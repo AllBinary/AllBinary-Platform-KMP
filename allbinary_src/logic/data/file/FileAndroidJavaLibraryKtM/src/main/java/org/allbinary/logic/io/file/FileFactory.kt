@@ -68,7 +68,7 @@ this.context= context
 var path = path
 
         try {
-            context.openFileInput(path)
+            this.context.openFileInput(path)
 
 
 

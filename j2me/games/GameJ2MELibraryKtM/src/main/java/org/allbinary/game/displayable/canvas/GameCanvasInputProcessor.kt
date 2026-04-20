@@ -82,11 +82,11 @@ this.inputToGameKeyMapping!!.init(this.allBinaryGameCanvas)
 
 
     
-                        if(gameKey != NONE)
+                        if(gameKey != this.NONE)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this.allBinaryGameCanvas, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this.allBinaryGameCanvas, gameKey)!!
 
 downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
@@ -136,14 +136,14 @@ this.removeGameKeyEvent(canvas, keyCode, deviceId, false)
 
 
     
-                        if(gameKey != NONE)
+                        if(gameKey != this.NONE)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(canvas as GameKeyEventSourceInterface, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(canvas as GameKeyEventSourceInterface, gameKey)!!
 
-upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 

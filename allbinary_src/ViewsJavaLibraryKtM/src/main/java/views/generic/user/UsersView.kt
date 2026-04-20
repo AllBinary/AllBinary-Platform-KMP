@@ -64,7 +64,7 @@ var document = document
     var usersNode: Node = document.createElement(UsersData.NAME)!!
 
 
-    var size: Int = userVector!!.size!!
+    var size: Int = this.userVector!!.size!!
 
 
 
@@ -74,7 +74,7 @@ var document = document
 
         {
 
-    var userInterface: User = userVector!!.get(index) as User
+    var userInterface: User = this.userVector!!.get(index) as User
 
 
     

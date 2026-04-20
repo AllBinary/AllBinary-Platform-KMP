@@ -88,7 +88,7 @@ ScrollMapEventHandler.getInstance()!!.addListener(this)
         //nullable = true from not(false or (false and false)) = true
 {
 var simpleTiledLayer = simpleTiledLayer
-this.paintSimpleTiledLayer= ALL_VISIBLE_TILEDLAYER
+this.paintSimpleTiledLayer= this.ALL_VISIBLE_TILEDLAYER
 this.currentIndex= 0
 
     var rows: Int = simpleTiledLayer!!.getRows()!!

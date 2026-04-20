@@ -86,7 +86,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.storeName= request.getParameter(StoreFrontData.getInstance()!!.NAME)
+this.storeName= this.request.getParameter(StoreFrontData.getInstance()!!.NAME)
 this.searchParams= SearchParams(this.request)
 }
 
@@ -165,7 +165,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERA
                             null, this.searchParams, xslFile, contentType, this.getPropertiesHashMap(), this.getPageContext())
 
 
-    var success: String = ProductListingFactory.getInstance(searchRequest)!!.generateAll(storeName)!!
+    var success: String = ProductListingFactory.getInstance(searchRequest)!!.generateAll(this.storeName)!!
 
 this.email()
 

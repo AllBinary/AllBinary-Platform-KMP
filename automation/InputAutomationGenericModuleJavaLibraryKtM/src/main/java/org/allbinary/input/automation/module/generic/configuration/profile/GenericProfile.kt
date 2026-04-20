@@ -132,7 +132,7 @@ var document = document
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileData.NAME, name)!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = this.vector.size!!
 
 
 
@@ -142,7 +142,7 @@ var document = document
 
         {
 
-    var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
+    var genericProfileDataWorkerType: GenericProfileDataWorkerType = this.vector.get(index) as GenericProfileDataWorkerType
 
 node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
 }

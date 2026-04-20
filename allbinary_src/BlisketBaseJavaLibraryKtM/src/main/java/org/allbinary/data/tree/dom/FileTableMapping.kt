@@ -68,11 +68,11 @@ this.file= file
 
     var filePropertyVector: Vector = Vector()
 
-filePropertyVector!!.add(file.getAbsolutePath())
-filePropertyVector!!.add(file.getCanonicalPath())
-filePropertyVector!!.add(file.getName())
-filePropertyVector!!.add(file.getParent())
-filePropertyVector!!.add(file.getPath())
+filePropertyVector!!.add(this.file.getAbsolutePath())
+filePropertyVector!!.add(this.file.getCanonicalPath())
+filePropertyVector!!.add(this.file.getName())
+filePropertyVector!!.add(this.file.getParent())
+filePropertyVector!!.add(this.file.getPath())
 
 
 
@@ -93,16 +93,16 @@ filePropertyVector!!.add(file.getPath())
     var pathUtil: PathUtil = PathUtil.getInstance()!!
 
 
-    var rootFileName: String = pathUtil!!.getNameFromPath(pathUtil!!.getWithoutExtension(file.getPath()))!!
+    var rootFileName: String = pathUtil!!.getNameFromPath(pathUtil!!.getWithoutExtension(this.file.getPath()))!!
 
 
     var fileData: FileData = FileData.getInstance()!!
 
 filePropertyHashMap!!.put(fileData!!.ROOT_NAME, rootFileName)
-filePropertyHashMap!!.put(fileData!!.ISFILE, Boolean.valueOf(file.isFile())!!.toString())
-filePropertyHashMap!!.put(fileData!!.ISDIRECTORY, Boolean.valueOf(file.isDirectory())!!.toString())
-filePropertyHashMap!!.put(fileData!!.ISHIDDEN, Boolean.valueOf(file.isHidden())!!.toString())
-filePropertyHashMap!!.put(fileData!!.ISABSOLUTE, Boolean.valueOf(file.isAbsolute())!!.toString())
+filePropertyHashMap!!.put(fileData!!.ISFILE, Boolean.valueOf(this.file.isFile())!!.toString())
+filePropertyHashMap!!.put(fileData!!.ISDIRECTORY, Boolean.valueOf(this.file.isDirectory())!!.toString())
+filePropertyHashMap!!.put(fileData!!.ISHIDDEN, Boolean.valueOf(this.file.isHidden())!!.toString())
+filePropertyHashMap!!.put(fileData!!.ISABSOLUTE, Boolean.valueOf(this.file.isAbsolute())!!.toString())
 filePropertyHashMap!!.put(fileData!!.ABSOLUTE_PATH, file.getAbsolutePath())
 filePropertyHashMap!!.put(fileData!!.CANONICAL_PATH, file.getCanonicalPath())
 filePropertyHashMap!!.put(fileData!!.NAME, file.getName())

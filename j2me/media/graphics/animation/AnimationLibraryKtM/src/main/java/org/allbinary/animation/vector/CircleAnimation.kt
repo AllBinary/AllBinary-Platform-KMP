@@ -70,8 +70,8 @@ this.setBasicColorP(basicColor)
 var graphics = graphics
 var x = x
 var y = y
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
-graphics.drawArc(x, y, width, height, 0, TOTAL_ANGLE)
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
+graphics.drawArc(x, y, this.width, this.height, 0, TOTAL_ANGLE)
 }
 
 

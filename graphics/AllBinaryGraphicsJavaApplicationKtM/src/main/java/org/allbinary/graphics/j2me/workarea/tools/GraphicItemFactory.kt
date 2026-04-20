@@ -57,8 +57,8 @@ companion object {
 private constructor ()
             : super()
         {
-graphicItems= HashMap<Any, Any>()
-graphicItems!!.put(LinesGraphicItem.getStaticName(), LinesGraphicItemFactory())
+this.graphicItems= HashMap<Any, Any>()
+this.graphicItems!!.put(LinesGraphicItem.getStaticName(), LinesGraphicItemFactory())
 }
 
 
@@ -67,7 +67,7 @@ graphicItems!!.put(LinesGraphicItem.getStaticName(), LinesGraphicItemFactory())
 : GraphicsItemInterfaceFactoryInterface{
 var itemName = itemName
 
-    var graphicsItemInterfaceFactoryInterface: GraphicsItemInterfaceFactoryInterface = graphicItems!!.get(itemName) as GraphicsItemInterfaceFactoryInterface
+    var graphicsItemInterfaceFactoryInterface: GraphicsItemInterfaceFactoryInterface = this.graphicItems!!.get(itemName) as GraphicsItemInterfaceFactoryInterface
 
 
     

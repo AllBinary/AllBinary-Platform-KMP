@@ -49,7 +49,7 @@ public constructor (label: String, x: Int)
 var label = label
 var x = x
 this.LABEL= label
-this.labelWidth= MyFont.getInstance()!!.stringWidth(LABEL) -LABEL.length
+this.labelWidth= MyFont.getInstance()!!.stringWidth(this.LABEL) -this.LABEL.length
 this.labelX= x
 this.valueX= this.labelWidth +x
 }

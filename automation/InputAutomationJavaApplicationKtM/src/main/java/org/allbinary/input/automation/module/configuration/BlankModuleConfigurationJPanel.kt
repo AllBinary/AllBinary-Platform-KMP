@@ -36,8 +36,8 @@ initComponents()
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jLabel1= javax.swing.JLabel()
-jLabel1!!.setText("No Configuration Available")
+this.jLabel1= javax.swing.JLabel()
+this.jLabel1!!.setText("No Configuration Available")
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 

@@ -45,7 +45,7 @@ import org.allbinary.string.CommonStrings
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogUtil.instance
 }
 
 
@@ -63,14 +63,14 @@ private constructor ()
     /*actual*/ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-PreLogUtil.put("Loggin Initialized", "LogUtil", "init()")
+PreLogUtil.put("Loggin Initialized", this, "init()")
 }
 
 
     /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
-var log = log
+    //var log = log
 
     var exception: Any = log.getThrowable()!!
 
@@ -110,9 +110,9 @@ var log = log
                                     }
                                 
 
-    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
-logger.log(Level.INFO, message)
+this.logger.log(Level.INFO, message)
 
                                     }
                                 
@@ -150,7 +150,7 @@ logger.log(Level.INFO, message)
                                     }
                                 
 
-    var message: String = logFormatUtil!!.getS(className, functionName, specialMessage)!!
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
 
     
@@ -159,12 +159,12 @@ logger.log(Level.INFO, message)
                                 )
                         
                                     {
-                                    logger.log(Level.SEVERE, message, exception)
+                                    this.logger.log(Level.SEVERE, message, exception)
 
                                     }
                                 
                         else {
-                            logger.log(Level.INFO, message)
+                            this.logger.log(Level.INFO, message)
 
                         }
                             

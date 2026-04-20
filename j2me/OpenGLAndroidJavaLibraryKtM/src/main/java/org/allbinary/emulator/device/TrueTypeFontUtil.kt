@@ -161,7 +161,7 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
     var paint: Paint = Paint()
 
 paint.setTypeface(typeface)
-paint.setTextSize(realFontSize.toFloat())
+paint.setTextSize(this.realFontSize.toFloat())
 paint.setAlpha(basicColor!!.alpha.toInt())
 paint.setColor(basicColor!!.toInt())
 

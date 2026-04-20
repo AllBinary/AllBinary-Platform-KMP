@@ -54,7 +54,7 @@ this.totalVisitedArray= IntArray(this.geographicMapCellHistoryArray!!.size)
     var isProgressing: Boolean = false
 
 
-    var size: Int = geographicMapCellHistoryArray!!.size
+    var size: Int = this.geographicMapCellHistoryArray!!.size
                 
 
 
@@ -70,7 +70,7 @@ this.totalVisitedArray= IntArray(this.geographicMapCellHistoryArray!!.size)
                         for (index in 0 until size)
 
         {
-totalVisited= geographicMapCellHistoryArray[index]!!.getTotalVisited()
+totalVisited= this.geographicMapCellHistoryArray[index]!!.getTotalVisited()
 currentTotalVisited= this.totalVisitedArray[index]!!
 
     

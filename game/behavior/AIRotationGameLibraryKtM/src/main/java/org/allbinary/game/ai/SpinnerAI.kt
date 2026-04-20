@@ -58,17 +58,17 @@ this.direction= direction
 var allBinaryLayerManager = allBinaryLayerManager
 
     
-                        if(isEven)
+                        if(this.isEven)
                         
                                     {
                                     super.processAI(this.direction[0]!!)
-isEven= false
+this.isEven= false
 
                                     }
                                 
                         else {
                             super.processAI(Canvas.KEY_NUM1)
-isEven= true
+this.isEven= true
 
                         }
                             

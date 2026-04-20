@@ -87,7 +87,7 @@ var pointVector = pointVector
     var document: org.w3c.dom.Document = WorkAreaJPanel.getDocument()!!
 
 
-    var linesNode: Node = document.createElement(LINES) as Node
+    var linesNode: Node = document.createElement(this.LINES) as Node
 
 
     var size2: Int = tempPointVector!!.size()!!
@@ -123,7 +123,7 @@ index++
         while(index < size && index < size2)
         {
 
-    var lineNode: Node = document.createElement(LINE) as Node
+    var lineNode: Node = document.createElement(this.LINE) as Node
 
 
     var rotatedSecondPoint: GPoint = tempPointVector!!.get(index) as GPoint

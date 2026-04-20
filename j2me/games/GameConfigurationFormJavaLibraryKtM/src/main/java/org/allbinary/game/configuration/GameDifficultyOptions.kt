@@ -111,7 +111,7 @@ this.setCommandListener(cmdListener)
         //nullable = true from not(false or (false and true)) = true
 {
 this.deleteAll()
-this.add(list, "Difficulty", Choice.EXCLUSIVE)
+this.add(this.list, "Difficulty", Choice.EXCLUSIVE)
 super.update()
 }
 

@@ -39,7 +39,7 @@ open public class WaypointInfoHudPaintable : SelectionHudPaintable {
 
     var rtsLayerP: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 public constructor (){
-keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
+this.keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
 }
 
 

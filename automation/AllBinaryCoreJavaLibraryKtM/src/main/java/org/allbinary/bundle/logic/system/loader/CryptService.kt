@@ -102,7 +102,7 @@ this.showLicenseDialog(abeClientInformation, e)
     //var e = e
 
         try {
-            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 
     var basicTextJDialog: BasicTextJDialog = BasicTextJDialog(e.message)
 
@@ -130,14 +130,14 @@ this.showLicenseDialog(abeClientInformation, e)
                                 
 } catch(e2: LicensingException)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e2)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e2)
 }
 
 basicTextJDialog!!.addCloseListener(ExitCloseListener())
 basicTextJDialog!!.setVisible(true)
 } catch(e3: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e3)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e3)
 }
 
 }

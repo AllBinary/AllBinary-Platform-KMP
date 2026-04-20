@@ -58,14 +58,14 @@ this.circularIndexUtil!!.setSize(this.highScoresArrayP!!.size)
     var index: Int = 0
 
 
-        while((highScores!!.getTotal() < 1 || lastIndex == this.circularIndexUtil!!.getIndex()) && index < this.highScoresArrayP!!.size)
+        while((highScores!!.getTotal() < 1 || this.lastIndex == this.circularIndexUtil!!.getIndex()) && index < this.highScoresArrayP!!.size)
         {
 this.circularIndexUtil!!.next()
 highScores= this.highScoresArrayP[this.circularIndexUtil!!.getIndex()]!!
 index++
 }
 
-lastIndex= this.circularIndexUtil!!.getIndex()
+this.lastIndex= this.circularIndexUtil!!.getIndex()
 
 
 

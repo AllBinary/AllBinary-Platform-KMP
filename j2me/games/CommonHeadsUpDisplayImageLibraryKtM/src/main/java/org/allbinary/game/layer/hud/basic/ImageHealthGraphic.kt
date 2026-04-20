@@ -47,7 +47,7 @@ var direction = direction
 
                             //For kotlin this is before the body of the constructor.
                     
-image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
+this.image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
 
     var imageCacheFactory: ImageCacheFactory = ImageCacheFactory.getInstance()!!
 
@@ -58,7 +58,7 @@ image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
                         for (numOfHealth in 0 until max)
 
         {
-image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
+this.image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
 }
 
 
@@ -75,7 +75,7 @@ image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
                         for (index in 0 until numOfHealth)
 
         {
-this.animationInterface!!.paint(image[numOfHealth]!!.getGraphics(), numOfHealth *10, 0)
+this.animationInterface!!.paint(this.image[numOfHealth]!!.getGraphics(), numOfHealth *10, 0)
 }
 
 }

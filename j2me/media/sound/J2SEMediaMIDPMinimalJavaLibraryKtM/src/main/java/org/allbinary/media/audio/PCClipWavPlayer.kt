@@ -295,7 +295,7 @@ this.setVolume((leftVolume.toFloat()) /100.0f)
                                     }
                                 
 
-    var masterGainFloatControl: FloatControl = clip.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
+    var masterGainFloatControl: FloatControl = this.clip.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
 
 masterGainFloatControl!!.setValue(20f *Math.log10(volume).toFloat())
 }

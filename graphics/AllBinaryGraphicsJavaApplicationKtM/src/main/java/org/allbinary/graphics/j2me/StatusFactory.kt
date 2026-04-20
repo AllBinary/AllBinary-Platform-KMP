@@ -72,7 +72,7 @@ MyFrame.statusJLabel!!.setText(status)
 {
 var status = status
 setStatusNoLog(status)
-this.logUtil!!.putF(STATUS_LABEL +status, this, SETSTATUS)
+this.logUtil!!.putF(this.STATUS_LABEL +status, this, SETSTATUS)
 }
 
 

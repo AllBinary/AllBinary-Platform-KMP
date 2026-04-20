@@ -50,10 +50,10 @@ var playerInputId = playerInputId
 
 
     
-                        if(playerInputId < list.size())
+                        if(playerInputId < this.list.size())
                         
                                     {
-                                    analogLocationInput= list.get(playerInputId) as AnalogLocationInput
+                                    analogLocationInput= this.list.get(playerInputId) as AnalogLocationInput
 
                                     }
                                 
@@ -63,7 +63,7 @@ var playerInputId = playerInputId
                         
                                     {
                                     analogLocationInput= AnalogLocationInput(playerInputId)
-list.add(analogLocationInput)
+this.list.add(analogLocationInput)
 
                                     }
                                 
@@ -78,7 +78,7 @@ var playerInputId = playerInputId
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list.get(playerInputId) as AnalogLocationInput
+                        return this.list.get(playerInputId) as AnalogLocationInput
 }
 
 

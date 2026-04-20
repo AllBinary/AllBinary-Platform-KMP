@@ -108,7 +108,7 @@ this.dispose(mutableImage!!.getImage() as Resource)
                         if(!resource.isDisposed())
                         
                                     {
-                                    System.out.println(commonStrings!!.CLOSE)
+                                    System.out.println(this.commonStrings!!.CLOSE)
 resource.dispose()
 
                                     }

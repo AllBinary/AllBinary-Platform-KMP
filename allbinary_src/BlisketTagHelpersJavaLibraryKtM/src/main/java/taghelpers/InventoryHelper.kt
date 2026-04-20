@@ -109,7 +109,7 @@ this.id= this.request.getParameter(BasicItemData.ID)
 
         try {
             
-    var inventoryViewSearchInterface: InventoryViewSearchInterface = InventoryViewFactory.getInstance(searchRequest)!!
+    var inventoryViewSearchInterface: InventoryViewSearchInterface = InventoryViewFactory.getInstance(this.searchRequest)!!
 
 
     var result: String = inventoryViewSearchInterface!!.getProduct(this.id)!!
@@ -179,7 +179,7 @@ this.id= this.request.getParameter(BasicItemData.ID)
                                     }
                                 
 
-    var inventoryViewSearchInterface: InventoryViewSearchInterface = InventoryViewFactory.getInstance(searchRequest)!!
+    var inventoryViewSearchInterface: InventoryViewSearchInterface = InventoryViewFactory.getInstance(this.searchRequest)!!
 
 
     var result: String = inventoryViewSearchInterface!!.searchSingleDynamicPage()!!

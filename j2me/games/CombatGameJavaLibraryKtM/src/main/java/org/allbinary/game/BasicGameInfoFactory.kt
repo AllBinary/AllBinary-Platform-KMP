@@ -48,8 +48,8 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var total = total
-currentReleaseIndex= 0
-currentDestroyIndex= 0
+this.currentReleaseIndex= 0
+this.currentDestroyIndex= 0
 this.total= total
 }
 

@@ -52,9 +52,9 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
 {
 
         try {
-            allBinaryGameCanvas!!.getLoopTimeHelperP()!!.setStartTime(gameTickTimeDelayHelper!!.setStartTime())
-gameTickDisplayInfoSingleton!!.update()
-allBinaryGameCanvas!!.processGame()
+            this.allBinaryGameCanvas!!.getLoopTimeHelperP()!!.setStartTime(this.gameTickTimeDelayHelper!!.setStartTime())
+this.gameTickDisplayInfoSingleton!!.update()
+this.allBinaryGameCanvas!!.processGame()
 } catch(e: Exception)
             {
 
@@ -71,7 +71,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     override fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
-allBinaryGameCanvas!!.processLoopSleep()
+this.allBinaryGameCanvas!!.processLoopSleep()
 }
 
 

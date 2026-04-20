@@ -132,7 +132,7 @@ this.list.add(index, layerInterface)
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(anyType) 
+        synchronized(this.anyType) 
 
         //mutex.withLock
         {
@@ -177,7 +177,7 @@ this.layerManagerLogging!!.remove(this, layerInterface, result)
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(anyType) 
+        synchronized(this.anyType) 
 
         //mutex.withLock
         {
@@ -199,7 +199,7 @@ var y = y
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(anyType) 
+        synchronized(this.anyType) 
 
         //mutex.withLock
         {
@@ -213,7 +213,7 @@ var y = y
                         for (index in this.list.size()!!  - 1  downTo 0)
 
         {
-comp= list.objectArray[index]!! as Layer
+comp= this.list.objectArray[index]!! as Layer
 
     
                         if(comp != 

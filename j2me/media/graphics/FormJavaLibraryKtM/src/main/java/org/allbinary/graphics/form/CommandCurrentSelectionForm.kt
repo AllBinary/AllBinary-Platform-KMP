@@ -75,7 +75,7 @@ this.update(items)
 
 
 
-                        for (index in selectedAnimationArray!!.size  - 1  downTo 0)
+                        for (index in this.selectedAnimationArray!!.size  - 1  downTo 0)
 
         {
 this.selectedAnimationArray[index]= nullAnimation
@@ -85,7 +85,7 @@ this.selectedAnimationArray[index]= nullAnimation
 
 
 
-                        for (index in unSelectedAnimationArray!!.size  - 1  downTo 0)
+                        for (index in this.unSelectedAnimationArray!!.size  - 1  downTo 0)
 
         {
 this.unSelectedAnimationArray[index]= nullAnimation

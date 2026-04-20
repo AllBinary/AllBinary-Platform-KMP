@@ -88,10 +88,10 @@ paint.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode
     //var alphaInt = alphaInt
 
     
-                        if(alphaInt != paint.getAlpha())
+                        if(alphaInt != this.paint.getAlpha())
                         
                                     {
-                                    paint.setAlpha(alphaInt)
+                                    this.paint.setAlpha(alphaInt)
 
                                     }
                                 

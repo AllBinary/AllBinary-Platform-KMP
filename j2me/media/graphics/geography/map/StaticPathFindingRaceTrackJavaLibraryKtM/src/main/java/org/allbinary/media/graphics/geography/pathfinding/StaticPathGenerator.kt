@@ -131,7 +131,7 @@ list.add(geographicMapCellPosition)
 
 
     
-                        if(list == basicArrayListUtil!!.getImmutableInstance())
+                        if(list == this.basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     list= BasicArrayList()

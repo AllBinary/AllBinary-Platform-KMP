@@ -108,7 +108,7 @@ customGPoint= analogLocationInput!!.getCustomGPoint()
                         if(x < 0)
                         
                                     {
-                                    inputProcessorArray[this.leftGameKeyEvent!!.getKey()]!!.process(allbinaryLayerManager, this.leftGameKeyEvent, x)
+                                    this.inputProcessorArray[this.leftGameKeyEvent!!.getKey()]!!.process(allbinaryLayerManager, this.leftGameKeyEvent, x)
 
                                     }
                                 
@@ -126,7 +126,7 @@ customGPoint= analogLocationInput!!.getCustomGPoint()
                         if(y < 0)
                         
                                     {
-                                    inputProcessorArray[this.downGameKeyEvent!!.getKey()]!!.process(allbinaryLayerManager, this.downGameKeyEvent, y)
+                                    this.inputProcessorArray[this.downGameKeyEvent!!.getKey()]!!.process(allbinaryLayerManager, this.downGameKeyEvent, y)
 
                                     }
                                 
@@ -144,7 +144,7 @@ customGPoint= analogLocationInput!!.getCustomGPoint()
                         if(leftTrigger > 0)
                         
                                     {
-                                    inputProcessorArray[this.leftTriggerGameKeyEvent!!.getKey()]!!.process(allbinaryLayerManager, this.leftTriggerGameKeyEvent, leftTrigger)
+                                    this.inputProcessorArray[this.leftTriggerGameKeyEvent!!.getKey()]!!.process(allbinaryLayerManager, this.leftTriggerGameKeyEvent, leftTrigger)
 
                                     }
                                 
@@ -153,7 +153,7 @@ customGPoint= analogLocationInput!!.getCustomGPoint()
                         if(rightTrigger > 0)
                         
                                     {
-                                    inputProcessorArray[this.rightTriggerGameKeyEvent!!.getKey()]!!.process(allbinaryLayerManager, this.rightTriggerGameKeyEvent, rightTrigger)
+                                    this.inputProcessorArray[this.rightTriggerGameKeyEvent!!.getKey()]!!.process(allbinaryLayerManager, this.rightTriggerGameKeyEvent, rightTrigger)
 
                                     }
                                 

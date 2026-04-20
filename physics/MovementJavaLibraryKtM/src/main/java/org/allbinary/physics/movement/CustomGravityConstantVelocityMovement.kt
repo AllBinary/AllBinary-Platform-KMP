@@ -56,7 +56,7 @@ this.customGravity= customGravity
 {
 var layer = layer
 super.process(layer)
-gravityUtil!!.process(this.getVelocityProperties(), this.customGravity)
+this.gravityUtil!!.process(this.getVelocityProperties(), this.customGravity)
 
     var velocityProperties: VelocityProperties = this.getVelocityProperties() as VelocityProperties
 

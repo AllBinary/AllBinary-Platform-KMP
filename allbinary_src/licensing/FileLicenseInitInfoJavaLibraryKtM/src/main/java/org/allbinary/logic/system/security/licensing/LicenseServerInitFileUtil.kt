@@ -129,7 +129,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var fileOutputStream: OutputStream = NULL_OUTPUT_STREAM
+    var fileOutputStream: OutputStream = this.NULL_OUTPUT_STREAM
 
 
         try {

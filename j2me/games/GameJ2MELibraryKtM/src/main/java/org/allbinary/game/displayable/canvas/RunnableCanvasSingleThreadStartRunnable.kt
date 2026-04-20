@@ -46,7 +46,7 @@ this.runnableCanvas= demoCanvas
 {
 
         try {
-            runnableCanvas!!.run()
+            this.runnableCanvas!!.run()
 } catch(e: Exception)
             {
 
@@ -63,7 +63,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     override fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
-runnableCanvas!!.processLoopSleep()
+this.runnableCanvas!!.processLoopSleep()
 }
 
 

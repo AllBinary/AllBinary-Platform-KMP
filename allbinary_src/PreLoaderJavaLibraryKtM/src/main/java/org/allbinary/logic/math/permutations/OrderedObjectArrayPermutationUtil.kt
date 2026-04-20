@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Arrays
+import org.allbinary.logic.TsUtil
 import org.allbinary.logic.util.visitor.Visitor
 
 open public class OrderedObjectArrayPermutationUtil
@@ -105,7 +106,10 @@ var data = data
     var i: Int = length -1
 
 
-        while(data[i -1]!!.hashCode() >= data[i]!!.hashCode())
+    var tsUtil: TsUtil = TsUtil.getInstance()!!
+
+
+        while(tsUtil!!.hashCode(data[i -1]!!) >= tsUtil!!.hashCode(data[i]!!))
         {
 i= i -1
 }
@@ -114,7 +118,7 @@ i= i -1
     var j: Int = length
 
 
-        while(data[j -1]!!.hashCode() <= data[i -1]!!.hashCode())
+        while(tsUtil!!.hashCode(data[j -1]!!) <= tsUtil!!.hashCode(data[i -1]!!))
         {
 j= j -1
 }
@@ -188,7 +192,7 @@ var visitor = visitor
 
     var iterations: Long = this.factorial(data.size)!!
 
-System.out.print(TOTAL_ITERATIONS_TABLE)
+System.out.print(this.TOTAL_ITERATIONS_TABLE)
 System.out.println(iterations)
 
 
@@ -201,7 +205,7 @@ this.getNext(data)
 visitor.visit(this)
 }
 
-System.out.println(FINISHED)
+System.out.println(this.FINISHED)
 }
 
 

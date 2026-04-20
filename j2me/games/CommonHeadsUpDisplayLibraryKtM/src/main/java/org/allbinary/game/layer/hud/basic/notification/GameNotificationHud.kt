@@ -82,10 +82,10 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     //var gameNotificationEvent = gameNotificationEvent
 
     
-                        if(lastGameNotificationEvent != gameNotificationEvent)
+                        if(this.lastGameNotificationEvent != gameNotificationEvent)
                         
                                     {
-                                    lastGameNotificationEvent= gameNotificationEvent
+                                    this.lastGameNotificationEvent= gameNotificationEvent
 this.logUtil!!.putF(gameNotificationEvent!!.getString(), this, METHOD_NAME)
 
                                     }

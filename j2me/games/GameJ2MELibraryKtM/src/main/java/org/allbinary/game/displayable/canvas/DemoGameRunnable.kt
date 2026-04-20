@@ -49,8 +49,8 @@ this.demoCanvas= demoCanvas
 {
 
         try {
-            demoCanvas!!.getLoopTimeHelperP()!!.setStartTime(gameTickTimeDelayHelper!!.setStartTime())
-demoCanvas!!.processGame()
+            this.demoCanvas!!.getLoopTimeHelperP()!!.setStartTime(this.gameTickTimeDelayHelper!!.setStartTime())
+this.demoCanvas!!.processGame()
 } catch(e: Exception)
             {
 
@@ -67,7 +67,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     override fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
-demoCanvas!!.processLoopSleep()
+this.demoCanvas!!.processLoopSleep()
 }
 
 

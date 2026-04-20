@@ -61,10 +61,10 @@ private constructor (){
 var gameLayer = gameLayer
 
     
-                        if(!list.contains(gameLayer))
+                        if(!this.list.contains(gameLayer))
                         
                                     {
-                                    list.add(gameLayer)
+                                    this.list.add(gameLayer)
 
                                     }
                                 

@@ -40,7 +40,7 @@ public constructor (anyType: Any)
             : super()
         {
 var anyType = anyType
-geographicMapCellPositionEvent= GeographicMapCellPositionEvent(anyType, CellPositionFactory.getInstance()!!.NONE)
+this.geographicMapCellPositionEvent= GeographicMapCellPositionEvent(anyType, CellPositionFactory.getInstance()!!.NONE)
 }
 
 

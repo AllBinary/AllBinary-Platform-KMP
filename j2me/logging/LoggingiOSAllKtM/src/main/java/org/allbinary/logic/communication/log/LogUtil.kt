@@ -29,6 +29,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.TsUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
@@ -48,7 +49,7 @@ import org.allbinary.string.CommonStrings
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogUtil.instance
 }
 
 
@@ -100,15 +101,15 @@ this.put(specialMessage, anyType, functionName, exception)
                         
                                     {
                                     className= StringMaker().
-                            append(anyType!!::class.toString()!!)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
+                            append(anyType!!::class.toString()!!)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(anyType)))!!.toString().toCharArray().concatToString()
                                 
 
                                     }
                                 
 
-    var message: String = logFormatUtil!!.getS(className, functionName, specialMessage)!!
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
-System.out.print(LOG_SUCCESS)
+System.out.print(this.LOG_SUCCESS)
 System.out.println(message)
 }
 
@@ -131,15 +132,15 @@ System.out.println(message)
                         
                                     {
                                     className= StringMaker().
-                            append(anyType!!::class.toString()!!)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
+                            append(anyType!!::class.toString()!!)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(anyType)))!!.toString().toCharArray().concatToString()
                                 
 
                                     }
                                 
 
-    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
-System.out.print(LOG_SUCCESS)
+System.out.print(this.LOG_SUCCESS)
 System.out.println(message)
 }
 

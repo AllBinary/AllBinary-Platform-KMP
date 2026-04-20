@@ -77,7 +77,7 @@ var gl = gl
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 

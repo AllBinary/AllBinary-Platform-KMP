@@ -78,7 +78,7 @@ var damage = damage
 
     var i: Int = this.circularIndexUtil!!.getIndex()!!
 
-animationInterfaceArray[i]!!.setFrame(0)
+this.animationInterfaceArray[i]!!.setFrame(0)
 this.circularIndexUtil!!.next()
 }
 
@@ -106,7 +106,7 @@ var graphics = graphics
 
         {
 
-    var animationInterface: IndexedAnimation = animationInterfaceArray[index]!!
+    var animationInterface: IndexedAnimation = this.animationInterfaceArray[index]!!
 
 
     
@@ -116,7 +116,7 @@ var graphics = graphics
                                     
     var delta: Int = animationInterface!!.getFrame() *20
 
-animationInterface!!.paint(graphics, x +dx, y -delta +dy)
+animationInterface!!.paint(graphics, x +this.dx, y -delta +this.dy)
 animationInterface!!.nextFrame()
 
                                     }

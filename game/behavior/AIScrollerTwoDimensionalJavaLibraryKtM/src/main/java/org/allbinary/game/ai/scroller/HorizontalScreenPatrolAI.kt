@@ -102,7 +102,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 super.processAI(this.keyDirection)
 
     
-                        if(timeDelayHelper!!.isTime())
+                        if(this.timeDelayHelper!!.isTime())
                         
                                     {
                                     
@@ -119,10 +119,10 @@ super.processAI(this.keyDirection)
                                     
     var y: Int = MyRandomFactory.getInstance()!!.getAbsoluteNextIntAllowZero(50)!!
 
-layerInterface!!.setPosition(displayInfoSingleton!!.getLastWidth() +layerInterface!!.getWidth() +50, y, layerInterface!!.getZP())
-firedIndex= 0
-this.firingX= displayInfoSingleton!!.getLastHalfWidth() +MyRandomFactory.getInstance()!!.getNextInt(displayInfoSingleton!!.getLastHalfWidth())
-secondaryPlayerQueue!!.add(this.sound)
+layerInterface!!.setPosition(this.displayInfoSingleton!!.getLastWidth() +layerInterface!!.getWidth() +50, y, layerInterface!!.getZP())
+this.firedIndex= 0
+this.firingX= this.displayInfoSingleton!!.getLastHalfWidth() +MyRandomFactory.getInstance()!!.getNextInt(displayInfoSingleton!!.getLastHalfWidth())
+this.secondaryPlayerQueue!!.add(this.sound)
 
                                     }
                                 
@@ -140,19 +140,19 @@ secondaryPlayerQueue!!.add(this.sound)
 
 
     
-                        if(FIRE > MAX_FIRE)
+                        if(FIRE > this.MAX_FIRE)
                         
                                     {
-                                    FIRE= MAX_FIRE
+                                    FIRE= this.MAX_FIRE
 
                                     }
                                 
 
     
-                        if(firedIndex > FIRE)
+                        if(this.firedIndex > FIRE)
                         
                                     {
-                                    firedIndex= 0
+                                    this.firedIndex= 0
 this.firingX= Integer.MIN_VALUE
 
                                     }

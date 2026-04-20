@@ -184,14 +184,14 @@ this.running= running
 
         //mutex.withLock
         {
-threadObjectUtil!!.notifyObject(this)
+this.threadObjectUtil!!.notifyObject(this)
 }
 
 
                                     }
                                 
 this.logUtil!!.putF(StringMaker().
-                            append(IS_RUNNING)!!.appendboolean(this.running)!!.toString(), this, SET_RUNNING)
+                            append(this.IS_RUNNING)!!.appendboolean(this.running)!!.toString(), this, SET_RUNNING)
 }
 
 
@@ -224,7 +224,7 @@ this.logUtil!!.putF(StringMaker().
                             
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(THREAD)
+stringBuffer!!.append(this.THREAD)
 
     
                         if(this.thread != 
@@ -236,7 +236,7 @@ stringBuffer!!.append(THREAD)
 
                                     }
                                 
-stringBuffer!!.append(NOT_EQUAL)
+stringBuffer!!.append(this.NOT_EQUAL)
 
     
                         if(this.currentThread != 
@@ -277,7 +277,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, IS_RUNNING)
         //nullable = true from not(false or (false and false)) = true
 {
 var wait = wait
-loopTimeHelper!!.delay= wait
+this.loopTimeHelper!!.delay= wait
 this.pauseWait= wait.toLong() *3
 this.logUtil!!.putF(StringMaker().
                             append("setWait - delay: ")!!.appendint(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -305,7 +305,7 @@ this.currentThread= Thread.currentThread()
     open fun setCurrentThreadFake()
         //nullable = true from not(false or (false and true)) = true
 {
-this.currentThread= thread
+this.currentThread= this.thread
 }
 
 
@@ -362,12 +362,12 @@ var wait = wait
                         if(wait > 0)
                         
                                     {
-                                    threadObjectUtil!!.waitObject(this, wait.toLong())
+                                    this.threadObjectUtil!!.waitObject(this, wait.toLong())
 
                                     }
                                 
                         else {
-                            threadObjectUtil!!.waitObject(this)
+                            this.threadObjectUtil!!.waitObject(this)
 
                         }
                             
@@ -384,7 +384,7 @@ var wait = wait
     open fun processSleep()
         //nullable = true from not(false or (false and true)) = true
 {
-Thread.sleep(pauseWait)
+Thread.sleep(this.pauseWait)
 }
 
 
@@ -429,7 +429,7 @@ this.runnableCanvasRefreshHelper!!.process()
                                     
     var stringMaker: StringMaker = StringMaker()
 
-this.logUtil!!.putF(stringMaker!!.append(START_PAUSE)!!.appendlong(System.currentTimeMillis())!!.append(PAUSE_SLEEP)!!.appendlong(this.pauseWait)!!.toString(), this, PROCESS_LOOP_SLEEP)
+this.logUtil!!.putF(stringMaker!!.append(this.START_PAUSE)!!.appendlong(System.currentTimeMillis())!!.append(this.PAUSE_SLEEP)!!.appendlong(this.pauseWait)!!.toString(), this, PROCESS_LOOP_SLEEP)
 
         while(this.isPaused() && this.isRunning() && !this.isSingleThread())
         {
@@ -440,7 +440,7 @@ this.processSleep()
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-this.logUtil!!.putF(stringMaker!!.append(END_PAUSE)!!.appendlong(System.currentTimeMillis())!!.toString(), this, PROCESS_LOOP_SLEEP)
+this.logUtil!!.putF(stringMaker!!.append(this.END_PAUSE)!!.appendlong(System.currentTimeMillis())!!.toString(), this, PROCESS_LOOP_SLEEP)
 
 
 

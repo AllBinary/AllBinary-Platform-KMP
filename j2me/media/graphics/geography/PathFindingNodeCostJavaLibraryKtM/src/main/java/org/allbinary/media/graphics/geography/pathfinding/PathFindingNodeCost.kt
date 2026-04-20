@@ -136,7 +136,7 @@ stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
                                 )
         {
 stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
-stringBuffer!!.append(commonSeps!!.SPACE)
+stringBuffer!!.append(this.commonSeps!!.SPACE)
 pathFindingNode= pathFindingNode!!.parent as PathFindingNode
 }
 

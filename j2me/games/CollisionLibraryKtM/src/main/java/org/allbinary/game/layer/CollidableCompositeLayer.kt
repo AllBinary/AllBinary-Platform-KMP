@@ -85,7 +85,7 @@ public constructor (layerInfo: Rectangle, viewPosition: ViewPosition)
 
                             //For kotlin this is before the body of the constructor.
                     
-collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
+this.collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
 public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
@@ -98,7 +98,7 @@ public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositi
 
                             //For kotlin this is before the body of the constructor.
                     
-collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
+this.collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
 public constructor (layerInfo: Rectangle)                        
@@ -109,7 +109,7 @@ public constructor (layerInfo: Rectangle)
 
                             //For kotlin this is before the body of the constructor.
                     
-collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
+this.collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
 

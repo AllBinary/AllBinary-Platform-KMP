@@ -495,7 +495,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
 
 
     
-                        if(dropCellPositionHistory!!.anyCellPositionWithDrop(occupyList))
+                        if(this.dropCellPositionHistory!!.anyCellPositionWithDrop(occupyList))
                         
                                     {
                                     rtsPlayerLayerInterface!!.add(ErrorSound.getInstance())
@@ -588,7 +588,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
 
-dropCellPositionHistory!!.add(occupyList, layerInterface)
+this.dropCellPositionHistory!!.add(occupyList, layerInterface)
 
     var rtsPlayerGameInput: RTSPlayerGameInput = rtsPlayerLayerInterface!!.getPlayerGameInput() as RTSPlayerGameInput
 

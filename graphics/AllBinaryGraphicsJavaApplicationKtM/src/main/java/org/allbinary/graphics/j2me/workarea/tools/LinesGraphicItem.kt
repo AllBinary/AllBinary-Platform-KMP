@@ -535,7 +535,7 @@ firstPoint= secondPoint
 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
@@ -641,7 +641,7 @@ this.removePoint()
 this.currentMousePoint= mousePoint
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
@@ -705,7 +705,7 @@ var y = y
 this.currentMousePoint= point
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
@@ -768,7 +768,7 @@ this.deactivate()
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e)
 }
 
 }

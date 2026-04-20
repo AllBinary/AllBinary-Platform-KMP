@@ -141,7 +141,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD
     var subject: String = "New Password"
 
 
-    var body: String = "New Password: " +newPassword
+    var body: String = "New Password: " +this.newPassword
 
 
     var basicEmailInfo: BasicEmailInfo = AdminEmailInfo(subject, body) as BasicEmailInfo

@@ -75,7 +75,7 @@ this.circularIndexUtil!!.setIndex(this.circularIndexUtil!!.getSize() -1)
         //nullable = true from not(false or (false and true)) = true
 {
 this.setFrame(this.getSize() -1)
-loopCount= 0
+this.loopCount= 0
 }
 
 
@@ -89,7 +89,7 @@ loopCount= 0
                                     {
                                     
     
-                        if(timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
+                        if(this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
                         
                                     {
                                     this.previousFrame()
@@ -118,7 +118,7 @@ loopCount= 0
 : Boolean{
 
     
-                        if(loopCount < loopCountTotal || this.getFrame() != 0)
+                        if(this.loopCount < this.loopCountTotal || this.getFrame() != 0)
                         
                                     {
                                     

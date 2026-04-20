@@ -59,16 +59,16 @@ private constructor ()
 
 
 
-                        for (index in cancelInputArray!!.size -1 downTo 0)
+                        for (index in this.cancelInputArray!!.size -1 downTo 0)
 
         {
-cancelInputArray[index]= basicTouchInputFactory!!.NONE
+this.cancelInputArray[index]= basicTouchInputFactory!!.NONE
 }
 
-cancelInputArray[basicTouchInputFactory!!.UP.getId()]= basicTouchInputFactory!!.DOWN
-cancelInputArray[basicTouchInputFactory!!.DOWN.getId()]= basicTouchInputFactory!!.UP
-cancelInputArray[basicTouchInputFactory!!.LEFT.getId()]= basicTouchInputFactory!!.RIGHT
-cancelInputArray[basicTouchInputFactory!!.RIGHT.getId()]= basicTouchInputFactory!!.LEFT
+this.cancelInputArray[basicTouchInputFactory!!.UP.getId()]= basicTouchInputFactory!!.DOWN
+this.cancelInputArray[basicTouchInputFactory!!.DOWN.getId()]= basicTouchInputFactory!!.UP
+this.cancelInputArray[basicTouchInputFactory!!.LEFT.getId()]= basicTouchInputFactory!!.RIGHT
+this.cancelInputArray[basicTouchInputFactory!!.RIGHT.getId()]= basicTouchInputFactory!!.LEFT
 }
 
 

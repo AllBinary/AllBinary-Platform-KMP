@@ -42,7 +42,7 @@ this.gameCanvas= gameCanvas
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-gameCanvas!!.paintGameOver(graphics)
+this.gameCanvas!!.paintGameOver(graphics)
 }
 
 

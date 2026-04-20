@@ -594,11 +594,11 @@ var repeated = repeated
 
 
     
-                        if(gameKey != NONE)
+                        if(gameKey != this.NONE)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
 
 DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
@@ -607,10 +607,10 @@ DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
                         else {
                             
     
-                        if(lastKeyNotMapped != keyCode)
+                        if(this.lastKeyNotMapped != keyCode)
                         
                                     {
-                                    lastKeyNotMapped= keyCode
+                                    this.lastKeyNotMapped= keyCode
 this.logUtil!!.putF(StringMaker().
                             append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
@@ -639,11 +639,11 @@ var repeated = repeated
 
 
     
-                        if(gameKey != NONE)
+                        if(gameKey != this.NONE)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
 
 UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
@@ -876,7 +876,7 @@ this.getBasicGameDemoPaintable()!!.setState(this.state)
 this.paintedSpecialAnimationInterface= this.getSpecialAnimationInterface()
 
     
-                        if(!this.demoGameRunnable!!.isRunning() && gameCanvas!!.isInitialized())
+                        if(!this.demoGameRunnable!!.isRunning() && this.gameCanvas!!.isInitialized())
                         
                                     {
                                     this.getSpecialAnimationInterface()!!.reset()
@@ -905,7 +905,7 @@ this.paintedSpecialAnimationInterface= this.getSpecialAnimationInterface()
                                     }
                                 
 
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.processPageAdState()
 }
@@ -980,8 +980,8 @@ this.getHighScoresFactoryInterface()!!.fetchHighScores(gameInfo, this.highScores
 
 PreLogUtil.put(StringMaker().
                             append("Game Thread in DemoCanvas: ")!!.append(this.stringUtil!!.toString(gameCanvas))!!.toString(), this, commonStrings!!.START)
-this.canvasThread= threadFactoryUtil!!.getInstance(gameCanvas)
-this.gameCanvas!!.setThread(canvasThread)
+this.canvasThread= this.threadFactoryUtil!!.getInstance(gameCanvas)
+this.gameCanvas!!.setThread(this.canvasThread)
 this.threadFactoryUtil!!.start(this.canvasThread)
 
     
@@ -1000,7 +1000,7 @@ this.threadFactoryUtil!!.start(this.canvasThread)
 {
 
     
-                        if(!gameCanvas!!.isInitialized() || gameCanvas!!.getTitle() == NullGameCanvas.NO_GAME)
+                        if(!this.gameCanvas!!.isInitialized() || gameCanvas!!.getTitle() == NullGameCanvas.NO_GAME)
                         
                                     {
                                     
@@ -1048,7 +1048,7 @@ this.preDemoProcess()
                         if(indexedAnimationBehavior!!.loopIndex < 1)
                         
                                     {
-                                    timeDelayHelper!!.setStartTime()
+                                    this.timeDelayHelper!!.setStartTime()
 
                                     }
                                 
@@ -1080,16 +1080,16 @@ this.start()
                                     {
                                     
     
-                        if(!demoGameRunnable!!.isRunning())
+                        if(!this.demoGameRunnable!!.isRunning())
                         
                                     {
                                     this.startDemoGame()
-demoGameRunnable!!.setRunning(true)
+this.demoGameRunnable!!.setRunning(true)
 
-    var thread: Thread = threadFactoryUtil!!.getInstance(demoGameRunnable)!!
+    var thread: Thread = this.threadFactoryUtil!!.getInstance(this.demoGameRunnable)!!
 
-demoGameRunnable!!.setThread(thread)
-threadFactoryUtil!!.start(thread)
+this.demoGameRunnable!!.setThread(thread)
+this.threadFactoryUtil!!.start(thread)
 
                                     }
                                 
@@ -1168,7 +1168,7 @@ this.setPaintableInterface(this.getDefaultPaintableInterface())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return !this.demoGameRunnable!!.isRunning() && gameCanvas!!.isInitialized()
+                        return !this.demoGameRunnable!!.isRunning() && this.gameCanvas!!.isInitialized()
 }
 
 
@@ -1189,7 +1189,7 @@ this.gameRunnable!!.run()
                                 
 
     
-                        if(timeDelayHelper!!.isTime() && this.isReadyForStateChange())
+                        if(this.timeDelayHelper!!.isTime() && this.isReadyForStateChange())
                         
                                     {
                                     this.demoStateChange()
@@ -1236,7 +1236,7 @@ this.setRunning(true)
 
                         }
                             
-fullScreenUtil!!.init(this, this.getCustomCommandListener())
+this.fullScreenUtil!!.init(this, this.getCustomCommandListener())
 this.initMenu()
 this.initPostPaint()
 this.setState()
@@ -1246,7 +1246,7 @@ this.setState()
                         
                                     {
                                     
-        while(gameCanvas == NullGameCanvas.getInstance() || !gameCanvas!!.isInitialized())
+        while(this.gameCanvas == NullGameCanvas.getInstance() || !this.gameCanvas!!.isInitialized())
         {
 this.loopTimeHelper!!.setStartTime()
 this.processGame()

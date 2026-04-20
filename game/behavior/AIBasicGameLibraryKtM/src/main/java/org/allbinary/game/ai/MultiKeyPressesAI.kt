@@ -102,7 +102,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         if(key !=  -1)
                         
                                     {
-                                    gameInput!!.add(gameKeyEventFactory!!.getInstance(this, key))
+                                    gameInput!!.add(this.gameKeyEventFactory!!.getInstance(this, key))
 
                                     }
                                 
@@ -127,7 +127,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         if(key !=  -1)
                         
                                     {
-                                    gameInput!!.addForRemoval(gameKeyEventFactory!!.getInstance(this, key))
+                                    gameInput!!.addForRemoval(this.gameKeyEventFactory!!.getInstance(this, key))
 
                                     }
                                 

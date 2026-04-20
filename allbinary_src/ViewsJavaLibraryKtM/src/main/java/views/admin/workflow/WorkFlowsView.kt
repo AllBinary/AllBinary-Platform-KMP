@@ -106,7 +106,7 @@ var document = document
     var node: Node = document.createElement(WorkFlowData.getInstance()!!.WORKFLOWS)!!
 
 
-    var size: Int = workFlowsVector!!.size!!
+    var size: Int = this.workFlowsVector!!.size!!
 
 
 
@@ -116,7 +116,7 @@ var document = document
 
         {
 
-    var workFlowInterface: WorkFlowInterface = workFlowsVector!!.get(index) as WorkFlowInterface
+    var workFlowInterface: WorkFlowInterface = this.workFlowsVector!!.get(index) as WorkFlowInterface
 
 }
 

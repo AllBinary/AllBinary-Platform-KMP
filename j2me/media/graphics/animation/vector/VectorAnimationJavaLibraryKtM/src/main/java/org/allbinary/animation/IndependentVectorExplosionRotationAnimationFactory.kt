@@ -60,7 +60,7 @@ this.init()
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-framePoints= VectorRotationGenerator.getInstance()!!.getInstance(this.vectorInfo)
+this.framePoints= VectorRotationGenerator.getInstance()!!.getInstance(this.vectorInfo)
 }
 
 
@@ -90,7 +90,7 @@ frame= rotationAnimationInterface!!.getFrame()
                                     }
                                 
 
-    var points: Array<Array<IntArray?>?> = vectorExplosionGenerator!!.getInstance(framePoints[frame]!!, 6, vectorExplosionGenerator!!.ROTATION)!!
+    var points: Array<Array<IntArray?>?> = this.vectorExplosionGenerator!!.getInstance(this.framePoints[frame]!!, 6, vectorExplosionGenerator!!.ROTATION)!!
 
 
 

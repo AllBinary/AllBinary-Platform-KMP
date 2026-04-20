@@ -117,18 +117,18 @@ this.velocity= value
                         if(lastVelocity != this.velocity)
                         
                                     {
-                                    this.string= primitiveLongUtil!!.getCharArray(this.velocity *18)
+                                    this.string= this.primitiveLongUtil!!.getCharArray(this.velocity *18)
 
     
                         if(OpenGLFeatureUtil.getInstance()!!.isAnyThreed())
                         
                                     {
-                                    this.totalDigits= primitiveLongUtil!!.getCurrentTotalDigits() +1
+                                    this.totalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits() +1
 
                                     }
                                 
                         else {
-                            this.totalDigits= primitiveLongUtil!!.getCurrentTotalDigits()
+                            this.totalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 
                         }
                             

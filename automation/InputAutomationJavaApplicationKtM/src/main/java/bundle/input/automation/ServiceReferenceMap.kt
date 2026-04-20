@@ -164,7 +164,7 @@ var m = m
         //nullable = true from not(false or (false and true)) = true
 : Set{
 
-    var keyStringArray: Array<String?> = serviceReference!!.getPropertyKeys()!!
+    var keyStringArray: Array<String?> = this.serviceReference!!.getPropertyKeys()!!
 
 
 

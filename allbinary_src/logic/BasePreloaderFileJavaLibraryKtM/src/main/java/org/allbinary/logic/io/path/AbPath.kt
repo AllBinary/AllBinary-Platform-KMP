@@ -78,8 +78,8 @@ var aPath = aPath
                         
                                     {
                                     this.schema= this.getSchema(aPath)
-this.nameP= EMPTY_STRING
-this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
+this.nameP= this.EMPTY_STRING
+this.path= this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPath(aPath)))
 
                                     }
                                 
@@ -105,7 +105,7 @@ var name = name
                                     {
                                     this.schema= this.getSchema(aPath)
 this.nameP= name
-this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
+this.path= this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPath(aPath)))
 
                                     }
                                 
@@ -129,9 +129,9 @@ this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.schema= EMPTY_STRING
-this.setPath(abPathData!!.SEPARATOR)
-this.nameP= EMPTY_STRING
+this.schema= this.EMPTY_STRING
+this.setPath(this.abPathData!!.SEPARATOR)
+this.nameP= this.EMPTY_STRING
 }
 
 
@@ -140,7 +140,7 @@ this.nameP= EMPTY_STRING
 : String{
 var aPath = aPath
 
-    var beginIndex: Int = aPath!!.indexOf(commonSeps!!.COLON)!!
+    var beginIndex: Int = aPath!!.indexOf(this.commonSeps!!.COLON)!!
 
 
     
@@ -193,13 +193,13 @@ var aPath = aPath
                         if(!this.hasSchema())
                         
                                     {
-                                    tempPath= abPathUtil!!.adjustStart(tempPath)
+                                    tempPath= this.abPathUtil!!.adjustStart(tempPath)
 
                                     }
                                 
                         else {
                             
-    var beginIndex: Int = tempPath!!.indexOf(commonSeps!!.COLON)!!
+    var beginIndex: Int = tempPath!!.indexOf(this.commonSeps!!.COLON)!!
 
 
     
@@ -208,13 +208,13 @@ var aPath = aPath
                                     {
                                     beginIndex++
 
-        while(tempPath[beginIndex] == abPathData!!.SEPARATORCHAR || tempPath[beginIndex] == filePathData!!.SEPARATORCHAR)
+        while(tempPath[beginIndex] == this.abPathData!!.SEPARATORCHAR || tempPath[beginIndex] == filePathData!!.SEPARATORCHAR)
         {
 beginIndex++
 numberOfSeps++
 
     
-                        if(numberOfSeps > 2)
+                        if(this.numberOfSeps > 2)
                         
                                     {
                                     
@@ -301,7 +301,7 @@ stringBuffer!!.append(this.nameP)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.schema)
-stringBuffer!!.append(commonSeps!!.COLON)
+stringBuffer!!.append(this.commonSeps!!.COLON)
 stringBuffer!!.append(filePathData!!.SEPARATOR)
 stringBuffer!!.append(FilePathUtil.adjust(this.getPath()))
 stringBuffer!!.append(this.nameP)

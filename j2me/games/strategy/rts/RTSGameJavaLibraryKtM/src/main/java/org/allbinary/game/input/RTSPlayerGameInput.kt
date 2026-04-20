@@ -113,7 +113,7 @@ this.selectedRTSLayerPlayerGameInput= SelectedRTSLayersPlayerGameInput(this.getR
                                     }
                                 
 
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = gameCanvas!!.getLayerManager() as GeographicMapCompositeInterface
+    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.gameCanvas!!.getLayerManager() as GeographicMapCompositeInterface
 
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
@@ -205,7 +205,7 @@ var layerManager = layerManager
         try {
             this.processMotionInput(layerManager)
 
-    var size: Int = inputList!!.size()!!
+    var size: Int = this.inputList!!.size()!!
 
 
     var key: Int = 0
@@ -218,7 +218,7 @@ var layerManager = layerManager
 
         {
 
-    var gameKeyEvent: GameKeyEvent = inputList!!.get(index) as GameKeyEvent
+    var gameKeyEvent: GameKeyEvent = this.inputList!!.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
 this.getScrollPlayerGameInput()!!.processInput(key)
@@ -268,7 +268,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_I
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
 
 
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = gameCanvas!!.getLayerManager() as GeographicMapCompositeInterface
+    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.gameCanvas!!.getLayerManager() as GeographicMapCompositeInterface
 
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
@@ -346,7 +346,7 @@ var graphics = graphics
     var geographicMapCellPosition: GeographicMapCellPosition = this.getSelectedRtsFormInput()!!.getSelectedGeographicCellPosition()!!
 
 
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = gameCanvas!!.getLayerManager() as GeographicMapCompositeInterface
+    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.gameCanvas!!.getLayerManager() as GeographicMapCompositeInterface
 
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!

@@ -98,7 +98,7 @@ graphics.setColor(this.basicColor!!.toInt())
 
 graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
 
-    var size: Int = inputInfo!!.size
+    var size: Int = this.inputInfo!!.size
                 
 
 
@@ -108,8 +108,8 @@ graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
                         for (index in 0 until size)
 
         {
-beginWidth= (graphics.getFont()!!.stringWidth(inputInfo[index]!!) shr 1)
-graphics.drawString(inputInfo[index]!!, halfWidth -beginWidth, (index +3) *charHeight, anchor)
+beginWidth= (graphics.getFont()!!.stringWidth(this.inputInfo[index]!!) shr 1)
+graphics.drawString(this.inputInfo[index]!!, halfWidth -beginWidth, (index +3) *charHeight, anchor)
 }
 
 }

@@ -100,7 +100,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
     //var instanceId = instanceId
 
     
-                        if(dx != 0 || dy != 0)
+                        if(this.dx != 0 || this.dy != 0)
                         
                                     {
                                     

@@ -68,9 +68,9 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
 
     var existingFont: Font = graphics.getFont()!!
 
-fontDebugFactory!!.setFont(this.font, graphics)
+this.fontDebugFactory!!.setFont(this.font, graphics)
 super.paint(graphics, x, y)
-fontDebugFactory!!.setFont(existingFont, graphics)
+this.fontDebugFactory!!.setFont(existingFont, graphics)
 }
 
 
@@ -92,7 +92,7 @@ fontDebugFactory!!.setFont(existingFont, graphics)
                                     }
                                 
 this.hasChanged= true
-this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (fontSize *scaleX).toInt())
+this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (this.fontSize *scaleX).toInt())
 }
 
 

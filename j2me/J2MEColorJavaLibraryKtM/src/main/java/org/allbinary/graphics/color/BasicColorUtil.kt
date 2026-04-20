@@ -67,19 +67,19 @@ var red = red
 var green = green
 var blue = blue
 
-    var value: Int= 0
+    var value: Int = 0
 
 
     
-                        if(isAlpha)
+                        if(this.isAlpha)
                         
                                     {
                                     
     
-                        if(ffOpaque)
+                        if(this.ffOpaque)
                         
                                     {
-                                    value= ALPHA
+                                    value= this.ALPHA
 
                                     }
                                 
@@ -108,7 +108,7 @@ value= blue or value
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ((alphaValue shl 24) and ALPHA) +((r shl 16) and 0x00FF0000) +((g shl 8) and 0x0000FF00) +(b and 0x000000FF)
+                        return ((alphaValue shl 24) and this.ALPHA) +((r shl 16) and 0x00FF0000) +((g shl 8) and 0x0000FF00) +(b and 0x000000FF)
 }
 
 
@@ -121,7 +121,7 @@ value= blue or value
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ((alphaValue shl 24) and ALPHA) +color
+                        return ((alphaValue shl 24) and this.ALPHA) +color
 }
 
 
@@ -133,7 +133,7 @@ value= blue or value
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (0xFFFFFF -color) or ALPHA
+                        return (0xFFFFFF -color) or this.ALPHA
 }
 
 

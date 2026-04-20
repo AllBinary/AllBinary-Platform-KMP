@@ -161,7 +161,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
             
     var animation: IndexedAnimation = this.animation
 
-this.animationInterfaceFactoryInterface!!.setInitialScale(scaleProperties)
+this.animationInterfaceFactoryInterface!!.setInitialScale(this.scaleProperties)
 this.animation= this.animationInterfaceFactoryInterface!!.getInstance(this.instanceId) as IndexedAnimation
 this.animation.setState(animation)
 } catch(e: Exception)

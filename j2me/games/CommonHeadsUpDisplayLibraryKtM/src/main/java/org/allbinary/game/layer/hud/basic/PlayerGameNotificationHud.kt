@@ -96,7 +96,7 @@ gameNotificationEventHandler!!.addListener(this)
 : GPoint{
 var x = x
 var y = y
-point= CustomGPoint(0, 0)
+this.point= CustomGPoint(0, 0)
 this.point.setX(x)
 this.point.setY(y)
 
@@ -125,12 +125,12 @@ this.point.setY(y)
                                     {
                                     
     
-                        if(lastString != string)
+                        if(this.lastString != string)
                         
                                     {
                                     this.lastString= string
 this.logUtil!!.putF(StringMaker().
-                            append(PERMANENT_GAME_NOTIFICATION)!!.append(string)!!.toString(), this, commonStrings!!.ADD)
+                            append(this.PERMANENT_GAME_NOTIFICATION)!!.append(string)!!.toString(), this, commonStrings!!.ADD)
 
                                     }
                                 
@@ -154,7 +154,7 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
 {
 
     
-                        if(this.timeDelayHelper!!.isTime(gameTickTimeDelayHelper!!.startTime))
+                        if(this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
                         
                                     {
                                     
@@ -212,7 +212,7 @@ this.string= this.gameNotification!!.stringList!!.remove(0) as String
 
     var width: Int = MyFont.getInstance()!!.stringWidth2(this.string)!!
 
-this.setX((displayInfo!!.getLastWidth() -width) shr 1)
+this.setX((this.displayInfo!!.getLastWidth() -width) shr 1)
 this.point.setX(this.getX())
 this.point.setY(this.getY())
 
@@ -247,7 +247,7 @@ this.string= this.permanentGameNotification!!.stringList!!.objectArray[index]!! 
 
     var width: Int = MyFont.getInstance()!!.stringWidth2(this.string)!!
 
-this.setX((displayInfo!!.getLastWidth() -width) shr 1)
+this.setX((this.displayInfo!!.getLastWidth() -width) shr 1)
 this.point.setX(this.getX())
 this.point.setY(this.getY())
 

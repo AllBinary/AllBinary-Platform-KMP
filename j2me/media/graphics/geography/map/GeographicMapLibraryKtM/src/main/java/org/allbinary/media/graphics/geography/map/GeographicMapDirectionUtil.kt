@@ -153,7 +153,7 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
                                     
 
 
-                            throw Exception(MESSAGE)
+                            throw Exception(this.MESSAGE)
 
                                     }
                                 
@@ -336,7 +336,7 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
                                     
 
 
-                            throw Exception(MESSAGE)
+                            throw Exception(this.MESSAGE)
 
                                     }
                                 
@@ -606,9 +606,9 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(ERROR)
+stringBuffer!!.append(this.ERROR)
 stringBuffer!!.append(CellPosition.toString(fromGeographicMapCellPosition))
-stringBuffer!!.append(EQUAL)
+stringBuffer!!.append(this.EQUAL)
 stringBuffer!!.append(CellPosition.toString(toGeographicMapCellPosition))
 
 

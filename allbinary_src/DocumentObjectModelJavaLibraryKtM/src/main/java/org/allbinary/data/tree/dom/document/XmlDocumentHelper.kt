@@ -87,10 +87,10 @@ this.init(4, true)
 
     var transformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
 
-transformerFactory!!.setAttribute(INDENT_NUMBER, indent)
-transformer= transformerFactory!!.newTransformer()
-transformer.setOutputProperty(OutputKeys.ENCODING, CharacterSetData.getInstance()!!.UTF_8)
-transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclaration) {
+transformerFactory!!.setAttribute(this.INDENT_NUMBER, indent)
+this.transformer= transformerFactory!!.newTransformer()
+this.transformer.setOutputProperty(OutputKeys.ENCODING, CharacterSetData.getInstance()!!.UTF_8)
+this.transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclaration) {
                             
                             booleanFactory!!.YES
                         
@@ -98,7 +98,7 @@ transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclarat
                             booleanFactory!!.NO
                             }
     )
-transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory!!.YES)
+this.transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory!!.YES)
 } catch(e: Exception)
             {
 
@@ -125,7 +125,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 
     var out: Writer = StringWriter()
 
-transformer.transform(DOMSource(document), StreamResult(out))
+this.transformer.transform(DOMSource(document), StreamResult(out))
 
 
 

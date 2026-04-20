@@ -89,7 +89,7 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var aUnknownSpecificOSAllowed = aUnknownSpecificOSAllowed
-unknownSpecificOSAllowed= aUnknownSpecificOSAllowed
+this.unknownSpecificOSAllowed= aUnknownSpecificOSAllowed
 }
 
 

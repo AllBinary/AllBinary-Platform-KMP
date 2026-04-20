@@ -81,7 +81,7 @@ this.name= name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SPELL_GAME_SKILL_TYPE +this.getName()
+                        return this.SPELL_GAME_SKILL_TYPE +this.getName()
 }
 
 

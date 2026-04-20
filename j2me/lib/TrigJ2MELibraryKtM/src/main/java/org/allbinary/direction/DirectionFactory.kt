@@ -86,13 +86,13 @@ private constructor ()
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-UP_LEFT= Direction("UP LEFT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 4)
+this.UP_LEFT= Direction("UP LEFT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 4)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-UP_RIGHT= Direction("UP RIGHT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 5)
+this.UP_RIGHT= Direction("UP RIGHT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 5)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-DOWN_LEFT= Direction("DOWN LEFT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 6)
+this.DOWN_LEFT= Direction("DOWN LEFT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 6)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-DOWN_RIGHT= Direction("DOWN RIGHT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 7)
+this.DOWN_RIGHT= Direction("DOWN RIGHT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 7)
 }
 
 

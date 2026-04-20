@@ -71,7 +71,7 @@ var base = base
 
         try {
             
-    var transformInfoHttpStoreInterface: TransformInfoHttpStoreInterface = parentTransformInfoInterface as TransformInfoHttpStoreInterface
+    var transformInfoHttpStoreInterface: TransformInfoHttpStoreInterface = this.parentTransformInfoInterface as TransformInfoHttpStoreInterface
 
 
     var fileAbPath: AbPath = AbFilePath(URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH +transformInfoHttpStoreInterface!!.getStoreName() +AbPathData.getInstance()!!.SEPARATOR +href) as AbPath

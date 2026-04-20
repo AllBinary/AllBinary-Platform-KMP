@@ -52,7 +52,7 @@ companion object {
     private val id: Int
 public constructor (){
 this.id= index++
-this.motionGestureRecognizer= MotionGestureRecognizer(id)
+this.motionGestureRecognizer= MotionGestureRecognizer(this.id)
 this.touchButtonRecognizer= TouchButtonRecognizer()
 }
 
@@ -71,13 +71,13 @@ this.touchButtonRecognizer= TouchButtonRecognizer()
                         if(this.touchButtonRecognizer!!.pressTouchButtonInput(x, y, deviceId))
                         
                                     {
-                                    touchButtonProcessing= true
+                                    this.touchButtonProcessing= true
 
                                     }
                                 
 
     
-                        if(!touchButtonProcessing)
+                        if(!this.touchButtonProcessing)
                         
                                     {
                                     
@@ -111,7 +111,7 @@ this.motionGestureRecognizer!!.processPressedMotionEvent(point, deviceId, modifi
                                 
 
     
-                        if(!touchButtonProcessing)
+                        if(!this.touchButtonProcessing)
                         
                                     {
                                     
@@ -125,10 +125,10 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
                                 
 
     
-                        if(touchButtonProcessing)
+                        if(this.touchButtonProcessing)
                         
                                     {
-                                    touchButtonProcessing= false
+                                    this.touchButtonProcessing= false
 
                                     }
                                 
@@ -146,7 +146,7 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
     //var modifiers = modifiers
 
     
-                        if(touchButtonProcessing)
+                        if(this.touchButtonProcessing)
                         
                                     {
                                     this.touchButtonRecognizer!!.pressTouchButtonInput(x, y, deviceId)
@@ -155,7 +155,7 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
                                 
 
     
-                        if(!touchButtonProcessing)
+                        if(!this.touchButtonProcessing)
                         
                                     {
                                     
@@ -185,7 +185,7 @@ this.motionGestureRecognizer!!.processDraggedMotionEvent(point, deviceId, modifi
     //var modifiers = modifiers
 
     
-                        if(x != lastX || y != lastY)
+                        if(x != this.lastX || y != this.lastY)
                         
                                     {
                                     this.lastX= x

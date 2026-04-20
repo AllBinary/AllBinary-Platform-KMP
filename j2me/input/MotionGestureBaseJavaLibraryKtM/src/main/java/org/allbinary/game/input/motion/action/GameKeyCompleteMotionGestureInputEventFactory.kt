@@ -64,7 +64,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyCompleteMotionGestureInputEvent = gameKeyCompleteMotionGestureInputEvent
-eventList!!.add(gameKeyCompleteMotionGestureInputEvent)
+this.eventList!!.add(gameKeyCompleteMotionGestureInputEvent)
 }
 
 
@@ -72,12 +72,12 @@ eventList!!.add(gameKeyCompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and true)) = true
 {
 this.logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.appendint(eventList!!.size())!!.toString(), this, "updateAll")
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.appendint(this.eventList!!.size())!!.toString(), this, "updateAll")
 
 
 
 
-                        for (index in eventList!!.size() -1 downTo 0)
+                        for (index in this.eventList!!.size() -1 downTo 0)
 
         {
 

@@ -84,14 +84,14 @@ this.anyType= anyType
 
         try {
             
-    var dynamicClass: KClass<*> = anyType!!::class!!
+    var dynamicClass: KClass<*> = this.anyType!!::class!!
 
 
-    var method: Method = dynamicClass!!.getMethod(METHOD_CALL_GET_HOST_NAME, 
+    var method: Method = dynamicClass!!.getMethod(this.METHOD_CALL_GET_HOST_NAME, 
                             null)!!
 
 
-    var result: String = method.invoke(anyType, 
+    var result: String = method.invoke(this.anyType, 
                             null) as String
 
 
@@ -117,14 +117,14 @@ this.anyType= anyType
 
         try {
             
-    var dynamicClass: KClass<*> = anyType!!::class!!
+    var dynamicClass: KClass<*> = this.anyType!!::class!!
 
 
-    var method: Method = dynamicClass!!.getMethod(METHOD_CALL_ADD_USERS, 
+    var method: Method = dynamicClass!!.getMethod(this.METHOD_CALL_ADD_USERS, 
                             null)!!
 
 
-    var result: Boolean = method.invoke(anyType, 
+    var result: Boolean = method.invoke(this.anyType, 
                             null) as Boolean
 
 
@@ -150,14 +150,14 @@ this.anyType= anyType
 
         try {
             
-    var dynamicClass: KClass<*> = anyType!!::class!!
+    var dynamicClass: KClass<*> = this.anyType!!::class!!
 
 
-    var method: Method = dynamicClass!!.getMethod(METHOD_CALL_ADD_DATABASES, 
+    var method: Method = dynamicClass!!.getMethod(this.METHOD_CALL_ADD_DATABASES, 
                             null)!!
 
 
-    var result: Boolean = method.invoke(anyType, 
+    var result: Boolean = method.invoke(this.anyType, 
                             null) as Boolean
 
 
@@ -183,14 +183,14 @@ this.anyType= anyType
 
         try {
             
-    var dynamicClass: KClass<*> = anyType!!::class!!
+    var dynamicClass: KClass<*> = this.anyType!!::class!!
 
 
-    var method: Method = dynamicClass!!.getMethod(METHOD_CALL_ADD_TABLES, 
+    var method: Method = dynamicClass!!.getMethod(this.METHOD_CALL_ADD_TABLES, 
                             null)!!
 
 
-    var result: Boolean = method.invoke(anyType, 
+    var result: Boolean = method.invoke(this.anyType, 
                             null) as Boolean
 
 
@@ -216,14 +216,14 @@ this.anyType= anyType
 
         try {
             
-    var dynamicClass: KClass<*> = anyType!!::class!!
+    var dynamicClass: KClass<*> = this.anyType!!::class!!
 
 
-    var method: Method = dynamicClass!!.getMethod(METHOD_CALL_TEMP_MAIN_PATH, 
+    var method: Method = dynamicClass!!.getMethod(this.METHOD_CALL_TEMP_MAIN_PATH, 
                             null)!!
 
 
-    var result: Boolean = method.invoke(anyType, 
+    var result: Boolean = method.invoke(this.anyType, 
                             null) as Boolean
 
 
@@ -249,14 +249,14 @@ this.anyType= anyType
 
         try {
             
-    var dynamicClass: KClass<*> = anyType!!::class!!
+    var dynamicClass: KClass<*> = this.anyType!!::class!!
 
 
-    var method: Method = dynamicClass!!.getMethod(METHOD_CALL_MAIN_PATH, 
+    var method: Method = dynamicClass!!.getMethod(this.METHOD_CALL_MAIN_PATH, 
                             null)!!
 
 
-    var result: Boolean = method.invoke(anyType, 
+    var result: Boolean = method.invoke(this.anyType, 
                             null) as Boolean
 
 

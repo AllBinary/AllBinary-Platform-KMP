@@ -169,15 +169,15 @@ var layerInterface = layerInterface
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerManager = layerManager
 var layerInterface = layerInterface
-BUILD_BUILDING_RTS_LAYER_EVENT.setRtsLayer(layerInterface)
-BuildingEventHandler.getInstance()!!.fireEvent(BUILD_BUILDING_RTS_LAYER_EVENT)
+this.BUILD_BUILDING_RTS_LAYER_EVENT.setRtsLayer(layerInterface)
+BuildingEventHandler.getInstance()!!.fireEvent(this.BUILD_BUILDING_RTS_LAYER_EVENT)
 
     
                         if(
                                     (rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface).isLocalPlayer())
                         
                                     {
-                                    LocalPlayerBuildingEventHandler.getInstance()!!.fireEvent(BUILD_BUILDING_RTS_LAYER_EVENT)
+                                    LocalPlayerBuildingEventHandler.getInstance()!!.fireEvent(this.BUILD_BUILDING_RTS_LAYER_EVENT)
 
                                     }
                                 

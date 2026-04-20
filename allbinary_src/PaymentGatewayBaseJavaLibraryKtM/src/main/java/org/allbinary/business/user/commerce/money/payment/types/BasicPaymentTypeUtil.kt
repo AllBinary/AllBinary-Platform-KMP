@@ -73,7 +73,7 @@ this.paymentTypeVector!!.add(paymentType)
 : BasicPaymentType{
 var paymentTypeString = paymentTypeString
 
-    var size: Int = paymentTypeVector!!.size!!
+    var size: Int = this.paymentTypeVector!!.size!!
 
 
 
@@ -83,7 +83,7 @@ var paymentTypeString = paymentTypeString
 
         {
 
-    var paymentType: BasicPaymentType = paymentTypeVector!!.get(i) as BasicPaymentType
+    var paymentType: BasicPaymentType = this.paymentTypeVector!!.get(i) as BasicPaymentType
 
 
     
@@ -127,7 +127,7 @@ var a_PaymentTypeVector = a_PaymentTypeVector
     var diff: Vector = Vector()
 
 
-    var size: Int = paymentTypeVector!!.size!!
+    var size: Int = this.paymentTypeVector!!.size!!
 
 
 
@@ -137,7 +137,7 @@ var a_PaymentTypeVector = a_PaymentTypeVector
 
         {
 
-    var paymentType: BasicPaymentType = paymentTypeVector!!.get(i) as BasicPaymentType
+    var paymentType: BasicPaymentType = this.paymentTypeVector!!.get(i) as BasicPaymentType
 
 
     

@@ -131,22 +131,22 @@ this.childActionScriptConditionJPanel= childActionScriptConditionJPanel
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-newActionScriptInputJPanel= javax.swing.JPanel()
-childActionScriptConditionJPanel= javax.swing.JPanel()
-newActionScriptConditionJPanel= javax.swing.JPanel()
-scriptItemJPanel= javax.swing.JPanel()
-removeJPanel= javax.swing.JPanel()
-newActionScriptInputJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+this.newActionScriptInputJPanel= javax.swing.JPanel()
+this.childActionScriptConditionJPanel= javax.swing.JPanel()
+this.newActionScriptConditionJPanel= javax.swing.JPanel()
+this.scriptItemJPanel= javax.swing.JPanel()
+this.removeJPanel= javax.swing.JPanel()
+this.newActionScriptInputJPanel!!.setLayout(java.awt.GridLayout(1, 0))
 
-    var childActionScriptConditionJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(childActionScriptConditionJPanel)
+    var childActionScriptConditionJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.childActionScriptConditionJPanel)
 
-childActionScriptConditionJPanel!!.setLayout(childActionScriptConditionJPanelLayout)
+this.childActionScriptConditionJPanel!!.setLayout(childActionScriptConditionJPanelLayout)
 childActionScriptConditionJPanelLayout!!.setHorizontalGroup(childActionScriptConditionJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 229, Short.MAX_VALUE))
 childActionScriptConditionJPanelLayout!!.setVerticalGroup(childActionScriptConditionJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 8, Short.MAX_VALUE))
-newActionScriptConditionJPanel!!.setLayout(java.awt.GridLayout(1, 0))
-scriptItemJPanel!!.setLayout(java.awt.GridLayout(1, 1))
-removeJPanel!!.setLayout(java.awt.GridLayout(1, 1))
-removeJPanel!!.setMinimumSize(java.awt.Dimension(30, 20))
+this.newActionScriptConditionJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+this.scriptItemJPanel!!.setLayout(java.awt.GridLayout(1, 1))
+this.removeJPanel!!.setLayout(java.awt.GridLayout(1, 1))
+this.removeJPanel!!.setMinimumSize(java.awt.Dimension(30, 20))
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 

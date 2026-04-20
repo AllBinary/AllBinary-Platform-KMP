@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.TsUtil
 
 open public class ComparableObject
             : Object
@@ -43,7 +44,7 @@ open public class ComparableObject
 var anyType = anyType
 
     
-                        if(this.hashCode() < anyType!!.hashCode())
+                        if(TsUtil.getInstance()!!.hashCode(this) < TsUtil.getInstance()!!.hashCode(anyType))
                         
                                     {
                                     
@@ -56,7 +57,7 @@ var anyType = anyType
                                 
                              else 
     
-                        if(this.hashCode() > anyType!!.hashCode())
+                        if(TsUtil.getInstance()!!.hashCode(this) > TsUtil.getInstance()!!.hashCode(anyType))
                         
                                     {
                                     

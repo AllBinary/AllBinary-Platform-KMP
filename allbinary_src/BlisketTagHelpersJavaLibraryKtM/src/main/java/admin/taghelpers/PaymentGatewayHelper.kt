@@ -54,7 +54,7 @@ var pageContext = pageContext
 
         try {
             this.weblisketSession= WeblisketSession(hashMap, pageContext)
-httpServletRequest= pageContext!!.getRequest() as HttpServletRequest
+this.httpServletRequest= pageContext!!.getRequest() as HttpServletRequest
 this.portion= Portion(hashMap)
 } catch(e: Exception)
             {
@@ -83,7 +83,7 @@ this.portion= Portion(hashMap)
         try {
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
-                            getInstance(httpServletRequest)!!
+                            getInstance(this.httpServletRequest)!!
 
 paymentGatewayInterface!!.setStoreName(this.weblisketSession!!.getStoreName())
 PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
@@ -135,7 +135,7 @@ PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
         try {
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
-                            getInstance(httpServletRequest)!!
+                            getInstance(this.httpServletRequest)!!
 
 paymentGatewayInterface!!.setStoreName(this.weblisketSession!!.getStoreName())
 
@@ -203,7 +203,7 @@ PaymentGatewayEntityFactory.getInstance()!!.update(paymentGatewayInterface)
         try {
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
-                            getInstance(httpServletRequest)!!
+                            getInstance(this.httpServletRequest)!!
 
 paymentGatewayInterface!!.setStoreName(this.weblisketSession!!.getStoreName())
 

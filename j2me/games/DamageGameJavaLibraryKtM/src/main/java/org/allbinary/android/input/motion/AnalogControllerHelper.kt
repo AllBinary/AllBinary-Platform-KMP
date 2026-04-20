@@ -59,7 +59,7 @@ this.reduceTimeFactor= reduceTimeFactor
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 var xAnalogValue = xAnalogValue
-this.rightTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
+this.rightTimeElapsedHelper!!.delay= ((this.SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
 
     
                         if(this.rightTimeElapsedHelper!!.isTime())
@@ -79,7 +79,7 @@ this.rightTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduc
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 var xAnalogValue = xAnalogValue
-this.leftTimeElapsedHelper!!.delay= ((SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
+this.leftTimeElapsedHelper!!.delay= ((this.SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
 
     
                         if(this.leftTimeElapsedHelper!!.isTime())
@@ -99,7 +99,7 @@ this.leftTimeElapsedHelper!!.delay= ((SCALE_VALUE +xAnalogValue) shr this.reduce
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 var xAnalogValue = xAnalogValue
-this.upTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
+this.upTimeElapsedHelper!!.delay= ((this.SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
 
     
                         if(this.upTimeElapsedHelper!!.isTime())
@@ -119,7 +119,7 @@ this.upTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduceTi
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 var xAnalogValue = xAnalogValue
-this.downTimeElapsedHelper!!.delay= ((SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
+this.downTimeElapsedHelper!!.delay= ((this.SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
 
     
                         if(this.downTimeElapsedHelper!!.isTime())

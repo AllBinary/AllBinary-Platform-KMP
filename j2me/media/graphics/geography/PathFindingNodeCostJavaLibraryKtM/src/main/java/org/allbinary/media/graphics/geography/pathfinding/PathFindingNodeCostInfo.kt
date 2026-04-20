@@ -73,10 +73,10 @@ this.totalCostP= totalCost
     open fun setTotalCost()
         //nullable = true from not(false or (false and true)) = true
 {
-this.totalCostP= costFromStartP +costToEndP
+this.totalCostP= this.costFromStartP +this.costToEndP
 
     
-                        if(this.totalCostP > pathFindingNodeCostInfoData!!.MAX_NODE_COST)
+                        if(this.totalCostP > this.pathFindingNodeCostInfoData!!.MAX_NODE_COST)
                         
                                     {
                                     

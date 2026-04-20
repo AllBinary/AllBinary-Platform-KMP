@@ -59,8 +59,8 @@ this.setBasicColorP(basicColor)
     //var graphics = graphics
     //var x = x
     //var y = y
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
-graphics.fillRect(x, y, width, height)
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
+graphics.fillRect(x, y, this.width, this.height)
 }
 
 

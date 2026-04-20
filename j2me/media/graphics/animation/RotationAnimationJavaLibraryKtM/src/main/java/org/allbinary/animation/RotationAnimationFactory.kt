@@ -44,7 +44,7 @@ public constructor ()
             : super()
         {
 this.totalAngle= AngleFactory.getInstance()!!.TOTAL_ANGLE
-this.angleIncrement= (totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
+this.angleIncrement= (this.totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
 }
 
 public constructor (totalAngle: Short, angleIncrement: Short)

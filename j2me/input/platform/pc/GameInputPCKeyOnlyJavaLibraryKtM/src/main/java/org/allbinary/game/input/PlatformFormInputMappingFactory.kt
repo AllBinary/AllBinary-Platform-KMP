@@ -66,7 +66,7 @@ companion object {
         try {
             
     
-                        if(SINGLETON == InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING)
+                        if(this.SINGLETON == InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING)
                         
                                     {
                                     
@@ -83,7 +83,7 @@ inputToGameKeyMapping!!.add(gameKeyFactory!!.DOWN, pcKeyFactory!!.DPAD_DOWN)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.LEFT, pcKeyFactory!!.DPAD_LEFT)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.RIGHT, pcKeyFactory!!.DPAD_RIGHT)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.KEY_NUM1, pcKeyFactory!!.ENTER)
-SINGLETON= inputToGameKeyMapping
+this.SINGLETON= inputToGameKeyMapping
 
                                     }
                                 

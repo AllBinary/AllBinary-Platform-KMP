@@ -59,7 +59,7 @@ var after = after
 var length = length
 this.length= length.toString().toCharArray().concatToString()
                                 
-addAttribute(MAXLENGTH, this.length)
+addAttribute(this.MAXLENGTH, this.length)
 }
 
 
@@ -69,7 +69,7 @@ addAttribute(MAXLENGTH, this.length)
 var size = size
 this.size= size.toString().toCharArray().concatToString()
                                 
-addAttribute(MAXLENGTH, this.size)
+addAttribute(this.MAXLENGTH, this.size)
 }
 
 

@@ -82,11 +82,11 @@ this.init()
 var dx = dx
 var dy = dy
 
-    var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var terrainTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 terrainTiledLayer!!.move( -dx,  -dy)
-scrollMapEvent!!.setDxDy( -dx,  -dy)
-ScrollMapEventHandler.getInstance()!!.fireEvent(scrollMapEvent)
+this.scrollMapEvent!!.setDxDy( -dx,  -dy)
+ScrollMapEventHandler.getInstance()!!.fireEvent(this.scrollMapEvent)
 }
 
 
@@ -104,7 +104,7 @@ this.maxRight= this.getSpecialWidth()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var terrainTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -140,7 +140,7 @@ this.move(diffX, 0)
 {
 var anchor = anchor
 
-    var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var terrainTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -197,7 +197,7 @@ this.move(0, diffY)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var y: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() -10
+    var y: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() -10
 
 
     
@@ -217,7 +217,7 @@ this.move(0, diffY)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var y: Int =  -geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() +10
+    var y: Int =  -this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() +10
 
 
     
@@ -237,7 +237,7 @@ this.move(0, diffY)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var x: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() +10
+    var x: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() +10
 
 
     
@@ -257,7 +257,7 @@ this.move(0, diffY)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var x: Int =  -geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() -10
+    var x: Int =  -this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() -10
 
 
     
@@ -288,7 +288,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
-inputProcessorArray[key]!!.process(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
+this.inputProcessorArray[key]!!.process(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
 }
 
 
@@ -301,7 +301,7 @@ var layerManager = layerManager
 
         try {
             
-    var size: Int = inputList!!.size()!!
+    var size: Int = this.inputList!!.size()!!
 
 
     var key: Int = 0
@@ -314,7 +314,7 @@ var layerManager = layerManager
 
         {
 
-    var gameKeyEvent: GameKeyEvent = inputList!!.get(index) as GameKeyEvent
+    var gameKeyEvent: GameKeyEvent = this.inputList!!.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
 this.processInput(key)
@@ -346,7 +346,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_I
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var terrainTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -380,7 +380,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_I
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var terrainTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -415,11 +415,11 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_I
 : Boolean{
 var newY = newY
 
-    var y: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
+    var y: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
 
 
     
-                        if(y > maxBottom +border)
+                        if(y > this.maxBottom +this.border)
                         
                                     {
                                     
@@ -447,11 +447,11 @@ var newY = newY
 : Boolean{
 var newY = newY
 
-    var y: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
+    var y: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
 
 
     
-                        if(y <  -border)
+                        if(y <  -this.border)
                         
                                     {
                                     
@@ -479,11 +479,11 @@ var newY = newY
 : Boolean{
 var newX = newX
 
-    var x: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
+    var x: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
 
 
     
-                        if(x <  -maxRight -border)
+                        if(x <  -this.maxRight -this.border)
                         
                                     {
                                     
@@ -511,11 +511,11 @@ var newX = newX
 : Boolean{
 var newX = newX
 
-    var x: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
+    var x: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
 
 
     
-                        if(x > border)
+                        if(x > this.border)
                         
                                     {
                                     

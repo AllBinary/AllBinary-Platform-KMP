@@ -54,10 +54,10 @@ protected constructor ()
 var layerInterface = layerInterface
 
     
-                        if(!list.contains(layerInterface))
+                        if(!this.list.contains(layerInterface))
                         
                                     {
-                                    list.add(layerInterface)
+                                    this.list.add(layerInterface)
 
                                     }
                                 

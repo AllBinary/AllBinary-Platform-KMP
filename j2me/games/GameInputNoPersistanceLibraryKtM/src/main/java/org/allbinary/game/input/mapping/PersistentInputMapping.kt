@@ -69,7 +69,7 @@ protected constructor (name: String)
             : super()
         {
 var name = name
-inputPersistance= InputPersistance(name)
+this.inputPersistance= InputPersistance(name)
 }
 
 
@@ -137,8 +137,8 @@ this.save(abeClientInformation)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
-inputPersistance!!.save(abeClientInformation, this.getInputMapping()!!.getHashtable())
-inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
+this.inputPersistance!!.save(abeClientInformation, this.getInputMapping()!!.getHashtable())
+this.inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
 
     
                         if(this.getInputMappingEventListenerInterface() != 
@@ -146,7 +146,7 @@ inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
                                 )
                         
                                     {
-                                    this.getInputMappingEventListenerInterface()!!.onInputMappingEvent(inputMappingEvent)
+                                    this.getInputMappingEventListenerInterface()!!.onInputMappingEvent(this.inputMappingEvent)
 
                                     }
                                 
@@ -162,17 +162,17 @@ inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
 this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 
         try {
-            inputPersistance!!.loadAll(abeClientInformation)
+            this.inputPersistance!!.loadAll(abeClientInformation)
 } catch(e: Exception)
             {
 PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
-inputPersistance!!.deleteRecoreStore(abeClientInformation)
+this.inputPersistance!!.deleteRecoreStore(abeClientInformation)
 this.setDefault(abeClientInformation)
-inputPersistance!!.loadAll(abeClientInformation)
+this.inputPersistance!!.loadAll(abeClientInformation)
 }
 
 
-    var list: BasicArrayList = inputPersistance!!.getList()!!
+    var list: BasicArrayList = this.inputPersistance!!.getList()!!
 
 
     var totalMappedTo: Int = 0
@@ -262,7 +262,7 @@ var input = input
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -275,7 +275,7 @@ var input = input
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 

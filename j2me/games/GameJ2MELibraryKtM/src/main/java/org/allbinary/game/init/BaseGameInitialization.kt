@@ -149,7 +149,7 @@ CompleteMotionGestureInputToGameMotionGestureInput.getInstance()!!.init()
 progressCanvas!!.addPortion(localPortion, "Motion Input")
 GameFeatureImageCacheFactory.init()
 progressCanvas!!.addPortion(localPortion, "Image Cache")
-this.resourceInitializationArray[EARLY_RESOURCES]!!.init()
+this.resourceInitializationArray[this.EARLY_RESOURCES]!!.init()
 
                                     }
                                 

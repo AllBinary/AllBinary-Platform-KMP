@@ -177,7 +177,7 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 this.process(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, eventStrings!!.FIRE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, eventStrings!!.FIRE_EVENT, e)
 }
 
 index++
@@ -214,7 +214,7 @@ eventListenerInterface!!.onEvent(eventObject)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(eventStrings!!.TOTAL_LISTENERS)
+stringBuffer!!.append(this.eventStrings!!.TOTAL_LISTENERS)
 stringBuffer!!.appendint(this.eventListenerInterfaceList!!.size())
 
     var eventListenerInterface: EventListenerInterface
@@ -228,7 +228,7 @@ stringBuffer!!.appendint(this.eventListenerInterfaceList!!.size())
 
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
-stringBuffer!!.append(eventStrings!!.LISTENER_LABEL)
+stringBuffer!!.append(this.eventStrings!!.LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
             {

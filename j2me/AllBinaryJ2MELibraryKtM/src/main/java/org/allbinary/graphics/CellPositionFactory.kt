@@ -119,7 +119,7 @@ var i_row = i_row
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cellPositionArray[i_column]!![i_row]!!
+                        return this.cellPositionArray[i_column]!![i_row]!!
 } catch(e: Exception)
             {
 
@@ -143,7 +143,7 @@ this.logUtil!!.put(StringMaker().
 var i_column = i_column
 var i_row = i_row
 
-    var cellPositionCanBeNull: CellPosition? = cellPositionArray[i_column]!![i_row]
+    var cellPositionCanBeNull: CellPosition? = this.cellPositionArray[i_column]!![i_row]
 
 
     
@@ -153,7 +153,7 @@ var i_row = i_row
                         
                                     {
                                     cellPositionCanBeNull= CellPosition(i_column, i_row, this.columns, this.rows)
-cellPositionArray[i_column]!![i_row]= cellPositionCanBeNull
+this.cellPositionArray[i_column]!![i_row]= cellPositionCanBeNull
 
                                     }
                                 

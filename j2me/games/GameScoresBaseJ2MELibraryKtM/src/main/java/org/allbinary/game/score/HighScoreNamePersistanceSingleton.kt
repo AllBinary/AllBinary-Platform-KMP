@@ -102,7 +102,7 @@ this.name= StringUtil.getInstance()!!.EMPTY_STRING
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo
 
-    var size: Int = nameBasicArrayList!!.size()!!
+    var size: Int = this.nameBasicArrayList!!.size()!!
 
 
 
@@ -239,7 +239,7 @@ inputStream= DataInputStream(byteArrayInputStream)
 this.name= inputStream!!.readUTF()
 }
 
-nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
+this.nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
 }
 
 

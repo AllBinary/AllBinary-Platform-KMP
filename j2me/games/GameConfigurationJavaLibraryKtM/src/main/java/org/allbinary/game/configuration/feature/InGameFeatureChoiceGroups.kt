@@ -85,7 +85,7 @@ private constructor ()
 {
 var name = name
 var list = list
-hashtable.put(name, list)
+this.hashtable.put(name, list)
 }
 
 

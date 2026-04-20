@@ -64,8 +64,8 @@ this.setP2(p2)
     open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
-deltaX= getP1()!!.getX().toDouble() -getP2()!!.getX()
-deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
+this.deltaX= getP1()!!.getX().toDouble() -getP2()!!.getX()
+this.deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
 }
 
 

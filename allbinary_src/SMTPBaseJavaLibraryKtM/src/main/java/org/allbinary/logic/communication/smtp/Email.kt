@@ -233,7 +233,7 @@ this.properties.put(SMTP_LOCAL_HOST, "FakeHostName")
 
 
     
-                        if(isDebug)
+                        if(this.isDebug)
                         
                                     {
                                     this.properties.put(DEBUG, "true")
@@ -241,28 +241,28 @@ this.properties.put(SMTP_LOCAL_HOST, "FakeHostName")
                                     }
                                 
 
-    var session: Session = Session.getInstance(properties, authenticator)!!
+    var session: Session = Session.getInstance(this.properties, authenticator)!!
 
 
     
-                        if(isDebug)
+                        if(this.isDebug)
                         
                                     {
                                     session.setDebug(true)
-bs= ByteArrayOutputStream()
+this.bs= ByteArrayOutputStream()
 
-    var printStream: PrintStream = PrintStream(bs)
+    var printStream: PrintStream = PrintStream(this.bs)
 
 session.setDebugOut(printStream)
 
                                     }
                                 
-msg= MimeMessage(session)
-msg.addFrom(addresses_from)
-msg.setRecipients(Message.RecipientType.TO, addresses_to)
-msg.setRecipients(Message.RecipientType.CC, addresses_cc)
-msg.setRecipients(Message.RecipientType.BCC, addresses_bcc)
-msg.setSubject(subject)
+this.msg= MimeMessage(session)
+this.msg.addFrom(addresses_from)
+this.msg.setRecipients(Message.RecipientType.TO, addresses_to)
+this.msg.setRecipients(Message.RecipientType.CC, addresses_cc)
+this.msg.setRecipients(Message.RecipientType.BCC, addresses_bcc)
+this.msg.setSubject(subject)
 
     var mimeMultipart: MimeMultipart = MimeMultipart()
 
@@ -276,7 +276,7 @@ msg.setSubject(subject)
 mimeMultipart!!.addBodyPart(mimeBodyParts[i]!!)
 }
 
-msg.setContent(mimeMultipart)
+this.msg.setContent(mimeMultipart)
 }
 
 
@@ -296,7 +296,7 @@ msg.setContent(mimeMultipart)
 : String{
 
     
-                        if(isDebug)
+                        if(this.isDebug)
                         
                                     {
                                     
@@ -344,9 +344,9 @@ msg.setContent(mimeMultipart)
             
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-hashMap!!.put(EmailData.SERVER, properties.get(SMTP_HOST) as String)
+hashMap!!.put(EmailData.SERVER, this.properties.get(SMTP_HOST) as String)
 
-    var addresses: Array<Address?> = msg.getFrom()!!
+    var addresses: Array<Address?> = this.msg.getFrom()!!
 
 
     
@@ -368,7 +368,7 @@ hashMap!!.put(EmailData.FROM, addresses[index]!!.toString())
 
                                     }
                                 
-addresses= msg.getRecipients(Message.RecipientType.TO)
+addresses= this.msg.getRecipients(Message.RecipientType.TO)
 
     
                         if(addresses != 
@@ -389,7 +389,7 @@ hashMap!!.put(EmailData.TO, addresses[index]!!.toString())
 
                                     }
                                 
-addresses= msg.getRecipients(Message.RecipientType.CC)
+addresses= this.msg.getRecipients(Message.RecipientType.CC)
 
     
                         if(addresses != 
@@ -410,7 +410,7 @@ hashMap!!.put(EmailData.CC, addresses[index]!!.toString())
 
                                     }
                                 
-addresses= msg.getRecipients(Message.RecipientType.BCC)
+addresses= this.msg.getRecipients(Message.RecipientType.BCC)
 
     
                         if(addresses != 
@@ -470,7 +470,7 @@ hashMap!!.put(EmailData.CONTENT, content)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toHashMap()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toHashMap()", e)
 
                                     }
                                 

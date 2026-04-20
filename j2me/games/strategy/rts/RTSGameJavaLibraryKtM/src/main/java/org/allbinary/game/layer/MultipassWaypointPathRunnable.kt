@@ -252,9 +252,9 @@ this.setRunning(false)
         //nullable = true from not(false or (false and true)) = true
 {
 multipassState!!.step= 0
-multipassState!!.iteration= 0
-multipassState!!.iteration2= 0
-pathFindingInfo= NullUtil.getInstance()!!.NULL_OBJECT
+this.multipassState!!.iteration= 0
+this.multipassState!!.iteration2= 0
+this.pathFindingInfo= NullUtil.getInstance()!!.NULL_OBJECT
 }
 
 
@@ -262,8 +262,8 @@ pathFindingInfo= NullUtil.getInstance()!!.NULL_OBJECT
         //nullable = true from not(false or (false and true)) = true
 {
 this.reset2()
-currentPassRunnable= ALREADY_ENDED_RUNNABLE
-done= true
+this.currentPassRunnable= ALREADY_ENDED_RUNNABLE
+this.done= true
 }
 
 

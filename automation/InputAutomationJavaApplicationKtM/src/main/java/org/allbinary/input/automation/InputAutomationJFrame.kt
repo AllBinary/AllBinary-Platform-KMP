@@ -174,7 +174,7 @@ initComponents()
     var url: URL = this::class.getResource("/help/Help.hs")!!
 
 this.logUtil!!.putF("URL: " +url, this, this.commonStrings!!.CONSTRUCTOR)
-helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)
+this.helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)
 url= this::class.getResource("/resources/allbinaryicon8bit.jpg")
 
     var imageIcon: ImageIcon = ImageIcon(url)
@@ -218,31 +218,31 @@ this.gameRobotJTabbedPane!!.setSelectedIndex(0)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-noModuleSelectedJDialog= javax.swing.JDialog()
-noModuleSelectedJLabel= javax.swing.JLabel()
-gameRobotJTabbedPane= javax.swing.JTabbedPane()
-inputAutomationModuleJPanel= javax.swing.JPanel()
-jScrollPane1= javax.swing.JScrollPane()
-inputAutomationModuleJList= javax.swing.JList()
-automationModuleConfigurationJPanel= javax.swing.JPanel()
-mainJMenuBar= javax.swing.JMenuBar()
-processingJMenu= javax.swing.JMenu()
-startJMenuItem= javax.swing.JMenuItem()
-stopJMenuItem= javax.swing.JMenuItem()
-optionsJMenu= javax.swing.JMenu()
-stopOnFocusJCheckBoxMenuItem= javax.swing.JCheckBoxMenuItem()
-toolsJMenu= javax.swing.JMenu()
-helpJMenuItem= javax.swing.JMenuItem()
-updatesJMenuItem= javax.swing.JMenuItem()
-subscriptionJMenuItem= javax.swing.JMenuItem()
-modulesJMenuItem= javax.swing.JMenuItem()
-aboutJMenuItem= javax.swing.JMenuItem()
-noModuleSelectedJDialog!!.setMinimumSize(java.awt.Dimension(200, 100))
-noModuleSelectedJLabel!!.setText("Please Select A Module")
+this.noModuleSelectedJDialog= javax.swing.JDialog()
+this.noModuleSelectedJLabel= javax.swing.JLabel()
+this.gameRobotJTabbedPane= javax.swing.JTabbedPane()
+this.inputAutomationModuleJPanel= javax.swing.JPanel()
+this.jScrollPane1= javax.swing.JScrollPane()
+this.inputAutomationModuleJList= javax.swing.JList()
+this.automationModuleConfigurationJPanel= javax.swing.JPanel()
+this.mainJMenuBar= javax.swing.JMenuBar()
+this.processingJMenu= javax.swing.JMenu()
+this.startJMenuItem= javax.swing.JMenuItem()
+this.stopJMenuItem= javax.swing.JMenuItem()
+this.optionsJMenu= javax.swing.JMenu()
+this.stopOnFocusJCheckBoxMenuItem= javax.swing.JCheckBoxMenuItem()
+this.toolsJMenu= javax.swing.JMenu()
+this.helpJMenuItem= javax.swing.JMenuItem()
+this.updatesJMenuItem= javax.swing.JMenuItem()
+this.subscriptionJMenuItem= javax.swing.JMenuItem()
+this.modulesJMenuItem= javax.swing.JMenuItem()
+this.aboutJMenuItem= javax.swing.JMenuItem()
+this.noModuleSelectedJDialog!!.setMinimumSize(java.awt.Dimension(200, 100))
+this.noModuleSelectedJLabel!!.setText("Please Select A Module")
 
-    var noModuleSelectedJDialogLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(noModuleSelectedJDialog!!.getContentPane())
+    var noModuleSelectedJDialogLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.noModuleSelectedJDialog!!.getContentPane())
 
-noModuleSelectedJDialog!!.getContentPane()!!.setLayout(noModuleSelectedJDialogLayout)
+this.noModuleSelectedJDialog!!.getContentPane()!!.setLayout(noModuleSelectedJDialogLayout)
 noModuleSelectedJDialogLayout!!.setHorizontalGroup(noModuleSelectedJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(noModuleSelectedJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(noModuleSelectedJLabel)!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
 noModuleSelectedJDialogLayout!!.setVerticalGroup(noModuleSelectedJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(noModuleSelectedJLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE)
@@ -286,8 +286,8 @@ formFocusLost(evt)
 
                                 }
                             )
-gameRobotJTabbedPane!!.setMinimumSize(java.awt.Dimension(320, 200))
-inputAutomationModuleJList!!.setMinimumSize(java.awt.Dimension(200, 0))
+this.gameRobotJTabbedPane!!.setMinimumSize(java.awt.Dimension(320, 200))
+this.inputAutomationModuleJList!!.setMinimumSize(java.awt.Dimension(200, 0))
 inputAutomationModuleJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
@@ -300,24 +300,24 @@ inputAutomationModuleJListValueChanged(evt)
 
                                 }
                             )
-jScrollPane1!!.setViewportView(inputAutomationModuleJList)
+this.jScrollPane1!!.setViewportView(this.inputAutomationModuleJList)
 
-    var inputAutomationModuleJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(inputAutomationModuleJPanel)
+    var inputAutomationModuleJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.inputAutomationModuleJPanel)
 
-inputAutomationModuleJPanel!!.setLayout(inputAutomationModuleJPanelLayout)
+this.inputAutomationModuleJPanel!!.setLayout(inputAutomationModuleJPanelLayout)
 inputAutomationModuleJPanelLayout!!.setHorizontalGroup(inputAutomationModuleJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(inputAutomationModuleJPanelLayout!!.createSequentialGroup()!!.addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(367, Short.MAX_VALUE)))
 inputAutomationModuleJPanelLayout!!.setVerticalGroup(inputAutomationModuleJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(inputAutomationModuleJPanelLayout!!.createSequentialGroup()!!.addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-gameRobotJTabbedPane!!.addTab("Modules", inputAutomationModuleJPanel)
+this.gameRobotJTabbedPane!!.addTab("Modules", inputAutomationModuleJPanel)
 
-    var automationModuleConfigurationJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(automationModuleConfigurationJPanel)
+    var automationModuleConfigurationJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.automationModuleConfigurationJPanel)
 
-automationModuleConfigurationJPanel!!.setLayout(automationModuleConfigurationJPanelLayout)
+this.automationModuleConfigurationJPanel!!.setLayout(automationModuleConfigurationJPanelLayout)
 automationModuleConfigurationJPanelLayout!!.setHorizontalGroup(automationModuleConfigurationJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 566, Short.MAX_VALUE))
 automationModuleConfigurationJPanelLayout!!.setVerticalGroup(automationModuleConfigurationJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 334, Short.MAX_VALUE))
-gameRobotJTabbedPane!!.addTab("Configuration", automationModuleConfigurationJPanel)
-processingJMenu!!.setText("Processing")
-processingJMenu!!.setToolTipText("Set module processing state")
-startJMenuItem!!.setText(this.commonStrings!!.START)
+this.gameRobotJTabbedPane!!.addTab("Configuration", automationModuleConfigurationJPanel)
+this.processingJMenu!!.setText("Processing")
+this.processingJMenu!!.setToolTipText("Set module processing state")
+this.startJMenuItem!!.setText(this.commonStrings!!.START)
 startJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -330,8 +330,8 @@ startJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(startJMenuItem)
-stopJMenuItem!!.setText("Stop")
+this.processingJMenu!!.add(this.startJMenuItem)
+this.stopJMenuItem!!.setText("Stop")
 stopJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -344,9 +344,9 @@ stopJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(stopJMenuItem)
-mainJMenuBar!!.add(processingJMenu)
-optionsJMenu!!.setText("Options")
+this.processingJMenu!!.add(this.stopJMenuItem)
+this.mainJMenuBar!!.add(this.processingJMenu)
+this.optionsJMenu!!.setText("Options")
 optionsJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -359,9 +359,9 @@ optionsJMenuActionPerformed(evt)
 
                                 }
                             )
-stopOnFocusJCheckBoxMenuItem!!.setSelected(true)
-stopOnFocusJCheckBoxMenuItem!!.setEnabled(false)
-stopOnFocusJCheckBoxMenuItem!!.setLabel("Stop Module On Focus")
+this.stopOnFocusJCheckBoxMenuItem!!.setSelected(true)
+this.stopOnFocusJCheckBoxMenuItem!!.setEnabled(false)
+this.stopOnFocusJCheckBoxMenuItem!!.setLabel("Stop Module On Focus")
 stopOnFocusJCheckBoxMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -374,10 +374,10 @@ stopOnFocusJCheckBoxMenuItemActionPerformed(evt)
 
                                 }
                             )
-optionsJMenu!!.add(stopOnFocusJCheckBoxMenuItem)
-mainJMenuBar!!.add(optionsJMenu)
-toolsJMenu!!.setText("Help")
-helpJMenuItem!!.setText("Help")
+this.optionsJMenu!!.add(this.stopOnFocusJCheckBoxMenuItem)
+this.mainJMenuBar!!.add(this.optionsJMenu)
+this.toolsJMenu!!.setText("Help")
+this.helpJMenuItem!!.setText("Help")
 helpJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -390,8 +390,8 @@ helpJMenuItemActionPerformed(evt)
 
                                 }
                             )
-toolsJMenu!!.add(helpJMenuItem)
-updatesJMenuItem!!.setText("Updates")
+this.toolsJMenu!!.add(this.helpJMenuItem)
+this.updatesJMenuItem!!.setText("Updates")
 updatesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -404,8 +404,8 @@ updatesJMenuItemActionPerformed(evt)
 
                                 }
                             )
-toolsJMenu!!.add(updatesJMenuItem)
-subscriptionJMenuItem!!.setText("Subscription")
+this.toolsJMenu!!.add(this.updatesJMenuItem)
+this.subscriptionJMenuItem!!.setText("Subscription")
 subscriptionJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -418,8 +418,8 @@ subscriptionJMenuItemActionPerformed(evt)
 
                                 }
                             )
-toolsJMenu!!.add(subscriptionJMenuItem)
-modulesJMenuItem!!.setText("Module Manager")
+this.toolsJMenu!!.add(this.subscriptionJMenuItem)
+this.modulesJMenuItem!!.setText("Module Manager")
 modulesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -432,8 +432,8 @@ modulesJMenuItemActionPerformed(evt)
 
                                 }
                             )
-toolsJMenu!!.add(modulesJMenuItem)
-aboutJMenuItem!!.setText("About")
+this.toolsJMenu!!.add(this.modulesJMenuItem)
+this.aboutJMenuItem!!.setText("About")
 aboutJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -446,9 +446,9 @@ aboutJMenuItemActionPerformed(evt)
 
                                 }
                             )
-toolsJMenu!!.add(aboutJMenuItem)
-mainJMenuBar!!.add(toolsJMenu)
-setJMenuBar(mainJMenuBar)
+this.toolsJMenu!!.add(this.aboutJMenuItem)
+this.mainJMenuBar!!.add(this.toolsJMenu)
+setJMenuBar(this.mainJMenuBar)
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(getContentPane())
 
@@ -465,7 +465,7 @@ pack()
 var evt = evt
 
         try {
-            Desktop.getDesktop()!!.browse(uri)
+            Desktop.getDesktop()!!.browse(this.uri)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "subscriptionJMenuItemActionPerformed", e)
@@ -480,7 +480,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "subscriptionJMenuItemA
 var evt = evt
 
         try {
-            Desktop.getDesktop()!!.browse(uri)
+            Desktop.getDesktop()!!.browse(this.uri)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updatesJMenuItemActionPerformed", e)
@@ -521,7 +521,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "modulesJMenuItemAction
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
-JavaHelpUtil.getInstance()!!.show(helpSet)
+JavaHelpUtil.getInstance()!!.show(this.helpSet)
 }
 
 
@@ -609,8 +609,8 @@ this.getAutomationModuleConfigurationJPanel()!!.removeAll()
 
     var layout: javax.swing.GroupLayout = this.getAutomationModuleConfigurationJPanel()!!.getLayout() as javax.swing.GroupLayout
 
-layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(inputAutomationModuleInterface!!.getConfigurationJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(inputAutomationModuleInterface!!.getConfigurationJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(this.inputAutomationModuleInterface!!.getConfigurationJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(this.inputAutomationModuleInterface!!.getConfigurationJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 this.gameRobotJTabbedPane!!.setEnabledAt(1, true)
 this.logUtil!!.putF("Setting Module: " +gameAutomationRobotModuleNameString +" and Configuration JPanel", this, "gameAutomationRobotModuleJListValueChanged")
 
@@ -663,12 +663,12 @@ var evt = evt
             this.logUtil!!.putF("Starting", this, "startJMenuItemActionPerformed")
 
     
-                        if(inputAutomationModuleInterface != 
+                        if(this.inputAutomationModuleInterface != 
                                     null
                                 )
                         
                                     {
-                                    this.runnableInterface= inputAutomationModuleInterface!!.getInstance()
+                                    this.runnableInterface= this.inputAutomationModuleInterface!!.getInstance()
 
     
                         if(this.runnableInterface != 
@@ -677,8 +677,8 @@ var evt = evt
                         
                                     {
                                     this.thread= Thread(this.runnableInterface)
-thread.setPriority(Thread.MIN_PRIORITY +1)
-thread.start()
+this.thread.setPriority(Thread.MIN_PRIORITY +1)
+this.thread.start()
 
                                     }
                                 

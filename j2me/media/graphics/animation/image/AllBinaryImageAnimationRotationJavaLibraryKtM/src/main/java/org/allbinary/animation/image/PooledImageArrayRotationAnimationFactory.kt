@@ -129,7 +129,7 @@ this.init(image, width, height, dx, dy, angleIncrement)
 
     var imageArray: Array<Image?> = ImageToRotationImageArrayUtil.getInstance()!!.generate(image, angleIncrement, totalAngle)!!
 
-allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray, angleIncrement, totalAngle, dx, dy)
+this.allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray, angleIncrement, totalAngle, dx, dy)
 }
 
 
@@ -143,7 +143,7 @@ allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdjustedImageArrayRotationAnimation(allBinaryImageRotationAnimationInfo, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return AdjustedImageArrayRotationAnimation(this.allBinaryImageRotationAnimationInfo, this.animationBehaviorFactory!!.getOrCreateInstance())
 }
 
 

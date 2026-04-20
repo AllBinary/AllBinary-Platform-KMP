@@ -73,7 +73,7 @@ private constructor ()
 
 
         try {
-            outputStream= streamUtil!!.get(inputStream, ByteArrayOutputStream(), ByteArray(16384)) as ByteArrayOutputStream
+            outputStream= this.streamUtil!!.get(inputStream, ByteArrayOutputStream(), ByteArray(16384)) as ByteArrayOutputStream
 
     var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.getInstance()!!.DESEDE)
 
@@ -85,8 +85,8 @@ abCrypt!!.init(key)
                         return abCrypt!!.decrypt(outputStream!!.toByteArray())
 
          finally {
-            streamUtil!!.close(outputStream)
-streamUtil!!.close(inputStream)
+            this.streamUtil!!.close(outputStream)
+this.streamUtil!!.close(inputStream)
 
          }
         

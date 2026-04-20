@@ -71,7 +71,7 @@ var frame = frame
 
     var newAngle: Int = this.angleIncrementInfo!!.getAngleIncrement() *frame -90
 
-this.setAngle(frameUtil!!.adjustAngleToFrameAngle(newAngle).toShort())
+this.setAngle(this.frameUtil!!.adjustAngleToFrameAngle(newAngle).toShort())
 }
 
 

@@ -56,7 +56,7 @@ companion object {
 : UpKeyEventHandlerBase{
 var deviceId = deviceId
 
-    var playerInputId: Int = playerInputIdFactory!!.getPlayerForDevice(deviceId)!!
+    var playerInputId: Int = this.playerInputIdFactory!!.getPlayerForDevice(deviceId)!!
 
 
 

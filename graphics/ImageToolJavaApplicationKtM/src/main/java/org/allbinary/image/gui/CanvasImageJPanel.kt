@@ -137,7 +137,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-writeOverOriginalJCheckBox= javax.swing.JCheckBox()
+this.writeOverOriginalJCheckBox= javax.swing.JCheckBox()
 jPanel1= object: javax.swing.JPanel()
                                 {
                                 
@@ -163,19 +163,19 @@ var graphics = graphics
 
                                 }
                             
-generateJButton= javax.swing.JButton()
-jLabel4= javax.swing.JLabel()
-jPanel2= javax.swing.JPanel()
-jLabel5= javax.swing.JLabel()
-widthReductionTextField= javax.swing.JTextField()
-jLabel6= javax.swing.JLabel()
-heightReductionTextField= javax.swing.JTextField()
-widthReductionTextField1= javax.swing.JTextField()
-jLabel7= javax.swing.JLabel()
-jLabel8= javax.swing.JLabel()
-heightReductionTextField1= javax.swing.JTextField()
-writeOverOriginalJCheckBox!!.setSelected(true)
-writeOverOriginalJCheckBox!!.setText("Write Over Original")
+this.generateJButton= javax.swing.JButton()
+this.jLabel4= javax.swing.JLabel()
+this.jPanel2= javax.swing.JPanel()
+this.jLabel5= javax.swing.JLabel()
+this.widthReductionTextField= javax.swing.JTextField()
+this.jLabel6= javax.swing.JLabel()
+this.heightReductionTextField= javax.swing.JTextField()
+this.widthReductionTextField1= javax.swing.JTextField()
+this.jLabel7= javax.swing.JLabel()
+this.jLabel8= javax.swing.JLabel()
+this.heightReductionTextField1= javax.swing.JTextField()
+this.writeOverOriginalJCheckBox!!.setSelected(true)
+this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
 writeOverOriginalJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -189,12 +189,12 @@ writeOverOriginalJCheckBoxActionPerformed(evt)
                                 }
                             )
 
-    var jPanel1Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(jPanel1)
+    var jPanel1Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.jPanel1)
 
-jPanel1!!.setLayout(jPanel1Layout)
+this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 0, Short.MAX_VALUE))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 196, Short.MAX_VALUE))
-generateJButton!!.setText("Generate")
+this.generateJButton!!.setText("Generate")
 generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -207,9 +207,9 @@ generateJButtonActionPerformed(evt)
 
                                 }
                             )
-jLabel4!!.setText("Results:")
-jLabel5!!.setText("Right:")
-widthReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
+this.jLabel4!!.setText("Results:")
+this.jLabel5!!.setText("Right:")
+this.widthReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 widthReductionTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -222,9 +222,9 @@ widthReductionTextFieldActionPerformed(evt)
 
                                 }
                             )
-jLabel6!!.setText("Bottom")
-heightReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
-widthReductionTextField1!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
+this.jLabel6!!.setText("Bottom")
+this.heightReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
+this.widthReductionTextField1!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 widthReductionTextField1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -237,13 +237,13 @@ widthReductionTextField1ActionPerformed(evt)
 
                                 }
                             )
-jLabel7!!.setText("Top")
-jLabel8!!.setText("Left:")
-heightReductionTextField1!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
+this.jLabel7!!.setText("Top")
+this.jLabel8!!.setText("Left:")
+this.heightReductionTextField1!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 
-    var jPanel2Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(jPanel2)
+    var jPanel2Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.jPanel2)
 
-jPanel2!!.setLayout(jPanel2Layout)
+this.jPanel2!!.setLayout(jPanel2Layout)
 jPanel2Layout!!.setHorizontalGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel2Layout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(jLabel8)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(widthReductionTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel5)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(widthReductionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel7)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(heightReductionTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel6)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(heightReductionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(140, Short.MAX_VALUE)))
 jPanel2Layout!!.setVerticalGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout!!.createSequentialGroup()!!.addGap(0, 16, Short.MAX_VALUE)!!.addGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel6)!!.addComponent(heightReductionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel8)!!.addComponent(widthReductionTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(jLabel7)!!.addComponent(heightReductionTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel5)!!.addComponent(widthReductionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))))
 
@@ -341,7 +341,7 @@ this.logUtil!!.putF(commonStrings!!.VISIT, this, commonStrings!!.VISIT)
 this.result= generatedBufferedImage
 this.getParent()!!.repaint()
 
-    var file: File = imageProcessorInput!!.getFiles()[index]!!
+    var file: File = this.imageProcessorInput!!.getFiles()[index]!!
 
 
     
@@ -352,10 +352,10 @@ this.getParent()!!.repaint()
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
 
 filePath= StringBuilder().
-                            append(filePath!!.substring(0, extensionIndex))!!.append(commonSeps!!.UNDERSCORE)!!.append(name)!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
+                            append(filePath!!.substring(0, extensionIndex))!!.append(this.commonSeps!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
 file= File(filePath)
 
                                     }

@@ -78,7 +78,7 @@ var name = name
     var shipping: ShippingInterface
 
 
-    var size: Int = shippingVector!!.size!!
+    var size: Int = this.shippingVector!!.size!!
 
 
 
@@ -87,7 +87,7 @@ var name = name
                         for (index in 0 until size)
 
         {
-shipping= shippingVector!!.get(index) as ShippingInterface
+shipping= this.shippingVector!!.get(index) as ShippingInterface
 
     
                         if(name.compareTo(shipping.getName()) == 0)
@@ -106,7 +106,7 @@ shipping= shippingVector!!.get(index) as ShippingInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SHIPPINGERROR))
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.EXCEPTION, this, "getShippingInterface(String name)")
+                                    this.logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, "getShippingInterface(String name)")
 
                                     }
                                 

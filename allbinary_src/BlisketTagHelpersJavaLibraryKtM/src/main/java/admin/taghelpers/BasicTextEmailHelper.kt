@@ -58,10 +58,10 @@ this.hashMap= hashMap
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var adminEmailSubject: String = hashMap!!.get("Subject") as String
+    var adminEmailSubject: String = this.hashMap!!.get("Subject") as String
 
 
-    var adminEmailTextBody: String = hashMap!!.get("Body") as String
+    var adminEmailTextBody: String = this.hashMap!!.get("Body") as String
 
 
     var adminBasicEmailInfo: BasicEmailInfo = AdminEmailInfo(adminEmailSubject, adminEmailTextBody) as BasicEmailInfo

@@ -102,7 +102,7 @@ var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
                             throw Exception(StringMaker().
-                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.append(this::class.toString()!!)!!.toString())
+                            append(this.commonStrings!!.NOT_IMPLEMENTED)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.append(this::class.toString()!!)!!.toString())
 }
 
 
@@ -128,7 +128,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return layerCollisionUtil!!.isCollision(ownerLayer, collidableInterfaceCompositeInterface as AllBinaryLayer)
+                        return layerCollisionUtil!!.isCollision(this.ownerLayer, collidableInterfaceCompositeInterface as AllBinaryLayer)
 }
 
 
@@ -141,7 +141,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 

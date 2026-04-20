@@ -293,7 +293,7 @@ this.storeName= value
         try {
             
     
-                        if(command != 
+                        if(this.command != 
                                     null
                                 )
                         
@@ -302,7 +302,7 @@ this.storeName= value
 this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     
-                        if(command.compareTo(BasketData.INSERT) == 0)
+                        if(this.command.compareTo(BasketData.INSERT) == 0)
                         
                                     {
                                     
@@ -319,7 +319,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                              else 
     
-                        if(command.compareTo(BasketData.DELETE) == 0)
+                        if(this.command.compareTo(BasketData.DELETE) == 0)
                         
                                     {
                                     this.removeItemFromBasket()
@@ -328,7 +328,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                              else 
     
-                        if(command.compareTo(BasketData.ADJUST) == 0)
+                        if(this.command.compareTo(BasketData.ADJUST) == 0)
                         
                                     {
                                     this.adjustBasket()
@@ -337,7 +337,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                              else 
     
-                        if(command.compareTo(BasketData.ISEMPTY) == 0)
+                        if(this.command.compareTo(BasketData.ISEMPTY) == 0)
                         
                                     {
                                     

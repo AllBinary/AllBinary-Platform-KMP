@@ -71,7 +71,7 @@ this.update(NONE, NONE)
     var stringMaker: StringMaker = StringMaker()
 
 
-    var size: Int = gameInputMappingArray!!.size
+    var size: Int = this.gameInputMappingArray!!.size
                 
 
 
@@ -93,7 +93,7 @@ this.update(NONE, NONE)
                         for (index in 0 until size)
 
         {
-gameInputMapping= gameInputMappingArray[index]!!
+gameInputMapping= this.gameInputMappingArray[index]!!
 gameKey= gameInputMapping!!.getGameKey()
 list= gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
 stringMaker!!.delete(0, stringMaker!!.length())

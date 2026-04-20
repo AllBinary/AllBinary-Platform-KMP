@@ -47,21 +47,21 @@ initComponents()
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-newProfileActionJDialog= javax.swing.JDialog()
-newProfileActionJLabel= javax.swing.JLabel()
-okNewProfileActionJButton= javax.swing.JButton()
-newProfileActionJTextField= javax.swing.JTextField()
-genericProfileActionsJPanel= javax.swing.JPanel()
-genericProfileActionsJScrollPane= javax.swing.JScrollPane()
-genericProfileActionsJList= javax.swing.JList()
-newActionJButton= javax.swing.JButton()
-deleteActionJButton= javax.swing.JButton()
-saveJButton= javax.swing.JButton()
-blankGenericProfileActionJPanel= javax.swing.JPanel()
-newProfileActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
-newProfileActionJDialog!!.setResizable(false)
-newProfileActionJLabel!!.setText("New Action Name")
-okNewProfileActionJButton!!.setText("Ok")
+this.newProfileActionJDialog= javax.swing.JDialog()
+this.newProfileActionJLabel= javax.swing.JLabel()
+this.okNewProfileActionJButton= javax.swing.JButton()
+this.newProfileActionJTextField= javax.swing.JTextField()
+this.genericProfileActionsJPanel= javax.swing.JPanel()
+this.genericProfileActionsJScrollPane= javax.swing.JScrollPane()
+this.genericProfileActionsJList= javax.swing.JList()
+this.newActionJButton= javax.swing.JButton()
+this.deleteActionJButton= javax.swing.JButton()
+this.saveJButton= javax.swing.JButton()
+this.blankGenericProfileActionJPanel= javax.swing.JPanel()
+this.newProfileActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
+this.newProfileActionJDialog!!.setResizable(false)
+this.newProfileActionJLabel!!.setText("New Action Name")
+this.okNewProfileActionJButton!!.setText("Ok")
 okNewProfileActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -75,12 +75,12 @@ okNewProfileActionJButtonActionPerformed(evt)
                                 }
                             )
 
-    var newProfileActionJDialogLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(newProfileActionJDialog!!.getContentPane())
+    var newProfileActionJDialogLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.newProfileActionJDialog!!.getContentPane())
 
-newProfileActionJDialog!!.getContentPane()!!.setLayout(newProfileActionJDialogLayout)
+this.newProfileActionJDialog!!.getContentPane()!!.setLayout(newProfileActionJDialogLayout)
 newProfileActionJDialogLayout!!.setHorizontalGroup(newProfileActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(newProfileActionJDialogLayout!!.createSequentialGroup()!!.addGroup(newProfileActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(newProfileActionJDialogLayout!!.createSequentialGroup()!!.addGap(93, 93, 93)!!.addComponent(okNewProfileActionJButton))!!.addGroup(newProfileActionJDialogLayout!!.createSequentialGroup()!!.addGap(75, 75, 75)!!.addComponent(newProfileActionJLabel))!!.addGroup(newProfileActionJDialogLayout!!.createSequentialGroup()!!.addGap(29, 29, 29)!!.addComponent(newProfileActionJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))!!.addContainerGap(34, Short.MAX_VALUE)))
 newProfileActionJDialogLayout!!.setVerticalGroup(newProfileActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newProfileActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(newProfileActionJLabel)!!.addGap(21, 21, 21)!!.addComponent(newProfileActionJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)!!.addComponent(okNewProfileActionJButton)!!.addContainerGap()))
-genericProfileActionsJPanel!!.setPreferredSize(java.awt.Dimension(10000, 10000))
+this.genericProfileActionsJPanel!!.setPreferredSize(java.awt.Dimension(10000, 10000))
 genericProfileActionsJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
@@ -93,8 +93,8 @@ genericProfileActionsJListValueChanged(evt)
 
                                 }
                             )
-genericProfileActionsJScrollPane!!.setViewportView(genericProfileActionsJList)
-newActionJButton!!.setText("New")
+this.genericProfileActionsJScrollPane!!.setViewportView(this.genericProfileActionsJList)
+this.newActionJButton!!.setText("New")
 newActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -107,7 +107,7 @@ newActionJButtonActionPerformed(evt)
 
                                 }
                             )
-deleteActionJButton!!.setText("Delete")
+this.deleteActionJButton!!.setText("Delete")
 deleteActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -120,7 +120,7 @@ deleteActionJButtonActionPerformed(evt)
 
                                 }
                             )
-saveJButton!!.setText("Save")
+this.saveJButton!!.setText("Save")
 saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -133,17 +133,17 @@ saveJButtonActionPerformed(evt)
 
                                 }
                             )
-blankGenericProfileActionJPanel!!.setMinimumSize(java.awt.Dimension(500, 300))
+this.blankGenericProfileActionJPanel!!.setMinimumSize(java.awt.Dimension(500, 300))
 
-    var blankGenericProfileActionJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(blankGenericProfileActionJPanel)
+    var blankGenericProfileActionJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.blankGenericProfileActionJPanel)
 
-blankGenericProfileActionJPanel!!.setLayout(blankGenericProfileActionJPanelLayout)
+this.blankGenericProfileActionJPanel!!.setLayout(blankGenericProfileActionJPanelLayout)
 blankGenericProfileActionJPanelLayout!!.setHorizontalGroup(blankGenericProfileActionJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 500, Short.MAX_VALUE))
 blankGenericProfileActionJPanelLayout!!.setVerticalGroup(blankGenericProfileActionJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 296, Short.MAX_VALUE))
 
-    var genericProfileActionsJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(genericProfileActionsJPanel)
+    var genericProfileActionsJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.genericProfileActionsJPanel)
 
-genericProfileActionsJPanel!!.setLayout(genericProfileActionsJPanelLayout)
+this.genericProfileActionsJPanel!!.setLayout(genericProfileActionsJPanelLayout)
 genericProfileActionsJPanelLayout!!.setHorizontalGroup(genericProfileActionsJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(genericProfileActionsJPanelLayout!!.createSequentialGroup()!!.addComponent(genericProfileActionsJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(blankGenericProfileActionJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))!!.addGroup(genericProfileActionsJPanelLayout!!.createSequentialGroup()!!.addComponent(newActionJButton)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(deleteActionJButton)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(saveJButton)!!.addContainerGap()))
 genericProfileActionsJPanelLayout!!.setVerticalGroup(genericProfileActionsJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(genericProfileActionsJPanelLayout!!.createSequentialGroup()!!.addGroup(genericProfileActionsJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(newActionJButton)!!.addComponent(deleteActionJButton)!!.addComponent(saveJButton))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(genericProfileActionsJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)!!.addComponent(blankGenericProfileActionJPanel, 0, 296, Short.MAX_VALUE)!!.addComponent(genericProfileActionsJScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE))!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
 

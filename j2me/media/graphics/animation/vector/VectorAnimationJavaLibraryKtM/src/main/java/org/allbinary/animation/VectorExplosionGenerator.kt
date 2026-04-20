@@ -114,7 +114,7 @@ var type = type
     var tempBasicArrayList: BasicArrayList = pointsBasicArrayList!!.objectArray[0]!! as BasicArrayList
 
 
-    var newPoints: Array<Array<IntArray?>?> = vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList, tempBasicArrayList!!.size())!!
+    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList, tempBasicArrayList!!.size())!!
 
 
 
@@ -224,7 +224,7 @@ index++
 sectionBasicArrayList= RandomTranslation.getInstance(sectionBasicArrayList, howMuch)
 
     
-                        if(type == ROTATION)
+                        if(type == this.ROTATION)
                         
                                     {
                                     sectionBasicArrayList= randomRotationFactory!!.getInstance(sectionBasicArrayList, howMuch)

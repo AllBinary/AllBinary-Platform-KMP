@@ -122,7 +122,7 @@ public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositi
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -152,7 +152,7 @@ public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositi
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -165,7 +165,7 @@ public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositi
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 

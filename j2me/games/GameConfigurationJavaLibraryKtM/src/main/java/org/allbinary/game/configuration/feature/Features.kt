@@ -82,10 +82,10 @@ this.init()
 this.add(gameFeature)
 
     
-                        if(!defaultList!!.contains(gameFeature))
+                        if(!this.defaultList!!.contains(gameFeature))
                         
                                     {
-                                    defaultList!!.add(gameFeature)
+                                    this.defaultList!!.add(gameFeature)
 
                                     }
                                 
@@ -100,12 +100,12 @@ this.add(gameFeature)
     //var gameFeature = gameFeature
 
     
-                        if(!list.contains(gameFeature))
+                        if(!this.list.contains(gameFeature))
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, commonStrings!!.ADD)
-list.add(gameFeature)
+this.list.add(gameFeature)
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, gameFeature!!.toString()))
 
                                     }
@@ -122,7 +122,7 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, 
 this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, "removeDefault")
 this.remove(gameFeature)
-defaultList!!.remove(gameFeature)
+this.defaultList!!.remove(gameFeature)
 }
 
 
@@ -134,11 +134,11 @@ defaultList!!.remove(gameFeature)
     //var gameFeature = gameFeature
 
     
-                        if(list.contains(gameFeature))
+                        if(this.list.contains(gameFeature))
                         
                                     {
                                     this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.REMOVE)
-list.remove(gameFeature)
+this.list.remove(gameFeature)
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, gameFeature!!.toString()))
 
                                     }

@@ -64,7 +64,7 @@ public constructor ()
 var index = index
 
     
-                        if(index >= activeCommands!!.size())
+                        if(index >= this.activeCommands!!.size())
                         
                                     {
                                     
@@ -79,7 +79,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return activeCommands!!.objectArray[index]!! as CompleteMotionGestureInputEvent
+                        return this.activeCommands!!.objectArray[index]!! as CompleteMotionGestureInputEvent
 }
 
 

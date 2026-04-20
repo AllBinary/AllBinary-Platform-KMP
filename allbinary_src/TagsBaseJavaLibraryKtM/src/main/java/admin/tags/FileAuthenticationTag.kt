@@ -147,12 +147,12 @@ this.timeout= this.weblisketSession!!.getTimeout()
 {
 
     
-                        if(attemptsInteger != 
+                        if(this.attemptsInteger != 
                                     null
-                                 && attemptsInteger!!.toInt() > 0)
+                                 && this.attemptsInteger!!.toInt() > 0)
                         
                                     {
-                                    this.weblisketSession!!.setAttempts(Integer(attemptsInteger!!.toInt() +1))
+                                    this.weblisketSession!!.setAttempts(Integer(this.attemptsInteger!!.toInt() +1))
 
                                     }
                                 
@@ -172,16 +172,16 @@ this.timeout= this.weblisketSession!!.getTimeout()
 
         try {
             
-    var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
+    var userName: String = this.request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
 
 
-    var password: String = request.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
+    var password: String = this.request.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
 
 
-    var newPassword: String = request.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
+    var newPassword: String = this.request.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
 
 
-    var newReenteredPassword: String = request.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
+    var newReenteredPassword: String = this.request.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
 
 
     
@@ -398,7 +398,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
     var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
 
 
-    var timePassed: Long = role.getSessionInactivityTimeout()!!
+    var timePassed: Long = this.role.getSessionInactivityTimeout()!!
 
 
     var calendar: Calendar = Calendar.getInstance()!!
@@ -573,11 +573,11 @@ stringBuffer!!.append("Trying New login<p>")
         try {
             
     
-                        if(BooleanUtil.getInstance()!!.getFromString(authenticated))
+                        if(BooleanUtil.getInstance()!!.getFromString(this.authenticated))
                         
                                     {
                                     
-    var size: Int = roles.size!!
+    var size: Int = this.roles.size!!
 
 
 
@@ -587,11 +587,11 @@ stringBuffer!!.append("Trying New login<p>")
 
         {
 
-    var mustBeOfRole: BasicUserRole = roles.get(index) as BasicUserRole
+    var mustBeOfRole: BasicUserRole = this.roles.get(index) as BasicUserRole
 
 
     
-                        if(sessionUserName != 
+                        if(this.sessionUserName != 
                                     null
                                  && role.equals(mustBeOfRole))
                         
@@ -658,11 +658,11 @@ stringBuffer!!.append("Trying New login<p>")
                                 
 
     
-                        if(userName != 
+                        if(this.userName != 
                                     null
-                                 && userName!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0 && password != 
+                                 && this.userName!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0 && this.password != 
                                     null
-                                 && password.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
+                                 && this.password.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
                         
                                     {
                                     
@@ -673,7 +673,7 @@ stringBuffer!!.append("Trying New login<p>")
 
 
     
-                        if(installerInfo!!.isValid(userName, password))
+                        if(installerInfo!!.isValid(this.userName, this.password))
                         
                                     {
                                     login= org.allbinary.globals.GLOBALS2.LOGINSUCCESS
@@ -744,7 +744,7 @@ this.nextAttempt()
         try {
             
     
-                        if(BooleanUtil.getInstance()!!.getFromString(timeout))
+                        if(BooleanUtil.getInstance()!!.getFromString(this.timeout))
                         
                                     {
                                     this.invalidateSession()
@@ -813,14 +813,14 @@ this.getFormData()
                                 
 
     
-                        if(command != 
+                        if(this.command != 
                                     null
                                 )
                         
                                     {
                                     
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.CHANGEPASSWORD) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.CHANGEPASSWORD) == 0)
                         
                                     {
                                     
@@ -904,7 +904,7 @@ this.getFormData()
 pageContext!!.getOut()!!.print("Please login again.<p>")
 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -939,7 +939,7 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -967,9 +967,9 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
 
     
-                        if((userName == 
+                        if((this.userName == 
                                     null
-                                 || userName!!.compareTo(stringUtil!!.EMPTY_STRING) == 0) && (password == 
+                                 || this.userName!!.compareTo(stringUtil!!.EMPTY_STRING) == 0) && (password == 
                                     null
                                  || password.compareTo(stringUtil!!.EMPTY_STRING) == 0) && this.roles != 
                                     null
@@ -987,7 +987,7 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
                                 
 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -1045,7 +1045,7 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
 pageContext!!.getOut()!!.print(validRole())
 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -1081,7 +1081,7 @@ pageContext!!.getOut()!!.print(validRole())
 pageContext!!.getOut()!!.print(invalidRole())
 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -1119,11 +1119,11 @@ pageContext!!.getOut()!!.print(invalidRole())
                                 
 
     
-                        if(userName != 
+                        if(this.userName != 
                                     null
-                                 && userName!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0 && password != 
+                                 && this.userName!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0 && this.password != 
                                     null
-                                 && password.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
+                                 && this.password.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
                         
                                     {
                                     pageContext!!.getOut()!!.print("Sorry your username and/or password is invalid.<p>")
@@ -1153,7 +1153,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 
 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     

@@ -75,7 +75,7 @@ private constructor ()
 
 
     
-                        if(features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(this.features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     
@@ -126,7 +126,7 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
 
 copySwtImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 gc= swtImage!!.getGc()
-imageSwtRotationUtil!!.rotateImage(originalSwtImage, copySwtImage, gc, totalAngle)
+this.imageSwtRotationUtil!!.rotateImage(originalSwtImage, copySwtImage, gc, totalAngle)
 
                                     }
                                 

@@ -71,7 +71,7 @@ var gameInput = gameInput
                             //For kotlin this is before the body of the constructor.
                     
 this.maxDistance= hashtable.get(BasePatrolAI.MAX_DISTANCE) as Integer
-this.currentDistance= maxDistance!!.toInt()
+this.currentDistance= this.maxDistance!!.toInt()
 }
 
 
@@ -92,7 +92,7 @@ this.changeDirectionIfReachedPacingAreaMax()
 
     var velocityProperties: BasicVelocityProperties = velocityInterfaceCompositeInterface!!.getVelocityProperties()!!
 
-xTotalDistance += velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()
+this.xTotalDistance += velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()
 }
 
 
@@ -103,7 +103,7 @@ xTotalDistance += velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()
     var mathUtil: MathUtil = MathUtil.getInstance()!!
 
 
-    var totalDistance: Int = mathUtil!!.abs(xTotalDistance)!!
+    var totalDistance: Int = mathUtil!!.abs(this.xTotalDistance)!!
 
 
     
@@ -125,9 +125,9 @@ xTotalDistance += velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()
                         if(this.lastKeyDirection == Canvas.LEFT)
                         
                                     {
-                                    keyDirection= Canvas.RIGHT
-this.lastKeyDirection= keyDirection
-xTotalDistance= 0
+                                    this.keyDirection= Canvas.RIGHT
+this.lastKeyDirection= this.keyDirection
+this.xTotalDistance= 0
 
                                     }
                                 
@@ -136,9 +136,9 @@ xTotalDistance= 0
                         if(this.lastKeyDirection == Canvas.RIGHT)
                         
                                     {
-                                    keyDirection= Canvas.LEFT
-this.lastKeyDirection= keyDirection
-xTotalDistance= 0
+                                    this.keyDirection= Canvas.LEFT
+this.lastKeyDirection= this.keyDirection
+this.xTotalDistance= 0
 
                                     }
                                 

@@ -232,7 +232,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
     var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
 
 
-    var inactivityAllowed: Long = role.getSessionInactivityTimeout()!!
+    var inactivityAllowed: Long = this.role.getSessionInactivityTimeout()!!
 
 
     var calendar: Calendar = Calendar.getInstance()!!
@@ -367,7 +367,7 @@ stringBuffer!!.append("Trying New login<p/>")
 : Boolean{
 
     
-                        if(BooleanUtil.getInstance()!!.getFromString(authenticated))
+                        if(BooleanUtil.getInstance()!!.getFromString(this.authenticated))
                         
                                     {
                                     
@@ -410,13 +410,13 @@ var roles = roles
                                     {
                                     
     
-                        if(sessionUserName != 
+                        if(this.sessionUserName != 
                                     null
                                 )
                         
                                     {
                                     
-    var basicUserRole: BasicUserRole = role.getBasicUserRole()!!
+    var basicUserRole: BasicUserRole = this.role.getBasicUserRole()!!
 
 
     var basicUserRoleArray: Array<Any?> = roles.toArray()!!
@@ -449,7 +449,7 @@ var roles = roles
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
 
 
-    var userInterface: UserInterface = userEntityInterface!!.getUser(sessionUserName)!!
+    var userInterface: UserInterface = userEntityInterface!!.getUser(this.sessionUserName)!!
 
 
     
@@ -535,12 +535,12 @@ var roles = roles
 {
 
     
-                        if(attemptsInteger != 
+                        if(this.attemptsInteger != 
                                     null
-                                 && attemptsInteger!!.toInt() > 0)
+                                 && this.attemptsInteger!!.toInt() > 0)
                         
                                     {
-                                    this.weblisketSession!!.setAttempts(Integer(attemptsInteger!!.toInt() +1))
+                                    this.weblisketSession!!.setAttempts(Integer(this.attemptsInteger!!.toInt() +1))
 
                                     }
                                 
@@ -652,7 +652,7 @@ this.nextAttempt()
         try {
             
     
-                        if(BooleanUtil.getInstance()!!.getFromString(timeout))
+                        if(BooleanUtil.getInstance()!!.getFromString(this.timeout))
                         
                                     {
                                     this.invalidateSession()
@@ -730,13 +730,13 @@ stringBuffer!!.append(" Role: ")
 stringBuffer!!.append(this.role.toString())
 stringBuffer!!.append("<br/>\n")
 stringBuffer!!.append("Time Left: ")
-stringBuffer!!.appendlong((role.getSessionTimeout() -(calendar.getTimeInMillis() -timeCreated)))
+stringBuffer!!.appendlong((this.role.getSessionTimeout() -(calendar.getTimeInMillis() -timeCreated)))
 stringBuffer!!.append("<br/>\n")
 stringBuffer!!.append("Inactivity Time Allowed: ")
-stringBuffer!!.appendlong(role.getSessionTimeout())
+stringBuffer!!.appendlong(this.role.getSessionTimeout())
 stringBuffer!!.append("<br/>\n")
 stringBuffer!!.append("Inactivity Time Allowed: ")
-stringBuffer!!.appendlong(role.getSessionInactivityTimeout())
+stringBuffer!!.appendlong(this.role.getSessionInactivityTimeout())
 stringBuffer!!.append("<br/>\n")
 
                                     }

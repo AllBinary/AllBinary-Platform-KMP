@@ -60,7 +60,7 @@ this.imageFileAbPath= imageAbPath
     //var fileItem = fileItem
 
     
-                        if(fileName == 
+                        if(this.fileName == 
                                     null
                                 )
                         
@@ -85,7 +85,7 @@ this.imageFileAbPath= imageAbPath
                                     }
                                 
 
-    var originalImageFile: AbFile = AbFile(this.imageFileAbPath!!.toString() +fileName)
+    var originalImageFile: AbFile = AbFile(this.imageFileAbPath!!.toString() +this.fileName)
 
 originalImageFile!!.createNewFile()
 FileUtil.getInstance()!!.write(ByteArrayInputStream(fileItem!!.get()), originalImageFile)

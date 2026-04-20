@@ -110,7 +110,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.setRequestHashMap(MultipartRequestParams(request).
+this.setRequestHashMap(MultipartRequestParams(this.request).
                             toHashMap())
 this.id= this.getRequestHashMap()!!.get(BasicItemData.ID) as String
 }
@@ -133,7 +133,7 @@ this.id= this.getRequestHashMap()!!.get(BasicItemData.ID) as String
 
                                     }
                                 
-this.addDomNodeInterface(BasicItemView(itemInterface, vector))
+this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
 }
 
 

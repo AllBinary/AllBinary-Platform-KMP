@@ -160,7 +160,7 @@ var keyName = keyName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable.get(keyName as Object) as String
+                        return this.hashtable.get(keyName as Object) as String
 }
 
 

@@ -78,7 +78,7 @@ private constructor ()
                         for (index in 0 until size)
 
         {
-inputIntegerArray[index]= NO_INPUT
+this.inputIntegerArray[index]= this.NO_INPUT
 }
 
 }
@@ -108,7 +108,7 @@ var id = id
                                 
 
     
-                        if(id > inputIntegerArray!!.size)
+                        if(id > this.inputIntegerArray!!.size)
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().

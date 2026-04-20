@@ -207,7 +207,7 @@ this.movement.init(weaponProperties!!.getSpeed(), angle, otherAngle)
 
 
     
-                        if(sourceLayerInterface!!.getGroupInterface()[0] == basicGroupFactory!!.ENEMY)
+                        if(this.sourceLayerInterface!!.getGroupInterface()[0] == basicGroupFactory!!.ENEMY)
                         
                                     {
                                     this.setGroupInterface(basicGroupFactory!!.ENEMY_ARRAY)
@@ -215,7 +215,7 @@ this.movement.init(weaponProperties!!.getSpeed(), angle, otherAngle)
                                     }
                                 
                         else {
-                            this.setGroupInterface(sourceLayerInterface!!.getGroupInterface())
+                            this.setGroupInterface(this.sourceLayerInterface!!.getGroupInterface())
 
                         }
                             
@@ -316,7 +316,7 @@ this.totalDamage += damage *damage
         //nullable = true from not(false or (false and false)) = true
 {
 var total = total
-scoreableInterface!!.addPoints(GameConfigurationUtil.getInstance()!!.getCompetitionValue() *total)
+this.scoreableInterface!!.addPoints(GameConfigurationUtil.getInstance()!!.getCompetitionValue() *total)
 }
 
 

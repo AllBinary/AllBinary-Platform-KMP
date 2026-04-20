@@ -71,10 +71,10 @@ public constructor (basket: BasketInterface)
         {
 var basket = basket
 this.basket= basket
-id= 
+this.id= 
                                         null
                                     
-shippingType= StringUtil.getInstance()!!.EMPTY_STRING
+this.shippingType= StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 public constructor (storeName: String, basket: BasketInterface, id: String, shippingType: String, special: String, paymentMethod: String)

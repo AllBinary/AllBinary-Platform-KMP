@@ -94,7 +94,7 @@ this.document= DomDocumentHelper.create(data)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
-                                    this.logUtil!!.putF("Tax Doc: " +DomDocumentHelper.toString(document), this, "getTaxRate")
+                                    this.logUtil!!.putF("Tax Doc: " +DomDocumentHelper.toString(this.document), this, "getTaxRate")
 
                                     }
                                 
@@ -106,7 +106,7 @@ this.document= DomDocumentHelper.create(data)
 
 state= state.uppercase()
 
-    var nodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
+    var nodeList: NodeList = this.document.getElementsByTagName(TaxData.NAME)!!
 
 
 
@@ -197,7 +197,7 @@ this.document= DomDocumentHelper.create(data)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
-                                    this.logUtil!!.putF("Tax Doc: " +DomDocumentHelper.toString(document), this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Tax Doc: " +DomDocumentHelper.toString(this.document), this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -208,7 +208,7 @@ this.document= DomDocumentHelper.create(data)
     var rootNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
 
 
-    var nodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
+    var nodeList: NodeList = this.document.getElementsByTagName(TaxData.NAME)!!
 
 
 

@@ -142,7 +142,7 @@ this.setSize(dimension)
 this.setCanvasSize(canvasDom!!.getDimension()!!.getWidth(), canvasDom!!.getDimension()!!.getHeight())
 this.graphicItemHashMap= canvasDom!!.getGraphicItemHashMap()
 
-    var graphicItemArray: Array<Any?> = graphicItemHashMap!!.keys.toTypedArray()!!
+    var graphicItemArray: Array<Any?> = this.graphicItemHashMap!!.keys.toTypedArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -158,7 +158,7 @@ this.graphicItemHashMap= canvasDom!!.getGraphicItemHashMap()
 
     var graphicItemTreeNode: MutableTreeNode = graphicItemArray[index]!! as MutableTreeNode
 
-canvasTreeNode!!.add(graphicItemTreeNode)
+this.canvasTreeNode!!.add(graphicItemTreeNode)
 }
 
 this.repaint()
@@ -173,7 +173,7 @@ this.workAreaJTreeJPanel!!.repaint()
                         if(LOGGING.contains(LOGGING.GRAPHICSCREATION))
                         
                                     {
-                                    guiLog!!.put("Constructor Error", this, "contructor", e)
+                                    this.guiLog!!.put("Constructor Error", this, "contructor", e)
 
                                     }
                                 
@@ -449,7 +449,7 @@ newPoints!!.add(newGraphicItem)
 
     var newGraphicItem: GraphicItemInterface = newPoints!!.get(index) as GraphicItemInterface
 
-canvasTreeNode!!.add(newGraphicItem!!.getTreeNode())
+this.canvasTreeNode!!.add(newGraphicItem!!.getTreeNode())
 this.getGraphicItemHashMap()!!.put(newGraphicItem!!.getTreeNode(), newGraphicItem)
 }
 
@@ -594,7 +594,7 @@ var graphicItem = graphicItem
     var graphicItemClone: GraphicItemInterface = graphicItem!!.duplicate()!!
 
 this.getGraphicItemHashMap()!!.put(graphicItemClone!!.getTreeNode(), graphicItemClone)
-canvasTreeNode!!.add(graphicItemClone!!.getTreeNode())
+this.canvasTreeNode!!.add(graphicItemClone!!.getTreeNode())
 }
 
 

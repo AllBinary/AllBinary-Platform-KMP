@@ -60,7 +60,7 @@ var vector = vector
 
     var size: Int = vector.size!!
 
-list.clear()
+this.list.clear()
 
     var textItem: CommandTextItem
 
@@ -107,7 +107,7 @@ command= vector.elementAt(index) as Command
                         
                                     {
                                     textItem= CommandTextItem(command, ImageItem.LAYOUT_DEFAULT, StringUtil.getInstance()!!.EMPTY_STRING, backgroundBasicColor, foregroundBasicColor)
-list.add(textItem)
+this.list.add(textItem)
 
                                     }
                                 
@@ -117,7 +117,7 @@ list.add(textItem)
 }
 
 
-    var textItemArray: Array<CustomItem?> = arrayOfNulls(list.size())
+    var textItemArray: Array<CustomItem?> = arrayOfNulls(this.list.size())
 
 
     var size2: Int = textItemArray!!.size
@@ -130,7 +130,7 @@ list.add(textItem)
                         for (index in 0 until size2)
 
         {
-textItemArray[index]= list.objectArray[index]!! as CustomItem
+textItemArray[index]= this.list.objectArray[index]!! as CustomItem
 }
 
 

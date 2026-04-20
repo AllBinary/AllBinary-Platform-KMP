@@ -74,7 +74,7 @@ this.countedIndex= countedIndex
                         if(healthInterfaceCompositeInterface!!.getHealthInterface()!!.isAlive())
                         
                                     {
-                                    pickupProcessorInterface!!.process(ownerLayerInterface)
+                                    pickupProcessorInterface!!.process(this.ownerLayerInterface)
 
                                     }
                                 

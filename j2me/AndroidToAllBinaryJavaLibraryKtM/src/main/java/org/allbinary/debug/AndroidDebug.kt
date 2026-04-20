@@ -58,7 +58,7 @@ setRunning(true)
     override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
-startTime= Long.MAX_VALUE
+this.startTime= Long.MAX_VALUE
 Debug.stopMethodTracing()
 setRunning(false)
 }

@@ -67,7 +67,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(OS_NAME)
+                        return System.getProperty(this.OS_NAME)
 }
 
 
@@ -78,7 +78,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(OS_ARCH)
+                        return System.getProperty(this.OS_ARCH)
 }
 
 
@@ -89,7 +89,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(OS_VERSION)
+                        return System.getProperty(this.OS_VERSION)
 }
 
 

@@ -93,7 +93,7 @@ this.finishedListenerInterface= finishedListenerInterface
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jFileChooser1= javax.swing.JFileChooser()
+this.jFileChooser1= javax.swing.JFileChooser()
 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
 jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {

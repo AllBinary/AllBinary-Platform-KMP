@@ -82,7 +82,7 @@ this.increment= (this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement())
                                  || this.getBasicColorP()!!.toInt() != basicColor!!.toInt())
                         
                                     {
-                                    imageModifierUtil!!.setColor(this.originalImage, this.getImage(), 0, basicColor)
+                                    this.imageModifierUtil!!.setColor(this.originalImage, this.getImage(), 0, basicColor)
 changed= true
 
                                     }
@@ -93,7 +93,7 @@ super.setBasicColorP(basicColor)
                         if(changed)
                         
                                     {
-                                    matrix.setRotate(0.0f, this.halfWidth.toFloat(), this.halfHeight.toFloat())
+                                    this.matrix.setRotate(0.0f, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 
                                     }
@@ -126,13 +126,13 @@ this.setBasicColorP(basicColor)
                                     }
                                 
 super.setAlpha(alpha)
-imageModifierUtil!!.setAlpha(this.originalImage, this.getImage(), 0, this.alphaP)
+this.imageModifierUtil!!.setAlpha(this.originalImage, this.getImage(), 0, this.alphaP)
 
     
                         if(changed)
                         
                                     {
-                                    matrix.setRotate(0.0f, this.halfWidth.toFloat(), this.halfHeight.toFloat())
+                                    this.matrix.setRotate(0.0f, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 
                                     }
@@ -144,7 +144,7 @@ this.updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
-matrix.setRotate(this.increment.toFloat(), this.halfWidth.toFloat(), this.halfHeight.toFloat())
+this.matrix.setRotate(this.increment.toFloat(), this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 
@@ -153,7 +153,7 @@ this.updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
-matrix.setRotate( -this.increment.toFloat(), this.halfWidth.toFloat(), this.halfHeight.toFloat())
+this.matrix.setRotate( -this.increment.toFloat(), this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 
@@ -177,7 +177,7 @@ this.circularIndexUtil!!.setIndex(index)
     var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
 
 this.angleInfo!!.adjustAngle(newFrame)
-matrix.setRotate((newFrame -currentFrame).toFloat() *increment, this.halfWidth.toFloat(), this.halfHeight.toFloat())
+this.matrix.setRotate((newFrame -currentFrame).toFloat() *this.increment, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 

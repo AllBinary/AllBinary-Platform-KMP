@@ -55,8 +55,8 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
             
     var allBinaryGameCanvas: AllBinaryGameCanvas = this.allBinaryGameCanvas
 
-allBinaryGameCanvas!!.getLoopTimeHelperP()!!.setStartTime(gameTickTimeDelayHelper!!.setStartTime())
-gameTickDisplayInfoSingleton!!.update()
+allBinaryGameCanvas!!.getLoopTimeHelperP()!!.setStartTime(this.gameTickTimeDelayHelper!!.setStartTime())
+this.gameTickDisplayInfoSingleton!!.update()
 allBinaryGameCanvas!!.processGame()
 
     

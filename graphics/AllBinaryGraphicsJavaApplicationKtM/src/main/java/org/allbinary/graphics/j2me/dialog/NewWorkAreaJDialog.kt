@@ -111,11 +111,11 @@ this.getContentPane()!!.setLayout(GridLayout(5, 2))
 this.getContentPane()!!.add(JLabel("Please enter"))
 this.getContentPane()!!.add(JLabel(" the size."))
 this.getContentPane()!!.add(JLabel("Name:"))
-this.getContentPane()!!.add(nameJTextField)
+this.getContentPane()!!.add(this.nameJTextField)
 this.getContentPane()!!.add(JLabel("X: "))
-this.getContentPane()!!.add(xSizeJTextField)
+this.getContentPane()!!.add(this.xSizeJTextField)
 this.getContentPane()!!.add(JLabel("Y: "))
-this.getContentPane()!!.add(ySizeJTextField)
+this.getContentPane()!!.add(this.ySizeJTextField)
 this.getContentPane()!!.add(submitButton)
 this.show()
 } catch(e: Exception)
@@ -137,10 +137,10 @@ this.show()
 
         try {
             
-    var canvasWidth: Integer = Integer(xSizeJTextField!!.getText())
+    var canvasWidth: Integer = Integer(this.xSizeJTextField!!.getText())
 
 
-    var canvasHeight: Integer = Integer(ySizeJTextField!!.getText())
+    var canvasHeight: Integer = Integer(this.ySizeJTextField!!.getText())
 
 
     var newName: String = this.nameJTextField!!.getText()!!
@@ -156,7 +156,7 @@ this.show()
     var workAreaJPanel: WorkAreaJPanel = WorkAreaJPanel(newName, this.dimension, canvasWidth!!.toInt(), canvasHeight!!.toInt())
 
 workAreaJPanel!!.setLayout(GridLayout(1, 1))
-parent.add(workAreaJPanel as WorkAreaJPanelInterface)
+this.parent.add(workAreaJPanel as WorkAreaJPanelInterface)
 this.dispose()
 } catch(e: Exception)
             {

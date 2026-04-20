@@ -47,7 +47,7 @@ var gameInput = gameInput
 
                             //For kotlin this is before the body of the constructor.
                     
-currentSpeed= 5
+this.currentSpeed= 5
 }
 
 
@@ -65,7 +65,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
 
     
-                        if(ownerLayerInterface!!.getXP() -currentSpeed <= 0)
+                        if(ownerLayerInterface!!.getXP() -this.currentSpeed <= 0)
                         
                                     {
                                     this.reverse()
@@ -75,7 +75,7 @@ this.drop()
                                 
 
     
-                        if(ownerLayerInterface!!.getX2() +currentSpeed > DisplayInfoSingleton.getInstance()!!.getLastWidth())
+                        if(ownerLayerInterface!!.getX2() +this.currentSpeed > DisplayInfoSingleton.getInstance()!!.getLastWidth())
                         
                                     {
                                     this.reverse()
@@ -86,10 +86,10 @@ this.drop()
                                 
 
     
-                        if(currentRelativeAngle == 0)
+                        if(this.currentRelativeAngle == 0)
                         
                                     {
-                                    x += (currentSpeed)
+                                    x += this.currentSpeed
 
                                     }
                                 
@@ -98,14 +98,14 @@ this.drop()
                         if(currentRelativeAngle == 180)
                         
                                     {
-                                    x -= (currentSpeed)
+                                    x -= this.currentSpeed
 
                                     }
                                 
 ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerInterface!!.getZP())
 
     
-                        if(currentRelativeAngle == 0)
+                        if(this.currentRelativeAngle == 0)
                         
                                     {
                                     super.processAI(Canvas.KEY_NUM0)
@@ -129,10 +129,10 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
 {
 
     
-                        if(currentRelativeAngle == 180)
+                        if(this.currentRelativeAngle == 180)
                         
                                     {
-                                    currentRelativeAngle= 0
+                                    this.currentRelativeAngle= 0
 
                                     }
                                 
@@ -141,7 +141,7 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
                         if(currentRelativeAngle == 0)
                         
                                     {
-                                    currentRelativeAngle= 180
+                                    this.currentRelativeAngle= 180
 
                                     }
                                 
@@ -153,7 +153,7 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
 {
 
     
-                        if(currentSpeed < 20)
+                        if(this.currentSpeed < 20)
                         
                                     {
                                     currentSpeed++

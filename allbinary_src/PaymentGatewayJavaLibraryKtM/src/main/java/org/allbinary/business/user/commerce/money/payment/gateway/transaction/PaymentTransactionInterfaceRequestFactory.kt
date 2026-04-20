@@ -171,7 +171,7 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPaymentTransactionInterface()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "getPaymentTransactionInterface()", e)
 
                                     }
                                 
@@ -336,7 +336,7 @@ orderReview!!.setPaymentInfo(payment)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generatePaymentTransactionInterfaceFromTestData()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generatePaymentTransactionInterfaceFromTestData()", e)
 
                                     }
                                 

@@ -132,14 +132,14 @@ var tableName = tableName
 
         try {
             
-    var fileName: String = tableName +EXTENSION
+    var fileName: String = tableName +this.EXTENSION
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(SAVING +tableName, this, this.METHOD_GET_OUTPUT_STREAM)
+                                    this.logUtil!!.putF(this.SAVING +tableName, this, this.METHOD_GET_OUTPUT_STREAM)
 
                                     }
                                 
@@ -211,7 +211,7 @@ var tableName = tableName
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var fileName: String = tableName +EXTENSION
+    var fileName: String = tableName +this.EXTENSION
 
 stringBuffer!!.append(backupPath)
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
@@ -225,9 +225,9 @@ stringBuffer!!.append(time)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(SAVING_BACKUP_PATH)
+stringBuffer!!.append(this.SAVING_BACKUP_PATH)
 stringBuffer!!.append(backupAbPath!!.toFileSystemString())
-stringBuffer!!.append(FILE_LABEL)
+stringBuffer!!.append(this.FILE_LABEL)
 stringBuffer!!.append(fileName)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_BACKUP_FILE)
 
@@ -291,7 +291,7 @@ index= value.indexOf(specialCharArray[0]!!, lastIndex)
     var nextLine: String = value.substring(lastIndex, index -1)!!
 
 stringBuffer!!.append(nextLine)
-stringBuffer!!.append(NEW_LINE)
+stringBuffer!!.append(this.NEW_LINE)
 lastIndex= index +1
 
                                     }
@@ -397,7 +397,7 @@ stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 }
 
 stringBuffer!!.append(rset.getString(colNum))
-stringBuffer!!.append(END)
+stringBuffer!!.append(this.END)
 
     var sqlStatementLine: String = stringBuffer!!.toString()!!
 
@@ -406,7 +406,7 @@ stringBuffer!!.append(END)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(APPENDING +sqlStatementLine, this, this.METHOD_BACKUP_TABLE)
+                                    this.logUtil!!.putF(this.APPENDING +sqlStatementLine, this, this.METHOD_BACKUP_TABLE)
 
                                     }
                                 
@@ -418,7 +418,7 @@ StreamUtil.getInstance()!!.close(outputStream)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TABLE_LABEL +tableName +BACKUP_SUCCESS
+                        return this.TABLE_LABEL +tableName +this.BACKUP_SUCCESS
 } catch(e: Exception)
             {
 
@@ -434,7 +434,7 @@ StreamUtil.getInstance()!!.close(outputStream)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TABLE_LABEL +tableName +" Backup Failed"
+                        return this.TABLE_LABEL +tableName +" Backup Failed"
 }
 
 }
@@ -483,7 +483,7 @@ var portion = portion
                                     }
                                 
 
-    var backupFile: AbFile = AbFile(path, tableName +EXTENSION)
+    var backupFile: AbFile = AbFile(path, tableName +this.EXTENSION)
 
 
     var bufferedLineReader: BufferedLineReader = BufferedLineReader(backupFile)
@@ -512,11 +512,11 @@ var portion = portion
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(TOTAL_LABEL)
+stringBuffer!!.append(this.TOTAL_LABEL)
 stringBuffer!!.append(size)
-stringBuffer!!.append(SECTION_LABEL)
+stringBuffer!!.append(this.SECTION_LABEL)
 stringBuffer!!.append(start)
-stringBuffer!!.append(DASH)
+stringBuffer!!.append(this.DASH)
 stringBuffer!!.append(end)
 
     
@@ -550,7 +550,7 @@ bufferedLineReader!!.readUpToLines(start)
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(this.TABLE_LABEL)
 stringBuffer!!.append(tableName)
-stringBuffer!!.append(PORTION_RESTORED)
+stringBuffer!!.append(this.PORTION_RESTORED)
 
 
 
@@ -570,7 +570,7 @@ stringBuffer!!.append(PORTION_RESTORED)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(TABLE_LABEL)
+stringBuffer!!.append(this.TABLE_LABEL)
 stringBuffer!!.append(tableName)
 stringBuffer!!.append(" Restoration Failed")
 

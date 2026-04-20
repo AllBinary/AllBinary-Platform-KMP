@@ -208,7 +208,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "Constructor(TransformInfoI
 {
 this.document= DomDocumentHelper.create()
 
-    var objectConfigNode: Node = document.createElement(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
+    var objectConfigNode: Node = this.document.createElement(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
 
 this.document.appendChild(objectConfigNode)
 }

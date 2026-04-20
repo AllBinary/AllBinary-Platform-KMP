@@ -99,7 +99,7 @@ var value = value
                                 
 
     
-                        if(value > maxValue)
+                        if(value > this.maxValue)
                         
                                     {
                                     this.setCurrentTotalDigits(3)
@@ -115,7 +115,7 @@ var value = value
     var index: Int = 0
 
 
-    var div: Int = powerOfTen
+    var div: Int = this.powerOfTen
 
 
     var lastValue: Int = 0

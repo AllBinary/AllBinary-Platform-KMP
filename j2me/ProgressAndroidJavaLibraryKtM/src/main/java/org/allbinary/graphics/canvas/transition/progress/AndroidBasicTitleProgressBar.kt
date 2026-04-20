@@ -104,7 +104,7 @@ var foregroundBasicColor = foregroundBasicColor
 this.init()
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
 
-    var size: Int = IMAGE.size
+    var size: Int = this.IMAGE.size
                 
 
 
@@ -114,7 +114,7 @@ DisplayChangeEventHandler.getInstance()!!.addListener(this)
                         for (index in 0 until size)
 
         {
-IMAGE[index]= NullCanvas.NULL_IMAGE
+this.IMAGE[index]= NullCanvas.NULL_IMAGE
 }
 
 }
@@ -341,7 +341,7 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 super.start()
-this.midletActivity!!.runOnUiThread(showTitleProgressBarRunnable)
+this.midletActivity!!.runOnUiThread(this.showTitleProgressBarRunnable)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
@@ -356,7 +356,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD
 
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
-this.midletActivity!!.runOnUiThread(dismissTitleProgressBarRunnable)
+this.midletActivity!!.runOnUiThread(this.dismissTitleProgressBarRunnable)
 super.end()
 } catch(e: Exception)
             {
@@ -381,7 +381,7 @@ super.addEarlyPortion(value, text, index)
                         if(this.midletActivity != AndroidUtil.NULL_ACTIVITY)
                         
                                     {
-                                    this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
+                                    this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
 
                                     }
                                 
@@ -403,7 +403,7 @@ var index = index
         try {
             this.portion= value
 super.addPortion(value, text, index)
-this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
+this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
@@ -421,7 +421,7 @@ var text = text
         try {
             this.portion= value
 super.addPortion(value, text)
-this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
+this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
@@ -437,7 +437,7 @@ var value = value
 
         try {
             super.setValue(value)
-this.midletActivity!!.runOnUiThread(titleProgressDialogSetProgressRunnable)
+this.midletActivity!!.runOnUiThread(this.titleProgressDialogSetProgressRunnable)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
@@ -618,7 +618,7 @@ var index = index
 var graphics = graphics
 
         try {
-            animation.paint(graphics, 0, 20)
+            this.animation.paint(graphics, 0, 20)
 super.paint2(graphics)
 } catch(e: Exception)
             {

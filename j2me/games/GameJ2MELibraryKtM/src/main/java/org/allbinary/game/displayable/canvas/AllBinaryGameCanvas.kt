@@ -329,7 +329,7 @@ this.init(gameLayerManager, buffered)
 this.highScoresFactoryInterface= highScoresFactoryInterface
 
     
-                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() == gameTypeFactory!!.BOT)
+                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() == this.gameTypeFactory!!.BOT)
                         
                                     {
                                     this.gameBehavior= DemoGameBehavior.getInstance()
@@ -354,7 +354,7 @@ public constructor (gameLayerManager: AllBinaryGameLayerManager){
 this.highScoresHelper= NoHighScoresFactory.getInstance()!!.createHighScoresHelper()
 
     
-                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() == gameTypeFactory!!.BOT)
+                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() == this.gameTypeFactory!!.BOT)
                         
                                     {
                                     this.gameBehavior= DemoGameBehavior.getInstance()
@@ -474,7 +474,7 @@ this.menuForm!!.init(rectangle, formType)
                         if(this.currentTouchInputFactory != NoButtonsTouchInputFactory.getInstance())
                         
                                     {
-                                    touchButtonFactory!!.toggle(this.isPaused(), this.currentTouchInputFactory!!.getList())
+                                    this.touchButtonFactory!!.toggle(this.isPaused(), this.currentTouchInputFactory!!.getList())
 
                                     }
                                 
@@ -529,7 +529,7 @@ super.processSleep()
 
 
     
-                        if(features.isFeature(touchFeatureFactory!!.TOUCH_ENABLED))
+                        if(features.isFeature(this.touchFeatureFactory!!.TOUCH_ENABLED))
                         
                                     {
                                     this.setOpenMenuPaintable(BasicPopupMenuPaintable(popupMenuRectangle, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor()))
@@ -587,7 +587,7 @@ this.setMenuForm(CommandCurrentSelectionFormFactory.getInstance(StringUtil.getIn
 
 
     
-                        if(features.isFeature(touchFeatureFactory!!.TOUCH_ENABLED))
+                        if(features.isFeature(this.touchFeatureFactory!!.TOUCH_ENABLED))
                         
                                     {
                                     this.mainMenuInputProcessor= PopupCommandFormInputProcessor(BasicArrayList(),  -1, this, scrollSelectionForm, this.getPopupMenuInputProcessor() as PopupMenuInputProcessor)
@@ -682,7 +682,7 @@ scrollSelectionForm!!.init(rectangle, formType)
 this.gameBehavior!!.pause(this)
 this.closeMenu()
 super.pause()
-touchButtonFactory!!.toggle(this.isPaused(), BasicArrayListUtil.getInstance()!!.getImmutableInstance())
+this.touchButtonFactory!!.toggle(this.isPaused(), BasicArrayListUtil.getInstance()!!.getImmutableInstance())
 System.gc()
 }
 
@@ -695,7 +695,7 @@ this.logUtil!!.putF(commonStrings!!.START, this, gameStrings!!.UNPAUSE)
 this.closeMenu()
 System.gc()
 super.unPause()
-touchButtonFactory!!.toggle(this.isPaused(), BasicArrayListUtil.getInstance()!!.getImmutableInstance())
+this.touchButtonFactory!!.toggle(this.isPaused(), BasicArrayListUtil.getInstance()!!.getImmutableInstance())
 this.gameBehavior!!.unPause(this)
 }
 
@@ -1019,7 +1019,7 @@ this.initTouch()
 
 gameInitializedEvent!!.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_TOUCH)
 GameInitializedEventHandler.getInstance()!!.fireEvent(gameInitializedEvent)
-touchButtonFactory!!.defaultList()
+this.touchButtonFactory!!.defaultList()
 this.updateTouch()
 this.postInitTouch()
 }
@@ -1064,7 +1064,7 @@ this.gameBehavior!!.updateTouch(this)
 
 
     
-                        if(features.isFeature(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS))
+                        if(features.isFeature(this.touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS))
                         
                                     {
                                     
@@ -1233,7 +1233,7 @@ this.gameBehavior!!.updateScreenButtonPaintable(this)
 
 
     
-                        if(features.isFeature(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS))
+                        if(features.isFeature(this.touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS))
                         
                                     {
                                     this.setTouchPaintableP(this.getTouchButtonsPaintable())
@@ -1243,7 +1243,7 @@ this.setStartLevel(this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel())
                                 
                              else 
     
-                        if(features.isFeature(touchFeatureFactory!!.SHOW_SCREEN_BUTTONS))
+                        if(features.isFeature(this.touchFeatureFactory!!.SHOW_SCREEN_BUTTONS))
                         
                                     {
                                     this.setTouchPaintableP(this.getTouchButtonsPaintable())
@@ -1252,7 +1252,7 @@ this.setStartLevel(this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel())
                                 
                              else 
     
-                        if(features.isFeature(touchFeatureFactory!!.HIDE_SCREEN_BUTTONS))
+                        if(features.isFeature(this.touchFeatureFactory!!.HIDE_SCREEN_BUTTONS))
                         
                                     {
                                     this.setTouchPaintableP(NullPaintable.getInstance())
@@ -1559,8 +1559,8 @@ GameInitializedEventHandler.getInstance()!!.fireEvent(gameInitializedEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var portion = portion
-screenCapture!!.endRecording()
-screenCapture!!.startRecording()
+this.screenCapture!!.endRecording()
+this.screenCapture!!.startRecording()
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -1799,7 +1799,7 @@ this.colorFillPaintable!!.paint(graphics)
     //var graphics = graphics
 baseGameStatistics!!.nextRefresh()
 this.draw(graphics)
-menuPaintable!!.paint(graphics)
+this.menuPaintable!!.paint(graphics)
 this.progressPaintable!!.paint(graphics)
 }
 
@@ -1950,11 +1950,11 @@ portion= 4
     open fun processPlayingGame()
         //nullable = true from not(false or (false and true)) = true
 {
-cheatProcessor!!.update()
-sensorGameUpdateProcessor!!.getInputSensor()!!.update()
-gameInputProcessor!!.process()
-gameLayerManager!!.process()
-startIntermissionProcessor!!.process()
+this.cheatProcessor!!.update()
+this.sensorGameUpdateProcessor!!.getInputSensor()!!.update()
+this.gameInputProcessor!!.process()
+this.gameLayerManager!!.process()
+this.startIntermissionProcessor!!.process()
 }
 
 
@@ -1989,9 +1989,9 @@ super.process()
 
                                     }
                                 
-mainStateProcessor!!.process()
+this.mainStateProcessor!!.process()
 menuInputProcessor!!.processInput()
-endGameProcessor!!.process()
+this.endGameProcessor!!.process()
 baseGameStatistics!!.nextFrame()
 }
 
@@ -2041,7 +2041,7 @@ this.threadObjectUtil!!.notifyObject(this)
                         else {
                             
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL))
+                        if(features.isDefault(this.openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
@@ -2050,7 +2050,7 @@ this.threadObjectUtil!!.notifyObject(this)
 
         while(openGLImageSpecificFactory!!.updating)
         {
-Thread.sleep(YIELD_SLEEP)
+Thread.sleep(this.YIELD_SLEEP)
 }
 
 
@@ -2079,7 +2079,7 @@ this.setRunning(true)
                         if(this.getCustomCommandListener() == NullCommandListener.NULL_COMMAND_LISTENER)
                         
                                     {
-                                    Thread.sleep(YIELD_SLEEP)
+                                    Thread.sleep(this.YIELD_SLEEP)
 
                                     }
                                 
@@ -2090,13 +2090,13 @@ this.threadInit()
                         if(this.getCustomCommandListener() == NullCommandListener.NULL_COMMAND_LISTENER)
                         
                                     {
-                                    Thread.sleep(YIELD_SLEEP)
+                                    Thread.sleep(this.YIELD_SLEEP)
 
                                     }
                                 
 this.open()
 
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.init()
 gameAdState!!.setGameIsReady(true)
@@ -2120,15 +2120,15 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML())
+                        if(features.isDefault(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML())
                         
                                     {
                                     
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
+                        if(features.isDefault(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
-                                    this.logUtil!!.putF(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName(), this, commonStrings!!.RUN)
+                                    this.logUtil!!.putF(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName(), this, commonStrings!!.RUN)
 
                                     }
                                 
@@ -2144,7 +2144,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
     var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
 
-currentDisplayableFactory!!.setRunnable(gameRunnable)
+currentDisplayableFactory!!.setRunnable(this.gameRunnable)
 currentDisplayableFactory!!.setDisplayable(this)
 OpenGLThreadUtil.getInstance()!!.onResume()
 
@@ -2188,7 +2188,7 @@ this.end()
         //nullable = true from not(false or (false and true)) = true
 {
 this.loopTimeHelper!!.setStartTime(gameTickTimeDelayHelper!!.setStartTime())
-gameTickDisplayInfoSingleton!!.update()
+this.gameTickDisplayInfoSingleton!!.update()
 this.processGame()
 this.processLoopSleep()
 }
@@ -2215,12 +2215,12 @@ super.setRunning(running)
                         else {
                             
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL) || SWTUtil.isSWT)
+                        if(features.isDefault(this.openGLFeatureFactory!!.OPENGL) || SWTUtil.isSWT)
                         
                                     {
                                     
     
-                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() != gameTypeFactory!!.BOT)
+                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() != this.gameTypeFactory!!.BOT)
                         
                                     {
                                     
@@ -2250,7 +2250,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
     open fun end()
         //nullable = true from not(false or (false and true)) = true
 {
-screenCapture!!.endRecording()
+this.screenCapture!!.endRecording()
 baseGameStatistics!!.add(StringMaker().
                             append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
 baseGameStatistics!!.init()
@@ -2269,7 +2269,7 @@ this.endGameThread()
 DisplayChangeEventHandler.getInstance()!!.removeListener(this)
 GameLevelDisplayChangeEventListenersFactory.getInstance()!!.clear()
 
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.notPlayingAdState()
 }
@@ -2318,7 +2318,7 @@ this.gameBehavior!!.setHighScore(abeClientInformation, this, name, score, autoSu
     var highScore: HighScore = this.createHighScore(score)!!
 
 
-    var textBox: HighScoreTextBox = HighScoreTextBox(this.highScoresFactoryInterface, highScoresHelper, abeClientInformation, this.gameLayerManager!!.getGameInfo(), this.getCustomCommandListener(), name, highScore, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())
+    var textBox: HighScoreTextBox = HighScoreTextBox(this.highScoresFactoryInterface, this.highScoresHelper, abeClientInformation, this.gameLayerManager!!.getGameInfo(), this.getCustomCommandListener(), name, highScore, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())
 
 
     

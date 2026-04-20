@@ -58,7 +58,7 @@ this.setBasicColorP(BasicColorFactory.getInstance()!!.BLACK)
     //var graphics = graphics
     //var unusedX = unusedX
     //var unusedY = unusedY
-graphics.fillRect(x, y, width, height)
+graphics.fillRect(this.x, this.y, this.width, this.height)
 }
 
 

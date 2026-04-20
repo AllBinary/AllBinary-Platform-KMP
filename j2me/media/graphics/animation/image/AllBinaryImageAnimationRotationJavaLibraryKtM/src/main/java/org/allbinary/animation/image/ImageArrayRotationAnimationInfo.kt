@@ -84,7 +84,7 @@ this.imageArray= imageArray
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AngleInfo.getInstance(angleIncrement.toShort())
+                        return AngleInfo.getInstance(this.angleIncrement.toShort())
 }
 
 

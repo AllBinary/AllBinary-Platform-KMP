@@ -129,9 +129,9 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-writeOverOriginalJCheckBox= javax.swing.JCheckBox()
-widthReductionTextField= javax.swing.JTextField()
-jLabel5= javax.swing.JLabel()
+this.writeOverOriginalJCheckBox= javax.swing.JCheckBox()
+this.widthReductionTextField= javax.swing.JTextField()
+this.jLabel5= javax.swing.JLabel()
 jPanel1= object: javax.swing.JPanel()
                                 {
                                 
@@ -157,13 +157,13 @@ var graphics = graphics
 
                                 }
                             
-jLabel4= javax.swing.JLabel()
-jLabel6= javax.swing.JLabel()
-heightReductionTextField= javax.swing.JTextField()
-generateJButton= javax.swing.JButton()
-jPanel2= javax.swing.JPanel()
-jLabel1= javax.swing.JLabel()
-totalFramesJComboBox= javax.swing.JComboBox<>()
+this.jLabel4= javax.swing.JLabel()
+this.jLabel6= javax.swing.JLabel()
+this.heightReductionTextField= javax.swing.JTextField()
+this.generateJButton= javax.swing.JButton()
+this.jPanel2= javax.swing.JPanel()
+this.jLabel1= javax.swing.JLabel()
+this.totalFramesJComboBox= javax.swing.JComboBox<>()
 
     var size: Int = 70
 
@@ -180,9 +180,9 @@ totalFramesJComboBox= javax.swing.JComboBox<>()
 animationStringArray2[index -1]= index.toString()
 }
 
-totalFramesJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(animationStringArray2))
-jLabel2= javax.swing.JLabel()
-totalAnimationsJComboBox= javax.swing.JComboBox<>()
+this.totalFramesJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(animationStringArray2))
+this.jLabel2= javax.swing.JLabel()
+this.totalAnimationsJComboBox= javax.swing.JComboBox<>()
 
     var animationStringArray: Array<String?> = arrayOfNulls(size -1)
 
@@ -196,15 +196,15 @@ totalAnimationsJComboBox= javax.swing.JComboBox<>()
 animationStringArray[index -1]= index.toString()
 }
 
-totalAnimationsJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(animationStringArray))
-jLabel3= javax.swing.JLabel()
-spriteTypeJComboBox= javax.swing.JComboBox<>()
+this.totalAnimationsJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(animationStringArray))
+this.jLabel3= javax.swing.JLabel()
+this.spriteTypeJComboBox= javax.swing.JComboBox<>()
 spriteTypeJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.DIRECTIONAL_ANIMATIONS,org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.HORIZONTAL_ANIMATIONS,org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.HORIZONTAL_SPRITE)))
 jLabel7= javax.swing.JLabel()
-increaseWidthTextField= javax.swing.JTextField()
-jLabel8= javax.swing.JLabel()
-increaseHeightTextField= javax.swing.JTextField()
-writeOverOriginalJCheckBox!!.setText("Write Over Original")
+this.increaseWidthTextField= javax.swing.JTextField()
+this.jLabel8= javax.swing.JLabel()
+this.increaseHeightTextField= javax.swing.JTextField()
+this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
 writeOverOriginalJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -217,7 +217,7 @@ writeOverOriginalJCheckBoxActionPerformed(evt)
 
                                 }
                             )
-widthReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
+this.widthReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 widthReductionTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -230,17 +230,17 @@ widthReductionTextFieldActionPerformed(evt)
 
                                 }
                             )
-jLabel5!!.setText("Less Width:")
-jLabel4!!.setText("Results:")
+this.jLabel5!!.setText("Less Width:")
+this.jLabel4!!.setText("Results:")
 
-    var jPanel1Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(jPanel1)
+    var jPanel1Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.jPanel1)
 
-jPanel1!!.setLayout(jPanel1Layout)
+this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel1Layout!!.createSequentialGroup()!!.addComponent(jLabel4)!!.addGap(0, 0, Short.MAX_VALUE)))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel1Layout!!.createSequentialGroup()!!.addComponent(jLabel4)!!.addGap(0, 184, Short.MAX_VALUE)))
-jLabel6!!.setText("Less Height:")
-heightReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
-generateJButton!!.setText("Generate")
+this.jLabel6!!.setText("Less Height:")
+this.heightReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
+this.generateJButton!!.setText("Generate")
 generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -253,8 +253,8 @@ generateJButtonActionPerformed(evt)
 
                                 }
                             )
-jLabel1!!.setText("Row Total:")
-totalFramesJComboBox!!.setSelectedIndex(1)
+this.jLabel1!!.setText("Row Total:")
+this.totalFramesJComboBox!!.setSelectedIndex(1)
 totalFramesJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -267,8 +267,8 @@ totalFramesJComboBoxActionPerformed(evt)
 
                                 }
                             )
-jLabel2!!.setText("Column Total :")
-totalAnimationsJComboBox!!.setSelectedIndex(3)
+this.jLabel2!!.setText("Column Total :")
+this.totalAnimationsJComboBox!!.setSelectedIndex(3)
 totalAnimationsJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -281,7 +281,7 @@ totalAnimationsJComboBoxActionPerformed(evt)
 
                                 }
                             )
-jLabel3!!.setText("Type:")
+this.jLabel3!!.setText("Type:")
 spriteTypeJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -295,13 +295,13 @@ spriteTypeJComboBoxActionPerformed(evt)
                                 }
                             )
 
-    var jPanel2Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(jPanel2)
+    var jPanel2Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.jPanel2)
 
-jPanel2!!.setLayout(jPanel2Layout)
+this.jPanel2!!.setLayout(jPanel2Layout)
 jPanel2Layout!!.setHorizontalGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(jLabel1)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(totalFramesJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel2)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(totalAnimationsJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel3)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(spriteTypeJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
 jPanel2Layout!!.setVerticalGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel2Layout!!.createSequentialGroup()!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.addGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel1)!!.addComponent(totalFramesJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(jLabel2)!!.addComponent(totalAnimationsJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(jLabel3)!!.addComponent(spriteTypeJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-jLabel7!!.setText("More Width:")
-increaseWidthTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
+this.jLabel7!!.setText("More Width:")
+this.increaseWidthTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 increaseWidthTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -314,8 +314,8 @@ increaseWidthTextFieldActionPerformed(evt)
 
                                 }
                             )
-jLabel8!!.setText("More Height:")
-increaseHeightTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
+this.jLabel8!!.setText("More Height:")
+this.increaseHeightTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 
@@ -449,7 +449,7 @@ this.logUtil!!.putF(commonStrings!!.VISIT, this, commonStrings!!.VISIT)
 this.result= generatedBufferedImage
 this.getParent()!!.repaint()
 
-    var file: File = imageProcessorInput!!.getFiles()[index]!!
+    var file: File = this.imageProcessorInput!!.getFiles()[index]!!
 
 
     
@@ -460,10 +460,10 @@ this.getParent()!!.repaint()
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
 
 filePath= StringBuilder().
-                            append(filePath!!.substring(0, extensionIndex))!!.append(commonSeps!!.UNDERSCORE)!!.append(name)!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
+                            append(filePath!!.substring(0, extensionIndex))!!.append(this.commonSeps!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
 file= File(filePath)
 
                                     }

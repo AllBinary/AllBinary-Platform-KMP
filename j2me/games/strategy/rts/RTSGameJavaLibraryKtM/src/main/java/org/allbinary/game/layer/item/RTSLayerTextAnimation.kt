@@ -54,9 +54,9 @@ var x = x
 var y = y
 super.paint(graphics, x, y)
 
-    var adjustedCostY: Int = image.getHeight() -this.myFont!!.DEFAULT_CHAR_HEIGHT
+    var adjustedCostY: Int = this.image.getHeight() -this.myFont!!.DEFAULT_CHAR_HEIGHT
 
-graphics.drawString(text, x, y +adjustedCostY, 0)
+graphics.drawString(this.text, x, y +adjustedCostY, 0)
 }
 
 

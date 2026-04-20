@@ -125,7 +125,7 @@ var index = index
     var values: Vector = Vector()
 
 values.add(index)
-values.add(userName)
+values.add(this.userName)
 values.add(StringUtil.getInstance()!!.EMPTY_STRING)
 values.add(address.getName())
 values.add(address.getStreet())

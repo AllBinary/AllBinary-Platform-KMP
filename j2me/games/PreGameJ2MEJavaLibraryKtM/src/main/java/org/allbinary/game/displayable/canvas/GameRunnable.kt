@@ -60,7 +60,7 @@ DisplayInfoSingleton.getInstance()!!.process()
     open fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
-Thread.sleep(wait)
+Thread.sleep(this.wait)
 }
 
 

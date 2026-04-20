@@ -86,7 +86,7 @@ this.pathFinder= PathFinder()
 RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
 this.init(geographicMapInterface, pathFindingInfo, mapArray)
 this.pathFinder!!.init(geographicMapInterface)
-pathFindingInfo!!.setPathFinder(pathFinder)
+pathFindingInfo!!.setPathFinder(this.pathFinder)
 
 
 

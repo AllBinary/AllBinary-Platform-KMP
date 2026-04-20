@@ -41,7 +41,7 @@ public constructor (points: BasicArrayList)
             : super()
         {
 var points = points
-pointBasicArrayList= points
+this.pointBasicArrayList= points
 }
 
 
@@ -49,7 +49,7 @@ pointBasicArrayList= points
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
-pointBasicArrayList= points
+this.pointBasicArrayList= points
 }
 
 
@@ -70,7 +70,7 @@ var y = y
     var newBasicArrayList: BasicArrayList = BasicArrayList()
 
 
-    var size: Int = pointBasicArrayList!!.size()!!
+    var size: Int = this.pointBasicArrayList!!.size()!!
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
@@ -85,7 +85,7 @@ var y = y
                         for (index in 0 until size)
 
         {
-secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
+secondPoint= this.pointBasicArrayList!!.objectArray[index]!! as GPoint
 
     
                         if(secondPoint!!.getX() != 1000)
@@ -161,14 +161,14 @@ var angle = angle
                         for (index in 0 until size)
 
         {
-secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
+secondPoint= this.pointBasicArrayList!!.objectArray[index]!! as GPoint
 
     
                         if(secondPoint!!.getX() != 1000)
                         
                                     {
-                                    sin= noDecimalTrigTable!!.sin(angle)
-cos= noDecimalTrigTable!!.cos(angle)
+                                    sin= this.noDecimalTrigTable!!.sin(angle)
+cos= this.noDecimalTrigTable!!.cos(angle)
 y= secondPoint!!.getY() *sin
 secondX= (secondPoint!!.getX() *cos) -y
 secondY= (secondPoint!!.getX() *sin) +(secondPoint!!.getY() *cos)
@@ -222,7 +222,7 @@ var width = width
                         for (index in 0 until size)
 
         {
-secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
+secondPoint= this.pointBasicArrayList!!.objectArray[index]!! as GPoint
 
     
                         if(secondPoint!!.getX() != 1000)

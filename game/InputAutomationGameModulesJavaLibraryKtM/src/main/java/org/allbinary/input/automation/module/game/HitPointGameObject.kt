@@ -162,13 +162,13 @@ this.damaged= damaged
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(HP_LABEL)
+stringBuffer!!.append(this.HP_LABEL)
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(IS_DAMAGED_LABEL)
+stringBuffer!!.append(this.IS_DAMAGED_LABEL)
 stringBuffer!!.appendboolean(this.isDamaged())
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(IS_CLOSE_DEATH_LABEL)
+stringBuffer!!.append(this.IS_CLOSE_DEATH_LABEL)
 stringBuffer!!.appendboolean(this.isCloseDeath())
 
 

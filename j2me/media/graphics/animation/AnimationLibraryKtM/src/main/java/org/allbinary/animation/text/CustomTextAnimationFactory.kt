@@ -125,19 +125,19 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight
 
 
     
-                        if(dx != 0 || dy != 0)
+                        if(this.dx != 0 || this.dy != 0)
                         
                                     {
-                                    customTextAnimation= AdjustCustomTextAnimation(text, this.scaleProperties!!.scaleHeight, dx, dy, this.animationBehaviorFactory!!.getOrCreateInstance())
+                                    customTextAnimation= AdjustCustomTextAnimation(this.text, this.scaleProperties!!.scaleHeight, this.dx, this.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
 
                                     }
                                 
                         else {
-                            customTextAnimation= CustomTextAnimation(text, this.scaleProperties!!.scaleHeight, this.animationBehaviorFactory!!.getOrCreateInstance())
+                            customTextAnimation= CustomTextAnimation(this.text, this.scaleProperties!!.scaleHeight, this.animationBehaviorFactory!!.getOrCreateInstance())
 
                         }
                             
-customTextAnimation!!.setBasicColorP(basicColor)
+customTextAnimation!!.setBasicColorP(this.basicColor)
 
 
 
@@ -160,7 +160,7 @@ customTextAnimation!!.setBasicColorP(basicColor)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return font.stringWidth(this.text)
+                        return this.font.stringWidth(this.text)
 }
 
 
@@ -171,7 +171,7 @@ customTextAnimation!!.setBasicColorP(basicColor)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return font.getHeight()
+                        return this.font.getHeight()
 }
 
 

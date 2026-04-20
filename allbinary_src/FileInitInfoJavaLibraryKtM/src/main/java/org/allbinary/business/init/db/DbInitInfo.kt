@@ -116,11 +116,11 @@ this.initFileName= initFileName
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var PATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +PACKAGE)
+    var PATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.PACKAGE)
 
 this.directory.create(PATH)
 
-    var FILEABPATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +PACKAGE, this.initFileName)
+    var FILEABPATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.PACKAGE, this.initFileName)
 
 
         try {
@@ -168,7 +168,7 @@ dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedPassword))
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedSchema))
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedServer))
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedPort))
-hasRead= false
+this.hasRead= false
 
          finally {
             StreamUtil.getInstance()!!.close(dataOutputStream)
@@ -197,7 +197,7 @@ hasRead= false
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var FILEABPATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +PACKAGE, this.initFileName)
+    var FILEABPATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.PACKAGE, this.initFileName)
 
 
         try {
@@ -265,7 +265,7 @@ this.setPort(WeakCrypt(7).
                                     }
                                 
                         else {
-                            hasRead= false
+                            this.hasRead= false
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADER))
@@ -309,10 +309,10 @@ this.hasRead= value
         try {
             
     
-                        if(!hasRead)
+                        if(!this.hasRead)
                         
                                     {
-                                    hasRead= true
+                                    this.hasRead= true
 this.load()
 
                                     }
@@ -324,7 +324,7 @@ this.load()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "updateIfNeeded", e)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, "updateIfNeeded", e)
 
                                     }
                                 

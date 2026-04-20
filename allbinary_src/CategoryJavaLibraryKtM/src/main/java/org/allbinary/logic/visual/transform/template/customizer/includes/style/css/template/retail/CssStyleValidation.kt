@@ -78,7 +78,7 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
                                     }
                                 
 
-    var size: Int = cssStyleElementVector!!.size!!
+    var size: Int = this.cssStyleElementVector!!.size!!
 
 
 
@@ -88,7 +88,7 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
 
         {
 
-    var styleValidationInterface: ValidationInterface = cssStyleElementVector!!.get(i) as ValidationInterface
+    var styleValidationInterface: ValidationInterface = this.cssStyleElementVector!!.get(i) as ValidationInterface
 
 
     
@@ -207,7 +207,7 @@ var document = document
 
 node.appendChild(styleNode)
 
-    var size: Int = cssStyleElementVector!!.size!!
+    var size: Int = this.cssStyleElementVector!!.size!!
 
 
 
@@ -217,7 +217,7 @@ node.appendChild(styleNode)
 
         {
 
-    var styleDomNodeInterface: DomNodeInterface = cssStyleElementVector!!.get(i) as DomNodeInterface
+    var styleDomNodeInterface: DomNodeInterface = this.cssStyleElementVector!!.get(i) as DomNodeInterface
 
 styleNode!!.appendChild(styleDomNodeInterface!!.toXmlNode(document))
 }

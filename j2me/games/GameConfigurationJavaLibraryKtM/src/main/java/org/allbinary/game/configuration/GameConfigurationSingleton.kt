@@ -55,8 +55,8 @@ companion object {
 private constructor ()
             : super()
         {
-list= BasicArrayList()
-hashtable= Hashtable<Any, Any>()
+this.list= BasicArrayList()
+this.hashtable= Hashtable<Any, Any>()
 }
 
 
@@ -68,7 +68,7 @@ var name = name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable.get(name as Object) as GameConfiguration
+                        return this.hashtable.get(name as Object) as GameConfiguration
 }
 
 
@@ -87,7 +87,7 @@ var name = name
         //nullable = true from not(false or (false and false)) = true
 {
 var gameConfiguration = gameConfiguration
-list.add(gameConfiguration)
+this.list.add(gameConfiguration)
 }
 
 

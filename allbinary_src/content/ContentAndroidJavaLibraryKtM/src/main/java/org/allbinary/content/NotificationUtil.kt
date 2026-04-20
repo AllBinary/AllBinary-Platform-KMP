@@ -75,12 +75,12 @@ private constructor ()
                         if(SDK_VERSION > 22)
                         
                                     {
-                                    notificationBuilder= NotificationBuilderAPI23()
+                                    this.notificationBuilder= NotificationBuilderAPI23()
 
                                     }
                                 
                         else {
-                            notificationBuilder= NotificationBuilder.NULL_NOTIFICATION_BUILDER
+                            this.notificationBuilder= NotificationBuilder.NULL_NOTIFICATION_BUILDER
 
                         }
                             
@@ -120,7 +120,7 @@ private constructor ()
 
 
     
-                        if(notificationBuilder == 
+                        if(this.notificationBuilder == 
                                     null
                                 )
                         
@@ -137,7 +137,7 @@ this.logUtil!!.putF(commonStrings!!.EXCEPTION, this, commonStrings!!.NOT_IMPLEME
 
                                     }
                                 
-notificationBuilder!!.build(context, command, message, integer, pendingIntent)
+this.notificationBuilder!!.build(context, command, message, integer, pendingIntent)
 }
 
 

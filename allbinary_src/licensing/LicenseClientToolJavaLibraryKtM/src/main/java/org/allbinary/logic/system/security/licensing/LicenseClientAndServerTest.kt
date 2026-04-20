@@ -80,7 +80,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
                         for (index in 1 until options.size)
 
         {
-vector.add(options[index]!!)
+this.vector.add(options[index]!!)
 }
 
 
@@ -110,7 +110,7 @@ vector.add(options[index]!!)
                                 )
                         
                                     {
-                                    vector.add(line)
+                                    this.vector.add(line)
 
                                     }
                                 
@@ -154,7 +154,7 @@ vector.add(options[index]!!)
     var RESULT: String = "Test Result: "
 
 
-    var size: Int = vector.size()!!
+    var size: Int = this.vector.size()!!
 
 
 
@@ -165,7 +165,7 @@ vector.add(options[index]!!)
         {
 stringBuffer!!.append(TESTING)
 
-    var serverName: String = vector.get(index) as String
+    var serverName: String = this.vector.get(index) as String
 
 
         try {

@@ -191,7 +191,7 @@ imageData!!.data[index3 +2]= b.toByte()
     //var basicColor = basicColor
 
     
-                        if(features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(this.features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     
@@ -305,7 +305,7 @@ imageData!!.data[index +2]= bx.toByte()
     //var alphaInt = alphaInt
 
     
-                        if(features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(this.features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     

@@ -57,7 +57,7 @@ var id = id
 var num = num
 
     
-                        if(items.containsKey(id))
+                        if(this.items.containsKey(id))
                         
                                     {
                                     
@@ -72,12 +72,12 @@ var num = num
 
     var newNumInt: Integer = Integer(oldNumInt!!.toInt() +numInt!!.toInt())
 
-items.put(id, newNumInt!!.toString())
+this.items.put(id, newNumInt!!.toString())
 
                                     }
                                 
                         else {
-                            items.put(id, num)
+                            this.items.put(id, num)
 
                         }
                             
@@ -88,7 +88,7 @@ items.put(id, newNumInt!!.toString())
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id
-items.remove(id)
+this.items.remove(id)
 }
 
 
@@ -102,12 +102,12 @@ var num = num
                         if(Integer.valueOf(num)!!.toInt() > 0)
                         
                                     {
-                                    items.put(id, num)
+                                    this.items.put(id, num)
 
                                     }
                                 
                         else {
-                            items.remove(id)
+                            this.items.remove(id)
 
                         }
                             
@@ -176,7 +176,7 @@ totalWeight!!.add(weightFloat!!.toString())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer(items.size())
+                        return Integer(this.items.size())
 }
 
 
@@ -184,7 +184,7 @@ totalWeight!!.add(weightFloat!!.toString())
         //nullable = true from not(false or (false and true)) = true
 : Set{
 
-    var set: Set = items.keySet()!!
+    var set: Set = this.items.keySet()!!
 
 
 
@@ -210,7 +210,7 @@ totalWeight!!.add(weightFloat!!.toString())
 : Integer{
 var product = product
 
-    var numStr: String = items.get(product) as String
+    var numStr: String = this.items.get(product) as String
 
 
 

@@ -85,8 +85,8 @@ this.fetchHighScores(gameInfo, highScoresResultsListener, true)
     //var preload = preload
 
         try {
-            highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, gameInfo, TOP, PERSONAL_HIGH_SCORES, SCORES, ScoreComparator(true))
-highScoresResultsListener!!.setHighScoresArray(highScoresArray)
+            this.highScoresArray[0]= RecordStoreHighScores.getInstance(this.abeClientInformation, gameInfo, this.TOP, PERSONAL_HIGH_SCORES, SCORES, ScoreComparator(true))
+highScoresResultsListener!!.setHighScoresArray(this.highScoresArray)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)

@@ -55,7 +55,7 @@ this.cacheableInterfaceFactoryInterface= cacheableInterfaceFactoryInterface
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -68,7 +68,7 @@ var key = key
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -95,7 +95,7 @@ var cacheableInterfaces = cacheableInterfaces
                         for (index in 0 until cacheableInterfaces!!.size)
 
         {
-buffers.add(cacheableInterfaces[index]!!)
+this.buffers.add(cacheableInterfaces[index]!!)
 }
 
 }

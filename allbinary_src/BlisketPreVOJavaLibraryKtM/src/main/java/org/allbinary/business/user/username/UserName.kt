@@ -104,7 +104,7 @@ this.userName= hashMap!!.get(UserData.USERNAME) as String
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.isValid(userName)
+                        return this.isValid(this.userName)
 } catch(e: Exception)
             {
 

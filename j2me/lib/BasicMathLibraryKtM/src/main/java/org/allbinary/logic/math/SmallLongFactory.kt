@@ -70,38 +70,38 @@ var negativeValue = negativeValue
 
 
 
-                        for (index in value -1 downTo lastMin)
+                        for (index in value -1 downTo this.lastMin)
 
         {
-INTEGER_ARRAY[index +NEGATIVE_MAX]= index as Long
+this.INTEGER_ARRAY[index +this.NEGATIVE_MAX]= index as Long
 }
 
 
 
 
 
-                        for (index in negativeValue -1 downTo lastNegativeMin)
+                        for (index in negativeValue -1 downTo this.lastNegativeMin)
 
         {
-INTEGER_ARRAY[index]=  -index as Long
+this.INTEGER_ARRAY[index]=  -index as Long
 }
 
 
     
-                        if(lastMin < value)
+                        if(this.lastMin < value)
                         
                                     {
-                                    lastMin= value
-MIN= value
+                                    this.lastMin= value
+this.MIN= value
 
                                     }
                                 
 
     
-                        if(lastNegativeMin < negativeValue)
+                        if(this.lastNegativeMin < negativeValue)
                         
                                     {
-                                    lastNegativeMin= negativeValue
+                                    this.lastNegativeMin= negativeValue
 
                                     }
                                 
@@ -113,38 +113,38 @@ MIN= value
 {
 
     
-                        if(INTEGER_ARRAY[0] == 
+                        if(this.INTEGER_ARRAY[0] == 
                                     null
                                 )
                         
                                     {
                                     
     
-                        if(lastMin < POSITIVE_MAX || lastNegativeMin < NEGATIVE_MAX)
+                        if(this.lastMin < this.POSITIVE_MAX || this.lastNegativeMin < this.NEGATIVE_MAX)
                         
                                     {
                                     
 
 
 
-                        for (index in POSITIVE_MAX -1 downTo lastMin)
+                        for (index in this.POSITIVE_MAX -1 downTo this.lastMin)
 
         {
-INTEGER_ARRAY[index +NEGATIVE_MAX]= index as Long
+this.INTEGER_ARRAY[index +this.NEGATIVE_MAX]= index as Long
 }
 
 
 
 
 
-                        for (index in NEGATIVE_MAX -1 downTo lastNegativeMin)
+                        for (index in this.NEGATIVE_MAX -1 downTo this.lastNegativeMin)
 
         {
-INTEGER_ARRAY[index]=  -index as Long
+this.INTEGER_ARRAY[index]=  -index as Long
 }
 
-lastMin= POSITIVE_MAX
-lastNegativeMin= NEGATIVE_MAX
+this.lastMin= this.POSITIVE_MAX
+this.lastNegativeMin= this.NEGATIVE_MAX
 
                                     }
                                 
@@ -165,14 +165,14 @@ private constructor ()
 var index = index
 
     
-                        if(index +NEGATIVE_MAX > this.INTEGER_ARRAY.size -1)
+                        if(index +this.NEGATIVE_MAX > this.INTEGER_ARRAY.size -1)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return INTEGER_ARRAY[ -1 +NEGATIVE_MAX]!!
+                        return this.INTEGER_ARRAY[ -1 +this.NEGATIVE_MAX]!!
 
                                     }
                                 
@@ -180,7 +180,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return INTEGER_ARRAY[(index.toInt()) +NEGATIVE_MAX]!!
+                        return this.INTEGER_ARRAY[(index.toInt()) +this.NEGATIVE_MAX]!!
 }
 
 
@@ -193,12 +193,12 @@ var index = index
 
 
     
-                        if(STRING_ARRAY[i] == 
+                        if(this.STRING_ARRAY[i] == 
                                     null
                                 )
                         
                                     {
-                                    STRING_ARRAY[i]= this.INTEGER_ARRAY[i]!!.toString()
+                                    this.STRING_ARRAY[i]= this.INTEGER_ARRAY[i]!!.toString()
 
                                     }
                                 
@@ -206,7 +206,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return STRING_ARRAY[i]!!
+                        return this.STRING_ARRAY[i]!!
 }
 
 

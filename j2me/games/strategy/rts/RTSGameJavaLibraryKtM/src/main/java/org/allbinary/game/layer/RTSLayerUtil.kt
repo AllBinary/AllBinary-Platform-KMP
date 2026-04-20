@@ -186,7 +186,7 @@ rtsLayer!!.select()
 : Int{
     //var weaponProperties = weaponProperties
 
-    var cost: Long = (weaponProperties!!.getDamage() +weaponProperties!!.getRange() +((MAX_RELOAD_TIME /weaponProperties!!.getReloadTime()) shr 1))
+    var cost: Long = (weaponProperties!!.getDamage() +weaponProperties!!.getRange() +((this.MAX_RELOAD_TIME /weaponProperties!!.getReloadTime()) shr 1))
 
 cost= this.getCostExponential(cost)
 

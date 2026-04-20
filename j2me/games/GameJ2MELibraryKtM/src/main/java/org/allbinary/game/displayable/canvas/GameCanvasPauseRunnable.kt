@@ -72,7 +72,7 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
                         if(isOpenGL)
                         
                                     {
-                                    allBinaryGameCanvas!!.processSleep()
+                                    this.allBinaryGameCanvas!!.processSleep()
 
                                     }
                                 

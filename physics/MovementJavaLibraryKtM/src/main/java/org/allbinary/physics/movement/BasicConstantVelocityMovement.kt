@@ -80,13 +80,13 @@ var otherAngle = otherAngle
     var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()!!
 
 
-    var xVector: Int = (axisMathVectorUtil!!.calculateX(radius, angle) /scaleFactorValue).toInt()
+    var xVector: Int = (this.axisMathVectorUtil!!.calculateX(radius, angle) /scaleFactorValue).toInt()
 
 
-    var yVector: Int = (axisMathVectorUtil!!.calculateY(radius, angle) /scaleFactorValue).toInt()
+    var yVector: Int = (this.axisMathVectorUtil!!.calculateY(radius, angle) /scaleFactorValue).toInt()
 
 
-    var zVector: Int = (axisMathVectorUtil!!.calculateZ(radius, otherAngle) /scaleFactorValue).toInt()
+    var zVector: Int = (this.axisMathVectorUtil!!.calculateZ(radius, otherAngle) /scaleFactorValue).toInt()
 
 layer.move(xVector, yVector, zVector)
 }
@@ -127,7 +127,7 @@ this.velocityProperties!!.zero()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return velocityProperties
+                        return this.velocityProperties
 }
 
 
@@ -154,7 +154,7 @@ this.speedBasicDecimal= speedBasicDecimal
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return speedBasicDecimal
+                        return this.speedBasicDecimal
 }
 
 

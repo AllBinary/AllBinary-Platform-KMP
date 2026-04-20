@@ -78,7 +78,7 @@ this.alphaP= alpha
     //var graphics = graphics
     //var x = x
     //var y = y
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
 }
 
 

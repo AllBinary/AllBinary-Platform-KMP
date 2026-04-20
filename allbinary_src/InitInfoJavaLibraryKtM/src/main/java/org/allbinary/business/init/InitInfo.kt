@@ -130,7 +130,7 @@ initInfoEntity!!.update()
 
                         }
                             
-hasRead= false
+this.hasRead= false
 } catch(e: Exception)
             {
 
@@ -154,9 +154,9 @@ hasRead= false
 var hashMap = hashMap
 
         try {
-            testing= hashMap!!.get(TESTING as Object) as String
-mainPath= AbPath(hashMap!!.get(MAINPATH as Object) as String)
-testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object) as String)
+            this.testing= hashMap!!.get(this.TESTING) as String
+this.mainPath= AbPath(hashMap!!.get(this.MAINPATH) as String)
+this.testHtmlPath= AbPath(hashMap!!.get(this.TESTHTMLPATH) as String)
 } catch(e: Exception)
             {
 
@@ -179,13 +179,13 @@ testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object) as String)
 {
 
         try {
-            testing= 
+            this.testing= 
                                         null
                                     
-mainPath= 
+this.mainPath= 
                                         null
                                     
-testHtmlPath= 
+this.testHtmlPath= 
                                         null
                                     
 
@@ -218,7 +218,7 @@ initInfoEntity!!.get()
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-hasRead= value
+this.hasRead= value
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -230,10 +230,10 @@ hasRead= value
         try {
             
     
-                        if(!hasRead)
+                        if(!this.hasRead)
                         
                                     {
-                                    hasRead= true
+                                    this.hasRead= true
 this.get()
 
                                     }
@@ -269,7 +269,7 @@ this.get()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BooleanUtil.getInstance()!!.getFromString(testing)
+                        return BooleanUtil.getInstance()!!.getFromString(this.testing)
 } catch(e: Exception)
             {
 
@@ -309,7 +309,7 @@ this.updateIfNeeded()
 this.updateIfNeeded()
 
     
-                        if(testHtmlPath != 
+                        if(this.testHtmlPath != 
                                     null
                                 )
                         
@@ -340,7 +340,7 @@ this.updateIfNeeded()
 this.updateIfNeeded()
 
     
-                        if(mainPath != 
+                        if(this.mainPath != 
                                     null
                                 )
                         
@@ -369,7 +369,7 @@ this.updateIfNeeded()
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-testing= value
+this.testing= value
 }
 
 
@@ -433,9 +433,9 @@ var testing = testing
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-hashMap!!.put(TESTING, this.getTesting())
-hashMap!!.put(MAINPATH, this.getMainPath())
-hashMap!!.put(TESTHTMLPATH, this.getTestHtmlPath())
+hashMap!!.put(this.TESTING, this.getTesting())
+hashMap!!.put(this.MAINPATH, this.getMainPath())
+hashMap!!.put(this.TESTHTMLPATH, this.getTestHtmlPath())
 
 
 

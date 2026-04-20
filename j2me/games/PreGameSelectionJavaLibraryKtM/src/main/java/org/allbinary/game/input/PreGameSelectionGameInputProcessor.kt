@@ -150,7 +150,7 @@ var list = list
                                     {
                                     
     
-                        if(inputTimeHelper!!.isTime())
+                        if(this.inputTimeHelper!!.isTime())
                         
                                     {
                                     SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())

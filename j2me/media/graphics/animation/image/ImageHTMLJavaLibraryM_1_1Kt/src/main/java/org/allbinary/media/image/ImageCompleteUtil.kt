@@ -120,7 +120,7 @@ var name = name
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(COMPLETE +image.getName(), this, commonStrings!!.SUCCESS)
+PreLogUtil.put(this.COMPLETE +image.getName(), this, commonStrings!!.SUCCESS)
 
 
 

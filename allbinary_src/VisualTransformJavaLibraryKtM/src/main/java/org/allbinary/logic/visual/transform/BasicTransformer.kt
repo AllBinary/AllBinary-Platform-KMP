@@ -88,7 +88,7 @@ this.setTemplateAsInputStream()
 inputStream= AbFileInputStream(file)
 outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384)) as ByteArrayOutputStream
 
-    var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.DESEDE, AbKeys.getInstance()!!.getKey(abeClientInformation, file.getAbsolutePath()))
+    var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.DESEDE, AbKeys.getInstance()!!.getKey(this.abeClientInformation, file.getAbsolutePath()))
 
 
     var decrypted: ByteArray = abCrypt!!.decrypt(outputStream!!.toByteArray())!!
@@ -160,7 +160,7 @@ this.streamUtil!!.close(inputStream)
 inputStream= ByteArrayInputStream(this.getTransformInfoInterface()!!.getTemplate()!!.encodeToByteArray())
 outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384)) as ByteArrayOutputStream
 
-    var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.DESEDE, AbKeys.getInstance()!!.getKey(abeClientInformation, this.getTransformInfoInterface()!!.getName()))
+    var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.DESEDE, AbKeys.getInstance()!!.getKey(this.abeClientInformation, this.getTransformInfoInterface()!!.getName()))
 
 
     var decrypted: ByteArray = abCrypt!!.decrypt(outputStream!!.toByteArray())!!

@@ -62,10 +62,10 @@ private constructor (){
 var analogControllerConfigurationEventListenerInterface = analogControllerConfigurationEventListenerInterface
 
     
-                        if(!list.contains(analogControllerConfigurationEventListenerInterface))
+                        if(!this.list.contains(analogControllerConfigurationEventListenerInterface))
                         
                                     {
-                                    list.add(analogControllerConfigurationEventListenerInterface)
+                                    this.list.add(analogControllerConfigurationEventListenerInterface)
 
                                     }
                                 

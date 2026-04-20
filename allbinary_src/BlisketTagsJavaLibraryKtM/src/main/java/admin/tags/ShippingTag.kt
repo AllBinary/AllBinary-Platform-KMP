@@ -74,7 +74,7 @@ this.storeName= value
         try {
             
     var anyType: Any = ShippingHelperFactory().
-                            getInstance(propertiesHashMap, this.pageContext)!!
+                            getInstance(this.propertiesHashMap, this.pageContext)!!
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
@@ -132,16 +132,16 @@ this.storeName= value
         try {
             
     
-                        if(command != 
+                        if(this.command != 
                                     null
                                 )
                         
                                     {
                                     this.propertiesHashMap= HashMap<Any, Any>()
-propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
+this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.SETSHIPPINGTYPE) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.SETSHIPPINGTYPE) == 0)
                         
                                     {
                                     this.setShippingType()

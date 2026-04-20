@@ -168,23 +168,23 @@ var graphics = graphics
 
                                 }
                             
-jPanel2= javax.swing.JPanel()
-imageHeightIsFrameSizeJCheckBox= javax.swing.JCheckBox()
-horizontalJCheckBox= javax.swing.JCheckBox()
-verticleJCheckBox= javax.swing.JCheckBox()
-writeOverOriginalJCheckBox= javax.swing.JCheckBox()
-generateJButton= javax.swing.JButton()
-jPanel3= javax.swing.JPanel()
-jLabel2= javax.swing.JLabel()
+this.jPanel2= javax.swing.JPanel()
+this.imageHeightIsFrameSizeJCheckBox= javax.swing.JCheckBox()
+this.horizontalJCheckBox= javax.swing.JCheckBox()
+this.verticleJCheckBox= javax.swing.JCheckBox()
+this.writeOverOriginalJCheckBox= javax.swing.JCheckBox()
+this.generateJButton= javax.swing.JButton()
+this.jPanel3= javax.swing.JPanel()
+this.jLabel2= javax.swing.JLabel()
 
-    var jPanel1Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(jPanel1)
+    var jPanel1Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.jPanel1)
 
-jPanel1!!.setLayout(jPanel1Layout)
+this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(0, 507, Short.MAX_VALUE))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(0, 230, Short.MAX_VALUE))
-imageHeightIsFrameSizeJCheckBox!!.setSelected(true)
-imageHeightIsFrameSizeJCheckBox!!.setText("Image Height Is Frame Size")
-imageHeightIsFrameSizeJCheckBox!!.setEnabled(false)
+this.imageHeightIsFrameSizeJCheckBox!!.setSelected(true)
+this.imageHeightIsFrameSizeJCheckBox!!.setText("Image Height Is Frame Size")
+this.imageHeightIsFrameSizeJCheckBox!!.setEnabled(false)
 imageHeightIsFrameSizeJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -197,13 +197,13 @@ imageHeightIsFrameSizeJCheckBoxActionPerformed(evt)
 
                                 }
                             )
-horizontalJCheckBox!!.setSelected(true)
-horizontalJCheckBox!!.setText("Horizontal")
-horizontalJCheckBox!!.setEnabled(false)
-verticleJCheckBox!!.setText("Verticle")
-verticleJCheckBox!!.setEnabled(false)
-writeOverOriginalJCheckBox!!.setText("Write Over Original")
-generateJButton!!.setText("Generate")
+this.horizontalJCheckBox!!.setSelected(true)
+this.horizontalJCheckBox!!.setText("Horizontal")
+this.horizontalJCheckBox!!.setEnabled(false)
+this.verticleJCheckBox!!.setText("Verticle")
+this.verticleJCheckBox!!.setEnabled(false)
+this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
+this.generateJButton!!.setText("Generate")
 generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -217,16 +217,16 @@ generateJButtonActionPerformed(evt)
                                 }
                             )
 
-    var jPanel2Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(jPanel2)
+    var jPanel2Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.jPanel2)
 
-jPanel2!!.setLayout(jPanel2Layout)
+this.jPanel2!!.setLayout(jPanel2Layout)
 jPanel2Layout!!.setHorizontalGroup(jPanel2Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(jPanel2Layout!!.createSequentialGroup()!!.addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.add(verticleJCheckBox)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)!!.add(horizontalJCheckBox)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(imageHeightIsFrameSizeJCheckBox)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(writeOverOriginalJCheckBox)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(generateJButton)))
 jPanel2Layout!!.setVerticalGroup(jPanel2Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(jPanel2Layout!!.createSequentialGroup()!!.add(jPanel2Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(imageHeightIsFrameSizeJCheckBox, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.add(horizontalJCheckBox)!!.add(verticleJCheckBox)!!.add(writeOverOriginalJCheckBox)!!.add(generateJButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))!!.addContainerGap()))
-jLabel2!!.setText("Results:")
+this.jLabel2!!.setText("Results:")
 
-    var jPanel3Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(jPanel3)
+    var jPanel3Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.jPanel3)
 
-jPanel3!!.setLayout(jPanel3Layout)
+this.jPanel3!!.setLayout(jPanel3Layout)
 jPanel3Layout!!.setHorizontalGroup(jPanel3Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(jPanel3Layout!!.createSequentialGroup()!!.add(jLabel2)!!.addContainerGap(448, Short.MAX_VALUE)))
 jPanel3Layout!!.setVerticalGroup(jPanel3Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(jLabel2))
 

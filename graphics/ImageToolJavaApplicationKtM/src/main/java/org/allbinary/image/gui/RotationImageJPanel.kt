@@ -126,21 +126,21 @@ var graphics = graphics
 
                                 }
                             
-jPanel2= javax.swing.JPanel()
-jLabel1= javax.swing.JLabel()
-generateJButton= javax.swing.JButton()
-totalAngleJComboBox= javax.swing.JComboBox()
-jLabel3= javax.swing.JLabel()
-writeOverOriginalJCheckBox= javax.swing.JCheckBox()
-jPanel3= javax.swing.JPanel()
-jLabel2= javax.swing.JLabel()
+this.jPanel2= javax.swing.JPanel()
+this.jLabel1= javax.swing.JLabel()
+this.generateJButton= javax.swing.JButton()
+this.totalAngleJComboBox= javax.swing.JComboBox()
+this.jLabel3= javax.swing.JLabel()
+this.writeOverOriginalJCheckBox= javax.swing.JCheckBox()
+this.jPanel3= javax.swing.JPanel()
+this.jLabel2= javax.swing.JLabel()
 
-    var jPanel1Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(jPanel1)
+    var jPanel1Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.jPanel1)
 
-jPanel1!!.setLayout(jPanel1Layout)
+this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(0, 436, Short.MAX_VALUE))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(0, 227, Short.MAX_VALUE))
-generateJButton!!.setText("Generate")
+this.generateJButton!!.setText("Generate")
 generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -153,7 +153,7 @@ generateJButtonActionPerformed(evt)
 
                                 }
                             )
-totalAngleJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(commonStrings!!.UP,commonStrings!!.DOWN,"-90","90")))
+this.totalAngleJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(commonStrings!!.UP,commonStrings!!.DOWN,"-90","90")))
 totalAngleJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -166,19 +166,19 @@ totalAngleJComboBoxActionPerformed(evt)
 
                                 }
                             )
-jLabel3!!.setText("Total Angle:")
-writeOverOriginalJCheckBox!!.setText("Write Over Original")
+this.jLabel3!!.setText("Total Angle:")
+this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
 
-    var jPanel2Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(jPanel2)
+    var jPanel2Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.jPanel2)
 
-jPanel2!!.setLayout(jPanel2Layout)
+this.jPanel2!!.setLayout(jPanel2Layout)
 jPanel2Layout!!.setHorizontalGroup(jPanel2Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(jPanel2Layout!!.createSequentialGroup()!!.add(8, 8, 8)!!.add(jLabel1)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(jLabel3)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(totalAngleJComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(writeOverOriginalJCheckBox)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(generateJButton)!!.addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
 jPanel2Layout!!.setVerticalGroup(jPanel2Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(jPanel2Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(jLabel1)!!.add(generateJButton)!!.add(totalAngleJComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.add(jLabel3)!!.add(writeOverOriginalJCheckBox)))
-jLabel2!!.setText("Results:")
+this.jLabel2!!.setText("Results:")
 
-    var jPanel3Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(jPanel3)
+    var jPanel3Layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.jPanel3)
 
-jPanel3!!.setLayout(jPanel3Layout)
+this.jPanel3!!.setLayout(jPanel3Layout)
 jPanel3Layout!!.setHorizontalGroup(jPanel3Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(jPanel3Layout!!.createSequentialGroup()!!.add(jLabel2)!!.addContainerGap(377, Short.MAX_VALUE)))
 jPanel3Layout!!.setVerticalGroup(jPanel3Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(jLabel2))
 
@@ -253,7 +253,7 @@ this.imageProcessorInput= imageProcessorInput
 this.result= generatedBufferedImage
 this.getParent()!!.repaint()
 
-    var file: File = imageProcessorInput!!.getFiles()[index]!!
+    var file: File = this.imageProcessorInput!!.getFiles()[index]!!
 
 
     
@@ -264,10 +264,10 @@ this.getParent()!!.repaint()
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
 
 filePath= StringBuilder().
-                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(name)!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
+                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
 file= File(filePath)
 
                                     }

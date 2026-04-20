@@ -69,7 +69,7 @@ public constructor (groupInterfaceArray: Array<Group?>)
         {
     //var groupInterfaceArray = groupInterfaceArray
 
-    var size: Int = newUnconstructedRTSLayerInterfaceArray!!.size
+    var size: Int = this.newUnconstructedRTSLayerInterfaceArray!!.size
                 
 
 
@@ -79,7 +79,7 @@ public constructor (groupInterfaceArray: Array<Group?>)
                         for (index in 0 until size)
 
         {
-newUnconstructedRTSLayerInterfaceArray[index]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+this.newUnconstructedRTSLayerInterfaceArray[index]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 }
 
 this.groupInterfaceArray= groupInterfaceArray
@@ -312,7 +312,7 @@ this.logUtil!!.putF(StringMaker().
                                 )
                         
                                     {
-                                    hashtable.put(AllBinaryGameLayerManager.ID, layerManager)
+                                    this.hashtable.put(AllBinaryGameLayerManager.ID, layerManager)
 
 
 

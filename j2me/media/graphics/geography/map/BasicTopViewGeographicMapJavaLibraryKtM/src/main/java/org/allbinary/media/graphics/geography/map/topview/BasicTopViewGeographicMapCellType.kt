@@ -197,7 +197,7 @@ this.types= typeArray
         {
 
     
-                        if(types[index] == type)
+                        if(this.types[index] == type)
                         
                                     {
                                     
@@ -236,7 +236,7 @@ this.types= typeArray
     var stringMaker: StringMaker = StringMaker()
 
 
-    var size: Int = types.size
+    var size: Int = this.types.size
                 
 
 
@@ -246,7 +246,7 @@ this.types= typeArray
                         for (index in 0 until size)
 
         {
-stringMaker!!.appendint(types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
+stringMaker!!.appendint(this.types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
 }
 
 

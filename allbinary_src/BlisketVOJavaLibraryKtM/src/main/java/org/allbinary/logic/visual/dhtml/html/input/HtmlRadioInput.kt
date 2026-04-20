@@ -48,7 +48,7 @@ var after = after
     open fun setSelected()
         //nullable = true from not(false or (false and true)) = true
 {
-super.addAttribute(CHECKED, BooleanFactory.getInstance()!!.TRUE_STRING)
+super.addAttribute(this.CHECKED, BooleanFactory.getInstance()!!.TRUE_STRING)
 }
 
 

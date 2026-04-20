@@ -163,7 +163,7 @@ this.notYoursGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.get
 
 
     
-                        if(motionGestureInput == PRESSED)
+                        if(motionGestureInput == this.PRESSED)
                         
                                     {
                                     
@@ -174,7 +174,7 @@ this.notYoursGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.get
                         if(this.getRtsPlayerLayerInterface()!!.getCurrentScrollSelectionForm()!!.isInForm(point))
                         
                                     {
-                                    isDragging= rtsFormInput!!.processSticky(this.getSelectedRtsLayer(), this.getRtsPlayerLayerInterface(), layerManager, point)
+                                    this.isDragging= rtsFormInput!!.processSticky(this.getSelectedRtsLayer(), this.getRtsPlayerLayerInterface(), layerManager, point)
 
                                     }
                                 
@@ -292,13 +292,13 @@ rectY1= this.endPoint!!.getY()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(AT)
+stringBuffer!!.append(this.AT)
 stringBuffer!!.appendint(rectX1)
-stringBuffer!!.append(SPACE)
+stringBuffer!!.append(this.SPACE)
 stringBuffer!!.appendint(rectY1)
-stringBuffer!!.append(SPACE)
+stringBuffer!!.append(this.SPACE)
 stringBuffer!!.appendint(rectX2)
-stringBuffer!!.append(SPACE)
+stringBuffer!!.append(this.SPACE)
 stringBuffer!!.appendint(rectY2)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD)
 
@@ -313,21 +313,21 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD)
         {
 rtsLayer= rtsLayerList!!.get(index) as RTSLayer
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(POSSIBLE)
+stringBuffer!!.append(this.POSSIBLE)
 stringBuffer!!.append(rtsLayer!!.getName())
-stringBuffer!!.append(SPACE)
-stringBuffer!!.append(AT)
+stringBuffer!!.append(this.SPACE)
+stringBuffer!!.append(this.AT)
 stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth()))
-stringBuffer!!.append(SPACE)
+stringBuffer!!.append(this.SPACE)
 stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD)
 
     
-                        if(rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth(), rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
+                        if(this.rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth(), rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append(ADDING)!!.append(rtsLayer!!.getName())!!.toString(), this, METHOD)
+                            append(this.ADDING)!!.append(rtsLayer!!.getName())!!.toString(), this, METHOD)
 rtsLayer!!.select()
 this.getSelectedBuildingPlayerGameInput()!!.addSelectedRTSLayer(rtsLayer)
 
@@ -387,7 +387,7 @@ this.updatePaintable()
 
 
     
-                        if(motionGestureInput == touchMotionGestureFactory!!.PRESSED)
+                        if(motionGestureInput == this.touchMotionGestureFactory!!.PRESSED)
                         
                                     {
                                     this.startPoint= point
@@ -397,7 +397,7 @@ this.endPoint= point
                                 
                              else 
     
-                        if(motionGestureInput == touchMotionGestureFactory!!.RELEASED)
+                        if(motionGestureInput == this.touchMotionGestureFactory!!.RELEASED)
                         
                                     {
                                     this.endPoint= point
@@ -433,7 +433,7 @@ this.endPoint= PointFactory.getInstance()!!.ZERO_ZERO
 
 
     
-                        if(!isDragging)
+                        if(!this.isDragging)
                         
                                     {
                                     this.processSelectionBoxMotionInput(layerManager)
@@ -445,7 +445,7 @@ this.endPoint= PointFactory.getInstance()!!.ZERO_ZERO
                         if(endDrag)
                         
                                     {
-                                    isDragging= false
+                                    this.isDragging= false
 
                                     }
                                 
@@ -650,7 +650,7 @@ this.updatePaintable()
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
 multiSelectPaintable!!.setBasicColorP(geographicMapInterface!!.getForegroundBasicColor())
-multiSelectPaintable!!.update(list)
+this.multiSelectPaintable!!.update(list)
 this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfo(multiSelectPaintable)
 
                                     }

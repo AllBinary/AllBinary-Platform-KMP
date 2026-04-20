@@ -73,10 +73,10 @@ var document = document
                                     }
                                 
 
-    var hashMap: HashMap<Any, Any> = downloadableItem!!.toHashMap()!!
+    var hashMap: HashMap<Any, Any> = this.downloadableItem!!.toHashMap()!!
 
 
-    var totalTime: Long = downloadableItem!!.getValidTime()!!.longValue()!!
+    var totalTime: Long = this.downloadableItem!!.getValidTime()!!.longValue()!!
 
 
     var calendar: Calendar = Calendar.getInstance()!!

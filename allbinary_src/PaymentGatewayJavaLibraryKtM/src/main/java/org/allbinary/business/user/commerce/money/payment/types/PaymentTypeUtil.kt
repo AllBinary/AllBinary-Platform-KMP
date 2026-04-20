@@ -104,7 +104,7 @@ stringBuffer!!.append("payment")
 stringBuffer!!.append(sep)
 stringBuffer!!.append("gateway")
 stringBuffer!!.append(sep)
-PAYMENTGATEWAYFILEPATHSTRING= stringBuffer!!.toString()
+this.PAYMENTGATEWAYFILEPATHSTRING= stringBuffer!!.toString()
 }
 
 
@@ -184,7 +184,7 @@ stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 stringBuffer!!.append(storeName)
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
+stringBuffer!!.append(this.PAYMENTGATEWAYFILEPATHSTRING)
 
     var abPath: AbPath = AbPath(stringBuffer!!.toString(), SHIPPINGMETHODSFILENAME) as AbPath
 

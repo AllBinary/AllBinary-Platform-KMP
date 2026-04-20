@@ -65,7 +65,7 @@ this.signed= signed
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 
@@ -137,8 +137,8 @@ onMotionGestureEvent(ev)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
-isMouseGestureOccurring= true
-currentMotionGesture= TouchMotionGestureFactory.getInstance()!!.NO_MOTION
+this.isMouseGestureOccurring= true
+this.currentMotionGesture= TouchMotionGestureFactory.getInstance()!!.NO_MOTION
 this.onMotionGestureEvent(ev)
 }
 
@@ -151,19 +151,19 @@ var ev = ev
         try {
             
     
-                        if(isMouseGestureOccurring == false)
+                        if(this.isMouseGestureOccurring == false)
                         
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
-isMouseGestureOccurring= false
-signed.onMotionGestureCompleted(motionGestureCollection)
-motionGestureCollection!!.clear()
+this.isMouseGestureOccurring= false
+this.signed.onMotionGestureCompleted(this.motionGestureCollection)
+this.motionGestureCollection!!.clear()
 } catch(e: Exception)
             {
 this.logUtil!!.put(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))!!.toString(), this, "release", e)
+                            append(this.commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))!!.toString(), this, "release", e)
 }
 
 }
@@ -175,7 +175,7 @@ this.logUtil!!.put(StringMaker().
 var ev = ev
 
     
-                        if(isMouseGestureOccurring == false)
+                        if(this.isMouseGestureOccurring == false)
                         
 
 
@@ -205,11 +205,11 @@ var ev = ev
                         else {
                             
     
-                        if(currentMotionGesture != motionGestureInput)
+                        if(this.currentMotionGesture != motionGestureInput)
                         
                                     {
-                                    currentMotionGesture= motionGestureInput
-motionGestureCollection!!.add(ev.getMotionGesture())
+                                    this.currentMotionGesture= motionGestureInput
+this.motionGestureCollection!!.add(ev.getMotionGesture())
 
                                     }
                                 

@@ -73,8 +73,8 @@ this.tiledLayerP!!.paint(graphics)
 
     var font: Font = graphics.getFont()!!
 
-graphics.setFont(font2)
-graphics.setColor(debugColor)
+graphics.setFont(this.font2)
+graphics.setColor(this.debugColor)
 
     var x: Int = this.tiledLayerP!!.getX()!!
 

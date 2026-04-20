@@ -62,7 +62,7 @@ var gameInput = gameInput
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
-this.getArtificialIntelligenceInterface()[index]!!.processAI(allBinaryLayerManager)
+this.getArtificialIntelligenceInterface()[this.index]!!.processAI(allBinaryLayerManager)
 }
 
 

@@ -49,7 +49,7 @@ var after = after
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 this.value= stringUtil!!.EMPTY_STRING
-addAttribute(VALUE, value)
+addAttribute(this.VALUE, value)
 }
 
 

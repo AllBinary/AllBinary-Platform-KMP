@@ -72,7 +72,7 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
 
                                     }
                                 
-this.anyType= tagHelperFactoryInterface!!.getInstance(this.getPropertiesHashMap(), this.pageContext)
+this.anyType= this.tagHelperFactoryInterface!!.getInstance(this.getPropertiesHashMap(), this.pageContext)
 
                                     }
                                 

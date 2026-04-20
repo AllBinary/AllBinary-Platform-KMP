@@ -73,7 +73,7 @@ companion object {
     //var canvas = canvas
 
         try {
-            PlayN.openURL(list.remove(0) as String)
+            PlayN.openURL(this.list.remove(0) as String)
 } catch(e: Exception)
             {
 

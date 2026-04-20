@@ -126,9 +126,9 @@ ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
                         if(impactVelocityX != 0L)
                         
                                     {
-                                    halfImpactVelocityX= (impactVelocityX shr 1)
-ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(halfImpactVelocityX)
-vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(halfImpactVelocityX)
+                                    this.halfImpactVelocityX= (impactVelocityX shr 1)
+ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(this.halfImpactVelocityX)
+vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(this.halfImpactVelocityX)
 
                                     }
                                 
@@ -141,9 +141,9 @@ vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(
                         if(impactVelocityY != 0L)
                         
                                     {
-                                    halfImpactVelocityY= (impactVelocityY shr 1)
-ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityYBasicDecimalP()!!.add(halfImpactVelocityY)
-vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(halfImpactVelocityY)
+                                    this.halfImpactVelocityY= (impactVelocityY shr 1)
+ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityYBasicDecimalP()!!.add(this.halfImpactVelocityY)
+vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(this.halfImpactVelocityY)
 
                                     }
                                 
@@ -153,7 +153,7 @@ vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(
                             
 this.collideFriction(ownerVehicleLayerInterface)
 this.collideFriction(vehiclePropertiesCompositeInterface)
-totalImpactVelocity= impactVelocityX +impactVelocityY
+this.totalImpactVelocity= impactVelocityX +impactVelocityY
 }
 
 

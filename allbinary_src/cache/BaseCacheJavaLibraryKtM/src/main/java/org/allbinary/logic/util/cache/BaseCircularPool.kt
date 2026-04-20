@@ -49,7 +49,7 @@ open public class BaseCircularPool
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-    var anyType: Any = OBJECT_ARRAY[this.circularIndexUtil!!.getIndex()]!!
+    var anyType: Any = this.OBJECT_ARRAY[this.circularIndexUtil!!.getIndex()]!!
 
 this.circularIndexUtil!!.next()
 
@@ -75,7 +75,7 @@ this.circularIndexUtil!!.setIndex(0)
                         for (index in 0 until size)
 
         {
-OBJECT_ARRAY[index]= allBinaryObjectFactoryInterface!!.getInstance()
+this.OBJECT_ARRAY[index]= allBinaryObjectFactoryInterface!!.getInstance()
 }
 
 }
@@ -91,7 +91,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OBJECT_ARRAY[index]!!
+                        return this.OBJECT_ARRAY[index]!!
 }
 
 

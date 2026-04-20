@@ -142,7 +142,7 @@ GameInitializedEventHandler.getInstance()!!.fireEvent(EVENT)
 
 gameInitializationInterface!!.init(abeClientInformation, canvas.getCustomCommandListener(), resourceLoadingLevelFactory!!.LOAD_ALL.getLevel())
 this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_ALL)
-GameInitializedEventHandler.getInstance()!!.fireEvent(EVENT)
+GameInitializedEventHandler.getInstance()!!.fireEvent(this.EVENT)
 ChangedGameFeatureListener.getInstance()!!.remove(MainFeatureFactory.getInstance()!!.STATIC)
 
                                     }

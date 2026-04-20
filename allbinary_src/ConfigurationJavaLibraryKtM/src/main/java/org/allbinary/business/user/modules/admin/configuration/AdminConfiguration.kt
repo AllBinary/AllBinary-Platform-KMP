@@ -80,7 +80,7 @@ this.getFormData(storeHashMap)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeHashMap = storeHashMap
-this.logUtil!!.putF(commonStrings!!.START, this, "getFormData")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "getFormData")
 this.setContextConfigurationInterface(ContextConfiguration(storeHashMap) as ContextConfigurationInterface)
 }
 

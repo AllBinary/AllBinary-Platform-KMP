@@ -59,7 +59,7 @@ var document = document
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 
-    var hashMap: HashMap<Any, Any> = dataMappingInterface!!.toHashMap()!!
+    var hashMap: HashMap<Any, Any> = this.dataMappingInterface!!.toHashMap()!!
 
 hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, EMPTY_STRING)
 hashMap!!.put(EntryData.getInstance()!!.ENCRYPTION, EMPTY_STRING)

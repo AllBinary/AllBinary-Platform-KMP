@@ -84,10 +84,10 @@ public constructor (poolName: String, numThreads: Int, priority: Int)
 {
 
     
-                        if(!currentPriorityRunnable!!.isDone())
+                        if(!this.currentPriorityRunnable!!.isDone())
                         
                                     {
-                                    currentPriorityRunnable!!.run()
+                                    this.currentPriorityRunnable!!.run()
 
                                     }
                                 
@@ -97,7 +97,7 @@ public constructor (poolName: String, numThreads: Int, priority: Int)
 
 
     
-                        if(runnable == NULL_RUNNABLE)
+                        if(runnable == this.NULL_RUNNABLE)
                         
                                     {
                                     
@@ -108,14 +108,14 @@ public constructor (poolName: String, numThreads: Int, priority: Int)
 
                                     }
                                 
-currentPriorityRunnable= runnable as PriorityRunnable
+this.currentPriorityRunnable= runnable as PriorityRunnable
 
     
-                        if(!(currentPriorityRunnable == threadObjectUtil!!.NULL_PRIORITY_RUNNABLE))
+                        if(!(this.currentPriorityRunnable == this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE))
                         
                                     {
-                                    currentPriorityRunnable!!.reset()
-currentPriorityRunnable!!.run()
+                                    this.currentPriorityRunnable!!.reset()
+this.currentPriorityRunnable!!.run()
 
                                     }
                                 
@@ -155,8 +155,8 @@ currentPriorityRunnable!!.run()
                         if(!this.isAlive)
                         
                                     {
-                                    isAlive= true
-taskQueue= BasicArrayList()
+                                    this.isAlive= true
+this.taskQueue= BasicArrayList()
 
                                     }
                                 
@@ -191,7 +191,7 @@ taskQueue= BasicArrayList()
     var runnable: PriorityRunnable
 
 
-    var lowerPriorityRunnable: PriorityRunnable = threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
+    var lowerPriorityRunnable: PriorityRunnable = this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 
 
@@ -217,7 +217,7 @@ break;
 
 
     
-                        if(lowerPriorityRunnable == threadObjectUtil!!.NULL_PRIORITY_RUNNABLE || lowerPriorityRunnable == NULL_RUNNABLE)
+                        if(lowerPriorityRunnable == this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE || lowerPriorityRunnable == this.NULL_RUNNABLE)
                         
                                     {
                                     this.taskQueue!!.add(task)
@@ -245,7 +245,7 @@ this.taskQueue!!.add(index, task)
     //var task = task
 
     
-                        if(!isAlive)
+                        if(!this.isAlive)
                         
                                     {
                                     this.init()
@@ -259,7 +259,7 @@ this.taskQueue!!.add(index, task)
                                 )
                         
                                     {
-                                    taskQueue!!.add(task)
+                                    this.taskQueue!!.add(task)
 
                                     }
                                 
@@ -274,7 +274,7 @@ this.taskQueue!!.add(index, task)
 : Runnable{
 
     
-                        if(taskQueue!!.isEmpty())
+                        if(this.taskQueue!!.isEmpty())
                         
                                     {
                                     
@@ -289,7 +289,7 @@ this.taskQueue!!.add(index, task)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return taskQueue!!.remove(0) as Runnable
+                        return this.taskQueue!!.remove(0) as Runnable
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -297,7 +297,7 @@ this.taskQueue!!.add(index, task)
     open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
-taskQueue!!.clear()
+this.taskQueue!!.clear()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -307,12 +307,12 @@ taskQueue!!.clear()
 {
 
     
-                        if(isAlive)
+                        if(this.isAlive)
                         
                                     {
-                                    isAlive= false
-taskQueue!!.clear()
-this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
+                                    this.isAlive= false
+this.taskQueue!!.clear()
+this.currentPriorityRunnable= this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
                                     }
                                 
@@ -322,9 +322,9 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
     open fun join()
         //nullable = true from not(false or (false and true)) = true
 {
-isAlive= false
-taskQueue!!.clear()
-this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
+this.isAlive= false
+this.taskQueue!!.clear()
+this.currentPriorityRunnable= this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 }
 
 
@@ -393,8 +393,8 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
                         
                                     {
                                     this.isAlive= false
-taskQueue!!.clear()
-this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
+this.taskQueue!!.clear()
+this.currentPriorityRunnable= this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
                                     }
                                 

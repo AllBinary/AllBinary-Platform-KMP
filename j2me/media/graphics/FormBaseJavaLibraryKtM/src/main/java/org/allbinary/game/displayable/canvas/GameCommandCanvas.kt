@@ -130,8 +130,8 @@ public constructor (cmdListener: CommandListener, name: String, backgroundBasicC
 this.repaintBehavior= RepaintBehavior.getInstance()
 this.foregroundBasicColor= foregroundBasicColor
 this.backgroundBasicColor= backgroundBasicColor
-this.foregroundColor= foregroundBasicColor!!.toInt()
-this.backgroundColor= backgroundBasicColor!!.toInt()
+this.foregroundColor= this.foregroundBasicColor!!.toInt()
+this.backgroundColor= this.backgroundBasicColor!!.toInt()
 this.initCommands(cmdListener)
 
     
@@ -379,10 +379,10 @@ this.removeGameKeyEvent(keyCode, deviceId, false)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
 
-downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 
@@ -417,10 +417,10 @@ this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVEN
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
 
-upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 

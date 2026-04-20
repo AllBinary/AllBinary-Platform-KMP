@@ -65,7 +65,7 @@ private constructor ()
         //nullable = true from not(false or (false and true)) = true
 {
 this.DEFAULT_CHAR_HEIGHT= defaultFont!!.getHeight()
-this.DEFAULT_CHAR_WIDTH= defaultFont!!.charWidth('C')
+this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 }
 
 
@@ -88,7 +88,7 @@ this.DEFAULT_CHAR_WIDTH= defaultFont!!.charWidth('C')
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DEFAULT_CHAR_WIDTH *size
+                        return this.DEFAULT_CHAR_WIDTH *size
 }
 
 
@@ -100,7 +100,7 @@ this.DEFAULT_CHAR_WIDTH= defaultFont!!.charWidth('C')
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DEFAULT_CHAR_WIDTH *string.length
+                        return this.DEFAULT_CHAR_WIDTH *string.length
 }
 
 

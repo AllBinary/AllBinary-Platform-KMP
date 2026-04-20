@@ -64,7 +64,7 @@ companion object {
 : BasicColor{
     //var gameCanvasInterface = gameCanvasInterface
 
-    var color: BasicColor = YELLOW
+    var color: BasicColor = this.YELLOW
 
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = gameCanvasInterface!!.getLayerManager() as GeographicMapCompositeInterface

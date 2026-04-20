@@ -75,7 +75,7 @@ LayerManagerEventHandler.getInstance()!!.addListener(this)
     var groupList: BasicArrayList
 
 
-    var size: Int = list.size()!!
+    var size: Int = this.list.size()!!
 
 
 
@@ -177,7 +177,7 @@ groupList!!.clear()
     var id: Int = groupInterface!!.getGroupId().toInt()
 
 
-    var size: Int = list.size()!!
+    var size: Int = this.list.size()!!
 
 
 
@@ -291,7 +291,7 @@ groupId= groupInterface!!.getGroupId().toInt()
     //var excludeGroupList = excludeGroupList
     //var maxSize = maxSize
 
-    var size: Int = list.size()!!
+    var size: Int = this.list.size()!!
 
 
 
@@ -469,7 +469,7 @@ groupList!!.remove(layerInterface)
     var TOTAL_LABEL: String = CommonLabels.getInstance()!!.TOTAL_LABEL
 
 
-    var size: Int = list.size()!!
+    var size: Int = this.list.size()!!
 
 
 

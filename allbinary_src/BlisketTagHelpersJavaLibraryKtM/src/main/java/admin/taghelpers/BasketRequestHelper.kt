@@ -92,8 +92,8 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= request.getParameter(BasicItemData.ID)
-this.num= request.getParameter(BasketData.ITEMTOTALINBASKET)
+this.id= this.request.getParameter(BasicItemData.ID)
+this.num= this.request.getParameter(BasketData.ITEMTOTALINBASKET)
 }
 
 
@@ -104,9 +104,9 @@ this.num= request.getParameter(BasketData.ITEMTOTALINBASKET)
         try {
             
     
-                        if(id != 
+                        if(this.id != 
                                     null
-                                 && num != 
+                                 && this.num != 
                                     null
                                 )
                         
@@ -116,7 +116,7 @@ this.num= request.getParameter(BasketData.ITEMTOTALINBASKET)
 
 
     
-                        if(InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.getItem(id) == 
+                        if(InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.getItem(this.id) == 
                                     null
                                 )
                         
@@ -129,7 +129,7 @@ this.num= request.getParameter(BasketData.ITEMTOTALINBASKET)
 
                                     }
                                 
-basket.addItem(id, num)
+basket.addItem(this.id, num)
 
                                     }
                                 
@@ -175,7 +175,7 @@ basket.addItem(id, num)
         try {
             
     
-                        if(id != 
+                        if(this.id != 
                                     null
                                 )
                         
@@ -183,7 +183,7 @@ basket.addItem(id, num)
                                     
     var basket: BasketInterface = this.weblisketSession!!.getOrder()!!.getBasket()!!
 
-basket.removeItem(id)
+basket.removeItem(this.id)
 
                                     }
                                 
@@ -232,12 +232,12 @@ basket.removeItem(id)
 
 
     
-                        if(id != 
+                        if(this.id != 
                                     null
                                  && num != 
                                     null
                                 )
-                        basket.adjustItem(id, num)
+                        basket.adjustItem(this.id, num)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))

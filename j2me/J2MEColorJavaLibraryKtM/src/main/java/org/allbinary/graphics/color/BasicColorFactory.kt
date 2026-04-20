@@ -53,59 +53,117 @@ companion object {
             {
             }            
         
-    val NULL_COLOR: BasicColor = BasicColor(255, 255, 255, 255, "null color")
+    open fun createInstance(value: Int)
+        //nullable = true from not(false or (false and false)) = true
+: BasicColor{
+    //var value = value
 
-    val TAN: BasicColor = BasicColor(0xE9D8B5)
 
-    val SKIN_PINK: BasicColor = BasicColor(0xFDCECE)
 
-    val RED: BasicColor = BasicColor(0xFF0000, "red")
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicColor(BasicColorUtil.getInstance()!!.ALPHA, value, StringUtil.getInstance()!!.EMPTY_STRING)
+}
 
-    val LIGHT_RED: BasicColor = BasicColor(0xFFA0A0, "light red")
 
-    val DARK_GREEN: BasicColor = BasicColor(0x00FF00)
+    open fun createInstanceA(alphaValue: Int, value: Int)
+        //nullable = true from not(false or (false and false)) = true
+: BasicColor{
+    //var alphaValue = alphaValue
+    //var value = value
 
-    val GREEN: BasicColor = BasicColor(0x00DD00, "green")
 
-    val LIGHT_GREEN: BasicColor = BasicColor(0x007700)
 
-    val PURPLE: BasicColor = BasicColor(0x400040, "purple")
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicColor(alphaValue, value, StringUtil.getInstance()!!.EMPTY_STRING)
+}
 
-    val BLUE: BasicColor = BasicColor(0x0000FF, "blue")
 
-    val LIGHT_BLUE: BasicColor = BasicColor(0x00aaff)
+    open fun createInstanceAN(alphaValue: Int, value: Int, name: String)
+        //nullable = true from not(false or (false and false)) = true
+: BasicColor{
+    //var alphaValue = alphaValue
+    //var value = value
+    //var name = name
 
-    val VERY_LIGHT_BLUE: BasicColor = BasicColor(0x000033)
 
-    val PUCE: BasicColor = BasicColor(0xFF00AA)
 
-    val AQUA: BasicColor = BasicColor(0x00FFFF)
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicColor(alphaValue, value, name)
+}
 
-    val YELLOW: BasicColor = BasicColor(0xFFFF00, "yellow")
 
-    val PINK: BasicColor = BasicColor(0xFF00FF)
+    open fun createInstanceARGB(alphaValue: Int, r: Int, g: Int, b: Int, name: String)
+        //nullable = true from not(false or (false and false)) = true
+: BasicColor{
+    //var alphaValue = alphaValue
+    //var r = r
+    //var g = g
+    //var b = b
+    //var name = name
 
-    val BLACK: BasicColor = BasicColor(0x000000, "black")
+    var ALPHA_MASK: Int = 0xFF000000.toInt()
 
-    val GREY: BasicColor = BasicColor(0xAAAAAA, "grey")
 
-    val LIGHT_GREY: BasicColor = BasicColor(0xC0C0C0)
 
-    val DARK_GREY: BasicColor = BasicColor(0x404040)
 
-    val ORANGE: BasicColor = BasicColor(0xe07718)
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicColor(alphaValue, ((alphaValue shl 24) and ALPHA_MASK) +((r shl 16) and 0x00FF0000) +((g shl 8) and 0x0000FF00) +(b and 0x000000FF), StringUtil.getInstance()!!.EMPTY_STRING)
+}
 
-    val BROWN: BasicColor = BasicColor(0x956B00)
 
-    val WHITE: BasicColor = BasicColor(0xFFFFFF)
+    val NULL_COLOR: BasicColor = this.createInstanceARGB(255, 255, 255, 255, "null color")!!
 
-    val TRANSPARENT_COLOR: BasicColor = BasicColor(0x00000000, 0x000000, StringUtil.getInstance()!!.EMPTY_STRING)
+    val TAN: BasicColor = this.createInstance(0xE9D8B5)!!
 
-    val TRANSPARENT_GREY: BasicColor = BasicColor(0x52000000, 0xECECEC, StringUtil.getInstance()!!.EMPTY_STRING)
+    val SKIN_PINK: BasicColor = this.createInstance(0xFDCECE)!!
 
-    val TRANSPARENT_BLACK: BasicColor = BasicColor(0x52000000, 0x000000, StringUtil.getInstance()!!.EMPTY_STRING)
+    val RED: BasicColor = this.createInstanceAN(BasicColorUtil.getInstance()!!.ALPHA, 0xFF0000, "red")!!
 
-    val TRANSPARENT_RED: BasicColor = BasicColor(0x52000000, 0xFF0000, StringUtil.getInstance()!!.EMPTY_STRING)
+    val LIGHT_RED: BasicColor = this.createInstanceAN(BasicColorUtil.getInstance()!!.ALPHA, 0xFFA0A0, "light red")!!
+
+    val DARK_GREEN: BasicColor = this.createInstance(0x00FF00)!!
+
+    val GREEN: BasicColor = this.createInstanceAN(BasicColorUtil.getInstance()!!.ALPHA, 0x00DD00, "green")!!
+
+    val LIGHT_GREEN: BasicColor = this.createInstance(0x007700)!!
+
+    val PURPLE: BasicColor = this.createInstanceAN(BasicColorUtil.getInstance()!!.ALPHA, 0x400040, "purple")!!
+
+    val BLUE: BasicColor = this.createInstanceAN(BasicColorUtil.getInstance()!!.ALPHA, 0x0000FF, "blue")!!
+
+    val LIGHT_BLUE: BasicColor = this.createInstance(0x00aaff)!!
+
+    val VERY_LIGHT_BLUE: BasicColor = this.createInstance(0x000033)!!
+
+    val PUCE: BasicColor = this.createInstance(0xFF00AA)!!
+
+    val AQUA: BasicColor = this.createInstance(0x00FFFF)!!
+
+    val YELLOW: BasicColor = this.createInstanceAN(BasicColorUtil.getInstance()!!.ALPHA, 0xFFFF00, "yellow")!!
+
+    val PINK: BasicColor = this.createInstance(0xFF00FF)!!
+
+    val BLACK: BasicColor = this.createInstanceAN(BasicColorUtil.getInstance()!!.ALPHA, 0x000000, "black")!!
+
+    val GREY: BasicColor = this.createInstanceAN(BasicColorUtil.getInstance()!!.ALPHA, 0xAAAAAA, "grey")!!
+
+    val LIGHT_GREY: BasicColor = this.createInstance(0xC0C0C0)!!
+
+    val DARK_GREY: BasicColor = this.createInstance(0x404040)!!
+
+    val ORANGE: BasicColor = this.createInstance(0xe07718)!!
+
+    val BROWN: BasicColor = this.createInstance(0x956B00)!!
+
+    val WHITE: BasicColor = this.createInstance(0xFFFFFF)!!
+
+    val TRANSPARENT_COLOR: BasicColor = this.createInstanceAN(0x00000000, 0x000000, StringUtil.getInstance()!!.EMPTY_STRING)!!
+
+    val TRANSPARENT_GREY: BasicColor = this.createInstanceAN(0x52000000, 0xECECEC, StringUtil.getInstance()!!.EMPTY_STRING)!!
+
+    val TRANSPARENT_BLACK: BasicColor = this.createInstanceAN(0x52000000, 0x000000, StringUtil.getInstance()!!.EMPTY_STRING)!!
+
+    val TRANSPARENT_RED: BasicColor = this.createInstanceAN(0x52000000, 0xFF0000, StringUtil.getInstance()!!.EMPTY_STRING)!!
 
     val CLEAR_COLOR: BasicColor = BLACK
 

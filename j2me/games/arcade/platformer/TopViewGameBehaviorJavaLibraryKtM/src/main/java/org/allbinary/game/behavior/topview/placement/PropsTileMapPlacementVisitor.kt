@@ -103,7 +103,7 @@ open public class PropsTileMapPlacementVisitor : TileMapPlacementVisitor {
                         
                                     {
                                     
-    var randomInt: Int = randomFactory!!.getAbsoluteNextIntAllowZero(3)!!
+    var randomInt: Int = this.randomFactory!!.getAbsoluteNextIntAllowZero(3)!!
 
 
     
@@ -187,7 +187,7 @@ open public class PropsTileMapPlacementVisitor : TileMapPlacementVisitor {
                         
                                     {
                                     
-    var randomInt: Int = randomFactory!!.getAbsoluteNextIntAllowZero(4)!!
+    var randomInt: Int = this.randomFactory!!.getAbsoluteNextIntAllowZero(4)!!
 
 
     

@@ -43,7 +43,7 @@ this.displayable= displayable
     override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-ScreenRepaintUtil.repaint(displayable)
+ScreenRepaintUtil.repaint(this.displayable)
 }
 
 

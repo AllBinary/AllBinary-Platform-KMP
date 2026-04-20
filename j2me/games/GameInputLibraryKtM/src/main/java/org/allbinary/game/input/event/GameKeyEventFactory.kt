@@ -81,7 +81,7 @@ private constructor ()
 
 
 
-                        for (index in MAX_SOURCES  - 1  downTo 0)
+                        for (index in this.MAX_SOURCES  - 1  downTo 0)
 
         {
 
@@ -91,7 +91,7 @@ private constructor ()
                         for (index2 in size  - 1  downTo 0)
 
         {
-ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
+this.ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
 }
 
 }
@@ -107,7 +107,7 @@ ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
 var anyType = anyType
 var key = key
 
-    var gameKeyEvent: GameKeyEvent = ARRAY[anyType!!.getSourceId()]!![key]!!
+    var gameKeyEvent: GameKeyEvent = this.ARRAY[anyType!!.getSourceId()]!![key]!!
 
 
 
@@ -125,7 +125,7 @@ var key = key
 var anyType = anyType
 var input = input
 
-    var gameKeyEvent: GameKeyEvent = ARRAY[anyType!!.getSourceId()]!![input.getId()]!!
+    var gameKeyEvent: GameKeyEvent = this.ARRAY[anyType!!.getSourceId()]!![input.getId()]!!
 
 
 

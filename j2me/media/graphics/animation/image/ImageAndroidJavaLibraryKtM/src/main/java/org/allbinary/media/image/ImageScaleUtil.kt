@@ -147,7 +147,7 @@ private constructor ()
     var height: Int = (originalBitmap!!.getHeight() *scaleY).toInt()
 
 
-    var index: Int = imageBasicArrayList!!.indexOf(originalImage)!!
+    var index: Int = this.imageBasicArrayList!!.indexOf(originalImage)!!
 
 
     var alreadyAvailable: Boolean = false
@@ -198,8 +198,8 @@ private constructor ()
                             
     var scaledImage: Image = this.getScaledImage(imageCache, originalImage, scaleX, scaleY, width, height, cached)!!
 
-imageBasicArrayList!!.add(originalImage)
-scaledImageBasicArrayList!!.add(scaledImage)
+this.imageBasicArrayList!!.add(originalImage)
+this.scaledImageBasicArrayList!!.add(scaledImage)
 this.scaleXBasicArrayList!!.add(scaleX)
 this.scaleYBasicArrayList!!.add(scaleY)
 
@@ -238,7 +238,7 @@ this.scaleYBasicArrayList!!.add(scaleY)
                                     }
                                 
                         else {
-                            image= imageCache!!.get(commonStrings!!.CREATE_IMAGE, width, height)
+                            image= imageCache!!.get(this.commonStrings!!.CREATE_IMAGE, width, height)
 
                         }
                             

@@ -121,11 +121,11 @@ var array = array
 
 
 
-                        for (index in 0 until key.size)
+                        for (index in 0 until this.key.size)
 
         {
-value= key[index]!!
-array= byteUtil!!.xor(array, value)
+value= this.key[index]!!
+array= this.byteUtil!!.xor(array, value)
 }
 
 

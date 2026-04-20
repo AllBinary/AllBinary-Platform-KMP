@@ -75,7 +75,7 @@ companion object {
 
     val ROWS: String = "rows"
 
-    val FRAMES: Array<String?> = arrayOf(NONE,TOP,BOTTOM,TOPBOT,SIDES,ALL,BORDERED)
+    val FRAMES: Array<String?> = arrayOf(this.NONE,TOP,BOTTOM,TOPBOT,SIDES,ALL,this.BORDERED)
 
 }
                 

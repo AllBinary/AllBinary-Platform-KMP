@@ -122,7 +122,7 @@ this.logUtil!!.putF(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR
         //nullable = true from not(false or (false and false)) = true
 {
 var aRaceTrackInfo = aRaceTrackInfo
-raceTrackInfo= aRaceTrackInfo
+this.raceTrackInfo= aRaceTrackInfo
 }
 
 

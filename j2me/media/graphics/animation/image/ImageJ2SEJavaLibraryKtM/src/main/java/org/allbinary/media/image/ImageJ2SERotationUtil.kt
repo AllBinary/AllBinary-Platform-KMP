@@ -126,7 +126,7 @@ g.dispose()
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
 
-g.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
+g.setBackground(this.imageJ2SEUtil!!.TRANSPARENT_COLOR)
 g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
 
 
@@ -163,7 +163,7 @@ g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
     var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(numberOfFrames)
 
 
-    var arc: Double = (TWO_PIE) *totalAngle /360
+    var arc: Double = () *totalAngle /360
 
 
     var size: Int = bufferedImageArray!!.size

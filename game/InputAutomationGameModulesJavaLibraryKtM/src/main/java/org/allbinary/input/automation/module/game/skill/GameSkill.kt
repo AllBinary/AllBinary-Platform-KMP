@@ -167,13 +167,13 @@ this.vector.add(gameSkillPropertyInterface)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(GAME_SKILL_LABEL)
+stringBuffer!!.append(this.GAME_SKILL_LABEL)
 stringBuffer!!.append(this.getGameSkillType()!!.toString())
 stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(EXTRA_LABEL)
+stringBuffer!!.append(this.EXTRA_LABEL)
 stringBuffer!!.append(this.getExtra())
 stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(TIME_LABEL)
+stringBuffer!!.append(this.TIME_LABEL)
 stringBuffer!!.appendlong(this.getTime())
 
 

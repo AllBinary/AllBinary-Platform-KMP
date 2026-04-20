@@ -241,7 +241,7 @@ this.paintable.paint(graphics)
                                     }
                                 
 super.paint(graphics)
-hasPainted= true
+this.hasPainted= true
 }
 
 

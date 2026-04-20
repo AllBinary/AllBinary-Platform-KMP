@@ -76,7 +76,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         if(this.inputProbability!!.getTimeDelayHelper()!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
                         
                                     {
-                                    i_random= myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
+                                    this.i_random= this.myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
 
     var repeat: Boolean = false
 
@@ -85,7 +85,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
 
     
-                        if(this.getLastKey() !=  -1 && repeatLikelyhoodIntegerArray[this.getLastKey()]!!.toInt() >= i_random)
+                        if(this.getLastKey() !=  -1 && repeatLikelyhoodIntegerArray[this.getLastKey()]!!.toInt() >= this.i_random)
                         
                                     {
                                     repeat= true
@@ -100,7 +100,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                                     
     var likelyhoodIntegerArray: Array<Array<Integer?>?> = this.inputProbability!!.getLikelyhoodIntegerArray()!!
 
-i_random= myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
+this.i_random= this.myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
 
     var size: Int = keyArray!!.size
                 
@@ -128,7 +128,7 @@ likelyhoodIntegerKeyArray= likelyhoodIntegerArray[key]!!
                                     {
                                     
     
-                        if(i_random >= likelyhoodIntegerKeyArray[0]!!.toInt() && i_random < likelyhoodIntegerKeyArray[1]!!.toInt())
+                        if(this.i_random >= likelyhoodIntegerKeyArray[0]!!.toInt() && i_random < likelyhoodIntegerKeyArray[1]!!.toInt())
                         
                                     {
                                     this.setLastKey(key)

@@ -102,10 +102,10 @@ public constructor ()
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
 
-    var total: Short = angleArray!!.size.toShort()
+    var total: Short = this.angleArray!!.size.toShort()
 
-UP= NamedAngle(0.toShort(), commonPhoneStrings!!.UP)
-angleArray[0]= UP
+this.UP= NamedAngle(0.toShort(), commonPhoneStrings!!.UP)
+this.angleArray[0]= this.UP
 
 
 
@@ -113,11 +113,11 @@ angleArray[0]= UP
                         for (index in 1 until 90)
 
         {
-angleArray[index]= Angle(index.toShort())
+this.angleArray[index]= Angle(index.toShort())
 }
 
-RIGHT= NamedAngle(90.toShort(), commonPhoneStrings!!.RIGHT)
-angleArray[90]= RIGHT
+this.RIGHT= NamedAngle(90.toShort(), commonPhoneStrings!!.RIGHT)
+this.angleArray[90]= this.RIGHT
 
 
 
@@ -125,11 +125,11 @@ angleArray[90]= RIGHT
                         for (index in 91 until 180)
 
         {
-angleArray[index]= Angle(index.toShort())
+this.angleArray[index]= Angle(index.toShort())
 }
 
-DOWN= NamedAngle(180.toShort(), commonPhoneStrings!!.DOWN)
-angleArray[180]= DOWN
+this.DOWN= NamedAngle(180.toShort(), commonPhoneStrings!!.DOWN)
+this.angleArray[180]= this.DOWN
 
 
 
@@ -137,11 +137,11 @@ angleArray[180]= DOWN
                         for (index in 181 until 270)
 
         {
-angleArray[index]= Angle(index.toShort())
+this.angleArray[index]= Angle(index.toShort())
 }
 
-LEFT= NamedAngle(270.toShort(), commonPhoneStrings!!.LEFT)
-angleArray[270]= LEFT
+this.LEFT= NamedAngle(270.toShort(), commonPhoneStrings!!.LEFT)
+this.angleArray[270]= this.LEFT
 
 
 
@@ -149,7 +149,7 @@ angleArray[270]= LEFT
                         for (index in 271 until total)
 
         {
-angleArray[index]= Angle(index.toShort())
+this.angleArray[index]= Angle(index.toShort())
 }
 
 }
@@ -162,7 +162,7 @@ angleArray[index]= Angle(index.toShort())
 : Angle{
     //var index = index
 
-    var adjustedIndex: Int = frameUtil!!.adjustAngleToFrameAngle(index).toInt()
+    var adjustedIndex: Int = this.frameUtil!!.adjustAngleToFrameAngle(index).toInt()
 
 
 

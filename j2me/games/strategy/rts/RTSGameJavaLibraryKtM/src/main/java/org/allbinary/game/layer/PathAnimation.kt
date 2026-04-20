@@ -146,7 +146,7 @@ this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
                         
                                     {
                                     this.setBasicColorP(this.startColor)
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
 
                                     }
                                 
@@ -156,13 +156,13 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
                         
                                     {
                                     this.setBasicColorP(this.endColor)
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
 
                                     }
                                 
                         else {
                             this.setBasicColorP(this.middleColor)
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
 
                         }
                             

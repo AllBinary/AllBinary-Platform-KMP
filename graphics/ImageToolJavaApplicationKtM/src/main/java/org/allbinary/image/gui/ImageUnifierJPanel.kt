@@ -123,7 +123,7 @@ this.imageJList!!.setModel(defaultListModel)
 this.updateOnPropertiesChange()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 }
 
 }
@@ -160,7 +160,7 @@ tempBufferedImageArray[index]= bufferedImage
     var totalImages: Int = this.imageUnifierProperties!!.getRows() *this.imageUnifierProperties!!.getColumns()
 
 
-    var averageRatio: Double = imagesRatioUtil!!.getAverage(tempBufferedImageArray, totalImages)!!
+    var averageRatio: Double = this.imagesRatioUtil!!.getAverage(tempBufferedImageArray, totalImages)!!
 
 
     var averageRatioString: String = Double(averageRatio).
@@ -179,12 +179,12 @@ this.avgRatioJTextField!!.setText(averageRatioString)
 this.fudgeItJButton!!.setEnabled(false)
 
     
-                        if(!imagesRatioUtil!!.isEqual(tempBufferedImageArray, totalImages))
+                        if(!this.imagesRatioUtil!!.isEqual(tempBufferedImageArray, totalImages))
                         
                                     {
                                     
     
-                        if(isImageFillIn)
+                        if(this.isImageFillIn)
                         
                                     {
                                     this.fudgeItJButton!!.setEnabled(true)
@@ -197,7 +197,7 @@ this.fudgeItJButton!!.setEnabled(false)
 this.updateImage(tempBufferedImageArray)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateImage", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateImage", e)
 }
 
 }
@@ -234,7 +234,7 @@ tempBufferedImageArray[index]= bufferedImage
     var totalImages: Int = this.imageUnifierProperties!!.getRows() *this.imageUnifierProperties!!.getColumns()
 
 
-    var averageRatio: Double = imagesRatioUtil!!.getAverage(tempBufferedImageArray, totalImages)!!
+    var averageRatio: Double = this.imagesRatioUtil!!.getAverage(tempBufferedImageArray, totalImages)!!
 
 
     var fudgedBufferedImageArray: Array<BufferedImage?> = imagesRatioUtil!!.fudge(tempBufferedImageArray, totalImages, averageRatio)!!
@@ -242,7 +242,7 @@ tempBufferedImageArray[index]= bufferedImage
 this.updateImage(fudgedBufferedImageArray)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateImageWithFudgedImages", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateImageWithFudgedImages", e)
 }
 
 }
@@ -273,12 +273,12 @@ this.updateUI()
                         
                                     {
                                     this.imageUnifierProperties= ImageUnifierProperties()
-imageUnifierProperties!!.setRows(Integer(this.rowsJTextField!!.getText()))
-imageUnifierProperties!!.setColumns(Integer(this.columnsJTextField!!.getText()))
+this.imageUnifierProperties!!.setRows(Integer(this.rowsJTextField!!.getText()))
+this.imageUnifierProperties!!.setColumns(Integer(this.columnsJTextField!!.getText()))
 
     var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(Integer(this.cellWidthJTextField!!.getText()), Integer(this.cellHeightJTextField!!.getText()))
 
-imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
+this.imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
 
     var cellRatio: Double = (imageUnifierCell!!.getWidth().toDouble() /imageUnifierCell!!.getHeight())
 
@@ -309,33 +309,33 @@ this.updateImage()
 
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
-jScrollPane1= javax.swing.JScrollPane()
-imageJList= javax.swing.JList()
-jScrollPane2= javax.swing.JScrollPane()
-jPanel1= javax.swing.JPanel()
-jButton1= javax.swing.JButton()
-upJButton= javax.swing.JButton()
-downJButton= javax.swing.JButton()
-fudgeItJButton= javax.swing.JButton()
-jLabel2= javax.swing.JLabel()
-columnsJTextField= javax.swing.JTextField()
-jLabel1= javax.swing.JLabel()
-rowsJTextField= javax.swing.JTextField()
-jLabel3= javax.swing.JLabel()
-cellWidthJTextField= javax.swing.JTextField()
-jLabel4= javax.swing.JLabel()
-cellHeightJTextField= javax.swing.JTextField()
-jLabel5= javax.swing.JLabel()
-cellRatioJTextField= javax.swing.JTextField()
-jLabel6= javax.swing.JLabel()
-avgRatioJTextField= javax.swing.JTextField()
-jButton2= javax.swing.JButton()
-jButtonOrder= javax.swing.JButton()
+this.jScrollPane1= javax.swing.JScrollPane()
+this.imageJList= javax.swing.JList()
+this.jScrollPane2= javax.swing.JScrollPane()
+this.jPanel1= javax.swing.JPanel()
+this.jButton1= javax.swing.JButton()
+this.upJButton= javax.swing.JButton()
+this.downJButton= javax.swing.JButton()
+this.fudgeItJButton= javax.swing.JButton()
+this.jLabel2= javax.swing.JLabel()
+this.columnsJTextField= javax.swing.JTextField()
+this.jLabel1= javax.swing.JLabel()
+this.rowsJTextField= javax.swing.JTextField()
+this.jLabel3= javax.swing.JLabel()
+this.cellWidthJTextField= javax.swing.JTextField()
+this.jLabel4= javax.swing.JLabel()
+this.cellHeightJTextField= javax.swing.JTextField()
+this.jLabel5= javax.swing.JLabel()
+this.cellRatioJTextField= javax.swing.JTextField()
+this.jLabel6= javax.swing.JLabel()
+this.avgRatioJTextField= javax.swing.JTextField()
+this.jButton2= javax.swing.JButton()
+this.jButtonOrder= javax.swing.JButton()
 setMinimumSize(java.awt.Dimension(500, 375))
 setPreferredSize(java.awt.Dimension(0, 0))
-imageJList!!.setMinimumSize(java.awt.Dimension(50, 0))
-jScrollPane1!!.setViewportView(imageJList)
-jButton1!!.setText("Save")
+this.imageJList!!.setMinimumSize(java.awt.Dimension(50, 0))
+this.jScrollPane1!!.setViewportView(this.imageJList)
+this.jButton1!!.setText("Save")
 jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -348,7 +348,7 @@ jButton1ActionPerformed(evt)
 
                                 }
                             )
-upJButton!!.setText("Up")
+this.upJButton!!.setText("Up")
 upJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -361,7 +361,7 @@ upJButtonActionPerformed(evt)
 
                                 }
                             )
-downJButton!!.setText("Down")
+this.downJButton!!.setText("Down")
 downJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -374,7 +374,7 @@ downJButtonActionPerformed(evt)
 
                                 }
                             )
-fudgeItJButton!!.setText("Fudge It!")
+this.fudgeItJButton!!.setText("Fudge It!")
 fudgeItJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -387,8 +387,8 @@ fudgeItJButtonActionPerformed(evt)
 
                                 }
                             )
-jLabel2!!.setText("Columns:")
-columnsJTextField!!.setText(commonPhoneStrings!!.TWO)
+this.jLabel2!!.setText("Columns:")
+this.columnsJTextField!!.setText(commonPhoneStrings!!.TWO)
 columnsJTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -432,8 +432,8 @@ columnsJTextFieldKeyTyped(evt)
 
                                 }
                             )
-jLabel1!!.setText("Rows:")
-rowsJTextField!!.setText(commonPhoneStrings!!.TWO)
+this.jLabel1!!.setText("Rows:")
+this.rowsJTextField!!.setText(commonPhoneStrings!!.TWO)
 rowsJTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -446,8 +446,8 @@ rowsJTextFieldActionPerformed(evt)
 
                                 }
                             )
-jLabel3!!.setText("Cell Width:")
-cellWidthJTextField!!.setText("200")
+this.jLabel3!!.setText("Cell Width:")
+this.cellWidthJTextField!!.setText("200")
 cellWidthJTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -460,8 +460,8 @@ cellWidthJTextFieldActionPerformed(evt)
 
                                 }
                             )
-jLabel4!!.setText("Cell Height:")
-cellHeightJTextField!!.setText("150")
+this.jLabel4!!.setText("Cell Height:")
+this.cellHeightJTextField!!.setText("150")
 cellHeightJTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -474,11 +474,11 @@ cellHeightJTextFieldActionPerformed(evt)
 
                                 }
                             )
-jLabel5!!.setText("Cell Ratio:")
-cellRatioJTextField!!.setEditable(false)
-jLabel6!!.setText("Avg Image Ratio:")
-avgRatioJTextField!!.setEditable(false)
-jButton2!!.setText(commonStrings!!.UPDATE)
+this.jLabel5!!.setText("Cell Ratio:")
+this.cellRatioJTextField!!.setEditable(false)
+this.jLabel6!!.setText("Avg Image Ratio:")
+this.avgRatioJTextField!!.setEditable(false)
+this.jButton2!!.setText(this.commonStrings!!.UPDATE)
 jButton2!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -491,7 +491,7 @@ jButton2ActionPerformed(evt)
 
                                 }
                             )
-jButtonOrder!!.setText("Order")
+this.jButtonOrder!!.setText("Order")
 jButtonOrder!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -505,9 +505,9 @@ jButtonOrderActionPerformed(evt)
                                 }
                             )
 
-    var jPanel1Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(jPanel1)
+    var jPanel1Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.jPanel1)
 
-jPanel1!!.setLayout(jPanel1Layout)
+this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout!!.createSequentialGroup()!!.addContainerGap()!!.addGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)!!.addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addGroup(jPanel1Layout!!.createSequentialGroup()!!.addComponent(upJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)!!.addComponent(downJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addComponent(fudgeItJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout!!.createSequentialGroup()!!.addComponent(jLabel3)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout!!.createSequentialGroup()!!.addComponent(jLabel4)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addComponent(avgRatioJTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addComponent(cellRatioJTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addComponent(cellHeightJTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addComponent(cellWidthJTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)!!.addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout!!.createSequentialGroup()!!.addGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(jLabel2)!!.addComponent(jLabel1))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(rowsJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)!!.addGroup(jPanel1Layout!!.createSequentialGroup()!!.addComponent(columnsJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)!!.addGap(1, 1, 1))))!!.addComponent(jButtonOrder, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))!!.addContainerGap()))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel1Layout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(jButton1)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(upJButton)!!.addComponent(downJButton))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jButtonOrder)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(fudgeItJButton)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel2)!!.addComponent(columnsJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel1)!!.addComponent(rowsJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel3)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(cellWidthJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel4)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(cellHeightJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jButton2)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel5)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.addComponent(cellRatioJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addGap(7, 7, 7)!!.addComponent(jLabel6)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(avgRatioJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addGap(66, 66, 66)))
 
@@ -604,10 +604,10 @@ var evt = evt
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
 
 filePath= StringMaker().
-                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.appendint(this.imageUnifierProperties!!.getColumns())!!.append("_By_")!!.appendint(this.imageUnifierProperties!!.getRows())!!.append("_Unified")!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
+                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.appendint(this.imageUnifierProperties!!.getColumns())!!.append("_By_")!!.appendint(this.imageUnifierProperties!!.getRows())!!.append("_Unified")!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
 this.logUtil!!.putF("New File Path: " +filePath, this, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var outputFile: File = File(filePath)
@@ -615,7 +615,7 @@ this.logUtil!!.putF("New File Path: " +filePath, this, StringUtil.getInstance()!
 ImagePersistanceUtil.getInstance()!!.saveWithBatik(FileWrapperUtil.wrapFile(outputFile), this.result)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "jButton1ActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "jButton1ActionPerformed", e)
 }
 
 }

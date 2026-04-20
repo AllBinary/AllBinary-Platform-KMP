@@ -75,7 +75,7 @@ numberStringArray[0]= Integer.toString( -1)
 numberStringArray[index]= index.toString()
 }
 
-jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel(numberStringArray))
+this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel(numberStringArray))
 
     var araster: Raster = this.imageProcessorInput!!.getBufferedImageArray()[0]!!.getAlphaRaster()!!
 
@@ -385,20 +385,20 @@ this.imageProcessorInput= imageProcessorInput
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jLabel1= javax.swing.JLabel()
-jComboBox1= javax.swing.JComboBox<>()
-aboveJButton= javax.swing.JButton()
-jTextField1= javax.swing.JTextField()
-jLabel2= javax.swing.JLabel()
-jLabel3= javax.swing.JLabel()
-jTextField2= javax.swing.JTextField()
-updateJButton= javax.swing.JButton()
-floatPercentJTextField= javax.swing.JTextField()
-adjustFor16AboveJButton= javax.swing.JButton()
-adjustFor16BelowJButton= javax.swing.JButton()
-jLabel1!!.setText("Percent:")
-jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel<>(arrayOf("Item 1","Item 2","Item 3","Item 4")))
-aboveJButton!!.setText("Process")
+this.jLabel1= javax.swing.JLabel()
+this.jComboBox1= javax.swing.JComboBox<>()
+this.aboveJButton= javax.swing.JButton()
+this.jTextField1= javax.swing.JTextField()
+this.jLabel2= javax.swing.JLabel()
+this.jLabel3= javax.swing.JLabel()
+this.jTextField2= javax.swing.JTextField()
+this.updateJButton= javax.swing.JButton()
+this.floatPercentJTextField= javax.swing.JTextField()
+this.adjustFor16AboveJButton= javax.swing.JButton()
+this.adjustFor16BelowJButton= javax.swing.JButton()
+this.jLabel1!!.setText("Percent:")
+this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel<>(arrayOf("Item 1","Item 2","Item 3","Item 4")))
+this.aboveJButton!!.setText("Process")
 aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -411,9 +411,9 @@ aboveJButtonActionPerformed(evt)
 
                                 }
                             )
-jLabel2!!.setText("Width:")
-jLabel3!!.setText("Height:")
-updateJButton!!.setText("Update")
+this.jLabel2!!.setText("Width:")
+this.jLabel3!!.setText("Height:")
+this.updateJButton!!.setText("Update")
 updateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -426,9 +426,9 @@ updateJButtonActionPerformed(evt)
 
                                 }
                             )
-floatPercentJTextField!!.setText("-1.000000")
-floatPercentJTextField!!.setMinimumSize(java.awt.Dimension(120, 22))
-adjustFor16AboveJButton!!.setText("Adjust for 16 Above")
+this.floatPercentJTextField!!.setText("-1.000000")
+this.floatPercentJTextField!!.setMinimumSize(java.awt.Dimension(120, 22))
+this.adjustFor16AboveJButton!!.setText("Adjust for 16 Above")
 adjustFor16AboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -441,7 +441,7 @@ adjustFor16AboveJButtonActionPerformed(evt)
 
                                 }
                             )
-adjustFor16BelowJButton!!.setText("Adjust for 16 Below")
+this.adjustFor16BelowJButton!!.setText("Adjust for 16 Below")
 adjustFor16BelowJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 

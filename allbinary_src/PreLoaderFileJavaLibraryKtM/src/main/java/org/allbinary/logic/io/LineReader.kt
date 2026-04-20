@@ -58,9 +58,9 @@ public constructor (fileName: String)
     var bytes: ByteArray = ByteArray(100000)
 
 this.fileName= fileName
-idFile= AbFileInputStream(fileName)
-idFile!!.read(bytes)
-string= bytes.decodeToString()
+this.idFile= AbFileInputStream(fileName)
+this.idFile!!.read(bytes)
+this.string= bytes.decodeToString()
 } catch(e: Exception)
             {
 this.logUtil!!.put("File: " +fileName, this, "LineReader", e)
@@ -81,7 +81,7 @@ this.logUtil!!.put("File: " +fileName, this, "LineReader", e)
 
         try {
             
-    var nextIndex: Int = string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)!!
+    var nextIndex: Int = this.string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)!!
 
 
     
@@ -128,7 +128,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
 
         try {
             
-    var nextIndex: Int = string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)!!
+    var nextIndex: Int = this.string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)!!
 
 
     
@@ -143,7 +143,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
                                     }
                                 
 
-    var temp: String = string.substring(index, nextIndex)!!
+    var temp: String = this.string.substring(index, nextIndex)!!
 
 index= nextIndex +1
 

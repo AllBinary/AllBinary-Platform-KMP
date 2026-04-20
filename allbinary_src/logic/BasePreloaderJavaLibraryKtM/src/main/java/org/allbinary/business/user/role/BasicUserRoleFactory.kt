@@ -60,9 +60,9 @@ companion object {
 
     private val MAXSESSIONTIME: Long = 360000000
 
-    val INSTALLER: BasicUserRole = BasicUserRole("Installer", 16, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val INSTALLER: BasicUserRole = BasicUserRole("Installer", 16, MAXSESSIONTIME, this.INACTIVITYTIMEOUT)
 
-    val ADMINISTRATOR: BasicUserRole = BasicUserRole("Administrator", 0, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val ADMINISTRATOR: BasicUserRole = BasicUserRole("Administrator", 0, MAXSESSIONTIME, this.INACTIVITYTIMEOUT)
 
     val CUSTOMER: BasicUserRole = BasicUserRole("CustomerUser", "Customer User", 1, CUSTOMERTIMEOUT, CUSTOMERMAXSESSIONTIME)
 
@@ -82,11 +82,11 @@ companion object {
 
     val WEBMANAGER: BasicUserRole = BasicUserRole("WebManager", "Web Manager", 9, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val REVIEWER: BasicUserRole = BasicUserRole("Reviewer", 10, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val REVIEWER: BasicUserRole = BasicUserRole("Reviewer", 10, MAXSESSIONTIME, this.INACTIVITYTIMEOUT)
 
-    val SHIPPING: BasicUserRole = BasicUserRole("Shipping", 11, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val SHIPPING: BasicUserRole = BasicUserRole("Shipping", 11, MAXSESSIONTIME, this.INACTIVITYTIMEOUT)
 
-    val ADJUSTER: BasicUserRole = BasicUserRole("Adjuster", 12, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val ADJUSTER: BasicUserRole = BasicUserRole("Adjuster", 12, MAXSESSIONTIME, this.INACTIVITYTIMEOUT)
 
     val WORKFLOWEDITOR: BasicUserRole = BasicUserRole("WorkFlowEditor", "WorkFlow Editor", 13, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 

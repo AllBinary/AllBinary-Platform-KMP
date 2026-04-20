@@ -169,7 +169,7 @@ this.sequenceArray= sequenceArray
 
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.appendint(image.getHeight())
+stringBuffer!!.appendint(this.image.getHeight())
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(this.animationFactoryInitializationVisitor!!.toString())
 
@@ -209,7 +209,7 @@ this.scaleProperties!!.scaleHeight= (this.animationFactoryInitializationVisitor!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return animationFactoryInitializationVisitor
+                        return this.animationFactoryInitializationVisitor
 }
 
 
@@ -220,7 +220,7 @@ this.scaleProperties!!.scaleHeight= (this.animationFactoryInitializationVisitor!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return scaleProperties
+                        return this.scaleProperties
 }
 
 

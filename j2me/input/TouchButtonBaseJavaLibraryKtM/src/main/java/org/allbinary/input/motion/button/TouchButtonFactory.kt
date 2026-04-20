@@ -63,7 +63,7 @@ private constructor ()
     open fun defaultList()
         //nullable = true from not(false or (false and true)) = true
 {
-this.list= LIST
+this.list= this.LIST
 this.toggle(false, LIST)
 }
 
@@ -107,7 +107,7 @@ var list = list
                                     {
                                     this.saved= true
 this.savedList= this.list
-this.list= LIST
+this.list= this.LIST
 
                                     }
                                 

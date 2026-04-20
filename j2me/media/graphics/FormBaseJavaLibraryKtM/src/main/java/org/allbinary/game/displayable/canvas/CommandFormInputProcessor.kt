@@ -217,7 +217,7 @@ gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 key= gameKeyEvent!!.getKey()
 
     
-                        if(gameKeyEvent!!.getSourceId() != MOTION_GESTURE_SOURCE_ID)
+                        if(gameKeyEvent!!.getSourceId() != this.MOTION_GESTURE_SOURCE_ID)
                         
                                     {
                                     
@@ -382,7 +382,7 @@ this.processCommand()
 
                                     }
                                 
-this.doubleClickTimeHelper!!.delay= DOUBLE_CLICK_DELAY
+this.doubleClickTimeHelper!!.delay= this.DOUBLE_CLICK_DELAY
 this.doubleClickTimeHelper!!.setStartTime()
 
                                     }

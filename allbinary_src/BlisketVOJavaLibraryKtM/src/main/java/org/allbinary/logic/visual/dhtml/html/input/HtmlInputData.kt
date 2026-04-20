@@ -68,7 +68,7 @@ companion object {
 
     val SUBMIT: String = "submit"
 
-    val TYPES: Array<String?> = arrayOf(TEXT,RADIO,CHECKBOX,HIDDEN,IMAGE,PASSWORD,RADIO,RESET,SUBMIT)
+    val TYPES: Array<String?> = arrayOf(this.TEXT,RADIO,CHECKBOX,HIDDEN,IMAGE,this.PASSWORD,RADIO,RESET,this.SUBMIT)
 
 }
                 

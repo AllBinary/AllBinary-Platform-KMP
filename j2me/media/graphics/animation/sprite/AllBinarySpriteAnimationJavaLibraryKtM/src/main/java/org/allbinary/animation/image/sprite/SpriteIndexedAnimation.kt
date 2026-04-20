@@ -167,7 +167,7 @@ break;
     //var y = y
 this.setFrame(frame)
 this.sprite.setPosition(x, y)
-sprite.paint(graphics)
+this.sprite.paint(graphics)
 }
 
 
@@ -178,7 +178,7 @@ sprite.paint(graphics)
     //var x = x
     //var y = y
 this.sprite.setPosition(x, y)
-sprite.paint(graphics)
+this.sprite.paint(graphics)
 }
 
 
@@ -186,7 +186,7 @@ sprite.paint(graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
-sprite.paint(graphics)
+this.sprite.paint(graphics)
 }
 
 

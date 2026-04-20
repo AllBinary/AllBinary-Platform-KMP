@@ -119,8 +119,8 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
 {
 super.close()
 this.paintable.process()
-this.selectedGameKey= NONE
-this.selectedInput= NONE
+this.selectedGameKey= this.NONE
+this.selectedInput= this.NONE
 this.update()
 }
 
@@ -186,7 +186,7 @@ var repeated = repeated
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
 
 
-    var input: Input = inputFactory!!.getInstance(keyCode)!!
+    var input: Input = this.inputFactory!!.getInstance(keyCode)!!
 
 this.process(gameKey, input)
 } catch(e: Exception)
@@ -214,7 +214,7 @@ stringBuffer!!.append(this.stringUtil!!.toString(input))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
 
     
-                        if(this.selectedGameKey != NONE)
+                        if(this.selectedGameKey != this.NONE)
                         
                                     {
                                     this.gameActionCrud(gameKey, input)
@@ -236,7 +236,7 @@ var gameKey = gameKey
 this.logUtil!!.putF(StringMaker().
                             append("Selected GameKey: ")!!.append(this.stringUtil!!.toString(gameKey))!!.toString(), this, "setSelectedAction")
 this.selectedGameKey= gameKey
-this.selectedInput= NONE
+this.selectedInput= this.NONE
 this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
 this.repaintBehavior!!.onChangeRepaint(this)
 }
@@ -259,11 +259,11 @@ stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "gameActionCrud")
 
     
-                        if(this.selectedInput == NONE)
+                        if(this.selectedInput == this.NONE)
                         
                                     {
                                     
-    var list: BasicArrayList = inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
+    var list: BasicArrayList = this.inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
 
 
     var isInputAlreadyMappedToSelectedAction: Boolean = list.contains(input)!!
@@ -318,7 +318,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
 this.logUtil!!.putF(commonStrings!!.START, this, METHOD_NAME)
 
-    var isInputAlreadyMapped: Boolean = inputMapping!!.getInputMapping()!!.isMapped(input)!!
+    var isInputAlreadyMapped: Boolean = this.inputMapping!!.getInputMapping()!!.isMapped(input)!!
 
 
     
@@ -333,7 +333,7 @@ stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
 stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
-inputMapping!!.getInputMapping()!!.add(this.selectedGameKey, input)
+this.inputMapping!!.getInputMapping()!!.add(this.selectedGameKey, input)
 this.selectedInput= input
 this.update()
 
@@ -357,7 +357,7 @@ this.setSelectedAction(gameKey)
     var METHOD_NAME: String = "deleteCurrentMapping"
 
 
-    var list: BasicArrayList = inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
+    var list: BasicArrayList = this.inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
 
 
     
@@ -373,8 +373,8 @@ stringBuffer!!.append(stringUtil!!.toString(this.selectedGameKey))
 stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(stringUtil!!.toString(this.selectedInput))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
-inputMapping!!.getInputMapping()!!.remove(this.selectedGameKey, this.selectedInput)
-this.selectedInput= NONE
+this.inputMapping!!.getInputMapping()!!.remove(this.selectedGameKey, this.selectedInput)
+this.selectedInput= this.NONE
 this.update()
 
                                     }
@@ -392,7 +392,7 @@ this.update()
     open fun setDefault()
         //nullable = true from not(false or (false and true)) = true
 {
-inputMapping!!.setDefault(abeClientInformation)
+this.inputMapping!!.setDefault(this.abeClientInformation)
 this.helpPaintable!!.update(NONE, NONE)
 this.repaintBehavior!!.onChangeRepaint(this)
 }
@@ -403,7 +403,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
     override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
-inputMapping!!.update(abeClientInformation)
+this.inputMapping!!.update(this.abeClientInformation)
 this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
 this.repaintBehavior!!.onChangeRepaint(this)
 }

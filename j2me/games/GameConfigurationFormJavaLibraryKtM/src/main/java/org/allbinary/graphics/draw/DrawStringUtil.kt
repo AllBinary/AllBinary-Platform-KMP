@@ -202,7 +202,7 @@ PreLogUtil.put(StringMaker().
 
 
     
-                        if(string != EMPTY_STRING)
+                        if(string != this.EMPTY_STRING)
                         
                                     {
                                     

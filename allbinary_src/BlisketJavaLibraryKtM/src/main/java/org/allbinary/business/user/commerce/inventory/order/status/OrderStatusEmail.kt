@@ -104,7 +104,7 @@ this.notifyUser()
     var adminEmailSubject: String = "Order " +this.orderHistory!!.getStatus() +" Attempt"
 
 
-    var adminEmailTextBody: String = "Order attempt: " +this.orderHistory!!.getId() +" Preprocessing by: " +user.getUserName()
+    var adminEmailTextBody: String = "Order attempt: " +this.orderHistory!!.getId() +" Preprocessing by: " +this.user.getUserName()
 
 
     var adminBasicEmailInfo: BasicEmailInfo = AdminEmailInfo(adminEmailSubject, adminEmailTextBody) as BasicEmailInfo
@@ -165,7 +165,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, adminEmail
     var subject: String = "Order " +this.orderHistory!!.getStatus() +" Attempt"
 
 
-    var textBody: String = "Order attempt: " +this.orderHistory!!.getId() +" Preprocessing by: " +user.getUserName()
+    var textBody: String = "Order attempt: " +this.orderHistory!!.getId() +" Preprocessing by: " +this.user.getUserName()
 
 
     var basicEmailInfo: BasicEmailInfo = StoreEmailInfo(this.storeFrontInterface, subject, textBody) as BasicEmailInfo

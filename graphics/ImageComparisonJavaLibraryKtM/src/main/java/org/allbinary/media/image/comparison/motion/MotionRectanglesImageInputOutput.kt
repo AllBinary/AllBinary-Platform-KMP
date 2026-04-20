@@ -140,7 +140,7 @@ this.logUtil!!.putF("Motion Image File Path 1: " +filePathStringBuffer1!!.toStri
 this.logUtil!!.putF("Motion Image File Path 2: " +filePathStringBuffer2!!.toString(), this, commonStrings!!.SAVE)
 this.logUtil!!.putF("Motion Image File Path 2: " +filePathStringBuffer3!!.toString(), this, commonStrings!!.SAVE)
 
-    var bufferedImageCacheables: Array<BufferedImageCacheable?> = arrayOfNulls(NUMBER_OF_IMAGES)
+    var bufferedImageCacheables: Array<BufferedImageCacheable?> = arrayOfNulls(this.NUMBER_OF_IMAGES)
 
 
     var imageComparisonInfo: ImageComparisonResult = motionRectangles!!.getImageComparisonResult()!!
@@ -158,7 +158,7 @@ this.logUtil!!.putF("Motion Image File Path 2: " +filePathStringBuffer3!!.toStri
 
 
 
-                        for (index in 0 until NUMBER_OF_IMAGES)
+                        for (index in 0 until this.NUMBER_OF_IMAGES)
 
         {
 bufferedImageCacheables[index]= poolInterface!!.remove(bufferedImageInfo) as BufferedImageCacheable
@@ -167,7 +167,7 @@ bufferedImageCacheables[index]= poolInterface!!.remove(bufferedImageInfo) as Buf
 bufferedImageCacheables[0]!!.getBufferedImage()!!.setData(imageComparisonInfo!!.getBufferedImages()[1]!!.getData())
 
     
-                        if(NUMBER_OF_IMAGES > 1)
+                        if(this.NUMBER_OF_IMAGES > 1)
                         
                                     {
                                     bufferedImageCacheables[1]!!.getBufferedImage()!!.setData(imageComparisonInfo!!.getBufferedImages()[1]!!.getData())
@@ -177,12 +177,12 @@ bufferedImageCacheables[0]!!.getBufferedImage()!!.setData(imageComparisonInfo!!.
 
     var bufferedImageGraphicsArray: Array<Graphics?>
 
-bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
+bufferedImageGraphicsArray= arrayOfNulls(this.NUMBER_OF_IMAGES)
 
 
 
 
-                        for (index in 0 until NUMBER_OF_IMAGES)
+                        for (index in 0 until this.NUMBER_OF_IMAGES)
 
         {
 bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedImage()!!.getGraphics()
@@ -211,7 +211,7 @@ bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedI
 
 
 
-                        for (index in 0 until NUMBER_OF_IMAGES)
+                        for (index in 0 until this.NUMBER_OF_IMAGES)
 
         {
 bufferedImageGraphicsArray[index]!!.setColor(Color.ORANGE)
@@ -225,7 +225,7 @@ bufferedImageGraphicsArray[index]!!.drawRect(rectangle.x, rectangle.y, rectangle
 
 
     
-                        if(NUMBER_OF_IMAGES > 1)
+                        if(this.NUMBER_OF_IMAGES > 1)
                         
                                     {
                                     imagePersistanceUtil!!.saveWithImageIO(filePathStringBuffer1!!.toString(), bufferedImageCacheables[1]!!.getBufferedImage())
@@ -235,7 +235,7 @@ bufferedImageGraphicsArray[index]!!.drawRect(rectangle.x, rectangle.y, rectangle
 imagePersistanceUtil!!.saveWithImageIO(filePathStringBuffer2!!.toString(), bufferedImageCacheables[0]!!.getBufferedImage())
 
     
-                        if(NUMBER_OF_IMAGES > 2)
+                        if(this.NUMBER_OF_IMAGES > 2)
                         
                                     {
                                     imagePersistanceUtil!!.saveWithImageIO(filePathStringBuffer3!!.toString(), bufferedImageCacheables[2]!!.getBufferedImage())

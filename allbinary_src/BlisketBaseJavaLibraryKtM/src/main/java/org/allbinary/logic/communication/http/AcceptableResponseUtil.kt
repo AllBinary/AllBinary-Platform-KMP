@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Vector
+import org.allbinary.logic.TsUtil
 
 open public class AcceptableResponseUtil
             : Object
@@ -47,7 +48,7 @@ companion object {
 
 
                 init{
-AcceptableResponseFactory.getInstance()!!.HTML.hashCode()
+TsUtil.getInstance()!!.hashCode(AcceptableResponseFactory.getInstance()!!.HTML)
 }
 
         }
@@ -69,7 +70,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return candidateVector!!.get(index) as String
+                        return this.candidateVector!!.get(index) as String
 }
 
 
@@ -81,7 +82,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tagNameVector!!.get(index) as String
+                        return this.tagNameVector!!.get(index) as String
 }
 
 

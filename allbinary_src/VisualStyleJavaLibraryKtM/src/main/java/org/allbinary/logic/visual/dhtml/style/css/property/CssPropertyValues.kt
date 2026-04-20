@@ -150,7 +150,7 @@ this.propertyValueVector!!.add(propertyValue)
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = propertyValueVector!!.size!!
+    var size: Int = this.propertyValueVector!!.size!!
 
 
 
@@ -160,7 +160,7 @@ this.propertyValueVector!!.add(propertyValue)
 
         {
 
-    var value: String = propertyValueVector!!.get(index) as String
+    var value: String = this.propertyValueVector!!.get(index) as String
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(cssPropertyValueData!!.NAME)

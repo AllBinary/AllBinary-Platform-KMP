@@ -86,10 +86,10 @@ private constructor (){
     //var terrainEventListener = terrainEventListener
 
     
-                        if(!list.contains(terrainEventListener))
+                        if(!this.list.contains(terrainEventListener))
                         
                                     {
-                                    list.add(terrainEventListener)
+                                    this.list.add(terrainEventListener)
 
                                     }
                                 

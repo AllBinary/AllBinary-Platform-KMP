@@ -68,7 +68,7 @@ this.command= command
 
     var commandListener: CommandListener = canvas.getCustomCommandListener()!!
 
-commandListener!!.commandAction(command, canvas)
+commandListener!!.commandAction(this.command, canvas)
 this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
             {

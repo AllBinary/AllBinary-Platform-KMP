@@ -60,7 +60,7 @@ public constructor (originalImageArray: Array<Image?>, angleInfo: AngleInfo, ani
                             //For kotlin this is before the body of the constructor.
                     
 this.originalImageArray= originalImageArray
-this.setImageArray(imageModifierUtil!!.getImageArray(originalImageArray))
+this.setImageArray(this.imageModifierUtil!!.getImageArray(originalImageArray))
 this.currentImage= this.imageArray[this.circularIndexUtil!!.getIndex()]!!
 }
 
@@ -88,11 +88,11 @@ this.currentImage= this.imageArray[this.circularIndexUtil!!.getIndex()]!!
                         
                                     {
                                     super.setAlpha(alpha)
-imageModifierUtil!!.reset()
+this.imageModifierUtil!!.reset()
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
 
-imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
+this.imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 
                                     }
                                 
@@ -106,7 +106,7 @@ super.nextRotation()
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
 
-imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
+this.imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 this.currentImage= this.imageArray[index]!!
 }
 
@@ -118,7 +118,7 @@ super.previousRotation()
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
 
-imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
+this.imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 this.currentImage= this.imageArray[index]!!
 }
 
@@ -131,7 +131,7 @@ super.setFrame(index2)
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
 
-imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
+this.imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 this.currentImage= this.imageArray[index]!!
 }
 

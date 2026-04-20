@@ -103,7 +103,7 @@ public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectang
                                     }
                                 
                         else {
-                            graphics.setColor(backgroundColor)
+                            graphics.setColor(this.backgroundColor)
 graphics.fillRect(x, y, this.rectangle.getWidth(), this.rectangle.getHeight())
 
                         }
@@ -130,14 +130,14 @@ item= this.get(index) as CustomItemInterface
                                     {
                                     
     
-                        if(logged)
+                        if(this.logged)
                         
                                     {
                                     
                                     }
                                 
                         else {
-                            logged= true
+                            this.logged= true
 PreLogUtil.put(StringMaker().
                             append("painting beyond maxx: ")!!.appendint(this.rectangle.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
 

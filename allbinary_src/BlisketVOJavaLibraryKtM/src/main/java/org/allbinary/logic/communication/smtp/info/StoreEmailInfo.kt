@@ -70,7 +70,7 @@ this.init()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var contextConfigurationInterface: ContextConfigurationInterface = storeFrontInterface!!.getContextConfigurationInterface()!!
+    var contextConfigurationInterface: ContextConfigurationInterface = this.storeFrontInterface!!.getContextConfigurationInterface()!!
 
 
     var emailServerConfigurationInterface: EmailServerConfigurationInterface = contextConfigurationInterface!!.getEmailServerConfigurationInterface()!!

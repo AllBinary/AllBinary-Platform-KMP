@@ -85,7 +85,7 @@ this.name= payment.get(PaymentData.NAME) as String
 this.type= payment.get(PaymentData.TYPE) as String
 this.expiration= payment.get(PaymentData.EXPIRATION) as String
 this.encryption= payment.get(EntryData.getInstance()!!.ENCRYPTION) as String
-this.number= SuperCrypt(Integer(encryption).
+this.number= SuperCrypt(Integer(this.encryption).
                             toInt()).
                             decrypt(payment.get(PaymentData.NUMBER) as String) as String
 this.id= payment.get(PaymentData.ID) as String

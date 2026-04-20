@@ -102,7 +102,7 @@ this.running= running
 : Boolean{
 
     
-                        if(captureThread != 
+                        if(this.captureThread != 
                                     null
                                  && (captureThread!!.isAlive() || this.getCaptureWorker()!!.isRunning() || this.getMotionRectanglesWorker()!!.isRunning() || this.getImageComparisonWorker()!!.isRunning()))
                         
@@ -134,9 +134,9 @@ this.running= running
                         if(!isAnyDataWorkerRunning())
                         
                                     {
-                                    captureThread= Thread(this.getCaptureWorker())
+                                    this.captureThread= Thread(this.getCaptureWorker())
 this.logUtil!!.putF("Starting CaptureWorkers - Need more images - Thread State: " +captureThread!!.getState()!!.toString(), this, "startCaptureWorkers")
-captureThread!!.start()
+this.captureThread!!.start()
 
                                     }
                                 

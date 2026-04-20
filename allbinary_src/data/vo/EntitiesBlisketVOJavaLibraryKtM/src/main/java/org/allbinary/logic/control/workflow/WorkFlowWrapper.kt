@@ -69,7 +69,7 @@ this.anyType= anyType
 
         try {
             
-    var helperClass: KClass<*> = anyType!!::class!!
+    var helperClass: KClass<*> = this.anyType!!::class!!
 
 
     var method: Method = helperClass!!.getMethod("getName", 
@@ -94,7 +94,7 @@ this.anyType= anyType
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getName()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "getName()", e)
 
                                     }
                                 
@@ -115,7 +115,7 @@ this.anyType= anyType
 
         try {
             
-    var helperClass: KClass<*> = anyType!!::class!!
+    var helperClass: KClass<*> = this.anyType!!::class!!
 
 
     var method: Method = helperClass!!.getMethod("getStoreName", 
@@ -140,7 +140,7 @@ this.anyType= anyType
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getStoreName()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "getStoreName()", e)
 
                                     }
                                 
@@ -161,10 +161,10 @@ this.anyType= anyType
 
         try {
             
-    var helperClass: KClass<*> = anyType!!::class!!
+    var helperClass: KClass<*> = this.anyType!!::class!!
 
 
-    var method: Method = helperClass!!.getMethod(commonStrings!!.PROCESS, 
+    var method: Method = helperClass!!.getMethod(this.commonStrings!!.PROCESS, 
                             null)!!
 
 

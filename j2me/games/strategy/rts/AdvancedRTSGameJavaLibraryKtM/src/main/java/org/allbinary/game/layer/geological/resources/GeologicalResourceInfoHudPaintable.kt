@@ -42,7 +42,7 @@ companion object {
             
     private val keyvalueDrawString: KeyValueDrawCharArray
 public constructor (){
-keyvalueDrawString= KeyValueDrawCharArray(RESOURCES, this.textX)
+this.keyvalueDrawString= KeyValueDrawCharArray(RESOURCES, this.textX)
 }
 
 

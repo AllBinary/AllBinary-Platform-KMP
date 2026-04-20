@@ -173,7 +173,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
                             //For kotlin this is before the body of the constructor.
                     
 SmallIntegerSingletonFactory.getInstance()!!.init(0x291, 6)
-loadGameForm= CommandForm.NULL_COMMAND_FORM
+this.loadGameForm= CommandForm.NULL_COMMAND_FORM
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -238,7 +238,7 @@ this.init()
 {
 this.pauseAppBackground(true)
 
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.getAdvertisements()!!.stopAll()
 }
@@ -251,10 +251,10 @@ gameAdState!!.getAdvertisements()!!.stopAll()
 this.logUtil!!.putF(commonStrings!!.START, this, PAUSE_APP_BACKGROUND)
 
     
-                        if(allbinaryGameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
+                        if(this.allbinaryGameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
                         
                                     {
-                                    allbinaryGameCanvasRunnableInterface!!.pause()
+                                    this.allbinaryGameCanvasRunnableInterface!!.pause()
 
                                     }
                                 
@@ -272,7 +272,7 @@ AllBinarySensorManager.getInstance()!!.shutdown()
 {
 this.unPauseAppBackground(true)
 
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.getAdvertisements()!!.startAll()
 }
@@ -318,7 +318,7 @@ var isProgress = isProgress
                         
                                     {
                                     progressCanvas!!.start()
-this.commandAction(myCommandsFactory!!.SET_DISPLAYABLE, progressCanvas)
+this.commandAction(this.myCommandsFactory!!.SET_DISPLAYABLE, progressCanvas)
 
                                     }
                                 
@@ -346,7 +346,7 @@ var unconditional = unconditional
         try {
             PreLogUtil.put(GameStatisticsFactory.getInstance()!!.toString(), this, METHOD_NAME)
 
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.getAdvertisements()!!.stopAll()
 
@@ -382,7 +382,7 @@ this.logUtil!!.putF(commonStrings!!.END, this, METHOD_NAME)
 
         try {
             
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.getAdvertisements()!!.startAll()
 
@@ -397,7 +397,7 @@ this.logUtil!!.putF(commonStrings!!.START, this, START_APP)
                         if(gameCanvasRunnableInterface == NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
                         
                                     {
-                                    gameMidletStateFactory!!.setCurrentGameState(GameState.NO_GAME_STATE)
+                                    this.gameMidletStateFactory!!.setCurrentGameState(GameState.NO_GAME_STATE)
 this.setDemo()
 
                                     }
@@ -440,7 +440,7 @@ notifyDestroyed()
 
         try {
             
-    var displayableAsString: String = NO_DISPLAYABLE
+    var displayableAsString: String = this.NO_DISPLAYABLE
 
 
     
@@ -454,7 +454,7 @@ notifyDestroyed()
                                     }
                                 
 
-    var label: String = NO_COMMAND
+    var label: String = this.NO_COMMAND
 
 
     
@@ -468,7 +468,7 @@ notifyDestroyed()
                                     }
                                 
 PreLogUtil.put(StringMaker().
-                            append(COMMAND_NAME)!!.append(label)!!.append(DISPLAYABLE)!!.append(displayableAsString)!!.toString(), this, this.COMMAND_ACTION)
+                            append(this.COMMAND_NAME)!!.append(label)!!.append(this.DISPLAYABLE)!!.append(displayableAsString)!!.toString(), this, this.COMMAND_ACTION)
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
@@ -538,7 +538,7 @@ GameMidletEventHandler.getInstance()!!.fireEvent(DemoGameMidletEvent(this, DemoG
                                     {
                                     
     
-                        if(gameMidletStateFactory!!.getCurrentGameState() != GameState.PLAYING_GAME_STATE || command == gameCommandsFactory!!.RESTART_COMMAND)
+                        if(this.gameMidletStateFactory!!.getCurrentGameState() != GameState.PLAYING_GAME_STATE || command == gameCommandsFactory!!.RESTART_COMMAND)
                         
                                     {
                                     
@@ -558,7 +558,7 @@ GameMidletEventHandler.getInstance()!!.fireEvent(DemoGameMidletEvent(this, DemoG
                         else {
                             this.startedBefore= true
 this.createGame()
-gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
+this.gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
 
                         }
                             
@@ -635,7 +635,7 @@ menuListener!!.close()
                                     }
                                 
 this.stopGameCanvasRunnableInterface()
-gameMidletStateFactory!!.setCurrentGameState(GameState.NO_GAME_STATE)
+this.gameMidletStateFactory!!.setCurrentGameState(GameState.NO_GAME_STATE)
 this.setDemo()
 
                                     }
@@ -645,7 +645,7 @@ this.setDemo()
                                 
                              else 
     
-                        if(command == myCommandsFactory!!.RESUME_COMMAND)
+                        if(command == this.myCommandsFactory!!.RESUME_COMMAND)
                         
                                     {
                                     this.unPauseAppBackground(false)
@@ -654,7 +654,7 @@ this.setDemo()
                                 
                              else 
     
-                        if(command == myCommandsFactory!!.PAUSE_COMMAND)
+                        if(command == this.myCommandsFactory!!.PAUSE_COMMAND)
                         
                                     {
                                     this.pauseAppBackground(false)
@@ -663,7 +663,7 @@ this.setDemo()
                                 
                              else 
     
-                        if(command == myCommandsFactory!!.SET_DISPLAYABLE)
+                        if(command == this.myCommandsFactory!!.SET_DISPLAYABLE)
                         
                                     {
                                     this.pauseAppBackground(false)
@@ -892,7 +892,7 @@ this.stopAll()
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
-isFullScreen= features.isFeature(mainFeatureFactory!!.FULL_SCREEN)
+this.isFullScreen= this.features.isFeature(mainFeatureFactory!!.FULL_SCREEN)
 ResizableListenerHandler.getInstance()!!.fireEvent(true)
 this.setResized(false)
 this.commandAction(gameCommandsFactory!!.SET_MENU_DISPLAYABLE, this.getGameOptionsForm())
@@ -911,7 +911,7 @@ this.commandAction(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS, displayable
 
 stringBuffer!!.append("Close isFullScreen/change: ")
 stringBuffer!!.appendboolean(isFullScreen)
-stringBuffer!!.appendboolean(fullScreenUtil!!.isScreenChange(isFullScreen))
+stringBuffer!!.appendboolean(this.fullScreenUtil!!.isScreenChange(isFullScreen))
 stringBuffer!!.append(" isResized: ")
 stringBuffer!!.appendboolean(this.isResized())
 PreLogUtil.put(stringBuffer!!.toString(), this, COMMAND_ACTION)
@@ -1092,19 +1092,19 @@ virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
 
-    var isFullScreen: Boolean = features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
+    var isFullScreen: Boolean = this.features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
 
 
     
                         if(isFullScreen)
                         
                                     {
-                                    features.removeDefault(mainFeatureFactory!!.FULL_SCREEN)
+                                    this.features.removeDefault(mainFeatureFactory!!.FULL_SCREEN)
 
                                     }
                                 
                         else {
-                            features.addDefault(mainFeatureFactory!!.FULL_SCREEN)
+                            this.features.addDefault(mainFeatureFactory!!.FULL_SCREEN)
 
                         }
                             
@@ -1136,7 +1136,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, midletStrings!!.COMMAND_ACTI
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
 
-    var isFullScreen: Boolean = features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
+    var isFullScreen: Boolean = this.features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
 
 
     var displayable: Displayable = this.getDisplay()!!.getCurrent()!!
@@ -1235,11 +1235,11 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
     var threadFactoryUtil: ThreadFactoryUtil = ThreadFactoryUtil.getInstance()!!
 
-thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
+this.thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
 this.logUtil!!.putF(StringMaker().
-                            append("Thread Priority: ")!!.appendint(thread.getPriority())!!.toString(), this, "startGameCanvasRunnableInterface")
-this.allbinaryGameCanvasRunnableInterface!!.setThread(thread)
-threadFactoryUtil!!.start(thread)
+                            append("Thread Priority: ")!!.appendint(this.thread.getPriority())!!.toString(), this, "startGameCanvasRunnableInterface")
+this.allbinaryGameCanvasRunnableInterface!!.setThread(this.thread)
+threadFactoryUtil!!.start(this.thread)
 }
 
 
@@ -1276,7 +1276,7 @@ ThreadUtil.getInstance()!!.join(this.thread)
 
 
     
-                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ALL))
+                        if(this.features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ALL))
                         
                                     {
                                     progressCanvas!!.addPortion(50, "Stopped Game Runnable")
@@ -1321,7 +1321,7 @@ this.allbinaryGameCanvasRunnableInterface= gameCanvasRunnableInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AllBinaryGameLayerManager(basicColorFactory!!.BLACK, basicColorFactory!!.WHITE, gameInfo)
+                        return AllBinaryGameLayerManager(this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE, gameInfo)
 }
 
 
@@ -1363,7 +1363,7 @@ this.logUtil!!.putF(commonStrings!!.START, this, "getCurrentStateHashtable")
 
 
     
-                        if(allbinaryGameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
+                        if(this.allbinaryGameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
                         
                                     {
                                     
@@ -1408,7 +1408,7 @@ this.loadGameForm= loadGameForm
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return loadGameForm as LoadGameForm
+                        return this.loadGameForm as LoadGameForm
 }
 
 
@@ -1438,7 +1438,7 @@ this.resized= resized
 : Boolean{
 
     
-                        if(startedBefore)
+                        if(this.startedBefore)
                         
                                     {
                                     

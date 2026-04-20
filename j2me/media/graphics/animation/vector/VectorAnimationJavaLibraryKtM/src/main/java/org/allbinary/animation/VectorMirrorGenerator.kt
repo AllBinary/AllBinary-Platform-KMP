@@ -122,7 +122,7 @@ pointsBasicArrayList!!.add(getInstance(pointsBasicArrayList!!.objectArray[index]
 }
 
 
-    var newPoints: Array<Array<IntArray?>?> = vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList)!!
+    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList)!!
 
 
 

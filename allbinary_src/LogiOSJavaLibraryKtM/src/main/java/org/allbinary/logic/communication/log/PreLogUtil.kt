@@ -42,7 +42,7 @@ import org.allbinary.string.CommonStrings
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
-putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 

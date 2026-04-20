@@ -66,7 +66,7 @@ private constructor ()
     var imageName: String = image.getName()!!
 
 
-    var isNormalScaling: Boolean = list.size() == 0 || imageName!!.startsWith(EXCLUSION)
+    var isNormalScaling: Boolean = this.list.size() == 0 || imageName!!.startsWith(this.EXCLUSION)
 
 
     
@@ -83,7 +83,7 @@ private constructor ()
                                 
                         else {
                             
-    var size: Int = list.size()!!
+    var size: Int = this.list.size()!!
 
 
     var name: String
@@ -95,7 +95,7 @@ private constructor ()
                         for (index in 0 until size)
 
         {
-name= list.get(index) as String
+name= this.list.get(index) as String
 
     
                         if(imageName!!.startsWith(name))

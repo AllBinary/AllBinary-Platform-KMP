@@ -421,7 +421,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.needToMove(this.assoc
                         if(this.isTrackingWaypoint() || this.sensorAction == SensorActionFactory.getInstance()!!.EVADE || (this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER && this.getCurrentTargetDistance() >= this.longWeaponRange +this.currentTargetLayerInterfaceP!!.getHalfHeight()))
                         
                                     {
-                                    repeatedToLong!!.setStartTime()
+                                    this.repeatedToLong!!.setStartTime()
 
 
 
@@ -432,7 +432,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.needToMove(this.assoc
                                 
 
     
-                        if(repeatedToLong!!.isTime())
+                        if(this.repeatedToLong!!.isTime())
                         
                                     {
                                     

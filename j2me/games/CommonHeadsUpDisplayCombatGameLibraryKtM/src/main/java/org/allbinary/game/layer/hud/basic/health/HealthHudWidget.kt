@@ -119,20 +119,20 @@ this.update()
     override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true
 {
-max= (this.healthInterface!!.getHealth() /this.healthScale)
-timeDelayHelper= NoTimeDelayHelper.SINGLETON
+this.max= (this.healthInterface!!.getHealth() /this.healthScale)
+this.timeDelayHelper= NoTimeDelayHelper.SINGLETON
 
     
-                        if(max <= 1 && this.healthInterface!!.isAlive())
+                        if(this.max <= 1 && this.healthInterface!!.isAlive())
                         
                                     {
-                                    max= 1
+                                    this.max= 1
 
     
                         if(this.healthScale -this.healthInterface!!.getHealth() > (this.healthScale *2) /3)
                         
                                     {
-                                    timeDelayHelper= this.slowBeatTimeDelayHelper
+                                    this.timeDelayHelper= this.slowBeatTimeDelayHelper
 
                                     }
                                 
@@ -141,12 +141,12 @@ timeDelayHelper= NoTimeDelayHelper.SINGLETON
                         if(this.healthScale -this.healthInterface!!.getHealth() > this.healthScale /3)
                         
                                     {
-                                    timeDelayHelper= this.mediumBeatTimeDelayHelper
+                                    this.timeDelayHelper= this.mediumBeatTimeDelayHelper
 
                                     }
                                 
                         else {
-                            timeDelayHelper= this.fastBeatTimeDelayHelper
+                            this.timeDelayHelper= this.fastBeatTimeDelayHelper
 
                         }
                             
@@ -164,7 +164,7 @@ var graphics = graphics
 
 
 
-                        for (index in 0 until max)
+                        for (index in 0 until this.max)
 
         {
 

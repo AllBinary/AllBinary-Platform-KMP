@@ -117,9 +117,9 @@ this.logUtil!!.putF(StringMaker().
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(ANIMATION_FEATURES)
+stringBuffer!!.append(this.ANIMATION_FEATURES)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
-stringBuffer!!.append(IMAGE_LABEL)
+stringBuffer!!.append(this.IMAGE_LABEL)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
@@ -128,13 +128,13 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(IMAGE_GRAPHICS_ARRAY)
+stringBuffer!!.append(this.IMAGE_GRAPHICS_ARRAY)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
-stringBuffer!!.append(IMAGE_GRAPHICS_ROTATION)
+stringBuffer!!.append(this.IMAGE_GRAPHICS_ROTATION)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
-stringBuffer!!.append(SPRITE_QUARTER)
+stringBuffer!!.append(this.SPRITE_QUARTER)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
-stringBuffer!!.append(SPRITE_FULL)
+stringBuffer!!.append(this.SPRITE_FULL)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 

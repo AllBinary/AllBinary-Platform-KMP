@@ -71,7 +71,7 @@ this.getAddressForm()
     open fun getAddressForm()
         //nullable = true from not(false or (false and true)) = true
 {
-this.userName= request.getParameter(UserData.USERNAME)
+this.userName= this.request.getParameter(UserData.USERNAME)
 
     
                         if(this.userName == 
@@ -79,7 +79,7 @@ this.userName= request.getParameter(UserData.USERNAME)
                                 )
                         
                                     {
-                                    this.userName= request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)
+                                    this.userName= this.request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)
 
                                     }
                                 
@@ -93,7 +93,7 @@ this.streetAddress= StreetAddress(this.request)
 
         try {
             
-    var success: String = BillingAddressesEntity(stringUtil!!.EMPTY_STRING).
+    var success: String = BillingAddressesEntity(this.stringUtil!!.EMPTY_STRING).
                             drop()!!
 
 
@@ -140,7 +140,7 @@ this.streetAddress= StreetAddress(this.request)
 
         try {
             
-    var success: String = BillingAddressesEntity(stringUtil!!.EMPTY_STRING).
+    var success: String = BillingAddressesEntity(this.stringUtil!!.EMPTY_STRING).
                             createTable()!!
 
 

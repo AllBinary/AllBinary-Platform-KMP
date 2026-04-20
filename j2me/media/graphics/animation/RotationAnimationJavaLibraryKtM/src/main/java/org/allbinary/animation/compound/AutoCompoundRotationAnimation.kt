@@ -264,7 +264,7 @@ this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.adjustFrame(
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return animationInterfaceArray
+                        return this.animationInterfaceArray
 }
 
 

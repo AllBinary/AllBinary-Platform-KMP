@@ -240,9 +240,9 @@ this.updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
 this.imageRotationUtil!!.rotateImage(this.originalImageArray[0]!!, this.twoImages[this.bufferedImageIndex]!!, this.angleInfo!!.getAngle() +90)
-this.alphaProcessor!!.update(imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.alphaP)
-this.setColorProcessor!!.update(imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.basicColor)
-this.changeColorProcessor!!.update(imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.changeBasicColorP)
+this.alphaProcessor!!.update(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.alphaP)
+this.setColorProcessor!!.update(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.basicColor)
+this.changeColorProcessor!!.update(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.changeBasicColorP)
 this.swap()
 }
 

@@ -123,7 +123,7 @@ x= point.getX() +relativePoint!!.getX()
 y= point.getY() +relativePoint!!.getY()
 z= point.getZ() +relativePoint!!.getZ()
 layerInterface= layerInterfaceFactory!!.getInstance(layerHashtable, x, y, z)
-layerInterfaceVisitor!!.visit(layerInterface)
+this.layerInterfaceVisitor!!.visit(layerInterface)
 }
 
 }
@@ -150,10 +150,10 @@ layerInterfaceVisitor!!.visit(layerInterface)
     var height: Int = layerPlacementInterface!!.getHeight()!!
 
 
-    var x: Int = ((dimension.getX() -width) /2)
+    var x: Int = ((this.dimension.getX() -width) /2)
 
 
-    var y: Int = ((dimension.getY() -height) /2)
+    var y: Int = ((this.dimension.getY() -height) /2)
 
 
 
@@ -175,7 +175,7 @@ layerInterfaceVisitor!!.visit(layerInterface)
     var height: Int = layerPlacementInterface!!.getHeight()!!
 
 
-    var x: Int = ((dimension.getX() -width) /2)
+    var x: Int = ((this.dimension.getX() -width) /2)
 
 
     var y: Int =  -height

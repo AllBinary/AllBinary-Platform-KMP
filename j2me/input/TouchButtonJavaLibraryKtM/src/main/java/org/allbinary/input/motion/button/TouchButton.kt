@@ -125,21 +125,21 @@ this.animationInterface!!.paint(graphics, animationX, animationY)
 
         try {
             
-    var x: Int = this.rawRectangle!!.getWidth() *cellPositionP!!.getColumn()
+    var x: Int = this.rawRectangle!!.getWidth() *this.cellPositionP!!.getColumn()
 
 
-    var y: Int = this.rawRectangle!!.getHeight() *cellPositionP!!.getRow()
+    var y: Int = this.rawRectangle!!.getHeight() *this.cellPositionP!!.getRow()
 
 this.rectangleP= Rectangle(PointFactory.getInstance()!!.getInstance(x +xBorder, y +yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
 
-    var point: GPoint = rectangleP!!.getPoint()!!
+    var point: GPoint = this.rectangleP!!.getPoint()!!
 
 this.animationX= point.getX()
 this.animationY= point.getY()
-this.hintAnimationY= animationY -32
+this.hintAnimationY= this.animationY -32
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 }

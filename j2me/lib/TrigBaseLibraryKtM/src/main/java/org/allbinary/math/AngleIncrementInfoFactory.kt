@@ -62,7 +62,7 @@ var angleIncrement = angleIncrement
     var halfAngleIncrement: Int = (angleIncrement.toInt() shr 1)
 
 
-    var angleIncrementInfoCanBeNull: AngleIncrementInfo? = angleIncrementInfo[halfAngleIncrement]
+    var angleIncrementInfoCanBeNull: AngleIncrementInfo? = this.angleIncrementInfo[halfAngleIncrement]
 
 
     
@@ -72,7 +72,7 @@ var angleIncrement = angleIncrement
                         
                                     {
                                     angleIncrementInfoCanBeNull= AngleIncrementInfo(angleIncrement)
-angleIncrementInfo[halfAngleIncrement]= angleIncrementInfoCanBeNull
+this.angleIncrementInfo[halfAngleIncrement]= angleIncrementInfoCanBeNull
 
                                     }
                                 

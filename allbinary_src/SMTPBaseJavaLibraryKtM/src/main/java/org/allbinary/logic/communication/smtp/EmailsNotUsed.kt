@@ -72,7 +72,7 @@ var document = document
     var node: Node = document.createElement(EmailData.NAME)!!
 
 
-    var size: Int = emailInfoVector!!.size!!
+    var size: Int = this.emailInfoVector!!.size!!
 
 
 
@@ -82,7 +82,7 @@ var document = document
 
         {
 
-    var email: Email = emailInfoVector!!.get(index) as Email
+    var email: Email = this.emailInfoVector!!.get(index) as Email
 
 
     var emailNode: Node = email.toXmlNode(document)!!
@@ -105,7 +105,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.END, this, "toXmlNode()")
+                                    this.logUtil!!.putF(this.commonStrings!!.END, this, "toXmlNode()")
 
                                     }
                                 
@@ -121,7 +121,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode()", e)
 
                                     }
                                 

@@ -90,7 +90,7 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
     var list: BasicArrayList = BasicArrayList()
 
 
-    var tokenizer: Tokenizer = Tokenizer(commonSeps!!.UNDERSCORE)
+    var tokenizer: Tokenizer = Tokenizer(this.commonSeps!!.UNDERSCORE)
 
 tokenizer.getTokens(string, list)
 

@@ -64,22 +64,22 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX *2)
+    var WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(this.MAX *2)
                                                             
 
 
-    var TWO_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX)
+    var TWO_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(this.MAX)
                                                             
 
 
-    var THREE_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX)
+    var THREE_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(this.MAX)
                                                             
 
 
 
 
 
-                        for (index in 0 until MAX)
+                        for (index in 0 until this.MAX)
 
         {
 WEAPONLAYER_ARRAY[index]= arrayOfNulls(1)
@@ -87,9 +87,9 @@ TWO_WEAPONLAYER_ARRAY[index]= arrayOfNulls(2)
 THREE_WEAPONLAYER_ARRAY[index]= arrayOfNulls(3)
 }
 
-ALL_WEAPONLAYER_ARRAY[1]= WEAPONLAYER_ARRAY
-ALL_WEAPONLAYER_ARRAY[2]= TWO_WEAPONLAYER_ARRAY
-ALL_WEAPONLAYER_ARRAY[3]= THREE_WEAPONLAYER_ARRAY
+this.ALL_WEAPONLAYER_ARRAY[1]= WEAPONLAYER_ARRAY
+this.ALL_WEAPONLAYER_ARRAY[2]= TWO_WEAPONLAYER_ARRAY
+this.ALL_WEAPONLAYER_ARRAY[3]= THREE_WEAPONLAYER_ARRAY
 }
 
 
@@ -101,9 +101,9 @@ ALL_WEAPONLAYER_ARRAY[3]= THREE_WEAPONLAYER_ARRAY
 : Array<WeaponLayer?>{
 var size = size
 
-    var weaponLayerArray: Array<WeaponLayer?> = ALL_WEAPONLAYER_ARRAY[size]!![circularIndexUtil!!.getIndex()]!! as Array<WeaponLayer?>
+    var weaponLayerArray: Array<WeaponLayer?> = this.ALL_WEAPONLAYER_ARRAY[size]!![this.circularIndexUtil!!.getIndex()]!! as Array<WeaponLayer?>
 
-circularIndexUtil!!.next()
+this.circularIndexUtil!!.next()
 
 
 

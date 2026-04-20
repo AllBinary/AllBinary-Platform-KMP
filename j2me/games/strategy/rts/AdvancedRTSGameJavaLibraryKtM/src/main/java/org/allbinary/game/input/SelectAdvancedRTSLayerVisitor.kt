@@ -64,7 +64,7 @@ var anyType = anyType
     var assignWaypointsUtil: AssignWaypointsUtil = AssignWaypointsUtil.getInstance()!!
 
 
-    var list: BasicArrayList = selectedRTSLayersPlayerGameInput!!.getSelectedBasicArrayList()!!
+    var list: BasicArrayList = this.selectedRTSLayersPlayerGameInput!!.getSelectedBasicArrayList()!!
 
 
     var currentRTSLayer: RTSLayer

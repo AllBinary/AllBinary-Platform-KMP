@@ -95,10 +95,10 @@ private constructor ()
     //var originalImage = originalImage
 
     
-                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR, Exception())
+                                    this.logUtil!!.put(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR, Exception())
 
 
 
@@ -108,7 +108,7 @@ private constructor ()
                                     }
                                 
 
-    var image: Image = imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
+    var image: Image = this.imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
 
     
@@ -145,10 +145,10 @@ private constructor ()
     //var resize = resize
 
     
-                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR, Exception())
+                                    this.logUtil!!.put(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR, Exception())
 
 
 
@@ -190,7 +190,7 @@ private constructor ()
                                     }
                                 
 
-    var image: Image = imageCreationUtil!!.getInstance(newWidth, newHeight)!!
+    var image: Image = this.imageCreationUtil!!.getInstance(newWidth, newHeight)!!
 
 
     

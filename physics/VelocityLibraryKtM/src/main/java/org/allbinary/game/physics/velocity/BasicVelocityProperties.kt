@@ -76,7 +76,7 @@ this.velocityZBasicDecimal!!.set(0)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return velocityXBasicDecimal
+                        return this.velocityXBasicDecimal
 }
 
 
@@ -87,7 +87,7 @@ this.velocityZBasicDecimal!!.set(0)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return velocityYBasicDecimal
+                        return this.velocityYBasicDecimal
 }
 
 
@@ -98,7 +98,7 @@ this.velocityZBasicDecimal!!.set(0)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return velocityXBasicDecimal
+                        return this.velocityZBasicDecimal
 }
 
 
@@ -111,10 +111,10 @@ this.velocityZBasicDecimal!!.set(0)
     //var direction = direction
     //var otherDirection = otherDirection
 
-    var angle: Angle = directionUtil!!.getAngle(direction)!!
+    var angle: Angle = this.directionUtil!!.getAngle(direction)!!
 
 
-    var otherAngle: Angle = directionUtil!!.getAngle(otherDirection)!!
+    var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
 
 this.setVelocity(magnitudeBasicDecimal, angle, otherAngle)
 }
@@ -127,10 +127,10 @@ this.setVelocity(magnitudeBasicDecimal, angle, otherAngle)
     //var direction = direction
     //var otherDirection = otherDirection
 
-    var angle: Angle = directionUtil!!.getAngle(direction)!!
+    var angle: Angle = this.directionUtil!!.getAngle(direction)!!
 
 
-    var otherAngle: Angle = directionUtil!!.getAngle(otherDirection)!!
+    var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
 
 this.setVelocity(magnitude, angle, otherAngle)
 }
@@ -143,10 +143,10 @@ this.setVelocity(magnitude, angle, otherAngle)
     //var direction = direction
     //var otherDirection = otherDirection
 
-    var angle: Angle = directionUtil!!.getAngle(direction)!!
+    var angle: Angle = this.directionUtil!!.getAngle(direction)!!
 
 
-    var otherAngle: Angle = directionUtil!!.getAngle(otherDirection)!!
+    var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
 
 this.addVelocity(magnitudeBasicDecimal, angle, otherAngle)
 }
@@ -159,10 +159,10 @@ this.addVelocity(magnitudeBasicDecimal, angle, otherAngle)
     //var direction = direction
     //var otherDirection = otherDirection
 
-    var angle: Angle = directionUtil!!.getAngle(direction)!!
+    var angle: Angle = this.directionUtil!!.getAngle(direction)!!
 
 
-    var otherAngle: Angle = directionUtil!!.getAngle(otherDirection)!!
+    var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
 
 this.addVelocity(magnitude, angle, otherAngle)
 }
@@ -221,17 +221,17 @@ this.addVelocity(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().to
     //var angle = angle
     //var otherAngle = otherAngle
 
-    var xVector: Long = (axisMathVectorUtil!!.calculateX(magnitude, angle) /velocityXBasicDecimal!!.getScaledFactorValue())
+    var xVector: Long = (this.axisMathVectorUtil!!.calculateX(magnitude, angle) /this.velocityXBasicDecimal!!.getScaledFactorValue())
 
 
-    var yVector: Long = (axisMathVectorUtil!!.calculateY(magnitude, angle) /velocityYBasicDecimal!!.getScaledFactorValue())
+    var yVector: Long = (this.axisMathVectorUtil!!.calculateY(magnitude, angle) /this.velocityYBasicDecimal!!.getScaledFactorValue())
 
 
-    var zVector: Long = (axisMathVectorUtil!!.calculateZ(magnitude, otherAngle) /velocityZBasicDecimal!!.getScaledFactorValue())
+    var zVector: Long = (this.axisMathVectorUtil!!.calculateZ(magnitude, otherAngle) /this.velocityZBasicDecimal!!.getScaledFactorValue())
 
-velocityXBasicDecimal!!.set(xVector)
-velocityYBasicDecimal!!.set(yVector)
-velocityZBasicDecimal!!.set(zVector)
+this.velocityXBasicDecimal!!.set(xVector)
+this.velocityYBasicDecimal!!.set(yVector)
+this.velocityZBasicDecimal!!.set(zVector)
 }
 
 
@@ -242,17 +242,17 @@ velocityZBasicDecimal!!.set(zVector)
     //var angle = angle
     //var otherAngle = otherAngle
 
-    var xVector: Long = (axisMathVectorUtil!!.calculateX(magnitude, angle) /velocityXBasicDecimal!!.getScaledFactorValue())
+    var xVector: Long = (this.axisMathVectorUtil!!.calculateX(magnitude, angle) /this.velocityXBasicDecimal!!.getScaledFactorValue())
 
 
-    var yVector: Long = (axisMathVectorUtil!!.calculateY(magnitude, angle) /velocityYBasicDecimal!!.getScaledFactorValue())
+    var yVector: Long = (this.axisMathVectorUtil!!.calculateY(magnitude, angle) /this.velocityYBasicDecimal!!.getScaledFactorValue())
 
 
-    var zVector: Long = (axisMathVectorUtil!!.calculateZ(magnitude, otherAngle) /velocityZBasicDecimal!!.getScaledFactorValue())
+    var zVector: Long = (this.axisMathVectorUtil!!.calculateZ(magnitude, otherAngle) /this.velocityZBasicDecimal!!.getScaledFactorValue())
 
-velocityXBasicDecimal!!.add(xVector)
-velocityYBasicDecimal!!.add(yVector)
-velocityZBasicDecimal!!.add(zVector)
+this.velocityXBasicDecimal!!.add(xVector)
+this.velocityYBasicDecimal!!.add(yVector)
+this.velocityZBasicDecimal!!.add(zVector)
 }
 
 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.GPoint
+import org.allbinary.logic.TsUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.cache.CacheableInterface
 import org.allbinary.media.image.comparison.color.ColorDelta
@@ -48,7 +49,7 @@ var colorDelta = colorDelta
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            appendint(point.hashCode())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
+                            appendint(TsUtil.getInstance()!!.hashCode(point))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
 }
 
 
@@ -127,7 +128,7 @@ this.colorDelta= colorDelta
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append("PixelDelta: Point: ")!!.append(point.toString())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(colorDelta!!.toString())!!.toString()
+                            append("PixelDelta: Point: ")!!.append(this.point.toString())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(this.colorDelta!!.toString())!!.toString()
 }
 
 

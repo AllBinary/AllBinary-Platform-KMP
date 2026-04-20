@@ -124,9 +124,9 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
 
     
-                        if(userName == 
+                        if(this.userName == 
                                     null
-                                 || userName!!.length < 4 || userName!!.length > 250)
+                                 || this.userName!!.length < 4 || this.userName!!.length > 250)
                         
                                     {
                                     valid= Boolean.FALSE
@@ -224,9 +224,9 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
 
     
-                        if(userName == 
+                        if(this.userName == 
                                     null
-                                 || userName!!.length < 4 || userName!!.length > 250)
+                                 || this.userName!!.length < 4 || this.userName!!.length > 250)
                         
                                     {
                                     stringBuffer!!.append("Please enter a User Name with more than 4 characters.<br>")
@@ -320,8 +320,8 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
     var values: Vector = Vector()
 
-values.add(id)
-values.add(userName)
+values.add(this.id)
+values.add(this.userName)
 values.add(this.projectInfo)
 values.add(this.userComments)
 values.add(this.budget)

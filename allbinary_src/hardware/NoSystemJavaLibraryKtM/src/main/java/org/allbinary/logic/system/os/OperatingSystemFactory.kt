@@ -72,7 +72,7 @@ private constructor ()
         try {
             
     var osString: String = StringMaker().
-                            append("OperatingSystem Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString()!!
+                            append("OperatingSystem Info: ")!!.append(this.genericOperatingSystem!!.toString())!!.toString()!!
 
 System.out.println(osString)
 this.logUtil!!.putF(osString, this, commonStrings!!.GET_INSTANCE)

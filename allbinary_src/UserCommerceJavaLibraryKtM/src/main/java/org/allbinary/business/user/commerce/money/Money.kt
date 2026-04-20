@@ -157,14 +157,14 @@ var currency = currency
 
 
     
-                        if(currency.compareTo(DEFAULT_CURRENCY) == 0)
+                        if(currency.compareTo(this.DEFAULT_CURRENCY) == 0)
                         
                                     {
                                     
-    var dollar: Long = units.longValue() /100
+    var dollar: Long = this.units.longValue() /100
 
 
-    var cents: Long = units.longValue() -(dollar *100)
+    var cents: Long = this.units.longValue() -(dollar *100)
 
 stringBuffer!!.append(dollar as Long.
                             toString())

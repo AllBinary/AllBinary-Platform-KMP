@@ -114,7 +114,7 @@ this.emailVector!!.remove(emailEventListenerInterface)
     var emailEvent: EmailEvent = EmailEvent(this, this.userEmailEventNameData, this.emailInfo, 0)
 
 
-    var size: Int = emailVector!!.size!!
+    var size: Int = this.emailVector!!.size!!
 
 
 
@@ -124,7 +124,7 @@ this.emailVector!!.remove(emailEventListenerInterface)
 
         {
 
-    var emailEventListenerInterface: UserEmailEventListenerInterface = emailVector!!.get(index) as UserEmailEventListenerInterface
+    var emailEventListenerInterface: UserEmailEventListenerInterface = this.emailVector!!.get(index) as UserEmailEventListenerInterface
 
 emailEventListenerInterface!!.onEmailSendRequest(emailEvent)
 }

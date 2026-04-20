@@ -72,8 +72,8 @@ this.getMaxBlueJTextField()!!.setText("255")
 this.getMinRedJTextField()!!.setText(commonPhoneStrings!!.ZERO)
 this.getMinGreenJTextField()!!.setText(commonPhoneStrings!!.ZERO)
 this.getMinBlueJTextField()!!.setText(commonPhoneStrings!!.ZERO)
-fileJDialog= FileJDialog()
-fileJDialog!!.addFinishedListener(this)
+this.fileJDialog= FileJDialog()
+this.fileJDialog!!.addFinishedListener(this)
 }
 
 
@@ -81,44 +81,44 @@ fileJDialog!!.addFinishedListener(this)
         //nullable = true from not(false or (false and true)) = true
 {
 analysisActionJDialog= javax.swing.JDialog()
-titleJLabel= javax.swing.JLabel()
-colorRangeJLabel= javax.swing.JLabel()
-redJLabel= javax.swing.JLabel()
-minJLabel= javax.swing.JLabel()
-maxJLabel= javax.swing.JLabel()
-greenJLabel= javax.swing.JLabel()
-blueJLabel= javax.swing.JLabel()
-minRedJTextField= javax.swing.JTextField()
-maxRedJTextField= javax.swing.JTextField()
-maxGreenJTextField= javax.swing.JTextField()
-minBlueJTextField= javax.swing.JTextField()
-maxBlueJTextField= javax.swing.JTextField()
-okJButton= javax.swing.JButton()
-minGreenJTextField= javax.swing.JTextField()
-jPanel1= javax.swing.JPanel()
-mainJMenuBar= javax.swing.JMenuBar()
-fileJMenu= javax.swing.JMenu()
-openImageJMenuItem= javax.swing.JMenuItem()
-processingJMenu= javax.swing.JMenu()
-analyzeJMenuItem= javax.swing.JMenuItem()
-generateSpriteSplitterMenuItem= javax.swing.JMenuItem()
-generateRotationMenuItem= javax.swing.JMenuItem()
-generateMirrorSpriteMenuItem= javax.swing.JMenuItem()
-generateRotationSpriteJMenuItem= javax.swing.JMenuItem()
-createStripImageJMenuItem= javax.swing.JMenuItem()
-mirrorJMenuItem= javax.swing.JMenuItem()
-scaleImagesJMenuItem= javax.swing.JMenuItem()
-canvasImagesJMenuItem= javax.swing.JMenuItem()
-createIconImagesJMenuItem= javax.swing.JMenuItem()
-analysisActionJDialog!!.setMinimumSize(java.awt.Dimension(350, 250))
-titleJLabel!!.setText("              Color At Action Options            ")
-colorRangeJLabel!!.setText("Color Range")
-redJLabel!!.setText("Red:")
-minJLabel!!.setText("Minimum")
-maxJLabel!!.setText("Maximum")
-greenJLabel!!.setText("Green:")
-blueJLabel!!.setText("Blue:")
-okJButton!!.setText("OK")
+this.titleJLabel= javax.swing.JLabel()
+this.colorRangeJLabel= javax.swing.JLabel()
+this.redJLabel= javax.swing.JLabel()
+this.minJLabel= javax.swing.JLabel()
+this.maxJLabel= javax.swing.JLabel()
+this.greenJLabel= javax.swing.JLabel()
+this.blueJLabel= javax.swing.JLabel()
+this.minRedJTextField= javax.swing.JTextField()
+this.maxRedJTextField= javax.swing.JTextField()
+this.maxGreenJTextField= javax.swing.JTextField()
+this.minBlueJTextField= javax.swing.JTextField()
+this.maxBlueJTextField= javax.swing.JTextField()
+this.okJButton= javax.swing.JButton()
+this.minGreenJTextField= javax.swing.JTextField()
+this.jPanel1= javax.swing.JPanel()
+this.mainJMenuBar= javax.swing.JMenuBar()
+this.fileJMenu= javax.swing.JMenu()
+this.openImageJMenuItem= javax.swing.JMenuItem()
+this.processingJMenu= javax.swing.JMenu()
+this.analyzeJMenuItem= javax.swing.JMenuItem()
+this.generateSpriteSplitterMenuItem= javax.swing.JMenuItem()
+this.generateRotationMenuItem= javax.swing.JMenuItem()
+this.generateMirrorSpriteMenuItem= javax.swing.JMenuItem()
+this.generateRotationSpriteJMenuItem= javax.swing.JMenuItem()
+this.createStripImageJMenuItem= javax.swing.JMenuItem()
+this.mirrorJMenuItem= javax.swing.JMenuItem()
+this.scaleImagesJMenuItem= javax.swing.JMenuItem()
+this.canvasImagesJMenuItem= javax.swing.JMenuItem()
+this.createIconImagesJMenuItem= javax.swing.JMenuItem()
+this.analysisActionJDialog!!.setMinimumSize(java.awt.Dimension(350, 250))
+this.titleJLabel!!.setText("              Color At Action Options            ")
+this.colorRangeJLabel!!.setText("Color Range")
+this.redJLabel!!.setText("Red:")
+this.minJLabel!!.setText("Minimum")
+this.maxJLabel!!.setText("Maximum")
+this.greenJLabel!!.setText("Green:")
+this.blueJLabel!!.setText("Blue:")
+this.okJButton!!.setText("OK")
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -132,16 +132,16 @@ okJButtonActionPerformed(evt)
                                 }
                             )
 
-    var analysisActionJDialogLayout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(analysisActionJDialog!!.getContentPane())
+    var analysisActionJDialogLayout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(this.analysisActionJDialog!!.getContentPane())
 
-analysisActionJDialog!!.getContentPane()!!.setLayout(analysisActionJDialogLayout)
+this.analysisActionJDialog!!.getContentPane()!!.setLayout(analysisActionJDialogLayout)
 analysisActionJDialogLayout!!.setHorizontalGroup(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(blueJLabel)!!.add(greenJLabel)!!.add(redJLabel)!!.add(colorRangeJLabel))!!.add(29, 29, 29)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(org.jdesktop.layout.GroupLayout.TRAILING, minJLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)!!.add(org.jdesktop.layout.GroupLayout.LEADING, minBlueJTextField)!!.add(org.jdesktop.layout.GroupLayout.LEADING, minGreenJTextField)!!.add(org.jdesktop.layout.GroupLayout.LEADING, minRedJTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)!!.add(org.jdesktop.layout.GroupLayout.LEADING, okJButton)))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)!!.add(org.jdesktop.layout.GroupLayout.LEADING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)!!.add(org.jdesktop.layout.GroupLayout.LEADING, maxRedJTextField)!!.add(org.jdesktop.layout.GroupLayout.LEADING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(1, 1, 1)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(maxBlueJTextField)!!.add(maxGreenJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 43, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 17, Short.MAX_VALUE))!!.add(org.jdesktop.layout.GroupLayout.LEADING, maxJLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))!!.addContainerGap())!!.add(org.jdesktop.layout.GroupLayout.TRAILING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(titleJLabel)!!.add(25, 25, 25)))))
 analysisActionJDialogLayout!!.setVerticalGroup(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.add(titleJLabel)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(minJLabel)!!.add(colorRangeJLabel)!!.add(maxJLabel))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)!!.add(redJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(minRedJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.add(maxRedJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)!!.add(greenJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(minGreenJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.add(maxGreenJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)!!.add(blueJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(minBlueJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.add(maxBlueJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))!!.add(16, 16, 16)!!.add(okJButton)!!.addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE)
 getContentPane()!!.setLayout(java.awt.GridLayout(1, 0))
-jPanel1!!.setLayout(java.awt.GridLayout(1, 0))
-getContentPane()!!.add(jPanel1)
-fileJMenu!!.setText("File")
+this.jPanel1!!.setLayout(java.awt.GridLayout(1, 0))
+getContentPane()!!.add(this.jPanel1)
+this.fileJMenu!!.setText("File")
 fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -154,7 +154,7 @@ fileJMenuActionPerformed(evt)
 
                                 }
                             )
-openImageJMenuItem!!.setText("Open")
+this.openImageJMenuItem!!.setText("Open")
 openImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -167,9 +167,9 @@ openImageJMenuItemActionPerformed(evt)
 
                                 }
                             )
-fileJMenu!!.add(openImageJMenuItem)
-mainJMenuBar!!.add(fileJMenu)
-processingJMenu!!.setText("Processing")
+this.fileJMenu!!.add(this.openImageJMenuItem)
+this.mainJMenuBar!!.add(this.fileJMenu)
+this.processingJMenu!!.setText("Processing")
 processingJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -182,7 +182,7 @@ processingJMenuActionPerformed(evt)
 
                                 }
                             )
-analyzeJMenuItem!!.setText("Image Analyze")
+this.analyzeJMenuItem!!.setText("Image Analyze")
 analyzeJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -195,8 +195,8 @@ analyzeJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(analyzeJMenuItem)
-generateMirrorSpriteMenuItem!!.setText("Mirror Sprite Generator")
+this.processingJMenu!!.add(this.analyzeJMenuItem)
+this.generateMirrorSpriteMenuItem!!.setText("Mirror Sprite Generator")
 generateMirrorSpriteMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -209,8 +209,8 @@ generateMirrorSpriteMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(generateMirrorSpriteMenuItem)
-generateRotationSpriteJMenuItem!!.setText("Rotation Sprite Generator")
+this.processingJMenu!!.add(this.generateMirrorSpriteMenuItem)
+this.generateRotationSpriteJMenuItem!!.setText("Rotation Sprite Generator")
 generateRotationSpriteJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -223,8 +223,8 @@ generateRotationSpriteJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(generateRotationSpriteJMenuItem)
-generateSpriteSplitterMenuItem!!.setText("Sprite Splitter Generator")
+this.processingJMenu!!.add(this.generateRotationSpriteJMenuItem)
+this.generateSpriteSplitterMenuItem!!.setText("Sprite Splitter Generator")
 generateSpriteSplitterMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -237,8 +237,8 @@ generateSpriteSplitterMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(generateSpriteSplitterMenuItem)
-generateRotationMenuItem!!.setText("Rotate Image Generator")
+this.processingJMenu!!.add(this.generateSpriteSplitterMenuItem)
+this.generateRotationMenuItem!!.setText("Rotate Image Generator")
 generateRotationMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -251,8 +251,8 @@ generateRotationMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(generateRotationMenuItem)
-createStripImageJMenuItem!!.setText("Multi Image Unifier")
+this.processingJMenu!!.add(this.generateRotationMenuItem)
+this.createStripImageJMenuItem!!.setText("Multi Image Unifier")
 createStripImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -265,8 +265,8 @@ createStripImageJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(createStripImageJMenuItem)
-mirrorJMenuItem!!.setText("Mirror Image(s)")
+this.processingJMenu!!.add(this.createStripImageJMenuItem)
+this.mirrorJMenuItem!!.setText("Mirror Image(s)")
 mirrorJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -279,8 +279,8 @@ mirrorJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(mirrorJMenuItem)
-scaleImagesJMenuItem!!.setText("Scale Image(s)")
+this.processingJMenu!!.add(this.mirrorJMenuItem)
+this.scaleImagesJMenuItem!!.setText("Scale Image(s)")
 scaleImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -293,8 +293,8 @@ scaleImagesJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(scaleImagesJMenuItem)
-canvasImagesJMenuItem!!.setText("Canvas Image(s)")
+this.processingJMenu!!.add(this.scaleImagesJMenuItem)
+this.canvasImagesJMenuItem!!.setText("Canvas Image(s)")
 canvasImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -307,8 +307,8 @@ canvasImagesJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(canvasImagesJMenuItem)
-createIconImagesJMenuItem!!.setText("Create Icon Image(s)")
+this.processingJMenu!!.add(this.canvasImagesJMenuItem)
+this.createIconImagesJMenuItem!!.setText("Create Icon Image(s)")
 createIconImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -321,9 +321,9 @@ createIconsJMenuItemActionPerformed(evt)
 
                                 }
                             )
-processingJMenu!!.add(createIconImagesJMenuItem)
-mainJMenuBar!!.add(processingJMenu)
-setJMenuBar(mainJMenuBar)
+this.processingJMenu!!.add(this.createIconImagesJMenuItem)
+this.mainJMenuBar!!.add(this.processingJMenu)
+setJMenuBar(this.mainJMenuBar)
 pack()
 }
 
@@ -343,7 +343,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= imageUnifierJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "createStripImageJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "createStripImageJMenuItemActionPerformed", e)
 }
 
 }
@@ -357,7 +357,7 @@ var evt = evt
         try {
             this.logUtil!!.putF("Starting", this, "okJButtonActionPerformed")
 
-    var imageAnalysisResultsArray: Array<ImageAnalysisResults?> = ImageAnalysis.getInstance()!!.process(imageProcessorInput!!.getBufferedImageArray(), this.getColorRangeInterface())!!
+    var imageAnalysisResultsArray: Array<ImageAnalysisResults?> = ImageAnalysis.getInstance()!!.process(this.imageProcessorInput!!.getBufferedImageArray(), this.getColorRangeInterface())!!
 
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(ImageAnalysisResultsJPanel(imageAnalysisResultsArray))
@@ -368,7 +368,7 @@ imageProcessorInputCompositeInterface=
                                     
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "okJButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okJButtonActionPerformed", e)
 }
 
 }
@@ -388,10 +388,10 @@ var evt = evt
 
         try {
             this.logUtil!!.putF("Starting", this, "openImageJMenuItemActionPerformed")
-fileJDialog!!.setVisible(true)
+this.fileJDialog!!.setVisible(true)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "openImageJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "openImageJMenuItemActionPerformed", e)
 }
 
 }
@@ -500,7 +500,7 @@ this.fileJDialog!!.setVisible(false)
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onFiles", e)
 }
 
 }
@@ -523,7 +523,7 @@ var evt = evt
 this.analysisActionJDialog!!.setVisible(true)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "analyzeJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "analyzeJMenuItemActionPerformed", e)
 }
 
 }
@@ -545,7 +545,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= spriteImageJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationSpriteJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateRotationSpriteJMenuItemActionPerformed", e)
 }
 
 }
@@ -567,7 +567,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= imageJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
 }
 
 }
@@ -589,7 +589,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= rotationImageJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
 }
 
 }
@@ -611,7 +611,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= resizeImageJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
 }
 
 }
@@ -633,7 +633,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= createIconImagesJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
 }
 
 }
@@ -655,7 +655,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= resizeImageJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
 }
 
 }
@@ -677,7 +677,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= spriteImageJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorSpriteJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateMirrorSpriteJMenuItemActionPerformed", e)
 }
 
 }
@@ -699,7 +699,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= mirrorImageJPanel
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateMirrorJMenuItemActionPerformed", e)
 }
 
 }

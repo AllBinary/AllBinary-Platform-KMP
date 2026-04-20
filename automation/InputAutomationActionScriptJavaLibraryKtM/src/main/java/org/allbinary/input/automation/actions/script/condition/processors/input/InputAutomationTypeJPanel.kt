@@ -55,10 +55,10 @@ this.inputAutomationTypeJComboBox= inputAutomationTypeJComboBox
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-inputAutomationTypeJComboBox= javax.swing.JComboBox()
-jLabel1= javax.swing.JLabel()
-inputAutomationTypeJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("DirectX","DirectX 8","Low Level","Java Robot")))
-jLabel1!!.setText("Input Type:")
+this.inputAutomationTypeJComboBox= javax.swing.JComboBox()
+this.jLabel1= javax.swing.JLabel()
+this.inputAutomationTypeJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("DirectX","DirectX 8","Low Level","Java Robot")))
+this.jLabel1!!.setText("Input Type:")
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 

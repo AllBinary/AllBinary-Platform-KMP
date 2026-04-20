@@ -39,7 +39,7 @@ this.charArray= CharArray(20)
     var stringLength: Int = string.length!!
 
 this.ensureCapacity(this.currentLength +stringLength)
-string.toCharArray(0,
+string.toCharArray(this.charArray, this.currentLength, 0,
                                     stringLength)
 this.currentLength += stringLength
 

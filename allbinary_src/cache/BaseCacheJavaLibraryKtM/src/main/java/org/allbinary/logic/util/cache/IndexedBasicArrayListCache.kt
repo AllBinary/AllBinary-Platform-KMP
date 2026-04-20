@@ -130,7 +130,7 @@ var cacheableInterfaces = cacheableInterfaces
     override fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
-index= 0
+this.index= 0
 }
 
 

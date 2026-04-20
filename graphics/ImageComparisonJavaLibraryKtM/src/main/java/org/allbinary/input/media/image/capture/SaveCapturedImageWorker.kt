@@ -99,14 +99,14 @@ setRunning(true)
 
 timeHelper!!.setStartTime()
 
-    var capturedImageWorkerResultsEvent: CapturedImageWorkerResultsEvent = (capturedImageWorkerResultsEventVector!!.get(0) as CapturedImageWorkerResultsEvent)
+    var capturedImageWorkerResultsEvent: CapturedImageWorkerResultsEvent = (this.capturedImageWorkerResultsEventVector!!.get(0) as CapturedImageWorkerResultsEvent)
 
 
     var screenBufferedImage: BufferedImage = capturedImageWorkerResultsEvent!!.getBufferedImage()!!
 
 CapturedImageInputOutput().
                             save(screenBufferedImage, capturedImageWorkerResultsEvent!!.getFrame())
-capturedImageWorkerResultsEventVector!!.remove(capturedImageWorkerResultsEvent)
+this.capturedImageWorkerResultsEventVector!!.remove(capturedImageWorkerResultsEvent)
 this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
 setRunning(false)
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)

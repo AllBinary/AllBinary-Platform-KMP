@@ -130,7 +130,7 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(ab
                         if(this.validationDomNodeInterface!!.isValid())
                         
                                     {
-                                    pageContext!!.getOut()!!.print(this.validationDomNodeInterface!!.view())
+                                    this.pageContext!!.getOut()!!.print(this.validationDomNodeInterface!!.view())
 
 
 
@@ -140,7 +140,7 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(ab
                                     }
                                 
                         else {
-                            pageContext!!.getOut()!!.print(this.validationDomNodeInterface!!.validationInfo())
+                            this.pageContext!!.getOut()!!.print(this.validationDomNodeInterface!!.validationInfo())
 
 
 

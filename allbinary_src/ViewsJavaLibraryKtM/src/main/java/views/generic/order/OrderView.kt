@@ -70,7 +70,7 @@ this.getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var id: String = request.getParameter(OrderData.ID)!!
+    var id: String = this.request.getParameter(OrderData.ID)!!
 
 
     
@@ -95,12 +95,12 @@ var document = document
 
         try {
             
-    var orderHistoryNode: Node = orderHistory!!.toXmlNode(document)!!
+    var orderHistoryNode: Node = this.orderHistory!!.toXmlNode(document)!!
 
 
-    var node: Node = document.createElement(orderHistory!!.getPaymentMethod())!!
+    var node: Node = document.createElement(this.orderHistory!!.getPaymentMethod())!!
 
-orderHistoryNode!!.appendChild(basketReview!!.toXmlNode(document))
+orderHistoryNode!!.appendChild(this.basketReview!!.toXmlNode(document))
 node.appendChild(orderHistoryNode)
 
 

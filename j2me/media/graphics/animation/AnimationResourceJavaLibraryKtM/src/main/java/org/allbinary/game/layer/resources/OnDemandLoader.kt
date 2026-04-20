@@ -126,10 +126,10 @@ this.initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface, imageCache
 
 
 
-                        for (onDemandIndex in onDemandResourcesFactory!!.size()!!  - 1  downTo 0)
+                        for (onDemandIndex in this.onDemandResourcesFactory!!.size()!!  - 1  downTo 0)
 
         {
-onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
+onDemandResources= this.onDemandResourcesFactory!!.remove(onDemandIndex)
 
     
                         if(onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES)
@@ -177,7 +177,7 @@ PreLogUtil.put(StringMaker().
                         for (onDemandIndex in onDemandArray!!.size  - 1  downTo 0)
 
         {
-onDemandResources= onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)
+onDemandResources= this.onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)
 
     
                         if(onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES)

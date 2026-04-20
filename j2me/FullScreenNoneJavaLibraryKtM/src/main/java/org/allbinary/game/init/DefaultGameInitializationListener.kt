@@ -82,7 +82,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, ON_GAME_INITIALIZED)
 
-        while(!swtJOGLProcessor!!.isHolderCreated())
+        while(!this.swtJOGLProcessor!!.isHolderCreated())
         {
 this.logUtil!!.putF(commonStrings!!.UPDATE, this, ON_GAME_INITIALIZED)
 Thread.sleep(20)
@@ -91,15 +91,15 @@ Thread.sleep(20)
 FeatureResourceInitializationUtil.getInstance()!!.init(gameInitializedEvent!!.getLevel())
 
     
-                        if(firstTime)
+                        if(this.firstTime)
                         
                                     {
-                                    firstTime= false
+                                    this.firstTime= false
 
                                     }
                                 
                         else {
-                            swtJOGLProcessor!!.onSurfaceChanged()
+                            this.swtJOGLProcessor!!.onSurfaceChanged()
 
                         }
                             

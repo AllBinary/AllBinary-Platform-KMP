@@ -105,7 +105,7 @@ stringBuffer!!.append(this.SHIPPINGMETHODSFILEPATHSTRING)
 this.document= DomDocumentHelper.create(data)
 this.shippingVector= Vector()
 
-    var nodeList: NodeList = document.getElementsByTagName(ShippingMethodsData.NAME)!!
+    var nodeList: NodeList = this.document.getElementsByTagName(ShippingMethodsData.NAME)!!
 
 
 
@@ -132,7 +132,7 @@ this.shippingVector= Vector()
 
     var shippingMethodInterface: ShippingInterface = AbeFactory.getInstance()!!.getInstance(abeClientInformation, shippingMethodClassName) as ShippingInterface
 
-shippingVector!!.add(shippingMethodInterface)
+this.shippingVector!!.add(shippingMethodInterface)
 
     var defaultShippingMethodNameNode: Node = DomSearchHelper.getNode(ShippingMethodData.DEFAULT, shippingMethodNameNode!!.getChildNodes())!!
 
@@ -149,12 +149,12 @@ shippingVector!!.add(shippingMethodInterface)
 
 
     
-                        if(shippingVector!!.size < 1)
+                        if(this.shippingVector!!.size < 1)
                         
                                     {
                                     this.defaultShippingMethodInterface= BasicWeightShippingModuleView()
-shippingVector!!.add(this.defaultShippingMethodInterface)
-shippingVector!!.add(NoShippingModuleView())
+this.shippingVector!!.add(this.defaultShippingMethodInterface)
+this.shippingVector!!.add(NoShippingModuleView())
 
                                     }
                                 

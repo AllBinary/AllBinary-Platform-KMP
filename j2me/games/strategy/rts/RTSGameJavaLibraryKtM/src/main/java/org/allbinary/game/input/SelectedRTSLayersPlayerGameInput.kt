@@ -186,12 +186,12 @@ var rtsLayer = rtsLayer
                         
                                     {
                                     anyChanged= true
-rtsPlayerLayerInterface!!.add(UpgradeSound.getInstance())
+this.rtsPlayerLayerInterface!!.add(UpgradeSound.getInstance())
 rtsLayer!!.upgrade()
 capital.removeMoney(upgradeCost)
 
     
-                        if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
+                        if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
                                     GameNotificationEventHandler.getInstance()!!.fireEvent(upgradeGameNotificationEvent)
@@ -202,10 +202,10 @@ capital.removeMoney(upgradeCost)
                                     }
                                 
                         else {
-                            rtsPlayerLayerInterface!!.add(ErrorSound.getInstance())
+                            this.rtsPlayerLayerInterface!!.add(ErrorSound.getInstance())
 
     
-                        if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
+                        if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
                                     GameNotificationEventHandler.getInstance()!!.fireEvent(noMoneyGameNotificationEvent)
@@ -259,7 +259,7 @@ rtsPlayerGameInput!!.updatePaintable()
                         
                                     {
                                     anyChanged= true
-rtsPlayerLayerInterface!!.add(DowngradeSound.getInstance())
+this.rtsPlayerLayerInterface!!.add(DowngradeSound.getInstance())
 
     var downgradeCost: Int = rtsLayer!!.getDowngradeCost()!!
 
@@ -270,7 +270,7 @@ rtsLayer!!.downgrade()
 capital.addMoney(downgradeCost)
 
     
-                        if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
+                        if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
                                     GameNotificationEventHandler.getInstance()!!.fireEvent(downgradeGameNotificationEvent)
@@ -335,7 +335,7 @@ var layerManager = layerManager
 
         try {
             
-    var size: Int = list.size()!!
+    var size: Int = this.list.size()!!
 
 
     var key: Int = 0
@@ -348,7 +348,7 @@ var layerManager = layerManager
 
         {
 
-    var gameKeyEvent: GameKeyEvent = list.get(index) as GameKeyEvent
+    var gameKeyEvent: GameKeyEvent = this.list.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
 this.processInput(key)

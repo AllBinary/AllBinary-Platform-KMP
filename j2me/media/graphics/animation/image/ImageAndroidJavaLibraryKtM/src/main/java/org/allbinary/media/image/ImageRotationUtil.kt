@@ -87,12 +87,12 @@ var rotationInDegrees = rotationInDegrees
 
     var height: Int = bitmap.getHeight()!!
 
-matrix.setRotate(rotationInDegrees.toFloat(), (width shr 1).toFloat(), (height shr 1).toFloat())
+this.matrix.setRotate(rotationInDegrees.toFloat(), (width shr 1).toFloat(), (height shr 1).toFloat())
 
     var canvas: Canvas = 
                                     (image as AndroidImageInterface).getCanvas()!!
 
-canvas.concat(matrix)
+canvas.concat(this.matrix)
 image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
 
 

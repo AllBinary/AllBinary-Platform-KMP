@@ -61,10 +61,10 @@ private constructor ()
 
     var MAX: Int = InputFactory.getInstance()!!.MAX
 
-LEFT= MotionGestureInput(MAX -26, "L Trackball")
-RIGHT= MotionGestureInput(MAX -27, "R Trackball")
-UP= MotionGestureInput(MAX -28, "Up Trackball")
-DOWN= MotionGestureInput(MAX -29, "D Trackball")
+this.LEFT= MotionGestureInput(MAX -26, "L Trackball")
+this.RIGHT= MotionGestureInput(MAX -27, "R Trackball")
+this.UP= MotionGestureInput(MAX -28, "Up Trackball")
+this.DOWN= MotionGestureInput(MAX -29, "D Trackball")
 }
 
 

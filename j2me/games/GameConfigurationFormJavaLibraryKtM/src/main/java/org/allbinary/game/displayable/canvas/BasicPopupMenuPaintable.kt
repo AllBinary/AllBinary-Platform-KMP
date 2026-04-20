@@ -70,7 +70,7 @@ public constructor (rectangle: Rectangle, backgroundBasicColor: BasicColor, fore
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
-label= NAME
+this.label= NAME
 this.rectangle= rectangle
 
     var features: Features = Features.getInstance()!!
@@ -209,7 +209,7 @@ rectangleFilledAnimation!!.setHeight(height)
 
 this.animationInterface!!.paint(graphics, x, y)
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor)
-drawStringUtil!!.paintVerticle(graphics, label, x +BORDER, y +offset, 0)
+this.drawStringUtil!!.paintVerticle(graphics, label, x +this.BORDER, y +this.offset, 0)
 graphics.drawRect(x, y, width, height)
 }
 

@@ -80,11 +80,11 @@ this.roll.set(roll)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Y: ")
-stringBuffer!!.append(yaw.toString())
+stringBuffer!!.append(this.yaw.toString())
 stringBuffer!!.append(" P: ")
-stringBuffer!!.append(pitch.toString())
+stringBuffer!!.append(this.pitch.toString())
 stringBuffer!!.append(" R: ")
-stringBuffer!!.append(roll.toString())
+stringBuffer!!.append(this.roll.toString())
 
 
 

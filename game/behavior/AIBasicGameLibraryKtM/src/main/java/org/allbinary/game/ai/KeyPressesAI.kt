@@ -64,7 +64,7 @@ this.keys= arrayOfNulls(hashtable.size)
                         for (index in 0 until size)
 
         {
-keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
+this.keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
 }
 
 }
@@ -78,17 +78,17 @@ keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
 var allBinaryLayerManager = allBinaryLayerManager
 
     
-                        if(on)
+                        if(this.on)
                         
                                     {
                                     
 
 
 
-                        for (index in 0 until keys.size)
+                        for (index in 0 until this.keys.size)
 
         {
-super.processAI(keys[index]!!.toInt())
+super.processAI(this.keys[index]!!.toInt())
 }
 
 

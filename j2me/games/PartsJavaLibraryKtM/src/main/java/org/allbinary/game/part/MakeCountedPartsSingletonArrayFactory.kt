@@ -69,7 +69,7 @@ companion object {
         //nullable =  from not(true or (false and false)) = 
 : Array<PartInterface?>{
     //var partInterfaceArray = partInterfaceArray
-list= BasicArrayList()
+this.list= BasicArrayList()
 
 
 
@@ -77,7 +77,7 @@ list= BasicArrayList()
                         for (index in 0 until partInterfaceArray!!.size)
 
         {
-list.add(partInterfaceArray[index]!!)
+this.list.add(partInterfaceArray[index]!!)
 }
 
 
@@ -104,7 +104,7 @@ list.add(CountedLayerInterfaceFactoryPart(0, layerInterfaceFactoryInterface))
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Total Parts: ")
-stringBuffer!!.appendint(list.size())
+stringBuffer!!.appendint(this.list.size())
 stringBuffer!!.append(" Counted: ")
 stringBuffer!!.appendint(countedBasicArrayList!!.size())
 
@@ -112,7 +112,7 @@ stringBuffer!!.appendint(countedBasicArrayList!!.size())
 
 this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
-    var newPartInterfaceArray: Array<PartInterface?> = arrayOfNulls(list.size())
+    var newPartInterfaceArray: Array<PartInterface?> = arrayOfNulls(this.list.size())
 
 
     var newSize: Int = newPartInterfaceArray!!.size
@@ -125,7 +125,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANC
                         for (index in 0 until newSize)
 
         {
-newPartInterfaceArray[index]= list.get(index) as PartInterface
+newPartInterfaceArray[index]= this.list.get(index) as PartInterface
 }
 
 

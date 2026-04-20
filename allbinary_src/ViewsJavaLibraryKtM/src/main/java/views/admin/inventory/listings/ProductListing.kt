@@ -412,7 +412,7 @@ stringBuffer!!.append(" Store Not Found")
     var inventorySearchUtil: InventorySearchUtil = InventorySearchUtil.getInstance()!!
 
 
-    var vector: Vector = inventorySearchUtil!!.getBasicItemIdColumn(searchRequest)!!
+    var vector: Vector = inventorySearchUtil!!.getBasicItemIdColumn(this.searchRequest)!!
 
 
 
@@ -441,7 +441,7 @@ stringBuffer!!.append("Static Files Generated Successfully For ")
 stringBuffer!!.append(storeFront!!.getName())
 stringBuffer!!.append(" it used packages ")
 stringBuffer!!.append(storeFront!!.getPackageLocation())
-stringBuffer!!.append(INVENTORY)
+stringBuffer!!.append(this.INVENTORY)
 
 
 

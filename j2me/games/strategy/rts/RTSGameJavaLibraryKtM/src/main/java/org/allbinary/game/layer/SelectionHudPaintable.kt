@@ -83,7 +83,7 @@ this.x= CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +touchButtonLocationH
 this.textX= this.getX() +4
 this.width= displayInfoSingleton!!.getLastWidth() -this.getX() *2
 this.imageX= this.getWidth() +touchButtonLocationHelper!!.getColumnsRemainderHalf() -10
-this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +myFont!!.DEFAULT_CHAR_HEIGHT)
+this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +this.myFont!!.DEFAULT_CHAR_HEIGHT)
 }
 
 
@@ -105,7 +105,7 @@ this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +myFont!!.DEFA
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-graphics.setColor(backgroundColor)
+graphics.setColor(this.backgroundColor)
 graphics.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
 graphics.setColor(this.getColor())
 graphics.drawString(getName(), this.textX, y, 0)

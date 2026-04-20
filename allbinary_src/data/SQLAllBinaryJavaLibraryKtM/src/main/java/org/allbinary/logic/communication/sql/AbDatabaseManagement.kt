@@ -208,7 +208,7 @@ super.executeSQLStatement(sqlStatement)
                         return Boolean.TRUE
 } catch(e: Exception)
             {
-this.logUtil!!.put(UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
+this.logUtil!!.put(this.UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
 
 
 

@@ -101,7 +101,7 @@ this.name= name
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 this.logUtil!!.putF(StringMaker().
-                            append("Available List of Animations: ")!!.append(hashtable.toString())!!.toString(), this, commonStrings!!.INIT)
+                            append("Available List of Animations: ")!!.append(this.hashtable.toString())!!.toString(), this, commonStrings!!.INIT)
 this.setInitialized(true)
 }
 
@@ -125,7 +125,7 @@ this.setInitialized(true)
     //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
 
     
-                        if(hashtable.containsKey(resource as Object))
+                        if(this.hashtable.containsKey(resource as Object))
                         
                                     {
                                     
@@ -136,7 +136,7 @@ this.setInitialized(true)
 
                                     }
                                 
-hashtable.put(resource, animationInterfaceFactoryInterface)
+this.hashtable.put(resource, animationInterfaceFactoryInterface)
 }
 
 
@@ -147,7 +147,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 : BasicAnimationInterfaceFactoryInterface{
     //var resource = resource
 
-    var basicAnimationInterfaceFactoryInterfaceCanBeNull: Any? = hashtable.get(resource as Object)
+    var basicAnimationInterfaceFactoryInterfaceCanBeNull: Any? = this.hashtable.get(resource as Object)
 
 
     
@@ -179,7 +179,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 : Rectangle{
     //var resource = resource
 
-    var rectangleCanBeNull: Any? = rectangleHashtable!!.get(resource as Object)
+    var rectangleCanBeNull: Any? = this.rectangleHashtable!!.get(resource as Object)
 
 
     
@@ -211,7 +211,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 {
     //var resource = resource
     //var rectangle = rectangle
-rectangleHashtable!!.put(resource, rectangle)
+this.rectangleHashtable!!.put(resource, rectangle)
 }
 
 
@@ -225,7 +225,7 @@ rectangleHashtable!!.put(resource, rectangle)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rectangleArrayOfArraysHashtable!!.get(resource as Object)as Array<Array<Rectangle?>?>
+                        return this.rectangleArrayOfArraysHashtable!!.get(resource as Object)as Array<Array<Rectangle?>?>
 }
 
 
@@ -236,7 +236,7 @@ rectangleHashtable!!.put(resource, rectangle)
 {
     //var resource = resource
     //var rectangleArrayOfArrays = rectangleArrayOfArrays
-rectangleArrayOfArraysHashtable!!.put(resource, rectangleArrayOfArrays)
+this.rectangleArrayOfArraysHashtable!!.put(resource, rectangleArrayOfArrays)
 }
 
 

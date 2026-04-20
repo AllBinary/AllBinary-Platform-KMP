@@ -104,7 +104,7 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 
@@ -127,7 +127,7 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
             
 
 
-                            throw Exception("Hmm: " +componentInterface!!.getTransformDocumentInterface()!!.getDoc())
+                            throw Exception("Hmm: " +this.componentInterface!!.getTransformDocumentInterface()!!.getDoc())
 } catch(e: Exception)
             {
 
@@ -148,7 +148,7 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

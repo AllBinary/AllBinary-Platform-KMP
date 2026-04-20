@@ -94,7 +94,7 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
 
     
-                        if(paths != basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY)
+                        if(this.paths != this.basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY)
                         
                                     {
                                     
@@ -117,14 +117,14 @@ this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(til
 
 
 
-                        for (columnIndex in paths.size  - 1  downTo 0)
+                        for (columnIndex in this.paths.size  - 1  downTo 0)
 
         {
 
 
 
 
-                        for (rowIndex in paths.size  - 1  downTo 0)
+                        for (rowIndex in this.paths.size  - 1  downTo 0)
 
         {
 
@@ -132,7 +132,7 @@ this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(til
 
 
     
-                        if(pathsList != basicArrayListUtil!!.getImmutableInstance())
+                        if(pathsList != this.basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     BasicGeographicMapExtractedPathsCacheFactory.getInstance()!!.release(pathsList)
@@ -171,7 +171,7 @@ this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(til
 
 
     
-                        if(pathsList == basicArrayListUtil!!.getImmutableInstance())
+                        if(pathsList == this.basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     pathsList= this.createPaths(geographicMapCellPosition)
@@ -192,7 +192,7 @@ this.paths[geographicMapCellPosition!!.getColumn()]!![geographicMapCellPosition!
 : GeographicMapCellPosition{
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
 
-    var endGeographicMapCellPosition: GeographicMapCellPosition = basicArrayListUtil!!.getRandom(this.endList) as GeographicMapCellPosition
+    var endGeographicMapCellPosition: GeographicMapCellPosition = this.basicArrayListUtil!!.getRandom(this.endList) as GeographicMapCellPosition
 
 
     
@@ -362,17 +362,17 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
 
-                        for (columnIndex in paths.size  - 1  downTo 0)
+                        for (columnIndex in this.paths.size  - 1  downTo 0)
 
         {
 
 
 
 
-                        for (rowIndex in paths.size  - 1  downTo 0)
+                        for (rowIndex in this.paths.size  - 1  downTo 0)
 
         {
-this.paths[columnIndex]!![rowIndex]= basicArrayListUtil!!.getImmutableInstance()
+this.paths[columnIndex]!![rowIndex]= this.basicArrayListUtil!!.getImmutableInstance()
 }
 
 }

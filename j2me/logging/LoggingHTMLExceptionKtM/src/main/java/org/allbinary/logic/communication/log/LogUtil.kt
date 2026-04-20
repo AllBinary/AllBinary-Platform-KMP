@@ -43,7 +43,7 @@ import playn.core.PlayN
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogUtil.instance
 }
 
 
@@ -114,9 +114,9 @@ put(specialMessage, anyType, functionName, exception)
                                     }
                                 
 
-    var message: String = logFormatUtil!!.getS(className, functionName, specialMessage)!!
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
-PlayN.log()!!.debug(LOG_SUCCESS +message)
+PlayN.log()!!.debug(this.LOG_SUCCESS +message)
 }
 
 
@@ -142,7 +142,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
                                     }
                                 
 
-    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
 
     
@@ -151,12 +151,12 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
                                 )
                         
                                     {
-                                    PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
+                                    PlayN.log()!!.error(this.LOG_SUCCESS +message, exception as Throwable)
 
                                     }
                                 
                         else {
-                            PlayN.log()!!.debug(LOG_SUCCESS +message)
+                            PlayN.log()!!.debug(this.LOG_SUCCESS +message)
 
                         }
                             

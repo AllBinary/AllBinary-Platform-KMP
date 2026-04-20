@@ -72,7 +72,7 @@ companion object {
     //var canvas = canvas
 
         try {
-            list.remove(0)
+            this.list.remove(0)
 } catch(e: Exception)
             {
 

@@ -128,10 +128,10 @@ this.request= httpServletRequest
 
         try {
             
-    var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
+    var userName: String = this.request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
 
 
-    var email: String = request.getParameter(UserData.MAINEMAIL)!!
+    var email: String = this.request.getParameter(UserData.MAINEMAIL)!!
 
 
     
@@ -231,16 +231,16 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 
         try {
             
-    var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
+    var userName: String = this.request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
 
 
-    var passwordString: String = request.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
+    var passwordString: String = this.request.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
 
 
-    var newPassword: String = request.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
+    var newPassword: String = this.request.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
 
 
-    var newReenteredPassword: String = request.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
+    var newReenteredPassword: String = this.request.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
 
 
     
@@ -434,7 +434,7 @@ var roles = roles
                         if(userInterface!!.getRole()!!.getBasicUserRole()!!.equals(nextRole))
                         
                                     {
-                                    userInterface!!.validateSession(weblisketSession as WeblisketSessionInterface)
+                                    userInterface!!.validateSession(this.weblisketSession as WeblisketSessionInterface)
 this.request.removeAttribute(WeblisketSessionData.REMOVABLEUSERNAME)
 this.request.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
 

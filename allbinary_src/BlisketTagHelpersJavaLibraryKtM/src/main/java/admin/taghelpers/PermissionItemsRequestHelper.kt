@@ -79,18 +79,18 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= request.getParameter(BasicItemData.ID)
-this.number= request.getParameter(BasicItemData.NUMBER)
-this.enabled= request.getParameter(EntryData.getInstance()!!.ENABLE)
-this.who= request.getParameter(PermissionItemData.WHO)
-this.what= request.getParameter(PermissionItemData.WHAT)
-this.type= request.getParameter(PermissionItemData.TYPE)
-this.remoteAddr= request.getParameter(PermissionItemData.REMOTE_ADDR)
-this.startTime= request.getParameter(PermissionItemData.START_TIME)
-this.endTime= request.getParameter(PermissionItemData.END_TIME)
-this.price= request.getParameter(BasicItemData.PRICE)
-this.timeEntered= request.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+this.id= this.request.getParameter(BasicItemData.ID)
+this.number= this.request.getParameter(BasicItemData.NUMBER)
+this.enabled= this.request.getParameter(EntryData.getInstance()!!.ENABLE)
+this.who= this.request.getParameter(PermissionItemData.WHO)
+this.what= this.request.getParameter(PermissionItemData.WHAT)
+this.type= this.request.getParameter(PermissionItemData.TYPE)
+this.remoteAddr= this.request.getParameter(PermissionItemData.REMOTE_ADDR)
+this.startTime= this.request.getParameter(PermissionItemData.START_TIME)
+this.endTime= this.request.getParameter(PermissionItemData.END_TIME)
+this.price= this.request.getParameter(BasicItemData.PRICE)
+this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
+this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 }
 
 
@@ -157,7 +157,7 @@ values.add(time)
 values.add(time)
 PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.insert(values)
 
-    var success: String = "Successfully inserted " +id +" into items table"
+    var success: String = "Successfully inserted " +this.id +" into items table"
 
 
     
@@ -176,7 +176,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 } catch(e: Exception)
             {
 
-    var error: String = "Failed to insert " +id +" into items table"
+    var error: String = "Failed to insert " +this.id +" into items table"
 
 
     
@@ -202,7 +202,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 : String{
 
         try {
-            PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.delete(id)
+            PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.delete(this.id)
 
     var success: String = "Successfully deleted"
 
@@ -262,7 +262,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append(id)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(success)!!.toString(), this, "update()")
+                            append(this.id)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(success)!!.toString(), this, "update()")
 
                                     }
                                 
@@ -274,7 +274,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 } catch(e: Exception)
             {
 
-    var error: String = "Failed to update: " +id
+    var error: String = "Failed to update: " +this.id
 
 
     

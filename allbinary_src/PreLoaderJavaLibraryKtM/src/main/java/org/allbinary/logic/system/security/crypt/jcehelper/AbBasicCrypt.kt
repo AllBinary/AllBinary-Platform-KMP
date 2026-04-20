@@ -82,10 +82,10 @@ Security.addProvider(sunJce)
     var keySpec: KeySpec = KeySpecFactory.getInstance()!!.getInstance(this.algorithm, this.key)!!
 
 
-    var keyFactory: SecretKeyFactory = SecretKeyFactory.getInstance(algorithm)!!
+    var keyFactory: SecretKeyFactory = SecretKeyFactory.getInstance(this.algorithm)!!
 
 this.secretKey= keyFactory!!.generateSecret(keySpec)
-this.cipher= Cipher.getInstance(algorithm)
+this.cipher= Cipher.getInstance(this.algorithm)
 } catch(e: Exception)
             {
 
@@ -103,12 +103,12 @@ PreLogUtil.putOE("init Failed", this, commonStrings!!.INIT, e)
 var array = array
 
         try {
-            cipher.init(Cipher.ENCRYPT_MODE, secretKey)
+            this.cipher.init(Cipher.ENCRYPT_MODE, secretKey)
 
     var ivArray: ByteArray = secretKey!!.getEncoded()!!
 
 
-    var encrypted: ByteArray = cipher.doFinal(array)!!
+    var encrypted: ByteArray = this.cipher.doFinal(array)!!
 
 
     var result: ByteArray = ByteArray(ivArray!!.size +encrypted.size)
@@ -158,7 +158,7 @@ PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e)
 var array = array
 
         try {
-            cipher.init(Cipher.DECRYPT_MODE, secretKey)
+            this.cipher.init(Cipher.DECRYPT_MODE, secretKey)
 
     var ivArray: ByteArray = ByteArray(8)
 
@@ -187,7 +187,7 @@ result[index -ivArray!!.size]= array[index]!!
 }
 
 
-    var decrypted: ByteArray = cipher.doFinal(result)!!
+    var decrypted: ByteArray = this.cipher.doFinal(result)!!
 
 
 

@@ -122,7 +122,7 @@ this.domNodeInterfaceVector!!.add(domNodeInterface)
 
         try {
             
-    var size: Int = domNodeInterfaceVector!!.size!!
+    var size: Int = this.domNodeInterfaceVector!!.size!!
 
 
 
@@ -132,7 +132,7 @@ this.domNodeInterfaceVector!!.add(domNodeInterface)
 
         {
 
-    var domNodeInterface: DomNodeInterface = domNodeInterfaceVector!!.get(index) as DomNodeInterface
+    var domNodeInterface: DomNodeInterface = this.domNodeInterfaceVector!!.get(index) as DomNodeInterface
 
 this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!.toXmlNode(this.transformDocumentInterface!!.getDoc()))
 }

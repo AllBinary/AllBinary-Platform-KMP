@@ -105,10 +105,10 @@ this.actionScriptJTree= actionScriptJTree
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jScrollPane1= javax.swing.JScrollPane()
-actionScriptJTree= javax.swing.JTree()
+this.jScrollPane1= javax.swing.JScrollPane()
+this.actionScriptJTree= javax.swing.JTree()
 setLayout(java.awt.GridLayout(1, 0))
-actionScriptJTree!!.setPreferredSize(java.awt.Dimension(500, 500))
+this.actionScriptJTree!!.setPreferredSize(java.awt.Dimension(500, 500))
 actionScriptJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -128,8 +128,8 @@ actionScriptJTreeMouseReleased(evt)
 
                                 }
                             )
-jScrollPane1!!.setViewportView(actionScriptJTree)
-add(jScrollPane1)
+this.jScrollPane1!!.setViewportView(this.actionScriptJTree)
+add(this.jScrollPane1)
 }
 
 

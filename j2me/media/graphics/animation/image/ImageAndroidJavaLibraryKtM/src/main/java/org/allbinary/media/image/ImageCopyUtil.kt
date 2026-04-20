@@ -86,7 +86,7 @@ private constructor ()
 : Image{
     //var originalImage = originalImage
 
-    var image: Image = imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
+    var image: Image = this.imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
 
     
@@ -154,7 +154,7 @@ private constructor ()
                                     }
                                 
 
-    var image: Image = imageCreationUtil!!.getInstance(newWidth, newHeight)!!
+    var image: Image = this.imageCreationUtil!!.getInstance(newWidth, newHeight)!!
 
 
     

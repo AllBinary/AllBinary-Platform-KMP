@@ -103,7 +103,7 @@ var index = index
     var point: GPoint = geographicMapCellPosition!!.getPoint()!!
 
 
-    var randomCell: Int = myRandomFactory!!.getAbsoluteNextInt(this.totalCells)!!
+    var randomCell: Int = this.myRandomFactory!!.getAbsoluteNextInt(this.totalCells)!!
 
 
     var row: Int = this.rowArray[randomCell]!!

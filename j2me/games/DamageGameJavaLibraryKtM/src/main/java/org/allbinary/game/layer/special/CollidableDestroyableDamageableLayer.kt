@@ -563,16 +563,16 @@ stringBuffer!!.append(pickupBehavior!!.toString())
                                 
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(READYFOREXPLOSION)
-stringBuffer!!.appendboolean(readyForExplosion)
+stringBuffer!!.appendboolean(this.readyForExplosion)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(commonStrings!!.INIT)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.X_LABEL)
-stringBuffer!!.appendint(initX)
+stringBuffer!!.appendint(this.initX)
 stringBuffer!!.append(positionStrings!!.Y_LABEL)
-stringBuffer!!.appendint(initX)
+stringBuffer!!.appendint(this.initX)
 stringBuffer!!.append(positionStrings!!.Z_LABEL)
-stringBuffer!!.appendint(initZ)
+stringBuffer!!.appendint(this.initZ)
 }
 
 

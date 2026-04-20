@@ -45,7 +45,7 @@ this.paintableArray= paintableArray
 
 
 
-                        for (index in paintableArray!!.size -1 downTo 0)
+                        for (index in this.paintableArray!!.size -1 downTo 0)
 
         {
 this.paintableArray[index]!!.paint(graphics)
@@ -62,7 +62,7 @@ var graphics = graphics
 
 
 
-                        for (index in paintableArray!!.size -1 downTo 0)
+                        for (index in this.paintableArray!!.size -1 downTo 0)
 
         {
 this.paintableArray[index]!!.paintThreed(graphics)

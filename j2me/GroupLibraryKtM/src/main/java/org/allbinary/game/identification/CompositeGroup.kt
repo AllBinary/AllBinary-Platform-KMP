@@ -88,7 +88,7 @@ this.list.add(groupInterface)
     //var groupInterface = groupInterface
 
     
-                        if(list.contains(groupInterface))
+                        if(this.list.contains(groupInterface))
                         
                                     {
                                     

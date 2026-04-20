@@ -50,9 +50,9 @@ this.profileActionScriptConditionInterface= profileActionScriptConditionInterfac
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-removeJButton= javax.swing.JButton()
+this.removeJButton= javax.swing.JButton()
 setLayout(java.awt.GridLayout())
-removeJButton!!.setText("Remove")
+this.removeJButton!!.setText("Remove")
 removeJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -65,7 +65,7 @@ removeJButtonActionPerformed(evt)
 
                                 }
                             )
-add(removeJButton)
+add(this.removeJButton)
 }
 
 

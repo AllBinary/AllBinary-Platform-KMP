@@ -64,7 +64,7 @@ var otherAngle = otherAngle
 var layer = layer
 
     
-                        if(timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
+                        if(this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
                         
                                     {
                                     super.process(layer)

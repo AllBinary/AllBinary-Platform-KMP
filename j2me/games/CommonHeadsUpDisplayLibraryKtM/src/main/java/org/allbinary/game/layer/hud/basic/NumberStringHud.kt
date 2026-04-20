@@ -183,10 +183,10 @@ var graphics = graphics
 var x = x
 var y = y
 
-    var charArray: CharArray = PREPEND_STRING
+    var charArray: CharArray = this.PREPEND_STRING
 
 
-    var len: Int = PREPEND_STRING.size
+    var len: Int = this.PREPEND_STRING.size
                 
 
 

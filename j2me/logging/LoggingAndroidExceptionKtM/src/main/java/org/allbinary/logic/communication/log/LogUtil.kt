@@ -41,7 +41,7 @@
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogUtil.instance
 }
 
 
@@ -105,13 +105,13 @@ private constructor ()
     //var functionName = functionName
     //var exception = exception
 
-    var className: String = LABEL
+    var className: String = this.LABEL
 
 className= anyType!!::class.toString()!!
 
-    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
-android.util.Log.i(LABEL, LOG_SUCCESS +message)
+android.util.Log.i(this.LABEL, this.LOG_SUCCESS +message)
 }
 
 

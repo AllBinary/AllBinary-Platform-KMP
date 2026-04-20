@@ -283,7 +283,7 @@ height= item.getMinimumHeight()
                             
 
     
-                        if(rectangleCollisionUtil!!.isInside(diffX, dy -this.halfBorder, diffX +width +this.border, dy +height +this.halfBorder +1, point.getX(), point.getY()))
+                        if(this.rectangleCollisionUtil!!.isInside(diffX, dy -this.halfBorder, diffX +width +this.border, dy +height +this.halfBorder +1, point.getX(), point.getY()))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -306,7 +306,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
                         if(this.formType == formTypeFactory!!.HORIZONTAL_FORM)
                         
                                     {
-                                    dx= dx +width +border
+                                    dx= dx +width +this.border
 
     
                         if(dx > this.rectangle.getMaxX())
@@ -326,7 +326,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
                         if(this.formType == formTypeFactory!!.VERTICAL_CENTER_FORM)
                         
                                     {
-                                    dy= dy +height +border
+                                    dy= dy +height +this.border
 
     
                         if(dy > this.rectangle.getMaxY())
@@ -484,7 +484,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
     //var point = point
 
     
-                        if(rectangleCollisionUtil!!.isInside(x, y -halfBorder, this.rectangle.getMaxX() +border, this.rectangle.getMaxY() +border, point.getX(), point.getY()))
+                        if(this.rectangleCollisionUtil!!.isInside(x, y -this.halfBorder, this.rectangle.getMaxX() +this.border, this.rectangle.getMaxY() +this.border, point.getX(), point.getY()))
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
@@ -529,7 +529,7 @@ graphics.setColor(this.getButtonBasicColor()!!.toInt())
 
     var adjustedBorder: Int = 3
 
-graphics.drawRect(x -halfBorder -adjustedBorder, y -halfBorder -adjustedBorder, width +border -adjustedBorder, height +border -adjustedBorder)
+graphics.drawRect(x -this.halfBorder -adjustedBorder, y -this.halfBorder -adjustedBorder, width +this.border -adjustedBorder, height +this.border -adjustedBorder)
 
     
                         if(this.formType == formTypeFactory!!.HORIZONTAL_FORM)
@@ -539,7 +539,7 @@ graphics.drawRect(x -halfBorder -adjustedBorder, y -halfBorder -adjustedBorder, 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return x +width +border
+                        return x +width +this.border
 
                                     }
                                 
@@ -552,7 +552,7 @@ graphics.drawRect(x -halfBorder -adjustedBorder, y -halfBorder -adjustedBorder, 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return y +height +border
+                        return y +height +this.border
 
                                     }
                                 
@@ -610,7 +610,7 @@ item.paintUnselected(graphics, x, y)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return x +width +border
+                        return x +width +this.border
 
                                     }
                                 
@@ -623,7 +623,7 @@ item.paintUnselected(graphics, x, y)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return y +height +border
+                        return y +height +this.border
 
                                     }
                                 

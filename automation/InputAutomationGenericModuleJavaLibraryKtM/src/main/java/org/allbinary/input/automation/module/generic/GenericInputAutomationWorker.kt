@@ -133,7 +133,7 @@ this.waitForDataWorkers()
 setFrame(keyArray[keyArray!!.size -1]!! as Long)
 
     
-                        if(getFrame() > lastFrame)
+                        if(getFrame() > this.lastFrame)
                         
                                     {
                                     this.logUtil!!.putF("Processing new frame: " +getFrame(), this, this.PROCESS_DATA_WORKER_RESULTS)
@@ -174,7 +174,7 @@ this.logUtil!!.putF("Processing Action: " +actionNameString, this, this.PROCESS_
 CaptureWorkerUtil.processProfileActionConditions(vector, getFrame())
 }
 
-lastFrame= getFrame()
+this.lastFrame= getFrame()
 
                                     }
                                 

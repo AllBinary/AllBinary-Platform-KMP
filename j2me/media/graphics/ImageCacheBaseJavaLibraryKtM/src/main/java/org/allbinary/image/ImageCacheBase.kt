@@ -64,20 +64,20 @@ public constructor ()
 
 
 
-                        for (index in listOfList!!.size -1 downTo 0)
+                        for (index in this.listOfList!!.size -1 downTo 0)
 
         {
-listOfList[index]= BasicArrayList()
+this.listOfList[index]= BasicArrayList()
 }
 
 
 
 
 
-                        for (index in availableListOfList!!.size -1 downTo 0)
+                        for (index in this.availableListOfList!!.size -1 downTo 0)
 
         {
-availableListOfList[index]= BasicArrayList()
+this.availableListOfList[index]= BasicArrayList()
 }
 
 }
@@ -120,11 +120,11 @@ availableListOfList[index]= BasicArrayList()
 
 
 
-                        for (index in listOfList!!.size -1 downTo 0)
+                        for (index in this.listOfList!!.size -1 downTo 0)
 
         {
-availableListOfList[index]!!.clear()
-availableListOfList[index]!!.addAll(listOfList[index]!!)
+this.availableListOfList[index]!!.clear()
+this.availableListOfList[index]!!.addAll(this.listOfList[index]!!)
 }
 
 this.logUtil!!.putF(StringMaker().
@@ -141,7 +141,7 @@ this.logUtil!!.putF(StringMaker().
     var foundIndex: Int =  -1
 
 
-    var size: Int = widths.size
+    var size: Int = this.widths.size
                 
 
 
@@ -153,7 +153,7 @@ this.logUtil!!.putF(StringMaker().
         {
 
     
-                        if(widths[index] == width && heights[index] == height)
+                        if(this.widths[index] == width && this.heights[index] == height)
                         
                                     {
                                     foundIndex= index
@@ -188,11 +188,11 @@ this.logUtil!!.putF(StringMaker().
                                     {
                                     
     
-                        if(availableListOfList[foundIndex]!!.size() > 0)
+                        if(this.availableListOfList[foundIndex]!!.size() > 0)
                         
                                     {
                                     
-    var list: BasicArrayList = availableListOfList[foundIndex]!!
+    var list: BasicArrayList = this.availableListOfList[foundIndex]!!
 
 
 

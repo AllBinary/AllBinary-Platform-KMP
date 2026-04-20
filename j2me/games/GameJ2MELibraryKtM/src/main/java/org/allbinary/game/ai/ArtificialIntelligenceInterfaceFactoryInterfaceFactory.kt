@@ -77,7 +77,7 @@ var hashtable = hashtable
     var type: Int = typeInteger!!.toInt()!!
 
 
-    var artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface = list.objectArray[type -1]!! as ArtificialIntelligenceInterfaceFactoryInterface
+    var artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface = this.list.objectArray[type -1]!! as ArtificialIntelligenceInterfaceFactoryInterface
 
 
 
@@ -91,7 +91,7 @@ var hashtable = hashtable
         //nullable = true from not(false or (false and false)) = true
 {
 var artificialIntelligenceInterfaceFactoryInterface = artificialIntelligenceInterfaceFactoryInterface
-list.add(artificialIntelligenceInterfaceFactoryInterface)
+this.list.add(artificialIntelligenceInterfaceFactoryInterface)
 }
 
 

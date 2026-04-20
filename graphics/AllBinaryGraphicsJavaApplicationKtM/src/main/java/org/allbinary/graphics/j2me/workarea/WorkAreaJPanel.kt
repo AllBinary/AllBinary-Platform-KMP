@@ -206,8 +206,8 @@ gridBagConstraints!!.gridwidth= 6
 gridBagConstraints!!.fill= java.awt.GridBagConstraints.BOTH
 gridBagConstraints!!.weightx= 1
 gridBagConstraints!!.weighty= 1
-gridBagLayout!!.setConstraints(canvasHolderJPanel, gridBagConstraints)
-this.innerJPanel!!.add(canvasHolderJPanel)
+gridBagLayout!!.setConstraints(this.canvasHolderJPanel, gridBagConstraints)
+this.innerJPanel!!.add(this.canvasHolderJPanel)
 gridBagConstraints= GridBagConstraints()
 gridBagConstraints!!.gridx= 8
 gridBagConstraints!!.gridy= 0
@@ -215,9 +215,9 @@ gridBagConstraints!!.gridwidth= java.awt.GridBagConstraints.REMAINDER
 gridBagConstraints!!.fill= java.awt.GridBagConstraints.BOTH
 gridBagConstraints!!.weightx= .1
 gridBagConstraints!!.weighty= .1
-propertiesJPanel= PropertiesJPanel()
-gridBagLayout!!.setConstraints(propertiesJPanel, gridBagConstraints)
-this.innerJPanel!!.add(propertiesJPanel)
+this.propertiesJPanel= PropertiesJPanel()
+gridBagLayout!!.setConstraints(this.propertiesJPanel, gridBagConstraints)
+this.innerJPanel!!.add(this.propertiesJPanel)
 MyCanvasEventService.addListener(this as MyCanvasEventListener)
 }
 
@@ -256,7 +256,7 @@ canvasJPanelHashMap!!.put(canvasJPanel!!.getTreeNode(), Integer(index))
     open fun play()
         //nullable = true from not(false or (false and true)) = true
 {
-isPlaying= true
+this.isPlaying= true
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -264,7 +264,7 @@ isPlaying= true
     open fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
-isPlaying= false
+this.isPlaying= false
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -354,7 +354,7 @@ super.setVisible(true)
 {
 var factor = factor
 
-    var size: Int = canvasJPanelList!!.size()!!
+    var size: Int = this.canvasJPanelList!!.size()!!
 
 
 
@@ -364,7 +364,7 @@ var factor = factor
 
         {
 
-    var canvasJPanel: CanvasJPanel = canvasJPanelList!!.get(index) as CanvasJPanel
+    var canvasJPanel: CanvasJPanel = this.canvasJPanelList!!.get(index) as CanvasJPanel
 
 canvasJPanel!!.getGrid()!!.setZoom(canvasJPanel!!.getGrid()!!.getZoom() +factor)
 }
@@ -591,7 +591,7 @@ nameNode!!.appendChild(nameTextNode)
     var framesNode: Node = document.createElement(WorkAreaDom.FRAMES)!!
 
 
-    var size: Int = canvasJPanelList!!.size()!!
+    var size: Int = this.canvasJPanelList!!.size()!!
 
 
 
@@ -601,7 +601,7 @@ nameNode!!.appendChild(nameTextNode)
 
         {
 
-    var canvasJPanel: CanvasJPanel = canvasJPanelList!!.get(index) as CanvasJPanel
+    var canvasJPanel: CanvasJPanel = this.canvasJPanelList!!.get(index) as CanvasJPanel
 
 framesNode!!.appendChild(canvasJPanel!!.toDom())
 }
@@ -620,7 +620,7 @@ document.appendChild(workAreaNode)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-innerJPanel= javax.swing.JPanel()
+this.innerJPanel= javax.swing.JPanel()
 setLayout(java.awt.GridLayout(1, 1))
 innerJPanel!!.addKeyListener(object: java.awt.event.KeyAdapter()
                                 {
@@ -648,7 +648,7 @@ innerJPanelKeyReleased(evt)
 
                                 }
                             )
-add(innerJPanel)
+add(this.innerJPanel)
 }
 
 

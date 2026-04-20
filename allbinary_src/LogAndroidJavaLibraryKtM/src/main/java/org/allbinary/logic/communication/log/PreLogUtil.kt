@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.communication.log.LogFormatUtil
 
 /*actual*/ open public class PreLogUtil
             : Object
@@ -39,7 +40,7 @@ import org.allbinary.logic.NullUtil
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
-putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 
@@ -53,7 +54,7 @@ putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJEC
     //var functionName = functionName
     //var exception = exception
 
-    var className: String = LABEL
+    var className: String = PreLogUtil.LABEL
 
 
     var actualClassName: String = anyType!!::class.toString()!!!!
@@ -72,7 +73,7 @@ putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJEC
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-android.util.Log.i(LABEL, message)
+android.util.Log.i(PreLogUtil.LABEL, message)
 }
 
 
@@ -82,7 +83,7 @@ android.util.Log.i(LABEL, message)
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
-putSE(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+PreLogUtil.putSE(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 

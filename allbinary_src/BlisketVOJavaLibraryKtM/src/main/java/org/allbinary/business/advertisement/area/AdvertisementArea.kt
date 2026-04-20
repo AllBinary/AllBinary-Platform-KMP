@@ -147,7 +147,7 @@ this.description= description
         //nullable = true from not(false or (false and false)) = true
 {
 var advertisementConstraintsInterface = advertisementConstraintsInterface
-this.advertisementAreaConstraintsInterface= advertisementAreaConstraintsInterface
+this.advertisementAreaConstraintsInterface= this.advertisementAreaConstraintsInterface
 }
 
 

@@ -93,10 +93,10 @@ this.textJLabel!!.setText(text)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jButton1= javax.swing.JButton()
-textJLabel= javax.swing.JLabel()
+this.jButton1= javax.swing.JButton()
+this.textJLabel= javax.swing.JLabel()
 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
-jButton1!!.setText("OK")
+this.jButton1!!.setText("OK")
 jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -109,7 +109,7 @@ jButton1ActionPerformed(evt)
 
                                 }
                             )
-textJLabel!!.setText("No Text Set")
+this.textJLabel!!.setText("No Text Set")
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(getContentPane())
 

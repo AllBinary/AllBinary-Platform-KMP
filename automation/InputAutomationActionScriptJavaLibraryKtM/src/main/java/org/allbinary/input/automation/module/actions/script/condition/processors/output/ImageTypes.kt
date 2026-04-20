@@ -139,7 +139,7 @@ var document = document
     var newNode: Node = document.createElement(ImageActionScriptOutputData.TYPES)!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = this.vector.size!!
 
 
 
@@ -149,7 +149,7 @@ var document = document
 
         {
 
-    var imageType: InputImageType = vector.get(index) as InputImageType
+    var imageType: InputImageType = this.vector.get(index) as InputImageType
 
 newNode!!.appendChild(ModDomHelper.createTextNode(document, ImageActionScriptOutputData.TYPE, imageType!!.getName()))
 }
@@ -170,7 +170,7 @@ newNode!!.appendChild(ModDomHelper.createTextNode(document, ImageActionScriptOut
 
 stringBuffer!!.append("ImageTypes: ")
 
-    var size: Int = vector.size!!
+    var size: Int = this.vector.size!!
 
 
 
@@ -180,7 +180,7 @@ stringBuffer!!.append("ImageTypes: ")
 
         {
 
-    var imageType: InputImageType = vector.get(index) as InputImageType
+    var imageType: InputImageType = this.vector.get(index) as InputImageType
 
 stringBuffer!!.append(imageType!!.getName())
 

@@ -259,11 +259,11 @@ motionGestureEventList!!.clear()
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
 
 
-    var rectPoint: GPoint = rectangle.getPoint()!!
+    var rectPoint: GPoint = this.rectangle.getPoint()!!
 
 
     
-                        if(rectangleCollisionUtil!!.isInside(rectPoint!!.getX(), rectPoint!!.getY(), rectangle.getMaxX() +20, rectangle.getMaxY(), point.getX(), point.getY()))
+                        if(this.rectangleCollisionUtil!!.isInside(rectPoint!!.getX(), rectPoint!!.getY(), rectangle.getMaxX() +20, rectangle.getMaxY(), point.getX(), point.getY()))
                         
                                     {
                                     

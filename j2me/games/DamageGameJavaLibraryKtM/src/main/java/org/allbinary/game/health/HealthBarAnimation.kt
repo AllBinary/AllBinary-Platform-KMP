@@ -92,13 +92,13 @@ this.location= location
         //nullable = true from not(false or (false and false)) = true
 {
     //var newX2 = newX2
-x2= newX2
+this.x2= newX2
 
     var quarter: Int = (this.allbinaryLayer!!.getWidth() shr 2)
 
 
     
-                        if(x2 > quarter *3)
+                        if(this.x2 > quarter *3)
                         
                                     {
                                     this.basicColor= this.basicColorFactory!!.GREEN
@@ -108,7 +108,7 @@ this.colorP= this.basicColor!!.toInt()
                                 
                              else 
     
-                        if(x2 > quarter *2)
+                        if(this.x2 > quarter *2)
                         
                                     {
                                     this.basicColor= this.basicColorFactory!!.YELLOW
@@ -118,7 +118,7 @@ this.colorP= this.basicColor!!.toInt()
                                 
                              else 
     
-                        if(x2 > quarter)
+                        if(this.x2 > quarter)
                         
                                     {
                                     this.basicColor= this.basicColorFactory!!.ORANGE

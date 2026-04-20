@@ -74,7 +74,7 @@ this.totalNumberOfUsers= userVector!!.size as Long
 
     var currentNumberOfUsersForRole: Long = this.getNewTotal(nextUserRole)!!
 
-totalUsersByRoleHashMap!!.put(nextUserRole, currentNumberOfUsersForRole)
+this.totalUsersByRoleHashMap!!.put(nextUserRole, currentNumberOfUsersForRole)
 }
 
 }
@@ -85,7 +85,7 @@ totalUsersByRoleHashMap!!.put(nextUserRole, currentNumberOfUsersForRole)
 : Long{
 var userRole = userRole
 
-    var numberOfUsersForRoleLong: Long = totalUsersByRoleHashMap!!.get(userRole as Object) as Long
+    var numberOfUsersForRoleLong: Long = this.totalUsersByRoleHashMap!!.get(userRole as Object) as Long
 
 
     

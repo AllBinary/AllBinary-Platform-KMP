@@ -92,12 +92,12 @@ this.isJumpOver= false
     //var accelerationMultiplier = accelerationMultiplier
 
     
-                        if(!isJumpOver)
+                        if(!this.isJumpOver)
                         
                                     {
                                     
     
-                        if(gravityActionIndex < maxGravityActionIndex)
+                        if(this.gravityActionIndex < this.maxGravityActionIndex)
                         
                                     {
                                     
@@ -122,11 +122,11 @@ gravityActionIndex++
                             
 
     
-                        if(isJumpAction)
+                        if(this.isJumpAction)
                         
                                     {
                                     jumpBehavior!!.process()
-isJumpAction= false
+this.isJumpAction= false
 
                                     }
                                 

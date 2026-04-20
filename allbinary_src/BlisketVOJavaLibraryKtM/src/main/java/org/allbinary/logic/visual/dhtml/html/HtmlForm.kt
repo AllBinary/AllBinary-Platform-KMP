@@ -61,21 +61,21 @@ public constructor (action: String)
         {
 var action = action
 this.action= action
-inputs= Vector()
+this.inputs= Vector()
 }
 
 
     open fun setPost()
         //nullable = true from not(false or (false and true)) = true
 {
-method= POST
+this.method= this.POST
 }
 
 
     open fun setGet()
         //nullable = true from not(false or (false and true)) = true
 {
-method= GET
+this.method= this.GET
 }
 
 
@@ -83,7 +83,7 @@ method= GET
         //nullable = true from not(false or (false and false)) = true
 {
 var htmlInput = htmlInput
-inputs.add(htmlInput)
+this.inputs.add(htmlInput)
 }
 
 
@@ -91,7 +91,7 @@ inputs.add(htmlInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var htmlTable = htmlTable
-inputs.add(htmlTable)
+this.inputs.add(htmlTable)
 }
 
 
@@ -105,20 +105,20 @@ inputs.add(htmlTable)
     var result: String = stringUtil!!.EMPTY_STRING
 
 
-    var inputArray: Array<Any?> = inputs.toArray()!!
+    var inputArray: Array<Any?> = this.inputs.toArray()!!
 
 
     var inputSize: Int = inputArray!!.size
                 
 
-result= FORMBEGIN
-result += METHOD
-result += method
+result= this.FORMBEGIN
+result += this.METHOD
+result += this.method
 result += "\" "
-result += ACTION
-result += action
+result += this.ACTION
+result += this.action
 result += "\" "
-result += END
+result += this.END
 
 
 
@@ -130,7 +130,7 @@ result += inputArray[i]!!.toString()
 result += " "
 }
 
-result += FORMEND
+result += this.FORMEND
 
 
 

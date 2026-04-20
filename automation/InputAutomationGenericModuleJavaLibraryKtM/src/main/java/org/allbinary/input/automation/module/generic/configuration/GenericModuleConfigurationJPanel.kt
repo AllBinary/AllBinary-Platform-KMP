@@ -58,29 +58,29 @@ this.selectFirstElement()
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-newProfileJDialog= javax.swing.JDialog()
-okNewProfileJButton= javax.swing.JButton()
-newProfileNameJLabel= javax.swing.JLabel()
-newProfileNameJTextField= javax.swing.JTextField()
-buttonGroup2= javax.swing.ButtonGroup()
-genericJTabbedPane= javax.swing.JTabbedPane()
-genericProfilesJPanel= javax.swing.JPanel()
-genericProfilesJScrollPane= javax.swing.JScrollPane()
-genericProfilesJList= javax.swing.JList()
-newProfileJButton= javax.swing.JButton()
-deleteProfileJButton= javax.swing.JButton()
-jPanel1= javax.swing.JPanel()
-screenCaptureJRadioButton= javax.swing.JRadioButton()
-jLabel1= javax.swing.JLabel()
-jLabel2= javax.swing.JLabel()
-savedCaptureJRadioButton= javax.swing.JRadioButton()
-captureMotionAnalysisJCheckBox= javax.swing.JCheckBox()
-captureComparisonJCheckBox= javax.swing.JCheckBox()
-jLabel3= javax.swing.JLabel()
-blankGenericProfileActionsJPanel= javax.swing.JPanel()
-newProfileJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
-newProfileJDialog!!.setResizable(false)
-okNewProfileJButton!!.setText("Ok")
+this.newProfileJDialog= javax.swing.JDialog()
+this.okNewProfileJButton= javax.swing.JButton()
+this.newProfileNameJLabel= javax.swing.JLabel()
+this.newProfileNameJTextField= javax.swing.JTextField()
+this.buttonGroup2= javax.swing.ButtonGroup()
+this.genericJTabbedPane= javax.swing.JTabbedPane()
+this.genericProfilesJPanel= javax.swing.JPanel()
+this.genericProfilesJScrollPane= javax.swing.JScrollPane()
+this.genericProfilesJList= javax.swing.JList()
+this.newProfileJButton= javax.swing.JButton()
+this.deleteProfileJButton= javax.swing.JButton()
+this.jPanel1= javax.swing.JPanel()
+this.screenCaptureJRadioButton= javax.swing.JRadioButton()
+this.jLabel1= javax.swing.JLabel()
+this.jLabel2= javax.swing.JLabel()
+this.savedCaptureJRadioButton= javax.swing.JRadioButton()
+this.captureMotionAnalysisJCheckBox= javax.swing.JCheckBox()
+this.captureComparisonJCheckBox= javax.swing.JCheckBox()
+this.jLabel3= javax.swing.JLabel()
+this.blankGenericProfileActionsJPanel= javax.swing.JPanel()
+this.newProfileJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
+this.newProfileJDialog!!.setResizable(false)
+this.okNewProfileJButton!!.setText("Ok")
 okNewProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -93,20 +93,20 @@ okNewProfileJButtonActionPerformed(evt)
 
                                 }
                             )
-newProfileNameJLabel!!.setText("New Profile Name")
+this.newProfileNameJLabel!!.setText("New Profile Name")
 
-    var newProfileJDialogLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(newProfileJDialog!!.getContentPane())
+    var newProfileJDialogLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.newProfileJDialog!!.getContentPane())
 
-newProfileJDialog!!.getContentPane()!!.setLayout(newProfileJDialogLayout)
+this.newProfileJDialog!!.getContentPane()!!.setLayout(newProfileJDialogLayout)
 newProfileJDialogLayout!!.setHorizontalGroup(newProfileJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(newProfileJDialogLayout!!.createSequentialGroup()!!.addGroup(newProfileJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(newProfileJDialogLayout!!.createSequentialGroup()!!.addGap(80, 80, 80)!!.addComponent(newProfileNameJLabel))!!.addGroup(newProfileJDialogLayout!!.createSequentialGroup()!!.addGap(30, 30, 30)!!.addComponent(newProfileNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addGroup(newProfileJDialogLayout!!.createSequentialGroup()!!.addGap(100, 100, 100)!!.addComponent(okNewProfileJButton)))!!.addContainerGap(35, Short.MAX_VALUE)))
 newProfileJDialogLayout!!.setVerticalGroup(newProfileJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(newProfileJDialogLayout!!.createSequentialGroup()!!.addGap(10, 10, 10)!!.addComponent(newProfileNameJLabel)!!.addGap(16, 16, 16)!!.addComponent(newProfileNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addGap(20, 20, 20)!!.addComponent(okNewProfileJButton)))
 setLayout(java.awt.GridLayout(1, 0))
 setMinimumSize(java.awt.Dimension(400, 300))
 setPreferredSize(java.awt.Dimension(700, 700))
-genericJTabbedPane!!.setToolTipText(stringUtil!!.EMPTY_STRING)
-genericJTabbedPane!!.setMinimumSize(java.awt.Dimension(800, 600))
-genericProfilesJPanel!!.setMinimumSize(java.awt.Dimension(400, 300))
-genericProfilesJPanel!!.setPreferredSize(java.awt.Dimension(0, 0))
+this.genericJTabbedPane!!.setToolTipText(this.stringUtil!!.EMPTY_STRING)
+this.genericJTabbedPane!!.setMinimumSize(java.awt.Dimension(800, 600))
+this.genericProfilesJPanel!!.setMinimumSize(java.awt.Dimension(400, 300))
+this.genericProfilesJPanel!!.setPreferredSize(java.awt.Dimension(0, 0))
 genericProfilesJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
@@ -119,9 +119,9 @@ genericProfilesJListValueChanged(evt)
 
                                 }
                             )
-genericProfilesJScrollPane!!.setViewportView(genericProfilesJList)
-newProfileJButton!!.setText("New")
-newProfileJButton!!.setToolTipText("Creates a new profile")
+this.genericProfilesJScrollPane!!.setViewportView(this.genericProfilesJList)
+this.newProfileJButton!!.setText("New")
+this.newProfileJButton!!.setToolTipText("Creates a new profile")
 newProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -134,8 +134,8 @@ newProfileJButtonActionPerformed(evt)
 
                                 }
                             )
-deleteProfileJButton!!.setText("Delete")
-deleteProfileJButton!!.setToolTipText("Deletes the selected profile")
+this.deleteProfileJButton!!.setText("Delete")
+this.deleteProfileJButton!!.setToolTipText("Deletes the selected profile")
 deleteProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -148,11 +148,11 @@ deleteProfileJButtonActionPerformed(evt)
 
                                 }
                             )
-jPanel1!!.setPreferredSize(java.awt.Dimension(1000, 100))
-screenCaptureJRadioButton!!.setText("Screen Captures")
-screenCaptureJRadioButton!!.setToolTipText("Records the screen into memory for logical processing")
-screenCaptureJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
-screenCaptureJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
+this.jPanel1!!.setPreferredSize(java.awt.Dimension(1000, 100))
+this.screenCaptureJRadioButton!!.setText("Screen Captures")
+this.screenCaptureJRadioButton!!.setToolTipText("Records the screen into memory for logical processing")
+this.screenCaptureJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
+this.screenCaptureJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 screenCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -165,12 +165,12 @@ screenCaptureJRadioButtonActionPerformed(evt)
 
                                 }
                             )
-jLabel1!!.setText("Profile Options")
-jLabel2!!.setText("Process From:")
-savedCaptureJRadioButton!!.setText("Saved Images")
-savedCaptureJRadioButton!!.setToolTipText("Loads images from files for logical processing.  Usually for debugging your profile actions")
-savedCaptureJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
-savedCaptureJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
+this.jLabel1!!.setText("Profile Options")
+this.jLabel2!!.setText("Process From:")
+this.savedCaptureJRadioButton!!.setText("Saved Images")
+this.savedCaptureJRadioButton!!.setToolTipText("Loads images from files for logical processing.  Usually for debugging your profile actions")
+this.savedCaptureJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
+this.savedCaptureJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 savedCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -183,10 +183,10 @@ savedCaptureJRadioButtonActionPerformed(evt)
 
                                 }
                             )
-captureMotionAnalysisJCheckBox!!.setText("Motion Analysis")
-captureMotionAnalysisJCheckBox!!.setToolTipText("Uses image comparison and contraints to locate moving objects")
-captureMotionAnalysisJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
-captureMotionAnalysisJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
+this.captureMotionAnalysisJCheckBox!!.setText("Motion Analysis")
+this.captureMotionAnalysisJCheckBox!!.setToolTipText("Uses image comparison and contraints to locate moving objects")
+this.captureMotionAnalysisJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
+this.captureMotionAnalysisJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 captureMotionAnalysisJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -199,10 +199,10 @@ captureMotionAnalysisJCheckBoxActionPerformed(evt)
 
                                 }
                             )
-captureComparisonJCheckBox!!.setText("Comparison")
-captureComparisonJCheckBox!!.setToolTipText("Compares the last two input images for multi image logic")
-captureComparisonJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
-captureComparisonJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
+this.captureComparisonJCheckBox!!.setText("Comparison")
+this.captureComparisonJCheckBox!!.setToolTipText("Compares the last two input images for multi image logic")
+this.captureComparisonJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
+this.captureComparisonJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 captureComparisonJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -215,29 +215,29 @@ captureComparisonJCheckBoxActionPerformed(evt)
 
                                 }
                             )
-jLabel3!!.setText("Image Processing:")
-jLabel3!!.setToolTipText("Turns on/off various extended image processing")
+this.jLabel3!!.setText("Image Processing:")
+this.jLabel3!!.setToolTipText("Turns on/off various extended image processing")
 
-    var jPanel1Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(jPanel1)
+    var jPanel1Layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.jPanel1)
 
-jPanel1!!.setLayout(jPanel1Layout)
+this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel1Layout!!.createSequentialGroup()!!.addGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(screenCaptureJRadioButton)!!.addComponent(jLabel1)!!.addComponent(jLabel2)!!.addComponent(savedCaptureJRadioButton)!!.addComponent(captureMotionAnalysisJCheckBox)!!.addComponent(captureComparisonJCheckBox)!!.addComponent(jLabel3))!!.addContainerGap(22, Short.MAX_VALUE)))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel1Layout!!.createSequentialGroup()!!.addComponent(jLabel1)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel2)!!.addGap(7, 7, 7)!!.addComponent(screenCaptureJRadioButton)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(savedCaptureJRadioButton)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jLabel3)!!.addGap(7, 7, 7)!!.addComponent(captureComparisonJCheckBox)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(captureMotionAnalysisJCheckBox)!!.addContainerGap(106, Short.MAX_VALUE)))
 
-    var genericProfilesJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(genericProfilesJPanel)
+    var genericProfilesJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.genericProfilesJPanel)
 
-genericProfilesJPanel!!.setLayout(genericProfilesJPanelLayout)
+this.genericProfilesJPanel!!.setLayout(genericProfilesJPanelLayout)
 genericProfilesJPanelLayout!!.setHorizontalGroup(genericProfilesJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(genericProfilesJPanelLayout!!.createSequentialGroup()!!.addGroup(genericProfilesJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(genericProfilesJPanelLayout!!.createSequentialGroup()!!.addComponent(newProfileJButton)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(deleteProfileJButton))!!.addGroup(genericProfilesJPanelLayout!!.createSequentialGroup()!!.addComponent(genericProfilesJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)))!!.addContainerGap()))
 genericProfilesJPanelLayout!!.setVerticalGroup(genericProfilesJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(genericProfilesJPanelLayout!!.createSequentialGroup()!!.addGroup(genericProfilesJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(newProfileJButton)!!.addComponent(deleteProfileJButton))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(genericProfilesJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)!!.addComponent(genericProfilesJScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE))))
-genericJTabbedPane!!.addTab("Profiles", genericProfilesJPanel)
+this.genericJTabbedPane!!.addTab("Profiles", genericProfilesJPanel)
 
-    var blankGenericProfileActionsJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(blankGenericProfileActionsJPanel)
+    var blankGenericProfileActionsJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(this.blankGenericProfileActionsJPanel)
 
-blankGenericProfileActionsJPanel!!.setLayout(blankGenericProfileActionsJPanelLayout)
+this.blankGenericProfileActionsJPanel!!.setLayout(blankGenericProfileActionsJPanelLayout)
 blankGenericProfileActionsJPanelLayout!!.setHorizontalGroup(blankGenericProfileActionsJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE))
 blankGenericProfileActionsJPanelLayout!!.setVerticalGroup(blankGenericProfileActionsJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 275, Short.MAX_VALUE))
-genericJTabbedPane!!.addTab("Actions", blankGenericProfileActionsJPanel)
-add(genericJTabbedPane)
+this.genericJTabbedPane!!.addTab("Actions", blankGenericProfileActionsJPanel)
+add(this.genericJTabbedPane)
 }
 
 

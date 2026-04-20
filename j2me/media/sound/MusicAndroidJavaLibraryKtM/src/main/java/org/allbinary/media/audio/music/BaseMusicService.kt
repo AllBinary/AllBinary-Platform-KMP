@@ -58,7 +58,7 @@ open public class BaseMusicService : Service {
         //nullable = true from not(false or (false and false)) = true
 : IBinder?{
     //var intent = intent
-this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.BIND)
+this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.BIND)
 
 
 
@@ -70,23 +70,23 @@ this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.BIND)
     override fun onCreate()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.CREATE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.CREATE)
 }
 
 
     override fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.DESTROY)
+this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.DESTROY)
 
     
-                        if(player != NullAndroidCanvas.NULL_MEDIA_PLAYER)
+                        if(this.player != NullAndroidCanvas.NULL_MEDIA_PLAYER)
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.PAUSE)
-player.stop()
-player.reset()
-player.release()
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.PAUSE)
+this.player.stop()
+this.player.reset()
+this.player.release()
 
                                     }
                                 
@@ -98,11 +98,11 @@ player.release()
 {
 
     
-                        if(player != NullAndroidCanvas.NULL_MEDIA_PLAYER)
+                        if(this.player != NullAndroidCanvas.NULL_MEDIA_PLAYER)
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.PAUSE)
-player.pause()
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.PAUSE)
+this.player.pause()
 
                                     }
                                 
@@ -114,11 +114,11 @@ player.pause()
 {
 
     
-                        if(player != NullAndroidCanvas.NULL_MEDIA_PLAYER && !player.isPlaying())
+                        if(this.player != NullAndroidCanvas.NULL_MEDIA_PLAYER && !this.player.isPlaying())
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.RESUME)
-player.start()
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.RESUME)
+this.player.start()
 
                                     }
                                 
@@ -129,9 +129,9 @@ player.start()
         //nullable = true from not(false or (false and true)) = true
 {
 player= MediaPlayer.create(this, songId)
-player.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
-player.setLooping(false)
-player.start()
+this.player.setVolume((this.leftVolume.toFloat()) /100.0f, (this.rightVolume.toFloat()) /100.0f)
+this.player.setLooping(false)
+this.player.start()
 }
 
 
@@ -141,7 +141,7 @@ player.start()
     //var intent = intent
     //var startid = startid
 onStartCommand(intent)
-this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.START)
+this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.START)
 }
 
 
@@ -164,7 +164,7 @@ onStartCommand(intent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intent = intent
-this.logUtil!!.putF(commonStrings!!.START, this, commonStateStrings!!.ON_START_COMMAND)
+this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.ON_START_COMMAND)
 
     var musicStrings: MusicStrings = MusicStrings.getInstance()!!
 
@@ -227,19 +227,19 @@ this.rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
                             
 
     
-                        if(songId !=  -1)
+                        if(this.songId !=  -1)
                         
                                     {
                                     System.gc()
 
     
-                        if(player != NullAndroidCanvas.NULL_MEDIA_PLAYER && player.isPlaying())
+                        if(this.player != NullAndroidCanvas.NULL_MEDIA_PLAYER && this.player.isPlaying())
                         
                                     {
                                     
     var player: MediaPlayer = this.player
 
-this.logUtil!!.putF(ALREADY_PLAYING, this, commonStateStrings!!.ON_START_COMMAND)
+this.logUtil!!.putF(this.ALREADY_PLAYING, this, commonStateStrings!!.ON_START_COMMAND)
 
     var runnable: Runnable = object: ARunnable()
                                 {

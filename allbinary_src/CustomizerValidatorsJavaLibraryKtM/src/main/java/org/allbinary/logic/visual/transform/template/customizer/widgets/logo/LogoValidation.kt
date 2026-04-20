@@ -202,7 +202,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
                                 
 
     
-                        if(this.logoFileItem!!.getSize() > fileData!!.MAXIMAGEFILESIZE || logoFileItem!!.getSize() < fileData!!.MINIMAGEFILESIZE)
+                        if(this.logoFileItem!!.getSize() > fileData!!.MAXIMAGEFILESIZE || this.logoFileItem!!.getSize() < fileData!!.MINIMAGEFILESIZE)
                         
                                     {
                                     

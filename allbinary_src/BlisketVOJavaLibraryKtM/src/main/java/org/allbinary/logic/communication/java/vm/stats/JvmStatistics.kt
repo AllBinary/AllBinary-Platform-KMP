@@ -39,7 +39,7 @@ open public class JvmStatistics
 public constructor ()
             : super()
         {
-runtime= Runtime.getRuntime()
+this.runtime= Runtime.getRuntime()
 }
 
 
@@ -376,7 +376,7 @@ runtime= Runtime.getRuntime()
     open fun collectGarbage()
         //nullable = true from not(false or (false and true)) = true
 {
-runtime.gc()
+this.runtime.gc()
 }
 
 

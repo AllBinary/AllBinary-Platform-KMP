@@ -66,7 +66,7 @@ this.init(filePath)
 public constructor ()
             : super()
         {
-this.init(CPUFILE)
+this.init(this.CPUFILE)
 }
 
 
@@ -118,7 +118,7 @@ var filePath = filePath
     var fileReader: FileReader = FileReader(filePath)
 
 lineNumberReader= LineNumberReader(fileReader)
-cpuHashMap= HashMap<Any, Any>()
+this.cpuHashMap= HashMap<Any, Any>()
 
     
                         if(lineNumberReader == 
@@ -191,35 +191,35 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
 
     
                         if(key.indexOf(CpuInfo.PROCESSOR.toString()) >= 0)
-                        cpuHashMap!!.put(CpuInfo.PROCESSOR, value)
+                        this.cpuHashMap!!.put(CpuInfo.PROCESSOR, value)
 
     
                         if(key.indexOf(CpuInfo.VENDORID.toString()) >= 0)
-                        cpuHashMap!!.put(CpuInfo.VENDORID, value)
+                        this.cpuHashMap!!.put(CpuInfo.VENDORID, value)
 
     
                         if(key.indexOf(CpuInfo.CPUFAMILY.toString()) >= 0)
-                        cpuHashMap!!.put(CpuInfo.CPUFAMILY, value)
+                        this.cpuHashMap!!.put(CpuInfo.CPUFAMILY, value)
 
     
                         if(key.indexOf(CpuInfo.MODEL.toString()) >= 0)
-                        cpuHashMap!!.put(CpuInfo.MODEL, value)
+                        this.cpuHashMap!!.put(CpuInfo.MODEL, value)
 
     
                         if(key.indexOf(CpuInfo.MODELNAME.toString()) >= 0)
-                        cpuHashMap!!.put(CpuInfo.MODELNAME, value)
+                        this.cpuHashMap!!.put(CpuInfo.MODELNAME, value)
 
     
                         if(key.indexOf(CpuInfo.STEPPING.toString()) >= 0)
-                        cpuHashMap!!.put(CpuInfo.STEPPING, value)
+                        this.cpuHashMap!!.put(CpuInfo.STEPPING, value)
 
     
                         if(key.indexOf(CpuInfo.CPUMHZ.toString()) >= 0)
-                        cpuHashMap!!.put(CpuInfo.CPUMHZ, value)
+                        this.cpuHashMap!!.put(CpuInfo.CPUMHZ, value)
 
     
                         if(key.indexOf(CpuInfo.CACHESIZE.toString()) >= 0)
-                        cpuHashMap!!.put(CpuInfo.CACHESIZE, value)
+                        this.cpuHashMap!!.put(CpuInfo.CACHESIZE, value)
 
                                     }
                                 
@@ -250,7 +250,7 @@ nextLine= lineNumberReader!!.readLine()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuHashMap!!.get(CpuInfo.PROCESSOR) as String
+                        return this.cpuHashMap!!.get(CpuInfo.PROCESSOR) as String
 }
 
 
@@ -261,7 +261,7 @@ nextLine= lineNumberReader!!.readLine()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuHashMap!!.get(CpuInfo.VENDORID) as String
+                        return this.cpuHashMap!!.get(CpuInfo.VENDORID) as String
 }
 
 
@@ -272,7 +272,7 @@ nextLine= lineNumberReader!!.readLine()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuHashMap!!.get(CpuInfo.CPUFAMILY) as String
+                        return this.cpuHashMap!!.get(CpuInfo.CPUFAMILY) as String
 }
 
 
@@ -283,7 +283,7 @@ nextLine= lineNumberReader!!.readLine()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuHashMap!!.get(CpuInfo.MODEL) as String
+                        return this.cpuHashMap!!.get(CpuInfo.MODEL) as String
 }
 
 
@@ -294,7 +294,7 @@ nextLine= lineNumberReader!!.readLine()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuHashMap!!.get(CpuInfo.MODELNAME) as String
+                        return this.cpuHashMap!!.get(CpuInfo.MODELNAME) as String
 }
 
 
@@ -305,7 +305,7 @@ nextLine= lineNumberReader!!.readLine()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuHashMap!!.get(CpuInfo.STEPPING) as String
+                        return this.cpuHashMap!!.get(CpuInfo.STEPPING) as String
 }
 
 
@@ -316,7 +316,7 @@ nextLine= lineNumberReader!!.readLine()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuHashMap!!.get(CpuInfo.CPUMHZ) as String
+                        return this.cpuHashMap!!.get(CpuInfo.CPUMHZ) as String
 }
 
 
@@ -327,7 +327,7 @@ nextLine= lineNumberReader!!.readLine()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuHashMap!!.get(CpuInfo.CACHESIZE) as String
+                        return this.cpuHashMap!!.get(CpuInfo.CACHESIZE) as String
 }
 
 

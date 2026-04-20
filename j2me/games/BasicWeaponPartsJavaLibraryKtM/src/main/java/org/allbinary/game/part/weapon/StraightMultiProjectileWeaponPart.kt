@@ -125,13 +125,13 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
 
 
-                        for (index in 0 until total)
+                        for (index in 0 until this.total)
 
         {
-sine= (next *noDecimalTrigTable!!.sin(angle.toInt())).toLong()
-beamX= (sine /noDecimalTrigTable!!.SCALE).toInt()
-cosine= (next *noDecimalTrigTable!!.cos(angle.toInt())).toLong()
-beamY=  -(cosine /noDecimalTrigTable!!.SCALE).toInt()
+sine= (next *this.noDecimalTrigTable!!.sin(angle.toInt())).toLong()
+beamX= (sine /this.noDecimalTrigTable!!.SCALE).toInt()
+cosine= (next *this.noDecimalTrigTable!!.cos(angle.toInt())).toLong()
+beamY=  -(cosine /this.noDecimalTrigTable!!.SCALE).toInt()
 weaponLayer= weaponLayerCircularStaticPool!!.getInstance(sourceLayerInterface, x +beamX, y +beamY, 0, angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
 allbinaryLayerManager!!.append(weaponLayer)
 next += increment

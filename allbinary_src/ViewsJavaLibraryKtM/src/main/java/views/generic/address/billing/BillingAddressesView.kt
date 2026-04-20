@@ -86,7 +86,7 @@ var document = document
     var billingAddressesNode: Node = document.createElement(BillingAddressData.MULTIPLE)!!
 
 
-    var size: Int = streetAddresses!!.size!!
+    var size: Int = this.streetAddresses!!.size!!
 
 
 
@@ -96,7 +96,7 @@ var document = document
 
         {
 
-    var streetAddress: StreetAddress = streetAddresses!!.get(index) as StreetAddress
+    var streetAddress: StreetAddress = this.streetAddresses!!.get(index) as StreetAddress
 
 billingAddressesNode!!.appendChild(streetAddress!!.toXmlNode(document))
 }

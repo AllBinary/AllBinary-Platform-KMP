@@ -73,7 +73,7 @@ this.gl= gl
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
@@ -81,11 +81,11 @@ this.gl= gl
 
 
 
-                        for (index in list.size() -1 downTo 0)
+                        for (index in this.list.size() -1 downTo 0)
 
         {
 
-    var openGLESImage: OpenGLESImage = (list.objectArray[index]!! as OpenGLESImage)
+    var openGLESImage: OpenGLESImage = (this.list.objectArray[index]!! as OpenGLESImage)
 
 
     
@@ -135,12 +135,12 @@ height= textureSize
     var image2: Image = this.imageCache!!.get(caller, width, height)!!
 
 
-    var image: Image = preResourceImageUtil!!.encapsulate(image2)!!
+    var image: Image = this.preResourceImageUtil!!.encapsulate(image2)!!
 
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
@@ -149,7 +149,7 @@ height= textureSize
                         if(image != NullCanvas.NULL_IMAGE)
                         
                                     {
-                                    list.add(image)
+                                    this.list.add(image)
 
                                     }
                                 
@@ -174,12 +174,12 @@ height= textureSize
     var cachedImage: Image = this.imageCache!!.get(key)!!
 
 
-    var image: Image = preResourceImageUtil!!.encapsulate(cachedImage)!!
+    var image: Image = this.preResourceImageUtil!!.encapsulate(cachedImage)!!
 
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
@@ -188,7 +188,7 @@ height= textureSize
                         if(image != NullCanvas.NULL_IMAGE)
                         
                                     {
-                                    list.add(image)
+                                    this.list.add(image)
 
                                     }
                                 
@@ -222,13 +222,13 @@ height= textureSize
             
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
 
     
-                        if(list.contains(image))
+                        if(this.list.contains(image))
                         
                                     {
                                     
@@ -238,7 +238,7 @@ height= textureSize
 
                                     }
                                 
-list.add(image)
+this.list.add(image)
 }
 
 this.renderer.add(image)

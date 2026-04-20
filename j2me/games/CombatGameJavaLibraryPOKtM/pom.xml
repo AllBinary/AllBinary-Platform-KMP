@@ -44,7 +44,7 @@
         <module>../../games/PickupGameJavaLibraryKtM</module>
 
         <module>../../../allbinary_src/licensing/HardCodedLicenseInitInfoJavaLibraryKtM</module>
-<!--        <module>../../../allbinary_src/licensing/FileLicenseInitInfoJavaLibraryKtM</module>-->
+        <module>../../../allbinary_src/licensing/FileLicenseInitInfoJavaLibraryKtM</module>
         <module>../../../allbinary_src/licensing/ClientInfoLicensingJavaLibraryKtM</module>
 
         <module>../../games/licensing/PartnerJ2MEJavaLibraryKtM</module><!--

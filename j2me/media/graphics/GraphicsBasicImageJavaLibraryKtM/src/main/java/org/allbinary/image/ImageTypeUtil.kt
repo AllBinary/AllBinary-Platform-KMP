@@ -73,11 +73,11 @@ mediaFileType= mediaFileType!!.lowercase()
 
 
 
-                        for (index in list.size() -1 downTo 0)
+                        for (index in this.list.size() -1 downTo 0)
 
         {
 
-    var name: String = list.get(index) as String
+    var name: String = this.list.get(index) as String
 
 
     

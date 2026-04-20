@@ -114,7 +114,7 @@ this.gauge= CustomGaugeItem.NULL_GAUGE_ITEM
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
 this.backgroundBasicColor= backgroundBasicColor
-this.gauge= CustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, maxValue.toInt(), 0, backgroundBasicColor, foregroundBasicColor)
+this.gauge= CustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, this.maxValue.toInt(), 0, backgroundBasicColor, foregroundBasicColor)
 }
 
 
@@ -160,7 +160,7 @@ this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.START_METHOD_NA
 this.setBackground(true)
 this.gauge.setHeight(30)
 this.gauge.setLabel(commonStrings!!.PLEASE_WAIT)
-this.setText(TEXT)
+this.setText(this.TEXT)
 this.setValue(0)
 this.inGameProcessor= Processor.getInstance()
 this.paintable= GAUGE_PAINTABLE
@@ -182,8 +182,8 @@ this.logUtil!!.putF(commonStrings!!.START, this, START_BACKGROUND)
 
 this.setBackground(background)
 this.gauge.setHeight(myFont!!.DEFAULT_CHAR_HEIGHT +2)
-this.gauge.setLabel(backgroundLabel)
-this.setText(TEXT)
+this.gauge.setLabel(this.backgroundLabel)
+this.setText(this.TEXT)
 this.setValue(0)
 this.inGameProcessor= Processor.getInstance()
 this.paintable= GAUGE_PAINTABLE
@@ -302,10 +302,10 @@ var graphics = graphics
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-graphics.setColor(backgroundBasicColor!!.toInt())
+graphics.setColor(this.backgroundBasicColor!!.toInt())
 graphics.fillRect(0, 0, displayInfoSingleton!!.getLastWidth(), displayInfoSingleton!!.getLastHeight())
-gauge.paint(graphics, 0, 0)
-hasPainted= true
+this.gauge.paint(graphics, 0, 0)
+this.hasPainted= true
 }
 
 

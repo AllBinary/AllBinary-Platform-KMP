@@ -46,7 +46,7 @@ var method = method
                     
 
         try {
-            guiLog!!.showDialog(msg)
+            this.guiLog!!.showDialog(msg)
 this.logUtil!!.put(msg, obj, method, this)
 } catch(e: Exception)
             {
@@ -66,7 +66,7 @@ var method = method
                     
 
         try {
-            guiLog!!.showDialog(msg)
+            this.guiLog!!.showDialog(msg)
 this.logUtil!!.put(msg, className, method, this)
 } catch(e: Exception)
             {

@@ -70,7 +70,7 @@ this.jarURL= jarURL
 
         try {
             
-    var conn: URLConnection = jarURL!!.openConnection()!!
+    var conn: URLConnection = this.jarURL!!.openConnection()!!
 
 
     var jis: JarInputStream = JarInputStream(conn.getInputStream())

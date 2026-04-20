@@ -67,7 +67,7 @@ var base = base
 
         try {
             
-    var fileAbPath: AbPath = AbFilePath(path +AbPathData.getInstance()!!.SEPARATOR +href) as AbPath
+    var fileAbPath: AbPath = AbFilePath(this.path +AbPathData.getInstance()!!.SEPARATOR +href) as AbPath
 
 
     

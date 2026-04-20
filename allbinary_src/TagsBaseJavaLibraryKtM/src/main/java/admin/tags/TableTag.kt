@@ -395,14 +395,14 @@ this.total= total
 
         try {
             
-    var helperClass: KClass<*> = requestObject!!::class!!
+    var helperClass: KClass<*> = this.requestObject!!::class!!
 
 
     var method: Method = helperClass!!.getMethod("insert", 
                             null)!!
 
 
-    var result: String = method.invoke(requestObject, 
+    var result: String = method.invoke(this.requestObject, 
                             null) as String
 
 
@@ -442,14 +442,14 @@ this.total= total
 
         try {
             
-    var helperClass: KClass<*> = requestObject!!::class!!
+    var helperClass: KClass<*> = this.requestObject!!::class!!
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.delete, 
                             null)!!
 
 
-    var result: String = method.invoke(requestObject, 
+    var result: String = method.invoke(this.requestObject, 
                             null) as String
 
 
@@ -489,14 +489,14 @@ this.total= total
 
         try {
             
-    var helperClass: KClass<*> = requestObject!!::class!!
+    var helperClass: KClass<*> = this.requestObject!!::class!!
 
 
     var method: Method = helperClass!!.getMethod("update", 
                             null)!!
 
 
-    var result: String = method.invoke(requestObject, 
+    var result: String = method.invoke(this.requestObject, 
                             null) as String
 
 

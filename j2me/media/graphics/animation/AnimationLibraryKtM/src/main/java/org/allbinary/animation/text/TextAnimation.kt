@@ -79,12 +79,12 @@ this.setText(text)
 var graphics = graphics
 var x = x
 var y = y
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
 
     var height: Int = this.getHeight()!!
 
 
-    var size: Int = textArrayP!!.size
+    var size: Int = this.textArrayP!!.size
                 
 
 
@@ -94,7 +94,7 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
                         for (index in 0 until size)
 
         {
-graphics.drawString(textArrayP[index]!!, x, y +(index *height), anchor)
+graphics.drawString(this.textArrayP[index]!!, x, y +(index *height), anchor)
 }
 
 }
@@ -196,7 +196,7 @@ this.textArrayP= textArray
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return textArrayP
+                        return this.textArrayP
 }
 
 

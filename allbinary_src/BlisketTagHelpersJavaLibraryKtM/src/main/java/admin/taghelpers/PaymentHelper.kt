@@ -65,7 +65,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.value= request.getParameter("VALUE")
+this.value= this.request.getParameter("VALUE")
 }
 
 
@@ -81,7 +81,7 @@ this.value= request.getParameter("VALUE")
     var paymentEntity: PaymentEntity = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!
 
 
-    var paymentInterface: PaymentInterface = PaymentFactory.getInstance(request)!!
+    var paymentInterface: PaymentInterface = PaymentFactory.getInstance(this.request)!!
 
 paymentEntity!!.add(this.weblisketSession!!.getUserName(), paymentInterface)
 paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(paymentEntity!!.getLastId(this.weblisketSession!!.getUserName())))

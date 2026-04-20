@@ -83,14 +83,14 @@ private constructor ()
 
     var SPACE: String = CommonSeps.getInstance()!!.SPACE
 
-CUSTOMIZER_NAME= SPACE +CustomizerTransformInfoData.NAME
-BODY_VIEWNAMEKEY= SPACE +BodyData.getInstance()!!.VIEWNAMEKEY
-TITLE_VIEWNAMEKEY= SPACE +TitleData.getInstance()!!.VIEWNAMEKEY
-GLOBALS_NEW= GLOBALS2.NEW +SPACE
-GLOBALS_INSERT= commonStrings!!.INSERT +SPACE
-GLOBALS_DELETE= commonStrings!!.DELETE +SPACE
-GLOBALS_EDIT= GLOBALS2.EDIT +SPACE
-GLOBALS_UPDATE= commonStrings!!.UPDATE +SPACE
+this.CUSTOMIZER_NAME= SPACE +CustomizerTransformInfoData.NAME
+this.BODY_VIEWNAMEKEY= SPACE +BodyData.getInstance()!!.VIEWNAMEKEY
+this.TITLE_VIEWNAMEKEY= SPACE +TitleData.getInstance()!!.VIEWNAMEKEY
+this.GLOBALS_NEW= GLOBALS2.NEW +SPACE
+this.GLOBALS_INSERT= commonStrings!!.INSERT +SPACE
+this.GLOBALS_DELETE= commonStrings!!.DELETE +SPACE
+this.GLOBALS_EDIT= GLOBALS2.EDIT +SPACE
+this.GLOBALS_UPDATE= commonStrings!!.UPDATE +SPACE
 }
 
 
@@ -114,10 +114,10 @@ hashMap!!.put(arrayOf(CUSTOMIZER_NAME), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(BODY_VIEWNAMEKEY), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(TITLE_VIEWNAMEKEY), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(GLOBALS_NEW), ONE_EMPTY_STRING_ARRAY)
-hashMap!!.put(arrayOf(GLOBALS_INSERT), ONE_EMPTY_STRING_ARRAY)
-hashMap!!.put(arrayOf(GLOBALS_DELETE), ONE_EMPTY_STRING_ARRAY)
-hashMap!!.put(arrayOf(GLOBALS_EDIT), ONE_EMPTY_STRING_ARRAY)
-hashMap!!.put(arrayOf(GLOBALS_UPDATE), ONE_EMPTY_STRING_ARRAY)
+hashMap!!.put(arrayOf(this.GLOBALS_INSERT), ONE_EMPTY_STRING_ARRAY)
+hashMap!!.put(arrayOf(this.GLOBALS_DELETE), ONE_EMPTY_STRING_ARRAY)
+hashMap!!.put(arrayOf(this.GLOBALS_EDIT), ONE_EMPTY_STRING_ARRAY)
+hashMap!!.put(arrayOf(this.GLOBALS_UPDATE), ONE_EMPTY_STRING_ARRAY)
 
     var replace: Replace = 
                 null

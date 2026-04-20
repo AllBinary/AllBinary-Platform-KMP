@@ -52,7 +52,7 @@ var speedBasicDecimal = speedBasicDecimal
 {
 var layer = layer
 super.process(layer)
-gravityUtil!!.process(this.getVelocityProperties())
+this.gravityUtil!!.process(this.getVelocityProperties())
 }
 
 

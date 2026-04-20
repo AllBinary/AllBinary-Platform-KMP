@@ -46,7 +46,7 @@ private constructor ()
     open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
-list.clear()
+this.list.clear()
 }
 
 
@@ -70,7 +70,7 @@ list.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayListUtil!!.getRandom(list) as AllBinaryLayerFactoryInterface
+                        return this.basicArrayListUtil!!.getRandom(this.list) as AllBinaryLayerFactoryInterface
 }
 
 
@@ -78,7 +78,7 @@ list.clear()
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
-list.add(layerInterfaceFactoryInterface)
+this.list.add(layerInterfaceFactoryInterface)
 }
 
 

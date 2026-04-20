@@ -75,7 +75,7 @@ public constructor (name: String, childNameList: BasicArrayList){
     //var name = name
     //var childNameList = childNameList
 this.logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
-displayInfoSingleton!!.update(this, canvasStrings!!.CONSTRUCTOR)
+this.displayInfoSingleton!!.update(this, canvasStrings!!.CONSTRUCTOR)
 this.name= name
 this.childNameList= childNameList
 this.commandStack= Stack()
@@ -87,7 +87,7 @@ this.commandStack= Stack()
 {
 var mode = mode
 super.setFullScreenMode(mode)
-displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
+this.displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
 }
 
 
@@ -96,7 +96,7 @@ displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
 {
 var w = w
 var h = h
-displayInfoSingleton!!.update(this, canvasStrings!!.SIZE_CHANGED)
+this.displayInfoSingleton!!.update(this, canvasStrings!!.SIZE_CHANGED)
 }
 
 
@@ -134,7 +134,7 @@ var command = command
                         if(!this.commandStack!!.contains(command))
                         
                                     {
-                                    commandStack!!.push(command)
+                                    this.commandStack!!.push(command)
 super.addCommand(command)
 
                                     }
@@ -147,7 +147,7 @@ super.addCommand(command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
-commandStack!!.removeElement(command)
+this.commandStack!!.removeElement(command)
 super.removeCommand(command)
 }
 
@@ -157,7 +157,7 @@ super.removeCommand(command)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var size: Int = commandStack!!.size!!
+    var size: Int = this.commandStack!!.size!!
 
 
 
@@ -166,7 +166,7 @@ super.removeCommand(command)
                         for (index in 0 until size)
 
         {
-super.removeCommand(commandStack!!.pop() as Command)
+super.removeCommand(this.commandStack!!.pop() as Command)
 }
 
 }
@@ -179,7 +179,7 @@ super.removeCommand(commandStack!!.pop() as Command)
 {
 var l = l
 super.setCommandListener(l)
-listener= l
+this.listener= l
 }
 
 
@@ -217,7 +217,7 @@ this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
     open fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, canvasStrings!!.PAUSE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, canvasStrings!!.PAUSE)
 this.removePauseCommand()
 this.addCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.setPaused(true)
@@ -228,7 +228,7 @@ this.setPaused(true)
     open fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
 this.removeCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.addCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 this.setPaused(false)
@@ -240,7 +240,7 @@ this.setPaused(false)
     open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-displayInfoSingleton!!.process()
+this.displayInfoSingleton!!.process()
 }
 
 
@@ -316,7 +316,7 @@ var deviceId = deviceId
 {
 var x = x
 var y = y
-touchME!!.pointerDragged(x, y)
+this.touchME!!.pointerDragged(x, y)
 }
 
 
@@ -325,7 +325,7 @@ touchME!!.pointerDragged(x, y)
 {
 var x = x
 var y = y
-touchME!!.pointerPressed(x, y)
+this.touchME!!.pointerPressed(x, y)
 }
 
 
@@ -334,7 +334,7 @@ touchME!!.pointerPressed(x, y)
 {
 var x = x
 var y = y
-touchME!!.pointerReleased(x, y)
+this.touchME!!.pointerReleased(x, y)
 }
 
 

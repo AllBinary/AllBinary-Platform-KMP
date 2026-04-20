@@ -116,9 +116,9 @@ public constructor (musicServiceClass: KClass<*>, songList: BasicArrayList)
         {
     //var musicServiceClass = musicServiceClass
     //var songList = songList
-PreLogUtil.put(commonStateStrings!!.CONTEXT +resourceUtil!!.getContext(), this, commonStrings!!.CONSTRUCTOR)
+PreLogUtil.put(this.commonStateStrings!!.CONTEXT +this.resourceUtil!!.getContext(), this, commonStrings!!.CONSTRUCTOR)
 this.musicServiceClass= musicServiceClass
-currentIntent= Intent(resourceUtil!!.getContext(), musicServiceClass::class.java)
+this.currentIntent= Intent(this.resourceUtil!!.getContext(), musicServiceClass::class.java)
 this.songList= songList
 }
 
@@ -172,7 +172,7 @@ this.timeDelayHelper!!.delay= 0
                                 
 
     
-                        if(this.timeDelayHelper!!.isTime(gameTickTimeDelayHelper!!.startTime))
+                        if(this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
                         
                                     {
                                     this.startNewSong()
@@ -186,12 +186,12 @@ this.timeDelayHelper!!.delay= 0
                                 
 
     
-                        if(timeDelayHelper2!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
+                        if(this.timeDelayHelper2!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
                         
                                     {
                                     
     
-                        if(androidServicesUtil!!.isServiceRunning(this.musicServiceClass!!.toString()!!))
+                        if(this.androidServicesUtil!!.isServiceRunning(this.musicServiceClass!!.toString()!!))
                         
                                     {
                                     
@@ -225,7 +225,7 @@ this.timeDelayHelper!!.delay= 0
     var duration: Long = sound.getDuration().toLong()
 
 PreLogUtil.put(StringBuilder().
-                            append(PLAY)!!.append(sound.getResource())!!.append(FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(this.PLAY)!!.append(sound.getResource())!!.append(this.FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
 }
 
 }
@@ -242,7 +242,7 @@ PreLogUtil.put(StringBuilder().
                         if(this.nextSongSound == NoSound.getInstance())
                         
                                     {
-                                    this.currentSongSound= basicArrayListUtil!!.getRandom(this.songList) as Sound
+                                    this.currentSongSound= this.basicArrayListUtil!!.getRandom(this.songList) as Sound
 
                                     }
                                 
@@ -256,11 +256,11 @@ this.nextSongSound= NoSound.getInstance()
     var duration: Long = this.currentSongSound!!.getDuration().toLong()
 
 PreLogUtil.put(StringBuilder().
-                            append(PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(this.PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(this.FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
 this.timeDelayHelper!!.delay= duration.toInt()
-this.currentIntent!!.putExtra(musicStrings!!.SONG_EXTRA, this.resourceUtil!!.getResourceId(this.currentSongSound!!.getResource())!!.toInt())
-this.currentIntent!!.putExtra(musicStrings!!.LEFT_VOLUME, leftVolume)
-this.currentIntent!!.putExtra(musicStrings!!.RIGHT_VOLUME, rightVolume)
+this.currentIntent!!.putExtra(this.musicStrings!!.SONG_EXTRA, this.resourceUtil!!.getResourceId(this.currentSongSound!!.getResource())!!.toInt())
+this.currentIntent!!.putExtra(this.musicStrings!!.LEFT_VOLUME, leftVolume)
+this.currentIntent!!.putExtra(this.musicStrings!!.RIGHT_VOLUME, rightVolume)
 this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
 } catch(e: Exception)
             {
@@ -269,12 +269,12 @@ this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
 
 
     
-                        if(currentSongSound != 
+                        if(this.currentSongSound != 
                                     null
                                 )
                         
                                     {
-                                    resource= currentSongSound!!.getResource()
+                                    resource= this.currentSongSound!!.getResource()
 
                                     }
                                 

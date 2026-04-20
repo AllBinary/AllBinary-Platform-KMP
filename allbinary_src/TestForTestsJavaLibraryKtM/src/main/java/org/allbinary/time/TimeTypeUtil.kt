@@ -81,10 +81,10 @@ companion object {
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return if(isNight()) {
                             
-                            NIGHT
+                            this.NIGHT
                         
                             } else {
-                            DAY
+                            this.DAY
                             }
     
 }
@@ -131,10 +131,10 @@ var timeInMillis = timeInMillis
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return if(isNight(timeInMillis)) {
                             
-                            NIGHT
+                            this.NIGHT
                         
                             } else {
-                            DAY
+                            this.DAY
                             }
     
 }

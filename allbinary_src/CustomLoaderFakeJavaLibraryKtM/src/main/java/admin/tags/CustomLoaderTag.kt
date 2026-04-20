@@ -108,14 +108,14 @@ URLGLOBALS.init(urlGlobals)
                                 
 
     
-                        if(command != 
+                        if(this.command != 
                                     null
                                 )
                         
                                     {
                                     
     
-                        if(command.compareTo(GLOBALS2.SET) == 0)
+                        if(this.command.compareTo(GLOBALS2.SET) == 0)
                         
                                     {
                                     this.setCustomLoaderWebappPath()

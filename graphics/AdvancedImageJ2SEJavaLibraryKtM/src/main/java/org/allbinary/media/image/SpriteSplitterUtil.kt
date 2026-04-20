@@ -111,7 +111,7 @@ bufferedImage= bufferedImageArray[index]!!
 this.logUtil!!.putF(spriteType, this, commonStrings!!.RUN)
 
     
-                        if(spriteType == HORIZONTAL_SPRITE)
+                        if(spriteType == this.HORIZONTAL_SPRITE)
                         
                                     {
                                     
@@ -171,7 +171,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                                     }
                                 
 nameEnding= StringMaker().
-                            appendint(index2)!!.append(commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()
+                            appendint(index2)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()
 visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
 }
 
@@ -207,7 +207,7 @@ y= cellHeight *index2
         {
 tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().
-                            appendint(index2)!!.append(commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(_ROW)!!.toString()
+                            appendint(index2)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(this._ROW)!!.toString()
 }
 
 
@@ -288,7 +288,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                                     }
                                 
 nameEnding= StringMaker().
-                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()
+                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()
 visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
 }
 
@@ -324,7 +324,7 @@ y= cellHeight *index2
         {
 tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().
-                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(_ROW)!!.toString()
+                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(this.commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(this._ROW)!!.toString()
 }
 
 

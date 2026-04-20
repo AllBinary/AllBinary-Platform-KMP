@@ -90,8 +90,8 @@ var ownerAdvancedRTSGameLayer = ownerAdvancedRTSGameLayer
 
     var waypointLayer: RTSLayer = list.get(index) as RTSLayer
 
-WAYPOINT_EVENT.setRtsLayer(waypointLayer)
-unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)
+this.WAYPOINT_EVENT.setRtsLayer(waypointLayer)
+unitWaypointBehavior!!.onWaypointEvent(this.WAYPOINT_EVENT)
 }
 
 
@@ -102,8 +102,8 @@ unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)
                         if(waypointLayer != NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
                         
                                     {
-                                    WAYPOINT_EVENT.setRtsLayer(waypointLayer)
-unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)
+                                    this.WAYPOINT_EVENT.setRtsLayer(waypointLayer)
+unitWaypointBehavior!!.onWaypointEvent(this.WAYPOINT_EVENT)
 
                                     }
                                 

@@ -148,7 +148,7 @@ this.isMultipleSelect= value
     var result: String = stringUtil!!.EMPTY_STRING
 
 
-    var optionsArray: Array<Any?> = options.toArray()!!
+    var optionsArray: Array<Any?> = this.options.toArray()!!
 
 
     var optionsSize: Int = optionsArray!!.size
@@ -171,10 +171,10 @@ this.isMultipleSelect= value
                                  && value.compareTo(stringUtil!!.EMPTY_STRING) != 0)
                         
                                     {
-                                    result += STARTOPTION
-result += END
+                                    result += this.STARTOPTION
+result += this.END
 result += value
-result += ENDOPTION
+result += this.ENDOPTION
 
                                     }
                                 
@@ -204,13 +204,13 @@ result += ENDOPTION
     var attributeSize: Int = attributeKeys!!.size
                 
 
-result= before
-result += STARTSELECT
-result += NAME
-result += name
+result= this.before
+result += this.STARTSELECT
+result += this.NAME
+result += this.name
 result += "\" "
-result += SIZE
-result += size
+result += this.SIZE
+result += this.size
 result += "\" "
 
 
@@ -244,11 +244,11 @@ result += "\" "
 
     
                         if(this.isMultiple())
-                        result += " " +multiple +" "
-result += END
+                        result += " " +this.multiple +" "
+result += this.END
 result += getOptions()
-result += ENDSELECT
-result += after
+result += this.ENDSELECT
+result += this.after
 
 
 

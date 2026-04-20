@@ -101,7 +101,7 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
 
 
-                        for (index in 0 until total)
+                        for (index in 0 until this.total)
 
         {
 weaponLayer= weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), 0, (minAngle +increment).toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)

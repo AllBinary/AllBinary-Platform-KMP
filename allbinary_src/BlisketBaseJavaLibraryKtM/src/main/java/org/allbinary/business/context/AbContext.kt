@@ -70,7 +70,7 @@ this.pageContext= pageContext
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return WeblisketSession(propertiesHashMap, pageContext)
+                        return WeblisketSession(this.propertiesHashMap, pageContext)
 }
 
 

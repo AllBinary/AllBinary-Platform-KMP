@@ -58,7 +58,7 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-EVENT_POOL.init(TerrainEventFactory())
+this.EVENT_POOL.init(TerrainEventFactory())
 }
 
 
@@ -70,7 +70,7 @@ EVENT_POOL.init(TerrainEventFactory())
 : TerrainEvent{
 var basicTerrainInfo = basicTerrainInfo
 
-    var trackingEvent: TerrainEvent = EVENT_POOL.getNextInstance() as TerrainEvent
+    var trackingEvent: TerrainEvent = this.EVENT_POOL.getNextInstance() as TerrainEvent
 
 trackingEvent!!.setBasicTerrainInfoForCircularStaticPool(basicTerrainInfo)
 

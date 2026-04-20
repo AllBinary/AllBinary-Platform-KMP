@@ -96,7 +96,7 @@ var response = response
                                     }
                                 
 
-    var beginIndex: Int = requestPath!!.indexOf(DOWNLOAD)!!
+    var beginIndex: Int = requestPath!!.indexOf(this.DOWNLOAD)!!
 
 
     var filePath: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -106,7 +106,7 @@ var response = response
                         if(beginIndex >= 0)
                         
                                     {
-                                    filePath= requestPath!!.substring(beginIndex +DOWNLOAD.length)
+                                    filePath= requestPath!!.substring(beginIndex +this.DOWNLOAD.length)
 
                                     }
                                 
@@ -165,7 +165,7 @@ var response = response
                                     }
                                 
 response.reset()
-response.setBufferSize(DEFAULT_BUFFER_SIZE)
+response.setBufferSize(this.DEFAULT_BUFFER_SIZE)
 response.setContentType(contentType)
 response.setHeader("Content-Length", file.length.concatToString()
 

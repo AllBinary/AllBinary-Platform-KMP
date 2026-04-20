@@ -101,7 +101,7 @@ originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
 
                         }
                             
-imageJ2SERotationUtil!!.rotateImage(originalAwtImage, newBufferedImage, totalAngle)
+this.imageJ2SERotationUtil!!.rotateImage(originalAwtImage, newBufferedImage, totalAngle)
 
                                     }
                                 
@@ -160,7 +160,7 @@ originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
     var newBufferedImage: BufferedImage = j2seImage!!.getImage() as BufferedImage
 
 
-    var bufferedImage: BufferedImage = imageJ2SERotationUtil!!.getRotatedImage(originalAwtImage, newBufferedImage, rotationInDegrees)!!
+    var bufferedImage: BufferedImage = this.imageJ2SERotationUtil!!.getRotatedImage(originalAwtImage, newBufferedImage, rotationInDegrees)!!
 
 
 

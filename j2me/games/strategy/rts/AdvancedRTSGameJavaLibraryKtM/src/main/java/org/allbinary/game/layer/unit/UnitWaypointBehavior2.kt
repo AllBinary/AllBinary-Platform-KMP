@@ -295,7 +295,7 @@ this.processTargetList()
 {
 var layerInterface = layerInterface
 
-    var anotherTargetDistance: Int = layerDistanceUtil!!.getDistance(this.associatedAdvancedRTSGameLayer, layerInterface)!!
+    var anotherTargetDistance: Int = this.layerDistanceUtil!!.getDistance(this.associatedAdvancedRTSGameLayer, layerInterface)!!
 
 
     
@@ -618,9 +618,9 @@ this.setWaypointPath(targetLayer)
                                     {
                                     this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.wander(this.associatedAdvancedRTSGameLayer)
 this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.WANDERING, this.basicColorFactory!!.RED)
-wanderPathsList!!.clear()
-wanderPathsList!!.add(this.associatedAdvancedRTSGameLayer!!.getSurroundingGeographicMapCellPositionList())
-this.setRandomGeographicMapCellHistory(wanderPathsList)
+this.wanderPathsList!!.clear()
+this.wanderPathsList!!.add(this.associatedAdvancedRTSGameLayer!!.getSurroundingGeographicMapCellPositionList())
+this.setRandomGeographicMapCellHistory(this.wanderPathsList)
 
                                     }
                                 

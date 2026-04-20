@@ -137,7 +137,7 @@ var exception = exception
 
         try {
             
-    var data: String = logFormatUtil!!.get(specialMessage, anyType!!::class.toString()!!, functionName, exception)!!
+    var data: String = this.logFormatUtil!!.get(specialMessage, anyType!!::class.toString()!!, functionName, exception)!!
 
 this.showDialog(data)
 System.out.println(data)
@@ -148,7 +148,7 @@ System.out.println(data)
                         return data
 } catch(e: Exception)
             {
-PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "put", e)
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, "put", e)
 
 
 
@@ -186,7 +186,7 @@ var exception = exception
 
         try {
             
-    var data: String = logFormatUtil!!.get(specialMessage, className, functionName, exception)!!
+    var data: String = this.logFormatUtil!!.get(specialMessage, className, functionName, exception)!!
 
 this.showDialog(data)
 System.out.println(data)
@@ -197,7 +197,7 @@ System.out.println(data)
                         return data
 } catch(e: Exception)
             {
-PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "put", e)
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, "put", e)
 
 
 

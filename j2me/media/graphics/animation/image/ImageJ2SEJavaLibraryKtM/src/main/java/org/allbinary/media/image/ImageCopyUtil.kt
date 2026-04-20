@@ -86,7 +86,7 @@ private constructor ()
 : Image{
     //var originalImage = originalImage
 
-    var image: Image = imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
+    var image: Image = this.imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
 
     
@@ -154,10 +154,10 @@ private constructor ()
                                     }
                                 
 
-    var originalBufferedImage: BufferedImage = imageUtil!!.getBufferedImage(originalImage)!!
+    var originalBufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(originalImage)!!
 
 
-    var bufferedImage: BufferedImage = imageUtil!!.createBufferedImageWithLargerCanvas(originalBufferedImage, newWidth, newHeight)!!
+    var bufferedImage: BufferedImage = this.imageUtil!!.createBufferedImageWithLargerCanvas(originalBufferedImage, newWidth, newHeight)!!
 
 
     var image: J2SEImmutableImage = J2SEImmutableImage(bufferedImage)

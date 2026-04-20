@@ -90,7 +90,7 @@ var layer = layer
 
 
     
-                        if(list != basicArrayListUtil!!.getImmutableInstance())
+                        if(list != this.basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     

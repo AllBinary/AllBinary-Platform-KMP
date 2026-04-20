@@ -98,7 +98,7 @@ buffer.write(ch)
     var decryptedString: String = decrypted.decodeToString()
 
 
-    var index: Int = decryptedString!!.indexOf(XML_START)!!
+    var index: Int = decryptedString!!.indexOf(this.XML_START)!!
 
 
     

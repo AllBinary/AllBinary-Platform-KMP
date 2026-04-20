@@ -64,9 +64,9 @@ public constructor ()
 var value = value
 
         try {
-            newFile!!.createNewFile()
+            this.newFile!!.createNewFile()
 
-    var idData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(newFile)!!
+    var idData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(this.newFile)!!
 
 idData!!.writeLong(value)
 } catch(e: Exception)
@@ -96,7 +96,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 {
 var filePathName = filePathName
 var name = name
-newFile= AbFile(filePathName)
+this.newFile= AbFile(filePathName)
 }
 
 
@@ -122,14 +122,14 @@ newFile= AbFile(filePathName)
     var idFile: AbFileInputStream = AbFileInputStream(this.newFile)
 
 idData= AbDataInputStream(idFile)
-id= idData!!.readLong()
+this.id= idData!!.readLong()
 
     var idOutFile: AbFileOutputStream = AbFileOutputStream(this.newFile)
 
 idOutData= AbDataOutputStream(idOutFile)
-idOutData!!.writeLong(id +1)
+idOutData!!.writeLong(this.id +1)
 
-    var idLong: Long = id as Long
+    var idLong: Long = this.id as Long
 
 
 

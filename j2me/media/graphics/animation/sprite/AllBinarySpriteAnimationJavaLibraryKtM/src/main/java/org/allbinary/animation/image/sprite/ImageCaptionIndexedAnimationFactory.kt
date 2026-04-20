@@ -132,7 +132,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
     var animationInterface: Animation = ImageAnimation(scaledImage, this.animationBehaviorFactory!!.getOrCreateInstance())
 
 
-    var sprite: Sprite = animationFactorySpriteScaleUtil!!.createImage(this.spriteMovieImage, this.frameWidth, this.frameHeight, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
+    var sprite: Sprite = this.animationFactorySpriteScaleUtil!!.createImage(this.spriteMovieImage, this.frameWidth, this.frameHeight, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
 
 
     var movieIndexedAnimationInterface: IndexedAnimation = SpriteIndexedAnimation(sprite, this.spriteMovieImage, this.animationBehaviorFactory!!.getOrCreateInstance())
@@ -158,7 +158,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CaptionIndexedAnimation(animationInterface, movieIndexedAnimationInterface, player, this.captionDx, this.captionDy, dx, dy, time, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return CaptionIndexedAnimation(animationInterface, movieIndexedAnimationInterface, player, this.captionDx, this.captionDy, this.dx, this.dy, this.time, this.animationBehaviorFactory!!.getOrCreateInstance())
 }
 
 

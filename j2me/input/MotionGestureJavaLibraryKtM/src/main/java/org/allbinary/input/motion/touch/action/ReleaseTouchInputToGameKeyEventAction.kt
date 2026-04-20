@@ -63,7 +63,7 @@ private constructor ()
                     
 
         try {
-            this.setGameKey(NONE)
+            this.setGameKey(this.NONE)
 this.setGameKeyEvent(GameKeyEventFactory.getInstance()!!.getInstance(this, NONE))
 } catch(e: Exception)
             {

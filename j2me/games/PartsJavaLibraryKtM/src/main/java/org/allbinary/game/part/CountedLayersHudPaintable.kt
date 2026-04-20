@@ -77,11 +77,11 @@ this.dropSize= dropSize
 {
 var graphics = graphics
 
-    var height: Int = myFont!!.DEFAULT_CHAR_HEIGHT
+    var height: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
 
 
     
-                        if(this.dropSize > myFont!!.DEFAULT_CHAR_HEIGHT)
+                        if(this.dropSize > this.myFont!!.DEFAULT_CHAR_HEIGHT)
                         
                                     {
                                     height= this.dropSize
@@ -101,7 +101,7 @@ var graphics = graphics
     var y: Int= 0
 
 
-    var size: Int = partInterfaceArray!!.size
+    var size: Int = this.partInterfaceArray!!.size
                 
 
 
@@ -120,10 +120,10 @@ var graphics = graphics
 
 
 
-                        for (index in startIndex until size)
+                        for (index in this.startIndex until size)
 
         {
-countedLayerInterfaceFactory= partInterfaceArray[index]!! as CountedLayerInterfaceFactoryPart
+countedLayerInterfaceFactory= this.partInterfaceArray[index]!! as CountedLayerInterfaceFactoryPart
 
     
                         if(countedLayerInterfaceFactory!!.getTotal() > 0)
@@ -134,7 +134,7 @@ layerInterface= pickedUpLayerInterfaceFactoryInterface!!.getIconLayer()
 y= 40 +(count *height)
 layerInterface!!.setPosition(widthEdge, y, layerInterface!!.getZP())
 layerInterface!!.paint(graphics)
-graphics.setColor(countedTotalStringColor)
+graphics.setColor(this.countedTotalStringColor)
 charArray= countedLayerInterfaceFactory!!.getTotalString()
 graphics.drawChars(charArray, 0, charArray!!.size, widthEdge -countedLayerInterfaceFactory!!.getXOffset(), y, 0)
 count++
@@ -148,7 +148,7 @@ count++
                         if(count > 0)
                         
                                     {
-                                    graphics.setColor(countedPartsBorder)
+                                    graphics.setColor(this.countedPartsBorder)
 graphics.drawRect(lastWidth -(XXStringWidth +this.dropSize), 40, XXStringWidth +this.dropSize, (count *height) +3)
 
                                     }

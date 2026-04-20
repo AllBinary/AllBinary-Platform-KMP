@@ -73,10 +73,10 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
         //nullable = true from not(false or (false and true)) = true
 : Array<Array<Paintable?>?>{
 
-    var totalColumns: Int = touchButtonLocationHelper!!.getTotalColumns()!!
+    var totalColumns: Int = this.touchButtonLocationHelper!!.getTotalColumns()!!
 
 
-    var totalRows: Int = touchButtonLocationHelper!!.getTotalRows()!!
+    var totalRows: Int = this.touchButtonLocationHelper!!.getTotalRows()!!
 
 
     var paintableTable: Array<Array<Paintable?>?> = Array(totalColumns) { arrayOfNulls<Paintable?>(totalRows) }
@@ -102,7 +102,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
                         for (rowIndex in totalRows -1 downTo 0)
 
         {
-paintableTable[index]!![rowIndex]= TouchButton(BasicTouchInputFactory.getInstance()!!.NONE, TouchButtonBlankResource.getInstance(), commonButtons!!.NORMAL_BUTTON, cellPositionFactory!!.getInstance(index, rowIndex), this.touchButtonLocationHelper!!.getColumnsRemainderHalf(), this.touchButtonLocationHelper!!.getRowsRemainderHalf())
+this.paintableTable[index]!![rowIndex]= TouchButton(BasicTouchInputFactory.getInstance()!!.NONE, TouchButtonBlankResource.getInstance(), commonButtons!!.NORMAL_BUTTON, cellPositionFactory!!.getInstance(index, rowIndex), this.touchButtonLocationHelper!!.getColumnsRemainderHalf(), this.touchButtonLocationHelper!!.getRowsRemainderHalf())
 }
 
 }
@@ -120,10 +120,10 @@ paintableTable[index]!![rowIndex]= TouchButton(BasicTouchInputFactory.getInstanc
 {
 var graphics = graphics
 
-    var totalColumns: Int = touchButtonLocationHelper!!.getTotalColumns()!!
+    var totalColumns: Int = this.touchButtonLocationHelper!!.getTotalColumns()!!
 
 
-    var totalRows: Int = touchButtonLocationHelper!!.getTotalRows()!!
+    var totalRows: Int = this.touchButtonLocationHelper!!.getTotalRows()!!
 
 
 
@@ -139,7 +139,7 @@ var graphics = graphics
                         for (rowIndex in totalRows -1 downTo 0)
 
         {
-paintableTable[index]!![rowIndex]!!.paint(graphics)
+this.paintableTable[index]!![rowIndex]!!.paint(graphics)
 }
 
 }

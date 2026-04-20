@@ -95,8 +95,8 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= request.getParameter(OrderData.ID)
-this.groupId= request.getParameter(ShippingMethodData.GROUP)
+this.id= this.request.getParameter(OrderData.ID)
+this.groupId= this.request.getParameter(ShippingMethodData.GROUP)
 
     
                         if(this.newStatus == 
@@ -104,7 +104,7 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
                                 )
                         
                                     {
-                                    this.newStatus= request.getParameter(OrderHistoryData.STATUS)
+                                    this.newStatus= this.request.getParameter(OrderHistoryData.STATUS)
 
                                     }
                                 
@@ -120,7 +120,7 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
     var success: String = "Status successfully set to: " +this.status
 
 
-    var orderReviewInterface: OrderHistoryInterface = OrderHistoryFactory.getInstance(id)!!
+    var orderReviewInterface: OrderHistoryInterface = OrderHistoryFactory.getInstance(this.id)!!
 
 
     var status: String = orderReviewInterface!!.getStatus()!!
@@ -134,7 +134,7 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "Order " +id +" Already Cancelled<br/>"
+                        return "Order " +this.id +" Already Cancelled<br/>"
 
                                     }
                                 
@@ -147,7 +147,7 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "Order " +id +" Already Shipped. You can't cancel a shipped order.<br/>"
+                        return "Order " +this.id +" Already Shipped. You can't cancel a shipped order.<br/>"
 
                                     }
                                 
@@ -160,7 +160,7 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "Order " +id +" has been cancelled.<br/>"
+                        return "Order " +this.id +" has been cancelled.<br/>"
 
                                     }
                                 
@@ -173,7 +173,7 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "Order " +id +" Partially Shipped. You can cancel unshipped items, but not the whole order.<br/>"
+                        return "Order " +this.id +" Partially Shipped. You can cancel unshipped items, but not the whole order.<br/>"
 
                                     }
                                 
@@ -185,12 +185,12 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
                                     
     var orderHistoryEntityInterface: OrderHistoryEntityInterface = OrderHistoryEntityFactory.getInstance()!!
 
-orderHistoryEntityInterface!!.setStatus(id, this.newStatus)
+orderHistoryEntityInterface!!.setStatus(this.id, this.newStatus)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "Order " +id +" has been cancelled.<br/>"
+                        return "Order " +this.id +" has been cancelled.<br/>"
 
                                     }
                                 

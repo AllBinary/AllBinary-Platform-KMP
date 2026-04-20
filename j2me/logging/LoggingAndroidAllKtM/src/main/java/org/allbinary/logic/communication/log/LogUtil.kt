@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.TsUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
@@ -46,7 +47,7 @@ import org.allbinary.string.CommonSeps
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogUtil.instance
 }
 
 
@@ -101,15 +102,15 @@ this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OB
 var functionName = functionName
 var exception = exception
 
-    var className: String = LABEL
+    var className: String = this.LABEL
 
 className= StringMaker().
-                            append(anyType!!::class.toString()!!)!!.append(commonSeps!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
+                            append(anyType!!::class.toString()!!)!!.append(this.commonSeps!!.COLON)!!.append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(anyType)))!!.toString().toCharArray().concatToString()
                                 
 
-    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
-android.util.Log.i(LABEL, message)
+android.util.Log.i(this.LABEL, message)
 }
 
 

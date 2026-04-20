@@ -89,19 +89,19 @@ var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, this.METHOD_ADD_USERS)
-userDbInitInfo= UserDbInitInfo()
-inventoryDbInitInfo= InventoryDbInitInfo()
-historyDbInitInfo= HistoryDbInitInfo()
-staticpagesDbInitInfo= StaticPagesDbInitInfo()
-logDbInitInfo= LogDbInitInfo()
+this.userDbInitInfo= UserDbInitInfo()
+this.inventoryDbInitInfo= InventoryDbInitInfo()
+this.historyDbInitInfo= HistoryDbInitInfo()
+this.staticpagesDbInitInfo= StaticPagesDbInitInfo()
+this.logDbInitInfo= LogDbInitInfo()
 
-    var CUSTOMERDB: String = userDbInitInfo!!.getName()!!
-
-
-    var CUSTOMERDBUSER: String = userDbInitInfo!!.getUserName()!!
+    var CUSTOMERDB: String = this.userDbInitInfo!!.getName()!!
 
 
-    var CUSTOMERDBPASSWORD: String = userDbInitInfo!!.getPassword()!!
+    var CUSTOMERDBUSER: String = this.userDbInitInfo!!.getUserName()!!
+
+
+    var CUSTOMERDBPASSWORD: String = this.userDbInitInfo!!.getPassword()!!
 
 
     
@@ -118,13 +118,13 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var INVENTORYDB: String = inventoryDbInitInfo!!.getName()!!
+    var INVENTORYDB: String = this.inventoryDbInitInfo!!.getName()!!
 
 
-    var INVENTORYDBUSER: String = inventoryDbInitInfo!!.getUserName()!!
+    var INVENTORYDBUSER: String = this.inventoryDbInitInfo!!.getUserName()!!
 
 
-    var INVENTORYDBPASSWORD: String = inventoryDbInitInfo!!.getPassword()!!
+    var INVENTORYDBPASSWORD: String = this.inventoryDbInitInfo!!.getPassword()!!
 
 
     
@@ -141,13 +141,13 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var HISTORYDB: String = historyDbInitInfo!!.getName()!!
+    var HISTORYDB: String = this.historyDbInitInfo!!.getName()!!
 
 
-    var HISTORYDBUSER: String = historyDbInitInfo!!.getUserName()!!
+    var HISTORYDBUSER: String = this.historyDbInitInfo!!.getUserName()!!
 
 
-    var HISTORYDBPASSWORD: String = historyDbInitInfo!!.getPassword()!!
+    var HISTORYDBPASSWORD: String = this.historyDbInitInfo!!.getPassword()!!
 
 
     
@@ -164,13 +164,13 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var STATICPAGESDB: String = staticpagesDbInitInfo!!.getName()!!
+    var STATICPAGESDB: String = this.staticpagesDbInitInfo!!.getName()!!
 
 
-    var STATICPAGESDBUSER: String = staticpagesDbInitInfo!!.getUserName()!!
+    var STATICPAGESDBUSER: String = this.staticpagesDbInitInfo!!.getUserName()!!
 
 
-    var STATICPAGESDBPASSWORD: String = staticpagesDbInitInfo!!.getPassword()!!
+    var STATICPAGESDBPASSWORD: String = this.staticpagesDbInitInfo!!.getPassword()!!
 
 
     
@@ -187,13 +187,13 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var LOGDB: String = logDbInitInfo!!.getName()!!
+    var LOGDB: String = this.logDbInitInfo!!.getName()!!
 
 
-    var LOGDBUSER: String = logDbInitInfo!!.getUserName()!!
+    var LOGDBUSER: String = this.logDbInitInfo!!.getUserName()!!
 
 
-    var LOGDBPASSWORD: String = logDbInitInfo!!.getPassword()!!
+    var LOGDBPASSWORD: String = this.logDbInitInfo!!.getPassword()!!
 
 
     
@@ -234,13 +234,13 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_USERS, 
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, this.METHOD_ADD_DATABASES)
-userDbInitInfo= UserDbInitInfo()
-inventoryDbInitInfo= InventoryDbInitInfo()
-historyDbInitInfo= HistoryDbInitInfo()
-staticpagesDbInitInfo= StaticPagesDbInitInfo()
-logDbInitInfo= LogDbInitInfo()
+this.userDbInitInfo= UserDbInitInfo()
+this.inventoryDbInitInfo= InventoryDbInitInfo()
+this.historyDbInitInfo= HistoryDbInitInfo()
+this.staticpagesDbInitInfo= StaticPagesDbInitInfo()
+this.logDbInitInfo= LogDbInitInfo()
 
-    var CUSTOMERDB: String = userDbInitInfo!!.getName()!!
+    var CUSTOMERDB: String = this.userDbInitInfo!!.getName()!!
 
 
     
@@ -257,7 +257,7 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var INVENTORYDB: String = inventoryDbInitInfo!!.getName()!!
+    var INVENTORYDB: String = this.inventoryDbInitInfo!!.getName()!!
 
 
     
@@ -274,7 +274,7 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var HISTORYDB: String = historyDbInitInfo!!.getName()!!
+    var HISTORYDB: String = this.historyDbInitInfo!!.getName()!!
 
 
     
@@ -291,7 +291,7 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var STATICPAGESDB: String = staticpagesDbInitInfo!!.getName()!!
+    var STATICPAGESDB: String = this.staticpagesDbInitInfo!!.getName()!!
 
 
     
@@ -308,7 +308,7 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var LOGDB: String = logDbInitInfo!!.getName()!!
+    var LOGDB: String = this.logDbInitInfo!!.getName()!!
 
 
     
@@ -325,7 +325,7 @@ logDbInitInfo= LogDbInitInfo()
                                     }
                                 
 
-    var file: AbFile = FileFactory.getInstance()!!.getInstance(SQL_FILE)!!
+    var file: AbFile = FileFactory.getInstance()!!.getInstance(this.SQL_FILE)!!
 
 file.createNewFile()
 

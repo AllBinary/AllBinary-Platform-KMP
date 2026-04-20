@@ -139,7 +139,7 @@ this.player.deallocate()
             this.player.prefetch()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "prefetch", e)
 }
 
 }
@@ -153,7 +153,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
             this.player.realize()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "realize", e)
 }
 
 }
@@ -191,7 +191,7 @@ var now = now
                         return this.player.setMediaTime(now)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
 
 
@@ -211,7 +211,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
         try {
             
     
-                        if(timeElapsedHelper!!.isTime(gameTickTimeDelayHelper!!.startTime))
+                        if(this.timeElapsedHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
                         
                                     {
                                     this.player.start()
@@ -234,7 +234,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD
             this.player.stop()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 }

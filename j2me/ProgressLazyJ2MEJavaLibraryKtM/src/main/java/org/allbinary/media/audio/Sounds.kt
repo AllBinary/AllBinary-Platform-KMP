@@ -68,9 +68,9 @@ this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-soundsFactoryInterface!!.init()
+this.soundsFactoryInterface!!.init()
 
-    var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
+    var soundInterfaceArray: Array<Sound?> = this.soundsFactoryInterface!!.getSoundInterfaceArray()!!
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
@@ -117,7 +117,7 @@ progressCanvas!!.addPortion(100, StringMaker().
                                 
 }
 
-soundsFactoryInterface!!.setInitialized(true)
+this.soundsFactoryInterface!!.setInitialized(true)
 this.logUtil!!.putF(commonStrings!!.END, this, commonStrings!!.INIT)
 }
 
@@ -127,9 +127,9 @@ this.logUtil!!.putF(commonStrings!!.END, this, commonStrings!!.INIT)
     open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
 
-    var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
+    var soundInterfaceArray: Array<Sound?> = this.soundsFactoryInterface!!.getSoundInterfaceArray()!!
 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
@@ -177,9 +177,9 @@ progressCanvas!!.addPortion(100, this.soundStrings!!.STOPPING_SOUND, index)
     open fun closeAll()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
 
-    var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
+    var soundInterfaceArray: Array<Sound?> = this.soundsFactoryInterface!!.getSoundInterfaceArray()!!
 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!

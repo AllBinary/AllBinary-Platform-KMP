@@ -269,7 +269,7 @@ var renderer = renderer
 {
 
     
-                        if(firstTime)
+                        if(this.firstTime)
                         
                                     {
                                     
@@ -279,12 +279,12 @@ var renderer = renderer
     var abCanvas: AllBinaryGameCanvas = abToGBUtil!!.abCanvas as AllBinaryGameCanvas
 
 
-        while(loadNowList!!.isEmpty() && (!abCanvas!!.isInitialized() || (abCanvas!!.isInitialized() && this.hasAnyLazyAnimationFactories)) && !this.progressEnded)
+        while(this.loadNowList!!.isEmpty() && (!abCanvas!!.isInitialized() || (abCanvas!!.isInitialized() && this.hasAnyLazyAnimationFactories)) && !this.progressEnded)
         {
 Thread.sleep(120)
 }
 
-firstTime= false
+this.firstTime= false
 
                                     }
                                 
@@ -306,19 +306,19 @@ firstTime= false
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
 
     
-                        if(loadNowList!!.isEmpty())
+                        if(this.loadNowList!!.isEmpty())
                         
                                     {
                                     this.endProcessor!!.process()
 
     
-                        if(loadSoonList!!.isEmpty())
+                        if(this.loadSoonList!!.isEmpty())
                         
                                     {
                                     
@@ -328,7 +328,7 @@ firstTime= false
                                     {
                                     
     
-                        if(firstTime)
+                        if(this.firstTime)
                         
                                     {
                                     
@@ -362,7 +362,7 @@ firstTime= false
                         if(this.loadImageForAnimation(lazyImageRotationAnimation))
                         
                                     {
-                                    loadAfterList!!.remove(lazyImageRotationAnimation)
+                                    this.loadAfterList!!.remove(lazyImageRotationAnimation)
 
                                     }
                                 
@@ -379,7 +379,7 @@ firstTime= false
                         if(this.loadImageForAnimation(lazyImageRotationAnimation))
                         
                                     {
-                                    loadSoonList!!.remove(lazyImageRotationAnimation)
+                                    this.loadSoonList!!.remove(lazyImageRotationAnimation)
 
                                     }
                                 
@@ -394,7 +394,7 @@ firstTime= false
 
                                     }
                                 
-lazyImageRotationAnimation= loadNowList!!.get(0) as LazyImageRotationAnimation
+lazyImageRotationAnimation= this.loadNowList!!.get(0) as LazyImageRotationAnimation
 }
 
 
@@ -405,11 +405,11 @@ lazyImageRotationAnimation= loadNowList!!.get(0) as LazyImageRotationAnimation
                                     
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
-loadNowList!!.remove(lazyImageRotationAnimation)
+this.loadNowList!!.remove(lazyImageRotationAnimation)
 }
 
 
@@ -423,7 +423,7 @@ loadNowList!!.remove(lazyImageRotationAnimation)
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
@@ -435,7 +435,7 @@ loadNowList!!.remove(lazyImageRotationAnimation)
                         if(size > 0)
                         
                                     {
-                                    loadSoonList!!.addAll(list)
+                                    this.loadSoonList!!.addAll(list)
 
                                     }
                                 
@@ -484,7 +484,7 @@ loadNowList!!.remove(lazyImageRotationAnimation)
         //nullable = true from not(false or (false and true)) = true
 {
 
-        while(!loadList!!.isEmpty() || !loadNowList!!.isEmpty())
+        while(!this.loadList!!.isEmpty() || !this.loadNowList!!.isEmpty())
         {
 loadImageForAnimations()
 loadImage()
@@ -499,7 +499,7 @@ loadImage()
         //nullable = true from not(false or (false and true)) = true
 {
 
-        while(!loadNowList!!.isEmpty())
+        while(!this.loadNowList!!.isEmpty())
         {
 loadImageForAnimation()
 }
@@ -516,7 +516,7 @@ loadImageForAnimation()
         while(!this.loadAfterList!!.isEmpty() || !this.loadNowList!!.isEmpty())
         {
 
-        while(!loadNowList!!.isEmpty())
+        while(!this.loadNowList!!.isEmpty())
         {
 loadImageForAnimation()
 }
@@ -529,7 +529,7 @@ loadImageForAnimation()
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
@@ -599,13 +599,13 @@ loadImageForAnimation()
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
 
     
-                        if(loadList!!.size() == 0)
+                        if(this.loadList!!.size() == 0)
                         
                                     {
                                     
@@ -616,7 +616,7 @@ loadImageForAnimation()
 
                                     }
                                 
-image= loadList!!.remove(0) as Image
+image= this.loadList!!.remove(0) as Image
 }
 
 this.loadImage(image)
@@ -948,11 +948,11 @@ this.runTask()
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
-loadList!!.add(image)
+this.loadList!!.add(image)
 }
 
 
@@ -989,7 +989,7 @@ loadList!!.add(image)
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
@@ -1050,7 +1050,7 @@ this.loadAfterList!!.remove(list.get(index))
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
@@ -1078,7 +1078,7 @@ this.loadAfterList!!.add(lazyImageRotationAnimation)
                             
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(lock) 
+        synchronized(this.lock) 
 
         //mutex.withLock
         {
@@ -1114,10 +1114,10 @@ this.processor.process()
 {
 
     
-                        if(firstTime)
+                        if(this.firstTime)
                         
                                     {
-                                    firstTime= false
+                                    this.firstTime= false
 
                                     }
                                 

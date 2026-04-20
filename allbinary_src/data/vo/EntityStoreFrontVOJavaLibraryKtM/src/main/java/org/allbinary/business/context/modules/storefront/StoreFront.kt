@@ -233,7 +233,7 @@ var hashMap = hashMap
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath(this.create(EMPTY_STRING, key, hashMap))
+                        return AbPath(this.create(this.EMPTY_STRING, key, hashMap))
 }
 
 
@@ -262,7 +262,7 @@ var hashMap = hashMap
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.create(EMPTY_STRING, key, hashMap)
+                        return this.create(this.EMPTY_STRING, key, hashMap)
 }
 
 
@@ -361,7 +361,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 : Boolean{
 
     
-                        if(!StringValidationUtil.getInstance()!!.isValidRequired(this.name, MINSTORENAMELENGTH, MAXCHAR))
+                        if(!StringValidationUtil.getInstance()!!.isValidRequired(this.name, MINSTORENAMELENGTH, this.MAXCHAR))
                         
                                     {
                                     
@@ -440,7 +440,7 @@ valid= this.isNameValid()
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.basketName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.basketName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -449,7 +449,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.homeHostName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.homeHostName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -458,7 +458,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.homeHostNamePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.homeHostNamePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -467,7 +467,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.hostName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.hostName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -476,7 +476,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.hostNamePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.hostNamePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -485,7 +485,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -494,7 +494,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostNamePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostNamePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -503,7 +503,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testHostName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testHostName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -512,7 +512,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testHostNamePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testHostNamePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -521,7 +521,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.imagePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.imagePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -530,7 +530,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.staticPath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -539,7 +539,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.categoryPath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.categoryPath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -548,7 +548,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.inventoryControl, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryControl, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -557,7 +557,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.subStores, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.subStores, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -566,7 +566,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.tagLocation, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.tagLocation, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -575,7 +575,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.packageLocation, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.packageLocation, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -584,7 +584,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.ftp, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.ftp, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -593,7 +593,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpPath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpPath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -602,7 +602,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpUserName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpUserName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -611,7 +611,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpPassword, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpPassword, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -620,7 +620,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtp, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtp, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -629,7 +629,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -638,7 +638,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpUserName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpUserName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -647,7 +647,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPassword, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPassword, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -687,14 +687,14 @@ valid= this.isNameValid()
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.name, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.name, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Name is invalid. Must be < ")
-stringBuffer!!.appendint(MAXCHAR)
+stringBuffer!!.appendint(this.MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
 
@@ -726,227 +726,227 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 stringBuffer!!.append(this.nameValidationInfo())
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.basketName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.basketName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     stringBuffer!!.append("Basket name is invalid. Must be < ")
-stringBuffer!!.appendint(MAXCHAR)
+stringBuffer!!.appendint(this.MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.homeHostName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.homeHostName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     stringBuffer!!.append("Home host name is invalid. Must be < ")
-stringBuffer!!.appendint(MAXCHAR)
+stringBuffer!!.appendint(this.MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.homeHostNamePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.homeHostNamePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     stringBuffer!!.append("Home host name path is invalid. Must be < ")
-stringBuffer!!.appendint(MAXCHAR)
+stringBuffer!!.appendint(this.MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.hostName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.hostName, MINCHAR, this.MAXCHAR))
                         
                                     {
                                     stringBuffer!!.append("Host name is invalid. Must be < ")
-stringBuffer!!.appendint(MAXCHAR)
+stringBuffer!!.appendint(this.MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.hostNamePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.hostNamePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
                                     stringBuffer!!.append("Host name path is invalid. Must be < ")
-stringBuffer!!.appendint(MAXCHAR)
+stringBuffer!!.appendint(this.MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostName, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Test home host name is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Test home host name is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostNamePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostNamePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Test home host name path is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Test home host name path is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testHostName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testHostName, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Test host name is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Test host name is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testHostNamePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testHostNamePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Test host name path is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Test host name path is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.imagePath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.imagePath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Image path is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Image path is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.staticPath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Static path is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Static path is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.categoryPath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.categoryPath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Category path is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Category path is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.inventoryControl, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryControl, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Inventory control is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Inventory control is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.subStores, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.subStores, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Sub stores is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Sub stores is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.tagLocation, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.tagLocation, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Tag location is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Tag location is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.packageLocation, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidRequired(this.packageLocation, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Package location is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Package location is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.ftp, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.ftp, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Ftp is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Ftp is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpPath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpPath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Ftp path is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Ftp path is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpUserName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpUserName, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Ftp username is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Ftp username is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpPassword, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.ftpPassword, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Ftp password is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Ftp password is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtp, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtp, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Test ftp is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Test ftp is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPath!!.toString(), MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPath!!.toString(), MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Test ftp Path is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Test ftp Path is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpUserName, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpUserName, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Test ftp username is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Test ftp username is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPassword, MINCHAR, MAXCHAR))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPassword, MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append("Test ftp password is invalid. Must be < " +MAXCHAR +" and > 0 characters.<br>")
+                                    stringBuffer!!.append("Test ftp password is invalid. Must be < " +this.MAXCHAR +" and > 0 characters.<br>")
 
                                     }
                                 
@@ -991,7 +991,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var location: String = EMPTY_STRING
+    var location: String = this.EMPTY_STRING
 
 
     
@@ -1019,7 +1019,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var location: String = EMPTY_STRING
+    var location: String = this.EMPTY_STRING
 
 
     
@@ -1047,7 +1047,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var location: String = EMPTY_STRING
+    var location: String = this.EMPTY_STRING
 
 
     
@@ -1075,7 +1075,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var location: String = EMPTY_STRING
+    var location: String = this.EMPTY_STRING
 
 
     
@@ -1842,7 +1842,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "install()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "install()", e)
 
                                     }
                                 

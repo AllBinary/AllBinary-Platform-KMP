@@ -70,7 +70,7 @@ private constructor (){
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
-graphics.setColor(color)
+graphics.setColor(this.color)
 
     var myFont: MyFont = MyFont.getInstance()!!
 
@@ -87,12 +87,12 @@ graphics.setColor(color)
     var font: Font = graphics.getFont()!!
 
 
-    var beginWidth: Int = (font.stringWidth(COPYRIGHT) shr 1)
+    var beginWidth: Int = (font.stringWidth(this.COPYRIGHT) shr 1)
 
 
     var COPYRIGHT_Y: Int = 2 *myFont!!.DEFAULT_CHAR_HEIGHT
 
-graphics.drawString(COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, anchor)
+graphics.drawString(this.COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, anchor)
 }
 
 
@@ -101,7 +101,7 @@ graphics.drawString(COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, ancho
 {
 var basicColor = basicColor
 this.basicColor= basicColor
-color= basicColor!!.toInt()
+this.color= basicColor!!.toInt()
 }
 
 

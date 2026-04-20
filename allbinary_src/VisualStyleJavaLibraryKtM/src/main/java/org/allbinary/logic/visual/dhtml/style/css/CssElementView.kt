@@ -87,7 +87,7 @@ var node = node
 
 this.value= DomNodeHelper.getTextNodeValue(valueNode)
 
-    var titleValueNode: Node = DomSearchHelper.getNodeNoThrow(TITLE, node.getChildNodes())!!
+    var titleValueNode: Node = DomSearchHelper.getNodeNoThrow(this.TITLE, node.getChildNodes())!!
 
 
     
@@ -109,7 +109,7 @@ this.title= stringUtil!!.EMPTY_STRING
                         }
                             
 
-    var descriptionValueNode: Node = DomSearchHelper.getNodeNoThrow(DESCRIPTION, node.getChildNodes())!!
+    var descriptionValueNode: Node = DomSearchHelper.getNodeNoThrow(this.DESCRIPTION, node.getChildNodes())!!
 
 
     
@@ -225,7 +225,7 @@ var document = document
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, CssElementData.getInstance()!!.NAME, hashMap)!!
 
 
-    var size: Int = cssPropertyVector!!.size!!
+    var size: Int = this.cssPropertyVector!!.size!!
 
 
 
@@ -235,13 +235,13 @@ var document = document
 
         {
 
-    var cssPropertyDomNodeInterface: DomNodeInterface = cssPropertyVector!!.get(index) as DomNodeInterface
+    var cssPropertyDomNodeInterface: DomNodeInterface = this.cssPropertyVector!!.get(index) as DomNodeInterface
 
 node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 }
 
 
-    var size2: Int = cssElementVector!!.size!!
+    var size2: Int = this.cssElementVector!!.size!!
 
 
 
@@ -251,7 +251,7 @@ node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 
         {
 
-    var cssElementDomNodeInterface: DomNodeInterface = cssElementVector!!.get(index) as DomNodeInterface
+    var cssElementDomNodeInterface: DomNodeInterface = this.cssElementVector!!.get(index) as DomNodeInterface
 
 node.appendChild(cssElementDomNodeInterface!!.toXmlNode(document))
 }

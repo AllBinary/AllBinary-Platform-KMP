@@ -93,7 +93,7 @@ this.gameInfo= gameInfo
 {
     //var highScoresArray = highScoresArray
 this.highScoresArray= highScoresArray
-firstTime= false
+this.firstTime= false
 this.saveHighScore()
 }
 
@@ -102,7 +102,7 @@ this.saveHighScore()
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
-HighScoreNamePersistanceSingleton.getInstance()!!.save(abeClientInformation, gameInfo, name)
+HighScoreNamePersistanceSingleton.getInstance()!!.save(this.abeClientInformation, gameInfo, name)
 this.highScore!!.setName(name)
 }
 
@@ -111,18 +111,18 @@ this.highScore!!.setName(name)
         //nullable = true from not(false or (false and true)) = true
 {
 this.logUtil!!.putF(StringMaker().
-                            append(commonStrings!!.START)!!.append(StringUtil.getInstance()!!.toString(this.highScore))!!.toString(), this, "saveHighScore")
+                            append(this.commonStrings!!.START)!!.append(StringUtil.getInstance()!!.toString(this.highScore))!!.toString(), this, "saveHighScore")
 
     var size: Int = this.highScoresArray!!.size
                 
 
 
     
-                        if(firstTime && size == 0)
+                        if(this.firstTime && size == 0)
                         
                                     {
                                     this.logUtil!!.putF("Games canvas did not give us any HighScores", this, "saveHighScore")
-highScoresFactoryInterface!!.fetchHighScores(gameInfo, this)
+this.highScoresFactoryInterface!!.fetchHighScores(this.gameInfo, this)
 
 
 
@@ -144,14 +144,14 @@ highScoresFactoryInterface!!.fetchHighScores(gameInfo, this)
                         for (index in 0 until size)
 
         {
-highScores= highScoresArray[index]!!
+highScores= this.highScoresArray[index]!!
 highScores!!.addHighScore(this.highScore)
 highScoresAsString= highScores!!.toString()
 this.logUtil!!.putF(StringMaker().
                             append("Added/Adding Score: ")!!.append(highScoresAsString)!!.toString(), this, "saveHighScore")
 }
 
-this.highScoresHelper!!.setHighScoresArray(highScoresArray)
+this.highScoresHelper!!.setHighScoresArray(this.highScoresArray)
 }
 
 

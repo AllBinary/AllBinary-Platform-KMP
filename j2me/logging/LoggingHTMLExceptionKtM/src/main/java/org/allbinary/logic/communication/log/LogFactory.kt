@@ -35,10 +35,10 @@
     /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable =  from not(true or (false and false)) = 
 : Log{
-var specialMessage = specialMessage
-var anyType = anyType
-var functionName = functionName
-var exception = exception
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
+    //var exception = exception
 
 
 
@@ -50,9 +50,9 @@ var exception = exception
     /*actual*/ open fun getInstanceF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 : Log{
-var specialMessage = specialMessage
-var anyType = anyType
-var functionName = functionName
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
 
 
 

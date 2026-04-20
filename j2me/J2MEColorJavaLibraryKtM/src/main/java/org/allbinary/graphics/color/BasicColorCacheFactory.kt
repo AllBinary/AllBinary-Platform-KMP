@@ -61,7 +61,7 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicDefaultColor = basicDefaultColor
-hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
+this.hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -71,7 +71,7 @@ hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
 : BasicColor{
     //var integer = integer
 
-    var basicColor: BasicColor = hashtable.get(integer as Object) as BasicColor
+    var basicColor: BasicColor = this.hashtable.get(integer as Object) as BasicColor
 
 
     
@@ -80,8 +80,8 @@ hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
                                 )
                         
                                     {
-                                    basicColor= BasicColor(integer.toInt())
-hashtable.put(integer, basicColor)
+                                    basicColor= BasicColorFactory.getInstance()!!.createInstance(integer.toInt())
+this.hashtable.put(integer, basicColor)
 
                                     }
                                 

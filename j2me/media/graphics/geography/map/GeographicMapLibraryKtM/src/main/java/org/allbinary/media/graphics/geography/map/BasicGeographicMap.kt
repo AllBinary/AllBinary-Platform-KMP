@@ -280,10 +280,10 @@ else -> {
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
 
-    var i_column: Int = mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
+    var i_column: Int = this.mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
 
 
-    var i_row: Int = mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
+    var i_row: Int = this.mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
 
 
 
@@ -302,10 +302,10 @@ else -> {
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
 
-    var i_column: Int = mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
+    var i_column: Int = this.mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
 
 
-    var i_row: Int = mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
+    var i_row: Int = this.mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
 
 
     
@@ -398,16 +398,16 @@ geographicMapCellPositionList!!.clear()
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
 
-    var i_columnMin: Int = mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
+    var i_columnMin: Int = this.mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
 
 
-    var i_rowMin: Int = mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
+    var i_rowMin: Int = this.mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
 
 
-    var i_columnMax: Int = mathUtil!!.abs(x2 /allBinaryTiledLayer!!.getCellHeight()) +1
+    var i_columnMax: Int = this.mathUtil!!.abs(x2 /allBinaryTiledLayer!!.getCellHeight()) +1
 
 
-    var i_rowMax: Int = mathUtil!!.abs(y2 /allBinaryTiledLayer!!.getCellWidth()) +1
+    var i_rowMax: Int = this.mathUtil!!.abs(y2 /allBinaryTiledLayer!!.getCellWidth()) +1
 
 
 

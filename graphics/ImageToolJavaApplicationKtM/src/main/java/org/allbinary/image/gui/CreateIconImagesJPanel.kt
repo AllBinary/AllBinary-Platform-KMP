@@ -234,8 +234,8 @@ this.imageProcessorInput= imageProcessorInput
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-aboveJButton= javax.swing.JButton()
-aboveJButton!!.setText("Process")
+this.aboveJButton= javax.swing.JButton()
+this.aboveJButton!!.setText("Process")
 aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 

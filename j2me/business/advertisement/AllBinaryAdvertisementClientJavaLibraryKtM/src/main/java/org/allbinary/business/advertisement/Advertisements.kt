@@ -71,7 +71,7 @@ var advertisementProcessorInterface = advertisementProcessorInterface
                         
                                     {
                                     
-    var random: Int = myRandomFactory!!.getAbsoluteNextInt(size)!!
+    var random: Int = this.myRandomFactory!!.getAbsoluteNextInt(size)!!
 
 
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.pageList!!.objectArray[random]!! as AdvertisementProcessorInterface
@@ -102,7 +102,7 @@ advertisementProcessorInterface!!.start()
                         
                                     {
                                     
-    var random: Int = myRandomFactory!!.getAbsoluteNextInt(size)!!
+    var random: Int = this.myRandomFactory!!.getAbsoluteNextInt(size)!!
 
 
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.pageList!!.objectArray[random]!! as AdvertisementProcessorInterface

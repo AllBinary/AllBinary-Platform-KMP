@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.string.StringUtil
 
 open public class BasicColor
             : Object
@@ -52,40 +51,6 @@ open public class BasicColor
     val blue: Short
 
     val alpha: Short
-
-    private val basicColorUtil: BasicColorUtil = BasicColorUtil.getInstance()!!
-public constructor (value: Int)                        
-
-                            : this(value, StringUtil.getInstance()!!.EMPTY_STRING){
-    //var value = value
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (alphaValue: Int, value: Int)                        
-
-                            : this(alphaValue, value, StringUtil.getInstance()!!.EMPTY_STRING){
-    //var alphaValue = alphaValue
-    //var value = value
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
- constructor (value: Int, name: String)                        
-
-                            : this(BasicColorUtil.getInstance()!!.ALPHA, value, name){
-    //var value = value
-    //var name = name
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
  constructor (alphaValue: Int, value: Int, name: String)
             : super()
         {
@@ -97,13 +62,16 @@ this.name= name
     var tempValue: Int= 0
 
 
+    var basicColorUtil: BasicColorUtil = BasicColorUtil.getInstance()!!
+
+
     
-                        if(this.basicColorUtil!!.isAlpha)
+                        if(basicColorUtil!!.isAlpha)
                         
                                     {
                                     
     
-                        if(this.basicColorUtil!!.ffOpaque)
+                        if(basicColorUtil!!.ffOpaque)
                         
                                     {
                                     tempValue= alphaValue or value
@@ -146,38 +114,6 @@ this.blueComponent= (blueInt.toFloat()) /255
 this.value= tempValue
 }
 
-public constructor (alphaValue: Int, r: Int, g: Int, b: Int, name: String)
-            : super()
-        {
-    //var alphaValue = alphaValue
-    //var r = r
-    //var g = g
-    //var b = b
-    //var name = name
-this.name= name
-this.alpha= alphaValue.toShort()
-this.alphaComponent= (alphaValue.toFloat()) /255
-
-    var redInt: Int = r
-
-this.red= redInt.toShort()
-this.redComponent= (redInt.toFloat()) /255
-
-    var greenInt: Int = g
-
-this.green= greenInt.toShort()
-this.greenComponent= (greenInt.toFloat()) /255
-
-    var blueInt: Int = b
-
-this.blue= blueInt.toShort()
-this.blueComponent= (blueInt.toFloat()) /255
-
-    var ALPHA_MASK: Int = 0xFF000000.toInt()
-
-this.value= ((alphaValue shl 24) and ALPHA_MASK) +((redInt shl 16) and 0x00FF0000) +((greenInt shl 8) and 0x0000FF00) +(blueInt and 0x000000FF)
-}
-
 
     open fun intValue()
         //nullable = true from not(false or (false and true)) = true
@@ -186,7 +122,7 @@ this.value= ((alphaValue shl 24) and ALPHA_MASK) +((redInt shl 16) and 0x00FF000
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return value
+                        return this.value
 }
 
 
@@ -197,7 +133,7 @@ this.value= ((alphaValue shl 24) and ALPHA_MASK) +((redInt shl 16) and 0x00FF000
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return value
+                        return this.value
 }
 
 
@@ -233,7 +169,7 @@ stringBuffer!!.appendint(this.value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -244,7 +180,7 @@ stringBuffer!!.appendint(this.value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return redComponent
+                        return this.redComponent
 }
 
 
@@ -255,7 +191,7 @@ stringBuffer!!.appendint(this.value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return greenComponent
+                        return this.greenComponent
 }
 
 
@@ -266,7 +202,7 @@ stringBuffer!!.appendint(this.value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return blueComponent
+                        return this.blueComponent
 }
 
 
@@ -277,7 +213,7 @@ stringBuffer!!.appendint(this.value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return alphaComponent
+                        return this.alphaComponent
 }
 
 

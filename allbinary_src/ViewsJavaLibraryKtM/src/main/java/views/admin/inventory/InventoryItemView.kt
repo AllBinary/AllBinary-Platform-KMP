@@ -112,7 +112,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.setRequestHashMap(MultipartRequestParams(request).
+this.setRequestHashMap(MultipartRequestParams(this.request).
                             toHashMap())
 
     var imageFileItemObject: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
@@ -187,7 +187,7 @@ downloadableItem= this.downloadableItemVector!!.get(index) as DownloadableItem
 vector.add(DownloadableItemView(downloadableItem))
 }
 
-this.addDomNodeInterface(BasicItemView(itemInterface, vector))
+this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
 }
 
 

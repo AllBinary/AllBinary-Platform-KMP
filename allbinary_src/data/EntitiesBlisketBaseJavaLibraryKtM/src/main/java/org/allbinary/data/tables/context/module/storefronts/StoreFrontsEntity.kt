@@ -49,7 +49,7 @@ public constructor ()
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setTableName(tableName)
+this.setTableName(this.tableName)
 }
 
 
@@ -189,7 +189,7 @@ super.updateWhere(StoreFrontData.getInstance()!!.NAME, updatedValues!!.get(Store
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)
-stringBuffer!!.append(tableName)
+stringBuffer!!.append(this.tableName)
 stringBuffer!!.append(this.sqlStrings!!.START)
 stringBuffer!!.append(storeFrontData!!.NAME)
 stringBuffer!!.append(this.sqlTypeStrings!!.SIXTY_CHAR_COLUMN_NOT_NULL)

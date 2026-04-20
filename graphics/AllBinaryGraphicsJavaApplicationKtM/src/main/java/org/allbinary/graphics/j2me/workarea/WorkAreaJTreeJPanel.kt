@@ -73,7 +73,7 @@ this.rootTreeNode!!.add(treeNode)
     open fun updateTree()
         //nullable = true from not(false or (false and true)) = true
 {
-this.workAreaJTree= JTree(rootTreeNode)
+this.workAreaJTree= JTree(this.rootTreeNode)
 this.workAreaJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -175,7 +175,7 @@ var treePath = treePath
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var size: Int = highlightedBasicArrayList!!.size()!!
+    var size: Int = this.highlightedBasicArrayList!!.size()!!
 
 this.logUtil!!.putF("size: " +size, this, "deselectAll")
 
@@ -186,7 +186,7 @@ this.logUtil!!.putF("size: " +size, this, "deselectAll")
 
         {
 
-    var node: DefaultMutableTreeNode = highlightedBasicArrayList!!.get(index) as DefaultMutableTreeNode
+    var node: DefaultMutableTreeNode = this.highlightedBasicArrayList!!.get(index) as DefaultMutableTreeNode
 
 MyGraphicItemEventService.fire(MyGraphicItemEvent(MyGraphicItemEventSource(MyGraphicItemEventService.DESELECT, node) as Object))
 }
@@ -201,7 +201,7 @@ this.highlightedBasicArrayList!!.clear()
         //nullable = true from not(false or (false and false)) = true
 {
 var node = node
-highlightedBasicArrayList!!.add(node)
+this.highlightedBasicArrayList!!.add(node)
 MyGraphicItemEventService.fire(MyGraphicItemEvent(MyGraphicItemEventSource(MyGraphicItemEventService.SELECT, node) as Object))
 }
 
@@ -385,11 +385,11 @@ this.workAreaJTree!!.expandPath(treePath)
         //nullable = true from not(false or (false and true)) = true
 {
 itemJPopupMenu= javax.swing.JPopupMenu()
-deleteJMenuItem= javax.swing.JMenuItem()
-copyJMenuItem= javax.swing.JMenuItem()
-rotateJMenuItem= javax.swing.JMenuItem()
-itemJScrollPane1= javax.swing.JScrollPane()
-workAreaPropertiesJPanel= javax.swing.JPanel()
+this.deleteJMenuItem= javax.swing.JMenuItem()
+this.copyJMenuItem= javax.swing.JMenuItem()
+this.rotateJMenuItem= javax.swing.JMenuItem()
+this.itemJScrollPane1= javax.swing.JScrollPane()
+this.workAreaPropertiesJPanel= javax.swing.JPanel()
 itemJPopupMenu!!.addPopupMenuListener(object: javax.swing.event.PopupMenuListener()
                                 {
                                 
@@ -415,7 +415,7 @@ itemJPopupMenuPopupMenuWillBecomeVisible(evt)
 
                                 }
                             )
-deleteJMenuItem!!.setText("Delete")
+this.deleteJMenuItem!!.setText("Delete")
 deleteJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -428,8 +428,8 @@ deleteJMenuItemMousePressed(evt)
 
                                 }
                             )
-itemJPopupMenu!!.add(deleteJMenuItem)
-copyJMenuItem!!.setText("Copy")
+this.itemJPopupMenu!!.add(this.deleteJMenuItem)
+this.copyJMenuItem!!.setText("Copy")
 copyJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -442,8 +442,8 @@ copyJMenuItemMousePressed(evt)
 
                                 }
                             )
-itemJPopupMenu!!.add(copyJMenuItem)
-rotateJMenuItem!!.setText("Rotate 45*")
+this.itemJPopupMenu!!.add(this.copyJMenuItem)
+this.rotateJMenuItem!!.setText("Rotate 45*")
 rotateJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -456,7 +456,7 @@ rotateJMenuItemMousePressed(evt)
 
                                 }
                             )
-itemJPopupMenu!!.add(rotateJMenuItem)
+this.itemJPopupMenu!!.add(this.rotateJMenuItem)
 setLayout(java.awt.GridLayout(1, 1))
 workAreaPropertiesJPanel!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
@@ -470,9 +470,9 @@ workAreaPropertiesJPanelMousePressed(evt)
 
                                 }
                             )
-workAreaPropertiesJPanel!!.setLayout(java.awt.GridLayout(1, 0))
-itemJScrollPane1!!.setViewportView(workAreaPropertiesJPanel)
-add(itemJScrollPane1)
+this.workAreaPropertiesJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+this.itemJScrollPane1!!.setViewportView(this.workAreaPropertiesJPanel)
+add(this.itemJScrollPane1)
 }
 
 
@@ -491,7 +491,7 @@ this.expand()
 this.repaint()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "rotateJMenuItemMousePressed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "rotateJMenuItemMousePressed", e)
 }
 
 }
@@ -588,7 +588,7 @@ var evt = evt
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "workAreaJTreeMousePressed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "workAreaJTreeMousePressed", e)
 }
 
 }
@@ -617,7 +617,7 @@ var evt = evt
             this.copy()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "copyJMenuItemMousePressed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "copyJMenuItemMousePressed", e)
 }
 
 }
@@ -650,7 +650,7 @@ this.repaint()
 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "deleteJMenuItemMousePressed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteJMenuItemMousePressed", e)
 }
 
 }

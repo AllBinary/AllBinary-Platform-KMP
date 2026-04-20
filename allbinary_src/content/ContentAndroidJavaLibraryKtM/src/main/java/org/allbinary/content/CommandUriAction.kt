@@ -68,7 +68,7 @@ companion object {
 {
 var command = command
 var url = url
-hashtable.put(command, url)
+this.hashtable.put(command, url)
 }
 
 
@@ -98,7 +98,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 : Intent{
 var command = command
 
-    var url: String = hashtable.get(command as Object) as String
+    var url: String = this.hashtable.get(command as Object) as String
 
 
     var uri: Uri = Uri.parse(url)!!

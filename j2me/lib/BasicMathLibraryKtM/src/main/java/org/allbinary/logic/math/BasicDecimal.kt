@@ -212,7 +212,7 @@ this.updateScaled()
     open fun updateScaled()
         //nullable = true from not(false or (false and true)) = true
 {
-this.scaled= (this.units /factorValue).toInt()
+this.scaled= (this.units /this.factorValue).toInt()
 }
 
 

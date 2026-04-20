@@ -39,7 +39,7 @@ var userName = userName
 
                             //For kotlin this is before the body of the constructor.
                     
-setTableName(TABLENAME)
+setTableName(this.TABLENAME)
 }
 
 

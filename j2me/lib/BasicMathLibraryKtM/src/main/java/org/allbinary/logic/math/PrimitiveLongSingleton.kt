@@ -85,7 +85,7 @@ var numberAsChar = numberAsChar
         {
 
     
-                        if(NUMBER_CHAR_ARRAY[index] == numberAsChar)
+                        if(this.NUMBER_CHAR_ARRAY[index] == numberAsChar)
                         
                                     {
                                     

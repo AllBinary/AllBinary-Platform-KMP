@@ -128,7 +128,7 @@ this.types= typeArray
         {
 
     
-                        if(types[index] == type)
+                        if(this.types[index] == type)
                         
                                     {
                                     

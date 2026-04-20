@@ -120,7 +120,7 @@ this.logUtil!!.putF(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABE
     var gameKeyMapping: PersistentInputMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
 
 
-    var size: Int = gameInputMappingArray!!.size
+    var size: Int = this.gameInputMappingArray!!.size
                 
 
 
@@ -152,7 +152,7 @@ this.logUtil!!.putF(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABE
                         for (index in 0 until size)
 
         {
-gameInputMapping= gameInputMappingArray[index]!!
+gameInputMapping= this.gameInputMappingArray[index]!!
 gameKey= gameInputMapping!!.getGameKey()
 list= gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
 

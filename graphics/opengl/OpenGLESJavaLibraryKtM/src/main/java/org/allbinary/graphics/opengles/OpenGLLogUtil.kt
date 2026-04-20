@@ -68,7 +68,7 @@ stringBuffer!!.appendint(error)
                         if(error == 1281)
                         
                                     {
-                                    stringBuffer!!.append(MAX_TEXTURE)
+                                    stringBuffer!!.append(this.MAX_TEXTURE)
 
     var maxTextureSize: IntArray = IntArray(1)
 
@@ -124,7 +124,7 @@ stringBuffer!!.appendint(error)
                         if(error == 1281)
                         
                                     {
-                                    stringBuffer!!.append(MAX_TEXTURE)
+                                    stringBuffer!!.append(this.MAX_TEXTURE)
 
     var maxTextureSize: IntArray = IntArray(1)
 
@@ -133,7 +133,7 @@ stringBuffer!!.appendint(maxTextureSize[0]!!)
 
                                     }
                                 
-stringBuffer!!.append(IMAGE)
+stringBuffer!!.append(this.IMAGE)
 stringBuffer!!.append(image.toString())
 PreLogUtil.put(stringBuffer!!.toString(), this, LOG_ERROR)
 

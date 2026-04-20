@@ -58,7 +58,7 @@ this.canvas= gameCanvas
         //nullable = true from not(false or (false and false)) = true
 {
 var motionGestureEvent = motionGestureEvent
-motionGestureEventList!!.add(motionGestureEvent)
+this.motionGestureEventList!!.add(motionGestureEvent)
 }
 
 
@@ -77,7 +77,7 @@ this.canvas= canvas
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return canvas as MyCanvas
+                        return this.canvas as MyCanvas
 }
 
 

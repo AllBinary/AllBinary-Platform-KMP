@@ -144,7 +144,7 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(columnName)
-stringBuffer!!.append(EQUAL_QUOTE)
+stringBuffer!!.append(this.EQUAL_QUOTE)
 
     var columnValue: String = updatedKeyValuePairs!!.get(columnName) as String
 
@@ -253,7 +253,7 @@ stringBuffer!!.append(this.EQUAL_QUOTE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(COLUMN_NAME_LABEL +columnName, this, METHOD_UPDATE_WHERE)
+                                    this.logUtil!!.putF(this.COLUMN_NAME_LABEL +columnName, this, METHOD_UPDATE_WHERE)
 
                                     }
                                 
@@ -531,7 +531,7 @@ stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 value= Replace(this.sqlStrings!!.ESCAPE, this.sqlStrings!!.DOUBLE_ESCAPE).
                             all(value)
 stringBuffer!!.append(value)
-stringBuffer!!.append(INSERT_END)
+stringBuffer!!.append(this.INSERT_END)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
 
@@ -662,7 +662,7 @@ result.put(columnName, field)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(ROW_VALUE_LABEL +result.toString(), this, this.METHOD_GET_ROW)
+                                    this.logUtil!!.putF(this.ROW_VALUE_LABEL +result.toString(), this, this.METHOD_GET_ROW)
 
                                     }
                                 
@@ -678,7 +678,7 @@ result.put(columnName, field)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.putF(NO_RESULTS_IN_RESULT_SET, this, this.METHOD_GET_ROW)
+                                    this.logUtil!!.putF(this.NO_RESULTS_IN_RESULT_SET, this, this.METHOD_GET_ROW)
 
                                     }
                                 
@@ -920,7 +920,7 @@ result.put(columnName, field)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(ROW_VALUES_LABEL +result.toString(), this, this.METHOD_GET_ALL_ROWS)
+                                    this.logUtil!!.putF(this.ROW_VALUES_LABEL +result.toString(), this, this.METHOD_GET_ALL_ROWS)
 
                                     }
                                 
@@ -1068,7 +1068,7 @@ result.put(columnName, field)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(ROW_VALUE_LABEL +result.toString(), this, METHOD_GET_ROWS_WHERE_BETWEEN)
+                                    this.logUtil!!.putF(this.ROW_VALUE_LABEL +result.toString(), this, METHOD_GET_ROWS_WHERE_BETWEEN)
 
                                     }
                                 
@@ -1183,7 +1183,7 @@ result.put(columnName, field)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(ROW_VALUE_LABEL +result.toString(), this, METHOD_GET_ROWS_WHERE_BETWEEN)
+                                    this.logUtil!!.putF(this.ROW_VALUE_LABEL +result.toString(), this, METHOD_GET_ROWS_WHERE_BETWEEN)
 
                                     }
                                 

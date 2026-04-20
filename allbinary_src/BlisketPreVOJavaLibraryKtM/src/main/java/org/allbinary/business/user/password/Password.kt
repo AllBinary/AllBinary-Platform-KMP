@@ -180,7 +180,7 @@ vector.add(Integer(random).
                             toString())
 vector.add(secret)
 vector.add(SuperCrypt(random).
-                            encrypt(password))
+                            encrypt(this.password))
 
 
 

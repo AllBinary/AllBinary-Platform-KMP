@@ -113,7 +113,7 @@ this.taskQueue= BasicArrayList()
 
         {
 pooledThread= PooledThread()
-pooledThread!!.setPriority(priority)
+pooledThread!!.setPriority(this.priority)
 pooledThread!!.start()
 }
 
@@ -169,7 +169,7 @@ pooledThread!!.start()
     var runnable: PriorityRunnable
 
 
-    var lowerPriorityRunnable: PriorityRunnable = threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
+    var lowerPriorityRunnable: PriorityRunnable = this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 
 
@@ -195,7 +195,7 @@ break;
 
 
     
-                        if(lowerPriorityRunnable == threadObjectUtil!!.NULL_PRIORITY_RUNNABLE || lowerPriorityRunnable == NULL_RUNNABLE)
+                        if(lowerPriorityRunnable == this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE || lowerPriorityRunnable == this.NULL_RUNNABLE)
                         
                                     {
                                     this.taskQueue!!.add(task)
@@ -232,7 +232,7 @@ notify()
         {
 
     
-                        if(!isAlive)
+                        if(!this.isAlive)
                         
                                     {
                                     this.init()
@@ -432,7 +432,7 @@ notifyAll()
                         
                                     {
                                     this.isAlive= false
-taskQueue!!.clear()
+this.taskQueue!!.clear()
 
                                     }
                                 

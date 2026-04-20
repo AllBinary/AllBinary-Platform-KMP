@@ -111,7 +111,7 @@ companion object {
                         for (index in 0 until bufferedImageArray!!.size)
 
         {
-this.logUtil!!.putF(TOTAL_ANGLE +totalAngle, this, commonStrings!!.RUN)
+this.logUtil!!.putF(this.TOTAL_ANGLE +totalAngle, this, commonStrings!!.RUN)
 generatedBufferedImage= ImageJ2SERotationUtil.getInstance()!!.getRotatedImage(bufferedImageArray[index]!!, totalAngle!!.toInt())
 visitor.visit(generatedBufferedImage, input, index)
 }

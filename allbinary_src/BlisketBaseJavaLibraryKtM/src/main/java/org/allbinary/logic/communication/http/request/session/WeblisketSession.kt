@@ -104,7 +104,7 @@ this.session= request.getSession(true)
         //nullable = true from not(false or (false and false)) = true
 {
 var password = password
-session.setAttribute(UserData.PASSWORD, password)
+this.session.setAttribute(UserData.PASSWORD, password)
 }
 
 
@@ -112,7 +112,7 @@ session.setAttribute(UserData.PASSWORD, password)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
-session.setAttribute(UserData.USERNAME, userName)
+this.session.setAttribute(UserData.USERNAME, userName)
 }
 
 
@@ -120,14 +120,14 @@ session.setAttribute(UserData.USERNAME, userName)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-session.setAttribute(PaymentGatewayData.NAME.toString(), value)
+this.session.setAttribute(PaymentGatewayData.NAME.toString(), value)
 }
 
 
     open fun setAuthenticated()
         //nullable = true from not(false or (false and true)) = true
 {
-session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.TRUE_STRING)
+this.session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.TRUE_STRING)
 }
 
 
@@ -135,7 +135,7 @@ session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInsta
         //nullable = true from not(false or (false and false)) = true
 {
 var aRole = aRole
-session.setAttribute(UserRoleData.NAME.toString(), aRole)
+this.session.setAttribute(UserRoleData.NAME.toString(), aRole)
 }
 
 
@@ -143,7 +143,7 @@ session.setAttribute(UserRoleData.NAME.toString(), aRole)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-session.setAttribute(WeblisketSessionData.ATTEMPTS, value)
+this.session.setAttribute(WeblisketSessionData.ATTEMPTS, value)
 }
 
 
@@ -181,7 +181,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getAttribute(UserData.USERNAME) as String
+                        return this.session.getAttribute(UserData.USERNAME) as String
 }
 
 
@@ -192,7 +192,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getAttribute(UserData.PASSWORD) as String
+                        return this.session.getAttribute(UserData.PASSWORD) as String
 }
 
 
@@ -203,7 +203,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getAttribute(PaymentGatewayData.NAME.toString()) as String
+                        return this.session.getAttribute(PaymentGatewayData.NAME.toString()) as String
 }
 
 
@@ -214,7 +214,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getAttribute(WeblisketSessionData.AUTHENTICATED) as String
+                        return this.session.getAttribute(WeblisketSessionData.AUTHENTICATED) as String
 }
 
 
@@ -225,7 +225,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getAttribute(WeblisketSessionData.ATTEMPTS) as Integer
+                        return this.session.getAttribute(WeblisketSessionData.ATTEMPTS) as Integer
 }
 
 
@@ -236,7 +236,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getAttribute(WeblisketSessionData.TIMEOUT) as String
+                        return this.session.getAttribute(WeblisketSessionData.TIMEOUT) as String
 }
 
 
@@ -247,7 +247,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getAttribute(StoreFrontData.getInstance()!!.NAME) as String
+                        return this.session.getAttribute(StoreFrontData.getInstance()!!.NAME) as String
 }
 
 
@@ -257,7 +257,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
         //nullable = true from not(false or (false and true)) = true
 : UserRole{
 
-    var userRole: UserRole = session.getAttribute(UserRoleData.NAME.toString()) as UserRole
+    var userRole: UserRole = this.session.getAttribute(UserRoleData.NAME.toString()) as UserRole
 
 
     
@@ -303,7 +303,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
                         
                                     {
                                     
-    var orderInterface: OrderInterface = session.getAttribute(basketName) as OrderInterface
+    var orderInterface: OrderInterface = this.session.getAttribute(basketName) as OrderInterface
 
 
     
@@ -340,7 +340,7 @@ session.setAttribute(basketName, orderInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.FALSE_STRING)
+this.session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.FALSE_STRING)
 }
 
 
@@ -390,7 +390,7 @@ this.session.removeAttribute(UserData.USERNAME)
                         if(!StringValidationUtil.getInstance()!!.isEmpty(basketName))
                         
                                     {
-                                    session.removeAttribute(basketName)
+                                    this.session.removeAttribute(basketName)
 
                                     }
                                 

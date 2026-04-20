@@ -39,7 +39,7 @@ public constructor (){
 
 stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.INIT_PATH)
-stringBuffer!!.append(IDFILE)
+stringBuffer!!.append(this.IDFILE)
 stringBuffer!!.append(UniqueIdGenerator.EXT)
 super.setFile(stringBuffer!!.toString(), IDFILE)
 }

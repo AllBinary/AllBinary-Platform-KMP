@@ -185,7 +185,7 @@ this.scale(originalImage, originalImageArray[0]!!, scaleX, scaleY, false)
                         if(clear)
                         
                                     {
-                                    g.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
+                                    g.setBackground(this.imageJ2SEUtil!!.TRANSPARENT_COLOR)
 g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
 
                                     }

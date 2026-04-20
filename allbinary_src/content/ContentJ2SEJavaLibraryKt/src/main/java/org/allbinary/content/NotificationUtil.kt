@@ -31,6 +31,7 @@
         
 import javax.microedition.lcdui.Command
 import org.allbinary.data.resource.ResourceUtil
+import org.allbinary.logic.TsUtil
 
 open public class NotificationUtil
             : Object
@@ -82,7 +83,7 @@ var message = message
     var pendingIntent: PendingIntent = PendingIntent.getActivity(context, 0, intent, 0)!!
 
 notification.setLatestEventInfo(context, command.getLabel(), message, pendingIntent)
-notificationManager!!.notify(command.hashCode(), notification)
+notificationManager!!.notify(TsUtil.getInstance()!!.hashCode(command), notification)
 }
 
 

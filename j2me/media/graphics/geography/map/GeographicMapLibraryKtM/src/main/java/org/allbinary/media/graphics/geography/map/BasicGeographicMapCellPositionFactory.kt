@@ -57,7 +57,7 @@ this.geographicMapCellPositionFactoryInterface= this.geographicMapInterface!!.ge
 this.tiledLayer= this.geographicMapInterface!!.getAllBinaryTiledLayer()
 this.columns= this.tiledLayer!!.getColumns()
 this.rows= this.tiledLayer!!.getRows()
-this.geographicMapCellPositionArray= Array(rows) { arrayOfNulls<GeographicMapCellPosition?>(columns) }
+this.geographicMapCellPositionArray= Array(this.rows) { arrayOfNulls<GeographicMapCellPosition?>(this.columns) }
                                                             
 this.init()
 }
@@ -200,7 +200,7 @@ this.logUtil!!.put(StringMaker().
     //var width = width
     //var height = height
 
-    var cellPositionCanBeNull: Any? = geographicMapCellPositionArray[i_row]!![i_column]
+    var cellPositionCanBeNull: Any? = this.geographicMapCellPositionArray[i_row]!![i_column]
 
 
     
@@ -210,7 +210,7 @@ this.logUtil!!.put(StringMaker().
                         
                                     {
                                     cellPositionCanBeNull= this.geographicMapCellPositionFactoryInterface!!.getInstance(this.geographicMapInterface, i_column, i_row, columns, rows, width, height)
-geographicMapCellPositionArray[i_row]!![i_column]= cellPositionCanBeNull as GeographicMapCellPosition
+this.geographicMapCellPositionArray[i_row]!![i_column]= cellPositionCanBeNull as GeographicMapCellPosition
 
                                     }
                                 

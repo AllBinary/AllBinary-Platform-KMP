@@ -243,7 +243,7 @@ var path = path
 var path = path
 
     
-                        if(path[0] == abPathData!!.SEPARATORCHAR)
+                        if(path[0] == this.abPathData!!.SEPARATORCHAR)
                         
                                     {
                                     
@@ -285,7 +285,7 @@ var path = path
                                 
 
     
-                        if(path[path.length -1] == abPathData!!.SEPARATORCHAR)
+                        if(path[path.length -1] == this.abPathData!!.SEPARATORCHAR)
                         
                                     {
                                     
@@ -317,7 +317,7 @@ var path = path
                         if(!this.isValidStart(path))
                         
                                     {
-                                    path= abPathData!!.SEPARATOR +path
+                                    path= this.abPathData!!.SEPARATOR +path
 
                                     }
                                 
@@ -338,7 +338,7 @@ var path = path
                         if(!this.isValidEnd(path))
                         
                                     {
-                                    path= path +abPathData!!.SEPARATOR
+                                    path= path +this.abPathData!!.SEPARATOR
 
                                     }
                                 
@@ -390,14 +390,14 @@ var path = path
 : String{
 var categoryPath = categoryPath
 
-    var endIndex: Int = categoryPath!!.lastIndexOf(abPathData!!.SEPARATOR)!!
+    var endIndex: Int = categoryPath!!.lastIndexOf(this.abPathData!!.SEPARATOR)!!
 
 
     
                         if(endIndex < 0)
                         
                                     {
-                                    endIndex= categoryPath!!.lastIndexOf(filePathData!!.SEPARATORCHAR)
+                                    endIndex= categoryPath!!.lastIndexOf(this.filePathData!!.SEPARATORCHAR)
 
                                     }
                                 
@@ -448,14 +448,14 @@ var categoryPath = categoryPath
 : AbPath{
 var categoryPath = categoryPath
 
-    var endIndex: Int = categoryPath!!.lastIndexOf(abPathData!!.SEPARATOR)!!
+    var endIndex: Int = categoryPath!!.lastIndexOf(this.abPathData!!.SEPARATOR)!!
 
 
     
                         if(endIndex < 0)
                         
                                     {
-                                    endIndex= categoryPath!!.lastIndexOf(filePathData!!.SEPARATORCHAR)
+                                    endIndex= categoryPath!!.lastIndexOf(this.filePathData!!.SEPARATORCHAR)
 
                                     }
                                 

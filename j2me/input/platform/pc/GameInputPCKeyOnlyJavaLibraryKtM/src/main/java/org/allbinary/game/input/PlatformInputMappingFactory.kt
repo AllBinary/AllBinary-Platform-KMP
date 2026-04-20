@@ -66,10 +66,10 @@ companion object {
         try {
             
     
-                        if(SINGLETON == PersistentInputMapping.NULL_PERSISTENT_INPUT_MAPPING)
+                        if(this.SINGLETON == PersistentInputMapping.NULL_PERSISTENT_INPUT_MAPPING)
                         
                                     {
-                                    SINGLETON= LaptopGameInputMapping()
+                                    this.SINGLETON= LaptopGameInputMapping()
 
                                     }
                                 

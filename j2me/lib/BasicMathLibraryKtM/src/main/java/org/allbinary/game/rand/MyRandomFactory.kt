@@ -173,7 +173,7 @@ found= false
 private constructor ()
             : super()
         {
-rand= Random(System.currentTimeMillis())
+this.rand= Random(System.currentTimeMillis())
 }
 
 
@@ -181,7 +181,7 @@ rand= Random(System.currentTimeMillis())
         //nullable = true from not(false or (false and false)) = true
 {
 var seed = seed
-rand= Random(seed)
+this.rand= Random(seed)
 }
 
 

@@ -42,7 +42,7 @@ open public class TouchButtonsListBuilder : BaseTouchInput {
 {
     //var list = list
 
-    var size: Int = baseTouchInputList!!.size()!!
+    var size: Int = this.baseTouchInputList!!.size()!!
 
 
     var baseTouchInput: BaseTouchInput
@@ -54,7 +54,7 @@ open public class TouchButtonsListBuilder : BaseTouchInput {
                         for (index in 0 until size)
 
         {
-baseTouchInput= baseTouchInputList!!.get(index) as BaseTouchInput
+baseTouchInput= this.baseTouchInputList!!.get(index) as BaseTouchInput
 list.addAll(baseTouchInput!!.getList())
 }
 

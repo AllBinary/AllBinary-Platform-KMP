@@ -108,11 +108,11 @@ var gauge = gauge
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(GAUGE_UPDATE)
+stringBuffer!!.append(this.GAUGE_UPDATE)
 stringBuffer!!.append(gameConfiguration!!.getName())
-stringBuffer!!.append(FROM)
+stringBuffer!!.append(this.FROM)
 stringBuffer!!.appendint(gameConfiguration!!.getValue()!!.toInt())
-stringBuffer!!.append(TO)
+stringBuffer!!.append(this.TO)
 stringBuffer!!.appendint(value.toInt())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.UPDATE)
 gameConfiguration!!.setValue(value)
@@ -136,7 +136,7 @@ var gauge = gauge
 
 stringBuffer!!.append("Gauge Default: ")
 stringBuffer!!.append(gameConfiguration!!.getName())
-stringBuffer!!.append(TO)
+stringBuffer!!.append(this.TO)
 stringBuffer!!.appendint(gameConfiguration!!.getDefaultValue()!!.toInt())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "setDefault")
 gauge.setValue(gameConfiguration!!.getDefaultValue()!!.toInt() -gameConfiguration!!.getMinValue()!!.toInt())
@@ -162,7 +162,7 @@ var gameConfiguration = gameConfiguration
                         if(gameConfiguration == gameConfigurationCentral!!.CHALLENGE_LEVEL)
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.START, this, "updateChallange")
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, "updateChallange")
 gameConfigurationCentral!!.COLLIDE_DAMAGE.setValue(gameConfiguration!!.getValue())
 gameConfigurationCentral!!.ATTACK_CHALLENGE_LEVEL.setValue(gameConfiguration!!.getValue())
 gameConfigurationCentral!!.DURABILITY_CHALLENGE_LEVEL.setValue(gameConfiguration!!.getValue())
@@ -246,12 +246,12 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
     open fun updateCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, "updateCompetitionValue")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "updateCompetitionValue")
 
     var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
 
-COMPETITION_VALUE= gameConfigurationCentral!!.COLLIDE_DAMAGE.getValue()!!.toInt() +gameConfigurationCentral!!.ATTACK_CHALLENGE_LEVEL.getValue()!!.toInt() +gameConfigurationCentral!!.DURABILITY_CHALLENGE_LEVEL.getValue()!!.toInt() +gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.getValue()!!.toInt()
-COMPETITION_VALUE= (COMPETITION_VALUE shr 2)
+this.COMPETITION_VALUE= gameConfigurationCentral!!.COLLIDE_DAMAGE.getValue()!!.toInt() +gameConfigurationCentral!!.ATTACK_CHALLENGE_LEVEL.getValue()!!.toInt() +gameConfigurationCentral!!.DURABILITY_CHALLENGE_LEVEL.getValue()!!.toInt() +gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.getValue()!!.toInt()
+this.COMPETITION_VALUE= (this.COMPETITION_VALUE shr 2)
 }
 
 

@@ -94,13 +94,13 @@ private constructor ()
     //var originalImage = originalImage
 
     
-                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(this.features.isFeature(this.openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
     var image: Image = originalImage
 
-image= openGLUtil!!.add(image)
+image= this.openGLUtil!!.add(image)
 
 
 
@@ -129,10 +129,10 @@ image= openGLUtil!!.add(image)
     //var originalImage = originalImage
 
     
-                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.putF(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR)
 
 
 
@@ -146,7 +146,7 @@ image= openGLUtil!!.add(image)
 
 
     
-                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(this.features.isFeature(this.openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
@@ -189,7 +189,7 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(originalImmutableImage!!.i
 
                         }
                             
-image= openGLUtil!!.add(image)
+image= this.openGLUtil!!.add(image)
 
 
 
@@ -228,10 +228,10 @@ image= openGLUtil!!.add(image)
 
 
     
-                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.putF(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR)
 
 
 
@@ -242,12 +242,12 @@ image= openGLUtil!!.add(image)
                                 
 
     
-                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(this.features.isFeature(this.openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
     
-                        if(openGLESImageExclusionUtil!!.isCustomScaling(originalImage))
+                        if(this.openGLESImageExclusionUtil!!.isCustomScaling(originalImage))
                         
                                     {
                                     
@@ -340,7 +340,7 @@ image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createIma
 
                         }
                             
-image= openGLUtil!!.add(image)
+image= this.openGLUtil!!.add(image)
 
 
 
@@ -367,10 +367,10 @@ image= openGLUtil!!.add(image)
 
 
     
-                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.putF(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR)
 
 
 
@@ -386,7 +386,7 @@ image= openGLUtil!!.add(image)
 
 
     
-                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(this.features.isFeature(this.openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
@@ -430,7 +430,7 @@ image= openGLESImage
                         else {
                             image= originalImage
 
-    var openGLESImage: OpenGLESImage = openGLUtil!!.add(image) as OpenGLESImage
+    var openGLESImage: OpenGLESImage = this.openGLUtil!!.add(image) as OpenGLESImage
 
 
     var openGLESImageProperties: OpenGLESImageProperties = openGLESImage!!.openGLESImageProperties
@@ -439,7 +439,7 @@ openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2= ((width.toF
 openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLESImage!!.getHeight()).toFloat()
 
     
-                        if(image.getName()!!.startsWith(INFORMATION))
+                        if(image.getName()!!.startsWith(this.INFORMATION))
                         
                                     {
                                     openGLESImage!!.openGLESImageTranslate= OpenGLESDeviceImageTranslate()
@@ -458,7 +458,7 @@ openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY *0.25f
 openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY *0.75f
 
     
-                        if(image.getName()!!.startsWith(LEADERBOARD))
+                        if(image.getName()!!.startsWith(this.LEADERBOARD))
                         
                                     {
                                     openGLESImage!!.openGLESImageTranslate= OpenGLESDeviceImageTranslate()
@@ -556,7 +556,7 @@ image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createIma
 
                         }
                             
-image= openGLUtil!!.add(image)
+image= this.openGLUtil!!.add(image)
 
                         }
                             
@@ -578,10 +578,10 @@ image= openGLUtil!!.add(image)
     //var resize = resize
 
     
-                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.putF(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR)
 
 
 

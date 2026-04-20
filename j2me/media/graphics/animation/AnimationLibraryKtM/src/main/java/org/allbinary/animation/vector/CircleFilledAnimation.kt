@@ -29,7 +29,6 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.ColorCompositeInterface
-import org.allbinary.math.AngleFactory
 
 open public class CircleFilledAnimation : Animation
                 , ColorCompositeInterface {
@@ -66,8 +65,8 @@ this.setBasicColorP(basicColor)
     //var graphics = graphics
     //var x = x
     //var y = y
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
-graphics.fillRect(x, y, width, height)
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
+graphics.fillRect(x, y, this.width, this.height)
 }
 
 

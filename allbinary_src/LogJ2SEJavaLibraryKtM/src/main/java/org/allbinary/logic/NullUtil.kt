@@ -44,7 +44,7 @@ import java.util.Vector
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return NullUtil.instance
 }
 
 
@@ -57,7 +57,7 @@ import java.util.Vector
         
     /*actual*/ val NULL_OBJECT: Any = Any()
 
-    /*actual*/ val NULL_CLASS: KClass<*> = NULL_OBJECT::class!!
+    /*actual*/ val NULL_CLASS: KClass<*> = this.NULL_OBJECT::class!!
 
     /*actual*/ val NULL_OBJECT_ARRAY: Array<Any?> = arrayOfNulls(0)
 

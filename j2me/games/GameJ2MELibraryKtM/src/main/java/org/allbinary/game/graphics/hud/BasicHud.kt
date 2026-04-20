@@ -154,8 +154,8 @@ var height = height
                         if(basicHudFactory!!.BOTTOMLEFT == this.getLocation())
                         
                                     {
-                                    x= bufferZone +2
-y= height -maxHeight -bufferZone
+                                    x= this.bufferZone +2
+y= height -this.maxHeight -this.bufferZone
 anchor= Graphics.BOTTOM and Graphics.LEFT
 
                                     }
@@ -165,8 +165,8 @@ anchor= Graphics.BOTTOM and Graphics.LEFT
                         if(basicHudFactory!!.BOTTOMRIGHT == this.getLocation())
                         
                                     {
-                                    x= width -maxWidth
-y= height -maxHeight -bufferZone
+                                    x= width -this.maxWidth
+y= height -this.maxHeight -this.bufferZone
 anchor= Graphics.BOTTOM and Graphics.RIGHT
 
                                     }
@@ -176,8 +176,8 @@ anchor= Graphics.BOTTOM and Graphics.RIGHT
                         if(basicHudFactory!!.TOPLEFT == this.getLocation())
                         
                                     {
-                                    x= bufferZone +2
-y= bufferZoneY
+                                    x= this.bufferZone +2
+y= this.bufferZoneY
 anchor= Anchor.TOP_LEFT
 
                                     }
@@ -187,8 +187,8 @@ anchor= Anchor.TOP_LEFT
                         if(basicHudFactory!!.TOPRIGHT == this.getLocation())
                         
                                     {
-                                    x= width -maxWidth
-y= bufferZoneY
+                                    x= width -this.maxWidth
+y= this.bufferZoneY
 anchor= Graphics.TOP and Graphics.RIGHT
 
                                     }
@@ -198,8 +198,8 @@ anchor= Graphics.TOP and Graphics.RIGHT
                         if(basicHudFactory!!.TOPCENTER == this.getLocation())
                         
                                     {
-                                    x= ((width -maxWidth) /2)
-y= bufferZoneY
+                                    x= ((width -this.maxWidth) /2)
+y= this.bufferZoneY
 anchor= Graphics.TOP and Graphics.HCENTER
 
                                     }
@@ -209,8 +209,8 @@ anchor= Graphics.TOP and Graphics.HCENTER
                         if(basicHudFactory!!.BOTTOMCENTER == this.getLocation())
                         
                                     {
-                                    x= ((width -maxWidth) /2)
-y= height -maxHeight -bufferZone
+                                    x= ((width -this.maxWidth) /2)
+y= height -this.maxHeight -this.bufferZone
 anchor= Graphics.BOTTOM and Graphics.HCENTER
 
                                     }
@@ -220,8 +220,8 @@ anchor= Graphics.BOTTOM and Graphics.HCENTER
                         if(basicHudFactory!!.ABSOLUTE == this.getLocation())
                         
                                     {
-                                    x= maxHeight
-y= maxWidth
+                                    x= this.maxHeight
+y= this.maxWidth
 anchor= 0
 
                                     }
@@ -252,7 +252,7 @@ var displayChangeEvent = displayChangeEvent
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
 this.hudGraphicsPosition= this.getHudGraphicsPosition(displayInfo!!.getLastWidth(), displayInfo!!.getLastHeight())
-x= this.hudGraphicsPosition!!.getPoint()!!.getX()
+this.x= this.hudGraphicsPosition!!.getPoint()!!.getX()
 this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
 } catch(e: Exception)
             {
@@ -457,7 +457,7 @@ var graphics = graphics
 var string = string
 this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
 
-    var y: Int = getY() +offsetY
+    var y: Int = getY() +this.offsetY
 
 graphics.drawString(string, x, y, hudGraphicsPosition!!.getAnchor())
 }

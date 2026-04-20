@@ -85,7 +85,7 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(append)
 this.append= stringBuffer!!.toString()
 this.string= StringMaker().
-                            append(listString)!!.append(this.append)!!.toString()
+                            append(this.listString)!!.append(this.append)!!.toString()
 }
 
 
@@ -96,7 +96,7 @@ var append = append
 this.append= StringMaker().
                             append(this.append)!!.append(append)!!.toString()
 this.string= StringMaker().
-                            append(listString)!!.append(this.append)!!.toString()
+                            append(this.listString)!!.append(this.append)!!.toString()
 }
 
 
@@ -108,14 +108,14 @@ var y = y
 this.append= StringMaker().
                             append(GPoint.toStringStatic(x, y, 0))!!.append(CommonSeps.getInstance()!!.SPACE)!!.toString()
 this.string= StringMaker().
-                            append(listString)!!.append(this.append)!!.toString()
+                            append(this.listString)!!.append(this.append)!!.toString()
 }
 
 
     open fun releaseAndNotFired()
         //nullable = true from not(false or (false and true)) = true
 {
-this.append(RELEASED_AND_NOT_FIRED)
+this.append(this.RELEASED_AND_NOT_FIRED)
 }
 
 
@@ -123,7 +123,7 @@ this.append(RELEASED_AND_NOT_FIRED)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(RELEASED_AND_FIRED, touchButtonInput)
+this.append(this.RELEASED_AND_FIRED, touchButtonInput)
 }
 
 
@@ -131,7 +131,7 @@ this.append(RELEASED_AND_FIRED, touchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(RELEASED_AND_FIRED_2, touchButtonInput)
+this.append(this.RELEASED_AND_FIRED_2, touchButtonInput)
 }
 
 
@@ -139,7 +139,7 @@ this.append(RELEASED_AND_FIRED_2, touchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
+this.append(this.ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
 }
 
 
@@ -147,7 +147,7 @@ this.append(ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(PRESSED_AND_FIRED, touchButtonInput)
+this.append(this.PRESSED_AND_FIRED, touchButtonInput)
 }
 
 
@@ -155,7 +155,7 @@ this.append(PRESSED_AND_FIRED, touchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(PRESSED_AND_NOT_FIRED, touchButtonInput)
+this.append(this.PRESSED_AND_NOT_FIRED, touchButtonInput)
 }
 
 
@@ -168,7 +168,7 @@ var index = index
 
 this.listString= list.toString()
 this.string= StringMaker().
-                            append(listString)!!.append(this.append)!!.toString()
+                            append(this.listString)!!.append(this.append)!!.toString()
 
 
 
@@ -186,7 +186,7 @@ var touchButtonInput = touchButtonInput
 
 this.listString= list.toString()
 this.string= StringMaker().
-                            append(listString)!!.append(this.append)!!.toString()
+                            append(this.listString)!!.append(this.append)!!.toString()
 
 
 
@@ -202,7 +202,7 @@ var touchButtonInput = touchButtonInput
 super.add(touchButtonInput)
 this.listString= list.toString()
 this.string= StringMaker().
-                            append(listString)!!.append(this.append)!!.toString()
+                            append(this.listString)!!.append(this.append)!!.toString()
 }
 
 

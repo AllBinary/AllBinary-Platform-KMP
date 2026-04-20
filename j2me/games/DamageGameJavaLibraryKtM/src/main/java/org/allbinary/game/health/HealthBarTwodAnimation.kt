@@ -51,7 +51,7 @@ public constructor (layerInterface: AllBinaryLayer, location: Int)
 
     var ax: Int = this.allbinaryLayer!!.getViewPosition()!!.getX()!!
 
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.colorP)
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.basicColor, this.colorP)
 graphics.fillRect(ax, this.getY() -1, x2, this.thickness)
 }
 

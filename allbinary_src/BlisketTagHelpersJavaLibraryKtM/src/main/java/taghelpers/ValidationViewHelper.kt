@@ -48,7 +48,7 @@ var pageContext = pageContext
 
                             //For kotlin this is before the body of the constructor.
                     
-viewInterface= this.getViewObject() as ValidationComponentInterface
+this.viewInterface= this.getViewObject() as ValidationComponentInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))

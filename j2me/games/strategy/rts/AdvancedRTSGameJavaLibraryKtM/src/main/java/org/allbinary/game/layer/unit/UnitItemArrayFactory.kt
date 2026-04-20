@@ -78,7 +78,7 @@ this.resources= resources
     var name: String = flagResources!!.NAME
 
 
-    var index: Int = name.indexOf(commonSeps!!.SPACE)!!
+    var index: Int = name.indexOf(this.commonSeps!!.SPACE)!!
 
 
     

@@ -75,7 +75,7 @@ this.byteArray= byteArray
 
 
 
-                            throw IOException(commonStrings!!.NOT_IMPLEMENTED)
+                            throw IOException(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -157,7 +157,7 @@ var encoding = encoding
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return FileItemUtil.getInstance()!!.getString(byteArray)
+                        return FileItemUtil.getInstance()!!.getString(this.byteArray)
 } catch(e: Exception)
             {
 
@@ -165,7 +165,7 @@ var encoding = encoding
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getString", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "getString", e)
 
                                     }
                                 
@@ -188,7 +188,7 @@ var file = file
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -201,14 +201,14 @@ var file = file
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
     open fun delete()
         //nullable = true from not(false or (false and true)) = true
 {
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, "delete()")
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, "delete()")
 }
 
 
@@ -274,7 +274,7 @@ var state = state
 
 
 
-                            throw IOException(commonStrings!!.NOT_IMPLEMENTED)
+                            throw IOException(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -284,7 +284,7 @@ var state = state
 
 
 
-                            throw RuntimeException(commonStrings!!.NOT_IMPLEMENTED)
+                            throw RuntimeException(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -295,7 +295,7 @@ var fih = fih
 
 
 
-                            throw RuntimeException(commonStrings!!.NOT_IMPLEMENTED)
+                            throw RuntimeException(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 

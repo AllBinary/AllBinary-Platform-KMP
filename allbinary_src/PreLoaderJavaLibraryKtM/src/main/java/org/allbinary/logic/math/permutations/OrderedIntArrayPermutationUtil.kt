@@ -186,7 +186,7 @@ var visitor = visitor
 
     var iterations: Long = this.factorial(data.size)!!
 
-System.out.print(TOTAL_ITERATIONS_TABLE)
+System.out.print(this.TOTAL_ITERATIONS_TABLE)
 System.out.println(iterations)
 
 
@@ -199,7 +199,7 @@ this.getNext(data)
 visitor.visit(this)
 }
 
-System.out.println(FINISHED)
+System.out.println(this.FINISHED)
 }
 
 

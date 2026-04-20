@@ -128,9 +128,9 @@ var hashMap = hashMap
                                 
 }
 
-this.logUtil!!.putF("minX: " +minX +" minY: " +minY +" maxX: " +maxX +" maxY: " +maxY, this, commonStrings!!.GET_INSTANCE)
-setWidth(maxX -minX)
-setHeight(maxY -minY)
+this.logUtil!!.putF("minX: " +this.minX +" minY: " +this.minY +" maxX: " +this.maxX +" maxY: " +this.maxY, this, commonStrings!!.GET_INSTANCE)
+setWidth(this.maxX -this.minX)
+setHeight(this.maxY -this.minY)
 
     var max: Int = getWidth()!!
 
@@ -155,13 +155,13 @@ setHeight(maxY -minY)
 
 this.logUtil!!.putF(s, this, commonStrings!!.GET_INSTANCE)
 
-    var currentMiddleX: Int = minX +getWidth() /2
+    var currentMiddleX: Int = this.minX +getWidth() /2
 
 
-    var currentMiddleY: Int = minY +getHeight() /2
+    var currentMiddleY: Int = this.minY +getHeight() /2
 
-dx= middle -currentMiddleX
-dy= middle -currentMiddleY
+this.dx= middle -currentMiddleX
+this.dy= middle -currentMiddleY
 }
 
 
@@ -173,7 +173,7 @@ dy= middle -currentMiddleY
 var hashMap = hashMap
 this.calculate(hashMap)
 this.logUtil!!.putF(StringMaker().
-                            append(" dx: ")!!.appendint(dx)!!.append(" dy: ")!!.appendint(dy)!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append(" dx: ")!!.appendint(this.dx)!!.append(" dy: ")!!.appendint(this.dy)!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
     var graphicItemArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 
@@ -230,37 +230,37 @@ var pointVector = pointVector
 
 
     
-                        if(point.getX() < minX)
+                        if(point.getX() < this.minX)
                         
                                     {
-                                    minX= point.getX()
+                                    this.minX= point.getX()
 
                                     }
                                 
 
     
-                        if(point.getX() > maxX)
+                        if(point.getX() > this.maxX)
                         
                                     {
-                                    maxX= point.getX()
+                                    this.maxX= point.getX()
 
                                     }
                                 
 
     
-                        if(point.getY() < minY)
+                        if(point.getY() < this.minY)
                         
                                     {
-                                    minY= point.getY()
+                                    this.minY= point.getY()
 
                                     }
                                 
 
     
-                        if(point.getY() > maxY)
+                        if(point.getY() > this.maxY)
                         
                                     {
-                                    maxY= point.getY()
+                                    this.maxY= point.getY()
 
                                     }
                                 

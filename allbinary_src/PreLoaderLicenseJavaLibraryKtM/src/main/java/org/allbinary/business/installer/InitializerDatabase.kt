@@ -217,7 +217,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(adminDbUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.adminDbUserName, MIN, MAX))
                         
                                     {
                                     isValid= false
@@ -226,7 +226,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(adminDbPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.adminDbPassword, MINPASSWORD, MAX))
                         
                                     {
                                     isValid= false
@@ -286,7 +286,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(adminDbUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.adminDbUserName, MIN, MAX))
                         
                                     {
                                     stringBuffer!!.append("Admin username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -295,7 +295,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(adminDbPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.adminDbPassword, MINPASSWORD, MAX))
                         
                                     {
                                     stringBuffer!!.append("Admin password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -324,7 +324,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
 : Boolean{
 
         try {
-            initDb!!.addUsers()
+            this.initDb!!.addUsers()
 
 
 
@@ -348,7 +348,7 @@ this.logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
 : Boolean{
 
         try {
-            initDb!!.addDatabases()
+            this.initDb!!.addDatabases()
 
 
 
@@ -372,7 +372,7 @@ this.logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
 : Boolean{
 
         try {
-            initDb!!.addTables()
+            this.initDb!!.addTables()
 
 
 

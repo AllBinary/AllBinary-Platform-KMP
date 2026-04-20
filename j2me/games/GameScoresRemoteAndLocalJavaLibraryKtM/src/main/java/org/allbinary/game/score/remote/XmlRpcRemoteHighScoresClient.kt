@@ -76,7 +76,7 @@ this.setServer(0)
 
     var index: Int = serverUrl!!.lastIndexOf('/')!!
 
-serverUrl= serverUrl!!.substring(0, index +1) +page
+serverUrl= serverUrl!!.substring(0, index +1) +this.page
 
     var stringBuffer: StringMaker = StringMaker()
 

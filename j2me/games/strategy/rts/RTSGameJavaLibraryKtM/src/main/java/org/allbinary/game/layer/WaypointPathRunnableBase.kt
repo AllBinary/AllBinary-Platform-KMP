@@ -110,7 +110,7 @@ this.setPriority()
                         
                                     {
                                     
-    var distance: Int = layerDistanceUtil!!.getDistance(targetLayer, pathFindingLayer)!!
+    var distance: Int = this.layerDistanceUtil!!.getDistance(targetLayer, pathFindingLayer)!!
 
 
     var distanceCategory: Int = distance /70

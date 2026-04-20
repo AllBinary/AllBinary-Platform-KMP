@@ -105,7 +105,7 @@ var document = document
     var node: Node = document.createElement(ThemesData.getInstance()!!.NAME)!!
 
 
-    var size: Int = themeVector!!.size!!
+    var size: Int = this.themeVector!!.size!!
 
 
 
@@ -115,7 +115,7 @@ var document = document
 
         {
 
-    var themeDomNodeInterface: DomNodeInterface = themeVector!!.get(i) as DomNodeInterface
+    var themeDomNodeInterface: DomNodeInterface = this.themeVector!!.get(i) as DomNodeInterface
 
 node.appendChild(themeDomNodeInterface!!.toXmlNode(document))
 }

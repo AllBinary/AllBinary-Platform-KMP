@@ -68,7 +68,7 @@ this.setOsgiServiceVisitorInterface(osgiServiceVisitorInterface)
 {
 this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
-    var vector: Vector = osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
+    var vector: Vector = this.osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
 
 this.logUtil!!.putF("Processing " +vector.size +" Services", this, commonStrings!!.PROCESS)
 
@@ -131,7 +131,7 @@ osgiServiceInterface= vector.get(index) as OSGIServiceInterface
         //nullable = true from not(false or (false and false)) = true
 {
 var aBundleContext = aBundleContext
-bundleContext= aBundleContext
+this.bundleContext= aBundleContext
 }
 
 

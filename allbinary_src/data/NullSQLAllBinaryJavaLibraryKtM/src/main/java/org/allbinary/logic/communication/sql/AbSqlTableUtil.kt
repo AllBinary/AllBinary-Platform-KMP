@@ -79,7 +79,7 @@ var abSqlTable = abSqlTable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TABLE_LABEL +tableName +" Backup Failed"
+                        return this.TABLE_LABEL +tableName +" Backup Failed"
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -95,7 +95,7 @@ var portion = portion
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(TABLE_LABEL)
+stringBuffer!!.append(this.TABLE_LABEL)
 stringBuffer!!.append(tableName)
 stringBuffer!!.append(" Restoration Failed")
 

@@ -97,7 +97,7 @@ public constructor (key: String, value: String)
         {
     //var key = key
     //var value = value
-hashMap= HashMap<Any, Any>()
+this.hashMap= HashMap<Any, Any>()
 this.hashMap!!.put(arrayOf(key), arrayOf(value))
 }
 
@@ -106,7 +106,7 @@ public constructor (keys: Array<String?>, values: Array<String?>)
         {
     //var keys = keys
     //var values = values
-hashMap= HashMap<Any, Any>()
+this.hashMap= HashMap<Any, Any>()
 this.hashMap!!.put(keys, values)
 }
 
@@ -142,7 +142,7 @@ var total = total
     var totalNumberOfReplaces: Int = 0
 
 
-    var keySet: Set = hashMap!!.keys!!
+    var keySet: Set = this.hashMap!!.keys!!
 
 
     var keys: Array<String?>
@@ -165,7 +165,7 @@ var total = total
 
         {
 keys= keyArray[index2]!! as Array<String?>
-values= hashMap!!.get(keys as Object) as Array<String?>
+values= this.hashMap!!.get(keys as Object) as Array<String?>
 
     var foundTotal: Long = 0
 
@@ -189,7 +189,7 @@ values= hashMap!!.get(keys as Object) as Array<String?>
                         if(foundTotal % 100 == 0)
                         
                                     {
-                                    System.out.println(FOUND_KEY +foundTotal)
+                                    System.out.println(this.FOUND_KEY +foundTotal)
 
                                     }
                                 
@@ -292,7 +292,7 @@ var replace = replace
     var totalNumberOfReplaces: Int = 0
 
 
-    var keySet: Set = hashMap!!.keys!!
+    var keySet: Set = this.hashMap!!.keys!!
 
 
     var key: String
@@ -315,7 +315,7 @@ var replace = replace
 
         {
 key= keyArray[index2]!! as String
-value= hashMap!!.get(key as Object) as String
+value= this.hashMap!!.get(key as Object) as String
 
     var index: Int = 0
 
@@ -331,7 +331,7 @@ newStringBuffer!!.delete(0, newStringBuffer!!.length())
                         if(begin !=  -1)
                         
                                     {
-                                    System.out.println(FOUND_KEY)
+                                    System.out.println(this.FOUND_KEY)
 
     var end: Int = replace.indexOf('\n', begin +key.length) +1
 

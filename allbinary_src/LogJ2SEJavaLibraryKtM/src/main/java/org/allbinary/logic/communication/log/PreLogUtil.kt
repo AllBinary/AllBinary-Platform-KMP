@@ -42,7 +42,7 @@ import org.allbinary.string.CommonStrings
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
-putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 
@@ -84,7 +84,7 @@ System.out.println(message)
 var specialMessage = specialMessage
 var className = className
 var functionName = functionName
-putSE(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+PreLogUtil.putSE(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 

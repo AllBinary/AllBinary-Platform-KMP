@@ -66,7 +66,7 @@ public constructor ()
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setTableName(tableName)
+this.setTableName(this.tableName)
 }
 
 
@@ -389,7 +389,7 @@ basketReview!!.addItem(item)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("CREATE TABLE ")
-stringBuffer!!.append(tableName)
+stringBuffer!!.append(this.tableName)
 stringBuffer!!.append(" (")
 stringBuffer!!.append(entryData!!.ID)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)

@@ -55,7 +55,7 @@ public constructor (){
                         if(TouchScreenFactory.getInstance()!!.isTouch())
                         
                                     {
-                                    startString= PRESS_START
+                                    this.startString= this.PRESS_START
 
                                     }
                                 
@@ -64,12 +64,12 @@ public constructor (){
                         if(AppletUtil.isAppletLoader(this))
                         
                                     {
-                                    startString= KEY_START
+                                    this.startString= this.KEY_START
 
                                     }
                                 
                         else {
-                            startString= MENU_START
+                            this.startString= this.MENU_START
 
                         }
                             
@@ -84,7 +84,7 @@ public constructor (){
 var graphics = graphics
 
     
-                        if(timeDelayHelper!!.isTime())
+                        if(this.timeDelayHelper!!.isTime())
                         
                                     {
                                     
@@ -113,7 +113,7 @@ var graphics = graphics
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
 
-    var beginWidth: Int = (graphics.getFont()!!.stringWidth(startString) shr 1)
+    var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.startString) shr 1)
 
 
     var myFont: MyFont = MyFont.getInstance()!!

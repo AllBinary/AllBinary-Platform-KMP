@@ -143,7 +143,7 @@ this.keyRepeated(keyCode, 0)
     var platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
 
 
-    var input: Input = inputFactory!!.getInstance(keyCode)!!
+    var input: Input = this.inputFactory!!.getInstance(keyCode)!!
 
 
     
@@ -202,7 +202,7 @@ super.paint(graphics)
     //var graphics = graphics
     //var x = x
     //var y = y
-textFieldItem!!.paint(graphics, x, y)
+this.textFieldItem!!.paint(graphics, x, y)
 }
 
 

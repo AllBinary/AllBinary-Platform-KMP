@@ -81,7 +81,7 @@ this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeC
     var node: PathFindingNodeCost
 
 
-    var sizeX: Int = costArray!!.size
+    var sizeX: Int = this.costArray!!.size
                 
 
 
@@ -109,7 +109,7 @@ this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeC
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = geographicMapCellType as RaceTrackGeographicMapCellType
 
 node= PathFindingNodeCost(NullUtil.getInstance()!!.NULL_OBJECT, basicGeographicMapCellPositionFactory!!.getInstance(column, row), PathFindingNodeCostInfo(raceTrackGeographicMapCellType!!.getTravelCost().toLong(),  -1.toLong()))
-costArray[column]!![row]= node
+this.costArray[column]!![row]= node
 }
 
 }
@@ -290,7 +290,7 @@ this.closedSet!!.clear()
     var targetRow: Int = target.getRow()!!
 
 
-    var sizeX: Int = costArray!!.size
+    var sizeX: Int = this.costArray!!.size
                 
 
 
@@ -311,8 +311,8 @@ this.closedSet!!.clear()
                         for (row in 0 until sizeY)
 
         {
-discoveryCalculation= mathUtil!!.abs(column -targetColumn).toLong() +mathUtil!!.abs(row -targetRow)
-node= costArray[column]!![row]!!
+discoveryCalculation= this.mathUtil!!.abs(column -targetColumn).toLong() +this.mathUtil!!.abs(row -targetRow)
+node= this.costArray[column]!![row]!!
 node.pathFindingNodeCostInfoP!!.totalCostP= 0
 node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
 }
@@ -322,7 +322,7 @@ node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
 
     var startNode: PathFindingNodeCost = costArray[start.getColumn()]!![start.getRow()]!!
 
-openPriorityQueue!!.add(startNode)
+this.openPriorityQueue!!.add(startNode)
 
     var geographicMapInterface: BasicGeographicMap = this.geographicMapInterface as BasicGeographicMap
 
@@ -341,8 +341,8 @@ openPriorityQueue!!.add(startNode)
 
         do
         {
-current= openPriorityQueue!!.poll()
-closedSet!!.add(current)
+current= this.openPriorityQueue!!.poll()
+this.closedSet!!.add(current)
 
     
                         if(current.equals(targetNode))
@@ -384,10 +384,10 @@ closedSet!!.add(current)
                         if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
                         
                                     {
-                                    neighbor= costArray[column]!![row]!!
+                                    neighbor= this.costArray[column]!![row]!!
 
     
-                        if(closedSet!!.contains(neighbor))
+                        if(this.closedSet!!.contains(neighbor))
                         
                                     {
                                     
@@ -401,14 +401,14 @@ neighborInfo= neighbor.pathFindingNodeCostInfoP
 calculatedCost= neighborInfo!!.costToEndP +neighborInfo!!.costFromStartP +current.pathFindingNodeCostInfoP!!.totalCostP
 
     
-                        if(calculatedCost < neighborInfo!!.totalCostP || !openPriorityQueue!!.contains(neighbor))
+                        if(calculatedCost < neighborInfo!!.totalCostP || !this.openPriorityQueue!!.contains(neighbor))
                         
                                     {
                                     neighborInfo!!.totalCostP= calculatedCost
 neighbor.parent= current
 
     
-                        if(!openPriorityQueue!!.contains(neighbor))
+                        if(!this.openPriorityQueue!!.contains(neighbor))
                         
                                     {
                                     
@@ -416,7 +416,7 @@ neighbor.parent= current
                         if(geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
                         
                                     {
-                                    openPriorityQueue!!.add(neighbor)
+                                    this.openPriorityQueue!!.add(neighbor)
 
                                     }
                                 
@@ -435,7 +435,7 @@ neighbor.parent= current
 
 }
 
-        while(!openPriorityQueue!!.isEmpty())
+        while(!this.openPriorityQueue!!.isEmpty())
     
 
 
@@ -467,7 +467,7 @@ this.closedSet!!.clear()
     var targetRow: Int = target.getRow()!!
 
 
-    var sizeX: Int = costArray!!.size
+    var sizeX: Int = this.costArray!!.size
                 
 
 
@@ -488,8 +488,8 @@ this.closedSet!!.clear()
                         for (row in 0 until sizeY)
 
         {
-discoveryCalculation= mathUtil!!.abs(column -targetColumn).toLong() +mathUtil!!.abs(row -targetRow)
-node= costArray[column]!![row]!!
+discoveryCalculation= this.mathUtil!!.abs(column -targetColumn).toLong() +this.mathUtil!!.abs(row -targetRow)
+node= this.costArray[column]!![row]!!
 node.pathFindingNodeCostInfoP!!.totalCostP= 0
 node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
 }
@@ -499,7 +499,7 @@ node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
 
     var startNode: PathFindingNodeCost = costArray[start.getColumn()]!![start.getRow()]!!
 
-openPriorityQueue!!.add(startNode)
+this.openPriorityQueue!!.add(startNode)
 multipassState!!.step++
 }
 
@@ -533,8 +533,8 @@ multipassState!!.step++
 
         do
         {
-current= openPriorityQueue!!.poll()
-closedSet!!.add(current)
+current= this.openPriorityQueue!!.poll()
+this.closedSet!!.add(current)
 
     
                         if(current.equals(targetNode))
@@ -576,10 +576,10 @@ closedSet!!.add(current)
                         if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
                         
                                     {
-                                    neighbor= costArray[column]!![row]!!
+                                    neighbor= this.costArray[column]!![row]!!
 
     
-                        if(closedSet!!.contains(neighbor))
+                        if(this.closedSet!!.contains(neighbor))
                         
                                     {
                                     
@@ -593,14 +593,14 @@ neighborInfo= neighbor.pathFindingNodeCostInfoP
 calculatedCost= neighborInfo!!.costToEndP +neighborInfo!!.costFromStartP +current.pathFindingNodeCostInfoP!!.totalCostP
 
     
-                        if(calculatedCost < neighborInfo!!.totalCostP || !openPriorityQueue!!.contains(neighbor))
+                        if(calculatedCost < neighborInfo!!.totalCostP || !this.openPriorityQueue!!.contains(neighbor))
                         
                                     {
                                     neighborInfo!!.totalCostP= calculatedCost
 neighbor.parent= current
 
     
-                        if(!openPriorityQueue!!.contains(neighbor))
+                        if(!this.openPriorityQueue!!.contains(neighbor))
                         
                                     {
                                     
@@ -608,7 +608,7 @@ neighbor.parent= current
                         if(geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
                         
                                     {
-                                    openPriorityQueue!!.add(neighbor)
+                                    this.openPriorityQueue!!.add(neighbor)
 
                                     }
                                 
@@ -641,7 +641,7 @@ total++
                                 
 }
 
-        while(!openPriorityQueue!!.isEmpty())
+        while(!this.openPriorityQueue!!.isEmpty())
     
 
 
@@ -666,7 +666,7 @@ current= current.parent as PathFindingNodeCost
 }
 
 path.add(start)
-basicArrayListUtil!!.reverse(path)
+this.basicArrayListUtil!!.reverse(path)
 
 
 

@@ -96,7 +96,7 @@ var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
 
     
-                        if(!enabled)
+                        if(!this.enabled)
                         
                                     {
                                     

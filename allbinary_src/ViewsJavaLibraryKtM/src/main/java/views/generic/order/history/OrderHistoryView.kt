@@ -66,11 +66,11 @@ var transformInfoInterface = transformInfoInterface
                             //For kotlin this is before the body of the constructor.
                     
 this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
-this.preprocessing= request.getParameter(OrderHistoryData.PREPROCESSINGNAME)
-this.shipped= request.getParameter(OrderHistoryData.SHIPPEDNAME)
-this.partiallyShipped= request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
-this.processing= request.getParameter(OrderHistoryData.PROCESSINGNAME)
-this.cancelled= request.getParameter(OrderHistoryData.CANCELLEDNAME)
+this.preprocessing= this.request.getParameter(OrderHistoryData.PREPROCESSINGNAME)
+this.shipped= this.request.getParameter(OrderHistoryData.SHIPPEDNAME)
+this.partiallyShipped= this.request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
+this.processing= this.request.getParameter(OrderHistoryData.PROCESSINGNAME)
+this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)
 }
 
 

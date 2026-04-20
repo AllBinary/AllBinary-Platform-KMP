@@ -61,7 +61,7 @@ this.userConfigurationInterface= UserConfiguration() as UserConfigurationInterfa
 
     var userEmailConfigurationInterface: UserEmailConfigurationInterface = userEmailConfigurationView!!.getEmailConfigurationInterface() as UserEmailConfigurationInterface
 
-userConfigurationInterface!!.setUserEmailConfigurationInterface(userEmailConfigurationInterface)
+this.userConfigurationInterface!!.setUserEmailConfigurationInterface(userEmailConfigurationInterface)
 
     var timeCreatedNode: Node = DomSearchHelper.getNode(EntryData.getInstance()!!.TIMECREATED, childNodeList)!!
 
@@ -111,11 +111,11 @@ var document = document
 
 node.appendChild(userEmailConfigurationView!!.toXmlNode(document))
 
-    var timeCreatedView: TimeCreatedView = TimeCreatedView(userConfigurationInterface!!.getTimeCreated())
+    var timeCreatedView: TimeCreatedView = TimeCreatedView(this.userConfigurationInterface!!.getTimeCreated())
 
 node.appendChild(timeCreatedView!!.toXmlNode(document))
 
-    var timeLastModifiedView: TimeLastModifiedView = TimeLastModifiedView(userConfigurationInterface!!.getTimeLastModified())
+    var timeLastModifiedView: TimeLastModifiedView = TimeLastModifiedView(this.userConfigurationInterface!!.getTimeLastModified())
 
 node.appendChild(timeLastModifiedView!!.toXmlNode(document))
 

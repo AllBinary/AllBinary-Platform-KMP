@@ -96,7 +96,7 @@ this.changeDirectionIfCliffReached()
 
 
     
-                        if(angle == DOWN)
+                        if(angle == this.DOWN)
                         
                                     {
                                     this.nextDirection()

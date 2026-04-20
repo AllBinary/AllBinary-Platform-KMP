@@ -156,8 +156,8 @@ var helpSet = helpSet
             
     var helpBroker: HelpBroker = helpSet!!.createHelpBroker()!!
 
-helpBroker!!.setLocation(point)
-helpBroker!!.setSize(dimension)
+helpBroker!!.setLocation(this.point)
+helpBroker!!.setSize(this.dimension)
 CSH.DisplayHelpFromSource(helpBroker).
                             actionPerformed(contextSensitiveHelpActionEvent)
 this.logUtil!!.putF("CSH Action", getInstance(), "show")

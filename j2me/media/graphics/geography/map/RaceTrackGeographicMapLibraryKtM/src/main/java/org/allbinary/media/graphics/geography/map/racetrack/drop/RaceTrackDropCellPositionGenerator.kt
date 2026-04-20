@@ -57,7 +57,7 @@ open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGener
 
     var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance()!!
 protected constructor (){
-timeDelayHelper= TimeDelayHelper(10000)
+this.timeDelayHelper= TimeDelayHelper(10000)
 }
 
 
@@ -75,7 +75,7 @@ this.list.clear()
 : Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition
 
-    var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
+    var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = this.raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
 
 
     var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory = this.raceTrackGeographicMapCellTypeFactory as RaceTrackGeographicMapCellTypeFactory
@@ -148,7 +148,7 @@ ahead= index
 total++
 
     
-                        if(total > STRAIGHTAWAY)
+                        if(total > this.STRAIGHTAWAY)
                         
                                     {
                                     this.list.add(geographicMapCellPosition)
@@ -200,11 +200,11 @@ this.drop(allBinaryGameLayerManager, index)
     //var allBinaryLayerManager = allBinaryLayerManager
 
     
-                        if(timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
+                        if(this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
                         
                                     {
                                     
-    var index: Int = basicArrayListUtil!!.getRandomIndex(this.list)!!
+    var index: Int = this.basicArrayListUtil!!.getRandomIndex(this.list)!!
 
 this.drop(allBinaryLayerManager, index)
 

@@ -59,10 +59,13 @@ open public class AndroidHardware
 public constructor ()
             : super()
         {
-this.init(DEVICES)
+this.init(this.DEVICES)
+
+    var size: Int = this.componentInterfaceVector!!.size()!!
+
 
     
-                        if(componentInterfaceVector!!.size() < MINHARDWARE)
+                        if(size < this.MINHARDWARE)
                         
                                     {
                                     
@@ -120,7 +123,7 @@ this.logUtil!!.put("Hardware Data: " +this.toString(), this, commonStrings!!.INI
         //nullable = true from not(false or (false and false)) = true
 : LineNumberReader{
     //var filePath = filePath
-componentInterfaceVector= BasicArrayList()
+this.componentInterfaceVector= BasicArrayList()
 
     var pciFile: FileReader = FileReader(filePath)
 
@@ -137,7 +140,7 @@ this.logUtil!!.putF("File Found", this, commonStrings!!.CONSTRUCTOR)
                                 )
         {
 nextLine= lineNumberReader!!.readLine()
-componentInterfaceVector!!.add(UnknownHardware(nextLine))
+this.componentInterfaceVector!!.add(UnknownHardware(nextLine))
 }
 
 
@@ -156,7 +159,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return componentInterfaceVector!!.get(index) as HardwareComponentInterface
+                        return this.componentInterfaceVector!!.get(index) as HardwareComponentInterface
 }
 
 

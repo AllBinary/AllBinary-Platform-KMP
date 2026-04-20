@@ -488,7 +488,7 @@ this.removeGameKeyEvent(keyCode, false)
 }
 
 
-    private var isSingleKeyRepeatableProcessing: Boolean = features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
+    private var isSingleKeyRepeatableProcessing: Boolean = this.features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
 
     override fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -523,11 +523,11 @@ var repeated = repeated
 
 
     
-                        if(gameKey != NONE)
+                        if(gameKey != this.NONE)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
 
 DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
@@ -559,11 +559,11 @@ var repeated = repeated
 
 
     
-                        if(gameKey != NONE)
+                        if(gameKey != this.NONE)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
 
 UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
@@ -812,7 +812,7 @@ this.getSpecialAnimationInterface()!!.reset()
                                     }
                                 
 
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.processPageAdState()
 }
@@ -903,7 +903,7 @@ this.preDemoProcess()
                         if(indexedAnimationBehavior!!.loopIndex < 1)
                         
                                     {
-                                    timeDelayHelper!!.setStartTime()
+                                    this.timeDelayHelper!!.setStartTime()
 
                                     }
                                 
@@ -949,7 +949,7 @@ this.setCurrentThread()
 this.setRunning(true)
 
     
-                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
+                        if(this.features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
                         
                                     {
                                     progressCanvas!!.end()
@@ -961,13 +961,13 @@ this.setRunning(true)
 
                         }
                             
-fullScreenUtil!!.init(this, this.getCustomCommandListener())
+this.fullScreenUtil!!.init(this, this.getCustomCommandListener())
 this.initMenu()
 this.initPostPaint()
 this.setState()
 
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
+                        if(this.features.isDefault(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
                                     OpenGLThreadUtil.getInstance()!!.onResume()
@@ -976,7 +976,7 @@ this.setState()
                                 
 
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML())
+                        if(this.features.isDefault(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML())
                         
                                     {
                                     
@@ -1013,7 +1013,7 @@ super.setRunning(running)
         try {
             
     
-                        if((features.isDefault(openGLFeatureFactory!!.OPENGL) || J2MEUtil.isHTML()) && !running)
+                        if((this.features.isDefault(this.openGLFeatureFactory!!.OPENGL) || J2MEUtil.isHTML()) && !running)
                         
                                     {
                                     
@@ -1047,7 +1047,7 @@ baseGameStatistics!!.add(StringMaker().
 baseGameStatistics!!.init()
 
     
-                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
+                        if(this.features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
                         
                                     {
                                     progressCanvas!!.start()

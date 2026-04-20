@@ -55,10 +55,10 @@ var location = location
                     
 this.basicColor= this.basicColorFactory!!.GREEN
 this.colorP= this.basicColor!!.toInt()
-rectangle= Rectangle(0, 0, 1, 1, this.basicColor)
-rectangle.setDoubleSidedEnabled(true)
-rectangle.setNormalsEnabled(false)
-rectangle.setTexturesEnabled(false)
+this.rectangle= Rectangle(0, 0, 1, 1, this.basicColor)
+this.rectangle.setDoubleSidedEnabled(true)
+this.rectangle.setNormalsEnabled(false)
+this.rectangle.setTexturesEnabled(false)
 }
 
 
@@ -66,7 +66,7 @@ rectangle.setTexturesEnabled(false)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var colorBufferList: ColorBufferList = rectangle.getVertices()!!.getColor4BufferList()!!
+    var colorBufferList: ColorBufferList = this.rectangle.getVertices()!!.getColor4BufferList()!!
 
 
     var size: Int = colorBufferList!!.size()!!
@@ -88,7 +88,7 @@ colorBufferList!!.set(index, this.basicColor)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var number3dBufferList: Number3dBufferList = rectangle.getVertices()!!.getPointsOnFacesNumber3dBufferList()!!
+    var number3dBufferList: Number3dBufferList = this.rectangle.getVertices()!!.getPointsOnFacesNumber3dBufferList()!!
 
 
     var width: Int = x2
@@ -179,7 +179,7 @@ this.updateSize()
 positionNumber3d!!.x=  -(viewPosition!!.getX().toFloat())
 positionNumber3d!!.z=  -(viewPosition!!.getY().toFloat())
 positionNumber3d!!.y= viewPosition!!.getZ() +this.allbinaryLayer!!.getHeight()
-object3dProcessor!!.drawObject(gl, this.rectangle)
+this.object3dProcessor!!.drawObject(gl, this.rectangle)
 }
 
 

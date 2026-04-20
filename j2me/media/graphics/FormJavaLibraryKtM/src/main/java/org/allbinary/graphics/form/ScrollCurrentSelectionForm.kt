@@ -105,8 +105,8 @@ this.init()
                         if(this.formType == formTypeFactory!!.TEMP_HORIZONTAL_FORM)
                         
                                     {
-                                    dx= x -30 +(this.rectangle.getWidth() shr 1)
-dy= y
+                                    this.dx= x -30 +(this.rectangle.getWidth() shr 1)
+this.dy= y
 
                                     }
                                 
@@ -134,8 +134,8 @@ dy= y
 totalWidth += item.getMinimumWidth() +border
 }
 
-dx= x +(this.rectangle.getWidth() shr 1) -(totalWidth shr 1)
-dy= y +(this.rectangle.getHeight() shr 1)
+this.dx= x +(this.rectangle.getWidth() shr 1) -(totalWidth shr 1)
+this.dy= y +(this.rectangle.getHeight() shr 1)
 
     
                         if(this.moveForSmallScreen)
@@ -146,10 +146,10 @@ dy= y +(this.rectangle.getHeight() shr 1)
 
 
     
-                        if(dy < maxTitleHeight)
+                        if(this.dy < maxTitleHeight)
                         
                                     {
-                                    dy= maxTitleHeight
+                                    this.dy= maxTitleHeight
 
                                     }
                                 
@@ -182,23 +182,23 @@ dy= y +(this.rectangle.getHeight() shr 1)
 
 
     
-                        if(maxWidth < item2.getMinimumWidth())
+                        if(this.maxWidth < item2.getMinimumWidth())
                         
                                     {
-                                    maxWidth= item2.getMinimumWidth()
+                                    this.maxWidth= item2.getMinimumWidth()
 
                                     }
                                 
 totalHeight += item2.getMinimumHeight() +border
 }
 
-dx= ((this.rectangle.getWidth() -maxWidth) /2)
+this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
 
     
                         if(this.size() > 0)
                         
                                     {
-                                    dy= y +((this.rectangle.getHeight() -totalHeight) /2)
+                                    this.dy= y +((this.rectangle.getHeight() -totalHeight) /2)
 
     
                         if(this.moveForSmallScreen)
@@ -209,10 +209,10 @@ dx= ((this.rectangle.getWidth() -maxWidth) /2)
 
 
     
-                        if(dy < maxTitleHeight)
+                        if(this.dy < maxTitleHeight)
                         
                                     {
-                                    dy= maxTitleHeight
+                                    this.dy= maxTitleHeight
 
                                     }
                                 
@@ -223,7 +223,7 @@ dx= ((this.rectangle.getWidth() -maxWidth) /2)
                                     }
                                 
                         else {
-                            dy= y
+                            this.dy= y
 
                         }
                             
@@ -374,7 +374,7 @@ var item = item
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ((maxWidth -item.getMinimumWidth()) shr 1)
+                        return ((this.maxWidth -item.getMinimumWidth()) shr 1)
 }
 
 

@@ -69,18 +69,18 @@ var weblisketSession = weblisketSession
 
 this.document= DomDocumentHelper.create()
 
-    var contentTypeNode: Node = document.createElement(contentType)!!
+    var contentTypeNode: Node = this.document.createElement(contentType)!!
 
 
-    var languageTypeNode: Node = document.createElement(language)!!
+    var languageTypeNode: Node = this.document.createElement(language)!!
 
 
-    var localTypeNode: Node = document.createElement(local)!!
+    var localTypeNode: Node = this.document.createElement(local)!!
 
 this.baseNode= localTypeNode
 languageTypeNode!!.appendChild(localTypeNode)
 contentTypeNode!!.appendChild(languageTypeNode)
-document.appendChild(contentTypeNode)
+this.document.appendChild(contentTypeNode)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -97,7 +97,7 @@ document.appendChild(contentTypeNode)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 
@@ -120,18 +120,18 @@ var searchRequest = searchRequest
 
 this.document= DomDocumentHelper.create()
 
-    var contentTypeNode: Node = document.createElement(contentType)!!
+    var contentTypeNode: Node = this.document.createElement(contentType)!!
 
 
-    var languageTypeNode: Node = document.createElement(language)!!
+    var languageTypeNode: Node = this.document.createElement(language)!!
 
 
-    var localTypeNode: Node = document.createElement(local)!!
+    var localTypeNode: Node = this.document.createElement(local)!!
 
 this.baseNode= localTypeNode
 languageTypeNode!!.appendChild(localTypeNode)
 contentTypeNode!!.appendChild(languageTypeNode)
-document.appendChild(contentTypeNode)
+this.document.appendChild(contentTypeNode)
 } catch(e: Exception)
             {
 
@@ -139,7 +139,7 @@ document.appendChild(contentTypeNode)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 
@@ -200,7 +200,7 @@ stringBuffer!!.append(this.baseNode!!.getNodeName())
                         }
                             
 stringBuffer!!.append("\nDocument: ")
-stringBuffer!!.append(DomDocumentHelper.toString(document))
+stringBuffer!!.append(DomDocumentHelper.toString(this.document))
 
 
 

@@ -140,7 +140,7 @@ this.angleInfo!!.adjustAngle(newFrame)
 {
     //var direction = direction
 
-    var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
+    var angle: Angle = this.directionUtil!!.getFrameAngle(direction)!!
 
 this.adjustFrame(angle)
 }

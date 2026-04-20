@@ -91,7 +91,7 @@ this.gameCanvas= gameCanvas
 
 
     
-                        if(key == gameKeyFactory!!.LEVEL_DOWN.getId())
+                        if(key == this.gameKeyFactory!!.LEVEL_DOWN.getId())
                         
                                     {
                                     inputProcessor!!.strafeLeft()
@@ -103,7 +103,7 @@ break;
                                 
                              else 
     
-                        if(key == gameKeyFactory!!.LEVEL_UP.getId())
+                        if(key == this.gameKeyFactory!!.LEVEL_UP.getId())
                         
                                     {
                                     inputProcessor!!.strafeRight()
@@ -115,7 +115,7 @@ break;
                                 
 
     
-                        if(key == gameKeyFactory!!.LEFT.getId())
+                        if(key == this.gameKeyFactory!!.LEFT.getId())
                         
                                     {
                                     inputProcessor!!.left()
@@ -127,7 +127,7 @@ break;
                                 
                              else 
     
-                        if(key == gameKeyFactory!!.RIGHT.getId())
+                        if(key == this.gameKeyFactory!!.RIGHT.getId())
                         
                                     {
                                     inputProcessor!!.right()
@@ -139,7 +139,7 @@ break;
                                 
                              else 
     
-                        if(key == gameKeyFactory!!.UP.getId())
+                        if(key == this.gameKeyFactory!!.UP.getId())
                         
                                     {
                                     inputProcessor!!.up()
@@ -151,7 +151,7 @@ break;
                                 
                              else 
     
-                        if(key == gameKeyFactory!!.DOWN.getId())
+                        if(key == this.gameKeyFactory!!.DOWN.getId())
                         
                                     {
                                     inputProcessor!!.down()
@@ -163,7 +163,7 @@ break;
                                 
                              else 
     
-                        if(key == gameKeyFactory!!.KEY_NUM1.getId())
+                        if(key == this.gameKeyFactory!!.KEY_NUM1.getId())
                         
                                     {
                                     inputProcessor!!.special1(gameLayerManager, GameKeyEvent.NONE)
@@ -175,7 +175,7 @@ break;
                                 
                              else 
     
-                        if(key == gameKeyFactory!!.KEY_NUM3.getId())
+                        if(key == this.gameKeyFactory!!.KEY_NUM3.getId())
                         
                                     {
                                     inputProcessor!!.special2(gameLayerManager, GameKeyEvent.NONE)

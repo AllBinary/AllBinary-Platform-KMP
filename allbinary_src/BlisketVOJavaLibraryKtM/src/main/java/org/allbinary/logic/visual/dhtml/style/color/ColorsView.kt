@@ -67,10 +67,10 @@ var blueIndex = blueIndex
 
 
     
-                        if(redIndex < HEXRADIX)
+                        if(redIndex < this.HEXRADIX)
                         
                                     {
-                                    hexColorStringBuffer!!.append(commonPhoneStrings!!.ZERO)
+                                    hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
 
                                     }
                                 
@@ -80,7 +80,7 @@ hexColorStringBuffer!!.append(redIndex, HEXRADIX.toString())
                         if(greenIndex < HEXRADIX)
                         
                                     {
-                                    hexColorStringBuffer!!.append(commonPhoneStrings!!.ZERO)
+                                    hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
 
                                     }
                                 
@@ -90,7 +90,7 @@ hexColorStringBuffer!!.append(greenIndex, HEXRADIX.toString())
                         if(blueIndex < HEXRADIX)
                         
                                     {
-                                    hexColorStringBuffer!!.append(commonPhoneStrings!!.ZERO)
+                                    hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
 
                                     }
                                 
@@ -123,7 +123,7 @@ node.appendChild(blackNode)
 
 
 
-                        for (index in 0 until MAX)
+                        for (index in 0 until this.MAX)
 
         {
 
@@ -131,10 +131,10 @@ node.appendChild(blackNode)
 
 
     
-                        if(index < HEXRADIX)
+                        if(index < this.HEXRADIX)
                         
                                     {
-                                    hexColorStringBuffer!!.append(commonPhoneStrings!!.ZERO)
+                                    hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
 
                                     }
                                 
@@ -144,7 +144,7 @@ hexColorStringBuffer!!.append(index, HEXRADIX.toString())
                         if(index < HEXRADIX)
                         
                                     {
-                                    hexColorStringBuffer!!.append(commonPhoneStrings!!.ZERO)
+                                    hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
 
                                     }
                                 
@@ -154,7 +154,7 @@ hexColorStringBuffer!!.append(index, HEXRADIX.toString())
                         if(index < HEXRADIX)
                         
                                     {
-                                    hexColorStringBuffer!!.append(commonPhoneStrings!!.ZERO)
+                                    hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
 
                                     }
                                 
@@ -173,49 +173,21 @@ node.appendChild(whiteNode)
 
 
 
-                        for (blueIndex in MAX /2 until MAX)
+                        for (blueIndex in this.MAX /2 until this.MAX)
 
         {
 
 
 
 
-                        for (greenIndex in 0 until MAX /2)
+                        for (greenIndex in 0 until this.MAX /2)
 
         {
 
 
 
 
-                        for (redIndex in 0 until MAX /2)
-
-        {
-node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
-}
-
-}
-
-}
-
-
-
-
-
-                        for (redIndex in MAX /2 until MAX)
-
-        {
-
-
-
-
-                        for (greenIndex in 0 until MAX /2)
-
-        {
-
-
-
-
-                        for (blueIndex in 0 until MAX /2)
+                        for (redIndex in 0 until this.MAX /2)
 
         {
 node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
@@ -229,21 +201,21 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
 
 
-                        for (greenIndex in MAX /2 until MAX)
+                        for (redIndex in this.MAX /2 until this.MAX)
 
         {
 
 
 
 
-                        for (redIndex in 0 until MAX /2)
+                        for (greenIndex in 0 until this.MAX /2)
 
         {
 
 
 
 
-                        for (blueIndex in 0 until MAX /2)
+                        for (blueIndex in 0 until this.MAX /2)
 
         {
 node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
@@ -257,21 +229,49 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
 
 
-                        for (greenIndex in 0 until MAX)
+                        for (greenIndex in this.MAX /2 until this.MAX)
 
         {
 
 
 
 
-                        for (redIndex in 0 until MAX)
+                        for (redIndex in 0 until this.MAX /2)
 
         {
 
 
 
 
-                        for (blueIndex in 0 until MAX)
+                        for (blueIndex in 0 until this.MAX /2)
+
+        {
+node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+}
+
+}
+
+}
+
+
+
+
+
+                        for (greenIndex in 0 until this.MAX)
+
+        {
+
+
+
+
+                        for (redIndex in 0 until this.MAX)
+
+        {
+
+
+
+
+                        for (blueIndex in 0 until this.MAX)
 
         {
 node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))

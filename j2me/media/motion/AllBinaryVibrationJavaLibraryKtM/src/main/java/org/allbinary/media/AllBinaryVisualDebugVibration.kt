@@ -63,7 +63,7 @@ this.timeDelayHelper!!.delay= duration
 var graphics = graphics
 
     
-                        if(timeDelayHelper!!.isTime())
+                        if(this.timeDelayHelper!!.isTime())
                         
                                     {
                                     this.timeDelayHelper!!.delay= Integer.MAX_VALUE
@@ -74,7 +74,7 @@ var graphics = graphics
     var myFont: MyFont = MyFont.getInstance()!!
 
 
-    var width: Int = myFont!!.stringWidth(VIBRATING)!!
+    var width: Int = myFont!!.stringWidth(this.VIBRATING)!!
 
 graphics.drawString(VIBRATING, displayInfoSingleton!!.getLastHalfWidth() -(width shr 1), 0, anchor)
 

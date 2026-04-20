@@ -87,10 +87,10 @@ private constructor (){
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!
 
-surroundingCellPositions[0]= geographicMapCellPositionFactory!!.getInstance(column, row -1)
-surroundingCellPositions[1]= geographicMapCellPositionFactory!!.getInstance(column, row +1)
-surroundingCellPositions[2]= geographicMapCellPositionFactory!!.getInstance(column -1, row)
-surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getInstance(column +1, row)
+this.surroundingCellPositions[0]= geographicMapCellPositionFactory!!.getInstance(column, row -1)
+this.surroundingCellPositions[1]= geographicMapCellPositionFactory!!.getInstance(column, row +1)
+this.surroundingCellPositions[2]= geographicMapCellPositionFactory!!.getInstance(column -1, row)
+this.surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getInstance(column +1, row)
 
     var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = this.raceTrackGeographicMap as BaseRaceTrackGeographicMap
 
@@ -107,10 +107,10 @@ surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getInstance(colu
 
 
 
-                        for (index in surroundingCellPositions!!.size  - 1  downTo 0)
+                        for (index in this.surroundingCellPositions!!.size  - 1  downTo 0)
 
         {
-geographicMapCellPosition= surroundingCellPositions[index]!!
+geographicMapCellPosition= this.surroundingCellPositions[index]!!
 raceTrackGeographicMapCellType= raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
 
     
@@ -143,7 +143,7 @@ break;
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
     //var geographicMapInterface = geographicMapInterface
-hashtable.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManager)
+this.hashtable.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManager)
 super.update(allBinaryGameLayerManager, geographicMapInterface)
 }
 
@@ -227,7 +227,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
     var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = this.raceTrackGeographicMap as BaseRaceTrackGeographicMap
 
 
-    var list: BasicArrayList = layerCoveringCellPositionsUtil!!.getAll(baseRaceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, BasicArrayList())!!
+    var list: BasicArrayList = this.layerCoveringCellPositionsUtil!!.getAll(baseRaceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, BasicArrayList())!!
 
 
     

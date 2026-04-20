@@ -51,7 +51,7 @@ companion object {
 public constructor ()
             : super()
         {
-idGeneratorEntity= IdGeneratorEntityFactory.getInstance() as IdGeneratorEntity
+this.idGeneratorEntity= IdGeneratorEntityFactory.getInstance() as IdGeneratorEntity
 }
 
 
@@ -64,9 +64,9 @@ var value = value
             
     var vector: Vector = Vector()
 
-vector.add(name)
+vector.add(this.name)
 vector.add(Long.valueOf(value)!!.toString())
-idGeneratorEntity!!.insert(vector)
+this.idGeneratorEntity!!.insert(vector)
 } catch(e: Exception)
             {
 
@@ -107,12 +107,12 @@ this.name= name
 
         try {
             
-    var idLong: Long = this.idGeneratorEntity!!.get(name)!!
+    var idLong: Long = this.idGeneratorEntity!!.get(this.name)!!
 
 
     var newValue: Long = (idLong!!.longValue() +1).toLong()!!
 
-this.idGeneratorEntity!!.update(name, newValue)
+this.idGeneratorEntity!!.update(this.name, newValue)
 
 
 

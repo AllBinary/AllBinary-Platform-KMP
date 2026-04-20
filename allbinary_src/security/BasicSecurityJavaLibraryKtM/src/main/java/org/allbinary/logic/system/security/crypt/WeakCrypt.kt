@@ -97,7 +97,7 @@ var value = value
 
         try {
             
-    var decrypted: ByteArray = abCrypt!!.decrypt(DatabaseEncoder.decode(value))!!
+    var decrypted: ByteArray = this.abCrypt!!.decrypt(DatabaseEncoder.decode(value))!!
 
 
 

@@ -59,8 +59,8 @@ this.before= before.toCharArray().concatToString()
 this.after= after.toCharArray().concatToString()
 this.height= height.toCharArray().concatToString()
 this.width= width.toCharArray().concatToString()
-addAttribute(HEIGHT, this.height)
-addAttribute(WIDTH, this.width)
+addAttribute(this.HEIGHT, this.height)
+addAttribute(this.WIDTH, this.width)
 }
 
 
@@ -88,8 +88,8 @@ this.body= body
     var attributeSize: Int = attributeKeys!!.size
                 
 
-result= before
-result += START
+result= this.before
+result += this.START
 result += " "
 
 
@@ -120,10 +120,10 @@ result += "\" "
                                 
 }
 
-result += END
-result += body
-result += ENDTAG
-result += after
+result += this.END
+result += this.body
+result += this.ENDTAG
+result += this.after
 
 
 

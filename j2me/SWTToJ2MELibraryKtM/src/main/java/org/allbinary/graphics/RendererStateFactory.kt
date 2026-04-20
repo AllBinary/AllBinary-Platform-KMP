@@ -79,7 +79,7 @@ this.loaded= loaded
         //nullable = true from not(false or (false and false)) = true
 {
 var initialized = initialized
-surfaceChanged= initialized
+this.surfaceChanged= initialized
 }
 
 

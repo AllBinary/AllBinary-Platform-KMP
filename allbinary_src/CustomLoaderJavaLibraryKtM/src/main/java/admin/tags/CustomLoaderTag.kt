@@ -129,7 +129,7 @@ setMethod!!.invoke(anyType, methodArgs)
                                 
 
     
-                        if(command != 
+                        if(this.command != 
                                     null
                                 )
                         
@@ -137,7 +137,7 @@ setMethod!!.invoke(anyType, methodArgs)
                                     this.propertiesHashMap= HashMap<Any, Any>()
 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.SET) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.SET) == 0)
                         
                                     {
                                     this.setCustomLoaderWebappPath()

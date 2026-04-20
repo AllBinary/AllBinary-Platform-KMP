@@ -88,7 +88,7 @@ this.url= stringBuffer!!.toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return url
+                        return this.url
 }
 
 

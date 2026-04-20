@@ -681,7 +681,7 @@ this.rtsLogHelper!!.setClosestGeographicMapCellHistory(this, pathsList)
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionBasicArrayList!!.get(geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition
 
-currentDistance= layerDistanceUtil!!.getDistance(this, geographicMapCellPosition!!.getMidPoint())
+currentDistance= this.layerDistanceUtil!!.getDistance(this, geographicMapCellPosition!!.getMidPoint())
 
     
                         if(currentDistance < shortestDistance)
@@ -1550,7 +1550,7 @@ layerPartialCellPositionsUtil!!.getAll(geographicMapInterface, this, velocityXSc
 
 
     
-                        if(cellPosition == cellPositionFactory!!.NONE)
+                        if(cellPosition == this.cellPositionFactory!!.NONE)
                         
                                     {
                                     
@@ -1854,7 +1854,7 @@ var ownerLayer = ownerLayer
                         if(this.getLoad() > 0)
                         
                                     {
-                                    CAPITAL_EVENT.setValue(this.getLoad())
+                                    this.CAPITAL_EVENT.setValue(this.getLoad())
 CapitalEventHandlerFactory.getInstance(ownerLayer!!.getGroupInterface()[0]!!)!!.fireEvent(CAPITAL_EVENT)
 this.setLoad(0)
 

@@ -90,19 +90,19 @@ private constructor ()
 
     var MAX: Int = InputFactory.getInstance()!!.MAX
 
-SPECIAL_BUTTON_SEVEN_TESTING_ONLY= TouchButtonInput(MAX -41, "Button 7 - Testing Only May Cross Over Key Values")
-SPECIAL_BUTTON_EIGHT_TESTING_ONLY= TouchButtonInput(MAX -42, "Button 8 - Testing Only May Cross Over Key Values")
-SPECIAL_BUTTON_SIX= TouchButtonInput(MAX -30, "Button 6")
-SPECIAL_BUTTON_FIVE= TouchButtonInput(MAX -31, "Button 5")
-SPECIAL_BUTTON_FOUR= TouchButtonInput(MAX -32, "Button 4")
-SPECIAL_BUTTON_THREE= TouchButtonInput(MAX -33, "Button 3")
-SPECIAL_BUTTON_TWO= TouchButtonInput(MAX -34, "Button 2")
-SPECIAL_BUTTON_ONE= TouchButtonInput(MAX -35, "Button 1")
-UP= TouchButtonInput(MAX -36, "Up Button")
-LEFT= TouchButtonInput(MAX -37, "Left Button")
-RIGHT= TouchButtonInput(MAX -38, "Right Button")
-DOWN= TouchButtonInput(MAX -39, "Down Button")
-NONE= TouchButtonInput(MAX -40, "No Button")
+this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY= TouchButtonInput(MAX -41, "Button 7 - Testing Only May Cross Over Key Values")
+this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY= TouchButtonInput(MAX -42, "Button 8 - Testing Only May Cross Over Key Values")
+this.SPECIAL_BUTTON_SIX= TouchButtonInput(MAX -30, "Button 6")
+this.SPECIAL_BUTTON_FIVE= TouchButtonInput(MAX -31, "Button 5")
+this.SPECIAL_BUTTON_FOUR= TouchButtonInput(MAX -32, "Button 4")
+this.SPECIAL_BUTTON_THREE= TouchButtonInput(MAX -33, "Button 3")
+this.SPECIAL_BUTTON_TWO= TouchButtonInput(MAX -34, "Button 2")
+this.SPECIAL_BUTTON_ONE= TouchButtonInput(MAX -35, "Button 1")
+this.UP= TouchButtonInput(MAX -36, "Up Button")
+this.LEFT= TouchButtonInput(MAX -37, "Left Button")
+this.RIGHT= TouchButtonInput(MAX -38, "Right Button")
+this.DOWN= TouchButtonInput(MAX -39, "Down Button")
+this.NONE= TouchButtonInput(MAX -40, "No Button")
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -113,24 +113,24 @@ NONE= TouchButtonInput(MAX -40, "No Button")
 var inputToGameKeyMapping = inputToGameKeyMapping
 
     
-                        if(!initialized)
+                        if(!this.initialized)
                         
                                     {
-                                    initialized= true
-list.add(UP)
-list.add(LEFT)
-list.add(RIGHT)
-list.add(DOWN)
-list.add(SPECIAL_BUTTON_TWO)
-list.add(SPECIAL_BUTTON_FOUR)
-list.add(SPECIAL_BUTTON_THREE)
-list.add(SPECIAL_BUTTON_ONE)
-list.add(SPECIAL_BUTTON_FIVE)
-list.add(SPECIAL_BUTTON_SIX)
-list.add(SPECIAL_BUTTON_SIX)
-list.add(SPECIAL_BUTTON_SEVEN_TESTING_ONLY)
-list.add(SPECIAL_BUTTON_EIGHT_TESTING_ONLY)
-this.updateAll(list, inputToGameKeyMapping)
+                                    this.initialized= true
+this.list.add(this.UP)
+this.list.add(this.LEFT)
+this.list.add(this.RIGHT)
+this.list.add(this.DOWN)
+this.list.add(this.SPECIAL_BUTTON_TWO)
+this.list.add(this.SPECIAL_BUTTON_FOUR)
+this.list.add(this.SPECIAL_BUTTON_THREE)
+this.list.add(this.SPECIAL_BUTTON_ONE)
+this.list.add(this.SPECIAL_BUTTON_FIVE)
+this.list.add(this.SPECIAL_BUTTON_SIX)
+this.list.add(this.SPECIAL_BUTTON_SIX)
+this.list.add(this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY)
+this.list.add(this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY)
+this.updateAll(this.list, inputToGameKeyMapping)
 CancelTouchButtonInputFactory.getInstance()
 
                                     }

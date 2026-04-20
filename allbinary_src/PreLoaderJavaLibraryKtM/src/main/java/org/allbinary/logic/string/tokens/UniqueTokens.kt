@@ -44,30 +44,30 @@ open public class UniqueTokens
 public constructor ()
             : super()
         {
-specialCharacters!!.add("!")
-specialCharacters!!.add("@")
-specialCharacters!!.add(CommonPhoneStrings.getInstance()!!.POUND)
-specialCharacters!!.add("$")
-specialCharacters!!.add("%")
-specialCharacters!!.add("^")
-specialCharacters!!.add(CommonSeps.getInstance()!!.AMPERSAND)
-specialCharacters!!.add(CommonPhoneStrings.getInstance()!!.STAR)
-specialCharacters!!.add("(")
-specialCharacters!!.add(")")
-specialCharacters!!.add("-")
-specialCharacters!!.add("_")
-specialCharacters!!.add("+")
-specialCharacters!!.add("=")
-specialCharacters!!.add("\\")
-specialCharacters!!.add("|")
-specialCharacters!!.add(AbPathData.getInstance()!!.EXTENSION_SEP)
-specialCharacters!!.add(",")
-specialCharacters!!.add("<")
-specialCharacters!!.add(">")
-specialCharacters!!.add("?")
-specialCharacters!!.add("/")
-specialCharacters!!.add("~")
-specialCharacters!!.add("`")
+this.specialCharacters!!.add("!")
+this.specialCharacters!!.add("@")
+this.specialCharacters!!.add(CommonPhoneStrings.getInstance()!!.POUND)
+this.specialCharacters!!.add("$")
+this.specialCharacters!!.add("%")
+this.specialCharacters!!.add("^")
+this.specialCharacters!!.add(CommonSeps.getInstance()!!.AMPERSAND)
+this.specialCharacters!!.add(CommonPhoneStrings.getInstance()!!.STAR)
+this.specialCharacters!!.add("(")
+this.specialCharacters!!.add(")")
+this.specialCharacters!!.add("-")
+this.specialCharacters!!.add("_")
+this.specialCharacters!!.add("+")
+this.specialCharacters!!.add("=")
+this.specialCharacters!!.add("\\")
+this.specialCharacters!!.add("|")
+this.specialCharacters!!.add(AbPathData.getInstance()!!.EXTENSION_SEP)
+this.specialCharacters!!.add(",")
+this.specialCharacters!!.add("<")
+this.specialCharacters!!.add(">")
+this.specialCharacters!!.add("?")
+this.specialCharacters!!.add("/")
+this.specialCharacters!!.add("~")
+this.specialCharacters!!.add("`")
 }
 
 
@@ -205,12 +205,12 @@ var subCleaningString = subCleaningString
 
 
 
-                        for (index in 0 until specialCharacters!!.size!!)
+                        for (index in 0 until this.specialCharacters!!.size!!)
 
         {
 
     
-                        if(subCleaningString!!.compareTo(specialCharacters!!.elementAt(index) as String) == 0)
+                        if(subCleaningString!!.compareTo(this.specialCharacters!!.elementAt(index) as String) == 0)
                         
 
 

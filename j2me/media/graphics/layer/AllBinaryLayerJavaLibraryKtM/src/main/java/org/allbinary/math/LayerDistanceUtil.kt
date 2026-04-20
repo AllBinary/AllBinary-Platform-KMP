@@ -72,7 +72,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mathUtil!!.sqrt((dx *dx) +(dy *dy)).toInt()
+                        return this.mathUtil!!.sqrt((dx *dx) +(dy *dy)).toInt()
 }
 
 
@@ -94,7 +94,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mathUtil!!.sqrt((dx *dx) +(dy *dy) +(dz *dz)).toInt()
+                        return this.mathUtil!!.sqrt((dx *dx) +(dy *dy) +(dz *dz)).toInt()
 }
 
 
@@ -113,7 +113,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mathUtil!!.sqrt((dx *dx) +(dy *dy)).toInt()
+                        return this.mathUtil!!.sqrt((dx *dx) +(dy *dy)).toInt()
 }
 
 

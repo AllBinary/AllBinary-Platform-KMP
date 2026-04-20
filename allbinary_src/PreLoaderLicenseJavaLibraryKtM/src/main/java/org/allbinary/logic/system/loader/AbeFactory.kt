@@ -142,7 +142,7 @@ var params = params
 
 
     
-                        if(useCustomLoader)
+                        if(this.useCustomLoader)
                         
                                     {
                                     
@@ -239,7 +239,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
 
 
     
-                        if(useCustomLoader)
+                        if(this.useCustomLoader)
                         
                                     {
                                     

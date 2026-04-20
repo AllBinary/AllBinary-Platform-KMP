@@ -64,7 +64,7 @@ ImageCacheFactory.getInstance()!!.hasAnyLazyAnimationFactories= true
                         if(this.animationInterfaceFactoryInterface!!.getImage()!!.isReady())
                         
                                     {
-                                    this.animationInterfaceFactoryInterface!!.setInitialScale(scaleProperties)
+                                    this.animationInterfaceFactoryInterface!!.setInitialScale(this.scaleProperties)
 
 
 

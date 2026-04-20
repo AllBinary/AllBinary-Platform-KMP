@@ -86,16 +86,16 @@ this.higher= higher
                         if(gameAdState!!.isShowingAt())
                         
                                     {
-                                    deltaY= higher
+                                    this.deltaY= this.higher
 
                                     }
                                 
                         else {
-                            deltaY= lower
+                            this.deltaY= this.lower
 
                         }
                             
-bottom= displayInfo!!.getLastHeight() -deltaY
+this.bottom= displayInfo!!.getLastHeight() -this.deltaY
 }
 
 

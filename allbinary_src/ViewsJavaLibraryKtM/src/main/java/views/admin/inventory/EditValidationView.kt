@@ -86,7 +86,7 @@ this.id= hashMap!!.get(BasicItemData.ID) as String
 : Boolean{
 
     
-                        if(id == 
+                        if(this.id == 
                                     null
                                  || !StringValidationUtil.getInstance()!!.isNumber(this.id))
                         
@@ -171,7 +171,7 @@ var document = document
 
 
     
-                        if(id == 
+                        if(this.id == 
                                     null
                                  || !StringValidationUtil.getInstance()!!.isNumber(this.id))
                         

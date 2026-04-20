@@ -171,7 +171,7 @@ this.dropping= dropping
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(RATIOS_LABEL)
+stringBuffer!!.append(this.RATIOS_LABEL)
 
 
 
@@ -192,10 +192,10 @@ stringBuffer!!.append(this.getRatios()[index]!!.toString())
 }
 
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(IS_GOOD_LABEL)
+stringBuffer!!.append(this.IS_GOOD_LABEL)
 stringBuffer!!.appendboolean(this.isGood())
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(IS_DROPPPING_LABEL)
+stringBuffer!!.append(this.IS_DROPPPING_LABEL)
 stringBuffer!!.appendboolean(this.isDropping())
 
 

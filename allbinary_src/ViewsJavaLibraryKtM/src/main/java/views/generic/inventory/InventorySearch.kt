@@ -191,7 +191,7 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
     var inventorySearchUtil: InventorySearchUtil = InventorySearchUtil.getInstance()!!
 
 
-    var vector: Vector = inventorySearchUtil!!.getBasicItemIdColumn(searchRequest)!!
+    var vector: Vector = inventorySearchUtil!!.getBasicItemIdColumn(this.searchRequest)!!
 
 
 

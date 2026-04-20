@@ -183,8 +183,8 @@ this.releaseHelper!!.release(touchButtonInput, deviceId)
 
     var gameKeyEvent: GameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
 
-upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
 this.currentlyPressedTouchButtonSingleton!!.remove(touchButtonInput)
 }
 
@@ -199,14 +199,14 @@ var x = x
 var y = y
 var deviceId = deviceId
 
-    var touchButtonInput: TouchButtonInput = lastPressedTouchButtonInput
+    var touchButtonInput: TouchButtonInput = this.lastPressedTouchButtonInput
 
 
     
                         if(currentlyPressedTouchButtonSingleton!!.contains(touchButtonInput))
                         
                                     {
-                                    lastPressedTouchButtonInput= BasicTouchInputFactory.getInstance()!!.NONE
+                                    this.lastPressedTouchButtonInput= BasicTouchInputFactory.getInstance()!!.NONE
 this.processRelease(touchButtonInput, deviceId)
 
 
@@ -241,7 +241,7 @@ rectangle= touchButton!!.getRectangle()
 point= rectangle.getPoint()
 
     
-                        if(rectangleCollisionUtil!!.isInside(point.getX(), point.getY(), rectangle.getMaxX(), rectangle.getMaxY(), x, y))
+                        if(this.rectangleCollisionUtil!!.isInside(point.getX(), point.getY(), rectangle.getMaxX(), rectangle.getMaxY(), x, y))
                         
                                     {
                                     touchButtonInput= touchButton!!.getTouchButtonInput()
@@ -303,7 +303,7 @@ rectangle= touchButton!!.getRectangle()
 point= rectangle.getPoint()
 
     
-                        if(rectangleCollisionUtil!!.isInside(point.getX(), point.getY(), rectangle.getMaxX(), rectangle.getMaxY(), x, y))
+                        if(this.rectangleCollisionUtil!!.isInside(point.getX(), point.getY(), rectangle.getMaxX(), rectangle.getMaxY(), x, y))
                         
                                     {
                                     touchButtonInput= touchButton!!.getTouchButtonInput()
@@ -313,13 +313,13 @@ point= rectangle.getPoint()
                         
                                     {
                                     this.releaseHelper!!.release(touchButtonInput, deviceId)
-lastPressedTouchButtonInput= touchButtonInput
+this.lastPressedTouchButtonInput= touchButtonInput
 currentlyPressedTouchButtonSingleton!!.add(touchButtonInput)
 
     var gameKeyEvent: GameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
 
-downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 

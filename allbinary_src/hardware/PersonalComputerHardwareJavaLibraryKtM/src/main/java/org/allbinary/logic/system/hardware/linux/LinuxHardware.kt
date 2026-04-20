@@ -110,7 +110,7 @@ public constructor ()
 this.init(PCIFILE)
 
     
-                        if(componentInterfaceVector!!.size < MINHARDWARE)
+                        if(this.componentInterfaceVector!!.size < this.MINHARDWARE)
                         
                                     {
                                     
@@ -130,8 +130,8 @@ this.init(PCIFILE)
                                 )
                         
                                     {
-                                    cpuInterfaceVector!!.add(cpu)
-componentInterfaceVector!!.add(cpu)
+                                    this.cpuInterfaceVector!!.add(cpu)
+this.componentInterfaceVector!!.add(cpu)
 
                                     }
                                 
@@ -190,18 +190,18 @@ var lineNumberReader = lineNumberReader
 var filePath = filePath
 
         try {
-            componentInterfaceVector= Vector()
-videoInterfaceVector= Vector()
-hardDriveControllerInterfaceVector= Vector()
-cpuInterfaceVector= Vector()
-usbInterfaceVector= Vector()
-ethernetInterfaceVector= Vector()
-multimediaInterfaceVector= Vector()
-fireWireInterfaceVector= Vector()
-bridgeInterfaceVector= Vector()
-hardDriveInterfaceVector= Vector()
-macInterfaceVector= Vector()
-monitorInterfaceVector= Vector()
+            this.componentInterfaceVector= Vector()
+this.videoInterfaceVector= Vector()
+this.hardDriveControllerInterfaceVector= Vector()
+this.cpuInterfaceVector= Vector()
+this.usbInterfaceVector= Vector()
+this.ethernetInterfaceVector= Vector()
+this.multimediaInterfaceVector= Vector()
+this.fireWireInterfaceVector= Vector()
+this.bridgeInterfaceVector= Vector()
+this.hardDriveInterfaceVector= Vector()
+this.macInterfaceVector= Vector()
+this.monitorInterfaceVector= Vector()
 
     var pciFile: FileReader = FileReader(filePath)
 
@@ -296,7 +296,7 @@ nextLine= lineNumberReader!!.readLine()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    this.logUtil!!.putF("Found Hardware Device: " +componentInterfaceVector!!.size, this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("Found Hardware Device: " +this.componentInterfaceVector!!.size, this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -339,7 +339,7 @@ nextLine= lineNumberReader!!.readLine()
                                 )
                         
                                     {
-                                    componentInterfaceVector!!.add(componentInterface)
+                                    this.componentInterfaceVector!!.add(componentInterface)
 
                                     }
                                 
@@ -384,7 +384,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return multimediaInterfaceVector!!.get(index) as MediaInterface
+                        return this.multimediaInterfaceVector!!.get(index) as MediaInterface
 }
 
 
@@ -396,7 +396,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return bridgeInterfaceVector!!.get(index) as BridgeInterface
+                        return this.bridgeInterfaceVector!!.get(index) as BridgeInterface
 }
 
 
@@ -408,7 +408,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cpuInterfaceVector!!.get(index) as CpuInterface
+                        return this.cpuInterfaceVector!!.get(index) as CpuInterface
 }
 
 
@@ -420,7 +420,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ethernetInterfaceVector!!.get(index) as EthernetInterface
+                        return this.ethernetInterfaceVector!!.get(index) as EthernetInterface
 }
 
 
@@ -432,7 +432,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return fireWireInterfaceVector!!.get(index) as FireWireInterface
+                        return this.fireWireInterfaceVector!!.get(index) as FireWireInterface
 }
 
 
@@ -444,7 +444,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hardDriveControllerInterfaceVector!!.get(index) as HardDriveControllerInterface
+                        return this.hardDriveControllerInterfaceVector!!.get(index) as HardDriveControllerInterface
 }
 
 
@@ -456,7 +456,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hardDriveInterfaceVector!!.get(index) as HardDriveInterface
+                        return this.hardDriveInterfaceVector!!.get(index) as HardDriveInterface
 }
 
 
@@ -468,7 +468,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return macInterfaceVector!!.get(index) as MachineAccessControlAddressInterface
+                        return this.macInterfaceVector!!.get(index) as MachineAccessControlAddressInterface
 }
 
 
@@ -480,7 +480,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return monitorInterfaceVector!!.get(index) as MonitorInterface
+                        return this.monitorInterfaceVector!!.get(index) as MonitorInterface
 }
 
 
@@ -492,7 +492,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return usbInterfaceVector!!.get(index) as UsbInterface
+                        return this.usbInterfaceVector!!.get(index) as UsbInterface
 }
 
 
@@ -504,7 +504,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return videoInterfaceVector!!.get(index) as VideoInterface
+                        return this.videoInterfaceVector!!.get(index) as VideoInterface
 }
 
 
@@ -516,7 +516,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return componentInterfaceVector!!.get(index) as HardwareComponentInterface
+                        return this.componentInterfaceVector!!.get(index) as HardwareComponentInterface
 }
 
 
@@ -527,7 +527,7 @@ var index = index
     var hardwareBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = componentInterfaceVector!!.size!!
+    var size: Int = this.componentInterfaceVector!!.size!!
 
 
 
@@ -537,7 +537,7 @@ var index = index
 
         {
 
-    var componentInterface: HardwareComponentInterface = componentInterfaceVector!!.get(index) as HardwareComponentInterface
+    var componentInterface: HardwareComponentInterface = this.componentInterfaceVector!!.get(index) as HardwareComponentInterface
 
 hardwareBuffer!!.append("Component ")
 hardwareBuffer!!.appendint(index)

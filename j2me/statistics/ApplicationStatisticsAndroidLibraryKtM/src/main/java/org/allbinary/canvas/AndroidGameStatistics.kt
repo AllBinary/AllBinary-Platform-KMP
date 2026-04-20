@@ -47,7 +47,7 @@ public constructor (){
 
 
 
-                        for (index in 0 until STRING_ARRAY.size)
+                        for (index in 0 until this.STRING_ARRAY.size)
 
         {
 this.STRING_ARRAY[index]= stringUtil!!.EMPTY_STRING
@@ -69,7 +69,7 @@ this.totalOnDraws= 0
     override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-view.postInvalidate()
+this.view.postInvalidate()
 }
 
 
@@ -97,17 +97,17 @@ this.totalOnDraws++
                         for (index in 0 until stringArray!!.size)
 
         {
-STRING_ARRAY[index]= stringArray[index]!!
+this.STRING_ARRAY[index]= stringArray[index]!!
 }
 
 
     var totalTime: Long = getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
 totalTime= (totalTime /10000)
-STRING_ARRAY[10]= TOTAL_ONDRAWS
-STRING_ARRAY[11]= (this.totalOnDraws).toString()
-STRING_ARRAY[12]= ONDRAWS_RATE
-STRING_ARRAY[13]= (this.totalOnDraws /totalTime).toString()
+this.STRING_ARRAY[10]= this.TOTAL_ONDRAWS
+this.STRING_ARRAY[11]= (this.totalOnDraws).toString()
+this.STRING_ARRAY[12]= this.ONDRAWS_RATE
+this.STRING_ARRAY[13]= (this.totalOnDraws /totalTime).toString()
 
 
 
@@ -137,9 +137,9 @@ stringBuffer!!.append(super.toString(totalTime))
                         if(this.totalOnDraws > 0)
                         
                                     {
-                                    stringBuffer!!.append(TOTAL_ONDRAWS)
+                                    stringBuffer!!.append(this.TOTAL_ONDRAWS)
 stringBuffer!!.append(totalOnDraws.toString())
-stringBuffer!!.append(ONDRAWS_RATE)
+stringBuffer!!.append(this.ONDRAWS_RATE)
 
     var drawsOverTime: String = (this.totalOnDraws /totalTime).toString()!!
 

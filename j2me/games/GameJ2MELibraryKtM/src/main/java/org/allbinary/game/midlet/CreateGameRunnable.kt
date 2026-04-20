@@ -72,7 +72,7 @@ this.startGameMidletEvent= DemoGameMidletEvent(this, DemoGameMidletStateFactory.
 this.demoGameMidlet!!.commandAction(MyCommandsFactory.getInstance()!!.SET_DISPLAYABLE, progressCanvas)
 this.demoGameMidlet!!.stopGameCanvasRunnableInterface()
 this.demoGameMidlet!!.setGameCanvasRunnableInterface(this.demoGameMidlet!!.createGameCanvasRunnableInterface())
-this.demoGameMidlet!!.getGameCanvasRunnableInterface()!!.setLoadStateHashtable(hashtable)
+this.demoGameMidlet!!.getGameCanvasRunnableInterface()!!.setLoadStateHashtable(this.hashtable)
 this.demoGameMidlet!!.startGameCanvasRunnableInterface()
 DemoGameMidletEventHandler.getInstance()!!.fireEvent(this.startGameMidletEvent)
 this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)

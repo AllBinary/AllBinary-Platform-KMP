@@ -106,7 +106,7 @@ companion object {
                         if((scaleX == 1.0f && scaleY == 1.0f) || (scaleX == 0.0f || scaleY == 0.0f))
                         
                                     {
-                                    scaledImage= openGLUtil!!.add(image)
+                                    scaledImage= this.openGLUtil!!.add(image)
 sprite= spriteFactory!!.create(scaledImage, width, height)
 
                                     }
@@ -114,14 +114,14 @@ sprite= spriteFactory!!.create(scaledImage, width, height)
                         else {
                             
     
-                        if(openGLESImageExclusionUtil!!.isCustomScaling(image))
+                        if(this.openGLESImageExclusionUtil!!.isCustomScaling(image))
                         
                                     {
                                     
-    var width2: Int = j2seMath!!.round((scaleWidth) -0.5f)!!
+    var width2: Int = this.j2seMath!!.round((scaleWidth) -0.5f)!!
 
 
-    var height2: Int = j2seMath!!.round((scaleHeight) -0.5f)!!
+    var height2: Int = this.j2seMath!!.round((scaleHeight) -0.5f)!!
 
 
     var multiplesOf16Width: Int = width2 /16
@@ -158,7 +158,7 @@ scaleY= (by16Height.toFloat()) /height
 
                                     }
                                 
-scaledImage= imageScaleUtil!!.createImage(imageCache, image, scaleX, 1.0f, scaleY, 1.0f, true)
+scaledImage= this.imageScaleUtil!!.createImage(this.imageCache, image, scaleX, 1.0f, scaleY, 1.0f, true)
 sprite= spriteFactory!!.create(scaledImage, (width *scaleX).toInt(), (height *scaleY).toInt())
 
                         }
@@ -167,7 +167,7 @@ sprite= spriteFactory!!.create(scaledImage, (width *scaleX).toInt(), (height *sc
                                     }
                                 
                         else {
-                            scaledImage= openGLUtil!!.add(image)
+                            scaledImage= this.openGLUtil!!.add(image)
 sprite= spriteFactory!!.create(scaledImage, width, height)
 
                         }

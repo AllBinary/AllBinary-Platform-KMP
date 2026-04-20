@@ -66,10 +66,10 @@ this.clear()
 
 
 
-                        for (index in platformToGameKeyMapping!!.size -1 downTo 0)
+                        for (index in this.platformToGameKeyMapping!!.size -1 downTo 0)
 
         {
-platformToGameKeyMapping[index]= gameKeyFactory!!.NONE
+this.platformToGameKeyMapping[index]= this.gameKeyFactory!!.NONE
 }
 
 }
@@ -99,7 +99,7 @@ this.clear()
 
 
     
-                        if(input != gameKeyFactory!!.NONE)
+                        if(input != this.gameKeyFactory!!.NONE)
                         
                                     {
                                     this.addAll(input, inputToGameKeyMapping!!.getMappedInput(input))
@@ -164,7 +164,7 @@ var mappedToInput = mappedToInput
 
 
     
-                        if(id >= 0 && id < platformToGameKeyMapping!!.size)
+                        if(id >= 0 && id < this.platformToGameKeyMapping!!.size)
                         
                                     {
                                     this.platformToGameKeyMapping[id]= input as GameKey
@@ -199,12 +199,12 @@ var id = id
 
 
 
-                        for (index in 0 until platformToGameKeyMapping!!.size)
+                        for (index in 0 until this.platformToGameKeyMapping!!.size)
 
         {
 
     
-                        if(platformToGameKeyMapping[index]!!.getId() == id)
+                        if(this.platformToGameKeyMapping[index]!!.getId() == id)
                         
                                     {
                                     
@@ -246,10 +246,10 @@ var gameKey = gameKey
 
 
     
-                        if(key < 0 &&  -key < negativePlatformToGameKeyMapping!!.size)
+                        if(key < 0 &&  -key < this.negativePlatformToGameKeyMapping!!.size)
                         
                                     {
-                                    negativePlatformToGameKeyMapping[ -key]= gameKey
+                                    this.negativePlatformToGameKeyMapping[ -key]= gameKey
 
                                     }
                                 
@@ -260,10 +260,10 @@ var gameKey = gameKey
                                     {
                                     
     
-                        if(platformToGameKeyMapping[key] == gameKeyFactory!!.NONE)
+                        if(this.platformToGameKeyMapping[key] == this.gameKeyFactory!!.NONE)
                         
                                     {
-                                    platformToGameKeyMapping[key]= gameKey
+                                    this.platformToGameKeyMapping[key]= gameKey
 
                                     }
                                 
@@ -353,7 +353,7 @@ negativePlatformToGameKeyMapping= arrayOfNulls( -smallestKey)
                         for (index in negativePlatformToGameKeyMapping!!.size  - 1  downTo 0)
 
         {
-negativePlatformToGameKeyMapping[index]= gameKeyFactory!!.NONE
+negativePlatformToGameKeyMapping[index]= this.gameKeyFactory!!.NONE
 }
 
 this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
@@ -385,7 +385,7 @@ var canvas = canvas
 var id = id
 
     
-                        if(id >= 0 && id < platformToGameKeyMapping!!.size)
+                        if(id >= 0 && id < this.platformToGameKeyMapping!!.size)
                         
                                     {
                                     
@@ -398,7 +398,7 @@ var id = id
                                 
                              else 
     
-                        if(id < 0 &&  -id < negativePlatformToGameKeyMapping!!.size)
+                        if(id < 0 &&  -id < this.negativePlatformToGameKeyMapping!!.size)
                         
                                     {
                                     
@@ -427,7 +427,7 @@ var id = id
 var id = id
 
     
-                        if(id >= 0 && id < platformToGameKeyMapping!!.size)
+                        if(id >= 0 && id < this.platformToGameKeyMapping!!.size)
                         
                                     {
                                     
@@ -440,7 +440,7 @@ var id = id
                                 
                              else 
     
-                        if(id < 0 &&  -id < negativePlatformToGameKeyMapping!!.size)
+                        if(id < 0 &&  -id < this.negativePlatformToGameKeyMapping!!.size)
                         
                                     {
                                     

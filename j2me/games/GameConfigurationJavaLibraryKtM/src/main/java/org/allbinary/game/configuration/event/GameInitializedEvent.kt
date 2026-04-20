@@ -71,7 +71,7 @@ this.resourceLoadingLevel= ResourceLoadingLevelFactory.getInstance()!!.LEVEL
 {
 var resourceLoadingLevel = resourceLoadingLevel
 this.resourceLoadingLevel= resourceLoadingLevel
-level= this.resourceLoadingLevel!!.getLevel()
+this.level= this.resourceLoadingLevel!!.getLevel()
 }
 
 

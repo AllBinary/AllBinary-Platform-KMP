@@ -93,7 +93,7 @@ this.weblisketSession= WeblisketSession(this.propertiesHashMap, this.pageContext
     var orderInterface: OrderInterface = this.weblisketSession!!.getOrder()!!
 
 
-    var requestPaymentGateway: String = request.getParameter(PaymentGatewayData.NAME.toString()) as String
+    var requestPaymentGateway: String = this.request.getParameter(PaymentGatewayData.NAME.toString()) as String
 
 
     

@@ -121,7 +121,7 @@ this.hundredthTime= currentTime /100
                         if(lastLowerTime != this.hundredthTime)
                         
                                     {
-                                    this.hundrethsString= primitiveLongUtil!!.getCharArray(this.hundredthTime.toInt())
+                                    this.hundrethsString= this.primitiveLongUtil!!.getCharArray(this.hundredthTime.toInt())
 this.totalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 
                                     }

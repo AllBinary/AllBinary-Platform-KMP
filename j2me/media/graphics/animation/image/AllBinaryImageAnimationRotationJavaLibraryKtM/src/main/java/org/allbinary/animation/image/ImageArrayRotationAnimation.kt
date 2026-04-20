@@ -101,7 +101,7 @@ this.expectedTotalFrames= totalAngle /this.angleInfo!!.getAngleIncrementInfo()!!
 this.angleInfo!!.adjustAngle(0)
 
     
-                        if(expectedTotalFrames != this.getSize())
+                        if(this.expectedTotalFrames != this.getSize())
                         
                                     {
                                     

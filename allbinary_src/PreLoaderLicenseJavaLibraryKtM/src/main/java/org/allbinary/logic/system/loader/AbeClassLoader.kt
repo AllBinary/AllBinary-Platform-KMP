@@ -244,7 +244,7 @@ var name = name
 
 
         try {
-            cname= PATH +name.replace('.', AbPathData.getInstance()!!.SEPARATORCHAR) +ENCRYPTED_EXTENSION
+            cname= PATH +name.replace('.', AbPathData.getInstance()!!.SEPARATORCHAR) +this.ENCRYPTED_EXTENSION
 in= FileInputStream(cname)
 
     var decrypted: ByteArray = this.abCryptUtil!!.decrypt(in, this.key)!!

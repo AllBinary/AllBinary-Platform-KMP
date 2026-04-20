@@ -146,7 +146,7 @@ this.ext= ext
 
 
     var inputStream: InputStream = FileInputStream(StringMaker().
-                            append(path)!!.append(resource)!!.append(ext)!!.toString())
+                            append(this.path)!!.append(resource)!!.append(this.ext)!!.toString())
 
 
     

@@ -102,7 +102,7 @@ setRunning(true)
         {
 timeHelper!!.setStartTime()
 
-    var bufferedImage: BufferedImage = screenScavangerRobot!!.getScreenAsBufferedImages()[0]!!
+    var bufferedImage: BufferedImage = this.screenScavangerRobot!!.getScreenAsBufferedImages()[0]!!
 
 
     var frame: Long = index as Long

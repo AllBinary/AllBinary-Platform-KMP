@@ -68,7 +68,7 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : Group{
 
-    var group: Group = list.objectArray[index]!! as Group
+    var group: Group = this.list.objectArray[this.index]!! as Group
 
 index++
 
@@ -109,10 +109,10 @@ var nameArray = nameArray
 
     var TEAM: String = "Team "
 
-list.clear()
-index= 0
+this.list.clear()
+this.index= 0
 
-    var size: Int = list.size()!!
+    var size: Int = this.list.size()!!
 
 
         while(size < groups)
@@ -135,7 +135,7 @@ name= stringMaker!!.append(TEAM)!!.appendint(size)!!.toString()
 
                         }
                             
-list.add(Group(name, (size +3).toShort()))
+this.list.add(Group(name, (size +3).toShort()))
 size++
 }
 

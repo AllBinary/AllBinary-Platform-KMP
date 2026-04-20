@@ -66,9 +66,9 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 {
 this.lastWidth= displayInfoSingleton!!.getLastWidth()
-this.lastHeight= displayInfoSingleton!!.getLastHeight()
-this.lastHalfWidth= displayInfoSingleton!!.getLastHalfWidth()
-this.lastHalfHeight= displayInfoSingleton!!.getLastHalfHeight()
+this.lastHeight= this.displayInfoSingleton!!.getLastHeight()
+this.lastHalfWidth= this.displayInfoSingleton!!.getLastHalfWidth()
+this.lastHalfHeight= this.displayInfoSingleton!!.getLastHalfHeight()
 }
 
 

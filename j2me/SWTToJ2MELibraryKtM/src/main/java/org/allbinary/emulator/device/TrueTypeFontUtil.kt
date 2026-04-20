@@ -85,12 +85,12 @@ private constructor ()
                         if(AvianUtil.isAvian())
                         
                                     {
-                                    widthFloatArray= FloatArray()
+                                    this.widthFloatArray= FloatArray()
 
                                     }
                                 
                         else {
-                            widthFloatArray= FloatArray()
+                            this.widthFloatArray= FloatArray()
 
                         }
                             

@@ -59,7 +59,7 @@ public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFac
                     
 
     
-                        if(lastImage != NullCanvas.NULL_IMAGE)
+                        if(this.lastImage != NullCanvas.NULL_IMAGE)
                         
                                     {
                                     
@@ -72,7 +72,7 @@ androidImageInterface!!.getBitmap()!!.recycle()
 
     var scale: Float = ScreenRelationalUtil.getInstance()!!.getScale(image)!!
 
-lastImage= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), this.getImage(), scale, scale, false)
+this.lastImage= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), this.getImage(), scale, scale, false)
 }
 
 
@@ -86,7 +86,7 @@ lastImage= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFacto
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageAnimation(lastImage, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return ImageAnimation(this.lastImage, this.animationBehaviorFactory!!.getOrCreateInstance())
 }
 
 

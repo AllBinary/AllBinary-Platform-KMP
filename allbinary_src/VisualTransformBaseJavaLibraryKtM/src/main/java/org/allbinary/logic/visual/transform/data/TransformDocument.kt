@@ -52,10 +52,10 @@ public constructor ()
         try {
             this.document= DomDocumentHelper.create()
 
-    var allbinaryNode: Node = document.createElement("allbinary")!!
+    var allbinaryNode: Node = this.document.createElement("allbinary")!!
 
 this.baseNode= allbinaryNode
-document.appendChild(this.baseNode)
+this.document.appendChild(this.baseNode)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -72,7 +72,7 @@ document.appendChild(this.baseNode)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 
@@ -133,7 +133,7 @@ stringBuffer!!.append(this.baseNode!!.getNodeName())
                         }
                             
 stringBuffer!!.append("\nDocument: ")
-stringBuffer!!.append(DomDocumentHelper.toString(document))
+stringBuffer!!.append(DomDocumentHelper.toString(this.document))
 
 
 

@@ -69,7 +69,7 @@ this.waitFor(image, name, this.timeDelayHelper)
     //var name = name
 
     
-                        if(timeDelayHelper!!.isTime())
+                        if(this.timeDelayHelper!!.isTime())
                         
                                     {
                                     

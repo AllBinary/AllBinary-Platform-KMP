@@ -68,7 +68,7 @@ open public class WebAppUrlGlobals : UrlGlobalsInterface {
 {
 var path = path
 path= path
-isWebappPathSet= true
+this.isWebappPathSet= true
 }
 
 
@@ -106,7 +106,7 @@ isWebappPathSet= true
                                 
                              else 
     
-                        if(isWebappPathSet)
+                        if(this.isWebappPathSet)
                         
                                     {
                                     

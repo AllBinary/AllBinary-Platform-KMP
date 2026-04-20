@@ -48,7 +48,7 @@ import org.allbinary.time.TimeStampUtil
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogFormatUtil.instance
 }
 
 
@@ -87,10 +87,10 @@ private constructor ()
     //var specialMessage = specialMessage
     //var exception = exception
 
-    var stringBuffer: StringMaker = getF(className, functionName)!!
+    var stringBuffer: StringMaker = this.getF(className, functionName)!!
 
 stringBuffer!!.append(this.getO(exception))
-stringBuffer!!.append(SPECIAL_MESSAGE)
+stringBuffer!!.append(this.SPECIAL_MESSAGE)
 stringBuffer!!.append(specialMessage)
 stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 
@@ -108,9 +108,9 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
     //var functionName = functionName
     //var specialMessage = specialMessage
 
-    var stringBuffer: StringMaker = getF(className, functionName)!!
+    var stringBuffer: StringMaker = this.getF(className, functionName)!!
 
-stringBuffer!!.append(SPECIAL_MESSAGE)
+stringBuffer!!.append(this.SPECIAL_MESSAGE)
 stringBuffer!!.append(specialMessage)
 stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 
@@ -133,18 +133,18 @@ var functionName = functionName
                                 )
                         
                                     {
-                                    functionName= NONE
+                                    functionName= this.NONE
 
                                     }
                                 
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(TIME)
-stringBuffer!!.append(timeStampUtil!!.getAsString())
-stringBuffer!!.append(CLASS_NAME)
+stringBuffer!!.append(this.TIME)
+stringBuffer!!.append(this.timeStampUtil!!.getAsString())
+stringBuffer!!.append(this.CLASS_NAME)
 stringBuffer!!.append(className)
-stringBuffer!!.append(FUNCTION_CALL)
+stringBuffer!!.append(this.FUNCTION_CALL)
 stringBuffer!!.append(functionName)
 
 
@@ -166,13 +166,13 @@ stringBuffer!!.append(functionName)
     //var exception = exception
 
     
-                        if(exception != nullUtil!!.NULL_OBJECT)
+                        if(exception != this.nullUtil!!.NULL_OBJECT)
                         
                                     {
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(LOG_ERROR)
+stringBuffer!!.append(this.LOG_ERROR)
 
     var exceptionAsString: String = exception.toString()!!
 
@@ -188,22 +188,22 @@ stringBuffer!!.append(LOG_ERROR)
                                     }
                                 
                         else {
-                            stringBuffer!!.append(EMPTY)
+                            stringBuffer!!.append(this.EMPTY)
 
                         }
                             
-stringBuffer!!.append(STACK_TRACE)
+stringBuffer!!.append(this.STACK_TRACE)
 
     
-                        if(exception != nullUtil!!.NULL_OBJECT)
+                        if(exception != this.nullUtil!!.NULL_OBJECT)
                         
                                     {
-                                    stringBuffer!!.append(exceptionUtil!!.getStackTrace(exception as Throwable))
+                                    stringBuffer!!.append(this.exceptionUtil!!.getStackTrace(exception as Throwable))
 
                                     }
                                 
                         else {
-                            stringBuffer!!.append(stringUtil!!.NULL_STRING)
+                            stringBuffer!!.append(this.stringUtil!!.NULL_STRING)
 
                         }
                             

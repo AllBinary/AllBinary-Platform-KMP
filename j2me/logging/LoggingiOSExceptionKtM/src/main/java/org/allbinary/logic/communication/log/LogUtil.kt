@@ -44,7 +44,7 @@ import org.allbinary.string.CommonStrings
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogUtil.instance
 }
 
 
@@ -139,9 +139,9 @@ put(specialMessage, anyType, functionName, exception)
                                     }
                                 
 
-    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
-System.out.print(LOG_SUCCESS)
+System.out.print(this.LOG_SUCCESS)
 System.out.println(message)
 }
 

@@ -69,13 +69,13 @@ this.midlet.destroyApp(false, this.isProgress)
 this.midlet.setDisplay(NullCanvas.NULL_CANVAS)
 this.midlet.notifyDestroyed()
 this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
-processor.process()
+this.processor.process()
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
         try {
-            processor.process()
+            this.processor.process()
 } catch(e2: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)

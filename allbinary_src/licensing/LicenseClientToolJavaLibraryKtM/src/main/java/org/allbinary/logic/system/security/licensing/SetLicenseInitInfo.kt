@@ -74,7 +74,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
                         for (index in 1 until options.size)
 
         {
-vector.add(options[index]!!)
+this.vector.add(options[index]!!)
 }
 
 }

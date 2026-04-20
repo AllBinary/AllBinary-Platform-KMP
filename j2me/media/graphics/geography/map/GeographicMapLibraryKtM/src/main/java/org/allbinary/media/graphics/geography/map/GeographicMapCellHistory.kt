@@ -142,7 +142,7 @@ this.track(geographicMapCellPosition)
                         
                                     {
                                     this.list.add(geographicMapCellPosition)
-this.visitedList!!.add(booleanFactory!!.FALSE)
+this.visitedList!!.add(this.booleanFactory!!.FALSE)
 
                                     }
                                 
@@ -227,7 +227,7 @@ var geographicMapCellPosition = geographicMapCellPosition
 value= this.visitedList!!.get(index) as Boolean
 
     
-                        if(value == booleanFactory!!.FALSE)
+                        if(value == this.booleanFactory!!.FALSE)
                         
                                     {
                                     
@@ -270,7 +270,7 @@ value= this.visitedList!!.get(index) as Boolean
 value= this.visitedList!!.get(index) as Boolean
 
     
-                        if(value == booleanFactory!!.FALSE)
+                        if(value == this.booleanFactory!!.FALSE)
                         
                                     {
                                     
@@ -351,7 +351,7 @@ geographicMapCellPosition= pathList!!.get(index) as GeographicMapCellPosition
 
 
     
-                        if(value == booleanFactory!!.TRUE)
+                        if(value == this.booleanFactory!!.TRUE)
                         
                                     {
                                     
@@ -394,7 +394,7 @@ geographicMapCellPosition= pathList!!.get(index) as GeographicMapCellPosition
                                     {
                                     value= this.visitedList!!.get(index) as Boolean
 
-    var TRUE: Boolean = booleanFactory!!.TRUE
+    var TRUE: Boolean = this.booleanFactory!!.TRUE
 
 
     
@@ -535,7 +535,7 @@ this.totalVisited++
     var localVisitedList: BasicArrayList = this.visitedList
 
 
-    var localFalseBoolean: Boolean = booleanFactory!!.FALSE
+    var localFalseBoolean: Boolean = this.booleanFactory!!.FALSE
 
 
     var size: Int = localVisitedList!!.size()!!
@@ -568,10 +568,10 @@ this.totalVisited= 0
 
 
     
-                        if(halfWidth == 0)
+                        if(this.halfWidth == 0)
                         
                                     {
-                                    this.halfWidth= (graphics.getFont()!!.stringWidth(MISSED_INFO) shr 1)
+                                    this.halfWidth= (graphics.getFont()!!.stringWidth(this.MISSED_INFO) shr 1)
 
                                     }
                                 
@@ -594,7 +594,7 @@ this.animation.paint(graphics, x +halfWidth, y +(height))
     //var geographicMapInterface = geographicMapInterface
 
         try {
-            graphics.setColor(RED)
+            graphics.setColor(this.RED)
 
     var localVisitedList: BasicArrayList = this.visitedList
 
@@ -614,7 +614,7 @@ this.animation.paint(graphics, x +halfWidth, y +(height))
                         for (index in size  - 1  downTo 0)
 
         {
-geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
+geographicMapCellPosition= this.list.get(index) as GeographicMapCellPosition
 isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean
 
     

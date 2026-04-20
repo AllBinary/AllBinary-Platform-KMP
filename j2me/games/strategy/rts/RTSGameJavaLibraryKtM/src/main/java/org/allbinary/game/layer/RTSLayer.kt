@@ -532,14 +532,14 @@ this.getAnimationInterface()!!.paint(graphics, viewX, viewY)
     override fun downgrade()
         //nullable = true from not(false or (false and true)) = true
 {
-rtsLayerUtil!!.downgrade(this)
+this.rtsLayerUtil!!.downgrade(this)
 }
 
 
     override fun upgrade()
         //nullable = true from not(false or (false and true)) = true
 {
-rtsLayerUtil!!.upgrade(this)
+this.rtsLayerUtil!!.upgrade(this)
 }
 
 
@@ -548,7 +548,7 @@ rtsLayerUtil!!.upgrade(this)
 : Boolean{
 
     
-                        if(this.hackVerticleBuild < BUILD_VALUE)
+                        if(this.hackVerticleBuild < this.BUILD_VALUE)
                         
                                     {
                                     
@@ -587,7 +587,7 @@ this.hackVerticleBuild++
 
                                     }
                                 
-this.percentCompleteP= 100 *this.hackVerticleBuild /BUILD_VALUE
+this.percentCompleteP= 100 *this.hackVerticleBuild /this.BUILD_VALUE
 this.getHudPaintable()!!.updateInfo()
 }
 
@@ -1182,7 +1182,7 @@ var resource = resource
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return indexedButShouldBeRotationAnimationInterface as RotationAnimation
+                        return this.indexedButShouldBeRotationAnimationInterface as RotationAnimation
 }
 
 

@@ -45,7 +45,7 @@ this.library= library
     open fun load()
         //nullable = true from not(false or (false and true)) = true
 {
-System.loadLibrary(library)
+System.loadLibrary(this.library)
 }
 
 

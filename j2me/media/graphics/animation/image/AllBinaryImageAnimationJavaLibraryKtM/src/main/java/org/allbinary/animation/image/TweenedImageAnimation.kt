@@ -153,10 +153,10 @@ var y = y
     var frame: Int = this.getFrame()!!
 
 
-    var currentX: Int = dx *frame
+    var currentX: Int = this.dx *frame
 
 
-    var currentY: Int = dy *frame
+    var currentY: Int = this.dy *frame
 
 graphics.drawImage(this.image, x +currentX, y +currentY, anchor)
 }

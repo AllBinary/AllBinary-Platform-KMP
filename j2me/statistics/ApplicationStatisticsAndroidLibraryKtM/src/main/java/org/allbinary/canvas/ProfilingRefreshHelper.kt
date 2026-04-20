@@ -67,34 +67,34 @@ private constructor (){
 {
 var view = view
 super.init(view)
-frameProcessingTimeElapsed= this.getTimeDelayHelper()!!.getStartTime()
-bestFrameProcessingTime= Integer.MAX_VALUE
-worstFrameProcessingTime= 0
+this.frameProcessingTimeElapsed= this.getTimeDelayHelper()!!.getStartTime()
+this.bestFrameProcessingTime= Integer.MAX_VALUE
+this.worstFrameProcessingTime= 0
 }
 
 
     override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
-frameProcessingTimeElapsed= System.currentTimeMillis() -frameProcessingTimeElapsed
+this.frameProcessingTimeElapsed= System.currentTimeMillis() -this.frameProcessingTimeElapsed
 
     
-                        if(firstTime != true)
+                        if(this.firstTime != true)
                         
                                     {
                                     
     
-                        if(frameProcessingTimeElapsed > worstFrameProcessingTime)
-                        worstFrameProcessingTime= frameProcessingTimeElapsed.toInt()
+                        if(this.frameProcessingTimeElapsed > this.worstFrameProcessingTime)
+                        this.worstFrameProcessingTime= this.frameProcessingTimeElapsed.toInt()
 
     
-                        if(frameProcessingTimeElapsed < bestFrameProcessingTime)
-                        bestFrameProcessingTime= frameProcessingTimeElapsed.toInt()
+                        if(this.frameProcessingTimeElapsed < this.bestFrameProcessingTime)
+                        this.bestFrameProcessingTime= this.frameProcessingTimeElapsed.toInt()
 
                                     }
                                 
                         else {
-                            firstTime= false
+                            this.firstTime= false
 
                         }
                             

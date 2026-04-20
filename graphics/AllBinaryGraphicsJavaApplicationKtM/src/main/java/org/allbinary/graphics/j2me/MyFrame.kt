@@ -123,8 +123,8 @@ initComponents()
 this.setSize(Dimension(550, 400))
 this.mainJPanel!!.setSize(Dimension(550, 400))
 this.jTabbedPane!!.setSize(Dimension(550, 400))
-fileJDialog= FileJDialog()
-fileJDialog!!.addFinishedListener(this)
+this.fileJDialog= FileJDialog()
+this.fileJDialog!!.addFinishedListener(this)
 this.rotateJDialog= RotateJDialog(this, false)
 }
 
@@ -133,52 +133,52 @@ this.rotateJDialog= RotateJDialog(this, false)
         //nullable = true from not(false or (false and true)) = true
 {
 jToolBar1= javax.swing.JToolBar()
-jButton2= javax.swing.JButton()
-saveJButton= javax.swing.JButton()
-jButton1= javax.swing.JButton()
-openJButton= javax.swing.JButton()
-jButton3= javax.swing.JButton()
-jButton4= javax.swing.JButton()
-jButton41= javax.swing.JButton()
-jButton5= javax.swing.JButton()
-animateJButton= javax.swing.JButton()
-playJButton= javax.swing.JButton()
-stopJjButton= javax.swing.JButton()
-jPanel1= javax.swing.JPanel()
-mainJPanel= javax.swing.JPanel()
-jTabbedPane= javax.swing.JTabbedPane()
-statusJPanel= javax.swing.JPanel()
+this.jButton2= javax.swing.JButton()
+this.saveJButton= javax.swing.JButton()
+this.jButton1= javax.swing.JButton()
+this.openJButton= javax.swing.JButton()
+this.jButton3= javax.swing.JButton()
+this.jButton4= javax.swing.JButton()
+this.jButton41= javax.swing.JButton()
+this.jButton5= javax.swing.JButton()
+this.animateJButton= javax.swing.JButton()
+this.playJButton= javax.swing.JButton()
+this.stopJjButton= javax.swing.JButton()
+this.jPanel1= javax.swing.JPanel()
+this.mainJPanel= javax.swing.JPanel()
+this.jTabbedPane= javax.swing.JTabbedPane()
+this.statusJPanel= javax.swing.JPanel()
 statusJLabel= javax.swing.JLabel()
-menuJMenuBar= javax.swing.JMenuBar()
-fileJMenu= javax.swing.JMenu()
-newJMenuItem= javax.swing.JMenuItem()
-openJMenuItem= javax.swing.JMenuItem()
-saveJMenuItem= javax.swing.JMenuItem()
-saveAsJMenuItem= javax.swing.JMenuItem()
-exportJMenuItem1= javax.swing.JMenuItem()
-exitJMenuItem= javax.swing.JMenuItem()
-viewJMenu= javax.swing.JMenu()
-zoomInJMenuItem= javax.swing.JMenuItem()
-zoomOutJMenuItem= javax.swing.JMenuItem()
-objectJMenu= javax.swing.JMenu()
-explodeAllJMenuItem= javax.swing.JMenuItem()
-frameJMenu= javax.swing.JMenu()
-previousFrameJMenuItem= javax.swing.JMenuItem()
-nextFrameJMenuItem= javax.swing.JMenuItem()
-removeJMenuItem= javax.swing.JMenuItem()
-copyJMenuItem1= javax.swing.JMenuItem()
-insertAfterJMenuItem= javax.swing.JMenuItem()
-insertBeforeJMenuItem= javax.swing.JMenuItem()
-generateJMenu= javax.swing.JMenu()
-centerJMenuItem= javax.swing.JMenuItem()
-autoDamageJMenuItem= javax.swing.JMenuItem()
-autoExplodeJMenuItem= javax.swing.JMenuItem()
-autoGrowJMenuItem= javax.swing.JMenuItem()
-jMenuItem1= javax.swing.JMenuItem()
-autoRotateGenerationJMenuItem= javax.swing.JMenuItem()
-autoSheildMenuItem= javax.swing.JMenuItem()
-autoShrinkJMenuItem= javax.swing.JMenuItem()
-jMenu1= javax.swing.JMenu()
+this.menuJMenuBar= javax.swing.JMenuBar()
+this.fileJMenu= javax.swing.JMenu()
+this.newJMenuItem= javax.swing.JMenuItem()
+this.openJMenuItem= javax.swing.JMenuItem()
+this.saveJMenuItem= javax.swing.JMenuItem()
+this.saveAsJMenuItem= javax.swing.JMenuItem()
+this.exportJMenuItem1= javax.swing.JMenuItem()
+this.exitJMenuItem= javax.swing.JMenuItem()
+this.viewJMenu= javax.swing.JMenu()
+this.zoomInJMenuItem= javax.swing.JMenuItem()
+this.zoomOutJMenuItem= javax.swing.JMenuItem()
+this.objectJMenu= javax.swing.JMenu()
+this.explodeAllJMenuItem= javax.swing.JMenuItem()
+this.frameJMenu= javax.swing.JMenu()
+this.previousFrameJMenuItem= javax.swing.JMenuItem()
+this.nextFrameJMenuItem= javax.swing.JMenuItem()
+this.removeJMenuItem= javax.swing.JMenuItem()
+this.copyJMenuItem1= javax.swing.JMenuItem()
+this.insertAfterJMenuItem= javax.swing.JMenuItem()
+this.insertBeforeJMenuItem= javax.swing.JMenuItem()
+this.generateJMenu= javax.swing.JMenu()
+this.centerJMenuItem= javax.swing.JMenuItem()
+this.autoDamageJMenuItem= javax.swing.JMenuItem()
+this.autoExplodeJMenuItem= javax.swing.JMenuItem()
+this.autoGrowJMenuItem= javax.swing.JMenuItem()
+this.jMenuItem1= javax.swing.JMenuItem()
+this.autoRotateGenerationJMenuItem= javax.swing.JMenuItem()
+this.autoSheildMenuItem= javax.swing.JMenuItem()
+this.autoShrinkJMenuItem= javax.swing.JMenuItem()
+this.jMenu1= javax.swing.JMenu()
 addWindowListener(object: java.awt.event.WindowAdapter()
                                 {
                                 
@@ -191,7 +191,7 @@ exitForm(evt)
 
                                 }
                             )
-jButton2!!.setText("New")
+this.jButton2!!.setText("New")
 jButton2!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -204,8 +204,8 @@ jButton2ActionPerformed(evt)
 
                                 }
                             )
-jToolBar1!!.add(jButton2)
-saveJButton!!.setText("Save")
+this.jToolBar1!!.add(this.jButton2)
+this.saveJButton!!.setText("Save")
 saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -218,8 +218,8 @@ saveJButtonActionPerformed(evt)
 
                                 }
                             )
-jToolBar1!!.add(saveJButton)
-jButton1!!.setText("Export")
+this.jToolBar1!!.add(this.saveJButton)
+this.jButton1!!.setText("Export")
 jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -232,8 +232,8 @@ jButton1ActionPerformed(evt)
 
                                 }
                             )
-jToolBar1!!.add(jButton1)
-openJButton!!.setText("Open")
+this.jToolBar1!!.add(this.jButton1)
+this.openJButton!!.setText("Open")
 openJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -246,18 +246,18 @@ openJButtonActionPerformed(evt)
 
                                 }
                             )
-jToolBar1!!.add(openJButton)
-jButton3!!.setText("Copy")
-jToolBar1!!.add(jButton3)
-jButton4!!.setText("Insert Before")
-jToolBar1!!.add(jButton4)
-jButton41!!.setText("Insert After")
-jToolBar1!!.add(jButton41)
-jButton5!!.setText("Delete")
-jToolBar1!!.add(jButton5)
-animateJButton!!.setText("AnimateEdit")
-jToolBar1!!.add(animateJButton)
-playJButton!!.setText("Play")
+this.jToolBar1!!.add(this.openJButton)
+this.jButton3!!.setText("Copy")
+this.jToolBar1!!.add(this.jButton3)
+this.jButton4!!.setText("Insert Before")
+this.jToolBar1!!.add(this.jButton4)
+this.jButton41!!.setText("Insert After")
+this.jToolBar1!!.add(this.jButton41)
+this.jButton5!!.setText("Delete")
+this.jToolBar1!!.add(this.jButton5)
+this.animateJButton!!.setText("AnimateEdit")
+this.jToolBar1!!.add(this.animateJButton)
+this.playJButton!!.setText("Play")
 playJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -270,8 +270,8 @@ playJButtonMousePressed(evt)
 
                                 }
                             )
-jToolBar1!!.add(playJButton)
-stopJjButton!!.setText("Stop")
+this.jToolBar1!!.add(this.playJButton)
+this.stopJjButton!!.setText("Stop")
 stopJjButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -284,11 +284,11 @@ stopJjButtonMousePressed(evt)
 
                                 }
                             )
-jToolBar1!!.add(stopJjButton)
-getContentPane()!!.add(jToolBar1, java.awt.BorderLayout.NORTH)
-jPanel1!!.setLayout(java.awt.GridLayout(1, 0))
-mainJPanel!!.setLayout(java.awt.GridLayout(1, 0))
-jTabbedPane!!.setMinimumSize(java.awt.Dimension(550, 400))
+this.jToolBar1!!.add(this.stopJjButton)
+getContentPane()!!.add(this.jToolBar1, java.awt.BorderLayout.NORTH)
+this.jPanel1!!.setLayout(java.awt.GridLayout(1, 0))
+this.mainJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+this.jTabbedPane!!.setMinimumSize(java.awt.Dimension(550, 400))
 jTabbedPane!!.addChangeListener(object: javax.swing.event.ChangeListener()
                                 {
                                 
@@ -301,14 +301,14 @@ jTabbedPaneStateChanged(evt)
 
                                 }
                             )
-mainJPanel!!.add(jTabbedPane)
-jPanel1!!.add(mainJPanel)
-getContentPane()!!.add(jPanel1, java.awt.BorderLayout.CENTER)
-statusJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+this.mainJPanel!!.add(this.jTabbedPane)
+this.jPanel1!!.add(this.mainJPanel)
+getContentPane()!!.add(this.jPanel1, java.awt.BorderLayout.CENTER)
+this.statusJPanel!!.setLayout(java.awt.GridLayout(1, 0))
 statusJLabel!!.setText("Status Bar")
-statusJPanel!!.add(statusJLabel)
-getContentPane()!!.add(statusJPanel, java.awt.BorderLayout.SOUTH)
-fileJMenu!!.setText("File")
+this.statusJPanel!!.add(statusJLabel)
+getContentPane()!!.add(this.statusJPanel, java.awt.BorderLayout.SOUTH)
+this.fileJMenu!!.setText("File")
 fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -321,7 +321,7 @@ fileJMenuActionPerformed(evt)
 
                                 }
                             )
-newJMenuItem!!.setText("New")
+this.newJMenuItem!!.setText("New")
 newJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -334,8 +334,8 @@ newJMenuItemActionPerformed(evt)
 
                                 }
                             )
-fileJMenu!!.add(newJMenuItem)
-openJMenuItem!!.setText("Open")
+this.fileJMenu!!.add(this.newJMenuItem)
+this.openJMenuItem!!.setText("Open")
 openJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -348,8 +348,8 @@ openJMenuItemActionPerformed(evt)
 
                                 }
                             )
-fileJMenu!!.add(openJMenuItem)
-saveJMenuItem!!.setText("Save")
+this.fileJMenu!!.add(this.openJMenuItem)
+this.saveJMenuItem!!.setText("Save")
 saveJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -362,10 +362,10 @@ saveJMenuItemMousePressed(evt)
 
                                 }
                             )
-fileJMenu!!.add(saveJMenuItem)
-saveAsJMenuItem!!.setText("SaveAs")
-fileJMenu!!.add(saveAsJMenuItem)
-exportJMenuItem1!!.setText("Export")
+this.fileJMenu!!.add(this.saveJMenuItem)
+this.saveAsJMenuItem!!.setText("SaveAs")
+this.fileJMenu!!.add(this.saveAsJMenuItem)
+this.exportJMenuItem1!!.setText("Export")
 exportJMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -378,8 +378,8 @@ exportJMenuItem1ActionPerformed(evt)
 
                                 }
                             )
-fileJMenu!!.add(exportJMenuItem1)
-exitJMenuItem!!.setText("Exit")
+this.fileJMenu!!.add(this.exportJMenuItem1)
+this.exitJMenuItem!!.setText("Exit")
 exitJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -392,10 +392,10 @@ exitJMenuItemActionPerformed(evt)
 
                                 }
                             )
-fileJMenu!!.add(exitJMenuItem)
-menuJMenuBar!!.add(fileJMenu)
-viewJMenu!!.setText("View")
-zoomInJMenuItem!!.setText("Zoom In")
+this.fileJMenu!!.add(this.exitJMenuItem)
+this.menuJMenuBar!!.add(this.fileJMenu)
+this.viewJMenu!!.setText("View")
+this.zoomInJMenuItem!!.setText("Zoom In")
 zoomInJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -408,8 +408,8 @@ zoomInJMenuItemMousePressed(evt)
 
                                 }
                             )
-viewJMenu!!.add(zoomInJMenuItem)
-zoomOutJMenuItem!!.setText("Zoom Out")
+this.viewJMenu!!.add(this.zoomInJMenuItem)
+this.zoomOutJMenuItem!!.setText("Zoom Out")
 zoomOutJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -422,10 +422,10 @@ zoomOutJMenuItemMousePressed(evt)
 
                                 }
                             )
-viewJMenu!!.add(zoomOutJMenuItem)
-menuJMenuBar!!.add(viewJMenu)
-objectJMenu!!.setText("Objects")
-explodeAllJMenuItem!!.setText("Explode All")
+this.viewJMenu!!.add(this.zoomOutJMenuItem)
+this.menuJMenuBar!!.add(this.viewJMenu)
+this.objectJMenu!!.setText("Objects")
+this.explodeAllJMenuItem!!.setText("Explode All")
 explodeAllJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -438,9 +438,9 @@ explodeAllJMenuItemMousePressed(evt)
 
                                 }
                             )
-objectJMenu!!.add(explodeAllJMenuItem)
-menuJMenuBar!!.add(objectJMenu)
-frameJMenu!!.setText("Frame")
+this.objectJMenu!!.add(this.explodeAllJMenuItem)
+this.menuJMenuBar!!.add(this.objectJMenu)
+this.frameJMenu!!.setText("Frame")
 frameJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -453,21 +453,21 @@ frameJMenuActionPerformed(evt)
 
                                 }
                             )
-previousFrameJMenuItem!!.setText("Previous")
-frameJMenu!!.add(previousFrameJMenuItem)
-nextFrameJMenuItem!!.setText("Next")
-frameJMenu!!.add(nextFrameJMenuItem)
-removeJMenuItem!!.setText("Remove")
-frameJMenu!!.add(removeJMenuItem)
-copyJMenuItem1!!.setText("Copy")
-frameJMenu!!.add(copyJMenuItem1)
-insertAfterJMenuItem!!.setText("Ins After")
-frameJMenu!!.add(insertAfterJMenuItem)
-insertBeforeJMenuItem!!.setText("Ins Before")
-frameJMenu!!.add(insertBeforeJMenuItem)
-menuJMenuBar!!.add(frameJMenu)
-generateJMenu!!.setText("Generate")
-centerJMenuItem!!.setText("Center")
+this.previousFrameJMenuItem!!.setText("Previous")
+this.frameJMenu!!.add(this.previousFrameJMenuItem)
+this.nextFrameJMenuItem!!.setText("Next")
+this.frameJMenu!!.add(this.nextFrameJMenuItem)
+this.removeJMenuItem!!.setText("Remove")
+this.frameJMenu!!.add(this.removeJMenuItem)
+this.copyJMenuItem1!!.setText("Copy")
+this.frameJMenu!!.add(this.copyJMenuItem1)
+this.insertAfterJMenuItem!!.setText("Ins After")
+this.frameJMenu!!.add(this.insertAfterJMenuItem)
+this.insertBeforeJMenuItem!!.setText("Ins Before")
+this.frameJMenu!!.add(this.insertBeforeJMenuItem)
+this.menuJMenuBar!!.add(this.frameJMenu)
+this.generateJMenu!!.setText("Generate")
+this.centerJMenuItem!!.setText("Center")
 centerJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -480,10 +480,10 @@ centerJMenuItemActionPerformed(evt)
 
                                 }
                             )
-generateJMenu!!.add(centerJMenuItem)
-autoDamageJMenuItem!!.setText("Damage")
-generateJMenu!!.add(autoDamageJMenuItem)
-autoExplodeJMenuItem!!.setText("Explode")
+this.generateJMenu!!.add(this.centerJMenuItem)
+this.autoDamageJMenuItem!!.setText("Damage")
+this.generateJMenu!!.add(this.autoDamageJMenuItem)
+this.autoExplodeJMenuItem!!.setText("Explode")
 autoExplodeJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -496,10 +496,10 @@ autoExplodeJMenuItemMousePressed(evt)
 
                                 }
                             )
-generateJMenu!!.add(autoExplodeJMenuItem)
-autoGrowJMenuItem!!.setText("Grow")
-generateJMenu!!.add(autoGrowJMenuItem)
-jMenuItem1!!.setText("Mirror")
+this.generateJMenu!!.add(this.autoExplodeJMenuItem)
+this.autoGrowJMenuItem!!.setText("Grow")
+this.generateJMenu!!.add(this.autoGrowJMenuItem)
+this.jMenuItem1!!.setText("Mirror")
 jMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -512,8 +512,8 @@ jMenuItem1ActionPerformed(evt)
 
                                 }
                             )
-generateJMenu!!.add(jMenuItem1)
-autoRotateGenerationJMenuItem!!.setText("Rotate")
+this.generateJMenu!!.add(this.jMenuItem1)
+this.autoRotateGenerationJMenuItem!!.setText("Rotate")
 autoRotateGenerationJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
@@ -526,15 +526,15 @@ autoRotateGenerationJMenuItemMousePressed(evt)
 
                                 }
                             )
-generateJMenu!!.add(autoRotateGenerationJMenuItem)
-autoSheildMenuItem!!.setText("Shield")
-generateJMenu!!.add(autoSheildMenuItem)
-autoShrinkJMenuItem!!.setText("Shrink")
-generateJMenu!!.add(autoShrinkJMenuItem)
-menuJMenuBar!!.add(generateJMenu)
-jMenu1!!.setText("Help")
-menuJMenuBar!!.add(jMenu1)
-setJMenuBar(menuJMenuBar)
+this.generateJMenu!!.add(this.autoRotateGenerationJMenuItem)
+this.autoSheildMenuItem!!.setText("Shield")
+this.generateJMenu!!.add(this.autoSheildMenuItem)
+this.autoShrinkJMenuItem!!.setText("Shrink")
+this.generateJMenu!!.add(this.autoShrinkJMenuItem)
+this.menuJMenuBar!!.add(this.generateJMenu)
+this.jMenu1!!.setText("Help")
+this.menuJMenuBar!!.add(this.jMenu1)
+setJMenuBar(this.menuJMenuBar)
 pack()
 }
 
@@ -549,7 +549,7 @@ var evt = evt
                             null) as Object))
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "explodeAllJMenuItemMousePressed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "explodeAllJMenuItemMousePressed", e)
 }
 
 }
@@ -565,7 +565,7 @@ var evt = evt
                             null) as Object))
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "autoExplodeJMenuItemMousePressed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "autoExplodeJMenuItemMousePressed", e)
 }
 
 }
@@ -707,7 +707,7 @@ var evt = evt
                             null) as Object))
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
 }
 
 }
@@ -738,7 +738,7 @@ var evt = evt
             this.getSelectedWorkArea()!!.autoMirror()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
 }
 
 }
@@ -771,7 +771,7 @@ this.add(workAreaJPanel as WorkAreaJPanelInterface)
 this.fileJDialog!!.setVisible(false)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onFiles", e)
 }
 
 }
@@ -798,7 +798,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, "newJMenuItemActionPerformed", e)
+                                    this.guiLog!!.put(this.commonStrings!!.EXCEPTION, this, "newJMenuItemActionPerformed", e)
 
                                     }
                                 
@@ -813,7 +813,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
 
         try {
             this.logUtil!!.putF("Starting", this, "openImageJMenuItemActionPerformed")
-fileJDialog!!.setVisible(true)
+this.fileJDialog!!.setVisible(true)
 } catch(e: Exception)
             {
 
@@ -821,7 +821,7 @@ fileJDialog!!.setVisible(true)
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, "open", e)
+                                    this.guiLog!!.put(this.commonStrings!!.EXCEPTION, this, "open", e)
 
                                     }
                                 
@@ -839,13 +839,13 @@ fileJDialog!!.setVisible(true)
     var workAreaJPanel: WorkAreaJPanelInterface = this.jTabbedPane!!.getSelectedComponent() as WorkAreaJPanelInterface
 
 
-    var file: File = File(this.SAVE_PATH +"/" +workAreaJPanel!!.getName() +JAVAEXTENSION)
+    var file: File = File(this.SAVE_PATH +"/" +workAreaJPanel!!.getName() +this.JAVAEXTENSION)
 
 
     var document: Document = workAreaJPanel!!.toDocument()!!
 
 this.logUtil!!.putF("Export: " +DomHelper.getInstance()!!.toString(document), this, "exportJMenuItem1ActionPerformed")
-xslHelper!!.export(file, this.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, document)
+this.xslHelper!!.export(file, this.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, document)
 } catch(e: Exception)
             {
 
@@ -853,7 +853,7 @@ xslHelper!!.export(file, this.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, doc
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, "export", e)
+                                    this.guiLog!!.put(this.commonStrings!!.EXCEPTION, this, "export", e)
 
                                     }
                                 
@@ -870,7 +870,7 @@ xslHelper!!.export(file, this.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, doc
             
     var workAreaJPanel: WorkAreaJPanelInterface = this.jTabbedPane!!.getSelectedComponent() as WorkAreaJPanelInterface
 
-DomHelper.getInstance()!!.save(File(this.SAVE_PATH +"/" +workAreaJPanel!!.getName() +SAVEEXTENSION), workAreaJPanel!!.toDocument())
+DomHelper.getInstance()!!.save(File(this.SAVE_PATH +"/" +workAreaJPanel!!.getName() +this.SAVEEXTENSION), workAreaJPanel!!.toDocument())
 } catch(e: Exception)
             {
 
@@ -878,7 +878,7 @@ DomHelper.getInstance()!!.save(File(this.SAVE_PATH +"/" +workAreaJPanel!!.getNam
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
+                                    this.guiLog!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
 
                                     }
                                 
@@ -971,8 +971,8 @@ var newCanvasInterface = newCanvasInterface
 
                                     }
                                 
-jTabbedPane!!.addTab(newCanvasInterface!!.getName(), newCanvasInterface as JPanel)
-jTabbedPane!!.setSelectedComponent(newCanvasInterface as JPanel)
+this.jTabbedPane!!.addTab(newCanvasInterface!!.getName(), newCanvasInterface as JPanel)
+this.jTabbedPane!!.setSelectedComponent(newCanvasInterface as JPanel)
 
     var animationThread: Thread = Thread(newCanvasInterface as Runnable)
 
@@ -985,7 +985,7 @@ this.updateSelectedWorkArea()
                         if(LOGGING.contains(LOGGING.GRAPHICSCREATION))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, "addNewCanvas", e)
+                                    this.guiLog!!.put(this.commonStrings!!.EXCEPTION, this, "addNewCanvas", e)
 
                                     }
                                 

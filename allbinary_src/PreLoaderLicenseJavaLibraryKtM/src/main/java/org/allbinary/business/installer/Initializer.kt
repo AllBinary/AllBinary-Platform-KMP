@@ -187,41 +187,41 @@ var hashMap = hashMap
             
     var initializerData: InitializerData = InitializerData.getInstance()!!
 
-userJdbcDriver= hashMap!!.get(initializerData!!.CUSTOMERJDBCDRIVER) as String
-userName= hashMap!!.get(initializerData!!.CUSTOMERNAME) as String
-userUserName= hashMap!!.get(initializerData!!.CUSTOMERUSERNAME) as String
-userPassword= hashMap!!.get(initializerData!!.CUSTOMERPASSWORD) as String
-userSchema= hashMap!!.get(initializerData!!.CUSTOMERSCHEMA) as String
-userServer= hashMap!!.get(initializerData!!.CUSTOMERSERVER) as String
-userPort= hashMap!!.get(initializerData!!.CUSTOMERPORT) as String
-historyJdbcDriver= hashMap!!.get(initializerData!!.HISTORYJDBCDRIVER) as String
-historyName= hashMap!!.get(initializerData!!.HISTORYNAME) as String
-historyUserName= hashMap!!.get(initializerData!!.HISTORYUSERNAME) as String
-historyPassword= hashMap!!.get(initializerData!!.HISTORYPASSWORD) as String
-historySchema= hashMap!!.get(initializerData!!.HISTORYSCHEMA) as String
-historyServer= hashMap!!.get(initializerData!!.HISTORYSERVER) as String
-historyPort= hashMap!!.get(initializerData!!.HISTORYPORT) as String
-logJdbcDriver= hashMap!!.get(initializerData!!.LOGJDBCDRIVER) as String
-logName= hashMap!!.get(initializerData!!.LOGNAME) as String
-logUserName= hashMap!!.get(initializerData!!.LOGUSERNAME) as String
-logPassword= hashMap!!.get(initializerData!!.LOGPASSWORD) as String
-logSchema= hashMap!!.get(initializerData!!.LOGSCHEMA) as String
-logServer= hashMap!!.get(initializerData!!.LOGSERVER) as String
-logPort= hashMap!!.get(initializerData!!.LOGPORT) as String
-inventoryJdbcDriver= hashMap!!.get(initializerData!!.INVENTORYJDBCDRIVER) as String
-inventoryName= hashMap!!.get(initializerData!!.INVENTORYNAME) as String
-inventoryUserName= hashMap!!.get(initializerData!!.INVENTORYUSERNAME) as String
-inventoryPassword= hashMap!!.get(initializerData!!.INVENTORYPASSWORD) as String
-inventorySchema= hashMap!!.get(initializerData!!.INVENTORYSCHEMA) as String
-inventoryServer= hashMap!!.get(initializerData!!.INVENTORYSERVER) as String
-inventoryPort= hashMap!!.get(initializerData!!.INVENTORYPORT) as String
-staticPagesJdbcDriver= hashMap!!.get(initializerData!!.STATICPAGESJDBCDRIVER) as String
-staticPagesName= hashMap!!.get(initializerData!!.STATICPAGESNAME) as String
-staticPagesUserName= hashMap!!.get(initializerData!!.STATICPAGESUSERNAME) as String
-staticPagesPassword= hashMap!!.get(initializerData!!.STATICPAGESPASSWORD) as String
-staticPagesSchema= hashMap!!.get(initializerData!!.STATICPAGESSCHEMA) as String
-staticPagesServer= hashMap!!.get(initializerData!!.STATICPAGESSERVER) as String
-staticPagesPort= hashMap!!.get(initializerData!!.STATICPAGESPORT) as String
+this.userJdbcDriver= hashMap!!.get(initializerData!!.CUSTOMERJDBCDRIVER) as String
+this.userName= hashMap!!.get(initializerData!!.CUSTOMERNAME) as String
+this.userUserName= hashMap!!.get(initializerData!!.CUSTOMERUSERNAME) as String
+this.userPassword= hashMap!!.get(initializerData!!.CUSTOMERPASSWORD) as String
+this.userSchema= hashMap!!.get(initializerData!!.CUSTOMERSCHEMA) as String
+this.userServer= hashMap!!.get(initializerData!!.CUSTOMERSERVER) as String
+this.userPort= hashMap!!.get(initializerData!!.CUSTOMERPORT) as String
+this.historyJdbcDriver= hashMap!!.get(initializerData!!.HISTORYJDBCDRIVER) as String
+this.historyName= hashMap!!.get(initializerData!!.HISTORYNAME) as String
+this.historyUserName= hashMap!!.get(initializerData!!.HISTORYUSERNAME) as String
+this.historyPassword= hashMap!!.get(initializerData!!.HISTORYPASSWORD) as String
+this.historySchema= hashMap!!.get(initializerData!!.HISTORYSCHEMA) as String
+this.historyServer= hashMap!!.get(initializerData!!.HISTORYSERVER) as String
+this.historyPort= hashMap!!.get(initializerData!!.HISTORYPORT) as String
+this.logJdbcDriver= hashMap!!.get(initializerData!!.LOGJDBCDRIVER) as String
+this.logName= hashMap!!.get(initializerData!!.LOGNAME) as String
+this.logUserName= hashMap!!.get(initializerData!!.LOGUSERNAME) as String
+this.logPassword= hashMap!!.get(initializerData!!.LOGPASSWORD) as String
+this.logSchema= hashMap!!.get(initializerData!!.LOGSCHEMA) as String
+this.logServer= hashMap!!.get(initializerData!!.LOGSERVER) as String
+this.logPort= hashMap!!.get(initializerData!!.LOGPORT) as String
+this.inventoryJdbcDriver= hashMap!!.get(initializerData!!.INVENTORYJDBCDRIVER) as String
+this.inventoryName= hashMap!!.get(initializerData!!.INVENTORYNAME) as String
+this.inventoryUserName= hashMap!!.get(initializerData!!.INVENTORYUSERNAME) as String
+this.inventoryPassword= hashMap!!.get(initializerData!!.INVENTORYPASSWORD) as String
+this.inventorySchema= hashMap!!.get(initializerData!!.INVENTORYSCHEMA) as String
+this.inventoryServer= hashMap!!.get(initializerData!!.INVENTORYSERVER) as String
+this.inventoryPort= hashMap!!.get(initializerData!!.INVENTORYPORT) as String
+this.staticPagesJdbcDriver= hashMap!!.get(initializerData!!.STATICPAGESJDBCDRIVER) as String
+this.staticPagesName= hashMap!!.get(initializerData!!.STATICPAGESNAME) as String
+this.staticPagesUserName= hashMap!!.get(initializerData!!.STATICPAGESUSERNAME) as String
+this.staticPagesPassword= hashMap!!.get(initializerData!!.STATICPAGESPASSWORD) as String
+this.staticPagesSchema= hashMap!!.get(initializerData!!.STATICPAGESSCHEMA) as String
+this.staticPagesServer= hashMap!!.get(initializerData!!.STATICPAGESSERVER) as String
+this.staticPagesPort= hashMap!!.get(initializerData!!.STATICPAGESPORT) as String
 } catch(e: Exception)
             {
 this.logUtil!!.put("Unable to get form data", this, "getFormData()", e)
@@ -286,7 +286,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(userName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.userName, MIN, MAXDB))
                         
                                     {
                                     isValid= false
@@ -295,7 +295,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(userUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.userUserName, MIN, MAX))
                         
                                     {
                                     isValid= false
@@ -304,7 +304,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(userPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.userPassword, MINPASSWORD, MAX))
                         
                                     {
                                     isValid= false
@@ -322,7 +322,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(historyName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.historyName, MIN, MAXDB))
                         
                                     {
                                     isValid= false
@@ -331,7 +331,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(historyUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.historyUserName, MIN, MAX))
                         
                                     {
                                     isValid= false
@@ -340,7 +340,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(historyPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.historyPassword, MINPASSWORD, MAX))
                         
                                     {
                                     isValid= false
@@ -394,7 +394,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(inventoryName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryName, MIN, MAXDB))
                         
                                     {
                                     isValid= false
@@ -403,7 +403,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(inventoryUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryUserName, MIN, MAX))
                         
                                     {
                                     isValid= false
@@ -412,7 +412,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(inventoryPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.inventoryPassword, MINPASSWORD, MAX))
                         
                                     {
                                     isValid= false
@@ -430,7 +430,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(staticPagesName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesName, MIN, MAXDB))
                         
                                     {
                                     isValid= false
@@ -439,7 +439,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(staticPagesUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesUserName, MIN, MAX))
                         
                                     {
                                     isValid= false
@@ -448,7 +448,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(staticPagesPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.staticPagesPassword, MINPASSWORD, MAX))
                         
                                     {
                                     isValid= false
@@ -528,7 +528,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.userJdbcDriver))
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(userName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.userName, MIN, MAXDB))
                         
                                     {
                                     stringBuffer!!.append("User db name should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -537,7 +537,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.userJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(userUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.userUserName, MIN, MAX))
                         
                                     {
                                     stringBuffer!!.append("User db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -546,7 +546,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.userJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(userPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.userPassword, MINPASSWORD, MAX))
                         
                                     {
                                     stringBuffer!!.append("User DB password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -565,7 +565,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.historyJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(historyName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.historyName, MIN, MAXDB))
                         
                                     {
                                     stringBuffer!!.append("History db should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -574,7 +574,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.historyJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(historyUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.historyUserName, MIN, MAX))
                         
                                     {
                                     stringBuffer!!.append("History db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -583,7 +583,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.historyJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(historyPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.historyPassword, MINPASSWORD, MAX))
                         
                                     {
                                     stringBuffer!!.append("History db password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -639,7 +639,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.inventoryJdbcDriver)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(inventoryName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryName, MIN, MAXDB))
                         
                                     {
                                     stringBuffer!!.append("Inventory db should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -648,7 +648,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.inventoryJdbcDriver)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(inventoryUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryUserName, MIN, MAX))
                         
                                     {
                                     stringBuffer!!.append("Inventory db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -657,7 +657,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.inventoryJdbcDriver)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(inventoryPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.inventoryPassword, MINPASSWORD, MAX))
                         
                                     {
                                     stringBuffer!!.append("Inventory DB password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -676,7 +676,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(staticPagesName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesName, MIN, MAXDB))
                         
                                     {
                                     stringBuffer!!.append("Static Pages db should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -685,7 +685,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(staticPagesUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesUserName, MIN, MAX))
                         
                                     {
                                     stringBuffer!!.append("Static Pages db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -694,7 +694,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(staticPagesPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.staticPagesPassword, MINPASSWORD, MAX))
                         
                                     {
                                     stringBuffer!!.append("Static Pages DB password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -728,24 +728,24 @@ this.logUtil!!.putF("Creating DB connection files", this, "set()")
     var userDbInitInfo: UserDbInitInfo = UserDbInitInfo(false)
 
 userDbInitInfo!!.setJdbcDriver(this.userJdbcDriver)
-userDbInitInfo!!.setName(userName)
-userDbInitInfo!!.setUserName(userUserName)
-userDbInitInfo!!.setPassword(userPassword)
-userDbInitInfo!!.setSchema(userSchema)
-userDbInitInfo!!.setServer(userServer)
-userDbInitInfo!!.setPort(userPort)
+userDbInitInfo!!.setName(this.userName)
+userDbInitInfo!!.setUserName(this.userUserName)
+userDbInitInfo!!.setPassword(this.userPassword)
+userDbInitInfo!!.setSchema(this.userSchema)
+userDbInitInfo!!.setServer(this.userServer)
+userDbInitInfo!!.setPort(this.userPort)
 userDbInitInfo!!.setHasRead(true)
 userDbInitInfo!!.write()
 
     var historyDbInitInfo: HistoryDbInitInfo = HistoryDbInitInfo(false)
 
 historyDbInitInfo!!.setJdbcDriver(this.historyJdbcDriver)
-historyDbInitInfo!!.setName(historyName)
-historyDbInitInfo!!.setUserName(historyUserName)
-historyDbInitInfo!!.setPassword(historyPassword)
-historyDbInitInfo!!.setSchema(historySchema)
-historyDbInitInfo!!.setServer(historyServer)
-historyDbInitInfo!!.setPort(historyPort)
+historyDbInitInfo!!.setName(this.historyName)
+historyDbInitInfo!!.setUserName(this.historyUserName)
+historyDbInitInfo!!.setPassword(this.historyPassword)
+historyDbInitInfo!!.setSchema(this.historySchema)
+historyDbInitInfo!!.setServer(this.historyServer)
+historyDbInitInfo!!.setPort(this.historyPort)
 historyDbInitInfo!!.setHasRead(true)
 historyDbInitInfo!!.write()
 
@@ -764,24 +764,24 @@ logDbInitInfo!!.write()
     var staticPagesDbInitInfo: StaticPagesDbInitInfo = StaticPagesDbInitInfo(false)
 
 staticPagesDbInitInfo!!.setJdbcDriver(this.staticPagesJdbcDriver)
-staticPagesDbInitInfo!!.setName(staticPagesName)
-staticPagesDbInitInfo!!.setUserName(staticPagesUserName)
-staticPagesDbInitInfo!!.setPassword(staticPagesPassword)
-staticPagesDbInitInfo!!.setSchema(staticPagesSchema)
-staticPagesDbInitInfo!!.setServer(staticPagesServer)
-staticPagesDbInitInfo!!.setPort(staticPagesPort)
+staticPagesDbInitInfo!!.setName(this.staticPagesName)
+staticPagesDbInitInfo!!.setUserName(this.staticPagesUserName)
+staticPagesDbInitInfo!!.setPassword(this.staticPagesPassword)
+staticPagesDbInitInfo!!.setSchema(this.staticPagesSchema)
+staticPagesDbInitInfo!!.setServer(this.staticPagesServer)
+staticPagesDbInitInfo!!.setPort(this.staticPagesPort)
 staticPagesDbInitInfo!!.setHasRead(true)
 staticPagesDbInitInfo!!.write()
 
     var inventoryDbInitInfo: InventoryDbInitInfo = InventoryDbInitInfo(false)
 
 inventoryDbInitInfo!!.setJdbcDriver(this.inventoryJdbcDriver)
-inventoryDbInitInfo!!.setName(inventoryName)
-inventoryDbInitInfo!!.setUserName(inventoryUserName)
-inventoryDbInitInfo!!.setPassword(inventoryPassword)
-inventoryDbInitInfo!!.setSchema(inventorySchema)
-inventoryDbInitInfo!!.setServer(inventoryServer)
-inventoryDbInitInfo!!.setPort(inventoryPort)
+inventoryDbInitInfo!!.setName(this.inventoryName)
+inventoryDbInitInfo!!.setUserName(this.inventoryUserName)
+inventoryDbInitInfo!!.setPassword(this.inventoryPassword)
+inventoryDbInitInfo!!.setSchema(this.inventorySchema)
+inventoryDbInitInfo!!.setServer(this.inventoryServer)
+inventoryDbInitInfo!!.setPort(this.inventoryPort)
 inventoryDbInitInfo!!.setHasRead(true)
 inventoryDbInitInfo!!.write()
 this.logUtil!!.putF("Created DB connection files", this, "set()")

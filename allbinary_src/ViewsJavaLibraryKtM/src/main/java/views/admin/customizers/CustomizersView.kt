@@ -79,7 +79,7 @@ this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this
     var unsortedCustomizerViewVector: Vector = Vector()
 
 
-    var size: Int = customizersVector!!.size!!
+    var size: Int = this.customizersVector!!.size!!
 
 
 
@@ -89,7 +89,7 @@ this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this
 
         {
 
-    var viewName: String = customizersVector!!.get(index) as String
+    var viewName: String = this.customizersVector!!.get(index) as String
 
 
     
@@ -175,7 +175,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

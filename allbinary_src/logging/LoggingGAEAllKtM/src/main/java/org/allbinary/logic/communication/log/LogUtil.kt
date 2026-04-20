@@ -45,7 +45,7 @@ import org.allbinary.string.CommonStrings
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogUtil.instance
 }
 
 
@@ -117,7 +117,7 @@ this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OB
                                     }
                                 
 
-    var message: String = logFormatUtil!!.getS(className, functionName, specialMessage)!!
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
 
     
@@ -126,12 +126,12 @@ this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OB
                                 )
                         
                                     {
-                                    logger.log(Level.SEVERE, message, exception)
+                                    this.logger.log(Level.SEVERE, message, exception)
 
                                     }
                                 
                         else {
-                            logger.log(Level.INFO, message)
+                            this.logger.log(Level.INFO, message)
 
                         }
                             

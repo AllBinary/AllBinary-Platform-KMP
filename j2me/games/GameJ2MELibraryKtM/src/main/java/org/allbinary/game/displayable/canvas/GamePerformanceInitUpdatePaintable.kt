@@ -42,7 +42,7 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable {
         
     private val halfHeight: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfHeight()!!
 
-    private val yArray: IntArray = intArrayOf(halfHeight +30,halfHeight +30,halfHeight +30 +15,halfHeight +30 +15,halfHeight +30 +30,halfHeight +30 +30,halfHeight +30 +45,halfHeight +30 +45)
+    private val yArray: IntArray = intArrayOf(this.halfHeight +30,this.halfHeight +30,this.halfHeight +30 +15,this.halfHeight +30 +15,this.halfHeight +30 +30,this.halfHeight +30 +30,this.halfHeight +30 +45,this.halfHeight +30 +45)
 
     private var baseRefreshHelperCharArray: Array<CharArray?> = Array(0) { CharArray(0) }
 
@@ -55,7 +55,7 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable {
     override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
-baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.toCharArray()
+this.baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.toCharArray()
 }
 
 
@@ -68,7 +68,7 @@ var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
 
-graphics.setColor(RED)
+graphics.setColor(this.RED)
 
     var charArray: CharArray
 
@@ -82,7 +82,7 @@ graphics.setColor(RED)
     var size3: Int= 0
 
 
-    var size: Int = baseRefreshHelperCharArray!!.size -2
+    var size: Int = this.baseRefreshHelperCharArray!!.size -2
 
 
 
@@ -91,8 +91,8 @@ graphics.setColor(RED)
                         for (index in size downTo 0)
 
         {
-charArray= baseRefreshHelperCharArray[index]!!
-charArray2= baseRefreshHelperCharArray[index +1]!!
+charArray= this.baseRefreshHelperCharArray[index]!!
+charArray2= this.baseRefreshHelperCharArray[index +1]!!
 size2= charArray!!.size
 size3= charArray2!!.size
 graphics.drawChars(charArray, 0, size2, 0, yArray[index]!!, 0)

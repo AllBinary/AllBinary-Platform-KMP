@@ -54,17 +54,17 @@ companion object {
         
     val NAME: String = "lru"
 
-    var MAX_TIME_THOUSAND_MAX: CachePolicy = CachePolicy(NAME, Long.MAX_VALUE, 1000)
+    var MAX_TIME_THOUSAND_MAX: CachePolicy = CachePolicy(this.NAME, Long.MAX_VALUE, 1000)
 
-    var THIRTY_MINUTES_TEN_THOUSAND_MAX: CachePolicy = CachePolicy(NAME, 1000 *60 *30, 10000)
+    var THIRTY_MINUTES_TEN_THOUSAND_MAX: CachePolicy = CachePolicy(this.NAME, 1000 *60 *30, 10000)
 
-    var THIRTY_MINUTES_FIFTY_THOUSAND_MAX: CachePolicy = CachePolicy(NAME, 1000 *60 *30, 100000)
+    var THIRTY_MINUTES_FIFTY_THOUSAND_MAX: CachePolicy = CachePolicy(this.NAME, 1000 *60 *30, 100000)
 
-    var ONE_MINUTE_FIVE_MAX: CachePolicy = CachePolicy(NAME, 1000 *60 *1, 5)
+    var ONE_MINUTE_FIVE_MAX: CachePolicy = CachePolicy(this.NAME, 1000 *60 *1, 5)
 
-    var ONE_MINUTE_TEN_MAX: CachePolicy = CachePolicy(NAME, 1000 *60 *1, 10)
+    var ONE_MINUTE_TEN_MAX: CachePolicy = CachePolicy(this.NAME, 1000 *60 *1, 10)
 
-    var ONE_MINUTE_ONE_HUNDRED_MAX: CachePolicy = CachePolicy(NAME, 1000 *60 *1, 100)
+    var ONE_MINUTE_ONE_HUNDRED_MAX: CachePolicy = CachePolicy(this.NAME, 1000 *60 *1, 100)
 
 }
                 

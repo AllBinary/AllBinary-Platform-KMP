@@ -103,7 +103,7 @@ var initializeCounter = initializeCounter
     var licenseInitInfo: LicenseInitInfo = LicenseInitInfo()
 
 licenseInitInfo!!.clearServers()
-licenseInitInfo!!.addServer(OFFICIAL_ALLBINARY_SERVICES_SERVER)
+licenseInitInfo!!.addServer(this.OFFICIAL_ALLBINARY_SERVICES_SERVER)
 
 
 

@@ -60,34 +60,34 @@ public constructor (basicDecimal: BasicDecimal, velocityProperties: BasicVelocit
 
     var velocityProperties: BasicVelocityProperties = this.getVelocityProperties()!!
 
-accumulatedX= (accumulatedX +velocityProperties!!.getVelocityXBasicDecimalP()!!.getUnscaled()).toInt()
-accumulatedY= (accumulatedY +velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled()).toInt()
-accumulatedZ= (accumulatedZ +velocityProperties!!.getVelocityZBasicDecimalP()!!.getUnscaled()).toInt()
-layer.move(accumulatedX /factorValue, accumulatedY /factorValue, accumulatedZ /factorValue)
+this.accumulatedX= (this.accumulatedX +velocityProperties!!.getVelocityXBasicDecimalP()!!.getUnscaled()).toInt()
+this.accumulatedY= (this.accumulatedY +velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled()).toInt()
+this.accumulatedZ= (this.accumulatedZ +velocityProperties!!.getVelocityZBasicDecimalP()!!.getUnscaled()).toInt()
+layer.move(this.accumulatedX /this.factorValue, this.accumulatedY /this.factorValue, this.accumulatedZ /this.factorValue)
 
     
-                        if(mathUtil!!.abs(accumulatedX) > factorValue)
+                        if(mathUtil!!.abs(this.accumulatedX) > this.factorValue)
                         
                                     {
-                                    accumulatedX= 0
+                                    this.accumulatedX= 0
 
                                     }
                                 
 
     
-                        if(mathUtil!!.abs(accumulatedY) > factorValue)
+                        if(mathUtil!!.abs(this.accumulatedY) > this.factorValue)
                         
                                     {
-                                    accumulatedY= 0
+                                    this.accumulatedY= 0
 
                                     }
                                 
 
     
-                        if(mathUtil!!.abs(accumulatedZ) > factorValue)
+                        if(mathUtil!!.abs(this.accumulatedZ) > this.factorValue)
                         
                                     {
-                                    accumulatedZ= 0
+                                    this.accumulatedZ= 0
 
                                     }
                                 

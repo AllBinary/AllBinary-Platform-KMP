@@ -126,7 +126,7 @@ this.hashtable.clear()
                                 )
                         
                                     {
-                                    listCanBeNull= basicArrayListUtil!!.getImmutableInstance()
+                                    listCanBeNull= this.basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 

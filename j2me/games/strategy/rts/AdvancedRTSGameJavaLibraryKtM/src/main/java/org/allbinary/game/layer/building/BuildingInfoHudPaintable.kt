@@ -99,9 +99,9 @@ index++
 efficiencyHud= NumberStringHud("Efficiency:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 index++
 
-    var totalLength: Int = HEALTH.length +1
+    var totalLength: Int = this.HEALTH.length +1
 
-healthHud= NumberStringHud(HEALTH, 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+healthHud= NumberStringHud(this.HEALTH, 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX +(totalLength *DEFAULT_CHAR_HEIGHT), y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 } catch(e: Exception)
             {
@@ -158,7 +158,7 @@ this.efficiencyHud!!.set(buildingLayer!!.getEfficiency() /100)
 
 this.healthHud!!.set(health)
 
-    var totalLength: Int = HEALTH.length +MathUtil.getInstance()!!.getTotalDigits(health)
+    var totalLength: Int = this.HEALTH.length +MathUtil.getInstance()!!.getTotalDigits(health)
 
 this.maxHealthHud!!.setX(this.textX +MyFont.getInstance()!!.stringWidth(totalLength))
 this.maxHealthHud!!.set(buildingLayer!!.getHealthInterface()!!.getMaxHealth())

@@ -100,11 +100,11 @@ var deviceId = deviceId
 
 
     
-                        if(deviceId < MAX_FAST_DEVICEID)
+                        if(deviceId < this.MAX_FAST_DEVICEID)
                         
                                     {
                                     
-    var playerInputId: Int = deviceIdToplayerId[deviceId]!!
+    var playerInputId: Int = this.deviceIdToplayerId[deviceId]!!
 
 
     
@@ -127,7 +127,7 @@ var deviceId = deviceId
 
 
 
-                        for (index in totalDevicesMapped -1 downTo 0)
+                        for (index in this.totalDevicesMapped -1 downTo 0)
 
         {
 
@@ -148,10 +148,10 @@ var deviceId = deviceId
 
                         }
                             
-index= totalDevicesMapped
+index= this.totalDevicesMapped
 
     
-                        if(deviceId < MAX_FAST_DEVICEID)
+                        if(deviceId < this.MAX_FAST_DEVICEID)
                         
                                     {
                                     this.deviceIdToplayerId[deviceId]= index
@@ -165,7 +165,7 @@ index= totalDevicesMapped
                         }
                             
 this.playerIdToDeviceId[index]= deviceId
-AnalogLocationInputFactory.getInstance()!!.addPlayer(totalDevicesMapped)
+AnalogLocationInputFactory.getInstance()!!.addPlayer(this.totalDevicesMapped)
 totalDevicesMapped++
 this.logUtil!!.putF(StringMaker().
                             append("Added DeviceId: ")!!.appendint(deviceId)!!.append(" at: ")!!.appendint(index)!!.append(" Total: ")!!.appendint(this.totalDevicesMapped)!!.toString(), this, "getPlayerForDevice")
@@ -187,7 +187,7 @@ this.logUtil!!.putF(StringMaker().
 
 
 
-                        for (index in totalDevicesMapped -1 downTo 0)
+                        for (index in this.totalDevicesMapped -1 downTo 0)
 
         {
 
@@ -217,7 +217,7 @@ var playerInputId = playerInputId
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return playersInPlay[playerInputId]!!
+                        return this.playersInPlay[playerInputId]!!
 }
 
 
@@ -227,7 +227,7 @@ var playerInputId = playerInputId
 var playerInputId = playerInputId
 this.logUtil!!.putF(StringMaker().
                             append("Setting PlayerInPlay with playerInputId: ")!!.appendint(playerInputId)!!.toString(), this, "setPlayerInPlay")
-playersInPlay[playerInputId]= true
+this.playersInPlay[playerInputId]= true
 }
 
 
@@ -237,7 +237,7 @@ playersInPlay[playerInputId]= true
 var playerInputId = playerInputId
 this.logUtil!!.putF(StringMaker().
                             append("Setting PlayerOutOfPlay with playerInputId: ")!!.appendint(playerInputId)!!.toString(), this, "setPlayerOutOfPlay")
-playersInPlay[playerInputId]= false
+this.playersInPlay[playerInputId]= false
 }
 
 

@@ -109,7 +109,7 @@ this.actionsStringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
     var filePathStringBuffer: StringMaker = StringMaker()
 
 filePathStringBuffer!!.append(ImageOutputData.SAVE_PATH)
-filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
+filePathStringBuffer!!.append(LongUtil.fillIn(this.frame.toString()))
 filePathStringBuffer!!.append(".txt")
 
     var filePath: String = filePathStringBuffer!!.toString()!!
@@ -121,10 +121,10 @@ fileOutputStream!!.write(frameBytes)
 fileOutputStream!!.write(getFrame()!!.toString()!!.encodeToByteArray())
 fileOutputStream!!.write('\n')
 fileOutputStream!!.write(info)
-fileOutputStream!!.write(infoStringBuffer!!.toString()!!.encodeToByteArray())
+fileOutputStream!!.write(this.infoStringBuffer!!.toString()!!.encodeToByteArray())
 fileOutputStream!!.write('\n')
 fileOutputStream!!.write(actions)
-fileOutputStream!!.write(actionsStringBuffer!!.toString()!!.encodeToByteArray())
+fileOutputStream!!.write(this.actionsStringBuffer!!.toString()!!.encodeToByteArray())
 fileOutputStream!!.close()
 }
 

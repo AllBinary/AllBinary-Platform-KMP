@@ -62,7 +62,7 @@ graphics.setColor(basicColor!!.toInt())
 }
 
 
-    open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor, value: Int)
+    open fun setBasicColorP3(graphics: Graphics, basicColor: BasicColor, value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

@@ -63,7 +63,7 @@ var gameKeyEvent = gameKeyEvent
             super.onPressGameKeyEvent(gameKeyEvent)
 
     
-                        if(timeHelper!!.isTime())
+                        if(this.timeHelper!!.isTime())
                         
                                     {
                                     this.processInput()
@@ -115,7 +115,7 @@ var gameKeyEvent = gameKeyEvent
             super.onUpGameKeyEvent(gameKeyEvent)
 
     
-                        if(timeHelper!!.isTime())
+                        if(this.timeHelper!!.isTime())
                         
                                     {
                                     this.processInput()
@@ -140,7 +140,7 @@ var motionGestureEvent = motionGestureEvent
             super.onMotionGestureEvent(motionGestureEvent)
 
     
-                        if(timeHelper!!.isTime())
+                        if(this.timeHelper!!.isTime())
                         
                                     {
                                     this.processInput()

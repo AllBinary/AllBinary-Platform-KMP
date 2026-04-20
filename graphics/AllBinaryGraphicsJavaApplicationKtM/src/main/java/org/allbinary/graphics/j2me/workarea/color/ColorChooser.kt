@@ -36,9 +36,9 @@ initComponents()
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jColorChooser1= javax.swing.JColorChooser()
+this.jColorChooser1= javax.swing.JColorChooser()
 setLayout(java.awt.BorderLayout())
-add(jColorChooser1, java.awt.BorderLayout.CENTER)
+add(this.jColorChooser1, java.awt.BorderLayout.CENTER)
 }
 
 

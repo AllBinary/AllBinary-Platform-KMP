@@ -62,10 +62,10 @@ var sound = sound
         try {
             
     
-                        if(!list.contains(sound))
+                        if(!this.list.contains(sound))
                         
                                     {
-                                    list.add(sound)
+                                    this.list.add(sound)
 
                                     }
                                 
@@ -90,10 +90,10 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
 
 
     
-                        if(list.size() > 0)
+                        if(this.list.size() > 0)
                         
                                     {
-                                    sound= list.remove(0) as Sound
+                                    sound= this.list.remove(0) as Sound
 
     
                         if(sound != 
@@ -106,9 +106,9 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
                                     }
                                 
 
-        while(list.size() > max)
+        while(this.list.size() > this.max)
         {
-list.remove(0)
+this.list.remove(0)
 }
 
 played= true

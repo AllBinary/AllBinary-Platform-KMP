@@ -55,7 +55,7 @@ open public class EmulatorCustomRenderer
 {
     //var gl = gl
     //var eglConfig = eglConfig
-this.logUtil!!.putF(commonStrings!!.START, this, this.renderStrings!!.ON_SURFACE_CREATED)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.renderStrings!!.ON_SURFACE_CREATED)
 
     var initEmulatorFactory: InitEmulatorFactory = InitEmulatorFactory.getInstance()!!
 
@@ -78,7 +78,7 @@ Thread.sleep(180)
 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
 }
 
 

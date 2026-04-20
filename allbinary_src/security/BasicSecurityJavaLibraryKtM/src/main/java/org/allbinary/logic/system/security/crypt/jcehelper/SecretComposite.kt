@@ -57,7 +57,7 @@ this.key= key
 : ByteArray{
 var array = array
 array= this.mutilate(array)
-cipher.init(Cipher.ENCRYPT_MODE, secretKey)
+this.cipher.init(Cipher.ENCRYPT_MODE, secretKey)
 
 
 
@@ -77,7 +77,7 @@ cipher.init(Cipher.DECRYPT_MODE, secretKey)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.mutilate(cipher.doFinal(array))
+                        return this.mutilate(this.cipher.doFinal(array))
 }
 
 
@@ -89,18 +89,18 @@ var array = array
 
 
 
-                        for (index in 0 until key.size)
+                        for (index in 0 until this.key.size)
 
         {
 
-    var value: Byte = key[index]!!
+    var value: Byte = this.key[index]!!
 
 
     
                         if(value < 8 && value > 0)
                         
                                     {
-                                    array= byteUtil!!.xorByte(array, value.toInt())
+                                    array= this.byteUtil!!.xorByte(array, value.toInt())
 
                                     }
                                 

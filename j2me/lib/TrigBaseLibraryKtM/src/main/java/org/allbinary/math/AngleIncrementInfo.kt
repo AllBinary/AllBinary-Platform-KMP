@@ -113,37 +113,37 @@ var angle = angle
 
 
     
-                        if(UP_FRAME.toInt() -angle < closestDirection!!.toInt() -angle)
+                        if(this.UP_FRAME.toInt() -angle < closestDirection!!.toInt() -angle)
                         
                                     {
-                                    closestDirection= UP_FRAME
+                                    closestDirection= this.UP_FRAME
 
                                     }
                                 
 
     
-                        if(DOWN_FRAME.toInt() -angle < closestDirection!!.toInt() -angle)
+                        if(this.DOWN_FRAME.toInt() -angle < closestDirection!!.toInt() -angle)
                         
                                     {
-                                    closestDirection= DOWN_FRAME
+                                    closestDirection= this.DOWN_FRAME
 
                                     }
                                 
 
     
-                        if(LEFT_FRAME.toInt() -angle < closestDirection!!.toInt() -angle)
+                        if(this.LEFT_FRAME.toInt() -angle < closestDirection!!.toInt() -angle)
                         
                                     {
-                                    closestDirection= LEFT_FRAME
+                                    closestDirection= this.LEFT_FRAME
 
                                     }
                                 
 
     
-                        if(RIGHT_FRAME.toInt() -angle < closestDirection!!.toInt() -angle)
+                        if(this.RIGHT_FRAME.toInt() -angle < closestDirection!!.toInt() -angle)
                         
                                     {
-                                    closestDirection= RIGHT_FRAME
+                                    closestDirection= this.RIGHT_FRAME
 
                                     }
                                 

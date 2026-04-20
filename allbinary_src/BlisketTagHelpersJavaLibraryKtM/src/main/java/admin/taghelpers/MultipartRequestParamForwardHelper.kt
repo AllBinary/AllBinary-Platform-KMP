@@ -87,7 +87,7 @@ this.requestMapInterface= InventoryItemViewParentTagHelper.getInstance()!!.getRe
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(page)
+stringBuffer!!.append(this.page)
 stringBuffer!!.append(params)
 this.pageContext!!.forward(stringBuffer!!.toString())
 
@@ -187,7 +187,7 @@ stringBuffer!!.append(value)
 
 
     
-                        if(StringValidationUtil.getInstance()!!.isEmpty(command) || (!StringValidationUtil.getInstance()!!.isEmpty(requestCommand) && command.compareTo(requestCommand) == 0))
+                        if(StringValidationUtil.getInstance()!!.isEmpty(this.command) || (!StringValidationUtil.getInstance()!!.isEmpty(requestCommand) && command.compareTo(requestCommand) == 0))
                         
                                     {
                                     

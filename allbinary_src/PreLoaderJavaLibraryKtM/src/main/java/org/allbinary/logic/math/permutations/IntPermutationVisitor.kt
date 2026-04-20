@@ -33,7 +33,7 @@ this.data= data
 : Any{
 var anyType = anyType
 stringBuilder!!.delete(0, stringBuilder!!.length())
-this.print(data, stringBuilder)
+this.print(this.data, stringBuilder)
 
 
 

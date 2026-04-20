@@ -69,7 +69,7 @@ ForcedLogUtil.log(CommonStrings.getInstance()!!.NOT_IMPLEMENTED, this)
 var gameFeatureEvent = gameFeatureEvent
 this.logUtil!!.putF(StringMaker().
                             append(gameFeatureUtil!!.GAME_FEATURE_CHANGED)!!.append(gameFeatureEvent!!.getWhatChanged())!!.toString(), this, gameFeatureUtil!!.ON_GAME_FEATURE_CHANGE)
-list.add(gameFeatureEvent!!.getGameOption())
+this.list.add(gameFeatureEvent!!.getGameOption())
 setChanged(true)
 }
 
@@ -78,7 +78,7 @@ setChanged(true)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature
-list.add(gameFeature)
+this.list.add(gameFeature)
 }
 
 
@@ -86,7 +86,7 @@ list.add(gameFeature)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature
-list.remove(gameFeature)
+this.list.remove(gameFeature)
 }
 
 
@@ -100,7 +100,7 @@ this.changed= initialized
                         if(!this.isChanged())
                         
                                     {
-                                    list.clear()
+                                    this.list.clear()
 
                                     }
                                 
@@ -112,7 +112,7 @@ this.changed= initialized
 : Boolean{
 var gameFeature = gameFeature
 
-    var isChanged: Boolean = list.contains(gameFeature)!!
+    var isChanged: Boolean = this.list.contains(gameFeature)!!
 
 
     var stringBuffer: StringMaker = StringMaker()

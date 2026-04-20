@@ -115,7 +115,7 @@ this.conn=
         try {
             initialize()
 
-    var stmt: Statement = conn.createStatement()!!
+    var stmt: Statement = this.conn.createStatement()!!
 
 stmt.execute(statement)
 
@@ -128,7 +128,7 @@ stmt.close()
 this.conn= 
                                         null
                                     
-sqlConnectionPool!!.add(this.getDatabaseConnectionInfoInterface()!!.getUrl(), tempConnection)
+this.sqlConnectionPool!!.add(this.getDatabaseConnectionInfoInterface()!!.getUrl(), tempConnection)
 
 
 
@@ -141,7 +141,7 @@ sqlConnectionPool!!.add(this.getDatabaseConnectionInfoInterface()!!.getUrl(), te
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.put(FAILED_SQL_STATEMENT +statement, this, METHOD_EXECUTED_SQL_STATEMENT, e)
+                                    this.logUtil!!.put(this.FAILED_SQL_STATEMENT +statement, this, METHOD_EXECUTED_SQL_STATEMENT, e)
 
                                     }
                                 
@@ -164,7 +164,7 @@ this.conn=
     //var databaseName = databaseName
 
         try {
-            this.executeSQLStatement(sqlStrings!!.CREATE_DATABASE +databaseName)
+            this.executeSQLStatement(this.sqlStrings!!.CREATE_DATABASE +databaseName)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -178,7 +178,7 @@ this.conn=
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return databaseName +sqlStrings!!.CREATE_RETURN
+                        return databaseName +this.sqlStrings!!.CREATE_RETURN
 } catch(e: Exception)
             {
 
@@ -186,7 +186,7 @@ this.conn=
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.put(DATABASE_CREATION_FAILED_LABEL +databaseName, this, this.METHOD_CREATE, e)
+                                    this.logUtil!!.put(this.DATABASE_CREATION_FAILED_LABEL +databaseName, this, this.METHOD_CREATE, e)
 
                                     }
                                 
@@ -194,7 +194,7 @@ this.conn=
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DATABASE_CREATION_FAILED_LABEL +databaseName
+                        return this.DATABASE_CREATION_FAILED_LABEL +databaseName
 }
 
 }
@@ -205,7 +205,7 @@ this.conn=
 {
 
         try {
-            this.conn= sqlConnectionPool!!.get(this.getDatabaseConnectionInfoInterface()!!.getUrl())
+            this.conn= this.sqlConnectionPool!!.get(this.getDatabaseConnectionInfoInterface()!!.getUrl())
 } catch(se: SQLException)
             {
 
@@ -213,7 +213,7 @@ this.conn=
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.put(SQL_CONNECTION_RETRYING, this, METHOD_CREATE_CONNECTION, se)
+                                    this.logUtil!!.put(this.SQL_CONNECTION_RETRYING, this, METHOD_CREATE_CONNECTION, se)
 
                                     }
                                 
@@ -222,7 +222,7 @@ this.conn=
             Thread.currentThread()!!.sleep(2000)
 
     
-                        if(connectAttemptCounter < 10)
+                        if(this.connectAttemptCounter < 10)
                         
                                     {
                                     connectAttemptCounter++
@@ -237,7 +237,7 @@ this.initialize()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.put(SQL_CONNECTION_RETRY +se.message, this, this.METHOD_CREATE_CONNECTION, e)
+                                    this.logUtil!!.put(this.SQL_CONNECTION_RETRY +se.message, this, this.METHOD_CREATE_CONNECTION, e)
 
                                     }
                                 
@@ -272,7 +272,7 @@ jdbcDriverClass!!.newInstance()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.put(LOAD_JDBC_DRIVER_FAILED_LABEL +this.getDatabaseConnectionInfoInterface()!!.getJdbcDriver(), this, METHOD_INITIALIZE, e)
+                                    this.logUtil!!.put(this.LOAD_JDBC_DRIVER_FAILED_LABEL +this.getDatabaseConnectionInfoInterface()!!.getJdbcDriver(), this, METHOD_INITIALIZE, e)
 
                                     }
                                 
@@ -289,7 +289,7 @@ this.createConnection()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    this.logUtil!!.put(SQL_CONNECTION_FAILED, this, this.METHOD_INITIALIZE, se)
+                                    this.logUtil!!.put(this.SQL_CONNECTION_FAILED, this, this.METHOD_INITIALIZE, se)
 
                                     }
                                 

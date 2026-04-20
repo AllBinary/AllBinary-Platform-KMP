@@ -135,17 +135,17 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("totalColumns: ")
-stringBuffer!!.appendint(totalColumns)
+stringBuffer!!.appendint(this.totalColumns)
 stringBuffer!!.append(" totalRows: ")
-stringBuffer!!.appendint(totalRows)
+stringBuffer!!.appendint(this.totalRows)
 stringBuffer!!.append(" columnsRemainder: ")
-stringBuffer!!.appendint(columnsRemainder)
+stringBuffer!!.appendint(this.columnsRemainder)
 stringBuffer!!.append(" rowsRemainder: ")
-stringBuffer!!.appendint(rowsRemainder)
+stringBuffer!!.appendint(this.rowsRemainder)
 stringBuffer!!.append(" columnsRemainderHalf: ")
-stringBuffer!!.appendint(columnsRemainderHalf)
+stringBuffer!!.appendint(this.columnsRemainderHalf)
 stringBuffer!!.append(" rowsRemainderHalf: ")
-stringBuffer!!.appendint(rowsRemainderHalf)
+stringBuffer!!.appendint(this.rowsRemainderHalf)
 
 
 

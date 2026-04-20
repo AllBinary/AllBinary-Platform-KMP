@@ -71,13 +71,13 @@ var otherAngle = otherAngle
     var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()!!
 
 
-    var xVector: Int = (axisMathVectorUtil!!.calculateX(radius, angle) /scaleFactorValue).toInt()
+    var xVector: Int = (this.axisMathVectorUtil!!.calculateX(radius, angle) /scaleFactorValue).toInt()
 
 
-    var yVector: Int = (axisMathVectorUtil!!.calculateY(radius, angle) /scaleFactorValue).toInt()
+    var yVector: Int = (this.axisMathVectorUtil!!.calculateY(radius, angle) /scaleFactorValue).toInt()
 
 
-    var zVector: Int = (axisMathVectorUtil!!.calculateZ(radius, otherAngle) /scaleFactorValue).toInt()
+    var zVector: Int = (this.axisMathVectorUtil!!.calculateZ(radius, otherAngle) /scaleFactorValue).toInt()
 
 layer.move(xVector, yVector, zVector)
 }

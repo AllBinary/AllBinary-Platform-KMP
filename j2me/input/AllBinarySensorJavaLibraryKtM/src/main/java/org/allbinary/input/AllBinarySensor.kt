@@ -98,14 +98,14 @@ protected constructor ()
     open fun shutdown()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, "shutdown")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "shutdown")
 }
 
 
     override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
 {
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 

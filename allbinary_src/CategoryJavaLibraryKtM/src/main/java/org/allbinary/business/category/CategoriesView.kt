@@ -51,7 +51,7 @@ this.categoryInterface= categoryInterface
 : Node{
 var document = document
 
-    var node: Node = CategoryView(categoryInterface).
+    var node: Node = CategoryView(this.categoryInterface).
                             toXmlNode(document)!!
 
 

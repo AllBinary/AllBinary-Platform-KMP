@@ -140,7 +140,7 @@ this.load()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return platformRecordIdUtil!!.getRecordId(abeClientInformation, StringMaker().
-                            append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(this.getName())!!.append(RECORD_ID)!!.toString())
+                            append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(this.getName())!!.append(this.RECORD_ID)!!.toString())
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -166,7 +166,7 @@ this.removeLowestHighScore()
 
                                     }
                                 
-recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+recordStore= RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
 
     var highScoreBytes: ByteArray = newHighScore!!.getAsBytes()!!
 
@@ -221,7 +221,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 
 
         try {
-            recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore= RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
 
@@ -333,7 +333,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 
 
         try {
-            recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore= RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
 this.setList(BasicArrayList())
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
@@ -539,7 +539,7 @@ var newHighScore = newHighScore
 
 
     
-                        if(recordComparatorInterface!!.compare(newHighScore!!.getAsBytes(), highScore!!.getAsBytes()) == RecordComparator.FOLLOWS)
+                        if(this.recordComparatorInterface!!.compare(newHighScore!!.getAsBytes(), highScore!!.getAsBytes()) == RecordComparator.FOLLOWS)
                         
                                     {
                                     this.logUtil!!.putF("Obtained a High Score", this, "isBestScore")

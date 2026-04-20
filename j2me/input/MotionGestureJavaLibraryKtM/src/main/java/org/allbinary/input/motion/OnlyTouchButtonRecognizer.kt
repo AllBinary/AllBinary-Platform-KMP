@@ -52,7 +52,7 @@ var modifiers = modifiers
                         if(this.touchButtonRecognizer!!.pressTouchButtonInput(x, y, deviceId))
                         
                                     {
-                                    touchButtonProcessing= true
+                                    this.touchButtonProcessing= true
 
                                     }
                                 
@@ -70,10 +70,10 @@ var deviceId = deviceId
 var modifiers = modifiers
 
     
-                        if(touchButtonProcessing)
+                        if(this.touchButtonProcessing)
                         
                                     {
-                                    touchButtonProcessing= false
+                                    this.touchButtonProcessing= false
 
                                     }
                                 
@@ -104,7 +104,7 @@ var deviceId = deviceId
 var modifiers = modifiers
 
     
-                        if(touchButtonProcessing)
+                        if(this.touchButtonProcessing)
                         
                                     {
                                     this.touchButtonRecognizer!!.pressTouchButtonInput(x, y, deviceId)

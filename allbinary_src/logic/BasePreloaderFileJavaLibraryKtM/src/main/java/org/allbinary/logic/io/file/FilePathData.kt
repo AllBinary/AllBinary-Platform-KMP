@@ -59,7 +59,7 @@ private constructor ()
                         if(File.separatorChar == '\\')
                         
                                     {
-                                    SEPARATOR= File.separator +File.separator
+                                    this.SEPARATOR= File.separator +File.separator
 
                                     }
                                 

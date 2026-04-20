@@ -316,7 +316,7 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 
     var categoryVector: Vector = Vector()
 
-categoryVector!!.add(category)
+categoryVector!!.add(this.category)
 
 
 

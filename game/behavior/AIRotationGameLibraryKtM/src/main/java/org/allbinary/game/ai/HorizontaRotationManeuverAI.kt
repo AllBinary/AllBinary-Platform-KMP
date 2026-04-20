@@ -72,7 +72,7 @@ this.rotationAnimationInterface= rotationAnimationInterfaceCompositeInterface!!.
     var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface = this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
 
 this.baseVelocityInterface= velocityInterfaceCompositeInterface!!.getVelocityProperties()
-this.velocityInterface= baseVelocityInterface as VelocityInterface
+this.velocityInterface= this.baseVelocityInterface as VelocityInterface
 
     var rotationAnimationInterface: RotationAnimationInterface = this.rotationAnimationInterface as RotationAnimationInterface
 
@@ -146,7 +146,7 @@ this.drop()
                                     }
                                 
 
-    var index: Int = circularIndexUtil!!.getIndex()!!
+    var index: Int = this.circularIndexUtil!!.getIndex()!!
 
 
     
@@ -226,7 +226,7 @@ this.baseVelocityInterface!!.zero()
 {
 
     
-                        if(currentSpeedDivisor > 1)
+                        if(this.currentSpeedDivisor > 1)
                         
                                     {
                                     currentSpeedDivisor--

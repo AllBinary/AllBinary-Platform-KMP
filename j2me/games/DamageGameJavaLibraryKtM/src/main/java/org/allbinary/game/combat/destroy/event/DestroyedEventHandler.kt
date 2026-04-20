@@ -63,10 +63,10 @@ private constructor (){
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
     
-                        if(!list.contains(collidableDestroyableDamageableLayer))
+                        if(!this.list.contains(collidableDestroyableDamageableLayer))
                         
                                     {
-                                    list.add(collidableDestroyableDamageableLayer)
+                                    this.list.add(collidableDestroyableDamageableLayer)
 
                                     }
                                 

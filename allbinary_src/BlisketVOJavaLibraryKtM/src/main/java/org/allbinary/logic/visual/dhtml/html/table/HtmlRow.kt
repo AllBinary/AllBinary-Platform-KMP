@@ -91,10 +91,10 @@ this.numberOfColumns++
                 
 
 
-    var cellSize: Int = htmlCellsVector!!.size!!
+    var cellSize: Int = this.htmlCellsVector!!.size!!
 
-result= before
-result += START
+result= this.before
+result += this.START
 result += " "
 
 
@@ -125,7 +125,7 @@ result += "\" "
                                 
 }
 
-result += END
+result += this.END
 
 
 
@@ -133,12 +133,12 @@ result += END
                         for (i in 0 until cellSize)
 
         {
-result += htmlCellsVector!!.get(i)!!.toString()
+result += this.htmlCellsVector!!.get(i)!!.toString()
 result += " "
 }
 
-result += ENDTAG
-result += after
+result += this.ENDTAG
+result += this.after
 
 
 

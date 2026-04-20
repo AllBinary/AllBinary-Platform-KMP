@@ -96,10 +96,10 @@ this.cellpadding= cellpadding
 this.cellspacing= cellspacing
 this.after= after
 this.htmlRowsVector= Vector()
-addAttribute(BORDER, CommonPhoneStrings.getInstance()!!.ZERO)
-addAttribute(CELLPADDING, this.cellpadding)
-addAttribute(CELLSPACING, this.cellspacing)
-addAttribute(STYLE, this.BORDERCOLLAPSE)
+addAttribute(this.BORDER, CommonPhoneStrings.getInstance()!!.ZERO)
+addAttribute(this.CELLPADDING, this.cellpadding)
+addAttribute(this.CELLSPACING, this.cellspacing)
+addAttribute(this.STYLE, this.BORDERCOLLAPSE)
 }
 
 
@@ -127,8 +127,8 @@ this.htmlRowsVector!!.add(htmlRow)
 
     var attributeKeys: Array<Any?> = otherAttributes!!.keySet()!!.toTypedArray()!!
 
-result= before
-result += START
+result= this.before
+result += this.START
 result += " "
 
 
@@ -159,9 +159,9 @@ result += "\" "
                                 
 }
 
-result += END
+result += this.END
 
-    var size: Int = htmlRowsVector!!.size!!
+    var size: Int = this.htmlRowsVector!!.size!!
 
 
 
@@ -170,12 +170,12 @@ result += END
                         for (i in 0 until size)
 
         {
-result += htmlRowsVector!!.get(i)!!.toString()
+result += this.htmlRowsVector!!.get(i)!!.toString()
 result += " "
 }
 
-result += ENDTAG
-result += after
+result += this.ENDTAG
+result += this.after
 
 
 

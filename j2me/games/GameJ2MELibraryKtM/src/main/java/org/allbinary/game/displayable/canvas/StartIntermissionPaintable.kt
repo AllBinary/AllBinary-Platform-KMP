@@ -100,11 +100,11 @@ var graphics = graphics
 
     var existingFont: Font = graphics.getFont()!!
 
-fontDebugFactory!!.setFont(this.font, graphics)
+this.fontDebugFactory!!.setFont(this.font, graphics)
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.color)
+basicSetColorUtil!!.setBasicColorP3(graphics, this.basicColor, this.color)
 
     var beginWidth: Int= 0
 
@@ -117,7 +117,7 @@ basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.color)
         {
 
     
-                        if(hasChanged)
+                        if(this.hasChanged)
                         
                                     {
                                     this.lastWidth[index]= (graphics.getFont()!!.stringWidth(this.stringArray[index]!!) shr 1)
@@ -128,8 +128,8 @@ beginWidth= this.lastWidth[index]!!
 graphics.drawString(this.stringArray[index]!!, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHalfHeight() -lineArray[index], anchor)
 }
 
-hasChanged= false
-fontDebugFactory!!.setFont(existingFont, graphics)
+this.hasChanged= false
+this.fontDebugFactory!!.setFont(existingFont, graphics)
 }
 
 
@@ -141,10 +141,10 @@ fontDebugFactory!!.setFont(existingFont, graphics)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var level: Int = gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()!!
+    var level: Int = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()!!
 
 this.stringArray[0]= StringMaker().
-                            append(BEGIN_LEVEL)!!.appendint(level)!!.toString()
+                            append(this.BEGIN_LEVEL)!!.appendint(level)!!.toString()
 
 
 

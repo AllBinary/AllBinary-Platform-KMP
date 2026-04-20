@@ -79,7 +79,7 @@ RecordStore.deleteRecordStore(this.getRecordId(abeClientInformation))
 {
     //var abeClientInformation = abeClientInformation
 
-    var size: Int = idList!!.size()!!
+    var size: Int = this.idList!!.size()!!
 
 
 

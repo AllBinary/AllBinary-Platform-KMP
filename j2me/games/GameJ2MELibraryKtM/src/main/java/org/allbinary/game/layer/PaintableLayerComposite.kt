@@ -48,7 +48,7 @@ this.paintableArray= paintableArray
 
 
 
-                        for (index in paintableArray!!.size  - 1  downTo 0)
+                        for (index in this.paintableArray!!.size  - 1  downTo 0)
 
         {
 this.paintableArray[index]!!.paint(graphics)
@@ -68,7 +68,7 @@ this.paintableArray[index]!!.paint(graphics)
 
 
 
-                        for (index in paintableArray!!.size  - 1  downTo 0)
+                        for (index in this.paintableArray!!.size  - 1  downTo 0)
 
         {
 paintableInterface= this.paintableArray[index]!! as PaintableInterface

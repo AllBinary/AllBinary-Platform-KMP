@@ -86,7 +86,7 @@ this.logUtil!!.putF(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toS
 
     var index: Int = serverUrl!!.lastIndexOf("/")!!
 
-serverUrl= serverUrl!!.substring(0, index +1) +PAGE
+serverUrl= serverUrl!!.substring(0, index +1) +this.PAGE
 
     var xmlRpcClient: XmlRpcClient = XmlRpcClient(serverUrl)
 

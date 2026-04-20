@@ -76,13 +76,13 @@ this.after= after
     var attributeSize: Int = attributeKeys!!.size
                 
 
-result= before
-result += STARTINPUT
-result += TYPE
-result += type
+result= this.before
+result += this.STARTINPUT
+result += this.TYPE
+result += this.type
 result += "\" "
-result += NAME
-result += name
+result += this.NAME
+result += this.name
 result += "\" "
 
 
@@ -113,9 +113,9 @@ result += "\" "
                                 
 }
 
-result += END
-result += ENDINPUT
-result += after
+result += this.END
+result += this.ENDINPUT
+result += this.after
 
 
 

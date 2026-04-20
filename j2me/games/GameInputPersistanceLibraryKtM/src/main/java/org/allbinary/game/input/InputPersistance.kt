@@ -276,7 +276,7 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
 
-    var inputObjectArray: Array<Any?> = hashtableUtil!!.getKeysAsArray(hashtable)!!
+    var inputObjectArray: Array<Any?> = this.hashtableUtil!!.getKeysAsArray(hashtable)!!
 
 
     var size: Int = inputObjectArray!!.size

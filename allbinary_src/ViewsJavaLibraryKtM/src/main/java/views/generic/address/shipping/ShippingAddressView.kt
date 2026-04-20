@@ -83,7 +83,7 @@ var document = document
             
     var formNode: Node = document.createElement(StreetAddressData.FORM)!!
 
-formNode!!.appendChild(streetAddress!!.toXmlNode(document))
+formNode!!.appendChild(this.streetAddress!!.toXmlNode(document))
 
 
 

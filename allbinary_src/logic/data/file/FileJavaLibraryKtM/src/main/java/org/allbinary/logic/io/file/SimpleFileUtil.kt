@@ -308,15 +308,15 @@ var n = n
                                     }
                                 
 
-    var byteArray: ByteArray = nullUtil!!.NULL_BYTE_ARRAY
+    var byteArray: ByteArray = this.nullUtil!!.NULL_BYTE_ARRAY
 
 
         try {
             
     var outputStream2: ByteArrayOutputStream = ByteArrayOutputStream(max)
 
-byteArray= streamUtil!!.getByteArray(inputStream, outputStream2, byteArray1)
-streamUtil!!.close(inputStream)
+byteArray= this.streamUtil!!.getByteArray(inputStream, outputStream2, byteArray1)
+this.streamUtil!!.close(inputStream)
 } catch(e: Exception)
             {
 streamUtil!!.close(inputStream)

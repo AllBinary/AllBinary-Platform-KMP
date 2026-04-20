@@ -131,7 +131,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
                                     {
                                     
     
-                        if(layerCollisionUtil!!.isCollision(this.ownerLayer, layerInterface))
+                        if(this.layerCollisionUtil!!.isCollision(this.ownerLayer, layerInterface))
                         
                                     {
                                     

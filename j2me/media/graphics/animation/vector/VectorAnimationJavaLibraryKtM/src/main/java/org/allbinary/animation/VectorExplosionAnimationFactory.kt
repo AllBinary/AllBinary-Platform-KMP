@@ -75,7 +75,7 @@ this.setBasicColorP(basicColor)
     var framePoints: Array<IntArray?> = vectorRotationAnimationInterface!!.getPoints(frame)!!
 
 
-    var points: Array<Array<IntArray?>?> = vectorExplosionGenerator!!.getInstance(framePoints, 6, vectorExplosionGenerator!!.ROTATION)!!
+    var points: Array<Array<IntArray?>?> = this.vectorExplosionGenerator!!.getInstance(framePoints, 6, vectorExplosionGenerator!!.ROTATION)!!
 
 
 

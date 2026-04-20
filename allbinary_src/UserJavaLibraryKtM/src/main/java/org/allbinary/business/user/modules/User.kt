@@ -231,7 +231,7 @@ this.enable= stringUtil!!.getInstance(userHashMap!!.get(EntryData.getInstance()!
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(firstName, 1, UserData.MAXLEN))
+                        if(!stringValidationUtil!!.isValidRequired(this.firstName, 1, UserData.MAXLEN))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -240,7 +240,7 @@ this.enable= stringUtil!!.getInstance(userHashMap!!.get(EntryData.getInstance()!
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(lastName, 1, UserData.MAXLEN))
+                        if(!stringValidationUtil!!.isValidRequired(this.lastName, 1, UserData.MAXLEN))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -300,7 +300,7 @@ stringBuffer!!.append(UserName.getValidationInfo(this.userName))
 stringBuffer!!.append(this.password.getValidationInfo())
 
     
-                        if(!stringValidationUtil!!.isValidRequired(firstName, 1, UserData.MAXLEN))
+                        if(!stringValidationUtil!!.isValidRequired(this.firstName, 1, UserData.MAXLEN))
                         
                                     {
                                     stringBuffer!!.append("Please enter a valid First Name.<br />")
@@ -309,7 +309,7 @@ stringBuffer!!.append(this.password.getValidationInfo())
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(lastName, 1, UserData.MAXLEN))
+                        if(!stringValidationUtil!!.isValidRequired(this.lastName, 1, UserData.MAXLEN))
                         
                                     {
                                     stringBuffer!!.append("Please enter a valid Last Name.<br />")
@@ -780,22 +780,22 @@ this.enable= enable
 
     var values: Vector = Vector()
 
-values.add(userName)
-values.add(prefixName)
-values.add(firstName)
-values.add(lastName)
-values.add(middleName)
-values.add(suffixName)
-values.add(company)
-values.add(positionAtCompany)
-values.add(mainEmail)
-values.add(secondaryEmail)
-values.add(homePhone)
-values.add(cellPhone)
-values.add(workPhone)
-values.add(otherContact)
-values.add(electronicDevice)
-values.add(fax)
+values.add(this.userName)
+values.add(this.prefixName)
+values.add(this.firstName)
+values.add(this.lastName)
+values.add(this.middleName)
+values.add(this.suffixName)
+values.add(this.company)
+values.add(this.positionAtCompany)
+values.add(this.mainEmail)
+values.add(this.secondaryEmail)
+values.add(this.homePhone)
+values.add(this.cellPhone)
+values.add(this.workPhone)
+values.add(this.otherContact)
+values.add(this.electronicDevice)
+values.add(this.fax)
 values.add(this.getRole()!!.toString())
 
     var userConfigurationDomDocumentMapping: UserConfigurationDomDocumentMapping = UserConfigurationDomDocumentMapping(this.getUserConfigurationInterface())

@@ -76,7 +76,7 @@ this.value= httpTransformInfoInterface!!.getPageContext()!!.getRequest()!!.getPa
 
     var billingAddressesEntity: BillingAddressesEntity = BillingAddressesEntity(this.getWeblisketSession()!!.getUserName())
 
-this.streetAddress= billingAddressesEntity!!.get(Integer(value))
+this.streetAddress= billingAddressesEntity!!.get(Integer(this.value))
 
     
                         if(this.streetAddress == 

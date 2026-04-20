@@ -54,7 +54,7 @@ var pageContext = pageContext
 this.propertiesHashMap= hashMap
 this.pageContext= pageContext
 
-    var storeName: String = propertiesHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String
+    var storeName: String = this.propertiesHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String
 
 
     

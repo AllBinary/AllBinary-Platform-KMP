@@ -75,7 +75,7 @@ var document = document
                                     }
                                 
 
-    var hashMap: HashMap<Any, Any> = itemInterface!!.toHashMap()!!
+    var hashMap: HashMap<Any, Any> = this.itemInterface!!.toHashMap()!!
 
 
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING

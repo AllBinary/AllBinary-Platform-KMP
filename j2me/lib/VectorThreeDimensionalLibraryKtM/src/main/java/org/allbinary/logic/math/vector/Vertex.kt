@@ -76,13 +76,13 @@ public constructor ()
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
 
 stringBuffer!!.append(positionStrings!!.X_LABEL)
-stringBuffer!!.append(x.toString())
+stringBuffer!!.append(this.x.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(positionStrings!!.Y_LABEL)
-stringBuffer!!.append(y.toString())
+stringBuffer!!.append(this.y.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(positionStrings!!.Z_LABEL)
-stringBuffer!!.append(z.toString())
+stringBuffer!!.append(this.z.toString())
 
 
 

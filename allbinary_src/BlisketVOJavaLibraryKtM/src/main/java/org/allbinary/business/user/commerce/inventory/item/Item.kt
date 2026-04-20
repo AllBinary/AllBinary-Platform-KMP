@@ -67,11 +67,11 @@ public constructor (){
 
     var EMPTY: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-group= EMPTY
-tax= EMPTY
-shippingType= EMPTY
-shippingCost= EMPTY
-shippingAddress= StreetAddress()
+this.group= EMPTY
+this.tax= EMPTY
+this.shippingType= EMPTY
+this.shippingCost= EMPTY
+this.shippingAddress= StreetAddress()
 }
 
 

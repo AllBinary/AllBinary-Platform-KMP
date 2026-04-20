@@ -77,7 +77,7 @@ this.basicLayerProcessorArray= layerProcessorArray
 
         {
 
-    var layerProcessorInterface: LayerProcessor = basicLayerProcessorArray[index]!!
+    var layerProcessorInterface: LayerProcessor = this.basicLayerProcessorArray[index]!!
 
 }
 
@@ -141,7 +141,7 @@ layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
                         for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
 
         {
-layerProcessorInterface= basicLayerProcessorArray[index]!!
+layerProcessorInterface= this.basicLayerProcessorArray[index]!!
 
     
                         if(layerProcessorInterface!!.isProcessorLayer(layerInterface))
@@ -163,7 +163,7 @@ layerProcessorInterface= basicLayerProcessorArray[index]!!
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
-deleteLayerManagerEvent!!.setLayerInterface(layerInterface)
+this.deleteLayerManagerEvent!!.setLayerInterface(layerInterface)
 layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
 
     var layerProcessorInterface: LayerProcessor
@@ -175,7 +175,7 @@ layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
                         for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
 
         {
-layerProcessorInterface= basicLayerProcessorArray[index]!!
+layerProcessorInterface= this.basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.getLayerManager()!!.remove(layerInterface)
 }
 
@@ -202,7 +202,7 @@ super.remove(layerInterface)
                         for (index in 0 until size)
 
         {
-layerProcessorInterface= basicLayerProcessorArray[index]!!
+layerProcessorInterface= this.basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.process(this)
 }
 
@@ -228,7 +228,7 @@ layerProcessorInterface!!.process(this)
                         for (index in 0 until size)
 
         {
-layerProcessorInterface= basicLayerProcessorArray[index]!!
+layerProcessorInterface= this.basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.getLayerManager()!!.cleanup()
 }
 

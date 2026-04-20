@@ -127,7 +127,7 @@ var graphics = graphics
     var width: Int = this.displayInfoSingleton!!.getLastWidth()!!
 
 
-    var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(INSTRUCTIONS) shr 1)
+    var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(this.INSTRUCTIONS) shr 1)
 
 graphics.drawString(INSTRUCTIONS, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_CHAR_HEIGHT *2, anchor)
 }

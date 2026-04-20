@@ -74,7 +74,7 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(size2) }
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var mapArray: Array<IntArray?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!
+    var mapArray: Array<IntArray?> = this.raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!
 
 
     var startIndex2: Int = mapArray[0]!!.size -1
@@ -112,7 +112,7 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
     //var row = row
     //var currentType = currentType
 
-    var emptyType: Int = geographicMapCellTypeFactory!!.getEmptyType()!!
+    var emptyType: Int = this.geographicMapCellTypeFactory!!.getEmptyType()!!
 
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!

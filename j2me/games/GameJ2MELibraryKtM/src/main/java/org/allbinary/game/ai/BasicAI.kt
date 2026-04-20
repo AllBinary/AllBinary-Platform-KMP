@@ -79,7 +79,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -94,7 +94,7 @@ var key = key
                         if(key !=  -1)
                         
                                     {
-                                    this.gameInput!!.add(gameKeyEventFactory!!.getInstance(this, key))
+                                    this.gameInput!!.add(this.gameKeyEventFactory!!.getInstance(this, key))
 
                                     }
                                 

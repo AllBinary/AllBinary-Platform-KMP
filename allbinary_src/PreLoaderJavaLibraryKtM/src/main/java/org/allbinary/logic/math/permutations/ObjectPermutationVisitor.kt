@@ -13,6 +13,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.TsUtil
 import org.allbinary.logic.util.visitor.Visitor
 import org.allbinary.string.CommonSeps
 
@@ -33,7 +34,7 @@ this.data= data
 : Any{
 var anyType = anyType
 stringBuilder!!.delete(0, stringBuilder!!.length())
-this.print(data, stringBuilder)
+this.print(this.data, stringBuilder)
 
 
 
@@ -59,6 +60,9 @@ this.print(data, stringBuilder)
 var data = data
 var stringBuilder = stringBuilder
 
+    var tsUtil: TsUtil = TsUtil.getInstance()!!
+
+
     var size: Int = data.size
                 
 
@@ -69,7 +73,7 @@ var stringBuilder = stringBuilder
                         for (i in 0 until size)
 
         {
-stringBuilder!!.append(data[i]!!.hashCode())
+stringBuilder!!.append(tsUtil!!.hashCode(data[i]!!))
 stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)
 }
 

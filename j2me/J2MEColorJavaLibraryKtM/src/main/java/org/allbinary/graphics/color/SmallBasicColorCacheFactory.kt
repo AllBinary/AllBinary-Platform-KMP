@@ -65,8 +65,8 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicDefaultColor = basicDefaultColor
-BASIC_COLOR_ARRAY[colorIndex]= basicDefaultColor
-INDEX_TO_COLOR[colorIndex]= basicDefaultColor!!.toInt()
+this.BASIC_COLOR_ARRAY[this.colorIndex]= basicDefaultColor
+this.INDEX_TO_COLOR[this.colorIndex]= basicDefaultColor!!.toInt()
 colorIndex++
 }
 
@@ -82,19 +82,19 @@ colorIndex++
 
 
 
-                        for (index in 0 until SIZE)
+                        for (index in 0 until this.SIZE)
 
         {
 
     
-                        if(INDEX_TO_COLOR[index] == colorAsInt)
+                        if(this.INDEX_TO_COLOR[index] == colorAsInt)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BASIC_COLOR_ARRAY[index]!!
+                        return this.BASIC_COLOR_ARRAY[index]!!
 
                                     }
                                 
@@ -103,7 +103,7 @@ colorIndex++
 
     var ALPHA_MASK: Int = 0xFF000000.toInt()
 
-basicColor= BasicColor(colorAsInt and ALPHA_MASK, colorAsInt and 0x00FFFFFF, StringUtil.getInstance()!!.EMPTY_STRING)
+basicColor= BasicColorFactory.getInstance()!!.createInstanceAN(colorAsInt and ALPHA_MASK, colorAsInt and 0x00FFFFFF, StringUtil.getInstance()!!.EMPTY_STRING)
 this.add(basicColor)
 
 

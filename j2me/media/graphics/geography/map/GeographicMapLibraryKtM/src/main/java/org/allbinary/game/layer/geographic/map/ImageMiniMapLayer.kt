@@ -70,7 +70,7 @@ this.image= PaintableToImageUtil.getImage(allBinaryTiledLayer, aWidth, aHeight)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-graphics.drawImage(image, x, y, anchor)
+graphics.drawImage(this.image, x, y, anchor)
 this.paintDots(graphics)
 }
 

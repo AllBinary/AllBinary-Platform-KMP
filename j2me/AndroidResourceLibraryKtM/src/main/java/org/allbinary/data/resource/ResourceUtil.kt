@@ -83,7 +83,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return context as Context
+                        return this.context as Context
 }
 
 
@@ -163,7 +163,7 @@ this.hashMap!!.put(resource, value)
 var resource = resource
 var value = value
 
-    var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashMap)!!
+    var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(this.hashMap)!!
 
 
 

@@ -36,7 +36,7 @@ open public class HtmlTags
 public constructor ()
             : super()
         {
-htmlTagVector= Vector()
+this.htmlTagVector= Vector()
 }
 
 
@@ -48,7 +48,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return htmlTagVector!!.get(index) as HtmlTag
+                        return this.htmlTagVector!!.get(index) as HtmlTag
 }
 
 
@@ -56,7 +56,7 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 {
 var htmlTag = htmlTag
-htmlTagVector!!.add(htmlTag)
+this.htmlTagVector!!.add(htmlTag)
 }
 
 

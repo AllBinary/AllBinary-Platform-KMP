@@ -438,7 +438,7 @@ var mouseEvent = mouseEvent
 var mouseEvent = mouseEvent
 var xPixelsPerCell = xPixelsPerCell
 var yPixelsPerCell = yPixelsPerCell
-this.logUtil!!.putF(commonStrings!!.START, this, MouseStrings.getInstance()!!.MOUSE_PRESSED)
+this.logUtil!!.putF(this.commonStrings!!.START, this, MouseStrings.getInstance()!!.MOUSE_PRESSED)
 this.startPoint= PointFactory.getInstance()!!.getInstance(mouseEvent!!.getX(), mouseEvent!!.getY())
 this.endPoint= this.startPoint
 }
@@ -450,7 +450,7 @@ this.endPoint= this.startPoint
 var mouseEvent = mouseEvent
 var xPixelsPerCell = xPixelsPerCell
 var yPixelsPerCell = yPixelsPerCell
-this.logUtil!!.putF(commonStrings!!.START, this, MouseStrings.getInstance()!!.MOUSE_RELEASED)
+this.logUtil!!.putF(this.commonStrings!!.START, this, MouseStrings.getInstance()!!.MOUSE_RELEASED)
 this.endPoint= PointFactory.getInstance()!!.getInstance(mouseEvent!!.getX(), mouseEvent!!.getY())
 this.active= false
 this.makeSelection()

@@ -66,12 +66,12 @@ var command = command
 
 
 
-                        for (index in HIGH_SCORE_COMMANDS.size -1 downTo 0)
+                        for (index in this.HIGH_SCORE_COMMANDS.size -1 downTo 0)
 
         {
 
     
-                        if(command == HIGH_SCORE_COMMANDS[index])
+                        if(command == this.HIGH_SCORE_COMMANDS[index])
                         
                                     {
                                     
@@ -102,12 +102,12 @@ var command = command
 
 
 
-                        for (index in HIGH_SCORE_COMMANDS.size -1 downTo 0)
+                        for (index in this.HIGH_SCORE_COMMANDS.size -1 downTo 0)
 
         {
 
     
-                        if(command == HIGH_SCORE_COMMANDS[index])
+                        if(command == this.HIGH_SCORE_COMMANDS[index])
                         
                                     {
                                     

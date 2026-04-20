@@ -81,7 +81,7 @@ var rtsInterface = rtsInterface
                     
 this.rtsInterface= rtsInterface
 
-    var DEFAULT_CHAR_HEIGHT: Int = myFont!!.DEFAULT_CHAR_HEIGHT
+    var DEFAULT_CHAR_HEIGHT: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
 
 
     var imageHeight: Int = 0
@@ -100,9 +100,9 @@ this.rtsInterface= rtsInterface
                                 
 this.adjustedCostLabelY=  -yOffset +imageHeight -(3 *DEFAULT_CHAR_HEIGHT)
 this.adjustedCostY=  -yOffset +imageHeight -(2 *DEFAULT_CHAR_HEIGHT)
-this.adjustedCostX= 2 +(DOLLAR.length *(DEFAULT_CHAR_HEIGHT -1))
+this.adjustedCostX= 2 +(this.DOLLAR.length *(DEFAULT_CHAR_HEIGHT -1))
 this.adjustedLevelY=  -yOffset +imageHeight -DEFAULT_CHAR_HEIGHT
-this.adjustedLevelX= 2 +(LEVEL.length *(DEFAULT_CHAR_HEIGHT -1))
+this.adjustedLevelX= 2 +(this.LEVEL.length *(DEFAULT_CHAR_HEIGHT -1))
 this.update()
 }
 
@@ -136,10 +136,10 @@ super.paint(graphics, x, y)
 
     var xa: Int = x +2
 
-graphics.drawString(COST, xa, y +this.adjustedCostLabelY, 0)
-graphics.drawString(DOLLAR, xa, y +this.adjustedCostY, 0)
+graphics.drawString(this.COST, xa, y +this.adjustedCostLabelY, 0)
+graphics.drawString(this.DOLLAR, xa, y +this.adjustedCostY, 0)
 graphics.drawChars(costString, 0, this.costLength, x +this.adjustedCostX, y +this.adjustedCostY, 0)
-graphics.drawString(LEVEL, xa, y +this.adjustedLevelY, 0)
+graphics.drawString(this.LEVEL, xa, y +this.adjustedLevelY, 0)
 graphics.drawChars(levelString, 0, this.levelLength, x +this.adjustedLevelX, y +this.adjustedLevelY, 0)
 }
 

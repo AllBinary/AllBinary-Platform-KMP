@@ -97,7 +97,7 @@ var key = key
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKey = gameKey
-intKeyToGameKey[gameKey!!.getId()]= gameKey
+this.intKeyToGameKey[gameKey!!.getId()]= gameKey
 }
 
 

@@ -42,7 +42,7 @@ public constructor ()
             : super()
         {
 this.startTime= System.currentTimeMillis()
-this.lastStartTime= startTime
+this.lastStartTime= this.startTime
 }
 
 public constructor (startTime: Long)

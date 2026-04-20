@@ -52,13 +52,13 @@ import org.allbinary.time.TimeDelayHelper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogUtil.instance
 }
 
 
         }
             
-    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
+    private val MESSAGE: String = "message"
 
     private var isFirstException: Boolean = true
 
@@ -188,7 +188,7 @@ this.isFirstException= false
             System.out.println("Eeeek")
 
     
-                        if(abeClientInformation == 
+                        if(this.abeClientInformation == 
                                     null
                                 )
                         
@@ -201,14 +201,14 @@ this.isFirstException= false
                                     }
                                 
 
-    var hashtable: Hashtable<Any, Any> = abeClientInformation!!.toHashtable()!!
+    var hashtable: Hashtable<Any, Any> = this.abeClientInformation!!.toHashtable()!!
 
-stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(message)
-stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(SpecialMessageUtil.getInstance()!!.get())
-hashtable.put("message", stringBuffer!!.toString())
-XmlRpcRemoteLogClient(abeClientInformation).
+this.stringBuffer!!.delete(0, this.stringBuffer!!.length())
+this.stringBuffer!!.append(message)
+this.stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+this.stringBuffer!!.append(SpecialMessageUtil.getInstance()!!.get())
+hashtable.put(this.MESSAGE, this.stringBuffer!!.toString())
+XmlRpcRemoteLogClient(this.abeClientInformation).
                             get(hashtable)
 } catch(e: Throwable)
             {

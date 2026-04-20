@@ -117,8 +117,8 @@ var mediaData = mediaData
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
-stringBuffer!!.append(storeFrontInterface!!.getCurrentHostNamePath())
-stringBuffer!!.append(itemInterface!!.getCategory())
+stringBuffer!!.append(this.storeFrontInterface!!.getCurrentHostNamePath())
+stringBuffer!!.append(this.itemInterface!!.getCategory())
 
     var fullPath: String = stringBuffer!!.toString()!!
 
@@ -266,17 +266,17 @@ mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getLargeImage(), fu
                                 
                         else {
                             
-    var smallImageFile: AbFile = AbFile(itemInterface!!.getSmallImage())
+    var smallImageFile: AbFile = AbFile(this.itemInterface!!.getSmallImage())
 
 smallImageFile!!.createNewFile()
 fileUtil!!.write(ByteArrayInputStream(byteArray), smallImageFile)
 
-    var mediumImageFile: AbFile = AbFile(itemInterface!!.getMediumImage())
+    var mediumImageFile: AbFile = AbFile(this.itemInterface!!.getMediumImage())
 
 smallImageFile!!.createNewFile()
 fileUtil!!.write(ByteArrayInputStream(byteArray), mediumImageFile)
 
-    var largeImageFile: AbFile = AbFile(itemInterface!!.getSmallImage())
+    var largeImageFile: AbFile = AbFile(this.itemInterface!!.getSmallImage())
 
 largeImageFile!!.createNewFile()
 fileUtil!!.write(ByteArrayInputStream(byteArray), largeImageFile)
@@ -324,7 +324,7 @@ stringBuffer!!.append(MediaData.getDefault()!!.getName())
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(fileName)
-stringBuffer!!.append(SMALL)
+stringBuffer!!.append(this.SMALL)
 stringBuffer!!.append(END)
 
     var newImageFileName: String = stringBuffer!!.toString()!!
@@ -332,13 +332,13 @@ stringBuffer!!.append(END)
 this.itemInterface!!.setSmallImage(newImageFileName)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(fileName)
-stringBuffer!!.append(MEDIUM)
+stringBuffer!!.append(this.MEDIUM)
 stringBuffer!!.append(END)
 newImageFileName= stringBuffer!!.toString()
 this.itemInterface!!.setMediumImage(newImageFileName)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(fileName)
-stringBuffer!!.append(LARGE)
+stringBuffer!!.append(this.LARGE)
 stringBuffer!!.append(END)
 newImageFileName= stringBuffer!!.toString()
 this.itemInterface!!.setLargeImage(newImageFileName)

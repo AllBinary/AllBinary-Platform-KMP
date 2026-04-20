@@ -52,7 +52,7 @@ this.categoryInterface= categoryInterface
 : Node{
 var document = document
 
-    var node: Node = StoreThemeCategoryView(categoryInterface).
+    var node: Node = StoreThemeCategoryView(this.categoryInterface).
                             toXmlNode(document)!!
 
 

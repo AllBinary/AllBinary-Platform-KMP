@@ -128,7 +128,7 @@ this.reset()
     var currentTime: Long = System.currentTimeMillis()!!
 
 
-    var totalTimeElapsed: Long = currentTime -lastFrameStartTime
+    var totalTimeElapsed: Long = currentTime -this.lastFrameStartTime
 
 
     var indexedAnimationBehavior: IndexedAnimationBehavior = this.getAnimationBehavior() as IndexedAnimationBehavior
@@ -234,7 +234,7 @@ this.lastFrameStartTime= currentTime
 
 
 
-                        for (index in 0 until sizeP)
+                        for (index in 0 until this.sizeP)
 
         {
 this.animationInterfaceArray[index]!!.setFrame(frame)
@@ -268,7 +268,7 @@ indexedAnimationBehavior!!.reset()
 
 
 
-                        for (index in 0 until sizeP)
+                        for (index in 0 until this.sizeP)
 
         {
 this.animationInterfaceArray[index]!!.previousFrame()
@@ -319,14 +319,14 @@ this.paint(graphics, x, y)
 
 
 
-                        for (index in 0 until sizeP)
+                        for (index in 0 until this.sizeP)
 
         {
 deltaX= this.dxArray[index] +x
-deltaY= this.dyArray[index] +y
+deltaY= this.dyArray[index] +this.y
 
     
-                        if(this.basicColorArray[index] != CLEAR_COLOR)
+                        if(this.basicColorArray[index] != this.CLEAR_COLOR)
                         
                                     {
                                     this.basicSetColorUtil!!.setBasicColorP(graphics, this.basicColorArray[index]!!)

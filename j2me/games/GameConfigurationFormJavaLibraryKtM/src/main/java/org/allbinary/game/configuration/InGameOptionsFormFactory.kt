@@ -74,11 +74,11 @@ var foregroundBasicColor = foregroundBasicColor
         try {
             
     
-                        if(SINGLETON == CommandForm.NULL_COMMAND_FORM)
+                        if(this.SINGLETON == CommandForm.NULL_COMMAND_FORM)
                         
                                     {
                                     initInterface!!.init()
-SINGLETON= InGameOptionsForm(commandListener, title, backgrounBasicColor, foregroundBasicColor)
+this.SINGLETON= InGameOptionsForm(commandListener, title, backgrounBasicColor, foregroundBasicColor)
 
                                     }
                                 

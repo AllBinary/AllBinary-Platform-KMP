@@ -68,7 +68,7 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-list= BasicArrayList()
+this.list= BasicArrayList()
 }
 
 
@@ -87,12 +87,12 @@ var z = z
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 this.logUtil!!.putF(StringMaker().
-                            append(HASHTABLE_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append(this.HASHTABLE_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
     var typeInteger: Integer = hashtable.get(Layer.ID as Object) as Integer
 
 
-    var layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface = list.objectArray[typeInteger!!.toInt() -1]!! as LayerInterfaceFactoryInterface
+    var layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface = this.list.objectArray[typeInteger!!.toInt() -1]!! as LayerInterfaceFactoryInterface
 
 
 
@@ -106,7 +106,7 @@ this.logUtil!!.putF(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
-list.add(layerInterfaceFactoryInterface)
+this.list.add(layerInterfaceFactoryInterface)
 }
 
 

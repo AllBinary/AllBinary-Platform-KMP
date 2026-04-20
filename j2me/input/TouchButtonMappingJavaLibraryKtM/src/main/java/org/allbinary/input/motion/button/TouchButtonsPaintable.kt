@@ -55,7 +55,7 @@ var graphics = graphics
 
     var list: BasicArrayList = touchButtonFactory!!.getList()!!
 
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor, this.foregroundColor)
+this.basicSetColorUtil!!.setBasicColorP3(graphics, this.foregroundBasicColor, this.foregroundColor)
 
     var touchButton: TouchButton
 

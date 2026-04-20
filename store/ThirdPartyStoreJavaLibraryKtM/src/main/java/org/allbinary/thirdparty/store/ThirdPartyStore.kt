@@ -57,7 +57,7 @@ var clientInformationInterface = clientInformationInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return authorized
+                        return this.authorized
 }
 
 
@@ -76,7 +76,7 @@ this.authorized= authorized
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 

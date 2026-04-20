@@ -52,7 +52,7 @@ this.animationBehaviorP= animationBehavior
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return animationBehaviorP
+                        return this.animationBehaviorP
 }
 
 
@@ -90,7 +90,7 @@ this.setFrame(0)
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 

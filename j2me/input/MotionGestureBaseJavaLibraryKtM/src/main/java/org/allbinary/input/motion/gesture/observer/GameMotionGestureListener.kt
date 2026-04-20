@@ -63,7 +63,7 @@ this.signed= signed
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 
@@ -135,7 +135,7 @@ onMotionGestureEvent(ev)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
-touchGestureCollection!!.add(ev.getMotionGesture())
+this.touchGestureCollection!!.add(ev.getMotionGesture())
 }
 
 
@@ -145,15 +145,15 @@ touchGestureCollection!!.add(ev.getMotionGesture())
 var ev = ev
 
         try {
-            touchGestureCollection!!.add(ev.getMotionGesture())
-signed.onMotionGestureCompleted(touchGestureCollection)
-touchGestureCollection!!.clear()
+            this.touchGestureCollection!!.add(ev.getMotionGesture())
+this.signed.onMotionGestureCompleted(this.touchGestureCollection)
+this.touchGestureCollection!!.clear()
 } catch(e: Exception)
             {
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(commonStrings!!.EXCEPTION_LABEL)
+stringBuffer!!.append(this.commonStrings!!.EXCEPTION_LABEL)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))
 this.logUtil!!.put(stringBuffer!!.toString(), this, "release", e)
 }
@@ -189,10 +189,10 @@ var ev = ev
                                     }
                                 
                         else {
-                            motionGestureCollection!!.add(motionGestureInput)
-signed.onMotionGestureCompleted(motionGestureCollection)
-motionGestureCollection!!.clear()
-touchGestureCollection!!.clear()
+                            this.motionGestureCollection!!.add(motionGestureInput)
+this.signed.onMotionGestureCompleted(this.motionGestureCollection)
+this.motionGestureCollection!!.clear()
+this.touchGestureCollection!!.clear()
 
                         }
                             
@@ -201,7 +201,7 @@ touchGestureCollection!!.clear()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(commonStrings!!.EXCEPTION_LABEL)
+stringBuffer!!.append(this.commonStrings!!.EXCEPTION_LABEL)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))
 this.logUtil!!.put(stringBuffer!!.toString(), this, "onMotionGestureEvent", e)
 }

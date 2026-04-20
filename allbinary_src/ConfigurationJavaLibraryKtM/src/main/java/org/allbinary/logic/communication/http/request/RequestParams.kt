@@ -57,7 +57,7 @@ public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
-map= request.getParameterMap()
+this.map= request.getParameterMap()
 this.logUtil!!.putF("RequestParams Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
@@ -65,7 +65,7 @@ public constructor (pageContext: PageContext)
             : super()
         {
 var pageContext = pageContext
-map= pageContext!!.getRequest()!!.getParameterMap()
+this.map= pageContext!!.getRequest()!!.getParameterMap()
 this.logUtil!!.putF("Request Params Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
@@ -106,7 +106,7 @@ var document = document
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var keys: Set = map.keySet()!!
+    var keys: Set = this.map.keySet()!!
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
@@ -126,12 +126,12 @@ var document = document
     var key: String = keyArray[i]!! as String
 
 
-    var values: Array<String?> = map.get(key) as Array<String?>
+    var values: Array<String?> = this.map.get(key) as Array<String?>
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(KEY)
+stringBuffer!!.append(this.KEY)
 stringBuffer!!.append(key)
-stringBuffer!!.append(VALUE)
+stringBuffer!!.append(this.VALUE)
 stringBuffer!!.append(values[0]!!)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "toXmlNode(document)")
 node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMETER, key.toCharArray().concatToString(), .toCharArray()))
@@ -144,7 +144,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMET
                         return node
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
 
 
 
@@ -164,7 +164,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
-    var keys: Set = map.keySet()!!
+    var keys: Set = this.map.keySet()!!
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
@@ -187,7 +187,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
     var key: String = keyArray[i]!! as String
 
 
-    var values: Array<String?> = map.get(key) as Array<String?>
+    var values: Array<String?> = this.map.get(key) as Array<String?>
 
 hashMap!!.put(key.toCharArray().concatToString(), .toCharArray())
 }

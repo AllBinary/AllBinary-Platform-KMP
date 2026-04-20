@@ -50,7 +50,7 @@ public constructor ()
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setTableName(TABLENAME)
+this.setTableName(this.TABLENAME)
 }
 
 

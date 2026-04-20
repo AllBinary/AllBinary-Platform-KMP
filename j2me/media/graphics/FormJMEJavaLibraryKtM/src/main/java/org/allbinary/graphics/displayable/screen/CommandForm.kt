@@ -124,7 +124,7 @@ this.repaintProcessor!!.process()
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
-commandStack!!.push(command)
+this.commandStack!!.push(command)
 super.addCommand(command)
 }
 
@@ -133,7 +133,7 @@ super.addCommand(command)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var size: Int = commandStack!!.size!!
+    var size: Int = this.commandStack!!.size!!
 
 
 
@@ -142,7 +142,7 @@ super.addCommand(command)
                         for (index in 0 until size)
 
         {
-super.removeCommand(commandStack!!.pop() as Command)
+super.removeCommand(this.commandStack!!.pop() as Command)
 }
 
 }

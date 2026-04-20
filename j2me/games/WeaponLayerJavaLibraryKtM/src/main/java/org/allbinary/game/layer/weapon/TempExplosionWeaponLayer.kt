@@ -51,7 +51,7 @@ this.timeDelayHelper!!.delay= timeDelay
 var allBinaryLayerManager = allBinaryLayerManager
 
     
-                        if(timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
+                        if(this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
                         
                                     {
                                     this.getCollidableInferface()!!.collide(this)

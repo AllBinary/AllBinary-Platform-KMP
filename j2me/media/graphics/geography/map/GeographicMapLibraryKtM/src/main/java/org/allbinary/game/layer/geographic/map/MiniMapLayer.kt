@@ -140,7 +140,7 @@ this.positionList!!.remove(index)
     var layerIndex: Int =  -1
 
 
-    var size: Int = list.size()!!
+    var size: Int = this.list.size()!!
 
 
     var nextColorCompositeInterface: ColorCompositeInterface
@@ -152,7 +152,7 @@ this.positionList!!.remove(index)
                         for (index in 0 until size)
 
         {
-nextColorCompositeInterface= list.get(index) as ColorCompositeInterface
+nextColorCompositeInterface= this.list.get(index) as ColorCompositeInterface
 
     
                         if(nextColorCompositeInterface == colorCompositeInterface)

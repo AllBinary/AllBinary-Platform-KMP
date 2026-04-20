@@ -59,7 +59,7 @@ public constructor ()
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setTableName(tableName)
+this.setTableName(this.tableName)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -447,7 +447,7 @@ super.deleteWhere(whereHashMap)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)
-stringBuffer!!.append(tableName)
+stringBuffer!!.append(this.tableName)
 stringBuffer!!.append(this.sqlStrings!!.START)
 stringBuffer!!.append(PaymentGatewayData.ID.toString())
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_AUTO_INCREMENT_NOT_NULL)

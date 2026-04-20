@@ -80,7 +80,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.shippingType= request.getParameter(ShippingMethodData.NAME)
+this.shippingType= this.request.getParameter(ShippingMethodData.NAME)
 }
 
 
@@ -95,7 +95,7 @@ this.shippingType= request.getParameter(ShippingMethodData.NAME)
 
     var order: OrderInterface = this.weblisketSession!!.getOrder()!!
 
-order.setShippingMethod(shippingType)
+order.setShippingMethod(this.shippingType)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))

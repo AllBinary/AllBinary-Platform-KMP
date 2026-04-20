@@ -62,7 +62,7 @@ public constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var item = item
-items.add(item)
+this.items.add(item)
 }
 
 
@@ -82,7 +82,7 @@ items.add(item)
 {
 var id = id
 
-    var itemArray: Array<Any?> = items.toArray()!!
+    var itemArray: Array<Any?> = this.items.toArray()!!
 
 
     var size: Int = itemArray!!.size
@@ -103,7 +103,7 @@ var id = id
                         if(item.getId()!!.compareTo(id) == 0)
                         
                                     {
-                                    items.remove(item)
+                                    this.items.remove(item)
 
                                     }
                                 
@@ -118,7 +118,7 @@ var id = id
 var id = id
 var num = num
 
-    var itemArray: Array<Any?> = items.toArray()!!
+    var itemArray: Array<Any?> = this.items.toArray()!!
 
 
     var size: Int = itemArray!!.size
@@ -155,7 +155,7 @@ var num = num
     var weightFloat: Float = 0
 
 
-    var itemArray: Array<Any?> = items.toArray()!!
+    var itemArray: Array<Any?> = this.items.toArray()!!
 
 
     var size: Int = itemArray!!.size
@@ -191,7 +191,7 @@ weightFloat += Float(item.getWeight()).
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer(items.size)
+                        return Integer(this.items.size)
 }
 
 
@@ -202,7 +202,7 @@ weightFloat += Float(item.getWeight()).
     var idSet: HashSet = HashSet()
 
 
-    var itemArray: Array<Any?> = items.toArray()!!
+    var itemArray: Array<Any?> = this.items.toArray()!!
 
 
     var size: Int = itemArray!!.size
@@ -234,7 +234,7 @@ idSet!!.add(item.getId())
 : Integer{
 var id = id
 
-    var itemArray: Array<Any?> = items.toArray()!!
+    var itemArray: Array<Any?> = this.items.toArray()!!
 
 
     var size: Int = itemArray!!.size
@@ -283,7 +283,7 @@ var document = document
     var node: Node = document.createElement(BasketData.BASKET)!!
 
 
-    var itemArray: Array<Any?> = items.toArray()!!
+    var itemArray: Array<Any?> = this.items.toArray()!!
 
 
     var size: Int = itemArray!!.size

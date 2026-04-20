@@ -73,7 +73,7 @@ this.dy= dy
     //var x = x
     //var y = y
 this.animationInterface!!.paint(graphics, x +this.captionDx, y +this.captionDy)
-this.overlayAnimationInterface!!.paint(graphics, x +this.captionDx +dx, y +this.captionDy +dy)
+this.overlayAnimationInterface!!.paint(graphics, x +this.captionDx +this.dx, y +this.captionDy +this.dy)
 }
 
 
@@ -85,7 +85,7 @@ this.overlayAnimationInterface!!.paint(graphics, x +this.captionDx +dx, y +this.
     //var y = y
     //var z = z
 this.animationInterface!!.paintThreed(graphics, x +this.captionDx, y +this.captionDy, z)
-this.overlayAnimationInterface!!.paintThreed(graphics, x +this.captionDx +dx, y +this.captionDy +dy, z)
+this.overlayAnimationInterface!!.paintThreed(graphics, x +this.captionDx +this.dx, y +this.captionDy +this.dy, z)
 }
 
 

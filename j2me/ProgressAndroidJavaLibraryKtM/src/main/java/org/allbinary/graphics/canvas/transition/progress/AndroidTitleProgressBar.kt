@@ -111,7 +111,7 @@ this.progressActivity= activity
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 super.start()
-this.progressActivity!!.runOnUiThread(showTitleProgressBarRunnable)
+this.progressActivity!!.runOnUiThread(this.showTitleProgressBarRunnable)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
@@ -126,7 +126,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD
 
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
-this.progressActivity!!.runOnUiThread(dismissTitleProgressBarRunnable)
+this.progressActivity!!.runOnUiThread(this.dismissTitleProgressBarRunnable)
 super.end()
 } catch(e: Exception)
             {
@@ -146,7 +146,7 @@ var index = index
         try {
             super.addPortion(value, text, index)
 this.portion= value
-this.progressActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
+this.progressActivity!!.runOnUiThread(this.progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
@@ -164,7 +164,7 @@ var text = text
         try {
             super.addPortion(value, text)
 this.portion= value
-this.progressActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
+this.progressActivity!!.runOnUiThread(this.progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
@@ -180,7 +180,7 @@ var value = value
 
         try {
             super.setValue(value)
-this.progressActivity!!.runOnUiThread(progressDialogSetProgressRunnable)
+this.progressActivity!!.runOnUiThread(this.progressDialogSetProgressRunnable)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)

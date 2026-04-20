@@ -75,11 +75,11 @@ companion object {
 var tool = tool
 
         try {
-            StatusFactory.getInstance()!!.setStatus(SELECTED_LABEL +tool)
+            StatusFactory.getInstance()!!.setStatus(this.SELECTED_LABEL +tool)
 this.tool= tool
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setSelectionTool", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setSelectionTool", e)
 }
 
 }
@@ -88,15 +88,15 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setSelectionTool", e)
     open fun getSelectedToolFactory()
         //nullable = true from not(false or (false and true)) = true
 : GraphicsItemInterfaceFactoryInterface{
-StatusFactory.getInstance()!!.setStatus("Tool In Use: " +tool)
+StatusFactory.getInstance()!!.setStatus("Tool In Use: " +this.tool)
 
     
-                        if(tool != 
+                        if(this.tool != 
                                     null
                                 )
                         
                                     {
-                                    this.selectedTool= GraphicItemFactory.getInstance()!!.getInstance(tool)
+                                    this.selectedTool= GraphicItemFactory.getInstance()!!.getInstance(this.tool)
 this.logUtil!!.putF("New Tool: " +this.selectedTool, this, "getSelectedToolFactory")
 
 

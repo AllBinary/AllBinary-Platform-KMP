@@ -68,7 +68,7 @@ var path = path
 
         try {
             
-    var files: BasicArrayList = subDirectory!!.search(AbFile(path))!!
+    var files: BasicArrayList = this.subDirectory!!.search(AbFile(path))!!
 
 
 
@@ -117,7 +117,7 @@ includeExtensionBasicArrayList!!.add(includeExtensions[index]!!)
     var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryOrIncludeFileExtensionBooleanFileVisitor(includeExtensionBasicArrayList))
 
 
-    var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!
+    var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile(path))!!
 
 
 
@@ -153,7 +153,7 @@ includeExtensionBasicArrayList!!.add(includeExtension)
     var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryOrIncludeFileExtensionBooleanFileVisitor(includeExtensionBasicArrayList))
 
 
-    var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!
+    var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile(path))!!
 
 
 
@@ -190,7 +190,7 @@ includeExtensionBasicArrayList!!.add(includeExtension)
     var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryOrIncludeFileExtensionBooleanFileVisitor(includeExtensionBasicArrayList, pathIncludes))
 
 
-    var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!
+    var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile(path))!!
 
 
 
@@ -221,7 +221,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
     var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryBooleanFileVisitor())
 
 
-    var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!
+    var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile(path))!!
 
 
 

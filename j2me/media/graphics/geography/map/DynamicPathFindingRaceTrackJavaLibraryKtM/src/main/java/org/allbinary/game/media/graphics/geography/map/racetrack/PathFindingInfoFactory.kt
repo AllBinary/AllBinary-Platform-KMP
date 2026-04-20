@@ -109,7 +109,7 @@ this.pathFinderGraphVisitorFactoryInterface= pathFinderGraphVisitorFactoryInterf
 RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
 this.init(geographicMapInterface, pathFindingInfo, mapArray)
 this.basicGeographicMapPathFinder!!.init(geographicMapInterface, basicGeographicMapGraph, pathFinderGraphVisitorFactoryInterface!!.getInstance(geographicMapInterface))
-pathFindingInfo!!.setPathFinder(basicGeographicMapPathFinder)
+pathFindingInfo!!.setPathFinder(this.basicGeographicMapPathFinder)
 
 
 
@@ -180,7 +180,7 @@ this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray)
 
 
 
-                        for (index in 0 until MAX_DIRECTIONS)
+                        for (index in 0 until this.MAX_DIRECTIONS)
 
         {
 row= basicGeographicMapUtil!!.getBorderingRow(index, cellPosition)

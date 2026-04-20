@@ -91,8 +91,8 @@ this.update()
     open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
-levelNumberCharArray= this.primitiveLongUtil!!.getCharArray(this.level)
-levelNumberTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
+this.levelNumberCharArray= this.primitiveLongUtil!!.getCharArray(this.level)
+this.levelNumberTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
 
 
@@ -135,7 +135,7 @@ this.update()
 : Boolean{
 
     
-                        if(this.level <= maxlevel)
+                        if(this.level <= this.maxlevel)
                         
                                     {
                                     
