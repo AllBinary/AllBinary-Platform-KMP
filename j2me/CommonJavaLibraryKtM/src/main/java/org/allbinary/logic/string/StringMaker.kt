@@ -39,7 +39,9 @@ this.charArray= CharArray(20)
     var stringLength: Int = string.length!!
 
 this.ensureCapacity(this.currentLength +stringLength)
-string.toCharArray(this.charArray, this.currentLength, 0,
+string.toCharArray(this.charArray,
+                                    this.currentLength,
+                                    0,
                                     stringLength)
 this.currentLength += stringLength
 
@@ -271,7 +273,7 @@ this.currentLength -= (end -start)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return charArray.concatToString(0, this.currentLength)
+                        return this.charArray.concatToString(0, this.currentLength)
 }
 
 

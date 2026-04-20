@@ -149,10 +149,10 @@ hasRead= false
     var iData: AbDataInputStream = AbDataInputStream(iFile)
 
 
-    var decryptedUserName: String = decode.toCharArray()
+    var decryptedUserName: String = DatabaseEncoder.decode.toCharArray()
 
 
-    var decryptedPassword: String = decode.toCharArray()
+    var decryptedPassword: String = DatabaseEncoder.decode.toCharArray()
 
 this.setUserName(WeakCrypt(1).
                             decrypt(decryptedUserName))

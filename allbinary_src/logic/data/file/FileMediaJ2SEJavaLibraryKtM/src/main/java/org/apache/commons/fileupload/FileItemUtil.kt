@@ -73,7 +73,7 @@ var fileItem = fileItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getBytes.toCharArray().concatToString(DEFAULT_CHARSET)
+                        return this.getBytes.toCharArray().concatToString(DEFAULT_CHARSET)
 }
 
 

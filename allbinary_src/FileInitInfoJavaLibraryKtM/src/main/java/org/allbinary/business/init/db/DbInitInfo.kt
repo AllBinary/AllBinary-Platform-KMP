@@ -218,25 +218,25 @@ this.hasRead= false
 
         try {
             
-    var decryptedJdbcDriver: String = decode.toCharArray()
+    var decryptedJdbcDriver: String = DatabaseEncoder.decode.toCharArray()
 
 
-    var decryptedName: String = decode.toCharArray()
+    var decryptedName: String = DatabaseEncoder.decode.toCharArray()
 
 
-    var decryptedUserName: String = decode.toCharArray()
+    var decryptedUserName: String = DatabaseEncoder.decode.toCharArray()
 
 
-    var decryptedPassword: String = decode.toCharArray()
+    var decryptedPassword: String = DatabaseEncoder.decode.toCharArray()
 
 
-    var decryptedSchema: String = decode.toCharArray()
+    var decryptedSchema: String = DatabaseEncoder.decode.toCharArray()
 
 
-    var decryptedServer: String = decode.toCharArray()
+    var decryptedServer: String = DatabaseEncoder.decode.toCharArray()
 
 
-    var decryptedPort: String = decode.toCharArray()
+    var decryptedPort: String = DatabaseEncoder.decode.toCharArray()
 
 this.setJdbcDriver(WeakCrypt(1).
                             decrypt(decryptedJdbcDriver))

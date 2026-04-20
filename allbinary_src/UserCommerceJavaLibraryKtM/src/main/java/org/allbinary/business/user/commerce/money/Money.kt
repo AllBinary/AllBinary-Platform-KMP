@@ -221,8 +221,8 @@ centsStr= "00"
                                     }
                                 
                         else {
-                            dollarStr= substring.toCharArray()
-centsStr= substring.toCharArray()
+                            dollarStr= usDollarStr!!.substring.toCharArray()
+centsStr= usDollarStr!!.substring.toCharArray()
 
                         }
                             

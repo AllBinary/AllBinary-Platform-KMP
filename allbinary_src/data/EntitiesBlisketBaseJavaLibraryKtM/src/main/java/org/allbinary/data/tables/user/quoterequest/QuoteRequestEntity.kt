@@ -228,7 +228,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var result: String = dropTable.toCharArray()
+    var result: String = super.dropTable.toCharArray()
 
 
 

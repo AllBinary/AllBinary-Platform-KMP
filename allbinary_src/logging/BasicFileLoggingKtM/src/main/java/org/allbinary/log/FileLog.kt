@@ -243,20 +243,20 @@ var exception = exception
                                     }
                                 
 
-    var className: String = NULL_STRING.toCharArray()
+    var className: String = stringUtil!!.NULL_STRING.toCharArray()
 
 
     
                         if(functionName == 
                                     null
                                 )
-                        functionName= NULL_STRING.toCharArray()
+                        functionName= stringUtil!!.NULL_STRING.toCharArray()
 
     
                         if(specialMessage == 
                                     null
                                 )
-                        specialMessage= NULL_STRING.toCharArray()
+                        specialMessage= stringUtil!!.NULL_STRING.toCharArray()
 
     
                         if(anyType!!::class.toString()!! != 
@@ -364,13 +364,13 @@ var functionName = functionName
                         if(functionName == 
                                     null
                                 )
-                        functionName= NULL_STRING.toCharArray()
+                        functionName= stringUtil!!.NULL_STRING.toCharArray()
 
     
                         if(specialMessage == 
                                     null
                                 )
-                        specialMessage= NULL_STRING.toCharArray()
+                        specialMessage= stringUtil!!.NULL_STRING.toCharArray()
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
