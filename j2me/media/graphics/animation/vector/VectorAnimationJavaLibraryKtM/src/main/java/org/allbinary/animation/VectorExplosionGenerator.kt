@@ -30,6 +30,8 @@ import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.pipeline.RandomRotationFactory
 import org.allbinary.graphics.pipeline.RandomTranslation
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.util.BasicArrayListS
 
 open public class VectorExplosionGenerator
             : Object
@@ -136,7 +138,7 @@ var startFrame = startFrame
 
         try {
             
-    var pointsBasicArrayList: BasicArrayList = BasicArrayList(howMuch)
+    var pointsBasicArrayList: BasicArrayList = BasicArrayListS(howMuch)
 
 pointsBasicArrayList!!.add(createPointsBasicArrayList(points))
 
@@ -195,13 +197,13 @@ var type = type
     var index: Int = 0
 
 
-    var pointBasicArrayList: BasicArrayList = BasicArrayList()
+    var pointBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
         while(index < points.size)
         {
 
-    var sectionBasicArrayList: BasicArrayList = BasicArrayList()
+    var sectionBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
         while(points[index]!![0] != 1000)
@@ -294,7 +296,7 @@ var points = points
                                     }
                                 
 
-    var firstPointBasicArrayList: BasicArrayList = BasicArrayList(points.size)
+    var firstPointBasicArrayList: BasicArrayList = BasicArrayListS(points.size)
 
 
 
@@ -303,7 +305,7 @@ var points = points
                         for (index in 0 until points.size)
 
         {
-firstPointBasicArrayList!!.add(PointFactory.getInstance()!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))
+firstPointBasicArrayList!!.add(PointFactory.getInstance()!!.getInstance0(points[index]!![0]!!, points[index]!![1]!!))
 }
 
 

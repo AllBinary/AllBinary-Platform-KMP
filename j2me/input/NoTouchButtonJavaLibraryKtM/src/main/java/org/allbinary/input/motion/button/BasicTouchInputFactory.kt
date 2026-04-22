@@ -31,6 +31,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicTouchInputFactory
             : Object
@@ -84,7 +85,7 @@ companion object {
 
     private var initialized: Boolean = false
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
     open fun init(inputToGameKeyMapping: InputToGameKeyMapping)

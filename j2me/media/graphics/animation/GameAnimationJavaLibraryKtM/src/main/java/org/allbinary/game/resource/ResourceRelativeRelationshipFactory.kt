@@ -28,6 +28,7 @@
 import java.util.Hashtable
 import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class ResourceRelativeRelationshipFactory
@@ -104,7 +105,7 @@ var hardPoint = hardPoint
                         if(list == this.basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
-                                    list= BasicArrayList()
+                                    list= BasicArrayListD()
 
                                     }
                                 

@@ -45,43 +45,18 @@ open public class RotationAnimation : IndexedAnimation
     val angleInfo: AngleInfo
 
     var circularIndexUtil: CircularIndexUtil
-protected constructor (angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
+protected constructor (angleInfo: AngleInfo, circularIndexUtil: CircularIndexUtil, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var angleInfo = angleInfo
+    //var circularIndexUtil = circularIndexUtil
     //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
                     
 this.angleInfo= angleInfo
-this.circularIndexUtil= CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement())
-}
-
-protected constructor (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
-
-                            : super(animationBehavior){
-    //var angleInfo = angleInfo
-    //var totalAngle = totalAngle
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.angleInfo= angleInfo
-this.circularIndexUtil= CircularIndexUtil.getInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement())
-}
-
-protected constructor (animationBehavior: AnimationBehavior)                        
-
-                            : super(animationBehavior){
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.angleInfo= AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE)
-this.circularIndexUtil= CircularIndexUtil.getInstance(4)
+this.circularIndexUtil= circularIndexUtil
 }
 
 

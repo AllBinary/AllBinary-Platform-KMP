@@ -55,13 +55,13 @@ var args = args
 
     var initInfo: SetLicenseInitInfo = SetLicenseInitInfo(args)
 
-initInfo!!.createNewLicenseInitInfo(BasicArrayList())
+initInfo!!.createNewLicenseInitInfo(BasicArrayListD())
 }
 
 
         }
             
-    private var vector: BasicArrayList = BasicArrayList()
+    private var vector: BasicArrayList = BasicArrayListD()
 public constructor (options: Array<String?>)
             : super()
         {

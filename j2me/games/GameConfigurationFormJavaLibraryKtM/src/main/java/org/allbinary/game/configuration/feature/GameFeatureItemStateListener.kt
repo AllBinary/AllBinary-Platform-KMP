@@ -36,6 +36,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameFeatureItemStateListener
             : Object
@@ -44,7 +45,7 @@ open public class GameFeatureItemStateListener
         
 companion object {
             
-    private var toggleList: BasicArrayList = BasicArrayList()
+    private var toggleList: BasicArrayList = BasicArrayListD()
 
     open fun add(gameFeature: GameFeature)
         //nullable = true from not(false or (false and false)) = true

@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerFactoryInterface
 
@@ -48,7 +49,7 @@ open public class FallingPickupLayerFactory
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return FallingPickupLayer()
+                        return FallingPickupLayer(RemoteInfo.REMOTE_INFO)
 }
 
 

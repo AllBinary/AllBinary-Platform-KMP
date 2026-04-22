@@ -50,55 +50,9 @@ open public class CustomTextAnimationFactory
 
     private var initScaleHeight: Int
 
-    private var dx: Int = 0
-
-    private var dy: Int = 0
-
     var font: Font
 
     var scaleProperties: ScaleProperties
-public constructor (text: String, fontSize: Int, dx: Int, dy: Int)                        
-
-                            : this(text, fontSize, AnimationBehaviorFactory.getInstance()){
-    //var text = text
-    //var fontSize = fontSize
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.dx= dx
-this.dy= dy
-}
-
-public constructor (text: String, fontSize: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(text, fontSize, animationBehaviorFactory){
-    //var text = text
-    //var fontSize = fontSize
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.dx= dx
-this.dy= dy
-}
-
-public constructor (text: String, fontSize: Int)                        
-
-                            : this(text, fontSize, AnimationBehaviorFactory.getInstance()){
-    //var text = text
-    //var fontSize = fontSize
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (text: String, fontSize: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
@@ -123,20 +77,7 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight
 
     var customTextAnimation: CustomTextAnimation
 
-
-    
-                        if(this.dx != 0 || this.dy != 0)
-                        
-                                    {
-                                    customTextAnimation= AdjustCustomTextAnimation(this.text, this.scaleProperties!!.scaleHeight, this.dx, this.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
-
-                                    }
-                                
-                        else {
-                            customTextAnimation= CustomTextAnimation(this.text, this.scaleProperties!!.scaleHeight, this.animationBehaviorFactory!!.getOrCreateInstance())
-
-                        }
-                            
+customTextAnimation= CustomTextAnimation(this.text, this.scaleProperties!!.scaleHeight, this.animationBehaviorFactory!!.getOrCreateInstance())
 customTextAnimation!!.setBasicColorP(this.basicColor)
 
 

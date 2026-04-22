@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.Rectangle
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.view.ViewPosition
 
 open public class AllBinaryLayerFactory
@@ -50,7 +51,7 @@ this.rectangle= rectangle
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AllBinaryLayer(this.rectangle, ViewPosition())
+                        return AllBinaryLayer(StringUtil.getInstance()!!.EMPTY_STRING, this.rectangle, ViewPosition.getInstanceD())
 }
 
 

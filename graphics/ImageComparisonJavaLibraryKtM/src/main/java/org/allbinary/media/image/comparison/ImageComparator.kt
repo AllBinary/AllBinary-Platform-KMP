@@ -190,7 +190,7 @@ this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
                         for (indexX in 0 until imageComparisonInfo!!.imageWidth)
 
         {
-this.process(imageComparisonInfo, PointFactory.getInstance()!!.getInstance(indexX, indexY))
+this.process(imageComparisonInfo, PointFactory.getInstance()!!.getInstance0(indexX, indexY))
 
     
                         if(imageComparisonInfo!!.getNonMatchingPixelVector()!!.size() > this.imageComparatorConstraintsInterface!!.getMaxNonMatchingPixelDeltas())

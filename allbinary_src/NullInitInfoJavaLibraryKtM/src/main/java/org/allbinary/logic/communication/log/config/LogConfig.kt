@@ -30,6 +30,7 @@ import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.logic.java.bool.BooleanUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.w3c.dom.Node
 
 open public class LogConfig
@@ -185,7 +186,7 @@ this.fileName= value
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-    var logKeyVector: BasicArrayList = BasicArrayList()
+    var logKeyVector: BasicArrayList = BasicArrayListD()
 
 
 

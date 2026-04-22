@@ -30,6 +30,7 @@ import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.communication.log.config.LoggingInitInfo
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.w3c.dom.Node
 
 open public class LogConfigTypes
@@ -40,7 +41,7 @@ companion object {
             
     val JSP_ERROR_NO_FUNCTION: String = "in JSP Not In Function"
 
-    var LOGGING: BasicArrayList = BasicArrayList()
+    var LOGGING: BasicArrayList = BasicArrayListD()
 
                 init{
 LogConfigTypes.init()

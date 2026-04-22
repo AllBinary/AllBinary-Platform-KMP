@@ -29,6 +29,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GroupFactory
             : Object
@@ -60,7 +61,7 @@ companion object {
 
     val NULL_GROUP_ARRAY: Array<Group?> = arrayOfNulls(0)
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     private var index: Int = 0
 

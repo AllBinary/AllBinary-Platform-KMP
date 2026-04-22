@@ -32,6 +32,7 @@ import org.allbinary.business.user.UserData
 import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicStoreFront
             : Object
@@ -433,7 +434,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SEMICOLON)
 
 
-    var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayList())!!
+    var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayListD())!!
 
 
 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 import org.allbinary.layer.LayerInterfaceFactoryInterface
 
@@ -50,7 +51,7 @@ companion object {
 
         }
             
-    private var list: BasicArrayList = BasicArrayList()
+    private var list: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {

@@ -32,12 +32,13 @@ import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.input.motion.gesture.observer.BaseMotionGestureEventListener
 import org.allbinary.input.motion.gesture.observer.MotionGestureEvent
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicMenuInputProcessor : PlayerGameInput
                 , BaseMotionGestureEventListener {
         
 
-    val motionGestureEventList: BasicArrayList = BasicArrayList()
+    val motionGestureEventList: BasicArrayList = BasicArrayListD()
 
     private var canvas: Canvas = NullCanvas.NULL_CANVAS
 protected constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: Canvas)                        

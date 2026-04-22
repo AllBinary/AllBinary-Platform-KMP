@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CountedPickedUpLayerInterfaceFactoryPool
             : Object
@@ -59,7 +60,7 @@ SINGLETON= CountedPickedUpLayerInterfaceFactoryPool()
 private constructor ()
             : super()
         {
-list= BasicArrayList()
+list= BasicArrayListD()
 }
 
 

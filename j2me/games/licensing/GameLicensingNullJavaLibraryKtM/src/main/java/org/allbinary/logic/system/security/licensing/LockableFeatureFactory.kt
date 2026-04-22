@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class LockableFeatureFactory
             : Object
@@ -53,7 +54,7 @@ companion object {
             {
             }            
         
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     open fun getList()
         //nullable = true from not(false or (false and true)) = true

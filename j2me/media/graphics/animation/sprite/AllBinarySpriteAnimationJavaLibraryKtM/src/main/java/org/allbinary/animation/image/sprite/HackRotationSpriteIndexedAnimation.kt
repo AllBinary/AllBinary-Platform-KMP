@@ -32,6 +32,7 @@ import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.RotationAnimation
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.math.AngleInfo
+import org.allbinary.util.CircularIndexUtil
 
 open public class HackRotationSpriteIndexedAnimation : RotationAnimation {
         
@@ -41,7 +42,7 @@ open public class HackRotationSpriteIndexedAnimation : RotationAnimation {
     private val image: Image
 public constructor (sprite: Sprite, image: Image, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, animationBehavior){
+                            : super(angleInfo, CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
     //var sprite = sprite
     //var image = image
     //var angleInfo = angleInfo

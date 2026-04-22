@@ -32,6 +32,7 @@ import org.allbinary.logic.io.file.directory.DirectoryOrIncludeFileExtensionBool
 import org.allbinary.logic.io.file.directory.SubDirectory
 import org.allbinary.logic.io.file.filter.VisitorFileFilter
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class FileListFetcher
             : Object
@@ -97,7 +98,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
         try {
             
-    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayList()
+    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = includeExtensions!!.size
@@ -146,7 +147,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
         try {
             
-    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayList()
+    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayListD()
 
 includeExtensionBasicArrayList!!.add(includeExtension)
 
@@ -183,7 +184,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
         try {
             
-    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayList()
+    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayListD()
 
 includeExtensionBasicArrayList!!.add(includeExtension)
 

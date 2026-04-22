@@ -53,6 +53,7 @@ import org.allbinary.thread.BaseImageLoadingProcessor
 import org.allbinary.thread.ConcurrentImageLoadingProcessor
 import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class ImageCache : ImageCacheBase {
         
@@ -76,13 +77,13 @@ companion object {
 
     private val gdResources: GDResources = GDResources.getInstance()!!
 
-    val loadNowList: BasicArrayList = BasicArrayList()
+    val loadNowList: BasicArrayList = BasicArrayListD()
 
-    val loadSoonList: BasicArrayList = BasicArrayList()
+    val loadSoonList: BasicArrayList = BasicArrayListD()
 
-    val loadList: BasicArrayList = BasicArrayList()
+    val loadList: BasicArrayList = BasicArrayListD()
 
-    val loadAfterList: BasicArrayList = BasicArrayList()
+    val loadAfterList: BasicArrayList = BasicArrayListD()
 
     private val lock: SynchObject = SynchObject()
 
@@ -984,7 +985,7 @@ this.loadList!!.add(image)
 : BasicArrayList{
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
         

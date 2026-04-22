@@ -32,6 +32,7 @@ import javax.microedition.media.PlayerListener
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicPlayer
             : Object
@@ -51,7 +52,7 @@ companion object {
 
     private var loopCount: Int= 0
 
-    val listenersList: BasicArrayList = BasicArrayList()
+    val listenersList: BasicArrayList = BasicArrayListD()
 public constructor ()
             : super()
         {

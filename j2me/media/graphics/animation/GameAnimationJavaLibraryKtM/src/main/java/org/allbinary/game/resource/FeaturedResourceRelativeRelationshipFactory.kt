@@ -31,6 +31,7 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.relationship.RelativeLayerRelationship
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class FeaturedResourceRelativeRelationshipFactory : FeaturedResourceFactory {
@@ -119,10 +120,13 @@ var layer = layer
     open fun duplicate(list: BasicArrayList, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var list = list
+    //var list = list
 var layer = layer
 
-    var newList: BasicArrayList = BasicArrayList()
+    var pointFactory: PointFactory = PointFactory.getInstance()!!
+
+
+    var newList: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = list.size()!!
@@ -137,7 +141,7 @@ var layer = layer
 
     var relativeRelationship: RelativeRelationship = list.objectArray[index]!! as RelativeRelationship
 
-newList!!.add(RelativeLayerRelationship(layer, PointFactory.getInstance()!!.getInstance(relativeRelationship!!.getX(), relativeRelationship!!.getY()), BasicArrayListUtil.getInstance()!!.getImmutableInstance()))
+newList!!.add(RelativeLayerRelationship(layer, pointFactory!!.getInstance0(relativeRelationship!!.getX(), relativeRelationship!!.getY()), BasicArrayListUtil.getInstance()!!.getImmutableInstance()))
 }
 
 

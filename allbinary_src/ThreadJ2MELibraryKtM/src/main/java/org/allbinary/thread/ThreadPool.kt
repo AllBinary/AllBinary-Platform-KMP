@@ -36,6 +36,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class ThreadPool
@@ -45,6 +46,8 @@ open public class ThreadPool
 companion object {
             
     private val ROOT_NAME: String = "-PooledThread-"
+
+    var NORMAL_PRIORITY: Int = Thread.NORM_PRIORITY
 
         }
             
@@ -69,17 +72,6 @@ companion object {
     private var threadID: Int= 0
 
     private var numThreads: Int
-public constructor (poolName: String, numThreads: Int)                        
-
-                            : this(poolName, numThreads, Thread.NORM_PRIORITY){
-    //var poolName = poolName
-    //var numThreads = numThreads
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (poolName: String, numThreads: Int, priority: Int)
             : super()
         {
@@ -101,7 +93,7 @@ this.numThreads= numThreads
                         
                                     {
                                     this.isAlive= true
-this.taskQueue= BasicArrayList()
+this.taskQueue= BasicArrayListD()
 
     var pooledThread: PooledThread
 

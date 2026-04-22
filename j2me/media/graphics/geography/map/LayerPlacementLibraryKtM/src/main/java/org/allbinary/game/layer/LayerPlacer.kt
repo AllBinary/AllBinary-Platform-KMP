@@ -136,6 +136,9 @@ this.layerInterfaceVisitor!!.visit(layerInterface)
 : GPoint{
     //var layerPlacementInterface = layerPlacementInterface
 
+    var pointFactory: PointFactory = PointFactory.getInstance()!!
+
+
     var layerPlacementType: LayerPlacementType = layerPlacementInterface!!.getLayerType()!!
 
 
@@ -159,7 +162,7 @@ this.layerInterfaceVisitor!!.visit(layerInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.getInstance()!!.getInstance(x, y)
+                        return pointFactory!!.getInstance0(x, y)
 
                                     }
                                 
@@ -184,7 +187,7 @@ this.layerInterfaceVisitor!!.visit(layerInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.getInstance()!!.getInstance(x, y)
+                        return pointFactory!!.getInstance0(x, y)
 
                                     }
                                 

@@ -27,6 +27,7 @@
         
 import org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class DropLayerFactory
@@ -50,7 +51,7 @@ companion object {
 
         }
             
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {

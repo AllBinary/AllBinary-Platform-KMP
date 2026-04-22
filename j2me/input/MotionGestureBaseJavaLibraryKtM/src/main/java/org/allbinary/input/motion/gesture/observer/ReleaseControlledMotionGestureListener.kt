@@ -34,6 +34,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class ReleaseControlledMotionGestureListener
             : Object
@@ -49,7 +50,7 @@ open public class ReleaseControlledMotionGestureListener
 
     private var isMouseGestureOccurring: Boolean = false
 
-    private var motionGestureCollection: BasicArrayList = BasicArrayList()
+    private var motionGestureCollection: BasicArrayList = BasicArrayListD()
 
     private var signed: CompleteMotionGestureListenerInterface
 public constructor (signed: CompleteMotionGestureListenerInterface)

@@ -48,6 +48,7 @@ import org.allbinary.media.graphics.geography.pathfinding.BasicGeographicMapExtr
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathGenerator
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class Waypoint : WaypointBase

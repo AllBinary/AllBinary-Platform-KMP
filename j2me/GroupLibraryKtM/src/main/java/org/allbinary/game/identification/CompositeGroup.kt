@@ -30,6 +30,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CompositeGroup
             : Object
@@ -47,7 +48,7 @@ companion object {
 
     private val groupInterface: Group
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 public constructor (groupInterface: Group)
             : super()
         {

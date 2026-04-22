@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class TouchButtonsListBuilder : BaseTouchInput {
         
@@ -35,7 +36,7 @@ open public class TouchButtonsListBuilder : BaseTouchInput {
             {
             }            
         
-    private val baseTouchInputList: BasicArrayList = BasicArrayList()
+    private val baseTouchInputList: BasicArrayList = BasicArrayListD()
 
     open fun add(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true

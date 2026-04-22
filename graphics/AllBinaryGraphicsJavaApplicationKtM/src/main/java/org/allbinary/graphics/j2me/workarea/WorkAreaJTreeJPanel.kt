@@ -39,6 +39,7 @@ import org.allbinary.graphics.j2me.workarea.tools.event.MyGraphicItemEventSource
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class WorkAreaJTreeJPanel : javax.swing.JPanel {
         
@@ -58,7 +59,7 @@ initComponents()
 this.rootTreeNode= DefaultMutableTreeNode(workAreaName)
 this.workAreaPropertiesJPanel!!.removeAll()
 updateTree()
-this.highlightedBasicArrayList= BasicArrayList()
+this.highlightedBasicArrayList= BasicArrayListD()
 }
 
 
@@ -96,7 +97,7 @@ this.workAreaPropertiesJPanel!!.add(this.workAreaJTree)
 : BasicArrayList{
 var treePathArray = treePathArray
 
-    var basicArrayList: BasicArrayList = BasicArrayList()
+    var basicArrayList: BasicArrayList = BasicArrayListD()
 
 
     

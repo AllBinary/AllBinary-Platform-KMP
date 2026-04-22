@@ -33,6 +33,7 @@ import org.allbinary.animation.RotationAnimation
 import org.allbinary.graphics.Anchor
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.math.AngleInfo
+import org.allbinary.util.CircularIndexUtil
 
 open public class ImageBaseRotationAnimation : RotationAnimation {
         
@@ -40,7 +41,7 @@ open public class ImageBaseRotationAnimation : RotationAnimation {
     private val image: Image
 public constructor (image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, totalAngle, animationBehavior){
+                            : super(angleInfo, CircularIndexUtil.getInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
     //var image = image
     //var angleInfo = angleInfo
     //var totalAngle = totalAngle

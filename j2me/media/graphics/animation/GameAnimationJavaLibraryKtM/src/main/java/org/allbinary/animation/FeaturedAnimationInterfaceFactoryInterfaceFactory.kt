@@ -35,6 +35,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class FeaturedAnimationInterfaceFactoryInterfaceFactory : FeaturedResourceFactory {
         
@@ -81,6 +82,9 @@ var resource = resource
     //var x = x
     //var y = y
 
+    var pointFactory: PointFactory = PointFactory.getInstance()!!
+
+
     var list: BasicArrayList = this.getList()!!
 
 
@@ -116,7 +120,7 @@ var resource = resource
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Rectangle(PointFactory.getInstance()!!.getInstance(x, y), ((rectangle.getWidth() *scale) shr 1), ((rectangle.getHeight() *scale) shr 1))
+                        return Rectangle(pointFactory!!.getInstance0(x, y), ((rectangle.getWidth() *scale) shr 1), ((rectangle.getHeight() *scale) shr 1))
 
                                     }
                                 
@@ -171,7 +175,7 @@ var resource = resource
     var list: BasicArrayList = this.getList()!!
 
 
-    var resourceTypeAvailableList: BasicArrayList = BasicArrayList()
+    var resourceTypeAvailableList: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = getList()!!.size()!!

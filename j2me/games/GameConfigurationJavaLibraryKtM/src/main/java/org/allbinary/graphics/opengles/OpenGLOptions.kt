@@ -28,6 +28,7 @@
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureChoiceGroups
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class OpenGLOptions
             : Object
@@ -51,18 +52,18 @@ open public class OpenGLOptions
                         
                                     {
                                     
-    var openGLMultipleList: BasicArrayList = BasicArrayList()
+    var openGLMultipleList: BasicArrayList = BasicArrayListD()
 
 openGLMultipleList!!.add(openGLFeatureFactory!!.OPENGL)
 GameFeatureChoiceGroups.getMultipleInstance()!!.add("OpenGL (Complete Restart)", openGLMultipleList)
 
-    var openGLVersionSelectorMultipleList: BasicArrayList = BasicArrayList()
+    var openGLVersionSelectorMultipleList: BasicArrayList = BasicArrayListD()
 
 openGLVersionSelectorMultipleList!!.add(openGLFeatureFactory!!.OPENGL_AUTO_SELECT)
 openGLVersionSelectorMultipleList!!.add(openGLFeatureFactory!!.OPENGL_MINIMUM)
 GameFeatureChoiceGroups.getExclusiveInstance()!!.add("OpenGL Version Selector", openGLVersionSelectorMultipleList)
 
-    var openGLImageColorMultipleList: BasicArrayList = BasicArrayList()
+    var openGLImageColorMultipleList: BasicArrayList = BasicArrayListD()
 
 openGLImageColorMultipleList!!.add(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444)
 openGLImageColorMultipleList!!.add(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_8888)

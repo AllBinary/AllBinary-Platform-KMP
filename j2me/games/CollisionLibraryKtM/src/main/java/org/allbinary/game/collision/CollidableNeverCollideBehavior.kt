@@ -27,12 +27,14 @@
         
 import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.graphics.RectangleFactory
+import org.allbinary.logic.string.StringUtil
+import org.allbinary.view.ViewPosition
 
 open public class CollidableNeverCollideBehavior : CollidableBaseBehavior {
         
  constructor (isCollidable: Boolean)                        
 
-                            : super(CollidableCompositeLayer(RectangleFactory.SINGLETON), isCollidable){
+                            : super(CollidableCompositeLayer(StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.getInstanceD(), CollidableNeverCollideBehaviorFactory.getInstance()), isCollidable){
 var isCollidable = isCollidable
 
 

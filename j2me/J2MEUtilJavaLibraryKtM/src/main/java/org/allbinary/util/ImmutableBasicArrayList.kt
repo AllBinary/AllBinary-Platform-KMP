@@ -27,7 +27,7 @@
         
 import org.allbinary.logic.communication.log.ForcedLogUtil
 
-open public class ImmutableBasicArrayList : BasicArrayList {
+open public class ImmutableBasicArrayList : BasicArrayListS {
         
 
     private val name: String

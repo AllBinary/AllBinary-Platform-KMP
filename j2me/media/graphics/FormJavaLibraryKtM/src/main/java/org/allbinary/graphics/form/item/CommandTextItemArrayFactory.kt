@@ -34,13 +34,14 @@ import org.allbinary.graphics.form.ScreenInfo
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.visitor.Visitor
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CommandTextItemArrayFactory
             : Object
          {
         
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     private val visitorInterface: Visitor
 public constructor (visitorInterface: Visitor)

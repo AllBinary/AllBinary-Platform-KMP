@@ -54,9 +54,9 @@ open public class BasicVelocityProperties
 public constructor ()
             : super()
         {
-this.velocityXBasicDecimal= BasicDecimal()
-this.velocityYBasicDecimal= BasicDecimal()
-this.velocityZBasicDecimal= BasicDecimal()
+this.velocityXBasicDecimal= BasicDecimal(0)
+this.velocityYBasicDecimal= BasicDecimal(0)
+this.velocityZBasicDecimal= BasicDecimal(0)
 }
 
 

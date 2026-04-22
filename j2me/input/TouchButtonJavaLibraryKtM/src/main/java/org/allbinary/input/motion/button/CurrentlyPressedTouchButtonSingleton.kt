@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CurrentlyPressedTouchButtonSingleton
             : Object
@@ -48,7 +49,7 @@ companion object {
 
         }
             
-    val list: BasicArrayList = BasicArrayList()
+    val list: BasicArrayList = BasicArrayListD()
 protected constructor ()
             : super()
         {

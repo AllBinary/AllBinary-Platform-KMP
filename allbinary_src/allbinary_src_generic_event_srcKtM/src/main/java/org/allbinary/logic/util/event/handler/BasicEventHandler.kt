@@ -33,6 +33,7 @@ import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicEventHandler
             : Object
@@ -51,7 +52,7 @@ companion object {
 public constructor ()
             : super()
         {
-this.eventListenerInterfaceList= BasicArrayList()
+this.eventListenerInterfaceList= BasicArrayListD()
 }
 
 
@@ -103,7 +104,7 @@ index++
     open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
-this.eventListenerInterfaceList= BasicArrayList()
+this.eventListenerInterfaceList= BasicArrayListD()
 }
 
 

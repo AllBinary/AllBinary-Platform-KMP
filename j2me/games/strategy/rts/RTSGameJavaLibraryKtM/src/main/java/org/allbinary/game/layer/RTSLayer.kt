@@ -79,6 +79,26 @@ open public class RTSLayer : MultiPlayerGameLayer
         
 companion object {
             
+                @Throws(Exception::class)
+            
+    open fun createSimulatedInstance(remoteInfo: RemoteInfo)
+        //nullable = true from not(false or (false and false)) = true
+: RTSLayer{
+    //var remoteInfo = remoteInfo
+
+    var nullAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance()!!
+
+
+    var nullIndexedAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return RTSLayer(RemoteInfo.REMOTE_INFO, GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0, TileLayerPositionIntoViewPosition())
+}
+
+
     private val id: Int = 0
 
     val MAIN_INDEX: Int = 0
@@ -201,30 +221,6 @@ companion object {
     private var destroyed: Boolean = false
 
     private var selected: Boolean = false
-protected constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
-
-                            : this(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
-    //var remoteInfo = remoteInfo
-    //var groupInterface = groupInterface
-    //var rootName = rootName
-    //var name = name
-    //var healthInterface = healthInterface
-    //var rtsFormInput = rtsFormInput
-    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-    //var rectangle = rectangle
-    //var x = x
-    //var y = y
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 protected constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, groupInterface, name, rectangle, viewPosition){
@@ -269,38 +265,6 @@ this.sensorRangeAnimation= animation
 this.initSensorRangeAnimation= animation
 this.animationInterface= this.initAnimationInterface
 this.geographicMapCellPositionAreaBase= GeographicMapCellPositionArea(this)
-}
-
-protected constructor (remoteInfo: RemoteInfo)                        
-
-                            : super(remoteInfo, GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, RectangleFactory.SINGLETON, TileLayerPositionIntoViewPosition()){
-    //var remoteInfo = remoteInfo
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.initInputProcessors()
-this.rtsFormInput= NullRTSFormInputFactory.getInstance()
-
-    var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-
-this.baseAnimationInterface= animation
-this.buildAnimationInterface= animation
-this.rangeAnimation= animation
-this.initRangeAnimation= animation
-this.sensorRangeAnimation= animation
-this.initSensorRangeAnimation= animation
-this.animationInterface= animation
-
-    var indexedAnimation: IndexedAnimation = NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
-
-this.indexedButShouldBeRotationAnimationInterface= indexedAnimation
-this.initAnimationInterface= indexedAnimation
-this.emptyAnimationInterface= indexedAnimation
-this.destroyAnimationInterface= indexedAnimation
-this.verticleBuildAnimationInterface= indexedAnimation
-this.rootName= StringUtil.getInstance()!!.EMPTY_STRING
-this.geographicMapCellPositionAreaBase= GeographicMapCellPositionAreaBase.NULL_GEOGRPAHIC_MAP_POSITION_AREA_BASE
 }
 
 

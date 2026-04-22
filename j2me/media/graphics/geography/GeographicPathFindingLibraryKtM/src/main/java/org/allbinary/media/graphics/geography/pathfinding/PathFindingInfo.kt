@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListS
 import org.allbinary.util.BasicArrayListUtil
 
 open public class PathFindingInfo
@@ -62,8 +63,8 @@ public constructor (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCost
         {
     //var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
 this.pathFindingNodeCostInfoFactoryInterface= pathFindingNodeCostInfoFactoryInterface
-this.startPathFindingNodeList= BasicArrayList(1)
-this.endPathFindingNodeList= BasicArrayList(1)
+this.startPathFindingNodeList= BasicArrayListS(1)
+this.endPathFindingNodeList= BasicArrayListS(1)
 }
 
 

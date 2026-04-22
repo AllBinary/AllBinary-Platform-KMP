@@ -34,6 +34,7 @@ import org.allbinary.logic.NullUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameNotification
             : Object
@@ -50,11 +51,11 @@ companion object {
             {
             }            
         
-    val stringList: BasicArrayList = BasicArrayList()
+    val stringList: BasicArrayList = BasicArrayListD()
 
-    val timeList: BasicArrayList = BasicArrayList()
+    val timeList: BasicArrayList = BasicArrayListD()
 
-    val colorList: BasicArrayList = BasicArrayList()
+    val colorList: BasicArrayList = BasicArrayListD()
 
     open fun add(string: String, seconds: Integer, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true

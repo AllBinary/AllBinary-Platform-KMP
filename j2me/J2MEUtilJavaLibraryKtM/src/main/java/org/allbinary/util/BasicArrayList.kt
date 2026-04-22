@@ -32,44 +32,11 @@ companion object {
     var objectArray: Array<Any?>
 
     private var currentIndex: Int = 0
-public constructor (size: Int)                        
-
-                            : super(){
-    //var size = size
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-
-    
-                        if(size < 0)
-                        
-                                    {
-                                    
-
-
-                            throw IllegalArgumentException(StringMaker().
-                            append("Init Size Exception: ")!!.appendint(size)!!.toString())
-
-                                    }
-                                
-this.objectArray= arrayOfNulls(size)
-}
-
 public constructor (objectArray: Array<Any?>)
             : super()
         {
     //var objectArray = objectArray
 this.objectArray= objectArray
-}
-
-public constructor ()                        
-
-                            : this(7){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
 }
 
 
@@ -691,10 +658,10 @@ System.arraycopy(this.objectArray, 0, objectArray, 0, currentIndex)
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-    var list: BasicArrayList = BasicArrayList()
-
-
     var size: Int = this.size()!!
+
+
+    var list: BasicArrayList = BasicArrayListS(size)
 
 
     var anyType: Any

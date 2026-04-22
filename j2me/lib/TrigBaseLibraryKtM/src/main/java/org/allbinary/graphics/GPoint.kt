@@ -35,6 +35,18 @@ open public class GPoint
         
 companion object {
             
+    open fun getInstance(point: GPoint)
+        //nullable =  from not(true or (false and false)) = 
+: GPoint{
+    //var point = point
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return GPoint(point.getX(), point.getY(), point.getZ())
+}
+
+
     private val POINT_LABEL: String = "Point: "
 
     open fun toStringStatic(x: Int, y: Int, z: Int)
@@ -73,25 +85,6 @@ stringBuffer!!.appendint(z)
     private val y: Int
 
     private val z: Int
-public constructor (point: GPoint)
-            : super()
-        {
-var point = point
-this.x= point.getX()
-this.y= point.getY()
-this.z= point.getZ()
-}
-
-public constructor (x: Int, y: Int)
-            : super()
-        {
-var x = x
-var y = y
-this.x= x
-this.y= y
-this.z= 3
-}
-
 public constructor (x: Int, y: Int, z: Int)
             : super()
         {

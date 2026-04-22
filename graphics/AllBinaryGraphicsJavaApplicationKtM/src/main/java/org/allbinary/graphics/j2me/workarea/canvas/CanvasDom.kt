@@ -85,7 +85,7 @@ public constructor (canvasNode: Node)
         {
 var canvasNode = canvasNode
 this.grid= Grid()
-this.grid.grid= PointFactory.getInstance()!!.getInstance(0, 0)
+this.grid.grid= PointFactory.getInstance()!!.getInstance0(0, 0)
 this.dimension= IntegerDimension(0, 0)
 
     var name: String = canvasNode!!.getNodeName()!!
@@ -269,7 +269,7 @@ this.setDimension(IntegerDimension(x, y))
 {
 var gridX = gridX
 var gridY = gridY
-this.grid.grid= PointFactory.getInstance()!!.getInstance(gridX, gridY)
+this.grid.grid= PointFactory.getInstance()!!.getInstance0(gridX, gridY)
 }
 
 
@@ -328,7 +328,7 @@ pointNode!!.appendChild(yNode)
 
 angleNode!!.appendChild(angleTextNode)
 
-    var sizeNode: Node = this.getPointNode(PointFactory.getInstance()!!.getInstance(this.getDimension()!!.getWidth(), this.getDimension()!!.getHeight()), this.SIZE) as Node
+    var sizeNode: Node = this.getPointNode(PointFactory.getInstance()!!.getInstance0(this.getDimension()!!.getWidth(), this.getDimension()!!.getHeight()), this.SIZE) as Node
 
 
     var zoomNode: Node = document.createElement(this.ZOOM) as Node

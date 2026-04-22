@@ -27,6 +27,7 @@
         
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BaseBasicArrayListCache
             : Object
@@ -38,7 +39,7 @@ open public class BaseBasicArrayListCache
             {
             }            
         
-    val list: BasicArrayList = BasicArrayList()
+    val list: BasicArrayList = BasicArrayListD()
 
     open fun log()
         //nullable = true from not(false or (false and true)) = true

@@ -27,6 +27,7 @@
         
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AbeNoLicense
             : Object
@@ -50,7 +51,7 @@ companion object {
 
         }
             
-    var serverVector: BasicArrayList = BasicArrayList()
+    var serverVector: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {

@@ -27,6 +27,7 @@
         
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AbstractArrayListPool
             : Object
@@ -36,7 +37,7 @@ open public class AbstractArrayListPool
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    var buffers: BasicArrayList = BasicArrayList()
+    var buffers: BasicArrayList = BasicArrayListD()
 
     var cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface
 public constructor (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)

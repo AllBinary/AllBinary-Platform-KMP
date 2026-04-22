@@ -33,6 +33,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class InputMapping
             : Object
@@ -45,7 +46,7 @@ open public class InputMapping
 
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-    private val mappedList: BasicArrayList = BasicArrayList()
+    private val mappedList: BasicArrayList = BasicArrayListD()
 protected constructor ()
             : super()
         {
@@ -202,7 +203,7 @@ this.mappedList!!.add(mappedToInput)
                         
                                     {
                                     
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 this.hashtable.put(id, list)
 

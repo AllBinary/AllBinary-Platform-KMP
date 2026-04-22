@@ -35,6 +35,7 @@ import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
@@ -255,7 +256,7 @@ var nodeList = nodeList
 var nodeName = nodeName
 var nodeList = nodeList
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var childNodeList: NodeList = getChildNodeList(nodeName, nodeList)!!
@@ -299,7 +300,7 @@ var nodeList = nodeList
 : BasicArrayList{
 var nodeList = nodeList
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var numberOfChildren: Int = nodeList!!.getLength()!!

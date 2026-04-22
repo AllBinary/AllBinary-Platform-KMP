@@ -32,6 +32,7 @@ import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSLayerInfoPaintable
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.InputFeatureFactory
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
@@ -70,7 +71,7 @@ open public class RTSPlayerGameInput : PlayerGameInput {
 
     private val gameCanvas: AllBinaryGameCanvas
 
-    private val motionGestureInputList: BasicArrayList = BasicArrayList()
+    private val motionGestureInputList: BasicArrayList = BasicArrayListD()
 
     private val scrollPlayerGameInput: ScrollMapPlayerGameInput
 

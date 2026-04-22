@@ -31,6 +31,7 @@ import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.input.motion.gesture.MotionGestureToMotionGestureActionAssociation
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class MotionGestureConfiguration
             : Object
@@ -51,7 +52,7 @@ open public class MotionGestureConfiguration
 
     private var mouseButtonMask: Int = 0
 
-    private var activeCommands: BasicArrayList = BasicArrayList()
+    private var activeCommands: BasicArrayList = BasicArrayListD()
 public constructor ()
             : super()
         {

@@ -40,6 +40,7 @@ import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class DisplayInfoSingleton
             : Object
@@ -364,7 +365,7 @@ var lastHeight = lastHeight
 
     private val UPDATE_FROM_ORIENTATION_CHANGE: String = "Updating from Orientation Change "
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     open fun add(reason: String)
         //nullable = true from not(false or (false and false)) = true

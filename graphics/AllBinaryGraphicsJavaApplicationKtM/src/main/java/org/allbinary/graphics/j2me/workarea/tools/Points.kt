@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class Points
             : Object
@@ -37,7 +38,7 @@ open public class Points
 public constructor ()
             : super()
         {
-this.pointVector= BasicArrayList()
+this.pointVector= BasicArrayListD()
 }
 
 

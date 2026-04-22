@@ -41,6 +41,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.view.ViewPosition
 import org.allbinary.view.event.ViewPositionEvent
 import org.allbinary.view.event.ViewPositionEventListenerInterface
@@ -78,28 +79,7 @@ basicSetColorUtil!!.setBasicColorP(graphics, BLACK)
                             }
     
 
-    private val gameKeyEventList: BasicArrayList = BasicArrayList()
-public constructor (layerInfo: Rectangle)                        
-
-                            : this(layerInfo, ViewPosition()){
-    //var layerInfo = layerInfo
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (layerInfo: Rectangle, viewPosition: ViewPosition)                        
-
-                            : super(layerInfo, viewPosition){
-    //var layerInfo = layerInfo
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
+    private val gameKeyEventList: BasicArrayList = BasicArrayListD()
 public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(name, layerInfo, viewPosition){

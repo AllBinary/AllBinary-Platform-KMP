@@ -34,6 +34,7 @@ import org.allbinary.logic.io.AbFileLocalInputStream
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
@@ -120,7 +121,7 @@ companion object {
 
     var logConfigNodeVector: Vector = DomSearchHelper.getAllNodes(LogConfigData.getInstance()!!.NAME, logConfigsNode!!.getChildNodes())!!
 
-LoggingInitInfo.logConfigInfoList= BasicArrayList()
+LoggingInitInfo.logConfigInfoList= BasicArrayListD()
 
     var size: Int = logConfigNodeVector!!.size!!
 
@@ -223,7 +224,7 @@ LoggingInitInfo.updateIfNeeded()
 : BasicArrayList{
 LoggingInitInfo.updateIfNeeded()
 
-    var allLogTypeVector: BasicArrayList = BasicArrayList()
+    var allLogTypeVector: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!
@@ -267,7 +268,7 @@ LoggingInitInfo.updateIfNeeded()
 : BasicArrayList{
 LoggingInitInfo.updateIfNeeded()
 
-    var allLogTypeVector: BasicArrayList = BasicArrayList()
+    var allLogTypeVector: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!

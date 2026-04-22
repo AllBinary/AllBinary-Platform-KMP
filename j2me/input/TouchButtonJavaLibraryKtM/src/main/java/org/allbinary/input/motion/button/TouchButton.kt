@@ -125,12 +125,15 @@ this.animationInterface!!.paint(graphics, animationX, animationY)
 
         try {
             
+    var pointFactory: PointFactory = PointFactory.getInstance()!!
+
+
     var x: Int = this.rawRectangle!!.getWidth() *this.cellPositionP!!.getColumn()
 
 
     var y: Int = this.rawRectangle!!.getHeight() *this.cellPositionP!!.getRow()
 
-this.rectangleP= Rectangle(PointFactory.getInstance()!!.getInstance(x +xBorder, y +yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
+this.rectangleP= Rectangle(pointFactory!!.getInstance0(x +xBorder, y +yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
 
     var point: GPoint = this.rectangleP!!.getPoint()!!
 

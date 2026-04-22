@@ -31,6 +31,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AbeClientLicense
             : Object
@@ -116,7 +117,7 @@ this.id= hashtable.get(abeClientInformationData!!.LICENSEID) as String
 
     var vector: Vector = hashtable.get(abeClientInformationData!!.LICENSESERVERS) as Vector
 
-this.servers= BasicArrayList()
+this.servers= BasicArrayListD()
 
     var size: Int = vector.size!!
 

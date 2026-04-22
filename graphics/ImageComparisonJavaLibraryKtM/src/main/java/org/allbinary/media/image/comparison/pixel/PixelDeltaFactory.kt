@@ -81,7 +81,7 @@ var y = y
 var rgb1 = rgb1
 var rgb2 = rgb2
 
-    var point: GPoint = PointFactory.getInstance()!!.getInstance(x, y)!!
+    var point: GPoint = PointFactory.getInstance()!!.getInstance0(x, y)!!
 
 
     var colorDelta: ColorDelta = ColorDeltaFactory.getInstance(rgb1, rgb2)!!

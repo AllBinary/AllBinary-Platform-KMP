@@ -32,12 +32,18 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class ThreadPool
             : Object
          {
         
+companion object {
+            
+    var NORMAL_PRIORITY: Int = 5
 
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -50,22 +56,11 @@ open public class ThreadPool
 
     private var isAlive: Boolean= false
 
-    private var taskQueue: BasicArrayList = BasicArrayList()
+    private var taskQueue: BasicArrayList = BasicArrayListD()
 
     private var numThreads: Int= 0
 
     private var runningTask: Boolean= false
-public constructor (poolName: String, numThreads: Int)                        
-
-                            : this(poolName, numThreads, 5){
-    //var poolName = poolName
-    //var numThreads = numThreads
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (poolName: String, numThreads: Int, priority: Int)
             : super()
         {
@@ -156,7 +151,7 @@ this.currentPriorityRunnable!!.run()
                         
                                     {
                                     this.isAlive= true
-this.taskQueue= BasicArrayList()
+this.taskQueue= BasicArrayListD()
 
                                     }
                                 

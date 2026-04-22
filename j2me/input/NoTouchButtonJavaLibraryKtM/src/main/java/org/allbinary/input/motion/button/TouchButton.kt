@@ -101,7 +101,10 @@ this.animationInterface!!.paint(graphics, animationX, animationY)
 
     var y: Int = this.rawRectangle!!.getHeight() *this.cellPosition!!.getRow()
 
-this.rectangle= Rectangle(PointFactory.getInstance()!!.getInstance(x +this.xBorder, y +this.yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
+
+    var pointFactory: PointFactory = PointFactory.getInstance()!!
+
+this.rectangle= Rectangle(pointFactory!!.getInstance0(x +this.xBorder, y +this.yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
 
     var point: GPoint = this.rectangle.getPoint()!!
 

@@ -187,7 +187,7 @@ this.treeNode= DefaultMutableTreeNode(PointsDomUtil.getInstance()!!.LINES +item)
 item++
 this.points.init()
 this.pointTreeNodeVector= Vector()
-this.fulcrumPoint= PointFactory.getInstance()!!.getInstance(0, 0)
+this.fulcrumPoint= PointFactory.getInstance()!!.getInstance0(0, 0)
 }
 
 
@@ -303,7 +303,7 @@ var pointNodes = pointNodes
     var yInteger: Integer = Integer(yTextNode!!.getNodeValue())
 
 
-    var point: GPoint = PointFactory.getInstance()!!.getInstance(xInteger!!.toInt(), yInteger!!.toInt())!!
+    var point: GPoint = PointFactory.getInstance()!!.getInstance0(xInteger!!.toInt(), yInteger!!.toInt())!!
 
 this.addPoint(point)
 }
@@ -414,7 +414,7 @@ var list = list
                                 )
                         
                                     {
-                                    this.points.getPoints()!!.add(PointFactory.getInstance()!!.getInstance(point.getX(), point.getY()))
+                                    this.points.getPoints()!!.add(PointFactory.getInstance()!!.getInstance0(point.getX(), point.getY()))
 this.pointTreeNodeVector!!.add(DefaultMutableTreeNode(point.toString()))
 this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.size -1) as DefaultMutableTreeNode)
 
@@ -489,7 +489,7 @@ graphics.setStroke(BasicStroke(x))
                                     }
                                 
 
-    var tempPointVector: BasicArrayList = PointsUtil.getInstance()!!.doTransforms(this.points.getPoints(), canvasAngle, PointFactory.getInstance()!!.getInstance(dimension.getWidth(), dimension.getHeight()))!!
+    var tempPointVector: BasicArrayList = PointsUtil.getInstance()!!.doTransforms(this.points.getPoints(), canvasAngle, PointFactory.getInstance()!!.getInstance0(dimension.getWidth(), dimension.getHeight()))!!
 
 
     
@@ -613,7 +613,7 @@ var y = y
 
         try {
             
-    var mousePoint: GPoint = PointFactory.getInstance()!!.getInstance(mouseEvent!!.getPoint()!!.x, mouseEvent!!.getPoint()!!.y)!!
+    var mousePoint: GPoint = PointFactory.getInstance()!!.getInstance0(mouseEvent!!.getPoint()!!.x, mouseEvent!!.getPoint()!!.y)!!
 
 
     
@@ -621,7 +621,7 @@ var y = y
                         
                                     {
                                     
-    var point: GPoint = PointFactory.getInstance()!!.getInstance(mousePoint!!.getX() /x, mousePoint!!.getY() /y)!!
+    var point: GPoint = PointFactory.getInstance()!!.getInstance0(mousePoint!!.getX() /x, mousePoint!!.getY() /y)!!
 
 StatusFactory.getInstance()!!.setStatus("Line Point Added: " +point.toString())
 this.addPoint(point)
@@ -697,10 +697,10 @@ var y = y
 
         try {
             
-    var mousePoint: GPoint = PointFactory.getInstance()!!.getInstance(mouseEvent!!.getPoint()!!.x, mouseEvent!!.getPoint()!!.y)!!
+    var mousePoint: GPoint = PointFactory.getInstance()!!.getInstance0(mouseEvent!!.getPoint()!!.x, mouseEvent!!.getPoint()!!.y)!!
 
 
-    var point: GPoint = PointFactory.getInstance()!!.getInstance(mousePoint!!.getX() /x, mousePoint!!.getY() /y)!!
+    var point: GPoint = PointFactory.getInstance()!!.getInstance0(mousePoint!!.getX() /x, mousePoint!!.getY() /y)!!
 
 this.currentMousePoint= point
 } catch(e: Exception)

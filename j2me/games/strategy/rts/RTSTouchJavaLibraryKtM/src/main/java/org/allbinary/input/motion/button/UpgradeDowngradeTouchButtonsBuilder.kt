@@ -28,6 +28,7 @@
 import org.allbinary.game.input.resource.TouchButtonDowngradeResource
 import org.allbinary.game.input.resource.TouchButtonUpgradeResource
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.graphics.CellPositionFactory
@@ -49,7 +50,7 @@ open public class UpgradeDowngradeTouchButtonsBuilder : BaseTouchInput {
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()

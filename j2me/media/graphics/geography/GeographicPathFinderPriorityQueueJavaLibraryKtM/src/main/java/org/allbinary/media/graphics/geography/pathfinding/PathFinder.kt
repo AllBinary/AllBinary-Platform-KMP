@@ -38,6 +38,7 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class PathFinder : GeographicPathFinderBase {
@@ -205,7 +206,7 @@ var totalPaths = totalPaths
     var list: BasicArrayList = this.findPath(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition)!!
 
 
-    var pathList: BasicArrayList = BasicArrayList()
+    var pathList: BasicArrayList = BasicArrayListD()
 
 pathList!!.add(list)
 
@@ -255,7 +256,7 @@ this.findPathStart(startPathFindingNode!!.geographicMapCellPosition, endPathFind
                                     }
                                 
 
-    var pathList: BasicArrayList = BasicArrayList()
+    var pathList: BasicArrayList = BasicArrayListD()
 
 pathList!!.add(list)
 multipassState!!.iteration= 0
@@ -656,7 +657,7 @@ total++
     //var start = start
 var current = current
 
-    var path: BasicArrayList = BasicArrayList()
+    var path: BasicArrayList = BasicArrayListD()
 
 
         while(current.parent != NullUtil.getInstance()!!.NULL_OBJECT)

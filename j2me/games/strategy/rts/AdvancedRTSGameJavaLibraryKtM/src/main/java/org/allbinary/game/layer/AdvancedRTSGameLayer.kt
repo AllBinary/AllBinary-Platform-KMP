@@ -27,20 +27,21 @@
         
 import javax.microedition.lcdui.Canvas
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
+import org.allbinary.animation.NullAnimationFactory
+import org.allbinary.animation.NullIndexedAnimationFactory
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
-import org.allbinary.animation.transition.shake.NoShakeAnimationListener
 import org.allbinary.animation.transition.shake.ShakeAnimationListener
-import org.allbinary.animation.transition.shake.ShakeAnimationListenerFactory
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.GameTypeFactory
 import org.allbinary.game.combat.destroy.event.DestroyedEvent
 import org.allbinary.game.combat.destroy.event.DestroyedEventHandler
 import org.allbinary.game.combat.destroy.event.DestroyedEventListenerInterface
-import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.game.health.Health
 import org.allbinary.game.identification.Group
+import org.allbinary.game.identification.GroupFactory
 import org.allbinary.game.input.event.GameKeyEventFactory
+import org.allbinary.game.input.form.NullRTSFormInputFactory
 import org.allbinary.game.input.form.RTSFormInput
 import org.allbinary.game.layer.building.event.BuildingEventHandler
 import org.allbinary.game.layer.unit.UnitLayer
@@ -56,11 +57,11 @@ import org.allbinary.game.tick.NullTickable
 import org.allbinary.game.tick.TickableInterface
 import org.allbinary.game.view.TileLayerPositionIntoViewPosition
 import org.allbinary.graphics.Rectangle
+import org.allbinary.graphics.RectangleFactory
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.AngleInfo
 import org.allbinary.math.FrameUtil
-import org.allbinary.media.AllBinaryNoVibration
-import org.allbinary.media.AllBinaryVibration
 import org.allbinary.media.AllBinaryVibrationME
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
@@ -72,7 +73,29 @@ import org.allbinary.view.ViewPosition
 open public class AdvancedRTSGameLayer : RTSLayer
                 , DestroyedEventListenerInterface {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun createSimulated()
+        //nullable = true from not(false or (false and true)) = true
+: AdvancedRTSGameLayer{
 
+    var nullAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance()!!
+
+
+    var nullIndexedAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AdvancedRTSGameLayer(RemoteInfo.REMOTE_INFO, NullPathFindingLayer.NULL_PATH_FINDING_LAYER, AdvancedRTSProperties.createSimulated(), GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0, TileLayerPositionIntoViewPosition())
+}
+
+
+        }
+            
     val shakeListener: ShakeAnimationListener
 
     val vibration: AllBinaryVibrationME
@@ -82,36 +105,12 @@ open public class AdvancedRTSGameLayer : RTSLayer
     private var parentLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 
     var waypointBehaviorBase: TickableInterface = NullTickable.getInstance()!!
-public constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterface, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
-
-                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
-    //var remoteInfo = remoteInfo
-    //var parentLayer = parentLayer
-    //var groupInterface = groupInterface
-    //var rootName = rootName
-    //var name = name
-    //var healthInterface = healthInterface
-    //var rtsFormInput = rtsFormInput
-    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-    //var rectangle = rectangle
-    //var x = x
-    //var y = y
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterface, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
+public constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterface, advancedRTSProperties: AdvancedRTSProperties, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, viewPosition){
     //var remoteInfo = remoteInfo
     //var parentLayer = parentLayer
+    //var advancedRTSProperties = advancedRTSProperties
     //var groupInterface = groupInterface
     //var rootName = rootName
     //var name = name
@@ -133,24 +132,10 @@ public constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterfa
                     
 this.setVisible(false)
 this.setWaypointBehavior(WaypointBehaviorBase())
-this.shakeListener= ShakeAnimationListenerFactory.getInstance()
-this.vibration= AllBinaryVibration.getInstance()
-this.duration= GameConfigurationCentral.getInstance()!!.VIBRATION.getValue()!!.toInt() *100
+this.shakeListener= advancedRTSProperties!!.shakeListener
+this.vibration= advancedRTSProperties!!.vibration
+this.duration= advancedRTSProperties!!.duration
 this.setParentLayer(parentLayer)
-}
-
-public constructor ()                        
-
-                            : super(RemoteInfo.REMOTE_INFO){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setWaypointBehavior(WaypointBehaviorBase())
-this.shakeListener= NoShakeAnimationListener.NO_SHAKE_ANIMATION_LISTENER
-this.vibration= AllBinaryNoVibration.NO_VIBRATION
-this.duration= 0
-this.setParentLayer(NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
 }
 
 

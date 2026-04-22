@@ -35,6 +35,7 @@ import org.allbinary.game.layer.MultipassWaypointPathRunnable
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.WaypointPathRunnable
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.communication.log.LogUtil
@@ -60,7 +61,7 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
         
 companion object {
             
-    private val runningWaypointPathList: BasicArrayList = BasicArrayList()
+    private val runningWaypointPathList: BasicArrayList = BasicArrayListD()
 
     private val TARGET_DISTANCE: String = "Target Distance"
 
@@ -107,7 +108,7 @@ var fakeWaypoint = fakeWaypoint
                             //For kotlin this is before the body of the constructor.
                     
 this.progressTimeDelayHelper= TimeDelayHelper(5000)
-this.wanderPathsList= BasicArrayList()
+this.wanderPathsList= BasicArrayListD()
 
     var features: Features = Features.getInstance()!!
 
@@ -1145,7 +1146,7 @@ open public inner class BuildingSteeringVisitor : SteeringVisitor {
             {
             }            
         
-    private val positionList: BasicArrayList = BasicArrayList()
+    private val positionList: BasicArrayList = BasicArrayListD()
 
     override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true

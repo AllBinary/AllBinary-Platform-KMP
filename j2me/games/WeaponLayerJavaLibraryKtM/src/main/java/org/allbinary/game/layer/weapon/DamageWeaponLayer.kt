@@ -33,37 +33,6 @@ import org.allbinary.view.ViewPosition
 
 open public class DamageWeaponLayer : WeaponLayer {
         
-public constructor (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
-
-                            : super(name, movement, animationInterface, rectangle, viewPosition){
-    //var name = name
-    //var movement = movement
-    //var animationInterface = animationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableDamageWeaponBehavior(this, true))
-}
-
-public constructor (name: String, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
-
-                            : super(name, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
-    //var name = name
-    //var movement = movement
-    //var animationInterface = animationInterface
-    //var destroyedAnimationInterface = destroyedAnimationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableDamageWeaponBehavior(this, true))
-}
-
 public constructor (name: String, remoteInfo: RemoteInfo, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition, username: String, actorSessionId: Int, id: Int, multiPlayerType: Int)                        
 
                             : super(name, remoteInfo, multiPlayerType, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){

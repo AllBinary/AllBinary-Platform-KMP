@@ -11,25 +11,46 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
+import org.allbinary.util.CircularIndexUtil
 
 open public class NullRotationAnimation : RotationAnimation {
         
- constructor (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
-
-                            : super(angleInfo, totalAngle, animationBehavior){
+companion object {
+            
+    open fun createTotalAngle(angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)
+        //nullable = true from not(false or (false and false)) = true
+: NullRotationAnimation{
     //var angleInfo = angleInfo
     //var totalAngle = totalAngle
     //var animationBehavior = animationBehavior
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NullRotationAnimation(angleInfo, CircularIndexUtil.getInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior)
 }
 
- constructor (animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+    open fun createQuarter(animationBehavior: AnimationBehavior)
+        //nullable = true from not(false or (false and false)) = true
+: NullRotationAnimation{
+    //var animationBehavior = animationBehavior
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NullRotationAnimation(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), animationBehavior)
+}
+
+
+        }
+            protected constructor (angleInfo: AngleInfo, circularIndexUtil: CircularIndexUtil, animationBehavior: AnimationBehavior)                        
+
+                            : super(angleInfo, circularIndexUtil, animationBehavior){
+    //var angleInfo = angleInfo
+    //var circularIndexUtil = circularIndexUtil
     //var animationBehavior = animationBehavior
 
 

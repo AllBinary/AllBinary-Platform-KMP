@@ -34,6 +34,7 @@ import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class OpenGLESImage
             : Object
@@ -44,7 +45,7 @@ companion object {
             
     val NULL_OPENGL_IMAGE: OpenGLESImage = OpenGLESImage(NullCanvas.NULL_IMAGE, PlatformBitmapBaseFactory.NULL_PLATFORM_BITMAP_BASE_FACTORY, PlatformTextureBaseFactory.NULL_PLATFORM_TEXTURE_BASE_FACTORY)
 
-    val texture2dList: BasicArrayList = BasicArrayList()
+    val texture2dList: BasicArrayList = BasicArrayListD()
 
     val TYPE: Int = 4
 

@@ -13,6 +13,7 @@
         
 import org.allbinary.logic.util.cache.BaseBasicArrayListCache
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListS
 
 open public class BasicGeographicMapExtractedPathCacheFactory : BaseBasicArrayListCache {
         
@@ -57,7 +58,7 @@ var maxPaths = maxPaths
                         for (index in maxConcurrentPaths downTo this.maxConcurrentPaths)
 
         {
-this.list.add(BasicArrayList(maxPaths))
+this.list.add(BasicArrayListS(maxPaths))
 }
 
 this.maxConcurrentPaths= maxConcurrentPaths
@@ -89,7 +90,7 @@ this.maxPaths= maxPaths
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicArrayList(this.maxPaths)
+                        return BasicArrayListS(this.maxPaths)
 
                         }
                             

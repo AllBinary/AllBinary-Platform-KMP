@@ -40,6 +40,7 @@ import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BlisketBackupFactory
             : Object
@@ -140,7 +141,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var path: AbPath = AbPath(backupPath)
 
 
-    var fileBasicArrayList: BasicArrayList = BasicArrayList()
+    var fileBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
@@ -204,7 +205,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var path: AbPath = AbPath(backupPath)
 
 
-    var fileBasicArrayList: BasicArrayList = BasicArrayList()
+    var fileBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
@@ -271,7 +272,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var path: AbPath = AbPath(backupPath)
 
 
-    var fileBasicArrayList: BasicArrayList = BasicArrayList()
+    var fileBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!

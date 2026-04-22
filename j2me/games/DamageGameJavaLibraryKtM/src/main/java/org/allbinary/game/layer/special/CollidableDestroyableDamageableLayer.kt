@@ -27,6 +27,7 @@
         
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
+import org.allbinary.game.collision.CollidableNeverCollideBehaviorFactory
 import org.allbinary.game.combat.damage.DamageableInterface
 import org.allbinary.game.combat.destroy.DestroyableInterface
 import org.allbinary.game.combat.destroy.event.DestroyedEvent
@@ -45,6 +46,7 @@ import org.allbinary.graphics.RectangleFactory
 import org.allbinary.image.opengles.OpenGLSurfaceChangedInterface
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.view.ViewPosition
@@ -57,7 +59,7 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
         
 companion object {
             
-    val NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
+    val NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
 
     private val READYFOREXPLOSION: String = "ReadyForExplosion: "
 
@@ -86,25 +88,9 @@ companion object {
     var isDraggable: Boolean = false
 
     var isDragged: Boolean = false
-public constructor (groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
-
-                            : super(layerInfo, viewPosition){
-    //var groupInterface = groupInterface
-    //var layerInfo = layerInfo
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.initWidth= layerInfo!!.getWidth()
-this.initHeight= layerInfo!!.getHeight()
-this.groupInterface= groupInterface
-this.pickupBehavior= PickupBehavior.NULL_PICKUP_BEHAVIOR
-}
-
 public constructor (groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, layerInfo, viewPosition){
+                            : super(name, layerInfo, viewPosition, CollidableNeverCollideBehaviorFactory.getInstance()){
     //var groupInterface = groupInterface
     //var name = name
     //var layerInfo = layerInfo

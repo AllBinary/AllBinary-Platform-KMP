@@ -48,7 +48,7 @@ open public class AllBinaryLayer : Layer
         
 companion object {
             
-    val NULL_ALLBINARY_LAYER: AllBinaryLayer = AllBinaryLayer(RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
+    val NULL_ALLBINARY_LAYER: AllBinaryLayer = AllBinaryLayer(StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
 
     private val TYPE: String = "Type: "
 
@@ -63,17 +63,6 @@ companion object {
     private val name: String
 
     private var viewPosition: ViewPosition = ViewPosition.NULL_VIEW_POSITION
-public constructor (rectangle: Rectangle, viewPosition: ViewPosition)                        
-
-                            : this(StringUtil.getInstance()!!.EMPTY_STRING, rectangle, viewPosition){
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (name: String, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(rectangle.getWidth(), rectangle.getHeight()){

@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.animation.vector.CircleFilledAnimation
 import org.allbinary.game.layer.AllBinaryTiledLayer
@@ -64,7 +66,7 @@ open public class MiniMapLayer : AllBinaryLayer
     private var animationInterface: CircleFilledAnimation
 public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.getInstance(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition){
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING, Rectangle(PointFactory.getInstance()!!.getInstance0(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition){
 var geographicMapInterface = geographicMapInterface
 var viewPosition = viewPosition
 
@@ -74,9 +76,9 @@ var viewPosition = viewPosition
 this.allBinaryTiledLayer= geographicMapInterface!!.getAllBinaryTiledLayer()
 this.geographicMapCellPositionFactory= geographicMapInterface!!.getGeographicMapCellPositionFactory()
 this.animationInterface= CircleFilledAnimation(this.allBinaryTiledLayer!!.getCellWidth(), this.allBinaryTiledLayer!!.getCellHeight(), BasicColorFactory.getInstance()!!.WHITE)
-this.list= BasicArrayList()
-this.basicColorList= BasicArrayList()
-this.positionList= BasicArrayList()
+this.list= BasicArrayListD()
+this.basicColorList= BasicArrayListD()
+this.positionList= BasicArrayListD()
 GeographicMapCellPositionEventHandler.getInstance()!!.addListener(this)
 this.init()
 }

@@ -34,7 +34,13 @@ open public class TileLayerPositionIntoViewPosition : ViewPosition {
         
 
     private var tiledLayer: Layer = NullLayer.getInstance()!!
-public constructor (){
+public constructor ()                        
+
+                            : super(0, 0, 0){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
 }
 
 

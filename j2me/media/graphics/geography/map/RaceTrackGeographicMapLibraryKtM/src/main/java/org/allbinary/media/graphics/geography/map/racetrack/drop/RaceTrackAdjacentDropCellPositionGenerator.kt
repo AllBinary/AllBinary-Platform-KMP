@@ -27,6 +27,7 @@
         
 import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.identification.BasicGroupFactory
@@ -227,7 +228,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
     var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = this.raceTrackGeographicMap as BaseRaceTrackGeographicMap
 
 
-    var list: BasicArrayList = this.layerCoveringCellPositionsUtil!!.getAll(baseRaceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, BasicArrayList())!!
+    var list: BasicArrayList = this.layerCoveringCellPositionsUtil!!.getAll(baseRaceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, BasicArrayListD())!!
 
 
     

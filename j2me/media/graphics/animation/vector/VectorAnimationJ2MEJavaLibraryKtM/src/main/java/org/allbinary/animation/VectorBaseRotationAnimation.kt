@@ -43,7 +43,7 @@ open public class VectorBaseRotationAnimation : RotationAnimation
     private var currentPoints: Array<Array<IntArray?>?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
 public constructor (angleInfo: AngleInfo, currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, animationBehavior){
+                            : super(angleInfo, CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
     //var angleInfo = angleInfo
     //var currentPoints = currentPoints
     //var basicColor = basicColor
@@ -53,36 +53,6 @@ public constructor (angleInfo: AngleInfo, currentPoints: Array<Array<IntArray?>?
                             //For kotlin this is before the body of the constructor.
                     
 this.setPoints(currentPoints)
-this.setBasicColorP(basicColor)
-}
-
-public constructor (angleInfo: AngleInfo, currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
-
-                            : super(angleInfo, animationBehavior){
-    //var angleInfo = angleInfo
-    //var currentPoints = currentPoints
-    //var basicColor = basicColor
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setPoints(Array(1) { Array(currentPoints!!.size) { IntArray(2) } })
-
-    var size: Int = currentPoints!!.size
-                
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-this.currentPoints[0]!![index]!![0]= currentPoints[index]!![0]!!
-this.currentPoints[0]!![index]!![1]= currentPoints[index]!![1]!!
-}
-
 this.setBasicColorP(basicColor)
 }
 

@@ -47,6 +47,7 @@ import org.allbinary.persistance.PlatformRecordIdUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class RecordStoreHighScores : HighScores {
         
@@ -334,7 +335,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 
         try {
             recordStore= RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
-this.setList(BasicArrayList())
+this.setList(BasicArrayListD())
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
 

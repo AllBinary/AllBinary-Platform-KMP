@@ -46,6 +46,7 @@ import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicM
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathGenerator
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class NoCacheWaypoint : WaypointBase

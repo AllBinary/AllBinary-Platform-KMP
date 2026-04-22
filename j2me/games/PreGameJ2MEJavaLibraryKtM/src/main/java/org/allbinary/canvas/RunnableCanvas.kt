@@ -99,26 +99,6 @@ this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
                                 
 }
 
-public constructor (commandListener: CommandListener, childNameList: BasicArrayList)                        
-
-                            : this(commandListener, childNameList, true){
-    //var commandListener = commandListener
-    //var childNameList = childNameList
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor ()                        
-
-                            : this(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST, false){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
     open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true

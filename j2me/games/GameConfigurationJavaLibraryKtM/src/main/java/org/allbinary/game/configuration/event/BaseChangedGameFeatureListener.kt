@@ -35,6 +35,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BaseChangedGameFeatureListener
             : Object
@@ -51,7 +52,7 @@ open public class BaseChangedGameFeatureListener
 
     val gameFeatureUtil: GameFeatureUtil = GameFeatureUtil.getInstance()!!
 
-    val list: BasicArrayList = BasicArrayList()
+    val list: BasicArrayList = BasicArrayListD()
 
     private var changed: Boolean = true
 

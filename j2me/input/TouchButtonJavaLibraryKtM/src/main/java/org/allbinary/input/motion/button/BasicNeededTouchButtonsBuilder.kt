@@ -29,6 +29,7 @@ import org.allbinary.animation.Animation
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class BasicNeededTouchButtonsBuilder : BaseTouchInput {
@@ -48,7 +49,7 @@ open public class BasicNeededTouchButtonsBuilder : BaseTouchInput {
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()

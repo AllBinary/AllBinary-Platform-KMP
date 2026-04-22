@@ -72,12 +72,15 @@ var yBorder = yBorder
 
         try {
             
+    var pointFactory: PointFactory = PointFactory.getInstance()!!
+
+
     var x: Int = this.rawRectangle!!.getWidth() *cellPositionP!!.getColumn()
 
 
     var y: Int = this.rawRectangle!!.getHeight() *cellPositionP!!.getRow()
 
-this.rectangleP= Rectangle(PointFactory.getInstance()!!.getInstance(x, y), this.rawRectangle!!.getWidth() +(2 *xBorder), this.rawRectangle!!.getHeight() +(2 *yBorder))
+this.rectangleP= Rectangle(pointFactory!!.getInstance0(x, y), this.rawRectangle!!.getWidth() +(2 *xBorder), this.rawRectangle!!.getHeight() +(2 *yBorder))
 
     var point: GPoint = this.rectangleP!!.getPoint()!!
 

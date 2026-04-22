@@ -18,6 +18,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class LayerManager
             : Object
@@ -30,7 +31,7 @@ open public class LayerManager
 
     private val layerManagerLogging: LayerManagerLoggingBase
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     private val anyType: SynchObject = SynchObject()
 public constructor (layerManagerLogging: LayerManagerLogging)

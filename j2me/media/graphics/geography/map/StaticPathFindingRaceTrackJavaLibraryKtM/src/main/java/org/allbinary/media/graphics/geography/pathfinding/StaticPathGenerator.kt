@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -75,7 +76,7 @@ PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.
     //var geographicMapCellPositionFactory = geographicMapCellPositionFactory
     //var pathList = pathList
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = pathList!!.size()!!
@@ -134,7 +135,7 @@ list.add(geographicMapCellPosition)
                         if(list == this.basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
-                                    list= BasicArrayList()
+                                    list= BasicArrayListD()
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
@@ -183,7 +184,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicArrayList()
+                        return BasicArrayListD()
 }
 
 }

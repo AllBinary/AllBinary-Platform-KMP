@@ -29,6 +29,7 @@ import org.allbinary.graphics.displayable.event.DisplayChangeEventHandler
 import org.allbinary.graphics.displayable.event.DisplayChangeEventListener
 import org.allbinary.logic.util.event.handler.BasicEventHandler
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameLevelDisplayChangeEventListenersFactory
             : Object
@@ -56,7 +57,7 @@ companion object {
             {
             }            
         
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     open fun add(displayChangeEventListener: DisplayChangeEventListener)
         //nullable = true from not(false or (false and false)) = true

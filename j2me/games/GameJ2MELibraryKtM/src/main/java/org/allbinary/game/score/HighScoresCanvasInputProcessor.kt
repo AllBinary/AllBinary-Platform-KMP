@@ -30,6 +30,7 @@ import org.allbinary.game.input.PlayerGameInput
 import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.game.score.displayable.HighScoresCanvas
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class HighScoresCanvasInputProcessor : PlayerGameInput {
         
@@ -37,7 +38,7 @@ open public class HighScoresCanvasInputProcessor : PlayerGameInput {
     private val highScoresCanvas: HighScoresCanvas
 public constructor (highScoresCanvas: HighScoresCanvas)                        
 
-                            : super(BasicArrayList(),  -1){
+                            : super(BasicArrayListD(),  -1){
 var highScoresCanvas = highScoresCanvas
 
 

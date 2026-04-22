@@ -27,6 +27,7 @@
         
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class PlayerOwnedRTSLayers
             : Object
@@ -38,7 +39,7 @@ open public class PlayerOwnedRTSLayers
             {
             }            
         
-    val rtsLayerList: BasicArrayList = BasicArrayList()
+    val rtsLayerList: BasicArrayList = BasicArrayListD()
 
     override fun toString()
         //nullable =  from not(false or (true and true)) = 

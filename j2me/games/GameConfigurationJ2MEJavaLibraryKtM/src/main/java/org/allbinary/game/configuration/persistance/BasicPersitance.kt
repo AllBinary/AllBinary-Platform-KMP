@@ -35,6 +35,7 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 import org.allbinary.persistance.PlatformRecordIdUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicPersitance
             : Object
@@ -51,9 +52,9 @@ open public class BasicPersitance
 
     private val recordId: String
 
-    val valueList: BasicArrayList = BasicArrayList()
+    val valueList: BasicArrayList = BasicArrayListD()
 
-    val idList: BasicArrayList = BasicArrayList()
+    val idList: BasicArrayList = BasicArrayListD()
 protected constructor (recordId: String)
             : super()
         {

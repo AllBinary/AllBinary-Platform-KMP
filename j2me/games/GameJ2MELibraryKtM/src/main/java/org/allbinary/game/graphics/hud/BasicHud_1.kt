@@ -271,7 +271,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISP
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.getInstance()!!.getInstance(x, y)
+                        return PointFactory.getInstance()!!.getInstance0(x, y)
 }
 
 

@@ -32,6 +32,7 @@ import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.view.ViewPosition
 
 open public class HealLayer : AllBinaryLayer
@@ -39,7 +40,7 @@ open public class HealLayer : AllBinaryLayer
         
 public constructor ()                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition()){
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition.getInstanceD()){
 
 
                             //For kotlin this is before the body of the constructor.

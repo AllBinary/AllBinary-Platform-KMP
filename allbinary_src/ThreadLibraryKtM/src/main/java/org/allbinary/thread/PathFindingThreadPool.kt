@@ -49,7 +49,7 @@ companion object {
         }
             public constructor (poolName: String, numThreads: Int, priority: Int)                        
 
-                            : super(poolName, numThreads){
+                            : super(poolName, numThreads, ThreadPool.NORMAL_PRIORITY){
     //var poolName = poolName
     //var numThreads = numThreads
     //var priority = priority

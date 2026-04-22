@@ -31,6 +31,7 @@ import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.view.ViewPosition
 
 open public class IconLayer : AllBinaryLayer {
@@ -44,7 +45,7 @@ companion object {
     private var animationInterface: Animation
 public constructor (animationInterface: Animation, width: Int, height: Int)                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, width, height), ViewPosition()){
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, width, height), ViewPosition.getInstanceD()){
 var animationInterface = animationInterface
 var width = width
 var height = height

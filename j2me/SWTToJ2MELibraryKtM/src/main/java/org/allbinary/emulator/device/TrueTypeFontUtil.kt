@@ -43,7 +43,6 @@ import org.allbinary.graphics.opengles.OpenGLCapabilities
 import org.allbinary.image.PreResourceImageUtil
 import org.allbinary.image.opengles.OpenGLESImage
 import org.allbinary.logic.communication.log.PreLogUtil
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 
@@ -261,7 +260,7 @@ graphics.setColor(basicColor!!.toInt())
     var biggestHeight: Int = 0
 
 
-    var bounds: Rectangle = Rectangle(PointFactory.getInstance()!!.getInstance(0, 0), cellSize, cellSize)
+    var bounds: Rectangle = Rectangle(PointFactory.getInstance()!!.getInstance0(0, 0), cellSize, cellSize)
 
 
     var x: Int= 0

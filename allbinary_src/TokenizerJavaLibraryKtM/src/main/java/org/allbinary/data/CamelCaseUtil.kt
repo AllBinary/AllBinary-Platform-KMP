@@ -31,6 +31,7 @@ import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CamelCaseUtil
             : Object
@@ -87,7 +88,7 @@ companion object {
 
 stringBuilder!!.delete(0, stringBuilder!!.length())
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var tokenizer: Tokenizer = Tokenizer(this.commonSeps!!.UNDERSCORE)

@@ -42,17 +42,6 @@ var url = url
                     
 }
 
-public constructor (hostname: String, port: Int)                        
-
-                            : this(URL("http://" +hostname +':' +port +"/RPC2")){
-var hostname = hostname
-var port = port
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
     open fun getURL()
         //nullable = true from not(false or (false and true)) = true

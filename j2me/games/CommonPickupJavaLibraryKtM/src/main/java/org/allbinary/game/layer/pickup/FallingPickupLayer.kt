@@ -25,8 +25,14 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.animation.Animation
+import org.allbinary.animation.NullAnimationFactory
+import org.allbinary.game.collision.CollidableAlwaysPickupNeverCollideBehaviorFactory
+import org.allbinary.game.identification.BasicGroupFactory
 import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.game.tick.TickableInterface
+import org.allbinary.graphics.PointFactory
+import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.view.ViewPosition
 
@@ -40,17 +46,8 @@ companion object {
         }
             public constructor (remoteInfo: RemoteInfo)                        
 
-                            : super(NAME, remoteInfo, ViewPosition()){
-var remoteInfo = remoteInfo
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor ()                        
-
-                            : super(NAME, ViewPosition()){
+                            : super(NAME, remoteInfo, 0, CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY, NullAnimationFactory.getFactoryInstance()!!.getInstance(0), Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition.getInstanceD()){
+    //var remoteInfo = remoteInfo
 
 
                             //For kotlin this is before the body of the constructor.

@@ -34,6 +34,7 @@ import org.allbinary.game.layer.capital.Capital
 import org.allbinary.media.audio.DowngradeSound
 import org.allbinary.media.audio.UpgradeSound
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.java.bool.BooleanFactory
@@ -61,9 +62,9 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
 
     val isSingleKeyProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS) || Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_PRESS)
 
-    private var selectedRTSLayersList: BasicArrayList = BasicArrayList()
+    private var selectedRTSLayersList: BasicArrayList = BasicArrayListD()
 
-    private var preSelectedRTSLayersList: BasicArrayList = BasicArrayList()
+    private var preSelectedRTSLayersList: BasicArrayList = BasicArrayListD()
 
     private var paintSelectedRTSLayersList: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 

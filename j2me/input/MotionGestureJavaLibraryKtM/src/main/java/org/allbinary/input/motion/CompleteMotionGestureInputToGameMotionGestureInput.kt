@@ -41,6 +41,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CompleteMotionGestureInputToGameMotionGestureInput
             : Object
@@ -86,32 +87,32 @@ companion object {
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
 
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 list.add(touchMotionGestureFactory!!.DIAGONAL_DOWN_LEFT)
 motionGestureConfiguration!!.addMotionGestureAction(list, DiagonalDownLeftTouchInputToGameKeyEventAction.getInstance())
-list= BasicArrayList()
+list= BasicArrayListD()
 list.add(touchMotionGestureFactory!!.DIAGONAL_DOWN_RIGHT)
 motionGestureConfiguration!!.addMotionGestureAction(list, DiagonalDownRightTouchInputToGameKeyEventAction.getInstance())
-list= BasicArrayList()
+list= BasicArrayListD()
 list.add(touchMotionGestureFactory!!.DIAGONAL_UP_LEFT)
 motionGestureConfiguration!!.addMotionGestureAction(list, DiagonalUpLeftTouchInputToGameKeyEventAction.getInstance())
-list= BasicArrayList()
+list= BasicArrayListD()
 list.add(touchMotionGestureFactory!!.DIAGONAL_UP_RIGHT)
 motionGestureConfiguration!!.addMotionGestureAction(list, DiagonalUpRightTouchInputToGameKeyEventAction.getInstance())
-list= BasicArrayList()
+list= BasicArrayListD()
 list.add(touchMotionGestureFactory!!.LEFT)
 motionGestureConfiguration!!.addMotionGestureAction(list, LeftTouchInputToGameKeyEventAction.getInstance())
-list= BasicArrayList()
+list= BasicArrayListD()
 list.add(touchMotionGestureFactory!!.RIGHT)
 motionGestureConfiguration!!.addMotionGestureAction(list, RightTouchInputToGameKeyEventAction.getInstance())
-list= BasicArrayList()
+list= BasicArrayListD()
 list.add(touchMotionGestureFactory!!.DOWN)
 motionGestureConfiguration!!.addMotionGestureAction(list, DownTouchInputToGameKeyEventAction.getInstance())
-list= BasicArrayList()
+list= BasicArrayListD()
 list.add(touchMotionGestureFactory!!.UP)
 motionGestureConfiguration!!.addMotionGestureAction(list, UpTouchInputToGameKeyEventAction.getInstance())
-list= BasicArrayList()
+list= BasicArrayListD()
 list.add(touchMotionGestureFactory!!.RELEASED)
 motionGestureConfiguration!!.addMotionGestureAction(list, ReleaseTouchInputToGameKeyEventAction.getInstance())
 } catch(e: Exception)

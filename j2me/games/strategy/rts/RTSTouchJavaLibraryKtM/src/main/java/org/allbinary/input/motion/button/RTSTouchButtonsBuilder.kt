@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 import org.allbinary.logic.communication.log.LogUtil
 
@@ -46,7 +47,7 @@ open public class RTSTouchButtonsBuilder : BaseTouchInput {
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 list.addAll(BasicTouchButtonsBuilder().
                             getList())

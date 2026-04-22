@@ -41,7 +41,7 @@ this.OBJECT_ARRAY= arrayOfNulls(size)
                         for (index in size -1 downTo 0)
 
         {
-this.OBJECT_ARRAY[index]= CustomGPoint(0, 0)
+this.OBJECT_ARRAY[index]= CustomGPoint.getInstance3(0, 0)
 }
 
 }

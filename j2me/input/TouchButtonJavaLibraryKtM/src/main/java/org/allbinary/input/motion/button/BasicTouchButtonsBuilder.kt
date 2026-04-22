@@ -27,6 +27,7 @@
         
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class BasicTouchButtonsBuilder : BaseTouchInput {
@@ -46,7 +47,7 @@ open public class BasicTouchButtonsBuilder : BaseTouchInput {
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var commonButtons: CommonButtons = CommonButtons.getInstance()!!

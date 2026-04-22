@@ -34,6 +34,7 @@ import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.logic.util.event.handler.BasicEventHandler
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class UpKeyEventHandlerBase : BasicEventHandler {
         
@@ -45,7 +46,7 @@ companion object {
 
         }
             
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
  constructor (){
 }
 

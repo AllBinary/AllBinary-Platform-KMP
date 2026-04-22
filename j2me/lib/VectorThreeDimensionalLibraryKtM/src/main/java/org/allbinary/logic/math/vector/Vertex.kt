@@ -35,31 +35,11 @@ open public class Vertex
          {
         
 
-    var x: BasicDecimal = BasicDecimal()
+    var x: BasicDecimal = BasicDecimal(0)
 
-    var y: BasicDecimal = BasicDecimal()
+    var y: BasicDecimal = BasicDecimal(0)
 
-    var z: BasicDecimal = BasicDecimal()
-public constructor (x: Int, y: Int, z: Int)
-            : super()
-        {
-var x = x
-var y = y
-var z = z
-this.x.set(x)
-this.y.set(y)
-this.z.set(z)
-}
-
-public constructor (x: Int, y: Int)
-            : super()
-        {
-var x = x
-var y = y
-this.x.set(x)
-this.y.set(y)
-}
-
+    var z: BasicDecimal = BasicDecimal(0)
 public constructor ()
             : super()
         {

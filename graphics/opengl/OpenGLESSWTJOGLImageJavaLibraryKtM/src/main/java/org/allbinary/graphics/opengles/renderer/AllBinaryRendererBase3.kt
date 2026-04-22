@@ -29,6 +29,7 @@ import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
 import org.allbinary.image.opengles.OpenGLESImage
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AllBinaryRendererBase3
             : Object
@@ -40,7 +41,7 @@ open public class AllBinaryRendererBase3
             {
             }            
         
-    val list: BasicArrayList = BasicArrayList()
+    val list: BasicArrayList = BasicArrayListD()
 
                 @Throws(Exception::class)
             

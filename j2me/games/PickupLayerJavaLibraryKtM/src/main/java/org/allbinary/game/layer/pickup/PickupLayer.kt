@@ -49,21 +49,6 @@ open public class PickupLayer : MultiPlayerGameLayer
     private var destroyed: Boolean= false
 
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-public constructor (name: String, remoteInfo: RemoteInfo, viewPosition: ViewPosition)                        
-
-                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), viewPosition){
-    //var name = name
-    //var remoteInfo = remoteInfo
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableAlwaysPickupNeverCollideBehaviorFactory.getInstance())
-this.setLayerWidth(10)
-this.setLayerHeight(10)
-}
-
 public constructor (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
@@ -82,32 +67,6 @@ this.setCollidableInferface(CollidableAlwaysPickupNeverCollideBehaviorFactory.ge
 this.setLayerWidth(10)
 this.setLayerHeight(10)
 this.init(pickedUpLayerInterfaceFactoryInterface, animationInterface)
-}
-
-public constructor (name: String, viewPosition: ViewPosition)                        
-
-                            : this(name, RemoteInfo.REMOTE_INFO, viewPosition){
-    //var name = name
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (name: String, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
-
-                            : this(name, RemoteInfo.REMOTE_INFO, total, pickedUpLayerInterfaceFactoryInterface, animationInterface, rectangle, viewPosition){
-    //var name = name
-    //var total = total
-    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
-    //var animationInterface = animationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
 }
 
 

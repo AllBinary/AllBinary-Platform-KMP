@@ -34,6 +34,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class ImageCacheBase
             : Object
@@ -67,7 +68,7 @@ public constructor ()
                         for (index in this.listOfList!!.size -1 downTo 0)
 
         {
-this.listOfList[index]= BasicArrayList()
+this.listOfList[index]= BasicArrayListD()
 }
 
 
@@ -77,7 +78,7 @@ this.listOfList[index]= BasicArrayList()
                         for (index in this.availableListOfList!!.size -1 downTo 0)
 
         {
-this.availableListOfList[index]= BasicArrayList()
+this.availableListOfList[index]= BasicArrayListD()
 }
 
 }

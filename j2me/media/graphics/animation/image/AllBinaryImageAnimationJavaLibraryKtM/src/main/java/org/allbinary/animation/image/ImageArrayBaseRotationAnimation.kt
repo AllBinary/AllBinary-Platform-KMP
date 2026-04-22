@@ -51,7 +51,7 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
     private var totalFrames: Int= 0
 public constructor (originalImageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, animationBehavior){
+                            : super(angleInfo, CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
     //var originalImageArray = originalImageArray
     //var angleInfo = angleInfo
     //var animationBehavior = animationBehavior

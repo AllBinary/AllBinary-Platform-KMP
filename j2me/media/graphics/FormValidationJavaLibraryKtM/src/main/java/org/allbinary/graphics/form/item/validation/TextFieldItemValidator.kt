@@ -30,6 +30,7 @@ import org.allbinary.logic.control.validate.ValidatorBase
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class TextFieldItemValidator : ValidatorBase {
         
@@ -110,7 +111,7 @@ this.allowOnEmpty= allowOnEmpty
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var string: String = this.textFieldItem!!.getString()!!

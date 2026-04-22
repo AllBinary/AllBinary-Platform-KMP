@@ -32,6 +32,7 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.CellPositionsUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.util.BasicArrayListS
 import org.allbinary.util.BasicArrayListUtil
 
 open public class GeographicMapCellPositionArea : GeographicMapCellPositionAreaBase {
@@ -41,9 +42,9 @@ open public class GeographicMapCellPositionArea : GeographicMapCellPositionAreaB
 
     private val layerCoveringCellPositionsUtil: LayerCoveringCellPositionsUtil = LayerCoveringCellPositionsUtil.getInstance()!!
 
-    private val reusableOccupyingGeographicMapCellPositionList: BasicArrayList = BasicArrayList(4)
+    private val reusableOccupyingGeographicMapCellPositionList: BasicArrayList = BasicArrayListS(4)
 
-    private val reusableSurroundingGeographicMapCellPositionList: BasicArrayList = BasicArrayList(12)
+    private val reusableSurroundingGeographicMapCellPositionList: BasicArrayList = BasicArrayListS(12)
 
     private val surroundingCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0)!!
 

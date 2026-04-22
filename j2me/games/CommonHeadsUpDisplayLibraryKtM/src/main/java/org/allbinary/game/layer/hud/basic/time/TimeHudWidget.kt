@@ -34,7 +34,27 @@ import org.allbinary.logic.math.PrimitiveLongSingleton
 
 open public class TimeHudWidget : BasicHud {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun getInstance(location: Int, direction: Int, basicColor: BasicColor, timer: Timer)
+        //nullable =  from not(true or (false and false)) = 
+: TimeHudWidget{
+var location = location
+var direction = direction
+var basicColor = basicColor
+var timer = timer
 
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return TimeHudWidget(location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, basicColor, timer)
+}
+
+
+        }
+            
     private val TIME_STRING: String = "Time "
 
     private val TIME_CHAR_ARRAY: CharArray = charArrayOf('T','i','m','e',' ')
@@ -78,33 +98,6 @@ this.offset= myFont!!.stringWidth(this.TIME_STRING) +myFont!!.stringWidth(3)
 
                                     }
                                 
-}
-
-public constructor (location: Int, direction: Int, maxWidth: Int, basicColor: BasicColor, timer: Timer)                        
-
-                            : this(location, direction, 14, maxWidth, 2, basicColor, timer){
-var location = location
-var direction = direction
-var maxWidth = maxWidth
-var basicColor = basicColor
-var timer = timer
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (location: Int, direction: Int, basicColor: BasicColor, timer: Timer)                        
-
-                            : this(location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, basicColor, timer){
-var location = location
-var direction = direction
-var basicColor = basicColor
-var timer = timer
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
 }
 
 

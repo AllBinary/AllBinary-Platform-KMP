@@ -59,7 +59,7 @@ var args = args
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 list.add(commonPhoneStrings!!.ONE)
 list.add(commonPhoneStrings!!.TWO)

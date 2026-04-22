@@ -28,24 +28,12 @@
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.Rectangle
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.view.ViewPosition
 
 open public class MultiPlayerGameLayer : CollidableDestroyableDamageableLayer
                 , MultiPlayerGameLayerInterface {
         
-public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
-
-                            : super(groupInterface, layerInfo, viewPosition){
-    //var remoteInfo = remoteInfo
-    //var groupInterface = groupInterface
-    //var layerInfo = layerInfo
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(groupInterface, name, layerInfo, viewPosition){

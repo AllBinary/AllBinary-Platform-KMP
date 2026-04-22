@@ -30,6 +30,7 @@ import org.allbinary.graphics.PointFactory
 import org.allbinary.math.Angle
 import org.allbinary.math.NoDecimalTrigTable
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicGraphicsPipeline
             : Object
@@ -67,7 +68,7 @@ this.pointBasicArrayList= points
 var x = x
 var y = y
 
-    var newBasicArrayList: BasicArrayList = BasicArrayList()
+    var newBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = this.pointBasicArrayList!!.size()!!
@@ -91,7 +92,7 @@ secondPoint= this.pointBasicArrayList!!.objectArray[index]!! as GPoint
                         if(secondPoint!!.getX() != 1000)
                         
                                     {
-                                    newBasicArrayList!!.add(pointFactory!!.getInstance(secondPoint!!.getX() +x, secondPoint!!.getY() +y))
+                                    newBasicArrayList!!.add(pointFactory!!.getInstance0(secondPoint!!.getX() +x, secondPoint!!.getY() +y))
 
                                     }
                                 
@@ -125,7 +126,7 @@ this.rotate(angle.getValue().toInt())
 {
 var angle = angle
 
-    var newBasicArrayList: BasicArrayList = BasicArrayList()
+    var newBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
     var secondPoint: GPoint
@@ -172,7 +173,7 @@ cos= this.noDecimalTrigTable!!.cos(angle)
 y= secondPoint!!.getY() *sin
 secondX= (secondPoint!!.getX() *cos) -y
 secondY= (secondPoint!!.getX() *sin) +(secondPoint!!.getY() *cos)
-point= pointFactory!!.getInstance(secondX.toInt() /10000, secondY.toInt() /10000)
+point= pointFactory!!.getInstance0(secondX.toInt() /10000, secondY.toInt() /10000)
 newBasicArrayList!!.add(point)
 
                                     }
@@ -201,7 +202,7 @@ var width = width
     var halfWidth: Int = (width shr 1)
 
 
-    var newBasicArrayList: BasicArrayList = BasicArrayList()
+    var newBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
     var secondPoint: GPoint
@@ -243,7 +244,7 @@ secondPoint= this.pointBasicArrayList!!.objectArray[index]!! as GPoint
 
                         }
                             
-point= pointFactory!!.getInstance(newX, secondPoint!!.getY())
+point= pointFactory!!.getInstance0(newX, secondPoint!!.getY())
 newBasicArrayList!!.add(point)
 
                                     }

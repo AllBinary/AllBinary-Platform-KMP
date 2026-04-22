@@ -34,6 +34,7 @@ import org.allbinary.logic.string.regex.replace.Replace
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class UniqueTokens
             : Object
@@ -98,7 +99,7 @@ var stringVector = stringVector
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.COMMA)
 
 
-    var keywordVector: BasicArrayList = tokenizer.getTokens(keywords, BasicArrayList())!!
+    var keywordVector: BasicArrayList = tokenizer.getTokens(keywords, BasicArrayListD())!!
 
 
 
@@ -126,7 +127,7 @@ hashSet!!.add(cleanString)
     var spaceTokenizer: Tokenizer = Tokenizer(commonSeps!!.SPACE)
 
 
-    var subKeywordVector: BasicArrayList = spaceTokenizer!!.getTokens(cleanString, BasicArrayList())!!
+    var subKeywordVector: BasicArrayList = spaceTokenizer!!.getTokens(cleanString, BasicArrayListD())!!
 
 
 

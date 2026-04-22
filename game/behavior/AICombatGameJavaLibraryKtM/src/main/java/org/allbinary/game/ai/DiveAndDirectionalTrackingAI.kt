@@ -53,6 +53,7 @@ import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class DiveAndDirectionalTrackingAI : BasicAI
                 , TrackingEventListenerInterface
@@ -68,7 +69,7 @@ companion object {
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(500)
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     private val directionalInterface: DirectionalInterface
 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class ImageTypeUtil
             : Object
@@ -54,7 +55,7 @@ companion object {
 
     val GIF: String = "gif"
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {

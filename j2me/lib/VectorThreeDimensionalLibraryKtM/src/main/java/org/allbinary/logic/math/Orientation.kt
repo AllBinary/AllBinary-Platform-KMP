@@ -56,11 +56,11 @@ SINGLETON.roll.set(roll)
 
         }
             
-    var yaw: BasicDecimal = BasicDecimal()
+    var yaw: BasicDecimal = BasicDecimal(0)
 
-    var pitch: BasicDecimal = BasicDecimal()
+    var pitch: BasicDecimal = BasicDecimal(0)
 
-    var roll: BasicDecimal = BasicDecimal()
+    var roll: BasicDecimal = BasicDecimal(0)
 private constructor (yaw: Int, pitch: Int, roll: Int)
             : super()
         {

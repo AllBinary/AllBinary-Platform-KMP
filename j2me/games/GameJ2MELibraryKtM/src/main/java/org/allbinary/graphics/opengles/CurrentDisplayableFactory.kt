@@ -47,6 +47,7 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.thread.NullRunnable
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CurrentDisplayableFactory
             : Object
@@ -87,7 +88,7 @@ companion object {
 
     private val RUNNABLE_WAS_ALREADY_IN_USE: String = "Runnable was already in use: "
 
-    val DEFAULT_CHILD_NAME_LIST: BasicArrayList = BasicArrayList()
+    val DEFAULT_CHILD_NAME_LIST: BasicArrayList = BasicArrayListD()
 
     private var displayable: Displayable = NullDisplayable.getInstance()!!
 

@@ -32,6 +32,7 @@ import org.allbinary.logic.io.file.FileFactory
 import org.allbinary.logic.io.file.FileWrapperUtil
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class Directory
             : Object
@@ -199,7 +200,7 @@ var fileFilter = fileFilter
 var file = file
 var isRecursiveSearch = isRecursiveSearch
 
-    var fileList: BasicArrayList = BasicArrayList()
+    var fileList: BasicArrayList = BasicArrayListD()
 
 
     var recursiveFileList: BasicArrayList
@@ -298,7 +299,7 @@ var file = file
     //var file = file
     //var isRecursiveSearch = isRecursiveSearch
 
-    var fileList: BasicArrayList = BasicArrayList()
+    var fileList: BasicArrayList = BasicArrayListD()
 
 
     var recursiveFileList: BasicArrayList
@@ -395,7 +396,7 @@ var file = file
     //var file = file
     //var isRecursiveSearch = isRecursiveSearch
 
-    var fileList: BasicArrayList = BasicArrayList()
+    var fileList: BasicArrayList = BasicArrayListD()
 
 
     var recursiveFileList: BasicArrayList
@@ -500,7 +501,7 @@ var level = level
 var file = file
 var isRecursiveSearch = isRecursiveSearch
 
-    var fileList: BasicArrayList = BasicArrayList()
+    var fileList: BasicArrayList = BasicArrayListD()
 
 
     var recursiveFileList: BasicArrayList

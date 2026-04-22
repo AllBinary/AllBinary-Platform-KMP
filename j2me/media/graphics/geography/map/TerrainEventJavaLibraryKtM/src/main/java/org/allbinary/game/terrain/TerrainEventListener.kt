@@ -15,6 +15,7 @@ import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class TerrainEventListener
             : Object
@@ -27,7 +28,7 @@ open public class TerrainEventListener
             {
             }            
         
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true

@@ -33,7 +33,9 @@ import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.view.ViewPosition
 
 open public class TestingInputSingleton : AllBinaryGameLayer
                 , GameInputInterface {
@@ -58,7 +60,7 @@ companion object {
     val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 private constructor ()                        
 
-                            : super(RectangleFactory.SINGLETON){
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.getInstanceD()){
 
 
                             //For kotlin this is before the body of the constructor.

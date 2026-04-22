@@ -74,6 +74,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameCommandCanvas : MyCanvas
                 , MenuListener
@@ -208,7 +209,7 @@ this.menuForm= form
                         if(form != ScrollSelectionFormNoneFactory.getInstance())
                         
                                     {
-                                    this.setMenuInputProcessor(ImmediateCommandFormInputProcessor(BasicArrayList(),  -1, this, form))
+                                    this.setMenuInputProcessor(ImmediateCommandFormInputProcessor(BasicArrayListD(),  -1, this, form))
 this.menuPaintable= FormPaintable(form)
 
                                     }
@@ -251,7 +252,10 @@ this.repaintBehavior!!.onChangeRepaint(this)
     var startY: Int = (displayInfo!!.getLastHeight() *2 /3) -height
 
 
-    var rectangle: Rectangle = Rectangle(PointFactory.getInstance()!!.getInstance(30, startY), displayInfo!!.getLastWidth() -30, startY)
+    var pointFactory: PointFactory = PointFactory.getInstance()!!
+
+
+    var rectangle: Rectangle = Rectangle(pointFactory!!.getInstance0(30, startY), displayInfo!!.getLastWidth() -30, startY)
 
 
 

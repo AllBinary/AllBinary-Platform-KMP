@@ -33,6 +33,7 @@ import javax.microedition.lcdui.CommandListener
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class WebCommandProcessor
             : Object
@@ -64,7 +65,7 @@ companion object {
 
     private val aboutCommandProcessor: AboutCommandProcessor = AboutCommandProcessor.getInstance()!!
 
-    val list: BasicArrayList = BasicArrayList()
+    val list: BasicArrayList = BasicArrayListD()
 
     open fun process(midletCommandListener: CommandListener, command: Command, canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true

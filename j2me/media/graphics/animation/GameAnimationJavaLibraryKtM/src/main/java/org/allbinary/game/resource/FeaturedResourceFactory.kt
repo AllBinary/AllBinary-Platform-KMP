@@ -35,6 +35,7 @@ import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class FeaturedResourceFactory
             : Object
@@ -43,7 +44,7 @@ open public class FeaturedResourceFactory
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 public constructor ()
             : super()
         {

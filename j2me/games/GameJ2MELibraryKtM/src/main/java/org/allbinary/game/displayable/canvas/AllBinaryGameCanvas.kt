@@ -153,6 +153,7 @@ import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class AllBinaryGameCanvas : RunnableCanvas
@@ -228,7 +229,7 @@ companion object {
 
     private var highScoresPaintable: Paintable = NullPaintable.getInstance()!!
 
-    private var localPlayerGameInputList: BasicArrayList = BasicArrayList()
+    private var localPlayerGameInputList: BasicArrayList = BasicArrayListD()
 
     private var isCheating: Boolean= false
 
@@ -313,7 +314,7 @@ companion object {
     private var progressPaintable: PaintableInterface = ProgressCanvasFactory.getLazyInstance()!!
 public constructor (commandListener: CommandListener, gameLayerManager: AllBinaryGameLayerManager, highScoresFactoryInterface: HighScoresFactoryInterface, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, buffered: Boolean)                        
 
-                            : super(commandListener, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST){
+                            : super(commandListener, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST, true){
     //var commandListener = commandListener
     //var gameLayerManager = gameLayerManager
     //var highScoresFactoryInterface = highScoresFactoryInterface
@@ -329,7 +330,7 @@ this.init(gameLayerManager, buffered)
 this.highScoresFactoryInterface= highScoresFactoryInterface
 
     
-                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() == this.gameTypeFactory!!.BOT)
+                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() == this.gameTypeFactory!!.BOT || this.gameLayerManager!!.getGameInfo()!!.getGameType() == this.gameTypeFactory!!.NONE)
                         
                                     {
                                     this.gameBehavior= DemoGameBehavior.getInstance()
@@ -347,36 +348,6 @@ this.initSpecialPaint()
 this.initPopupMenu()
 this.initMenu()
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
-}
-
-public constructor (gameLayerManager: AllBinaryGameLayerManager){
-    //var gameLayerManager = gameLayerManager
-this.highScoresHelper= NoHighScoresFactory.getInstance()!!.createHighScoresHelper()
-
-    
-                        if(this.gameLayerManager!!.getGameInfo()!!.getGameType() == this.gameTypeFactory!!.BOT)
-                        
-                                    {
-                                    this.gameBehavior= DemoGameBehavior.getInstance()
-this.menuBehavior= BaseMenuBehavior.getInstance()
-
-                                    }
-                                
-                        else {
-                            this.gameBehavior= BaseGameBehavior.getInstance()
-this.menuBehavior= this.getInGameMenuBehavior()
-
-                        }
-                            
-this.gameLayerManager= gameLayerManager
-this.highScoresFactoryInterface= NoHighScoresFactory.getInstance()
-}
-
-public constructor (){
-this.highScoresHelper= NoHighScoresFactory.getInstance()!!.createHighScoresHelper()
-this.gameBehavior= DemoGameBehavior.getInstance()
-this.menuBehavior= BaseMenuBehavior.getInstance()
-this.highScoresFactoryInterface= NoHighScoresFactory.getInstance()
 }
 
 
@@ -533,7 +504,7 @@ super.processSleep()
                         
                                     {
                                     this.setOpenMenuPaintable(BasicPopupMenuPaintable(popupMenuRectangle, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor()))
-this.setPopupMenuInputProcessor(PopupMenuInputProcessor(BasicArrayList(),  -1, this, popupMenuRectangle))
+this.setPopupMenuInputProcessor(PopupMenuInputProcessor(BasicArrayListD(),  -1, this, popupMenuRectangle))
 
                                     }
                                 
@@ -590,7 +561,7 @@ this.setMenuForm(CommandCurrentSelectionFormFactory.getInstance(StringUtil.getIn
                         if(features.isFeature(this.touchFeatureFactory!!.TOUCH_ENABLED))
                         
                                     {
-                                    this.mainMenuInputProcessor= PopupCommandFormInputProcessor(BasicArrayList(),  -1, this, scrollSelectionForm, this.getPopupMenuInputProcessor() as PopupMenuInputProcessor)
+                                    this.mainMenuInputProcessor= PopupCommandFormInputProcessor(BasicArrayListD(),  -1, this, scrollSelectionForm, this.getPopupMenuInputProcessor() as PopupMenuInputProcessor)
 
                                     }
                                 

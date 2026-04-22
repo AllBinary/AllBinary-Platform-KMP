@@ -27,6 +27,7 @@
         
 import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class NoPlayerGameInput : PlayerGameInput {
         
@@ -48,7 +49,7 @@ companion object {
         }
             private constructor ()                        
 
-                            : super(BasicArrayList(),  -1){
+                            : super(BasicArrayListD(),  -1){
 
 
                             //For kotlin this is before the body of the constructor.

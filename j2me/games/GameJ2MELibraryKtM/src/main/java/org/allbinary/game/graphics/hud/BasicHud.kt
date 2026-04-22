@@ -274,7 +274,7 @@ var y = y
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.getInstance()!!.getInstance(x, y)
+                        return PointFactory.getInstance()!!.getInstance0(x, y)
 }
 
 

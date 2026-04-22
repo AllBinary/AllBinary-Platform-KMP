@@ -25,9 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.animation.NullAnimationFactory
+import org.allbinary.game.identification.BasicGroupFactory
 import org.allbinary.game.layer.AllBinaryTiledLayer
+import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.game.view.TileLayerPositionIntoViewPosition
+import org.allbinary.graphics.PointFactory
+import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.view.ViewPosition
 import org.allbinary.view.event.ViewPositionEventHandler
 
 open public class RaceTrackPickupLayer : PickupLayer {
@@ -39,7 +45,7 @@ companion object {
         }
             public constructor ()                        
 
-                            : super(NAME, TileLayerPositionIntoViewPosition()){
+                            : super(NAME, RemoteInfo.REMOTE_INFO, 0, CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY, NullAnimationFactory.getFactoryInstance()!!.getInstance(0), Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), TileLayerPositionIntoViewPosition()){
 
 
                             //For kotlin this is before the body of the constructor.

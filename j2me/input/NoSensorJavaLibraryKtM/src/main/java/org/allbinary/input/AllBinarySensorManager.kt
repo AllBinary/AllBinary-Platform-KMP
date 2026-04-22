@@ -30,6 +30,7 @@ import org.allbinary.input.gyro.GyroSensorFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AllBinarySensorManager
             : Object
@@ -80,7 +81,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
 }
 
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     open fun getSensorNamesList()
         //nullable = true from not(false or (false and true)) = true

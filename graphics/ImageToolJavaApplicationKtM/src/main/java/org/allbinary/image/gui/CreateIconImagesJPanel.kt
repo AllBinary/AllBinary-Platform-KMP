@@ -44,6 +44,7 @@ import org.allbinary.media.image.ImageProcessorInputCompositeInterface
 import org.allbinary.media.image.ImageUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CreateIconImagesJPanel : javax.swing.JPanel
                 , ImageProcessorInputCompositeInterface {
@@ -127,10 +128,10 @@ object: Thread()
     var files: Array<File?> = imageProcessorInput!!.getFiles()!!
 
 
-    var iconWidthList: BasicArrayList = BasicArrayList()
+    var iconWidthList: BasicArrayList = BasicArrayListD()
 
 
-    var iconHeightList: BasicArrayList = BasicArrayList()
+    var iconHeightList: BasicArrayList = BasicArrayListD()
 
 iconWidthList!!.add(864)
 iconHeightList!!.add(864)

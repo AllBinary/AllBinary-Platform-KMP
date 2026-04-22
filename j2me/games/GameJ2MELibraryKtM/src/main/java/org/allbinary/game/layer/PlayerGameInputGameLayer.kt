@@ -33,6 +33,7 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.view.StaticViewPosition
 
 open public class PlayerGameInputGameLayer : AllBinaryGameLayer
@@ -42,7 +43,7 @@ open public class PlayerGameInputGameLayer : AllBinaryGameLayer
     private var playerGameInput: PlayerGameInput
 public constructor (playerInputId: Int)                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), StaticViewPosition(0, 0, 0)){
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), StaticViewPosition(0, 0, 0)){
 var playerInputId = playerInputId
 
 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class LoggingInitInfo
             : Object
@@ -150,7 +151,7 @@ LoggingInitInfo.updateIfNeeded()
 : BasicArrayList{
 LoggingInitInfo.updateIfNeeded()
 
-    var allLogTypeVector: BasicArrayList = BasicArrayList()
+    var allLogTypeVector: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!

@@ -35,6 +35,7 @@ import org.allbinary.game.layer.special.SpecialGameInputInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class CheatGameInputProcessor : PlayerGameInput {
         
@@ -49,7 +50,7 @@ companion object {
     private val gameCanvas: AllBinaryGameCanvas
 public constructor (gameCanvas: AllBinaryGameCanvas)                        
 
-                            : super(BasicArrayList(),  -1){
+                            : super(BasicArrayListD(),  -1){
 var gameCanvas = gameCanvas
 
 

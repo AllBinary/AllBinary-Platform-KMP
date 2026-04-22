@@ -126,6 +126,7 @@ import org.allbinary.thread.ThreadFactoryUtil
 import org.allbinary.thread.ThreadUtil
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class DemoCanvas : RunnableCanvas
                 , GameCanvasRunnableInterface
@@ -208,7 +209,7 @@ companion object {
     var gameRunnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
 public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, highScoresFactoryInterface: HighScoresFactoryInterface, paintable: Paintable, overlayPaintable: InitUpdatePaintable, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, isContinue: Boolean)                        
 
-                            : super(commandListener, CurrentDisplayableFactory.getInstance()!!.DEFAULT_CHILD_NAME_LIST){
+                            : super(commandListener, CurrentDisplayableFactory.getInstance()!!.DEFAULT_CHILD_NAME_LIST, true){
     //var abeClientInformation = abeClientInformation
     //var commandListener = commandListener
     //var highScoresFactoryInterface = highScoresFactoryInterface
@@ -321,7 +322,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISP
                                 
                         else {
                             
-    var commandList: BasicArrayList = BasicArrayList()
+    var commandList: BasicArrayList = BasicArrayListD()
 
 commandList!!.add(gameCommandsFactory!!.START_COMMAND)
 
@@ -480,7 +481,7 @@ scrollSelectionForm!!.init(rectangle2, formType2)
                         if(this.getMenuForm() != ScrollSelectionFormNoneFactory.getInstance())
                         
                                     {
-                                    this.setMenuInputProcessor(CommandFormInputProcessor(BasicArrayList(),  -1, this, this.getMenuForm()))
+                                    this.setMenuInputProcessor(CommandFormInputProcessor(BasicArrayListD(),  -1, this, this.getMenuForm()))
 
                                     }
                                 

@@ -32,26 +32,23 @@ open public class BasicDecimal
         
 companion object {
             
-    val ZERO_BIGDECIMAL: BasicDecimal = BasicDecimal()
+    val ZERO_BIGDECIMAL: BasicDecimal = BasicDecimal(0)
+
+    open fun create(bigDecimal: BasicDecimal)
+        //nullable = true from not(false or (false and false)) = true
+: BasicDecimal{
+    //var bigDecimal = bigDecimal
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicDecimal(bigDecimal!!.getUnscaled())
+}
+
 
         }
             
     private var units: Long
-public constructor (bigDecimal: BasicDecimal)
-            : super()
-        {
-var bigDecimal = bigDecimal
-this.units= bigDecimal!!.getUnscaled()
-this.updateScaled()
-}
-
-public constructor ()
-            : super()
-        {
-this.units= 0
-this.updateScaled()
-}
-
 public constructor (units: Long)
             : super()
         {

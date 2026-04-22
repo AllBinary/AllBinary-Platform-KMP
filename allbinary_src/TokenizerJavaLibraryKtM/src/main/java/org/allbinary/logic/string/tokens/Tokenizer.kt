@@ -28,6 +28,7 @@
 import java.util.Hashtable
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class Tokenizer
             : Object
@@ -80,7 +81,7 @@ this.endSep= endSep
 : BasicArrayList{
 var string = string
 
-    var tokenList: BasicArrayList = BasicArrayList()
+    var tokenList: BasicArrayList = BasicArrayListD()
 
 
     var index: Int = 0

@@ -13,6 +13,7 @@
         
 import org.allbinary.animation.Animation
 import org.allbinary.game.combat.weapon.WeaponProperties
+import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.physics.movement.Movement
@@ -28,7 +29,7 @@ open public class TempExplosionWeaponLayer : SimpleWeaponLayer {
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(0)
 public constructor (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition, timeDelay: Int)                        
 
-                            : super(name, movement, animationInterface, rectangle, viewPosition){
+                            : super(name, RemoteInfo.REMOTE_INFO,  -1, movement, animationInterface, SimpleWeaponLayer.createDestroyed(), rectangle, viewPosition){
     //var name = name
     //var movement = movement
     //var animationInterface = animationInterface

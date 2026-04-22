@@ -41,7 +41,27 @@ import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class TitleAnimation : SpecialAnimation {
         
+companion object {
+            
+    open fun create(animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int)
+        //nullable = true from not(false or (false and false)) = true
+: TitleAnimation{
+    //var animationInterfaceArray = animationInterfaceArray
+    //var basicColorArray = basicColorArray
+    //var dxArray = dxArray
+    //var dyArray = dyArray
+    //var y = y
+    //var width = width
 
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return TitleAnimation(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width, IndexedAnimationBehavior(1, 250))
+}
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var deltaX: Float= 0.0f
@@ -67,34 +87,6 @@ open public class TitleAnimation : SpecialAnimation {
     private var lastFrameStartTime: Long
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-public constructor (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray)                        
-
-                            : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, 0, Integer.MIN_VALUE, IndexedAnimationBehavior(1, 250)){
-    //var animationInterfaceArray = animationInterfaceArray
-    //var basicColorArray = basicColorArray
-    //var dxArray = dxArray
-    //var dyArray = dyArray
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int)                        
-
-                            : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width, IndexedAnimationBehavior(1, 250)){
-    //var animationInterfaceArray = animationInterfaceArray
-    //var basicColorArray = basicColorArray
-    //var dxArray = dxArray
-    //var dyArray = dyArray
-    //var y = y
-    //var width = width
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){

@@ -30,6 +30,7 @@
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.PointFactory
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GraphicsPipeline : BasicGraphicsPipeline {
         
@@ -51,7 +52,7 @@ var points = points
 {
 var aTheta = aTheta
 
-    var newVector: BasicArrayList = BasicArrayList()
+    var newVector: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = this.pointBasicArrayList!!.size()!!
@@ -73,7 +74,7 @@ var aTheta = aTheta
     var secondY: Double = (secondPoint!!.getX() *Math.sin(aTheta)) +(secondPoint!!.getY() *Math.cos(aTheta))
 
 
-    var point: GPoint = PointFactory.getInstance()!!.getInstance((secondX.toInt()), (secondY.toInt()))!!
+    var point: GPoint = PointFactory.getInstance()!!.getInstance0((secondX.toInt()), (secondY.toInt()))!!
 
 newVector!!.add(point)
 }

@@ -55,6 +55,7 @@ import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.apache.commons.lang3.StringEscapeUtils
 import org.w3c.dom.Document
 
@@ -1253,7 +1254,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SEMICOLON)
 
 
-    var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayList())!!
+    var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayListD())!!
 
 
 

@@ -36,6 +36,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class PlayerGameInput : GameInput
                 , GameKeyEventListenerInterface {
@@ -46,7 +47,7 @@ open public class PlayerGameInput : GameInput
     private val playerInputId: Int
 public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int)                        
 
-                            : this(gameKeyEventList, BasicArrayList(), playerInputId){
+                            : this(gameKeyEventList, BasicArrayListD(), playerInputId){
     //var gameKeyEventList = gameKeyEventList
     //var playerInputId = playerInputId
 

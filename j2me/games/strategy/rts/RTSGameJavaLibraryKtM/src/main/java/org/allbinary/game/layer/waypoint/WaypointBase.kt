@@ -37,6 +37,7 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.pathfinding.MultipassState
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class WaypointBase
             : Object
@@ -49,7 +50,7 @@ companion object {
 
         }
             
-    private val connectedWaypointList: BasicArrayList = BasicArrayList()
+    private val connectedWaypointList: BasicArrayList = BasicArrayListD()
 
     private val sound: Sound
 

@@ -32,6 +32,7 @@ import javax.microedition.lcdui.NullCanvas
 import org.allbinary.device.NullGL10
 import org.allbinary.graphics.opengles.renderer.AllBinaryRendererBase3
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.image.ImageCache
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.image.PreResourceImageUtil
@@ -48,7 +49,7 @@ open public class OpenGLImageCache : ImageCache {
 
     private val lock: SynchObject = SynchObject()
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     private var renderer: AllBinaryRendererBase3 = AllBinaryRendererBase3()
 public constructor (){

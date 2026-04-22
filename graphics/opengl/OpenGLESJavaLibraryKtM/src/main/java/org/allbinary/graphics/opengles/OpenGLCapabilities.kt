@@ -34,6 +34,7 @@ import org.allbinary.image.opengles.OpenGLESGL10ImageFactory
 import org.allbinary.image.opengles.OpenGLESGL11VBOImageFactory
 import org.allbinary.image.opengles.OpenGLImageSpecificFactory
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
@@ -638,7 +639,7 @@ stringBuffer!!.append(" GL_EXTENSIONS: ")
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.SPACE)
 
 
-    var list: BasicArrayList = tokenizer.getTokens(this.glExtensions, BasicArrayList())!!
+    var list: BasicArrayList = tokenizer.getTokens(this.glExtensions, BasicArrayListD())!!
 
 
     var size: Int = list.size()!!

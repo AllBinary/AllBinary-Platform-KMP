@@ -40,6 +40,7 @@ import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GroupLayerManagerListener : LayerManagerEventListener {
         
@@ -62,7 +63,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 private constructor (){
 LayerManagerEventHandler.getInstance()!!.addListener(this)
 }
@@ -341,7 +342,7 @@ var total = total
 
         while(this.list.size() <= total +1)
         {
-this.list.add(BasicArrayList())
+this.list.add(BasicArrayListD())
 }
 
 }

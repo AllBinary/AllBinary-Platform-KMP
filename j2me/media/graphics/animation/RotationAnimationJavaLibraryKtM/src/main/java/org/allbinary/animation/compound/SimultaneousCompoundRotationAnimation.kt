@@ -32,7 +32,9 @@ import org.allbinary.animation.RotationAnimation
 import org.allbinary.direction.Direction
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.math.Angle
+import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
+import org.allbinary.util.CircularIndexUtil
 
 open public class SimultaneousCompoundRotationAnimation : RotationAnimation {
         
@@ -40,7 +42,7 @@ open public class SimultaneousCompoundRotationAnimation : RotationAnimation {
     private var animationInterfaceArray: Array<RotationAnimation?>
 public constructor (animationInterfaceArray: Array<RotationAnimation?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
     //var animationBehavior = animationBehavior
 

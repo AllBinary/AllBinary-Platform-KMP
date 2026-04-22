@@ -29,6 +29,7 @@ import org.allbinary.debug.DebugFactory
 import org.allbinary.debug.NoDebug
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class LicenseInitInfo
             : Object
@@ -37,7 +38,7 @@ open public class LicenseInitInfo
 
     private var id: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    private var serverList: BasicArrayList = BasicArrayList()
+    private var serverList: BasicArrayList = BasicArrayListD()
  constructor ()
             : super()
         {

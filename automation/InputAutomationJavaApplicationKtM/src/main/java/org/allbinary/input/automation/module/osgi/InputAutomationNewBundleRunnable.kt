@@ -50,6 +50,7 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.thread.RunnableInterface
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class InputAutomationNewBundleRunnable
             : Object
@@ -82,7 +83,7 @@ public constructor (inputAutomationBundleActivator: InputAutomationBundleActivat
         {
 var inputAutomationBundleActivator = inputAutomationBundleActivator
 this.inputAutomationBundleActivator= inputAutomationBundleActivator
-this.fileBasicArrayList= BasicArrayList()
+this.fileBasicArrayList= BasicArrayListD()
 }
 
 
@@ -274,7 +275,7 @@ this.logUtil!!.putF("File: " +file.getAbsolutePath() +" isDirectory: " +file.isD
 : BasicArrayList{
 this.logUtil!!.putF(this.commonStrings!!.START, this, "getInstalledJarSymbolicNameBasicArrayList")
 
-    var vector: BasicArrayList = BasicArrayList()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
     var bundleContext: BundleContext = InputAutomationBundleActivator.getBundleContext()!!
@@ -368,7 +369,7 @@ nextSymbolicName= list.get(index) as String
 : BasicArrayList{
 this.logUtil!!.putF(this.commonStrings!!.START, this, "findNewModules")
 
-    var vector: BasicArrayList = BasicArrayList()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
     var hashMap: HashMap<Any, Any> = this.getAllJarSymbolicNameHashMap()!!

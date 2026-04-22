@@ -27,6 +27,7 @@
         
 import javax.microedition.lcdui.Graphics
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.string.CommonSeps
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -37,7 +38,7 @@ import org.allbinary.logic.NullUtil
 open public class MultiSelectPaintable : SelectionHudPaintable {
         
 
-    private val rootNameList: BasicArrayList = BasicArrayList()
+    private val rootNameList: BasicArrayList = BasicArrayListD()
 
     private var totalCharArray: CharArray = NullUtil.getInstance()!!.NULL_CHAR_ARRAY
 

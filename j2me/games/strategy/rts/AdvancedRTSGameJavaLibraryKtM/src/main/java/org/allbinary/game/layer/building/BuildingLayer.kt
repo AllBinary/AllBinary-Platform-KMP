@@ -27,29 +27,32 @@
         
 import java.util.Hashtable
 import javax.microedition.lcdui.Graphics
+import org.allbinary.animation.NullAnimationFactory
+import org.allbinary.animation.NullIndexedAnimationFactory
+import org.allbinary.game.identification.GroupFactory
+import org.allbinary.game.input.form.NullRTSFormInputFactory
 import org.allbinary.game.input.form.RTSFormInput
 import org.allbinary.game.input.form.VisibleCellPositionsSingleton
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.AdvancedRTSPlayerLayerInterface
+import org.allbinary.game.layer.AdvancedRTSProperties
 import org.allbinary.game.layer.CollidableRTSBehavior
 import org.allbinary.game.layer.RTSLayerUtil
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.game.layer.waypoint.Waypoint
+import org.allbinary.game.view.TileLayerPositionIntoViewPosition
+import org.allbinary.graphics.RectangleFactory
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.animation.RotationAnimationInterfaceCompositeInterface
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.combat.damage.DamageFloaters
-import org.allbinary.game.combat.damage.PtsDamageFloaters
-import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.GameFeatureFactory
-import org.allbinary.game.graphics.hud.BasicHudFactory
 import org.allbinary.game.health.Health
-import org.allbinary.game.health.HealthBar
-import org.allbinary.game.health.HealthBarTwodAnimation
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.GeographicMapCellPositionAreaBase
 import org.allbinary.game.layer.NullPathFindingLayer
@@ -57,9 +60,7 @@ import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.game.tracking.TrackingEventListenerInterface
 import org.allbinary.graphics.Rectangle
-import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
-import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.SelectSound
@@ -67,9 +68,9 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapDirectionUtil
 import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
 import org.allbinary.time.TimeDelayHelper
+import org.allbinary.util.BasicArrayListS
 import org.allbinary.weapon.media.audio.ExplosionBasicSound
 import org.allbinary.game.multiplayer.layer.RemoteInfo
-import org.allbinary.logic.NullUtil
 
 open public class BuildingLayer : AdvancedRTSGameLayer
                 , RotationAnimationInterfaceCompositeInterface
@@ -77,6 +78,25 @@ open public class BuildingLayer : AdvancedRTSGameLayer
         
 companion object {
             
+                @Throws(Exception::class)
+            
+    open fun createSimulated()
+        //nullable = true from not(false or (false and true)) = true
+: BuildingLayer{
+
+    var nullAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance()!!
+
+
+    var nullIndexedAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BuildingLayer(RemoteInfo.REMOTE_INFO, SimulatedBuildingPropertiesFactory.getInstance(), AdvancedRTSProperties.createSimulated(), GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0)
+}
+
+
     open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
@@ -107,10 +127,12 @@ companion object {
     private val healthBar: Paintable
 
     private val pathsHashtable: Hashtable<Any, Any>
-public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+public constructor (remoteInfo: RemoteInfo, buildingPropertiesFactory: BuildingPropertiesFactory, advancedRTSProperties: AdvancedRTSProperties, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
-                            : super(remoteInfo, NullPathFindingLayer.NULL_PATH_FINDING_LAYER, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
+                            : super(remoteInfo, NullPathFindingLayer.NULL_PATH_FINDING_LAYER, advancedRTSProperties, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
     //var remoteInfo = remoteInfo
+    //var buildingPropertiesFactory = buildingPropertiesFactory
+    //var advancedRTSProperties = advancedRTSProperties
     //var groupInterface = groupInterface
     //var rootName = rootName
     //var name = name
@@ -131,68 +153,17 @@ public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootN
                     
 this.setCollidableInferface(CollidableRTSBehavior(this, true))
 this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, SelectSound.getInstance()))
-
-    var damageFloaters: DamageFloaters = DamageFloaters.getInstance()!!
-
-
-    var damageFloatersPaintableInterface: Paintable = NullPaintable.getInstance()!!
-
-
-    
-                        if(Features.getInstance()!!.isFeature(GameFeatureFactory.getInstance()!!.DAMAGE_FLOATERS))
-                        
-                                    {
-                                    damageFloaters= PtsDamageFloaters(this)
-damageFloatersPaintableInterface= damageFloaters
-
-                                    }
-                                
-                        else {
-                            damageFloaters= DamageFloaters()
-
-                        }
-                            
-this.damageFloaters= damageFloaters
-this.damageFloatersPaintableInterface= damageFloatersPaintableInterface
-
-    var healthBar: Paintable = NullPaintable.getInstance()!!
-
-
-    
-                        if(Features.getInstance()!!.isFeature(GameFeatureFactory.getInstance()!!.HEALTH_BARS))
-                        
-                                    {
-                                    healthBar= HealthBar(this, this.getHealthInterface(), HealthBarTwodAnimation(this as AllBinaryLayer, BasicHudFactory.getInstance()!!.BOTTOMLEFT),  -1)
-
-                                    }
-                                
-this.healthBar= healthBar
-this.pathsHashtable= Hashtable<Any, Any>()
+this.damageFloaters= buildingPropertiesFactory!!.getDamageFloaters(this)
+this.damageFloatersPaintableInterface= buildingPropertiesFactory!!.damageFloatersPaintableInterface
+this.healthBar= buildingPropertiesFactory!!.getHealthBar(this)
+this.pathsHashtable= buildingPropertiesFactory!!.getHashtable()
 this.setMaxLevel(30)
 this.setProductivity(1)
 this.setEfficiency(this.calculateEfficiency())
-this.efficiencyPerLevel= 10000 /this.getMaxLevel() +10000 % this.getMaxLevel()
+this.efficiencyPerLevel= buildingPropertiesFactory!!.getEfficiencyPerLevel(this)
 this.efficiency= this.efficiencyPerLevel
 this.generateMoveOutOfBuildAreaPaths()
-this.trackingEvent= TrackingEvent(this)
-}
-
-public constructor ()                        
-
-                            : super(){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableRTSBehavior(this, true))
-this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, SelectSound.getInstance()))
-this.efficiencyPerLevel= 0
-this.efficiency= 0
-this.trackingEvent= TrackingEvent()
-this.damageFloaters= DamageFloaters.getInstance()
-this.damageFloatersPaintableInterface= this.damageFloaters
-this.healthBar= NullPaintable.getInstance()
-this.pathsHashtable= NullUtil.getInstance()!!.NULL_TABLE
+this.trackingEvent= buildingPropertiesFactory!!.getTrackingEvent(this)
 }
 
 
@@ -508,7 +479,7 @@ this.efficiency= efficiency
                         for (index2 in occupyList!!.size() -1 downTo 0)
 
         {
-pathsList= BasicArrayList()
+pathsList= BasicArrayListD()
 occupyGeographicMapCellPosition= occupyList!!.get(index2) as GeographicMapCellPosition
 
 
@@ -523,7 +494,7 @@ surroundGeographicMapCellPosition= surroundList!!.get(index) as GeographicMapCel
                         if(geographicMapDirectionUtil!!.getEightDirectionFromCellPositionToAdjacentCellPosition(surroundGeographicMapCellPosition, occupyGeographicMapCellPosition) != NO_DIRECTION)
                         
                                     {
-                                    list= BasicArrayList(1)
+                                    list= BasicArrayListS(1)
 list.add(surroundGeographicMapCellPosition)
 pathsList!!.add(list)
 

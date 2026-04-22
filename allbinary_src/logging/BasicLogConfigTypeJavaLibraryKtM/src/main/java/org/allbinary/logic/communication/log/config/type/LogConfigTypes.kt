@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class LogConfigTypes
             : Object
@@ -33,7 +34,7 @@ open public class LogConfigTypes
         
 companion object {
             
-    var LOGGING: BasicArrayList = BasicArrayList()
+    var LOGGING: BasicArrayList = BasicArrayListD()
 
         }
             private constructor ()

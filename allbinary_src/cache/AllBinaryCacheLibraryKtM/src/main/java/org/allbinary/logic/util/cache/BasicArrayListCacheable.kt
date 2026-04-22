@@ -26,9 +26,9 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringUtil
-import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
-open public class BasicArrayListCacheable : BasicArrayList
+open public class BasicArrayListCacheable : BasicArrayListD
                 , CacheableInterface {
         
 

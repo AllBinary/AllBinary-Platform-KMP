@@ -38,6 +38,7 @@ import org.allbinary.logic.system.hardware.components.interfaces.HardwareCompone
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AndroidHardware
             : Object
@@ -49,7 +50,7 @@ open public class AndroidHardware
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var componentInterfaceVector: BasicArrayList = BasicArrayList()
+    private var componentInterfaceVector: BasicArrayList = BasicArrayListD()
 
     private val PROC_BUS_INPUT_DIRECTORY: String = "/proc/bus/input/"
 
@@ -123,7 +124,7 @@ this.logUtil!!.put("Hardware Data: " +this.toString(), this, commonStrings!!.INI
         //nullable = true from not(false or (false and false)) = true
 : LineNumberReader{
     //var filePath = filePath
-this.componentInterfaceVector= BasicArrayList()
+this.componentInterfaceVector= BasicArrayListD()
 
     var pciFile: FileReader = FileReader(filePath)
 

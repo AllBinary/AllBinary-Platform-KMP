@@ -123,7 +123,7 @@ objectArray[index++]= enumeration.nextElement()!!
 : BasicArrayList{
 var hashtable = hashtable
 
-    var list: BasicArrayList = BasicArrayList(hashtable.size)
+    var list: BasicArrayList = BasicArrayListS(hashtable.size)
 
 
     var enumeration: Enumeration<Any?> = hashtable.keys()!!

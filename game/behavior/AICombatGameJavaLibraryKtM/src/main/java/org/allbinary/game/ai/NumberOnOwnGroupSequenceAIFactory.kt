@@ -35,6 +35,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class NumberOnOwnGroupSequenceAIFactory
             : Object
@@ -61,7 +62,7 @@ open public class NumberOnOwnGroupSequenceAIFactory
     var integerArray: Array<Integer?> = NumberInSameGroupSequence.getInstance()!!.NUMBER_ON_SAME_TEAM_SEQUENCE
 
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
 

@@ -33,6 +33,7 @@ import org.allbinary.math.Angle
 import org.allbinary.math.AngleFactory
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListS
 import org.allbinary.vector.VectorInfo
 
 open public class VectorRotationGenerator
@@ -95,10 +96,10 @@ var frames = frames
     var angleIncrement: Int = totalAngle /frames
 
 
-    var pointsBasicArrayList: BasicArrayList = BasicArrayList(totalAngle /angleIncrement)
+    var pointsBasicArrayList: BasicArrayList = BasicArrayListS(totalAngle /angleIncrement)
 
 
-    var pointBasicArrayList: BasicArrayList = BasicArrayList(points.size)
+    var pointBasicArrayList: BasicArrayList = BasicArrayListS(points.size)
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
@@ -114,7 +115,7 @@ var frames = frames
                         for (index in 0 until size)
 
         {
-pointBasicArrayList!!.add(pointFactory!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))
+pointBasicArrayList!!.add(pointFactory!!.getInstance0(points[index]!![0]!!, points[index]!![1]!!))
 }
 
 

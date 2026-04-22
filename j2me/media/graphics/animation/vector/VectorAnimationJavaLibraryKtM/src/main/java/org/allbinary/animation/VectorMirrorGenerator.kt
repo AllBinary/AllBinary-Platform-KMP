@@ -31,6 +31,7 @@ import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListS
 
 open public class VectorMirrorGenerator
             : Object
@@ -86,7 +87,7 @@ var width = width
                 
 
 
-    var pointsBasicArrayList: BasicArrayList = BasicArrayList(size)
+    var pointsBasicArrayList: BasicArrayList = BasicArrayListS(size)
 
 
 
@@ -97,7 +98,7 @@ var width = width
         {
 nextPoints= points[frame]!!
 size2= nextPoints!!.size
-pointBasicArrayList= BasicArrayList(size2)
+pointBasicArrayList= BasicArrayListS(size2)
 
 
 
@@ -105,7 +106,7 @@ pointBasicArrayList= BasicArrayList(size2)
                         for (index in 0 until size2)
 
         {
-pointBasicArrayList!!.add(pointFactory!!.getInstance(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!))
+pointBasicArrayList!!.add(pointFactory!!.getInstance0(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!))
 }
 
 pointsBasicArrayList!!.add(pointBasicArrayList)

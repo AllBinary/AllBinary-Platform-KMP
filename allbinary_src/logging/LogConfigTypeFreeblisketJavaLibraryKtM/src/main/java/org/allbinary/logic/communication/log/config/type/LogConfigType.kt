@@ -27,6 +27,7 @@
         
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class LogConfigType
             : Object
@@ -34,7 +35,7 @@ open public class LogConfigType
         
 companion object {
             
-    var availableLogConfigTypes: BasicArrayList = BasicArrayList()
+    var availableLogConfigTypes: BasicArrayList = BasicArrayListD()
 
         }
             

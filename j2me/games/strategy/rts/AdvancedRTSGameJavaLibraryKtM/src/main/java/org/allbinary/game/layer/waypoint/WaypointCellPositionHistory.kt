@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.graphics.CellPosition
 import org.allbinary.layer.AllBinaryLayer
 
@@ -55,9 +56,9 @@ companion object {
             {
             }            
         
-    private var positionList: BasicArrayList = BasicArrayList()
+    private var positionList: BasicArrayList = BasicArrayListD()
 
-    private var layerList: BasicArrayList = BasicArrayList()
+    private var layerList: BasicArrayList = BasicArrayListD()
 
     open fun add(cellPosition: CellPosition, layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true

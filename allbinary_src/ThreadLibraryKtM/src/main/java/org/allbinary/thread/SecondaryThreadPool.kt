@@ -37,7 +37,7 @@ open public class SecondaryThreadPool : ThreadPool {
         
 companion object {
             
-    private val instance: ThreadPool = SecondaryThreadPool("Secondary", 1)
+    private val instance: ThreadPool = SecondaryThreadPool("Secondary", 1, ThreadPool.NORMAL_PRIORITY)
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -51,11 +51,12 @@ companion object {
 
 
         }
-            public constructor (poolName: String, numThreads: Int)                        
+            public constructor (poolName: String, numThreads: Int, priority: Int)                        
 
-                            : super(poolName, numThreads){
+                            : super(poolName, numThreads, priority){
     //var poolName = poolName
     //var numThreads = numThreads
+    //var priority = priority
 
 
                             //For kotlin this is before the body of the constructor.

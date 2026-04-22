@@ -28,12 +28,9 @@
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
-import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.animation.NullAnimationFactory
-import org.allbinary.animation.NullIndexedAnimationFactory
 import org.allbinary.game.collision.CollidableBaseBehavior
-import org.allbinary.game.combat.damage.ExplosionResources
 import org.allbinary.game.combat.destroy.DestroyedLayerProcessor
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.configuration.GameConfigurationUtil
@@ -88,35 +85,6 @@ companion object {
     private var weaponProperties: WeaponProperties = WeaponProperties.NULL_WEAPON_PROPERTIES
 
     private val multiPlayerType: Int
-protected constructor (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
-
-                            : this(name, movement, animationInterface, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.getProcedural(ExplosionResources.getInstance()!!.THIRD_EXPLOSION_RESOURCE)!!.getInstance(NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0)), rectangle, viewPosition){
-    //var name = name
-    //var movement = movement
-    //var animationInterface = animationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-protected constructor (name: String, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
-
-                            : this(name, RemoteInfo.REMOTE_INFO,  -1, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
-    //var name = name
-    //var movement = movement
-    //var animationInterface = animationInterface
-    //var destroyedAnimationInterface = destroyedAnimationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 protected constructor (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){

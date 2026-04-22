@@ -32,6 +32,31 @@ companion object {
             
     val NULL_CUSTOM_POINT: CustomGPoint = CustomGPoint(0, 0, 0)
 
+    open fun getInstance(point: GPoint)
+        //nullable =  from not(true or (false and false)) = 
+: CustomGPoint{
+    //var point = point
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return CustomGPoint(point.getX(), point.getY(), point.getZ())
+}
+
+
+    open fun getInstance3(x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
+: CustomGPoint{
+    //var x = x
+    //var y = y
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return CustomGPoint(x, y, 3)
+}
+
+
         }
             
     private var x: Int= 0
@@ -39,27 +64,6 @@ companion object {
     private var y: Int= 0
 
     private var z: Int= 0
-private constructor (point: GPoint)                        
-
-                            : super(point){
-var point = point
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (x: Int, y: Int)                        
-
-                            : super(x, y){
-var x = x
-var y = y
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (x: Int, y: Int, z: Int)                        
 
                             : super(x, y, z){

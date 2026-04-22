@@ -35,6 +35,7 @@ import org.allbinary.logic.system.os.OperatingSystemFactory
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class Features
             : Object
@@ -67,8 +68,8 @@ companion object {
 private constructor ()
             : super()
         {
-list= BasicArrayList()
-defaultList= BasicArrayList()
+list= BasicArrayListD()
+defaultList= BasicArrayListD()
 this.init()
 }
 

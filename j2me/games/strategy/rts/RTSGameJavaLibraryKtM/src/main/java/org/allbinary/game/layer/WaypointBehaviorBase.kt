@@ -28,10 +28,12 @@
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.layer.waypoint.WaypointBase
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.game.tick.TickableInterface
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.util.BasicArrayListS
 
 open public class WaypointBehaviorBase
             : Object
@@ -47,7 +49,7 @@ open public class WaypointBehaviorBase
 public constructor ()
             : super()
         {
-this.ownedWaypointList= BasicArrayList(1)
+this.ownedWaypointList= BasicArrayListS(1)
 }
 
 
@@ -305,7 +307,7 @@ this.waypoint= waypoint
 }
 
 
-    private val steeringVisitorList: BasicArrayList = BasicArrayList()
+    private val steeringVisitorList: BasicArrayList = BasicArrayListD()
 
 }
                 

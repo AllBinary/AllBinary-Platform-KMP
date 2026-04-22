@@ -35,6 +35,7 @@ import org.allbinary.image.ImageCache
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.microemu.android.device.AndroidImageInterface
 
 open public class ImageScaleUtil
@@ -69,13 +70,13 @@ private constructor ()
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-    private val imageBasicArrayList: BasicArrayList = BasicArrayList()
+    private val imageBasicArrayList: BasicArrayList = BasicArrayListD()
 
-    private val scaledImageBasicArrayList: BasicArrayList = BasicArrayList()
+    private val scaledImageBasicArrayList: BasicArrayList = BasicArrayListD()
 
-    private val scaleXBasicArrayList: BasicArrayList = BasicArrayList()
+    private val scaleXBasicArrayList: BasicArrayList = BasicArrayListD()
 
-    private val scaleYBasicArrayList: BasicArrayList = BasicArrayList()
+    private val scaleYBasicArrayList: BasicArrayList = BasicArrayListD()
 
                 @Throws(Exception::class)
             

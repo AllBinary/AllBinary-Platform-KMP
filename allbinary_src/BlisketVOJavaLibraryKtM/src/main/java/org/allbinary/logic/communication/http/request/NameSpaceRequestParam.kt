@@ -34,6 +34,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.logic.visual.dhtml.html.name.HtmlNameMathData
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class NameSpaceRequestParam
             : Object
@@ -77,7 +78,7 @@ this.value= value
     var sepTokenizer: Tokenizer = Tokenizer(NameSpaceRequestParamData.SEP)
 
 
-    var nameSpaceWithPropertiesVector: BasicArrayList = sepTokenizer!!.getTokens(packages, BasicArrayList())!!
+    var nameSpaceWithPropertiesVector: BasicArrayList = sepTokenizer!!.getTokens(packages, BasicArrayListD())!!
 
 
     
@@ -95,7 +96,7 @@ this.value= value
     var packageIndex: Int = 0
 
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var index: Int = 0
@@ -266,10 +267,10 @@ var properties = properties
     var packagePropertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
-    var propertyVector: BasicArrayList = propertiesTokenizer!!.getTokens(properties, BasicArrayList())!!
+    var propertyVector: BasicArrayList = propertiesTokenizer!!.getTokens(properties, BasicArrayListD())!!
 
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var propertyTokenizer: Tokenizer = Tokenizer(HtmlNameMathData.getInstance()!!.EQUALS)

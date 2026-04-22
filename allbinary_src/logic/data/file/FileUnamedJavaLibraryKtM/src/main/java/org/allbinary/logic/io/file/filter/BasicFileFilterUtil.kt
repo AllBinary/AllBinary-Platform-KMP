@@ -28,6 +28,7 @@
 import java.io.FileFilter
 import org.allbinary.logic.io.file.visitor.IncludeFileExtensionsBooleanFileVisitor
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicFileFilterUtil
             : Object
@@ -40,7 +41,7 @@ companion object {
 : FileFilter{
     //var extension = extension
 
-    var vector: BasicArrayList = BasicArrayList()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(extension)
 

@@ -96,7 +96,7 @@ gameNotificationEventHandler!!.addListener(this)
 : GPoint{
 var x = x
 var y = y
-this.point= CustomGPoint(0, 0)
+this.point= CustomGPoint.getInstance3(0, 0)
 this.point.setX(x)
 this.point.setY(y)
 

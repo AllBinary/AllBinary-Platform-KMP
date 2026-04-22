@@ -27,6 +27,7 @@
         
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AdvancedPlayerOwnedRTSLayers : PlayerOwnedRTSLayers {
         
@@ -36,21 +37,21 @@ open public class AdvancedPlayerOwnedRTSLayers : PlayerOwnedRTSLayers {
             {
             }            
         
-    private val unitsList: BasicArrayList = BasicArrayList()
+    private val unitsList: BasicArrayList = BasicArrayListD()
 
-    private val waypointsList: BasicArrayList = BasicArrayList()
+    private val waypointsList: BasicArrayList = BasicArrayListD()
 
-    private val buildingList: BasicArrayList = BasicArrayList()
+    private val buildingList: BasicArrayList = BasicArrayListD()
 
-    private val baseList: BasicArrayList = BasicArrayList()
+    private val baseList: BasicArrayList = BasicArrayListD()
 
-    private val garrisonList: BasicArrayList = BasicArrayList()
+    private val garrisonList: BasicArrayList = BasicArrayListD()
 
-    private val houseList: BasicArrayList = BasicArrayList()
+    private val houseList: BasicArrayList = BasicArrayListD()
 
-    private val labList: BasicArrayList = BasicArrayList()
+    private val labList: BasicArrayList = BasicArrayListD()
 
-    private val factoryList: BasicArrayList = BasicArrayList()
+    private val factoryList: BasicArrayList = BasicArrayListD()
 
     open fun addUnit(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true

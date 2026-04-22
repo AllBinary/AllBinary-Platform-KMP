@@ -28,6 +28,7 @@
 import org.allbinary.game.rand.MyRandomFactory
 import org.allbinary.logic.system.security.licensing.LockedUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class Advertisements
             : Object
@@ -39,9 +40,9 @@ open public class Advertisements
             {
             }            
         
-    private val bannerList: BasicArrayList = BasicArrayList()
+    private val bannerList: BasicArrayList = BasicArrayListD()
 
-    private val pageList: BasicArrayList = BasicArrayList()
+    private val pageList: BasicArrayList = BasicArrayListD()
 
     open fun addPage(advertisementProcessorInterface: AdvertisementProcessorInterface)
         //nullable = true from not(false or (false and false)) = true

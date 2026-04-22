@@ -54,7 +54,7 @@ companion object {
 
     val GIF: String = "gif"
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.util.visitor.Visitor
 
 open public class SteeringVisitor : Visitor {
@@ -36,7 +37,7 @@ open public class SteeringVisitor : Visitor {
             {
             }            
         
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     open fun getList()
         //nullable = true from not(false or (false and true)) = true

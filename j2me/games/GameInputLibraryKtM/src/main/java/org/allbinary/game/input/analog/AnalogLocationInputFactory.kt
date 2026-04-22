@@ -12,6 +12,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AnalogLocationInputFactory
             : Object
@@ -34,7 +35,7 @@ companion object {
 
         }
             
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {

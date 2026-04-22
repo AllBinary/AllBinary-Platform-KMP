@@ -33,6 +33,7 @@ import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class DatabaseEncoder
             : Object
@@ -103,10 +104,10 @@ var value = value
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SPACE)
 
 
-    var vector: BasicArrayList = tokenizer.getTokens(value, BasicArrayList())!!
+    var vector: BasicArrayList = tokenizer.getTokens(value, BasicArrayListD())!!
 
 
-    var byteVector: BasicArrayList = BasicArrayList()
+    var byteVector: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = vector.size()!!

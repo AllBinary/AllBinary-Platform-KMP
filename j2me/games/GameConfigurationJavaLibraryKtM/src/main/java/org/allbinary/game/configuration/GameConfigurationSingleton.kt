@@ -27,6 +27,7 @@
         
 import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameConfigurationSingleton
             : Object
@@ -55,7 +56,7 @@ companion object {
 private constructor ()
             : super()
         {
-this.list= BasicArrayList()
+this.list= BasicArrayListD()
 this.hashtable= Hashtable<Any, Any>()
 }
 

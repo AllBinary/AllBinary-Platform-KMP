@@ -27,14 +27,40 @@
         
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
+import javax.microedition.lcdui.NullCommandListener
+import org.allbinary.game.init.BasicBuildGameInitializerFactory
 import org.allbinary.game.layer.AllBinaryGameLayerManager
+import org.allbinary.game.score.NoHighScoresFactory
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.string.CommonStrings
 
 open public class NullGameCanvas : AllBinaryGameCanvas {
         
 companion object {
             
-    private val SINGLETON: NullGameCanvas = NullGameCanvas()
+    open fun create()
+        //nullable = true from not(false or (false and true)) = true
+: NullGameCanvas{
+
+        try {
+            
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NullGameCanvas(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER)
+} catch(e: Exception)
+            {
+LogUtil.getInstance()!!.put(CommonStrings.getInstance()!!.EXCEPTION, "NullGameCanvas", CommonStrings.getInstance()!!.GET_INSTANCE, e)
+
+
+
+                            throw RuntimeException(e)
+}
+
+}
+
+
+    private val SINGLETON: NullGameCanvas = create()!!
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -47,6 +73,8 @@ companion object {
 }
 
 
+                @Throws(Exception::class)
+            
     open fun getInstance(gameLayerManager: AllBinaryGameLayerManager)
         //nullable =  from not(true or (false and false)) = 
 : NullGameCanvas{
@@ -71,16 +99,12 @@ nullGameCanvas!!.setTitle(NO_GAME)
         }
             protected constructor (gameLayerManager: AllBinaryGameLayerManager)                        
 
-                            : super(gameLayerManager){
+                            : super(NullCommandListener.NULL_COMMAND_LISTENER, gameLayerManager, NoHighScoresFactory.getInstance(), BasicBuildGameInitializerFactory.NULL_BASE_BUILD_GMAE_INITIALIZER_FACTORY, false){
     //var gameLayerManager = gameLayerManager
 
 
                             //For kotlin this is before the body of the constructor.
                     
-super.setWait(1200)
-}
-
-private constructor (){
 super.setWait(1200)
 }
 

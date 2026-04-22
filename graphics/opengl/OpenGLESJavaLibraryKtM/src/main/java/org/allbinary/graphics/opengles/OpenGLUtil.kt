@@ -32,6 +32,7 @@ import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class OpenGLUtil
             : Object
@@ -75,9 +76,9 @@ companion object {
 
     private val anyType: SynchObject = SynchObject()
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
-    val runnableList: BasicArrayList = BasicArrayList()
+    val runnableList: BasicArrayList = BasicArrayListD()
 
     private var created: Boolean = false
 

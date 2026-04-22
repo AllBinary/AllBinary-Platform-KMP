@@ -26,6 +26,9 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.animation.Animation
+import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
+import org.allbinary.animation.NullIndexedAnimationFactory
+import org.allbinary.game.combat.damage.ExplosionResources
 import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.graphics.Rectangle
 import org.allbinary.physics.movement.Movement
@@ -33,38 +36,23 @@ import org.allbinary.view.ViewPosition
 
 open public class SimpleWeaponLayer : WeaponLayer {
         
-public constructor (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun createDestroyed()
+        //nullable = true from not(false or (false and true)) = true
+: Animation{
 
-                            : super(name, movement, animationInterface, rectangle, viewPosition){
-    //var name = name
-    //var movement = movement
-    //var animationInterface = animationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableWeaponBehavior(this, true))
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.getProcedural(ExplosionResources.getInstance()!!.THIRD_EXPLOSION_RESOURCE)!!.getInstance(NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0))
 }
 
-public constructor (name: String, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
-    //var name = name
-    //var movement = movement
-    //var animationInterface = animationInterface
-    //var destroyedAnimationInterface = destroyedAnimationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableWeaponBehavior(this, true))
-}
-
-public constructor (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
+        }
+            public constructor (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(name, remoteInfo, multiPlayerType, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
     //var name = name

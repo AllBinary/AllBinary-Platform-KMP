@@ -66,8 +66,8 @@ this.motionEventCircularPool= MotionEventCircularPool.getInstance(Integer.MAX_VA
     open fun mirrorVerticle(motionGestureEvent: MotionGestureEvent, halfWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 : MotionGestureEvent{
-var motionGestureEvent = motionGestureEvent
-var halfWidth = halfWidth
+    //var motionGestureEvent = motionGestureEvent
+    //var halfWidth = halfWidth
 
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(motionGestureEvent!!.getMotionGesture())!!
 
@@ -81,10 +81,10 @@ var halfWidth = halfWidth
     var pointFactory: PointFactory = PointFactory.getInstance()!!
 
 
-    var mirroredPreviousPoint: GPoint = pointFactory!!.getInstance(previousNewX, motionGestureEvent!!.getPreviousPoint()!!.getY())!!
+    var mirroredPreviousPoint: GPoint = pointFactory!!.getInstance0(previousNewX, motionGestureEvent!!.getPreviousPoint()!!.getY())!!
 
 
-    var mirroredCurrentPoint: GPoint = pointFactory!!.getInstance(currentNewX, motionGestureEvent!!.getCurrentPoint()!!.getY())!!
+    var mirroredCurrentPoint: GPoint = pointFactory!!.getInstance0(currentNewX, motionGestureEvent!!.getCurrentPoint()!!.getY())!!
 
 event.setPreviousPoint(mirroredPreviousPoint)
 event.setCurrentPoint(mirroredCurrentPoint)

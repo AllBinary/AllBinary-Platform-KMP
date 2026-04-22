@@ -29,6 +29,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class HighScores
             : Object
@@ -36,7 +37,7 @@ open public class HighScores
                 , HighScoresInterface {
         
 
-    private var orderedHighScoresList: BasicArrayList = BasicArrayList()
+    private var orderedHighScoresList: BasicArrayList = BasicArrayListD()
 
     private val name: String
 

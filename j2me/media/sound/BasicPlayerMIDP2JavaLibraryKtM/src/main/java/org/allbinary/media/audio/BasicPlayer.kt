@@ -32,6 +32,7 @@ import javax.microedition.media.PlayerListener
 import javax.microedition.media.TimeBase
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicPlayer
             : Object
@@ -52,7 +53,7 @@ companion object {
 
     private var timeBase: TimeBase
 
-    val listenersList: BasicArrayList = BasicArrayList()
+    val listenersList: BasicArrayList = BasicArrayListD()
 public constructor ()
             : super()
         {

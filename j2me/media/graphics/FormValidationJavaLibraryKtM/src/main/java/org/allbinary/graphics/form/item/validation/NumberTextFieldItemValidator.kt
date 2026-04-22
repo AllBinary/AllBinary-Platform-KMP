@@ -34,6 +34,7 @@ import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class NumberTextFieldItemValidator : ValidatorBase {
         
@@ -143,7 +144,7 @@ result= BooleanFactory.getInstance()!!.FALSE
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var string: String = this.textFieldItem!!.getString()!!

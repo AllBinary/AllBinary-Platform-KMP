@@ -29,6 +29,7 @@ import org.allbinary.debug.DebugFactory
 import org.allbinary.debug.NoDebug
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class LicenseInitInfo
             : Object
@@ -37,7 +38,7 @@ open public class LicenseInitInfo
 
     private var id: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    private var serverVector: BasicArrayList = BasicArrayList()
+    private var serverVector: BasicArrayList = BasicArrayListD()
 public constructor ()
             : super()
         {
@@ -89,7 +90,7 @@ this.id= value
     open fun clearServers()
         //nullable = true from not(false or (false and true)) = true
 {
-this.serverVector= BasicArrayList()
+this.serverVector= BasicArrayListD()
 }
 
 

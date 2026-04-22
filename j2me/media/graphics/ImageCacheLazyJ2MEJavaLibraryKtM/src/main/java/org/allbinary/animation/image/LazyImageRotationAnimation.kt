@@ -36,10 +36,13 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.image.ImageCache
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.math.AngleFactory
+import org.allbinary.math.AngleInfo
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.ScaleProperties
+import org.allbinary.util.CircularIndexUtil
 
 open public class LazyImageRotationAnimation : RotationAnimation {
         
@@ -66,7 +69,7 @@ companion object {
     var scaleProperties: ScaleProperties = ScaleProperties.instance
 public constructor (layoutIndex: Int, instanceId: Int, scaleProperties: ScaleProperties, animationInterfaceFactoryInterface: BaseImageAnimationFactory, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), animationBehavior){
     //var layoutIndex = layoutIndex
     //var instanceId = instanceId
     //var scaleProperties = scaleProperties
@@ -85,7 +88,7 @@ this.animationInterfaceFactoryInterface= animationInterfaceFactoryInterface
 imageCache!!.add(this)
 this.scaleProperties= scaleProperties
 this.NULL_INDEX_ANIMATION= NullRotationAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
-this.animation= object: RotationAnimation(animationBehavior)
+this.animation= object: RotationAnimation(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), animationBehavior)
                                 {
                                 
     private var index: Int= 0

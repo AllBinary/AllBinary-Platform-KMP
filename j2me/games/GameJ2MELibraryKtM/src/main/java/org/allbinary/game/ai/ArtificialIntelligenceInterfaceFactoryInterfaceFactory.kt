@@ -29,6 +29,7 @@
         
 import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class ArtificialIntelligenceInterfaceFactoryInterfaceFactory
@@ -62,7 +63,7 @@ companion object {
     open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
-list= BasicArrayList()
+list= BasicArrayListD()
 }
 
 

@@ -27,6 +27,7 @@
         
 import javax.microedition.lcdui.Image
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class OpenGLESImageExclusionUtil
             : Object
@@ -51,7 +52,7 @@ companion object {
             
     private val EXCLUSION: String = "font"
 
-    val list: BasicArrayList = BasicArrayList()
+    val list: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {

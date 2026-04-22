@@ -60,8 +60,8 @@ private constructor ()
 }
 
 
-    open fun getInstance(x: Int, y: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstance0(x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
 : GPoint{
 var x = x
 var y = y

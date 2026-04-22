@@ -33,6 +33,7 @@ import org.allbinary.graphics.font.MyFont
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class TextAnimation : IndexedAnimation {
         
@@ -105,7 +106,7 @@ graphics.drawString(this.textArrayP[index]!!, x, y +(index *height), anchor)
 {
 var text = text
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     

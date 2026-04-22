@@ -27,6 +27,7 @@
         
 import javax.microedition.lcdui.Graphics
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
@@ -67,8 +68,8 @@ companion object {
 public constructor ()
             : super()
         {
-this.list= BasicArrayList()
-this.visitedList= BasicArrayList()
+this.list= BasicArrayListD()
+this.visitedList= BasicArrayListD()
 this.init()
 }
 
@@ -296,7 +297,7 @@ value= this.visitedList!!.get(index) as Boolean
 : BasicArrayList{
 var pathList = pathList
 
-    var inPathButNotTrackedList: BasicArrayList = BasicArrayList()
+    var inPathButNotTrackedList: BasicArrayList = BasicArrayListD()
 
 
     var localList: BasicArrayList = this.list

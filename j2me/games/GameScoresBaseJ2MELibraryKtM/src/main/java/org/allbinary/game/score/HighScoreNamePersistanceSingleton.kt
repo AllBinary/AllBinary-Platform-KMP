@@ -48,6 +48,7 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 import org.allbinary.persistance.PlatformRecordIdUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class HighScoreNamePersistanceSingleton
             : Object
@@ -85,7 +86,7 @@ companion object {
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    private var nameBasicArrayList: BasicArrayList = BasicArrayList()
+    private var nameBasicArrayList: BasicArrayList = BasicArrayListD()
 
     open fun clear()
         //nullable = true from not(false or (false and true)) = true

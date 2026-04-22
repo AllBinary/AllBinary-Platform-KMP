@@ -31,6 +31,7 @@ import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameInput
             : Object
@@ -48,7 +49,7 @@ open public class GameInput
     val isRemoveDuplicateKeyPresses: Boolean
 public constructor (gameKeyEventList: BasicArrayList)                        
 
-                            : this(gameKeyEventList, BasicArrayList()){
+                            : this(gameKeyEventList, BasicArrayListD()){
     //var gameKeyEventList = gameKeyEventList
 
 

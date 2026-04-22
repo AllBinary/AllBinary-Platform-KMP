@@ -32,31 +32,22 @@ open public class ViewPosition : GPoint {
         
 companion object {
             
-    val NULL_VIEW_POSITION: ViewPosition = ViewPosition()
+    open fun getInstanceD()
+        //nullable = true from not(false or (false and true)) = true
+: ViewPosition{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ViewPosition(0, 0, 0)
+}
+
+
+    val NULL_VIEW_POSITION: ViewPosition = ViewPosition.getInstanceD()!!
 
         }
             
     private var allbinaryLayer: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
-public constructor ()                        
-
-                            : super(0, 0, 0){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-protected constructor (x: Int, y: Int)                        
-
-                            : super(x, y, 0){
-var x = x
-var y = y
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 protected constructor (x: Int, y: Int, z: Int)                        
 
                             : super(x, y, z){

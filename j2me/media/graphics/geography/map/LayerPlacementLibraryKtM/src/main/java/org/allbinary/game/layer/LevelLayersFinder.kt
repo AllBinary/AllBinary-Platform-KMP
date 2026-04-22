@@ -32,6 +32,7 @@ import java.util.Hashtable
 import org.allbinary.layer.Layer
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class LevelLayersFinder
             : Object
@@ -67,7 +68,7 @@ var hashtable = hashtable
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var enumeration: Enumeration<Any?> = hashtable.keys()!!

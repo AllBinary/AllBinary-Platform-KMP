@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.game.layer.AllBinaryGameLayerManager
@@ -47,7 +48,7 @@ import org.allbinary.time.TimeDelayHelper
 open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGenerator {
         
 
-    val list: BasicArrayList = BasicArrayList()
+    val list: BasicArrayList = BasicArrayListD()
 
     private val timeDelayHelper: TimeDelayHelper
 

@@ -31,6 +31,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class MakeCountedPartsSingletonArrayFactory
@@ -69,7 +70,7 @@ companion object {
         //nullable =  from not(true or (false and false)) = 
 : Array<PartInterface?>{
     //var partInterfaceArray = partInterfaceArray
-this.list= BasicArrayList()
+this.list= BasicArrayListD()
 
 
 

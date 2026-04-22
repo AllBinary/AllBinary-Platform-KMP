@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.game.rand.MyRandomFactory
@@ -43,7 +44,7 @@ open public class AnyRandomDropCellPositionGenerator : BaseDropCellPositionGener
             {
             }            
         
-    val list: BasicArrayList = BasicArrayList()
+    val list: BasicArrayList = BasicArrayListD()
 
     var geographicMapInterface: Any = NullUtil.getInstance()!!.NULL_OBJECT
 

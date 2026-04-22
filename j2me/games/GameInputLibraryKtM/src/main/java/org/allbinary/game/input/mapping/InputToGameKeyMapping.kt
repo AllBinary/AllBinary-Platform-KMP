@@ -37,6 +37,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class InputToGameKeyMapping : InputMapping {
         
@@ -190,7 +191,7 @@ var mappedToInput = mappedToInput
 : BasicArrayList{
 var id = id
 
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var inputFactory: InputFactory = InputFactory.getInstance()!!

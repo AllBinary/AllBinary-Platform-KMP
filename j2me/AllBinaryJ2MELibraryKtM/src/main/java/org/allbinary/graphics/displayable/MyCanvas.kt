@@ -39,6 +39,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.Sound
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class MyCanvas : Canvas
                 , DisplayableInterface
@@ -64,7 +65,7 @@ open public class MyCanvas : Canvas
     private var isPaused: Boolean= false
 public constructor ()                        
 
-                            : this(CommonStrings.getInstance()!!.UNKNOWN, BasicArrayList()){
+                            : this(CommonStrings.getInstance()!!.UNKNOWN, BasicArrayListD()){
 
 
                             //For kotlin this is before the body of the constructor.

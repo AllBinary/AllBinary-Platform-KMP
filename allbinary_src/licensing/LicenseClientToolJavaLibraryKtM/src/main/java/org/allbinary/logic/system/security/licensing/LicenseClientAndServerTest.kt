@@ -67,7 +67,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var vector: BasicArrayList = BasicArrayList()
+    private var vector: BasicArrayList = BasicArrayListD()
 public constructor (options: Array<String?>)
             : super()
         {
@@ -139,7 +139,7 @@ this.vector.add(options[index]!!)
 
         try {
             
-    var list: BasicArrayList = BasicArrayList()
+    var list: BasicArrayList = BasicArrayListD()
 
 
     var TESTING: String = "Testing with new licence:<br/>"

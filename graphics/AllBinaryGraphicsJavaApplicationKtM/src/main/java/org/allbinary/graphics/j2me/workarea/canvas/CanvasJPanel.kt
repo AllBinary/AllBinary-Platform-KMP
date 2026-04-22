@@ -193,7 +193,7 @@ this.canvasTreeNode= DefaultMutableTreeNode(this.frameLabel)
 frame++
 this.workAreaJTreeJPanel!!.add(this.getTreeNode())
 this.graphicItemHashMap= HashMap<Any, Any>()
-this.grid.grid= PointFactory.getInstance()!!.getInstance(0, 0)
+this.grid.grid= PointFactory.getInstance()!!.getInstance0(0, 0)
 this.setCanvasDimension(IntegerDimension(0, 0))
 this.selectedTool= 
                                         null
@@ -319,7 +319,7 @@ var ySize = ySize
 
                                     }
                                 
-this.grid.grid= PointFactory.getInstance()!!.getInstance(xSize, ySize)
+this.grid.grid= PointFactory.getInstance()!!.getInstance0(xSize, ySize)
 this.grid.isChanged= true
 } catch(e: Exception)
             {
@@ -409,10 +409,10 @@ this.setAngle(this.angle +angle)
     var newGraphicItem: GraphicItemInterface = GraphicItemFactory.getInstance()!!.getInstance(graphicItem!!.getName())!!.getInstance(this)!!
 
 
-    var pointOne: GPoint = GPoint(graphicItem!!.removePoint())
+    var pointOne: GPoint = GPoint.getInstance(graphicItem!!.removePoint())!!
 
 
-    var pointTwo: GPoint = GPoint(graphicItem!!.removePoint())
+    var pointTwo: GPoint = GPoint.getInstance(graphicItem!!.removePoint())!!
 
 
     

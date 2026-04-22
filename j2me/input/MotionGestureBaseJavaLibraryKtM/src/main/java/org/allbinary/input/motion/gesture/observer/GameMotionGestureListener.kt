@@ -34,6 +34,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameMotionGestureListener
             : Object
@@ -45,9 +46,9 @@ open public class GameMotionGestureListener
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var motionGestureCollection: BasicArrayList = BasicArrayList()
+    private var motionGestureCollection: BasicArrayList = BasicArrayListD()
 
-    private var touchGestureCollection: BasicArrayList = BasicArrayList()
+    private var touchGestureCollection: BasicArrayList = BasicArrayListD()
 
     private var signed: CompleteMotionGestureListenerInterface
 public constructor (signed: CompleteMotionGestureListenerInterface)

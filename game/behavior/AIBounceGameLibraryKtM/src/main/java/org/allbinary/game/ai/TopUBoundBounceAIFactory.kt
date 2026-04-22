@@ -72,7 +72,7 @@ var gameInput = gameInput
     var halfHeight: Int = ownerLayerInterface!!.getHeight() *2 +maxDistancePerTick +1
 
 
-    var point: GPoint = PointFactory.getInstance()!!.getInstance(halfWidth, halfHeight +60)!!
+    var point: GPoint = PointFactory.getInstance()!!.getInstance0(halfWidth, halfHeight +60)!!
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!

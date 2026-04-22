@@ -38,6 +38,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class SimpleFileUtil
             : Object
@@ -290,7 +291,7 @@ var n = n
     //var byteArray1 = byteArray1
     //var includeReturnLine = includeReturnLine
 
-    var stringList: BasicArrayList = BasicArrayList()
+    var stringList: BasicArrayList = BasicArrayListD()
 
 
     

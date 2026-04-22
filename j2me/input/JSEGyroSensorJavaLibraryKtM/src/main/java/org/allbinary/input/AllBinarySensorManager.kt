@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AllBinarySensorManager
             : Object
@@ -63,7 +64,7 @@ private constructor ()
 }
 
 
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 
     open fun getSensorNamesList()
         //nullable = true from not(false or (false and true)) = true

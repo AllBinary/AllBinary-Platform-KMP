@@ -29,6 +29,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameKeyCompleteMotionGestureInputEventFactory
             : Object
@@ -58,7 +59,7 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val eventList: BasicArrayList = BasicArrayList()
+    private val eventList: BasicArrayList = BasicArrayListD()
 
     open fun add(gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true

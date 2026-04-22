@@ -25,9 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
 import org.allbinary.game.layer.AllBinaryTiledLayer
+import org.allbinary.util.BasicArrayListS
 
 open public class CellPositionsUtil
             : Object
@@ -118,7 +118,7 @@ reusableList!!.add(geographicMapCellPosition)
 }
 
 
-    private val reusableSingleThreadedSurroundingList: BasicArrayList = BasicArrayList(8)
+    private val reusableSingleThreadedSurroundingList: BasicArrayList = BasicArrayListS(8)
 
                 @Throws(Exception::class)
             

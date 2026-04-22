@@ -64,7 +64,7 @@ companion object {
     var width: Int = displayInfo!!.getLastWidth() -(menuX *2)
 
 
-    var menuRectangle: Rectangle = Rectangle(PointFactory.getInstance()!!.getInstance(menuX, 16), width, CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE)
+    var menuRectangle: Rectangle = Rectangle(PointFactory.getInstance()!!.getInstance0(menuX, 16), width, CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE)
 
 
 

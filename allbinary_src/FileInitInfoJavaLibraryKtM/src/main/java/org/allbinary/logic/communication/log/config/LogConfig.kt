@@ -41,6 +41,7 @@ import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.java.bool.BooleanUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
@@ -223,7 +224,7 @@ stringBuffer!!.append(this.getFileName())
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
-    var logKeyVector: BasicArrayList = BasicArrayList()
+    var logKeyVector: BasicArrayList = BasicArrayListD()
 
 
     var document: Document = this.getDoc()!!

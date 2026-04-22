@@ -33,6 +33,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class LayerInterfaceFactory
@@ -68,7 +69,7 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.list= BasicArrayList()
+this.list= BasicArrayListD()
 }
 
 

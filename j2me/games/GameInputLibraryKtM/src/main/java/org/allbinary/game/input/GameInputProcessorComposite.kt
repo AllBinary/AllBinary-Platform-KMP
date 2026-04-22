@@ -28,6 +28,7 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class GameInputProcessorComposite : PlayerGameInput {
         
@@ -37,7 +38,7 @@ open public class GameInputProcessorComposite : PlayerGameInput {
     private val gameInputProcessorInterface: GameInputProcessorInterface
 public constructor (name: String, gameInputProcessorInterface: GameInputProcessorInterface)                        
 
-                            : super(BasicArrayList(),  -1){
+                            : super(BasicArrayListD(),  -1){
 var name = name
 var gameInputProcessorInterface = gameInputProcessorInterface
 

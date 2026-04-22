@@ -43,6 +43,7 @@ import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class PacePatrolAI : BasePatrolAI
                 , TrackingEventListenerInterface {
@@ -64,7 +65,7 @@ var gameInput = gameInput
                             //For kotlin this is before the body of the constructor.
                     
 TrackingEventHandler.getInstance()!!.addListener(this)
-this.trackingList= BasicArrayList()
+this.trackingList= BasicArrayListD()
 }
 
 

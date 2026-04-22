@@ -30,6 +30,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class RawKeyEventHandler
             : Object
@@ -62,14 +63,14 @@ companion object {
 public constructor ()
             : super()
         {
-this.eventListenerInterfaceList= BasicArrayList()
+this.eventListenerInterfaceList= BasicArrayListD()
 }
 
 
     open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
-this.eventListenerInterfaceList= BasicArrayList()
+this.eventListenerInterfaceList= BasicArrayListD()
 }
 
 

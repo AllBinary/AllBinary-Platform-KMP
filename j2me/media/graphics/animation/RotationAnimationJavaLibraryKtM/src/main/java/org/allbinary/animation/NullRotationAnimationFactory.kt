@@ -26,7 +26,10 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+import org.allbinary.math.AngleFactory
+import org.allbinary.math.AngleInfo
 import org.allbinary.media.ScaleProperties
+import org.allbinary.util.CircularIndexUtil
 
 open public class NullRotationAnimationFactory
             : Object
@@ -53,7 +56,7 @@ companion object {
             
     val NULL_ROTATION_ANIMATION_ARRAY: Array<RotationAnimation?> = arrayOfNulls(0)
 
-    private val NULL_ANIMATION: Animation = object: NullRotationAnimation(AnimationBehavior.getInstance())
+    private val NULL_ANIMATION: Animation = object: NullRotationAnimation(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), AnimationBehavior.getInstance())
                                 {
                                 
     override fun paint(graphics: Graphics, x: Int, y: Int)

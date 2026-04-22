@@ -34,6 +34,7 @@ import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class TransactionResult
             : Object
@@ -59,7 +60,7 @@ var result = result
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.AMPERSAND)
 
 
-    var tokens: BasicArrayList = tokenizer.getTokens(result, BasicArrayList())!!
+    var tokens: BasicArrayList = tokenizer.getTokens(result, BasicArrayListD())!!
 
 
     var tokenizer2: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.EQUALS)

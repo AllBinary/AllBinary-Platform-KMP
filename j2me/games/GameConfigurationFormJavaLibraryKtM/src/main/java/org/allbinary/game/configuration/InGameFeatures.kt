@@ -33,6 +33,7 @@ import org.allbinary.game.configuration.feature.TouchFeatureFactory
 import org.allbinary.init.Init
 import org.allbinary.input.gyro.OrientationData
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class InGameFeatures : Init {
         
@@ -106,7 +107,7 @@ open public class InGameFeatures : Init {
                         
                                     {
                                     
-    var exclusiveScreenButtonsVector: BasicArrayList = BasicArrayList()
+    var exclusiveScreenButtonsVector: BasicArrayList = BasicArrayListD()
 
 
     var touchFeatureFactory: TouchFeatureFactory = TouchFeatureFactory.getInstance()!!
@@ -128,7 +129,7 @@ inGameFeatureChoiceGroups!!.add(LABEL, exclusiveScreenButtonsVector)
     var orientationData: OrientationData = OrientationData.getInstance()!!
 
 
-    var inGameExclusiveOrientationSensorVector: BasicArrayList = BasicArrayList()
+    var inGameExclusiveOrientationSensorVector: BasicArrayList = BasicArrayListD()
 
 inGameExclusiveOrientationSensorVector!!.add(SensorFeatureFactory.getInstance()!!.ORIENTATION_SENSORS)
 inGameExclusiveOrientationSensorVector!!.add(SensorFeatureFactory.getInstance()!!.NO_ORIENTATION)

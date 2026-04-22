@@ -13,6 +13,7 @@
         
 import org.allbinary.layer.AllBinaryLayerFactoryInterface
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class PlacedLayerFactory
@@ -36,7 +37,7 @@ companion object {
 
         }
             
-    private val list: BasicArrayList = BasicArrayList()
+    private val list: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {
