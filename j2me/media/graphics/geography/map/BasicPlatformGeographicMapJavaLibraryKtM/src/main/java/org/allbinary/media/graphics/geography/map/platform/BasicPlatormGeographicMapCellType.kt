@@ -44,7 +44,7 @@ companion object {
 
     var types: BasicArrayList = BasicArrayListS(1)
 
-types.add(type.toBinaryString())
+types.add(type.toString())
 
     var basicPlatormGeographicMapCellType: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType(types)
 
