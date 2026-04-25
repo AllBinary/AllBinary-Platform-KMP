@@ -32,6 +32,7 @@ import org.allbinary.game.input.PlatformInputMappingFactory
 import org.allbinary.game.input.mapping.GameInputMapping
 import org.allbinary.game.input.mapping.PersistentInputMapping
 import org.allbinary.graphics.color.BasicColor
+import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
@@ -44,7 +45,7 @@ open public class BasicInputMappingHelpPaintable : HelpPaintable {
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 protected constructor (gameInputMappingArray: Array<GameInputMapping?>, basicColor: BasicColor)                        
 
-                            : super(basicColor){
+                            : super("Help Screen", BasicColorFactory.getInstance()!!.BLACK, basicColor){
     //var gameInputMappingArray = gameInputMappingArray
     //var basicColor = basicColor
 

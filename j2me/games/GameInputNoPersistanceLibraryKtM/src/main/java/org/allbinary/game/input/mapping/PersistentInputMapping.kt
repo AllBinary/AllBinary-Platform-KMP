@@ -46,7 +46,7 @@ open public class PersistentInputMapping
         
 companion object {
             
-    val NULL_PERSISTENT_INPUT_MAPPING: PersistentInputMapping = PersistentInputMapping()
+    val NULL_PERSISTENT_INPUT_MAPPING: PersistentInputMapping = PersistentInputMapping(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
 
         }
             
@@ -59,12 +59,6 @@ companion object {
     private var inputMappingEventListenerInterface: InputMappingEventListenerInterface = NullInputMappingEventListener.NULL_INPUT_MAPPING_EVENT_LISTENER
 
     private val inputPersistance: InputPersistance
-protected constructor ()
-            : super()
-        {
-inputPersistance= InputPersistance(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
-}
-
 protected constructor (name: String)
             : super()
         {

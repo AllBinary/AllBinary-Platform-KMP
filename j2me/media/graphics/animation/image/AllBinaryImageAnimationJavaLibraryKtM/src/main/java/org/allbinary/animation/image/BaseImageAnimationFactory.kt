@@ -42,7 +42,28 @@ open public class BaseImageAnimationFactory
         
                 , AnimationInterfaceFactoryInterface {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun create(image: Image, sequenceArray: IntArray, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: BaseImageAnimationFactory{
+    //var image = image
+    //var sequenceArray = sequenceArray
+    //var width = width
+    //var height = height
+    //var animationBehaviorFactory = animationBehaviorFactory
 
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BaseImageAnimationFactory(image, sequenceArray, width, height, 0, 0, animationBehaviorFactory)
+}
+
+
+        }
+            
     val animationFactoryImageScaleUtil: AnimationFactoryImageScaleUtil = AnimationFactoryImageScaleUtil.getInstance()!!
 
     private val image: Image
@@ -54,61 +75,15 @@ open public class BaseImageAnimationFactory
     val animationFactoryInitializationVisitor: AnimationFactoryInitializationVisitor
 
     var scaleProperties: ScaleProperties = ScaleProperties.instance
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, PrimitiveIntUtil.getArrayInstance(), width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-}
-
-public constructor (image: Image, sequenceArray: IntArray, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, sequenceArray, width, height, animationBehaviorFactory){
-    //var image = image
-    //var sequenceArray = sequenceArray
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-}
-
-public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, PrimitiveIntUtil.getArrayInstance(), width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, sequenceArray: IntArray, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (image: Image, sequenceArray: IntArray, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var image = image
     //var sequenceArray = sequenceArray
     //var width = width
     //var height = height
+    //var dx = dx
+    //var dy = dy
     //var animationBehaviorFactory = animationBehaviorFactory
 this.animationFactoryInitializationVisitor= AnimationFactoryInitializationVisitor()
 this.image= image
@@ -116,6 +91,8 @@ this.animationFactoryInitializationVisitor!!.width= width
 this.animationFactoryInitializationVisitor!!.height= height
 this.animationBehaviorFactory= animationBehaviorFactory
 this.sequenceArray= sequenceArray
+this.animationFactoryInitializationVisitor!!.dx= dx
+this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
 

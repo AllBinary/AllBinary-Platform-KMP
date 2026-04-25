@@ -29,43 +29,37 @@
         
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListS
 
 open public class BasicPlatormGeographicMapCellType
             : Object
          {
         
-
-    private val types: IntArray
-public constructor (type: Int)
-            : super()
-        {
+companion object {
+            
+    open fun create(type: Int)
+        //nullable = true from not(false or (false and false)) = true
+: BasicPlatormGeographicMapCellType{
     //var type = type
-GeographicMapCellType(type)
-this.types= IntArray(1)
-this.types[0]= type
+
+    var types: BasicArrayList = BasicArrayListS(1)
+
+types.add(type.toBinaryString())
+
+    var basicPlatormGeographicMapCellType: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType(types)
+
+GeographicMapCellType(type, 0)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return basicPlatormGeographicMapCellType
 }
 
-public constructor (types: IntArray)
-            : super()
-        {
-    //var types = types
 
-    var size: Int = types.size
-                
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-GeographicMapCellType(types[index]!!)
-}
-
-this.types= types
-}
-
+        }
+            
+    private val types: IntArray
 public constructor (types: BasicArrayList)
             : super()
         {
@@ -91,7 +85,7 @@ public constructor (types: BasicArrayList)
         {
 typeAsInteger= (types.get(index) as Integer)
 type= typeAsInteger!!.toInt()
-GeographicMapCellType(type)
+GeographicMapCellType(type, 0)
 typeArray[index]= type
 }
 

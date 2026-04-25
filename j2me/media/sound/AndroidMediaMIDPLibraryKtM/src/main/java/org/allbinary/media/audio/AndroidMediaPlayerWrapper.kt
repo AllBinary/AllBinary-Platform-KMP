@@ -34,26 +34,54 @@ import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 
 open public class AndroidMediaPlayerWrapper : BasicPlayer {
         
 companion object {
             
-    val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper()
+    open fun create()
+        //nullable = true from not(false or (false and true)) = true
+: AndroidMediaPlayerWrapper{
+
+        try {
+            
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AndroidMediaPlayerWrapper(StringUtil.getInstance()!!.EMPTY_STRING)
+} catch(e: Exception)
+            {
+
+
+
+                            throw RuntimeException()
+}
+
+}
+
+
+    val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper.create()!!
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var mediaPlayer: MediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER
-private constructor (){
-}
-
 public constructor (resource: String){
 var resource = resource
 
         try {
             
+    
+                        if(resource == StringUtil.getInstance()!!.EMPTY_STRING)
+                        
+                                    {
+                                    
+                                    }
+                                
+                        else {
+                            
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
 
@@ -76,6 +104,9 @@ var resource = resource
                                 
 this.setMediaPlayer(mediaPlayer)
 this.mediaPlayer!!.setLooping(false)
+
+                        }
+                            
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.CONSTRUCTOR, e)

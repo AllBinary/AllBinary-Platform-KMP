@@ -50,19 +50,6 @@ this.healthInterface!!.addListener(this)
 this.onHealthChange()
 }
 
-public constructor (layerInterface: AllBinaryLayer, healthInterface: Health, location: Int, direction: Int)                        
-
-                            : this(layerInterface, healthInterface, HealthBarTwodAnimation(layerInterface, location), direction){
-var layerInterface = layerInterface
-var healthInterface = healthInterface
-var location = location
-var direction = direction
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
     override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true

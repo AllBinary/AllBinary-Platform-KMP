@@ -30,6 +30,7 @@ import org.allbinary.animation.Animation
 import org.allbinary.game.graphics.hud.BasicHud
 import org.allbinary.game.health.Health
 import org.allbinary.game.health.HealthListenerInterface
+import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
@@ -54,7 +55,7 @@ open public class HealthHudWidget : BasicHud
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor (animationInterface: Animation, healthInterface: Health, location: Int, direction: Int)                        
 
-                            : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2){
+                            : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2, BasicColorFactory.getInstance()!!.WHITE){
 var animationInterface = animationInterface
 var healthInterface = healthInterface
 var location = location

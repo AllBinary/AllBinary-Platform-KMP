@@ -50,7 +50,7 @@ companion object {
     private val gameCanvas: AllBinaryGameCanvas
 public constructor (gameCanvas: AllBinaryGameCanvas)                        
 
-                            : super(BasicArrayListD(),  -1){
+                            : super(BasicArrayListD(), BasicArrayListD(),  -1){
 var gameCanvas = gameCanvas
 
 

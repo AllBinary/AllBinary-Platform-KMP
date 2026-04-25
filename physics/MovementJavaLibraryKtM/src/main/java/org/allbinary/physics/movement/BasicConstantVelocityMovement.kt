@@ -49,11 +49,6 @@ this.setSpeedBasicDecimal(basicDecimal)
 this.velocityProperties= velocityProperties
 }
 
-public constructor (){
-this.setSpeedBasicDecimal(BasicDecimal.ZERO_BIGDECIMAL)
-this.velocityProperties= BasicVelocityProperties()
-}
-
 
     override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true

@@ -690,11 +690,11 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
     var weaponProperties: WeaponProperties = basicWeaponPart!!.getWeaponProperties()!!
 
 this.weaponRange= weaponProperties!!.getRange()
-this.initRangeAnimation= AdjustedCircleAnimation(weaponRange, weaponRange, this.getWidth(), this.basicColorFactory!!.GREEN)
+this.initRangeAnimation= AdjustedCircleAnimation.createW(weaponRange, weaponRange, this.getWidth(), this.basicColorFactory!!.GREEN)
 
     var sensorRange: Int = weaponRange *SENSOR_RANGE_MULTIPLIER
 
-this.initSensorRangeAnimation= AdjustedCircleAnimation(sensorRange, sensorRange, this.getWidth(), this.basicColorFactory!!.RED)
+this.initSensorRangeAnimation= AdjustedCircleAnimation.createW(sensorRange, sensorRange, this.getWidth(), this.basicColorFactory!!.RED)
 this.getUnitWaypointBehavior()!!.initRange(weaponRange)
 this.fireTimeHelper!!.delay= (weaponProperties!!.getReloadTime().toInt())
 }

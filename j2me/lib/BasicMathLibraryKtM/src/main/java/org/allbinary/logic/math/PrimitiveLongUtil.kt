@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -32,10 +33,41 @@ open public class PrimitiveLongUtil
             : Object
          {
         
+companion object {
+            
+    open fun create(powerOfTen: Int)
+        //nullable = true from not(false or (false and false)) = true
+: PrimitiveLongUtil{
+var powerOfTen = powerOfTen
 
+    var primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil(powerOfTen, NullUtil.getInstance()!!.NULL_OBJECT)
+
+
+    
+                        if(powerOfTen % 10 != 0)
+                        
+                                    {
+                                    
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+logUtil!!.put(commonStrings!!.EXCEPTION, primitiveLongUtil, commonStrings!!.CONSTRUCTOR, Exception("Max must be power of 10"))
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return primitiveLongUtil
+}
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
-
-    private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var powerOfTen: Int
 
@@ -48,30 +80,11 @@ open public class PrimitiveLongUtil
     private var currentTotalDigits: Int= 0
 
     private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
-public constructor (powerOfTen: Int)                        
-
-                            : this(powerOfTen, false){
-var powerOfTen = powerOfTen
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-
-    
-                        if(powerOfTen % 10 != 0)
-                        
-                                    {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, Exception("Max must be power of 10"))
-
-                                    }
-                                
-}
-
-public constructor (powerOfTen: Int, throwException: Boolean)
+public constructor (powerOfTen: Int, unused: Any)
             : super()
         {
 var powerOfTen = powerOfTen
-var throwException = throwException
+var unused = unused
 this.maxDigits= MathUtil.getInstance()!!.getTotalDigits(powerOfTen)
 this.powerOfTen= powerOfTen
 this.maxValue= (powerOfTen *10) -1

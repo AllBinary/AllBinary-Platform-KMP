@@ -28,6 +28,7 @@
 import java.util.Hashtable
 import org.allbinary.game.combat.damage.DamageFloaters
 import org.allbinary.game.tracking.TrackingEvent
+import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.logic.NullUtil
@@ -117,7 +118,7 @@ this.damageFloatersPaintableInterface= damageFloaters
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TrackingEvent()
+                        return TrackingEvent(TrackingEventHandler.getInstance())
 }
 
 

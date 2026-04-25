@@ -29,6 +29,7 @@ import org.allbinary.animation.Animation
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.layer.weapon.WeaponLayer
 import org.allbinary.game.layer.weapon.WeaponLayerCircularPool
+import org.allbinary.game.score.NoScoreable
 import org.allbinary.game.score.ScoreableInterface
 import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.layer.AllBinaryLayer
@@ -37,23 +38,26 @@ import org.allbinary.math.NoDecimalTrigTable
 
 open public class StraightMultiProjectileWeaponPart : BasicWeaponPart {
         
-
-    private val weaponLayerCircularStaticPool: WeaponLayerCircularPool
-
-    private val total: Int
-public constructor (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
-
-                            : super(animationInterface){
+companion object {
+            
+    open fun create(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
+        //nullable = true from not(false or (false and false)) = true
+: StraightMultiProjectileWeaponPart{
     //var animationInterface = animationInterface
     //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.total= 2
-this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return StraightMultiProjectileWeaponPart(animationInterface, AllBinaryLayer.NULL_ALLBINARY_LAYER, weaponLayerCircularStaticPool, 2, WeaponProperties.NULL_WEAPON_PROPERTIES, NoScoreable.getInstance(), RelativeRelationship.NULL_RELATIVE_RELATIONSHIP)
 }
 
+
+        }
+            
+    private val weaponLayerCircularStaticPool: WeaponLayerCircularPool
+
+    private val total: Int
 public constructor (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, total: Int, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
                             : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){

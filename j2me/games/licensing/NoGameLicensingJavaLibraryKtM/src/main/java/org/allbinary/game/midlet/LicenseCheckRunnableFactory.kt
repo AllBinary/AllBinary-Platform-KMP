@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles.shader
+        package org.allbinary.game.midlet
 
 
 
@@ -25,20 +25,28 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ABRunnable
+import org.allbinary.thread.NullABRunnable
 
-open public class SimpleCompositeShaderUpdater : CompositeShaderUpdater {
+open public class LicenseCheckRunnableFactory
+            : Object
+         {
         
-public constructor (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray)                        
 
-                            : super(uniformBlockArray, uniformArray, attributeArray, attributeHandleArray){
-    //var uniformBlockArray = uniformBlockArray
-    //var uniformArray = uniformArray
-    //var attributeArray = attributeArray
-    //var attributeHandleArray = attributeHandleArray
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+    open fun getInstance(specialDemoGameMidlet: SpecialDemoGameMidlet)
+        //nullable =  from not(true or (false and false)) = 
+: ABRunnable{
+    //var specialDemoGameMidlet = specialDemoGameMidlet
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NullABRunnable.getInstance()
 }
 
 

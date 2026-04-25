@@ -46,7 +46,19 @@ open public class BasicWeaponPart
         
 companion object {
             
-    val NULL_BASIC_WEAPON_PART: BasicWeaponPart = BasicWeaponPart(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))
+    open fun create(animationInterface: Animation)
+        //nullable = true from not(false or (false and false)) = true
+: BasicWeaponPart{
+    //var animationInterface = animationInterface
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicWeaponPart(animationInterface, AllBinaryLayer.NULL_ALLBINARY_LAYER, WeaponProperties.NULL_WEAPON_PROPERTIES, NoScoreable.getInstance(), RelativeRelationship.NULL_RELATIVE_RELATIONSHIP)
+}
+
+
+    val NULL_BASIC_WEAPON_PART: BasicWeaponPart = BasicWeaponPart.create(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))!!
 
         }
             
@@ -59,13 +71,6 @@ companion object {
     private var scoreableInterface: ScoreableInterface = NoScoreable.getInstance()!!
 
     var relativeRelationship: RelativeRelationship = RelativeRelationship.NULL_RELATIVE_RELATIONSHIP
-public constructor (animationInterface: Animation)
-            : super()
-        {
-    //var animationInterface = animationInterface
-this.setAnimationInterface(animationInterface)
-}
-
 public constructor (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)
             : super()
         {

@@ -47,7 +47,7 @@ open public class RTSLayerCostAnimation : Animation
 
     private val myFont: MyFont = MyFont.getInstance()!!
 
-    private val primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil(10000)
+    private val primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil.create(10000)!!
 
     private val image: Image
 

@@ -32,16 +32,6 @@ import org.allbinary.animation.IndexedAnimation
 
 open public class SimultaneousCompoundIndexedAnimationInterfaceFactory : CompoundAnimationInterfaceFactory {
         
-public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>)                        
-
-                            : this(basicAnimationInterfaceFactoryInterfaceArray, AnimationBehaviorFactory.getInstance()){
-    //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory){

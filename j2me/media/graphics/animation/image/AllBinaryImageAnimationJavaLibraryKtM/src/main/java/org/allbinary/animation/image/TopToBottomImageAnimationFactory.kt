@@ -31,20 +31,9 @@ import org.allbinary.animation.AnimationBehaviorFactory
 
 open public class TopToBottomImageAnimationFactory : BaseImageAnimationFactory {
         
-public constructor (image: Image, sequenceArray: IntArray)                        
-
-                            : this(image, sequenceArray, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var sequenceArray = sequenceArray
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (image: Image, sequenceArray: IntArray, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, sequenceArray, image.getWidth(), image.getHeight(), animationBehaviorFactory){
+                            : super(image, sequenceArray, image.getWidth(), image.getHeight(), 0, 0, animationBehaviorFactory){
     //var image = image
     //var sequenceArray = sequenceArray
     //var animationBehaviorFactory = animationBehaviorFactory

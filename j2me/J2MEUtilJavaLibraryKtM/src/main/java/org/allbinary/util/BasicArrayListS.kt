@@ -54,15 +54,6 @@ public constructor (size: Int)
 this.objectArray= arrayOfNulls(size)
 }
 
-public constructor ()                        
-
-                            : this(7){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
 }
                 

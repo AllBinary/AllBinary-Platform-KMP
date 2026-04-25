@@ -91,7 +91,7 @@ private constructor ()
                         for (index2 in size  - 1  downTo 0)
 
         {
-this.ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
+this.ARRAY[index]!![index2]= GameKeyEvent.create(nullUtil!!.NULL_OBJECT, index, index2)
 }
 
 }

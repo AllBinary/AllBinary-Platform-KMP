@@ -79,7 +79,7 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
     private val downgradeGameNotificationEvent: GameNotificationEvent
 public constructor (towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, list: BasicArrayList, playerInputId: Int, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
 
-                            : super(list, playerInputId){
+                            : super(list, BasicArrayListD(), playerInputId){
 var towerInfoPaintable = towerInfoPaintable
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var list = list

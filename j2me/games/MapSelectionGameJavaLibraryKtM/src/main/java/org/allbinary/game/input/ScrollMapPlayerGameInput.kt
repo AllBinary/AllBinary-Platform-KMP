@@ -38,6 +38,7 @@ import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.event.ScrollMapEvent
 import org.allbinary.layer.event.ScrollMapEventHandler
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
+import org.allbinary.util.BasicArrayListD
 
 open public class ScrollMapPlayerGameInput : PlayerGameInput {
         
@@ -57,7 +58,7 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
     private var maxRight: Int= 0
 public constructor (geographicMapInterface: BasicGeographicMap, list: BasicArrayList, playerInputId: Int)                        
 
-                            : super(list, playerInputId){
+                            : super(list, BasicArrayListD(), playerInputId){
 var geographicMapInterface = geographicMapInterface
 var list = list
 var playerInputId = playerInputId

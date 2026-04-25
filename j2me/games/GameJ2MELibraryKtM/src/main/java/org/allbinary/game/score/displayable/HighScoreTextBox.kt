@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.CommandListener
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.TextField
 import org.allbinary.PostGameCommandFactory
@@ -60,7 +61,7 @@ open public class HighScoreTextBox : CustomTextBox {
     var submitted: Boolean = false
 public constructor (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
+                            : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, Font.getDefaultFont(), backgrounBasicColor, foregroundBasicColor){
     //var highScoresFactoryInterface = highScoresFactoryInterface
     //var highScoresHelper = highScoresHelper
     //var abeClientInformation = abeClientInformation

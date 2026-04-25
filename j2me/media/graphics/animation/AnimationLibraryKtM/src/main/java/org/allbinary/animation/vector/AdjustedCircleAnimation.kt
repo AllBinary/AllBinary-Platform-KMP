@@ -31,37 +31,79 @@ import org.allbinary.graphics.color.BasicColor
 
 open public class AdjustedCircleAnimation : CircleAnimation {
         
+companion object {
+            
+    open fun create(width: Int, height: Int, xAdjustment: Int, yAdjustment: Int, basicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+: AdjustedCircleAnimation{
+    //var width = width
+    //var height = height
+    //var xAdjustment = xAdjustment
+    //var yAdjustment = yAdjustment
+    //var basicColor = basicColor
 
-    private var xAdjustment: Int
+    var adjustedCircleAnimation: AdjustedCircleAnimation = AdjustedCircleAnimation(width, height, basicColor)
 
-    private var yAdjustment: Int
-public constructor (width: Int, height: Int, xAdjustment: Int, yAdjustment: Int, basicColor: BasicColor)                        
+adjustedCircleAnimation!!.init(xAdjustment, yAdjustment)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return adjustedCircleAnimation
+}
+
+
+    open fun createW(width: Int, height: Int, innerWidth: Int, basicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+: AdjustedCircleAnimation{
+    //var width = width
+    //var height = height
+    //var innerWidth = innerWidth
+    //var basicColor = basicColor
+
+    var adjustedCircleAnimation: AdjustedCircleAnimation = AdjustedCircleAnimation(width, height, basicColor)
+
+adjustedCircleAnimation!!.init(innerWidth)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return adjustedCircleAnimation
+}
+
+
+        }
+            
+    private var xAdjustment: Int= 0
+
+    private var yAdjustment: Int= 0
+public constructor (width: Int, height: Int, basicColor: BasicColor)                        
 
                             : super(width, height, basicColor){
-var width = width
-var height = height
-var xAdjustment = xAdjustment
-var yAdjustment = yAdjustment
-var basicColor = basicColor
+    //var width = width
+    //var height = height
+    //var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
                     
+}
+
+
+    open fun init(xAdjustment: Int, yAdjustment: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var xAdjustment = xAdjustment
+    //var yAdjustment = yAdjustment
 this.xAdjustment= xAdjustment
 this.yAdjustment= yAdjustment
 }
 
-public constructor (width: Int, height: Int, innerWidth: Int, basicColor: BasicColor)                        
 
-                            : super(width, height, basicColor){
-var width = width
-var height = height
-var innerWidth = innerWidth
-var basicColor = basicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
+    open fun init(innerWidth: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var innerWidth = innerWidth
 
     
                         if(AndroidUtil.isAndroid())

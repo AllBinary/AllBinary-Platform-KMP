@@ -89,7 +89,7 @@ private constructor ()
 }
 
 
-    private val weaponProperties: WeaponProperties = WeaponProperties(0, 8000, 10.toShort())
+    private val weaponProperties: WeaponProperties = WeaponProperties( -1L,  -1L, 0, 8000, 10.toShort())
 
     private val smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 

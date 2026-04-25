@@ -37,15 +37,6 @@ open public class SimplePathFinderGraphVisitorFactory : PathFinderGraphVisitorFa
     private val minPathWeight: Int
 
     private val maxPathWeight: Int
-public constructor ()                        
-
-                            : this(10, 8, 100000){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int){
 var edgeMinimum = edgeMinimum
 var minPathWeight = minPathWeight

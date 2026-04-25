@@ -61,19 +61,6 @@ open public class StartIntermissionPaintable : InitUpdatePaintable {
     private var hasChanged: Boolean = true
 
     val lastWidth: IntArray
-public constructor (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor)                        
-
-                            : this(gameCanvas, stringArray, lineArray, basicColor, Font.getDefaultFont()){
-    //var gameCanvas = gameCanvas
-    //var stringArray = stringArray
-    //var lineArray = lineArray
-    //var basicColor = basicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor, font: Font){
     //var gameCanvas = gameCanvas
     //var stringArray = stringArray

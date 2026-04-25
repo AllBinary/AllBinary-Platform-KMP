@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.game.configuration.persistance.GamePersistanceStrings
 import org.allbinary.game.input.mapping.PersistentInputMapping
 import org.allbinary.input.motion.button.BasicTouchInputFactory
 import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
@@ -34,12 +35,16 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 
 open public class PCGameInputMapping : PersistentInputMapping {
         
+public constructor ()                        
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+                            : super(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
                 @Throws(Exception::class)
             
     override fun init(abeClientInformation: AbeClientInformationInterface)

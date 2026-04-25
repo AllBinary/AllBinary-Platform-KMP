@@ -59,7 +59,7 @@ open public class TechnologyRTSInterfaceImageItem : CustomImageItem {
 
     private var levelLength: Int= 0
 
-    private val primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil(10000)
+    private val primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil.create(10000)!!
 
     private val LEVEL: String = "Level"
 

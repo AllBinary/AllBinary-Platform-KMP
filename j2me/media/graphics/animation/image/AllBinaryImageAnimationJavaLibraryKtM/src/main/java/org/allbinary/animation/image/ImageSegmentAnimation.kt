@@ -45,17 +45,6 @@ open public class ImageSegmentAnimation : ImageAnimation {
     private var circularIndexUtil: CircularIndexUtil
 
     private var sequenceArray: IntArray
-protected constructor (image: Image, animationBehavior: AnimationBehavior)                        
-
-                            : this(image, PrimitiveIntUtil.getArrayInstance(), animationBehavior){
-    //var image = image
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 protected constructor (image: Image, sequenceArray: IntArray, animationBehavior: AnimationBehavior)                        
 
                             : super(image, animationBehavior){

@@ -27,6 +27,7 @@
         
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.TextField
 import org.allbinary.string.CommonStrings
@@ -58,7 +59,7 @@ companion object {
     private var paintable: Paintable = NullPaintable.getInstance()!!
 public constructor (cmdListener: CommandListener, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(cmdListener, "Enter Registration Code:", StringUtil.getInstance()!!.EMPTY_STRING, 60, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
+                            : super(cmdListener, "Enter Registration Code:", StringUtil.getInstance()!!.EMPTY_STRING, 60, TextField.ANY, Font.getDefaultFont(), backgrounBasicColor, foregroundBasicColor){
 var cmdListener = cmdListener
 var backgrounBasicColor = backgrounBasicColor
 var foregroundBasicColor = foregroundBasicColor

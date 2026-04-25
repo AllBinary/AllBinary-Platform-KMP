@@ -48,17 +48,6 @@ open public class CompositeRTSFormInput : RTSFormInput {
     private val itemIndex: IntArray
 
     private val isPrimaryWaypointCreator: Boolean
-public constructor (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean)                        
-
-                            : this(groupInterface, isPrimaryWaypointCreator, intArrayOf(0)){
-    //var groupInterface = groupInterface
-    //var isPrimaryWaypointCreator = isPrimaryWaypointCreator
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean, itemIndex: IntArray)                        
 
                             : super(groupInterface){

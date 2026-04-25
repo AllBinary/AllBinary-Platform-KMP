@@ -25,21 +25,11 @@ open public class XmlRpcClient
         
 
     private val url: URL
-public constructor (url: URL)
+public constructor (url: String)
             : super()
         {
 var url = url
-this.url= url
-}
-
-public constructor (url: String)                        
-
-                            : this(URL(url)){
-var url = url
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
+this.url= URL(url)
 }
 
 

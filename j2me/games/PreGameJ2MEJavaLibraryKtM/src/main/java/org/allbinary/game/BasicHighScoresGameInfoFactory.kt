@@ -52,9 +52,9 @@ companion object {
             {
             }            
         
-    val MULTI_PLAYER_SERVER: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.MULTI_PLAYER, GameMode.SERVER, 0, 0)
+    val MULTI_PLAYER_SERVER: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.MULTI_PLAYER, GameMode.SERVER, PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE, 0, 0)
 
-    val SINGLE_PLAYER_SERVER: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.SINGLE_PLAYER, GameMode.SERVER, 0, 0)
+    val SINGLE_PLAYER_SERVER: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.SINGLE_PLAYER, GameMode.SERVER, PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE, 0, 0)
 
 }
                 

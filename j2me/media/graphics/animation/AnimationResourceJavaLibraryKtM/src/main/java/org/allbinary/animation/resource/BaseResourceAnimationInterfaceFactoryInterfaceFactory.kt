@@ -56,16 +56,6 @@ open public class BaseResourceAnimationInterfaceFactoryInterfaceFactory
     private val name: String
 
     private var initialized: Boolean= false
-public constructor (name: String)
-            : super()
-        {
-    //var name = name
-this.hashtable= Hashtable<Any, Any>()
-this.rectangleHashtable= Hashtable<Any, Any>()
-this.rectangleArrayOfArraysHashtable= Hashtable<Any, Any>()
-this.name= name
-}
-
 public constructor (name: String, hashtable: Hashtable<Any, Any>, rectangleHashtable: Hashtable<Any, Any>, rectangleArrayHashtable: Hashtable<Any, Any>)
             : super()
         {

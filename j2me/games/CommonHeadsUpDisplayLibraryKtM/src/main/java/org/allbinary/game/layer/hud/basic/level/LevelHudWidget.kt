@@ -36,7 +36,26 @@ import org.allbinary.logic.math.PrimitiveLongUtil
 open public class LevelHudWidget : BasicHud
                 , PaintableInterface {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun create(maxlevel: Int, location: Int, direction: Int)
+        //nullable = true from not(false or (false and false)) = true
+: LevelHudWidget{
+var maxlevel = maxlevel
+var location = location
+var direction = direction
 
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return LevelHudWidget(maxlevel, location, direction, MyFont.getInstance()!!.getSize() *4)
+}
+
+
+        }
+            
     private var level: Int
 
     private var maxlevel: Int
@@ -50,18 +69,6 @@ open public class LevelHudWidget : BasicHud
     private val offset: Int
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor (maxlevel: Int, location: Int, direction: Int)                        
-
-                            : this(maxlevel, location, direction, MyFont.getInstance()!!.getSize() *4){
-var maxlevel = maxlevel
-var location = location
-var direction = direction
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (maxlevel: Int, location: Int, direction: Int, maxWidth: Int)                        
 
                             : super(location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY){
@@ -76,7 +83,7 @@ var maxWidth = maxWidth
 
     var myFont: MyFont = MyFont.getInstance()!!
 
-this.primitiveLongUtil= PrimitiveLongUtil(1000)
+this.primitiveLongUtil= PrimitiveLongUtil.create(1000)
 
     var LEVEL: String = "Lv "
 

@@ -44,7 +44,54 @@ open public class ScrollSelectionForm : PaintableForm {
         
 companion object {
             
-    val NULL_SCROLL_SELECTION_FORM: ScrollSelectionForm = ScrollSelectionForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+    open fun create(title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+: ScrollSelectionForm{
+    //var title = title
+    //var items = items
+    //var formPaintableFactory = formPaintableFactory
+    //var rectangle = rectangle
+    //var formType = formType
+    //var border = border
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
+
+        try {
+            
+    
+                        if(formPaintableFactory == ItemPaintableFactory.getInstance())
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ScrollSelectionForm(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
+
+                                    }
+                                
+                        else {
+                            
+
+
+                            throw RuntimeException()
+
+                        }
+                            
+} catch(e: Exception)
+            {
+
+
+
+                            throw RuntimeException()
+}
+
+}
+
+
+    val NULL_SCROLL_SELECTION_FORM: ScrollSelectionForm = ScrollSelectionForm.create(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)!!
+
+    val NULL_SCROLL_SELECTION_HORIZONTAL_FORM: ScrollSelectionForm = ScrollSelectionForm.create(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)!!
 
     private val GET_SELECTED_INDEX: String = "getSelectedIndex"
 
@@ -65,7 +112,7 @@ companion object {
     var paintable: ItemPaintable = ItemPaintableFactory.getInstance()!!
 public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : this(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, rectangle, formType, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var formPaintableFactory = formPaintableFactory
@@ -78,26 +125,10 @@ public constructor (title: String, items: Array<CustomItem?>, formPaintableFacto
 
                             //For kotlin this is before the body of the constructor.
                     
-this.paintable= formPaintableFactory!!.getInstance(this)
-}
-
-public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
-
-                            : super(title, items, rectangle, formType, backgroundBasicColor, foregroundBasicColor){
-    //var title = title
-    //var items = items
-    //var rectangle = rectangle
-    //var formType = formType
-    //var border = border
-    //var backgroundBasicColor = backgroundBasicColor
-    //var foregroundBasicColor = foregroundBasicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
 this.buttonBasicColor= foregroundBasicColor
 this.border= border
 this.halfBorder= (border shr 1)
+this.paintable= formPaintableFactory!!.getInstance(this)
 }
 
 

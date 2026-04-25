@@ -30,7 +30,6 @@ import javax.microedition.lcdui.NullCanvas
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
-import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.media.image.ImageCopyUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
@@ -47,44 +46,6 @@ open public class AllBinaryFlickerAndroidImageRotationAnimationFactory
     private val angleIncrement: Short
 
     val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor (image: Image, width: Int, height: Int)                        
-
-                            : this(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var width = width
-    //var height = height
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, angleIncrement: Short)                        
-
-                            : this(image, width, height, angleIncrement, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var angleIncrement = angleIncrement
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {

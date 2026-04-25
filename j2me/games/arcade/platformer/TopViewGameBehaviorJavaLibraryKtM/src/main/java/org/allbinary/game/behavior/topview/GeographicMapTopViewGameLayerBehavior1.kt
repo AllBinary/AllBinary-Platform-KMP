@@ -52,17 +52,6 @@ open public class GeographicMapTopViewGameLayerBehavior1 : GeographicMapTopViewL
     private val offsetY: Int
 
     private var previousGeographicMapCellPosition: GeographicMapCellPosition
-public constructor ()                        
-
-                            : super(16){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.autoStepBlocks= true
-this.offsetY= 0
-}
-
 public constructor (maxGravityActionIndex: Int, autoStepBlocks: Boolean, offsetY: Int)                        
 
                             : super(maxGravityActionIndex){

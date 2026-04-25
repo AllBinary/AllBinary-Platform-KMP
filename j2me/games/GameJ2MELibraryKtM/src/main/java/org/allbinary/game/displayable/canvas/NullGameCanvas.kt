@@ -54,7 +54,7 @@ LogUtil.getInstance()!!.put(CommonStrings.getInstance()!!.EXCEPTION, "NullGameCa
 
 
 
-                            throw RuntimeException(e)
+                            throw RuntimeException()
 }
 
 }

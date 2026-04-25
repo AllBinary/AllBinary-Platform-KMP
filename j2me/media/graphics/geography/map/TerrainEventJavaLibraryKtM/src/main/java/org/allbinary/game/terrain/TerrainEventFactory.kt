@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.AllBinaryEventObjectFactoryInterface
 
@@ -46,7 +47,7 @@ public constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TerrainEvent()
+                        return TerrainEvent(NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 

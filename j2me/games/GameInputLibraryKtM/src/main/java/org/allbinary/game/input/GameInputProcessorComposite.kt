@@ -38,7 +38,7 @@ open public class GameInputProcessorComposite : PlayerGameInput {
     private val gameInputProcessorInterface: GameInputProcessorInterface
 public constructor (name: String, gameInputProcessorInterface: GameInputProcessorInterface)                        
 
-                            : super(BasicArrayListD(),  -1){
+                            : super(BasicArrayListD(), BasicArrayListD(),  -1){
 var name = name
 var gameInputProcessorInterface = gameInputProcessorInterface
 

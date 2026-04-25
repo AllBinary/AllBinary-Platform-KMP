@@ -104,18 +104,6 @@ this.setRange((value *9).toInt() /10)
                                 
 }
 
-public constructor (speed: Long, damage: Int, dissipation: Short)                        
-
-                            : this( -1L,  -1L, speed, damage, dissipation){
-var speed = speed
-var damage = damage
-var dissipation = dissipation
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
     open fun setReloadTime(reloadTime: Long)
         //nullable = true from not(false or (false and false)) = true

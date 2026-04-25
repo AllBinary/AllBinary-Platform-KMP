@@ -86,7 +86,7 @@ open public class RTSPlayerGameInput : PlayerGameInput {
     private var selectedRtsFormInput: RTSFormInput = NullRTSFormInputFactory.getInstance()!!
 public constructor (gameCanvas: AllBinaryGameCanvas, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
 
-                            : super(inputList, playerInputId){
+                            : super(inputList, BasicArrayListD(), playerInputId){
     //var gameCanvas = gameCanvas
     //var inputList = inputList
     //var playerInputId = playerInputId

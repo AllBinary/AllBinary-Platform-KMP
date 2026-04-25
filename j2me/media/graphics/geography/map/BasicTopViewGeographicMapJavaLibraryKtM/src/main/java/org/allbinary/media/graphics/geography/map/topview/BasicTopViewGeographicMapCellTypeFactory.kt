@@ -53,42 +53,6 @@ open public class BasicTopViewGeographicMapCellTypeFactory : GeographicMapCellTy
     val OTHER_CELL_TYPE: BasicTopViewGeographicMapCellType
 
     private val maxTileId: Int
-private constructor (){
-this.maxTileId= 9
-
-    var basicTopViewGeographicMapStrings: BasicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance()!!
-
-RaceTrackGeographicMapCellType(0, 999)
-
-    var BLOCK_CELL_TYPE: BasicTopViewGeographicMapCellType = BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.DEFAULT, 1, 1)
-
-
-    var OFF_MAP_CELL_TYPE: BasicTopViewGeographicMapCellType = BLOCK_CELL_TYPE
-
-
-    var FLOOR_CELL_TYPE: BasicTopViewGeographicMapCellType = BLOCK_CELL_TYPE
-
-
-    var DOOR_CELL_TYPE: BasicTopViewGeographicMapCellType = BLOCK_CELL_TYPE
-
-
-    var STAIRS_UP_CELL_TYPE: BasicTopViewGeographicMapCellType = BLOCK_CELL_TYPE
-
-
-    var STAIRS_DOWN_CELL_TYPE: BasicTopViewGeographicMapCellType = BLOCK_CELL_TYPE
-
-
-    var OTHER_CELL_TYPE: BasicTopViewGeographicMapCellType = BLOCK_CELL_TYPE
-
-this.BLOCK_CELL_TYPE= BLOCK_CELL_TYPE
-this.OFF_MAP_CELL_TYPE= OFF_MAP_CELL_TYPE
-this.FLOOR_CELL_TYPE= FLOOR_CELL_TYPE
-this.DOOR_CELL_TYPE= DOOR_CELL_TYPE
-this.STAIRS_UP_CELL_TYPE= STAIRS_UP_CELL_TYPE
-this.STAIRS_DOWN_CELL_TYPE= STAIRS_DOWN_CELL_TYPE
-this.OTHER_CELL_TYPE= OTHER_CELL_TYPE
-}
-
 public constructor (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
     //var tileTypeToTileIdsMap = tileTypeToTileIdsMap
     //var maxTileId = maxTileId
@@ -116,7 +80,7 @@ this.maxTileId= maxTileId
                                 )
                         
                                     {
-                                    RaceTrackGeographicMapCellType(type, 999)
+                                    RaceTrackGeographicMapCellType(CommonStrings.getInstance()!!.UNKNOWN, type, 999, 0)
 
                                     }
                                 
@@ -125,7 +89,7 @@ this.maxTileId= maxTileId
                         }
                             
 
-    var BLOCK_CELL_TYPE: BasicTopViewGeographicMapCellType = BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.DEFAULT, 1, 1)
+    var BLOCK_CELL_TYPE: BasicTopViewGeographicMapCellType = BasicTopViewGeographicMapCellType.create(basicTopViewGeographicMapStrings!!.DEFAULT, 1, 1)!!
 
 
     var OFF_MAP_CELL_TYPE: BasicTopViewGeographicMapCellType = BLOCK_CELL_TYPE
@@ -257,7 +221,7 @@ type= this.maxTileId -1
                                 )
                         
                                     {
-                                    RaceTrackGeographicMapCellType(commonStrings!!.START, type, 1)
+                                    RaceTrackGeographicMapCellType(commonStrings!!.START, type, 1, 0)
 
                                     }
                                 
@@ -273,7 +237,7 @@ type= this.maxTileId -2
                                 )
                         
                                     {
-                                    RaceTrackGeographicMapCellType(commonStrings!!.START, type, 1)
+                                    RaceTrackGeographicMapCellType(commonStrings!!.START, type, 1, 0)
 
                                     }
                                 

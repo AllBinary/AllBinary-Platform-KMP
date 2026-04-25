@@ -70,19 +70,6 @@ this.frameFactor= frameFactor
 directionArray[value]= this
 }
 
- constructor (name: String, otherName: String, value: Int)
-            : super()
-        {
-var name = name
-var otherName = otherName
-var value = value
-this.name= name
-this.otherName= otherName
-this.value= value
-this.frameFactor= 0
-directionArray[value]= this
-}
-
 
     open fun getValue()
         //nullable = true from not(false or (false and true)) = true

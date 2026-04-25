@@ -39,7 +39,13 @@ open public class AllBinaryLayerManager : LayerManager {
     private val deleteLayerManagerEvent: LayerManagerEvent = LayerManagerEvent(this, this.layerManagerEventHandler!!.DELETE)
 
     private var basicLayerProcessorArray: Array<LayerProcessor?> = arrayOfNulls(0)
-protected constructor (){
+protected constructor ()                        
+
+                            : super(LayerManagerNoDebug.getInstance()){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
 }
 
 

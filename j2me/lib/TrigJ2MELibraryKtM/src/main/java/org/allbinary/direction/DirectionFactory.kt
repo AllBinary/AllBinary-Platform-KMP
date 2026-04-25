@@ -56,9 +56,9 @@ companion object {
 
     val RIGHT: Direction = Direction(CommonPhoneStrings.getInstance()!!.RIGHT, "EAST", 1, 0)
 
-    val DOWN: Direction = Direction(CommonPhoneStrings.getInstance()!!.DOWN, "SOUTH", 2)
+    val DOWN: Direction = Direction(CommonPhoneStrings.getInstance()!!.DOWN, "SOUTH", 2, 0)
 
-    val UP: Direction = Direction(CommonPhoneStrings.getInstance()!!.UP, "NORTH", 3)
+    val UP: Direction = Direction(CommonPhoneStrings.getInstance()!!.UP, "NORTH", 3, 0)
 
     val UP_LEFT: Direction
 
@@ -68,15 +68,15 @@ companion object {
 
     val DOWN_RIGHT: Direction
 
-    val NOT_BORDERED_WITH: Direction = Direction("NOT_BORDERED_WITH", "NOT_BORDERED_WITH", 8)
+    val NOT_BORDERED_WITH: Direction = Direction("NOT_BORDERED_WITH", "NOT_BORDERED_WITH", 8, 0)
 
-    val NO_DIRECTION: Direction = Direction("NO_DIRECTION", "NO_DIRECTION", 9)
+    val NO_DIRECTION: Direction = Direction("NO_DIRECTION", "NO_DIRECTION", 9, 0)
 
-    val TOP: Direction = Direction("TOP", "TOP", 10)
+    val TOP: Direction = Direction("TOP", "TOP", 10, 0)
 
-    val BOTTOM: Direction = Direction("BOTTOM", "BOTTOM", 11)
+    val BOTTOM: Direction = Direction("BOTTOM", "BOTTOM", 11, 0)
 
-    val ALL_DIRECTION: Direction = Direction("ALL_DIRECTION", "ALL_DIRECTION", 12)
+    val ALL_DIRECTION: Direction = Direction("ALL_DIRECTION", "ALL_DIRECTION", 12, 0)
 private constructor ()
             : super()
         {
@@ -86,13 +86,13 @@ private constructor ()
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-this.UP_LEFT= Direction("UP LEFT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 4)
+this.UP_LEFT= Direction("UP LEFT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 4, 0)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-this.UP_RIGHT= Direction("UP RIGHT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 5)
+this.UP_RIGHT= Direction("UP RIGHT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 5, 0)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-this.DOWN_LEFT= Direction("DOWN LEFT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 6)
+this.DOWN_LEFT= Direction("DOWN LEFT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 6, 0)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-this.DOWN_RIGHT= Direction("DOWN RIGHT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 7)
+this.DOWN_RIGHT= Direction("DOWN RIGHT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 7, 0)
 }
 
 

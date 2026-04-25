@@ -19,20 +19,6 @@ open public class CustomImageItem : CustomItem {
         
 
     var yOffset: Int = 0
-public constructor (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor)                        
-
-                            : super(label, basicColor, basicColor){
-var label = label
-var image = image
-var layout = layout
-var altText = altText
-var basicColor = basicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor, yOffset: Int)                        
 
                             : super(label, basicColor, basicColor){

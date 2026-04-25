@@ -28,22 +28,13 @@
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
+import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class BottomToTopImageAnimationFactory : BaseImageAnimationFactory {
         
-public constructor (image: Image)                        
-
-                            : this(image, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
+                            : super(image, PrimitiveIntUtil.getArrayInstance(), image.getWidth(), image.getHeight(), 0, 0, animationBehaviorFactory){
     //var image = image
     //var animationBehaviorFactory = animationBehaviorFactory
 

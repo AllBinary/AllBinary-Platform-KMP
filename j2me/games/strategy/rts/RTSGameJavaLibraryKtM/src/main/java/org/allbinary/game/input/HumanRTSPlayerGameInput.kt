@@ -89,23 +89,6 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput
     private val notYoursGameNotificationEvent: GameNotificationEvent
 
     private var selectedRtsLayer: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
-public constructor (gameCanvas: AllBinaryGameCanvas, geographicMapInterface: BasicGeographicMap, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
-
-                            : this(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface, TouchButtonsBuilderFactory.NO_TOUCH_BUTTON_BUILDER_FACTORY){
-    //var gameCanvas = gameCanvas
-    //var geographicMapInterface = geographicMapInterface
-    //var inputList = inputList
-    //var playerInputId = playerInputId
-    //var towerInfoPaintable = towerInfoPaintable
-    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-    //var layerPositionFinderInterface = layerPositionFinderInterface
-    //var selectRTSLayerVisitorFactoryInterface = selectRTSLayerVisitorFactoryInterface
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (gameCanvas: AllBinaryGameCanvas, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface, touchButtonsBuilderFactory: TouchButtonsBuilderFactory)                        
 
                             : super(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface){

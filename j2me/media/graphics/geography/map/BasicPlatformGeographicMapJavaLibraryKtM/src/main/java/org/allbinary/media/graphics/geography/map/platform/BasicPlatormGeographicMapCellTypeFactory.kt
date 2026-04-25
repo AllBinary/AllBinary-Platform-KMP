@@ -51,9 +51,9 @@ public constructor (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
 
 this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 this.maxTileId= maxTileId
-GeographicMapCellType(0)
+GeographicMapCellType(0, 0)
 
-    var BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType(1)
+    var BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType.create(1)!!
 
 
     var JUMP_THRU_CELL_TYPE: BasicPlatormGeographicMapCellType = BLOCK_CELL_TYPE
@@ -121,8 +121,8 @@ basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithType
 this.BLOCK_CELL_TYPE= BLOCK_CELL_TYPE
 this.JUMP_THRU_CELL_TYPE= JUMP_THRU_CELL_TYPE
 this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
-GeographicMapCellType(this.maxTileId -1)
-GeographicMapCellType(this.maxTileId -2)
+GeographicMapCellType(this.maxTileId -1, 0)
+GeographicMapCellType(this.maxTileId -2, 0)
 }
 
 

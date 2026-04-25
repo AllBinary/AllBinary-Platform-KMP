@@ -33,16 +33,7 @@ open public class TrackingEvent : AllBinaryEventObject {
         
 
     private var layerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
-public constructor ()                        
-
-                            : super(TrackingEventHandler.getInstance()){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (allBinaryLayerInterface: AllBinaryLayer)                        
+public constructor (allBinaryLayerInterface: Any)                        
 
                             : super(allBinaryLayerInterface){
 var allBinaryLayerInterface = allBinaryLayerInterface
@@ -50,7 +41,15 @@ var allBinaryLayerInterface = allBinaryLayerInterface
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setLayerInterface(allBinaryLayerInterface)
+
+    
+                        if(allBinaryLayerInterface != TrackingEventHandler.getInstance())
+                        
+                                    {
+                                    this.setLayerInterface(allBinaryLayerInterface as AllBinaryLayer)
+
+                                    }
+                                
 }
 
 

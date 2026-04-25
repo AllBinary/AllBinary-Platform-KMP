@@ -33,6 +33,7 @@ import org.allbinary.animation.VectorAnimation
 import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.image.AnimationFrameToImageUtil
+import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 import org.allbinary.media.ScaleProperties
@@ -45,49 +46,9 @@ open public class VectorToImageArrayRotationAnimationFactory : BaseImageAnimatio
     private var imageArray: Array<Image?> = NullCanvas.NULL_IMAGE_ARRAY
 
     private var angleIncrement: Int= 0
-public constructor (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int)                        
-
-                            : this(vectorInfo, basicColor, dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var vectorInfo = vectorInfo
-    //var basicColor = basicColor
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(vectorInfo, basicColor, animationBehaviorFactory){
-    //var vectorInfo = vectorInfo
-    //var basicColor = basicColor
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-}
-
-public constructor (vectorInfo: VectorInfo, basicColor: BasicColor)                        
-
-                            : this(vectorInfo, basicColor, AnimationBehaviorFactory.getInstance()){
-    //var vectorInfo = vectorInfo
-    //var basicColor = basicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (vectorInfo: VectorInfo, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(AnimationFrameToImageUtil.getInstance()!!.getInstanceTranslate(vectorInfo!!.getWidth(), vectorInfo!!.getHeight(), VectorAnimation(vectorInfo!!.getPoints(), basicColor, animationBehaviorFactory!!.getOrCreateInstance())), 0, 0, animationBehaviorFactory){
+                            : super(AnimationFrameToImageUtil.getInstance()!!.getInstanceTranslate(vectorInfo!!.getWidth(), vectorInfo!!.getHeight(), VectorAnimation.create(vectorInfo!!.getPoints(), basicColor, animationBehaviorFactory!!.getOrCreateInstance())), PrimitiveIntUtil.getArrayInstance(), 0, 0, 0, 0, animationBehaviorFactory){
     //var vectorInfo = vectorInfo
     //var basicColor = basicColor
     //var animationBehaviorFactory = animationBehaviorFactory
@@ -136,7 +97,7 @@ this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.get
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdjustedImageArrayRotationAnimation(this.imageArray, AngleInfo.getInstance(this.angleIncrement.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return AdjustedImageArrayRotationAnimation.create(this.imageArray, AngleInfo.getInstance(this.angleIncrement.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), this.animationBehaviorFactory!!.getOrCreateInstance())
 
                         }
                             

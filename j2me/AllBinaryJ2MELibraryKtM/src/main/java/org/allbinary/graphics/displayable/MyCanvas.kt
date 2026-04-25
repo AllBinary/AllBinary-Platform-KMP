@@ -63,15 +63,6 @@ open public class MyCanvas : Canvas
     private val commandStack: Stack<Any>
 
     private var isPaused: Boolean= false
-public constructor ()                        
-
-                            : this(CommonStrings.getInstance()!!.UNKNOWN, BasicArrayListD()){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (name: String, childNameList: BasicArrayList){
     //var name = name
     //var childNameList = childNameList

@@ -68,7 +68,7 @@ var basicColor = basicColor
                     
 this.maxVelocity= powerOfTenVelocity
 this.velocity= 0
-this.primitiveLongUtil= PrimitiveLongUtil(powerOfTenVelocity)
+this.primitiveLongUtil= PrimitiveLongUtil.create(powerOfTenVelocity)
 
     var myFont: MyFont = MyFont.getInstance()!!
 

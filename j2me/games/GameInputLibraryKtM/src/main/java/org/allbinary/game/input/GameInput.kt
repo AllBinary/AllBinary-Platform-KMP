@@ -47,16 +47,6 @@ open public class GameInput
     private val removalGameKeyEventList: BasicArrayList
 
     val isRemoveDuplicateKeyPresses: Boolean
-public constructor (gameKeyEventList: BasicArrayList)                        
-
-                            : this(gameKeyEventList, BasicArrayListD()){
-    //var gameKeyEventList = gameKeyEventList
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (gameKeyEventList: BasicArrayList, removalGameKeyEventList: BasicArrayList)
             : super()
         {

@@ -41,17 +41,6 @@ public constructor (currentPoints: Array<Array<IntArray?>?>, animationBehavior: 
                     
 }
 
-public constructor (currentPoints: Array<IntArray?>, animationBehavior: AnimationBehavior)                        
-
-                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior){
-    //var currentPoints = currentPoints
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
     override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true

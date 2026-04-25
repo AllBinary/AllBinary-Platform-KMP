@@ -29,48 +29,31 @@ import javax.microedition.lcdui.Image
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.graphics.opengles.OpenGLUtil
+import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.media.image.ImageCopyUtil
 
 open public class ImageAnimationFactory : BaseImageAnimationFactory {
         
-public constructor (image: Image)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), 0, 0, AnimationBehaviorFactory.getInstance()){
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun create(image: Image)
+        //nullable = true from not(false or (false and false)) = true
+: ImageAnimationFactory{
     //var image = image
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ImageAnimationFactory(image, image.getWidth(), image.getHeight(), 0, 0, AnimationBehaviorFactory.getInstance())
 }
 
-public constructor (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
+        }
+            public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, 0, 0, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, dx, dy, animationBehaviorFactory){
+                            : super(image, PrimitiveIntUtil.getArrayInstance(), width, height, dx, dy, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height

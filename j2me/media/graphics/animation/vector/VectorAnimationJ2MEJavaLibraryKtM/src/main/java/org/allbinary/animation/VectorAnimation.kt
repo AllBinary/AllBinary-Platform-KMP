@@ -27,7 +27,6 @@
         
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.color.BasicColorSetUtil
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
@@ -36,7 +35,42 @@ import org.allbinary.util.CircularIndexUtil
 open public class VectorAnimation : IndexedAnimation
                 , VectorAnimationInterface {
         
+companion object {
+            
+    open fun create(currentPoints2: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)
+        //nullable = true from not(false or (false and false)) = true
+: VectorAnimation{
+    //var currentPoints2 = currentPoints2
+    //var basicColor = basicColor
+    //var animationBehavior = animationBehavior
 
+    var currentPoints: Array<Array<IntArray?>?> = Array(1) { Array(currentPoints2!!.size) { IntArray(2) } }
+
+
+    var size: Int = currentPoints2!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+currentPoints[0]!![index]!![0]= currentPoints2[index]!![0]!!
+currentPoints[0]!![index]!![1]= currentPoints2[index]!![1]!!
+}
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return VectorAnimation(currentPoints, basicColor, animationBehavior)
+}
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var currentPoints: Array<Array<IntArray?>?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
@@ -53,35 +87,6 @@ public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicCo
                             //For kotlin this is before the body of the constructor.
                     
 this.setPoints(currentPoints)
-this.setBasicColorP(basicColor)
-}
-
-public constructor (currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
-
-                            : super(animationBehavior){
-    //var currentPoints = currentPoints
-    //var basicColor = basicColor
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setPoints(Array(1) { Array(currentPoints!!.size) { IntArray(2) } })
-
-    var size: Int = currentPoints!!.size
-                
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-this.currentPoints[0]!![index]!![0]= currentPoints[index]!![0]!!
-this.currentPoints[0]!![index]!![1]= currentPoints[index]!![1]!!
-}
-
 this.setBasicColorP(basicColor)
 }
 

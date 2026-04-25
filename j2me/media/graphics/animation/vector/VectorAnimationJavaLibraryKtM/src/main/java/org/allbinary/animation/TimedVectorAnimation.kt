@@ -45,18 +45,6 @@ public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicCo
                     
 }
 
-public constructor (currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
-
-                            : super(currentPoints, basicColor, animationBehavior){
-    //var currentPoints = currentPoints
-    //var basicColor = basicColor
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
     override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true

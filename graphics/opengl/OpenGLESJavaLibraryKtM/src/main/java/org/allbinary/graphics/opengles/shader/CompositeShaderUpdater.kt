@@ -27,6 +27,7 @@
         
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
 
@@ -34,7 +35,7 @@ open public class CompositeShaderUpdater : ShaderUpdater {
         
 companion object {
             
-    private val instance: CompositeShaderUpdater = CompositeShaderUpdater(StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance())
+    private val instance: CompositeShaderUpdater = CompositeShaderUpdater(StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance(), NullUtil.getInstance()!!.NULL_INT_ARRAY)
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -64,18 +65,6 @@ companion object {
     val attributeHandleArray: IntArray
 
     val attributeArray: Array<String?>
-public constructor (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
-
-                            : this(uniformBlockArray, uniformArray, attributeArray, IntArray(attributeArray!!.size)){
-    //var uniformBlockArray = uniformBlockArray
-    //var uniformArray = uniformArray
-    //var attributeArray = attributeArray
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray){
     //var uniformBlockArray = uniformBlockArray
     //var uniformArray = uniformArray

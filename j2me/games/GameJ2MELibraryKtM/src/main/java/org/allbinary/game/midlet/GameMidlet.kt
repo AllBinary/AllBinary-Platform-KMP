@@ -45,6 +45,7 @@ import org.allbinary.game.GameInfo
 import org.allbinary.game.GameMode
 import org.allbinary.game.GameStrings
 import org.allbinary.game.GameTypeFactory
+import org.allbinary.game.PlayerTypesFactory
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.GameOptionsForm
 import org.allbinary.game.configuration.GameOptionsFormFactory
@@ -1315,7 +1316,7 @@ this.allbinaryGameCanvasRunnableInterface= gameCanvasRunnableInterface
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryGameLayerManager{
 
-    var gameInfo: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.SINGLE_PLAYER, GameMode.SERVER, 1, 1)
+    var gameInfo: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.SINGLE_PLAYER, GameMode.SERVER, PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE, 1, 1)
 
 
 

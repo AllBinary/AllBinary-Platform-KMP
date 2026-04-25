@@ -35,34 +35,83 @@ import org.allbinary.animation.image.BaseImageAnimationFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorUtil
 import org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil
+import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class SpriteIndexedAnimationFactory : BaseImageAnimationFactory
                 , ProceduralAnimationInterfaceFactoryInterface {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun createCWHDXY(image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: SpriteIndexedAnimationFactory{
+    //var image = image
+    //var basicColorArray = basicColorArray
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return SpriteIndexedAnimationFactory(image, basicColorArray, PrimitiveIntUtil.getArrayInstance(), width, height, dx, dy, animationBehaviorFactory)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createCWH(image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: SpriteIndexedAnimationFactory{
+    //var image = image
+    //var basicColorArray = basicColorArray
+    //var width = width
+    //var height = height
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+    var spriteIndexedAnimationFactory: SpriteIndexedAnimationFactory = SpriteIndexedAnimationFactory(image, basicColorArray, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory)
+
+spriteIndexedAnimationFactory!!.initHWH()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return spriteIndexedAnimationFactory
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createWH(image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: SpriteIndexedAnimationFactory{
+    //var image = image
+    //var width = width
+    //var height = height
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return SpriteIndexedAnimationFactory(image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory)
+}
+
+
+        }
+            
     private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
 
     private var basicColorArray: Array<BasicColor?> = BasicColorUtil.getInstance()!!.ZERO_ARRAY
-public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, dx: Int, dy: Int)                        
+private constructor (image: Image, basicColorArray: Array<BasicColor?>, sequenceArray: IntArray, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, basicColorArray, width, height, dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : super(image, sequenceArray, width, height, dx, dy, animationBehaviorFactory){
     //var image = image
     //var basicColorArray = basicColorArray
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var basicColorArray = basicColorArray
+    //var sequenceArray = sequenceArray
     //var width = width
     //var height = height
     //var dx = dx
@@ -73,36 +122,12 @@ public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: In
                             //For kotlin this is before the body of the constructor.
                     
 this.basicColorArray= basicColorArray
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
-public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int)                        
 
-                            : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var basicColorArray = basicColorArray
-    //var width = width
-    //var height = height
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var basicColorArray = basicColorArray
-    //var width = width
-    //var height = height
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.basicColorArray= basicColorArray
+    open fun initHWH()
+        //nullable = true from not(false or (false and true)) = true
+{
 this.animationFactoryInitializationVisitor!!.dx=  -(this.animationFactoryInitializationVisitor!!.width shr 2)
 this.animationFactoryInitializationVisitor!!.dy=  -(this.animationFactoryInitializationVisitor!!.height shr 2)
 
@@ -114,62 +139,6 @@ this.animationFactoryInitializationVisitor!!.dy=  -(this.animationFactoryInitial
 
                                     }
                                 
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int)                        
-
-                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-}
-
-public constructor (image: Image, width: Int, height: Int)                        
-
-                            : this(image, width, height, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var width = width
-    //var height = height
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
 }
 
 

@@ -50,22 +50,6 @@ this.dx= dx
 this.dy= dy
 }
 
-public constructor (currentPoints: Array<IntArray?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
-
-                            : super(currentPoints, basicColor, animationBehavior){
-    //var currentPoints = currentPoints
-    //var basicColor = basicColor
-    //var dx = dx
-    //var dy = dy
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.dx= dx
-this.dy= dy
-}
-
 
     override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true

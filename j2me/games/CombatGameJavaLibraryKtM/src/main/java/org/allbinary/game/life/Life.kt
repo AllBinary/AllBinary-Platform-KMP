@@ -33,7 +33,28 @@ open public class Life
         
 companion object {
             
-    val NO_LIFE: Life = Life()
+    open fun create()
+        //nullable = true from not(false or (false and true)) = true
+: Life{
+
+        try {
+            
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Life(0.toShort(), 0.toShort())
+} catch(e: Exception)
+            {
+
+
+
+                            throw RuntimeException()
+}
+
+}
+
+
+    val NO_LIFE: Life = Life.create()!!
 
         }
             
@@ -42,14 +63,6 @@ companion object {
     private var startLives: Short
 
     private var maxlives: Short
-public constructor ()
-            : super()
-        {
-this.lives= 0
-this.startLives= 0
-this.maxlives= 0
-}
-
 public constructor (lives: Short, maxlives: Short)
             : super()
         {

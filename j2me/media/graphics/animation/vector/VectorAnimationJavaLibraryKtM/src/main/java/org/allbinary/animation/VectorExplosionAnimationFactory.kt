@@ -37,16 +37,6 @@ open public class VectorExplosionAnimationFactory
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor (basicColor: BasicColor)                        
-
-                            : this(basicColor, AnimationBehaviorFactory.getInstance()){
-    //var basicColor = basicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {

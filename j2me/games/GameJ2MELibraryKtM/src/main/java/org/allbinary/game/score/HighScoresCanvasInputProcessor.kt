@@ -38,7 +38,7 @@ open public class HighScoresCanvasInputProcessor : PlayerGameInput {
     private val highScoresCanvas: HighScoresCanvas
 public constructor (highScoresCanvas: HighScoresCanvas)                        
 
-                            : super(BasicArrayListD(),  -1){
+                            : super(BasicArrayListD(), BasicArrayListD(),  -1){
 var highScoresCanvas = highScoresCanvas
 
 

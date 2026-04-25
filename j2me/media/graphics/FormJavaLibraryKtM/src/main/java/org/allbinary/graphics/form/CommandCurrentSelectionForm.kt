@@ -47,7 +47,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm {
     val unSelectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
 public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, ItemPaintableFactory.getInstance(), rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var rectangle = rectangle

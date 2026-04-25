@@ -30,6 +30,7 @@ import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.game.Sprite
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.graphics.Anchor
+import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class RightToLeftImageAnimation : ImageSegmentAnimation {
         
@@ -39,7 +40,7 @@ open public class RightToLeftImageAnimation : ImageSegmentAnimation {
     private var currentWidth: Int= 0
 public constructor (image: Image, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, animationBehavior){
+                            : super(image, PrimitiveIntUtil.getArrayInstance(), animationBehavior){
     //var image = image
     //var animationBehavior = animationBehavior
 

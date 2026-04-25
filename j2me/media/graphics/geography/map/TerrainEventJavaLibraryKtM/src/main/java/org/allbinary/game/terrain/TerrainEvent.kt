@@ -33,16 +33,7 @@ open public class TerrainEvent : AllBinaryEventObject {
         
 
     private var basicTerrainInfo: BasicTerrainInfo = BasicTerrainInfo.NULL_BASIC_TERRAIN_INFO
-public constructor ()                        
-
-                            : super(NullUtil.getInstance()!!.NULL_OBJECT){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (basicTerrainInfo: BasicTerrainInfo)                        
+public constructor (basicTerrainInfo: Any)                        
 
                             : super(basicTerrainInfo){
     //var basicTerrainInfo = basicTerrainInfo
@@ -50,7 +41,7 @@ public constructor (basicTerrainInfo: BasicTerrainInfo)
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setBasicTerrainInfo(basicTerrainInfo)
+this.setBasicTerrainInfo(basicTerrainInfo as BasicTerrainInfo)
 }
 
 

@@ -86,19 +86,6 @@ companion object {
     private val highScoresCanvasInputProcessor: HighScoresCanvasInputProcessor
 
     private var currentCommand: Command = highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[0]!!
-public constructor (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface)                        
-
-                            : this(commandListener, allBinaryGameLayerManager, allBinaryGameLayerManager!!.getGameInfo(), paintable, highScoresFactoryInterface, HighScoresCanvasNoInputProcessorFactory()){
-    //var commandListener = commandListener
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
-    //var paintable = paintable
-    //var highScoresFactoryInterface = highScoresFactoryInterface
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, gameInfo: GameInfo, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface: HighScoresCanvasInputProcessorFactoryInterface)                        
 
                             : super(commandListener, HighScoresCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){

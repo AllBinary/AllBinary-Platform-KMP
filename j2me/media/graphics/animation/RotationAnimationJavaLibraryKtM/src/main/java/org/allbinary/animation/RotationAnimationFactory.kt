@@ -36,17 +36,27 @@ open public class RotationAnimationFactory
                 , AnimationInterfaceFactoryInterface
                 , ProceduralAnimationInterfaceFactoryInterface {
         
+companion object {
+            
+    open fun create()
+        //nullable = true from not(false or (false and true)) = true
+: RotationAnimationFactory{
 
+    var totalAngle: Short = AngleFactory.getInstance()!!.TOTAL_ANGLE
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return RotationAnimationFactory(totalAngle, (totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort())
+}
+
+
+        }
+            
     private var totalAngle: Short
 
     private var angleIncrement: Short
-public constructor ()
-            : super()
-        {
-this.totalAngle= AngleFactory.getInstance()!!.TOTAL_ANGLE
-this.angleIncrement= (this.totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
-}
-
 public constructor (totalAngle: Short, angleIncrement: Short)
             : super()
         {

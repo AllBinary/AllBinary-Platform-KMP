@@ -44,7 +44,7 @@ var resource = resource
     override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.setPlayerP(PlayerComposite(AllBinaryMediaManager.createPlayer(this.getResource())))
+this.setPlayerP(PlayerComposite(AllBinaryMediaManager.createPlayer(this.getResource()), 570))
 }
 
 

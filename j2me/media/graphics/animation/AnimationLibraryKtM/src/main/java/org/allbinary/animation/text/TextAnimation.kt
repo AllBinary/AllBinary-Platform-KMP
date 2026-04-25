@@ -43,16 +43,6 @@ open public class TextAnimation : IndexedAnimation {
     var textArrayP: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
 
     private var anchor: Int = Anchor.TOP_LEFT
-public constructor (animationBehavior: AnimationBehavior)                        
-
-                            : super(animationBehavior){
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (text: String, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
@@ -112,7 +102,7 @@ var text = text
     
                         if(text != 
                                     null
-                                )
+                                 && text.length > 0)
                         
                                     {
                                     

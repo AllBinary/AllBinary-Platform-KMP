@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.util.Hashtable
 import org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.resource.ResourceLoadingLevelFactory
@@ -34,18 +35,23 @@ import org.allbinary.image.ImageCacheFactory
 
 open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory : BaseResourceAnimationInterfaceFactoryInterfaceFactory {
         
-public constructor ()                        
+companion object {
+            
+    open fun create()
+        //nullable = true from not(false or (false and true)) = true
+: TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory{
 
-                            : super("TouchButton Animations"){
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory("TouchButton Animations")
 }
 
-public constructor (name: String)                        
 
-                            : super(name){
+        }
+            public constructor (name: String)                        
+
+                            : super(name, Hashtable<Any, Any>(), Hashtable<Any, Any>(), Hashtable<Any, Any>()){
 var name = name
 
 

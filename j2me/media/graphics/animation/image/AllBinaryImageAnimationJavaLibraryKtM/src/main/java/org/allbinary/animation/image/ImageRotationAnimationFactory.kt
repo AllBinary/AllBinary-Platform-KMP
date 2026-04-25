@@ -29,6 +29,7 @@ import javax.microedition.lcdui.Image
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.game.configuration.GameConfigurationCentral
+import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 
@@ -36,166 +37,14 @@ open public class ImageRotationAnimationFactory : BaseImageAnimationFactory {
         
 
     val angleIncrement: Short
-public constructor (image: Image, dx: Int, dy: Int)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var unused = unused
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var unused = unused
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var unused = unused
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short)                        
-
-                            : this(image, width, height, dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, width, height, angleIncrement, animationBehaviorFactory){
+                            : super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
     //var dx = dx
     //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int)                        
-
-                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-}
-
-public constructor (image: Image)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), AnimationBehaviorFactory.getInstance()){
-    //var image = image
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
-    //var image = image
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.angleIncrement= (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
-}
-
-public constructor (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
     //var angleIncrement = angleIncrement
     //var animationBehaviorFactory = animationBehaviorFactory
 
@@ -203,6 +52,8 @@ public constructor (image: Image, width: Int, height: Int, angleIncrement: Short
                             //For kotlin this is before the body of the constructor.
                     
 this.angleIncrement= angleIncrement
+this.animationFactoryInitializationVisitor!!.dx= dx
+this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
 

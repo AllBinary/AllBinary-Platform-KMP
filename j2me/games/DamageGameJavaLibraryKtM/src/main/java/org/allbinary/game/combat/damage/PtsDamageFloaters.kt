@@ -60,7 +60,7 @@ companion object {
     private val primitiveLongUtil: PrimitiveLongUtil
 public constructor (layerInterface: AllBinaryLayer){
 var layerInterface = layerInterface
-this.primitiveLongUtil= PrimitiveLongUtil(100000)
+this.primitiveLongUtil= PrimitiveLongUtil.create(100000)
 this.layerInterface= layerInterface
 
     var CHAR_ARRAY: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!

@@ -29,6 +29,7 @@ import org.allbinary.animation.Animation
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.layer.weapon.WeaponLayer
 import org.allbinary.game.layer.weapon.WeaponLayerCircularPool
+import org.allbinary.game.score.NoScoreable
 import org.allbinary.game.score.ScoreableInterface
 import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.layer.AllBinaryLayer
@@ -36,20 +37,24 @@ import org.allbinary.layer.AllBinaryLayerManager
 
 open public class BasicProjectileWeaponPart : BasicWeaponPart {
         
-
-    private var weaponLayerCircularStaticPool: WeaponLayerCircularPool
-public constructor (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
-
-                            : super(animationInterface){
+companion object {
+            
+    open fun create(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
+        //nullable = true from not(false or (false and false)) = true
+: BasicProjectileWeaponPart{
     //var animationInterface = animationInterface
     //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicProjectileWeaponPart(animationInterface, AllBinaryLayer.NULL_ALLBINARY_LAYER, weaponLayerCircularStaticPool, WeaponProperties.NULL_WEAPON_PROPERTIES, NoScoreable.getInstance(), RelativeRelationship.NULL_RELATIVE_RELATIONSHIP)
 }
 
+
+        }
+            
+    private var weaponLayerCircularStaticPool: WeaponLayerCircularPool
 public constructor (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
                             : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){

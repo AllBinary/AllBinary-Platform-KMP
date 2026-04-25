@@ -45,6 +45,7 @@ import org.allbinary.media.graphics.geography.pathfinding.BasicGeographicMapPath
 import org.allbinary.media.graphics.geography.pathfinding.PathFinderGraphVisitorFactoryBase
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactory
+import org.allbinary.util.BasicArrayListS
 
 open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         
@@ -90,7 +91,7 @@ private constructor (pathFinderGraphVisitorFactoryInterface: PathFinderGraphVisi
 
 PreLogUtil.put("Using Dynamic Path Finding", this, commonStrings!!.GET_INSTANCE)
 this.basicGeographicMapPathFinder= BasicGeographicMapPathFinder(max)
-this.pathFindingInfo= PathFindingInfo(PathFindingNodeCostInfoFactory(max))
+this.pathFindingInfo= PathFindingInfo(PathFindingNodeCostInfoFactory(max), BasicArrayListS(1), BasicArrayListS(1))
 this.basicGeographicMapGraph= BasicGeographicMapGraph(pathFindingInfo!!.getPathFindingNodeCostInfoFactoryInterface() as PathFindingNodeCostInfoFactory)
 this.pathFinderGraphVisitorFactoryInterface= pathFinderGraphVisitorFactoryInterface
 }
@@ -104,7 +105,7 @@ this.pathFinderGraphVisitorFactoryInterface= pathFinderGraphVisitorFactoryInterf
     //var geographicMapInterface = geographicMapInterface
     //var mapArray = mapArray
 
-    var pathFindingInfo: PathFindingInfo = PathFindingInfo(this.pathFindingInfo!!.getPathFindingNodeCostInfoFactoryInterface())
+    var pathFindingInfo: PathFindingInfo = PathFindingInfo(this.pathFindingInfo!!.getPathFindingNodeCostInfoFactoryInterface(), BasicArrayListS(1), BasicArrayListS(1))
 
 RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
 this.init(geographicMapInterface, pathFindingInfo, mapArray)

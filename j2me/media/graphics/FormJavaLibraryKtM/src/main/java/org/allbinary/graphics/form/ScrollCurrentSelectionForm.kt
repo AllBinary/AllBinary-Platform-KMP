@@ -62,25 +62,6 @@ this.moveForSmallScreen= moveForSmallScreen
 this.init()
 }
 
-public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
-
-                            : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
-    //var title = title
-    //var items = items
-    //var rectangle = rectangle
-    //var formType = formType
-    //var border = border
-    //var moveForSmallScreen = moveForSmallScreen
-    //var backgroundBasicColor = backgroundBasicColor
-    //var foregroundBasicColor = foregroundBasicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.moveForSmallScreen= moveForSmallScreen
-this.init()
-}
-
 
                 @Throws(Exception::class)
             

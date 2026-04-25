@@ -38,23 +38,13 @@ companion object {
             
     val NULL_GEOGRAPHIC_MAP_CELL_TYPE_ARRAY: Array<GeographicMapCellType?> = arrayOfNulls(0)
 
-    val NULL_GEOGRAPHIC_MAP_CELL_TYPE: GeographicMapCellType = GeographicMapCellType(Integer.MIN_VALUE)
+    val NULL_GEOGRAPHIC_MAP_CELL_TYPE: GeographicMapCellType = GeographicMapCellType(Integer.MIN_VALUE, 0)
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val type: Int
-public constructor (type: Int)                        
-
-                            : this(type, 0){
-    //var type = type
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (type: Int, reset: Int)
             : super()
         {

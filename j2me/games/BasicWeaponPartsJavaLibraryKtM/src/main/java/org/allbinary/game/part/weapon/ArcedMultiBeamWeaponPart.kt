@@ -41,19 +41,6 @@ open public class ArcedMultiBeamWeaponPart : BasicWeaponPart {
     private val weaponLayerCircularStaticPool: WeaponLayerCircularPool
 
     private val total: Int
-public constructor (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
-
-                            : super(animationInterface){
-    //var animationInterface = animationInterface
-    //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.total= 2
-this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
-}
-
 public constructor (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, total: Int, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
                             : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){

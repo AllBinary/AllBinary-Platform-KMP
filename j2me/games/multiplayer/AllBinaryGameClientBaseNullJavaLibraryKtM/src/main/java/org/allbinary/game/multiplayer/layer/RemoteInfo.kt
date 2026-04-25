@@ -17,6 +17,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringUtil
 
 open public class RemoteInfo
             : Object
@@ -24,17 +25,12 @@ open public class RemoteInfo
         
 companion object {
             
-    val REMOTE_INFO: RemoteInfo = RemoteInfo()
+    val REMOTE_INFO: RemoteInfo = RemoteInfo(StringUtil.getInstance()!!.EMPTY_STRING,  -1,  -1, RemoteInfo.NEW_PLAYER_ID)
 
     val NEW_PLAYER_ID: Int = 0
 
         }
-            private constructor ()
-            : super()
-        {
-}
-
-public constructor (username: String, actorSessionId: Int, playerInputId: Int, id: Int)
+            public constructor (username: String, actorSessionId: Int, playerInputId: Int, id: Int)
             : super()
         {
 var username = username

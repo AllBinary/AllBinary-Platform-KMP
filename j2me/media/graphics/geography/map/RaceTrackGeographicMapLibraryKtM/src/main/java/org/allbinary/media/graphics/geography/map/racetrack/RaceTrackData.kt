@@ -58,20 +58,6 @@ open public class RaceTrackData
     private var overPassGeographicMapCellPositionArray: Array<CellPosition?> = NO_OVER_PASSES_ARRAY
 
     private var id: Integer
-public constructor (id: Integer, cellWidth: Int, cellHeight: Int, miniCellWidth: Int, miniCellHeight: Int)                        
-
-                            : this(id, cellWidth, cellHeight, miniCellWidth, miniCellHeight, NullUtil.getInstance()!!.NULL_INT_ARRAY, NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY){
-    //var id = id
-    //var cellWidth = cellWidth
-    //var cellHeight = cellHeight
-    //var miniCellWidth = miniCellWidth
-    //var miniCellHeight = miniCellHeight
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (id: Integer, cellWidth: Int, cellHeight: Int, miniCellWidth: Int, miniCellHeight: Int, cellTypeIdToGeographicMapCellTypeArray: IntArray, mapArray: Array<IntArray?>)
             : super()
         {

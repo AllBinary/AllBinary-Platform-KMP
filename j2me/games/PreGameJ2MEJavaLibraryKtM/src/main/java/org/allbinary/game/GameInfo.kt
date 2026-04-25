@@ -39,7 +39,7 @@ open public class GameInfo
         
 companion object {
             
-    val NONE: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.NONE, GameMode.NONE,  -1,  -1)
+    val NONE: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.NONE, GameMode.NONE, PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE,  -1,  -1)
 
     val LEVEL_NAME: String = "LEVEL"
 
@@ -58,20 +58,6 @@ companion object {
     private var highestLevel: Int= 0
 
     private var currentLevel: Int
-public constructor (gameType: GameType, gameMode: GameMode, highestLevel: Int, currentLevel: Int)
-            : super()
-        {
-    //var gameType = gameType
-    //var gameMode = gameMode
-    //var highestLevel = highestLevel
-    //var currentLevel = currentLevel
-this.gameType= gameType
-this.gameMode= gameMode
-this.setHighestLevel(highestLevel)
-this.currentLevel= currentLevel
-this.playerType= PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE
-}
-
 public constructor (gameType: GameType, gameMode: GameMode, playerType: PlayerType, highestLevel: Int, currentLevel: Int)
             : super()
         {

@@ -58,15 +58,6 @@ this.startPathFindingNodeList= startPathFindingNodeList
 this.endPathFindingNodeList= endPathFindingNodeList
 }
 
-public constructor (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase)
-            : super()
-        {
-    //var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
-this.pathFindingNodeCostInfoFactoryInterface= pathFindingNodeCostInfoFactoryInterface
-this.startPathFindingNodeList= BasicArrayListS(1)
-this.endPathFindingNodeList= BasicArrayListS(1)
-}
-
 
     override fun getStartPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true

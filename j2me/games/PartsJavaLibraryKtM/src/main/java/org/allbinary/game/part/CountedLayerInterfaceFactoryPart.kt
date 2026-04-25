@@ -62,7 +62,7 @@ public constructor (total: Int, countedPickedUpLayerInterfaceFactory: CountedPic
         {
 var total = total
 var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
-this.primitiveLongUtil= PrimitiveLongUtil(1000)
+this.primitiveLongUtil= PrimitiveLongUtil.create(1000)
 this.init(total, countedPickedUpLayerInterfaceFactory)
 }
 

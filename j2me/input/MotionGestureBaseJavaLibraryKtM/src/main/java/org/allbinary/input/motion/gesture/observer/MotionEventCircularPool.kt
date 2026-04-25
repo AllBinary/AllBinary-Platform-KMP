@@ -53,11 +53,6 @@ var id = id
         }
             
     private var eventPool: AllBinaryEventCircularPool = AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX -1) -MIN)
-private constructor ()
-            : super()
-        {
-}
-
 private constructor (id: Int)
             : super()
         {

@@ -24,14 +24,15 @@ import org.allbinary.logic.string.StringMaker
 
 open public class MultipleScrollSelectionHorizontalForm : ScrollSelectionForm {
         
-
-    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()!!
-public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
-
-                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun create(title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+: MultipleScrollSelectionHorizontalForm{
     //var title = title
     //var items = items
-    //var formPaintableFactory = formPaintableFactory
     //var rectangle = rectangle
     //var formType = formType
     //var border = border
@@ -39,15 +40,21 @@ public constructor (title: String, items: Array<CustomItem?>, formPaintableFacto
     //var foregroundBasicColor = foregroundBasicColor
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return MultipleScrollSelectionHorizontalForm(title, items, ItemPaintableFactory.getInstance(), rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
 }
 
-public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
+        }
+            
+    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()!!
+public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+
+                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
+    //var formPaintableFactory = formPaintableFactory
     //var rectangle = rectangle
     //var formType = formType
     //var border = border

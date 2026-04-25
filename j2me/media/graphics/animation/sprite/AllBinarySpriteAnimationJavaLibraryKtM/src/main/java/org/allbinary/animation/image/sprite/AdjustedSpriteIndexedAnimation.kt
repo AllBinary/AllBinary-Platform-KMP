@@ -38,20 +38,6 @@ open public class AdjustedSpriteIndexedAnimation : SpriteIndexedAnimation {
     private var dx: Int
 
     private var dy: Int
-public constructor (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
-
-                            : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, dx, dy, animationBehavior){
-    //var sprite = sprite
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (sprite: Sprite, image: Image, basicColorArray: Array<BasicColor?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(sprite, image, basicColorArray, animationBehavior){

@@ -35,7 +35,12 @@ open public class ImageArrayRotationAnimationCacheable : AdjustedImageArrayRotat
         
 public constructor (anyType: Any, animationBehavior: AnimationBehavior)                        
 
-                            : super(anyType, animationBehavior){
+                            : super(
+                                    (anyType as ImageArrayRotationAnimationInfo).getImageArray(), 
+                                    (anyType as ImageArrayRotationAnimationInfo).getAngleInfoP(), 
+                                    (anyType as ImageArrayRotationAnimationInfo).getTotalAngle(), 
+                                    (anyType as ImageArrayRotationAnimationInfo).getDx(), 
+                                    (anyType as ImageArrayRotationAnimationInfo).getDy(), animationBehavior){
     //var anyType = anyType
     //var animationBehavior = animationBehavior
 

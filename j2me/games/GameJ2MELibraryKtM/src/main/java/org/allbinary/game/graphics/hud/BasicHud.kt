@@ -74,20 +74,6 @@ open public class BasicHud
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.BLACK
 
     private var color: Int
-public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int)                        
-
-                            : this(location, direction, maxHeight, maxWidth, bufferZone, BasicColorFactory.getInstance()!!.WHITE){
-var location = location
-var direction = direction
-var maxHeight = maxHeight
-var maxWidth = maxWidth
-var bufferZone = bufferZone
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)
             : super()
         {

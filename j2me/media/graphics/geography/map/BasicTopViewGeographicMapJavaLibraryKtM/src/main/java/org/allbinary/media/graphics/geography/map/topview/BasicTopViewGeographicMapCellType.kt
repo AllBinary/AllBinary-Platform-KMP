@@ -34,12 +34,34 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListS
 
 open public class BasicTopViewGeographicMapCellType
             : Object
          {
         
+companion object {
+            
+    open fun create(name: String, type: Int, cost: Int)
+        //nullable = true from not(false or (false and false)) = true
+: BasicTopViewGeographicMapCellType{
+    //var name = name
+    //var type = type
+    //var cost = cost
 
+    var types: BasicArrayList = BasicArrayListS(1)
+
+types.add(type)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicTopViewGeographicMapCellType(name, types, cost)
+}
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val name: String
@@ -47,76 +69,6 @@ open public class BasicTopViewGeographicMapCellType
     val cost: Int
 
     private val types: IntArray
-public constructor (name: String, type: Int, cost: Int)
-            : super()
-        {
-    //var name = name
-    //var type = type
-    //var cost = cost
-
-    
-                        if(GeographicMapCellTypeFactory.getInstance()!!.getGeographicMapCellTypeArray()[type] == 
-                                    null
-                                )
-                        
-                                    {
-                                    RaceTrackGeographicMapCellType(name, type, cost)
-
-                                    }
-                                
-                        else {
-                            
-                        }
-                            
-this.name= name
-this.cost= cost
-this.types= IntArray(1)
-this.types[0]= type
-}
-
-public constructor (name: String, types: IntArray, cost: Int)
-            : super()
-        {
-    //var name = name
-    //var types = types
-    //var cost = cost
-
-    var size: Int = types.size
-                
-
-
-    var type: Int= 0
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-type= types[index]!!
-
-    
-                        if(GeographicMapCellTypeFactory.getInstance()!!.getGeographicMapCellTypeArray()[type] == 
-                                    null
-                                )
-                        
-                                    {
-                                    RaceTrackGeographicMapCellType(name, type, cost)
-
-                                    }
-                                
-                        else {
-                            
-                        }
-                            
-}
-
-this.name= name
-this.types= types
-this.cost= cost
-}
-
 public constructor (name: String, types: BasicArrayList, cost: Int)
             : super()
         {
@@ -151,7 +103,7 @@ type= typeAsInteger!!.toInt()
                                 )
                         
                                     {
-                                    RaceTrackGeographicMapCellType(name, type, cost)
+                                    RaceTrackGeographicMapCellType(name, type, cost, 0)
 
                                     }
                                 

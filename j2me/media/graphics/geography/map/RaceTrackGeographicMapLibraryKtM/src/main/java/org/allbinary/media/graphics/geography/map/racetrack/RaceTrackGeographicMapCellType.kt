@@ -34,36 +34,6 @@ open public class RaceTrackGeographicMapCellType : GeographicMapCellType {
     val name: String
 
     private val travelCost: Int
-public constructor (type: Int, travelCost: Int)                        
-
-                            : super(type){
-    //var type = type
-    //var travelCost = travelCost
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.travelCost= travelCost
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-this.name= commonStrings!!.UNKNOWN
-}
-
-public constructor (name: String, type: Int, travelCost: Int)                        
-
-                            : super(type){
-    //var name = name
-    //var type = type
-    //var travelCost = travelCost
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.name= name
-this.travelCost= travelCost
-}
-
 public constructor (name: String, type: Int, travelCost: Int, reset: Int)                        
 
                             : super(type, reset){

@@ -33,32 +33,12 @@ import org.allbinary.image.AnimationFrameToImageUtil
 
 open public class ImageAnimationSingletonInterfaceFactory : SingletonAnimationInterfaceFactory {
         
-private constructor (animationInterface: Animation)                        
-
-                            : super(animationInterface){
-var animationInterface = animationInterface
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image)                        
-
-                            : super(ImageAnimation(image, AnimationBehavior.getInstance())){
-var image = image
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (animationInterface: Animation, width: Int, height: Int)                        
 
-                            : this(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
-var animationInterface = animationInterface
-var width = width
-var height = height
+                            : super(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
+    //var animationInterface = animationInterface
+    //var width = width
+    //var height = height
 
 
                             //For kotlin this is before the body of the constructor.

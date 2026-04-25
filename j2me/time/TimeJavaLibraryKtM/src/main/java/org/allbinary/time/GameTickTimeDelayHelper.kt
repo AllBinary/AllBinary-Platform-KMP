@@ -38,13 +38,6 @@ open public class GameTickTimeDelayHelper
     var startTime: Long
 
     var lastStartTime: Long
-public constructor ()
-            : super()
-        {
-this.startTime= System.currentTimeMillis()
-this.lastStartTime= this.startTime
-}
-
 public constructor (startTime: Long)
             : super()
         {

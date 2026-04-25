@@ -26,39 +26,46 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.animation.Animation
+import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.graphics.CellPosition
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
-import org.allbinary.logic.communication.log.LogUtil
 
 open public class FullTouchButton : TouchButton {
         
-public constructor (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun create(touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
+        //nullable = true from not(false or (false and false)) = true
+: FullTouchButton{
+    //var touchButtonInput = touchButtonInput
+    //var touchButtonResource = touchButtonResource
+    //var rawRectangle = rawRectangle
+    //var cellPosition = cellPosition
+    //var xBorder = xBorder
+    //var yBorder = yBorder
 
-                            : super(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder){
-var touchButtonInput = touchButtonInput
-var touchButtonResource = touchButtonResource
-var rawRectangle = rawRectangle
-var cellPosition = cellPosition
-var xBorder = xBorder
-var yBorder = yBorder
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return FullTouchButton(touchButtonInput, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.RESOURCE)!!.getInstance(0), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.HINT)!!.getInstance(0), rawRectangle, cellPosition, xBorder, yBorder)
 }
 
-public constructor (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
+
+        }
+            public constructor (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
                             : super(touchButtonInput, animationInterface, hintAnimationInterface, rawRectangle, cellPosition, xBorder, yBorder){
-var touchButtonInput = touchButtonInput
-var animationInterface = animationInterface
-var hintAnimationInterface = hintAnimationInterface
-var rawRectangle = rawRectangle
-var cellPosition = cellPosition
-var xBorder = xBorder
-var yBorder = yBorder
+    //var touchButtonInput = touchButtonInput
+    //var animationInterface = animationInterface
+    //var hintAnimationInterface = hintAnimationInterface
+    //var rawRectangle = rawRectangle
+    //var cellPosition = cellPosition
+    //var xBorder = xBorder
+    //var yBorder = yBorder
 
 
                             //For kotlin this is before the body of the constructor.

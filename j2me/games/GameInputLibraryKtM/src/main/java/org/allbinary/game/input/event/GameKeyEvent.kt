@@ -33,6 +33,20 @@ open public class GameKeyEvent : AllBinaryEventObject {
         
 companion object {
             
+    open fun create(anyType: Any, sourceId: Int, key: Int)
+        //nullable = true from not(false or (false and false)) = true
+: GameKeyEvent{
+var anyType = anyType
+var sourceId = sourceId
+var key = key
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return GameKeyEvent(anyType, sourceId, 0, 0, key, false)
+}
+
+
     val NONE: GameKeyEvent = GameKeyEvent(NullUtil.getInstance()!!.NULL_OBJECT,  -1,  -1,  -1,  -1, false)
 
         }
@@ -64,21 +78,6 @@ this.setOriginalKey(originalKey)
 this.key= key
 this.setGameActionKey(gameActionKey)
 this.setRepeatEvents(repeated)
-}
-
-public constructor (anyType: Any, sourceId: Int, key: Int)                        
-
-                            : super(anyType){
-var anyType = anyType
-var sourceId = sourceId
-var key = key
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.sourceId= sourceId
-this.key= key
-this.setRepeatEvents(false)
 }
 
 

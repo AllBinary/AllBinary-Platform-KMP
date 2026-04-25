@@ -51,14 +51,6 @@ open public class PlayerComposite
     private val player: Player
 
     private val timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
-public constructor (player: Player)
-            : super()
-        {
-var player = player
-this.player= player
-this.timeElapsedHelper!!.delay= 570
-}
-
 public constructor (player: Player, repeatTime: Int)
             : super()
         {

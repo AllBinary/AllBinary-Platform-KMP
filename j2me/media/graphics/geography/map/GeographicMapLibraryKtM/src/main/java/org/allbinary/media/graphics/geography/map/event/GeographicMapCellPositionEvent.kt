@@ -48,17 +48,6 @@ public constructor (anyType: Any, geographicMapCellPosition: CellPosition)
 this.geographicMapCellPosition= geographicMapCellPosition
 }
 
-public constructor (anyType: Any, key: Int)                        
-
-                            : super(anyType){
-var anyType = anyType
-var key = key
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
     open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true

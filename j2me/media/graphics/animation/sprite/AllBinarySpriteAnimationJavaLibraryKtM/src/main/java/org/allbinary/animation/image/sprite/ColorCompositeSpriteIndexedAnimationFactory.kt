@@ -33,6 +33,7 @@ import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.animation.image.BaseImageAnimationFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil
+import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class ColorCompositeSpriteIndexedAnimationFactory : BaseImageAnimationFactory
                 , ProceduralAnimationInterfaceFactoryInterface {
@@ -41,22 +42,9 @@ open public class ColorCompositeSpriteIndexedAnimationFactory : BaseImageAnimati
     private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
 
     private val basicColorArray: Array<BasicColor?>
-public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int)                        
-
-                            : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var basicColorArray = basicColorArray
-    //var width = width
-    //var height = height
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory){
+                            : super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory){
     //var image = image
     //var basicColorArray = basicColorArray
     //var width = width

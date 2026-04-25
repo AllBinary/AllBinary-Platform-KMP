@@ -41,7 +41,29 @@ import org.allbinary.string.CommonStrings
 
 open public class TouchButton : Paintable {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun create(touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
+        //nullable = true from not(false or (false and false)) = true
+: TouchButton{
+    //var touchButtonInput = touchButtonInput
+    //var touchButtonResource = touchButtonResource
+    //var rawRectangle = rawRectangle
+    //var cellPosition = cellPosition
+    //var xBorder = xBorder
+    //var yBorder = yBorder
 
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return TouchButton(touchButtonInput, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.RESOURCE)!!.getInstance(0), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.HINT)!!.getInstance(0), rawRectangle, cellPosition, xBorder, yBorder)
+}
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -67,29 +89,14 @@ open public class TouchButton : Paintable {
     var animationY: Int= 0
 
     var hintAnimationY: Int= 0
-public constructor (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
-
-                            : this(touchButtonInput, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.RESOURCE)!!.getInstance(0), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.HINT)!!.getInstance(0), rawRectangle, cellPosition, xBorder, yBorder){
-var touchButtonInput = touchButtonInput
-var touchButtonResource = touchButtonResource
-var rawRectangle = rawRectangle
-var cellPosition = cellPosition
-var xBorder = xBorder
-var yBorder = yBorder
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int){
-var touchButtonInput = touchButtonInput
-var animationInterface = animationInterface
-var hintAnimationInterface = hintAnimationInterface
-var rawRectangle = rawRectangle
-var cellPosition = cellPosition
-var xBorder = xBorder
-var yBorder = yBorder
+    //var touchButtonInput = touchButtonInput
+    //var animationInterface = animationInterface
+    //var hintAnimationInterface = hintAnimationInterface
+    //var rawRectangle = rawRectangle
+    //var cellPosition = cellPosition
+    //var xBorder = xBorder
+    //var yBorder = yBorder
 this.touchButtonInput= touchButtonInput
 this.animationInterface= animationInterface
 this.hintAnimationInterface= hintAnimationInterface

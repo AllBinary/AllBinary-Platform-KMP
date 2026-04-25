@@ -34,7 +34,7 @@ open public class CircularIndexUtil
         
 companion object {
             
-    val NULL_CIRCULAR_INDEX_UTIL: CircularIndexUtil = CircularIndexUtil(0)
+    val NULL_CIRCULAR_INDEX_UTIL: CircularIndexUtil = CircularIndexUtil(0, 0)
 
     open fun getInstance(max: Int)
         //nullable =  from not(true or (false and false)) = 
@@ -44,7 +44,7 @@ var max = max
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CircularIndexUtil(max)
+                        return CircularIndexUtil(0, max)
 }
 
 
@@ -75,13 +75,6 @@ var index = index
 var size = size
 this.setSize(size)
 this.setIndex(index)
-}
-
-private constructor (size: Int)
-            : super()
-        {
-var size = size
-this.setSize(size)
 }
 
 

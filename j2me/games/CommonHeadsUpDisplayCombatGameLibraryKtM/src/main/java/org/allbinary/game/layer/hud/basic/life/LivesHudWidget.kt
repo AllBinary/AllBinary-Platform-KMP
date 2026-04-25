@@ -29,6 +29,7 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
 import org.allbinary.game.graphics.hud.BasicHud
 import org.allbinary.game.life.Life
+import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.graphics.paint.PaintableInterface
 
@@ -43,7 +44,7 @@ open public class LivesHudWidget : BasicHud
     private val animationInterface: Animation
 public constructor (animationInterface: Animation, lifeInterface: Life, location: Int, direction: Int)                        
 
-                            : super(location, direction, 16, lifeInterface!!.getMaxlives() *16, 2){
+                            : super(location, direction, 16, lifeInterface!!.getMaxlives() *16, 2, BasicColorFactory.getInstance()!!.WHITE){
 var animationInterface = animationInterface
 var lifeInterface = lifeInterface
 var location = location

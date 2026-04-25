@@ -34,6 +34,7 @@ import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.animation.caption.CaptionIndexedAnimation
 import org.allbinary.animation.image.ImageAnimation
+import org.allbinary.graphics.color.BasicColorUtil
 import org.allbinary.image.AnimationFactoryImageScaleUtil
 import org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil
 import org.allbinary.media.ScaleProperties
@@ -72,25 +73,6 @@ open public class ImageCaptionIndexedAnimationFactory
     var scaleProperties: ScaleProperties = ScaleProperties.instance
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int)                        
-
-                            : this(captionImage, spriteMovieImage, soundInterface, frameWidth, frameHeight, captionDx, captionDy, dx, dy, time, AnimationBehaviorFactory.getInstance()){
-    //var captionImage = captionImage
-    //var spriteMovieImage = spriteMovieImage
-    //var soundInterface = soundInterface
-    //var frameWidth = frameWidth
-    //var frameHeight = frameHeight
-    //var captionDx = captionDx
-    //var captionDy = captionDy
-    //var dx = dx
-    //var dy = dy
-    //var time = time
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
@@ -135,7 +117,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
     var sprite: Sprite = this.animationFactorySpriteScaleUtil!!.createImage(this.spriteMovieImage, this.frameWidth, this.frameHeight, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
 
 
-    var movieIndexedAnimationInterface: IndexedAnimation = SpriteIndexedAnimation(sprite, this.spriteMovieImage, this.animationBehaviorFactory!!.getOrCreateInstance())
+    var movieIndexedAnimationInterface: IndexedAnimation = SpriteIndexedAnimation(sprite, this.spriteMovieImage, BasicColorUtil.getInstance()!!.ZERO_ARRAY, this.animationBehaviorFactory!!.getOrCreateInstance())
 
 
     var player: Player = this.soundInterface!!.getPlayerP()!!

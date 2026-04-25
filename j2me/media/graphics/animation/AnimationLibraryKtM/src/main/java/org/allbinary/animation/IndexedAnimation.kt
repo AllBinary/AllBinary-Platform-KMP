@@ -35,10 +35,6 @@ open public class IndexedAnimation : Animation
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     val animationBehaviorP: AnimationBehavior
-private constructor (){
-this.animationBehaviorP= AnimationBehavior.getInstance()
-}
-
 protected constructor (animationBehavior: AnimationBehavior){
     //var animationBehavior = animationBehavior
 this.animationBehaviorP= animationBehavior

@@ -33,63 +33,48 @@ import org.allbinary.math.AngleInfo
 
 open public class AdjustedImageArrayRotationAnimation : ImageArrayRotationAnimation {
         
-
-    private var dx: Int= 0
-
-    private var dy: Int= 0
-public constructor (anyType: Any, animationBehavior: AnimationBehavior)                        
-
-                            : super(anyType, animationBehavior){
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun createAdjustedImageArrayRotationAnimationInfo(anyType: Any, animationBehavior: AnimationBehavior)
+        //nullable = true from not(false or (false and false)) = true
+: AdjustedImageArrayRotationAnimation{
     //var anyType = anyType
     //var animationBehavior = animationBehavior
 
+    var imageRotationAnimationInfo: ImageArrayRotationAnimationInfo = anyType as ImageArrayRotationAnimationInfo
 
-                            //For kotlin this is before the body of the constructor.
-                    
 
-    var allBinaryImageRotationAnimationInfo: ImageArrayRotationAnimationInfo = anyType as ImageArrayRotationAnimationInfo
 
-this.init(allBinaryImageRotationAnimationInfo!!.getDx(), allBinaryImageRotationAnimationInfo!!.getDy())
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AdjustedImageArrayRotationAnimation(imageRotationAnimationInfo!!.getImageArray(), imageRotationAnimationInfo!!.getAngleInfoP(), imageRotationAnimationInfo!!.getTotalAngle(), imageRotationAnimationInfo!!.getDx(), imageRotationAnimationInfo!!.getDy(), animationBehavior)
 }
 
-public constructor (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), 0, 0, animationBehavior){
-    //var imageArray = imageArray
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
-
-                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), dx, dy, animationBehavior){
-    //var imageArray = imageArray
-    //var dx = dx
-    //var dy = dy
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
-
-                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), dx, dy, animationBehavior){
+                @Throws(Exception::class)
+            
+    open fun create(imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)
+        //nullable = true from not(false or (false and false)) = true
+: AdjustedImageArrayRotationAnimation{
     //var imageArray = imageArray
     //var angleInfo = angleInfo
-    //var dx = dx
-    //var dy = dy
+    //var totalAngle = totalAngle
     //var animationBehavior = animationBehavior
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AdjustedImageArrayRotationAnimation(imageArray, angleInfo, totalAngle,  -(imageArray[0]!!.getWidth() shr 2),  -(imageArray[0]!!.getHeight() shr 2), animationBehavior)
 }
 
+
+        }
+            
+    private var dx: Int= 0
+
+    private var dy: Int= 0
 public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(imageArray, angleInfo, totalAngle, animationBehavior){
@@ -104,20 +89,6 @@ public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle:
                             //For kotlin this is before the body of the constructor.
                     
 this.init(dx, dy)
-}
-
-public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)                        
-
-                            : super(imageArray, angleInfo, totalAngle, animationBehavior){
-    //var imageArray = imageArray
-    //var angleInfo = angleInfo
-    //var totalAngle = totalAngle
-    //var animationBehavior = animationBehavior
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.init( -(imageArray[0]!!.getWidth() shr 2),  -(imageArray[0]!!.getHeight() shr 2))
 }
 
 

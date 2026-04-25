@@ -30,156 +30,64 @@ import javax.microedition.lcdui.NullCanvas
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.game.configuration.GameConfigurationCentral
+import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 import org.allbinary.media.image.ImageToRotationImageArrayUtil
 
 open public class AllBinaryArrayImageRotationAnimationFactory : BaseImageAnimationFactory {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun create(image: Image, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinaryArrayImageRotationAnimationFactory{
+    //var image = image
+    //var dx = dx
+    //var dy = dy
 
+    var arrayImageRotationAnimationFactory: AllBinaryArrayImageRotationAnimationFactory = AllBinaryArrayImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity(), AnimationBehaviorFactory.getInstance())
+
+arrayImageRotationAnimationFactory!!.init(dx, dy)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayImageRotationAnimationFactory
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createA(image: Image, dx: Int, dy: Int, angleIncrement: Int)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinaryArrayImageRotationAnimationFactory{
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var angleIncrement = angleIncrement
+
+    var arrayImageRotationAnimationFactory: AllBinaryArrayImageRotationAnimationFactory = AllBinaryArrayImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), angleIncrement, AnimationBehaviorFactory.getInstance())
+
+arrayImageRotationAnimationFactory!!.init(dx, dy)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayImageRotationAnimationFactory
+}
+
+
+        }
+            
     private var imageArray: Array<Image?> = NullCanvas.NULL_IMAGE_ARRAY
 
     private var angleIncrement: Int
-public constructor (image: Image, dx: Int, dy: Int)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var unused = unused
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, angleIncrement: Int)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, angleIncrement: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var unused = unused
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Int)                        
-
-                            : this(image, width, height, dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, width, height, angleIncrement, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-this.animationFactoryInitializationVisitor!!.originalDx= dx
-this.animationFactoryInitializationVisitor!!.originalDy= dy
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int)                        
-
-                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-this.animationFactoryInitializationVisitor!!.originalDx= dx
-this.animationFactoryInitializationVisitor!!.originalDy= dy
-}
-
-public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.angleIncrement= AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()
-this.init()
-}
-
 public constructor (image: Image, width: Int, height: Int, angleIncrement: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory){
+                            : super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -200,6 +108,18 @@ this.init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setImageArray(ImageToRotationImageArrayUtil.getInstance()!!.generate(this.getImage(), this.getAngleIncrement(), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()))
+}
+
+
+    open fun init(dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var dx = dx
+    //var dy = dy
+this.animationFactoryInitializationVisitor!!.dx= dx
+this.animationFactoryInitializationVisitor!!.dy= dy
+this.animationFactoryInitializationVisitor!!.originalDx= dx
+this.animationFactoryInitializationVisitor!!.originalDy= dy
 }
 
 

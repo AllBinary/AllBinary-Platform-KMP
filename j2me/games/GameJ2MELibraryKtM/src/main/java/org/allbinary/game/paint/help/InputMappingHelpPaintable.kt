@@ -325,10 +325,10 @@ stringBuffer!!.append(key.getName())
     var halfWidth: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfWidth()!!
 
 
-    var beginWidth: Int = (font.stringWidth(this.TITLE) shr 1)
+    var beginWidth: Int = (font.stringWidth(this.title) shr 1)
 
 graphics.setColor(this.basicColor!!.toInt())
-graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
+graphics.drawString(this.title, halfWidth -beginWidth, charHeight, anchor)
 
     var inputInfo: Array<String?> = this.inputInfo
 

@@ -40,17 +40,6 @@ open public class VectorAnimationInterfaceFactory
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor)                        
-
-                            : this(currentPoints, basicColor, AnimationBehaviorFactory.getInstance()){
-    //var currentPoints = currentPoints
-    //var basicColor = basicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {

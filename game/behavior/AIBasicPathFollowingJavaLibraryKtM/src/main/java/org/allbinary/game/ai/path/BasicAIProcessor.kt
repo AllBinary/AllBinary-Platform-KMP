@@ -49,20 +49,6 @@ open public class BasicAIProcessor
     private var geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo
 
     private var basicAI: BasicDirectionAIHelper
-public constructor (name: String, geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)                        
-
-                            : this(name, geographicMapCellHistory, GeographicMapCellPathHistoryInfo(), chosenPathList, angleInfo, seed){
-    //var name = name
-    //var geographicMapCellHistory = geographicMapCellHistory
-    //var chosenPathList = chosenPathList
-    //var angleInfo = angleInfo
-    //var seed = seed
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (name: String, geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)
             : super()
         {

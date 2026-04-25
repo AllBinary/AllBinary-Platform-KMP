@@ -26,15 +26,20 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.LayerManager
+import org.allbinary.layer.LayerManagerNoDebug
 
 open public class GameInputLayerManager : LayerManager {
         
+public constructor ()                        
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+                            : super(LayerManagerNoDebug.getInstance()){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
 }
                 
             

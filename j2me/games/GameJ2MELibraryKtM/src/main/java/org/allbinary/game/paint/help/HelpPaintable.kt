@@ -36,7 +36,7 @@ import org.allbinary.logic.string.StringUtil
 open public class HelpPaintable : Paintable {
         
 
-    var TITLE: String = "Help Screen"
+    val title: String
 
     var inputInfo: Array<String?> = StringUtil.getInstance()!!.getArrayInstance()!!
 
@@ -45,12 +45,7 @@ public constructor (title: String, backgroundBasicColor: BasicColor, basicColor:
     //var title = title
     //var backgroundBasicColor = backgroundBasicColor
     //var basicColor = basicColor
-this.TITLE= title
-this.basicColor= basicColor
-}
-
-public constructor (basicColor: BasicColor){
-    //var basicColor = basicColor
+this.title= title
 this.basicColor= basicColor
 }
 
@@ -90,13 +85,13 @@ this.inputInfo= inputInfo
     var halfWidth: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfWidth()!!
 
 
-    var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.TITLE) shr 1)
+    var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.title) shr 1)
 
 graphics.setColor(this.basicColor!!.toInt())
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
-graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
+graphics.drawString(this.title, halfWidth -beginWidth, charHeight, anchor)
 
     var size: Int = this.inputInfo!!.size
                 

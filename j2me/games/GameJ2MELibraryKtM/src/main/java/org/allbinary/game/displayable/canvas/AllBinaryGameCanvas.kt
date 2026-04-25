@@ -57,6 +57,7 @@ import org.allbinary.game.Intermission
 import org.allbinary.game.IntermissionCompositeInterface
 import org.allbinary.game.IntermissionEnableListenerInterface
 import org.allbinary.game.IntermissionInterface
+import org.allbinary.game.PlayerTypesFactory
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.InGameFeatures
 import org.allbinary.game.configuration.InGameOptionsForm
@@ -2257,7 +2258,7 @@ var score = score
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return HighScore(0, "NONE", GameInfo(gameInfo!!.getGameType(), gameInfo!!.getGameMode(), 0, 0), score)
+                        return HighScore(0, "NONE", GameInfo(gameInfo!!.getGameType(), gameInfo!!.getGameMode(), PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE, 0, 0), score)
 }
 
 

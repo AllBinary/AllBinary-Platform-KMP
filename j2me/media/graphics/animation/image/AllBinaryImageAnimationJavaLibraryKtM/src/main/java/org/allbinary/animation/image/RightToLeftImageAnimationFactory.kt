@@ -28,48 +28,16 @@
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
+import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class RightToLeftImageAnimationFactory : BaseImageAnimationFactory {
         
-public constructor (image: Image, dx: Int, dy: Int)                        
-
-                            : this(image, dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
+                            : super(image, PrimitiveIntUtil.getArrayInstance(), image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
     //var image = image
     //var dx = dx
     //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image)                        
-
-                            : this(image, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
-    //var image = image
     //var animationBehaviorFactory = animationBehaviorFactory
 
 

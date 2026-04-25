@@ -19,24 +19,6 @@ import org.allbinary.logic.util.visitor.Visitor
 
 open public class TextFieldItem : TextItem {
         
-public constructor (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
-
-                            : this(canvas, visitor, label, value, maxSize, layout, altText, Font.getDefaultFont(), backgroundBasicColor, foregroundBasicColor){
-var canvas = canvas
-var visitor = visitor
-var label = label
-var value = value
-var maxSize = maxSize
-var layout = layout
-var altText = altText
-var backgroundBasicColor = backgroundBasicColor
-var foregroundBasicColor = foregroundBasicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor){

@@ -51,7 +51,7 @@ companion object {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 this.EMPTY_CELL_TYPE= RaceTrackGeographicMapCellType(commonStrings!!.EMPTY, 0, PathFindingNodeCostInfoData.getInstance()!!.MAX_NODE_COST, 1)
-this.EASY_CELL_TYPE= RaceTrackGeographicMapCellType("Easy", 19, 1)
+this.EASY_CELL_TYPE= RaceTrackGeographicMapCellType("Easy", 19, 1, 0)
 this.FINISH_LINE_ROAD_CELL_TYPE= this.DEFAULT_FINISH_LINE_ROAD_CELL_TYPE
 }
 

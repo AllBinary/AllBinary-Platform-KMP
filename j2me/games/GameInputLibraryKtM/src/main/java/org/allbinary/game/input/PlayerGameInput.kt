@@ -45,17 +45,6 @@ open public class PlayerGameInput : GameInput
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
     private val playerInputId: Int
-public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int)                        
-
-                            : this(gameKeyEventList, BasicArrayListD(), playerInputId){
-    //var gameKeyEventList = gameKeyEventList
-    //var playerInputId = playerInputId
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 public constructor (gameKeyEventList: BasicArrayList, removalGameKeyEventList: BasicArrayList, playerInputId: Int)                        
 
                             : super(gameKeyEventList, removalGameKeyEventList){

@@ -31,6 +31,7 @@ import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.animation.text.TextAnimation
 import org.allbinary.graphics.color.BasicColor
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
 
@@ -39,7 +40,7 @@ open public class CaptionAnimationHelper : CaptionAnimationHelperBase {
 
     private val timeHelper: TimeDelayHelper = TimeDelayHelper(620)
 
-    private val textAnimation: TextAnimation = TextAnimation(AnimationBehavior.getInstance())
+    private val textAnimation: TextAnimation = TextAnimation(StringUtil.getInstance()!!.EMPTY_STRING, AnimationBehavior.getInstance())
 
     private val captionAnimation: Animation
 

@@ -43,7 +43,7 @@ open public class BasicMenuInputProcessor : PlayerGameInput
     private var canvas: Canvas = NullCanvas.NULL_CANVAS
 protected constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: Canvas)                        
 
-                            : super(gameKeyEventList, playerInputId){
+                            : super(gameKeyEventList, BasicArrayListD(), playerInputId){
 var gameKeyEventList = gameKeyEventList
 var playerInputId = playerInputId
 var gameCanvas = gameCanvas

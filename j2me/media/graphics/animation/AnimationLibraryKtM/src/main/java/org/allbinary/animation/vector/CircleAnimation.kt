@@ -40,14 +40,6 @@ open public class CircleAnimation : Animation
     var width: Int
 
     var height: Int
-public constructor (widthAndHeight: Int, basicColor: BasicColor){
-var widthAndHeight = widthAndHeight
-var basicColor = basicColor
-this.width= widthAndHeight
-this.height= widthAndHeight
-this.setBasicColorP(basicColor)
-}
-
 public constructor (width: Int, height: Int, basicColor: BasicColor){
 var width = width
 var height = height

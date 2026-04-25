@@ -34,18 +34,12 @@ open public class LayerManager
     private val list: BasicArrayList = BasicArrayListD()
 
     private val anyType: SynchObject = SynchObject()
-public constructor (layerManagerLogging: LayerManagerLogging)
+public constructor (layerManagerLogging: LayerManagerLoggingBase)
             : super()
         {
     //var layerManagerLogging = layerManagerLogging
 this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.layerManagerLogging= layerManagerLogging
-}
-
-public constructor ()
-            : super()
-        {
-this.layerManagerLogging= LayerManagerNoDebug.getInstance()
 }
 
 

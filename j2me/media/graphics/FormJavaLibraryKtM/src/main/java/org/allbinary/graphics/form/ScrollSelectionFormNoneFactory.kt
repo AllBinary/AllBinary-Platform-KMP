@@ -36,8 +36,6 @@ open public class ScrollSelectionFormNoneFactory
         
 companion object {
             
-    private val instance: ScrollSelectionForm = ScrollSelectionForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
-
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ScrollSelectionForm{
@@ -45,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ScrollSelectionForm.NULL_SCROLL_SELECTION_HORIZONTAL_FORM
 }
 
 

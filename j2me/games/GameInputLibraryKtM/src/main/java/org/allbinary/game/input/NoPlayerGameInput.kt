@@ -49,7 +49,7 @@ companion object {
         }
             private constructor ()                        
 
-                            : super(BasicArrayListD(),  -1){
+                            : super(BasicArrayListD(), BasicArrayListD(),  -1){
 
 
                             //For kotlin this is before the body of the constructor.

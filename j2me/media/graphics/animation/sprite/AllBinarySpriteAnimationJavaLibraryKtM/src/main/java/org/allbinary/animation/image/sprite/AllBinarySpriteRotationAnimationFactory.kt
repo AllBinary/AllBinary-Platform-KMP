@@ -33,123 +33,159 @@ import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.animation.image.BaseImageAnimationFactory
 import org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class AllBinarySpriteRotationAnimationFactory : BaseImageAnimationFactory
                 , ProceduralAnimationInterfaceFactoryInterface {
         
-
-    private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
-public constructor (image: Image, dx: Int, dy: Int, unused: Any)                        
-
-                            : this(image, dx, dy){
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun createWHDY(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinarySpriteRotationAnimationFactory{
     //var image = image
     //var dx = dx
     //var dy = dy
-    //var unused = unused
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+    var spriteRotationAnimationFactory: AllBinarySpriteRotationAnimationFactory = AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), (image.getHeight() shr 2), (image.getHeight() shr 2), 0, 0, animationBehaviorFactory)
+
+spriteRotationAnimationFactory!!.initWH(dx, dy)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return spriteRotationAnimationFactory
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createWH(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinarySpriteRotationAnimationFactory{
+    //var image = image
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AllBinarySpriteRotationAnimationFactory.createWHDY(image, 0, 0, animationBehaviorFactory)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createDXY(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinarySpriteRotationAnimationFactory{
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+    var spriteRotationAnimationFactory: AllBinarySpriteRotationAnimationFactory = AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), image.getHeight(), image.getHeight(), 0, 0, animationBehaviorFactory)
+
+spriteRotationAnimationFactory!!.init(dx, dy)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return spriteRotationAnimationFactory
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createDXYQ(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinarySpriteRotationAnimationFactory{
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+    var spriteRotationAnimationFactory: AllBinarySpriteRotationAnimationFactory = AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), (image.getHeight() shr 2), (image.getHeight() shr 2), 0, 0, animationBehaviorFactory)
+
+spriteRotationAnimationFactory!!.init(dx, dy)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return spriteRotationAnimationFactory
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createQ(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinarySpriteRotationAnimationFactory{
+    //var image = image
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), (image.getHeight() shr 2), (image.getHeight() shr 2), 0, 0, animationBehaviorFactory)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createWHF(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinarySpriteRotationAnimationFactory{
+    //var image = image
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), image.getHeight(), image.getHeight(), 0, 0, animationBehaviorFactory)
+}
+
+
+        }
+            
+    private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
+public constructor (image: Image, sequenceArray: IntArray, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+
+                            : super(image, sequenceArray, width, height, dx, dy, animationBehaviorFactory){
+    //var image = image
+    //var sequenceArray = sequenceArray
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
                     
+}
+
+
+    open fun init(dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var dx = dx
+    //var dy = dy
+this.animationFactoryInitializationVisitor!!.dx= dx
+this.animationFactoryInitializationVisitor!!.dy= dy
+}
+
+
+    open fun initWH(dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var dx = dx
+    //var dy = dy
+this.init(dx, dy)
 this.animationFactoryInitializationVisitor!!.dx +=  -this.animationFactoryInitializationVisitor!!.width /5
 this.animationFactoryInitializationVisitor!!.dy +=  -this.animationFactoryInitializationVisitor!!.height /5
-}
-
-public constructor (image: Image, dx: Int, dy: Int, unused: Int)                        
-
-                            : this(image, NullUtil.getInstance()!!.NULL_OBJECT, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var unused = unused
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-}
-
-public constructor (image: Image, unused: Any, unused2: Any)                        
-
-                            : this(image, 0, 0, unused){
-    //var image = image
-    //var unused = unused
-    //var unused2 = unused2
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int)                        
-
-                            : this(image, dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, animationBehaviorFactory){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-}
-
-public constructor (image: Image)                        
-
-                            : this(image, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, (image.getHeight() shr 2), (image.getHeight() shr 2), animationBehaviorFactory){
-    //var image = image
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, unused: Any)                        
-
-                            : super(image, (image.getHeight() shr 2), (image.getHeight() shr 2), AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var unused = unused
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, image.getHeight(), image.getHeight(), animationBehaviorFactory){
-    //var image = image
-    //var unused = unused
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
 }
 
 

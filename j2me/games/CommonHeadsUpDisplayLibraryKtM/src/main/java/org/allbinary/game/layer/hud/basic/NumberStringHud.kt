@@ -41,7 +41,28 @@ open public class NumberStringHud : BasicHud
         
 companion object {
             
-    val NULL_NUMBER_STRING_HUD: NumberStringHud = NumberStringHud(StringUtil.getInstance()!!.EMPTY_STRING, 9, BasicHudFactory.getInstance()!!.ABSOLUTE, 0, 0, 0, BasicColorFactory.getInstance()!!.NULL_COLOR)
+    open fun create()
+        //nullable = true from not(false or (false and true)) = true
+: NumberStringHud{
+
+        try {
+            
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NumberStringHud(StringUtil.getInstance()!!.EMPTY_STRING, 9, BasicHudFactory.getInstance()!!.ABSOLUTE, 1, 0, 0, 0, BasicColorFactory.getInstance()!!.NULL_COLOR)
+} catch(e: Exception)
+            {
+
+
+
+                            throw RuntimeException()
+}
+
+}
+
+
+    val NULL_NUMBER_STRING_HUD: NumberStringHud = NumberStringHud.create()!!
 
         }
             
@@ -58,31 +79,6 @@ companion object {
     private var valueTotalDigits: Int= 0
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor (prependString: String, max: Int, location: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
-
-                            : super(location, 1, maxHeight, maxWidth, bufferZone, basicColor){
-var prependString = prependString
-var max = max
-var location = location
-var maxHeight = maxHeight
-var maxWidth = maxWidth
-var bufferZone = bufferZone
-var basicColor = basicColor
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.PREPEND_STRING= prependString!!.toCharArray()
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-this.offset= myFont!!.stringWidth(prependString) +myFont!!.charWidth()
-this.valueString= PrimitiveLongSingleton.getInstance()!!.NUMBER_CHAR_ARRAYS[0]!!
-this.primitiveLongUtil= PrimitiveLongUtil(max +1)
-this.max= max
-this.value= 0
-}
-
 public constructor (prependString: String, max: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
@@ -104,7 +100,7 @@ this.PREPEND_STRING= prependString!!.toCharArray()
 
 this.offset= myFont!!.stringWidth(prependString) +myFont!!.charWidth()
 this.valueString= PrimitiveLongSingleton.getInstance()!!.NUMBER_CHAR_ARRAYS[0]!!
-this.primitiveLongUtil= PrimitiveLongUtil(max +1)
+this.primitiveLongUtil= PrimitiveLongUtil.create(max +1)
 this.max= max
 this.value= 0
 

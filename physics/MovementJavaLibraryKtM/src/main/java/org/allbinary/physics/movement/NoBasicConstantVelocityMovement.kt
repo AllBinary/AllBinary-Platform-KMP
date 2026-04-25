@@ -26,15 +26,21 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.AllBinaryGameLayer
+import org.allbinary.game.physics.velocity.BasicVelocityProperties
+import org.allbinary.logic.math.BasicDecimal
 
 open public class NoBasicConstantVelocityMovement : BasicConstantVelocityMovement {
         
+public constructor ()                        
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+                            : super(BasicDecimal.ZERO_BIGDECIMAL, BasicVelocityProperties()){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
                 @Throws(Exception::class)
             
     override fun process(layer: AllBinaryGameLayer)

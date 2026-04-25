@@ -31,189 +31,110 @@ import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
+import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.media.image.ImageCopyUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 
 open public class AllBinaryAndroidImageRotationAnimationFactory : BaseImageAnimationFactory {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun create(image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinaryAndroidImageRotationAnimationFactory{
+    //var image = image
+    //var width = width
+    //var height = height
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AllBinaryAndroidImageRotationAnimationFactory(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), animationBehaviorFactory, false)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createA(image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinaryAndroidImageRotationAnimationFactory{
+    //var image = image
+    //var width = width
+    //var height = height
+    //var angleIncrement = angleIncrement
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AllBinaryAndroidImageRotationAnimationFactory(image, width, height, angleIncrement, animationBehaviorFactory, false)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createU(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinaryAndroidImageRotationAnimationFactory{
+    //var image = image
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+    var androidImageRotationAnimationFactory: AllBinaryAndroidImageRotationAnimationFactory = AllBinaryAndroidImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), animationBehaviorFactory, false)
+
+androidImageRotationAnimationFactory!!.init( -(image.getWidth() shr 2),  -(image.getHeight() shr 2))
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return androidImageRotationAnimationFactory
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createDXYU(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinaryAndroidImageRotationAnimationFactory{
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
+
+    var androidImageRotationAnimationFactory: AllBinaryAndroidImageRotationAnimationFactory = AllBinaryAndroidImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), animationBehaviorFactory, false)
+
+androidImageRotationAnimationFactory!!.init(dx, dy)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return androidImageRotationAnimationFactory
+}
+
+
+        }
+            
+    open fun init(dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var dx = dx
+    //var dy = dy
+this.animationFactoryInitializationVisitor!!.dx= dx
+this.animationFactoryInitializationVisitor!!.dy= dy
+this.animationFactoryInitializationVisitor!!.originalDx= dx
+this.animationFactoryInitializationVisitor!!.originalDy= dy
+}
+
 
     private val angleIncrement: Short
 
     private val resizeCanvasForRotation: Boolean
-public constructor (image: Image, unused: Any)                        
-
-                            : this(image, unused, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var unused = unused
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, image.getWidth(), image.getHeight(),  -(image.getWidth() shr 2),  -(image.getHeight() shr 2), animationBehaviorFactory){
-    //var image = image
-    //var unused = unused
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, unused: Any)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var unused = unused
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var unused = unused
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, unused: Any, angleIncrement: Short)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var unused = unused
-    //var angleIncrement = angleIncrement
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var unused = unused
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, width, height, angleIncrement, animationBehaviorFactory){
-var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-this.animationFactoryInitializationVisitor!!.originalDx= dx
-this.animationFactoryInitializationVisitor!!.originalDy= dy
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : this(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-this.animationFactoryInitializationVisitor!!.originalDx= dx
-this.animationFactoryInitializationVisitor!!.originalDy= dy
-}
-
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory, resizeCanvasForRotation: Boolean)                        
-
-                            : this(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var animationBehaviorFactory = animationBehaviorFactory
-    //var resizeCanvasForRotation = resizeCanvasForRotation
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationFactoryInitializationVisitor!!.dx= dx
-this.animationFactoryInitializationVisitor!!.dy= dy
-this.animationFactoryInitializationVisitor!!.originalDx= dx
-this.animationFactoryInitializationVisitor!!.originalDy= dy
-}
-
-public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.angleIncrement= (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
-this.resizeCanvasForRotation= false
-}
-
-public constructor (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
-
-                            : super(image, width, height, animationBehaviorFactory){
-    //var image = image
-    //var width = width
-    //var height = height
-    //var angleIncrement = angleIncrement
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-this.angleIncrement= angleIncrement
-this.resizeCanvasForRotation= false
-}
-
 public constructor (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory, resizeCanvasForRotation: Boolean)                        
 
-                            : super(image, width, height, animationBehaviorFactory){
+                            : super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
