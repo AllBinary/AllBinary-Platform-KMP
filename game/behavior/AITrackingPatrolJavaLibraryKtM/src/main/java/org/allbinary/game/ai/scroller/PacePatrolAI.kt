@@ -92,14 +92,14 @@ this.update()
                         if(this.lastKeyDirection != keyDirection || !this.isFollowLimitedByTerrain)
                         
                                     {
-                                    super.processAI(Canvas.LEFT)
+                                    super.processKeyAI(Canvas.LEFT)
 
                                     }
                                 
 keyDirection= Canvas.LEFT
 this.lastKeyDirection= keyDirection
 xTotalDistance= 0
-super.processAI(Canvas.KEY_NUM1)
+super.processKeyAI(Canvas.KEY_NUM1)
 
                                     }
                                 
@@ -113,19 +113,19 @@ super.processAI(Canvas.KEY_NUM1)
                         if(this.lastKeyDirection != keyDirection || !this.isFollowLimitedByTerrain)
                         
                                     {
-                                    super.processAI(Canvas.RIGHT)
+                                    super.processKeyAI(Canvas.RIGHT)
 
                                     }
                                 
 keyDirection= Canvas.RIGHT
 this.lastKeyDirection= keyDirection
 xTotalDistance= 0
-super.processAI(Canvas.KEY_NUM1)
+super.processKeyAI(Canvas.KEY_NUM1)
 
                                     }
                                 
                         else {
-                            super.processAI(this.keyDirection)
+                            super.processKeyAI(this.keyDirection)
 
                         }
                             

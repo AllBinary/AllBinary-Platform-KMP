@@ -33,7 +33,7 @@ open public class GameKeyEvent : AllBinaryEventObject {
         
 companion object {
             
-    open fun create(anyType: Any, sourceId: Int, key: Int)
+    open fun createEvent(anyType: Any, sourceId: Int, key: Int)
         //nullable = true from not(false or (false and false)) = true
 : GameKeyEvent{
 var anyType = anyType

@@ -86,7 +86,7 @@ var soundsFactoryInterface = soundsFactoryInterface
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.putF(commonString!!.START, THIS, commonString!!.INIT)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
+ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()
 }

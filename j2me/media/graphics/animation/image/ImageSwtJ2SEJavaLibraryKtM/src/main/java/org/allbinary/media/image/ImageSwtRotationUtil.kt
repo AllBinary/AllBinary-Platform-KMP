@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import javax.microedition.lcdui.Image
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.logic.communication.log.LogUtil
@@ -33,9 +32,6 @@ import org.allbinary.string.CommonStrings
 import org.eclipse.swt.SWT
 import org.eclipse.swt.graphics.GC
 import org.eclipse.swt.graphics.ImageData
-import org.eclipse.swt.graphics.Transform
-import org.microemu.device.swt.SwtImmutableImage
-import org.microemu.device.swt.SwtMutableImage
 
 open public class ImageSwtRotationUtil
             : Object
@@ -146,7 +142,7 @@ private constructor ()
 }
 
 
-    open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
+    open fun getRotatedImageSWT(bufferedImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage

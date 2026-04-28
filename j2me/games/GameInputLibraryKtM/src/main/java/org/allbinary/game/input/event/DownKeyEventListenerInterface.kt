@@ -40,7 +40,7 @@ interface DownKeyEventListenerInterface : EventListenerInterface {
 
                 @Throws(Exception::class)
             
-    open fun onDownKeyEvent(keyInteger: Integer)
+    open fun onDownKey(keyInteger: Integer)
         //nullable = true from not(false or (false and false)) = true
 
 

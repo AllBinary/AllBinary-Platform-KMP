@@ -37,7 +37,7 @@ open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory :
         
 companion object {
             
-    open fun create()
+    open fun createFactory()
         //nullable = true from not(false or (false and true)) = true
 : TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory{
 
@@ -66,13 +66,13 @@ var name = name
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
-this.init(ImageCacheFactory.getInstance(), level)
+this.initImageCache(ImageCacheFactory.getInstance(), level)
 }
 
 
                 @Throws(Exception::class)
             
-    override fun init(imageCache: ImageCache, level: Int)
+    override fun initImageCache(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageCache = imageCache

@@ -33,20 +33,20 @@ open public class CellPosition : V {
         
 companion object {
             
-    open fun toString(basicGeographicMapCellPosition: CellPosition)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringCellPosition(basicGeographicMapCellPosition: CellPosition)
+        //nullable = true from not(false or (false and false)) = true
 : String{
 var basicGeographicMapCellPosition = basicGeographicMapCellPosition
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return toString(basicGeographicMapCellPosition!!.getColumn(), basicGeographicMapCellPosition!!.getRow())
+                        return toStringColRow(basicGeographicMapCellPosition!!.getColumn(), basicGeographicMapCellPosition!!.getRow())
 }
 
 
-    open fun toString(i_column: Int, i_row: Int)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringColRow(i_column: Int, i_row: Int)
+        //nullable = true from not(false or (false and false)) = true
 : String{
 var i_column = i_column
 var i_row = i_row
@@ -116,7 +116,7 @@ this.id= (row *columns) +column
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CellPosition.toString(this.getColumn(), this.getRow())
+                        return CellPosition.toStringColRow(this.getColumn(), this.getRow())
 }
 
 

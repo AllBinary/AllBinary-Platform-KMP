@@ -51,20 +51,13 @@ open public class AndroidTitleProgressBar : ProgressCanvas {
 protected constructor (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, backgroundBasicColor, foregroundBasicColor){
-var title = title
-var backgroundBasicColor = backgroundBasicColor
-var foregroundBasicColor = foregroundBasicColor
+    //var title = title
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
                     
-}
-
-
-    open fun init(activity: SimpleProgressActivityInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var activity = activity
 }
 
 
@@ -155,14 +148,14 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 
-    override fun addPortion(value: Int, text: String)
+    override fun addNormalPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 var text = text
 
         try {
-            super.addPortion(value, text)
+            super.addNormalPortion(value, text)
 this.portion= value
 this.progressActivity!!.runOnUiThread(this.progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)

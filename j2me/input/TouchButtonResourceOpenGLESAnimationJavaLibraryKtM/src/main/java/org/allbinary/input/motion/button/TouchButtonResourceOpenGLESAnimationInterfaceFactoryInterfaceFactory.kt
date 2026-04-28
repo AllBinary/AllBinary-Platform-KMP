@@ -47,7 +47,7 @@ public constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
-super.init(OpenGLImageCacheFactory.getInstance(), level)
+super.initImageCache(OpenGLImageCacheFactory.getInstance(), level)
 }
 
 

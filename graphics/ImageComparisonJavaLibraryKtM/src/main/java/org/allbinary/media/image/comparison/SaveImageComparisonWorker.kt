@@ -99,7 +99,7 @@ this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
 
-timeHelper!!.setStartTime()
+timeHelper!!.setStartTimeTNT()
 
     var imageComparisonResultsEvent: ImageComparisonResultsEvent = this.imageComparisonInfoVector!!.get(0) as ImageComparisonResultsEvent
 
@@ -110,7 +110,7 @@ this.logUtil!!.putF(imageComparisonInfo!!.toString(), this, this.commonStrings!!
 ComparisonImageInputOutput().
                             save(imageComparisonInfo, imageComparisonInfo!!.getFrameTwo())
 this.imageComparisonInfoVector!!.remove(imageComparisonInfo)
-this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {

@@ -37,7 +37,7 @@ open public class VectorAnimation : IndexedAnimation
         
 companion object {
             
-    open fun create(currentPoints2: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)
+    open fun createVectorAnimation(currentPoints2: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)
         //nullable = true from not(false or (false and false)) = true
 : VectorAnimation{
     //var currentPoints2 = currentPoints2
@@ -75,7 +75,7 @@ currentPoints[0]!![index]!![1]= currentPoints2[index]!![1]!!
 
     private var currentPoints: Array<Array<IntArray?>?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
 
-    private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0)!!
+    private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(0)!!
 public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
@@ -202,19 +202,19 @@ nextPointY= nextPoint[1]!!
 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintVectors", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "paintVectors", e)
 }
 
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 var x = x
 var y = y
-this.basicSetColorUtil!!.setBasicColorP(graphics, basicColor)
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor)
 this.paintVectors(graphics, x, y)
 }
 
@@ -246,7 +246,7 @@ var frame = frame
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentPoints[frame]!!
+                        return this.currentPoints[frame]!!
 }
 
 
@@ -255,7 +255,7 @@ var frame = frame
 {
 var currentPoints = currentPoints
 this.currentPoints= currentPoints
-this.circularIndexUtil= CircularIndexUtil.getInstance(currentPoints!!.size)
+this.circularIndexUtil= CircularIndexUtil.createInstance(currentPoints!!.size)
 }
 
 

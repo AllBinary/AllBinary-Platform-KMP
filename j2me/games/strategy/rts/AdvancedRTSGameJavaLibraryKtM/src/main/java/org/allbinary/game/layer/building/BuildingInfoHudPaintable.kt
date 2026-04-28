@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
-import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
@@ -139,7 +138,7 @@ this.productivityHud!!.paint(graphics)
 this.efficiencyHud!!.paint(graphics)
 this.healthHud!!.paint(graphics)
 this.maxHealthHud!!.paint(graphics)
-this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
+this.getAnimationInterface()!!.paintXY(graphics, this.imageX, y)
 }
 
 
@@ -160,7 +159,7 @@ this.healthHud!!.set(health)
 
     var totalLength: Int = this.HEALTH.length +MathUtil.getInstance()!!.getTotalDigits(health)
 
-this.maxHealthHud!!.setX(this.textX +MyFont.getInstance()!!.stringWidth(totalLength))
+this.maxHealthHud!!.setX(this.textX +MyFont.getInstance()!!.defaultStringWidth(totalLength))
 this.maxHealthHud!!.set(buildingLayer!!.getHealthInterface()!!.getMaxHealth())
 }
 

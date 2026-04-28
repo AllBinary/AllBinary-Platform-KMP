@@ -124,7 +124,7 @@ var index = index
     var tiledLayer: AllBinaryTiledLayer = this.raceTrackGeographicMap!!.getAllBinaryTiledLayer()!!
 
 
-    var pickupLayer: RaceTrackPickupLayer = PickupLayerCircularStaticPool.getInstance()!!.getInstance(pickedUpLayerInterfaceFactory, x, y, tiledLayer!!.getZP() +3) as RaceTrackPickupLayer
+    var pickupLayer: RaceTrackPickupLayer = PickupLayerCircularStaticPool.getInstance()!!.getInstanceXYZ(pickedUpLayerInterfaceFactory, x, y, tiledLayer!!.getZP() +3) as RaceTrackPickupLayer
 
 pickupLayer!!.setTiledLayer(tiledLayer)
 allBinaryLayerManager!!.append(pickupLayer)

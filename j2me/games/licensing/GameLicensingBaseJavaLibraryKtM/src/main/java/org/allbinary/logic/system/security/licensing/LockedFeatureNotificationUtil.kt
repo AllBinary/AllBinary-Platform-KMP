@@ -60,7 +60,7 @@ companion object {
             {
             }            
         
-    private val gameNotificationEvent: GameNotificationEvent = GameNotificationEvent(this, LicenseStrings.getInstance()!!.LOCKED, SmallIntegerSingletonFactory.getInstance()!!.getInstance(3), BasicColorFactory.getInstance()!!.RED, BooleanFactory.getInstance()!!.FALSE)
+    private val gameNotificationEvent: GameNotificationEvent = GameNotificationEvent(this, LicenseStrings.getInstance()!!.LOCKED, SmallIntegerSingletonFactory.getInstance()!!.getAt(3), BasicColorFactory.getInstance()!!.RED, BooleanFactory.getInstance()!!.FALSE)
 
                 @Throws(Exception::class)
             
@@ -74,7 +74,7 @@ GameNotificationEventHandler.getInstance()!!.fireEvent(gameNotificationEvent)
 
                 @Throws(Exception::class)
             
-    open fun fire(basicColor: BasicColor)
+    open fun fireWithColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor

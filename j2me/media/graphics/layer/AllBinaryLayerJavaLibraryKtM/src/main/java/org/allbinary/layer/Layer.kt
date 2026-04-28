@@ -40,7 +40,7 @@ open public class Layer
         
 companion object {
             
-    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
+    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
         }
             
@@ -79,7 +79,7 @@ this.z= z
 }
 
 
-    open fun move(dx: Int, dy: Int)
+    open fun moveDXY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -89,7 +89,7 @@ this.y += dy
 }
 
 
-    open fun move(dx: Int, dy: Int, dz: Int)
+    open fun moveDXYZ(dx: Int, dy: Int, dz: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx
@@ -240,8 +240,8 @@ this.height= height
 }
 
 
-    open fun toString(stringBuffer: StringMaker)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringAppend(stringBuffer: StringMaker)
+        //nullable = true from not(false or (false and false)) = true
 {
     //var stringBuffer = stringBuffer
 }

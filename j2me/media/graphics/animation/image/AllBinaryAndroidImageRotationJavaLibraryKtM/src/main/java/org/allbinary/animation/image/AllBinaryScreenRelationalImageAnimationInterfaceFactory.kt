@@ -61,7 +61,7 @@ androidImageInterface!!.getBitmap()!!.recycle()
                                     }
                                 
 
-    var scale: Float = ScreenRelationalUtil.getInstance()!!.getScale(image)!!
+    var scale: Float = ScreenRelationalUtil.getInstance()!!.getScaleImage(image)!!
 
 this.lastImage= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), this.getImage(), scale, scale, false)
 }

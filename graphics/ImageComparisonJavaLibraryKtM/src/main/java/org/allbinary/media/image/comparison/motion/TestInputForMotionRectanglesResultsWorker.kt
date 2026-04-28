@@ -122,7 +122,7 @@ this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
 
-timeHelper!!.setStartTime()
+timeHelper!!.setStartTimeTNT()
 
     var motionRectangles: MotionRectangles = this.getMotionRectanglesVector()!!.get(0) as MotionRectangles
 
@@ -200,7 +200,7 @@ inputRobotInterface!!.keyRelease(KeyEvent.VK_F1)
                                 
 this.index++
 this.getMotionRectanglesVector()!!.remove(motionRectangles)
-this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {

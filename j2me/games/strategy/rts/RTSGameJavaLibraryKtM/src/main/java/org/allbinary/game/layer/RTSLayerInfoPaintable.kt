@@ -52,7 +52,7 @@ this.initUpdatePaintable!!.paint(graphics)
 }
 
 
-    open fun updateRTSLayerInfo(hudPaintable: InitUpdatePaintable)
+    open fun updateRTSLayerInfoInit(hudPaintable: InitUpdatePaintable)
         //nullable = true from not(false or (false and false)) = true
 {
 var hudPaintable = hudPaintable
@@ -60,7 +60,7 @@ this.initUpdatePaintable= hudPaintable
 }
 
 
-    open fun updateRTSLayerInfo(hudPaintable: SelectionHudPaintable)
+    open fun updateRTSLayerInfoSelection(hudPaintable: SelectionHudPaintable)
         //nullable = true from not(false or (false and false)) = true
 {
 var hudPaintable = hudPaintable

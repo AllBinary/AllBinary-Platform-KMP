@@ -69,7 +69,7 @@ public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
                                     
     var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = (this.ownerLayer as CollidableDestroyableDamageableLayer)
 
-collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickup(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
+collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickupLayer(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
 
                                     }
                                 
@@ -83,14 +83,14 @@ collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickup(collidable
                                     }
                                 
                         else {
-                            this.collide(collidableInterfaceCompositeInterface as VehiclePropertiesCompositeInterface)
+                            this.collideVehicle(collidableInterfaceCompositeInterface as VehiclePropertiesCompositeInterface)
 
                         }
                             
 }
 
 
-    override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -102,7 +102,7 @@ ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
 
     private var halfImpactVelocityY: Long= 0
 
-    open fun collide(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
+    open fun collideVehicle(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
@@ -127,8 +127,8 @@ ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
                         
                                     {
                                     this.halfImpactVelocityX= (impactVelocityX shr 1)
-ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(this.halfImpactVelocityX)
-vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(this.halfImpactVelocityX)
+ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.addlong(this.halfImpactVelocityX)
+vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.addlong(this.halfImpactVelocityX)
 
                                     }
                                 
@@ -142,8 +142,8 @@ vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(
                         
                                     {
                                     this.halfImpactVelocityY= (impactVelocityY shr 1)
-ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityYBasicDecimalP()!!.add(this.halfImpactVelocityY)
-vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(this.halfImpactVelocityY)
+ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityYBasicDecimalP()!!.addlong(this.halfImpactVelocityY)
+vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.addlong(this.halfImpactVelocityY)
 
                                     }
                                 

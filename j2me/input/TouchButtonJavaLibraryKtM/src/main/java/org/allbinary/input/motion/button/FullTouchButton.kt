@@ -38,7 +38,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
+    open fun createButton(touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
         //nullable = true from not(false or (false and false)) = true
 : FullTouchButton{
     //var touchButtonInput = touchButtonInput
@@ -87,7 +87,7 @@ companion object {
 
     var y: Int = this.rawRectangle!!.getHeight() *cellPositionP!!.getRow()
 
-this.rectangleP= Rectangle(pointFactory!!.getInstance0(x, y), this.rawRectangle!!.getWidth() +(2 *xBorder), this.rawRectangle!!.getHeight() +(2 *yBorder))
+this.rectangleP= Rectangle(pointFactory!!.createXY(x, y), this.rawRectangle!!.getWidth() +(2 *xBorder), this.rawRectangle!!.getHeight() +(2 *yBorder))
 
     var point: GPoint = this.rectangleP!!.getPoint()!!
 

@@ -40,7 +40,7 @@ open public class AdvancedRTSProperties
         
 companion object {
             
-    open fun createSimulated()
+    open fun createPropertiesSimulated()
         //nullable = true from not(false or (false and true)) = true
 : AdvancedRTSProperties{
 
@@ -51,7 +51,7 @@ companion object {
 }
 
 
-    open fun create()
+    open fun createProperties()
         //nullable = true from not(false or (false and true)) = true
 : AdvancedRTSProperties{
 

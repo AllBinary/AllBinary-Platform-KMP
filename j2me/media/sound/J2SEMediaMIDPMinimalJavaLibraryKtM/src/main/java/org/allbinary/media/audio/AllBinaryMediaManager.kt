@@ -93,7 +93,7 @@ companion object {
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.putF(commonString!!.START, THIS, commonString!!.INIT)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
+ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()
 }
@@ -130,7 +130,7 @@ System.gc()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return createPlayer(ByteArrayInputStream(NullUtil.getInstance()!!.NULL_BYTE_ARRAY), AudioContentTypeDataFactory.getInstance()!!.MIME_AUDIO_TONE.getName())
+                        return createPlayerFromInputStream(ByteArrayInputStream(NullUtil.getInstance()!!.NULL_BYTE_ARRAY), AudioContentTypeDataFactory.getInstance()!!.MIME_AUDIO_TONE.getName())
 
                                     }
                                 
@@ -185,7 +185,7 @@ logUtil!!.put(commonString!!.EXCEPTION, THIS, CREATE_PLAYER, e)
 
                 @Throws(IOException::class, MediaException::class)
             
-    open fun createPlayer(stream: InputStream, type: String)
+    open fun createPlayerFromInputStream(stream: InputStream, type: String)
         //nullable = true from not(false or (false and false)) = true
 : Player{
     //var stream = stream

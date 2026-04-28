@@ -64,7 +64,7 @@ companion object {
 
     private var background: Int= 0
 
-    open fun setBackground(background: Int)
+    open fun setBackgroundResource(background: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
@@ -132,7 +132,7 @@ this.IMAGE[index]= NullCanvas.NULL_IMAGE
                                     {
                                     ResourceUtil.getInstance()!!.addResource(RESOURCE, Integer(AndroidBasicTitleProgressBar.background))
 GameFeatureImageCacheFactory.init()
-this.image= ImageCacheFactory.getInstance()!!.get(RESOURCE)
+this.image= ImageCacheFactory.getInstance()!!.getWithKey(RESOURCE)
 
                                     }
                                 
@@ -144,7 +144,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
-    open fun init(activity: Activity)
+    open fun initActivity(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
 var activity = activity
@@ -280,7 +280,7 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 
 
     
-                        if(displayInfo!!.isPortrait(lastWidth, lastHeight))
+                        if(displayInfo!!.isPortraitWH(lastWidth, lastHeight))
                         
                                     {
                                     this.setImages(0, lastWidth, lastHeight)
@@ -412,7 +412,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 
-    override fun addPortion(value: Int, text: String)
+    override fun addNormalPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -420,7 +420,7 @@ var text = text
 
         try {
             this.portion= value
-super.addPortion(value, text)
+super.addNormalPortion(value, text)
 this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
@@ -478,7 +478,7 @@ var lastHeight = lastHeight
                         if(this.IMAGE[index] == NullCanvas.NULL_IMAGE)
                         
                                     {
-                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -20, image.getHeight().toFloat(), false)
+                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage2(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -20, image.getHeight().toFloat(), false)
 
                                     }
                                 
@@ -494,7 +494,7 @@ var lastHeight = lastHeight
                         if(this.IMAGE[nextIndex] == NullCanvas.NULL_IMAGE)
                         
                                     {
-                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -28, image.getHeight().toFloat(), false)
+                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage2(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -28, image.getHeight().toFloat(), false)
 
                                     }
                                 
@@ -514,7 +514,7 @@ var lastHeight = lastHeight
 {
 var graphics = graphics
 this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
-this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
+this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(RESOURCE)
 
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 
@@ -552,7 +552,7 @@ this.updateCurrent()
 var graphics = graphics
 this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.UPDATE)
 this.initOpenGL(graphics)
-this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
+this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(RESOURCE)
 
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 
@@ -618,7 +618,7 @@ var index = index
 var graphics = graphics
 
         try {
-            this.animation.paint(graphics, 0, 20)
+            this.animation.paintXY(graphics, 0, 20)
 super.paint2(graphics)
 } catch(e: Exception)
             {

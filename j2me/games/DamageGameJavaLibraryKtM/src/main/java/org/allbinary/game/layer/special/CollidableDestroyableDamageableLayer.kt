@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.collision.CollidableNeverCollideBehaviorFactory
 import org.allbinary.game.combat.damage.DamageableInterface
@@ -43,7 +42,6 @@ import org.allbinary.game.part.PartInterface
 import org.allbinary.game.part.PartInterfaceUtil
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.RectangleFactory
-import org.allbinary.image.opengles.OpenGLSurfaceChangedInterface
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -117,7 +115,7 @@ this.setPosition(this.initX, this.initY, this.initZ)
 
                 @Throws(Exception::class)
             
-    open fun initPosition(x: Int, y: Int, z: Int)
+    open fun initPositionXYZ(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -392,7 +390,7 @@ this.readyForExplosion= isReadyForExplosion
 
                 @Throws(Exception::class)
             
-    open fun up(yAnalogValue: Int)
+    open fun upAnalog(yAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var yAnalogValue = yAnalogValue
@@ -401,7 +399,7 @@ this.readyForExplosion= isReadyForExplosion
 
                 @Throws(Exception::class)
             
-    open fun down(yAnalogValue: Int)
+    open fun downAnalog(yAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var yAnalogValue = yAnalogValue
@@ -410,7 +408,7 @@ this.readyForExplosion= isReadyForExplosion
 
                 @Throws(Exception::class)
             
-    open fun right(xAnalogValue: Int)
+    open fun rightAnalog(xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var xAnalogValue = xAnalogValue
@@ -419,7 +417,7 @@ this.readyForExplosion= isReadyForExplosion
 
                 @Throws(Exception::class)
             
-    open fun left(xAnalogValue: Int)
+    open fun leftAnalog(xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var xAnalogValue = xAnalogValue
@@ -502,8 +500,8 @@ this.partInterfaceArrayP= partInterfaceArray
 }
 
 
-    override fun toString(stringBuffer: StringMaker)
-        //nullable = true from not(false or (true and false)) = true
+    override fun toStringAppend(stringBuffer: StringMaker)
+        //nullable = true from not(false or (false and false)) = true
 {
     //var stringBuffer = stringBuffer
 
@@ -512,7 +510,7 @@ this.partInterfaceArrayP= partInterfaceArray
 
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
 
-super.toString(stringBuffer)
+super.toStringAppend(stringBuffer)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 
     var groupInterfaceArray: Array<Group?> = this.getGroupInterface()!!
@@ -568,7 +566,7 @@ stringBuffer!!.appendint(this.initZ)
 
     var stringBuffer: StringMaker = StringMaker()
 
-this.toString(stringBuffer)
+this.toStringAppend(stringBuffer)
 
 
 

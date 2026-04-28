@@ -43,7 +43,7 @@ open public class TitleAnimation : SpecialAnimation {
         
 companion object {
             
-    open fun create(animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int)
+    open fun createAnimation(animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int)
         //nullable = true from not(false or (false and false)) = true
 : TitleAnimation{
     //var animationInterfaceArray = animationInterfaceArray
@@ -269,7 +269,7 @@ this.animationInterfaceArray[index]!!.previousFrame()
 }
 
 
-    open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
+    open fun paintFrameXY(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -277,13 +277,13 @@ this.animationInterfaceArray[index]!!.previousFrame()
     //var x = x
     //var y = y
 this.setFrame(frame)
-this.paint(graphics, x, y)
+this.paintXY(graphics, x, y)
 }
 
 
     val CLEAR_COLOR: BasicColor = BasicColorFactory.getInstance()!!.CLEAR_COLOR
 
-    override fun paint(graphics: Graphics, ax: Int, ay: Int)
+    override fun paintXY(graphics: Graphics, ax: Int, ay: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -325,7 +325,7 @@ deltaY= this.dyArray[index] +this.y
 
                                     }
                                 
-this.animationInterfaceArray[index]!!.paint(graphics, deltaX, deltaY)
+this.animationInterfaceArray[index]!!.paintXY(graphics, deltaX, deltaY)
 }
 
 }

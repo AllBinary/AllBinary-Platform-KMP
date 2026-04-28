@@ -36,7 +36,6 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 
 open public class PlayerGameInput : GameInput
                 , GameKeyEventListenerInterface {
@@ -89,7 +88,7 @@ this.addForRemoval(gameKeyEvent)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun onDownKeyEvent(gameKeyEvent: Integer)
+    open fun onDownKey(gameKeyEvent: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKeyEvent = gameKeyEvent

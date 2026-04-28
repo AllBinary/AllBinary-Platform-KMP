@@ -86,7 +86,7 @@ this.rectangle= rectangle
                         if(J2MEUtil.isHTML() || (AndroidUtil.isAndroid() && isOpenGL))
                         
                                     {
-                                    BORDER= MyFont.getInstance()!!.charWidth() /2
+                                    BORDER= MyFont.getInstance()!!.defaultCharWidth() /2
 
                                     }
                                 
@@ -95,12 +95,12 @@ this.rectangle= rectangle
                         if(AndroidUtil.isAndroid() || J2MEUtil.isJ2SE() || SWTUtil.isSWT)
                         
                                     {
-                                    BORDER= MyFont.getInstance()!!.charWidth()
+                                    BORDER= MyFont.getInstance()!!.defaultCharWidth()
 
                                     }
                                 
                         else {
-                            BORDER= MyFont.getInstance()!!.charWidth() *2
+                            BORDER= MyFont.getInstance()!!.defaultCharWidth() *2
 
                         }
                             
@@ -207,7 +207,7 @@ rectangleFilledAnimation!!.setHeight(height)
 
     var height: Int = this.rectangle.getHeight()!!
 
-this.animationInterface!!.paint(graphics, x, y)
+this.animationInterface!!.paintXY(graphics, x, y)
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor)
 this.drawStringUtil!!.paintVerticle(graphics, label, x +this.BORDER, y +this.offset, 0)
 graphics.drawRect(x, y, width, height)

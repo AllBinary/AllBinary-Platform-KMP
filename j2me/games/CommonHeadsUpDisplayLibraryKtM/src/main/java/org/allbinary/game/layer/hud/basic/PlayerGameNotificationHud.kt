@@ -38,7 +38,6 @@ import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.font.MyFont
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
@@ -82,7 +81,7 @@ var basicColor = basicColor
 
                             //For kotlin this is before the body of the constructor.
                     
-this.circularIndexUtil= CircularIndexUtil.getInstance(0)
+this.circularIndexUtil= CircularIndexUtil.createInstance(0)
 
     var gameNotificationEventHandler: GameNotificationEventHandler = GameNotificationEventHandler.getInstance()!!
 
@@ -162,7 +161,7 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
 
 
     
-                        if(gameAdState!!.isShowingAt(this.getLocation()))
+                        if(gameAdState!!.isShowingAtLocation(this.getLocation()))
                         
                                     {
                                     this.offsetY=  -54
@@ -208,7 +207,7 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
     open fun setAndRemove()
         //nullable = true from not(false or (false and true)) = true
 {
-this.string= this.gameNotification!!.stringList!!.remove(0) as String
+this.string= this.gameNotification!!.stringList!!.removeAt(0) as String
 
     var width: Int = MyFont.getInstance()!!.stringWidth2(this.string)!!
 
@@ -216,7 +215,7 @@ this.setX((this.displayInfo!!.getLastWidth() -width) shr 1)
 this.point.setX(this.getX())
 this.point.setY(this.getY())
 
-    var time: Integer = this.gameNotification!!.timeList!!.remove(0) as Integer
+    var time: Integer = this.gameNotification!!.timeList!!.removeAt(0) as Integer
 
 
     var iTime: Int = time.toInt() *1000
@@ -231,7 +230,7 @@ this.point.setY(this.getY())
                                     }
                                 
 this.timeDelayHelper!!.delay= iTime
-this.setBasicColorP(this.gameNotification!!.colorList!!.remove(0) as BasicColor)
+this.setBasicColorP(this.gameNotification!!.colorList!!.removeAt(0) as BasicColor)
 }
 
 

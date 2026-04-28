@@ -93,13 +93,13 @@ this.resources= resources
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createFlagItem(flagResources, name, layerInterfaceFactoryInterface)
+                        return this.createNamedFlagItem(flagResources, name, layerInterfaceFactoryInterface)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun createFlagItem(flagResources: FlagGameResources, name: String, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
+    open fun createNamedFlagItem(flagResources: FlagGameResources, name: String, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CustomItem{
     //var flagResources = flagResources
@@ -109,7 +109,7 @@ this.resources= resources
     var IMAGE_CACHE: ImageCache = GameFeatureImageCacheFactory.getInstance()!!
 
 
-    var image: Image = IMAGE_CACHE.get(flagResources!!.RESOURCE_ICON)!!
+    var image: Image = IMAGE_CACHE.getWithKey(flagResources!!.RESOURCE_ICON)!!
 
 
     var item: CustomItem = LayerInterfaceFactoryImageItem(name, image, ImageItem.LAYOUT_DEFAULT, flagResources!!.NAME, basicColor, arrayOf(RTSLayerTextAnimation(RTSGameStrings.getInstance()!!.DRAGGABLE, image)), layerInterfaceFactoryInterface)

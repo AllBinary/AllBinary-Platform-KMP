@@ -56,7 +56,7 @@ companion object {
     private val NULL_ANIMATION: Animation = object: NullIndexedAnimation(AnimationBehavior.getInstance())
                                 {
                                 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -88,8 +88,8 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    override fun getInstance(animationInterface: Animation)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getInstanceAnimation(animationInterface: Animation)
+        //nullable = true from not(false or (false and false)) = true
 : Animation{
     //var animationInterface = animationInterface
 

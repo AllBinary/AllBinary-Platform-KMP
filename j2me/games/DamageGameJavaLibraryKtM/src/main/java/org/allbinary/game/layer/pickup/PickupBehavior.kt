@@ -89,7 +89,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 }
 
 
-    override fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
+    override fun doPickupLayer(pickupLayerInterface: PickedUpLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var pickupLayerInterface = pickupLayerInterface
@@ -157,11 +157,11 @@ var countedPickedUpLayerInterfaceFactoryInterface = countedPickedUpLayerInterfac
 
     var partIndex: Int = countedPickedUpLayerInterfaceFactoryInterface!!.getId() +this.countedIndex
 
-this.add(countedPickedUpLayerInterfaceFactoryInterface, partIndex)
+this.addAt(countedPickedUpLayerInterfaceFactoryInterface, partIndex)
 }
 
 
-    open fun add(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactoryInterface, partIndex: Int)
+    open fun addAt(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactoryInterface, partIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var countedPickedUpLayerInterfaceFactoryInterface = countedPickedUpLayerInterfaceFactoryInterface

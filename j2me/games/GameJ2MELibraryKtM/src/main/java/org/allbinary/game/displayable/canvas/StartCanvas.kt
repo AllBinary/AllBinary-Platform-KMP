@@ -209,7 +209,7 @@ this.setPaintableInterface(this.getDefaultPaintableInterface())
                                 
 
     
-                        if(ChangedGameFeatureListener.getInstance()!!.isChanged(GameFeatureFactory.getInstance()!!.SOUND))
+                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(GameFeatureFactory.getInstance()!!.SOUND))
                         
                                     {
                                     this.mediaInit()
@@ -451,7 +451,7 @@ GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
-this.keyPressed(keyCode, 0)
+this.keyPressedByDevice(keyCode, 0)
 }
 
 
@@ -459,7 +459,7 @@ this.keyPressed(keyCode, 0)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
-this.keyReleased(keyCode, 0)
+this.keyReleasedByDevice(keyCode, 0)
 }
 
 
@@ -467,11 +467,11 @@ this.keyReleased(keyCode, 0)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
-this.keyRepeated(keyCode, 0)
+this.keyRepeatedByDevice(keyCode, 0)
 }
 
 
-    override fun keyPressed(keyCode: Int, deviceId: Int)
+    override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -480,7 +480,7 @@ this.addGameKeyEvent(keyCode, false)
 }
 
 
-    override fun keyReleased(keyCode: Int, deviceId: Int)
+    override fun keyReleasedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -491,7 +491,7 @@ this.removeGameKeyEvent(keyCode, false)
 
     private var isSingleKeyRepeatableProcessing: Boolean = this.features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
 
-    override fun keyRepeated(keyCode: Int, deviceId: Int)
+    override fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -520,7 +520,7 @@ var repeated = repeated
 
         try {
             
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
+    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
 
     
@@ -528,7 +528,7 @@ var repeated = repeated
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
 
 DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
@@ -556,7 +556,7 @@ var repeated = repeated
 
         try {
             
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
+    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
 
     
@@ -564,7 +564,7 @@ var repeated = repeated
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
 
 UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
@@ -693,7 +693,7 @@ var isNotUsed = isNotUsed
 {
 var graphics = graphics
 this.paintableInterface!!.paint(graphics)
-this.paintedSpecialAnimationInterface!!.paint(graphics, 0, 0)
+this.paintedSpecialAnimationInterface!!.paintXY(graphics, 0, 0)
 this.highScoresPaintable!!.paint(graphics)
 this.getBasicGameDemoPaintable()!!.paint(graphics)
 this.overlayPaintable!!.paint(graphics)
@@ -711,7 +711,7 @@ this.paintedSpecialAnimationInterface!!.paintThreed(graphics, 0, 0, 0)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    override fun setGameOver()
+    override fun processGameOver()
         //nullable = true from not(false or (false and true)) = true
 {
 this.logUtil!!.putF("Not Implemented since not a game", this, "setGameOver")
@@ -772,13 +772,13 @@ this.logUtil!!.putF("Not Implemented since not a game", this, "setGameOver")
                                     }
                                 
 this.setState(newState)
-this.setState()
+this.updateDemoState()
 }
 
 
     private val SET_STATE: String = "setState"
 
-    open fun setState()
+    open fun updateDemoState()
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put(SmallIntegerSingletonFactory.getInstance()!!.createInstance(this.state)!!.toString(), this, SET_STATE)
@@ -859,7 +859,7 @@ var randomLevel = randomLevel
 
                 @Throws(Exception::class)
             
-    open fun create()
+    open fun createCanvas()
         //nullable = true from not(false or (false and true)) = true
 {
 this.highScoresPaintable= NullPaintable.getInstance()
@@ -889,7 +889,7 @@ this.overlayPaintable!!.update()
     override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-this.getMenuInputProcessor()!!.processInput()
+this.getMenuInputProcessor()!!.processInputList()
 this.preDemoProcess()
 
     
@@ -904,7 +904,7 @@ this.preDemoProcess()
                         if(indexedAnimationBehavior!!.loopIndex < 1)
                         
                                     {
-                                    this.timeDelayHelper!!.setStartTime()
+                                    this.timeDelayHelper!!.setStartTimeTNT()
 
                                     }
                                 
@@ -945,7 +945,7 @@ this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
             
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.addPortion(50, "Demo Thread")
+progressCanvas!!.addNormalPortion(50, "Demo Thread")
 this.setCurrentThread()
 this.setRunning(true)
 
@@ -958,14 +958,14 @@ this.setRunning(true)
                                     }
                                 
                         else {
-                            progressCanvas!!.addPortion(50, "Demo Thread Running")
+                            progressCanvas!!.addNormalPortion(50, "Demo Thread Running")
 
                         }
                             
-this.fullScreenUtil!!.init(this, this.getCustomCommandListener())
+this.fullScreenUtil!!.initOnRun(this, this.getCustomCommandListener())
 this.initMenu()
 this.initPostPaint()
-this.setState()
+this.updateDemoState()
 
     
                         if(this.features.isDefault(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
@@ -987,7 +987,7 @@ this.setState()
                             
         while(this.isRunning())
         {
-this.loopTimeHelper!!.setStartTime()
+this.loopTimeHelper!!.setStartTimeTNT()
 this.processGame()
 this.processLoopSleep()
 }

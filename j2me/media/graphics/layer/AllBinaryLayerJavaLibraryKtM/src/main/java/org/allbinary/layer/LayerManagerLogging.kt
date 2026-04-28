@@ -90,7 +90,7 @@ this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(th
 }
 
 
-    override fun append(layerInterface: AllBinaryLayer, index: Int)
+    override fun appendAt(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -125,7 +125,7 @@ this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(th
 }
 
 
-    override fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
+    override fun removeResult(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager

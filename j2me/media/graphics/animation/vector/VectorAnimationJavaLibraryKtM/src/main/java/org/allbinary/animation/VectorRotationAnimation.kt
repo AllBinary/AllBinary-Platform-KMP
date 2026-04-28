@@ -30,7 +30,6 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.math.Angle
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
-import org.allbinary.math.FrameUtil
 
 open public class VectorRotationAnimation : VectorBaseRotationAnimation {
         
@@ -48,22 +47,22 @@ this.angleInfo!!.adjustAngle(this.getFrame())
 }
 
 
-    override fun setFrame(direction: Direction)
+    override fun setFrameByDirection(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var direction = direction
 
     var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
 
-this.adjustFrame(angle)
+this.adjustFrameToAngle(angle)
 }
 
 
-    override fun setFrame(angle: Angle)
+    override fun setFrameToAngle(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
-this.adjustFrame(angle)
+this.adjustFrameToAngle(angle)
 }
 
 
@@ -84,7 +83,7 @@ this.setFrame(frameUtil!!.getFrameForAngle(newAngle, this.angleInfo!!.getAngleIn
 }
 
 
-    override fun adjustFrame(newAngle: Angle)
+    override fun adjustFrameToAngle(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newAngle = newAngle

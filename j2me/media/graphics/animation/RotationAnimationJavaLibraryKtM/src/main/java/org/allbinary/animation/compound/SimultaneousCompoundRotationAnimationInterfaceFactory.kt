@@ -56,8 +56,8 @@ public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<Animatio
 }
 
 
-    override fun getInstance(animationInterfaceArray: Array<Animation?>)
-        //nullable =  from not(true or (false and false)) = 
+    override fun createAnimation(animationInterfaceArray: Array<Animation?>)
+        //nullable = true from not(false or (false and false)) = true
 : Animation{
     //var animationInterfaceArray = animationInterfaceArray
 

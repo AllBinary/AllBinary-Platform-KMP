@@ -30,7 +30,6 @@
 import javax.microedition.lcdui.Image
 import org.allbinary.string.CommonStrings
 import org.eclipse.swt.graphics.Resource
-import org.microemu.device.swt.SwtImmutableImage
 import org.microemu.device.swt.SwtMutableImage
 
 open public class DisposalUtil
@@ -61,7 +60,7 @@ companion object {
         
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    open fun dispose(image: Image)
+    open fun disposeImage(image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -88,7 +87,7 @@ companion object {
                                     
     var mutableImage: SwtMutableImage = image as SwtMutableImage
 
-this.dispose(mutableImage!!.getImage() as Resource)
+this.disposeResource(mutableImage!!.getImage() as Resource)
 
                                     }
                                 
@@ -99,7 +98,7 @@ this.dispose(mutableImage!!.getImage() as Resource)
 }
 
 
-    open fun dispose(resource: Resource)
+    open fun disposeResource(resource: Resource)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resource = resource

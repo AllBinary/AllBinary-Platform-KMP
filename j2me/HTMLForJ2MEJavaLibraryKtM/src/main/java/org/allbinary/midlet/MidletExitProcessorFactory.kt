@@ -29,7 +29,6 @@ import javax.microedition.midlet.MIDlet
 import org.allbinary.AppletUtil
 import org.allbinary.J2MEUtil
 import org.allbinary.canvas.Processor
-import org.allbinary.midlet.MidletExitProcessor
 
 open public class MidletExitProcessorFactory
             : Object
@@ -57,8 +56,8 @@ companion object {
             {
             }            
         
-    open fun getInstance(midlet: MIDlet)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getExitInstance(midlet: MIDlet)
+        //nullable = true from not(false or (false and false)) = true
 : Processor{
 var midlet = midlet
 

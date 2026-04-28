@@ -54,14 +54,14 @@ companion object {
             {
             }            
         
-    open fun dispose(image: Image)
+    open fun disposeImage(image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
 }
 
 
-    open fun dispose(resource: Resource)
+    open fun disposeResource(resource: Resource)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resource = resource

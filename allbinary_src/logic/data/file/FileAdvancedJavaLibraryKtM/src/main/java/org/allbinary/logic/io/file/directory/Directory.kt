@@ -264,7 +264,7 @@ fileList!!.add(files[index]!!)
                         
                                     {
                                     recursiveFileList= this.search(fileFilter, files[index]!!, isRecursiveSearch)
-fileList!!.addAll(recursiveFileList)
+fileList!!.addAllList(recursiveFileList)
 
                                     }
                                 
@@ -359,7 +359,7 @@ fileList!!.add(files[index]!!)
                         
                                     {
                                     recursiveFileList= this.search(files[index]!!, isRecursiveSearch)
-fileList!!.addAll(recursiveFileList)
+fileList!!.addAllList(recursiveFileList)
 
                                     }
                                 
@@ -464,7 +464,7 @@ var file = file
                         
                                     {
                                     recursiveFileList= this.search(searchValue, files[index]!!, isRecursiveSearch)
-fileList!!.addAll(recursiveFileList)
+fileList!!.addAllList(recursiveFileList)
 
                                     }
                                 
@@ -569,7 +569,7 @@ fileList!!.add(files[index]!!)
                                     }
                                 
 recursiveFileList= this.search(level -1, files[index]!!, isRecursiveSearch)
-fileList!!.addAll(recursiveFileList)
+fileList!!.addAllList(recursiveFileList)
 }
 
 

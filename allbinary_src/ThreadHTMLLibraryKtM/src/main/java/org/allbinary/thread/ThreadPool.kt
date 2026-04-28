@@ -223,7 +223,7 @@ break;
                             
     var index: Int = this.taskQueue!!.indexOf(lowerPriorityRunnable)!!
 
-this.taskQueue!!.add(index, task)
+this.taskQueue!!.addAt(index, task)
 
                         }
                             
@@ -284,7 +284,7 @@ this.taskQueue!!.add(index, task)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.taskQueue!!.remove(0) as Runnable
+                        return this.taskQueue!!.removeAt(0) as Runnable
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.

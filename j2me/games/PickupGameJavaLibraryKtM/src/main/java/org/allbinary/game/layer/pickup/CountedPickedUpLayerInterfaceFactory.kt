@@ -62,8 +62,8 @@ list.add(this)
 
                 @Throws(Exception::class)
             
-    override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getNextInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+        //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer{
 var hashtable = hashtable
 var x = x

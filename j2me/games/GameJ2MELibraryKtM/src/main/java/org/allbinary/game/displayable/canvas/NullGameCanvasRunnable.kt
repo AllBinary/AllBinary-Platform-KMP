@@ -118,7 +118,7 @@ var highScoreSubmitted = highScoreSubmitted
 
                 @Throws(Exception::class)
             
-    override fun setGameOver()
+    override fun processGameOver()
         //nullable = true from not(false or (false and true)) = true
 {
 }

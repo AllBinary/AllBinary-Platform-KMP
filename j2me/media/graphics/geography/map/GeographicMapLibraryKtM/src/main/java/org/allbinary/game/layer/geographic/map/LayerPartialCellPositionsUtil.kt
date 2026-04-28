@@ -67,16 +67,16 @@ var layerInterface = layerInterface
 var reusableList = reusableList
 reusableList!!.clear()
 
-    var topLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(layerInterface!!.getXP(), layerInterface!!.getYP())!!
+    var topLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(layerInterface!!.getXP(), layerInterface!!.getYP())!!
 
 
-    var topRightGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(layerInterface!!.getXP() +layerInterface!!.getWidth(), layerInterface!!.getYP())!!
+    var topRightGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(layerInterface!!.getXP() +layerInterface!!.getWidth(), layerInterface!!.getYP())!!
 
 
-    var bottomLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(layerInterface!!.getXP(), layerInterface!!.getYP() +layerInterface!!.getHeight())!!
+    var bottomLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(layerInterface!!.getXP(), layerInterface!!.getYP() +layerInterface!!.getHeight())!!
 
 
-    var bottomRightGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(layerInterface!!.getXP() +layerInterface!!.getWidth(), layerInterface!!.getYP() +layerInterface!!.getHeight())!!
+    var bottomRightGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(layerInterface!!.getXP() +layerInterface!!.getWidth(), layerInterface!!.getYP() +layerInterface!!.getHeight())!!
 
 
     
@@ -124,7 +124,7 @@ reusableList!!.clear()
 
                 @Throws(Exception::class)
             
-    open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, dx: Int, dy: Int, reusableList: BasicArrayList)
+    open fun getAllDXY(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, dx: Int, dy: Int, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var geographicMapInterface = geographicMapInterface
@@ -134,16 +134,16 @@ var dy = dy
 var reusableList = reusableList
 reusableList!!.clear()
 
-    var topLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(layerInterface!!.getXP() +dx, layerInterface!!.getYP() +dy)!!
+    var topLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(layerInterface!!.getXP() +dx, layerInterface!!.getYP() +dy)!!
 
 
-    var topRightGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(layerInterface!!.getXP() +layerInterface!!.getWidth() +dx, layerInterface!!.getYP() +dy)!!
+    var topRightGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(layerInterface!!.getXP() +layerInterface!!.getWidth() +dx, layerInterface!!.getYP() +dy)!!
 
 
-    var bottomLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(layerInterface!!.getXP() +dx, layerInterface!!.getYP() +layerInterface!!.getHeight() +dy)!!
+    var bottomLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(layerInterface!!.getXP() +dx, layerInterface!!.getYP() +layerInterface!!.getHeight() +dy)!!
 
 
-    var bottomRightGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(layerInterface!!.getXP() +layerInterface!!.getWidth() +dx, layerInterface!!.getYP() +layerInterface!!.getHeight() +dy)!!
+    var bottomRightGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(layerInterface!!.getXP() +layerInterface!!.getWidth() +dx, layerInterface!!.getYP() +layerInterface!!.getHeight() +dy)!!
 
 
     

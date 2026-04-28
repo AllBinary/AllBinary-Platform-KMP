@@ -69,13 +69,13 @@ var resource = resource
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getRectangle(resource, 0, 0)
+                        return getRectangleXY(resource, 0, 0)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun getRectangle(resource: String, x: Int, y: Int)
+    open fun getRectangleXY(resource: String, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Rectangle{
     //var resource = resource
@@ -120,7 +120,7 @@ var resource = resource
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Rectangle(pointFactory!!.getInstance0(x, y), ((rectangle.getWidth() *scale) shr 1), ((rectangle.getHeight() *scale) shr 1))
+                        return Rectangle(pointFactory!!.createXY(x, y), ((rectangle.getWidth() *scale) shr 1), ((rectangle.getHeight() *scale) shr 1))
 
                                     }
                                 

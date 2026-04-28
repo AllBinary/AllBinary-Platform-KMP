@@ -52,10 +52,10 @@ var x = x
 var y = y
 
     
-                        if(LockedUtil.getInstance()!!.isLockedFeature() && currentIndex >= this.getLockedIndex())
+                        if(LockedUtil.getInstance()!!.isLocked() && currentIndex >= this.getLockedIndex())
                         
                                     {
-                                    this.getAnimation()!!.paint(graphics, x, y)
+                                    this.getAnimation()!!.paintXY(graphics, x, y)
 
                                     }
                                 

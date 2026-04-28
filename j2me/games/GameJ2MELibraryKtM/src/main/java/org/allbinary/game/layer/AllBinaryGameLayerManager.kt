@@ -44,7 +44,7 @@ companion object {
             
     val NULL_ALLBINARY_LAYER_MANAGER: AllBinaryGameLayerManager = AllBinaryGameLayerManager(BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE, GameInfo.NONE)
 
-    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(22)!!
+    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(22)!!
 
         }
             

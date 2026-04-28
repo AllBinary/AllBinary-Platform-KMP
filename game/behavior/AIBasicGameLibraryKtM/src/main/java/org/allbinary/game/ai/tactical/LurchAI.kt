@@ -121,7 +121,7 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
                         if(this.currentRelativeAngle == 0)
                         
                                     {
-                                    super.processAI(Canvas.KEY_NUM0)
+                                    super.processKeyAI(Canvas.KEY_NUM0)
 
                                     }
                                 
@@ -130,7 +130,7 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
                         if(currentRelativeAngle == 180)
                         
                                     {
-                                    super.processAI(Canvas.KEY_POUND)
+                                    super.processKeyAI(Canvas.KEY_POUND)
 
                                     }
                                 

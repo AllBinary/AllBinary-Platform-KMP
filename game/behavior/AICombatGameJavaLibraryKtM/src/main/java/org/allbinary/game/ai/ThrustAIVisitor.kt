@@ -50,7 +50,7 @@ var anyType = anyType
             
     var basicAI: BasicAI = anyType as BasicAI
 
-basicAI!!.processAI(Canvas.UP)
+basicAI!!.processKeyAI(Canvas.UP)
 } catch(e: Exception)
             {
 

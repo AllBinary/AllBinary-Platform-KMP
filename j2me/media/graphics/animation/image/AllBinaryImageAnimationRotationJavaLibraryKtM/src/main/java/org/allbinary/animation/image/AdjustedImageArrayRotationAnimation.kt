@@ -28,7 +28,6 @@
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.AnimationBehavior
-import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 
 open public class AdjustedImageArrayRotationAnimation : ImageArrayRotationAnimation {
@@ -55,7 +54,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun create(imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)
+    open fun createAnimation(imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)
         //nullable = true from not(false or (false and false)) = true
 : AdjustedImageArrayRotationAnimation{
     //var imageArray = imageArray
@@ -104,13 +103,13 @@ this.setDy(dy)
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
     //var x = x
     //var y = y
-super.paint(graphics, x +this.dx, y +this.dy)
+super.paintXY(graphics, x +this.dx, y +this.dy)
 }
 
 

@@ -30,15 +30,15 @@ import org.allbinary.math.Angle
 interface DirectionalInterface {
         
 
-    open fun setFrame(direction: Direction)
+    open fun setFrameByDirection(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun setFrame(angle: Angle)
+    open fun setFrameToAngle(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun adjustFrame(newAngle: Angle)
+    open fun adjustFrameToAngle(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 

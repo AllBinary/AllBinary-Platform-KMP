@@ -80,7 +80,7 @@ companion object {
                         if(Desktop.isDesktopSupported() && Desktop.getDesktop()!!.isSupported(Desktop.Action.BROWSE))
                         
                                     {
-                                    Desktop.getDesktop()!!.browse(URI(this.list.remove(0) as String))
+                                    Desktop.getDesktop()!!.browse(URI(this.list.removeAt(0) as String))
 
                                     }
                                 

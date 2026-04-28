@@ -26,8 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.Layer
-import org.allbinary.string.CommonStrings
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class BasicGeographicMapUtil
@@ -211,11 +209,11 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createAllBinaryTiledLayerArray(geographicMapInterfaceArray, tiledLayerArray, 0)
+                        return this.getAllBinaryTiledLayerArray(geographicMapInterfaceArray, tiledLayerArray, 0)
 }
 
 
-    open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>, tiledLayerArray: Array<Layer?>, startIndex: Int)
+    open fun getAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>, tiledLayerArray: Array<Layer?>, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Layer?>{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -271,7 +269,7 @@ tiledLayerArray[count++]= geographicMapInterface!!.getAllBinaryTiledLayer()
 
         {
 geographicMapInterface= geographicMapInterfaceArray[index]!!
-geographicMapInterface!!.getAllBinaryTiledLayer()!!.move(dx, dy)
+geographicMapInterface!!.getAllBinaryTiledLayer()!!.moveDXY(dx, dy)
 }
 
 }

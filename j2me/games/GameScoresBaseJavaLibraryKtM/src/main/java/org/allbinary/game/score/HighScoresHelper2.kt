@@ -35,7 +35,7 @@ open public class HighScoresHelper2 : HighScoresHelperBase {
             {
             }            
         
-    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0, 0)!!
+    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstanceAt(0, 0)!!
 
     private var selectedHighScores: HighScores = NullHighScoresSingletonFactory.getInstance()!!
 

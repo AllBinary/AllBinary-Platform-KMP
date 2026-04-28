@@ -67,7 +67,7 @@ public constructor (id: Int)
             : super()
         {
     //var id = id
-this.motionEventCircularPool= MotionEventCircularPool.getInstance(id)
+this.motionEventCircularPool= MotionEventCircularPool.createPool(id)
 
     var motionGesturesHandler: BasicEventHandler = BasicEventHandler()
 

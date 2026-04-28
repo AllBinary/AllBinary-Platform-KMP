@@ -59,7 +59,7 @@ public constructor (){
 
                 @Throws(Exception::class)
             
-    open fun get(caller: String, width: Int, height: Int)
+    override fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var caller = caller

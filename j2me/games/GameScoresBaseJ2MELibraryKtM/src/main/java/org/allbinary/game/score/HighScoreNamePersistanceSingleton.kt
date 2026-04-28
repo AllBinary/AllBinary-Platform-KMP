@@ -240,7 +240,7 @@ inputStream= DataInputStream(byteArrayInputStream)
 this.name= inputStream!!.readUTF()
 }
 
-this.nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
+this.nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getAt(id))
 }
 
 

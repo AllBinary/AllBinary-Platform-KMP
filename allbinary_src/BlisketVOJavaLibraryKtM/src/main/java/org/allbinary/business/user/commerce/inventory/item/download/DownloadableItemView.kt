@@ -153,7 +153,7 @@ hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, Integer(Integer.valueOf(secon
 
     var value: String = hashMap!!.get(name as Object) as String
 
-value= stringUtil!!.getInstance(value)
+value= stringUtil!!.getNonNull(value)
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 

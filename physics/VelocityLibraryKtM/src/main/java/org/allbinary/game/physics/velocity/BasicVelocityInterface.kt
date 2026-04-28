@@ -44,27 +44,27 @@ interface BasicVelocityInterface {
         //nullable = true from not(false or (false and true)) = true
 
 
-    open fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
+    open fun setVelocityWithBigDecimalAndDirection(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun addVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
+    open fun addVelocityWithBigDecimalAndDirection(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun setVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
+    open fun setVelocityWithDirection(magnitude: Long, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun addVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
+    open fun addVelocityWithDirection(magnitude: Long, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun setVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
+    open fun setVelocityWithBigDecimal(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun addVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
+    open fun addVelocityWithBigDecimal(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -76,7 +76,7 @@ interface BasicVelocityInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
+    open fun addVelocityi(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

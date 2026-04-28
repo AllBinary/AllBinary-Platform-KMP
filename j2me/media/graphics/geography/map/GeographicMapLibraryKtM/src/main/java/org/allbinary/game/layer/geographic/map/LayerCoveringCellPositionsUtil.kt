@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -62,7 +61,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, x: Int, y: Int, reusableList: BasicArrayList)
+    open fun getAllXY(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, x: Int, y: Int, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -71,7 +70,7 @@ companion object {
     //var y = y
     //var reusableList = reusableList
 
-    var topLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(x, y)!!
+    var topLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXY(x, y)!!
 
 
 

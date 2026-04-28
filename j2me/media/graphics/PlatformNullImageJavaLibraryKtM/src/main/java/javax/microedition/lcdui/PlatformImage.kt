@@ -49,7 +49,7 @@ open public class PlatformImage
 }
 
 
-    open fun getWidth(graphicsSurface2: Any, width: Int)
+    open fun getSurfaceWidth(graphicsSurface2: Any, width: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphicsSurface2 = graphicsSurface2
@@ -62,7 +62,7 @@ open public class PlatformImage
 }
 
 
-    open fun getHeight(graphicsSurface2: Any, height: Int)
+    open fun getSurfaceHeight(graphicsSurface2: Any, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphicsSurface2 = graphicsSurface2

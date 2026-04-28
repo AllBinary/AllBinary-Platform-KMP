@@ -49,11 +49,11 @@ open public class EndLevelNoBuildingSelectedTouchButtonsBuilder : TouchButtonsLi
 
     var list: BasicArrayList = BasicArrayListD()
 
-list.addAll(BasicTouchButtonsBuilder().
+list.addAllList(BasicTouchButtonsBuilder().
                             getList())
-list.addAll(BuildingScrollTouchButtonsBuilder().
+list.addAllList(BuildingScrollTouchButtonsBuilder().
                             getList())
-this.add(list)
+this.addList(list)
 
 
 

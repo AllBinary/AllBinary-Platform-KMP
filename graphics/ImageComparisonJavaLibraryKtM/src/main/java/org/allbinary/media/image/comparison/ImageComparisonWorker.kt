@@ -118,7 +118,7 @@ this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
 
-timeHelper!!.setStartTime()
+timeHelper!!.setStartTimeTNT()
 
     
                         if(this.imageComparatorConstraintsInterface!!.isFrameAllowed(this.index2))
@@ -162,7 +162,7 @@ this.bufferedImageVector!!.remove(0)
 index2++
 
     var message: String = StringMaker().
-                            append("Frame: ")!!.appendint(this.index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.appendlong(timeHelper!!.getElapsed())!!.toString()!!
+                            append("Frame: ")!!.appendint(this.index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.appendlong(timeHelper!!.getElapsedTNT())!!.toString()!!
 
 this.logUtil!!.putF(message, this, this.commonStrings!!.RUN)
 this.setRunning(false)

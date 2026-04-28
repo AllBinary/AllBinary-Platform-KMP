@@ -41,7 +41,7 @@ open public class WorkWaypoint : Waypoint {
         
 companion object {
             
-    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(25)!!
+    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(25)!!
 
         }
             public constructor (ownerLayer: PathFindingLayerInterface)                        

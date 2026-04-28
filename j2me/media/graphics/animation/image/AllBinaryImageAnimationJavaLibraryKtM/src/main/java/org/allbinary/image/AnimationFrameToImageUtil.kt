@@ -76,7 +76,7 @@ var animationInterface = animationInterface
     var tranlateY: Int = (height shr 2)
 
 graphics.translate(tranlateX, tranlateY)
-animationInterface!!.paint(graphics, 0, 0)
+animationInterface!!.paintXY(graphics, 0, 0)
 graphics.translate( -tranlateX,  -tranlateY)
 
 
@@ -88,8 +88,8 @@ graphics.translate( -tranlateX,  -tranlateY)
 
                 @Throws(Exception::class)
             
-    open fun getInstance(width: Int, height: Int, animationInterface: Animation)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceWH(width: Int, height: Int, animationInterface: Animation)
+        //nullable = true from not(false or (false and false)) = true
 : Image{
 var width = width
 var height = height
@@ -100,7 +100,7 @@ var animationInterface = animationInterface
 
     var graphics: Graphics = image.getGraphics()!!
 
-animationInterface!!.paint(graphics, 0, 0)
+animationInterface!!.paintXY(graphics, 0, 0)
 
 
 

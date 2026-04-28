@@ -53,7 +53,7 @@ this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 this.maxTileId= maxTileId
 GeographicMapCellType(0, 0)
 
-    var BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType.create(1)!!
+    var BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType.createType(1)!!
 
 
     var JUMP_THRU_CELL_TYPE: BasicPlatormGeographicMapCellType = BLOCK_CELL_TYPE

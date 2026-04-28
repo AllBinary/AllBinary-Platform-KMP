@@ -27,7 +27,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return MathUtil.instance
 }
 
 
@@ -119,7 +119,7 @@ var value = value
 }
 
 
-    open fun abs(value: Long)
+    open fun abslong(value: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var value = value

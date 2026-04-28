@@ -34,10 +34,6 @@ import org.allbinary.logic.system.security.licensing.LockedUtil
 import org.allbinary.canvas.Processor
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
 import org.allbinary.game.displayable.canvas.PreGameSelectorPaintable
-import org.allbinary.game.input.GameInputProcessorComposite
-import org.allbinary.game.input.GameInputProcessorInterface
-import org.allbinary.game.input.PlayerGameInput
-import org.allbinary.game.input.PlayerGameInputCompositeInterface
 import org.allbinary.game.input.event.GameKeyEventHandler
 import org.allbinary.game.input.event.GameKeyEventUtil
 import org.allbinary.game.state.GameState
@@ -47,8 +43,6 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.SelectSound
 import org.allbinary.thread.ABRunnable
-import org.allbinary.thread.SecondaryThreadPool
-import org.allbinary.thread.SoundThreadPool
 import org.allbinary.time.TimeDelayHelper
 
 open public class PreGameSelectionGameInputProcessor : Processor
@@ -150,7 +144,7 @@ var list = list
                                     {
                                     
     
-                        if(this.inputTimeHelper!!.isTime())
+                        if(this.inputTimeHelper!!.isTimeTNT())
                         
                                     {
                                     SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
@@ -174,7 +168,7 @@ break;
 
 
     
-                        if(selectedIndex < this.lockedIndex || !LockedUtil.getInstance()!!.isLockedFeature())
+                        if(selectedIndex < this.lockedIndex || !LockedUtil.getInstance()!!.isLocked())
                         
                                     {
                                     

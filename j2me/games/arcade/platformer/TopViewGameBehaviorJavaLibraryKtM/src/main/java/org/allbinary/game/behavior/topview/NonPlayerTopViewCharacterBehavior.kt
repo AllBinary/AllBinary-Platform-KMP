@@ -84,7 +84,7 @@ open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
                         if(direction == DirectionFactory.getInstance()!!.LEFT)
                         
                                     {
-                                    nextTerrainGeographicMapCellPosition= geographicMapCellPositionFactory!!.getInstance(geographicMapCellPosition!!.getColumn() -1, geographicMapCellPosition!!.getRow())
+                                    nextTerrainGeographicMapCellPosition= geographicMapCellPositionFactory!!.getAt(geographicMapCellPosition!!.getColumn() -1, geographicMapCellPosition!!.getRow())
 
                                     }
                                 
@@ -93,7 +93,7 @@ open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
                         if(direction == DirectionFactory.getInstance()!!.RIGHT)
                         
                                     {
-                                    nextTerrainGeographicMapCellPosition= geographicMapCellPositionFactory!!.getInstance(geographicMapCellPosition!!.getColumn() +1, geographicMapCellPosition!!.getRow())
+                                    nextTerrainGeographicMapCellPosition= geographicMapCellPositionFactory!!.getAt(geographicMapCellPosition!!.getColumn() +1, geographicMapCellPosition!!.getRow())
 
                                     }
                                 
@@ -107,7 +107,7 @@ this.geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geograph
                         
                                     {
                                     
-    var terrainEvent: TerrainEvent = TerrainEventCircularStaticPool.getInstance()!!.getInstance(this.CLIFF)!!
+    var terrainEvent: TerrainEvent = TerrainEventCircularStaticPool.getInstance()!!.getNext(this.CLIFF)!!
 
 TerrainEventHandler.getInstance(layer)!!.fireEvent(terrainEvent)
 
@@ -126,7 +126,7 @@ TerrainEventHandler.getInstance(layer)!!.fireEvent(terrainEvent)
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var x = x
     //var y = y
-layer.move(x, y)
+layer.moveDXY(x, y)
 }
 
 

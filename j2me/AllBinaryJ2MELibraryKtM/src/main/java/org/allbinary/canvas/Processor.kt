@@ -62,7 +62,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun process(timeDelta: Long)
+    open fun processt(timeDelta: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var timeDelta = timeDelta

@@ -244,7 +244,7 @@ aLastHeight= aLastHeight *operatingSystemInterface!!.getOverScanYPercent() /100
                                     {
                                     
     
-                        if(this.isPortrait(aLastWidth, aLastHeight))
+                        if(this.isPortraitWH(aLastWidth, aLastHeight))
                         
                                     {
                                     
@@ -316,11 +316,11 @@ this.add(SET_LAST_SIZE_METHOD_NAME)
 }
 
 
-    open fun isPortrait(lastWidth: Int, lastHeight: Int)
+    open fun isPortraitWH(lastWidth: Int, lastHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var lastWidth = lastWidth
-var lastHeight = lastHeight
+    //var lastWidth = lastWidth
+    //var lastHeight = lastHeight
 
     
                         if(lastHeight > lastWidth)
@@ -353,7 +353,7 @@ var lastHeight = lastHeight
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.isPortrait(this.last[this.WIDTH]!!, this.last[this.HEIGHT]!!)
+                        return this.isPortraitWH(this.last[this.WIDTH]!!, this.last[this.HEIGHT]!!)
 }
 
 
@@ -376,7 +376,7 @@ var lastHeight = lastHeight
 
 this.logUtil!!.putF(stringMaker!!.append(this.REASON)!!.append(reason)!!.toString(), this, FIRE_METHOD_NAME)
 stringMaker!!.delete(0, stringMaker!!.length())
-this.logUtil!!.putF(this.toString(stringMaker), this, FIRE_METHOD_NAME)
+this.logUtil!!.putF(this.toStringAppend(stringMaker), this, FIRE_METHOD_NAME)
 this.list.add(reason)
 }
 
@@ -477,7 +477,7 @@ aLastHeight= aLastHeight *operatingSystemInterface!!.getOverScanYPercent() /100
                                     {
                                     
     
-                        if(this.isPortrait(aLastWidth, aLastHeight))
+                        if(this.isPortraitWH(aLastWidth, aLastHeight))
                         
                                     {
                                     
@@ -579,12 +579,12 @@ this.add(commonStrings!!.UPDATE)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.toString(stringBuffer)
+                        return this.toStringAppend(stringBuffer)
 }
 
 
-    open fun toString(stringBuffer: StringMaker)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringAppend(stringBuffer: StringMaker)
+        //nullable = true from not(false or (false and false)) = true
 : String{
     //var stringBuffer = stringBuffer
 stringBuffer!!.append(this.DISPLAY_INFO)

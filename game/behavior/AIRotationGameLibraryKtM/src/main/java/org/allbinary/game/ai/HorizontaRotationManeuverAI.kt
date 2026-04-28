@@ -46,7 +46,7 @@ open public class HorizontaRotationManeuverAI : BasicAI
                 , ArtificialIntelligenceTransitionInterface {
         
 
-    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(10, Integer.MAX_VALUE)!!
+    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstanceAt(10, Integer.MAX_VALUE)!!
 
     private var currentSpeedDivisor: Int = 5
 
@@ -153,7 +153,7 @@ this.drop()
                         if(index % this.currentSpeedDivisor == 0 && index % 2 == 0)
                         
                                     {
-                                    super.processAI(Canvas.UP)
+                                    super.processKeyAI(Canvas.UP)
 velocityInterface!!.limitMaxXYVelocity(this.velocityInterface!!.getMaxForwardVelocity() /this.currentSpeedDivisor)
 
                                     }
@@ -164,7 +164,7 @@ this.circularIndexUtil!!.next()
                         if(frame == angleIncrementInfo!!.LEFT_FRAME.toInt())
                         
                                     {
-                                    super.processAI(Canvas.KEY_NUM0)
+                                    super.processKeyAI(Canvas.KEY_NUM0)
 
                                     }
                                 
@@ -173,7 +173,7 @@ this.circularIndexUtil!!.next()
                         if(frame == angleIncrementInfo!!.RIGHT_FRAME.toInt())
                         
                                     {
-                                    super.processAI(Canvas.KEY_POUND)
+                                    super.processKeyAI(Canvas.KEY_POUND)
 
                                     }
                                 

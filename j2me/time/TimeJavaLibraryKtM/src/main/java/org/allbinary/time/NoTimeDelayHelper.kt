@@ -43,7 +43,7 @@ companion object {
 }
 
 
-    override fun isTime()
+    override fun isTimeTNT()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -54,7 +54,7 @@ companion object {
 }
 
 
-    override fun isTimeSince(delay: Int)
+    override fun isTimeSinceTNT(delay: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var delay = delay

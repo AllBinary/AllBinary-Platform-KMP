@@ -112,8 +112,8 @@ this.hashtable.clear()
 
                 @Throws(Exception::class)
             
-    open fun getInstance(pathIdInteger: Integer)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getOrCreate(pathIdInteger: Integer)
+        //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var pathIdInteger = pathIdInteger
 

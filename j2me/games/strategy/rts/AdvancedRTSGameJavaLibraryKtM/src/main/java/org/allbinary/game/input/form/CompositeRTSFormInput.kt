@@ -25,11 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
@@ -98,7 +96,7 @@ this.rtsFormInputArray[index]!!.setAllBinaryGameLayerManager(allBinaryGameLayerM
 
                 @Throws(Exception::class)
             
-    override fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
+    override fun processAtPoint(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -123,7 +121,7 @@ var point = point
                         if(this.getSelectedStickyItemIndex() <= this.itemIndex[0])
                         
                                     {
-                                    this.rtsFormInputArray[0]!!.process(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point)
+                                    this.rtsFormInputArray[0]!!.processAtPoint(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point)
 
                                     }
                                 
@@ -135,7 +133,7 @@ var point = point
                         if(index > this.itemIndex[0])
                         
                                     {
-                                    this.rtsFormInputArray[1]!!.process(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point)
+                                    this.rtsFormInputArray[1]!!.processAtPoint(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point)
 
                                     }
                                 
@@ -144,7 +142,7 @@ var point = point
 
                 @Throws(Exception::class)
             
-    override fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -168,7 +166,7 @@ this.logUtil!!.putF(CommonLabels.getInstance()!!.INDEX_LABEL +index +" > " +this
                         if(this.getSelectedStickyItemIndex() <= this.itemIndex[0])
                         
                                     {
-                                    this.rtsFormInputArray[0]!!.process(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
+                                    this.rtsFormInputArray[0]!!.processGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
 
                                     }
                                 
@@ -180,7 +178,7 @@ this.logUtil!!.putF(CommonLabels.getInstance()!!.INDEX_LABEL +index +" > " +this
                         if(index > this.itemIndex[0])
                         
                                     {
-                                    this.rtsFormInputArray[1]!!.process(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
+                                    this.rtsFormInputArray[1]!!.processGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
 
                                     }
                                 
@@ -206,7 +204,7 @@ var point = point
 
                 @Throws(Exception::class)
             
-    override fun processSticky(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    override fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -214,7 +212,7 @@ var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerManager = layerManager
 var item = item
 var index = index
-this.rtsFormInputArray[0]!!.processSticky(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
+this.rtsFormInputArray[0]!!.processStickyGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
 }
 
 

@@ -100,7 +100,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
     var httpTransformInfoInterface: TransformInfoHttpInterface = this.getTransformInfoInterface() as TransformInfoHttpInterface
 
 
-    var templateNameOverride: String = StringUtil.getInstance()!!.getInstance(httpTransformInfoInterface!!.getPropertiesHashMap()!!.get(TransformInfoData.getInstance()!!.PARTIAL) as String)!!
+    var templateNameOverride: String = StringUtil.getInstance()!!.getNonNull(httpTransformInfoInterface!!.getPropertiesHashMap()!!.get(TransformInfoData.getInstance()!!.PARTIAL) as String)!!
 
 
     var stringBuffer: StringMaker = StringMaker()

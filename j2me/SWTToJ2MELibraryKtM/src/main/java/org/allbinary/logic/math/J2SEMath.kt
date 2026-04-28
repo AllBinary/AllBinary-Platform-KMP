@@ -85,7 +85,7 @@ var value = value
 }
 
 
-    open fun abs(value: Double)
+    open fun absdouble(value: Double)
         //nullable = true from not(false or (false and false)) = true
 : Double{
 var value = value

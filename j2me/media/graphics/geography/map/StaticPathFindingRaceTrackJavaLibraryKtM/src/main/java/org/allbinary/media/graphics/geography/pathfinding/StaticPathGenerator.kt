@@ -45,7 +45,8 @@ import org.allbinary.util.BasicArrayListUtil
 
 open public class StaticPathGenerator
             : Object
-         {
+        
+                , PathGeneratorInterface {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
@@ -95,7 +96,7 @@ PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.
 
         {
 basicGeographicMapCellPosition= pathList!!.get(index) as CellPosition
-geographicMapCellPosition= geographicMapCellPositionFactory!!.getInstance(basicGeographicMapCellPosition!!.getColumn(), basicGeographicMapCellPosition!!.getRow())
+geographicMapCellPosition= geographicMapCellPositionFactory!!.getAt(basicGeographicMapCellPosition!!.getColumn(), basicGeographicMapCellPosition!!.getRow())
 list.add(geographicMapCellPosition)
 }
 
@@ -109,8 +110,8 @@ list.add(geographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-    open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun create(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
+        //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
     //var geographicMapCellHistory = geographicMapCellHistory
@@ -128,7 +129,7 @@ list.add(geographicMapCellPosition)
     var mapIdInteger: Integer = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getDataId()!!
 
 
-    var list: BasicArrayList = pathCacheFactory!!.getInstance(mapIdInteger)!!
+    var list: BasicArrayList = pathCacheFactory!!.getOrCreate(mapIdInteger)!!
 
 
     
@@ -146,7 +147,7 @@ list.add(geographicMapCellPosition)
     var id: Int = PathData.getInstance()!!.OFFSET +mapIdInteger!!.toInt()
 
 
-    var basicList: BasicArrayList = pathCacheFactory!!.getInstance(smallIntegerSingletonFactory!!.getInstance(id))!!
+    var basicList: BasicArrayList = pathCacheFactory!!.getOrCreate(smallIntegerSingletonFactory!!.getAt(id))!!
 
 
     var size: Int = basicList!!.size()!!
@@ -166,7 +167,7 @@ list.add(pathList)
 }
 
 pathCacheFactory!!.add(mapIdInteger, list)
-pathCacheFactory!!.remove(smallIntegerSingletonFactory!!.getInstance(id))
+pathCacheFactory!!.remove(smallIntegerSingletonFactory!!.getAt(id))
 
                                     }
                                 

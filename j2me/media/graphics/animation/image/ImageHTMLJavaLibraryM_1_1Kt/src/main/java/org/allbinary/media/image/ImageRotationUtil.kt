@@ -81,7 +81,7 @@ companion object {
 
 canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeight() /2)
 
-    var image2: Image = this.rotateImage(originalImage, image, canvasSurface, totalAngle)!!
+    var image2: Image = this.rotateImageCanvasSurface(originalImage, image, canvasSurface, totalAngle)!!
 
 this.drawImage(originalImage, image, canvasSurface)
 
@@ -104,7 +104,7 @@ this.drawImage(originalImage, image, canvasSurface)
 }
 
 
-    open fun rotateImageClear(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
+    open fun rotateImageCanvasSurfaceClear(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -123,7 +123,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rotateImage(originalImage, image, canvasSurface, totalAngle)
+                        return this.rotateImageCanvasSurface(originalImage, image, canvasSurface, totalAngle)
 
                                     }
                                 
@@ -139,7 +139,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 }
 
 
-    open fun rotateImage(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
+    open fun rotateImageCanvasSurface(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -215,7 +215,7 @@ canvasSurface!!.drawImage(originalPlayNImage,  -originalImage!!.getWidth() /2,  
     //var originalImage = originalImage
     //var rotationInDegrees = rotationInDegrees
 
-    var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
+    var image: Image = ImageCreationUtil.getInstance()!!.createImageWH(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
 
     var rotatedImage: Image = this.rotateImage(originalImage, image, rotationInDegrees)!!

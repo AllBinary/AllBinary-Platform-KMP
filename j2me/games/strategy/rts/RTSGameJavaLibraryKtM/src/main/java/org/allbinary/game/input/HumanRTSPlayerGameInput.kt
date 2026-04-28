@@ -108,7 +108,7 @@ this.touchButtonsBuilderFactory= touchButtonsBuilderFactory
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-this.notYoursGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NOT_YOURS, SmallIntegerSingletonFactory.getInstance()!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.notYoursGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NOT_YOURS, SmallIntegerSingletonFactory.getInstance()!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
 BasicMotionGesturesHandler.getInstance()!!.addListener(this)
 }
 
@@ -177,7 +177,7 @@ this.notYoursGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.get
                         if(this.getRtsPlayerLayerInterface()!!.getCurrentScrollSelectionForm()!!.isInForm(point))
                         
                                     {
-                                    rtsFormInput!!.process(this.getSelectedRtsLayer(), this.getRtsPlayerLayerInterface(), layerManager, point)
+                                    rtsFormInput!!.processAtPoint(this.getSelectedRtsLayer(), this.getRtsPlayerLayerInterface(), layerManager, point)
 
                                     }
                                 
@@ -191,7 +191,7 @@ this.notYoursGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.get
 
 this.select(motionGestureEvent)
 this.getSelectedBuildingPlayerGameInput()!!.selectAllPreselected()
-previousRtsFormInput!!.process(this.getSelectedRtsLayer(), this.getRtsPlayerLayerInterface(), layerManager, point)
+previousRtsFormInput!!.processAtPoint(this.getSelectedRtsLayer(), this.getRtsPlayerLayerInterface(), layerManager, point)
 this.getSelectedBuildingPlayerGameInput()!!.deselectAllPreselected()
 
                                     }
@@ -453,7 +453,7 @@ this.setSelectedRtsLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DE
 }
 
 
-    open fun updateForm(rtsLayer: RTSLayer)
+    open fun updateFormForLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsLayer = rtsLayer
@@ -526,7 +526,7 @@ GameNotificationEventHandler.getInstance()!!.fireEvent(notYoursGameNotificationE
     var rtsLayer: RTSLayer = rtSLayer as RTSLayer
 
 rtsLayer!!.select()
-this.updateForm(rtsLayer)
+this.updateFormForLayer(rtsLayer)
 
     
                         if(gameCanvas!!.getGameState() == GameState.PLAYING_GAME_STATE)
@@ -634,7 +634,7 @@ this.updatePaintable()
 
 multiSelectPaintable!!.setBasicColorP(geographicMapInterface!!.getForegroundBasicColor())
 this.multiSelectPaintable!!.update(list)
-this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfo(multiSelectPaintable)
+this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfoSelection(multiSelectPaintable)
 
                                     }
                                 
@@ -646,12 +646,12 @@ this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfo(multiSelectPaintable)
                                     
     var rtsLayer: RTSLayer = list.get(0) as RTSLayer
 
-this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfo(rtsLayer!!.createHudPaintable())
+this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfoSelection(rtsLayer!!.createHudPaintable())
 
                                     }
                                 
                         else {
-                            this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfo(NullInitUpdatePaintable.getInstance())
+                            this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfoInit(NullInitUpdatePaintable.getInstance())
 
                         }
                             

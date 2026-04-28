@@ -62,7 +62,7 @@ this.image= image
 this.dx= dx
 this.dy= dy
 this.totalFrames= totalFrames
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.totalFrames)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.totalFrames)
 }
 
 
@@ -143,7 +143,7 @@ var sequence = sequence
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -165,7 +165,7 @@ graphics.drawImage(this.image, x +currentX, y +currentY, anchor)
     open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
-DisposalUtil.getInstance()!!.dispose(this.image)
+DisposalUtil.getInstance()!!.disposeImage(this.image)
 }
 
 
@@ -174,7 +174,7 @@ DisposalUtil.getInstance()!!.dispose(this.image)
     override fun finalize()
         //nullable = true from not(false or (false and true)) = true
 {
-DisposalUtil.getInstance()!!.dispose(this.image)
+DisposalUtil.getInstance()!!.disposeImage(this.image)
 }
 
 

@@ -92,16 +92,16 @@ var selectRTSLayerVisitorFactoryInterface = selectRTSLayerVisitorFactoryInterfac
 this.initInputProcessors()
 this.rtsPlayerLayerInterface= rtsPlayerLayerInterface
 this.list= list
-this.selectRTSLayerVisitorInterface= selectRTSLayerVisitorFactoryInterface!!.getInstance(this)
+this.selectRTSLayerVisitorInterface= selectRTSLayerVisitorFactoryInterface!!.create(this)
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-this.upgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.UPGRADE, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.downgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.DOWNGRADE, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.upgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.UPGRADE, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.downgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.DOWNGRADE, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
 }
 
 
@@ -309,7 +309,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 
                 @Throws(Exception::class)
             
-    open fun processInput(key: Int)
+    open fun processInputKey(key: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -320,7 +320,7 @@ var key = key
                                 )
                         
                                     {
-                                    this.inputProcessorArray[key]!!.process(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
+                                    this.inputProcessorArray[key]!!.processEvent(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
 
                                     }
                                 
@@ -352,7 +352,7 @@ var layerManager = layerManager
     var gameKeyEvent: GameKeyEvent = this.list.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
-this.processInput(key)
+this.processInputKey(key)
 }
 
 

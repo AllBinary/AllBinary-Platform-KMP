@@ -105,7 +105,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                                     {
                                     layerInterface= layerInterfaceCanBeNull as AllBinaryLayer
 allBinaryLayerManager!!.remove(layerInterface)
-destroyedEvent= destroyEventCircularStaticPool!!.getInstance(layerInterface)
+destroyedEvent= destroyEventCircularStaticPool!!.getInstanceForLayer(layerInterface)
 destroyedEventHandler!!.fireEvent(destroyedEvent)
 
                                     }

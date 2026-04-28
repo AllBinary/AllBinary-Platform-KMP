@@ -58,13 +58,13 @@ interface GeographicMapInterface {
 
                 @Throws(Exception::class)
             
-    open fun getCellPositionAt(x: Int, y: Int)
+    open fun getCellPositionAtXY(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition
 
                 @Throws(Exception::class)
             
-    open fun getCellPositionAtNoThrow(x: Int, y: Int)
+    open fun getCellPositionAtXYNoThrow(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition
 
@@ -74,7 +74,7 @@ interface GeographicMapInterface {
 
                 @Throws(Exception::class)
             
-    open fun getCellTypeAt(x: Int, y: Int)
+    open fun getCellTypeAtXY(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType
 

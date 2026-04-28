@@ -63,7 +63,7 @@ LogConfigTypeFactory.getInstance()
 
 PreLogUtil.put("Number Of Log Configs: " +loggingInitInfo!!.getNumberOfLogConfigs(), "LogConfigTypes", "init()")
 PreLogUtil.put("Number Of Log Config Type Names: " +logConfigTypeVector!!.size(), "LogConfigTypes", "init()")
-LogConfigTypes.LOGGING.addAll(logConfigTypeVector)
+LogConfigTypes.LOGGING.addAllList(logConfigTypeVector)
 LogConfigTypes.LOGGING.add(LogConfigTypeFactory.getInstance()!!.NETBEANS_MODULE)
 } catch(e: Exception)
             {

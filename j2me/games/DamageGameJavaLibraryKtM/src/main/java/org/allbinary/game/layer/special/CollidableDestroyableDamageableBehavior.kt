@@ -88,7 +88,7 @@ ownerCollidableDestroyableDamageableLayer!!.damage(collidableDestroyableDamageab
 }
 
 
-    override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun isCollisionInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -103,7 +103,7 @@ ForcedLogUtil.log("No Longer Used", this)
 
                 @Throws(Exception::class)
             
-    override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface

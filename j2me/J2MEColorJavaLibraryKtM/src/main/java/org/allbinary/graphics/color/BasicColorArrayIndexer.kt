@@ -40,7 +40,7 @@ public constructor (basicColorArray: Array<BasicColor?>)
         {
 var basicColorArray = basicColorArray
 this.basicColorArray= basicColorArray
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.basicColorArray!!.size)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.basicColorArray!!.size)
 }
 
 

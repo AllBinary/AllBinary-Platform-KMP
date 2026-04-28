@@ -44,7 +44,7 @@ open public class CompoundRotationAnimation : RotationAnimation
     private var animationInterfaceArray: Array<RotationAnimation?>
 public constructor (animationInterfaceArray: Array<RotationAnimation?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), animationBehavior){
+                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
     //var animationBehavior = animationBehavior
 
@@ -52,7 +52,7 @@ public constructor (animationInterfaceArray: Array<RotationAnimation?>, animatio
                             //For kotlin this is before the body of the constructor.
                     
 this.animationInterfaceArray= animationInterfaceArray
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.animationInterfaceArray!!.size)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.animationInterfaceArray!!.size)
 }
 
 
@@ -147,13 +147,13 @@ var sequence = sequence
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
     //var x = x
     //var y = y
-this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paint(graphics, x, y)
+this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paintXY(graphics, x, y)
 }
 
 
@@ -213,23 +213,23 @@ this.setFrame(frame)
 }
 
 
-    override fun setFrame(direction: Direction)
+    override fun setFrameByDirection(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var direction = direction
-this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.setFrame(direction)
+this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.setFrameByDirection(direction)
 }
 
 
-    override fun setFrame(angle: Angle)
+    override fun setFrameToAngle(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
-this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.setFrame(angle)
+this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.setFrameToAngle(angle)
 }
 
 
-    override fun adjustFrame(newAngle: Angle)
+    override fun adjustFrameToAngle(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newAngle = newAngle

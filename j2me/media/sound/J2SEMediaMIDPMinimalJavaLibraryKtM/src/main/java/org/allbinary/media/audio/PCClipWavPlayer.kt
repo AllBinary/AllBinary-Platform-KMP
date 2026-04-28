@@ -260,7 +260,7 @@ var controlType = controlType
 {
     //var leftVolume = leftVolume
     //var rightVolume = rightVolume
-this.setVolume((leftVolume.toFloat()) /100.0f)
+this.setVolumeF((leftVolume.toFloat()) /100.0f)
 }
 
 
@@ -278,7 +278,7 @@ this.setVolume((leftVolume.toFloat()) /100.0f)
 }
 
 
-    open fun setVolume(volume: Float)
+    open fun setVolumeF(volume: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var volume = volume

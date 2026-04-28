@@ -85,7 +85,7 @@ this.set()
 
     var myFont: MyFont = MyFont.getInstance()!!
 
-this.offset= myFont!!.stringWidth(this.TIME_STRING) +myFont!!.stringWidth(3)
+this.offset= myFont!!.stringWidth(this.TIME_STRING) +myFont!!.defaultStringWidth(3)
 
     
                         if(direction == 0)
@@ -121,7 +121,7 @@ this.totalDigits= this.timer.getCurrentTotalDigits()
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paint(graphics, TIME_CHAR_ARRAY, 0, TIME_CHAR_ARRAY.size, string, 0, totalDigits, offset)
+super.paintDX(graphics, TIME_CHAR_ARRAY, 0, TIME_CHAR_ARRAY.size, string, 0, totalDigits, offset)
 }
 
 

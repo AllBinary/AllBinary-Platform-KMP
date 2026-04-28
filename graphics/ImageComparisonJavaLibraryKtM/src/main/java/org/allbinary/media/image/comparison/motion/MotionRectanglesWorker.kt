@@ -105,7 +105,7 @@ this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
 
-timeHelper!!.setStartTime()
+timeHelper!!.setStartTimeTNT()
 
     var imageComparisonResultsEvent: ImageComparisonResultsEvent = this.imageComparisonInfoVector!!.get(0) as ImageComparisonResultsEvent
 
@@ -129,7 +129,7 @@ ConstrainedMotionRectanglesResultsCacheSingleton.getInstance()!!.add(MotionRecta
 this.fireEvent(MotionRectanglesResultsEvent(this, imageComparisonInfo!!.getFrameTwo(), constrainedMotionRectangles as MotionRectangles))
 this.imageComparisonInfoVector!!.remove(imageComparisonResultsEvent)
 this.index++
-this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
 this.setRunning(false)
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)

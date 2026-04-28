@@ -77,7 +77,7 @@ animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArra
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getInstance(animationInterfaceArray)
+                        return this.createAnimation(animationInterfaceArray)
 }
 
 
@@ -93,8 +93,8 @@ animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArra
 }
 
 
-    open fun getInstance(animationInterfaceArray: Array<Animation?>)
-        //nullable =  from not(true or (false and false)) = 
+    open fun createAnimation(animationInterfaceArray: Array<Animation?>)
+        //nullable = true from not(false or (false and false)) = true
 : Animation{
     //var animationInterfaceArray = animationInterfaceArray
 

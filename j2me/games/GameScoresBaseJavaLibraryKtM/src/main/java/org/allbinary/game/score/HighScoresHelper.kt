@@ -35,7 +35,7 @@ open public class HighScoresHelper : HighScoresHelperBase {
             {
             }            
         
-    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0, 0)!!
+    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstanceAt(0, 0)!!
 
     override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true

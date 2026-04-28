@@ -74,7 +74,7 @@ var aTheta = aTheta
     var secondY: Double = (secondPoint!!.getX() *Math.sin(aTheta)) +(secondPoint!!.getY() *Math.cos(aTheta))
 
 
-    var point: GPoint = PointFactory.getInstance()!!.getInstance0((secondX.toInt()), (secondY.toInt()))!!
+    var point: GPoint = PointFactory.getInstance()!!.createXY((secondX.toInt()), (secondY.toInt()))!!
 
 newVector!!.add(point)
 }

@@ -75,7 +75,7 @@ interface LayerInterface : NamedInterface, PaintableInterface, GroupInterfaceCom
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-    open fun move(dx: Int, dy: Int, dz: Int)
+    open fun moveDXYZ(dx: Int, dy: Int, dz: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

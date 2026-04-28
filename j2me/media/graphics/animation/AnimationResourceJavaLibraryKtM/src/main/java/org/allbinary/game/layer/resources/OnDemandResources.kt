@@ -64,7 +64,7 @@ protected constructor ()
 
                 @Throws(Exception::class)
             
-    open fun init(imageCache: ImageCache, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory, portion: Int, loadingString: String, index: Int)
+    open fun initAt(imageCache: ImageCache, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory, portion: Int, loadingString: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var imageCache = imageCache

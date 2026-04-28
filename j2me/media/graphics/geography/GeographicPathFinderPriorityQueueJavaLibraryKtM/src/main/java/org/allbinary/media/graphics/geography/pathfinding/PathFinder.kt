@@ -104,12 +104,12 @@ this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeC
 
         {
 
-    var geographicMapCellType: GeographicMapCellType = geographicMapInterface!!.getCellTypeAt(basicGeographicMapCellPositionFactory!!.getInstance(column, row))!!
+    var geographicMapCellType: GeographicMapCellType = geographicMapInterface!!.getCellTypeAt(basicGeographicMapCellPositionFactory!!.getAt(column, row))!!
 
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = geographicMapCellType as RaceTrackGeographicMapCellType
 
-node= PathFindingNodeCost(NullUtil.getInstance()!!.NULL_OBJECT, basicGeographicMapCellPositionFactory!!.getInstance(column, row), PathFindingNodeCostInfo(raceTrackGeographicMapCellType!!.getTravelCost().toLong(),  -1.toLong()))
+node= PathFindingNodeCost(NullUtil.getInstance()!!.NULL_OBJECT, basicGeographicMapCellPositionFactory!!.getAt(column, row), PathFindingNodeCostInfo(raceTrackGeographicMapCellType!!.getTravelCost().toLong(),  -1.toLong()))
 this.costArray[column]!![row]= node
 }
 
@@ -118,7 +118,7 @@ this.costArray[column]!![row]= node
 }
 
 
-    override fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
+    override fun searchTotalPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
@@ -149,7 +149,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
 
                 @Throws(Exception::class)
             
-    override fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
+    override fun searchTotalPathN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
@@ -382,7 +382,7 @@ this.closedSet!!.add(current)
         {
 
     
-                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
+                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getAt(column, row)))
                         
                                     {
                                     neighbor= this.costArray[column]!![row]!!
@@ -574,7 +574,7 @@ this.closedSet!!.add(current)
         {
 
     
-                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
+                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getAt(column, row)))
                         
                                     {
                                     neighbor= this.costArray[column]!![row]!!

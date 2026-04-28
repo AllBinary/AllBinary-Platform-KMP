@@ -112,7 +112,7 @@ var startPathFindingNodeList = startPathFindingNodeList
                         
                                     {
                                     
-    var geographicMapCellPositionNeighbor: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(column, nextRow)!!
+    var geographicMapCellPositionNeighbor: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(column, nextRow)!!
 
 graph.removeEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
 
@@ -165,7 +165,7 @@ graph.addVertex(geographicMapCellPosition)
                         
                                     {
                                     
-    var geographicMapCellPositionNeighbor: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(column, nextRow)!!
+    var geographicMapCellPositionNeighbor: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(column, nextRow)!!
 
 graph.addEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
 
@@ -203,13 +203,13 @@ var graph = graph
 
 this.logUtil!!.putF("Fixing Over Pass: " +overPassGeographicMapCellPosition!!.getColumn() +", " +overPassGeographicMapCellPosition!!.getRow(), this, "fixOverPassEdges")
 
-    var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
+    var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
 
 
-    var rightUnderPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn() +1, overPassGeographicMapCellPosition!!.getRow())!!
+    var rightUnderPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(overPassGeographicMapCellPosition!!.getColumn() +1, overPassGeographicMapCellPosition!!.getRow())!!
 
 
-    var leftUnderPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn() -1, overPassGeographicMapCellPosition!!.getRow())!!
+    var leftUnderPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(overPassGeographicMapCellPosition!!.getColumn() -1, overPassGeographicMapCellPosition!!.getRow())!!
 
 graph.removeEdge(underPassGeographicMapCellPosition, rightUnderPassGeographicMapCellPosition)
 graph.removeEdge(underPassGeographicMapCellPosition, leftUnderPassGeographicMapCellPosition)
@@ -253,7 +253,7 @@ var pathList = pathList
                         
                                     {
                                     pathList!!.remove(startPathFindingNode!!.geographicMapCellPosition)
-pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)
+pathList!!.addAt(0, startPathFindingNode!!.geographicMapCellPosition)
 
                                     }
                                 
@@ -292,7 +292,7 @@ var pathList = pathList
     var overPassGeographicMapCellPosition: CellPosition = CellPositionArray[index]!!
 
 
-    var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
+    var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
 
 
     var indexOf: Int = pathList!!.indexOf(overPassGeographicMapCellPosition)!!

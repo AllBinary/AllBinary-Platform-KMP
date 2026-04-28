@@ -44,7 +44,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactory(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : PooledImageArrayRotationAnimationFactory{
     //var image = image

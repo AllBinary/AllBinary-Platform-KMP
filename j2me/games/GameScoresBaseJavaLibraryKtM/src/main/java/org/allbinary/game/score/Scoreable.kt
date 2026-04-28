@@ -36,7 +36,7 @@ open public class Scoreable
         
 companion object {
             
-    var ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(3)!!
+    var ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(3)!!
 
         }
             

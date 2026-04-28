@@ -71,8 +71,8 @@ this.list.add(analogLocationInput)
 }
 
 
-    open fun getInstance(playerInputId: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceForPlayer(playerInputId: Int)
+        //nullable = true from not(false or (false and false)) = true
 : AnalogLocationInput{
 var playerInputId = playerInputId
 

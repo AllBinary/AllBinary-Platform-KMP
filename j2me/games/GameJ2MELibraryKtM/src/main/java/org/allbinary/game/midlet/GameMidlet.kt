@@ -173,7 +173,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
 
                             //For kotlin this is before the body of the constructor.
                     
-SmallIntegerSingletonFactory.getInstance()!!.init(0x291, 6)
+SmallIntegerSingletonFactory.getInstance()!!.initWithRange(0x291, 6)
 this.loadGameForm= CommandForm.NULL_COMMAND_FORM
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
@@ -305,7 +305,7 @@ AllBinarySensorManager.getInstance()!!.init()
 }
 
 
-    override fun destroyApp(unconditional: Boolean, isProgress: Boolean)
+    override fun destroyAppInRunnable(unconditional: Boolean, isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var unconditional = unconditional
@@ -544,7 +544,7 @@ GameMidletEventHandler.getInstance()!!.fireEvent(DemoGameMidletEvent(this, DemoG
                                     {
                                     
     
-                        if(this.gameStartTimeHelper!!.isTime())
+                        if(this.gameStartTimeHelper!!.isTimeTNT())
                         
                                     {
                                     
@@ -620,7 +620,7 @@ this.gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
                                     {
                                     
     
-                        if(this.gameStartTimeHelper!!.isTime())
+                        if(this.gameStartTimeHelper!!.isTimeTNT())
                         
                                     {
                                     
@@ -855,7 +855,7 @@ gameInputMappingCanvas!!.setDefault()
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.addPortion(50, "In Game Options")
+progressCanvas!!.addNormalPortion(50, "In Game Options")
 
     var layerManager: AllBinaryGameLayerManager = this.createGameLayerManager()!!
 
@@ -1009,7 +1009,7 @@ PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, COMM
 
 keyValuePersistance!!.delete(abeClientInformation, index)
 keyValuePersistance!!.clear()
-keyValuePersistance!!.loadAll(abeClientInformation, 1)
+keyValuePersistance!!.loadAllSize(abeClientInformation, 1)
 this.getLoadGameForm()!!.update()
 
                                     }
@@ -1236,7 +1236,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
     var threadFactoryUtil: ThreadFactoryUtil = ThreadFactoryUtil.getInstance()!!
 
-this.thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
+this.thread= threadFactoryUtil!!.getInstanceGameCanvasRunnable(this.allbinaryGameCanvasRunnableInterface)
 this.logUtil!!.putF(StringMaker().
                             append("Thread Priority: ")!!.appendint(this.thread.getPriority())!!.toString(), this, "startGameCanvasRunnableInterface")
 this.allbinaryGameCanvasRunnableInterface!!.setThread(this.thread)
@@ -1280,12 +1280,12 @@ ThreadUtil.getInstance()!!.join(this.thread)
                         if(this.features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ALL))
                         
                                     {
-                                    progressCanvas!!.addPortion(50, "Stopped Game Runnable")
+                                    progressCanvas!!.addNormalPortion(50, "Stopped Game Runnable")
 
                                     }
                                 
                         else {
-                            progressCanvas!!.addPortion(50, "Stopped Main Runnable")
+                            progressCanvas!!.addNormalPortion(50, "Stopped Main Runnable")
 
                         }
                             

@@ -89,7 +89,7 @@ this.maxTileId= maxTileId
                         }
                             
 
-    var BLOCK_CELL_TYPE: BasicTopViewGeographicMapCellType = BasicTopViewGeographicMapCellType.create(basicTopViewGeographicMapStrings!!.DEFAULT, 1, 1)!!
+    var BLOCK_CELL_TYPE: BasicTopViewGeographicMapCellType = BasicTopViewGeographicMapCellType.createType(basicTopViewGeographicMapStrings!!.DEFAULT, 1, 1)!!
 
 
     var OFF_MAP_CELL_TYPE: BasicTopViewGeographicMapCellType = BLOCK_CELL_TYPE

@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import javax.microedition.lcdui.Image
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.color.BasicColor
@@ -329,11 +328,11 @@ openGLESImage!!.openGLESImageProperties!!.alphaf= (alphaInt.toFloat()) /255f
 
                                     }
                                 
-this.setAlpha(image, alphaInt)
+this.setAlphaSWT(image, alphaInt)
 }
 
 
-    open fun setAlpha(image: Image, alphaInt: Int)
+    open fun setAlphaSWT(image: Image, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image

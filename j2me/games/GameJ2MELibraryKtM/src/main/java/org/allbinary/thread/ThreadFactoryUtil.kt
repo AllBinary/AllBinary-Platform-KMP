@@ -69,32 +69,32 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    open fun getInstance(runnable: GameCanvasRunnableInterface)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceGameCanvasRunnable(runnable: GameCanvasRunnableInterface)
+        //nullable = true from not(false or (false and false)) = true
 : Thread{
     //var runnable = runnable
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getInstance(runnable, runnable.getType())
+                        return this.getInstanceType(runnable, runnable.getType())
 }
 
 
-    open fun getInstance(runnable: ABRunnable)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceForRunnable(runnable: ABRunnable)
+        //nullable = true from not(false or (false and false)) = true
 : Thread{
     //var runnable = runnable
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getInstance(runnable, runnable.getType())
+                        return this.getInstanceType(runnable, runnable.getType())
 }
 
 
-    open fun getInstance(runnable: Runnable, type: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceType(runnable: Runnable, type: Int)
+        //nullable = true from not(false or (false and false)) = true
 : Thread{
     //var runnable = runnable
     //var type = type

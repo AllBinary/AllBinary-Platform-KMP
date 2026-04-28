@@ -301,7 +301,7 @@ var cellPosition = cellPosition
 {
 var dx = dx
 var dy = dy
-this.getSimpleTiledLayer()!!.move(dx, dy)
+this.getSimpleTiledLayer()!!.moveDXY(dx, dy)
 }
 
 

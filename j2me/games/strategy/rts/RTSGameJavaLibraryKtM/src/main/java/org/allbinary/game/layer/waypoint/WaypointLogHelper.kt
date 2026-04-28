@@ -73,7 +73,7 @@ companion object {
 }
 
 
-    open fun addWaypointFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface, list: BasicArrayList)
+    open fun addWaypointFromBuildingList(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -92,7 +92,7 @@ companion object {
 }
 
 
-    open fun insertWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, index: Int, rtsLayer: CollidableDestroyableDamageableLayer, waypointName: String, list: BasicArrayList)
+    open fun insertWaypointList(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, index: Int, rtsLayer: CollidableDestroyableDamageableLayer, waypointName: String, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -103,7 +103,7 @@ companion object {
 }
 
 
-    open fun setRandomGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
+    open fun setRandomGeographicMapCellHistoryList(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer

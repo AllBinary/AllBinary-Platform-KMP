@@ -70,7 +70,7 @@ this.layerList!!.add(layerInterface)
 }
 
 
-    open fun add(list: BasicArrayList, layerInterface: AllBinaryLayer)
+    open fun addList(list: BasicArrayList, layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -100,15 +100,15 @@ var cellPosition = cellPosition
                         if(index >= 0)
                         
                                     {
-                                    this.positionList!!.remove(index)
-this.layerList!!.remove(index)
+                                    this.positionList!!.removeAt(index)
+this.layerList!!.removeAt(index)
 
                                     }
                                 
 }
 
 
-    open fun remove(layerInterface: AllBinaryLayer)
+    open fun removeLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterface = layerInterface
@@ -124,8 +124,8 @@ index= this.layerList!!.indexOf(layerInterface)
                         if(index >= 0)
                         
                                     {
-                                    this.positionList!!.remove(index)
-this.layerList!!.remove(index)
+                                    this.positionList!!.removeAt(index)
+this.layerList!!.removeAt(index)
 
                                     }
                                 

@@ -28,7 +28,6 @@
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.AnimationBehavior
-import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.util.CircularIndexUtil
 
 open public class ImageSegmentAnimation : ImageAnimation {
@@ -59,7 +58,7 @@ this.startX= 0
 this.startY= 0
 this.drawWidth= this.getImage()!!.getWidth()
 this.drawHeight= this.getImage()!!.getHeight()
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.drawHeight)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.drawHeight)
 this.sequenceArray= sequenceArray
 }
 
@@ -127,7 +126,7 @@ this.sequenceArray= sequenceArray
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

@@ -139,7 +139,7 @@ this.createInstance(column, row, width, height)
                         for (row in 0 until rows)
 
         {
-cellPosition= this.getInstance(column, row)
+cellPosition= this.getAt(column, row)
 geographicMapCelPositionFactoryInitVisitorInterface!!.visit(tiledLayer, cellPosition)
 }
 
@@ -163,8 +163,8 @@ this.logUtil!!.put(StringMaker().
 
                 @Throws(Exception::class)
             
-    open fun getInstance(i_column: Int, i_row: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getAt(i_column: Int, i_row: Int)
+        //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var i_column = i_column
     //var i_row = i_row
@@ -186,7 +186,7 @@ this.logUtil!!.put(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getInstance(anotherMapGeographicMapCellPosition!!.getColumn(), anotherMapGeographicMapCellPosition!!.getRow())
+                        return this.getAt(anotherMapGeographicMapCellPosition!!.getColumn(), anotherMapGeographicMapCellPosition!!.getRow())
 }
 
 

@@ -115,7 +115,7 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
+    open fun createImageScale(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage

@@ -108,7 +108,7 @@ var cellPositionArray = cellPositionArray
 
                 @Throws(Exception::class)
             
-    override fun getCellPositionAt(x: Int, y: Int)
+    override fun getCellPositionAtXY(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
 var x = x
@@ -122,7 +122,7 @@ var y = y
 
                 @Throws(Exception::class)
             
-    override fun getCellPositionAtNoThrow(x: Int, y: Int)
+    override fun getCellPositionAtXYNoThrow(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
 var x = x
@@ -147,7 +147,7 @@ var cellTypeId = cellTypeId
 
                 @Throws(Exception::class)
             
-    override fun getCellTypeAt(x: Int, y: Int)
+    override fun getCellTypeAtXY(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType{
 var x = x

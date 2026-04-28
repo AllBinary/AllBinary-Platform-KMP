@@ -71,8 +71,8 @@ colorIndex++
 }
 
 
-    open fun getInstance(colorAsInt: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getAndOrCreate(colorAsInt: Int)
+        //nullable = true from not(false or (false and false)) = true
 : BasicColor{
     //var colorAsInt = colorAsInt
 

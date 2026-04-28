@@ -105,13 +105,13 @@ this.unSelectedAnimationArray[index]= nullAnimation
                         for (index in items.size  - 1  downTo 0)
 
         {
-this.update(index, items[index]!!)
+this.updateAt(index, items[index]!!)
 }
 
 }
 
 
-    open fun update(index: Int, item: CustomItem)
+    open fun updateAt(index: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -193,7 +193,7 @@ adjustedBorder= 4
 
     var result: Int = super.append(item)!!
 
-this.update(result, item)
+this.updateAt(result, item)
 
 
 
@@ -246,7 +246,7 @@ super.set(itemNum, item)
     //var item = item
     //var x = x
     //var y = y
-this.selectedAnimationArray[index]!!.paint(graphics, x, y)
+this.selectedAnimationArray[index]!!.paintXY(graphics, x, y)
 
 
 
@@ -265,7 +265,7 @@ this.selectedAnimationArray[index]!!.paint(graphics, x, y)
     //var item = item
     //var x = x
     //var y = y
-this.unSelectedAnimationArray[index]!!.paint(graphics, x, y)
+this.unSelectedAnimationArray[index]!!.paintXY(graphics, x, y)
 
 
 

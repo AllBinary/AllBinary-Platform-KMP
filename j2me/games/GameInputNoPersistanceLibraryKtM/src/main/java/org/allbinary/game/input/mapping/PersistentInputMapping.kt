@@ -107,7 +107,7 @@ this.inputPersistance= InputPersistance(name)
 {
     //var abeClientInformation = abeClientInformation
 this.getInputMapping()!!.removeAll()
-this.getInputMapping()!!.add(this.getDefault())
+this.getInputMapping()!!.addMapping(this.getDefault())
 this.save(abeClientInformation)
 }
 

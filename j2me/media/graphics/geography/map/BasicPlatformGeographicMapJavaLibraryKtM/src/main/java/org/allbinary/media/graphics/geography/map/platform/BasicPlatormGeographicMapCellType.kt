@@ -37,7 +37,7 @@ open public class BasicPlatormGeographicMapCellType
         
 companion object {
             
-    open fun create(type: Int)
+    open fun createType(type: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicPlatormGeographicMapCellType{
     //var type = type
@@ -101,11 +101,11 @@ this.types= typeArray
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.isType(type.getType())
+                        return this.hasType(type.getType())
 }
 
 
-    open fun isType(type: Int)
+    open fun hasType(type: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var type = type

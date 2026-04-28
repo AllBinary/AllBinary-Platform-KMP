@@ -95,11 +95,11 @@ var portion = portion
 var portion = portion
 
     
-                        if(ChangedGameFeatureListener.getInstance()!!.isChanged(InputFeatureFactory.getInstance()!!.INPUT_MAPPING))
+                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(InputFeatureFactory.getInstance()!!.INPUT_MAPPING))
                         
                                     {
                                     PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.init(abeClientInformation)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, "Game Keys")
+ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Game Keys")
 ChangedGameFeatureListener.getInstance()!!.remove(InputFeatureFactory.getInstance()!!.INPUT_MAPPING)
 
                                     }
@@ -142,13 +142,13 @@ GameKeyEventFactory.getInstance()!!.init()
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.addPortion(localPortion, "Game Key Events")
+progressCanvas!!.addNormalPortion(localPortion, "Game Key Events")
 BasicTouchInputFactory.getInstance()!!.init(PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping())
-progressCanvas!!.addPortion(localPortion, "Touch Input")
+progressCanvas!!.addNormalPortion(localPortion, "Touch Input")
 CompleteMotionGestureInputToGameMotionGestureInput.getInstance()!!.init()
-progressCanvas!!.addPortion(localPortion, "Motion Input")
+progressCanvas!!.addNormalPortion(localPortion, "Motion Input")
 GameFeatureImageCacheFactory.init()
-progressCanvas!!.addPortion(localPortion, "Image Cache")
+progressCanvas!!.addNormalPortion(localPortion, "Image Cache")
 this.resourceInitializationArray[this.EARLY_RESOURCES]!!.init()
 
                                     }
@@ -234,7 +234,7 @@ this.allLoaded= true
                                 
 
     
-                        if(ChangedGameFeatureListener.getInstance()!!.isChanged(MainFeatureFactory.getInstance()!!.STATIC))
+                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(MainFeatureFactory.getInstance()!!.STATIC))
                         
                                     {
                                     

@@ -98,7 +98,7 @@ this.setInitialized(true)
 
                 @Throws(Exception::class)
             
-    open fun init(imageCache: ImageCache, level: Int)
+    open fun initImageCache(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageCache = imageCache

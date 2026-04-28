@@ -40,11 +40,11 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var demoCanvas = demoCanvas
-DemoCanvasProgressUtil.showProgress(demoCanvas, false)
+DemoCanvasProgressUtil.showProgressOptionallyInTheBackground(demoCanvas, false)
 }
 
 
-    open fun showProgress(demoCanvas: DemoCanvas, background: Boolean)
+    open fun showProgressOptionallyInTheBackground(demoCanvas: DemoCanvas, background: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var demoCanvas = demoCanvas

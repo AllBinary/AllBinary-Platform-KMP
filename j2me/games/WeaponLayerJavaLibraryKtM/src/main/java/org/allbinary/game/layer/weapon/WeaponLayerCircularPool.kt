@@ -52,7 +52,7 @@ var scoreable = scoreable
 
     var weaponLayer: WeaponLayer = super.getNextInstance() as WeaponLayer
 
-weaponLayer!!.init(x, y, z)
+weaponLayer!!.initXYZ(x, y, z)
 weaponLayer!!.init(sourceLayerInterface, angle, otherAngle, weaponProperties, scoreable)
 
 

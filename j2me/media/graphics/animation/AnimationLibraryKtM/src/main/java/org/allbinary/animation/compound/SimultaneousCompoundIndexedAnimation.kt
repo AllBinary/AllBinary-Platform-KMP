@@ -153,7 +153,7 @@ this.animationInterfaceArray[index]!!.nextFrame()
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -170,7 +170,7 @@ this.animationInterfaceArray[index]!!.nextFrame()
                         for (index in 0 until size)
 
         {
-this.animationInterfaceArray[index]!!.paint(graphics, x, y)
+this.animationInterfaceArray[index]!!.paintXY(graphics, x, y)
 }
 
 }

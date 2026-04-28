@@ -38,8 +38,8 @@ this.lockedIndex= lockedIndex
 
                 @Throws(Exception::class)
             
-    override fun getInstance(paintableForm: PaintableForm)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getInstanceItemPaintable(paintableForm: PaintableForm)
+        //nullable = true from not(false or (false and false)) = true
 : ItemPaintable{
 var paintableForm = paintableForm
 

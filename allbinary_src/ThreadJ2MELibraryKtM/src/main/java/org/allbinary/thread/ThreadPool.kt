@@ -198,7 +198,7 @@ break;
                             
     var index: Int = this.taskQueue!!.indexOf(lowerPriorityRunnable)!!
 
-this.taskQueue!!.add(index, task)
+this.taskQueue!!.addAt(index, task)
 
                         }
                             
@@ -280,7 +280,7 @@ this.wait()
 }
 
 
-    var runnable: Runnable = this.taskQueue!!.remove(0) as Runnable
+    var runnable: Runnable = this.taskQueue!!.removeAt(0) as Runnable
 
 
 

@@ -48,7 +48,7 @@ public constructor (costFromStart: Long, costToGoal: Long)
     //var costToGoal = costToGoal
 this.costFromStartP= costFromStart
 this.costToEndP= costToGoal
-this.setTotalCost()
+this.setCalculatedTotalCost()
 }
 
 
@@ -70,7 +70,7 @@ this.totalCostP= totalCost
 
                 @Throws(Exception::class)
             
-    open fun setTotalCost()
+    open fun setCalculatedTotalCost()
         //nullable = true from not(false or (false and true)) = true
 {
 this.totalCostP= this.costFromStartP +this.costToEndP

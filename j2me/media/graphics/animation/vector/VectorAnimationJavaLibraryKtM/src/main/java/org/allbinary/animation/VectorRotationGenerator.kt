@@ -69,24 +69,24 @@ private constructor ()
     open fun getInstance(vectorRotationInfo: VectorInfo)
         //nullable =  from not(true or (false and false)) = 
 : Array<Array<IntArray?>?>{
-var vectorRotationInfo = vectorRotationInfo
+    //var vectorRotationInfo = vectorRotationInfo
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getInstance(vectorRotationInfo!!.getWidth(), vectorRotationInfo!!.getHeight(), vectorRotationInfo!!.getPoints(), vectorRotationInfo!!.getTotalFrames())
+                        return getInstanceFrames(vectorRotationInfo!!.getWidth(), vectorRotationInfo!!.getHeight(), vectorRotationInfo!!.getPoints(), vectorRotationInfo!!.getTotalFrames())
 }
 
 
     private val angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
-    open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceFrames(width: Int, height: Int, points: Array<IntArray?>, frames: Int)
+        //nullable = true from not(false or (false and false)) = true
 : Array<Array<IntArray?>?>{
-var width = width
-var height = height
-var points = points
-var frames = frames
+    //var width = width
+    //var height = height
+    //var points = points
+    //var frames = frames
 
         try {
             
@@ -115,7 +115,7 @@ var frames = frames
                         for (index in 0 until size)
 
         {
-pointBasicArrayList!!.add(pointFactory!!.getInstance0(points[index]!![0]!!, points[index]!![1]!!))
+pointBasicArrayList!!.add(pointFactory!!.createXY(points[index]!![0]!!, points[index]!![1]!!))
 }
 
 
@@ -124,12 +124,12 @@ pointBasicArrayList!!.add(pointFactory!!.getInstance0(points[index]!![0]!!, poin
 
         while(index < totalAngle)
         {
-pointsBasicArrayList!!.add(getInstance(width, height, pointBasicArrayList, this.angleFactory!!.getInstance(index)))
+pointsBasicArrayList!!.add(getListAtAngle(width, height, pointBasicArrayList, this.angleFactory!!.getAt(index)))
 index += angleIncrement
 }
 
 
-    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList, pointBasicArrayList!!.size())!!
+    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromListOfPointListWithPointsPerFrame(pointsBasicArrayList, pointBasicArrayList!!.size())!!
 
 
 
@@ -154,19 +154,19 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
                 @Throws(Exception::class)
             
-    open fun getInstance(width: Int, height: Int, pointBasicArrayList: BasicArrayList, angle: Angle)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getListAtAngle(width: Int, height: Int, pointBasicArrayList: BasicArrayList, angle: Angle)
+        //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var width = width
-var height = height
-var pointBasicArrayList = pointBasicArrayList
-var angle = angle
+    //var width = width
+    //var height = height
+    //var pointBasicArrayList = pointBasicArrayList
+    //var angle = angle
 
     var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(pointBasicArrayList)
 
 graphicsPipe!!.createMatrix()
 graphicsPipe!!.translate( -(width shr 1),  -(height shr 1))
-graphicsPipe!!.rotate(angle)
+graphicsPipe!!.rotateToAngle(angle)
 graphicsPipe!!.translate((width shr 1), (height shr 1))
 
 

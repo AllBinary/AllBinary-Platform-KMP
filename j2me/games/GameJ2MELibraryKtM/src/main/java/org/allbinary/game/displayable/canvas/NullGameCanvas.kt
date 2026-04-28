@@ -38,7 +38,7 @@ open public class NullGameCanvas : AllBinaryGameCanvas {
         
 companion object {
             
-    open fun create()
+    open fun createNull()
         //nullable = true from not(false or (false and true)) = true
 : NullGameCanvas{
 
@@ -60,7 +60,7 @@ LogUtil.getInstance()!!.put(CommonStrings.getInstance()!!.EXCEPTION, "NullGameCa
 }
 
 
-    private val SINGLETON: NullGameCanvas = create()!!
+    private val SINGLETON: NullGameCanvas = createNull()!!
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -75,8 +75,8 @@ LogUtil.getInstance()!!.put(CommonStrings.getInstance()!!.EXCEPTION, "NullGameCa
 
                 @Throws(Exception::class)
             
-    open fun getInstance(gameLayerManager: AllBinaryGameLayerManager)
-        //nullable =  from not(true or (false and false)) = 
+    open fun createCanvas(gameLayerManager: AllBinaryGameLayerManager)
+        //nullable = true from not(false or (false and false)) = true
 : NullGameCanvas{
     //var gameLayerManager = gameLayerManager
 
@@ -170,7 +170,7 @@ this.setCommandListener(cmdListener)
 
                 @Throws(Exception::class)
             
-    override fun buildGame(isProgress: Boolean)
+    override fun buildGameInit(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var isProgress = isProgress

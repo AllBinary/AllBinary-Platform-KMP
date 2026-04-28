@@ -52,7 +52,7 @@ this.setBasicColorP(BasicColorFactory.getInstance()!!.BLACK)
 }
 
 
-    override fun paint(graphics: Graphics, unusedX: Int, unusedY: Int)
+    override fun paintXY(graphics: Graphics, unusedX: Int, unusedY: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

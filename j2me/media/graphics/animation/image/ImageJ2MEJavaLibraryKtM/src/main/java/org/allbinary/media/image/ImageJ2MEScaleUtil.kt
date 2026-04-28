@@ -55,7 +55,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun scale(images: Array<Image?>, width: Int, height: Int)
+    open fun scaleArray(images: Array<Image?>, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
     //var images = images

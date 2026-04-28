@@ -34,11 +34,11 @@ open public class Aggression
          {
         
 
-    private var ram: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
+    private var ram: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
-    private var projectile: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
+    private var projectile: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
-    private var drops: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
+    private var drops: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 public constructor (ram: Integer, projectile: Integer, drops: Integer)
             : super()
         {

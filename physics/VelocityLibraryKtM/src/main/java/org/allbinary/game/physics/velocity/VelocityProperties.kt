@@ -174,7 +174,7 @@ var maxVelocity = maxVelocity
                         if(this.velocityYBasicDecimal!!.getUnscaled() > maxVelocity)
                         
                                     {
-                                    this.velocityYBasicDecimal!!.set(maxVelocity)
+                                    this.velocityYBasicDecimal!!.setint(maxVelocity)
 
                                     }
                                 
@@ -190,7 +190,7 @@ var maxVelocity = maxVelocity
                         if(this.velocityYBasicDecimal!!.getUnscaled() <  -maxVelocity)
                         
                                     {
-                                    this.velocityYBasicDecimal!!.set( -maxVelocity)
+                                    this.velocityYBasicDecimal!!.setint( -maxVelocity)
 
                                     }
                                 
@@ -215,7 +215,7 @@ var maxVelocity = maxVelocity
                         if(this.velocityXBasicDecimal!!.getUnscaled() > maxVelocity)
                         
                                     {
-                                    this.velocityXBasicDecimal!!.set(maxVelocity)
+                                    this.velocityXBasicDecimal!!.setint(maxVelocity)
 
                                     }
                                 
@@ -224,7 +224,7 @@ var maxVelocity = maxVelocity
                         if(this.velocityXBasicDecimal!!.getUnscaled() <  -maxVelocity)
                         
                                     {
-                                    this.velocityXBasicDecimal!!.set( -maxVelocity)
+                                    this.velocityXBasicDecimal!!.setint( -maxVelocity)
 
                                     }
                                 
@@ -295,24 +295,24 @@ var maxVelocity = maxVelocity
 }
 
 
-    override fun setVelocity(magnitude: Long, angle: Int, otherAngle: Int)
+    override fun setVelocityi(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var magnitude = magnitude
 var angle = angle
 var otherAngle = otherAngle
-super.setVelocity(magnitude, angle, otherAngle)
+super.setVelocityi(magnitude, angle, otherAngle)
 this.limitXYToForwardAndReverseMaxVelocity()
 }
 
 
-    override fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
+    override fun addVelocityi(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var magnitude = magnitude
 var angle = angle
 var otherAngle = otherAngle
-super.addVelocity(magnitude, angle, otherAngle)
+super.addVelocityi(magnitude, angle, otherAngle)
 this.limitXYToForwardAndReverseMaxVelocity()
 }
 

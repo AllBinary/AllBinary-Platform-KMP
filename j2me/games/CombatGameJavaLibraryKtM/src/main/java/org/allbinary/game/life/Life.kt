@@ -33,7 +33,7 @@ open public class Life
         
 companion object {
             
-    open fun create()
+    open fun createLife()
         //nullable = true from not(false or (false and true)) = true
 : Life{
 
@@ -54,7 +54,7 @@ companion object {
 }
 
 
-    val NO_LIFE: Life = Life.create()!!
+    val NO_LIFE: Life = Life.createLife()!!
 
         }
             

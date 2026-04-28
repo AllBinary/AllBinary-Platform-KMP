@@ -43,7 +43,7 @@ var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 
                 @Throws(Exception::class)
             
-    override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    override fun processEvent(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager

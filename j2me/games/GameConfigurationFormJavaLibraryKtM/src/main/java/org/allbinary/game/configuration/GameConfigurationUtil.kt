@@ -75,7 +75,7 @@ this.update(gauge)
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
 
 
-    var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstance(gauge.getLabel())!!
+    var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstanceByName(gauge.getLabel())!!
 
 this.updateChallange(gameOptionsForm, gameConfiguration)
 }
@@ -97,13 +97,13 @@ var gauge = gauge
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
 
 
-    var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstance(gauge.getLabel())!!
+    var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstanceByName(gauge.getLabel())!!
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
 
-    var value: Integer = smallIntegerSingletonFactory!!.getInstance(gauge.getValue() +gameConfiguration!!.getMinValue()!!.toInt())!!
+    var value: Integer = smallIntegerSingletonFactory!!.getAt(gauge.getValue() +gameConfiguration!!.getMinValue()!!.toInt())!!
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -129,7 +129,7 @@ var gauge = gauge
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
 
 
-    var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstance(gauge.getLabel())!!
+    var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstanceByName(gauge.getLabel())!!
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -192,7 +192,7 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
     var name: String = item.getLabel()!!
 
 
-    var nextGameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstance(name)!!
+    var nextGameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstanceByName(name)!!
 
 
     

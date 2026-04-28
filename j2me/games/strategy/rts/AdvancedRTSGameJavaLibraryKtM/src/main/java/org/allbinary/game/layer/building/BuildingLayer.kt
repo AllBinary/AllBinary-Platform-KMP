@@ -93,7 +93,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BuildingLayer(RemoteInfo.REMOTE_INFO, SimulatedBuildingPropertiesFactory.getInstance(), AdvancedRTSProperties.createSimulated(), GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0)
+                        return BuildingLayer(RemoteInfo.REMOTE_INFO, SimulatedBuildingPropertiesFactory.getInstance(), AdvancedRTSProperties.createPropertiesSimulated(), GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0)
 }
 
 
@@ -267,7 +267,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
 
     
-                        if(currentFrame == size && !this.timeDelayHelper!!.isTime())
+                        if(currentFrame == size && !this.timeDelayHelper!!.isTimeTNT())
                         
                                     {
                                     
@@ -295,7 +295,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 SecondaryPlayerQueueFactory.getInstance()!!.add(ExplosionBasicSound.getInstance())
 this.shakeListener!!.onSmallShakeEvent()
 vibration.vibrate(duration, 0, 0)
-this.timeDelayHelper!!.setStartTime()
+this.timeDelayHelper!!.setStartTimeTNT()
 this.setReadyForExplosion(true)
 
                         }
@@ -636,7 +636,7 @@ super.setDestroyed(destroyed)
                         if(this.isDestroyed())
                         
                                     {
-                                    DropCellPositionHistory.getInstance()!!.remove(this)
+                                    DropCellPositionHistory.getInstance()!!.removeAll(this)
 TrackingEventHandler.getInstance()!!.removeListener(this)
 
     

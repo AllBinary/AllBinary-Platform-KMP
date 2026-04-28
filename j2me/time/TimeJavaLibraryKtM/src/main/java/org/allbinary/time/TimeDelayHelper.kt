@@ -46,11 +46,11 @@ public constructor (delay: Int)
         {
     //var delay = delay
 this.delay= delay
-this.setStartTime()
+this.setStartTimeTNT()
 }
 
 
-    open fun isTime()
+    open fun isTimeTNT()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -78,7 +78,7 @@ this.setStartTime()
 }
 
 
-    open fun isTimeSince(delay: Int)
+    open fun isTimeSinceTNT(delay: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var delay = delay
@@ -185,7 +185,7 @@ var currentTime = currentTime
 }
 
 
-    open fun getElapsed()
+    open fun getElapsedTNT()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -238,13 +238,13 @@ var time = time
 }
 
 
-    open fun isElapsed(time: Long)
+    open fun isElapsedTNT(time: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var time = time
 
     
-                        if(this.getElapsed() > time)
+                        if(this.getElapsedTNT() > time)
                         
                                     {
                                     
@@ -286,7 +286,7 @@ this.startTime= startTime
 }
 
 
-    open fun setStartTime()
+    open fun setStartTimeTNT()
         //nullable = true from not(false or (false and true)) = true
 {
 this.startTime= System.currentTimeMillis()
@@ -296,7 +296,7 @@ this.startTime= System.currentTimeMillis()
     open fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
-this.elapsedTimeAtPause= this.getElapsed()
+this.elapsedTimeAtPause= this.getElapsedTNT()
 this.startTime= Long.MAX_VALUE
 }
 
@@ -311,7 +311,7 @@ this.startTime= Long.MAX_VALUE
                                     {
                                     this.startTime= System.currentTimeMillis() +this.elapsedTimeAtPause
 this.elapsedTimeAtPause= Long.MIN_VALUE
-this.setStartTime()
+this.setStartTimeTNT()
 
 
 
@@ -328,8 +328,8 @@ this.setStartTime()
 }
 
 
-    open fun toString(currentTime: Long)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringAt(currentTime: Long)
+        //nullable = true from not(false or (false and false)) = true
 : String{
 var currentTime = currentTime
 

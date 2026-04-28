@@ -321,8 +321,8 @@ this.viewPosition= viewPosition
 }
 
 
-    override fun toString(stringBuffer: StringMaker)
-        //nullable = true from not(false or (true and false)) = true
+    override fun toStringAppend(stringBuffer: StringMaker)
+        //nullable = true from not(false or (false and false)) = true
 {
     //var stringBuffer = stringBuffer
 
@@ -362,7 +362,7 @@ stringBuffer!!.appendint(this.getHeight())
 
     var stringBuffer: StringMaker = StringMaker()
 
-this.toString(stringBuffer)
+this.toStringAppend(stringBuffer)
 
 
 

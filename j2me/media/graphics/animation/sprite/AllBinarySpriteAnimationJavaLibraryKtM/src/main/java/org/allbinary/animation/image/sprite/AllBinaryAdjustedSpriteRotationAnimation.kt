@@ -53,7 +53,7 @@ this.dy= dy
 }
 
 
-    override fun paint(g: Graphics, x: Int, y: Int)
+    override fun paintXY(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g

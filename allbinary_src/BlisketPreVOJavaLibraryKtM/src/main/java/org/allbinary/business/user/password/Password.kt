@@ -168,7 +168,7 @@ valid= Boolean.FALSE
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var secret = secret
-this.password= StringUtil.getInstance()!!.getInstance(this.password)
+this.password= StringUtil.getInstance()!!.getNonNull(this.password)
 
     var random: Int = Random().
                             nextInt(SuperCrypt.KEYMAX)!!
@@ -193,7 +193,7 @@ vector.add(SuperCrypt(random).
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
 var secret = secret
-this.password= StringUtil.getInstance()!!.getInstance(this.password)
+this.password= StringUtil.getInstance()!!.getNonNull(this.password)
 
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 

@@ -62,7 +62,7 @@ this.screenListenerInterface= screenListenerInterface
 }
 
 
-    open fun fire(isFullScreen: Boolean)
+    open fun fireWithState(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isFullScreen = isFullScreen

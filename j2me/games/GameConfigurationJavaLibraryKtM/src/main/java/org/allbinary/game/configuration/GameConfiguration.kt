@@ -41,7 +41,7 @@ open public class GameConfiguration
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    private var defaultValue: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
+    private var defaultValue: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
     private var value: Integer
 

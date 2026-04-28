@@ -121,7 +121,7 @@ this.collidableWeaponBehavior= this.getCollidableInferface() as CollidableWeapon
 
                 @Throws(Exception::class)
             
-    open fun init(x: Int, y: Int, z: Int)
+    open fun initXYZ(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -449,7 +449,7 @@ var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
 
-this.animationInterface!!.paint(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight())
+this.animationInterface!!.paintXY(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight())
 }
 
 

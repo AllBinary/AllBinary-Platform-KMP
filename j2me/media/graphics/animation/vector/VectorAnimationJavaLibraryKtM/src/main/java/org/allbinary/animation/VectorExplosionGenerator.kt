@@ -67,12 +67,15 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun getInstance(list: BasicArrayList, howMuch: Int, type: VectorExplosionType)
-        //nullable =  from not(true or (false and false)) = 
+    open fun createList(list: BasicArrayList, howMuch: Int, type: VectorExplosionType)
+        //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var list = list
-var howMuch = howMuch
-var type = type
+    //var list = list
+    //var howMuch = howMuch
+    //var type = type
+
+    var point: GPoint
+
 
     var size: Int = list.size()!!
 
@@ -86,9 +89,7 @@ var type = type
                         for (index in 0 until size)
 
         {
-
-    var point: GPoint = list.objectArray[index]!! as GPoint
-
+point= list.objectArray[index]!! as GPoint
 points[index]!![0]= point.getX()
 points[index]!![1]= point.getY()
 }
@@ -97,7 +98,7 @@ points[index]!![1]= point.getY()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getInstance(list, points, howMuch, type)
+                        return createListFromPoints(list, points, howMuch, type)
 }
 
 
@@ -106,17 +107,17 @@ points[index]!![1]= point.getY()
     open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
         //nullable =  from not(true or (false and false)) = 
 : Array<Array<IntArray?>?>{
-var points = points
-var howMuch = howMuch
-var type = type
+    //var points = points
+    //var howMuch = howMuch
+    //var type = type
 
-    var pointsBasicArrayList: BasicArrayList = getInstance(points, howMuch, type, true)!!
+    var pointsBasicArrayList: BasicArrayList = getInstanceStartFrame(points, howMuch, type, true)!!
 
 
     var tempBasicArrayList: BasicArrayList = pointsBasicArrayList!!.objectArray[0]!! as BasicArrayList
 
 
-    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList, tempBasicArrayList!!.size())!!
+    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromListOfPointListWithPointsPerFrame(pointsBasicArrayList, tempBasicArrayList!!.size())!!
 
 
 
@@ -128,13 +129,13 @@ var type = type
 
                 @Throws(Exception::class)
             
-    open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType, startFrame: Boolean)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceStartFrame(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType, startFrame: Boolean)
+        //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var points = points
-var howMuch = howMuch
-var type = type
-var startFrame = startFrame
+    //var points = points
+    //var howMuch = howMuch
+    //var type = type
+    //var startFrame = startFrame
 
         try {
             
@@ -145,14 +146,16 @@ pointsBasicArrayList!!.add(createPointsBasicArrayList(points))
     var frameIndex: Int = 0
 
 
+    var tempBasicArrayList: BasicArrayList
+
+
+    var pointBasicArrayList: BasicArrayList
+
+
         while(frameIndex < howMuch)
         {
-
-    var tempBasicArrayList: BasicArrayList = pointsBasicArrayList!!.objectArray[frameIndex]!! as BasicArrayList
-
-
-    var pointBasicArrayList: BasicArrayList = getInstance(tempBasicArrayList, points, howMuch, type)!!
-
+tempBasicArrayList= pointsBasicArrayList!!.objectArray[frameIndex]!! as BasicArrayList
+pointBasicArrayList= createListFromPoints(tempBasicArrayList, points, howMuch, type)
 pointsBasicArrayList!!.add(pointBasicArrayList)
 frameIndex++
 }
@@ -162,7 +165,7 @@ frameIndex++
                         if(!startFrame)
                         
                                     {
-                                    pointsBasicArrayList!!.remove(0)
+                                    pointsBasicArrayList!!.removeAt(0)
 
                                     }
                                 
@@ -186,13 +189,13 @@ frameIndex++
 
                 @Throws(Exception::class)
             
-    open fun getInstance(tempBasicArrayList: BasicArrayList, points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
-        //nullable =  from not(true or (false and false)) = 
+    open fun createListFromPoints(tempBasicArrayList: BasicArrayList, points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
+        //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var tempBasicArrayList = tempBasicArrayList
-var points = points
-var howMuch = howMuch
-var type = type
+    //var tempBasicArrayList = tempBasicArrayList
+    //var points = points
+    //var howMuch = howMuch
+    //var type = type
 
     var index: Int = 0
 
@@ -200,11 +203,12 @@ var type = type
     var pointBasicArrayList: BasicArrayList = BasicArrayListD()
 
 
+    var sectionBasicArrayList: BasicArrayList
+
+
         while(index < points.size)
         {
-
-    var sectionBasicArrayList: BasicArrayList = BasicArrayListD()
-
+sectionBasicArrayList= BasicArrayListD()
 
         while(points[index]!![0] != 1000)
         {
@@ -229,7 +233,7 @@ sectionBasicArrayList= RandomTranslation.getInstance(sectionBasicArrayList, howM
                         if(type == this.ROTATION)
                         
                                     {
-                                    sectionBasicArrayList= randomRotationFactory!!.getInstance(sectionBasicArrayList, howMuch)
+                                    sectionBasicArrayList= randomRotationFactory!!.getInstanceList(sectionBasicArrayList, howMuch)
 
                                     }
                                 
@@ -282,7 +286,7 @@ index++
     open fun createPointsBasicArrayList(points: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var points = points
+    //var points = points
 
     
                         if(points.size == 0)
@@ -299,13 +303,16 @@ var points = points
     var firstPointBasicArrayList: BasicArrayList = BasicArrayListS(points.size)
 
 
+    var pointFactory: PointFactory = PointFactory.getInstance()!!
+
+
 
 
 
                         for (index in 0 until points.size)
 
         {
-firstPointBasicArrayList!!.add(PointFactory.getInstance()!!.getInstance0(points[index]!![0]!!, points[index]!![1]!!))
+firstPointBasicArrayList!!.add(pointFactory!!.createXY(points[index]!![0]!!, points[index]!![1]!!))
 }
 
 

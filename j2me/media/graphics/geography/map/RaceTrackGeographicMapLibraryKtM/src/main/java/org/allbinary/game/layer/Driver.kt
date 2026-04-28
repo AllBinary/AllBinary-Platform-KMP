@@ -35,13 +35,13 @@ open public class Driver
         
 companion object {
             
-    val NULL_DRIVER: Driver = Driver(SmallIntegerSingletonFactory.getInstance()!!.getInstance(0), SmallIntegerSingletonFactory.getInstance()!!.getInstance(0), Aggression(SmallIntegerSingletonFactory.getInstance()!!.getInstance(0), SmallIntegerSingletonFactory.getInstance()!!.getInstance(0), SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)))
+    val NULL_DRIVER: Driver = Driver(SmallIntegerSingletonFactory.getInstance()!!.getAt(0), SmallIntegerSingletonFactory.getInstance()!!.getAt(0), Aggression(SmallIntegerSingletonFactory.getInstance()!!.getAt(0), SmallIntegerSingletonFactory.getInstance()!!.getAt(0), SmallIntegerSingletonFactory.getInstance()!!.getAt(0)))
 
         }
             
-    private var turnSpeed: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
+    private var turnSpeed: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
-    private var trackPathSelectionSkill: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
+    private var trackPathSelectionSkill: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
     private var aggression: Aggression
 public constructor (turnSpeed: Integer, trackPathSelectionSkill: Integer, aggression: Aggression)

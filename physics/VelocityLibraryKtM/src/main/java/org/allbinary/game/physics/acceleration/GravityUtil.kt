@@ -57,20 +57,12 @@ companion object {
 
     val MAX_GAME_VELOCITY: Int = 18000
 
-    open fun process(velocityProperties: BasicVelocityProperties)
-        //nullable = true from not(false or (false and false)) = true
-{
-var velocityProperties = velocityProperties
-velocityProperties!!.getVelocityYBasicDecimalP()!!.add(this.GAME_GRAVITY_VELOCITY)
-}
-
-
     open fun process(velocityProperties: BasicVelocityProperties, customGravity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var velocityProperties = velocityProperties
 var customGravity = customGravity
-velocityProperties!!.getVelocityYBasicDecimalP()!!.add(customGravity)
+velocityProperties!!.getVelocityYBasicDecimalP()!!.addint(customGravity)
 }
 
 

@@ -58,7 +58,7 @@ companion object {
         
                 @Throws(Exception::class)
             
-    open fun init(fullScreenInterface: Canvas, commandListener: CommandListener)
+    open fun initOnRun(fullScreenInterface: Canvas, commandListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fullScreenInterface = fullScreenInterface
@@ -115,7 +115,7 @@ companion object {
 }
 
 
-    open fun isScreenChange(fullScreenInterface: Canvas)
+    open fun isScreenChangeCanvas(fullScreenInterface: Canvas)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var fullScreenInterface = fullScreenInterface

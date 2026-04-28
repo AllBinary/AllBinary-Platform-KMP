@@ -107,7 +107,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
 
                 @Throws(Exception::class)
             
-    open fun createGameCanvasRunnableInterface(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun createGameCanvasRunnable(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 : GameCanvasRunnableInterface{
 var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -127,7 +127,7 @@ var allBinaryGameLayerManager = allBinaryGameLayerManager
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createGameCanvasRunnableInterface(this.createGameLayerManager())
+                        return this.createGameCanvasRunnable(this.createGameLayerManager())
 }
 
 

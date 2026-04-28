@@ -63,7 +63,7 @@ var direction = direction
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return HealthBar(layerInterface, healthInterface, healthBarAnimationInterfaceFactory!!.getInstance(layerInterface, location), direction)
+                        return HealthBar(layerInterface, healthInterface, healthBarAnimationInterfaceFactory!!.getInstanceByLocation(layerInterface, location), direction)
 
                                     }
                                 

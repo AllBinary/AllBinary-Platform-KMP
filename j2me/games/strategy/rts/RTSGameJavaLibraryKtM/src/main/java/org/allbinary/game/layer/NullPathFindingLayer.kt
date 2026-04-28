@@ -269,7 +269,7 @@ var resource = resource
 
                 @Throws(Exception::class)
             
-    override fun trackTo(dx: Int, dy: Int)
+    override fun trackToDXY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx

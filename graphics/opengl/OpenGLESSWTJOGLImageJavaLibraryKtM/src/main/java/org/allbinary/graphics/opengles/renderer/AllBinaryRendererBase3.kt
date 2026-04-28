@@ -53,7 +53,7 @@ open public class AllBinaryRendererBase3
         while(this.list.size() > 0)
         {
 
-    var openGLESImage: OpenGLESImage = this.list.remove(0) as OpenGLESImage
+    var openGLESImage: OpenGLESImage = this.list.removeAt(0) as OpenGLESImage
 
 
     

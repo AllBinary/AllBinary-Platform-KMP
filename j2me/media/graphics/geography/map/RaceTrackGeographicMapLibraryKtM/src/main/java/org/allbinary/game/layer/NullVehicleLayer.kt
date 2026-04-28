@@ -192,7 +192,7 @@ var z = z
 }
 
 
-    override fun move(dx: Int, dy: Int, dz: Int)
+    override fun moveDXYZ(dx: Int, dy: Int, dz: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx

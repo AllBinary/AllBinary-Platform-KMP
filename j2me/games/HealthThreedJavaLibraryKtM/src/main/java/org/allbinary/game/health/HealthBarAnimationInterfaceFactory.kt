@@ -45,8 +45,8 @@ public constructor ()
 
                 @Throws(Exception::class)
             
-    open fun getInstance(layerInterface: AllBinaryLayer, location: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceByLocation(layerInterface: AllBinaryLayer, location: Int)
+        //nullable = true from not(false or (false and false)) = true
 : HealthBarAnimation{
 var layerInterface = layerInterface
 var location = location
@@ -74,8 +74,8 @@ var location = location
 
                 @Throws(Exception::class)
             
-    open fun getInstance(animationInterface: Animation)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceAnimation(animationInterface: Animation)
+        //nullable = true from not(false or (false and false)) = true
 : Animation{
 var animationInterface = animationInterface
 

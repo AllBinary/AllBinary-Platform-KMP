@@ -54,8 +54,8 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(raceTrackGeographicMap: RaceTrackGeographicMap)
-        //nullable =  from not(true or (false and false)) = 
+    open fun create(raceTrackGeographicMap: RaceTrackGeographicMap)
+        //nullable = true from not(false or (false and false)) = true
 : CustomMapGeneratorBase{
     //var raceTrackGeographicMap = raceTrackGeographicMap
 

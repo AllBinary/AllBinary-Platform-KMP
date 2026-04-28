@@ -95,18 +95,18 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getNextInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+        //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer{
     //var hashtable = hashtable
     //var x = x
     //var y = y
     //var z = z
 
-    var sourceLayerInterface: AllBinaryLayer = hashtable.get(this.smallIntegerSingletonFactory!!.getInstance(0) as Object) as AllBinaryLayer
+    var sourceLayerInterface: AllBinaryLayer = hashtable.get(this.smallIntegerSingletonFactory!!.getAt(0) as Object) as AllBinaryLayer
 
 
-    var angle: Integer = hashtable.get(this.smallIntegerSingletonFactory!!.getInstance(1) as Object) as Integer
+    var angle: Integer = hashtable.get(this.smallIntegerSingletonFactory!!.getAt(1) as Object) as Integer
 
 
 

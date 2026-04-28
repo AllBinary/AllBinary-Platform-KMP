@@ -51,17 +51,17 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, x: Int, y: Int, z: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceXYZ(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, x: Int, y: Int, z: Int)
+        //nullable = true from not(false or (false and false)) = true
 : PickedUpLayerInterface{
-var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
-var x = x
-var y = y
-var z = z
+    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+    //var x = x
+    //var y = y
+    //var z = z
 
     var pickupLayer: PickupLayer = this.getNextInstance() as PickupLayer
 
-pickupLayer!!.init(x, y, z)
+pickupLayer!!.initXYZ(x, y, z)
 pickupLayer!!.init(pickedUpLayerInterfaceFactoryInterface, pickedUpLayerInterfaceFactoryInterface!!.getAnimationInterface())
 
 

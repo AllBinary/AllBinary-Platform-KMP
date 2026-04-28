@@ -85,25 +85,25 @@ this.geographicMapCellTypeFactory= geographicMapCellTypeFactory
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(oldGeographicMapCellPosition!!.getColumn() -1, oldGeographicMapCellPosition!!.getRow())
+                        return geographicMapCellPositionFactory!!.getAt(oldGeographicMapCellPosition!!.getColumn() -1, oldGeographicMapCellPosition!!.getRow())
 }
 1 -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(oldGeographicMapCellPosition!!.getColumn() +1, oldGeographicMapCellPosition!!.getRow())
+                        return geographicMapCellPositionFactory!!.getAt(oldGeographicMapCellPosition!!.getColumn() +1, oldGeographicMapCellPosition!!.getRow())
 }
 2 -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(oldGeographicMapCellPosition!!.getColumn(), oldGeographicMapCellPosition!!.getRow() -1)
+                        return geographicMapCellPositionFactory!!.getAt(oldGeographicMapCellPosition!!.getColumn(), oldGeographicMapCellPosition!!.getRow() -1)
 }
 3 -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(oldGeographicMapCellPosition!!.getColumn(), oldGeographicMapCellPosition!!.getRow() +1)
+                        return geographicMapCellPositionFactory!!.getAt(oldGeographicMapCellPosition!!.getColumn(), oldGeographicMapCellPosition!!.getRow() +1)
 }
 else -> {
 
@@ -136,7 +136,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(oldGeographicMapCellPosition!!.getColumn() -1, oldGeographicMapCellPosition!!.getRow())
+                        return geographicMapCellPositionFactory!!.getAt(oldGeographicMapCellPosition!!.getColumn() -1, oldGeographicMapCellPosition!!.getRow())
 
                                     }
                                 
@@ -159,7 +159,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(oldGeographicMapCellPosition!!.getColumn() +1, oldGeographicMapCellPosition!!.getRow())
+                        return geographicMapCellPositionFactory!!.getAt(oldGeographicMapCellPosition!!.getColumn() +1, oldGeographicMapCellPosition!!.getRow())
 
                                     }
                                 
@@ -182,7 +182,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(oldGeographicMapCellPosition!!.getColumn(), oldGeographicMapCellPosition!!.getRow() -1)
+                        return geographicMapCellPositionFactory!!.getAt(oldGeographicMapCellPosition!!.getColumn(), oldGeographicMapCellPosition!!.getRow() -1)
 
                                     }
                                 
@@ -205,7 +205,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(oldGeographicMapCellPosition!!.getColumn(), oldGeographicMapCellPosition!!.getRow() +1)
+                        return geographicMapCellPositionFactory!!.getAt(oldGeographicMapCellPosition!!.getColumn(), oldGeographicMapCellPosition!!.getRow() +1)
 
                                     }
                                 
@@ -271,7 +271,7 @@ else -> {
 
                 @Throws(Exception::class)
             
-    override fun getCellPositionAt(x: Int, y: Int)
+    override fun getCellPositionAtXY(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var x = x
@@ -289,11 +289,11 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(i_column, i_row)
+                        return geographicMapCellPositionFactory!!.getAt(i_column, i_row)
 }
 
 
-    override fun getCellPositionAtNoThrow(x: Int, y: Int)
+    override fun getCellPositionAtXYNoThrow(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var x = x
@@ -318,7 +318,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory!!.getInstance(i_column, i_row)
+                        return geographicMapCellPositionFactory!!.getAt(i_column, i_row)
 } catch(e: Exception)
             {
 
@@ -428,7 +428,7 @@ geographicMapCellPositionList!!.clear()
                         if(allBinaryTiledLayer!!.getColumns() > columnIndex && allBinaryTiledLayer!!.getRows() > rowIndex)
                         
                                     {
-                                    geographicMapCellPositionList!!.add(geographicMapCellPositionFactory!!.getInstance(columnIndex, rowIndex))
+                                    geographicMapCellPositionList!!.add(geographicMapCellPositionFactory!!.getAt(columnIndex, rowIndex))
 
                                     }
                                 
@@ -489,7 +489,7 @@ geographicMapCellPositionList!!.clear()
 
     var y: Int = yPortion *index
 
-cellPositionArray[index]!![index2]= this.getCellPositionAt(x, y)
+cellPositionArray[index]!![index2]= this.getCellPositionAtXY(x, y)
 
     
                         if(currentCellPositionArray[index]!![index2] != cellPositionArray[index]!![index2])
@@ -513,13 +513,13 @@ cellPositionArray[index]!![index2]= this.getCellPositionAt(x, y)
 
                 @Throws(Exception::class)
             
-    override fun getCellTypeAt(x: Int, y: Int)
+    override fun getCellTypeAtXY(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType{
 var x = x
 var y = y
 
-    var cellPosition: GeographicMapCellPosition = this.getCellPositionAt(x, y)!!
+    var cellPosition: GeographicMapCellPosition = this.getCellPositionAtXY(x, y)!!
 
 
 

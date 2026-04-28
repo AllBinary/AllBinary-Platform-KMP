@@ -65,7 +65,7 @@ this.animationInterfaceArray[index]!!.setFrame(this.animationInterfaceArray[inde
 }
 
 this.layerInterface= layerInterface
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.animationInterfaceArray!!.size)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.animationInterfaceArray!!.size)
 this.dx= dx
 this.dy= dy
 }
@@ -116,7 +116,7 @@ var graphics = graphics
                                     
     var delta: Int = animationInterface!!.getFrame() *20
 
-animationInterface!!.paint(graphics, x +this.dx, y -delta +this.dy)
+animationInterface!!.paintXY(graphics, x +this.dx, y -delta +this.dy)
 animationInterface!!.nextFrame()
 
                                     }

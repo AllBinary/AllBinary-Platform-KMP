@@ -30,7 +30,6 @@ import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.graphics.opengles.OpenGLUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
-import org.allbinary.media.image.ImageCopyUtil
 
 open public class ImageAnimationFactory : BaseImageAnimationFactory {
         
@@ -38,7 +37,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(image: Image)
+    open fun createFactory(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : ImageAnimationFactory{
     //var image = image

@@ -64,13 +64,13 @@ this.currentDistance= MyRandomFactory.getInstance()!!.getAbsoluteNextInt(this.ma
 {
 var allBinaryLayerManager = allBinaryLayerManager
 super.update()
-super.processAI(this.keyDirection)
+super.processKeyAI(this.keyDirection)
 
     
                         if(this.changedDirection)
                         
                                     {
-                                    super.processAI(Canvas.KEY_NUM1)
+                                    super.processKeyAI(Canvas.KEY_NUM1)
 this.updateRandomDistance()
 this.changedDirection= false
 

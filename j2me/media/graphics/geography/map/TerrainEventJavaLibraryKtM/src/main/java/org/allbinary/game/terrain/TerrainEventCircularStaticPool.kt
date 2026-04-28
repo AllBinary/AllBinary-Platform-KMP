@@ -65,8 +65,8 @@ this.EVENT_POOL.init(TerrainEventFactory())
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun getInstance(basicTerrainInfo: BasicTerrainInfo)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getNext(basicTerrainInfo: BasicTerrainInfo)
+        //nullable = true from not(false or (false and false)) = true
 : TerrainEvent{
 var basicTerrainInfo = basicTerrainInfo
 

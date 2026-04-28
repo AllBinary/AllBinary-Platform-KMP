@@ -159,13 +159,13 @@ var index = index
 var imageArray = imageArray
 this.imageArray= imageArray
 this.totalFrames= imageArray!!.size
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.totalFrames)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.totalFrames)
 }
 
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

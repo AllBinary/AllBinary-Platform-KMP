@@ -169,13 +169,13 @@ var categoryHierarchyInterface = categoryHierarchyInterface
                         if(nextParentCategoryInterface!!.getProperties()!!.isRoot())
                         
                                     {
-                                    list.add(0, nextParentCategoryInterface!!.getPath()!!.toString())
+                                    list.addAt(0, nextParentCategoryInterface!!.getPath()!!.toString())
 
                                     }
                                 
                         else {
                             pathStringBuffer!!.delete(0, pathStringBuffer!!.length())
-list.add(0, pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(nextParentCategoryInterface!!.getProperties()!!.getValue())!!.toString())
+list.addAt(0, pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(nextParentCategoryInterface!!.getProperties()!!.getValue())!!.toString())
 
                         }
                             

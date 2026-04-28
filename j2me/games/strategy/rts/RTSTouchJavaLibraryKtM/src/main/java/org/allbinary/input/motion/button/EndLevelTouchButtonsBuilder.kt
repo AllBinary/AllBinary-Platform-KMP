@@ -49,13 +49,13 @@ open public class EndLevelTouchButtonsBuilder : TouchButtonsListBuilder {
 
     var list: BasicArrayList = BasicArrayListD()
 
-list.addAll(BasicTouchButtonsBuilder().
+list.addAllList(BasicTouchButtonsBuilder().
                             getList())
-list.addAll(BuildingScrollTouchButtonsBuilder().
+list.addAllList(BuildingScrollTouchButtonsBuilder().
                             getList())
-list.addAll(UpgradeDowngradeTouchButtonsBuilder().
+list.addAllList(UpgradeDowngradeTouchButtonsBuilder().
                             getList())
-this.add(list)
+this.addList(list)
 
 
 

@@ -38,7 +38,6 @@ import org.allbinary.game.layer.unit.UnitLayer
 import org.allbinary.game.layer.waypoint.WorkWaypoint
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.media.audio.BuildingSound
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
@@ -60,7 +59,7 @@ open public class UnitRTSFormInput : RTSFormInput {
         
 companion object {
             
-    val DECAL_ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(23)!!
+    val DECAL_ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(23)!!
 
         }
             
@@ -81,9 +80,9 @@ public constructor (groupInterface: Array<Group?>)
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
-this.newUnitGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NEW_UNIT, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
-this.getHashtable()!!.put(WorkWaypoint.ID, smallIntegerSingletonFactory!!.getInstance(50))
+this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.newUnitGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NEW_UNIT, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.getHashtable()!!.put(WorkWaypoint.ID, smallIntegerSingletonFactory!!.getAt(50))
 }
 
 
@@ -107,7 +106,7 @@ this.newUnitGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    override fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -202,7 +201,7 @@ this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= CollidableDestroyableDam
 rtsPlayerLayerInterface!!.add(BuildingSound.getInstance())
 capital.removeMoney(cost)
 AssignWaypointsUtil.getInstance()!!.set(layerInterface as UnitLayer, associatedRtsLayer as AdvancedRTSGameLayer)
-layerManager!!.append(layerInterface, PlayersSingletonFactory.total)
+layerManager!!.appendAt(layerInterface, PlayersSingletonFactory.total)
 
     var advancedRTSPlayerLayerInterface: AdvancedRTSPlayerLayerInterface = rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
 

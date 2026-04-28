@@ -35,7 +35,7 @@ interface LayerProcessorInterface : BasicLayerProcessorInterface {
 
                 @Throws(Exception::class)
             
-    open fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
+    open fun processAt(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -106,17 +106,17 @@ var basicColor = basicColor
 this.textAnimation!!.setBasicColorP(basicColor)
 this.textAnimation!!.setText(message)
 this.animation= this.captionAnimation
-this.timeHelper!!.setStartTime()
+this.timeHelper!!.setStartTimeTNT()
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 var x = x
 var y = y
-this.animation.paint(graphics, x, y)
+this.animation.paintXY(graphics, x, y)
 }
 
 

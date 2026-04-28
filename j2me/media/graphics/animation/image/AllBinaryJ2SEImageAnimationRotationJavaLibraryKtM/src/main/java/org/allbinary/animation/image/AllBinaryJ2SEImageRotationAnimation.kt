@@ -240,9 +240,9 @@ this.updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
 this.imageRotationUtil!!.rotateImage(this.originalImageArray[0]!!, this.twoImages[this.bufferedImageIndex]!!, this.angleInfo!!.getAngle() +90)
-this.alphaProcessor!!.update(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.alphaP)
-this.setColorProcessor!!.update(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.basicColor)
-this.changeColorProcessor!!.update(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.changeBasicColorP)
+this.alphaProcessor!!.updateAlpha(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.alphaP)
+this.setColorProcessor!!.updateColor(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.basicColor)
+this.changeColorProcessor!!.updateColor(this.imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.changeBasicColorP)
 this.swap()
 }
 
@@ -277,7 +277,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -305,7 +305,7 @@ super.close()
                         for (index in 0 until size2)
 
         {
-disposalUtil!!.dispose(this.twoImages[index]!!)
+disposalUtil!!.disposeImage(this.twoImages[index]!!)
 }
 
 
@@ -319,11 +319,11 @@ disposalUtil!!.dispose(this.twoImages[index]!!)
                         for (index in 0 until size)
 
         {
-disposalUtil!!.dispose(this.originalImageArray[index]!!)
+disposalUtil!!.disposeImage(this.originalImageArray[index]!!)
 }
 
-disposalUtil!!.dispose(this.realOriginalImage)
-disposalUtil!!.dispose(this.imageToShow)
+disposalUtil!!.disposeImage(this.realOriginalImage)
+disposalUtil!!.disposeImage(this.imageToShow)
 }
 
 
@@ -347,7 +347,7 @@ super.finalize()
                         for (index in 0 until size2)
 
         {
-disposalUtil!!.dispose(this.twoImages[index]!!)
+disposalUtil!!.disposeImage(this.twoImages[index]!!)
 }
 
 
@@ -361,11 +361,11 @@ disposalUtil!!.dispose(this.twoImages[index]!!)
                         for (index in 0 until size)
 
         {
-disposalUtil!!.dispose(this.originalImageArray[index]!!)
+disposalUtil!!.disposeImage(this.originalImageArray[index]!!)
 }
 
-disposalUtil!!.dispose(this.realOriginalImage)
-disposalUtil!!.dispose(this.imageToShow)
+disposalUtil!!.disposeImage(this.realOriginalImage)
+disposalUtil!!.disposeImage(this.imageToShow)
 }
 
 

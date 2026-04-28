@@ -43,9 +43,9 @@ companion object {
 var yaw = yaw
 var pitch = pitch
 var roll = roll
-SINGLETON.yaw.set(yaw)
-SINGLETON.pitch.set(pitch)
-SINGLETON.roll.set(roll)
+SINGLETON.yaw.setint(yaw)
+SINGLETON.pitch.setint(pitch)
+SINGLETON.roll.setint(roll)
 
 
 
@@ -67,9 +67,9 @@ private constructor (yaw: Int, pitch: Int, roll: Int)
 var yaw = yaw
 var pitch = pitch
 var roll = roll
-this.yaw.set(yaw)
-this.pitch.set(pitch)
-this.roll.set(roll)
+this.yaw.setint(yaw)
+this.pitch.setint(pitch)
+this.roll.setint(roll)
 }
 
 

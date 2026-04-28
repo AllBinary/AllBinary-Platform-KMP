@@ -27,8 +27,6 @@
         
 import javax.microedition.lcdui.Image
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
-import org.allbinary.logic.string.StringMaker
 import org.microemu.device.playn.PlaynImmutableImage
 import org.microemu.device.playn.PlaynMutableImage
 import playn.core.CanvasImage
@@ -64,7 +62,7 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun scale(images: Array<Image?>, width: Int, height: Int)
+    open fun scaleArray(images: Array<Image?>, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
 var images = images

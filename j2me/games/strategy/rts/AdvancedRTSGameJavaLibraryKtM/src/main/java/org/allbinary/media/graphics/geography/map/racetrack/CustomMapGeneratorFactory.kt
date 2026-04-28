@@ -36,8 +36,8 @@ open public class CustomMapGeneratorFactory : CustomMapGeneratorBaseFactory {
         
                 @Throws(Exception::class)
             
-    override fun getInstance(raceTrackGeographicMap: RaceTrackGeographicMap)
-        //nullable =  from not(true or (false and false)) = 
+    override fun create(raceTrackGeographicMap: RaceTrackGeographicMap)
+        //nullable = true from not(false or (false and false)) = true
 : CustomMapGeneratorBase{
     //var raceTrackGeographicMap = raceTrackGeographicMap
 

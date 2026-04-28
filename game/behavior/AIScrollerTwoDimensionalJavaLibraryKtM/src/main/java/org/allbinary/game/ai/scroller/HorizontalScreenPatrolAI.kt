@@ -46,7 +46,7 @@ open public class HorizontalScreenPatrolAI : BasicAI {
         
 companion object {
             
-    val SOUND: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(433)!!
+    val SOUND: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(433)!!
 
         }
             
@@ -99,10 +99,10 @@ this.sound= hashtable.get(SOUND as Object) as Sound
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
-super.processAI(this.keyDirection)
+super.processKeyAI(this.keyDirection)
 
     
-                        if(this.timeDelayHelper!!.isTime())
+                        if(this.timeDelayHelper!!.isTimeTNT())
                         
                                     {
                                     
@@ -131,7 +131,7 @@ this.secondaryPlayerQueue!!.add(this.sound)
                         if(currentOwnerLayerX < this.firingX && currentOwnerLayerX >  -layerInterface!!.getWidth())
                         
                                     {
-                                    super.processAI(Canvas.KEY_NUM1)
+                                    super.processKeyAI(Canvas.KEY_NUM1)
 
     var gameLayerManager: AllBinaryGameLayerManager = allBinaryLayerManager as AllBinaryGameLayerManager
 

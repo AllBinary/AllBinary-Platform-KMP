@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Canvas
-import org.allbinary.game.input.GameInputStrings
 import org.allbinary.game.input.GameKey
 import org.allbinary.game.input.GameKeyEventSourceInterface
 import org.allbinary.game.input.GameKeyFactory
@@ -78,12 +77,12 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
             PreLogUtil.put(StringMaker().
                             append(inputFactory!!.KEY_CODE_LABEL)!!.appendint(keyCode)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(inputFactory!!.DEVICE_ID_LABEL)!!.appendint(deviceId)!!.toString(), this, this.gameInputStrings!!.KEY_PRESSED)
 
-    var input: Input = this.inputFactory!!.getInstance(keyCode)!!
+    var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
 
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this.allBinaryGameCanvas, input)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this.allBinaryGameCanvas, input)!!
 
-this.downKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.downKeyEventHandler!!.fireEventForEvent(gameKeyEvent)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
@@ -101,7 +100,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!
 
         try {
             
-    var input: Input = this.inputFactory!!.getInstance(keyCode)!!
+    var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
 
     
@@ -114,10 +113,10 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!
     var gameKey: GameKey = GameKeyFactory.getInstance()!!.KEY_NUM0
 
 
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(canvas as GameKeyEventSourceInterface, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(canvas as GameKeyEventSourceInterface, gameKey)!!
 
 this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 

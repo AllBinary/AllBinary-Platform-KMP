@@ -49,9 +49,9 @@ open public class NoBuildingSelectedTouchButtonsBuilder : BaseTouchInput {
 
     var list: BasicArrayList = BasicArrayListD()
 
-list.addAll(BasicTouchButtonsBuilder().
+list.addAllList(BasicTouchButtonsBuilder().
                             getList())
-list.addAll(BuildingScrollTouchButtonsBuilder().
+list.addAllList(BuildingScrollTouchButtonsBuilder().
                             getList())
 
 

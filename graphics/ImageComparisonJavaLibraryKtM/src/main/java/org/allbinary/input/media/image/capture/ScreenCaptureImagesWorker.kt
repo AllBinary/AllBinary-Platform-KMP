@@ -100,7 +100,7 @@ setRunning(true)
 
         while(isRunning())
         {
-timeHelper!!.setStartTime()
+timeHelper!!.setStartTimeTNT()
 
     var bufferedImage: BufferedImage = this.screenScavangerRobot!!.getScreenAsBufferedImages()[0]!!
 
@@ -113,7 +113,7 @@ CapturedBufferedImagesCacheSingleton.getInstance()!!.add(BufferedImageFrameCache
     var capturedImageEvent: CapturedImageWorkerResultsEvent = CapturedImageWorkerResultsEvent(this, frame, bufferedImage)
 
 fireEvent(capturedImageEvent)
-this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
 setRunning(false)
 }
 

@@ -60,8 +60,8 @@ private constructor ()
 }
 
 
-    open fun getInstance(string: String)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getNonNull(string: String)
+        //nullable = true from not(false or (false and false)) = true
 : String{
 var string = string
 

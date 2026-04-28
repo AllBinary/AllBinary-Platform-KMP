@@ -59,7 +59,7 @@ companion object {
             {
             }            
         
-    open fun paint(bitmap: Bitmap, originalBitmap: Bitmap, paint: Paint)
+    open fun paintBitmap(bitmap: Bitmap, originalBitmap: Bitmap, paint: Paint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var bitmap = bitmap

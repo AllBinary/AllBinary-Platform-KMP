@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 
 open public class TiledLayerUtil
             : Object
@@ -53,7 +52,7 @@ companion object {
             {
             }            
         
-    open fun keepOnMapX(terrainTiledLayer: AllBinaryTiledLayer, x: Int, width: Int, mapBorderBufferWidth: Int)
+    open fun keepOnBorderdMapX(terrainTiledLayer: AllBinaryTiledLayer, x: Int, width: Int, mapBorderBufferWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var terrainTiledLayer = terrainTiledLayer
@@ -92,7 +91,7 @@ var mapBorderBufferWidth = mapBorderBufferWidth
 }
 
 
-    open fun keepOnMapY(terrainTiledLayer: AllBinaryTiledLayer, y: Int, height: Int, mapBorderBufferHeight: Int)
+    open fun keepOnBorderdMapY(terrainTiledLayer: AllBinaryTiledLayer, y: Int, height: Int, mapBorderBufferHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var terrainTiledLayer = terrainTiledLayer

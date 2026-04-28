@@ -107,7 +107,7 @@ this.init()
 }
 
 
-    open fun track(list: BasicArrayList)
+    open fun trackAll(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var list = list
@@ -489,7 +489,7 @@ this.totalVisited++
 
                 @Throws(Exception::class)
             
-    open fun isVisited(basicDecimal: BasicDecimal)
+    open fun isPortionVisited(basicDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var basicDecimal = basicDecimal
@@ -555,7 +555,7 @@ this.totalVisited= 0
 }
 
 
-    open fun paintNotVisited(graphics: Graphics, tiledLayer: AllBinaryTiledLayer, point: GPoint)
+    open fun paintNotVisitedRelativeToPoint(graphics: Graphics, tiledLayer: AllBinaryTiledLayer, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -582,7 +582,7 @@ this.totalVisited= 0
 
     var height: Int = 2 *myFont!!.DEFAULT_CHAR_HEIGHT
 
-this.animation.paint(graphics, x +halfWidth, y +(height))
+this.animation.paintXY(graphics, x +halfWidth, y +(height))
 }
 
 
@@ -622,7 +622,7 @@ isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean
                         if(!isCellVisitedBoolean)
                         
                                     {
-                                    this.paintNotVisited(graphics, geographicMapInterface!!.getAllBinaryTiledLayer(), geographicMapCellPosition!!.getPoint())
+                                    this.paintNotVisitedRelativeToPoint(graphics, geographicMapInterface!!.getAllBinaryTiledLayer(), geographicMapCellPosition!!.getPoint())
 
                                     }
                                 

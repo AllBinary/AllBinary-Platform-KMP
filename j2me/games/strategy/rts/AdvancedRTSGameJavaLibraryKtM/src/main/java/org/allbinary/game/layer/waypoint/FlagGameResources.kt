@@ -58,12 +58,12 @@ protected constructor (){
 
                 @Throws(Exception::class)
             
-    override fun init(ROOT: String, sizeString: String)
+    override fun append(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT
 var sizeString = sizeString
-super.init(ROOT, sizeString)
+super.append(ROOT, sizeString)
 
     var string: String = GameGraphicsResourceUtil.getInstance()!!.getName()!!
 

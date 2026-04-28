@@ -47,7 +47,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.getProcedural(ExplosionResources.getInstance()!!.THIRD_EXPLOSION_RESOURCE)!!.getInstance(NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0))
+                        return FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.getProcedural(ExplosionResources.getInstance()!!.THIRD_EXPLOSION_RESOURCE)!!.getInstanceAnimation(NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0))
 }
 
 

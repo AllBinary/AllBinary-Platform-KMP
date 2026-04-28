@@ -48,9 +48,9 @@ companion object {
 
     private var previousImage: Image = NullCanvas.NULL_IMAGE
 
-    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX_IMAGES)!!
+    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(MAX_IMAGES)!!
 
-    private val drawCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX_IMAGES -1, MAX_IMAGES)!!
+    private val drawCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstanceAt(MAX_IMAGES -1, MAX_IMAGES)!!
 public constructor (gameCanvas: AllBinaryGameCanvas){
 var gameCanvas = gameCanvas
 

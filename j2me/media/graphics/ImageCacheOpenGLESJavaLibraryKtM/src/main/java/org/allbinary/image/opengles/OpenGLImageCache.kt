@@ -166,13 +166,13 @@ height= textureSize
 
                 @Throws(Exception::class)
             
-    override fun createImage(key: Any, inputStream: InputStream)
+    override fun createImageFromInputStream(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
     //var inputStream = inputStream
 
-    var cachedImage: Image = this.imageCache!!.get(key)!!
+    var cachedImage: Image = this.imageCache!!.getWithKey(key)!!
 
 
     var image: Image = this.preResourceImageUtil!!.encapsulate(cachedImage)!!

@@ -55,7 +55,7 @@ companion object {
 
     private var MAX: Int = 32768
 
-    open fun init(max: Int)
+    open fun initMax(max: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var max = max
@@ -76,8 +76,8 @@ this.pathFinder= PathFinder()
 
                 @Throws(Exception::class)
             
-    open fun getInstance(geographicMapInterface: BasicGeographicMap, mapArray: Array<IntArray?>)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getInstancePathFindingInfo(geographicMapInterface: BasicGeographicMap, mapArray: Array<IntArray?>)
+        //nullable = true from not(false or (false and false)) = true
 : PathFindingInfo{
     //var geographicMapInterface = geographicMapInterface
     //var mapArray = mapArray
@@ -111,7 +111,7 @@ this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray)
 
                 @Throws(Exception::class)
             
-    open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>, cellPosition: GeographicMapCellPosition)
+    open fun buildPathFindingNodesForCellPosition(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -155,7 +155,7 @@ this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray)
                         for (row in 0 until totalRows)
 
         {
-this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray, geographicMapCellPositionFactory!!.getInstance(column, row))
+this.buildPathFindingNodesForCellPosition(geographicMapInterface, pathFindingInfo, mapArray, geographicMapCellPositionFactory!!.getAt(column, row))
 }
 
 }

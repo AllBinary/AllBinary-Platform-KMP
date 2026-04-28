@@ -184,7 +184,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                                     }
                                 
 
-    var lastTrackingEvent: TrackingEvent = this.list.remove(0) as TrackingEvent
+    var lastTrackingEvent: TrackingEvent = this.list.removeAt(0) as TrackingEvent
 
 this.lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
@@ -405,7 +405,7 @@ TrackingEventHandler.getInstance()!!.removeListener(this)
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastDirection(this.directionFactory!!.RIGHT)
-this.directionalInterface!!.setFrame(this.lastDirection)
+this.directionalInterface!!.setFrameByDirection(this.lastDirection)
 this.aiVistor!!.visit(this)
 }
 
@@ -416,7 +416,7 @@ this.aiVistor!!.visit(this)
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastDirection(this.directionFactory!!.LEFT)
-this.directionalInterface!!.setFrame(this.lastDirection)
+this.directionalInterface!!.setFrameByDirection(this.lastDirection)
 this.aiVistor!!.visit(this)
 }
 
@@ -427,7 +427,7 @@ this.aiVistor!!.visit(this)
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastDirection(this.directionFactory!!.DOWN)
-this.directionalInterface!!.setFrame(this.lastDirection)
+this.directionalInterface!!.setFrameByDirection(this.lastDirection)
 this.aiVistor!!.visit(this)
 }
 
@@ -438,7 +438,7 @@ this.aiVistor!!.visit(this)
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastDirection(this.directionFactory!!.UP)
-this.directionalInterface!!.setFrame(this.lastDirection)
+this.directionalInterface!!.setFrameByDirection(this.lastDirection)
 this.aiVistor!!.visit(this)
 }
 
@@ -448,7 +448,7 @@ this.aiVistor!!.visit(this)
     open fun dive()
         //nullable = true from not(false or (false and true)) = true
 {
-this.directionalInterface!!.setFrame(this.directionOfTarget)
+this.directionalInterface!!.setFrameByDirection(this.directionOfTarget)
 this.aiVistor!!.visit(this)
 }
 
@@ -458,7 +458,7 @@ this.aiVistor!!.visit(this)
     open fun attack()
         //nullable = true from not(false or (false and true)) = true
 {
-super.processAI(Canvas.KEY_NUM1)
+super.processKeyAI(Canvas.KEY_NUM1)
 }
 
 

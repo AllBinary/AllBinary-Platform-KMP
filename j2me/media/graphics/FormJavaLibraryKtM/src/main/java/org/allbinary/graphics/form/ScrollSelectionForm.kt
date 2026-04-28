@@ -44,7 +44,7 @@ open public class ScrollSelectionForm : PaintableForm {
         
 companion object {
             
-    open fun create(title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun createForm(title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : ScrollSelectionForm{
     //var title = title
@@ -89,9 +89,9 @@ companion object {
 }
 
 
-    val NULL_SCROLL_SELECTION_FORM: ScrollSelectionForm = ScrollSelectionForm.create(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)!!
+    val NULL_SCROLL_SELECTION_FORM: ScrollSelectionForm = ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)!!
 
-    val NULL_SCROLL_SELECTION_HORIZONTAL_FORM: ScrollSelectionForm = ScrollSelectionForm.create(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)!!
+    val NULL_SCROLL_SELECTION_HORIZONTAL_FORM: ScrollSelectionForm = ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)!!
 
     private val GET_SELECTED_INDEX: String = "getSelectedIndex"
 
@@ -128,7 +128,7 @@ public constructor (title: String, items: Array<CustomItem?>, formPaintableFacto
 this.buttonBasicColor= foregroundBasicColor
 this.border= border
 this.halfBorder= (border shr 1)
-this.paintable= formPaintableFactory!!.getInstance(this)
+this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
 }
 
 

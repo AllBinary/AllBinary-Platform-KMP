@@ -40,7 +40,7 @@ this.objectArray= objectArray
 }
 
 
-    open fun add(index: Int, element: Any)
+    open fun addAt(index: Int, element: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -85,7 +85,7 @@ this.objectArray[currentIndex++]= anyType
 }
 
 
-    open fun remove(index: Int)
+    open fun removeAt(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var index = index
@@ -297,7 +297,7 @@ this.objectArray[currentIndex++]= list.objectArray[index]!!
 }
 
 
-    open fun addAll(list: BasicArrayList)
+    open fun addAllList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var list = list
@@ -627,7 +627,7 @@ this.currentIndex= 0
 }
 
 
-    open fun toArray(objectArray: Array<Any?>)
+    open fun toArrayType(objectArray: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
     //var objectArray = objectArray
@@ -638,7 +638,7 @@ this.currentIndex= 0
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return arrayUtil!!.copyOf(this.objectArray, currentIndex, objectArray!!::class)
+                        return arrayUtil!!.copyOfType(this.objectArray, currentIndex, objectArray!!::class)
 System.arraycopy(this.objectArray, 0, objectArray, 0, currentIndex)
 
     

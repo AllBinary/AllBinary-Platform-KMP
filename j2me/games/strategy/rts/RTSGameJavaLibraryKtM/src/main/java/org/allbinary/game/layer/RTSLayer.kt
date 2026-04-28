@@ -255,7 +255,7 @@ this.baseAnimationInterface= baseAnimationInterfaceFactoryInterface!!.getInstanc
 this.emptyAnimationInterface= emptyAnimationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
 this.indexedButShouldBeRotationAnimationInterface= animationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
 this.initAnimationInterface= this.indexedButShouldBeRotationAnimationInterface
-this.destroyAnimationInterface= proceduralAnimationInterfaceFactoryInterface!!.getInstance(this.indexedButShouldBeRotationAnimationInterface) as IndexedAnimation
+this.destroyAnimationInterface= proceduralAnimationInterfaceFactoryInterface!!.getInstanceAnimation(this.indexedButShouldBeRotationAnimationInterface) as IndexedAnimation
 
     var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
@@ -466,7 +466,7 @@ super.paintFirst(graphics)
 
     var viewY: Int = viewPosition!!.getY()!!
 
-this.getAnimationInterface()!!.paint(graphics, viewX, viewY)
+this.getAnimationInterface()!!.paintXY(graphics, viewX, viewY)
 }
 
 
@@ -542,7 +542,7 @@ this.rtsLayerUtil!!.upgrade(this)
 {
 
     
-                        if(this.buildFrameTimeHelper!!.isTime())
+                        if(this.buildFrameTimeHelper!!.isTimeTNT())
                         
                                     {
                                     this.animationInterface= this.buildAnimationInterface
@@ -719,7 +719,7 @@ this.animationInterface= animationInterface
 
     var waypointBehaviorBase: WaypointBehaviorBase = this.getWaypointBehavior()!!
 
-waypointBehaviorBase!!.setTarget(targetGameLayer as PathFindingLayerInterface, anotherTargetDistance)
+waypointBehaviorBase!!.setTargetWithDistance(targetGameLayer as PathFindingLayerInterface, anotherTargetDistance)
 }
 
 
@@ -1056,7 +1056,7 @@ var resource = resource
 
                 @Throws(Exception::class)
             
-    override fun trackTo(dx: Int, dy: Int)
+    override fun trackToDXY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx

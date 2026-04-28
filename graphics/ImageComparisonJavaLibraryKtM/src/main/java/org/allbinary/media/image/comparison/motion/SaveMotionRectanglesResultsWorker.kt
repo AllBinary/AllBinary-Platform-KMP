@@ -111,7 +111,7 @@ this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
 
-timeHelper!!.setStartTime()
+timeHelper!!.setStartTimeTNT()
 
     var motionRectanglesResultsEvent: MotionRectanglesResultsEvent = this.getMotionRectanglesVector()!!.get(0) as MotionRectanglesResultsEvent
 
@@ -121,7 +121,7 @@ timeHelper!!.setStartTime()
 MotionRectanglesImageInputOutput().
                             save(motionRectangles, motionRectanglesResultsEvent!!.getFrame())
 this.getMotionRectanglesVector()!!.remove(motionRectangles)
-this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {

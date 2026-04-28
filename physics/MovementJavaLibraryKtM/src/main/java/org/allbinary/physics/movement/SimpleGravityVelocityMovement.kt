@@ -51,7 +51,7 @@ var speedBasicDecimal = speedBasicDecimal
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer
-this.gravityUtil!!.process(this.getVelocityProperties())
+this.gravityUtil!!.process(this.getVelocityProperties(), gravityUtil!!.GAME_GRAVITY_VELOCITY)
 super.process(layer)
 }
 

@@ -125,7 +125,7 @@ this.availableListOfList[index]= BasicArrayListD()
 
         {
 this.availableListOfList[index]!!.clear()
-this.availableListOfList[index]!!.addAll(this.listOfList[index]!!)
+this.availableListOfList[index]!!.addAllList(this.listOfList[index]!!)
 }
 
 this.logUtil!!.putF(StringMaker().
@@ -199,7 +199,7 @@ this.logUtil!!.putF(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list.remove(list.size() -1) as Image
+                        return list.removeAt(list.size() -1) as Image
 
                                     }
                                 
@@ -211,22 +211,6 @@ this.logUtil!!.putF(StringMaker().
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullCanvas.NULL_IMAGE
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun get(anyType: Any, width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var anyType = anyType
-    //var width = width
-    //var height = height
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.get(anyType!!::class.toString()!!, width, height)
 }
 
 
@@ -247,7 +231,7 @@ this.logUtil!!.putF(StringMaker().
 
                 @Throws(Exception::class)
             
-    open fun get(key: Any)
+    open fun getWithKey(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -276,7 +260,7 @@ this.logUtil!!.putF(StringMaker().
 
                 @Throws(Exception::class)
             
-    open fun createImage(key: Any, inputStream: InputStream)
+    open fun createImageFromInputStream(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key

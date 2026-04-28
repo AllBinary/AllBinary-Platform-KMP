@@ -189,7 +189,7 @@ hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +TransformInfoData.getInsta
     var propertiesHashMap: HashMap<Any, Any> = transformInfoHttpStoreInterface!!.getPropertiesHashMap()!!
 
 
-    var templateNameOverride: String = StringUtil.getInstance()!!.getInstance(propertiesHashMap!!.get(TransformInfoData.getInstance()!!.PARTIAL) as String)!!
+    var templateNameOverride: String = StringUtil.getInstance()!!.getNonNull(propertiesHashMap!!.get(TransformInfoData.getInstance()!!.PARTIAL) as String)!!
 
 
     

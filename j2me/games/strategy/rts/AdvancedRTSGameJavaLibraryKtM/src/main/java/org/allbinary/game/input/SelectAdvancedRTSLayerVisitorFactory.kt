@@ -54,8 +54,8 @@ companion object {
 }
 
 
-    override fun getInstance(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
-        //nullable =  from not(true or (false and false)) = 
+    override fun create(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
+        //nullable = true from not(false or (false and false)) = true
 : Visitor{
     //var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 

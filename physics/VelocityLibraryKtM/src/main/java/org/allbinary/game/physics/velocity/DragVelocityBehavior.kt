@@ -54,8 +54,8 @@ companion object {
                                     
     var basicDecimal: BasicDecimal = velocityProperties!!.getVelocityXBasicDecimalP()!!
 
-basicDecimal!!.multiply(nominator)
-basicDecimal!!.divide(denominator)
+basicDecimal!!.multiplyint(nominator)
+basicDecimal!!.divideint(denominator)
 
                                     }
                                 
@@ -67,8 +67,8 @@ basicDecimal!!.divide(denominator)
                                     
     var basicDecimal: BasicDecimal = velocityProperties!!.getVelocityYBasicDecimalP()!!
 
-basicDecimal!!.multiply(nominator)
-basicDecimal!!.divide(denominator)
+basicDecimal!!.multiplyint(nominator)
+basicDecimal!!.divideint(denominator)
 
                                     }
                                 
@@ -89,8 +89,8 @@ basicDecimal!!.divide(denominator)
                         if(basicDecimal!!.getUnscaled() != 0L)
                         
                                     {
-                                    basicDecimal!!.multiply(nominator)
-basicDecimal!!.divide(denominator)
+                                    basicDecimal!!.multiplyint(nominator)
+basicDecimal!!.divideint(denominator)
 
                                     }
                                 
@@ -111,8 +111,8 @@ basicDecimal!!.divide(denominator)
                                     
     var basicDecimal: BasicDecimal = velocityProperties!!.getVelocityYBasicDecimalP()!!
 
-basicDecimal!!.multiply(nominator)
-basicDecimal!!.divide(denominator)
+basicDecimal!!.multiplyint(nominator)
+basicDecimal!!.divideint(denominator)
 
                                     }
                                 

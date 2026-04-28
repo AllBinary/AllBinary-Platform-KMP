@@ -408,7 +408,7 @@ break;
                                 
 }
 
-list.add(lastIndex, newHighScore)
+list.addAt(lastIndex, newHighScore)
 } catch(e: EOFException)
             {
 this.logUtil!!.put("EOF", this, commonStrings!!.LOAD, e)

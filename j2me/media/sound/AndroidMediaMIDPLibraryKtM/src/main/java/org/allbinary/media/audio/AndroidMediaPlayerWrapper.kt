@@ -40,7 +40,7 @@ open public class AndroidMediaPlayerWrapper : BasicPlayer {
         
 companion object {
             
-    open fun create()
+    open fun createPlayerWrapper()
         //nullable = true from not(false or (false and true)) = true
 : AndroidMediaPlayerWrapper{
 
@@ -61,7 +61,7 @@ companion object {
 }
 
 
-    val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper.create()!!
+    val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper.createPlayerWrapper()!!
 
         }
             

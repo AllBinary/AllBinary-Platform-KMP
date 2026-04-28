@@ -58,8 +58,8 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(geographicMapInterface: BasicGeographicMap, graphArray: Array<IntArray?>)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getInstancePathFindingInfo(geographicMapInterface: BasicGeographicMap, graphArray: Array<IntArray?>)
+        //nullable = true from not(false or (false and false)) = true
 : PathFindingInfo{
     //var geographicMapInterface = geographicMapInterface
     //var graphArray = graphArray

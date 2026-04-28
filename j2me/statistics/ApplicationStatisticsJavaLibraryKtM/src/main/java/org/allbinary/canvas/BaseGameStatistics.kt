@@ -59,7 +59,7 @@ public constructor ()
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.timeDelayHelper!!.setStartTime()
+this.timeDelayHelper!!.setStartTimeTNT()
 this.totalRefreshes= 0
 this.totalFrames= 0
 }
@@ -294,8 +294,8 @@ STRING_ARRAY[9]= string
 }
 
 
-    open fun toString(totalTime: Long)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringAt(totalTime: Long)
+        //nullable = true from not(false or (false and false)) = true
 : String{
 var totalTime = totalTime
 
@@ -344,7 +344,7 @@ totalTime= (totalTime /1000)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.toString(totalTime)
+                        return this.toStringAt(totalTime)
 
                                     }
                                 

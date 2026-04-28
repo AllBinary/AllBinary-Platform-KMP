@@ -27,8 +27,8 @@
         
 import java.util.Hashtable
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.AllBinaryTiledLayer
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 
 open public class GeographicMapCellPositionFactory : GeographicMapCellPositionBaseFactory {

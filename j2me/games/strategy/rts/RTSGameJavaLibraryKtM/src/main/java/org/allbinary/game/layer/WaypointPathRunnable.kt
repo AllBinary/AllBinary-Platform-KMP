@@ -65,7 +65,7 @@ public constructor (){
 
                                     }
                                 
-waypointBehavior!!.setWaypointPathsList(this.targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition))
+waypointBehavior!!.setWaypointPathsList(this.targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsListRunnable(geographicMapCellPosition))
 pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(pathFindingLayer)
 Thread.sleep(15.toLong() +(this.priorityP *2))
 } catch(e: Exception)

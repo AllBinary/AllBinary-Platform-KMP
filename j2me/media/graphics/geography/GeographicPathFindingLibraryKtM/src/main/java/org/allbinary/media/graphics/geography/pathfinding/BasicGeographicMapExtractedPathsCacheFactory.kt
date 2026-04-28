@@ -81,7 +81,7 @@ this.maxPaths= maxPaths
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list.remove(0) as BasicArrayList
+                        return this.list.removeAt(0) as BasicArrayList
 
                                     }
                                 

@@ -69,7 +69,7 @@ this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 }
 
 
-    open fun charWidth()
+    open fun defaultCharWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -80,7 +80,7 @@ this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 }
 
 
-    open fun stringWidth(size: Int)
+    open fun defaultStringWidth(size: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var size = size

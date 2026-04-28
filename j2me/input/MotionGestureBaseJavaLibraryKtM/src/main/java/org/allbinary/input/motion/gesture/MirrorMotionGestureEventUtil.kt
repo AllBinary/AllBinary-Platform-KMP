@@ -57,7 +57,7 @@ companion object {
 private constructor ()
             : super()
         {
-this.motionEventCircularPool= MotionEventCircularPool.getInstance(Integer.MAX_VALUE)
+this.motionEventCircularPool= MotionEventCircularPool.createPool(Integer.MAX_VALUE)
 }
 
 
@@ -81,10 +81,10 @@ this.motionEventCircularPool= MotionEventCircularPool.getInstance(Integer.MAX_VA
     var pointFactory: PointFactory = PointFactory.getInstance()!!
 
 
-    var mirroredPreviousPoint: GPoint = pointFactory!!.getInstance0(previousNewX, motionGestureEvent!!.getPreviousPoint()!!.getY())!!
+    var mirroredPreviousPoint: GPoint = pointFactory!!.createXY(previousNewX, motionGestureEvent!!.getPreviousPoint()!!.getY())!!
 
 
-    var mirroredCurrentPoint: GPoint = pointFactory!!.getInstance0(currentNewX, motionGestureEvent!!.getCurrentPoint()!!.getY())!!
+    var mirroredCurrentPoint: GPoint = pointFactory!!.createXY(currentNewX, motionGestureEvent!!.getCurrentPoint()!!.getY())!!
 
 event.setPreviousPoint(mirroredPreviousPoint)
 event.setCurrentPoint(mirroredCurrentPoint)

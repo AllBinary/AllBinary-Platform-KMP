@@ -68,11 +68,11 @@ var basicColor = basicColor
                     
 this.maxVelocity= powerOfTenVelocity
 this.velocity= 0
-this.primitiveLongUtil= PrimitiveLongUtil.create(powerOfTenVelocity)
+this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(powerOfTenVelocity)
 
     var myFont: MyFont = MyFont.getInstance()!!
 
-this.offset= myFont!!.stringWidth(this.primitiveLongUtil!!.getMaxDigits()) +myFont!!.stringWidth(2)
+this.offset= myFont!!.defaultStringWidth(this.primitiveLongUtil!!.getMaxDigits()) +myFont!!.defaultStringWidth(2)
 }
 
 
@@ -135,7 +135,7 @@ this.velocity= value
 
     var myFont: MyFont = MyFont.getInstance()!!
 
-this.offset2= this.offset -myFont!!.stringWidth(this.totalDigits) -myFont!!.stringWidth(2)
+this.offset2= this.offset -myFont!!.defaultStringWidth(this.totalDigits) -myFont!!.defaultStringWidth(2)
 
                                     }
                                 
@@ -154,7 +154,7 @@ this.set(this.velocity -value)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paint(graphics, string, 0, this.totalDigits, KILOMETERS_PER_HOUR_STR, 0, this.totalChars, offset2, offset)
+super.paintDXY(graphics, string, 0, this.totalDigits, KILOMETERS_PER_HOUR_STR, 0, this.totalChars, offset2, offset)
 }
 
 

@@ -193,7 +193,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.onWaypointEvent(this.
                                     }
                                 
 this.targetList!!.add(advancedRTSGameLayer)
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.addWaypointFromBuilding(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer, this.targetList)
+this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.addWaypointFromBuildingList(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer, this.targetList)
 
                                     }
                                 
@@ -239,8 +239,8 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.addWaypointFromBuildi
 
                                     }
                                 
-this.targetList!!.add(index, rtsLayer)
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.insertWaypoint(this.associatedAdvancedRTSGameLayer, index, rtsLayer, this.getName(), this.targetList)
+this.targetList!!.addAt(index, rtsLayer)
+this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.insertWaypointList(this.associatedAdvancedRTSGameLayer, index, rtsLayer, this.getName(), this.targetList)
 
 
 
@@ -287,7 +287,7 @@ this.setMoving(false)
 
     var size: Int = pathsList!!.size()!!
 
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.setRandomGeographicMapCellHistory(this.associatedAdvancedRTSGameLayer, pathsList)
+this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.setRandomGeographicMapCellHistoryList(this.associatedAdvancedRTSGameLayer, pathsList)
 
     
                         if(size > 0)
@@ -322,7 +322,7 @@ this.lastPathGeographicMapCellPosition= SimpleGeographicMapCellPositionFactory.N
 this.currentGeographicMapCellHistoryP!!.init()
 this.associatedAdvancedRTSGameLayer!!.init(this.currentGeographicMapCellHistoryP, geographicMapCellPositionBasicArrayList)
 this.setTrackingWaypoint(true)
-this.getCompleteTimeDelayHelper()!!.setStartTime()
+this.getCompleteTimeDelayHelper()!!.setStartTimeTNT()
 }
 
 
@@ -422,7 +422,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.needToMove(this.assoc
                         if(this.isTrackingWaypoint() || this.sensorAction == SensorActionFactory.getInstance()!!.EVADE || (this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER && this.getCurrentTargetDistance() >= this.longWeaponRange +this.currentTargetLayerInterfaceP!!.getHalfHeight()))
                         
                                     {
-                                    this.repeatedToLong!!.setStartTime()
+                                    this.repeatedToLong!!.setStartTimeTNT()
 
 
 
@@ -433,7 +433,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.needToMove(this.assoc
                                 
 
     
-                        if(this.repeatedToLong!!.isTime())
+                        if(this.repeatedToLong!!.isTimeTNT())
                         
                                     {
                                     

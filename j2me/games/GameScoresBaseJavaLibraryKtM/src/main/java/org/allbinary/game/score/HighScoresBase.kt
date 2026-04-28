@@ -53,7 +53,7 @@ protected constructor ()
 }
 
 
-    override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
+    override fun fetchHighScoresPreload(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo

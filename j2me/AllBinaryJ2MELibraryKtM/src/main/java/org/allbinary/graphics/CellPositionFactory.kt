@@ -108,8 +108,8 @@ this.createInstance(column, row)
 }
 
 
-    open fun getInstance(i_column: Int, i_row: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceColRow(i_column: Int, i_row: Int)
+        //nullable = true from not(false or (false and false)) = true
 : CellPosition{
 var i_column = i_column
 var i_row = i_row

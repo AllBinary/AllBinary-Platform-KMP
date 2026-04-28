@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
 
 open public class GeographicMapCellTypeFactory
             : Object
@@ -58,8 +57,8 @@ companion object {
 
     private val geographicMapCellTypeArray: Array<GeographicMapCellType?> = arrayOfNulls(512)
 
-    open fun getInstance(type: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun get(type: Int)
+        //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType{
 var type = type
 

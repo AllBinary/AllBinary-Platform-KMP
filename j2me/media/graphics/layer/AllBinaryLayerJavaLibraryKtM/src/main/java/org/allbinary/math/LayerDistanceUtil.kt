@@ -98,7 +98,7 @@ companion object {
 }
 
 
-    open fun getDistance(layerInterface: AllBinaryLayer, point: GPoint)
+    open fun getDistanceAt(layerInterface: AllBinaryLayer, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var layerInterface = layerInterface

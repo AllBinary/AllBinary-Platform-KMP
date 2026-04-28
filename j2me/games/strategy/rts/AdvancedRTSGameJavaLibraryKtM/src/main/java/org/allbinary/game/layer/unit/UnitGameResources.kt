@@ -60,12 +60,12 @@ protected constructor (){
 
                 @Throws(Exception::class)
             
-    override fun init(ROOT: String, sizeString: String)
+    override fun append(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT
 var sizeString = sizeString
-super.init(ROOT, sizeString)
+super.append(ROOT, sizeString)
 
     var string: String = GameGraphicsResourceUtil.getInstance()!!.getName()!!
 
@@ -108,7 +108,7 @@ this.RESOURCE_ICON_BUILD= stringBuffer!!.toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameGraphicsResourceUtil.getInstance()!!.getString(GraphicsFeatureFactory.getInstance()!!.SPRITE_QUARTER_ROTATION_GRAPHICS)
+                        return GameGraphicsResourceUtil.getInstance()!!.getStringForFeature(GraphicsFeatureFactory.getInstance()!!.SPRITE_QUARTER_ROTATION_GRAPHICS)
 
                                     }
                                 

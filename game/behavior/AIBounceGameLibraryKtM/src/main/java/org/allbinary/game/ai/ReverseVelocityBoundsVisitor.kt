@@ -82,7 +82,7 @@ this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityPropert
 
     
                         if(this.velocityInterface!!.getVelocityXBasicDecimalP()!!.getUnscaled() < 0)
-                        this.velocityInterface!!.getVelocityXBasicDecimalP()!!.multiply( -1)
+                        this.velocityInterface!!.getVelocityXBasicDecimalP()!!.multiplyint( -1)
 }
 
 
@@ -92,7 +92,7 @@ this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityPropert
 
     
                         if(this.velocityInterface!!.getVelocityXBasicDecimalP()!!.getUnscaled() > 0)
-                        this.velocityInterface!!.getVelocityXBasicDecimalP()!!.multiply( -1)
+                        this.velocityInterface!!.getVelocityXBasicDecimalP()!!.multiplyint( -1)
 }
 
 
@@ -102,7 +102,7 @@ this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityPropert
 
     
                         if(this.velocityInterface!!.getVelocityYBasicDecimalP()!!.getUnscaled() < 0)
-                        this.velocityInterface!!.getVelocityYBasicDecimalP()!!.multiply( -1)
+                        this.velocityInterface!!.getVelocityYBasicDecimalP()!!.multiplyint( -1)
 }
 
 
@@ -112,7 +112,7 @@ this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityPropert
 
     
                         if(this.velocityInterface!!.getVelocityYBasicDecimalP()!!.getUnscaled() > 0)
-                        this.velocityInterface!!.getVelocityYBasicDecimalP()!!.multiply( -1)
+                        this.velocityInterface!!.getVelocityYBasicDecimalP()!!.multiplyint( -1)
 }
 
 

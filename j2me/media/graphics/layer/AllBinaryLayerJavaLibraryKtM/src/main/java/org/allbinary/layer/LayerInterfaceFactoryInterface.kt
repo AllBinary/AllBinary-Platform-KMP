@@ -32,8 +32,8 @@ interface LayerInterfaceFactoryInterface {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getNextInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+        //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer
 
 }

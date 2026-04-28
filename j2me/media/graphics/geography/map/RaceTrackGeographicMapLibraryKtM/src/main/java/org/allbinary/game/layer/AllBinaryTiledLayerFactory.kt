@@ -82,7 +82,7 @@ var raceTrackData = raceTrackData
                             getMiniInstance(raceTrackData)!!
 
 
-    var allbinaryTiledLayer: AllBinaryTiledLayer = AllBinaryJ2METiledLayer(smallIntegerSingletonFactory!!.getInstance(raceTrackData!!.getId()!!.toInt() +100 +1), tiledLayer, raceTrackData!!.getMapArray(), BasicColorFactory.getInstance()!!.RED.toInt())
+    var allbinaryTiledLayer: AllBinaryTiledLayer = AllBinaryJ2METiledLayer(smallIntegerSingletonFactory!!.getAt(raceTrackData!!.getId()!!.toInt() +100 +1), tiledLayer, raceTrackData!!.getMapArray(), BasicColorFactory.getInstance()!!.RED.toInt())
 
 allbinaryTiledLayer!!.setCells(raceTrackData!!.getMapArray())
 

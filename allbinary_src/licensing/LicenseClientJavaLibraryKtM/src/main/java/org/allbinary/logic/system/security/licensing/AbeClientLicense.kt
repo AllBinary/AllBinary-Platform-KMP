@@ -134,9 +134,9 @@ this.servers.add(vector.get(index))
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
-this.setSpecial(stringUtil!!.getInstance(hashtable.get(abeClientInformationData!!.SPECIAL) as String))
+this.setSpecial(stringUtil!!.getNonNull(hashtable.get(abeClientInformationData!!.SPECIAL) as String))
 
-    var licenseTypeString: String = stringUtil!!.getInstance(hashtable.get(abeClientInformationData!!.LICENSE_TYPE) as String)!!
+    var licenseTypeString: String = stringUtil!!.getNonNull(hashtable.get(abeClientInformationData!!.LICENSE_TYPE) as String)!!
 
 this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeString)
 }

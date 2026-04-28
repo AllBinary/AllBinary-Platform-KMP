@@ -84,7 +84,7 @@ public constructor (){
 var graphics = graphics
 
     
-                        if(this.timeDelayHelper!!.isTime())
+                        if(this.timeDelayHelper!!.isTimeTNT())
                         
                                     {
                                     

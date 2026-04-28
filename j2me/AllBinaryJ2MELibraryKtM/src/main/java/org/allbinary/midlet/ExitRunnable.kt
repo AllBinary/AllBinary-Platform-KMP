@@ -65,7 +65,7 @@ this.processor= processor
 
         try {
             this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
-this.midlet.destroyApp(false, this.isProgress)
+this.midlet.destroyAppInRunnable(false, this.isProgress)
 this.midlet.setDisplay(NullCanvas.NULL_CANVAS)
 this.midlet.notifyDestroyed()
 this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)

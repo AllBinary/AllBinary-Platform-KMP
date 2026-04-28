@@ -51,7 +51,7 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
     private var totalFrames: Int= 0
 public constructor (originalImageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
+                            : super(angleInfo, CircularIndexUtil.createInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
     //var originalImageArray = originalImageArray
     //var angleInfo = angleInfo
     //var animationBehavior = animationBehavior
@@ -160,13 +160,13 @@ this.currentImage= this.imageArray[index]!!
     //var imageArray = imageArray
 this.imageArray= imageArray
 this.totalFrames= imageArray!!.size
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.totalFrames)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.totalFrames)
 }
 
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -193,7 +193,7 @@ graphics.drawImage(this.currentImage, x, y, anchor)
                         for (index in 0 until size2)
 
         {
-disposalUtil!!.dispose(this.imageArray[index]!!)
+disposalUtil!!.disposeImage(this.imageArray[index]!!)
 }
 
 
@@ -207,10 +207,10 @@ disposalUtil!!.dispose(this.imageArray[index]!!)
                         for (index in 0 until size)
 
         {
-disposalUtil!!.dispose(this.originalImageArray[index]!!)
+disposalUtil!!.disposeImage(this.originalImageArray[index]!!)
 }
 
-disposalUtil!!.dispose(this.currentImage)
+disposalUtil!!.disposeImage(this.currentImage)
 }
 
 
@@ -233,7 +233,7 @@ disposalUtil!!.dispose(this.currentImage)
                         for (index in 0 until size2)
 
         {
-disposalUtil!!.dispose(this.imageArray[index]!!)
+disposalUtil!!.disposeImage(this.imageArray[index]!!)
 }
 
 
@@ -247,10 +247,10 @@ disposalUtil!!.dispose(this.imageArray[index]!!)
                         for (index in 0 until size)
 
         {
-disposalUtil!!.dispose(this.originalImageArray[index]!!)
+disposalUtil!!.disposeImage(this.originalImageArray[index]!!)
 }
 
-disposalUtil!!.dispose(this.currentImage)
+disposalUtil!!.disposeImage(this.currentImage)
 }
 
 

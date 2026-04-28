@@ -94,7 +94,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
                         if(this.list.size() > 0)
                         
                                     {
-                                    sound= this.list.remove(0) as Sound
+                                    sound= this.list.removeAt(0) as Sound
 
     
                         if(sound != 
@@ -109,7 +109,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
 
         while(this.list.size() > this.max)
         {
-this.list.remove(0)
+this.list.removeAt(0)
 }
 
 played= true

@@ -60,7 +60,7 @@ this.speedBasicDecimal= speedBasicDecimal
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
-this.velocityProperties!!.setVelocity(speedBasicDecimal, angleFactory!!.getInstance(angle), angleFactory!!.getInstance(otherAngle))
+this.velocityProperties!!.setVelocityWithBigDecimal(speedBasicDecimal, angleFactory!!.getAt(angle), angleFactory!!.getAt(otherAngle))
 }
 
 
@@ -83,7 +83,7 @@ var otherAngle = otherAngle
 
     var zVector: Int = (this.axisMathVectorUtil!!.calculateZ(radius, otherAngle) /scaleFactorValue).toInt()
 
-layer.move(xVector, yVector, zVector)
+layer.moveDXYZ(xVector, yVector, zVector)
 }
 
 
@@ -93,7 +93,7 @@ layer.move(xVector, yVector, zVector)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer
-layer.move(this.velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled())
+layer.moveDXYZ(this.velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled())
 }
 
 

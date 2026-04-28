@@ -43,7 +43,6 @@ import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.SelectSound
 import org.allbinary.media.graphics.geography.map.racetrack.MultiLevelRaceTrackGeographicMapInterfaceFactoryInterface
 import org.allbinary.thread.ABRunnable
-import org.allbinary.thread.SoundThreadPool
 import org.allbinary.time.TimeDelayHelper
 
 open public class MapSelectionGameInputProcessor : Processor
@@ -82,7 +81,7 @@ SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
     var wave: Int = raceTrackGeographicMapInterfaceFactoryInterface!!.getFirstWaveWithTrack(track)!!
 
 gameCanvas!!.getLayerManager()!!.getGameInfo()!!.setCurrentLevel(wave)
-gameCanvas!!.buildGame(false)
+gameCanvas!!.buildGameInit(false)
 GameKeyEventHandler.getInstance()!!.removeListener(getPlayerGameInput())
 this.setRunning(false)
 } catch(e: Exception)
@@ -152,7 +151,7 @@ var list = list
                                     {
                                     
     
-                        if(this.inputTimeHelper!!.isTime())
+                        if(this.inputTimeHelper!!.isTimeTNT())
                         
                                     {
                                     SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
@@ -176,7 +175,7 @@ break;
 
 
     
-                        if(selectedIndex < this.lockedIndex || !LockedUtil.getInstance()!!.isLockedFeature())
+                        if(selectedIndex < this.lockedIndex || !LockedUtil.getInstance()!!.isLocked())
                         
                                     {
                                     

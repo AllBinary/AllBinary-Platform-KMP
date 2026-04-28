@@ -215,10 +215,10 @@ var frame = frame
 
 
     
-                        if(timeHelper!!.isTime())
+                        if(timeHelper!!.isTimeTNT())
                         
                                     {
-                                    timeHelper!!.setStartTime()
+                                    timeHelper!!.setStartTimeTNT()
 
 
 

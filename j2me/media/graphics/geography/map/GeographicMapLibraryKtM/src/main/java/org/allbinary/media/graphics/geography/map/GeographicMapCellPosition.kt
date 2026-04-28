@@ -57,8 +57,8 @@ var height = height
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
 
-this.point= pointFactory!!.getInstance0(x, y)
-this.midPoint= pointFactory!!.getInstance0(x +(width shr 1), y +(height shr 1))
+this.point= pointFactory!!.createXY(x, y)
+this.midPoint= pointFactory!!.createXY(x +(width shr 1), y +(height shr 1))
 }
 
 

@@ -1225,7 +1225,7 @@ ratio= this.SCALE *dxl /dy
                         if(dx <= 0 && dy < 0)
                         
                                     {
-                                    ratio= this.mathUtil!!.abs(ratio)
+                                    ratio= this.mathUtil!!.abslong(ratio)
 
                                     }
                                 
@@ -1481,7 +1481,7 @@ dy[3]= (screenY2 -targetY2)
 
         {
 angleOfTarget= this.antiTan(dx[index]!!, dy[index2]!!)
-angle= angleFactory!!.getInstance(angleOfTarget.toInt())
+angle= angleFactory!!.getAt(angleOfTarget.toInt())
 stringMaker!!.delete(0, stringMaker!!.length())
 PreLogUtil.put(stringMaker!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)!!.appendint(index)!!.append(" index2: ")!!.appendint(index2)!!.append(PositionStrings.getInstance()!!.DX_LABEL)!!.appendint(dx[index]!!)!!.append(PositionStrings.getInstance()!!.DY_LABEL)!!.appendint(dy[index2]!!)!!.append(TARGET_ANGLE)!!.appendshort(angleOfTarget)!!.append(CommonSeps.getInstance()!!.EQUALS)!!.appendshort(angle.getValue())!!.toString(), this, METHOD_NAME)
 }

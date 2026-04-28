@@ -99,7 +99,7 @@ this.serverList!!.clear()
 {
 var value = value
 var index = index
-this.serverList!!.add(index, value)
+this.serverList!!.addAt(index, value)
 }
 
 

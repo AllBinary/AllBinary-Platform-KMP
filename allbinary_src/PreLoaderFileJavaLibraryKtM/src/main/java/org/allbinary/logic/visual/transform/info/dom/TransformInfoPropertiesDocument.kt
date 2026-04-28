@@ -55,7 +55,7 @@ public constructor (filePath: String)
 
     var xmlFile: AbFile = AbFile(filePath)
 
-this.document= DomDocumentFileHelper.create(xmlFile)
+this.document= DomDocumentFileHelper.createDocument(xmlFile)
 }
 
 

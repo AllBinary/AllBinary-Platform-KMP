@@ -144,7 +144,7 @@ this.image.setRGB2(pixels, offset, height, x, y, width, height)
     open fun recycle()
         //nullable = true from not(false or (false and true)) = true
 {
-DisposalUtil.getInstance()!!.dispose(image)
+DisposalUtil.getInstance()!!.disposeImage(image)
 }
 
 

@@ -61,8 +61,8 @@ this.hashtable= Hashtable<Any, Any>()
 }
 
 
-    open fun getInstance(name: String)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceByName(name: String)
+        //nullable = true from not(false or (false and false)) = true
 : GameConfiguration{
 var name = name
 

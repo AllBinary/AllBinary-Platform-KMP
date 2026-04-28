@@ -62,7 +62,7 @@ public constructor (total: Int, countedPickedUpLayerInterfaceFactory: CountedPic
         {
 var total = total
 var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
-this.primitiveLongUtil= PrimitiveLongUtil.create(1000)
+this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(1000)
 this.init(total, countedPickedUpLayerInterfaceFactory)
 }
 
@@ -96,7 +96,7 @@ var z = z
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getCountedPickedUpLayerInterfaceFactory()!!.getInstance(hashtable, x, y, z)
+                        return this.getCountedPickedUpLayerInterfaceFactory()!!.getNextInstance(hashtable, x, y, z)
 
                                     }
                                 

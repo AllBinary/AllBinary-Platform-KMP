@@ -62,7 +62,7 @@ var xAnalogValue = xAnalogValue
 this.rightTimeElapsedHelper!!.delay= ((this.SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
 
     
-                        if(this.rightTimeElapsedHelper!!.isTime())
+                        if(this.rightTimeElapsedHelper!!.isTimeTNT())
                         
                                     {
                                     collidableDestroyableDamageableLayer!!.right()
@@ -82,7 +82,7 @@ var xAnalogValue = xAnalogValue
 this.leftTimeElapsedHelper!!.delay= ((this.SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
 
     
-                        if(this.leftTimeElapsedHelper!!.isTime())
+                        if(this.leftTimeElapsedHelper!!.isTimeTNT())
                         
                                     {
                                     collidableDestroyableDamageableLayer!!.left()
@@ -102,7 +102,7 @@ var xAnalogValue = xAnalogValue
 this.upTimeElapsedHelper!!.delay= ((this.SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
 
     
-                        if(this.upTimeElapsedHelper!!.isTime())
+                        if(this.upTimeElapsedHelper!!.isTimeTNT())
                         
                                     {
                                     collidableDestroyableDamageableLayer!!.up()
@@ -122,7 +122,7 @@ var xAnalogValue = xAnalogValue
 this.downTimeElapsedHelper!!.delay= ((this.SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
 
     
-                        if(this.downTimeElapsedHelper!!.isTime())
+                        if(this.downTimeElapsedHelper!!.isTimeTNT())
                         
                                     {
                                     collidableDestroyableDamageableLayer!!.down()

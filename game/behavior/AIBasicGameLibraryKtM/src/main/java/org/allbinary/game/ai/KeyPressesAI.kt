@@ -88,7 +88,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         for (index in 0 until this.keys.size)
 
         {
-super.processAI(this.keys[index]!!.toInt())
+super.processKeyAI(this.keys[index]!!.toInt())
 }
 
 

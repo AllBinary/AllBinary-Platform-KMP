@@ -51,7 +51,7 @@ var gameInput = gameInput
     var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface = this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
 
 this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityProperties()
-this.velocityInterface!!.getVelocityYBasicDecimalP()!!.set(0)
+this.velocityInterface!!.getVelocityYBasicDecimalP()!!.setint(0)
 }
 
 
@@ -72,8 +72,8 @@ var allBinaryLayerManager = allBinaryLayerManager
                                     
     var basicDecimal: BasicDecimal = this.velocityInterface!!.getVelocityYBasicDecimalP()!!
 
-basicDecimal!!.set(0)
-basicDecimal!!.add(y)
+basicDecimal!!.setint(0)
+basicDecimal!!.addint(y)
 this.index++
 
                                     }
@@ -86,8 +86,8 @@ this.index++
                                     
     var basicDecimal: BasicDecimal = this.velocityInterface!!.getVelocityYBasicDecimalP()!!
 
-basicDecimal!!.set(0)
-basicDecimal!!.subtract(y)
+basicDecimal!!.setint(0)
+basicDecimal!!.subtractint(y)
 this.index++
 
                                     }

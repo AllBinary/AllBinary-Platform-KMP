@@ -34,7 +34,7 @@ companion object {
             
     val ZERO_BIGDECIMAL: BasicDecimal = BasicDecimal(0)
 
-    open fun create(bigDecimal: BasicDecimal)
+    open fun createBigDecimal(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 : BasicDecimal{
     //var bigDecimal = bigDecimal
@@ -58,7 +58,7 @@ this.updateScaled()
 }
 
 
-    open fun set(value: Int)
+    open fun setint(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -67,7 +67,7 @@ this.updateScaled()
 }
 
 
-    open fun set(value: Long)
+    open fun setlong(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -85,7 +85,7 @@ this.updateScaled()
 }
 
 
-    open fun add(value: Int)
+    open fun addint(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -94,7 +94,7 @@ this.updateScaled()
 }
 
 
-    open fun add(value: Long)
+    open fun addlong(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -112,7 +112,7 @@ this.updateScaled()
 }
 
 
-    open fun subtract(value: Int)
+    open fun subtractint(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -121,7 +121,7 @@ this.updateScaled()
 }
 
 
-    open fun subtract(value: Long)
+    open fun subtractlong(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -139,7 +139,7 @@ this.updateScaled()
 }
 
 
-    open fun multiply(value: Int)
+    open fun multiplyint(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -148,7 +148,7 @@ this.updateScaled()
 }
 
 
-    open fun multiply(value: Long)
+    open fun multiplylong(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -166,7 +166,7 @@ this.updateScaled()
 }
 
 
-    open fun divide(value: Int)
+    open fun divideint(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -175,7 +175,7 @@ this.updateScaled()
 }
 
 
-    open fun divide(value: Long)
+    open fun dividelong(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -246,7 +246,7 @@ this.scaled= (this.units /this.factorValue).toInt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return factor
+                        return this.factor
 }
 
 
@@ -257,7 +257,7 @@ this.scaled= (this.units /this.factorValue).toInt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return factorValue
+                        return this.factorValue
 }
 
 

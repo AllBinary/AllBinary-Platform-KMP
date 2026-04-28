@@ -57,13 +57,13 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return RemoteHighScores.getInstance(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending, true)
+                        return RemoteHighScores.getInstancePreload(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending, true)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean, preload: Boolean)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstancePreload(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean, preload: Boolean)
+        //nullable = true from not(false or (false and false)) = true
 : HighScores{
     //var abeClientInformation = abeClientInformation
     //var softwareInformation = softwareInformation

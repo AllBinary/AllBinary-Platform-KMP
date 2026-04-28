@@ -138,7 +138,7 @@ this.finishLineId= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 
 
     
-                        if(raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellTypeFactory!!.getInstance(geographicCellType)))
+                        if(raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellTypeFactory!!.get(geographicCellType)))
                         
                                     {
                                     RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.track(cellPosition)
@@ -191,6 +191,20 @@ pathFindingInfo!!.addStartPathFindingNode(PathFindingNode(NullUtil.getInstance()
     //var pathFindingInfo = pathFindingInfo
     //var endGeographicMapCellPosition = endGeographicMapCellPosition
 pathFindingInfo!!.addEndPathFindingNode(PathFindingNode(NullUtil.getInstance()!!.NULL_OBJECT, endGeographicMapCellPosition))
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun getInstancePathFindingInfo(geographicMapInterface: BasicGeographicMap, graphArray: Array<IntArray?>)
+        //nullable = true from not(false or (false and false)) = true
+: PathFindingInfo{
+    //var geographicMapInterface = geographicMapInterface
+    //var graphArray = graphArray
+
+
+
+                            throw RuntimeException()
 }
 
 

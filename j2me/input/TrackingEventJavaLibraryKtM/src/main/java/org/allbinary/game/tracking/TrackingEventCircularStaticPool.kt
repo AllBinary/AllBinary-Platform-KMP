@@ -66,8 +66,8 @@ EVENT_POOL.init(TrackingEventFactory())
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun getInstance(layerInterface: AllBinaryLayer)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getNextInstance(layerInterface: AllBinaryLayer)
+        //nullable = true from not(false or (false and false)) = true
 : TrackingEvent{
 var layerInterface = layerInterface
 

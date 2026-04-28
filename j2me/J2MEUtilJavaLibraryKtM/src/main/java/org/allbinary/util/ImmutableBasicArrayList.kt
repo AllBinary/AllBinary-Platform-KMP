@@ -57,7 +57,7 @@ ForcedLogUtil.log(this.name, this)
 }
 
 
-    override fun add(index: Int, element: Any)
+    override fun addAt(index: Int, element: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index

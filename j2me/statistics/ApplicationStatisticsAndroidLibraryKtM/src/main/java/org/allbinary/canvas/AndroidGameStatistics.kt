@@ -131,7 +131,7 @@ totalTime= (totalTime /1000)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(super.toString(totalTime))
+stringBuffer!!.append(super.toStringAt(totalTime))
 
     
                         if(this.totalOnDraws > 0)

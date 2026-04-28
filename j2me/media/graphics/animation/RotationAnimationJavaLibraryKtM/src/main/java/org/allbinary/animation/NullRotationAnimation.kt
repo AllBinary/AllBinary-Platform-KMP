@@ -29,7 +29,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullRotationAnimation(angleInfo, CircularIndexUtil.getInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior)
+                        return NullRotationAnimation(angleInfo, CircularIndexUtil.createInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior)
 }
 
 
@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullRotationAnimation(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), animationBehavior)
+                        return NullRotationAnimation(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior)
 }
 
 

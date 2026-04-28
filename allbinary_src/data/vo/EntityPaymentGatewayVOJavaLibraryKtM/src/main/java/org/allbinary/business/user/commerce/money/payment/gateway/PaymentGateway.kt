@@ -127,12 +127,12 @@ var hashMap = hashMap
 
 this.storeName= hashMap!!.get(StoreFrontData.getInstance()!!.NAME.toString()) as String
 this.name= hashMap!!.get(PaymentGatewayData.NAME.toString()) as String
-this.enable= stringUtil!!.getInstance(hashMap!!.get(EntryData.getInstance()!!.ENABLE.toString()) as String)
-this.paymentMethod= stringUtil!!.getInstance(hashMap!!.get(PaymentData.METHOD.toString()) as String)
-this.mode= stringUtil!!.getInstance(hashMap!!.get(PaymentGatewayData.MODE.toString()) as String)
-this.testProtocol= stringUtil!!.getInstance(hashMap!!.get(PaymentGatewayData.TESTPROTOCOL.toString()) as String)
-this.testServer= stringUtil!!.getInstance(hashMap!!.get(PaymentGatewayData.TESTSERVER.toString()) as String)
-this.testPort= stringUtil!!.getInstance(hashMap!!.get(PaymentGatewayData.TESTPORT.toString()) as String)
+this.enable= stringUtil!!.getNonNull(hashMap!!.get(EntryData.getInstance()!!.ENABLE.toString()) as String)
+this.paymentMethod= stringUtil!!.getNonNull(hashMap!!.get(PaymentData.METHOD.toString()) as String)
+this.mode= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.MODE.toString()) as String)
+this.testProtocol= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTPROTOCOL.toString()) as String)
+this.testServer= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTSERVER.toString()) as String)
+this.testPort= stringUtil!!.getNonNull(hashMap!!.get(PaymentGatewayData.TESTPORT.toString()) as String)
 this.testPath= hashMap!!.get(PaymentGatewayData.TESTPATH.toString()) as String
 
     

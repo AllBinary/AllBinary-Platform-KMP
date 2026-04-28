@@ -137,7 +137,7 @@ imageData= bufferedImage!!.getImageData()
 
     var newHeight: Int = (imageData!!.height *percent /100).toInt()
 
-scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidth, newHeight, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWidth, newHeight, scale)
 }
 
 
@@ -150,7 +150,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, percent: Float, scale: Boolean)
+    open fun createBufferedImage2(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, percent: Float, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<org.eclipse.swt.graphics.Image?>{
     //var bufferedImageArray = bufferedImageArray
@@ -184,7 +184,7 @@ imageData= bufferedImage!!.getImageData()
 
     var newHeight: Int = (imageData!!.height *percent).toInt()
 
-scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidth, newHeight, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImage, newWidth, newHeight, scale)
 }
 
 
@@ -197,7 +197,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, width: Int, height: Int, scale: Boolean)
+    open fun createBufferedImage3(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, width: Int, height: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<org.eclipse.swt.graphics.Image?>{
     //var bufferedImageArray = bufferedImageArray
@@ -218,7 +218,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
                         for (index in 0 until size)
 
         {
-scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[index]!!, width, height, scale)
+scaledBufferedImageArray[index]= this.createBufferedImage5(bufferedImageArray[index]!!, width, height, scale)
 }
 
 
@@ -231,7 +231,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[ind
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int)
+    open fun createBufferedImage4(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
@@ -241,13 +241,13 @@ var newHeight = newHeight
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createBufferedImage(bufferedImage, newWidth, newHeight, true)
+                        return this.createBufferedImage5(bufferedImage, newWidth, newHeight, true)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int, scale: Boolean)
+    open fun createBufferedImage5(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
@@ -258,13 +258,13 @@ var newHeight = newHeight
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createBufferedImage(bufferedImage, newWidth, newHeight, scale, false)
+                        return this.createBufferedImage6(bufferedImage, newWidth, newHeight, scale, false)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
+    open fun createBufferedImage6(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage

@@ -34,7 +34,7 @@ interface HighScoresFactoryInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
+    open fun fetchHighScoresPreload(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 

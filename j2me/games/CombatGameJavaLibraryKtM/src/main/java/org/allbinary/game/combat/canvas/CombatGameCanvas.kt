@@ -67,18 +67,18 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 {
 DestroyEventCircularStaticPool.getInstance()!!.init(this)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, "Destroy Events")
+ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Destroy Events")
 }
 
 
                 @Throws(Exception::class)
             
-    override fun init(abeClientInformation: AbeClientInformationInterface)
+    override fun initApp(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
 this.CombatGameCanvas_init()
-super.init(abeClientInformation)
+super.initApp(abeClientInformation)
 }
 
 
@@ -87,7 +87,7 @@ super.init(abeClientInformation)
 {
     //var portion = portion
 DestroyedLayerProcessor.init()
-ProgressCanvasFactory.getInstance()!!.addPortion(portion, "Basic Processors")
+ProgressCanvasFactory.getInstance()!!.addNormalPortion(portion, "Basic Processors")
 
     var features: Features = Features.getInstance()!!
 

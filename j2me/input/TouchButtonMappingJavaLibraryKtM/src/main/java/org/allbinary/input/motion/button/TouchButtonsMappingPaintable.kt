@@ -102,7 +102,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
                         for (rowIndex in totalRows -1 downTo 0)
 
         {
-this.paintableTable[index]!![rowIndex]= TouchButton.create(BasicTouchInputFactory.getInstance()!!.NONE, TouchButtonBlankResource.getInstance(), commonButtons!!.NORMAL_BUTTON, cellPositionFactory!!.getInstance(index, rowIndex), this.touchButtonLocationHelper!!.getColumnsRemainderHalf(), this.touchButtonLocationHelper!!.getRowsRemainderHalf())
+this.paintableTable[index]!![rowIndex]= TouchButton.createButton(BasicTouchInputFactory.getInstance()!!.NONE, TouchButtonBlankResource.getInstance(), commonButtons!!.NORMAL_BUTTON, cellPositionFactory!!.getInstanceColRow(index, rowIndex), this.touchButtonLocationHelper!!.getColumnsRemainderHalf(), this.touchButtonLocationHelper!!.getRowsRemainderHalf())
 }
 
 }

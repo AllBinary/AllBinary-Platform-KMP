@@ -95,7 +95,7 @@ this.fire(message)
 }
 
 
-    private val TWO: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
+    private val TWO: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(2)!!
 
     private val FALSE: Boolean = BooleanFactory.getInstance()!!.FALSE
 

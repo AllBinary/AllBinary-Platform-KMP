@@ -64,7 +64,7 @@ super.paint(graphics)
     var textLine2Y: Int = (y +myFont!!.DEFAULT_CHAR_HEIGHT)
 
 this.keyvalueDrawString!!.paint(graphics, textLine2Y)
-this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
+this.getAnimationInterface()!!.paintXY(graphics, this.imageX, y)
 }
 
 

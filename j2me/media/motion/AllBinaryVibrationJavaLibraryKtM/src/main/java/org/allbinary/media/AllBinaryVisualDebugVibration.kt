@@ -63,7 +63,7 @@ this.timeDelayHelper!!.delay= duration
 var graphics = graphics
 
     
-                        if(this.timeDelayHelper!!.isTime())
+                        if(this.timeDelayHelper!!.isTimeTNT())
                         
                                     {
                                     this.timeDelayHelper!!.delay= Integer.MAX_VALUE

@@ -61,8 +61,8 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(vector: BasicArrayList, howMuch: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceList(vector: BasicArrayList, howMuch: Int)
+        //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var vector = vector
 var howMuch = howMuch
@@ -70,7 +70,7 @@ var howMuch = howMuch
     var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(vector)
 
 graphicsPipe!!.createMatrix()
-graphicsPipe!!.rotate(this.angleFactory!!.getInstance(getNextRandomAngle(howMuch)))
+graphicsPipe!!.rotateToAngle(this.angleFactory!!.getAt(getNextRandomAngle(howMuch)))
 
 
 

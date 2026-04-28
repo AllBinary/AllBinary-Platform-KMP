@@ -97,7 +97,7 @@ setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
 
-timeHelper!!.setStartTime()
+timeHelper!!.setStartTimeTNT()
 
     var capturedImageWorkerResultsEvent: CapturedImageWorkerResultsEvent = (this.capturedImageWorkerResultsEventVector!!.get(0) as CapturedImageWorkerResultsEvent)
 
@@ -107,7 +107,7 @@ timeHelper!!.setStartTime()
 CapturedImageInputOutput().
                             save(screenBufferedImage, capturedImageWorkerResultsEvent!!.getFrame())
 this.capturedImageWorkerResultsEventVector!!.remove(capturedImageWorkerResultsEvent)
-this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
 setRunning(false)
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)

@@ -33,7 +33,6 @@ import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.layer.unit.UnitWaypointBehavior
 import org.allbinary.game.media.graphics.geography.map.racetrack.PathFindingInfoFactory
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.media.audio.Sound
@@ -46,7 +45,6 @@ import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicM
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathGenerator
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class NoCacheWaypoint : WaypointBase
@@ -99,7 +97,7 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
                 @Throws(Exception::class)
             
-    override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
+    override fun getPathsListRunnable(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -235,7 +233,7 @@ customMapGenerator!!.copyMapIntoCustomMap()
 customMapArray[startGeographicMapCellPosition!!.getRow()]!![startGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getStartType()
 customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 
-    var pathFindingInfo: PathFindingInfo = PathFindingInfoFactory.getInstance()!!.getInstance(raceTrackGeographicMap, customMapArray)!!
+    var pathFindingInfo: PathFindingInfo = PathFindingInfoFactory.getInstance()!!.getInstancePathFindingInfo(raceTrackGeographicMap, customMapArray)!!
 
 
     var list: BasicArrayList = PathGenerator.getInstance()!!.getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2)!!

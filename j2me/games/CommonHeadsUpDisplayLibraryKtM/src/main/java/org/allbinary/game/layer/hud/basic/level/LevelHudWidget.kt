@@ -40,7 +40,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(maxlevel: Int, location: Int, direction: Int)
+    open fun createHud(maxlevel: Int, location: Int, direction: Int)
         //nullable = true from not(false or (false and false)) = true
 : LevelHudWidget{
 var maxlevel = maxlevel
@@ -83,7 +83,7 @@ var maxWidth = maxWidth
 
     var myFont: MyFont = MyFont.getInstance()!!
 
-this.primitiveLongUtil= PrimitiveLongUtil.create(1000)
+this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(1000)
 
     var LEVEL: String = "Lv "
 
@@ -169,7 +169,7 @@ this.update()
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paint(graphics, levelString, 0, levelString!!.size, levelNumberCharArray, 0, levelNumberTotalDigits, this.offset)
+super.paintDX(graphics, levelString, 0, levelString!!.size, levelNumberCharArray, 0, levelNumberTotalDigits, this.offset)
 }
 
 

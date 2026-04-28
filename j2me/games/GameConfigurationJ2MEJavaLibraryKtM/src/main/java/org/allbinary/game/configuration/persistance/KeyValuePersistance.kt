@@ -32,7 +32,6 @@ import java.io.DataOutputStream
 import java.util.Hashtable
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
@@ -60,13 +59,13 @@ protected constructor (recordId: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
-this.loadAll(abeClientInformation, 1)
+this.loadAllSize(abeClientInformation, 1)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
+    open fun loadAllSize(abeClientInformation: AbeClientInformationInterface, size: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -137,7 +136,7 @@ hashtable.put(name, value)
 }
 
 this.valueList!!.add(hashtable)
-this.idList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
+this.idList!!.add(smallIntegerSingletonFactory!!.getAt(id))
 
                                     }
                                 

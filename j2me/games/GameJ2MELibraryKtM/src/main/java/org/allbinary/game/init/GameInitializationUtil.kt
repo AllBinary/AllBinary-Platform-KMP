@@ -75,7 +75,7 @@ companion object {
 
 
     
-                        if(ChangedGameFeatureListener.getInstance()!!.isChanged(mainFeatureFactory!!.STATIC))
+                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(mainFeatureFactory!!.STATIC))
                         
                                     {
                                     
@@ -131,7 +131,7 @@ GameInitializedEventHandler.getInstance()!!.fireEvent(EVENT)
     //var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
 
     
-                        if(ChangedGameFeatureListener.getInstance()!!.isChanged(MainFeatureFactory.getInstance()!!.STATIC))
+                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(MainFeatureFactory.getInstance()!!.STATIC))
                         
                                     {
                                     

@@ -84,7 +84,7 @@ var ahealth = ahealth
 }
 
 
-    override fun heal()
+    override fun healMax()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setHealth(this.getMaxHealth())

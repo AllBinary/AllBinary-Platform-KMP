@@ -28,7 +28,8 @@
 
 open public class LockedUtil
             : Object
-         {
+        
+                , LockedUtilInterface {
         
 companion object {
             
@@ -52,7 +53,7 @@ companion object {
             {
             }            
         
-    open fun isLockedFeature()
+    open fun isLocked()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

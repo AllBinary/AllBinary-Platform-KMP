@@ -47,7 +47,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
+    open fun searchTotalPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
@@ -62,7 +62,7 @@ var totalPaths = totalPaths
 
                 @Throws(Exception::class)
             
-    open fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
+    open fun searchTotalPathN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList

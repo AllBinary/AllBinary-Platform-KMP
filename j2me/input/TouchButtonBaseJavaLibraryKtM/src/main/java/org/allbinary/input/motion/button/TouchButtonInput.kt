@@ -71,7 +71,7 @@ var inputToGameKeyMapping = inputToGameKeyMapping
             
     var gameKey: GameKey = inputToGameKeyMapping!!.getInstance(this.getId())!!
 
-this.gameKeyEvent= this.gameKeyEventFactory!!.getInstance(this, gameKey)
+this.gameKeyEvent= this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)
 } catch(e: Exception)
             {
 

@@ -139,7 +139,7 @@ Thread.sleep(keyActionScriptInputInterface!!.getTime())
     var toLong: Int = 0
 
 
-        while(!timeHelper!!.isTime() || toLong > 6000)
+        while(!timeHelper!!.isTimeTNT() || toLong > 6000)
         {
 toLong++
 Thread.sleep(50)

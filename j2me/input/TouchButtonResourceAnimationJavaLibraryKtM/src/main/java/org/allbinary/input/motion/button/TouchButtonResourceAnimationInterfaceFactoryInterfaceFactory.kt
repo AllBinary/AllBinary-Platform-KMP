@@ -46,7 +46,7 @@ open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory :
         
 companion object {
             
-    open fun create()
+    open fun createFactory()
         //nullable = true from not(false or (false and true)) = true
 : TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory{
 
@@ -75,13 +75,13 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
     //var level = level
-this.init(ImageCacheFactory.getInstance(), level)
+this.initImageCache(ImageCacheFactory.getInstance(), level)
 }
 
 
                 @Throws(Exception::class)
             
-    override fun init(imageCache: ImageCache, level: Int)
+    override fun initImageCache(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageCache = imageCache
@@ -141,31 +141,31 @@ progressCanvas!!.addPortion(portion, loadingString, index++)
     var touchButtonStrafeRightResource: TouchButtonResource = TouchButtonStrafeRightResource.getInstance()!!
 
 
-    var touchButtonBlankResourceImage: Image = imageCache!!.get(touchButtonBlankResource!!.RESOURCE)!!
+    var touchButtonBlankResourceImage: Image = imageCache!!.getWithKey(touchButtonBlankResource!!.RESOURCE)!!
 
 
-    var touchButtonGenericActionResourceImage: Image = imageCache!!.get(touchButtonGenericActionResource!!.RESOURCE)!!
+    var touchButtonGenericActionResourceImage: Image = imageCache!!.getWithKey(touchButtonGenericActionResource!!.RESOURCE)!!
 
 
-    var touchButtonStartResourceImage: Image = imageCache!!.get(touchButtonStartResource!!.RESOURCE)!!
+    var touchButtonStartResourceImage: Image = imageCache!!.getWithKey(touchButtonStartResource!!.RESOURCE)!!
 
 
-    var touchButtonUpResourceImage: Image = imageCache!!.get(touchButtonUpResource!!.RESOURCE)!!
+    var touchButtonUpResourceImage: Image = imageCache!!.getWithKey(touchButtonUpResource!!.RESOURCE)!!
 
 
-    var touchButtonDownResourceImage: Image = imageCache!!.get(touchButtonDownResource!!.RESOURCE)!!
+    var touchButtonDownResourceImage: Image = imageCache!!.getWithKey(touchButtonDownResource!!.RESOURCE)!!
 
 
-    var touchButtonTurnLeftResourceImage: Image = imageCache!!.get(touchButtonTurnLeftResource!!.RESOURCE)!!
+    var touchButtonTurnLeftResourceImage: Image = imageCache!!.getWithKey(touchButtonTurnLeftResource!!.RESOURCE)!!
 
 
-    var touchButtonTurnRightResourceImage: Image = imageCache!!.get(touchButtonTurnRightResource!!.RESOURCE)!!
+    var touchButtonTurnRightResourceImage: Image = imageCache!!.getWithKey(touchButtonTurnRightResource!!.RESOURCE)!!
 
 
-    var touchButtonStrafeLeftResourceImage: Image = imageCache!!.get(touchButtonStrafeLeftResource!!.RESOURCE)!!
+    var touchButtonStrafeLeftResourceImage: Image = imageCache!!.getWithKey(touchButtonStrafeLeftResource!!.RESOURCE)!!
 
 
-    var touchButtonStrafeRightResourceImage: Image = imageCache!!.get(touchButtonStrafeRightResource!!.RESOURCE)!!
+    var touchButtonStrafeRightResourceImage: Image = imageCache!!.getWithKey(touchButtonStrafeRightResource!!.RESOURCE)!!
 
 
     var nullAnimationFactory: NullAnimationFactory = NullAnimationFactory.getFactoryInstance()!!
@@ -175,7 +175,7 @@ progressCanvas!!.addPortion(portion, loadingString, index++)
                         if(OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!.isOverScan())
                         
                                     {
-                                    imageCache!!.get(TouchButtonStartResource.getInstance()!!.HINT)
+                                    imageCache!!.getWithKey(TouchButtonStartResource.getInstance()!!.HINT)
 
                                     }
                                 
@@ -185,38 +185,38 @@ progressCanvas!!.addPortion(portion, loadingString, index++)
 
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonBlankResourceImage, touchButtonBlankResource!!.RESOURCE)
-this.add(touchButtonBlankResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonBlankResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonBlankResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonBlankResourceImage, AnimationBehaviorFactory.getInstance()))
 this.add(touchButtonBlankResource!!.HINT, nullAnimationFactory)
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonGenericActionResourceImage, touchButtonGenericActionResource!!.RESOURCE)
-this.add(touchButtonGenericActionResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonGenericActionResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonGenericActionResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonGenericActionResourceImage, AnimationBehaviorFactory.getInstance()))
 this.add(touchButtonGenericActionResource!!.HINT, nullAnimationFactory)
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonStartResourceImage, touchButtonStartResource!!.RESOURCE)
-this.add(touchButtonStartResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonStartResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonStartResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonStartResourceImage, AnimationBehaviorFactory.getInstance()))
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonUpResourceImage, touchButtonUpResource!!.RESOURCE)
-this.add(touchButtonUpResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonUpResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonUpResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonUpResourceImage, AnimationBehaviorFactory.getInstance()))
 this.add(touchButtonUpResource!!.HINT, nullAnimationFactory)
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonDownResourceImage, touchButtonDownResource!!.RESOURCE)
-this.add(touchButtonDownResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonDownResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonDownResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonDownResourceImage, AnimationBehaviorFactory.getInstance()))
 this.add(touchButtonDownResource!!.HINT, nullAnimationFactory)
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonTurnLeftResourceImage, touchButtonTurnLeftResource!!.RESOURCE)
-this.add(touchButtonTurnLeftResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonTurnLeftResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonTurnLeftResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonTurnLeftResourceImage, AnimationBehaviorFactory.getInstance()))
 this.add(touchButtonTurnLeftResource!!.HINT, nullAnimationFactory)
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonTurnRightResourceImage, touchButtonTurnRightResource!!.RESOURCE)
-this.add(touchButtonTurnRightResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonTurnRightResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonTurnRightResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonTurnRightResourceImage, AnimationBehaviorFactory.getInstance()))
 this.add(touchButtonTurnRightResource!!.HINT, nullAnimationFactory)
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonStrafeLeftResourceImage, touchButtonStrafeLeftResource!!.RESOURCE)
-this.add(touchButtonStrafeLeftResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonStrafeLeftResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonStrafeLeftResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonStrafeLeftResourceImage, AnimationBehaviorFactory.getInstance()))
 this.add(touchButtonStrafeLeftResource!!.HINT, nullAnimationFactory)
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonStrafeRightResourceImage, touchButtonStrafeRightResource!!.RESOURCE)
-this.add(touchButtonStrafeRightResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.create(touchButtonStrafeRightResourceImage, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonStrafeRightResource!!.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonStrafeRightResourceImage, AnimationBehaviorFactory.getInstance()))
 this.add(touchButtonStrafeRightResource!!.HINT, nullAnimationFactory)
 
     
@@ -224,9 +224,9 @@ this.add(touchButtonStrafeRightResource!!.HINT, nullAnimationFactory)
                         
                                     {
                                     
-    var touchButtonStartHintResource: Image = imageCache!!.get(TouchButtonStartResource.getInstance()!!.HINT)!!
+    var touchButtonStartHintResource: Image = imageCache!!.getWithKey(TouchButtonStartResource.getInstance()!!.HINT)!!
 
-this.add(touchButtonStartResource!!.HINT, OneRowSpriteIndexedAnimationFactory.create(touchButtonStartHintResource, AnimationBehaviorFactory.getInstance()))
+this.add(touchButtonStartResource!!.HINT, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonStartHintResource, AnimationBehaviorFactory.getInstance()))
 
                                     }
                                 

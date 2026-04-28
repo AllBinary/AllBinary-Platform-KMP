@@ -46,13 +46,13 @@ this.image= image
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 var x = x
 var y = y
-super.paint(graphics, x, y)
+super.paintXY(graphics, x, y)
 
     var adjustedCostY: Int = this.image.getHeight() -this.myFont!!.DEFAULT_CHAR_HEIGHT
 

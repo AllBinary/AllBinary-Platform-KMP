@@ -67,8 +67,8 @@ EVENT_POOL.init(DestroyEventFactory(combatGameCanvas))
 
                 @Throws(Exception::class)
             
-    open fun getInstance(layerInterface: AllBinaryLayer)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceForLayer(layerInterface: AllBinaryLayer)
+        //nullable = true from not(false or (false and false)) = true
 : DestroyedEvent{
 var layerInterface = layerInterface
 

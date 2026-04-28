@@ -55,7 +55,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun scale(images: Array<Image?>, width: Int, height: Int)
+    open fun scaleArray(images: Array<Image?>, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
     //var images = images
@@ -91,7 +91,7 @@ scaledImages[index]= this.scale(images[index]!!, width, height)
     //var width = width
     //var height = height
 
-    var scaledImage: Image = ImageCopyUtil.getInstance()!!.createImage(image, width, height)!!
+    var scaledImage: Image = ImageCopyUtil.getInstance()!!.createImageWH(image, width, height, true)!!
 
 
 

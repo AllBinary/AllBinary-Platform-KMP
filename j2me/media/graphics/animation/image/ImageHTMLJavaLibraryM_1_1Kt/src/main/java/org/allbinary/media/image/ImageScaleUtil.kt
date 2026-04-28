@@ -26,9 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
-import org.allbinary.graphics.Anchor
 import org.allbinary.image.ImageCache
-import org.allbinary.logic.communication.log.PreLogUtil
 import org.microemu.device.playn.PlaynImmutableImage
 import org.microemu.device.playn.PlaynMutableImage
 import playn.core.CanvasImage
@@ -62,7 +60,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
+    open fun createImage2(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -76,13 +74,13 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createImage(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, true)
+                        return this.createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, true)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
+    open fun createImage3(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -121,20 +119,20 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createImage(originalImage, scaleX, scaleY)
+                        return this.createImageInternal(originalImage, scaleX, scaleY)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun createImage(originalImage: Image, scaleX: Float, scaleY: Float)
+    open fun createImageInternal(originalImage: Image, scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
     //var scaleX = scaleX
     //var scaleY = scaleY
 
-    var image: Image = ImageCreationUtil.getInstance()!!.getInstance((originalImage!!.getWidth() *scaleX).toInt(), (originalImage!!.getHeight() *scaleY).toInt())!!
+    var image: Image = ImageCreationUtil.getInstance()!!.createImageWH((originalImage!!.getWidth() *scaleX).toInt(), (originalImage!!.getHeight() *scaleY).toInt())!!
 
 
     

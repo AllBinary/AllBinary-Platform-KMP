@@ -51,7 +51,7 @@ open public class PacePatrolAIFactory
 var hashtable = hashtable
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
-hashtable.put(BasePatrolAI.MAX_DISTANCE, SmallIntegerSingletonFactory.getInstance()!!.getInstance(220))
+hashtable.put(BasePatrolAI.MAX_DISTANCE, SmallIntegerSingletonFactory.getInstance()!!.getAt(220))
 
 
 

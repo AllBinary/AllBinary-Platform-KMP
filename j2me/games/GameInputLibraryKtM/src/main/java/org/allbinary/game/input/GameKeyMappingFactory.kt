@@ -54,35 +54,35 @@ private constructor ()
 
     var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
 
-this.set(gameKeyFactory!!.NONE)
-this.set(gameKeyFactory!!.UP)
-this.set(gameKeyFactory!!.DOWN)
-this.set(gameKeyFactory!!.LEFT)
-this.set(gameKeyFactory!!.RIGHT)
-this.set(gameKeyFactory!!.KEY_POUND)
-this.set(gameKeyFactory!!.KEY_STAR)
-this.set(gameKeyFactory!!.KEY_NUM0)
-this.set(gameKeyFactory!!.KEY_NUM1)
-this.set(gameKeyFactory!!.KEY_NUM2)
-this.set(gameKeyFactory!!.KEY_NUM3)
-this.set(gameKeyFactory!!.KEY_NUM4)
-this.set(gameKeyFactory!!.KEY_NUM5)
-this.set(gameKeyFactory!!.KEY_NUM6)
-this.set(gameKeyFactory!!.KEY_NUM7)
-this.set(gameKeyFactory!!.KEY_NUM8)
-this.set(gameKeyFactory!!.KEY_NUM9)
-this.set(gameKeyFactory!!.GAME_A)
-this.set(gameKeyFactory!!.GAME_B)
-this.set(gameKeyFactory!!.GAME_C)
-this.set(gameKeyFactory!!.GAME_D)
-this.set(gameKeyFactory!!.FIRE)
-this.set(gameKeyFactory!!.LEVEL_DOWN)
-this.set(gameKeyFactory!!.LEVEL_UP)
+this.setGameKey(gameKeyFactory!!.NONE)
+this.setGameKey(gameKeyFactory!!.UP)
+this.setGameKey(gameKeyFactory!!.DOWN)
+this.setGameKey(gameKeyFactory!!.LEFT)
+this.setGameKey(gameKeyFactory!!.RIGHT)
+this.setGameKey(gameKeyFactory!!.KEY_POUND)
+this.setGameKey(gameKeyFactory!!.KEY_STAR)
+this.setGameKey(gameKeyFactory!!.KEY_NUM0)
+this.setGameKey(gameKeyFactory!!.KEY_NUM1)
+this.setGameKey(gameKeyFactory!!.KEY_NUM2)
+this.setGameKey(gameKeyFactory!!.KEY_NUM3)
+this.setGameKey(gameKeyFactory!!.KEY_NUM4)
+this.setGameKey(gameKeyFactory!!.KEY_NUM5)
+this.setGameKey(gameKeyFactory!!.KEY_NUM6)
+this.setGameKey(gameKeyFactory!!.KEY_NUM7)
+this.setGameKey(gameKeyFactory!!.KEY_NUM8)
+this.setGameKey(gameKeyFactory!!.KEY_NUM9)
+this.setGameKey(gameKeyFactory!!.GAME_A)
+this.setGameKey(gameKeyFactory!!.GAME_B)
+this.setGameKey(gameKeyFactory!!.GAME_C)
+this.setGameKey(gameKeyFactory!!.GAME_D)
+this.setGameKey(gameKeyFactory!!.FIRE)
+this.setGameKey(gameKeyFactory!!.LEVEL_DOWN)
+this.setGameKey(gameKeyFactory!!.LEVEL_UP)
 }
 
 
-    open fun getInstance(key: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getGameKey(key: Int)
+        //nullable = true from not(false or (false and false)) = true
 : GameKey{
 var key = key
 
@@ -93,7 +93,7 @@ var key = key
 }
 
 
-    open fun set(gameKey: GameKey)
+    open fun setGameKey(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKey = gameKey

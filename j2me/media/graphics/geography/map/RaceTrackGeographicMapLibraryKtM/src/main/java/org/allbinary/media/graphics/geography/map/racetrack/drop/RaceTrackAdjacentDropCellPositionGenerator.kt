@@ -88,10 +88,10 @@ private constructor (){
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!
 
-this.surroundingCellPositions[0]= geographicMapCellPositionFactory!!.getInstance(column, row -1)
-this.surroundingCellPositions[1]= geographicMapCellPositionFactory!!.getInstance(column, row +1)
-this.surroundingCellPositions[2]= geographicMapCellPositionFactory!!.getInstance(column -1, row)
-this.surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getInstance(column +1, row)
+this.surroundingCellPositions[0]= geographicMapCellPositionFactory!!.getAt(column, row -1)
+this.surroundingCellPositions[1]= geographicMapCellPositionFactory!!.getAt(column, row +1)
+this.surroundingCellPositions[2]= geographicMapCellPositionFactory!!.getAt(column -1, row)
+this.surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getAt(column +1, row)
 
     var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = this.raceTrackGeographicMap as BaseRaceTrackGeographicMap
 
@@ -222,7 +222,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
     var z: Int = point.getZ()!!
 
 
-    var layerInterface: AllBinaryLayer = RaceTrackAdjacentDropLayerFactory.getInstance()!!.getRandomInstance()!!.getInstance(hashtable, x, y, z)!!
+    var layerInterface: AllBinaryLayer = RaceTrackAdjacentDropLayerFactory.getInstance()!!.getRandomInstance()!!.getNextInstance(hashtable, x, y, z)!!
 
 
     var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = this.raceTrackGeographicMap as BaseRaceTrackGeographicMap
@@ -269,7 +269,7 @@ geographicMapCellType= this.raceTrackGeographicMap!!.getCellTypeAt(list.get(inde
                                 
 }
 
-dropCellPositionHistory!!.add(list, layerInterface)
+dropCellPositionHistory!!.addAll(list, layerInterface)
 allBinaryLayerManager!!.append(layerInterface)
 
                                     }

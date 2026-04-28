@@ -118,7 +118,7 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!
 
 
-    var cellPosition: CellPosition = geographicMapCellPositionFactory!!.getInstance(column, row)!!
+    var cellPosition: CellPosition = geographicMapCellPositionFactory!!.getAt(column, row)!!
 
 
     

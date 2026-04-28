@@ -142,7 +142,7 @@ this.userName= UserName(userHashMap).
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
-    var passwordString: String = stringUtil!!.getInstance(userHashMap!!.get(UserData.PASSWORD) as String)!!
+    var passwordString: String = stringUtil!!.getNonNull(userHashMap!!.get(UserData.PASSWORD) as String)!!
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
@@ -152,39 +152,39 @@ this.userName= UserName(userHashMap).
                         if(stringValidationUtil!!.isEmpty(this.userName) && stringValidationUtil!!.isEmpty(passwordString))
                         
                                     {
-                                    this.userName= stringUtil!!.getInstance(userHashMap!!.get(WeblisketSessionData.REMOVABLEUSERNAME) as String)
-passwordString= stringUtil!!.getInstance(userHashMap!!.get(WeblisketSessionData.REMOVABLEPASSWORD) as String)
+                                    this.userName= stringUtil!!.getNonNull(userHashMap!!.get(WeblisketSessionData.REMOVABLEUSERNAME) as String)
+passwordString= stringUtil!!.getNonNull(userHashMap!!.get(WeblisketSessionData.REMOVABLEPASSWORD) as String)
 
                                     }
                                 
 
-    var encryption: String = stringUtil!!.getInstance(userHashMap!!.get(EntryData.getInstance()!!.ENCRYPTION) as String)!!
+    var encryption: String = stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!.ENCRYPTION) as String)!!
 
 
-    var secret: String = stringUtil!!.getInstance(userHashMap!!.get(UserData.SECRET) as String)!!
+    var secret: String = stringUtil!!.getNonNull(userHashMap!!.get(UserData.SECRET) as String)!!
 
 this.password= Password(passwordString)
-this.prefixName= stringUtil!!.getInstance(userHashMap!!.get(UserData.PREFIXNAME) as String)
-this.firstName= stringUtil!!.getInstance(userHashMap!!.get(UserData.FIRSTNAME) as String)
-this.lastName= stringUtil!!.getInstance(userHashMap!!.get(UserData.LASTNAME) as String)
-this.middleName= stringUtil!!.getInstance(userHashMap!!.get(UserData.MIDDLENAME) as String)
-this.suffixName= stringUtil!!.getInstance(userHashMap!!.get(UserData.SUFFIXNAME) as String)
-this.company= stringUtil!!.getInstance(userHashMap!!.get(UserData.COMPANY) as String)
-this.positionAtCompany= stringUtil!!.getInstance(userHashMap!!.get(UserData.POSITIONATCOMPANY) as String)
-this.mainEmail= stringUtil!!.getInstance(userHashMap!!.get(UserData.MAINEMAIL) as String)
-this.secondaryEmail= stringUtil!!.getInstance(userHashMap!!.get(UserData.SECONDARYEMAIL) as String)
-this.homePhone= stringUtil!!.getInstance(userHashMap!!.get(UserData.HOMEPHONE) as String)
-this.cellPhone= stringUtil!!.getInstance(userHashMap!!.get(UserData.CELLPHONE) as String)
-this.workPhone= stringUtil!!.getInstance(userHashMap!!.get(UserData.WORKPHONE) as String)
-this.otherContact= stringUtil!!.getInstance(userHashMap!!.get(UserData.OTHERCONTACT) as String)
-this.electronicDevice= stringUtil!!.getInstance(userHashMap!!.get(UserData.ELECTRONICDEVICE) as String)
-this.fax= stringUtil!!.getInstance(userHashMap!!.get(UserData.FAX) as String)
+this.prefixName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.PREFIXNAME) as String)
+this.firstName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.FIRSTNAME) as String)
+this.lastName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.LASTNAME) as String)
+this.middleName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.MIDDLENAME) as String)
+this.suffixName= stringUtil!!.getNonNull(userHashMap!!.get(UserData.SUFFIXNAME) as String)
+this.company= stringUtil!!.getNonNull(userHashMap!!.get(UserData.COMPANY) as String)
+this.positionAtCompany= stringUtil!!.getNonNull(userHashMap!!.get(UserData.POSITIONATCOMPANY) as String)
+this.mainEmail= stringUtil!!.getNonNull(userHashMap!!.get(UserData.MAINEMAIL) as String)
+this.secondaryEmail= stringUtil!!.getNonNull(userHashMap!!.get(UserData.SECONDARYEMAIL) as String)
+this.homePhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.HOMEPHONE) as String)
+this.cellPhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.CELLPHONE) as String)
+this.workPhone= stringUtil!!.getNonNull(userHashMap!!.get(UserData.WORKPHONE) as String)
+this.otherContact= stringUtil!!.getNonNull(userHashMap!!.get(UserData.OTHERCONTACT) as String)
+this.electronicDevice= stringUtil!!.getNonNull(userHashMap!!.get(UserData.ELECTRONICDEVICE) as String)
+this.fax= stringUtil!!.getNonNull(userHashMap!!.get(UserData.FAX) as String)
 this.role= UserRoleB.getRole(userHashMap!!.get(UserRoleData.NAME.toString()) as String)
-this.permissions= stringUtil!!.getInstance(userHashMap!!.get(UserData.PERMISSIONS) as String)
+this.permissions= stringUtil!!.getNonNull(userHashMap!!.get(UserData.PERMISSIONS) as String)
 
     
                         if(!stringValidationUtil!!.isEmpty(this.permissions) && this.permissions.compareTo(StoreFrontData.getInstance()!!.NAME) == 0)
-                        this.permissions= stringUtil!!.getInstance(userHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String)
+                        this.permissions= stringUtil!!.getNonNull(userHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String)
                              else 
     
                         if(this.permissions == 
@@ -196,7 +196,7 @@ this.permissions= stringUtil!!.getInstance(userHashMap!!.get(UserData.PERMISSION
 
                                     }
                                 
-this.enable= stringUtil!!.getInstance(userHashMap!!.get(EntryData.getInstance()!!.ENABLE) as String)
+this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!.ENABLE) as String)
 }
 
 

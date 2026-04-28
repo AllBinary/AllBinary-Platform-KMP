@@ -135,7 +135,7 @@ onDemandResources= this.onDemandResourcesFactory!!.remove(onDemandIndex)
                         if(onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES)
                         
                                     {
-                                    index= onDemandResources!!.init(imageCache, this.resourceAnimationInterfaceFactoryInterfaceFactory, portion, loadingString, index)
+                                    index= onDemandResources!!.initAt(imageCache, this.resourceAnimationInterfaceFactoryInterfaceFactory, portion, loadingString, index)
 
                                     }
                                 
@@ -183,7 +183,7 @@ onDemandResources= this.onDemandResourcesFactory!!.remove(onDemandArray[onDemand
                         if(onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES)
                         
                                     {
-                                    index= onDemandResources!!.init(imageCache, this.resourceAnimationInterfaceFactoryInterfaceFactory, portion, loadingString, index)
+                                    index= onDemandResources!!.initAt(imageCache, this.resourceAnimationInterfaceFactoryInterfaceFactory, portion, loadingString, index)
 
                                     }
                                 

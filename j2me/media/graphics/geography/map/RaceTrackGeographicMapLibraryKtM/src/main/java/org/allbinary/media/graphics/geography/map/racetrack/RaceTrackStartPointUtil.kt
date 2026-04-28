@@ -63,7 +63,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.getInstance()!!.getInstance0(point.getX(), point.getY() +geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHalfCellHeight())
+                        return PointFactory.getInstance()!!.createXY(point.getX(), point.getY() +geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHalfCellHeight())
 }
 
 

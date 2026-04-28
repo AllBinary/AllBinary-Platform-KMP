@@ -72,7 +72,7 @@ companion object {
 var image = image
 var name = name
 this.timeDelayHelper!!.setStartTime()
-this.waitFor(image, name, this.timeDelayHelper)
+this.waitForATime(image, name, this.timeDelayHelper)
 }
 
 
@@ -122,7 +122,7 @@ var timeDelayHelper = timeDelayHelper
 
                 @Throws(Exception::class)
             
-    open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
+    open fun waitForATime(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
 {
 var image = image
@@ -175,7 +175,7 @@ PreLogUtil.put("Total: " +size, this, "waitForAll")
                         for (index in 0 until size)
 
         {
-this.waitFor(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
+this.waitForATime(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
 }
 
 }

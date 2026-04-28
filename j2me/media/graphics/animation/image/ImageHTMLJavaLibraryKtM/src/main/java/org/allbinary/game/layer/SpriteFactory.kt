@@ -34,7 +34,8 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class SpriteFactory
             : Object
-         {
+        
+                , SpriteFactoryInterface {
         
 companion object {
             
@@ -60,7 +61,7 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    open fun create(image: Image, frameWidth: Int, frameHeight: Int)
+    open fun createSprite(image: Image, frameWidth: Int, frameHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Sprite{
     //var image = image

@@ -33,7 +33,7 @@ open public class AdjustedCircleAnimation : CircleAnimation {
         
 companion object {
             
-    open fun create(width: Int, height: Int, xAdjustment: Int, yAdjustment: Int, basicColor: BasicColor)
+    open fun createAnimation(width: Int, height: Int, xAdjustment: Int, yAdjustment: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : AdjustedCircleAnimation{
     //var width = width
@@ -44,7 +44,7 @@ companion object {
 
     var adjustedCircleAnimation: AdjustedCircleAnimation = AdjustedCircleAnimation(width, height, basicColor)
 
-adjustedCircleAnimation!!.init(xAdjustment, yAdjustment)
+adjustedCircleAnimation!!.initXY(xAdjustment, yAdjustment)
 
 
 
@@ -90,7 +90,7 @@ public constructor (width: Int, height: Int, basicColor: BasicColor)
 }
 
 
-    open fun init(xAdjustment: Int, yAdjustment: Int)
+    open fun initXY(xAdjustment: Int, yAdjustment: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var xAdjustment = xAdjustment
@@ -126,7 +126,7 @@ this.yAdjustment= this.xAdjustment
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

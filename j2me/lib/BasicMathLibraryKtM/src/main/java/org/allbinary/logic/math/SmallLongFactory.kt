@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return SmallLongFactory.instance
 }
 
 
@@ -51,9 +51,9 @@ companion object {
 
     val POSITIVE_MAX: Int = 0x2D1
 
-    private val INTEGER_ARRAY: Array<Long?> = arrayOfNulls(NEGATIVE_MAX +POSITIVE_MAX)
+    private val INTEGER_ARRAY: Array<Long?> = arrayOfNulls(this.NEGATIVE_MAX +this.POSITIVE_MAX)
 
-    private val STRING_ARRAY: Array<String?> = arrayOfNulls(NEGATIVE_MAX +POSITIVE_MAX)
+    private val STRING_ARRAY: Array<String?> = arrayOfNulls(this.NEGATIVE_MAX +this.POSITIVE_MAX)
 
     var MIN: Int = 0
 
@@ -61,7 +61,7 @@ companion object {
 
     var lastNegativeMin: Int = 0
 
-    open fun init(value: Int, negativeValue: Int)
+    open fun initWithRange(value: Int, negativeValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -189,7 +189,7 @@ var index = index
 : String{
 var index = index
 
-    var i: Int = index +NEGATIVE_MAX
+    var i: Int = index +this.NEGATIVE_MAX
 
 
     

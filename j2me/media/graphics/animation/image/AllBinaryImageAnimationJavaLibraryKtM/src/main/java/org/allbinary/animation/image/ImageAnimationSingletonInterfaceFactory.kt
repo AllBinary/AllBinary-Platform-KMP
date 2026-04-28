@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import javax.microedition.lcdui.Image
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.SingletonAnimationInterfaceFactory
@@ -35,7 +34,7 @@ open public class ImageAnimationSingletonInterfaceFactory : SingletonAnimationIn
         
 public constructor (animationInterface: Animation, width: Int, height: Int)                        
 
-                            : super(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
+                            : super(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstanceWH(width, height, animationInterface), AnimationBehavior.getInstance())){
     //var animationInterface = animationInterface
     //var width = width
     //var height = height

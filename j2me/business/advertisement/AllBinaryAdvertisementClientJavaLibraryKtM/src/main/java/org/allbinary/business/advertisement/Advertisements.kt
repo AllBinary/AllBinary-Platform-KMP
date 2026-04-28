@@ -91,7 +91,7 @@ advertisementProcessorInterface!!.start()
 {
 
     
-                        if(LockedUtil.getInstance()!!.isLockedFeature())
+                        if(LockedUtil.getInstance()!!.isLocked())
                         
                                     {
                                     

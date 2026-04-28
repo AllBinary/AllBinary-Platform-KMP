@@ -88,7 +88,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         
                                     {
                                     ownerLayerInterface!!.setPosition(displayInfo!!.getLastWidth() -width, y, ownerLayerInterface!!.getZP())
-velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
+velocityProperties!!.getVelocityYBasicDecimalP()!!.setint(0)
 
                                     }
                                 
@@ -98,7 +98,7 @@ velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
                         
                                     {
                                     ownerLayerInterface!!.setPosition(x, displayInfo!!.getLastHeight() -height, ownerLayerInterface!!.getZP())
-velocityProperties!!.getVelocityXBasicDecimalP()!!.set(0)
+velocityProperties!!.getVelocityXBasicDecimalP()!!.setint(0)
 
                                     }
                                 
@@ -108,7 +108,7 @@ velocityProperties!!.getVelocityXBasicDecimalP()!!.set(0)
                         
                                     {
                                     ownerLayerInterface!!.setPosition(0, y, ownerLayerInterface!!.getZP())
-velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
+velocityProperties!!.getVelocityYBasicDecimalP()!!.setint(0)
 
                                     }
                                 
@@ -118,7 +118,7 @@ velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
                         
                                     {
                                     ownerLayerInterface!!.setPosition(x, 0, ownerLayerInterface!!.getZP())
-velocityProperties!!.getVelocityXBasicDecimalP()!!.set(0)
+velocityProperties!!.getVelocityXBasicDecimalP()!!.setint(0)
 
                                     }
                                 

@@ -134,16 +134,16 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getString(graphicsFeature)
+                        return getStringForFeature(graphicsFeature)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun getString(graphicsFeature: GraphicsFeature)
+    open fun getStringForFeature(graphicsFeature: GraphicsFeature)
         //nullable = true from not(false or (false and false)) = true
 : String{
-var graphicsFeature = graphicsFeature
+    //var graphicsFeature = graphicsFeature
 
     var stringBuffer: StringMaker = StringMaker()
 

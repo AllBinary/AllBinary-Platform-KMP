@@ -71,7 +71,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         
                                     {
                                     
-    var size: Int = GroupLayerManagerListener.getInstance()!!.getGroupSize(layerInterface)!!
+    var size: Int = GroupLayerManagerListener.getInstance()!!.getGroupSizeFromInterface(layerInterface)!!
 
 
     

@@ -108,7 +108,7 @@ this.list.add(SPECIAL_BUTTON_THREE)
 this.list.add(SPECIAL_BUTTON_ONE)
 this.list.add(SPECIAL_BUTTON_FIVE)
 this.list.add(SPECIAL_BUTTON_SIX)
-this.updateAll(this.list, inputToGameKeyMapping)
+this.updateAllList(this.list, inputToGameKeyMapping)
 CancelTouchButtonInputFactory.getInstance()
 
                                     }
@@ -120,11 +120,11 @@ CancelTouchButtonInputFactory.getInstance()
         //nullable = true from not(false or (false and false)) = true
 {
 var inputToGameKeyMapping = inputToGameKeyMapping
-this.updateAll(this.getList(), inputToGameKeyMapping)
+this.updateAllList(this.getList(), inputToGameKeyMapping)
 }
 
 
-    open fun updateAll(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
+    open fun updateAllList(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list

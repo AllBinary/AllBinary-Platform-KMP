@@ -260,7 +260,7 @@ graphics.setColor(basicColor!!.toInt())
     var biggestHeight: Int = 0
 
 
-    var bounds: Rectangle = Rectangle(PointFactory.getInstance()!!.getInstance0(0, 0), cellSize, cellSize)
+    var bounds: Rectangle = Rectangle(PointFactory.getInstance()!!.createXY(0, 0), cellSize, cellSize)
 
 
     var x: Int= 0

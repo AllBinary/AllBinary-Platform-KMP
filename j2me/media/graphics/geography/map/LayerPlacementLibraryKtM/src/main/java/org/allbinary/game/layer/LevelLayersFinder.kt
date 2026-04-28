@@ -83,7 +83,7 @@ var hashtable = hashtable
     var integer: Integer = layerHashtable!!.get(Layer.ID as Object) as Integer
 
 
-    var cachedInteger: Integer = smallIntegerSingletonFactory!!.getInstance(integer.toInt())!!
+    var cachedInteger: Integer = smallIntegerSingletonFactory!!.getAt(integer.toInt())!!
 
 
     

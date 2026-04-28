@@ -54,8 +54,8 @@ companion object {
         
     private val angleIncrementInfo: Array<AngleIncrementInfo?> = arrayOfNulls(AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt())
 
-    open fun getInstance(angleIncrement: Short)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getAt(angleIncrement: Short)
+        //nullable = true from not(false or (false and false)) = true
 : AngleIncrementInfo{
 var angleIncrement = angleIncrement
 

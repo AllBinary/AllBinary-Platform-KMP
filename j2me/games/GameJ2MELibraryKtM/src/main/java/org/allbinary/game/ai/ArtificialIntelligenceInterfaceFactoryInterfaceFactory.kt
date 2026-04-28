@@ -67,10 +67,10 @@ list= BasicArrayListD()
 }
 
 
-    open fun getInstance(hashtable: Hashtable<Any, Any>)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceFromCollection(hashtable: Hashtable<Any, Any>)
+        //nullable = true from not(false or (false and false)) = true
 : ArtificialIntelligenceInterfaceFactoryInterface{
-var hashtable = hashtable
+    //var hashtable = hashtable
 
     var typeInteger: Integer = hashtable.get(BasicAI.ID as Object) as Integer
 
@@ -91,7 +91,7 @@ var hashtable = hashtable
     open fun add(artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-var artificialIntelligenceInterfaceFactoryInterface = artificialIntelligenceInterfaceFactoryInterface
+    //var artificialIntelligenceInterfaceFactoryInterface = artificialIntelligenceInterfaceFactoryInterface
 this.list.add(artificialIntelligenceInterfaceFactoryInterface)
 }
 

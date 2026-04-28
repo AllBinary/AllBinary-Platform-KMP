@@ -445,8 +445,8 @@ this.setRunning(true)
 
         while(this.isRunning())
         {
-timeHelper!!.setStartTime()
-this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+timeHelper!!.setStartTimeTNT()
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
 this.updateModules()
 break;
 

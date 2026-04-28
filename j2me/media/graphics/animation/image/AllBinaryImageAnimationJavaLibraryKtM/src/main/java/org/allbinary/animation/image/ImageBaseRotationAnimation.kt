@@ -41,7 +41,7 @@ open public class ImageBaseRotationAnimation : RotationAnimation {
     private val image: Image
 public constructor (image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, CircularIndexUtil.getInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
+                            : super(angleInfo, CircularIndexUtil.createInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
     //var image = image
     //var angleInfo = angleInfo
     //var totalAngle = totalAngle
@@ -87,7 +87,7 @@ var sequence = sequence
 
     var anchor: Int = Anchor.TOP_LEFT
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -122,7 +122,7 @@ graphics.drawImage(this.image, x, y, anchor)
     open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
-DisposalUtil.getInstance()!!.dispose(this.image)
+DisposalUtil.getInstance()!!.disposeImage(this.image)
 }
 
 
@@ -131,7 +131,7 @@ DisposalUtil.getInstance()!!.dispose(this.image)
     override fun finalize()
         //nullable = true from not(false or (false and true)) = true
 {
-DisposalUtil.getInstance()!!.dispose(this.image)
+DisposalUtil.getInstance()!!.disposeImage(this.image)
 }
 
 

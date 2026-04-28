@@ -34,7 +34,6 @@ import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.input.motion.gesture.MotionGestureInput
 import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
 import org.allbinary.input.motion.gesture.observer.MotionGestureEvent
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.math.RectangleCollisionUtil
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
@@ -105,7 +104,7 @@ gameCanvas!!.toggleMenu()
 
                 @Throws(Exception::class)
             
-    override fun processInput()
+    override fun processInputList()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -268,7 +267,7 @@ motionGestureEventList!!.clear()
                                     {
                                     
     
-                        if(this.clickTimeHelper!!.isTime())
+                        if(this.clickTimeHelper!!.isTimeTNT())
                         
                                     {
                                     

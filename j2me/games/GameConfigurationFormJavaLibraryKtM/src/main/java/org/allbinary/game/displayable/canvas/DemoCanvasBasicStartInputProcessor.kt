@@ -50,7 +50,7 @@ var gameCanvas = gameCanvas
 
                 @Throws(Exception::class)
             
-    override fun processInput()
+    override fun processInputList()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

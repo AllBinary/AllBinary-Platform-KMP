@@ -72,7 +72,7 @@ companion object {
 
     private val RELEASED_AND_NOT_FIRED: String = "rel & not fired"
 
-    open fun append(append: String, touchButtonInput: TouchButtonInput)
+    open fun appendTouchButtonInput(append: String, touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var append = append
@@ -123,7 +123,7 @@ this.append(this.RELEASED_AND_NOT_FIRED)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(this.RELEASED_AND_FIRED, touchButtonInput)
+this.appendTouchButtonInput(this.RELEASED_AND_FIRED, touchButtonInput)
 }
 
 
@@ -131,7 +131,7 @@ this.append(this.RELEASED_AND_FIRED, touchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(this.RELEASED_AND_FIRED_2, touchButtonInput)
+this.appendTouchButtonInput(this.RELEASED_AND_FIRED_2, touchButtonInput)
 }
 
 
@@ -139,7 +139,7 @@ this.append(this.RELEASED_AND_FIRED_2, touchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(this.ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
+this.appendTouchButtonInput(this.ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
 }
 
 
@@ -147,7 +147,7 @@ this.append(this.ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(this.PRESSED_AND_FIRED, touchButtonInput)
+this.appendTouchButtonInput(this.PRESSED_AND_FIRED, touchButtonInput)
 }
 
 
@@ -155,16 +155,16 @@ this.append(this.PRESSED_AND_FIRED, touchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
-this.append(this.PRESSED_AND_NOT_FIRED, touchButtonInput)
+this.appendTouchButtonInput(this.PRESSED_AND_NOT_FIRED, touchButtonInput)
 }
 
 
-    override fun remove(index: Int)
+    override fun removeAt(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : TouchButtonInput{
 var index = index
 
-    var touchButtonInput: TouchButtonInput = super.remove(index)!!
+    var touchButtonInput: TouchButtonInput = super.removeAt(index)!!
 
 this.listString= list.toString()
 this.string= StringMaker().

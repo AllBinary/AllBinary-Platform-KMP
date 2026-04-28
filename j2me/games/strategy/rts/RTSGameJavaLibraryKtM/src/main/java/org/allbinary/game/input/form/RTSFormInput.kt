@@ -109,7 +109,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getIn
 
                 @Throws(Exception::class)
             
-    open fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
+    open fun processAtPoint(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -153,7 +153,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getIn
 
                                     }
                                 
-this.process(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
+this.processGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
 }
 
 
@@ -169,7 +169,7 @@ this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
 
                 @Throws(Exception::class)
             
-    open fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -226,7 +226,7 @@ this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
 
                                     }
                                 
-this.processSticky(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
+this.processStickyGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
 
 
 
@@ -237,7 +237,7 @@ this.processSticky(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, it
 
                 @Throws(Exception::class)
             
-    open fun processSticky(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var associatedRtsLayer = associatedRtsLayer
@@ -317,7 +317,7 @@ this.logUtil!!.putF(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return layerInterfaceFactoryInterface!!.getInstance(getHashtable(), cellPoint!!.getX(), cellPoint!!.getY(), cellPoint!!.getZ()) as RTSLayer
+                        return layerInterfaceFactoryInterface!!.getNextInstance(getHashtable(), cellPoint!!.getX(), cellPoint!!.getY(), cellPoint!!.getZ()) as RTSLayer
 
                                     }
                                 

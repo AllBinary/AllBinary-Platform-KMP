@@ -164,7 +164,7 @@ height= get = iconHeightList!!.get(index2)get as Integer
 get.
                     toInt()
 
-    var generatedBufferedImageArray: Array<BufferedImage?> = imageUtil!!.createBufferedImage(imageProcessorInput!!.getBufferedImageArray(), width, height, true)!!
+    var generatedBufferedImageArray: Array<BufferedImage?> = imageUtil!!.createBufferedImage3(imageProcessorInput!!.getBufferedImageArray(), width, height, true)!!
 
 
     var imagePersistanceUtil: ImagePersistanceUtil = ImagePersistanceUtil.getInstance()!!

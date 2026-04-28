@@ -46,7 +46,7 @@ open public class GeographicMapCellPositionArea : GeographicMapCellPositionAreaB
 
     private val reusableSurroundingGeographicMapCellPositionList: BasicArrayList = BasicArrayListS(12)
 
-    private val surroundingCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0)!!
+    private val surroundingCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(0)!!
 
     private val layerInterface: AllBinaryLayer
 
@@ -67,7 +67,7 @@ this.layerInterface= layerInterface
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
-this.occupyingGeographicMapCellPositionList= layerCoveringCellPositionsUtil!!.getAll(geographicMapInterface, layerInterface, layerInterface!!.getXP(), layerInterface!!.getYP(), reusableOccupyingGeographicMapCellPositionList)
+this.occupyingGeographicMapCellPositionList= layerCoveringCellPositionsUtil!!.getAllXY(geographicMapInterface, layerInterface, layerInterface!!.getXP(), layerInterface!!.getYP(), reusableOccupyingGeographicMapCellPositionList)
 this.surroundingGeographicMapCellPositionList= cellPositionsUtil!!.getAllSurrounding(geographicMapInterface, occupyingGeographicMapCellPositionList, reusableSurroundingGeographicMapCellPositionList)
 this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPositionList!!.size())
 }

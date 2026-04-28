@@ -30,8 +30,6 @@ import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.font.MyFont
-import org.allbinary.graphics.paint.NullPaintable
-import org.allbinary.graphics.paint.Paintable
 import org.allbinary.input.motion.button.CommonButtons
 
 open public class UpgradableRTSLayerHudPaintable : SelectionHudPaintable {
@@ -80,7 +78,7 @@ super.update()
 
 this.costY= (y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE)
 this.costY1= (y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -(charHeight))
-this.percentCompleteX2= this.imageX +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -myFont!!.charWidth()
+this.percentCompleteX2= this.imageX +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -myFont!!.defaultCharWidth()
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -164,7 +162,7 @@ super.paint(graphics)
 this.rtsLayerCompositePaintableLateInit!!.paint(graphics)
 graphics.drawChars(percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, costY, 0)
 graphics.drawString(this.PERCENT, this.percentCompleteX2, costY, 0)
-this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
+this.getAnimationInterface()!!.paintXY(graphics, this.imageX, y)
 }
 
 

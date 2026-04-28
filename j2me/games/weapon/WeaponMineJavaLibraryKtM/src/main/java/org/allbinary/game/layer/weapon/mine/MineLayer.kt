@@ -57,7 +57,7 @@ var viewPosition = viewPosition
 
     private val viewPositionEventHandler: ViewPositionEventHandler = ViewPositionEventHandler.getInstance()!!
 
-    override fun init(x: Int, y: Int, z: Int)
+    override fun initXYZ(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x

@@ -56,8 +56,8 @@ companion object {
             {
             }            
         
-    open fun getInstance(midlet: MIDlet)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getExitInstance(midlet: MIDlet)
+        //nullable = true from not(false or (false and false)) = true
 : Processor{
 var midlet = midlet
 

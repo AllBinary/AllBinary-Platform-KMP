@@ -85,7 +85,7 @@ var dy = dy
 
     var terrainTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
-terrainTiledLayer!!.move( -dx,  -dy)
+terrainTiledLayer!!.moveDXY( -dx,  -dy)
 this.scrollMapEvent!!.setDxDy( -dx,  -dy)
 ScrollMapEventHandler.getInstance()!!.fireEvent(this.scrollMapEvent)
 }
@@ -285,11 +285,11 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 
                 @Throws(Exception::class)
             
-    open fun processInput(key: Int)
+    open fun processInputKey(key: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
-this.inputProcessorArray[key]!!.process(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
+this.inputProcessorArray[key]!!.processEvent(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
 }
 
 
@@ -318,7 +318,7 @@ var layerManager = layerManager
     var gameKeyEvent: GameKeyEvent = this.inputList!!.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
-this.processInput(key)
+this.processInputKey(key)
 }
 
 

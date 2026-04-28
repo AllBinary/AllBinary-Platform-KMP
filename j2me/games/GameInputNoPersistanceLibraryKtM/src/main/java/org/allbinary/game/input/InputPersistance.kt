@@ -86,7 +86,7 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 this.logUtil!!.putF(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.appendint(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
 hashtable= Hashtable<Any, Any>()
 this.valueList!!.add(hashtable)
-this.idList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
+this.idList!!.add(smallIntegerSingletonFactory!!.getAt(id))
 }
 
 recordStore!!.closeRecordStore()

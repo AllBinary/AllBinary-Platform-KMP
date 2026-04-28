@@ -63,12 +63,12 @@ var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
-this.httpUserAgent= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.HTTP_USER_AGENT) as String)
-this.remoteAddress= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_ADDRESS) as String)
-this.remoteHost= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_HOST) as String)
-this.remoteHostByAddr= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_HOST_BY_ADDRESS) as String)
-this.remotePort= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_PORT) as String)
-this.requestedFilePath= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.REQUEST_FILE_PATH) as String)
+this.httpUserAgent= stringUtil!!.getNonNull(hashMap!!.get(abeHttpRequestInfoData!!.HTTP_USER_AGENT) as String)
+this.remoteAddress= stringUtil!!.getNonNull(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_ADDRESS) as String)
+this.remoteHost= stringUtil!!.getNonNull(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_HOST) as String)
+this.remoteHostByAddr= stringUtil!!.getNonNull(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_HOST_BY_ADDRESS) as String)
+this.remotePort= stringUtil!!.getNonNull(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_PORT) as String)
+this.requestedFilePath= stringUtil!!.getNonNull(hashMap!!.get(abeHttpRequestInfoData!!.REQUEST_FILE_PATH) as String)
 }
 
 public constructor (httpServletRequest: HttpServletRequest)

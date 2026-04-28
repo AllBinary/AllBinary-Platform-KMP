@@ -28,7 +28,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun createForm(title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : MultipleScrollSelectionHorizontalForm{
     //var title = title

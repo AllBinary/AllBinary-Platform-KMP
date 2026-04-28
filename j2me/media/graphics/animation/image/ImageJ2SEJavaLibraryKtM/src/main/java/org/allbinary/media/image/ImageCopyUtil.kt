@@ -86,7 +86,7 @@ private constructor ()
 : Image{
     //var originalImage = originalImage
 
-    var image: Image = this.imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
+    var image: Image = this.imageCreationUtil!!.createImageWH(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
 
     
@@ -115,7 +115,7 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
+    open fun createImageScale(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage

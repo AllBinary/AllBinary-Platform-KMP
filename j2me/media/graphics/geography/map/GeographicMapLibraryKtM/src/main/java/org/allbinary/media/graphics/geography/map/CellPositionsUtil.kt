@@ -103,7 +103,7 @@ reusableList!!.clear()
 
         {
 
-    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(topRightGeographicMapCellPosition!!.getColumn() +columnIndex, topRightGeographicMapCellPosition!!.getRow() +rowIndex)!!
+    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(topRightGeographicMapCellPosition!!.getColumn() +columnIndex, topRightGeographicMapCellPosition!!.getRow() +rowIndex)!!
 
 reusableList!!.add(geographicMapCellPosition)
 }
@@ -140,7 +140,7 @@ reusableList!!.clear()
     var layerGeographicMapCellPosition: GeographicMapCellPosition = occupyList!!.get(index) as GeographicMapCellPosition
 
 
-    var surroundingGeographicMapCellPositionList: BasicArrayList = getAllSurrounding(geographicMapInterface, layerGeographicMapCellPosition, reusableSingleThreadedSurroundingList)!!
+    var surroundingGeographicMapCellPositionList: BasicArrayList = getAllSurroundingAt(geographicMapInterface, layerGeographicMapCellPosition, reusableSingleThreadedSurroundingList)!!
 
 
 
@@ -185,7 +185,7 @@ reusableList!!.clear()
 
                 @Throws(Exception::class)
             
-    open fun getAllSurrounding(geographicMapInterface: BasicGeographicMap, layerGeographicMapCellPosition: GeographicMapCellPosition, reusableSurroundingList: BasicArrayList)
+    open fun getAllSurroundingAt(geographicMapInterface: BasicGeographicMap, layerGeographicMapCellPosition: GeographicMapCellPosition, reusableSurroundingList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -219,7 +219,7 @@ row= layerGeographicMapCellPosition!!.getRow() +surroundArray[index]!![1]
                         
                                     {
                                     
-    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(column, row)!!
+    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(column, row)!!
 
 reusableSurroundingList!!.add(geographicMapCellPosition)
 

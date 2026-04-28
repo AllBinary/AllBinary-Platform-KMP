@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.media.audio.music.MusicManager
 import org.allbinary.util.BasicArrayList
 
 open public class MusicManagerFactory
@@ -34,7 +33,7 @@ open public class MusicManagerFactory
         
 companion object {
             
-    open fun create(soundList: BasicArrayList)
+    open fun createMusicManager(soundList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : MusicManager{
     //var soundList = soundList

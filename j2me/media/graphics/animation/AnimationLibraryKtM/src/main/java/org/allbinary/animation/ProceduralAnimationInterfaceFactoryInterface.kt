@@ -31,8 +31,8 @@ interface ProceduralAnimationInterfaceFactoryInterface : BasicAnimationInterface
 
                 @Throws(Exception::class)
             
-    open fun getInstance(animationInterface: Animation)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceAnimation(animationInterface: Animation)
+        //nullable = true from not(false or (false and false)) = true
 : Animation
 
 }

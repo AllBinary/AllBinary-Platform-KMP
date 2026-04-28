@@ -137,7 +137,7 @@ object: Thread()
                         if(percentAsFloat!!.toInt() !=  -1)
                         
                                     {
-                                    generatedBufferedImageArray= imageUtil!!.createBufferedImage(imageProcessorInput!!.getBufferedImageArray(), percentAsFloat, true)
+                                    generatedBufferedImageArray= imageUtil!!.createBufferedImage2(imageProcessorInput!!.getBufferedImageArray(), percentAsFloat, true)
 
                                     }
                                 
@@ -146,7 +146,7 @@ object: Thread()
                         if(percent.toInt() !=  -1)
                         
                                     {
-                                    generatedBufferedImageArray= imageUtil!!.createBufferedImage(imageProcessorInput!!.getBufferedImageArray(), percent, true)
+                                    generatedBufferedImageArray= imageUtil!!.createBufferedImageForResize(imageProcessorInput!!.getBufferedImageArray(), percent, true)
 
                                     }
                                 
@@ -157,7 +157,7 @@ object: Thread()
 
     var height: Integer = Integer(Integer.valueOf(this@ResizeImageJPanel.jTextField2!!.getText() as String))!!
 
-generatedBufferedImageArray= imageUtil!!.createBufferedImage(imageProcessorInput!!.getBufferedImageArray(), width, height, true)
+generatedBufferedImageArray= imageUtil!!.createBufferedImage3(imageProcessorInput!!.getBufferedImageArray(), width, height, true)
 
                         }
                             

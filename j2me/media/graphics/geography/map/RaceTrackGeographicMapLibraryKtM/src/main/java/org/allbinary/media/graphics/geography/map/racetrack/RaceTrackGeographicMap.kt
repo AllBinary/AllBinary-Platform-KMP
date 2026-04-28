@@ -50,7 +50,7 @@ public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, 
 
                             //For kotlin this is before the body of the constructor.
                     
-this.customMapGenerator= customMapGeneratorBaseFactory!!.getInstance(this)
+this.customMapGenerator= customMapGeneratorBaseFactory!!.create(this)
 }
 
 

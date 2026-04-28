@@ -84,7 +84,7 @@ var soundsFactoryInterface = soundsFactoryInterface
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.putF(commonString!!.START, THIS, commonString!!.INIT)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
+ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()
 }
@@ -104,7 +104,7 @@ System.gc()
 }
 
 
-    open fun createPlayer(stream: InputStream, type: String)
+    open fun createPlayerFromInputStream(stream: InputStream, type: String)
         //nullable = true from not(false or (false and false)) = true
 : Player{
 var stream = stream

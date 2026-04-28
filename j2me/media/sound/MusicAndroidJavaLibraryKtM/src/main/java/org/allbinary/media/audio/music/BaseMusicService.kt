@@ -140,7 +140,7 @@ this.player.start()
 {
     //var intent = intent
     //var startid = startid
-onStartCommand(intent)
+onStartCommandIntent(intent)
 this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.START)
 }
 
@@ -151,7 +151,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.START
     //var intent = intent
     //var flags = flags
     //var startId = startId
-onStartCommand(intent)
+onStartCommandIntent(intent)
 
 
 
@@ -160,7 +160,7 @@ onStartCommand(intent)
 }
 
 
-    open fun onStartCommand(intent: Intent)
+    open fun onStartCommandIntent(intent: Intent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intent = intent
@@ -259,7 +259,7 @@ logUtil!!.putF(WAITING_FOR_MUSIC_TO_END, this, commonStateStrings!!.ON_START_COM
 Thread.sleep(1200)
 }
 
-onStartCommand(intent)
+onStartCommandIntent(intent)
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStateStrings!!.ON_START_COMMAND, e)

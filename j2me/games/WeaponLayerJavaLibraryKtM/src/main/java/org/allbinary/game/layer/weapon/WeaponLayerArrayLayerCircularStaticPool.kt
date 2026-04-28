@@ -55,7 +55,7 @@ companion object {
         
     private val MAX: Int = 5
 
-    private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX)!!
+    private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(MAX)!!
 
     private var ALL_WEAPONLAYER_ARRAY: Array<Array<Array<Any?>?>?> = arrayOfNulls(4)
                                                         
@@ -96,8 +96,8 @@ this.ALL_WEAPONLAYER_ARRAY[3]= THREE_WEAPONLAYER_ARRAY
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun getInstance(size: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceArray(size: Int)
+        //nullable = true from not(false or (false and false)) = true
 : Array<WeaponLayer?>{
 var size = size
 

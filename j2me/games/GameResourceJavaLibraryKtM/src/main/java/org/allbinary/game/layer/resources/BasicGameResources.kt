@@ -67,7 +67,7 @@ var SIZE = SIZE
                         if(scale > 1 && scale -1 < SIZE.size)
                         
                                     {
-                                    this.init(ROOT, SIZE[scale -1]!!)
+                                    this.append(ROOT, SIZE[scale -1]!!)
 
                                     }
                                 
@@ -93,20 +93,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 
                 @Throws(Exception::class)
             
-    open fun getString()
-        //nullable = true from not(false or (false and true)) = true
-: String{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameGraphicsResourceUtil.getInstance()!!.getName()
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun init(ROOT: String, sizeString: String)
+    open fun append(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT
@@ -128,6 +115,19 @@ stringBuffer!!.append(DESTROY)
 stringBuffer!!.append(string)
 stringBuffer!!.append(sizeString)
 this.RESOURCE_DESTROY= stringBuffer!!.toString()
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun getString()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return GameGraphicsResourceUtil.getInstance()!!.getName()
 }
 
 

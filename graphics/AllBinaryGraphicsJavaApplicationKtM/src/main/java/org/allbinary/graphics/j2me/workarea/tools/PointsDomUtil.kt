@@ -81,7 +81,7 @@ companion object {
 var canvasDom = canvasDom
 var pointVector = pointVector
 
-    var tempPointVector: BasicArrayList = PointsUtil.getInstance()!!.doTransforms(pointVector, Double(canvasDom!!.getAngle()), PointFactory.getInstance()!!.getInstance0(canvasDom!!.getDimension()!!.getWidth(), canvasDom!!.getDimension()!!.getHeight()))!!
+    var tempPointVector: BasicArrayList = PointsUtil.getInstance()!!.doTransforms(pointVector, Double(canvasDom!!.getAngle()), PointFactory.getInstance()!!.createXY(canvasDom!!.getDimension()!!.getWidth(), canvasDom!!.getDimension()!!.getHeight()))!!
 
 
     var document: org.w3c.dom.Document = WorkAreaJPanel.getDocument()!!

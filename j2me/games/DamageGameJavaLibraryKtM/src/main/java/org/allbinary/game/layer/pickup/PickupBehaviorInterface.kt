@@ -35,7 +35,7 @@ interface PickupBehaviorInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
+    open fun doPickupLayer(pickupLayerInterface: PickedUpLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

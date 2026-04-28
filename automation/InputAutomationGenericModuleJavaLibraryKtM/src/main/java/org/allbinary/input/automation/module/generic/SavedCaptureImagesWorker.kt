@@ -115,7 +115,7 @@ this.setRunning(true)
 
         while(this.isRunning())
         {
-timeHelper!!.setStartTime()
+timeHelper!!.setStartTimeTNT()
 
     var frame: Long = index as Long
 
@@ -154,7 +154,7 @@ this.fireEvent(capturedImageEvent)
 
                         }
                             
-this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
 this.setRunning(false)
 }
 

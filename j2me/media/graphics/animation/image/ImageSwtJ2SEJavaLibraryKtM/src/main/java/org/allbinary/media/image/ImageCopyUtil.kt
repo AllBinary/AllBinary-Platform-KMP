@@ -200,23 +200,7 @@ image= this.openGLUtil!!.add(image)
 
                 @Throws(Exception::class)
             
-    open fun createImage(originalImage: Image, width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var originalImage = originalImage
-    //var width = width
-    //var height = height
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createImage(originalImage, width, height, true)
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun createImage(originalImage: Image, width: Int, height: Int, mutable: Boolean)
+    open fun createImageWH(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -570,7 +554,7 @@ image= this.openGLUtil!!.add(image)
 
                 @Throws(Exception::class)
             
-    open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
+    open fun createImageScale(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -623,7 +607,7 @@ image= this.openGLUtil!!.add(image)
                                     }
                                 
 
-    var image: Image = this.createImage(originalImage, newWidth, newHeight)!!
+    var image: Image = this.createImageWH(originalImage, newWidth, newHeight, true)!!
 
 
     

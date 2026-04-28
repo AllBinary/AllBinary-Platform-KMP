@@ -101,7 +101,7 @@ this.soundsFactoryInterface!!.init()
                                 )
                         
                                     {
-                                    indexInteger= smallIntegerSingletonFactory!!.getInstance(i)
+                                    indexInteger= smallIntegerSingletonFactory!!.getAt(i)
 indexString= indexInteger!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
@@ -110,7 +110,7 @@ stringBuffer!!.append(this.soundStrings!!.SOUND)
 stringBuffer!!.append(soundInterfaceCanBeNull!!::class.toString()!!)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 soundInterfaceCanBeNull!!.init()
-progressCanvas!!.addPortion(100, StringMaker().
+progressCanvas!!.addNormalPortion(100, StringMaker().
                             append(this.soundStrings!!.INIT_SOUND)!!.append(indexString)!!.toString())
 
                                     }

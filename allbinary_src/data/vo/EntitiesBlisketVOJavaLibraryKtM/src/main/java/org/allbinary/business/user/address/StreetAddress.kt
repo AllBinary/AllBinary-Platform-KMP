@@ -599,7 +599,7 @@ var document = document
     var name: String = keyArray[i]!! as String
 
 
-    var value: String = stringUtil!!.getInstance(hashMap!!.get(name as Object) as String)!!
+    var value: String = stringUtil!!.getNonNull(hashMap!!.get(name as Object) as String)!!
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }

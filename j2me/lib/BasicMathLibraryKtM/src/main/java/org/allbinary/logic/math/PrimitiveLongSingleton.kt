@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PrimitiveLongSingleton.instance
 }
 
 
@@ -73,7 +73,7 @@ companion object {
 : Byte{
 var numberAsChar = numberAsChar
 
-    var size: Int = NUMBER_CHAR_ARRAY.size
+    var size: Int = this.NUMBER_CHAR_ARRAY.size
                 
 
 

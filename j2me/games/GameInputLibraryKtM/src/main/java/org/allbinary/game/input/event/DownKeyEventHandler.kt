@@ -51,8 +51,8 @@ companion object {
             
     private val playerInputIdFactory: LocalPlayerInputIdFactory = LocalPlayerInputIdFactory.getInstance()!!
 
-    open fun getInstance(deviceId: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceForDevice(deviceId: Int)
+        //nullable = true from not(false or (false and false)) = true
 : DownKeyEventHandlerBase{
 var deviceId = deviceId
 

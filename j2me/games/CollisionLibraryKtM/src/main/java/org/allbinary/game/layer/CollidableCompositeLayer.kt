@@ -113,14 +113,14 @@ this.collidableInferface= collidableInferface
 }
 
 
-    override fun toString(stringBuffer: StringMaker)
-        //nullable = true from not(false or (true and false)) = true
+    override fun toStringAppend(stringBuffer: StringMaker)
+        //nullable = true from not(false or (false and false)) = true
 {
     //var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-super.toString(stringBuffer)
+super.toStringAppend(stringBuffer)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(this.getCollidableInferface()!!.toString())
 }
@@ -132,7 +132,7 @@ stringBuffer!!.append(this.getCollidableInferface()!!.toString())
 
     var stringBuffer: StringMaker = StringMaker()
 
-this.toString(stringBuffer)
+this.toStringAppend(stringBuffer)
 
 
 

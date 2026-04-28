@@ -54,7 +54,7 @@ this.dimension= dimension
 
                 @Throws(Exception::class)
             
-    open fun process(list: BasicArrayList)
+    open fun processList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var list = list
@@ -122,7 +122,7 @@ layerHashtable= hashtable.get(point as Object) as Hashtable<Any, Any>
 x= point.getX() +relativePoint!!.getX()
 y= point.getY() +relativePoint!!.getY()
 z= point.getZ() +relativePoint!!.getZ()
-layerInterface= layerInterfaceFactory!!.getInstance(layerHashtable, x, y, z)
+layerInterface= layerInterfaceFactory!!.getNexInstance(layerHashtable, x, y, z)
 this.layerInterfaceVisitor!!.visit(layerInterface)
 }
 
@@ -162,7 +162,7 @@ this.layerInterfaceVisitor!!.visit(layerInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return pointFactory!!.getInstance0(x, y)
+                        return pointFactory!!.createXY(x, y)
 
                                     }
                                 
@@ -187,7 +187,7 @@ this.layerInterfaceVisitor!!.visit(layerInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return pointFactory!!.getInstance0(x, y)
+                        return pointFactory!!.createXY(x, y)
 
                                     }
                                 

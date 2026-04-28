@@ -32,7 +32,6 @@ import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.graphics.color.BasicColorUtil
 import org.allbinary.graphics.color.ColorCompositeInterface
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.logic.string.StringMaker
@@ -146,7 +145,7 @@ break;
 }
 
 
-    open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
+    open fun paintFrame(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -159,7 +158,7 @@ this.sprite.paint(graphics)
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

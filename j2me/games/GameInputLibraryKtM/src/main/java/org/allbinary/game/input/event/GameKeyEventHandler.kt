@@ -75,7 +75,7 @@ this.downGameKeyEventHandler!!.removeAllListeners()
 }
 
 
-    open fun addListener(eventListenerInterface: EventListenerInterface, playerInputId: Int)
+    open fun addListenerForPlayer(eventListenerInterface: EventListenerInterface, playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface

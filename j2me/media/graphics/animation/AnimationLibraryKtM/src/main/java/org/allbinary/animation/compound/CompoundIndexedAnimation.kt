@@ -50,7 +50,7 @@ public constructor (animationInterfaceArray: Array<Animation?>, animationBehavio
                             //For kotlin this is before the body of the constructor.
                     
 this.animationInterfaceArray= animationInterfaceArray
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.animationInterfaceArray!!.size)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.animationInterfaceArray!!.size)
 }
 
 
@@ -130,13 +130,13 @@ this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.nextFrame()
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
     //var x = x
     //var y = y
-this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paint(graphics, x, y)
+this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paintXY(graphics, x, y)
 }
 
 

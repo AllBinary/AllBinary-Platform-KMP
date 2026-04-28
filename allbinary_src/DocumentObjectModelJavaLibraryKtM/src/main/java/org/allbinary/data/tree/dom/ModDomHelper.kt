@@ -249,7 +249,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                         
                                     {
                                     
-    var value: String = stringUtil!!.getInstance(anyType as String)!!
+    var value: String = stringUtil!!.getNonNull(anyType as String)!!
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
@@ -308,7 +308,7 @@ var valueVector = valueVector
 
         {
 
-    var value: String = stringUtil!!.getInstance(valueVector!!.get(i) as String)!!
+    var value: String = stringUtil!!.getNonNull(valueVector!!.get(i) as String)!!
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, duplicateNodeName, value))
 }
@@ -347,7 +347,7 @@ var valueVector = valueVector
 
         {
 
-    var value: String = stringUtil!!.getInstance(valueVector!!.get(index) as String)!!
+    var value: String = stringUtil!!.getNonNull(valueVector!!.get(index) as String)!!
 
 node.appendChild(ModDomHelper.createNameValueIndexNodes(document, duplicateNodeName, index, value))
 }
@@ -414,7 +414,7 @@ var hashMap = hashMap
     var anyType: Any = hashMap!!.get(name as Object) as Object
 
 
-    var value: String = stringUtil!!.getInstance(anyType as String)!!
+    var value: String = stringUtil!!.getNonNull(anyType as String)!!
 
 node.appendChild(ModDomHelper.createTextNode(document, name, value))
 }

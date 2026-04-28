@@ -45,7 +45,7 @@ open public class LayerManagerLoggingBase
 }
 
 
-    open fun append(layerInterface: AllBinaryLayer, index: Int)
+    open fun appendAt(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -60,7 +60,7 @@ open public class LayerManagerLoggingBase
 }
 
 
-    open fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
+    open fun removeResult(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager

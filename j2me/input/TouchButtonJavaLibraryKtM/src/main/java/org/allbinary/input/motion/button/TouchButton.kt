@@ -45,7 +45,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
+    open fun createButton(touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
         //nullable = true from not(false or (false and false)) = true
 : TouchButton{
     //var touchButtonInput = touchButtonInput
@@ -114,7 +114,7 @@ this.logUtil!!.putF(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this.hintAnimationInterface!!.paint(graphics, animationX, this.hintAnimationY)
+this.hintAnimationInterface!!.paintXY(graphics, animationX, this.hintAnimationY)
 }
 
 
@@ -122,7 +122,7 @@ this.hintAnimationInterface!!.paint(graphics, animationX, this.hintAnimationY)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this.animationInterface!!.paint(graphics, animationX, animationY)
+this.animationInterface!!.paintXY(graphics, animationX, animationY)
 }
 
 
@@ -140,7 +140,7 @@ this.animationInterface!!.paint(graphics, animationX, animationY)
 
     var y: Int = this.rawRectangle!!.getHeight() *this.cellPositionP!!.getRow()
 
-this.rectangleP= Rectangle(pointFactory!!.getInstance0(x +xBorder, y +yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
+this.rectangleP= Rectangle(pointFactory!!.createXY(x +xBorder, y +yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
 
     var point: GPoint = this.rectangleP!!.getPoint()!!
 

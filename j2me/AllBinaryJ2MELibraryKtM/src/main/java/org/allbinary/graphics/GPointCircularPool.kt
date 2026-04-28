@@ -32,7 +32,7 @@ open public class GPointCircularPool : BaseCircularPool {
         
 public constructor (size: Int){
 var size = size
-this.circularIndexUtil= CircularIndexUtil.getInstance(size)
+this.circularIndexUtil= CircularIndexUtil.createInstance(size)
 this.OBJECT_ARRAY= arrayOfNulls(size)
 
 

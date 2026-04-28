@@ -171,7 +171,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
-    open fun destroyApp(unconditional: Boolean, isProgress: Boolean)
+    open fun destroyAppInRunnable(unconditional: Boolean, isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var unconditional = unconditional

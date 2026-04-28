@@ -157,8 +157,8 @@ this.angleArray[index]= Angle(index.toShort())
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 
-    open fun getInstance(index: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getAt(index: Int)
+        //nullable = true from not(false or (false and false)) = true
 : Angle{
     //var index = index
 

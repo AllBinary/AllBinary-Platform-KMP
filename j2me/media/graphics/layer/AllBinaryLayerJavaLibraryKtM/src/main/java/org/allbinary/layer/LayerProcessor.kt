@@ -46,7 +46,7 @@ this.layerManager= layerManager
 
                 @Throws(Exception::class)
             
-    override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
+    override fun processAt(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -102,7 +102,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         for (index in 0 until size)
 
         {
-this.process(allBinaryLayerManager, layerManager!!.getLayerAt(index) as AllBinaryLayer, index)
+this.processAt(allBinaryLayerManager, layerManager!!.getLayerAt(index) as AllBinaryLayer, index)
 }
 
 }

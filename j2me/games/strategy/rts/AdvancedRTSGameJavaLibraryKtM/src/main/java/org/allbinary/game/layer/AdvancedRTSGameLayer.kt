@@ -90,7 +90,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdvancedRTSGameLayer(RemoteInfo.REMOTE_INFO, NullPathFindingLayer.NULL_PATH_FINDING_LAYER, AdvancedRTSProperties.createSimulated(), GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0, TileLayerPositionIntoViewPosition())
+                        return AdvancedRTSGameLayer(RemoteInfo.REMOTE_INFO, NullPathFindingLayer.NULL_PATH_FINDING_LAYER, AdvancedRTSProperties.createPropertiesSimulated(), GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0, TileLayerPositionIntoViewPosition())
 }
 
 
@@ -372,7 +372,7 @@ this.waypointBehaviorBase= unitWaypointHelper
                         
                                     {
                                     this.rtsLayer2LogHelper!!.buildingChaseLeft(this, angle)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.LEFT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.LEFT))
 
     
                         if(angle <= 190)
@@ -391,7 +391,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
                                 
                         else {
                             this.rtsLayer2LogHelper!!.buildingChaseRight(this, angle)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.RIGHT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.RIGHT))
 
     
                         if(angle >= 170)
@@ -423,7 +423,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
                         
                                     {
                                     this.rtsLayer2LogHelper!!.buildingChaseLeft(this, angle)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.RIGHT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.RIGHT))
 
     
                         if(angle > 315)
@@ -442,7 +442,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
                                 
                         else {
                             this.rtsLayer2LogHelper!!.buildingChaseRight(this, angle)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.LEFT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.LEFT))
 
     
                         if(angle < 45)
@@ -474,7 +474,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
                         
                                     {
                                     this.rtsLayer2LogHelper!!.buildingChaseDown(this, angle)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.LEFT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.LEFT))
 
     
                         if(angle < 135)
@@ -493,7 +493,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
                                 
                         else {
                             this.rtsLayer2LogHelper!!.buildingChaseUp(this, angle)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.RIGHT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.RIGHT))
 
     
                         if(angle > 45)
@@ -525,7 +525,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
                         
                                     {
                                     this.rtsLayer2LogHelper!!.buildingChaseDown(this, angle)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.RIGHT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.RIGHT))
 
     
                         if(angle > 225)
@@ -544,7 +544,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
                                 
                         else {
                             this.rtsLayer2LogHelper!!.buildingChaseUp(this, angle)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.LEFT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.LEFT))
 
     
                         if(angle < 315 && angle > 180)

@@ -144,7 +144,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "InputMapping::remove")
 
                 @Throws(Exception::class)
             
-    open fun add(inputToGameKeyMapping: InputToGameKeyMapping)
+    open fun addMapping(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputToGameKeyMapping = inputToGameKeyMapping

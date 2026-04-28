@@ -111,7 +111,7 @@ this.NONE= TouchButtonInput(MAX -40, "No Button")
     open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
-var inputToGameKeyMapping = inputToGameKeyMapping
+    //var inputToGameKeyMapping = inputToGameKeyMapping
 
     
                         if(!this.initialized)
@@ -131,7 +131,7 @@ this.list.add(this.SPECIAL_BUTTON_SIX)
 this.list.add(this.SPECIAL_BUTTON_SIX)
 this.list.add(this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY)
 this.list.add(this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY)
-this.updateAll(this.list, inputToGameKeyMapping)
+this.updateAllFromList(this.list, inputToGameKeyMapping)
 CancelTouchButtonInputFactory.getInstance()
 
                                     }
@@ -142,16 +142,16 @@ CancelTouchButtonInputFactory.getInstance()
     open fun updateAll(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
-var inputToGameKeyMapping = inputToGameKeyMapping
-this.updateAll(this.list, inputToGameKeyMapping)
+    //var inputToGameKeyMapping = inputToGameKeyMapping
+this.updateAllFromList(this.list, inputToGameKeyMapping)
 }
 
 
-    open fun updateAll(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
+    open fun updateAllFromList(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
-var list = list
-var inputToGameKeyMapping = inputToGameKeyMapping
+    //var list = list
+    //var inputToGameKeyMapping = inputToGameKeyMapping
 this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.appendint(list.size())!!.toString(), this, "updateAll")
 

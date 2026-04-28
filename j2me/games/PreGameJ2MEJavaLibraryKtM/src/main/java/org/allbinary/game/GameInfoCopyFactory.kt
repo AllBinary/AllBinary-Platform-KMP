@@ -32,11 +32,11 @@ open public class GameInfoCopyFactory
         
 companion object {
             
-    open fun getInstance(gameInfo: GameInfo, maxLevel: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceMaxLevel(gameInfo: GameInfo, maxLevel: Int)
+        //nullable = true from not(false or (false and false)) = true
 : GameInfo{
-var gameInfo = gameInfo
-var maxLevel = maxLevel
+    //var gameInfo = gameInfo
+    //var maxLevel = maxLevel
 
 
 
@@ -48,7 +48,7 @@ var maxLevel = maxLevel
     open fun getInstance(gameInfo: GameInfo)
         //nullable =  from not(true or (false and false)) = 
 : GameInfo{
-var gameInfo = gameInfo
+    //var gameInfo = gameInfo
 
 
 

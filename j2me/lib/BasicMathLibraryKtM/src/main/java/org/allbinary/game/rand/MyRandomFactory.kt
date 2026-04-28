@@ -49,7 +49,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return MyRandomFactory.instance
 }
 
 
@@ -102,7 +102,7 @@ intArray[index]= index
 intArray2[index]= index
 }
 
-randomFactory!!.shuffle(intArray, intArray2)
+randomFactory!!.shuffle2(intArray, intArray2)
 
 
 
@@ -196,7 +196,7 @@ var range = range
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rand.nextInt() /div
+                        return (this.rand.nextInt() /div).toInt()
 }
 
 
@@ -208,7 +208,7 @@ var range = range
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mathUtil!!.abs(this.getNextInt(range))
+                        return this.mathUtil!!.abs(this.getNextInt(range))
 }
 
 
@@ -234,7 +234,7 @@ var range = range
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mathUtil!!.abs(this.getNextInt(range))
+                        return this.mathUtil!!.abs(this.getNextInt(range))
 
                         }
                             
@@ -245,11 +245,11 @@ var range = range
         //nullable = true from not(false or (false and false)) = true
 {
     //var intArray = intArray
-this.shuffle(intArray, intArray!!.size *7)
+this.shuffleTotal(intArray, intArray!!.size *7)
 }
 
 
-    open fun shuffle(intArray: IntArray, shuffleTotal: Int)
+    open fun shuffleTotal(intArray: IntArray, shuffleTotal: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intArray = intArray
@@ -284,16 +284,16 @@ intArray[randomIndex2]= value
 }
 
 
-    open fun shuffle(intArray: IntArray, intArray2: IntArray)
+    open fun shuffle2(intArray: IntArray, intArray2: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intArray = intArray
     //var intArray2 = intArray2
-this.shuffle(intArray, intArray2, intArray!!.size *7)
+this.shuffle2Total(intArray, intArray2, intArray!!.size *7)
 }
 
 
-    open fun shuffle(intArray: IntArray, intArray2: IntArray, shuffleTotal: Int)
+    open fun shuffle2Total(intArray: IntArray, intArray2: IntArray, shuffleTotal: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intArray = intArray

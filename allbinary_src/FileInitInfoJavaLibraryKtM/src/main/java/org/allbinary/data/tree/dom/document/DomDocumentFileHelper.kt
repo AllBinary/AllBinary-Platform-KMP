@@ -44,7 +44,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(xmlFile: AbFile)
+    open fun createDocument(xmlFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var xmlFile = xmlFile

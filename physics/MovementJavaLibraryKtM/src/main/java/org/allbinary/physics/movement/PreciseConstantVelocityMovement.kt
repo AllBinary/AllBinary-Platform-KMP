@@ -63,7 +63,7 @@ public constructor (basicDecimal: BasicDecimal, velocityProperties: BasicVelocit
 this.accumulatedX= (this.accumulatedX +velocityProperties!!.getVelocityXBasicDecimalP()!!.getUnscaled()).toInt()
 this.accumulatedY= (this.accumulatedY +velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled()).toInt()
 this.accumulatedZ= (this.accumulatedZ +velocityProperties!!.getVelocityZBasicDecimalP()!!.getUnscaled()).toInt()
-layer.move(this.accumulatedX /this.factorValue, this.accumulatedY /this.factorValue, this.accumulatedZ /this.factorValue)
+layer.moveDXYZ(this.accumulatedX /this.factorValue, this.accumulatedY /this.factorValue, this.accumulatedZ /this.factorValue)
 
     
                         if(mathUtil!!.abs(this.accumulatedX) > this.factorValue)

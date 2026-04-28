@@ -175,7 +175,7 @@ stringBuffer!!.append(nextStore)
 stringBuffer!!.append(" from: ")
 stringBuffer!!.append(viewsPath)
 PreLogUtil.put(stringBuffer!!.toString(), this, "backupViews()")
-fileBasicArrayList!!.addAll(this.getFileBasicArrayList(viewsPath))
+fileBasicArrayList!!.addAllList(this.getFileBasicArrayList(viewsPath))
 }
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupViews.zip")
@@ -242,7 +242,7 @@ stringBuffer!!.append(nextStore)
 stringBuffer!!.append(" from: ")
 stringBuffer!!.append(resourcesPath)
 PreLogUtil.put(stringBuffer!!.toString(), this, "backupResources()")
-fileBasicArrayList!!.addAll(this.getFileBasicArrayList(resourcesPath))
+fileBasicArrayList!!.addAllList(this.getFileBasicArrayList(resourcesPath))
 }
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupResources.zip")
@@ -297,7 +297,7 @@ PreLogUtil.put("Backup Store Jsps: " +nextStore, this, "backupJsps()")
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(nextStore)
-fileBasicArrayList!!.addAll(this.getFileBasicArrayList(stringBuffer!!.toString()))
+fileBasicArrayList!!.addAllList(this.getFileBasicArrayList(stringBuffer!!.toString()))
 }
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupJsps.zip")

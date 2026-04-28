@@ -54,7 +54,7 @@ this.gameCanvas= gameCanvas
                                     {
                                     
     
-                        if(this.gameCanvas!!.getGameStateTimeHelper()!!.isElapsed(this.WAIT))
+                        if(this.gameCanvas!!.getGameStateTimeHelper()!!.isElapsedTNT(this.WAIT))
                         
                                     {
                                     

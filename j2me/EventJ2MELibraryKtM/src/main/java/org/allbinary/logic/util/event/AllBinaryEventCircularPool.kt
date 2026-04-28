@@ -33,7 +33,7 @@ open public class AllBinaryEventCircularPool : BaseCircularPool {
 public constructor (max: Int){
 var max = max
 this.OBJECT_ARRAY= arrayOfNulls(max)
-this.circularIndexUtil= CircularIndexUtil.getInstance(max)
+this.circularIndexUtil= CircularIndexUtil.createInstance(max)
 }
 
 

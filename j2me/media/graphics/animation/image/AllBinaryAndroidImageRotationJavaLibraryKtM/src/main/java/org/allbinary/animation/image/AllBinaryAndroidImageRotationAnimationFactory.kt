@@ -42,7 +42,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactory(image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryAndroidImageRotationAnimationFactory{
     //var image = image
@@ -59,7 +59,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun createA(image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactoryA(image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryAndroidImageRotationAnimationFactory{
     //var image = image
@@ -77,7 +77,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun createU(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactoryU(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryAndroidImageRotationAnimationFactory{
     //var image = image
@@ -96,7 +96,7 @@ androidImageRotationAnimationFactory!!.init( -(image.getWidth() shr 2),  -(image
 
                 @Throws(Exception::class)
             
-    open fun createDXYU(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactoryDXYU(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryAndroidImageRotationAnimationFactory{
     //var image = image
@@ -167,7 +167,7 @@ this.resizeCanvasForRotation= resizeCanvasForRotation
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageCopyUtil.getInstance()!!.createImage(this.getImage(), 1.44f, false)
+                        return ImageCopyUtil.getInstance()!!.createImageScale(this.getImage(), 1.44f, false)
 
                                     }
                                 

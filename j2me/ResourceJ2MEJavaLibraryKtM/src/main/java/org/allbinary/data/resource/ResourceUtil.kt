@@ -76,7 +76,7 @@ var resource = resource
                                 )
                         
                                     {
-                                    inputStream= this.getResourceAsStream(resource, 2)
+                                    inputStream= this.getResourceAsStreamAtStart(resource, 2)
 
     
                         if(inputStream == 
@@ -84,7 +84,7 @@ var resource = resource
                                 )
                         
                                     {
-                                    inputStream= this.getResourceAsStream(resource, 1)
+                                    inputStream= this.getResourceAsStreamAtStart(resource, 1)
 
     
                         if(inputStream == 
@@ -234,7 +234,7 @@ inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
                 @Throws(Exception::class)
             
-    open fun getResourceAsStream(resource: String, startIndex: Int)
+    open fun getResourceAsStreamAtStart(resource: String, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
 var resource = resource

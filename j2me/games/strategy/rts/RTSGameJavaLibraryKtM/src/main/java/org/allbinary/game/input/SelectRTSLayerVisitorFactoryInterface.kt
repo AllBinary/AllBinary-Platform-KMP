@@ -30,8 +30,8 @@ import org.allbinary.logic.util.visitor.Visitor
 interface SelectRTSLayerVisitorFactoryInterface {
         
 
-    open fun getInstance(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
-        //nullable =  from not(true or (false and false)) = 
+    open fun create(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
+        //nullable = true from not(false or (false and false)) = true
 : Visitor
 
 }

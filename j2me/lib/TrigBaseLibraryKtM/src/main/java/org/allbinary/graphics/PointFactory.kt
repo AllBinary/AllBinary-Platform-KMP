@@ -47,7 +47,7 @@ companion object {
 
         }
             
-    var ZERO_ZERO: GPoint = this.getInstance(0, 0, 0)!!
+    var ZERO_ZERO: GPoint = this.createXYZ(0, 0, 0)!!
 
     open fun init()
         //nullable = true from not(false or (false and true)) = true
@@ -60,7 +60,7 @@ private constructor ()
 }
 
 
-    open fun getInstance0(x: Int, y: Int)
+    open fun createXY(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GPoint{
 var x = x
@@ -73,8 +73,8 @@ var y = y
 }
 
 
-    open fun getInstance(x: Int, y: Int, z: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun createXYZ(x: Int, y: Int, z: Int)
+        //nullable = true from not(false or (false and false)) = true
 : GPoint{
 var x = x
 var y = y

@@ -36,7 +36,7 @@ companion object {
 : String{
 var keyCode = keyCode
 
-    var input: Input = InputFactory.getInstance()!!.getInstance(keyCode)!!
+    var input: Input = InputFactory.getInstance()!!.getInstanceById(keyCode)!!
 
 
     

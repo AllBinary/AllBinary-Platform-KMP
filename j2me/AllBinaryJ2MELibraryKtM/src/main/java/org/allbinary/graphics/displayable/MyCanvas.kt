@@ -39,7 +39,6 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.Sound
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 
 open public class MyCanvas : Canvas
                 , DisplayableInterface
@@ -277,7 +276,7 @@ this.isPaused= isPaused
 }
 
 
-    open fun keyPressed(keyCode: Int, deviceId: Int)
+    open fun keyPressedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -285,7 +284,7 @@ var deviceId = deviceId
 }
 
 
-    open fun keyRepeated(keyCode: Int, deviceId: Int)
+    open fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -293,7 +292,7 @@ var deviceId = deviceId
 }
 
 
-    open fun keyReleased(keyCode: Int, deviceId: Int)
+    open fun keyReleasedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode

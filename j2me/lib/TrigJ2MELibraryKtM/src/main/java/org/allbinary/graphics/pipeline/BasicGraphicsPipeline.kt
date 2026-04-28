@@ -92,7 +92,7 @@ secondPoint= this.pointBasicArrayList!!.objectArray[index]!! as GPoint
                         if(secondPoint!!.getX() != 1000)
                         
                                     {
-                                    newBasicArrayList!!.add(pointFactory!!.getInstance0(secondPoint!!.getX() +x, secondPoint!!.getY() +y))
+                                    newBasicArrayList!!.add(pointFactory!!.createXY(secondPoint!!.getX() +x, secondPoint!!.getY() +y))
 
                                     }
                                 
@@ -109,7 +109,7 @@ this.pointBasicArrayList= newBasicArrayList
 
                 @Throws(Exception::class)
             
-    open fun rotate(angle: Angle)
+    open fun rotateToAngle(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle
@@ -173,7 +173,7 @@ cos= this.noDecimalTrigTable!!.cos(angle)
 y= secondPoint!!.getY() *sin
 secondX= (secondPoint!!.getX() *cos) -y
 secondY= (secondPoint!!.getX() *sin) +(secondPoint!!.getY() *cos)
-point= pointFactory!!.getInstance0(secondX.toInt() /10000, secondY.toInt() /10000)
+point= pointFactory!!.createXY(secondX.toInt() /10000, secondY.toInt() /10000)
 newBasicArrayList!!.add(point)
 
                                     }
@@ -244,7 +244,7 @@ secondPoint= this.pointBasicArrayList!!.objectArray[index]!! as GPoint
 
                         }
                             
-point= pointFactory!!.getInstance0(newX, secondPoint!!.getY())
+point= pointFactory!!.createXY(newX, secondPoint!!.getY())
 newBasicArrayList!!.add(point)
 
                                     }

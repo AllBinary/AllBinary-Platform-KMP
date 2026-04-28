@@ -200,14 +200,14 @@ var sequence = sequence
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
     //var x = x
     //var y = y
-this.animationInterface!!.paint(graphics, x +this.captionDx, y +this.captionDy)
-this.movieIndexedAnimationInterface!!.paint(graphics, x +this.captionDx +this.dx, y +this.captionDy +this.dy)
+this.animationInterface!!.paintXY(graphics, x +this.captionDx, y +this.captionDy)
+this.movieIndexedAnimationInterface!!.paintXY(graphics, x +this.captionDx +this.dx, y +this.captionDy +this.dy)
 }
 
 

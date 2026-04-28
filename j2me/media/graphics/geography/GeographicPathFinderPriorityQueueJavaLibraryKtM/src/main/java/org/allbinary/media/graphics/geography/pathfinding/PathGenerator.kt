@@ -31,7 +31,8 @@ import org.allbinary.util.BasicArrayList
 
 open public class PathGenerator
             : Object
-         {
+        
+                , PathGeneratorInterface {
         
 companion object {
             
@@ -86,8 +87,8 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun create(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
+        //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
     //var geographicMapCellHistory = geographicMapCellHistory
@@ -118,7 +119,7 @@ companion object {
     var geographicPathFinderInterface: GeographicPathFinderBase = pathFindingInfo!!.getPathFinder()!!
 
 
-    var geographicMapCellPositionBasicArrayList: BasicArrayList = geographicPathFinderInterface!!.search(startPathFindingNodeList, endPathFindingNodeList, totalPaths)!!
+    var geographicMapCellPositionBasicArrayList: BasicArrayList = geographicPathFinderInterface!!.searchTotalPath(startPathFindingNodeList, endPathFindingNodeList, totalPaths)!!
 
 
 
@@ -147,7 +148,7 @@ companion object {
     var geographicPathFinderInterface: GeographicPathFinderBase = pathFindingInfo!!.getPathFinder()!!
 
 
-    var geographicMapCellPositionBasicArrayList: BasicArrayList = geographicPathFinderInterface!!.searchN(startPathFindingNodeList, endPathFindingNodeList, totalPaths, multipassState)!!
+    var geographicMapCellPositionBasicArrayList: BasicArrayList = geographicPathFinderInterface!!.searchTotalPathN(startPathFindingNodeList, endPathFindingNodeList, totalPaths, multipassState)!!
 
 
 

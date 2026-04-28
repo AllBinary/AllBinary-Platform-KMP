@@ -32,7 +32,6 @@ import javax.microedition.lcdui.TextField
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
-import org.allbinary.logic.communication.log.LogUtil
 
 open public class SaveGameForm : CommandForm {
         
@@ -42,8 +41,8 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
-        //nullable =  from not(true or (false and false)) = 
+    open fun createForm(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
 : CommandForm{
 var commandListener = commandListener
 var title = title

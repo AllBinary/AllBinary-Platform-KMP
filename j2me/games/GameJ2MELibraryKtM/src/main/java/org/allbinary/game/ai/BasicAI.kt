@@ -45,9 +45,9 @@ open public class BasicAI : ArtificialIntelligence
         
 companion object {
             
-    val AI_VISITOR: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
+    val AI_VISITOR: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(2)!!
 
-    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(1)!!
+    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(1)!!
 
         }
             
@@ -85,7 +85,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                 @Throws(Exception::class)
             
-    open fun processAI(key: Int)
+    open fun processKeyAI(key: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -94,7 +94,7 @@ var key = key
                         if(key !=  -1)
                         
                                     {
-                                    this.gameInput!!.add(this.gameKeyEventFactory!!.getInstance(this, key))
+                                    this.gameInput!!.add(this.gameKeyEventFactory!!.getInstanceForKey(this, key))
 
                                     }
                                 

@@ -95,7 +95,7 @@ this.ext= ext
 : InputStream{
     //var resource = resource
 
-    var inputStream: InputStream = this.getResourceAsStream(resource, 2)!!
+    var inputStream: InputStream = this.getResourceAsStreamAtStart(resource, 2)!!
 
 
     
@@ -104,7 +104,7 @@ this.ext= ext
                                 )
                         
                                     {
-                                    inputStream= this.getResourceAsStream(resource, 1)
+                                    inputStream= this.getResourceAsStreamAtStart(resource, 1)
 
     
                         if(inputStream == 
@@ -133,7 +133,7 @@ this.ext= ext
 
                 @Throws(Exception::class)
             
-    open fun getResourceAsStream(resource: String, startIndex: Int)
+    open fun getResourceAsStreamAtStart(resource: String, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var resource = resource

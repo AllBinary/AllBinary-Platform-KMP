@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt.Color
 import java.awt.Graphics2D
 import java.awt.GraphicsConfiguration
 import java.awt.GraphicsDevice
@@ -34,9 +33,7 @@ import java.awt.Transparency
 import java.awt.geom.AffineTransform
 import java.awt.image.BufferedImage
 import javax.microedition.lcdui.Image
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
@@ -112,7 +109,7 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent: Int, scale: Boolean)
+    open fun createBufferedImageForResize(bufferedImageArray: Array<BufferedImage?>, percent: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
     //var bufferedImageArray = bufferedImageArray
@@ -155,7 +152,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent: Float, scale: Boolean)
+    open fun createBufferedImage2(bufferedImageArray: Array<BufferedImage?>, percent: Float, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
     //var bufferedImageArray = bufferedImageArray
@@ -198,7 +195,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, width: Int, height: Int, scale: Boolean)
+    open fun createBufferedImage3(bufferedImageArray: Array<BufferedImage?>, width: Int, height: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
     //var bufferedImageArray = bufferedImageArray
@@ -232,7 +229,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[ind
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int)
+    open fun createBufferedImageForSave(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -259,13 +256,13 @@ var newHeight = newHeight
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createBufferedImage(bufferedImage, newWidth, newHeight, scale, false)
+                        return this.createBufferedImageAllowTranslate(bufferedImage, newWidth, newHeight, scale, false)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
+    open fun createBufferedImageAllowTranslate(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage

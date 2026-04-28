@@ -52,7 +52,7 @@ companion object {
             {
             }            
         
-    open fun adjust(points: Array<Array<IntArray?>?>, x: Int, y: Int)
+    open fun adjustXY(points: Array<Array<IntArray?>?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<IntArray?>?>{
     //var points = points

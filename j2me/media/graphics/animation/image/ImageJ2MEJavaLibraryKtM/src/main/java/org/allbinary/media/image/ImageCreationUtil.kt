@@ -56,8 +56,8 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(width: Int, height: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun createImageWH(width: Int, height: Int)
+        //nullable = true from not(false or (false and false)) = true
 : Image{
     //var width = width
     //var height = height

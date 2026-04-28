@@ -103,11 +103,11 @@ companion object {
 
     var alphaFloat: Float = alphaF /255
 
-this.setAlpha(originalImage, image, imageIndex, alphaFloat)
+this.setAlphaF(originalImage, image, imageIndex, alphaFloat)
 }
 
 
-    open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alpha: Float)
+    open fun setAlphaF(originalImage: Image, image: Image, imageIndex: Int, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage

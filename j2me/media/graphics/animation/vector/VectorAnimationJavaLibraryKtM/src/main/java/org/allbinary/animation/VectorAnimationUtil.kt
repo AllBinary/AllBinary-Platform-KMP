@@ -54,16 +54,22 @@ companion object {
 }
 
 
-    open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicArrayList, pointsPerFrame: Int)
+    open fun toAnimationArrayFromListOfPointListWithPointsPerFrame(vector: BasicArrayList, pointsPerFrame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<IntArray?>?>{
-var vector = vector
-var pointsPerFrame = pointsPerFrame
+    //var vector = vector
+    //var pointsPerFrame = pointsPerFrame
 
     var size: Int = vector.size()!!
 
 
     var points: Array<Array<IntArray?>?> = Array(size) { Array(pointsPerFrame) { IntArray(2) } }
+
+
+    var nextBasicArrayList: BasicArrayList
+
+
+    var framePoints: Array<IntArray?>
 
 
 
@@ -72,21 +78,17 @@ var pointsPerFrame = pointsPerFrame
                         for (index in 0 until size)
 
         {
-
-    var nextBasicArrayList: BasicArrayList = vector.objectArray[index]!! as BasicArrayList
-
-
-    var frame: Array<IntArray?> = toFrameArrayFromPointBasicArrayList(nextBasicArrayList)!!
+nextBasicArrayList= vector.objectArray[index]!! as BasicArrayList
+framePoints= toFrameArrayFromPointBasicArrayList(nextBasicArrayList)
 
 
 
 
-
-                        for (pointIndex in 0 until frame.size)
+                        for (pointIndex in 0 until framePoints!!.size)
 
         {
-points[index]!![pointIndex]!![0]= frame[pointIndex]!![0]!!
-points[index]!![pointIndex]!![1]= frame[pointIndex]!![1]!!
+points[index]!![pointIndex]!![0]= framePoints[pointIndex]!![0]!!
+points[index]!![pointIndex]!![1]= framePoints[pointIndex]!![1]!!
 }
 
 }
@@ -99,15 +101,21 @@ points[index]!![pointIndex]!![1]= frame[pointIndex]!![1]!!
 }
 
 
-    open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicArrayList)
+    open fun toAnimationArrayFromListOfPointList(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<IntArray?>?>{
-var vector = vector
+    //var vector = vector
 
     var size: Int = vector.size()!!
 
 
     var points: Array<Array<IntArray?>?> = Array(size) { Array(0) { IntArray(0) } }
+
+
+    var nextBasicArrayList: BasicArrayList
+
+
+    var framePoints: Array<IntArray?>
 
 
 
@@ -116,12 +124,8 @@ var vector = vector
                         for (index in 0 until size)
 
         {
-
-    var nextBasicArrayList: BasicArrayList = vector.objectArray[index]!! as BasicArrayList
-
-
-    var framePoints: Array<IntArray?> = toFrameArrayFromPointBasicArrayList(nextBasicArrayList)!!
-
+nextBasicArrayList= vector.objectArray[index]!! as BasicArrayList
+framePoints= toFrameArrayFromPointBasicArrayList(nextBasicArrayList)
 points[index]= Array(framePoints!!.size) { IntArray(2) }
 
 

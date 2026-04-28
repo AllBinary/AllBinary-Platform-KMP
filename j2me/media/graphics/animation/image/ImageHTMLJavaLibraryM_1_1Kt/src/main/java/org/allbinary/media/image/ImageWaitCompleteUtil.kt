@@ -30,7 +30,6 @@ import javax.microedition.lcdui.Image
 import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
-import org.allbinary.string.CommonStrings
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.HashtableUtil
 import org.microemu.device.playn.PlaynImage
@@ -56,8 +55,8 @@ public constructor (){
 {
     //var image = image
     //var name = name
-this.timeDelayHelper!!.setStartTime()
-this.waitFor(image, name, this.timeDelayHelper)
+this.timeDelayHelper!!.setStartTimeTNT()
+this.waitForATime(image, name, this.timeDelayHelper)
 }
 
 
@@ -69,7 +68,7 @@ this.waitFor(image, name, this.timeDelayHelper)
     //var name = name
 
     
-                        if(this.timeDelayHelper!!.isTime())
+                        if(this.timeDelayHelper!!.isTimeTNT())
                         
                                     {
                                     
@@ -84,7 +83,7 @@ this.waitFor(image, name, this.timeDelayHelper)
 
                 @Throws(Exception::class)
             
-    open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
+    open fun waitForATime(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -101,7 +100,7 @@ this.waitFor(image, name, this.timeDelayHelper)
         {
 
     
-                        if(timeDelayHelper!!.isTime())
+                        if(timeDelayHelper!!.isTimeTNT())
                         
                                     {
                                     
@@ -130,7 +129,7 @@ this.waitFor(image, name, this.timeDelayHelper)
     open fun waitForAll()
         //nullable = true from not(false or (false and true)) = true
 {
-this.allTimeDelayHelper!!.setStartTime()
+this.allTimeDelayHelper!!.setStartTimeTNT()
 
     var hashtable: Hashtable<Any, Any> = GameFeatureImageCacheFactory.getInstance()!!.getHashtableP()!!
 
@@ -149,7 +148,7 @@ PreLogUtil.put("Image Total: " +size, this, "waitForAll")
                         for (index in 0 until size)
 
         {
-this.waitFor(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
+this.waitForATime(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
 }
 
 }

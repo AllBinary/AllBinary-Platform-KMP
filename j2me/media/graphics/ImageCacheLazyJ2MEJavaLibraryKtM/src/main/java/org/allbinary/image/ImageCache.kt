@@ -344,7 +344,7 @@ this.firstTime= false
                                     }
                                 
                         else {
-                            loadImage()
+                            loadNextImage()
 
                         }
                             
@@ -360,7 +360,7 @@ this.firstTime= false
                             lazyImageRotationAnimation= this.loadAfterList!!.get(0) as LazyImageRotationAnimation
 
     
-                        if(this.loadImageForAnimation(lazyImageRotationAnimation))
+                        if(this.loadImageForLazyAnimation(lazyImageRotationAnimation))
                         
                                     {
                                     this.loadAfterList!!.remove(lazyImageRotationAnimation)
@@ -377,7 +377,7 @@ this.firstTime= false
                             lazyImageRotationAnimation= this.loadSoonList!!.get(0) as LazyImageRotationAnimation
 
     
-                        if(this.loadImageForAnimation(lazyImageRotationAnimation))
+                        if(this.loadImageForLazyAnimation(lazyImageRotationAnimation))
                         
                                     {
                                     this.loadSoonList!!.remove(lazyImageRotationAnimation)
@@ -400,7 +400,7 @@ lazyImageRotationAnimation= this.loadNowList!!.get(0) as LazyImageRotationAnimat
 
 
     
-                        if(this.loadImageForAnimation(lazyImageRotationAnimation))
+                        if(this.loadImageForLazyAnimation(lazyImageRotationAnimation))
                         
                                     {
                                     
@@ -436,7 +436,7 @@ this.loadNowList!!.remove(lazyImageRotationAnimation)
                         if(size > 0)
                         
                                     {
-                                    this.loadSoonList!!.addAll(list)
+                                    this.loadSoonList!!.addAllList(list)
 
                                     }
                                 
@@ -466,7 +466,7 @@ this.loadNowList!!.remove(lazyImageRotationAnimation)
                         if(this.totalLoaded % 10 == 0)
                         
                                     {
-                                    progressCanvas!!.addPortion(1, LOAD_IMAGE_FOR_ANIMATION)
+                                    progressCanvas!!.addNormalPortion(1, LOAD_IMAGE_FOR_ANIMATION)
 
                                     }
                                 
@@ -488,7 +488,7 @@ this.loadNowList!!.remove(lazyImageRotationAnimation)
         while(!this.loadList!!.isEmpty() || !this.loadNowList!!.isEmpty())
         {
 loadImageForAnimations()
-loadImage()
+loadNextImage()
 }
 
 }
@@ -537,7 +537,7 @@ loadImageForAnimation()
 
     
                         if(!this.loadAfterList!!.isEmpty())
-                        lazyImageRotationAnimation= this.loadAfterList!!.remove(0) as LazyImageRotationAnimation
+                        lazyImageRotationAnimation= this.loadAfterList!!.removeAt(0) as LazyImageRotationAnimation
 }
 
 
@@ -547,7 +547,7 @@ loadImageForAnimation()
                                 )
                         
                                     {
-                                    this.loadImageForAnimation(lazyImageRotationAnimation)
+                                    this.loadImageForLazyAnimation(lazyImageRotationAnimation)
 
                                     }
                                 
@@ -558,7 +558,7 @@ loadImageForAnimation()
 
                 @Throws(Exception::class)
             
-    open fun loadImageForAnimation(lazyImageRotationAnimation: LazyImageRotationAnimation)
+    open fun loadImageForLazyAnimation(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
@@ -589,7 +589,7 @@ loadImageForAnimation()
 
                 @Throws(Exception::class)
             
-    open fun loadImage()
+    open fun loadNextImage()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -617,7 +617,7 @@ loadImageForAnimation()
 
                                     }
                                 
-image= this.loadList!!.remove(0) as Image
+image= this.loadList!!.removeAt(0) as Image
 }
 
 this.loadImage(image)
@@ -805,7 +805,7 @@ listOfList[foundIndex]!!.add(image)
 
                 @Throws(Exception::class)
             
-    open fun get(key: Any)
+    open fun getWithKey(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -824,7 +824,7 @@ listOfList[foundIndex]!!.add(image)
 
 
         try {
-            image= this.createImage(key, inputStream)
+            image= this.createImageFromInputStream(key, inputStream)
 } catch(e: Exception)
             {
 this.logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
@@ -834,7 +834,7 @@ System.gc()
 System.gc()
 this.logUtil!!.putF(Memory.getInfo(), this, commonStrings!!.GET)
 Thread.sleep(100)
-image= this.createImage(key, inputStream)
+image= this.createImageFromInputStream(key, inputStream)
 }
 
 this.hashtable.put(key, image)
@@ -896,7 +896,7 @@ this.logUtil!!.putF(StringMaker().
 
                 @Throws(Exception::class)
             
-    open fun createImage(key: Any, inputStream: InputStream)
+    open fun createImageFromInputStream(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key

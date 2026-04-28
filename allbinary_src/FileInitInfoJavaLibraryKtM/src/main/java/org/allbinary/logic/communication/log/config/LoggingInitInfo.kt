@@ -247,7 +247,7 @@ LoggingInitInfo.updateIfNeeded()
                         if(logConfigInfo!!.isEnabled())
                         
                                     {
-                                    allLogTypeVector!!.addAll(logTypeVector)
+                                    allLogTypeVector!!.addAllList(logTypeVector)
 
                                     }
                                 
@@ -291,7 +291,7 @@ LoggingInitInfo.updateIfNeeded()
                         if(logConfigInfo!!.isEnabled())
                         
                                     {
-                                    allLogTypeVector!!.addAll(logTypeVector)
+                                    allLogTypeVector!!.addAllList(logTypeVector)
 
                                     }
                                 

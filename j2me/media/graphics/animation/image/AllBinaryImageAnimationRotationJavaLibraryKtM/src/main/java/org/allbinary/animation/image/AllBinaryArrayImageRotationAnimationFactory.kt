@@ -41,7 +41,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(image: Image, dx: Int, dy: Int)
+    open fun createFactory(image: Image, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryArrayImageRotationAnimationFactory{
     //var image = image
@@ -50,7 +50,7 @@ companion object {
 
     var arrayImageRotationAnimationFactory: AllBinaryArrayImageRotationAnimationFactory = AllBinaryArrayImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity(), AnimationBehaviorFactory.getInstance())
 
-arrayImageRotationAnimationFactory!!.init(dx, dy)
+arrayImageRotationAnimationFactory!!.initDXY(dx, dy)
 
 
 
@@ -61,7 +61,7 @@ arrayImageRotationAnimationFactory!!.init(dx, dy)
 
                 @Throws(Exception::class)
             
-    open fun createA(image: Image, dx: Int, dy: Int, angleIncrement: Int)
+    open fun createFactoryA(image: Image, dx: Int, dy: Int, angleIncrement: Int)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryArrayImageRotationAnimationFactory{
     //var image = image
@@ -71,7 +71,7 @@ arrayImageRotationAnimationFactory!!.init(dx, dy)
 
     var arrayImageRotationAnimationFactory: AllBinaryArrayImageRotationAnimationFactory = AllBinaryArrayImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), angleIncrement, AnimationBehaviorFactory.getInstance())
 
-arrayImageRotationAnimationFactory!!.init(dx, dy)
+arrayImageRotationAnimationFactory!!.initDXY(dx, dy)
 
 
 
@@ -111,7 +111,7 @@ this.setImageArray(ImageToRotationImageArrayUtil.getInstance()!!.generate(this.g
 }
 
 
-    open fun init(dx: Int, dy: Int)
+    open fun initDXY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx

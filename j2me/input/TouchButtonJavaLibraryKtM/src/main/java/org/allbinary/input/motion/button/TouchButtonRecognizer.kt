@@ -86,8 +86,8 @@ var deviceId = deviceId
     var gameKeyEvent: GameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
 
 upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
-this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.remove(index)
+upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
+this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.removeAt(index)
 }
 
 }
@@ -138,8 +138,8 @@ var deviceId = deviceId
     var gameKeyEvent: GameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
 
 upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
-this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.remove(index)
+upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
+this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.removeAt(index)
 
                                     }
                                 
@@ -184,7 +184,7 @@ this.releaseHelper!!.release(touchButtonInput, deviceId)
     var gameKeyEvent: GameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
 
 this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 this.currentlyPressedTouchButtonSingleton!!.remove(touchButtonInput)
 }
 
@@ -319,7 +319,7 @@ currentlyPressedTouchButtonSingleton!!.add(touchButtonInput)
     var gameKeyEvent: GameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
 
 this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 

@@ -77,8 +77,8 @@ this.list= BasicArrayListD()
 
                 @Throws(Exception::class)
             
-    open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getNexInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+        //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer{
     //var hashtable = hashtable
     //var x = x
@@ -99,7 +99,7 @@ this.logUtil!!.putF(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return layerInterfaceFactoryInterface!!.getInstance(hashtable, x, y, z)
+                        return layerInterfaceFactoryInterface!!.getNextInstance(hashtable, x, y, z)
 }
 
 

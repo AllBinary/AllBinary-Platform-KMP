@@ -216,7 +216,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
                 @Throws(Exception::class)
             
-    open fun updateExclusive(choiceGroup: ChoiceGroup)
+    open fun updateExclusiveForChoiceGroup(choiceGroup: ChoiceGroup)
         //nullable = true from not(false or (false and false)) = true
 {
 var choiceGroup = choiceGroup
@@ -346,7 +346,7 @@ this.logUtil!!.putF(StringMaker().
         {
 anyType= objectArray[index]!! as Object
 basicArrayList= hashtable.get(anyType as Object) as BasicArrayList
-updateExclusive(gameFeature, basicArrayList)
+updateExclusiveList(gameFeature, basicArrayList)
 }
 
 }
@@ -354,7 +354,7 @@ updateExclusive(gameFeature, basicArrayList)
 
                 @Throws(Exception::class)
             
-    open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
+    open fun updateExclusiveList(gameFeature: Feature, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature

@@ -66,7 +66,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
                                     
     var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayer as CollidableDestroyableDamageableLayer
 
-collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickup(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
+collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickupLayer(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
 
                                     }
                                 
@@ -79,7 +79,7 @@ collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickup(collidable
 
                 @Throws(Exception::class)
             
-    override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface

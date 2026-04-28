@@ -66,8 +66,8 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(partInterfaceArray: Array<PartInterface?>)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getUpdated(partInterfaceArray: Array<PartInterface?>)
+        //nullable = true from not(false or (false and false)) = true
 : Array<PartInterface?>{
     //var partInterfaceArray = partInterfaceArray
 this.list= BasicArrayListD()

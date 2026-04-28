@@ -141,7 +141,7 @@ this.loopCount= 0
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -149,7 +149,7 @@ var x = x
 var y = y
 x= DisplayInfoSingleton.getInstance()!!.getLastHalfWidth() -(this.getImage(this.circularIndexUtil!!.getIndex())!!.getWidth() shr 1)
 y= 5
-super.paint(graphics, x, y)
+super.paintXY(graphics, x, y)
 }
 
 

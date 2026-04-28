@@ -41,7 +41,7 @@ open public class NumberStringHud : BasicHud
         
 companion object {
             
-    open fun create()
+    open fun createHud()
         //nullable = true from not(false or (false and true)) = true
 : NumberStringHud{
 
@@ -62,7 +62,7 @@ companion object {
 }
 
 
-    val NULL_NUMBER_STRING_HUD: NumberStringHud = NumberStringHud.create()!!
+    val NULL_NUMBER_STRING_HUD: NumberStringHud = NumberStringHud.createHud()!!
 
         }
             
@@ -98,9 +98,9 @@ this.PREPEND_STRING= prependString!!.toCharArray()
 
     var myFont: MyFont = MyFont.getInstance()!!
 
-this.offset= myFont!!.stringWidth(prependString) +myFont!!.charWidth()
+this.offset= myFont!!.stringWidth(prependString) +myFont!!.defaultCharWidth()
 this.valueString= PrimitiveLongSingleton.getInstance()!!.NUMBER_CHAR_ARRAYS[0]!!
-this.primitiveLongUtil= PrimitiveLongUtil.create(max +1)
+this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(max +1)
 this.max= max
 this.value= 0
 
@@ -168,11 +168,11 @@ this.set(this.value -value)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paint(graphics, PREPEND_STRING, 0, PREPEND_STRING.size, this.valueString, 0, this.valueTotalDigits, offset)
+super.paintDX(graphics, PREPEND_STRING, 0, PREPEND_STRING.size, this.valueString, 0, this.valueTotalDigits, offset)
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

@@ -59,16 +59,16 @@ open public class BasicTouchButtonsBuilder : BaseTouchInput {
     var basicTouchButtonCellPositionFactory: BasicTouchButtonCellPositionFactory = BasicTouchButtonCellPositionFactory()
 
 
-    var UP: TouchButton = TouchButton.create(BasicTouchInputFactory.getInstance()!!.UP, TouchButtonUpResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.SECOND_FROM_BOTTOM_LEFT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())!!
+    var UP: TouchButton = TouchButton.createButton(BasicTouchInputFactory.getInstance()!!.UP, TouchButtonUpResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.SECOND_FROM_BOTTOM_LEFT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())!!
 
 
-    var DOWN: TouchButton = TouchButton.create(BasicTouchInputFactory.getInstance()!!.DOWN, TouchButtonDownResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.BOTTOM_LEFT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())!!
+    var DOWN: TouchButton = TouchButton.createButton(BasicTouchInputFactory.getInstance()!!.DOWN, TouchButtonDownResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.BOTTOM_LEFT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())!!
 
 
-    var LEFT: TouchButton = TouchButton.create(BasicTouchInputFactory.getInstance()!!.SPECIAL_BUTTON_FOUR, TouchButtonTurnLeftResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.BOTTOM_SECOND_FROM_RIGHT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())!!
+    var LEFT: TouchButton = TouchButton.createButton(BasicTouchInputFactory.getInstance()!!.SPECIAL_BUTTON_FOUR, TouchButtonTurnLeftResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.BOTTOM_SECOND_FROM_RIGHT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())!!
 
 
-    var RIGHT: TouchButton = TouchButton.create(BasicTouchInputFactory.getInstance()!!.SPECIAL_BUTTON_THREE, TouchButtonTurnRightResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.BOTTOM_RIGHT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())!!
+    var RIGHT: TouchButton = TouchButton.createButton(BasicTouchInputFactory.getInstance()!!.SPECIAL_BUTTON_THREE, TouchButtonTurnRightResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.BOTTOM_RIGHT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())!!
 
 list.add(UP)
 list.add(LEFT)

@@ -27,7 +27,6 @@
         
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.AnimationBehavior
-import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 
 open public class ImageArrayRotationAnimation : ImageArrayBaseRotationAnimation {
@@ -36,7 +35,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun create(anyType: Any, animationBehavior: AnimationBehavior)
+    open fun createAnimation(anyType: Any, animationBehavior: AnimationBehavior)
         //nullable = true from not(false or (false and false)) = true
 : ImageArrayRotationAnimation{
     //var anyType = anyType

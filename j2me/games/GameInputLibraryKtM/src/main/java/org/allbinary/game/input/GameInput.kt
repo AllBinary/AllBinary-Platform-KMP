@@ -31,7 +31,6 @@ import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 
 open public class GameInput
             : Object
@@ -148,7 +147,7 @@ gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
                         if(gameKeyEvent!!.getSourceId() != 1)
                         
                                     {
-                                    list.remove(index)
+                                    list.removeAt(index)
 
                                     }
                                 
@@ -192,7 +191,7 @@ gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
                         if(list.objectArray[index2] == anyType)
                         
                                     {
-                                    list.remove(index2)
+                                    list.removeAt(index2)
 
                                     }
                                 

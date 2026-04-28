@@ -28,7 +28,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.PlayerGameInput
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.EventStrings
@@ -112,7 +111,7 @@ super.removeListener(eventListenerInterface)
             
     var playerGameInput: PlayerGameInput = this.list.objectArray[index]!! as PlayerGameInput
 
-playerGameInput!!.onDownKeyEvent(eventObject)
+playerGameInput!!.onDownKey(eventObject)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
@@ -146,7 +145,7 @@ index++
 
                 @Throws(Exception::class)
             
-    open fun fireEvent(eventObject: GameKeyEvent)
+    open fun fireEventForEvent(eventObject: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -185,7 +184,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!
 
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
-this.process(eventObject, eventListenerInterface)
+this.processEvent(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
@@ -207,13 +206,13 @@ index++
 
     var downKeyEventListenerInterface: DownKeyEventListenerInterface = eventListenerInterface as DownKeyEventListenerInterface
 
-downKeyEventListenerInterface!!.onDownKeyEvent(eventObject)
+downKeyEventListenerInterface!!.onDownKey(eventObject)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun process(eventObject: GameKeyEvent, eventListenerInterface: EventListenerInterface)
+    open fun processEvent(eventObject: GameKeyEvent, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject

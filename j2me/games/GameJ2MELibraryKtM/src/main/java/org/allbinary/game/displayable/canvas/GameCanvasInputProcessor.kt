@@ -78,7 +78,7 @@ this.inputToGameKeyMapping!!.init(this.allBinaryGameCanvas)
 
         try {
             
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this.allBinaryGameCanvas, keyCode)!!
+    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this.allBinaryGameCanvas, keyCode)!!
 
 
     
@@ -86,10 +86,10 @@ this.inputToGameKeyMapping!!.init(this.allBinaryGameCanvas)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this.allBinaryGameCanvas, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this.allBinaryGameCanvas, gameKey)!!
 
 downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 
@@ -100,10 +100,10 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                         }
                             
 
-    var keyCodeAsInteger: Integer = smallIntegerSingletonFactory!!.getInstanceNoThrow(keyCode)!!
+    var keyCodeAsInteger: Integer = smallIntegerSingletonFactory!!.getAtNoThrow(keyCode)!!
 
 downKeyEventHandler!!.fireEvent(keyCodeAsInteger)
-downKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(keyCodeAsInteger)
+downKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(keyCodeAsInteger)
 } catch(e: Exception)
             {
 this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
@@ -132,7 +132,7 @@ this.removeGameKeyEvent(canvas, keyCode, deviceId, false)
 
         try {
             
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(canvas, keyCode)!!
+    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(canvas, keyCode)!!
 
 
     
@@ -140,10 +140,10 @@ this.removeGameKeyEvent(canvas, keyCode, deviceId, false)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(canvas as GameKeyEventSourceInterface, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(canvas as GameKeyEventSourceInterface, gameKey)!!
 
 this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 

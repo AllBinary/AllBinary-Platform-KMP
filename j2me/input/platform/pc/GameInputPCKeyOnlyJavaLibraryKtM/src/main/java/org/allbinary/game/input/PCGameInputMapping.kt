@@ -27,7 +27,6 @@
         
 import org.allbinary.game.configuration.persistance.GamePersistanceStrings
 import org.allbinary.game.input.mapping.PersistentInputMapping
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 
 open public class PCGameInputMapping : PersistentInputMapping {
@@ -56,7 +55,7 @@ super.init(abeClientInformation)
                         if(this.getTotalMapped() == 0 || this.isDefaultNew())
                         
                                     {
-                                    this.getInputMapping()!!.add(this.getDefault())
+                                    this.getInputMapping()!!.addMapping(this.getDefault())
 this.save(abeClientInformation)
 
                                     }

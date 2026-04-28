@@ -106,7 +106,7 @@ pointBasicArrayList= BasicArrayListS(size2)
                         for (index in 0 until size2)
 
         {
-pointBasicArrayList!!.add(pointFactory!!.getInstance0(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!))
+pointBasicArrayList!!.add(pointFactory!!.createXY(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!))
 }
 
 pointsBasicArrayList!!.add(pointBasicArrayList)
@@ -123,7 +123,7 @@ pointsBasicArrayList!!.add(getInstance(pointsBasicArrayList!!.objectArray[index]
 }
 
 
-    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList)!!
+    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromListOfPointList(pointsBasicArrayList)!!
 
 
 

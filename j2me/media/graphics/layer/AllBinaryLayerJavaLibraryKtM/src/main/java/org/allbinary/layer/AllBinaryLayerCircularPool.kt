@@ -41,7 +41,7 @@ protected constructor (){
 {
 var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
 var total = total
-this.circularIndexUtil= CircularIndexUtil.getInstance(total)
+this.circularIndexUtil= CircularIndexUtil.createInstance(total)
 OBJECT_ARRAY= arrayOfNulls(total)
 
 

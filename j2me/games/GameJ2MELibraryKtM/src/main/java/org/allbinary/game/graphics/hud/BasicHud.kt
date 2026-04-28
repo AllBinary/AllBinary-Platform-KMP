@@ -118,7 +118,7 @@ this.color= basicColor!!.toInt()
 
                 @Throws(Exception::class)
             
-    open fun getHudGraphicsPosition(width: Int, height: Int)
+    open fun getHudGraphicsPositionWH(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : HudGraphicsPosition{
 var width = width
@@ -237,7 +237,7 @@ var displayChangeEvent = displayChangeEvent
             
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-this.hudGraphicsPosition= this.getHudGraphicsPosition(displayInfo!!.getLastWidth(), displayInfo!!.getLastHeight())
+this.hudGraphicsPosition= this.getHudGraphicsPositionWH(displayInfo!!.getLastWidth(), displayInfo!!.getLastHeight())
 this.x= this.hudGraphicsPosition!!.getPoint()!!.getX()
 this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
 } catch(e: Exception)
@@ -260,7 +260,7 @@ var y = y
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.getInstance()!!.getInstance0(x, y)
+                        return PointFactory.getInstance()!!.createXY(x, y)
 }
 
 
@@ -351,7 +351,7 @@ this.direction= direction
 }
 
 
-    open fun paint(graphics: Graphics, string: String, string2: String, offset: Int)
+    open fun paintSSO(graphics: Graphics, string: String, string2: String, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -364,7 +364,7 @@ graphics.drawString(string2, x +offset, getY(), hudGraphicsPosition!!.getAnchor(
 }
 
 
-    open fun paint(graphics: Graphics, string: String, string2: String, offset: Int, offset2: Int)
+    open fun paintSSOO(graphics: Graphics, string: String, string2: String, offset: Int, offset2: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -378,7 +378,7 @@ graphics.drawString(string2, x +offset2, getY(), hudGraphicsPosition!!.getAnchor
 }
 
 
-    open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int, xOffset2: Int)
+    open fun paintDXY(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int, xOffset2: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -399,7 +399,7 @@ graphics.drawChars(charArray2, offset2, len2, x +xOffset2, y, hudGraphicsPositio
 }
 
 
-    open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int)
+    open fun paintDX(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -419,7 +419,7 @@ graphics.drawChars(charArray2, offset2, len2, x +xOffset, y, hudGraphicsPosition
 }
 
 
-    open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
+    open fun paintOffsetAndLength(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

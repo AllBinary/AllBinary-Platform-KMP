@@ -64,14 +64,14 @@ var allbinaryCollidableLayer = allbinaryCollidableLayer
 }
 
 
-    override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 }
 
 
-    override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun isCollisionInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface

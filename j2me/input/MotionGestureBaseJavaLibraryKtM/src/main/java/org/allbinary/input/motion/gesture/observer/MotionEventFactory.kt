@@ -64,7 +64,7 @@ index= TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()
     var inputFactory: InputFactory = InputFactory.getInstance()!!
 
 
-    var input: Input = inputFactory!!.getInstance(index++)!!
+    var input: Input = inputFactory!!.getInstanceById(index++)!!
 
 
     

@@ -48,7 +48,6 @@ import org.allbinary.media.graphics.geography.pathfinding.BasicGeographicMapExtr
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathGenerator
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class Waypoint : WaypointBase
@@ -163,7 +162,7 @@ this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(til
 
                 @Throws(Exception::class)
             
-    override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
+    override fun getPathsListRunnable(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -320,7 +319,7 @@ customMapGenerator!!.copyMapIntoCustomMap()
 customMapArray[startGeographicMapCellPosition!!.getRow()]!![startGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getStartType()
 customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 
-    var pathFindingInfo: PathFindingInfo = PathFindingInfoFactory.getInstance()!!.getInstance(raceTrackGeographicMap, customMapArray)!!
+    var pathFindingInfo: PathFindingInfo = PathFindingInfoFactory.getInstance()!!.getInstancePathFindingInfo(raceTrackGeographicMap, customMapArray)!!
 
 
     var list: BasicArrayList = PathGenerator.getInstance()!!.getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2)!!

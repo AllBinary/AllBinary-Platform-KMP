@@ -27,7 +27,6 @@
         
 import org.allbinary.game.layer.RTSGameStrings
 import org.allbinary.game.layer.RTSInterface
-import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.TechnologyRTSInterfaceImageItem
 import org.allbinary.game.layer.capital.Capital
@@ -67,7 +66,7 @@ public constructor (groupInterface: Array<Group?>)
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, SmallIntegerSingletonFactory.getInstance()!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, SmallIntegerSingletonFactory.getInstance()!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
 }
 
 
@@ -90,7 +89,7 @@ this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    override fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer

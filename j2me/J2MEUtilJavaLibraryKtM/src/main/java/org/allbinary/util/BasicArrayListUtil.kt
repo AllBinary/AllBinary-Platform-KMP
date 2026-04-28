@@ -140,9 +140,9 @@ var list = list
 
         {
 secondSwapIndex= lastMinusOneIndex -index
-temp= list.remove(index)
-list.add(index, list.remove(secondSwapIndex))
-list.add(secondSwapIndex +1, temp)
+temp= list.removeAt(index)
+list.addAt(index, list.removeAt(secondSwapIndex))
+list.addAt(secondSwapIndex +1, temp)
 }
 
 }

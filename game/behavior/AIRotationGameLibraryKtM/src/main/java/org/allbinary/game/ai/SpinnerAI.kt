@@ -61,13 +61,13 @@ var allBinaryLayerManager = allBinaryLayerManager
                         if(this.isEven)
                         
                                     {
-                                    super.processAI(this.direction[0]!!)
+                                    super.processKeyAI(this.direction[0]!!)
 this.isEven= false
 
                                     }
                                 
                         else {
-                            super.processAI(Canvas.KEY_NUM1)
+                            super.processKeyAI(Canvas.KEY_NUM1)
 this.isEven= true
 
                         }

@@ -66,7 +66,7 @@ open public class SelectionHudPaintable : InitUpdatePaintable {
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 protected constructor (){
 this.update()
-this.primitiveLongUtil= PrimitiveLongUtil.create(10000)
+this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(10000)
 }
 
 

@@ -159,13 +159,13 @@ graphics.setFont(font)
 }
 
 
-    override fun move(dx: Int, dy: Int)
+    override fun moveDXY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
     //var dy = dy
 this.tiledLayerP!!.move(dx, dy)
-super.move( -dx,  -dy)
+super.moveDXY( -dx,  -dy)
 }
 
 

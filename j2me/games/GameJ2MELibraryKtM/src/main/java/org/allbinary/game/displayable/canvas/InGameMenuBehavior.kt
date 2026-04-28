@@ -58,7 +58,7 @@ companion object {
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
     //var displayChangeEvent = displayChangeEvent
-allBinaryGameCanvas!!.updateMenu(displayChangeEvent)
+allBinaryGameCanvas!!.updateMenuFromEvent(displayChangeEvent)
 }
 
 

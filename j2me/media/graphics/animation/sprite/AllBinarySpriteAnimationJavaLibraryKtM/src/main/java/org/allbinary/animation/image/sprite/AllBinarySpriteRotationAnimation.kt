@@ -32,7 +32,6 @@ import org.allbinary.direction.Direction
 import org.allbinary.math.Angle
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
-import org.allbinary.math.FrameUtil
 
 open public class AllBinarySpriteRotationAnimation : HackRotationSpriteIndexedAnimation {
         
@@ -66,22 +65,22 @@ this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
 
-    override fun setFrame(direction: Direction)
+    override fun setFrameByDirection(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
 var direction = direction
 
     var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
 
-this.adjustFrame(angle)
+this.adjustFrameToAngle(angle)
 }
 
 
-    override fun setFrame(angle: Angle)
+    override fun setFrameToAngle(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle
-this.adjustFrame(angle)
+this.adjustFrameToAngle(angle)
 }
 
 
@@ -94,7 +93,7 @@ this.angleInfo!!.adjustAngle(this.getFrame())
 }
 
 
-    override fun adjustFrame(angle: Angle)
+    override fun adjustFrameToAngle(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle

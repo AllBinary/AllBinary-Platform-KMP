@@ -38,7 +38,6 @@ import org.allbinary.game.configuration.persistance.BasicPersitance
 import org.allbinary.game.configuration.persistance.NullRecordComparator
 import org.allbinary.game.configuration.persistance.NullRecordFilter
 import org.allbinary.game.configuration.persistance.NullRecordStore
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
@@ -147,8 +146,8 @@ gameActionInputId= value.toLong()
 inputStream!!.readUTF()
 value= Integer.parseInt(inputStream!!.readUTF())
 inputId= value.toLong()
-gameActionInput= gameKeyFactory!!.getInstance(gameActionInputId.toInt())
-input= inputFactory!!.getInstance(inputId.toInt())
+gameActionInput= gameKeyFactory!!.getGameKey(gameActionInputId.toInt())
+input= inputFactory!!.getInstanceById(inputId.toInt())
 
     
                         if(input == inputFactory!!.NO_INPUT || gameActionInput == 
@@ -197,7 +196,7 @@ hashtable.put(input, gameActionInput)
 }
 
 this.valueList!!.add(hashtable)
-this.idList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
+this.idList!!.add(smallIntegerSingletonFactory!!.getAt(id))
 
                                     }
                                 
@@ -299,13 +298,13 @@ list= hashtable.get(inputObjectArray[index]!! as Object) as BasicArrayList
 
         {
 
-    var gameActionInputIdAsString: String = smallIntegerSingletonFactory!!.getInstance(gameActionInput!!.getId())!!.toString()!!
+    var gameActionInputIdAsString: String = smallIntegerSingletonFactory!!.getAt(gameActionInput!!.getId())!!.toString()!!
 
 outputStream!!.writeUTF(gameActionInputIdAsString)
 outputStream!!.writeUTF(commonSeps!!.EQUALS)
 input= list.objectArray[index2]!! as Input
 
-    var inputIdAsString: String = smallIntegerSingletonFactory!!.getInstance(input.getId())!!.toString()!!
+    var inputIdAsString: String = smallIntegerSingletonFactory!!.getAt(input.getId())!!.toString()!!
 
 outputStream!!.writeUTF(inputIdAsString)
 }

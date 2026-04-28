@@ -36,8 +36,8 @@ open public class MotionEventCircularPool
         
 companion object {
             
-    open fun getInstance(id: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun createPool(id: Int)
+        //nullable = true from not(false or (false and false)) = true
 : MotionEventCircularPool{
 var id = id
 

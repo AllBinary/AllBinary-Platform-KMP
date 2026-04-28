@@ -47,7 +47,7 @@ open public class RTSLayerCostAnimation : Animation
 
     private val myFont: MyFont = MyFont.getInstance()!!
 
-    private val primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil.create(10000)!!
+    private val primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(10000)!!
 
     private val image: Image
 
@@ -106,13 +106,13 @@ this.len= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 var x = x
 var y = y
-super.paint(graphics, x, y)
+super.paintXY(graphics, x, y)
 
     var adjustedCostY: Int = this.image.getHeight() -this.myFont!!.DEFAULT_CHAR_HEIGHT
 

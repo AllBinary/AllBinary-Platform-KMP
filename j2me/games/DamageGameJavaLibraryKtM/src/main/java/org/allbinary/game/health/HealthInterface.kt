@@ -41,7 +41,7 @@ interface HealthInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun heal()
+    open fun healMax()
         //nullable = true from not(false or (false and true)) = true
 
 

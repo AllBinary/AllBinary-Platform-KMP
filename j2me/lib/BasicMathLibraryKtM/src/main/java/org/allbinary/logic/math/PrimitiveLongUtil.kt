@@ -35,7 +35,7 @@ open public class PrimitiveLongUtil
         
 companion object {
             
-    open fun create(powerOfTen: Int)
+    open fun createPowerOfTen(powerOfTen: Int)
         //nullable = true from not(false or (false and false)) = true
 : PrimitiveLongUtil{
 var powerOfTen = powerOfTen
@@ -188,7 +188,7 @@ this.currentTotalDigits= currentTotalDigits
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentTotalDigits
+                        return this.currentTotalDigits
 }
 
 
@@ -199,7 +199,7 @@ this.currentTotalDigits= currentTotalDigits
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxDigits
+                        return this.maxDigits
 }
 
 

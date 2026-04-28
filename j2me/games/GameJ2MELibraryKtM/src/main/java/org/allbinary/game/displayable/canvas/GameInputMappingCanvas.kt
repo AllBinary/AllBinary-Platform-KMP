@@ -45,7 +45,6 @@ import org.allbinary.game.paint.ColorFillPaintableFactory
 import org.allbinary.game.paint.help.HelpPaintable
 import org.allbinary.game.paint.help.InputMappingHelpPaintable
 import org.allbinary.graphics.paint.ProcessPaintable
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.util.BasicArrayList
@@ -140,34 +139,34 @@ this.setCommandListener(cmdListener)
     override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var keyCode = keyCode
-this.keyPressed(keyCode, 0)
+    //var keyCode = keyCode
+this.keyPressedByDevice(keyCode, 0)
 }
 
 
     override fun keyReleased(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var keyCode = keyCode
-this.keyReleased(keyCode, 0)
+    //var keyCode = keyCode
+this.keyReleasedByDevice(keyCode, 0)
 }
 
 
     override fun keyRepeated(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var keyCode = keyCode
-this.keyRepeated(keyCode, 0)
+    //var keyCode = keyCode
+this.keyRepeatedByDevice(keyCode, 0)
 }
 
 
-    override fun keyPressed(keyCode: Int, deviceId: Int)
+    override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var keyCode = keyCode
-var deviceId = deviceId
+    //var keyCode = keyCode
+    //var deviceId = deviceId
 this.addGameKeyEvent(keyCode, false)
-super.keyPressed(keyCode, 0)
+super.keyPressedByDevice(keyCode, 0)
 }
 
 
@@ -176,17 +175,17 @@ super.keyPressed(keyCode, 0)
     open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var keyCode = keyCode
-var repeated = repeated
+    //var keyCode = keyCode
+    //var repeated = repeated
 
         try {
             this.logUtil!!.putF(StringMaker().
                             append("Raw Device Key Code: ")!!.append(Integer.toHexString(keyCode))!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
+    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
 
-    var input: Input = this.inputFactory!!.getInstance(keyCode)!!
+    var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
 this.process(gameKey, input)
 } catch(e: Exception)
@@ -232,7 +231,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
     open fun setSelectedAction(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
 {
-var gameKey = gameKey
+    //var gameKey = gameKey
 this.logUtil!!.putF(StringMaker().
                             append("Selected GameKey: ")!!.append(this.stringUtil!!.toString(gameKey))!!.toString(), this, "setSelectedAction")
 this.selectedGameKey= gameKey
@@ -412,7 +411,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
-var graphics = graphics
+    //var graphics = graphics
 this.colorFillPaintable!!.paint(graphics)
 this.helpPaintable!!.paint(graphics)
 this.paintable.paint(graphics)

@@ -69,7 +69,7 @@ companion object {
     var scaleProperties: ScaleProperties = ScaleProperties.instance
 public constructor (layoutIndex: Int, instanceId: Int, scaleProperties: ScaleProperties, animationInterfaceFactoryInterface: BaseImageAnimationFactory, animationBehavior: AnimationBehavior)                        
 
-                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), animationBehavior){
+                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior){
     //var layoutIndex = layoutIndex
     //var instanceId = instanceId
     //var scaleProperties = scaleProperties
@@ -88,7 +88,7 @@ this.animationInterfaceFactoryInterface= animationInterfaceFactoryInterface
 imageCache!!.add(this)
 this.scaleProperties= scaleProperties
 this.NULL_INDEX_ANIMATION= NullRotationAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
-this.animation= object: RotationAnimation(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.getInstance(4), animationBehavior)
+this.animation= object: RotationAnimation(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior)
                                 {
                                 
     private var index: Int= 0
@@ -110,7 +110,7 @@ this.index= index
                         return this.index
 }
 
-    open override fun paint(graphics: Graphics, x: Int, y: Int)
+    open override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -484,7 +484,7 @@ this.animation.setSequence(sequence)
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -492,7 +492,7 @@ this.animation.setSequence(sequence)
     //var y = y
 
         try {
-            this.animation.paint(graphics, x, y)
+            this.animation.paintXY(graphics, x, y)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)

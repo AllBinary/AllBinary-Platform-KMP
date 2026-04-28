@@ -64,7 +64,7 @@ companion object {
 }
 
 
-    open fun init(max: Int)
+    open fun initMax(max: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var max = max
@@ -99,8 +99,8 @@ this.pathFinderGraphVisitorFactoryInterface= pathFinderGraphVisitorFactoryInterf
 
                 @Throws(Exception::class)
             
-    open fun getInstance(geographicMapInterface: BasicGeographicMap, mapArray: Array<IntArray?>)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getInstancePathFindingInfo(geographicMapInterface: BasicGeographicMap, mapArray: Array<IntArray?>)
+        //nullable = true from not(false or (false and false)) = true
 : PathFindingInfo{
     //var geographicMapInterface = geographicMapInterface
     //var mapArray = mapArray
@@ -134,7 +134,7 @@ this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray)
 
                 @Throws(Exception::class)
             
-    open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>, cellPosition: GeographicMapCellPosition)
+    open fun buildPathFindingNodesForCellPosition(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -148,7 +148,7 @@ this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray)
     var cellTypeId: Int = mapArray[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]!!
 
 
-    var geographicMapCellType: GeographicMapCellType = GeographicMapCellTypeFactory.getInstance()!!.getInstance(geographicMapInterface!!.getCellTypeFromMapCellTypeInt(cellTypeId))!!
+    var geographicMapCellType: GeographicMapCellType = GeographicMapCellTypeFactory.getInstance()!!.get(geographicMapInterface!!.getCellTypeFromMapCellTypeInt(cellTypeId))!!
 
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = geographicMapCellType as RaceTrackGeographicMapCellType
@@ -191,7 +191,7 @@ column= basicGeographicMapUtil!!.getBorderingColumn(index, cellPosition)
                         if(row < allBinaryTiledLayer!!.getRows() && column < allBinaryTiledLayer!!.getColumns() && row >= 0 && column >= 0)
                         
                                     {
-                                    goingToGeographicMapCellPosition= geographicMapCellPositionFactory!!.getInstance(column, row)
+                                    goingToGeographicMapCellPosition= geographicMapCellPositionFactory!!.getAt(column, row)
 costFromStart= raceTrackGeographicMapCellType!!.getTravelCost()
 costToEnd= costFromStart
 pathFindingNodeCostInfoFactoryInterface!!.create(geographicMapInterface, goingToGeographicMapCellPosition, cellPosition, costFromStart, costToEnd)
@@ -237,7 +237,7 @@ pathFindingNodeCostInfoFactoryInterface!!.create(geographicMapInterface, goingTo
                         for (row in 0 until totalRows)
 
         {
-this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray, geographicMapCellPositionFactory!!.getInstance(column, row))
+this.buildPathFindingNodesForCellPosition(geographicMapInterface, pathFindingInfo, mapArray, geographicMapCellPositionFactory!!.getAt(column, row))
 }
 
 }

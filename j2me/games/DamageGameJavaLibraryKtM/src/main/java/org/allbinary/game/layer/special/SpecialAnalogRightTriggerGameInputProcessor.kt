@@ -43,7 +43,7 @@ var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
                 @Throws(Exception::class)
             
-    override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, yAnalogValue: Int)
+    override fun processAnalog(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, yAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager

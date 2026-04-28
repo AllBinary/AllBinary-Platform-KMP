@@ -28,7 +28,6 @@
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
-import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.graphics.opengles.OpenGLUtil
@@ -78,7 +77,7 @@ this.resizeCanvasForRotation= resizeCanvasForRotation
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageCopyUtil.getInstance()!!.createImage(this.getImage(), 1.44f, false)
+                        return ImageCopyUtil.getInstance()!!.createImageScale(this.getImage(), 1.44f, false)
 
                                     }
                                 

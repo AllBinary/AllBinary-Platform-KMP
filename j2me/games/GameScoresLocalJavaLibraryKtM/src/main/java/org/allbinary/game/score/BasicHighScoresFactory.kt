@@ -73,11 +73,11 @@ this.abeClientInformation= abeClientInformation
     //var gameInfo = gameInfo
     //var highScoresResultsListener = highScoresResultsListener
 this.logUtil!!.putF("Getting Local HighScores", this, FETCH)
-this.fetchHighScores(gameInfo, highScoresResultsListener, true)
+this.fetchHighScoresPreload(gameInfo, highScoresResultsListener, true)
 }
 
 
-    override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
+    override fun fetchHighScoresPreload(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo

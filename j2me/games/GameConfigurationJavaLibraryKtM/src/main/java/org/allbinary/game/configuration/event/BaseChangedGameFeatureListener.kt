@@ -59,7 +59,7 @@ open public class BaseChangedGameFeatureListener
     override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventObject = eventObject
+    //var eventObject = eventObject
 ForcedLogUtil.log(CommonStrings.getInstance()!!.NOT_IMPLEMENTED, this)
 }
 
@@ -67,7 +67,7 @@ ForcedLogUtil.log(CommonStrings.getInstance()!!.NOT_IMPLEMENTED, this)
     override fun onGameFeatureChange(gameFeatureEvent: GameFeatureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-var gameFeatureEvent = gameFeatureEvent
+    //var gameFeatureEvent = gameFeatureEvent
 this.logUtil!!.putF(StringMaker().
                             append(gameFeatureUtil!!.GAME_FEATURE_CHANGED)!!.append(gameFeatureEvent!!.getWhatChanged())!!.toString(), this, gameFeatureUtil!!.ON_GAME_FEATURE_CHANGE)
 this.list.add(gameFeatureEvent!!.getGameOption())
@@ -78,7 +78,7 @@ setChanged(true)
     open fun add(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
-var gameFeature = gameFeature
+    //var gameFeature = gameFeature
 this.list.add(gameFeature)
 }
 
@@ -86,7 +86,7 @@ this.list.add(gameFeature)
     open fun remove(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
-var gameFeature = gameFeature
+    //var gameFeature = gameFeature
 this.list.remove(gameFeature)
 }
 
@@ -94,7 +94,7 @@ this.list.remove(gameFeature)
     open fun setChanged(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var initialized = initialized
+    //var initialized = initialized
 this.changed= initialized
 
     
@@ -108,10 +108,10 @@ this.changed= initialized
 }
 
 
-    open fun isChanged(gameFeature: Feature)
+    open fun isChangedFeature(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var gameFeature = gameFeature
+    //var gameFeature = gameFeature
 
     var isChanged: Boolean = this.list.contains(gameFeature)!!
 

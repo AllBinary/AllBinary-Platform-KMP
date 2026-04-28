@@ -38,7 +38,6 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
-import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -92,7 +91,7 @@ groupList!!.clear()
 }
 
 
-    open fun getGroupSize(groupInterfaceCompositeInterface: GroupInterfaceCompositeInterface)
+    open fun getGroupSizeFromInterface(groupInterfaceCompositeInterface: GroupInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var groupInterfaceCompositeInterface = groupInterfaceCompositeInterface
@@ -118,7 +117,7 @@ groupList!!.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getGroupSize(id)
+                        return this.getGroupSizeById(id)
 }
 
 
@@ -133,11 +132,11 @@ groupList!!.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getList(id)
+                        return this.getListById(id)
 }
 
 
-    open fun getList(groupId: Int)
+    open fun getListById(groupId: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var groupId = groupId
@@ -152,7 +151,7 @@ groupList!!.clear()
 }
 
 
-    open fun getGroupSize(groupId: Int)
+    open fun getGroupSizeById(groupId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var groupId = groupId
@@ -193,7 +192,7 @@ groupList!!.clear()
                         
                                     {
                                     
-    var groupSize: Int = this.getGroupSize(index)!!
+    var groupSize: Int = this.getGroupSizeById(index)!!
 
 
     
@@ -307,7 +306,7 @@ groupId= groupInterface!!.getGroupId().toInt()
                         
                                     {
                                     
-    var groupSize: Int = this.getGroupSize(index)!!
+    var groupSize: Int = this.getGroupSizeById(index)!!
 
 
     

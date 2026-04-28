@@ -316,7 +316,7 @@ var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
     var nextPropertyName: String = propertyNameSetArray[index]!! as String
 
 
-    var propertyValue: String = StringUtil.getInstance()!!.getInstance(nextPackagePropertiesHashMap!!.get(nextPropertyName as Object) as String)!!
+    var propertyValue: String = StringUtil.getInstance()!!.getNonNull(nextPackagePropertiesHashMap!!.get(nextPropertyName as Object) as String)!!
 
 
     var valueNode: Node = DomSearchHelper.getNodeNoThrow(nextPropertyName, node.getChildNodes())!!

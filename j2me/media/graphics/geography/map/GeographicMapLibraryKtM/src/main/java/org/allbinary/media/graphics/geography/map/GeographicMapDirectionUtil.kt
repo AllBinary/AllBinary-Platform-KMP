@@ -426,7 +426,7 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
     var stringMaker: StringMaker = StringMaker()
 
 
-    var string: String = stringMaker!!.append(CellPosition.toString(fromGeographicMapCellPosition))!!.append(" == ")!!.append(CellPosition.toString(toGeographicMapCellPosition))!!.toString()!!
+    var string: String = stringMaker!!.append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition))!!.append(" == ")!!.append(CellPosition.toStringCellPosition(toGeographicMapCellPosition))!!.toString()!!
 
 stringMaker!!.delete(0, stringMaker!!.length())
 
@@ -607,9 +607,9 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.ERROR)
-stringBuffer!!.append(CellPosition.toString(fromGeographicMapCellPosition))
+stringBuffer!!.append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition))
 stringBuffer!!.append(this.EQUAL)
-stringBuffer!!.append(CellPosition.toString(toGeographicMapCellPosition))
+stringBuffer!!.append(CellPosition.toStringCellPosition(toGeographicMapCellPosition))
 
 
 

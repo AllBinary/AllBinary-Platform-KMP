@@ -91,7 +91,7 @@ private constructor ()
 
 
     
-                        if(ChangedGameFeatureListener.getInstance()!!.isChanged(MainFeatureFactory.getInstance()!!.STATIC))
+                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(MainFeatureFactory.getInstance()!!.STATIC))
                         
                                     {
                                     

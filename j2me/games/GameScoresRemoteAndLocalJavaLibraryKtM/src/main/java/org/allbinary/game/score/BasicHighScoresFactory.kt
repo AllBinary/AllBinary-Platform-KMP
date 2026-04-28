@@ -99,11 +99,11 @@ this.softwareInformation= softwareInformation
     //var gameInfo = gameInfo
     //var highScoresResultsListener = highScoresResultsListener
 this.logUtil!!.putF("Getting Remote/Local HighScores", this, FETCH)
-this.fetchHighScores(gameInfo, highScoresResultsListener, true)
+this.fetchHighScoresPreload(gameInfo, highScoresResultsListener, true)
 }
 
 
-    open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
+    open fun fetchHighScoresPreload(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -149,7 +149,7 @@ highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, game
 
                                     }
                                 
-highScoresArray[1]= RemoteHighScores.getInstance(abeClientInformation, softwareInformation, gameInfo2, WORLD_TOP_SCORES, SCORES, BooleanFactory.getInstance()!!.FALSE, preload)
+highScoresArray[1]= RemoteHighScores.getInstancePreload(abeClientInformation, softwareInformation, gameInfo2, WORLD_TOP_SCORES, SCORES, BooleanFactory.getInstance()!!.FALSE, preload)
 logUtil!!.putF(commonStrings!!.END, this, FETCH)
 LastFetchHighScoresFactory.getInstance()!!.highScoresArray= highScoresArray
 highScoresResultsListener!!.setHighScoresArray(highScoresArray)

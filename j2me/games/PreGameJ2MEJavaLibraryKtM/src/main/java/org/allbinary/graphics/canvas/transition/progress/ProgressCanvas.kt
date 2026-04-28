@@ -33,7 +33,6 @@ import org.allbinary.canvas.Processor
 import org.allbinary.canvas.RunnableCanvas
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.font.MyFont
@@ -243,7 +242,7 @@ var value = value
 var text = text
 var index = index
 this.setText(StringMaker().
-                            append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index)!!.toString())!!.toString())
+                            append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getAt(index)!!.toString())!!.toString())
 this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
@@ -255,13 +254,13 @@ var value = value
 var text = text
 var index = index
 this.setText(StringMaker().
-                            append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index)!!.toString())!!.toString())
+                            append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getAt(index)!!.toString())!!.toString())
 PreLogUtil.put(this.text, this, ADD_PORTION)
 this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
 
-    open fun addPortion(value: Int, text: String)
+    open fun addNormalPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

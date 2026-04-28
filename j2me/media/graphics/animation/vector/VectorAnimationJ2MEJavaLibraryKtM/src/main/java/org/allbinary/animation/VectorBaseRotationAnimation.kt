@@ -27,7 +27,6 @@
         
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.color.BasicColorSetUtil
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
@@ -43,7 +42,7 @@ open public class VectorBaseRotationAnimation : RotationAnimation
     private var currentPoints: Array<Array<IntArray?>?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
 public constructor (angleInfo: AngleInfo, currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
+                            : super(angleInfo, CircularIndexUtil.createInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
     //var angleInfo = angleInfo
     //var currentPoints = currentPoints
     //var basicColor = basicColor
@@ -132,7 +131,7 @@ this.circularIndexUtil!!.previous()
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -211,7 +210,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintVectors", e)
 {
     //var currentPoints = currentPoints
 this.currentPoints= currentPoints
-this.circularIndexUtil= CircularIndexUtil.getInstance(this.currentPoints!!.size)
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.currentPoints!!.size)
 }
 
 

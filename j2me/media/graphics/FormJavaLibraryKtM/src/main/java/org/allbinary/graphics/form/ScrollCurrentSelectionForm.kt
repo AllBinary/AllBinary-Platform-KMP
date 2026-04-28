@@ -30,7 +30,6 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.graphics.form.item.CustomItemInterface
-import org.allbinary.logic.communication.log.LogUtil
 
 open public class ScrollCurrentSelectionForm : ScrollSelectionForm {
         
@@ -59,7 +58,7 @@ public constructor (title: String, items: Array<CustomItem?>, formPaintableFacto
                             //For kotlin this is before the body of the constructor.
                     
 this.moveForSmallScreen= moveForSmallScreen
-this.init()
+this.initForm()
 }
 
 
@@ -71,11 +70,11 @@ this.init()
     //var rectangle = rectangle
     //var formType = formType
 super.init(rectangle, formType)
-this.init()
+this.initForm()
 }
 
 
-    open fun init()
+    open fun initForm()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -103,15 +102,16 @@ this.dy= y
     var totalWidth: Int = 0
 
 
+    var item: CustomItemInterface
+
+
 
 
 
                         for (index in 0 until size)
 
         {
-
-    var item: CustomItemInterface = this.get(index) as CustomItemInterface
-
+item= this.get(index) as CustomItemInterface
 totalWidth += item.getMinimumWidth() +border
 }
 
@@ -152,15 +152,16 @@ this.dy= y +(this.rectangle.getHeight() shr 1)
     var size: Int = this.size()!!
 
 
+    var item2: CustomItem
+
+
 
 
 
                         for (index in 0 until size)
 
         {
-
-    var item2: CustomItem = this.get(index)!!
-
+item2= this.get(index)
 
     
                         if(this.maxWidth < item2.getMinimumWidth())
@@ -241,15 +242,16 @@ this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
 
+    var item: CustomItemInterface
+
+
 
 
 
                         for (index in 0 until size)
 
         {
-
-    var item: CustomItemInterface = this.get(index) as CustomItemInterface
-
+item= this.get(index) as CustomItemInterface
 
     var diffX: Int = 0
 

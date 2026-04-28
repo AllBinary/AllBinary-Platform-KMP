@@ -52,14 +52,14 @@
 }
 
 
-    /*actual*/ open fun put(log: Log)
+    /*actual*/ open fun putP(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
 var log = log
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage

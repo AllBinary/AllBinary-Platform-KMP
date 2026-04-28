@@ -42,7 +42,7 @@ open public class HackRotationSpriteIndexedAnimation : RotationAnimation {
     private val image: Image
 public constructor (sprite: Sprite, image: Image, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
+                            : super(angleInfo, CircularIndexUtil.createInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
     //var sprite = sprite
     //var image = image
     //var angleInfo = angleInfo
@@ -69,7 +69,7 @@ this.image= image
 }
 
 
-    open fun paint(g: Graphics, frame: Int, x: Int, y: Int)
+    open fun paintFrame(g: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g
@@ -77,11 +77,11 @@ this.image= image
     //var x = x
     //var y = y
 this.setFrame(frame)
-this.paint(g, x, y)
+this.paintXY(g, x, y)
 }
 
 
-    override fun paint(g: Graphics, x: Int, y: Int)
+    override fun paintXY(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g

@@ -16,7 +16,8 @@ import org.allbinary.logic.system.SoftwareInformation
 
 open public class GameAdStateFactory
             : Object
-         {
+        
+                , GameAdStateFactoryInterface {
         
 companion object {
             
@@ -57,8 +58,8 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(softwareInformation: SoftwareInformation)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getInstanceForApp(softwareInformation: SoftwareInformation)
+        //nullable = true from not(false or (false and false)) = true
 : GameAdState{
     //var softwareInformation = softwareInformation
 this.gameAdState= gameAdStateArray[0]!!

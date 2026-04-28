@@ -60,7 +60,7 @@ companion object {
 
     val ffOpaque: Boolean = true
 
-    open fun get(red: Int, green: Int, blue: Int)
+    open fun getRGB(red: Int, green: Int, blue: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var red = red
@@ -97,7 +97,7 @@ value= blue or value
 }
 
 
-    open fun get(alphaValue: Int, r: Int, g: Int, b: Int)
+    open fun getARGB(alphaValue: Int, r: Int, g: Int, b: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var alphaValue = alphaValue

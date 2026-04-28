@@ -40,7 +40,7 @@ interface SalvoInterface {
 
                 @Throws(Exception::class)
             
-    open fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
+    open fun processScore(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

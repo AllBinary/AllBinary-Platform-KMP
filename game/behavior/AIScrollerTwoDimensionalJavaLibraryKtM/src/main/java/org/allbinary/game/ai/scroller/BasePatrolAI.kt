@@ -41,13 +41,13 @@ open public class BasePatrolAI : BasicAI {
         
 companion object {
             
-    val MAX_DISTANCE: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
+    val MAX_DISTANCE: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(2)!!
 
-    val DIRECTION_ARRAY: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(3)!!
+    val DIRECTION_ARRAY: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(3)!!
 
-    val FIRING_DISTANCE: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(4)!!
+    val FIRING_DISTANCE: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(4)!!
 
-    var SPEED: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(5)!!
+    var SPEED: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(5)!!
 
         }
             

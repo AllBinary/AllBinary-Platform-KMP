@@ -178,8 +178,8 @@ this.animationFactoryInitializationVisitor!!.dy=  -(this.animationFactoryInitial
 
                 @Throws(Exception::class)
             
-    override fun getInstance(animationInterface: Animation)
-        //nullable =  from not(true or (false and false)) = 
+    override fun getInstanceAnimation(animationInterface: Animation)
+        //nullable = true from not(false or (false and false)) = true
 : Animation{
     //var animationInterface = animationInterface
 

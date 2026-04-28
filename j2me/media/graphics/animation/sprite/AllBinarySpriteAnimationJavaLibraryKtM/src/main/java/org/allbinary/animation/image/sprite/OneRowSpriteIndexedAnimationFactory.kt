@@ -40,7 +40,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun createDX(image: Image, dx: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactoryDX(image: Image, dx: Int, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : OneRowSpriteIndexedAnimationFactory{
     //var image = image
@@ -60,7 +60,7 @@ oneRowSpriteIndexedAnimationFactory!!.initW(dx)
 
                 @Throws(Exception::class)
             
-    open fun createDXY(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactoryDXY(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : OneRowSpriteIndexedAnimationFactory{
     //var image = image
@@ -81,7 +81,7 @@ oneRowSpriteIndexedAnimationFactory!!.init(dx, dy)
 
                 @Throws(Exception::class)
             
-    open fun createWH(image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactoryWH(image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : OneRowSpriteIndexedAnimationFactory{
     //var image = image
@@ -98,7 +98,7 @@ oneRowSpriteIndexedAnimationFactory!!.init(dx, dy)
 
                 @Throws(Exception::class)
             
-    open fun create(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactory(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : OneRowSpriteIndexedAnimationFactory{
     //var image = image

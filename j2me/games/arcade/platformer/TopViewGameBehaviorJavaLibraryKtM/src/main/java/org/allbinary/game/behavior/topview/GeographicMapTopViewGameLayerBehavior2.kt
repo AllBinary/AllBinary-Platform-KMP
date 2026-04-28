@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.MultiGeographicMapBehavior
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.game.physics.acceleration.GravityUtil
@@ -87,7 +86,7 @@ this.offsetY= offsetY
                         if(!hasSolidBlock)
                         
                                     {
-                                    this.gravityUtil!!.process(velocityProperties)
+                                    this.gravityUtil!!.process(velocityProperties, gravityUtil!!.GAME_GRAVITY_VELOCITY)
 velocityProperties!!.limitXYToForwardAndReverseMaxVelocity()
 this.gravity()
 
@@ -122,7 +121,7 @@ this.gravity()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapInterfaceArray[0]!!.getCellPositionAtNoThrow(xCellPosition, yCellPosition)
+                        return geographicMapInterfaceArray[0]!!.getCellPositionAtXYNoThrow(xCellPosition, yCellPosition)
 }
 
 
@@ -145,7 +144,7 @@ this.gravity()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapInterfaceArray[0]!!.getCellPositionAtNoThrow(xCellPosition, yCellPosition)
+                        return geographicMapInterfaceArray[0]!!.getCellPositionAtXYNoThrow(xCellPosition, yCellPosition)
 }
 
 
@@ -168,7 +167,7 @@ this.gravity()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapInterfaceArray[0]!!.getCellPositionAtNoThrow(xCellPosition, yCellPosition)
+                        return geographicMapInterfaceArray[0]!!.getCellPositionAtXYNoThrow(xCellPosition, yCellPosition)
 }
 
 
@@ -191,7 +190,7 @@ this.gravity()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapInterfaceArray[0]!!.getCellPositionAtNoThrow(xCellPosition, yCellPosition)
+                        return geographicMapInterfaceArray[0]!!.getCellPositionAtXYNoThrow(xCellPosition, yCellPosition)
 }
 
 
@@ -212,7 +211,7 @@ this.gravity()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapInterfaceArray[0]!!.getCellPositionAtNoThrow(xCellPosition, yCellPosition)
+                        return geographicMapInterfaceArray[0]!!.getCellPositionAtXYNoThrow(xCellPosition, yCellPosition)
 }
 
 
@@ -233,13 +232,13 @@ this.gravity()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapInterfaceArray[0]!!.getCellPositionAtNoThrow(xCellPosition, yCellPosition)
+                        return geographicMapInterfaceArray[0]!!.getCellPositionAtXYNoThrow(xCellPosition, yCellPosition)
 }
 
 
                 @Throws(Exception::class)
             
-    override fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
+    override fun getGeographicMapCellPositionIfNotSolidBlockOrOffMapLocation(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -462,7 +461,7 @@ layer.
     //var x = x
     //var y = y
 
-    var geographicMapCellPosition: GeographicMapCellPosition = this.getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer, x, y)!!
+    var geographicMapCellPosition: GeographicMapCellPosition = this.getGeographicMapCellPositionIfNotSolidBlockOrOffMapLocation(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer, x, y)!!
 
 this.moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition, velocityProperties, layer, x, y)
 
@@ -512,7 +511,7 @@ this.moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geogra
                         
                                     {
                                     
-    var possibleStepGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterfaceArray[0]!!.getGeographicMapCellPositionFactory()!!.getInstance(geographicMapCellPosition!!.getColumn(), geographicMapCellPosition!!.getRow() -1)!!
+    var possibleStepGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterfaceArray[0]!!.getGeographicMapCellPositionFactory()!!.getAt(geographicMapCellPosition!!.getColumn(), geographicMapCellPosition!!.getRow() -1)!!
 
 this.geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition)
 
@@ -535,7 +534,7 @@ layer.
                                     }
                                 
                         else {
-                            velocityProperties!!.getVelocityXBasicDecimalP()!!.set(0)
+                            velocityProperties!!.getVelocityXBasicDecimalP()!!.setint(0)
 
                         }
                             
@@ -575,7 +574,7 @@ layer.
                         
                                     {
                                     
-    var possibleStepGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterfaceArray[0]!!.getGeographicMapCellPositionFactory()!!.getInstance(geographicMapCellPosition!!.getColumn(), geographicMapCellPosition!!.getRow() -1)!!
+    var possibleStepGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterfaceArray[0]!!.getGeographicMapCellPositionFactory()!!.getAt(geographicMapCellPosition!!.getColumn(), geographicMapCellPosition!!.getRow() -1)!!
 
 this.geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition)
 
@@ -598,7 +597,7 @@ layer.
                                     }
                                 
                         else {
-                            velocityProperties!!.getVelocityXBasicDecimalP()!!.set(0)
+                            velocityProperties!!.getVelocityXBasicDecimalP()!!.setint(0)
 
                         }
                             

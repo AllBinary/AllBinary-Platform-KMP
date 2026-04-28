@@ -84,7 +84,7 @@ this.canvas= canvas
 
                 @Throws(Exception::class)
             
-    open fun processInput()
+    open fun processInputList()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvasInterface
 import org.allbinary.layer.AllBinaryLayer
 
@@ -91,7 +90,7 @@ public constructor ()
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(layer.getXP() +layer.getHalfWidth(), layer.getYP() +layer.getHalfHeight())
+this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAtXY(layer.getXP() +layer.getHalfWidth(), layer.getYP() +layer.getHalfHeight())
 
     
                         if(this.newGeographicMapCellPosition != this.currentGeographicMapCellPosition)

@@ -89,7 +89,6 @@ import org.allbinary.game.score.HighScore
 import org.allbinary.game.score.HighScoresFactoryInterface
 import org.allbinary.game.score.HighScoresHelperBase
 import org.allbinary.game.score.HighScoresPaintable
-import org.allbinary.game.score.NoHighScoresFactory
 import org.allbinary.game.score.NullHighScoresSingletonFactory
 import org.allbinary.game.score.displayable.HighScoreTextBox
 import org.allbinary.game.state.GameState
@@ -408,7 +407,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISP
 
                 @Throws(Exception::class)
             
-    open fun updateMenu(displayChangeEvent: DisplayChangeEvent)
+    open fun updateMenuFromEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var displayChangeEvent = displayChangeEvent
@@ -478,7 +477,7 @@ super.processSleep()
                                 
 
     
-                        if(this.menuInputProcessor!!.processInput() !=  -1)
+                        if(this.menuInputProcessor!!.processInputList() !=  -1)
                         
                                     {
                                     this.runnableCanvasRefreshHelper!!.process()
@@ -811,7 +810,7 @@ this.menuBehavior!!.initSpecialPaint(this)
 {
 var gameLayerManager = gameLayerManager
 var buffered = buffered
-this.gameStateTimeHelper!!.setStartTime()
+this.gameStateTimeHelper!!.setStartTimeTNT()
 this.setHighScoreSubmitted(false)
 this.setLayerManager(gameLayerManager)
 
@@ -920,7 +919,7 @@ ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.addPortion(50, "Setting Configurables")
+progressCanvas!!.addNormalPortion(50, "Setting Configurables")
 GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, gameInitializationInterfaceFactoryInterface)
 
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
@@ -930,7 +929,7 @@ GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, game
 
 
     
-                        if(changedGameFeatureListener!!.isChanged(gameFeatureFactory!!.SOUND))
+                        if(changedGameFeatureListener!!.isChangedFeature(gameFeatureFactory!!.SOUND))
                         
                                     {
                                     
@@ -948,7 +947,7 @@ changedGameFeatureListener!!.remove(gameFeatureFactory!!.SOUND)
 
 
     
-                        if(changedGameFeatureListener!!.isChanged(sensorFeatureFactory!!.ORIENTATION_SENSORS) || changedGameFeatureListener!!.isChanged(sensorFeatureFactory!!.NO_ORIENTATION) || changedGameFeatureListener!!.isChanged(sensorFeatureFactory!!.SIMULATED_ORIENTATION_SENSORS))
+                        if(changedGameFeatureListener!!.isChangedFeature(sensorFeatureFactory!!.ORIENTATION_SENSORS) || changedGameFeatureListener!!.isChangedFeature(sensorFeatureFactory!!.NO_ORIENTATION) || changedGameFeatureListener!!.isChangedFeature(sensorFeatureFactory!!.SIMULATED_ORIENTATION_SENSORS))
                         
                                     {
                                     changedGameFeatureListener!!.remove(sensorFeatureFactory!!.NO_ORIENTATION)
@@ -960,13 +959,13 @@ changedGameFeatureListener!!.remove(sensorFeatureFactory!!.SIMULATED_ORIENTATION
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
 
-this.loadResources(resourceLoadingLevelFactory!!.LOAD_GAME)
+this.loadResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_GAME)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun init(abeClientInformation: AbeClientInformationInterface)
+    open fun initApp(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -1164,7 +1163,7 @@ this.logUtil!!.putF(StringMaker().
                         if(gameFeatureUtil!!.isExclusive(itemLabel))
                         
                                     {
-                                    gameFeatureUtil!!.updateExclusive(item as ChoiceGroup)
+                                    gameFeatureUtil!!.updateExclusiveForChoiceGroup(item as ChoiceGroup)
 
                                     }
                                 
@@ -1281,7 +1280,7 @@ this.gameOver= gameOver
 
                 @Throws(Exception::class)
             
-    override fun setGameOver()
+    override fun processGameOver()
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put(commonStrings!!.START, this, this.gameStrings!!.SET_GAME_OVER)
@@ -1344,7 +1343,7 @@ this.logUtil!!.putF(StringMaker().
 this.logUtil!!.putF(StringMaker().
                             append(this.gameStrings!!.GAME_STATE)!!.append(this.stringUtil!!.toString(gameState))!!.toString(), this, this.gameStrings!!.SET_GAME_STATE)
 this.gameState= gameState
-this.gameStateTimeHelper!!.setStartTime()
+this.gameStateTimeHelper!!.setStartTimeTNT()
 this.updateEndGameProcessor()
 this.updateGameKeyEventProcessor()
 this.gameBehavior!!.setGameState(this)
@@ -1353,7 +1352,7 @@ this.gameBehavior!!.setGameState(this)
 
                 @Throws(Exception::class)
             
-    open fun setGameState()
+    open fun updateGameState()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1466,7 +1465,7 @@ this.gameBehavior!!.updateEndGameProcessor(this)
 
                 @Throws(Exception::class)
             
-    open fun buildGame(isPortion: Boolean)
+    open fun buildGameInit(isPortion: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var isPortion = isPortion
@@ -1482,7 +1481,7 @@ this.logUtil!!.putF(commonStrings!!.START, this, this.commonStrings!!.CLEANUP)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.addPortion(10, "Cleaning Up")
+progressCanvas!!.addNormalPortion(10, "Cleaning Up")
 primaryPlayerQueue!!.clear()
 secondaryPlayerQueue!!.clear()
 GameLevelDisplayChangeEventListenersFactory.getInstance()!!.clear()
@@ -1491,7 +1490,7 @@ GameLevelDisplayChangeEventListenersFactory.getInstance()!!.clear()
 
                 @Throws(Exception::class)
             
-    open fun loadResources(resourceLoadingLevel: ResourceLoadingLevel)
+    open fun loadResourceLoadingLevel(resourceLoadingLevel: ResourceLoadingLevel)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resourceLoadingLevel = resourceLoadingLevel
@@ -1539,17 +1538,17 @@ this.screenCapture!!.startRecording()
 
     var features: Features = Features.getInstance()!!
 
-progressCanvas!!.addPortion(portion, "Generic Build")
+progressCanvas!!.addNormalPortion(portion, "Generic Build")
 this.removeAllGameKeyInputListenersOnBuild()
 this.updateTouch()
-progressCanvas!!.addPortion(portion, "High Scores")
+progressCanvas!!.addNormalPortion(portion, "High Scores")
 this.highScoresFactoryInterface!!.fetchHighScores(this.gameLayerManager!!.getGameInfo(), this.highScoresHelper)
 this.setHighScoresPaintable(NullPaintable.getInstance())
-progressCanvas!!.addPortion(portion, "Finishing.")
+progressCanvas!!.addNormalPortion(portion, "Finishing.")
 this.getEndGameInfoP()!!.update(this.getLayerManager()!!.getGameInfo(), this)
 this.isSingleKeyRepeatableProcessing= features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)
 this.setGameOver(false)
-progressCanvas!!.addPortion(portion, "Finishing..")
+progressCanvas!!.addNormalPortion(portion, "Finishing..")
 this.updateColor()
 this.getStartIntermissionPaintable()!!.update()
 
@@ -1565,7 +1564,7 @@ this.getStartIntermissionPaintable()!!.update()
 
                                     }
                                 
-progressCanvas!!.addPortion(portion, "Finishing...")
+progressCanvas!!.addNormalPortion(portion, "Finishing...")
 
     
                         if(this.isMainCanvas() || !this.isInitialized())
@@ -1648,7 +1647,7 @@ this.addKeyInputListener(playerGameInput)
         //nullable = true from not(false or (false and false)) = true
 {
     //var playerGameInput = playerGameInput
-GameKeyEventHandler.getInstance()!!.addListener(playerGameInput, playerGameInput!!.getPlayerInputId())
+GameKeyEventHandler.getInstance()!!.addListenerForPlayer(playerGameInput, playerGameInput!!.getPlayerInputId())
 }
 
 
@@ -1819,7 +1818,7 @@ var graphics = graphics
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
-this.keyPressed(keyCode, 0)
+this.keyPressedByDevice(keyCode, 0)
 }
 
 
@@ -1827,7 +1826,7 @@ this.keyPressed(keyCode, 0)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
-this.keyReleased(keyCode, 0)
+this.keyReleasedByDevice(keyCode, 0)
 }
 
 
@@ -1835,11 +1834,11 @@ this.keyReleased(keyCode, 0)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
-this.keyRepeated(keyCode, 0)
+this.keyRepeatedByDevice(keyCode, 0)
 }
 
 
-    override fun keyPressed(keyCode: Int, deviceId: Int)
+    override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -1848,7 +1847,7 @@ this.inputProcessor!!.keyPressed(keyCode, deviceId)
 }
 
 
-    override fun keyRepeated(keyCode: Int, deviceId: Int)
+    override fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -1865,7 +1864,7 @@ var deviceId = deviceId
 }
 
 
-    override fun keyReleased(keyCode: Int, deviceId: Int)
+    override fun keyReleasedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -1962,7 +1961,7 @@ super.process()
                                     }
                                 
 this.mainStateProcessor!!.process()
-menuInputProcessor!!.processInput()
+menuInputProcessor!!.processInputList()
 this.endGameProcessor!!.process()
 baseGameStatistics!!.nextFrame()
 }
@@ -2043,7 +2042,7 @@ Thread.sleep(this.YIELD_SLEEP)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.addPortion(50, "Game Thread")
+progressCanvas!!.addNormalPortion(50, "Game Thread")
 this.setCurrentThread()
 this.setRunning(true)
 

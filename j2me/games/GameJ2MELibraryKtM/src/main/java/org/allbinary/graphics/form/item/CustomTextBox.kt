@@ -86,7 +86,7 @@ this.setTitle(label)
     //var repeated = repeated
 this.logUtil!!.putF(StringMaker().
                             append(commonStrings!!.START)!!.appendint(keyCode)!!.toString(), this, "onEvent")
-this.keyPressed(keyCode, deviceId)
+this.keyPressedByDevice(keyCode, deviceId)
 }
 
 
@@ -94,7 +94,7 @@ this.keyPressed(keyCode, deviceId)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
-this.keyPressed(keyCode, 0)
+this.keyPressedByDevice(keyCode, 0)
 }
 
 
@@ -102,7 +102,7 @@ this.keyPressed(keyCode, 0)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
-this.keyReleased(keyCode, 0)
+this.keyReleasedByDevice(keyCode, 0)
 }
 
 
@@ -110,11 +110,11 @@ this.keyReleased(keyCode, 0)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
-this.keyRepeated(keyCode, 0)
+this.keyRepeatedByDevice(keyCode, 0)
 }
 
 
-    override fun keyPressed(keyCode: Int, deviceId: Int)
+    override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -127,7 +127,7 @@ this.keyRepeated(keyCode, 0)
     var platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
 
 
-    var input: Input = this.inputFactory!!.getInstance(keyCode)!!
+    var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
 
     
@@ -151,7 +151,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESS
 }
 
 
-    override fun keyReleased(keyCode: Int, deviceId: Int)
+    override fun keyReleasedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -175,12 +175,12 @@ graphics.setColor(this.foregroundColor)
 
                                     }
                                 
-this.paint(graphics, 8, graphics.getFont()!!.getHeight() +2)
+this.paintXY(graphics, 8, graphics.getFont()!!.getHeight() +2)
 super.paint(graphics)
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

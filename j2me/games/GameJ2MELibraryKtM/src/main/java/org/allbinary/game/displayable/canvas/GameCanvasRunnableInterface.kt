@@ -67,7 +67,7 @@ interface GameCanvasRunnableInterface : RunnableInterface, PaintableInterface, I
 
                 @Throws(Exception::class)
             
-    open fun setGameOver()
+    open fun processGameOver()
         //nullable = true from not(false or (false and true)) = true
 
 

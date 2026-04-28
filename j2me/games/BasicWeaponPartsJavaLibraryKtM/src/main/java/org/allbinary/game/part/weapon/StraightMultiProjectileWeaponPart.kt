@@ -40,7 +40,7 @@ open public class StraightMultiProjectileWeaponPart : BasicWeaponPart {
         
 companion object {
             
-    open fun create(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
+    open fun createPart(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
         //nullable = true from not(false or (false and false)) = true
 : StraightMultiProjectileWeaponPart{
     //var animationInterface = animationInterface
@@ -81,7 +81,7 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
                 @Throws(Exception::class)
             
-    override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
+    override fun processScore(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager

@@ -56,7 +56,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun scale(images: Array<Image?>, width: Int, height: Int)
+    open fun scaleArray(images: Array<Image?>, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
 var images = images
@@ -72,7 +72,7 @@ var height = height
 
     var image: Image = images[index]!!
 
-images[index]= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), image, width.toFloat() /2, image.getWidth().toFloat(), height.toFloat(), image.getHeight().toFloat(), false)
+images[index]= ImageScaleUtil.getInstance()!!.createImage2(GameFeatureImageCacheFactory.getInstance(), image, width.toFloat() /2, image.getWidth().toFloat(), height.toFloat(), image.getHeight().toFloat(), false)
 }
 
 
@@ -95,7 +95,7 @@ var height = height
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), image, width.toFloat(), image.getWidth().toFloat(), height.toFloat(), image.getHeight().toFloat(), false)
+                        return ImageScaleUtil.getInstance()!!.createImage2(GameFeatureImageCacheFactory.getInstance(), image, width.toFloat(), image.getWidth().toFloat(), height.toFloat(), image.getHeight().toFloat(), false)
 }
 
 

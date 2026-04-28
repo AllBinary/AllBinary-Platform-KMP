@@ -80,7 +80,7 @@ nextLayerInterface= this.list.get(index) as AllBinaryLayer
                         if(layerInterface!!.getZP() > nextLayerInterface!!.getZP())
                         
                                     {
-                                    this.append(layerInterface, index)
+                                    this.appendAt(layerInterface, index)
 
 
 
@@ -108,13 +108,13 @@ this.list.add(layerInterface)
 
                 @Throws(Exception::class)
             
-    open fun append(layerInterface: AllBinaryLayer, index: Int)
+    open fun appendAt(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
     //var index = index
-this.layerManagerLogging!!.append(layerInterface, index)
-this.list.add(index, layerInterface)
+this.layerManagerLogging!!.appendAt(layerInterface, index)
+this.list.addAt(index, layerInterface)
 }
 
 
@@ -135,7 +135,7 @@ this.layerManagerLogging!!.remove(layerInterface)
 
     var result: Boolean = this.list.remove(layerInterface)!!
 
-this.layerManagerLogging!!.remove(this, layerInterface, result)
+this.layerManagerLogging!!.removeResult(this, layerInterface, result)
 }
 
 }

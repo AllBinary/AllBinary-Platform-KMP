@@ -27,7 +27,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.canvas.Processor
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
@@ -59,7 +58,7 @@ this.abeClientInformation= clientInformationFactory!!.getInstance()
 {
 var isProgress = isProgress
 
-    var processor: Processor = MidletExitProcessorFactory.getInstance()!!.getInstance(this)!!
+    var processor: Processor = MidletExitProcessorFactory.getInstance()!!.getExitInstance(this)!!
 
 
         try {

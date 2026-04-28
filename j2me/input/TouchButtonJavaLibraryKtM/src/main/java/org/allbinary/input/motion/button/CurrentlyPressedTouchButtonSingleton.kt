@@ -67,7 +67,7 @@ protected constructor ()
 }
 
 
-    open fun remove(index: Int)
+    open fun removeAt(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : TouchButtonInput{
 var index = index
@@ -75,7 +75,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list.remove(index) as TouchButtonInput
+                        return this.list.removeAt(index) as TouchButtonInput
 }
 
 

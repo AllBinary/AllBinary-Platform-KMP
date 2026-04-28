@@ -31,13 +31,10 @@ import org.allbinary.game.tracking.TrackingEventCircularStaticPool
 import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.layer.AllBinaryLayer
-import org.allbinary.string.CommonSeps
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
-import org.allbinary.view.ViewPosition
 
 open public class PlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
         
@@ -60,7 +57,7 @@ open public class PlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
     //var y = y
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellPosition = geographicMapCellPosition
-TrackingEventHandler.getInstance()!!.fireEvent(TrackingEventCircularStaticPool.getInstance()!!.getInstance(layer))
+TrackingEventHandler.getInstance()!!.fireEvent(TrackingEventCircularStaticPool.getInstance()!!.getNextInstance(layer))
 }
 
 

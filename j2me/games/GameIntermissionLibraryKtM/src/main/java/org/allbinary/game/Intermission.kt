@@ -73,7 +73,7 @@ this.enabled= enabled
                         if(this.isEnabled())
                         
                                     {
-                                    this.getTimeDelayHelper()!!.setStartTime()
+                                    this.getTimeDelayHelper()!!.setStartTimeTNT()
 
                                     }
                                 

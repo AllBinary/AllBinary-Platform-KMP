@@ -66,7 +66,7 @@ open public class MiniMapLayer : AllBinaryLayer
     private var animationInterface: CircleFilledAnimation
 public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
 
-                            : super(StringUtil.getInstance()!!.EMPTY_STRING, Rectangle(PointFactory.getInstance()!!.getInstance0(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition){
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING, Rectangle(PointFactory.getInstance()!!.createXY(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition){
 var geographicMapInterface = geographicMapInterface
 var viewPosition = viewPosition
 
@@ -119,9 +119,9 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                         if(index >= 0)
                         
                                     {
-                                    this.list.remove(index)
-this.basicColorList!!.remove(index)
-this.positionList!!.remove(index)
+                                    this.list.removeAt(index)
+this.basicColorList!!.removeAt(index)
+this.positionList!!.removeAt(index)
 
                                     }
                                 
@@ -228,7 +228,7 @@ point= localPositionList!!.get(index) as GPoint
 basicColor= localBasicColorList!!.get(index) as BasicColor
 graphics.setColor(basicColor!!.toInt())
 this.animationInterface!!.setBasicColorP(basicColor)
-this.animationInterface!!.paint(graphics, point.getX() +this.x, point.getY() +this.y)
+this.animationInterface!!.paintXY(graphics, point.getX() +this.x, point.getY() +this.y)
 }
 
 }

@@ -88,7 +88,7 @@ interface WaypointLayerInterface {
 
                 @Throws(Exception::class)
             
-    open fun trackTo(dx: Int, dy: Int)
+    open fun trackToDXY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

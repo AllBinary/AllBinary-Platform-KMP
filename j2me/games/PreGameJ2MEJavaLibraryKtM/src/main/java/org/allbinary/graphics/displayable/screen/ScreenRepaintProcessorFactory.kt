@@ -55,10 +55,10 @@ companion object {
 }
 
 
-    open fun getInstance(displayable: Displayable)
-        //nullable =  from not(true or (false and false)) = 
+    open fun create(displayable: Displayable)
+        //nullable = true from not(false or (false and false)) = true
 : Processor{
-var displayable = displayable
+    //var displayable = displayable
 
     
                         if(!J2MEUtil.isJ2ME())

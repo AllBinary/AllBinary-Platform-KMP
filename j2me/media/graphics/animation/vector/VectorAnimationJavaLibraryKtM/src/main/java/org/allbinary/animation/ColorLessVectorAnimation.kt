@@ -42,7 +42,7 @@ public constructor (currentPoints: Array<Array<IntArray?>?>, animationBehavior: 
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

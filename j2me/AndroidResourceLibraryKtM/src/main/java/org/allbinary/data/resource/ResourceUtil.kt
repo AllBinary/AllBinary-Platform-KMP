@@ -87,7 +87,7 @@ private constructor ()
 }
 
 
-    open fun setContext(activity: Activity)
+    open fun setContextFromActivity(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
 var activity = activity

@@ -56,7 +56,7 @@ var sequentialAnimationInterface = sequentialAnimationInterface
 
         {
 sequentialAnimationInterface!!.setFrame(index)
-imageArray[index]= AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, sequentialAnimationInterface)
+imageArray[index]= AnimationFrameToImageUtil.getInstance()!!.getInstanceWH(width, height, sequentialAnimationInterface)
 }
 
 

@@ -222,10 +222,10 @@ var layerManager = layerManager
     var gameKeyEvent: GameKeyEvent = this.inputList!!.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
-this.getScrollPlayerGameInput()!!.processInput(key)
-this.getSelectedBuildingPlayerGameInput()!!.processInput(key)
-this.inputProcessorArray[key]!!.process(layerManager, gameKeyEvent)
-this.removeInputProcessorArray[key]!!.process(layerManager, gameKeyEvent)
+this.getScrollPlayerGameInput()!!.processInputKey(key)
+this.getSelectedBuildingPlayerGameInput()!!.processInputKey(key)
+this.inputProcessorArray[key]!!.processEvent(layerManager, gameKeyEvent)
+this.removeInputProcessorArray[key]!!.processEvent(layerManager, gameKeyEvent)
 }
 
 
@@ -284,7 +284,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_I
     var y: Int = point.getY() +allBinaryTiledLayer!!.getYP()
 
 
-    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(x, y)!!
+    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXYNoThrow(x, y)!!
 
 
     
@@ -305,7 +305,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_I
                                     }
                                 
                         else {
-                            geographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(layer.getXP(), layer.getYP())
+                            geographicMapCellPosition= geographicMapInterface!!.getCellPositionAtXY(layer.getXP(), layer.getYP())
 
                         }
                             

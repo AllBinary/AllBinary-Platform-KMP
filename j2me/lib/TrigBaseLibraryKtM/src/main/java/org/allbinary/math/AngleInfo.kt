@@ -43,7 +43,7 @@ var angleIncrement = angleIncrement
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AngleInfo(AngleIncrementInfoFactory.getInstance()!!.getInstance(angleIncrement))
+                        return AngleInfo(AngleIncrementInfoFactory.getInstance()!!.getAt(angleIncrement))
 }
 
 

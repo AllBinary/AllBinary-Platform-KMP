@@ -84,7 +84,7 @@ this.maxPathWeight= maxPathWeight
         {
 startPathFindingNode= startPathFindingNodeList!!.get(index) as PathFindingNode
 pathList!!.remove(startPathFindingNode!!.geographicMapCellPosition)
-pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)
+pathList!!.addAt(0, startPathFindingNode!!.geographicMapCellPosition)
 }
 
 }

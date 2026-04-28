@@ -72,7 +72,7 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
+    open fun createImage2(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -86,13 +86,13 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createImage(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, true)
+                        return this.createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, true)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
+    open fun createImage3(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -130,7 +130,7 @@ private constructor ()
     var scaleY: Float = scaleNominatorY /scaleDenominatorY
 
 
-    var scaledImage: Image = this.imageCopyUtil!!.createImage(originalImage, (scaleX *width).toInt(), (scaleY *height).toInt(), mutable)!!
+    var scaledImage: Image = this.imageCopyUtil!!.createImageWH(originalImage, (scaleX *width).toInt(), (scaleY *height).toInt(), mutable)!!
 
 
 
@@ -142,7 +142,7 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
+    open fun scale2(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -178,7 +178,7 @@ this.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX,
     var height: Int = originalImage!!.getHeight()!!
 
 
-    var scaledImage: Image = this.imageCopyUtil!!.createImage(originalImage, scaleX.toInt(), scaleY.toInt(), mutable)!!
+    var scaledImage: Image = this.imageCopyUtil!!.createImageWH(originalImage, scaleX.toInt(), scaleY.toInt(), mutable)!!
 
 originalImageArray[0]= scaledImage
 }

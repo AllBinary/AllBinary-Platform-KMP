@@ -57,7 +57,7 @@ var anyType = anyType
                         if(key !=  -1)
                         
                                     {
-                                    basicAI!!.processAI(key)
+                                    basicAI!!.processKeyAI(key)
 
                                     }
                                 

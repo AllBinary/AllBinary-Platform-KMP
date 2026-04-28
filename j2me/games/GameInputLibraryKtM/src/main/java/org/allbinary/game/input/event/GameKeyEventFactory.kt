@@ -91,7 +91,7 @@ private constructor ()
                         for (index2 in size  - 1  downTo 0)
 
         {
-this.ARRAY[index]!![index2]= GameKeyEvent.create(nullUtil!!.NULL_OBJECT, index, index2)
+this.ARRAY[index]!![index2]= GameKeyEvent.createEvent(nullUtil!!.NULL_OBJECT, index, index2)
 }
 
 }
@@ -101,11 +101,11 @@ this.ARRAY[index]!![index2]= GameKeyEvent.create(nullUtil!!.NULL_OBJECT, index, 
 
                 @Throws(Exception::class)
             
-    open fun getInstance(anyType: GameKeyEventSourceInterface, key: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceForKey(anyType: GameKeyEventSourceInterface, key: Int)
+        //nullable = true from not(false or (false and false)) = true
 : GameKeyEvent{
-var anyType = anyType
-var key = key
+    //var anyType = anyType
+    //var key = key
 
     var gameKeyEvent: GameKeyEvent = this.ARRAY[anyType!!.getSourceId()]!![key]!!
 
@@ -119,11 +119,11 @@ var key = key
 
                 @Throws(Exception::class)
             
-    open fun getInstance(anyType: GameKeyEventSourceInterface, input: Input)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceForInput(anyType: GameKeyEventSourceInterface, input: Input)
+        //nullable = true from not(false or (false and false)) = true
 : GameKeyEvent{
-var anyType = anyType
-var input = input
+    //var anyType = anyType
+    //var input = input
 
     var gameKeyEvent: GameKeyEvent = this.ARRAY[anyType!!.getSourceId()]!![input.getId()]!!
 

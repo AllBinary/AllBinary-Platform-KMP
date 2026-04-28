@@ -60,11 +60,11 @@ companion object {
         
                 @Throws(Exception::class)
             
-    open fun getInstance(basicGameResources: BasicGameResources, basicColor: BasicColor)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getAnimationFactory(basicGameResources: BasicGameResources, basicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
 : AnimationInterfaceFactoryInterface{
-var basicGameResources = basicGameResources
-var basicColor = basicColor
+    //var basicGameResources = basicGameResources
+    //var basicColor = basicColor
 
     var animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface
 

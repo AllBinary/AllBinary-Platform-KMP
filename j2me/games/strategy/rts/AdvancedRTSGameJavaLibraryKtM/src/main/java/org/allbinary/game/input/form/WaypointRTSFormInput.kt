@@ -100,12 +100,12 @@ this.isPrimaryWaypointCreator= isPrimaryWaypointCreator
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-this.dragToSpotGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.DRAG_TO_SPOT, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
-this.spotTakenGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.SPOT_TAKEN, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
-this.buildingCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILDING_COLLISION, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
-this.roadCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.ROAD_COLLISION, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
-this.newWaypointGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NEW_WAYPOINT, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
-this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.dragToSpotGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.DRAG_TO_SPOT, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.spotTakenGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.SPOT_TAKEN, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.buildingCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILDING_COLLISION, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.roadCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.ROAD_COLLISION, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.newWaypointGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NEW_WAYPOINT, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
 }
 
 
@@ -133,7 +133,7 @@ this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    override fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
+    override fun processAtPoint(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -171,9 +171,9 @@ super.process(layerManager)
     var y: Int = point.getY() +allBinaryTiledLayer!!.getYP()
 
 
-    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(x, y)!!
+    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXY(x, y)!!
 
-this.process(rtsPlayerLayerInterface, layerManager, geographicMapCellPosition)
+this.processCellPosition(rtsPlayerLayerInterface, layerManager, geographicMapCellPosition)
 
                                     }
                                 
@@ -211,7 +211,7 @@ this.process(rtsPlayerLayerInterface, layerManager, geographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-    open fun process(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun processCellPosition(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -253,7 +253,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRT
 
                 @Throws(Exception::class)
             
-    override fun processSticky(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    override fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -394,9 +394,9 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "attemptBuild")
                                     layerInterface!!.construct(rtsPlayerLayerInterface)
 newUnconstructedRTSLayerInterfaceArray[itemIndex]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 capital.removeMoney(cost)
-WaypointCellPositionHistory.getInstance()!!.add(list, layerInterface)
+WaypointCellPositionHistory.getInstance()!!.addList(list, layerInterface)
 
-    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(layerInterface!!.getXP(), layerInterface!!.getYP())!!
+    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXY(layerInterface!!.getXP(), layerInterface!!.getYP())!!
 
 
     var waypointLayer: WaypointLayer = layerInterface as WaypointLayer

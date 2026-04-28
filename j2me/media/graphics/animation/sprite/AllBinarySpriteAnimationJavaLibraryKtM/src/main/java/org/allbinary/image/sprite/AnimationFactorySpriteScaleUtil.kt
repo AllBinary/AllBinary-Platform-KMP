@@ -107,7 +107,7 @@ companion object {
                         
                                     {
                                     scaledImage= this.openGLUtil!!.add(image)
-sprite= spriteFactory!!.create(scaledImage, width, height)
+sprite= spriteFactory!!.createSprite(scaledImage, width, height)
 
                                     }
                                 
@@ -158,8 +158,8 @@ scaleY= (by16Height.toFloat()) /height
 
                                     }
                                 
-scaledImage= this.imageScaleUtil!!.createImage(this.imageCache, image, scaleX, 1.0f, scaleY, 1.0f, true)
-sprite= spriteFactory!!.create(scaledImage, (width *scaleX).toInt(), (height *scaleY).toInt())
+scaledImage= this.imageScaleUtil!!.createImage2(this.imageCache, image, scaleX, 1.0f, scaleY, 1.0f, true)
+sprite= spriteFactory!!.createSprite(scaledImage, (width *scaleX).toInt(), (height *scaleY).toInt())
 
                         }
                             
@@ -168,7 +168,7 @@ sprite= spriteFactory!!.create(scaledImage, (width *scaleX).toInt(), (height *sc
                                 
                         else {
                             scaledImage= this.openGLUtil!!.add(image)
-sprite= spriteFactory!!.create(scaledImage, width, height)
+sprite= spriteFactory!!.createSprite(scaledImage, width, height)
 
                         }
                             

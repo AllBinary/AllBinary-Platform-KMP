@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.thread.ARunnable
 import org.allbinary.business.advertisement.GameAdStateFactory
 import org.allbinary.game.GameAdState
 import org.allbinary.game.configuration.feature.Features
@@ -137,7 +136,7 @@ allBinaryGameCanvas!!.updateScreenButtonPaintable2()
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
-allBinaryGameCanvas!!.setGameState()
+allBinaryGameCanvas!!.updateGameState()
 }
 
 

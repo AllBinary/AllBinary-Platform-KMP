@@ -40,7 +40,7 @@ open public class TimedFireAI : BasicAI {
         
 companion object {
             
-    val TIME: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(1)!!
+    val TIME: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(1)!!
 
         }
             
@@ -75,7 +75,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         if(this.maxFireDelayTimeHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime) && timeFiredInterface!!.getLastFireTime() +this.maxFireDelayTimeHelper!!.delay < this.maxFireDelayTimeHelper!!.getStartTime())
                         
                                     {
-                                    super.processAI(Canvas.KEY_NUM1)
+                                    super.processKeyAI(Canvas.KEY_NUM1)
 this.maxFireDelayTimeHelper!!.delay= this.delay
 
                                     }

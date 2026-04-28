@@ -85,7 +85,7 @@ this.animationInterface!!.onHealthChange(((this.healthInterface!!.getHealth() +(
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this.animationInterface!!.paint(graphics, 0, 0)
+this.animationInterface!!.paintXY(graphics, 0, 0)
 }
 
 

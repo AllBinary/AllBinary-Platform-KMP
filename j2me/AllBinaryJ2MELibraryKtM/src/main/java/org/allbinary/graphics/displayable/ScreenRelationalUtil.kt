@@ -39,7 +39,7 @@ companion object {
             {
             }            
         
-    open fun getScale(image: Image)
+    open fun getScaleImage(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Float{
     //var image = image
@@ -47,11 +47,11 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getScale(image.getWidth(), image.getHeight())
+                        return this.getScaleWH(image.getWidth(), image.getHeight())
 }
 
 
-    open fun getScale(aWidth: Int, aHeight: Int)
+    open fun getScaleWH(aWidth: Int, aHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Float{
     //var aWidth = aWidth
@@ -60,11 +60,11 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getScale(aWidth, aHeight, 20)
+                        return this.getScaleWHA(aWidth, aHeight, 20)
 }
 
 
-    open fun getScale(aWidth: Int, aHeight: Int, add: Int)
+    open fun getScaleWHA(aWidth: Int, aHeight: Int, add: Int)
         //nullable = true from not(false or (false and false)) = true
 : Float{
     //var aWidth = aWidth
@@ -114,11 +114,11 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (this.getScale(aWidth, aHeight) *aHeight).toInt()
+                        return (this.getScaleWH(aWidth, aHeight) *aHeight).toInt()
 }
 
 
-    open fun getScaledHeight(aWidth: Int, aHeight: Int, add: Int)
+    open fun getScaledHeightAdd(aWidth: Int, aHeight: Int, add: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var aWidth = aWidth
@@ -128,7 +128,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (this.getScale(aWidth, aHeight, add) *aHeight).toInt()
+                        return (this.getScaleWHA(aWidth, aHeight, add) *aHeight).toInt()
 }
 
 

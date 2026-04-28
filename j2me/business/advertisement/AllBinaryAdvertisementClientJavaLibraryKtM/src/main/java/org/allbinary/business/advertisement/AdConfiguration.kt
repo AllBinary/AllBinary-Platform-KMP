@@ -41,7 +41,7 @@ open public class AdConfiguration
 public constructor (advertIdArray: Array<Any?>)
             : super()
         {
-var advertIdArray = advertIdArray
+    //var advertIdArray = advertIdArray
 this.INNERACTIVE= advertIdArray[0]!! as String
 this.ADMOB= advertIdArray[1]!! as String
 this.LEADBOLT= advertIdArray[2]!! as String
@@ -62,14 +62,14 @@ this.LEADBOLT= advertIdArray[2]!! as String
     open fun process(gameState: GameState)
         //nullable = true from not(false or (false and false)) = true
 {
-var gameState = gameState
+    //var gameState = gameState
 }
 
 
-    open fun process(state: Int)
+    open fun processDemo(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var state = state
+    //var state = state
 }
 
 
@@ -79,10 +79,10 @@ var state = state
 }
 
 
-    open fun setShowAds(showAds: Boolean)
+    open fun setToggleAds(showAds: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var showAds = showAds
+    //var showAds = showAds
 }
 
 

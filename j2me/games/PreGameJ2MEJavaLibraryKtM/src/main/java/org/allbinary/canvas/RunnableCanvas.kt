@@ -30,9 +30,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.CommandListener
-import javax.microedition.lcdui.NullCommandListener
 import org.allbinary.game.displayable.canvas.NullWaitGameRunnable
-import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
@@ -435,7 +433,7 @@ this.logUtil!!.putF(stringMaker!!.append(this.END_PAUSE)!!.appendlong(System.cur
                                     }
                                 
 
-    var elapsedTime: Long = this.loopTimeHelper!!.getElapsed()!!
+    var elapsedTime: Long = this.loopTimeHelper!!.getElapsedTNT()!!
 
 
     var wait: Long = this.loopTimeHelper!!.delay.toLong()

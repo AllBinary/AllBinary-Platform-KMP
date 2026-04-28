@@ -46,7 +46,7 @@ open public class BasicWeaponPart
         
 companion object {
             
-    open fun create(animationInterface: Animation)
+    open fun createPart(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
 : BasicWeaponPart{
     //var animationInterface = animationInterface
@@ -58,7 +58,7 @@ companion object {
 }
 
 
-    val NULL_BASIC_WEAPON_PART: BasicWeaponPart = BasicWeaponPart.create(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))!!
+    val NULL_BASIC_WEAPON_PART: BasicWeaponPart = BasicWeaponPart.createPart(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))!!
 
         }
             
@@ -106,13 +106,13 @@ this.relativeRelationship= relativeRelationship
     //var allbinaryLayerManager = allbinaryLayerManager
     //var angle = angle
     //var otherAngle = otherAngle
-this.process(allbinaryLayerManager, angle, otherAngle, this.getWeaponProperties(), this.scoreableInterface)
+this.processScore(allbinaryLayerManager, angle, otherAngle, this.getWeaponProperties(), this.scoreableInterface)
 }
 
 
                 @Throws(Exception::class)
             
-    override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
+    override fun processScore(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager
@@ -178,7 +178,7 @@ this.animationInterface= animationInterface
 
     var viewY: Int = viewPosition!!.getY()!!
 
-this.animationInterface!!.paint(graphics, viewX, viewY)
+this.animationInterface!!.paintXY(graphics, viewX, viewY)
 }
 
 

@@ -54,7 +54,7 @@ var geographicMapInterface = geographicMapInterface
     var hashtable: Hashtable<Any, Any> = GeographicMapCellPositionFactory.getHashtable()!!
 
 
-    var cellPositionKey: String = CellPosition.toString(i_column, i_row)!!
+    var cellPositionKey: String = CellPosition.toStringColRow(i_column, i_row)!!
 
 
     var cellPositionCanBeNull: Any? = hashtable.get(cellPositionKey as Object)

@@ -27,7 +27,6 @@
         
 import org.allbinary.layer.event.LayerManagerEvent
 import org.allbinary.layer.event.LayerManagerEventHandler
-import org.allbinary.logic.communication.log.LogUtil
 
 open public class AllBinaryLayerManager : LayerManager {
         
@@ -111,7 +110,7 @@ super.append(layerInterface)
 
                 @Throws(Exception::class)
             
-    override fun append(layerInterface: AllBinaryLayer, index: Int)
+    override fun appendAt(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -122,7 +121,7 @@ super.append(layerInterface)
                         
                                     {
                                     this.appendProcessors(layerInterface)
-super.append(layerInterface, index)
+super.appendAt(layerInterface, index)
 
                                     }
                                 

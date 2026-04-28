@@ -30,7 +30,6 @@ import org.allbinary.game.input.GameKey
 import org.allbinary.game.input.GameKeyFactory
 import org.allbinary.game.input.Input
 import org.allbinary.game.input.InputFactory
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -84,7 +83,7 @@ this.clear()
 }
 
 
-    override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
+    override fun addMapping(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputToGameKeyMapping = inputToGameKeyMapping
@@ -209,7 +208,7 @@ var id = id
                         
                                     {
                                     
-    var input: Input = inputFactory!!.getInstance(index)!!
+    var input: Input = inputFactory!!.getInstanceById(index)!!
 
 
     
@@ -237,7 +236,7 @@ var id = id
 
                 @Throws(Exception::class)
             
-    open fun init(canvas: Canvas, gameKey: GameKey)
+    open fun initGameKey(canvas: Canvas, gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
 {
 var canvas = canvas
@@ -368,7 +367,7 @@ this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
                         for (index in mappedGameKeys!!.size  - 1  downTo 0)
 
         {
-this.init(canvas, mappedGameKeys[index]!!)
+this.initGameKey(canvas, mappedGameKeys[index]!!)
 }
 
 } catch(t: Throwable)
@@ -379,8 +378,8 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
 }
 
 
-    open fun getInstance(canvas: Canvas, id: Int)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceForCanvas(canvas: Canvas, id: Int)
+        //nullable = true from not(false or (false and false)) = true
 : GameKey{
 var canvas = canvas
 var id = id

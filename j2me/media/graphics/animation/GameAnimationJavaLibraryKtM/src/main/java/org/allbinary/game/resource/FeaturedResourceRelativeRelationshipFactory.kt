@@ -141,7 +141,7 @@ var layer = layer
 
     var relativeRelationship: RelativeRelationship = list.objectArray[index]!! as RelativeRelationship
 
-newList!!.add(RelativeLayerRelationship(layer, pointFactory!!.getInstance0(relativeRelationship!!.getX(), relativeRelationship!!.getY()), BasicArrayListUtil.getInstance()!!.getImmutableInstance()))
+newList!!.add(RelativeLayerRelationship(layer, pointFactory!!.createXY(relativeRelationship!!.getX(), relativeRelationship!!.getY()), BasicArrayListUtil.getInstance()!!.getImmutableInstance()))
 }
 
 

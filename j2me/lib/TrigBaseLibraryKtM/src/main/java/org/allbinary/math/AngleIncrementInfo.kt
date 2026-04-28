@@ -60,10 +60,10 @@ this.angleIncrement= angleIncrement
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
-this.DOWN_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.DOWN.getValue() /this.angleIncrement)
-this.UP_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.UP.getValue().toInt())
-this.LEFT_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.LEFT.getValue() /this.angleIncrement)
-this.RIGHT_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.RIGHT.getValue() /this.angleIncrement)
+this.DOWN_FRAME= smallIntegerSingletonFactory!!.getAt(angleFactory!!.DOWN.getValue() /this.angleIncrement)
+this.UP_FRAME= smallIntegerSingletonFactory!!.getAt(angleFactory!!.UP.getValue().toInt())
+this.LEFT_FRAME= smallIntegerSingletonFactory!!.getAt(angleFactory!!.LEFT.getValue() /this.angleIncrement)
+this.RIGHT_FRAME= smallIntegerSingletonFactory!!.getAt(angleFactory!!.RIGHT.getValue() /this.angleIncrement)
 }
 
 
@@ -109,7 +109,7 @@ var frame = frame
 : Int{
 var angle = angle
 
-    var closestDirection: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(360)!!
+    var closestDirection: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(360)!!
 
 
     

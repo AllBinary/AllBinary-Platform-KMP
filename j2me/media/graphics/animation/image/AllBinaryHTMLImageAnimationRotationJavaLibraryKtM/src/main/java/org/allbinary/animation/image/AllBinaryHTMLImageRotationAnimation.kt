@@ -31,7 +31,6 @@ import org.allbinary.animation.AnimationBehavior
 import org.allbinary.math.AngleInfo
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.media.image.ImageCopyUtil
-import org.allbinary.media.image.ImageCreationUtil
 import org.allbinary.media.image.ImageModifierUtil
 import org.allbinary.media.image.ImageRotationUtil
 import org.microemu.device.playn.PlaynMutableImage
@@ -183,7 +182,7 @@ this.updateImage()
     var canvasSurface: CanvasSurface = this.canvasSurfaceArray[this.bufferedImageIndex]!!
 
 canvasSurface!!.save()
-this.imageRotationUtil!!.rotateImageClear(this.originalImage, this.twoImages[this.bufferedImageIndex]!!, canvasSurface, this.angleInfo!!.getAngle() +90)
+this.imageRotationUtil!!.rotateImageCanvasSurfaceClear(this.originalImage, this.twoImages[this.bufferedImageIndex]!!, canvasSurface, this.angleInfo!!.getAngle() +90)
 this.alphaProcessor!!.setAlpha(this.imageModifierUtil, this.originalImage, this.twoImages[this.bufferedImageIndex]!!, this.alphaP)
 this.imageRotationUtil!!.drawImage(this.originalImage, imageToShow, canvasSurface)
 canvasSurface!!.restore()
@@ -221,7 +220,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

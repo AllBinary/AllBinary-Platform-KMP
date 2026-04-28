@@ -120,7 +120,7 @@ this.logUtil!!.putF(StringMaker().
                         if(gameFeatureUtil!!.isExclusive(itemLabel))
                         
                                     {
-                                    gameFeatureUtil!!.updateExclusive(item as ChoiceGroup)
+                                    gameFeatureUtil!!.updateExclusiveForChoiceGroup(item as ChoiceGroup)
 
                                     }
                                 

@@ -55,12 +55,12 @@ companion object {
 
     private var lastDamageStringSizeArray: IntArray = IntArray(5)
 
-    private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(5)!!
+    private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(5)!!
 
     private val primitiveLongUtil: PrimitiveLongUtil
 public constructor (layerInterface: AllBinaryLayer){
 var layerInterface = layerInterface
-this.primitiveLongUtil= PrimitiveLongUtil.create(100000)
+this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(100000)
 this.layerInterface= layerInterface
 
     var CHAR_ARRAY: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!

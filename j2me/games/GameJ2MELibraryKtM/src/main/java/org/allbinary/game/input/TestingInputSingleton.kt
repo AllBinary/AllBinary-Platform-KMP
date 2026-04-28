@@ -77,7 +77,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 }
 
 
-    open fun initInputProcessors(aTestInputInterface: TestInputInterface)
+    open fun initInputProcessorsForTestInput(aTestInputInterface: TestInputInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var aTestInputInterface = aTestInputInterface
@@ -90,7 +90,7 @@ this.inputProcessorArray[Canvas.UP]= object: GameInputProcessor()
                                 
                 @Throws(Exception::class)
             
-    open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open override fun processEvent(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager
@@ -105,7 +105,7 @@ this.inputProcessorArray[Canvas.DOWN]= object: GameInputProcessor()
                                 
                 @Throws(Exception::class)
             
-    open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open override fun processEvent(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager
@@ -120,7 +120,7 @@ this.inputProcessorArray[Canvas.LEFT]= object: GameInputProcessor()
                                 
                 @Throws(Exception::class)
             
-    open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open override fun processEvent(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager
@@ -135,7 +135,7 @@ this.inputProcessorArray[Canvas.RIGHT]= object: GameInputProcessor()
                                 
                 @Throws(Exception::class)
             
-    open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open override fun processEvent(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager
@@ -150,7 +150,7 @@ this.inputProcessorArray[Canvas.KEY_NUM7]= object: GameInputProcessor()
                                 
                 @Throws(Exception::class)
             
-    open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open override fun processEvent(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager
@@ -165,7 +165,7 @@ this.inputProcessorArray[Canvas.KEY_NUM9]= object: GameInputProcessor()
                                 
                 @Throws(Exception::class)
             
-    open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open override fun processEvent(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager
@@ -182,7 +182,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun processInput(allbinaryLayerManager: AllBinaryLayerManager, list: BasicArrayList)
+    open fun processInputList(allbinaryLayerManager: AllBinaryLayerManager, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager
@@ -205,7 +205,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
         {
 gameKeyEvent= (list.objectArray[index]!! as GameKeyEvent)
 key= gameKeyEvent!!.getKey()
-inputProcessorArray[key]!!.process(allbinaryLayerManager, GameKeyEvent.NONE)
+inputProcessorArray[key]!!.processEvent(allbinaryLayerManager, GameKeyEvent.NONE)
 }
 
 }
@@ -218,7 +218,7 @@ inputProcessorArray[key]!!.process(allbinaryLayerManager, GameKeyEvent.NONE)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager
-this.processInput(allbinaryLayerManager, this.getGameKeyEventList())
+this.processInputList(allbinaryLayerManager, this.getGameKeyEventList())
 this.getGameKeyEventList()!!.clear()
 }
 

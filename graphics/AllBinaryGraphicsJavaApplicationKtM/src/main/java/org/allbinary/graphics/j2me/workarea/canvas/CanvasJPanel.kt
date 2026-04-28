@@ -193,7 +193,7 @@ this.canvasTreeNode= DefaultMutableTreeNode(this.frameLabel)
 frame++
 this.workAreaJTreeJPanel!!.add(this.getTreeNode())
 this.graphicItemHashMap= HashMap<Any, Any>()
-this.grid.grid= PointFactory.getInstance()!!.getInstance0(0, 0)
+this.grid.grid= PointFactory.getInstance()!!.createXY(0, 0)
 this.setCanvasDimension(IntegerDimension(0, 0))
 this.selectedTool= 
                                         null
@@ -319,7 +319,7 @@ var ySize = ySize
 
                                     }
                                 
-this.grid.grid= PointFactory.getInstance()!!.getInstance0(xSize, ySize)
+this.grid.grid= PointFactory.getInstance()!!.createXY(xSize, ySize)
 this.grid.isChanged= true
 } catch(e: Exception)
             {
@@ -484,7 +484,7 @@ var explosionType = explosionType
     var item: GraphicItemInterface = this.getGraphicItemHashMap()!!.get(graphicItemArray[index]!!) as GraphicItemInterface
 
 
-    var basicArrayList: BasicArrayList = VectorExplosionGenerator.getInstance()!!.getInstance(item.getPointsInterface()!!.getPoints(), howMuch, VectorExplosionGenerator.getInstance()!!.RANDOM)!!
+    var basicArrayList: BasicArrayList = VectorExplosionGenerator.getInstance()!!.createList(item.getPointsInterface()!!.getPoints(), howMuch, VectorExplosionGenerator.getInstance()!!.RANDOM)!!
 
 
     var newPoints: Points = Points()

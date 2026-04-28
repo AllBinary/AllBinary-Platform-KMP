@@ -39,7 +39,6 @@ import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.animation.NullIndexedAnimationFactory
-import org.allbinary.animation.NullRotationAnimationFactory
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.animation.RotationAnimation
 import org.allbinary.animation.caption.CaptionAnimationHelper
@@ -105,7 +104,6 @@ import org.allbinary.game.physics.velocity.VelocityProperties
 import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.game.tracking.TrackingEventListenerInterface
-import org.allbinary.game.view.TileLayerPositionIntoViewPosition
 import org.allbinary.graphics.CellPositionFactory
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.Rectangle
@@ -299,10 +297,10 @@ this.damageFloaters= DamageFloaters()
                             
 this.decalAnimation= decalAnimationInterfaceFactoryInterface!!.getInstance(0) as RotationAnimation
 this.initResourceAnimation= resourceAnimationInterfaceFactoryInterface!!.getInstance(0) as RotationAnimation
-this.initResourceAnimation!!.setFrame(direction)
-this.decalAnimation!!.setFrame(direction)
+this.initResourceAnimation!!.setFrameByDirection(direction)
+this.decalAnimation!!.setFrameByDirection(direction)
 this.rotationAnimationInterfaceP= this.indexedButShouldBeRotationAnimationInterface as RotationAnimation
-this.rotationAnimationInterfaceP!!.setFrame(direction)
+this.rotationAnimationInterfaceP!!.setFrameByDirection(direction)
 this.setMaxLevel(12)
 this.vehicleProperties= vehicleProperties
 this.trackingEvent= TrackingEvent(this)
@@ -333,7 +331,7 @@ this.initPathAnimation!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 hashtable.put(Group.ID, this.getGroupInterface())
 hashtable.put(Layer.ID, this)
 hashtable.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManagerP)
-this.setWaypointBehavior(UnitWaypointBehavior2(this, waypointLayerInterfaceFactoryInterface!!.getInstance(hashtable, x, y, z) as AdvancedRTSGameLayer))
+this.setWaypointBehavior(UnitWaypointBehavior2(this, waypointLayerInterfaceFactoryInterface!!.getNextInstance(hashtable, x, y, z) as AdvancedRTSGameLayer))
 
     var features: Features = Features.getInstance()!!
 
@@ -473,7 +471,7 @@ this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
 
         {
 
-    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(index, index2)!!
+    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(index, index2)!!
 
 
     
@@ -590,7 +588,7 @@ this.rtsLogHelper!!.setClosestGeographicMapCellHistory(this, pathsList)
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionBasicArrayList!!.get(geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition
 
-currentDistance= this.layerDistanceUtil!!.getDistance(this, geographicMapCellPosition!!.getMidPoint())
+currentDistance= this.layerDistanceUtil!!.getDistanceAt(this, geographicMapCellPosition!!.getMidPoint())
 
     
                         if(currentDistance < shortestDistance)
@@ -628,7 +626,7 @@ this.teleportTo(geographicMapCellPosition)
 {
     //var geographicMapCellHistory = geographicMapCellHistory
     //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
-geographicMapCellHistory!!.track(geographicMapCellPositionBasicArrayList)
+geographicMapCellHistory!!.trackAll(geographicMapCellPositionBasicArrayList)
 }
 
 
@@ -792,7 +790,7 @@ this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHe
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
 
-    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(this.x +this.getHalfWidth(), this.y +this.getHalfHeight())!!
+    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtXY(this.x +this.getHalfWidth(), this.y +this.getHalfHeight())!!
 
 
     var raceTrackGeographicMap: RaceTrackGeographicMap = geographicMapInterface as RaceTrackGeographicMap
@@ -826,7 +824,7 @@ this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHe
     //var gameKeyEvent = gameKeyEvent
 
     
-                        if(this.fireTimeHelper!!.isTime())
+                        if(this.fireTimeHelper!!.isTimeTNT())
                         
                                     {
                                     this.fireAll(layerManager)
@@ -937,7 +935,7 @@ var layerManager = layerManager
 
     var key: Int = GameKeyEventUtil.getKey(anyType)!!
 
-this.inputProcessorArray[key]!!.process(layerManager, GameKeyEvent.NONE)
+this.inputProcessorArray[key]!!.processEvent(layerManager, GameKeyEvent.NONE)
 }
 
 list.clear()
@@ -950,7 +948,7 @@ this.move()
         //nullable = true from not(false or (false and false)) = true
 {
     //var accelerate = accelerate
-this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.getUnscaled(), this.rotationAnimationInterfaceP!!.getAngleInfoP()!!.getAngle().toInt(), 90)
+this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocityi(accelerate.getUnscaled(), this.rotationAnimationInterfaceP!!.getAngleInfoP()!!.getAngle().toInt(), 90)
 }
 
 
@@ -966,7 +964,7 @@ this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.g
 
     var angle: Int = (angleInfo!!.getAngle() +this.slightAngle).toInt()
 
-hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), SmallIntegerSingletonFactory.getInstance()!!.getInstance(AngleFactory.getInstance()!!.getInstance(angle)!!.getValue().toInt()))
+hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getAt(1), SmallIntegerSingletonFactory.getInstance()!!.getAt(AngleFactory.getInstance()!!.getAt(angle)!!.getValue().toInt()))
 
     var salvoInterface: SalvoInterface = this.getPartInterfaceArray()[0]!! as SalvoInterface
 
@@ -1029,13 +1027,13 @@ this.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(this.get
     var dy: Int = (this.getYP() +this.getHalfHeight()) -point.getY()
 
 this.rtsLogHelper!!.trackTo(this, nextUnvisitedPathGeographicMapCellPosition, dx, dy, reason)
-this.trackTo(dx, dy)
+this.trackToDXY(dx, dy)
 }
 
 
                 @Throws(Exception::class)
             
-    override fun trackTo(dx: Int, dy: Int)
+    override fun trackToDXY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -1043,7 +1041,7 @@ this.trackTo(dx, dy)
 
     var angleOfTarget: Int = 0
 
-this.trackTo(dx, dy, angleOfTarget)
+this.trackToDXYTargetAngle(dx, dy, angleOfTarget)
 }
 
 
@@ -1233,13 +1231,13 @@ this.rtsLogHelper!!.currentMoveEnded(this)
                         
                                     {
                                     this.rtsLogHelper!!.rotateRight(this)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.RIGHT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.RIGHT))
 
                                     }
                                 
                         else {
                             this.rtsLogHelper!!.rotateLeft(this)
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.LEFT))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.LEFT))
 
                         }
                             
@@ -1331,7 +1329,7 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
 
                 @Throws(Exception::class)
             
-    open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
+    open fun trackToDXYTargetAngle(dx: Int, dy: Int, targetAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -1365,7 +1363,7 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
                                 )
                         
                                     {
-                                    list.remove(index)
+                                    list.removeAt(index)
 
                                     }
                                 
@@ -1410,7 +1408,7 @@ this.fireOrMove()
 
                                     }
                                 
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.UP))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.UP))
 
                                     }
                                 
@@ -1418,7 +1416,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
                             this.captionAnimationHelper!!.update(CommonPhoneStrings.getInstance()!!.FIRE, this.basicColorFactory!!.RED)
 this.rtsLayer2LogHelper!!.steeringFireOrStop(this)
 this.allStop()
-this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.KEY_NUM0))
+this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstanceForKey(this, Canvas.KEY_NUM0))
 TrackingEventHandler.getInstance()!!.fireEvent(this.getTrackingEvent())
 
                         }
@@ -1453,7 +1451,7 @@ this.getUnitWaypointBehavior()!!.move()
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-layerPartialCellPositionsUtil!!.getAll(geographicMapInterface, this, velocityXScaled.toInt(), velocityYScaled.toInt(), getPartialpositionlist())
+layerPartialCellPositionsUtil!!.getAllDXY(geographicMapInterface, this, velocityXScaled.toInt(), velocityYScaled.toInt(), getPartialpositionlist())
 
     var cellPosition: GeographicMapCellPosition = DropCellPositionHistory.getInstance()!!.getCellPositionWithDrop(getPartialpositionlist()) as GeographicMapCellPosition
 
@@ -1529,8 +1527,8 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
 
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
 
-velocityProperties!!.getVelocityXBasicDecimalP()!!.set(0)
-velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
+velocityProperties!!.getVelocityXBasicDecimalP()!!.setint(0)
+velocityProperties!!.getVelocityYBasicDecimalP()!!.setint(0)
 }
 
 
@@ -1553,14 +1551,14 @@ var graphics = graphics
 
     var viewY: Int = viewPosition!!.getY()!!
 
-this.decalAnimation!!.paint(graphics, viewX, viewY)
-this.rangeAnimation!!.paint(graphics, viewX, viewY)
-this.sensorRangeAnimation!!.paint(graphics, viewX, viewY)
+this.decalAnimation!!.paintXY(graphics, viewX, viewY)
+this.rangeAnimation!!.paintXY(graphics, viewX, viewY)
+this.sensorRangeAnimation!!.paintXY(graphics, viewX, viewY)
 this.damageFloatersPaintableInterface!!.paint(graphics)
 this.healthBar!!.paint(graphics)
-this.captionAnimationHelper!!.paint(graphics, viewX, viewY)
-this.pathAnimation!!.paint(graphics, viewX, viewY)
-this.resourceAnimation!!.paint(graphics, viewX, viewY)
+this.captionAnimationHelper!!.paintXY(graphics, viewX, viewY)
+this.pathAnimation!!.paintXY(graphics, viewX, viewY)
+this.resourceAnimation!!.paintXY(graphics, viewX, viewY)
 
                                     }
                                 

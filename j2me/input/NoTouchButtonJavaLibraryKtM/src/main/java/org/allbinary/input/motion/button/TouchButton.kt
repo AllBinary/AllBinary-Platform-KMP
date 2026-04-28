@@ -86,7 +86,7 @@ this.logUtil!!.putF(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this.animationInterface!!.paint(graphics, animationX, animationY)
+this.animationInterface!!.paintXY(graphics, animationX, animationY)
 }
 
 
@@ -104,7 +104,7 @@ this.animationInterface!!.paint(graphics, animationX, animationY)
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
 
-this.rectangle= Rectangle(pointFactory!!.getInstance0(x +this.xBorder, y +this.yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
+this.rectangle= Rectangle(pointFactory!!.createXY(x +this.xBorder, y +this.yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
 
     var point: GPoint = this.rectangle.getPoint()!!
 

@@ -34,7 +34,6 @@ import org.allbinary.game.combat.destroy.DestroyedLayerProcessor
 import org.allbinary.game.identification.BasicGroupFactory
 import org.allbinary.game.multiplayer.layer.MultiPlayerGameLayer
 import org.allbinary.game.multiplayer.layer.RemoteInfo
-import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.image.opengles.OpenGLSurfaceChangedInterface
 import org.allbinary.view.ViewPosition
@@ -81,7 +80,7 @@ this.setDestroyed(false)
 }
 
 
-    open fun init(x: Int, y: Int, z: Int)
+    open fun initXYZ(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -104,7 +103,7 @@ var graphics = graphics
 
     var viewY: Int = viewPosition!!.getY()!!
 
-this.animationInterface!!.paint(graphics, viewX, viewY)
+this.animationInterface!!.paintXY(graphics, viewX, viewY)
 }
 
 

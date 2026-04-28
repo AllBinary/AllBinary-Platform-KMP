@@ -143,7 +143,7 @@ farAllbinaryLayer= allBinaryLayer
                         if(farAllbinaryLayer!!.getXP() < ownerLayerInterface!!.getXP())
                         
                                     {
-                                    this.processAI(Canvas.LEFT)
+                                    this.processKeyAI(Canvas.LEFT)
 
                                     }
                                 
@@ -152,7 +152,7 @@ farAllbinaryLayer= allBinaryLayer
                         if(farAllbinaryLayer!!.getXP() > ownerLayerInterface!!.getXP())
                         
                                     {
-                                    this.processAI(Canvas.RIGHT)
+                                    this.processKeyAI(Canvas.RIGHT)
 
                                     }
                                 
@@ -161,7 +161,7 @@ farAllbinaryLayer= allBinaryLayer
                         if(farAllbinaryLayer!!.getYP() > ownerLayerInterface!!.getYP())
                         
                                     {
-                                    this.processAI(Canvas.UP)
+                                    this.processKeyAI(Canvas.UP)
 
                                     }
                                 
@@ -170,7 +170,7 @@ farAllbinaryLayer= allBinaryLayer
                         if(farAllbinaryLayer!!.getYP() < ownerLayerInterface!!.getYP())
                         
                                     {
-                                    this.processAI(Canvas.DOWN)
+                                    this.processKeyAI(Canvas.DOWN)
 
                                     }
                                 

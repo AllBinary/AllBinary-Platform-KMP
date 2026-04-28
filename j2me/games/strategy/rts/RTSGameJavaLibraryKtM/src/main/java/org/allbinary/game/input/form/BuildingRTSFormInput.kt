@@ -38,7 +38,6 @@ import org.allbinary.media.audio.BuildingSound
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.system.security.licensing.LockedFeatureNotificationUtil
 import org.allbinary.logic.system.security.licensing.LockedUtil
@@ -101,15 +100,15 @@ this.isUnitProducer= isUnitProducer
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-this.buildOnPathGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILD_ON_PATH, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.spotTakenGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.SPOT_TAKEN, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.selectBuildSpotGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.SELECT_BUILD_SPOT, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.roadCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.ROAD_COLLISION, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.buildingCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILDING_COLLISION, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.structureToCloseCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.STRUCTURE_TO_CLOSE, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.buildingGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILDING, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.mapEdgeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.MAP_EDGE, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.buildOnPathGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILD_ON_PATH, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.spotTakenGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.SPOT_TAKEN, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.selectBuildSpotGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.SELECT_BUILD_SPOT, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.roadCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.ROAD_COLLISION, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.buildingCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILDING_COLLISION, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.structureToCloseCollisionGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.STRUCTURE_TO_CLOSE, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.buildingGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILDING, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
+this.mapEdgeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.MAP_EDGE, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
 }
 
 
@@ -140,7 +139,7 @@ this.mapEdgeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    override fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -176,7 +175,7 @@ this.buildFromMotionInput(rtsPlayerLayerInterface, layerManager, item, itemIndex
 
 
     
-                        if(LockedUtil.getInstance()!!.isLockedFeature() && layerInterfaceFactoryInterface!!.isDemoLocked())
+                        if(LockedUtil.getInstance()!!.isLocked() && layerInterfaceFactoryInterface!!.isDemoLocked())
                         
                                     {
                                     
@@ -238,7 +237,7 @@ this.logUtil!!.putF(commonStrings!!.START, this, "buildFromMotionInput")
                         
                                     {
                                     rtsPlayerLayerInterface!!.add(ErrorSound.getInstance())
-LockedFeatureNotificationUtil.getInstance()!!.fire(geographicMapInterface!!.getForegroundBasicColor())
+LockedFeatureNotificationUtil.getInstance()!!.fireWithColor(geographicMapInterface!!.getForegroundBasicColor())
 
 
 
@@ -588,7 +587,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
 
-this.dropCellPositionHistory!!.add(occupyList, layerInterface)
+this.dropCellPositionHistory!!.addAll(occupyList, layerInterface)
 
     var rtsPlayerGameInput: RTSPlayerGameInput = rtsPlayerLayerInterface!!.getPlayerGameInput() as RTSPlayerGameInput
 

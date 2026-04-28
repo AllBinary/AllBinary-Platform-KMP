@@ -166,7 +166,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                         if(increaseWidth != 0 || increaseHeight != 0)
                         
                                     {
-                                    generatedBufferedImageArray[index2]!![index3]= imageUtil!!.createBufferedImage(generatedBufferedImageArray[index2]!![index3]!!, cellWidth +increaseWidth, cellHeight +increaseHeight, false, true)
+                                    generatedBufferedImageArray[index2]!![index3]= imageUtil!!.createBufferedImageAllowTranslate(generatedBufferedImageArray[index2]!![index3]!!, cellWidth +increaseWidth, cellHeight +increaseHeight, false, true)
 
                                     }
                                 
@@ -283,7 +283,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                         if(increaseWidth != 0 || increaseHeight != 0)
                         
                                     {
-                                    generatedBufferedImageArray[index2]!![index3]= ImageUtil.getInstance()!!.createBufferedImage(generatedBufferedImageArray[index2]!![index3]!!, cellWidth +increaseWidth, cellHeight +increaseHeight, false, true)
+                                    generatedBufferedImageArray[index2]!![index3]= ImageUtil.getInstance()!!.createBufferedImageAllowTranslate(generatedBufferedImageArray[index2]!![index3]!!, cellWidth +increaseWidth, cellHeight +increaseHeight, false, true)
 
                                     }
                                 

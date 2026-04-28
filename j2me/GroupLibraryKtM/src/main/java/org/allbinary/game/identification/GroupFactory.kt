@@ -80,7 +80,7 @@ index++
 }
 
 
-    open fun getNextGroup(name: String)
+    open fun getNextGroupByName(name: String)
         //nullable = true from not(false or (false and false)) = true
 : Group{
     //var name = name

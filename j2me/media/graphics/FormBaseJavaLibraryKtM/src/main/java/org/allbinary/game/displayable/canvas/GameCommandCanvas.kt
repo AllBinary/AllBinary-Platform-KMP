@@ -73,7 +73,6 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonSeps
-import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
 open public class GameCommandCanvas : MyCanvas
@@ -86,7 +85,7 @@ companion object {
 
         }
             
-    private val repaintProcessor: Processor = ScreenRepaintProcessorFactory.getInstance()!!.getInstance(this)!!
+    private val repaintProcessor: Processor = ScreenRepaintProcessorFactory.getInstance()!!.create(this)!!
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
@@ -255,7 +254,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
     var pointFactory: PointFactory = PointFactory.getInstance()!!
 
 
-    var rectangle: Rectangle = Rectangle(pointFactory!!.getInstance0(30, startY), displayInfo!!.getLastWidth() -30, startY)
+    var rectangle: Rectangle = Rectangle(pointFactory!!.createXY(30, startY), displayInfo!!.getLastWidth() -30, startY)
 
 
 
@@ -309,7 +308,7 @@ this.repaintProcessor!!.process()
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
-this.keyPressed(keyCode, 0)
+this.keyPressedByDevice(keyCode, 0)
 }
 
 
@@ -317,7 +316,7 @@ this.keyPressed(keyCode, 0)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
-this.keyReleased(keyCode, 0)
+this.keyReleasedByDevice(keyCode, 0)
 }
 
 
@@ -325,11 +324,11 @@ this.keyReleased(keyCode, 0)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
-this.keyRepeated(keyCode, 0)
+this.keyRepeatedByDevice(keyCode, 0)
 }
 
 
-    override fun keyPressed(keyCode: Int, deviceId: Int)
+    override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -340,7 +339,7 @@ this.addGameKeyEvent(keyCode, 0, false)
 }
 
 
-    override fun keyReleased(keyCode: Int, deviceId: Int)
+    override fun keyReleasedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -349,7 +348,7 @@ this.removeGameKeyEvent(keyCode, deviceId, false)
 }
 
 
-    override fun keyRepeated(keyCode: Int, deviceId: Int)
+    override fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -375,7 +374,7 @@ this.removeGameKeyEvent(keyCode, deviceId, false)
 
         try {
             
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
+    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
 
     
@@ -383,10 +382,10 @@ this.removeGameKeyEvent(keyCode, deviceId, false)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
 
 this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 
@@ -413,7 +412,7 @@ this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVEN
 
         try {
             
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
+    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
 
     
@@ -421,10 +420,10 @@ this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVEN
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstance(this, gameKey)!!
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
 
 this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
+this.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 

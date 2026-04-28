@@ -33,7 +33,6 @@ import org.allbinary.game.terrain.TerrainEventCircularStaticPool
 import org.allbinary.game.terrain.TerrainEventHandler
 import org.allbinary.game.terrain.TerrainEventListener
 import org.allbinary.layer.AllBinaryLayer
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.math.Angle
 import org.allbinary.math.AngleFactory
 import org.allbinary.util.BasicArrayList
@@ -57,7 +56,7 @@ public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBina
                             //For kotlin this is before the body of the constructor.
                     
 TerrainEventHandler.getInstance(ownerLayerInterface)!!.addListener(this.terrainEventListener)
-this.terrainEventListener!!.onTerrainEvent(TerrainEventCircularStaticPool.getInstance()!!.getInstance(this.CLIFF))
+this.terrainEventListener!!.onTerrainEvent(TerrainEventCircularStaticPool.getInstance()!!.getNext(this.CLIFF))
 }
 
 
@@ -86,7 +85,7 @@ this.changeDirectionIfCliffReached()
 
         {
 
-    var terrainEvent: TerrainEvent = list.remove(index) as TerrainEvent
+    var terrainEvent: TerrainEvent = list.removeAt(index) as TerrainEvent
 
 
     var basicTerrainInfo: BasicTerrainInfo = terrainEvent!!.getBasicTerrainInfo()!!

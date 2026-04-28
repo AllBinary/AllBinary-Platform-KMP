@@ -55,11 +55,11 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return copyOf(original, newLength, original::class)
+                        return copyOfType(original, newLength, original::class)
 }
 
 
-    open fun copyOf(original: Array<Any?>, newLength: Int, newType: KClass<*>)
+    open fun copyOfType(original: Array<Any?>, newLength: Int, newType: KClass<*>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
     //var original = original
@@ -77,7 +77,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 }
 
 
-    open fun copyOf(original: ByteArray, newLength: Int)
+    open fun copyOfbyte(original: ByteArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var original = original
@@ -94,7 +94,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 }
 
 
-    open fun copyOf(original: ShortArray, newLength: Int)
+    open fun copyOfshort(original: ShortArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : ShortArray{
 var original = original
@@ -111,7 +111,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 }
 
 
-    open fun copyOf(original: IntArray, newLength: Int)
+    open fun copyOfint(original: IntArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : IntArray{
     //var original = original
@@ -128,7 +128,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 }
 
 
-    open fun copyOf(original: LongArray, newLength: Int)
+    open fun copyOflong(original: LongArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : LongArray{
     //var original = original
@@ -145,7 +145,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 }
 
 
-    open fun copyOf(original: CharArray, newLength: Int)
+    open fun copyOfchar(original: CharArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : CharArray{
     //var original = original
@@ -165,7 +165,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 }
 
 
-    open fun copyOf(original: FloatArray, newLength: Int)
+    open fun copyOffloat(original: FloatArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : FloatArray{
     //var original = original
@@ -182,7 +182,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 }
 
 
-    open fun copyOf(original: DoubleArray, newLength: Int)
+    open fun copyOfdouble(original: DoubleArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : DoubleArray{
     //var original = original
@@ -199,7 +199,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 }
 
 
-    open fun copyOf(original: BooleanArray, newLength: Int)
+    open fun copyOfboolean(original: BooleanArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : BooleanArray{
     //var original = original
@@ -337,8 +337,8 @@ stringBuffer!!.append(commonSeps!!.NEW_LINE)
 }
 
 
-    open fun toString(objectArray: Array<Any?>)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringFromObjectArray(objectArray: Array<Any?>)
+        //nullable = true from not(false or (false and false)) = true
 : String{
     //var objectArray = objectArray
 
@@ -366,8 +366,8 @@ stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 }
 
 
-    open fun toString(byteArray: ByteArray)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringFromByteArray(byteArray: ByteArray)
+        //nullable = true from not(false or (false and false)) = true
 : String{
     //var byteArray = byteArray
 

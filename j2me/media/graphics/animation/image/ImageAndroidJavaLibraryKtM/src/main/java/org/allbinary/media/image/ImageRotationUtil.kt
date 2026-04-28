@@ -70,7 +70,7 @@ private constructor ()
 var originalImage = originalImage
 var rotationInDegrees = rotationInDegrees
 
-    var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
+    var image: Image = ImageCreationUtil.getInstance()!!.createImageWH(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
 
     

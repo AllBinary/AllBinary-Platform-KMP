@@ -59,7 +59,7 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -69,7 +69,7 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
     var existingFont: Font = graphics.getFont()!!
 
 this.fontDebugFactory!!.setFont(this.font, graphics)
-super.paint(graphics, x, y)
+super.paintXY(graphics, x, y)
 this.fontDebugFactory!!.setFont(existingFont, graphics)
 }
 

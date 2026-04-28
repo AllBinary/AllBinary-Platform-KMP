@@ -28,7 +28,6 @@
 import org.allbinary.game.layer.behavior.GameLayerBehavior
 import org.allbinary.game.physics.acceleration.BasicAccelerationProperties
 import org.allbinary.game.physics.velocity.VelocityProperties
-import org.allbinary.string.CommonStrings
 
 open public class TopViewGameLayerBehavior : GameLayerBehavior {
         
@@ -68,12 +67,12 @@ this.isFallingWithoutJumpAttempt= true
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties
-velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
-this.land()
+velocityProperties!!.getVelocityYBasicDecimalP()!!.setint(0)
+this.landReset()
 }
 
 
-    open fun land()
+    open fun landReset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.gravityActionIndex= 0
@@ -103,7 +102,7 @@ this.isJumpOver= false
                                     
     var acceleration2: Int =  -acceleration.getForward() *accelerationMultiplier
 
-velocityProperties!!.getVelocityYBasicDecimalP()!!.add(acceleration2)
+velocityProperties!!.getVelocityYBasicDecimalP()!!.addint(acceleration2)
 velocityProperties!!.limitXYToForwardAndReverseMaxVelocity()
 gravityActionIndex++
 

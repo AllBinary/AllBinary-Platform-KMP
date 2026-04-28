@@ -172,7 +172,7 @@ listOfList[foundIndex]!!.add(image)
 
                 @Throws(Exception::class)
             
-    override fun get(key: Any)
+    override fun getWithKey(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -207,7 +207,7 @@ listOfList[foundIndex]!!.add(image)
                                 
 
         try {
-            image= this.createImage(key, inputStream)
+            image= this.createImageFromInputStream(key, inputStream)
 } catch(e: Exception)
             {
 this.logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
@@ -217,7 +217,7 @@ System.gc()
 System.gc()
 this.logUtil!!.putF(Memory.getInfo(), this, commonStrings!!.GET)
 Thread.sleep(100)
-image= this.createImage(key, inputStream)
+image= this.createImageFromInputStream(key, inputStream)
 }
 
 inputStream!!.close()

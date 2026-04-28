@@ -274,7 +274,7 @@ this.waypoint= waypoint
 
                 @Throws(Exception::class)
             
-    open fun setTarget(layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
+    open fun setTargetWithDistance(layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
