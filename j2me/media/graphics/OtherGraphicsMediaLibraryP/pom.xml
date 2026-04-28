@@ -79,7 +79,7 @@
         <module>../../graphics/GraphicsBasicImageJavaLibraryKtM</module>
         <!--
         -->
-<!--        <module>../../graphics/animation/image/AllBinaryImageAnimationRotationJavaLibraryKtM</module>-->
+        <module>../../graphics/animation/image/AllBinaryImageAnimationRotationJavaLibraryKtM</module>
 
     </modules>
 
