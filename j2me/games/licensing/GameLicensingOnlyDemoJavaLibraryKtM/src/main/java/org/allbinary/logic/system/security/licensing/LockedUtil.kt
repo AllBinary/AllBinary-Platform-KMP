@@ -53,7 +53,7 @@ companion object {
             {
             }            
         
-    open fun isLocked()
+    override fun isLocked()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -64,7 +64,7 @@ companion object {
 }
 
 
-    open fun isLockedFeature(lockableFeatrue: LockableFeature)
+    override fun isLockedFeature(lockableFeatrue: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var lockableFeatrue = lockableFeatrue

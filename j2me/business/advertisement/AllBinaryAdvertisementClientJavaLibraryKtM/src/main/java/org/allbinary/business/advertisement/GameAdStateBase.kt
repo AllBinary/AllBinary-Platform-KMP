@@ -36,16 +36,16 @@ open public class GameAdStateBase
          {
         
 
-    val adConfiguration: AdConfiguration
+    val adConfigurationP: AdConfiguration
 
-    val advertisements: Advertisements = Advertisements()
+    val advertisementsP: Advertisements = Advertisements()
 
-    var okayToShowAds: Boolean= false
+    var okayToShowAdsP: Boolean= false
 public constructor (adConfiguration: AdConfiguration)
             : super()
         {
     //var adConfiguration = adConfiguration
-this.adConfiguration= adConfiguration
+this.adConfigurationP= adConfiguration
 }
 
 
@@ -178,7 +178,7 @@ var gameIsReady = gameIsReady
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return advertisements
+                        return advertisementsP
 }
 
 
@@ -189,7 +189,7 @@ var gameIsReady = gameIsReady
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adConfiguration
+                        return adConfigurationP
 }
 
 
@@ -208,7 +208,7 @@ var gameIsReady = gameIsReady
         //nullable = true from not(false or (false and false)) = true
 {
 var okayToShowAds = okayToShowAds
-this.okayToShowAds= okayToShowAds
+this.okayToShowAdsP= okayToShowAds
 }
 
 
@@ -219,7 +219,7 @@ this.okayToShowAds= okayToShowAds
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return okayToShowAds
+                        return okayToShowAdsP
 }
 
 

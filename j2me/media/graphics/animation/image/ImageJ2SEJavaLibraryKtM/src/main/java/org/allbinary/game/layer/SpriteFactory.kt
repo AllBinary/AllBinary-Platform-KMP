@@ -58,7 +58,7 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    open fun createSprite(image: Image, frameWidth: Int, frameHeight: Int)
+    override fun createSprite(image: Image, frameWidth: Int, frameHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Sprite{
     //var image = image
