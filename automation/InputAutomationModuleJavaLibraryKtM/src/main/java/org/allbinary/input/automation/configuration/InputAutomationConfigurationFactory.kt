@@ -80,9 +80,9 @@ companion object {
 
     var root: JAXBElement<InputAutomationConfiguration> = unmarshaller.unmarshal(StreamSource(FileInputStream(file)), InputAutomationConfiguration::class)!!
 
-inputAutomationConfiguration= root.getValue() as InputAutomationConfiguration
+InputAutomationConfigurationFactory.inputAutomationConfiguration= root.getValue() as InputAutomationConfiguration
 
-    var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration> = inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
+    var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration> = InputAutomationConfigurationFactory.inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
 
 logUtil!!.putF("isInstalled: " +inputAutomationConfiguration!!.isInstalled(), INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
@@ -108,7 +108,7 @@ logUtil!!.putF("LoadedConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStri
                                 
                         else {
                             logUtil!!.putF("New Configuration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
-inputAutomationConfiguration= InputAutomationConfiguration()
+InputAutomationConfigurationFactory.inputAutomationConfiguration= InputAutomationConfiguration()
 
                         }
                             
@@ -122,7 +122,7 @@ inputAutomationConfiguration= InputAutomationConfiguration()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputAutomationConfiguration
+                        return InputAutomationConfigurationFactory.inputAutomationConfiguration
 }
 
 

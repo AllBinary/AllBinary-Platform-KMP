@@ -227,7 +227,7 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
     open fun stop2()
         //nullable = true from not(false or (false and true)) = true
 {
-clip.stop()
+this.clip.stop()
 super.stop()
 }
 

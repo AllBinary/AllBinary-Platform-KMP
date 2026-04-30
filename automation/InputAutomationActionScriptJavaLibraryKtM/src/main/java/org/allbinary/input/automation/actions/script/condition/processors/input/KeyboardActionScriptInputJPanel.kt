@@ -48,7 +48,7 @@ open public class KeyboardActionScriptInputJPanel : javax.swing.JPanel {
 public constructor (keyActionScriptInputInterface: KeyboardActionScriptInputInterface){
 var keyActionScriptInputInterface = keyActionScriptInputInterface
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 this.keyActionScriptInputInterface= keyActionScriptInputInterface
 
     var defaultComboBoxModel: DefaultComboBoxModel = DefaultComboBoxModel()
@@ -191,7 +191,7 @@ this.keyActionScriptInputInterface!!.log()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return keyActionJDialog
+                        return this.keyActionJDialog
 }
 
 
@@ -232,7 +232,7 @@ this.keyActionJDialog!!.setMinimumSize(java.awt.Dimension(255, 280))
 this.titleJLabel!!.setHorizontalAlignment(javax.swing.SwingConstants.CENTER)
 this.titleJLabel!!.setText("Keyboard Input Options")
 this.addKeyJLabel!!.setText("Add Key:")
-keyNameJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.keyNameJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -254,7 +254,7 @@ this.textJTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 this.pressJRadioButton!!.setText("Press")
 this.pressJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.pressJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-pressJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.pressJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -269,7 +269,7 @@ pressJRadioButtonActionPerformed(evt)
 this.releaseJRadioButton!!.setText("Release")
 this.releaseJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.releaseJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-releaseJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.releaseJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -285,7 +285,7 @@ this.normalJRadioButton!!.setSelected(true)
 this.normalJRadioButton!!.setText("Normal")
 this.normalJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.normalJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-normalJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.normalJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -301,7 +301,7 @@ this.simultaneousJRadioButton!!.setSelected(true)
 this.simultaneousJRadioButton!!.setText("Simultaneous")
 this.simultaneousJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.simultaneousJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-simultaneousJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.simultaneousJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -316,7 +316,7 @@ simultaneousJRadioButtonActionPerformed(evt)
 this.sequenceJRadioButton!!.setText("Sequence")
 this.sequenceJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.sequenceJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-sequenceJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.sequenceJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -330,7 +330,7 @@ sequenceJRadioButtonActionPerformed(evt)
                             )
 this.okJButton!!.setText("OK")
 this.okJButton!!.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER)
-okJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -343,7 +343,7 @@ okJButtonActionPerformed(evt)
                                 }
                             )
 this.jPanel1!!.add(this.okJButton)
-keyIntegerJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.keyIntegerJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -363,7 +363,7 @@ keyActionJDialogLayout!!.setHorizontalGroup(keyActionJDialogLayout!!.createParal
 keyActionJDialogLayout!!.setVerticalGroup(keyActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(keyActionJDialogLayout!!.createSequentialGroup()!!.addComponent(titleJLabel)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(keyActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(inputTypeJLabel)!!.addComponent(inputAutomationTypeJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(keyActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(addKeyJLabel)!!.addComponent(keyIntegerJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(keyNameJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(keyActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(testJLabel)!!.addComponent(textJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(keyActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(pressJRadioButton)!!.addComponent(normalJRadioButton)!!.addComponent(releaseJRadioButton))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(keyActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(holdTimeJLabel)!!.addComponent(timeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(keyActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(delayBetweenJLabel)!!.addComponent(delayJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(keyActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(simultaneousJRadioButton)!!.addComponent(sequenceJRadioButton))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addContainerGap()))
 setMinimumSize(java.awt.Dimension(100, 0))
 this.keyActionJButton!!.setText("Edit")
-keyActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.keyActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -454,7 +454,7 @@ this.sequenceJRadioButton!!.setSelected(false)
 {
 var evt = evt
 
-    var integer: Integer = getSelectedKey()!!
+    var integer: Integer = this.getSelectedKey()!!
 
 this.prependText(integer)
 this.keyIntegerJComboBox!!.setSelectedIndex(this.keyNameJComboBox!!.getSelectedIndex())

@@ -80,9 +80,9 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput
 
     private val touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
 
-    private val PRESSED: MotionGestureInput = touchMotionGestureFactory!!.PRESSED
+    private val PRESSED: MotionGestureInput = this.touchMotionGestureFactory!!.PRESSED
 
-    private val RELEASED: MotionGestureInput = touchMotionGestureFactory!!.RELEASED
+    private val RELEASED: MotionGestureInput = this.touchMotionGestureFactory!!.RELEASED
 
     private val touchButtonsBuilderFactory: TouchButtonsBuilderFactory
 
@@ -166,7 +166,7 @@ this.notYoursGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.get
                                 
                              else 
     
-                        if(motionGestureInput == RELEASED)
+                        if(motionGestureInput == this.RELEASED)
                         
                                     {
                                     
@@ -504,7 +504,7 @@ this.setSelectedRtsFormInput(rtfFormInput)
                         
                                     {
                                     this.getRtsPlayerLayerInterface()!!.add(ErrorSound.getInstance())
-GameNotificationEventHandler.getInstance()!!.fireEvent(notYoursGameNotificationEvent)
+GameNotificationEventHandler.getInstance()!!.fireEvent(this.notYoursGameNotificationEvent)
 
 
 
@@ -632,9 +632,9 @@ this.updatePaintable()
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-multiSelectPaintable!!.setBasicColorP(geographicMapInterface!!.getForegroundBasicColor())
+this.multiSelectPaintable!!.setBasicColorP(geographicMapInterface!!.getForegroundBasicColor())
 this.multiSelectPaintable!!.update(list)
-this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfoSelection(multiSelectPaintable)
+this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfoSelection(this.multiSelectPaintable)
 
                                     }
                                 
@@ -723,7 +723,7 @@ getMotionGestureInputList()!!.add(motionGestureEvent)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return selectedRtsLayer
+                        return this.selectedRtsLayer
 }
 
 

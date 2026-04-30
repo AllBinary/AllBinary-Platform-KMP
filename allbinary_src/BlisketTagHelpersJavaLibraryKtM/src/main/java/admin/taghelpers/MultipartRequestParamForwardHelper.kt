@@ -187,7 +187,7 @@ stringBuffer!!.append(value)
 
 
     
-                        if(StringValidationUtil.getInstance()!!.isEmpty(this.command) || (!StringValidationUtil.getInstance()!!.isEmpty(requestCommand) && command.compareTo(requestCommand) == 0))
+                        if(StringValidationUtil.getInstance()!!.isEmpty(this.command) || (!StringValidationUtil.getInstance()!!.isEmpty(requestCommand) && this.command.compareTo(requestCommand) == 0))
                         
                                     {
                                     

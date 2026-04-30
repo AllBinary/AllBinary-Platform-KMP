@@ -393,7 +393,7 @@ this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealt
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return buildingLevelCost
+                        return this.buildingLevelCost
 }
 
 
@@ -412,7 +412,7 @@ this.buildingLevelCost= buildingLevelCost
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return productivity
+                        return this.productivity
 }
 
 
@@ -431,7 +431,7 @@ this.productivity= productivity
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return efficiency
+                        return this.efficiency
 }
 
 

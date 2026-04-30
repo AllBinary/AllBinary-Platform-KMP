@@ -97,7 +97,7 @@ pathList!!.addAt(0, startPathFindingNode!!.geographicMapCellPosition)
 var graphPath = graphPath
 
     
-                        if(graphPath!!.getEdgeList()!!.size() > this.edgeMinimum && graphPath!!.getWeight() < maxPathWeight && graphPath!!.getWeight() > minPathWeight)
+                        if(graphPath!!.getEdgeList()!!.size() > this.edgeMinimum && graphPath!!.getWeight() < this.maxPathWeight && graphPath!!.getWeight() > this.minPathWeight)
                         
                                     {
                                     

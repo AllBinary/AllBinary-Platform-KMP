@@ -240,7 +240,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return id
+                        return this.id
 }
 
 
@@ -251,7 +251,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return system
+                        return this.system
 }
 
 
@@ -262,7 +262,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return platform
+                        return this.platform
 }
 
 
@@ -273,7 +273,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return specialName
+                        return this.specialName
 }
 
 
@@ -284,7 +284,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return version
+                        return this.version
 }
 
 
@@ -295,7 +295,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return changes
+                        return this.changes
 }
 
 
@@ -306,7 +306,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return licenseFile
+                        return this.licenseFile
 }
 
 
@@ -317,7 +317,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return file
+                        return this.file
 }
 
 
@@ -328,7 +328,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return size
+                        return this.size
 }
 
 
@@ -339,7 +339,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return validTime
+                        return this.validTime
 }
 
 
@@ -350,7 +350,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return retries
+                        return this.retries
 }
 
 

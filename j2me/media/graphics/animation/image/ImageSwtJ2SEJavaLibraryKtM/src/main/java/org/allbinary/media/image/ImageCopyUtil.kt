@@ -59,7 +59,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ImageCopyUtil.instance
 }
 
 
@@ -455,7 +455,7 @@ openGLESDeviceImageTranslate!!.translateX=  -displayInfoSingleton!!.getLastWidth
                                 
 
     
-                        if(image.getName()!!.startsWith(LEADERBOARD))
+                        if(image.getName()!!.startsWith(this.LEADERBOARD))
                         
                                     {
                                     

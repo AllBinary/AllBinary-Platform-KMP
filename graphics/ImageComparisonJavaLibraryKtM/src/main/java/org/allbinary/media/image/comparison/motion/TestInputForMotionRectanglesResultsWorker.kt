@@ -99,7 +99,7 @@ this.onMotionRectanglesImageComparisonResultsEvent(allBinaryEventObject as Motio
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return running
+                        return this.running
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.

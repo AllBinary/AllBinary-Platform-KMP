@@ -52,9 +52,9 @@ open public class GeographicMapCellPositionArea : GeographicMapCellPositionAreaB
 
     private var LIST: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
-    private var occupyingGeographicMapCellPositionList: BasicArrayList = LIST
+    private var occupyingGeographicMapCellPositionList: BasicArrayList = this.LIST
 
-    private var surroundingGeographicMapCellPositionList: BasicArrayList = LIST
+    private var surroundingGeographicMapCellPositionList: BasicArrayList = this.LIST
 public constructor (layerInterface: AllBinaryLayer){
     //var layerInterface = layerInterface
 this.layerInterface= layerInterface
@@ -67,8 +67,8 @@ this.layerInterface= layerInterface
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
-this.occupyingGeographicMapCellPositionList= layerCoveringCellPositionsUtil!!.getAllXY(geographicMapInterface, layerInterface, layerInterface!!.getXP(), layerInterface!!.getYP(), reusableOccupyingGeographicMapCellPositionList)
-this.surroundingGeographicMapCellPositionList= cellPositionsUtil!!.getAllSurrounding(geographicMapInterface, occupyingGeographicMapCellPositionList, reusableSurroundingGeographicMapCellPositionList)
+this.occupyingGeographicMapCellPositionList= this.layerCoveringCellPositionsUtil!!.getAllXY(geographicMapInterface, this.layerInterface, this.layerInterface!!.getXP(), this.layerInterface!!.getYP(), this.reusableOccupyingGeographicMapCellPositionList)
+this.surroundingGeographicMapCellPositionList= this.cellPositionsUtil!!.getAllSurrounding(geographicMapInterface, this.occupyingGeographicMapCellPositionList, this.reusableSurroundingGeographicMapCellPositionList)
 this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPositionList!!.size())
 }
 
@@ -80,7 +80,7 @@ this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPos
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return occupyingGeographicMapCellPositionList
+                        return this.occupyingGeographicMapCellPositionList
 }
 
 
@@ -91,7 +91,7 @@ this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPos
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return surroundingGeographicMapCellPositionList
+                        return this.surroundingGeographicMapCellPositionList
 }
 
 

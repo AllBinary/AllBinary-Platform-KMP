@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return NoDecimalTrigTable.instance
 }
 
 
@@ -1165,7 +1165,7 @@ var angle = angle
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return noDecimalSin[angle]!!
+                        return this.noDecimalSin[angle]!!
 }
 
 
@@ -1177,7 +1177,7 @@ var angle = angle
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return noDecimalCos[angle]!!
+                        return this.noDecimalCos[angle]!!
 }
 
 
@@ -1189,7 +1189,7 @@ var angle = angle
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return noDecimalTan[angle]!!
+                        return this.noDecimalTan[angle]!!
 }
 
 

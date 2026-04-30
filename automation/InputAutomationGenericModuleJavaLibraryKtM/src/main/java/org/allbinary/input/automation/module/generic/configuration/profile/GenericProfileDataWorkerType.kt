@@ -60,7 +60,7 @@ var node = node
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashMap!!.get(name as Object) as GenericProfileDataWorkerType
+                        return GenericProfileDataWorkerType.hashMap!!.get(name as Object) as GenericProfileDataWorkerType
 }
 
 
@@ -72,7 +72,7 @@ public constructor (name: String)
         {
 var name = name
 this.setName(name)
-hashMap!!.put(this.getName(), this)
+GenericProfileDataWorkerType.hashMap!!.put(this.getName(), this)
 }
 
 
@@ -83,7 +83,7 @@ hashMap!!.put(this.getName(), this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -102,7 +102,7 @@ this.name= name
 : Node{
 var document = document
 
-    var node: Node = ModDomHelper.createTextNode(document, GenericProfileDataWorkerData.NAME, name)!!
+    var node: Node = ModDomHelper.createTextNode(document, GenericProfileDataWorkerData.NAME, this.name)!!
 
 
 

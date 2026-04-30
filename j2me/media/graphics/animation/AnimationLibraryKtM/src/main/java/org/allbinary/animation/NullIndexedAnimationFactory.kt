@@ -47,7 +47,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NULL_INDEXED_ANIMATION_FACTORY
+                        return NullIndexedAnimationFactory.NULL_INDEXED_ANIMATION_FACTORY
 }
 
 

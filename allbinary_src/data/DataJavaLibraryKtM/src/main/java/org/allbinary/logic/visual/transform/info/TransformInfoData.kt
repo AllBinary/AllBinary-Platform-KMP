@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return TransformInfoData.instance
 }
 
 
@@ -80,9 +80,9 @@ companion object {
 
     val LABEL: String = "TRANSFORM_INFO_LABEL"
 
-    val OWNER: String = "OWNER_" +NAME
+    val OWNER: String = "OWNER_" +this.NAME
 
-    val PARTIAL: String = "PARTIAL_" +NAME
+    val PARTIAL: String = "PARTIAL_" +this.NAME
 
 }
                 

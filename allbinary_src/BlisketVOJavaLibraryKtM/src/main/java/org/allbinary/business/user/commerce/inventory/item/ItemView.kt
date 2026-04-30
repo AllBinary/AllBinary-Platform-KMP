@@ -68,7 +68,7 @@ var document = document
     var node: Node = document.createElement(ItemData.ITEM)!!
 
 
-    var basicItemView: BasicItemView = BasicItemView(this.itemInterface, vector)
+    var basicItemView: BasicItemView = BasicItemView(this.itemInterface, this.vector)
 
 node.appendChild(basicItemView!!.toXmlNode(document))
 

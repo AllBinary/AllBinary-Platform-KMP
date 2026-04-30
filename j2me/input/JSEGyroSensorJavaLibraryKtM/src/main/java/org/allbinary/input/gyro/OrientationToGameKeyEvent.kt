@@ -75,7 +75,7 @@ this.allBinaryGyroSensor= allBinaryGyroSensor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return allBinaryGyroSensor
+                        return this.allBinaryGyroSensor
 }
 
 

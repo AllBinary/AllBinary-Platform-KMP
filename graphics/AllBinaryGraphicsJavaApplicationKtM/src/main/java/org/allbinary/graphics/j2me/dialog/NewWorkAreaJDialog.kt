@@ -79,7 +79,7 @@ var newName = newName
                     
 
         try {
-            initComponents()
+            this.initComponents()
 this.parent= parent
 this.xSizeJTextField= JTextField("12")
 this.ySizeJTextField= JTextField("12")

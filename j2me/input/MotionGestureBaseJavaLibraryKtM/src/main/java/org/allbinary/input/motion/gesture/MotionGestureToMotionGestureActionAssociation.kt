@@ -53,7 +53,7 @@ this.motionGestureAction= commandAction
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
+                        return this.list
 }
 
 
@@ -72,7 +72,7 @@ this.list= list
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return motionGestureAction
+                        return this.motionGestureAction
 }
 
 

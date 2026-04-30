@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return InputOutputTypeData.instance
 }
 
 
@@ -70,9 +70,9 @@ companion object {
 
     val PL: String = "pl"
 
-    val DEFAULT: String = JSP
+    val DEFAULT: String = this.JSP
 
-    val DEFAULT_FRAGMENT: String = JSP_FRAGMENT
+    val DEFAULT_FRAGMENT: String = this.JSP_FRAGMENT
 
 }
                 

@@ -45,9 +45,9 @@ open public class GameConfiguration
 
     private var value: Integer
 
-    private var minValue: Integer = defaultValue
+    private var minValue: Integer = this.defaultValue
 
-    private var maxValue: Integer = defaultValue
+    private var maxValue: Integer = this.defaultValue
 
     private var modifiable: Boolean = BooleanFactory.getInstance()!!.TRUE
 public constructor (name: String, defaultValue: Integer, minValue: Integer, maxValue: Integer)
@@ -96,7 +96,7 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(this, StringM
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return value
+                        return this.value
 }
 
 
@@ -115,7 +115,7 @@ this.maxValue= maxValue
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxValue
+                        return this.maxValue
 }
 
 
@@ -134,7 +134,7 @@ this.minValue= minValue
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minValue
+                        return this.minValue
 }
 
 
@@ -153,7 +153,7 @@ this.name= name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -172,7 +172,7 @@ this.defaultValue= defaultValue
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultValue
+                        return this.defaultValue
 }
 
 
@@ -226,7 +226,7 @@ this.modifiable= modifiable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return modifiable
+                        return this.modifiable
 }
 
 

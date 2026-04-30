@@ -46,7 +46,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return SystemHardwareFactory.instance
 }
 
 
@@ -61,7 +61,7 @@ companion object {
 osBuffer!!.append("Hardware Info: \n")
 
     
-                        if(hardwareInterface != 
+                        if(SystemHardwareFactory.hardwareInterface != 
                                     null
                                 )
                         
@@ -102,10 +102,10 @@ var operatingSystemInterface = operatingSystemInterface
         try {
             
     
-                        if(hardwareInterface == NoHardware.getInstance())
+                        if(SystemHardwareFactory.hardwareInterface == NoHardware.getInstance())
                         
                                     {
-                                    hardwareInterface= HardwareFactory.getInstance()!!.getInstance(operatingSystemInterface)
+                                    SystemHardwareFactory.hardwareInterface= HardwareFactory.getInstance()!!.getInstance(operatingSystemInterface)
 
                                     }
                                 
@@ -119,7 +119,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hardwareInterface
+                        return SystemHardwareFactory.hardwareInterface
 }
 
 

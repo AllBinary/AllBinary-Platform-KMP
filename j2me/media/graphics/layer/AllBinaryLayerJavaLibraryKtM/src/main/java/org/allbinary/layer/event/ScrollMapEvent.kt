@@ -59,7 +59,7 @@ this.dx= dx
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return dx
+                        return this.dx
 }
 
 
@@ -78,7 +78,7 @@ this.dy= dy
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return dy
+                        return this.dy
 }
 
 

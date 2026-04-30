@@ -77,7 +77,7 @@ companion object {
                         if(features.isFeature(sensorFeatureFactory!!.NO_ORIENTATION))
                         
                                     {
-                                    allBinaryAccelerometerSensor= NoAccelerometerSensor()
+                                    AccelerometerSensorFactory.allBinaryAccelerometerSensor= NoAccelerometerSensor()
 
                                     }
                                 
@@ -99,7 +99,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return allBinaryAccelerometerSensor
+                        return AccelerometerSensorFactory.allBinaryAccelerometerSensor
 }
 
 

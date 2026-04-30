@@ -548,7 +548,7 @@ var statement = statement
                                 )
                         
                                     {
-                                    initialize()
+                                    this.initialize()
 
                                     }
                                 
@@ -613,7 +613,7 @@ stmt.close()
                         if(this.useridAndPassword == true)
                         
                                     {
-                                    this.conn= DriverManager.getConnection(this.databaseConnectionInfoInterface!!.getUrl(), userid, password)
+                                    this.conn= DriverManager.getConnection(this.databaseConnectionInfoInterface!!.getUrl(), this.userid, this.password)
 
                                     }
                                 
@@ -647,7 +647,7 @@ PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, INIT_SQL, "createConnection()",
     var jdbcDriver: String = this.databaseConnectionInfoInterface!!.getJdbcDriver()!!
 
 PreLogUtil.put(StringBuilder().
-                            append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!::class.toString()!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, "initialize()")
+                            append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!::class.toString()!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), this.INIT_SQL, "initialize()")
 Class.forName(jdbcDriver)!!.newInstance()
 } catch(e: Exception)
             {
@@ -656,7 +656,7 @@ Class.forName(jdbcDriver)!!.newInstance()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.putOE("LoadDriver Failed: " +this.databaseConnectionInfoInterface!!.getJdbcDriver(), INIT_SQL, "initialize()", e)
+                                    PreLogUtil.putOE("LoadDriver Failed: " +this.databaseConnectionInfoInterface!!.getJdbcDriver(), this.INIT_SQL, "initialize()", e)
 
                                     }
                                 
@@ -707,7 +707,7 @@ this.createConnection()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return databaseConnectionInfoInterface
+                        return this.databaseConnectionInfoInterface
 }
 
 

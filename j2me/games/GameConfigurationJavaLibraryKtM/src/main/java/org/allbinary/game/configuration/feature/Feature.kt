@@ -44,7 +44,7 @@ var name = name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable.get(name as Object) as Feature
+                        return Feature.hashtable.get(name as Object) as Feature
 }
 
 
@@ -53,7 +53,7 @@ var name = name
 {
 var name = name
 var gameFeature = gameFeature
-hashtable.put(name, gameFeature)
+Feature.hashtable.put(name, gameFeature)
 }
 
 
@@ -65,7 +65,7 @@ public constructor (name: String)
         {
 var name = name
 this.name= name
-add(name, this)
+Feature.add(name, this)
 ChangedGameFeatureListener.getInstance()!!.add(this)
 }
 
@@ -77,7 +77,7 @@ ChangedGameFeatureListener.getInstance()!!.add(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getName()
+                        return this.getName()
 }
 
 
@@ -88,7 +88,7 @@ ChangedGameFeatureListener.getInstance()!!.add(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 

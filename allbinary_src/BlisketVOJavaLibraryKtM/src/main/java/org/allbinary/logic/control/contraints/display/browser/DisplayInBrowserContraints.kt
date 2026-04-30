@@ -54,7 +54,7 @@ var node = node
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mountable
+                        return this.mountable
 }
 
 
@@ -73,7 +73,7 @@ this.mountable= mountable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return frameable
+                        return this.frameable
 }
 
 
@@ -92,7 +92,7 @@ this.frameable= frameable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return quickFrameable
+                        return this.quickFrameable
 }
 
 
@@ -111,7 +111,7 @@ this.quickFrameable= quickFrameable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mountedLink
+                        return this.mountedLink
 }
 
 

@@ -47,13 +47,13 @@ open public class ImageCacheBase
 
     val SIZE: Int = 128
 
-    val widths: IntArray = IntArray(SIZE)
+    val widths: IntArray = IntArray(this.SIZE)
 
-    val heights: IntArray = IntArray(SIZE)
+    val heights: IntArray = IntArray(this.SIZE)
 
-    val listOfList: Array<BasicArrayList?> = arrayOfNulls(SIZE)
+    val listOfList: Array<BasicArrayList?> = arrayOfNulls(this.SIZE)
 
-    val availableListOfList: Array<BasicArrayList?> = arrayOfNulls(SIZE)
+    val availableListOfList: Array<BasicArrayList?> = arrayOfNulls(this.SIZE)
 
     var volume: Int = 0
 
@@ -327,7 +327,7 @@ stringBuffer!!.appendint(totalAvailable)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable
+                        return this.hashtable
 }
 
 

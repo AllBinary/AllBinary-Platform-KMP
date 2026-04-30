@@ -81,7 +81,7 @@ var transformInfoInterface = transformInfoInterface
     
                         if(command == 
                                     null
-                                 || command.compareTo(UPDATEPRODUCT) != 0)
+                                 || command.compareTo(UpdateFileValidationView.UPDATEPRODUCT) != 0)
                         
                                     {
                                     
@@ -277,7 +277,7 @@ var document = document
     
                         if(command == 
                                     null
-                                 || command.compareTo(UPDATEPRODUCT) != 0)
+                                 || command.compareTo(UpdateFileValidationView.UPDATEPRODUCT) != 0)
                         
                                     {
                                     

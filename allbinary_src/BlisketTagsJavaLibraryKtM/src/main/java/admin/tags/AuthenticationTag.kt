@@ -754,7 +754,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 
                              else 
     
-                        if(command.compareTo(org.allbinary.globals.GLOBALS2.CHANGEPASSWORD) == 0)
+                        if(this.command.compareTo(org.allbinary.globals.GLOBALS2.CHANGEPASSWORD) == 0)
                         
                                     {
                                     
@@ -795,7 +795,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 
                              else 
     
-                        if(command.compareTo(WeblisketSessionData.INVALIDATESESSION) == 0)
+                        if(this.command.compareTo(WeblisketSessionData.INVALIDATESESSION) == 0)
                         
                                     {
                                     
@@ -903,9 +903,9 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
     
                         if((this.userName == 
                                     null
-                                 || this.userName!!.compareTo(stringUtil!!.EMPTY_STRING) == 0) && (password == 
+                                 || this.userName!!.compareTo(stringUtil!!.EMPTY_STRING) == 0) && (this.password == 
                                     null
-                                 || password.compareTo(stringUtil!!.EMPTY_STRING) == 0) && this.roles != 
+                                 || this.password.compareTo(stringUtil!!.EMPTY_STRING) == 0) && this.roles != 
                                     null
                                  && this.isAuthenticationSessionValid())
                         

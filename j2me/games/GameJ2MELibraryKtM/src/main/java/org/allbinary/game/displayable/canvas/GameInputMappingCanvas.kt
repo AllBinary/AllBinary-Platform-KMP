@@ -76,9 +76,9 @@ companion object {
 
     private val abeClientInformation: AbeClientInformationInterface
 
-    private var selectedGameKey: GameKey = NONE
+    private var selectedGameKey: GameKey = this.NONE
 
-    private var selectedInput: Input = NONE
+    private var selectedInput: Input = this.NONE
 public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, helpPaintable: HelpPaintable)                        
 
                             : super(commandListener, NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){

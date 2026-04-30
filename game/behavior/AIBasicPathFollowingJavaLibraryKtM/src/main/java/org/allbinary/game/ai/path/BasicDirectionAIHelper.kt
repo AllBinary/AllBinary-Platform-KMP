@@ -221,7 +221,7 @@ var frame = frame
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return angleInfo
+                        return this.angleInfo
 }
 
 
@@ -232,7 +232,7 @@ var frame = frame
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 

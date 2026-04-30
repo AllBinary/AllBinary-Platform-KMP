@@ -78,7 +78,7 @@ this.key= PixelDelta.getKey(this.getPoint(), this.getColorDelta())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return key
+                        return this.key
 }
 
 
@@ -89,7 +89,7 @@ this.key= PixelDelta.getKey(this.getPoint(), this.getColorDelta())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return point
+                        return this.point
 }
 
 
@@ -108,7 +108,7 @@ this.point= point
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return colorDelta
+                        return this.colorDelta
 }
 
 

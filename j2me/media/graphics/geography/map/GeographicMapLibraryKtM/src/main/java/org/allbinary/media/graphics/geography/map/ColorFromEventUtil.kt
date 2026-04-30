@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ColorFromEventUtil.instance
 }
 
 
@@ -57,7 +57,7 @@ companion object {
         
     private val YELLOW: BasicColor = BasicColorFactory.getInstance()!!.YELLOW
 
-    val COLOR_INT: Int = YELLOW.toInt()!!
+    val COLOR_INT: Int = this.YELLOW.toInt()!!
 
     open fun getForegroundColor(gameCanvasInterface: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true

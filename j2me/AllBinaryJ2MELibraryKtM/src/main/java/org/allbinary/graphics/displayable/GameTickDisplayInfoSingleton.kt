@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return GameTickDisplayInfoSingleton.instance
 }
 
 
@@ -54,18 +54,18 @@ companion object {
         
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-    private var lastWidth: Int = displayInfoSingleton!!.getLastWidth()!!
+    private var lastWidth: Int = this.displayInfoSingleton!!.getLastWidth()!!
 
-    private var lastHeight: Int = displayInfoSingleton!!.getLastHeight()!!
+    private var lastHeight: Int = this.displayInfoSingleton!!.getLastHeight()!!
 
-    private var lastHalfWidth: Int = displayInfoSingleton!!.getLastHalfWidth()!!
+    private var lastHalfWidth: Int = this.displayInfoSingleton!!.getLastHalfWidth()!!
 
-    private var lastHalfHeight: Int = displayInfoSingleton!!.getLastHalfHeight()!!
+    private var lastHalfHeight: Int = this.displayInfoSingleton!!.getLastHalfHeight()!!
 
     open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
-this.lastWidth= displayInfoSingleton!!.getLastWidth()
+this.lastWidth= this.displayInfoSingleton!!.getLastWidth()
 this.lastHeight= this.displayInfoSingleton!!.getLastHeight()
 this.lastHalfWidth= this.displayInfoSingleton!!.getLastHalfWidth()
 this.lastHalfHeight= this.displayInfoSingleton!!.getLastHalfHeight()

@@ -53,7 +53,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var listener = listener
-listenerList!!.add(listener::class as Class<*>, listener as java.util.EventListener)
+MyCanvasEventService.listenerList!!.add(listener::class as Class<*>, listener as java.util.EventListener)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -62,7 +62,7 @@ listenerList!!.add(listener::class as Class<*>, listener as java.util.EventListe
         //nullable = true from not(false or (false and false)) = true
 {
 var listener = listener
-listenerList!!.remove(listener::class as Class<*>, listener as java.util.EventListener)
+MyCanvasEventService.listenerList!!.remove(listener::class as Class<*>, listener as java.util.EventListener)
 }
 
 
@@ -90,7 +90,7 @@ var evt = evt
                                     {
                                     
     
-                        if(evt.getCommand()!!.compareTo(DELETE) == 0)
+                        if(evt.getCommand()!!.compareTo(MyCanvasEventService.DELETE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
@@ -101,7 +101,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(DUPLICATE) == 0)
+                        if(evt.getCommand()!!.compareTo(MyCanvasEventService.DUPLICATE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
@@ -112,7 +112,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(SELECT) == 0)
+                        if(evt.getCommand()!!.compareTo(MyCanvasEventService.SELECT) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
@@ -123,7 +123,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(ROTATE) == 0)
+                        if(evt.getCommand()!!.compareTo(MyCanvasEventService.ROTATE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
@@ -134,7 +134,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(EXPLODE) == 0)
+                        if(evt.getCommand()!!.compareTo(MyCanvasEventService.EXPLODE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
@@ -145,7 +145,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(AUTOEXPLODE) == 0)
+                        if(evt.getCommand()!!.compareTo(MyCanvasEventService.AUTOEXPLODE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
@@ -156,7 +156,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(CENTER) == 0)
+                        if(evt.getCommand()!!.compareTo(MyCanvasEventService.CENTER) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener

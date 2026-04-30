@@ -67,7 +67,7 @@ var size = size
     var geographicMapInterface: BasicGeographicMap = raceTrackGeographicMapInterfaceFactoryInterface!!.getTrackInstance(SmallIntegerSingletonFactory.getInstance()!!.getAt(index))!!
 
 
-    var list: BasicArrayList = PathGenerator.getInstance()!!.create(geographicMapInterface, RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance(), pathFindingInfo, 10)!!
+    var list: BasicArrayList = PathGenerator.getInstance()!!.createList(geographicMapInterface, RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance(), pathFindingInfo, 10)!!
 
 System.out.println("Track " +index)
 this.printPaths(list)

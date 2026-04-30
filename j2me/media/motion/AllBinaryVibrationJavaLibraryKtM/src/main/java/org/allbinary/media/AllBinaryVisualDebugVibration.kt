@@ -76,7 +76,7 @@ var graphics = graphics
 
     var width: Int = myFont!!.stringWidth(this.VIBRATING)!!
 
-graphics.drawString(VIBRATING, displayInfoSingleton!!.getLastHalfWidth() -(width shr 1), 0, anchor)
+graphics.drawString(VIBRATING, displayInfoSingleton!!.getLastHalfWidth() -(width shr 1), 0, this.anchor)
 
                                     }
                                 

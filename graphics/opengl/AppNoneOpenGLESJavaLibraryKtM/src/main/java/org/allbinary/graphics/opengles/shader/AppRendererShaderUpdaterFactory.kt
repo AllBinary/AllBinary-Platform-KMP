@@ -39,7 +39,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return AppRendererShaderUpdaterFactory.instance
 }
 
 
@@ -52,7 +52,7 @@ companion object {
         
     private val NULL_SHADER_COMPOSITE_ARRAY: Array<ShaderComposite?> = arrayOfNulls(0)
 
-    val shaderCompositeArray: Array<ShaderComposite?> = NULL_SHADER_COMPOSITE_ARRAY
+    val shaderCompositeArray: Array<ShaderComposite?> = this.NULL_SHADER_COMPOSITE_ARRAY
 
     private val shaderOpenGLProcessorArray: Array<ShaderOpenGLProcessor?> = arrayOfNulls(0)
 

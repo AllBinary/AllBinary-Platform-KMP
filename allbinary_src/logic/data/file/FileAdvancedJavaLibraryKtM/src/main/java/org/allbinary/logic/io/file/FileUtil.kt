@@ -63,7 +63,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return FileUtil.instance
 }
 
 
@@ -272,7 +272,7 @@ var overwriteAll = overwriteAll
 
         try {
             
-    var outPath: AbPath = fixPath(file, path, realPath, cloud)!!
+    var outPath: AbPath = this.fixPath(file, path, realPath, cloud)!!
 
 
     var outFile: AbFile = AbFile(outPath)
@@ -784,7 +784,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyDirectory")
                                     }
                                 
 
-    var newDirectory: String = getNewDirectory(fromFile)!!
+    var newDirectory: String = FileUtil.getNewDirectory(fromFile)!!
 
 
     var newDirectoryAbPath: AbPath = AbPath(to.getPath() +AbPathData.getInstance()!!.SEPARATOR +newDirectory)
@@ -1063,7 +1063,7 @@ this.copyFile(file, aFile)
                         if(file.isDirectory())
                         
                                     {
-                                    copyDirectory(file, toLocationFile)
+                                    this.copyDirectory(file, toLocationFile)
 
                                     }
                                 
@@ -1099,7 +1099,7 @@ this.copyFile(file, aFile)
 
                                     }
                                 
-copyDirectory(fromLocationFile, toLocationFile)
+this.copyDirectory(fromLocationFile, toLocationFile)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(this.logConfigTypeFactory!!.FILE))

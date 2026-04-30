@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return MyFont.instance
 }
 
 
@@ -52,9 +52,9 @@ companion object {
             
     private val defaultFont: Font = Font.getDefaultFont()!!
 
-    var DEFAULT_CHAR_HEIGHT: Int = defaultFont!!.getHeight()!!
+    var DEFAULT_CHAR_HEIGHT: Int = this.defaultFont!!.getHeight()!!
 
-    private var DEFAULT_CHAR_WIDTH: Int = defaultFont!!.charWidth('C')!!
+    private var DEFAULT_CHAR_WIDTH: Int = this.defaultFont!!.charWidth('C')!!
 private constructor ()
             : super()
         {
@@ -64,7 +64,7 @@ private constructor ()
     open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
-this.DEFAULT_CHAR_HEIGHT= defaultFont!!.getHeight()
+this.DEFAULT_CHAR_HEIGHT= this.defaultFont!!.getHeight()
 this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 }
 
@@ -76,7 +76,7 @@ this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DEFAULT_CHAR_WIDTH
+                        return this.DEFAULT_CHAR_WIDTH
 }
 
 
@@ -112,7 +112,7 @@ this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultFont!!.stringWidth(string)
+                        return this.defaultFont!!.stringWidth(string)
 }
 
 
@@ -123,7 +123,7 @@ this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultFont!!.getSize()
+                        return this.defaultFont!!.getSize()
 }
 
 
@@ -135,7 +135,7 @@ this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultFont!!.charWidth(aChar)
+                        return this.defaultFont!!.charWidth(aChar)
 }
 
 
@@ -149,7 +149,7 @@ this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultFont!!.charsWidth(charArray, offset, length)
+                        return this.defaultFont!!.charsWidth(charArray, offset, length)
 }
 
 

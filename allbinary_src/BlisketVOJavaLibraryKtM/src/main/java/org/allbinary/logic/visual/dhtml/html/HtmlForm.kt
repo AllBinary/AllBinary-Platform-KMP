@@ -47,7 +47,7 @@ open public class HtmlForm
 
     private val POST: String = "POST\""
 
-    private val METHODS: Array<String?> = arrayOf(GET,POST)
+    private val METHODS: Array<String?> = arrayOf(this.GET,this.POST)
 
     private val METHOD: String = "METHOD=\""
 

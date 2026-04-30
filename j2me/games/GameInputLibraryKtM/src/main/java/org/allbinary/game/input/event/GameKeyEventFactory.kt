@@ -46,7 +46,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return GameKeyEventFactory.instance
 }
 
 
@@ -60,7 +60,7 @@ companion object {
 
     private val MAX_SOURCES: Int = 4
 
-    private var ARRAY: Array<Array<GameKeyEvent?>?> = Array(MAX_SOURCES) { arrayOfNulls<GameKeyEvent?>(InputFactory.getInstance()!!.MAX) }
+    private var ARRAY: Array<Array<GameKeyEvent?>?> = Array(this.MAX_SOURCES) { arrayOfNulls<GameKeyEvent?>(InputFactory.getInstance()!!.MAX) }
                                                             
 private constructor ()
             : super()

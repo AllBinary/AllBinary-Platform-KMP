@@ -230,10 +230,10 @@ this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
     var delta: Int = 0
 
 
-    var deltaX: Int = getDx()!!
+    var deltaX: Int = this.getDx()!!
 
 
-    var deltaY: Int = getDy()!!
+    var deltaY: Int = this.getDy()!!
 
 
     var size: Int = this.size()!!
@@ -368,7 +368,7 @@ var item = item
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return dx
+                        return this.dx
 }
 
 
@@ -379,7 +379,7 @@ var item = item
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return dy
+                        return this.dy
 }
 
 

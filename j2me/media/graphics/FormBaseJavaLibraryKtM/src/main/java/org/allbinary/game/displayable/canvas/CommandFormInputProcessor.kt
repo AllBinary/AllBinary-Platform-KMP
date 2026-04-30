@@ -55,11 +55,11 @@ open public class CommandFormInputProcessor : BasicMenuInputProcessor {
 
     private val CLICK_DELAY: Int = 150
 
-    private val clickTimeHelper: TimeDelayHelper = TimeDelayHelper(CLICK_DELAY)
+    private val clickTimeHelper: TimeDelayHelper = TimeDelayHelper(this.CLICK_DELAY)
 
     private val DOUBLE_CLICK_DELAY: Int = 1200
 
-    private val doubleClickTimeHelper: TimeDelayHelper = TimeDelayHelper(DOUBLE_CLICK_DELAY)
+    private val doubleClickTimeHelper: TimeDelayHelper = TimeDelayHelper(this.DOUBLE_CLICK_DELAY)
 
     val isSingleKeyProcessing: Boolean = InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()!!
 

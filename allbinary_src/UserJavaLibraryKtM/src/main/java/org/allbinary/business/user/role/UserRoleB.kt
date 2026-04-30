@@ -111,7 +111,7 @@ var aUserFactoryInterface = aUserFactoryInterface
 
                             //For kotlin this is before the body of the constructor.
                     
-roleVector!!.add(this)
+UserRoleB.roleVector!!.add(this)
 }
 
 

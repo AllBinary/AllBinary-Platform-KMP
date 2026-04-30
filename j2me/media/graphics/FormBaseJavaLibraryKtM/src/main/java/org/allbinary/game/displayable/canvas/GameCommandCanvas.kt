@@ -141,7 +141,7 @@ this.initCommands(cmdListener)
                                     
         try {
             this.initMenu()
-repaintProcessor!!.process()
+this.repaintProcessor!!.process()
 } catch(e: Exception)
             {
 
@@ -300,7 +300,7 @@ this.repaintProcessor!!.process()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return id
+                        return GameCommandCanvas.id
 }
 
 
@@ -465,7 +465,7 @@ this.menuInputProcessor= menuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return menuInputProcessor
+                        return this.menuInputProcessor
 }
 
 

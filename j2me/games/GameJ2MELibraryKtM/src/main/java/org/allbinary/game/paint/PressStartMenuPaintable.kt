@@ -121,7 +121,7 @@ var graphics = graphics
 
     var line: Int = (4 *myFont!!.DEFAULT_CHAR_HEIGHT) +(myFont!!.DEFAULT_CHAR_HEIGHT shr 1)
 
-graphics.drawString(startString, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHeight() -line, anchor)
+graphics.drawString(startString, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHeight() -line, this.anchor)
 
                                     }
                                 
@@ -143,7 +143,7 @@ this.flash= flash
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return flash
+                        return this.flash
 }
 
 

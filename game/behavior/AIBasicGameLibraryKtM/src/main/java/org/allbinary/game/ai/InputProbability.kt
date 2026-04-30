@@ -69,7 +69,7 @@ this.timeDelayHelper= timeDelayHelper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return likelyhoodIntegerArray
+                        return this.likelyhoodIntegerArray
 }
 
 
@@ -80,7 +80,7 @@ this.timeDelayHelper= timeDelayHelper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return repeatLikelyhoodIntegerArray
+                        return this.repeatLikelyhoodIntegerArray
 }
 
 
@@ -91,7 +91,7 @@ this.timeDelayHelper= timeDelayHelper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return max
+                        return this.max
 }
 
 
@@ -102,7 +102,7 @@ this.timeDelayHelper= timeDelayHelper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return timeDelayHelper
+                        return this.timeDelayHelper
 }
 
 

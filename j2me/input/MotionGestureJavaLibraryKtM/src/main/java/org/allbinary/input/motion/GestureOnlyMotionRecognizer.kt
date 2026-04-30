@@ -43,8 +43,8 @@ companion object {
 
     private val id: Int
 public constructor (){
-this.id= index++
-this.motionGestureRecognizer= MotionGestureRecognizer(id)
+this.id= GestureOnlyMotionRecognizer.index++
+this.motionGestureRecognizer= MotionGestureRecognizer(this.id)
 }
 
 

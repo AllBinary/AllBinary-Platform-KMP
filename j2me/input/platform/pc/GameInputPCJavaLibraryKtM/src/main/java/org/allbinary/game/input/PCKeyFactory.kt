@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return PCKeyFactory.SINGLETON
 }
 
 
@@ -191,13 +191,13 @@ companion object {
 
     val DPAD_RIGHT: PCGameKey = PCGameKey(KeyEvent.VK_RIGHT, CommonPhoneStrings.getInstance()!!.RIGHT)
 
-    val DPAD_UP2: PCGameKey = DPAD_UP
+    val DPAD_UP2: PCGameKey = this.DPAD_UP
 
-    val DPAD_DOWN2: PCGameKey = DPAD_DOWN
+    val DPAD_DOWN2: PCGameKey = this.DPAD_DOWN
 
-    val DPAD_LEFT2: PCGameKey = DPAD_LEFT
+    val DPAD_LEFT2: PCGameKey = this.DPAD_LEFT
 
-    val DPAD_RIGHT2: PCGameKey = DPAD_RIGHT
+    val DPAD_RIGHT2: PCGameKey = this.DPAD_RIGHT
 
     val COMMA: PCGameKey = PCGameKey(KeyEvent.VK_COMMA, "COMMA")
 

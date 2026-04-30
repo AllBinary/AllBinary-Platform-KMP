@@ -72,7 +72,7 @@ var pageContext = pageContext
                                 
 this.propertiesHashMap= propertiesHashMap
 this.pageContext= pageContext
-this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(abeClientInformation, propertiesHashMap, pageContext) as ValidationComponentInterface
+this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(this.abeClientInformation, propertiesHashMap, pageContext) as ValidationComponentInterface
 }
 
 

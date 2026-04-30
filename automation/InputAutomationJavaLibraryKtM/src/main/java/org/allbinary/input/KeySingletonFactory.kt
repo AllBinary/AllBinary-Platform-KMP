@@ -64,7 +64,7 @@ companion object {
 
     var keyAsString: String = KeyEvent.getKeyText(keyArray[index]!!)!!
 
-keyStringHashtable!!.put(keyAsString, keyArray[index]!!)
+KeySingletonFactory.keyStringHashtable!!.put(keyAsString, keyArray[index]!!)
 }
 
 } catch(e: Exception)
@@ -81,7 +81,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "KeySingleFactory", STATIC_BLOCK, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return keyStringHashtable
+                        return KeySingletonFactory.keyStringHashtable
 }
 
 
@@ -104,7 +104,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return keyArray
+                        return KeySingletonFactory.keyArray
 }
 
 

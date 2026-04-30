@@ -134,7 +134,7 @@ this.processScore(allbinaryLayerManager, angle, otherAngle, this.getWeaponProper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ownerLayerInterface
+                        return this.ownerLayerInterface
 }
 
 
@@ -153,7 +153,7 @@ this.ownerLayerInterface= ownerLayerInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return animationInterface
+                        return this.animationInterface
 }
 
 
@@ -196,7 +196,7 @@ this.animationInterface!!.paintXY(graphics, viewX, viewY)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return weaponProperties
+                        return this.weaponProperties
 }
 
 

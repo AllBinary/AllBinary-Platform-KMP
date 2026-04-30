@@ -316,7 +316,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
                                     }
                                 
-session.setAttribute(basketName, orderInterface)
+this.session.setAttribute(basketName, orderInterface)
 
 
 
@@ -361,7 +361,7 @@ this.session.removeAttribute(UserData.USERNAME)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getCreationTime()
+                        return this.session.getCreationTime()
 }
 
 
@@ -372,7 +372,7 @@ this.session.removeAttribute(UserData.USERNAME)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session.getLastAccessedTime()
+                        return this.session.getLastAccessedTime()
 }
 
 

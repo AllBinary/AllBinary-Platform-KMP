@@ -61,7 +61,7 @@ var componentInterface = componentInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return data
+                        return this.data
 }
 
 

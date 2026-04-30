@@ -52,7 +52,7 @@ stringbuffer.appendint(type)
     var key: String = stringbuffer.toString()!!
 
 
-    var bufferedImageInfo: BufferedImageInfo = hashMap!!.get(key as Object) as BufferedImageInfo
+    var bufferedImageInfo: BufferedImageInfo = BufferedImageInfoFactory.hashMap!!.get(key as Object) as BufferedImageInfo
 
 
     
@@ -62,7 +62,7 @@ stringbuffer.appendint(type)
                         
                                     {
                                     bufferedImageInfo= BufferedImageInfo(width, height, type)
-hashMap!!.put(key, bufferedImageInfo)
+BufferedImageInfoFactory.hashMap!!.put(key, bufferedImageInfo)
 
                                     }
                                 

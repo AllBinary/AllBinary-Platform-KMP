@@ -364,7 +364,7 @@ commandList!!.add(gameCommandsFactory!!.DISPLAY_ABOUT)
 var cmdListener = cmdListener
 this.removeAllCommands()
 
-    var commandArray: Array<Any?> = getCustomCommands()!!
+    var commandArray: Array<Any?> = this.getCustomCommands()!!
 
 
     var size: Int = commandArray!!.size
@@ -443,7 +443,7 @@ GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return id
+                        return StartCanvas.id
 }
 
 
@@ -1043,9 +1043,9 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-baseGameStatistics!!.add(StringMaker().
+this.baseGameStatistics!!.add(StringMaker().
                             append(BOT_GAME_STATS)!!.append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
-baseGameStatistics!!.init()
+this.baseGameStatistics!!.init()
 
     
                         if(this.features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
@@ -1086,7 +1086,7 @@ var gameState = gameState
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return state
+                        return this.state
 }
 
 
@@ -1117,7 +1117,7 @@ this.logUtil!!.putF("Wow the AI got a high score!", this, "isHighScoreSubmitted"
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return realHighScoresPaintable
+                        return this.realHighScoresPaintable
 }
 
 
@@ -1137,7 +1137,7 @@ this.specialAnimationInterface= specialAnimationInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return specialAnimationInterface
+                        return this.specialAnimationInterface
 }
 
 
@@ -1156,7 +1156,7 @@ this.paintableInterface= paintableInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return paintableInterface
+                        return this.paintableInterface
 }
 
 
@@ -1175,7 +1175,7 @@ this.defaultPaintableInterface= defaultPaintableInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultPaintableInterface
+                        return this.defaultPaintableInterface
 }
 
 
@@ -1186,7 +1186,7 @@ this.defaultPaintableInterface= defaultPaintableInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return highScoresFactoryInterface
+                        return this.highScoresFactoryInterface
 }
 
 
@@ -1205,7 +1205,7 @@ this.menuInputProcessor= menuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return menuInputProcessor
+                        return this.menuInputProcessor
 }
 
 
@@ -1216,7 +1216,7 @@ this.menuInputProcessor= menuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return menuForm
+                        return this.menuForm
 }
 
 
@@ -1235,7 +1235,7 @@ this.menuForm= menuForm
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initialized
+                        return this.initialized
 }
 
 
@@ -1246,7 +1246,7 @@ this.menuForm= menuForm
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return overlayPaintable
+                        return this.overlayPaintable
 }
 
 
@@ -1265,7 +1265,7 @@ this.basicGameDemoPaintable= basicGameDemoPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicGameDemoPaintable
+                        return this.basicGameDemoPaintable
 }
 
 
@@ -1284,7 +1284,7 @@ this.tempWait= tempWait
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tempWait
+                        return this.tempWait
 }
 
 
@@ -1340,7 +1340,7 @@ this.tempWait= tempWait
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameInitializationInterfaceFactoryInterface
+                        return this.gameInitializationInterfaceFactoryInterface
 }
 
 

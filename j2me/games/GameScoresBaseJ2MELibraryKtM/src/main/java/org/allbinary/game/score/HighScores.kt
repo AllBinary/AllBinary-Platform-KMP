@@ -73,7 +73,7 @@ this.orderedHighScoresList= orderedHighScoresList
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return orderedHighScoresList
+                        return this.orderedHighScoresList
 }
 
 
@@ -84,7 +84,7 @@ this.orderedHighScoresList= orderedHighScoresList
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -114,7 +114,7 @@ this.orderedHighScoresList!!.add(newHighScore)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return heading
+                        return this.heading
 }
 
 
@@ -125,7 +125,7 @@ this.orderedHighScoresList!!.add(newHighScore)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return columnOneHeading
+                        return this.columnOneHeading
 }
 
 
@@ -136,7 +136,7 @@ this.orderedHighScoresList!!.add(newHighScore)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return columnTwoHeading
+                        return this.columnTwoHeading
 }
 
 

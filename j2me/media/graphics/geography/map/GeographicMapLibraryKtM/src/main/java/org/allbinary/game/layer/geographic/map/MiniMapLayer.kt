@@ -89,7 +89,7 @@ this.init()
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-allBinaryTiledLayer!!.setPosition(this.x, this.y, this.z)
+this.allBinaryTiledLayer!!.setPosition(this.x, this.y, this.z)
 }
 
 
@@ -170,7 +170,7 @@ break;
 }
 
 
-    var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(geographicMapCellPositionEvent!!.getGeographicMapCellPosition())!!
+    var geographicMapCellPosition: GeographicMapCellPosition = this.geographicMapCellPositionFactory!!.getInstance(geographicMapCellPositionEvent!!.getGeographicMapCellPosition())!!
 
 
     var point: GPoint = geographicMapCellPosition!!.getPoint()!!
@@ -238,7 +238,7 @@ this.animationInterface!!.paintXY(graphics, point.getX() +this.x, point.getY() +
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
-allBinaryTiledLayer!!.paint(graphics)
+this.allBinaryTiledLayer!!.paint(graphics)
 this.paintDots(graphics)
 }
 

@@ -41,7 +41,7 @@ open public class RemoveActionScriptItemJPanel : java.awt.Panel {
 public constructor (genericProfileActionJPanel: GenericProfileActionJPanel, profileActionScriptConditionInterface: ProfileActionScriptConditionInterface){
 var genericProfileActionJPanel = genericProfileActionJPanel
 var profileActionScriptConditionInterface = profileActionScriptConditionInterface
-initComponents()
+this.initComponents()
 this.genericProfileActionJPanel= genericProfileActionJPanel
 this.profileActionScriptConditionInterface= profileActionScriptConditionInterface
 }
@@ -53,7 +53,7 @@ this.profileActionScriptConditionInterface= profileActionScriptConditionInterfac
 this.removeJButton= javax.swing.JButton()
 setLayout(java.awt.GridLayout())
 this.removeJButton!!.setText("Remove")
-removeJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.removeJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

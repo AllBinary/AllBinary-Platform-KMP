@@ -73,7 +73,7 @@ this.items.add(item)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return items
+                        return this.items
 }
 
 

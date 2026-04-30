@@ -92,7 +92,7 @@ this.currentWidth= this.getDrawWidth() -this.startWidth
     //var graphics = graphics
     //var x = x
     //var y = y
-graphics.drawRegion(this.getImage(), this.startWidth, this.getStartY(), this.currentWidth, this.getDrawHeight(), Sprite.TRANS_NONE, x +this.startWidth, y, anchor)
+graphics.drawRegion(this.getImage(), this.startWidth, this.getStartY(), this.currentWidth, this.getDrawHeight(), Sprite.TRANS_NONE, x +this.startWidth, y, this.anchor)
 }
 
 

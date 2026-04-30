@@ -593,7 +593,7 @@ stringBuffer!!.append("Trying New login<p>")
     
                         if(this.sessionUserName != 
                                     null
-                                 && role.equals(mustBeOfRole))
+                                 && this.role.equals(mustBeOfRole))
                         
                                     {
                                     
@@ -861,7 +861,7 @@ this.getFormData()
                                 
                              else 
     
-                        if(command.compareTo(WeblisketSessionData.INVALIDATESESSION) == 0)
+                        if(this.command.compareTo(WeblisketSessionData.INVALIDATESESSION) == 0)
                         
                                     {
                                     
@@ -969,9 +969,9 @@ pageContext!!.getOut()!!.print("Please login again.<p>")
     
                         if((this.userName == 
                                     null
-                                 || this.userName!!.compareTo(stringUtil!!.EMPTY_STRING) == 0) && (password == 
+                                 || this.userName!!.compareTo(stringUtil!!.EMPTY_STRING) == 0) && (this.password == 
                                     null
-                                 || password.compareTo(stringUtil!!.EMPTY_STRING) == 0) && this.roles != 
+                                 || this.password.compareTo(stringUtil!!.EMPTY_STRING) == 0) && this.roles != 
                                     null
                                  && this.isAuthenticationSessionValid())
                         

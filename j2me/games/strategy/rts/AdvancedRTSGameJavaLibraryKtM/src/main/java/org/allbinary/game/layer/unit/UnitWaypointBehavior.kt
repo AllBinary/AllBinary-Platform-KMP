@@ -171,7 +171,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.onWaypointEvent(this.
     //var advancedRTSGameLayer = advancedRTSGameLayer
 
     
-                        if(advancedRTSGameLayer == PrimaryWaypointHelper.getInstance()!!.getWaypointLayer() || advancedRTSGameLayer!!.getParentLayer() == associatedAdvancedRTSGameLayer!!.getParentLayer())
+                        if(advancedRTSGameLayer == PrimaryWaypointHelper.getInstance()!!.getWaypointLayer() || advancedRTSGameLayer!!.getParentLayer() == this.associatedAdvancedRTSGameLayer!!.getParentLayer())
                         
                                     {
                                     
@@ -315,7 +315,7 @@ this.lastPathGeographicMapCellPosition= SimpleGeographicMapCellPositionFactory.N
                         if(this.associatedAdvancedRTSGameLayer!!.showMoreCaptionStates)
                         
                                     {
-                                    this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(PATHING, BasicColorFactory.getInstance()!!.GREEN)
+                                    this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(UnitWaypointBehavior.PATHING, BasicColorFactory.getInstance()!!.GREEN)
 
                                     }
                                 
@@ -517,7 +517,7 @@ this.waypointPathsListP= waypointPathsList
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return waypointPathsListP
+                        return this.waypointPathsListP
 }
 
 
@@ -528,7 +528,7 @@ this.waypointPathsListP= waypointPathsList
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return moving
+                        return this.moving
 }
 
 
@@ -547,7 +547,7 @@ this.moving= moving
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return trackingWaypoint
+                        return this.trackingWaypoint
 }
 
 
@@ -558,7 +558,7 @@ this.moving= moving
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return possibleTargetList
+                        return this.possibleTargetList
 }
 
 
@@ -577,7 +577,7 @@ this.lastPathGeographicMapCellPosition= lastPathGeographicMapCellPosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return lastPathGeographicMapCellPosition
+                        return this.lastPathGeographicMapCellPosition
 }
 
 
@@ -596,7 +596,7 @@ this.currentPathGeographicMapCellPosition= currentPathGeographicMapCellPosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentPathGeographicMapCellPosition
+                        return this.currentPathGeographicMapCellPosition
 }
 
 
@@ -615,7 +615,7 @@ this.sensorAction= sensorAction
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return sensorAction
+                        return this.sensorAction
 }
 
 
@@ -634,7 +634,7 @@ this.currentTargetLayerInterfaceP= currentTargetLayerInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentTargetLayerInterfaceP
+                        return this.currentTargetLayerInterfaceP
 }
 
 
@@ -653,7 +653,7 @@ this.currentTargetDistance= currentTargetDistance
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentTargetDistance
+                        return this.currentTargetDistance
 }
 
 
@@ -664,7 +664,7 @@ this.currentTargetDistance= currentTargetDistance
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return completeTimeDelayHelper
+                        return this.completeTimeDelayHelper
 }
 
 
@@ -675,7 +675,7 @@ this.currentTargetDistance= currentTargetDistance
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentGeographicMapCellHistoryP
+                        return this.currentGeographicMapCellHistoryP
 }
 
 

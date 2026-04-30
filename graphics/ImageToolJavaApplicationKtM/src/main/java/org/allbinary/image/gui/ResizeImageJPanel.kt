@@ -370,7 +370,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 
@@ -399,7 +399,7 @@ this.adjustFor16BelowJButton= javax.swing.JButton()
 this.jLabel1!!.setText("Percent:")
 this.jComboBox1!!.setModel(javax.swing.DefaultComboBoxModel<>(arrayOf("Item 1","Item 2","Item 3","Item 4")))
 this.aboveJButton!!.setText("Process")
-aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -414,7 +414,7 @@ aboveJButtonActionPerformed(evt)
 this.jLabel2!!.setText("Width:")
 this.jLabel3!!.setText("Height:")
 this.updateJButton!!.setText("Update")
-updateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.updateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -429,7 +429,7 @@ updateJButtonActionPerformed(evt)
 this.floatPercentJTextField!!.setText("-1.000000")
 this.floatPercentJTextField!!.setMinimumSize(java.awt.Dimension(120, 22))
 this.adjustFor16AboveJButton!!.setText("Adjust for 16 Above")
-adjustFor16AboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.adjustFor16AboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -442,7 +442,7 @@ adjustFor16AboveJButtonActionPerformed(evt)
                                 }
                             )
 this.adjustFor16BelowJButton!!.setText("Adjust for 16 Below")
-adjustFor16BelowJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.adjustFor16BelowJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

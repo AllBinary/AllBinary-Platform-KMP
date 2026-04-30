@@ -28,13 +28,15 @@
 import java.util.Enumeration
 import java.util.Hashtable
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.EnumerationUtil
 
 open public class BasicPlatormGeographicMapCellTypeFactory : GeographicMapCellTypeFactory {
         
+
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     val BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType
 
@@ -83,9 +85,9 @@ GeographicMapCellType(0, 0)
     var basicPlatormGeographicMapCellType: BasicPlatormGeographicMapCellType
 
 
-        while(enumeration.hasMoreElements())
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-key= enumeration.nextElement()!! as String
+key= this.enumerationUtil!!.nextElement(enumeration)!! as String
 this.logUtil!!.putF(key, this, commonStrings!!.INIT)
 idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
 basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithTypeList)

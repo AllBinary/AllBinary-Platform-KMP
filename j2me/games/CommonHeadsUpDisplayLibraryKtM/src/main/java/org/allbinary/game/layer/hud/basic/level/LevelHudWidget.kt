@@ -169,7 +169,7 @@ this.update()
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paintDX(graphics, levelString, 0, levelString!!.size, levelNumberCharArray, 0, levelNumberTotalDigits, this.offset)
+super.paintDX(graphics, this.levelString, 0, this.levelString!!.size, this.levelNumberCharArray, 0, this.levelNumberTotalDigits, this.offset)
 }
 
 

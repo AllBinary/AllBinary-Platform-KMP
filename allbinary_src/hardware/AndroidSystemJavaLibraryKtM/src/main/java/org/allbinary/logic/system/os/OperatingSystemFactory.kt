@@ -45,7 +45,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return OperatingSystemFactory.instance
 }
 
 
@@ -117,7 +117,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericOperatingSystem
+                        return this.genericOperatingSystem
 }
 
 

@@ -92,7 +92,7 @@ this.x= x
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return x
+                        return this.x
 }
 
 
@@ -111,7 +111,7 @@ this.y= y
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return y
+                        return this.y
 }
 
 
@@ -130,7 +130,7 @@ this.z= z
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return z
+                        return this.z
 }
 
 

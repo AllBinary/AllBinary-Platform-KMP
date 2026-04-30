@@ -130,9 +130,9 @@ this.IMAGE[index]= NullCanvas.NULL_IMAGE
                         if(AndroidBasicTitleProgressBar.background != 0)
                         
                                     {
-                                    ResourceUtil.getInstance()!!.addResource(RESOURCE, Integer(AndroidBasicTitleProgressBar.background))
+                                    ResourceUtil.getInstance()!!.addResource(AndroidBasicTitleProgressBar.RESOURCE, Integer(AndroidBasicTitleProgressBar.background))
 GameFeatureImageCacheFactory.init()
-this.image= ImageCacheFactory.getInstance()!!.getWithKey(RESOURCE)
+this.image= ImageCacheFactory.getInstance()!!.getWithKey(AndroidBasicTitleProgressBar.RESOURCE)
 
                                     }
                                 
@@ -514,7 +514,7 @@ var lastHeight = lastHeight
 {
 var graphics = graphics
 this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
-this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(RESOURCE)
+this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(AndroidBasicTitleProgressBar.RESOURCE)
 
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 
@@ -552,7 +552,7 @@ this.updateCurrent()
 var graphics = graphics
 this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.UPDATE)
 this.initOpenGL(graphics)
-this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(RESOURCE)
+this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(AndroidBasicTitleProgressBar.RESOURCE)
 
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 
@@ -652,7 +652,7 @@ this.portion= portion
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return portion
+                        return this.portion
 }
 
 

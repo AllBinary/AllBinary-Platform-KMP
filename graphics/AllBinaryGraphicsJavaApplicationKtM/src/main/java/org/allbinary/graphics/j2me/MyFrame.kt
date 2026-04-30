@@ -71,9 +71,9 @@ companion object {
 
     private val PATH: String = "G:/mnt/bc/mydev/work/graphics/AllBinaryGraphicsJavaApplication"
 
-    private val SAVE_PATH: String = PATH +"/save"
+    private val SAVE_PATH: String = MyFrame.PATH +"/save"
 
-    private val TEMPLATE_EXPORT_PATH: String = PATH +"/templates/export"
+    private val TEMPLATE_EXPORT_PATH: String = MyFrame.PATH +"/templates/export"
 
     open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
@@ -119,7 +119,7 @@ logUtil!!.put(CommonStrings.getInstance()!!.EXCEPTION,
 
     private var rotateJDialog: RotateJDialog
 public constructor (){
-initComponents()
+this.initComponents()
 this.setSize(Dimension(550, 400))
 this.mainJPanel!!.setSize(Dimension(550, 400))
 this.jTabbedPane!!.setSize(Dimension(550, 400))
@@ -192,7 +192,7 @@ exitForm(evt)
                                 }
                             )
 this.jButton2!!.setText("New")
-jButton2!!.addActionListener(object: java.awt.event.ActionListener()
+this.jButton2!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -206,7 +206,7 @@ jButton2ActionPerformed(evt)
                             )
 this.jToolBar1!!.add(this.jButton2)
 this.saveJButton!!.setText("Save")
-saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -220,7 +220,7 @@ saveJButtonActionPerformed(evt)
                             )
 this.jToolBar1!!.add(this.saveJButton)
 this.jButton1!!.setText("Export")
-jButton1!!.addActionListener(object: java.awt.event.ActionListener()
+this.jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -234,7 +234,7 @@ jButton1ActionPerformed(evt)
                             )
 this.jToolBar1!!.add(this.jButton1)
 this.openJButton!!.setText("Open")
-openJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.openJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -258,7 +258,7 @@ this.jToolBar1!!.add(this.jButton5)
 this.animateJButton!!.setText("AnimateEdit")
 this.jToolBar1!!.add(this.animateJButton)
 this.playJButton!!.setText("Play")
-playJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.playJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -272,7 +272,7 @@ playJButtonMousePressed(evt)
                             )
 this.jToolBar1!!.add(this.playJButton)
 this.stopJjButton!!.setText("Stop")
-stopJjButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.stopJjButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -289,7 +289,7 @@ getContentPane()!!.add(this.jToolBar1, java.awt.BorderLayout.NORTH)
 this.jPanel1!!.setLayout(java.awt.GridLayout(1, 0))
 this.mainJPanel!!.setLayout(java.awt.GridLayout(1, 0))
 this.jTabbedPane!!.setMinimumSize(java.awt.Dimension(550, 400))
-jTabbedPane!!.addChangeListener(object: javax.swing.event.ChangeListener()
+this.jTabbedPane!!.addChangeListener(object: javax.swing.event.ChangeListener()
                                 {
                                 
     open override fun stateChanged(evt: javax.swing.event.ChangeEvent)
@@ -309,7 +309,7 @@ statusJLabel!!.setText("Status Bar")
 this.statusJPanel!!.add(statusJLabel)
 getContentPane()!!.add(this.statusJPanel, java.awt.BorderLayout.SOUTH)
 this.fileJMenu!!.setText("File")
-fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
+this.fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -322,7 +322,7 @@ fileJMenuActionPerformed(evt)
                                 }
                             )
 this.newJMenuItem!!.setText("New")
-newJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.newJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -336,7 +336,7 @@ newJMenuItemActionPerformed(evt)
                             )
 this.fileJMenu!!.add(this.newJMenuItem)
 this.openJMenuItem!!.setText("Open")
-openJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.openJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -350,7 +350,7 @@ openJMenuItemActionPerformed(evt)
                             )
 this.fileJMenu!!.add(this.openJMenuItem)
 this.saveJMenuItem!!.setText("Save")
-saveJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.saveJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -366,7 +366,7 @@ this.fileJMenu!!.add(this.saveJMenuItem)
 this.saveAsJMenuItem!!.setText("SaveAs")
 this.fileJMenu!!.add(this.saveAsJMenuItem)
 this.exportJMenuItem1!!.setText("Export")
-exportJMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
+this.exportJMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -380,7 +380,7 @@ exportJMenuItem1ActionPerformed(evt)
                             )
 this.fileJMenu!!.add(this.exportJMenuItem1)
 this.exitJMenuItem!!.setText("Exit")
-exitJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.exitJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -396,7 +396,7 @@ this.fileJMenu!!.add(this.exitJMenuItem)
 this.menuJMenuBar!!.add(this.fileJMenu)
 this.viewJMenu!!.setText("View")
 this.zoomInJMenuItem!!.setText("Zoom In")
-zoomInJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.zoomInJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -410,7 +410,7 @@ zoomInJMenuItemMousePressed(evt)
                             )
 this.viewJMenu!!.add(this.zoomInJMenuItem)
 this.zoomOutJMenuItem!!.setText("Zoom Out")
-zoomOutJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.zoomOutJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -426,7 +426,7 @@ this.viewJMenu!!.add(this.zoomOutJMenuItem)
 this.menuJMenuBar!!.add(this.viewJMenu)
 this.objectJMenu!!.setText("Objects")
 this.explodeAllJMenuItem!!.setText("Explode All")
-explodeAllJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.explodeAllJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -441,7 +441,7 @@ explodeAllJMenuItemMousePressed(evt)
 this.objectJMenu!!.add(this.explodeAllJMenuItem)
 this.menuJMenuBar!!.add(this.objectJMenu)
 this.frameJMenu!!.setText("Frame")
-frameJMenu!!.addActionListener(object: java.awt.event.ActionListener()
+this.frameJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -468,7 +468,7 @@ this.frameJMenu!!.add(this.insertBeforeJMenuItem)
 this.menuJMenuBar!!.add(this.frameJMenu)
 this.generateJMenu!!.setText("Generate")
 this.centerJMenuItem!!.setText("Center")
-centerJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.centerJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -484,7 +484,7 @@ this.generateJMenu!!.add(this.centerJMenuItem)
 this.autoDamageJMenuItem!!.setText("Damage")
 this.generateJMenu!!.add(this.autoDamageJMenuItem)
 this.autoExplodeJMenuItem!!.setText("Explode")
-autoExplodeJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.autoExplodeJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -500,7 +500,7 @@ this.generateJMenu!!.add(this.autoExplodeJMenuItem)
 this.autoGrowJMenuItem!!.setText("Grow")
 this.generateJMenu!!.add(this.autoGrowJMenuItem)
 this.jMenuItem1!!.setText("Mirror")
-jMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
+this.jMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -514,7 +514,7 @@ jMenuItem1ActionPerformed(evt)
                             )
 this.generateJMenu!!.add(this.jMenuItem1)
 this.autoRotateGenerationJMenuItem!!.setText("Rotate")
-autoRotateGenerationJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.autoRotateGenerationJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -599,7 +599,7 @@ this.rotateJDialog!!.setVisible(true)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
-getSelectedWorkArea()!!.changeZoom( -1)
+this.getSelectedWorkArea()!!.changeZoom( -1)
 }
 
 
@@ -607,7 +607,7 @@ getSelectedWorkArea()!!.changeZoom( -1)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
-getSelectedWorkArea()!!.changeZoom(1)
+this.getSelectedWorkArea()!!.changeZoom(1)
 }
 
 
@@ -961,7 +961,7 @@ var newCanvasInterface = newCanvasInterface
             this.numberOfWorkAreas++
 
     
-                        if(this.numberOfWorkAreas == MAXWORKAREAS)
+                        if(this.numberOfWorkAreas == MyFrame.MAXWORKAREAS)
                         
                                     {
                                     

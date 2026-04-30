@@ -60,9 +60,9 @@ open public class Waypoint : WaypointBase
 
     val ownerLayer: PathFindingLayerInterface
 
-    private var endList: BasicArrayList = basicArrayListUtil!!.getImmutableInstance()!!
+    private var endList: BasicArrayList = this.basicArrayListUtil!!.getImmutableInstance()!!
 
-    private var paths: Array<Array<BasicArrayList?>?> = basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY
+    private var paths: Array<Array<BasicArrayList?>?> = this.basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY
 public constructor (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
                             : super(sound){
@@ -246,7 +246,7 @@ endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosi
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayListUtil!!.getImmutableInstance()
+                        return this.basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 
@@ -264,7 +264,7 @@ endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosi
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayListUtil!!.getImmutableInstance()
+                        return this.basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 
@@ -282,7 +282,7 @@ endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosi
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayListUtil!!.getImmutableInstance()
+                        return this.basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 

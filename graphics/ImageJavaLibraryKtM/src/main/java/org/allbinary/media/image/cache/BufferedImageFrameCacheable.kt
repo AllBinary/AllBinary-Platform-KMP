@@ -66,7 +66,7 @@ this.setBufferedImage(bufferedImage)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return bufferedImage
+                        return this.bufferedImage
 }
 
 
@@ -85,7 +85,7 @@ this.bufferedImage= bufferedImage
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return frame
+                        return this.frame
 }
 
 

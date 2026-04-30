@@ -63,7 +63,7 @@ var text = text
 
                             //For kotlin this is before the body of the constructor.
                     
-initComponents()
+this.initComponents()
 this.setText(text)
 }
 
@@ -85,7 +85,7 @@ this.closeListenerInterface= closeListenerInterface
 
 public constructor (text: String){
 var text = text
-initComponents()
+this.initComponents()
 this.textJLabel!!.setText(text)
 }
 

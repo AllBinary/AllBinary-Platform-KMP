@@ -55,7 +55,7 @@ companion object {
 
         try {
             logUtil!!.putF(commonStrings!!.START, ColorCacheFactory::class, STATIC_BLOCK)
-cacheInterface= AutomaticCacheInterfaceFactory.getInstance(ColorCacheableFactory(), CacheTypeFactory.getInstance()!!.CACHE, CachePolicyFactory.getInstance()!!.THIRTY_MINUTES_TEN_THOUSAND_MAX)
+ColorCacheFactory.cacheInterface= AutomaticCacheInterfaceFactory.getInstance(ColorCacheableFactory(), CacheTypeFactory.getInstance()!!.CACHE, CachePolicyFactory.getInstance()!!.THIRTY_MINUTES_TEN_THOUSAND_MAX)
 logUtil!!.putF(commonStrings!!.END, ColorCacheFactory::class, STATIC_BLOCK)
 } catch(e: Exception)
             {
@@ -71,7 +71,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, ColorCacheFactory::class, STATIC_BLOCK,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cacheInterface
+                        return ColorCacheFactory.cacheInterface
 }
 
 

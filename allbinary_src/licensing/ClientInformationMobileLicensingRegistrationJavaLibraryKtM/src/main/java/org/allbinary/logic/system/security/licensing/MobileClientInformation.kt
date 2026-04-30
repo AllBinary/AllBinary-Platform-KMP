@@ -40,7 +40,7 @@ companion object {
             
     val DESC: String = "Mobile"
 
-    val ANDROID_DESC: String = "Android" +DESC
+    val ANDROID_DESC: String = "Android" +MobileClientInformation.DESC
 
         }
             public constructor (name: String, version: String, specialName: String, shortName: String)                        

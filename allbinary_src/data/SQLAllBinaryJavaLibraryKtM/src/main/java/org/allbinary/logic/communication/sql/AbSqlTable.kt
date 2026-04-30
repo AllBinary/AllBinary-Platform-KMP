@@ -68,7 +68,7 @@ this.tableName= tableName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tableName
+                        return this.tableName
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -93,7 +93,7 @@ var data = data
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tableName +sqlStrings!!.CREATE_RETURN
+                        return this.tableName +sqlStrings!!.CREATE_RETURN
 } catch(e: Exception)
             {
 
@@ -109,7 +109,7 @@ var data = data
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "Failed to Create " +tableName +" table."
+                        return "Failed to Create " +this.tableName +" table."
 }
 
 }

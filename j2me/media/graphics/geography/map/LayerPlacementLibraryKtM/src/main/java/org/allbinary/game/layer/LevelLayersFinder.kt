@@ -33,6 +33,7 @@ import org.allbinary.layer.Layer
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
+import org.allbinary.util.EnumerationUtil
 
 open public class LevelLayersFinder
             : Object
@@ -49,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LevelLayersFinder.instance
 }
 
 
@@ -60,10 +61,12 @@ companion object {
             {
             }            
         
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
+
     open fun get(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var hashtable = hashtable
+    //var hashtable = hashtable
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
@@ -74,17 +77,20 @@ var hashtable = hashtable
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
 
 
-        while(enumeration.hasMoreElements())
+    var layerHashtable: Hashtable<Any, Any>
+
+
+    var integer: Integer
+
+
+    var cachedInteger: Integer
+
+
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-
-    var layerHashtable: Hashtable<Any, Any> = hashtable.get(enumeration.nextElement()!! as Object) as Hashtable<Any, Any>
-
-
-    var integer: Integer = layerHashtable!!.get(Layer.ID as Object) as Integer
-
-
-    var cachedInteger: Integer = smallIntegerSingletonFactory!!.getAt(integer.toInt())!!
-
+layerHashtable= hashtable.get(this.enumerationUtil!!.nextElement(enumeration)!! as Object) as Hashtable<Any, Any>
+integer= layerHashtable!!.get(Layer.ID as Object) as Integer
+cachedInteger= smallIntegerSingletonFactory!!.getAt(integer.toInt())
 
     
                         if(!list.contains(cachedInteger))

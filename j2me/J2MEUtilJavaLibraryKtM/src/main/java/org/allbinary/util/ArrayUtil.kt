@@ -33,7 +33,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ArrayUtil.instance
 }
 
 
@@ -55,7 +55,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return copyOfType(original, newLength, original::class)
+                        return this.copyOfType(original, newLength, original::class)
 }
 
 
@@ -68,7 +68,7 @@ companion object {
 
     var copy: Array<Any?> = arrayOfNulls(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -85,7 +85,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
     var copy: ByteArray = ByteArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -102,7 +102,7 @@ var newLength = newLength
 
     var copy: ShortArray = ShortArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -119,7 +119,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
     var copy: IntArray = IntArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -136,7 +136,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
     var copy: LongArray = LongArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -156,7 +156,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
                                                         CharArray(newLength)
                                                     
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -173,7 +173,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
     var copy: FloatArray = FloatArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -190,7 +190,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
     var copy: DoubleArray = DoubleArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -207,7 +207,7 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
     var copy: BooleanArray = BooleanArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
+System.arraycopy(original, 0, copy, 0, this.mathUtil!!.min(original.size, newLength))
 
 
 
@@ -288,8 +288,8 @@ intArray[rowIndex +x]= temp
 }
 
 
-    open fun toString(twoDimensionalIntArray: Array<IntArray?>)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringFromTwoDimensionaArray(twoDimensionalIntArray: Array<IntArray?>)
+        //nullable = true from not(false or (false and false)) = true
 : String{
     //var twoDimensionalIntArray = twoDimensionalIntArray
 

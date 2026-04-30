@@ -64,7 +64,7 @@ this.setWinStr(this.NORMAL_GAME_OVER_WIN)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameOverStr
+                        return this.gameOverStr
 }
 
 
@@ -83,7 +83,7 @@ this.gameOverStr= gameOverStr
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return winStr
+                        return this.winStr
 }
 
 

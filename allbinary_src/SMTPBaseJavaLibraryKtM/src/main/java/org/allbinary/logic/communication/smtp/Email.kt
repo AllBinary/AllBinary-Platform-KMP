@@ -90,7 +90,7 @@ var textBody = textBody
 var htmlAttachment = htmlAttachment
 var contentBase = contentBase
 this.isDebug= false
-init(from, to, subject, server, textBody, htmlAttachment, contentBase)
+this.init(from, to, subject, server, textBody, htmlAttachment, contentBase)
 }
 
 public constructor (from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String, isDebug: Boolean)
@@ -105,7 +105,7 @@ var htmlAttachment = htmlAttachment
 var contentBase = contentBase
 var isDebug = isDebug
 this.isDebug= isDebug
-init(from, to, subject, server, textBody, htmlAttachment, contentBase)
+this.init(from, to, subject, server, textBody, htmlAttachment, contentBase)
 }
 
 
@@ -155,7 +155,7 @@ mimeBodyParts[1]= MimeBodyPart(internetHeaders, htmlAttachment!!.encodeToByteArr
 
                                     }
                                 
-init(server, null as Authenticator, arrayOf(InternetAddress(from)), arrayOf(InternetAddress(to)), null as Array<InternetAddress?>, null as Array<InternetAddress?>, subject, mimeBodyParts)
+this.init(server, null as Authenticator, arrayOf(InternetAddress(from)), arrayOf(InternetAddress(to)), null as Array<InternetAddress?>, null as Array<InternetAddress?>, subject, mimeBodyParts)
 } catch(e: Exception)
             {
 

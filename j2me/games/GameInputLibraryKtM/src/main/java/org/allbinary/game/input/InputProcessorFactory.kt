@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return InputProcessorFactory.instance
 }
 
 
@@ -61,7 +61,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputProcessor
+                        return this.inputProcessor
 }
 
 

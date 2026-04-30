@@ -51,7 +51,7 @@ open public class AndroidDebug
 {
 this.setStartTime(System.currentTimeMillis())
 Debug.startMethodTracing("trace", bufferSize)
-setRunning(true)
+this.setRunning(true)
 }
 
 
@@ -60,7 +60,7 @@ setRunning(true)
 {
 this.startTime= Long.MAX_VALUE
 Debug.stopMethodTracing()
-setRunning(false)
+this.setRunning(false)
 }
 
 
@@ -90,7 +90,7 @@ this.startTime= startTime
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return startTime
+                        return this.startTime
 }
 
 
@@ -109,7 +109,7 @@ this.running= running
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return running
+                        return this.running
 }
 
 

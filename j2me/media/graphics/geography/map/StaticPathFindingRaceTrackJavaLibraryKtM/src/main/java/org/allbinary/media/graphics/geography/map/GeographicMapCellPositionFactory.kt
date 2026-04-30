@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable
+                        return GeographicMapCellPositionFactory.hashtable
 }
 
 
@@ -82,7 +82,7 @@ companion object {
                                     this.logUtil!!.putF(StringMaker().
                             append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 geographicMapCellPositionFactoryCanBeNull= BasicGeographicMapCellPositionFactory(geographicMapInterface)
-hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactoryCanBeNull)
+GeographicMapCellPositionFactory.hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactoryCanBeNull)
 
 
 

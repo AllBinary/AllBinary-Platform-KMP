@@ -92,7 +92,7 @@ this.currentHeight= this.getDrawHeight() -this.startHeight
 var graphics = graphics
 var x = x
 var y = y
-graphics.drawRegion(this.getImage(), this.getStartX(), this.startHeight, this.getDrawWidth(), this.currentHeight, Sprite.TRANS_NONE, x, y +this.startHeight, anchor)
+graphics.drawRegion(this.getImage(), this.getStartX(), this.startHeight, this.getDrawWidth(), this.currentHeight, Sprite.TRANS_NONE, x, y +this.startHeight, this.anchor)
 }
 
 

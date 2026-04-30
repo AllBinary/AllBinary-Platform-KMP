@@ -73,7 +73,7 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
     //var weaponProperties = weaponProperties
     //var scoreableInterface = scoreableInterface
 
-    var increment: Short = ((this.total -1) /TOTAL_ANGLE).toShort()
+    var increment: Short = ((this.total -1) /this.TOTAL_ANGLE).toShort()
 
 
     var minAngle: Short = (angle -((increment *total) shr 1)).toShort()
@@ -91,7 +91,7 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
                         for (index in 0 until this.total)
 
         {
-weaponLayer= weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), 0, (minAngle +increment).toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
+weaponLayer= this.weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), 0, (minAngle +increment).toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
 allbinaryLayerManager!!.append(weaponLayer)
 next += increment
 }

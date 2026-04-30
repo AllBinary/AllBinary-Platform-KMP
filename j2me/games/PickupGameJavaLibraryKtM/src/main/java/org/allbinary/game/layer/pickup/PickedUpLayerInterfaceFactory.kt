@@ -53,7 +53,7 @@ this.iconLayer= iconLayer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return iconLayer
+                        return this.iconLayer
 }
 
 
@@ -64,7 +64,7 @@ this.iconLayer= iconLayer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return animationInterface
+                        return this.animationInterface
 }
 
 
@@ -75,7 +75,7 @@ this.iconLayer= iconLayer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return pickedUpLayerType
+                        return this.pickedUpLayerType
 }
 
 

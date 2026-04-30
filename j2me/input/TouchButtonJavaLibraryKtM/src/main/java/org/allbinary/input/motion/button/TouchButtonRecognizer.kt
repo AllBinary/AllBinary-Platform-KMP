@@ -203,7 +203,7 @@ var deviceId = deviceId
 
 
     
-                        if(currentlyPressedTouchButtonSingleton!!.contains(touchButtonInput))
+                        if(this.currentlyPressedTouchButtonSingleton!!.contains(touchButtonInput))
                         
                                     {
                                     this.lastPressedTouchButtonInput= BasicTouchInputFactory.getInstance()!!.NONE
@@ -309,12 +309,12 @@ point= rectangle.getPoint()
                                     touchButtonInput= touchButton!!.getTouchButtonInput()
 
     
-                        if(!currentlyPressedTouchButtonSingleton!!.contains(touchButtonInput))
+                        if(!this.currentlyPressedTouchButtonSingleton!!.contains(touchButtonInput))
                         
                                     {
                                     this.releaseHelper!!.release(touchButtonInput, deviceId)
 this.lastPressedTouchButtonInput= touchButtonInput
-currentlyPressedTouchButtonSingleton!!.add(touchButtonInput)
+this.currentlyPressedTouchButtonSingleton!!.add(touchButtonInput)
 
     var gameKeyEvent: GameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
 

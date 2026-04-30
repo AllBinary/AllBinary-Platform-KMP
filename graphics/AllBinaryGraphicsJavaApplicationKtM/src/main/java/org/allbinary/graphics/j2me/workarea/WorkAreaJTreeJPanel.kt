@@ -55,10 +55,10 @@ open public class WorkAreaJTreeJPanel : javax.swing.JPanel {
     private var highlightedBasicArrayList: BasicArrayList
 public constructor (workAreaName: String){
 var workAreaName = workAreaName
-initComponents()
+this.initComponents()
 this.rootTreeNode= DefaultMutableTreeNode(workAreaName)
 this.workAreaPropertiesJPanel!!.removeAll()
-updateTree()
+this.updateTree()
 this.highlightedBasicArrayList= BasicArrayListD()
 }
 
@@ -417,7 +417,7 @@ itemJPopupMenuPopupMenuWillBecomeVisible(evt)
                                 }
                             )
 this.deleteJMenuItem!!.setText("Delete")
-deleteJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.deleteJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -431,7 +431,7 @@ deleteJMenuItemMousePressed(evt)
                             )
 this.itemJPopupMenu!!.add(this.deleteJMenuItem)
 this.copyJMenuItem!!.setText("Copy")
-copyJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.copyJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -445,7 +445,7 @@ copyJMenuItemMousePressed(evt)
                             )
 this.itemJPopupMenu!!.add(this.copyJMenuItem)
 this.rotateJMenuItem!!.setText("Rotate 45*")
-rotateJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.rotateJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -459,7 +459,7 @@ rotateJMenuItemMousePressed(evt)
                             )
 this.itemJPopupMenu!!.add(this.rotateJMenuItem)
 setLayout(java.awt.GridLayout(1, 1))
-workAreaPropertiesJPanel!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.workAreaPropertiesJPanel!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)

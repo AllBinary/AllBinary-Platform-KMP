@@ -132,7 +132,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 this.writeOverOriginalJCheckBox= javax.swing.JCheckBox()
 this.widthReductionTextField= javax.swing.JTextField()
 this.jLabel5= javax.swing.JLabel()
-jPanel1= object: javax.swing.JPanel()
+this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
     open override fun paint(graphics: Graphics)
@@ -199,13 +199,13 @@ animationStringArray[index -1]= index.toString()
 this.totalAnimationsJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(animationStringArray))
 this.jLabel3= javax.swing.JLabel()
 this.spriteTypeJComboBox= javax.swing.JComboBox<>()
-spriteTypeJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.DIRECTIONAL_ANIMATIONS,org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.HORIZONTAL_ANIMATIONS,org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.HORIZONTAL_SPRITE)))
+this.spriteTypeJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.DIRECTIONAL_ANIMATIONS,org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.HORIZONTAL_ANIMATIONS,org.allbinary.media.image.SpriteSplitterUtil.getInstance()!!.HORIZONTAL_SPRITE)))
 jLabel7= javax.swing.JLabel()
 this.increaseWidthTextField= javax.swing.JTextField()
 this.jLabel8= javax.swing.JLabel()
 this.increaseHeightTextField= javax.swing.JTextField()
 this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
-writeOverOriginalJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.writeOverOriginalJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -218,7 +218,7 @@ writeOverOriginalJCheckBoxActionPerformed(evt)
                                 }
                             )
 this.widthReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
-widthReductionTextField!!.addActionListener(object: java.awt.event.ActionListener()
+this.widthReductionTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -241,7 +241,7 @@ jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(javax.swing
 this.jLabel6!!.setText("Less Height:")
 this.heightReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 this.generateJButton!!.setText("Generate")
-generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -255,7 +255,7 @@ generateJButtonActionPerformed(evt)
                             )
 this.jLabel1!!.setText("Row Total:")
 this.totalFramesJComboBox!!.setSelectedIndex(1)
-totalFramesJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.totalFramesJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -269,7 +269,7 @@ totalFramesJComboBoxActionPerformed(evt)
                             )
 this.jLabel2!!.setText("Column Total :")
 this.totalAnimationsJComboBox!!.setSelectedIndex(3)
-totalAnimationsJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.totalAnimationsJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -282,7 +282,7 @@ totalAnimationsJComboBoxActionPerformed(evt)
                                 }
                             )
 this.jLabel3!!.setText("Type:")
-spriteTypeJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.spriteTypeJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -302,7 +302,7 @@ jPanel2Layout!!.setHorizontalGroup(jPanel2Layout!!.createParallelGroup(javax.swi
 jPanel2Layout!!.setVerticalGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(jPanel2Layout!!.createSequentialGroup()!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.addGroup(jPanel2Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel1)!!.addComponent(totalFramesJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(jLabel2)!!.addComponent(totalAnimationsJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(jLabel3)!!.addComponent(spriteTypeJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
 this.jLabel7!!.setText("More Width:")
 this.increaseWidthTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
-increaseWidthTextField!!.addActionListener(object: java.awt.event.ActionListener()
+this.increaseWidthTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -425,7 +425,7 @@ var evt = evt
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 

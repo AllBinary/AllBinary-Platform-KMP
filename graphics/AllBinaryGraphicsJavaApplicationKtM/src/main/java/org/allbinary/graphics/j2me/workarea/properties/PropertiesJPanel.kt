@@ -30,7 +30,7 @@ import javax.swing
 open public class PropertiesJPanel : javax.swing.JPanel {
         
 public constructor (){
-initComponents()
+this.initComponents()
 }
 
 

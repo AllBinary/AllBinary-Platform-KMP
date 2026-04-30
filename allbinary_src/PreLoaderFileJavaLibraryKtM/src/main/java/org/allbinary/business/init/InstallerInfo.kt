@@ -81,7 +81,7 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var FILEABPATH: AbPath = AbPath(URLGLOBALS.getMainPath() +PACKAGE, INITFILENAME)
+    var FILEABPATH: AbPath = AbPath(URLGLOBALS.getMainPath() +InstallerInfo.PACKAGE, InstallerInfo.INITFILENAME)
 
 
         try {
@@ -102,7 +102,7 @@ newFile!!.createNewFile()
 
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedUserName))
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedPassword))
-hasRead= false
+InstallerInfo.hasRead= false
 } catch(e: Exception)
             {
 
@@ -130,7 +130,7 @@ hasRead= false
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var FILEABPATH: AbPath = AbPath(URLGLOBALS.getMainPath() +PACKAGE, INITFILENAME)
+    var FILEABPATH: AbPath = AbPath(URLGLOBALS.getMainPath() +InstallerInfo.PACKAGE, InstallerInfo.INITFILENAME)
 
 
         try {
@@ -214,10 +214,10 @@ InstallerInfo.password= password
 {
 
     
-                        if(!hasRead)
+                        if(!InstallerInfo.hasRead)
                         
                                     {
-                                    hasRead= true
+                                    InstallerInfo.hasRead= true
 this.read()
 
     

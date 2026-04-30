@@ -62,7 +62,7 @@ this.setAvoidVector(Vector())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return avoidVector
+                        return this.avoidVector
 }
 
 
@@ -181,7 +181,7 @@ this.avoidVector= avoidVector
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxNonMatchingPixelDeltas
+                        return this.maxNonMatchingPixelDeltas
 }
 
 

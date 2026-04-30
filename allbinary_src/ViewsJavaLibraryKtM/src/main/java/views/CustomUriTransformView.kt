@@ -80,7 +80,7 @@ this.setTransformDocumentInterface(TransformDocumentFactory.getInstance())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NO_TYPE
+                        return this.NO_TYPE
 }
 
 
@@ -91,7 +91,7 @@ this.setTransformDocumentInterface(TransformDocumentFactory.getInstance())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return transformInfoInterface
+                        return this.transformInfoInterface
 }
 
 

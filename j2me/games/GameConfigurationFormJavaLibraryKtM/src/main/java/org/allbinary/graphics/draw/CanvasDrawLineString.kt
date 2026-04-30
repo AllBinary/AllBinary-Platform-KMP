@@ -62,7 +62,7 @@ var line = line
 
     var myFont: MyFont = MyFont.getInstance()!!
 
-drawStringUtil!!.drawCenterString(graphics, string, 0, string.length, x, y +(line *myFont!!.DEFAULT_CHAR_HEIGHT))
+this.drawStringUtil!!.drawCenterString(graphics, string, 0, string.length, x, this.y +(line *myFont!!.DEFAULT_CHAR_HEIGHT))
 }
 
 

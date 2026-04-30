@@ -30,7 +30,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return GameAdStateFactory.instance
 }
 
 
@@ -43,7 +43,7 @@ companion object {
         
     private val gameAdStateArray: Array<GameAdState?> = arrayOf(GameAdState(AppNameLicensingAdConfiguration()))
 
-    private var gameAdState: GameAdState = gameAdStateArray[0]!!
+    private var gameAdState: GameAdState = this.gameAdStateArray[0]!!
 
     open fun getCurrentInstance()
         //nullable = true from not(false or (false and true)) = true
@@ -62,12 +62,12 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : GameAdState{
     //var softwareInformation = softwareInformation
-this.gameAdState= gameAdStateArray[0]!!
+this.gameAdState= this.gameAdStateArray[0]!!
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameAdStateArray[0]!!
+                        return this.gameAdStateArray[0]!!
 }
 
 

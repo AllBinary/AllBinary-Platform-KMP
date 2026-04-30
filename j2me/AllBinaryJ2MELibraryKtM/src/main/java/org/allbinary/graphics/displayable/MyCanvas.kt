@@ -65,8 +65,8 @@ open public class MyCanvas : Canvas
 public constructor (name: String, childNameList: BasicArrayList){
     //var name = name
     //var childNameList = childNameList
-this.logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
-this.displayInfoSingleton!!.update(this, canvasStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, this.commonStrings!!.CONSTRUCTOR)
+this.displayInfoSingleton!!.update(this, this.canvasStrings!!.CONSTRUCTOR)
 this.name= name
 this.childNameList= childNameList
 this.commandStack= Stack()
@@ -78,7 +78,7 @@ this.commandStack= Stack()
 {
 var mode = mode
 super.setFullScreenMode(mode)
-this.displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
+this.displayInfoSingleton!!.update(this, this.canvasStrings!!.SET_FULL_SCREEN_MODE)
 }
 
 
@@ -87,7 +87,7 @@ this.displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
 {
 var w = w
 var h = h
-this.displayInfoSingleton!!.update(this, canvasStrings!!.SIZE_CHANGED)
+this.displayInfoSingleton!!.update(this, this.canvasStrings!!.SIZE_CHANGED)
 }
 
 
@@ -208,7 +208,7 @@ this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
     open fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(this.commonStrings!!.START, this, canvasStrings!!.PAUSE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.PAUSE)
 this.removePauseCommand()
 this.addCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.setPaused(true)
@@ -219,7 +219,7 @@ this.setPaused(true)
     open fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(this.commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.UN_PAUSE)
 this.removeCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.addCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 this.setPaused(false)

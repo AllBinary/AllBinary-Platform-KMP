@@ -64,7 +64,7 @@ public constructor ()
 
                             //For kotlin this is before the body of the constructor.
                     
-initComponents()
+this.initComponents()
 this.getJFileChooser1()!!.setMultiSelectionEnabled(true)
 }
 
@@ -77,7 +77,7 @@ var modal = modal
 
                             //For kotlin this is before the body of the constructor.
                     
-initComponents()
+this.initComponents()
 this.getJFileChooser1()!!.setMultiSelectionEnabled(true)
 }
 
@@ -95,7 +95,7 @@ this.finishedListenerInterface= finishedListenerInterface
 {
 this.jFileChooser1= javax.swing.JFileChooser()
 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
-jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
+this.jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -163,7 +163,7 @@ this.logUtil!!.putF("Starting Action Command: " +evt.getActionCommand(), this, "
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return jFileChooser1
+                        return this.jFileChooser1
 }
 
 

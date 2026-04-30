@@ -49,7 +49,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var listener = listener
-listenerList!!.add(listener::class as Class<*>, listener as java.util.EventListener)
+MyGraphicItemEventService.listenerList!!.add(listener::class as Class<*>, listener as java.util.EventListener)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -58,7 +58,7 @@ listenerList!!.add(listener::class as Class<*>, listener as java.util.EventListe
         //nullable = true from not(false or (false and false)) = true
 {
 var listener = listener
-listenerList!!.remove(listener::class as Class<*>, listener as java.util.EventListener)
+MyGraphicItemEventService.listenerList!!.remove(listener::class as Class<*>, listener as java.util.EventListener)
 }
 
 
@@ -86,7 +86,7 @@ var evt = evt
                                     {
                                     
     
-                        if(evt.getCommand()!!.compareTo(SELECT) == 0)
+                        if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.SELECT) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyGraphicItemEventListener
@@ -97,7 +97,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(DESELECT) == 0)
+                        if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.DESELECT) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyGraphicItemEventListener
@@ -108,7 +108,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(DELETE) == 0)
+                        if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.DELETE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyGraphicItemEventListener
@@ -119,7 +119,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(DUPLICATE) == 0)
+                        if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.DUPLICATE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyGraphicItemEventListener
@@ -130,7 +130,7 @@ var evt = evt
                                 
                              else 
     
-                        if(evt.getCommand()!!.compareTo(ROTATE) == 0)
+                        if(evt.getCommand()!!.compareTo(MyGraphicItemEventService.ROTATE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyGraphicItemEventListener

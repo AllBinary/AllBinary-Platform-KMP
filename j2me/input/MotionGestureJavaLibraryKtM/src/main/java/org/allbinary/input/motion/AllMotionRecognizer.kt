@@ -51,7 +51,7 @@ companion object {
 
     private val id: Int
 public constructor (){
-this.id= index++
+this.id= AllMotionRecognizer.index++
 this.motionGestureRecognizer= MotionGestureRecognizer(this.id)
 this.touchButtonRecognizer= TouchButtonRecognizer()
 }
@@ -209,7 +209,7 @@ this.motionGestureRecognizer!!.processMovedMotionEvent(point, deviceId, modifier
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return motionGestureRecognizer
+                        return this.motionGestureRecognizer
 }
 
 

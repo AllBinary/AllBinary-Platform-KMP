@@ -82,7 +82,7 @@ this.basicColor= basicColor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicColor
+                        return this.basicColor
 }
 
 

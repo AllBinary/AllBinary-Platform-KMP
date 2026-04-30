@@ -43,7 +43,7 @@ var direction = direction
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directionArray[direction]!!
+                        return Direction.directionArray[direction]!!
 }
 
 
@@ -100,7 +100,7 @@ directionArray[value]= this
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return otherName
+                        return this.otherName
 }
 
 
@@ -111,7 +111,7 @@ directionArray[value]= this
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 

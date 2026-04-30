@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return OpenGLCapabilities.instance
 }
 
 
@@ -100,7 +100,7 @@ var gl = gl
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return glVersion
+                        return this.glVersion
 }
 
 

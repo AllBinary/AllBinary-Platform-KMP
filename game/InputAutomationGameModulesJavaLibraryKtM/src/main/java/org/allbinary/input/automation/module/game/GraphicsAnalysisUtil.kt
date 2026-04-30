@@ -71,7 +71,7 @@ var y = y
 
 
     
-                        if(color.getRed() < MAX && color.getGreen() < MAX && color.getBlue() < MAX)
+                        if(color.getRed() < GraphicsAnalysisUtil.MAX && color.getGreen() < GraphicsAnalysisUtil.MAX && color.getBlue() < GraphicsAnalysisUtil.MAX)
                         
                                     {
                                     

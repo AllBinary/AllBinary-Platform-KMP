@@ -76,14 +76,14 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return INPUTAUTOMATION_JFRAME
+                        return InputAutomationJFrame.INPUTAUTOMATION_JFRAME
 }
 
 
     open fun destroy()
         //nullable = true from not(false or (false and true)) = true
 {
-INPUTAUTOMATION_JFRAME.setVisible(false)
+InputAutomationJFrame.INPUTAUTOMATION_JFRAME.setVisible(false)
 }
 
 
@@ -169,7 +169,7 @@ InputAutomationJFrame.create(
 
     private val uri: URI = URI("http://geocities.com/allbinary/")
 public constructor (){
-initComponents()
+this.initComponents()
 
     var url: URL = this::class.getResource("/help/Help.hs")!!
 
@@ -246,7 +246,7 @@ this.noModuleSelectedJDialog!!.getContentPane()!!.setLayout(noModuleSelectedJDia
 noModuleSelectedJDialogLayout!!.setHorizontalGroup(noModuleSelectedJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(noModuleSelectedJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(noModuleSelectedJLabel)!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
 noModuleSelectedJDialogLayout!!.setVerticalGroup(noModuleSelectedJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(noModuleSelectedJLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE)
-setMinimumSize(java.awt.Dimension(325, 215))
+this.setMinimumSize(java.awt.Dimension(325, 215))
 setResizable(false)
 addWindowFocusListener(object: java.awt.event.WindowFocusListener()
                                 {
@@ -288,7 +288,7 @@ formFocusLost(evt)
                             )
 this.gameRobotJTabbedPane!!.setMinimumSize(java.awt.Dimension(320, 200))
 this.inputAutomationModuleJList!!.setMinimumSize(java.awt.Dimension(200, 0))
-inputAutomationModuleJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
+this.inputAutomationModuleJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
     open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
@@ -318,7 +318,7 @@ this.gameRobotJTabbedPane!!.addTab("Configuration", automationModuleConfiguratio
 this.processingJMenu!!.setText("Processing")
 this.processingJMenu!!.setToolTipText("Set module processing state")
 this.startJMenuItem!!.setText(this.commonStrings!!.START)
-startJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.startJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -332,7 +332,7 @@ startJMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.startJMenuItem)
 this.stopJMenuItem!!.setText("Stop")
-stopJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.stopJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -347,7 +347,7 @@ stopJMenuItemActionPerformed(evt)
 this.processingJMenu!!.add(this.stopJMenuItem)
 this.mainJMenuBar!!.add(this.processingJMenu)
 this.optionsJMenu!!.setText("Options")
-optionsJMenu!!.addActionListener(object: java.awt.event.ActionListener()
+this.optionsJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -362,7 +362,7 @@ optionsJMenuActionPerformed(evt)
 this.stopOnFocusJCheckBoxMenuItem!!.setSelected(true)
 this.stopOnFocusJCheckBoxMenuItem!!.setEnabled(false)
 this.stopOnFocusJCheckBoxMenuItem!!.setLabel("Stop Module On Focus")
-stopOnFocusJCheckBoxMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.stopOnFocusJCheckBoxMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -378,7 +378,7 @@ this.optionsJMenu!!.add(this.stopOnFocusJCheckBoxMenuItem)
 this.mainJMenuBar!!.add(this.optionsJMenu)
 this.toolsJMenu!!.setText("Help")
 this.helpJMenuItem!!.setText("Help")
-helpJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.helpJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -392,7 +392,7 @@ helpJMenuItemActionPerformed(evt)
                             )
 this.toolsJMenu!!.add(this.helpJMenuItem)
 this.updatesJMenuItem!!.setText("Updates")
-updatesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.updatesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -406,7 +406,7 @@ updatesJMenuItemActionPerformed(evt)
                             )
 this.toolsJMenu!!.add(this.updatesJMenuItem)
 this.subscriptionJMenuItem!!.setText("Subscription")
-subscriptionJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.subscriptionJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -420,7 +420,7 @@ subscriptionJMenuItemActionPerformed(evt)
                             )
 this.toolsJMenu!!.add(this.subscriptionJMenuItem)
 this.modulesJMenuItem!!.setText("Module Manager")
-modulesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.modulesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -434,7 +434,7 @@ modulesJMenuItemActionPerformed(evt)
                             )
 this.toolsJMenu!!.add(this.modulesJMenuItem)
 this.aboutJMenuItem!!.setText("About")
-aboutJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.aboutJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -714,7 +714,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "startJMenuItemActionPe
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return automationModuleConfigurationJPanel
+                        return this.automationModuleConfigurationJPanel
 }
 
 

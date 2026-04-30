@@ -73,7 +73,7 @@ public constructor ()
 
 
     
-                        if(symbolicName!!.compareTo(DESKTOP_SYMBOLIC_NAME) == 0)
+                        if(symbolicName!!.compareTo(DesktopBundle.DESKTOP_SYMBOLIC_NAME) == 0)
                         
                                     {
                                     this.bundle= bundle

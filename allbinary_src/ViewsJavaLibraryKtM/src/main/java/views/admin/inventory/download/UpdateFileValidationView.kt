@@ -709,7 +709,7 @@ var size = size
 
 stringBuffer!!.append("File name is not valid: ")
 stringBuffer!!.append(fileName)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -741,7 +741,7 @@ stringBuffer!!.append("File Size To Large: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
 stringBuffer!!.appendint(fileData!!.MAXDOWNLOADABLEFILESIZE)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -769,7 +769,7 @@ stringBuffer!!.append("File Size To Small: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
 stringBuffer!!.appendint(fileData!!.MINDOWNLOADABLEFILESIZE)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 

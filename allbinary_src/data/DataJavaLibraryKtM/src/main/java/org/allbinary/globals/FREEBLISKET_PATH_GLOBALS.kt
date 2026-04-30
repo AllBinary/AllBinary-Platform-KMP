@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return FREEBLISKET_PATH_GLOBALS.instance
 }
 
 
@@ -55,9 +55,9 @@ companion object {
 
     val TEMPLATEPATH: String = "template" +AbPathData.getInstance()!!.SEPARATOR
 
-    val STYLEPATH: String = TEMPLATEPATH +"style" +AbPathData.getInstance()!!.SEPARATOR
+    val STYLEPATH: String = this.TEMPLATEPATH +"style" +AbPathData.getInstance()!!.SEPARATOR
 
-    val THEMEPATH: String = STYLEPATH +"theme" +AbPathData.getInstance()!!.SEPARATOR
+    val THEMEPATH: String = this.STYLEPATH +"theme" +AbPathData.getInstance()!!.SEPARATOR
 
     val DBINITPATH: String = PATH_GLOBALS.getInstance()!!.INIT_PATH +"db" +AbPathData.getInstance()!!.SEPARATOR
 

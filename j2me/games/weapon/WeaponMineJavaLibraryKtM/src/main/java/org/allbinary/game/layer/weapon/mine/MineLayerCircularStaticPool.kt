@@ -43,7 +43,7 @@ companion object {
 {
 var viewPositionFactoryInterface = viewPositionFactoryInterface
 MineCountedPickedUpLayerInterfaceFactory.init()
-WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInterface), 20)
+MineLayerCircularStaticPool.WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInterface), 20)
 }
 
 
@@ -54,7 +54,7 @@ WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInter
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return WEAPON_LAYER_CIRCULAR_STATIC_POOL
+                        return MineLayerCircularStaticPool.WEAPON_LAYER_CIRCULAR_STATIC_POOL
 }
 
 

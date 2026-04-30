@@ -41,7 +41,7 @@ companion object {
 
     private val DESTROY: String = "_destroy"
 
-    private val ICON_BUILD: String = "_icon" +BUILD
+    private val ICON_BUILD: String = "_icon" +UnitGameResources.BUILD
 
         }
             

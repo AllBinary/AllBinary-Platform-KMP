@@ -82,7 +82,7 @@ var name = name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return classes.get(name) as Class<*>
+                        return AbeClassLoader.classes.get(name) as Class<*>
 }
 
 
@@ -193,7 +193,7 @@ myClass= defineClass(name, classBytes, 0, classBytes!!.size)
 
                                     }
                                 
-classes.put(name, myClass::class.java)
+AbeClassLoader.classes.put(name, myClass::class.java)
 
                                     }
                                 
@@ -420,7 +420,7 @@ myClass= defineClass(name, classBytes, 0, classBytes!!.size)
 
                                     }
                                 
-classes.put(name, myClass::class.java)
+AbeClassLoader.classes.put(name, myClass::class.java)
 
                                     }
                                 

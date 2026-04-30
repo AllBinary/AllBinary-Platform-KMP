@@ -29,7 +29,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return TimeTypeUtil.instance
 }
 
 
@@ -79,7 +79,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return if(isNight()) {
+                        return if(this.isNight()) {
                             
                             this.NIGHT
                         
@@ -129,7 +129,7 @@ var timeInMillis = timeInMillis
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return if(isNight(timeInMillis)) {
+                        return if(this.isNight(timeInMillis)) {
                             
                             this.NIGHT
                         

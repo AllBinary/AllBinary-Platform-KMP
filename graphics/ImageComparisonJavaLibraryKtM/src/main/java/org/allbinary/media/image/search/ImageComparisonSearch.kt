@@ -192,7 +192,7 @@ this.nonMatchingPixelVector!!.add(pixel)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return bufferedImages
+                        return this.bufferedImages
 }
 
 
@@ -211,7 +211,7 @@ this.bufferedImages= bufferedImages
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tolerance
+                        return this.tolerance
 }
 
 

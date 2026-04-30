@@ -40,7 +40,7 @@ companion object {
 public constructor ()
             : super()
         {
-this.id= index++
+this.id= AllMotionRecognizer.index++
 }
 
 
@@ -99,7 +99,7 @@ var modifiers = modifiers
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return id
+                        return this.id
 }
 
 

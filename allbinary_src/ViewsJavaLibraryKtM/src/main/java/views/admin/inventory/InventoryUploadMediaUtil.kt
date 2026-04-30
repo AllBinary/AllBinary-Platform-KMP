@@ -218,9 +218,9 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "saveFiles()")
 
                                     }
                                 
-mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getSmallImage(), fullPath, mediaData, this.SMALLWIDTH, this.SMALLHEIGHT)
-mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getMediumImage(), fullPath, mediaData, this.MEDIUMWIDTH, this.MEDIUMHEIGHT)
-mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getLargeImage(), fullPath, mediaData, this.LARGEWIDTH, this.LARGEHEIGHT)
+this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getSmallImage(), fullPath, mediaData, this.SMALLWIDTH, this.SMALLHEIGHT)
+this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getMediumImage(), fullPath, mediaData, this.MEDIUMWIDTH, this.MEDIUMHEIGHT)
+this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getLargeImage(), fullPath, mediaData, this.LARGEWIDTH, this.LARGEHEIGHT)
 
                                     }
                                 
@@ -258,9 +258,9 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "saveFiles()")
 
                                     }
                                 
-mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getSmallImage(), fullPath, defaultMediaData, this.SMALLWIDTH, this.SMALLHEIGHT)
-mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getMediumImage(), fullPath, defaultMediaData, this.MEDIUMWIDTH, this.MEDIUMHEIGHT)
-mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getLargeImage(), fullPath, defaultMediaData, this.LARGEWIDTH, this.LARGEHEIGHT)
+this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getSmallImage(), fullPath, defaultMediaData, this.SMALLWIDTH, this.SMALLHEIGHT)
+this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getMediumImage(), fullPath, defaultMediaData, this.MEDIUMWIDTH, this.MEDIUMHEIGHT)
+this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getLargeImage(), fullPath, defaultMediaData, this.LARGEWIDTH, this.LARGEHEIGHT)
 
                                     }
                                 

@@ -52,11 +52,11 @@ open public class MotionGestureRecognizer
 
     private val origin: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
 
-    private var previous: GPoint = origin
+    private var previous: GPoint = this.origin
 
-    private var intermediate: GPoint = origin
+    private var intermediate: GPoint = this.origin
 
-    private val line: Line = Line(origin, origin)
+    private val line: Line = Line(this.origin, this.origin)
 
     private val motionGesturesHandler: BasicMotionGesturesHandler
 
@@ -167,7 +167,7 @@ this.line.setP2(current)
 
 
     
-                        if(this.j2seMath!!.abs(this.line.getDeltaX().toFloat()) < minimumMotionGesture && j2seMath!!.abs(line.getDeltaY().toFloat()) < minimumMotionGesture)
+                        if(this.j2seMath!!.abs(this.line.getDeltaX().toFloat()) < minimumMotionGesture && this.j2seMath!!.abs(line.getDeltaY().toFloat()) < minimumMotionGesture)
                         
                                     {
                                     this.intermediate= current
@@ -347,7 +347,7 @@ this.movedMotionGesturesHandler!!.fireEvent(event)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return motionGesturesHandler
+                        return this.motionGesturesHandler
 }
 
 

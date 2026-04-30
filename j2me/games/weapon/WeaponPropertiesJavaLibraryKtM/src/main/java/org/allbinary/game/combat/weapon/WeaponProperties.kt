@@ -64,7 +64,7 @@ var damage = damage
 var dissipation = dissipation
 
     
-                        if(speed < MAX && speed != 0L && !messageSent)
+                        if(speed < this.MAX && speed != 0L && !WeaponProperties.messageSent)
                         
                                     {
                                     
@@ -75,7 +75,7 @@ var dissipation = dissipation
 
 PreLogUtil.put(StringMaker().
                             append(MESSAGE)!!.appendlong(speed)!!.toString(), this, commonStrings!!.CONSTRUCTOR)
-messageSent= true
+WeaponProperties.messageSent= true
 
                                     }
                                 
@@ -86,7 +86,7 @@ this.setDissipation(dissipation)
 this.setSpeed(BasicDecimal(speed))
 
     
-                        if(dissipation != ZERO)
+                        if(dissipation != this.ZERO)
                         
                                     {
                                     
@@ -120,7 +120,7 @@ this.reloadTime= reloadTime
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return reloadTime
+                        return this.reloadTime
 }
 
 
@@ -139,7 +139,7 @@ this.targetingTime= targetingTime
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return targetingTime
+                        return this.targetingTime
 }
 
 
@@ -150,7 +150,7 @@ this.targetingTime= targetingTime
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return speed
+                        return this.speed
 }
 
 

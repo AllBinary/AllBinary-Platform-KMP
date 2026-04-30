@@ -133,7 +133,7 @@ this.logUtil!!.putF(stringMaker!!.appendint(cost)!!.append("<=")!!.appendint(cap
 capital.removeMoney(cost)
 rtsInterface!!.upgrade()
 technologyRTSInterfaceImageItem!!.update()
-TechEventHandler.getInstance()!!.fireEvent(EVENT)
+TechEventHandler.getInstance()!!.fireEvent(this.EVENT)
 
                                     }
                                 
@@ -144,7 +144,7 @@ TechEventHandler.getInstance()!!.fireEvent(EVENT)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(noMoneyGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.noMoneyGameNotificationEvent)
 
                                     }
                                 

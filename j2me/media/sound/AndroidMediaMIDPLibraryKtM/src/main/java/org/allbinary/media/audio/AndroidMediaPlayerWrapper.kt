@@ -316,7 +316,7 @@ this.mediaPlayer= mediaPlayer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mediaPlayer
+                        return this.mediaPlayer
 }
 
 

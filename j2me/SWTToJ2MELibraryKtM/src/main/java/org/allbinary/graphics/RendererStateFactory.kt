@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return RendererStateFactory.instance
 }
 
 
@@ -71,7 +71,7 @@ this.loaded= loaded
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return loaded
+                        return this.loaded
 }
 
 
@@ -90,7 +90,7 @@ this.surfaceChanged= initialized
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return surfaceChanged
+                        return this.surfaceChanged
 }
 
 

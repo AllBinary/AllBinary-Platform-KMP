@@ -65,7 +65,7 @@ var imageProcessorInput = imageProcessorInput
 
                             //For kotlin this is before the body of the constructor.
                     
-initComponents()
+this.initComponents()
 this.imageProcessorInput= imageProcessorInput
 }
 
@@ -152,7 +152,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jPanel1= object: javax.swing.JPanel()
+this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
     open override fun paint(graphics: Graphics)
@@ -195,7 +195,7 @@ jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(org.jdeskto
 this.totalFramesJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(CommonPhoneStrings.getInstance()!!.FOUR,CommonPhoneStrings.getInstance()!!.NINE,"18","20","36")))
 this.jLabel1!!.setText("Total Frames:")
 this.generateJButton!!.setText("Generate")
-generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -208,7 +208,7 @@ generateJButtonActionPerformed(evt)
                                 }
                             )
 this.totalAngleJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("360","90")))
-totalAngleJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.totalAngleJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -286,7 +286,7 @@ var evt = evt
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 

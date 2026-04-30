@@ -70,7 +70,7 @@ public constructor (poolName: String, numThreads: Int, priority: Int)
 }
 
 
-    private var currentPriorityRunnable: PriorityRunnable = threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
+    private var currentPriorityRunnable: PriorityRunnable = this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
                 @Throws(Exception::class)
             
@@ -276,7 +276,7 @@ this.taskQueue!!.addAt(index, task)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NULL_RUNNABLE
+                        return this.NULL_RUNNABLE
 
                                     }
                                 

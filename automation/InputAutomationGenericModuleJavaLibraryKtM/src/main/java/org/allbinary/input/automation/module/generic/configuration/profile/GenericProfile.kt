@@ -129,7 +129,7 @@ this.vector.remove(genericProfileDataWorkerType)
 : Node{
 var document = document
 
-    var node: Node = ModDomHelper.createTextNode(document, GenericProfileData.NAME, name)!!
+    var node: Node = ModDomHelper.createTextNode(document, GenericProfileData.NAME, this.name)!!
 
 
     var size: Int = this.vector.size!!
@@ -162,7 +162,7 @@ node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -181,7 +181,7 @@ this.name= name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfileActions
+                        return this.genericProfileActions
 }
 
 

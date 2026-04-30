@@ -58,9 +58,9 @@ var pageContext = pageContext
                                     {
                                     this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
 this.currentLocation= Replace(CommonSeps.getInstance()!!.SPACE, "%20").
-                            all(storeFrontInterface!!.getCurrentHostName() +storeFrontInterface!!.getCurrentHostNamePath())
+                            all(this.storeFrontInterface!!.getCurrentHostName() +this.storeFrontInterface!!.getCurrentHostNamePath())
 this.currentHomeLocation= Replace(CommonSeps.getInstance()!!.SPACE, "%20").
-                            all(storeFrontInterface!!.getCurrentHomeHostName() +storeFrontInterface!!.getCurrentHomeHostNamePath())
+                            all(this.storeFrontInterface!!.getCurrentHomeHostName() +this.storeFrontInterface!!.getCurrentHomeHostNamePath())
 
                                     }
                                 

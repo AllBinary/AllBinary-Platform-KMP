@@ -148,7 +148,7 @@ this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAtXY(
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return previousGeographicMapCellPosition
+                        return this.previousGeographicMapCellPosition
 }
 
 
@@ -159,7 +159,7 @@ this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAtXY(
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentGeographicMapCellPosition
+                        return this.currentGeographicMapCellPosition
 }
 
 

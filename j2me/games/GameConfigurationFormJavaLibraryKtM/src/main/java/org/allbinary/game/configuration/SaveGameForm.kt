@@ -64,7 +64,7 @@ FORM= SaveGameForm(commandListener, title, backgrounBasicColor, foregroundBasicC
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return FORM
+                        return SaveGameForm.FORM
 }
 
 

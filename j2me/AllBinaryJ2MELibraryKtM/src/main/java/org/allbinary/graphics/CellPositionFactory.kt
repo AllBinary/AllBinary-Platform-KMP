@@ -131,7 +131,7 @@ this.logUtil!!.put(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NONE
+                        return this.NONE
 }
 
 }
@@ -172,7 +172,7 @@ this.cellPositionArray[i_column]!![i_row]= cellPositionCanBeNull
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return columns
+                        return this.columns
 }
 
 
@@ -183,7 +183,7 @@ this.cellPositionArray[i_column]!![i_row]= cellPositionCanBeNull
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rows
+                        return this.rows
 }
 
 

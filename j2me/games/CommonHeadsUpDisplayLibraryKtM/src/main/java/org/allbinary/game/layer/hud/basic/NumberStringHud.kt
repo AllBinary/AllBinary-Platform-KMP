@@ -168,7 +168,7 @@ this.set(this.value -value)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paintDX(graphics, PREPEND_STRING, 0, PREPEND_STRING.size, this.valueString, 0, this.valueTotalDigits, offset)
+super.paintDX(graphics, this.PREPEND_STRING, 0, this.PREPEND_STRING.size, this.valueString, 0, this.valueTotalDigits, this.offset)
 }
 
 

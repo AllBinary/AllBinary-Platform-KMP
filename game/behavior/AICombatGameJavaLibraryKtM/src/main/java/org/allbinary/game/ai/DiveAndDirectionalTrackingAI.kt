@@ -490,7 +490,7 @@ this.aiVistor!!.visit(this)
                                     {
                                     
     
-                        if(this.getOwnerLayerInterface()!!.getYP() > this.lastTrackingLayerInterface!!.getYP() +MIN_DISTANCE)
+                        if(this.getOwnerLayerInterface()!!.getYP() > this.lastTrackingLayerInterface!!.getYP() +this.MIN_DISTANCE)
                         
                                     {
                                     
@@ -520,7 +520,7 @@ this.aiVistor!!.visit(this)
                                     {
                                     
     
-                        if(this.getOwnerLayerInterface()!!.getYP() < this.lastTrackingLayerInterface!!.getYP() +MIN_DISTANCE)
+                        if(this.getOwnerLayerInterface()!!.getYP() < this.lastTrackingLayerInterface!!.getYP() +this.MIN_DISTANCE)
                         
                                     {
                                     
@@ -550,7 +550,7 @@ this.aiVistor!!.visit(this)
                                     {
                                     
     
-                        if(this.getOwnerLayerInterface()!!.getXP() > this.lastTrackingLayerInterface!!.getXP() +MIN_DISTANCE)
+                        if(this.getOwnerLayerInterface()!!.getXP() > this.lastTrackingLayerInterface!!.getXP() +this.MIN_DISTANCE)
                         
                                     {
                                     
@@ -580,7 +580,7 @@ this.aiVistor!!.visit(this)
                                     {
                                     
     
-                        if(this.getOwnerLayerInterface()!!.getXP() < this.lastTrackingLayerInterface!!.getXP() +MIN_DISTANCE)
+                        if(this.getOwnerLayerInterface()!!.getXP() < this.lastTrackingLayerInterface!!.getXP() +this.MIN_DISTANCE)
                         
                                     {
                                     
@@ -719,7 +719,7 @@ super.setLastKey(lastKey)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return lastDirection
+                        return this.lastDirection
 }
 
 

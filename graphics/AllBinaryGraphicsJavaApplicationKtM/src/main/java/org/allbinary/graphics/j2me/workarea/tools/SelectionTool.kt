@@ -57,7 +57,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NAME
+                        return SelectionTool.NAME
 }
 
 
@@ -392,13 +392,13 @@ var point = point
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NAME
+                        return SelectionTool.NAME
 }
 
 
     private var startPoint: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
 
-    private var endPoint: GPoint = startPoint
+    private var endPoint: GPoint = this.startPoint
 
     open fun mouseClicked(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true

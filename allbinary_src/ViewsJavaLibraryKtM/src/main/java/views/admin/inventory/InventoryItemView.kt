@@ -103,7 +103,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TYPE_ID
+                        return InventoryItemView.TYPE_ID
 }
 
 
@@ -298,7 +298,7 @@ this.requestHashMap= requestHashMap
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return requestHashMap
+                        return this.requestHashMap
 }
 
 

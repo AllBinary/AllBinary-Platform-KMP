@@ -69,7 +69,7 @@ var document = document
 : UserConfigurationInterface{
 var userRole = userRole
 
-    var abPath: AbPath = AbPath(URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.USERCONFIGURATIONPATH, configurationName +userRole!!.toString() +AbPathData.getInstance()!!.EXTENSION_SEP +UserConfigurationData.UNCRYPTED_EXTENSION)
+    var abPath: AbPath = AbPath(URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.USERCONFIGURATIONPATH, UserConfigurationInterfaceFactory.configurationName +userRole!!.toString() +AbPathData.getInstance()!!.EXTENSION_SEP +UserConfigurationData.UNCRYPTED_EXTENSION)
 
 
     var documentString: String = CryptFileReader(UserConfigurationData.UNCRYPTED_EXTENSION, UserConfigurationData.ENCRYPTED_EXTENSION).

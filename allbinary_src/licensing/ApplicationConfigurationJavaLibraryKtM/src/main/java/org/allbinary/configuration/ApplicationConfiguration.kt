@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ApplicationConfiguration.instance
 }
 
 
@@ -65,7 +65,7 @@ private constructor ()
         try {
             
     
-                        if(FileFactory.getInstance()!!.isFile(FILE))
+                        if(FileFactory.getInstance()!!.isFile(this.FILE))
                         
                                     {
                                     this.read()
@@ -97,7 +97,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR,
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
 
-    var fileInputStream: InputStream = fileInputStreamFactory!!.getFileInputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
+    var fileInputStream: InputStream = fileInputStreamFactory!!.getFileInputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, this.FILE)!!
 
 
     var dataInputStream: AbDataInputStream = AbDataInputStream(fileInputStream)
@@ -208,7 +208,7 @@ this.logUtil!!.putF("Read Configuration: " +this.toString(), this, "read")
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
 
-    var fileOutputStream: OutputStream = fileInputStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
+    var fileOutputStream: OutputStream = fileInputStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, this.FILE)!!
 
 
     var dataOutputStream: AbDataOutputStream = AbDataOutputStream(fileOutputStream)
@@ -340,7 +340,7 @@ this.fullscreen= fullscreen
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return fullscreen
+                        return this.fullscreen
 }
 
 
@@ -359,7 +359,7 @@ this.showTitleBar= showTitleBar
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return showTitleBar
+                        return this.showTitleBar
 }
 
 
@@ -378,7 +378,7 @@ this.progressBarView= progressBarView
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return progressBarView
+                        return this.progressBarView
 }
 
 

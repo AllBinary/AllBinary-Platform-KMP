@@ -141,7 +141,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayListUtil!!.getImmutableInstance()
+                        return this.basicArrayListUtil!!.getImmutableInstance()
 }
 
 }
@@ -191,7 +191,7 @@ var totalPaths = totalPaths
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayListUtil!!.getImmutableInstance()
+                        return this.basicArrayListUtil!!.getImmutableInstance()
 }
 
 
@@ -251,7 +251,7 @@ this.findPathStart(startPathFindingNode!!.geographicMapCellPosition, endPathFind
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayListUtil!!.getImmutableInstance()
+                        return this.basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 
@@ -636,7 +636,7 @@ total++
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayListUtil!!.getImmutableInstance()
+                        return this.basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 

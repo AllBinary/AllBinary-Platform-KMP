@@ -60,7 +60,7 @@ this.reset()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return loopCount
+                        return this.loopCount
 }
 
 
@@ -98,7 +98,7 @@ this.loopCount= 0
                         if(this.getFrame() == 0)
                         
                                     {
-                                    loopCount++
+                                    this.loopCount++
 
                                     }
                                 

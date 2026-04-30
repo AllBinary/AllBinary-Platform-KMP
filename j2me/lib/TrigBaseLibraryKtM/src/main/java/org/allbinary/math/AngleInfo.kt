@@ -38,7 +38,7 @@ companion object {
     open fun getInstance(angleIncrement: Short)
         //nullable =  from not(true or (false and false)) = 
 : AngleInfo{
-var angleIncrement = angleIncrement
+    //var angleIncrement = angleIncrement
 
 
 
@@ -57,7 +57,7 @@ var angleIncrement = angleIncrement
 private constructor (angleIncrementInfo: AngleIncrementInfo)
             : super()
         {
-var angleIncrementInfo = angleIncrementInfo
+    //var angleIncrementInfo = angleIncrementInfo
 this.angleIncrementInfo= angleIncrementInfo
 }
 
@@ -67,7 +67,7 @@ this.angleIncrementInfo= angleIncrementInfo
     open fun adjustAngle(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var frame = frame
+    //var frame = frame
 
     var newAngle: Int = this.angleIncrementInfo!!.getAngleIncrement() *frame -90
 
@@ -82,14 +82,14 @@ this.setAngle(this.frameUtil!!.adjustAngleToFrameAngle(newAngle).toShort())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return angle
+                        return this.angle
 }
 
 
     open fun setAngle(angle: Short)
         //nullable = true from not(false or (false and false)) = true
 {
-var angle = angle
+    //var angle = angle
 this.angle= angle
 }
 
@@ -111,7 +111,7 @@ this.angle= angle
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(ANGLE)
+stringBuffer!!.append(AngleInfo.ANGLE)
 stringBuffer!!.appendshort(this.angle)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getAngleIncrementInfo()))

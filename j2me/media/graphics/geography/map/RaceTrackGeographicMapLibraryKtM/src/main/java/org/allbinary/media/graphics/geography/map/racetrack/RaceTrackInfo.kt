@@ -78,7 +78,7 @@ this.totalLaps= totalLaps
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return id
+                        return this.id
 }
 
 
@@ -97,7 +97,7 @@ this.id= id
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -116,7 +116,7 @@ this.name= name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return qualifyTime
+                        return this.qualifyTime
 }
 
 
@@ -135,7 +135,7 @@ this.qualifyTime= qualifyTime
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return worstContinuePosition
+                        return this.worstContinuePosition
 }
 
 
@@ -154,7 +154,7 @@ this.worstContinuePosition= worstContinuePosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return totalLaps
+                        return this.totalLaps
 }
 
 
@@ -173,7 +173,7 @@ this.totalLaps= totalLaps
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return foregroundBasicColor
+                        return this.foregroundBasicColor
 }
 
 
@@ -192,7 +192,7 @@ this.foregroundBasicColor= foregroundBasicColor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return backgroundBasicColor
+                        return this.backgroundBasicColor
 }
 
 
@@ -211,7 +211,7 @@ this.backgroundBasicColor= backgroundBasicColor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return raceTrackFrictionProperties
+                        return this.raceTrackFrictionProperties
 }
 
 

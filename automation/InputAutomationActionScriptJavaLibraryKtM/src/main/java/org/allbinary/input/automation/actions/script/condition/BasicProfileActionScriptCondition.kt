@@ -361,7 +361,7 @@ node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return profileActionConditionInterfaceVector
+                        return this.profileActionConditionInterfaceVector
 }
 
 
@@ -476,7 +476,7 @@ this.logUtil!!.put("Error", this, "actionPerformed", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return profileActionProcessorInterfaceVector
+                        return this.profileActionProcessorInterfaceVector
 }
 
 

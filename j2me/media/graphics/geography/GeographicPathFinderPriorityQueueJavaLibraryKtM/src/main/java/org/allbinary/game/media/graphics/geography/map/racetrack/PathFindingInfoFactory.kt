@@ -49,7 +49,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PathFindingInfoFactory.instance
 }
 
 
@@ -69,7 +69,7 @@ PathFindingInfoFactory.MAX= max
 
     private val pathFinder: PathFinder
 private constructor (){
-this.pathFindingInfo= PathFindingInfo(PathFindingNodeCostInfoFactory(MAX), BasicArrayListS(1), BasicArrayListS(1))
+this.pathFindingInfo= PathFindingInfo(PathFindingNodeCostInfoFactory(PathFindingInfoFactory.MAX), BasicArrayListS(1), BasicArrayListS(1))
 this.pathFinder= PathFinder()
 }
 

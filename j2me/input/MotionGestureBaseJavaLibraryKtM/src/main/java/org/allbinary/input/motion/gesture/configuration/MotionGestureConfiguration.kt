@@ -89,14 +89,14 @@ var index = index
 {
 var list = list
 var commandAction = commandAction
-activeCommands!!.add(MotionGestureToMotionGestureActionAssociation(list, commandAction))
+this.activeCommands!!.add(MotionGestureToMotionGestureActionAssociation(list, commandAction))
 }
 
 
     open fun clearMotionGestureAction()
         //nullable = true from not(false or (false and true)) = true
 {
-activeCommands!!.clear()
+this.activeCommands!!.clear()
 }
 
 
@@ -107,7 +107,7 @@ activeCommands!!.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return activeCommands
+                        return this.activeCommands
 }
 
 
@@ -118,7 +118,7 @@ activeCommands!!.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return diagonalMotionGestureAllowed
+                        return this.diagonalMotionGestureAllowed
 }
 
 
@@ -129,7 +129,7 @@ activeCommands!!.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return executingActions
+                        return this.executingActions
 }
 
 
@@ -156,7 +156,7 @@ this.diagonalMotionGestureAllowed= diagonalMotionGestureAllowed
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return diagonalTolerance
+                        return this.diagonalTolerance
 }
 
 
@@ -175,7 +175,7 @@ this.diagonalTolerance= diagonalTolerance
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minimumMotionGesture
+                        return this.minimumMotionGesture
 }
 
 
@@ -194,7 +194,7 @@ this.minimumMotionGesture= minimumMotionGesture
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return button
+                        return this.button
 }
 
 
@@ -213,7 +213,7 @@ this.button= button
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return color
+                        return this.color
 }
 
 
@@ -232,7 +232,7 @@ this.color= color
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mouseButtonMask
+                        return this.mouseButtonMask
 }
 
 

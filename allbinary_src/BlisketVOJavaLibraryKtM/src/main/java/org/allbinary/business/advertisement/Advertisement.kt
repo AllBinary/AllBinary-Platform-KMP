@@ -78,7 +78,7 @@ this.displayInBrowserContraintsInterface=
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return artist
+                        return this.artist
 }
 
 
@@ -97,7 +97,7 @@ this.artist= artist
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return artistLink
+                        return this.artistLink
 }
 
 
@@ -116,7 +116,7 @@ this.artistLink= artistLink
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return title
+                        return this.title
 }
 
 
@@ -135,7 +135,7 @@ this.title= title
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return dateAdded
+                        return this.dateAdded
 }
 
 
@@ -154,7 +154,7 @@ this.dateAdded= dateAdded
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directory
+                        return this.directory
 }
 
 
@@ -173,7 +173,7 @@ this.directory= directory
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return framedLink
+                        return this.framedLink
 }
 
 
@@ -192,7 +192,7 @@ this.framedLink= framedLink
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return listPrice
+                        return this.listPrice
 }
 
 
@@ -211,7 +211,7 @@ this.listPrice= listPrice
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ourPrice
+                        return this.ourPrice
 }
 
 
@@ -230,7 +230,7 @@ this.ourPrice= ourPrice
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rank
+                        return this.rank
 }
 
 
@@ -249,7 +249,7 @@ this.rank= rank
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
+                        return this.image
 }
 
 
@@ -268,7 +268,7 @@ this.image= image
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return product
+                        return this.product
 }
 
 
@@ -287,7 +287,7 @@ this.product= product
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return thumbnail
+                        return this.thumbnail
 }
 
 
@@ -306,7 +306,7 @@ this.thumbnail= thumbnail
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return displayInBrowserContraintsInterface
+                        return this.displayInBrowserContraintsInterface
 }
 
 

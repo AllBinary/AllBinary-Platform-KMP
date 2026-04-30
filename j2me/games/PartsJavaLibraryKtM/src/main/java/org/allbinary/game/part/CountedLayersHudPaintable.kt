@@ -41,7 +41,7 @@ companion object {
             
     private val XXString: String = "XX"
 
-    private val XXStringWidth: Int = MyFont.getInstance()!!.stringWidth(XXString)!!
+    private val XXStringWidth: Int = MyFont.getInstance()!!.stringWidth(CountedLayersHudPaintable.XXString)!!
 
         }
             
@@ -149,7 +149,7 @@ count++
                         
                                     {
                                     graphics.setColor(this.countedPartsBorder)
-graphics.drawRect(lastWidth -(XXStringWidth +this.dropSize), 40, XXStringWidth +this.dropSize, (count *height) +3)
+graphics.drawRect(lastWidth -(XXStringWidth +this.dropSize), 40, CountedLayersHudPaintable.XXStringWidth +this.dropSize, (count *height) +3)
 
                                     }
                                 

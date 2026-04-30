@@ -59,7 +59,7 @@ this.totalFrames= totalFrames
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return width
+                        return this.width
 }
 
 
@@ -78,7 +78,7 @@ this.width= width
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return height
+                        return this.height
 }
 
 
@@ -97,7 +97,7 @@ this.height= height
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return points
+                        return this.points
 }
 
 
@@ -116,7 +116,7 @@ this.points= points
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return totalFrames
+                        return this.totalFrames
 }
 
 

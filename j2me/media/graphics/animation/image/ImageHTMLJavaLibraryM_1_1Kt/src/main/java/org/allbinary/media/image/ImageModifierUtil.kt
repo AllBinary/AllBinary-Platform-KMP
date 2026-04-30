@@ -230,7 +230,7 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
                         if(image3.isReady() || image3.width() +image3.height() <= 0 || image.getName() == this.resourceCallbackStrings!!.FROM_DATA)
                         
                                     {
-                                    copy(imageArray, index, image, image3)
+                                    this.copy(imageArray, index, image, image3)
 
                                     }
                                 

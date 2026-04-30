@@ -90,7 +90,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TOUCH_BUTTON_SOURCE_ID
+                        return this.TOUCH_BUTTON_SOURCE_ID
 }
 
 
@@ -101,7 +101,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameKeyEvent
+                        return this.gameKeyEvent
 }
 
 

@@ -60,7 +60,7 @@ LogUtil.getInstance()!!.put(CommonStrings.getInstance()!!.EXCEPTION, "NullGameCa
 }
 
 
-    private val SINGLETON: NullGameCanvas = createNull()!!
+    private val SINGLETON: NullGameCanvas = NullGameCanvas.createNull()!!
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -69,7 +69,7 @@ LogUtil.getInstance()!!.put(CommonStrings.getInstance()!!.EXCEPTION, "NullGameCa
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return NullGameCanvas.SINGLETON
 }
 
 
@@ -139,7 +139,7 @@ this.running= running
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return running
+                        return this.running
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -206,7 +206,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TYPE
+                        return NullGameCanvas.TYPE
 }
 
 

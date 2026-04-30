@@ -161,7 +161,7 @@ this.updateImage()
     open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
-androidImageUtil!!.rotate(this.getImage(), originalImage, matrix, imageModifierUtil!!.paint)
+this.androidImageUtil!!.rotate(this.getImage(), originalImage, matrix, imageModifierUtil!!.paint)
 }
 
 

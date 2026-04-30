@@ -65,7 +65,7 @@ var frame = frame
                                     (getInstance as AutomaticCacheInterface).get(frame) as Object as BufferedImageFrameCacheable)
 
 this.logUtil!!.putF(("Saving: " +capturedBufferedImageCacheable!!.toString()), this, commonStrings!!.SAVE)
-save(capturedBufferedImageCacheable!!.getBufferedImage(), frame)
+this.save(capturedBufferedImageCacheable!!.getBufferedImage(), frame)
 }
 
 

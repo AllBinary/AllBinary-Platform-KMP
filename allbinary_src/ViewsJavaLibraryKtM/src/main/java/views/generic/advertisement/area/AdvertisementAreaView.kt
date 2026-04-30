@@ -67,7 +67,7 @@ var document = document
     var advertisementAreasEntityInterface: AdvertisementAreasEntityInterface = AdvertisementAreasEntityFactory.getInstance()!!
 
 
-    var advertisementAreaInterface: AdvertisementAreaInterface = advertisementAreasEntityInterface!!.get(this.getTransformInfoInterface()!!.getStoreName(), advertisementAreaName)!!
+    var advertisementAreaInterface: AdvertisementAreaInterface = advertisementAreasEntityInterface!!.get(this.getTransformInfoInterface()!!.getStoreName(), this.advertisementAreaName)!!
 
 
 

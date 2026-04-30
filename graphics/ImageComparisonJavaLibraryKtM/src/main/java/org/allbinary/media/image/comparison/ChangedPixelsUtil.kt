@@ -82,7 +82,7 @@ bufferedImageCacheables= arrayOfNulls(2)
     var bufferedImageCacheable: BufferedImageCacheable = poolInterface!!.remove(bufferedImageInfo) as BufferedImageCacheable
 
 bufferedImageCacheables[index]= bufferedImageCacheable
-bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(START_X, START_Y, bufferedImageInfo!!.getWidth(), bufferedImageInfo!!.getHeight(), CLEAR_INT_ARRAY, OFFSET, SCAN_SIZE)
+bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(ChangedPixelsUtil.START_X, ChangedPixelsUtil.START_Y, bufferedImageInfo!!.getWidth(), bufferedImageInfo!!.getHeight(), ChangedPixelsUtil.CLEAR_INT_ARRAY, ChangedPixelsUtil.OFFSET, ChangedPixelsUtil.SCAN_SIZE)
 }
 
 

@@ -89,7 +89,7 @@ var index = index
 
 whereKeyAndValue!!.put(UserData.USERNAME, userName)
 
-    var paymentInterface: PaymentInterface = getDefault(userName)!!
+    var paymentInterface: PaymentInterface = this.getDefault(userName)!!
 
 
     

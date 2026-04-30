@@ -64,7 +64,7 @@ this.shippingVector= ShippingMethodsFactory(abeClientInformation, storeFrontInte
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return shippingVector
+                        return this.shippingVector
 }
 
 
@@ -126,7 +126,7 @@ shipping= this.shippingVector!!.get(index) as ShippingInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultShippingMethodInterface
+                        return this.defaultShippingMethodInterface
 }
 
 

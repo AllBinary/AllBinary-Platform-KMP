@@ -56,7 +56,7 @@ companion object {
 public constructor ()
             : super()
         {
-this.title= NAME
+this.title= TitleView.NAME
 }
 
 public constructor (node: Node)
@@ -75,7 +75,7 @@ this.title= DomNodeHelper.getTextNodeValue(valueNode)
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.title))
                         
                                     {
-                                    this.title= NAME
+                                    this.title= TitleView.NAME
 
                                     }
                                 
@@ -128,7 +128,7 @@ this.title= hashMap!!.get(TitleData.getInstance()!!.TEXT) as String
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.title))
                         
                                     {
-                                    this.title= NAME
+                                    this.title= TitleView.NAME
 
                                     }
                                 

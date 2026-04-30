@@ -47,7 +47,7 @@ this.setInputAutomationRobotInterfaceWrapper(inputAutomationRobotInterfaceWrappe
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputAutomationRobotInterfaceWrapper
+                        return this.inputAutomationRobotInterfaceWrapper
 }
 
 

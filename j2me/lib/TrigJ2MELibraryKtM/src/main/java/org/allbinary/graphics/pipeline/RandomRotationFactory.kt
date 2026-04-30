@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return RandomRotationFactory.instance
 }
 
 
@@ -87,7 +87,7 @@ var howMuch = howMuch
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return myRandomFactory!!.getNextInt(howMuch *10)
+                        return this.myRandomFactory!!.getNextInt(howMuch *10)
 }
 
 

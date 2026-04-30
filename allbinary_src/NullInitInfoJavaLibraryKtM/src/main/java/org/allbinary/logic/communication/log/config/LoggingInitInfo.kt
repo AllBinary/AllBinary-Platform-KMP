@@ -48,7 +48,7 @@ companion object {
 {
 
         try {
-            hasRead= false
+            LoggingInitInfo.hasRead= false
 } catch(e: Exception)
             {
 
@@ -96,11 +96,11 @@ LoggingInitInfo.hasRead= value
 {
 
     
-                        if(!hasRead)
+                        if(!LoggingInitInfo.hasRead)
                         
                                     {
                                     LoggingInitInfo.read()
-hasRead= true
+LoggingInitInfo.hasRead= true
 
     
                         if(LoggingInitInfo.logConfigInfoList == 

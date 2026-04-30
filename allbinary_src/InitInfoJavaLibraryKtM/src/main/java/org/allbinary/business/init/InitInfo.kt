@@ -47,7 +47,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return InitInfo.instance
 }
 
 
@@ -299,7 +299,7 @@ this.updateIfNeeded()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return testing
+                        return this.testing
 }
 
 
@@ -318,7 +318,7 @@ this.updateIfNeeded()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return testHtmlPath!!.toString()
+                        return this.testHtmlPath!!.toString()
 
                                     }
                                 
@@ -349,7 +349,7 @@ this.updateIfNeeded()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mainPath!!.toString()
+                        return this.mainPath!!.toString()
 
                                     }
                                 

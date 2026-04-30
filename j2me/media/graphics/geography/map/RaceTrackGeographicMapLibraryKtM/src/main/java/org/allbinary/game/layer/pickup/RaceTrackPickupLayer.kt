@@ -63,7 +63,7 @@ var tiledLayer = tiledLayer
     var viewPosition: TileLayerPositionIntoViewPosition = this.getViewPosition() as TileLayerPositionIntoViewPosition
 
 viewPosition!!.setTiledLayer(tiledLayer)
-viewPositionEventHandler!!.addListener(this as AllBinaryLayer)
+this.viewPositionEventHandler!!.addListener(this as AllBinaryLayer)
 }
 
 
@@ -77,7 +77,7 @@ super.setDestroyed(destroyed)
                         if(this.isDestroyed())
                         
                                     {
-                                    viewPositionEventHandler!!.removeListener(this)
+                                    this.viewPositionEventHandler!!.removeListener(this)
 
                                     }
                                 

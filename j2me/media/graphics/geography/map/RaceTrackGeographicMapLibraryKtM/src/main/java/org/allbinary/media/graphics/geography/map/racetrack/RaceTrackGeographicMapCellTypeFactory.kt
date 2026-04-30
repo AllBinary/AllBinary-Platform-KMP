@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return RaceTrackGeographicMapCellTypeFactory.instance
 }
 
 
@@ -49,7 +49,7 @@ companion object {
             
     var EMPTY_CELL_TYPE: GeographicMapCellType = GeographicMapCellType(0,  -1)
 
-    var EASY_CELL_TYPE: GeographicMapCellType = EMPTY_CELL_TYPE
+    var EASY_CELL_TYPE: GeographicMapCellType = this.EMPTY_CELL_TYPE
 
     val BOTTOM_LEFT_TURN_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 

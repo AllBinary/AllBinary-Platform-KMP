@@ -281,7 +281,7 @@ this.gameInitialized= gameInitialized
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameInitialized
+                        return this.gameInitialized
 }
 
 
@@ -292,7 +292,7 @@ this.gameInitialized= gameInitialized
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return portion
+                        return this.portion
 }
 
 
@@ -311,7 +311,7 @@ this.initialized= initialized
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initialized
+                        return this.initialized
 }
 
 

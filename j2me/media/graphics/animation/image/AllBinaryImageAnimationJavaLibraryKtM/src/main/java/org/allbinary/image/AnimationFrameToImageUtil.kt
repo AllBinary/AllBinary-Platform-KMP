@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return AnimationFrameToImageUtil.instance
 }
 
 
@@ -64,7 +64,7 @@ var width = width
 var height = height
 var animationInterface = animationInterface
 
-    var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(instance::class.toString()!!, ((width *3) shr 1), ((height *3) shr 1))!!
+    var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(AnimationFrameToImageUtil.instance::class.toString()!!, ((width *3) shr 1), ((height *3) shr 1))!!
 
 
     var graphics: Graphics = image.getGraphics()!!
@@ -95,7 +95,7 @@ var width = width
 var height = height
 var animationInterface = animationInterface
 
-    var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(instance::class.toString()!!, width, height)!!
+    var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(AnimationFrameToImageUtil.instance::class.toString()!!, width, height)!!
 
 
     var graphics: Graphics = image.getGraphics()!!

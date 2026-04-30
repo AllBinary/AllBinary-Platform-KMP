@@ -62,7 +62,7 @@ companion object {
 
         try {
             logUtil!!.putF(commonStrings!!.START, instance, STATIC_BLOCK)
-cacheInterface= CacheInterfaceFactory.getInstance(CacheTypeFactory.getInstance()!!.CACHE, CachePolicyFactory.getInstance()!!.THIRTY_MINUTES_TEN_THOUSAND_MAX) as AutomaticCacheInterface
+PixelDeltaFactory.cacheInterface= CacheInterfaceFactory.getInstance(CacheTypeFactory.getInstance()!!.CACHE, CachePolicyFactory.getInstance()!!.THIRTY_MINUTES_TEN_THOUSAND_MAX) as AutomaticCacheInterface
 logUtil!!.putF(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
             {
@@ -87,7 +87,7 @@ var rgb2 = rgb2
     var colorDelta: ColorDelta = ColorDeltaFactory.getInstance(rgb1, rgb2)!!
 
 
-    var pixelDelta: PixelDelta = cacheInterface!!.get(PixelDelta.getKey(point, colorDelta)) as PixelDelta
+    var pixelDelta: PixelDelta = PixelDeltaFactory.cacheInterface!!.get(PixelDelta.getKey(point, colorDelta)) as PixelDelta
 
 
     

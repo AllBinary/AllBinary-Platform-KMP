@@ -49,7 +49,7 @@ this.setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputAutomationModuleInterfaceArray
+                        return this.inputAutomationModuleInterfaceArray
 }
 
 

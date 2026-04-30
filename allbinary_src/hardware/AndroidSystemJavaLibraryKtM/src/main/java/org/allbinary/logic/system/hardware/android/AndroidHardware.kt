@@ -54,7 +54,7 @@ open public class AndroidHardware
 
     private val PROC_BUS_INPUT_DIRECTORY: String = "/proc/bus/input/"
 
-    private val DEVICES: String = PROC_BUS_INPUT_DIRECTORY +"devices/"
+    private val DEVICES: String = this.PROC_BUS_INPUT_DIRECTORY +"devices/"
 
     private val MINHARDWARE: Int = 3
 public constructor ()

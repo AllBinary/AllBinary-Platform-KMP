@@ -109,7 +109,7 @@ this.upgradeCost= upgradeCost
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return upgradeCost
+                        return this.upgradeCost
 }
 
 
@@ -128,7 +128,7 @@ this.downGradeCost= downGradeCost
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return downGradeCost
+                        return this.downGradeCost
 }
 
 

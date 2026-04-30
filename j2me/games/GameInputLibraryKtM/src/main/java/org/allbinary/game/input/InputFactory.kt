@@ -45,7 +45,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return InputFactory.instance
 }
 
 
@@ -63,7 +63,7 @@ companion object {
 
     val inputIntegerArray: Array<Input?> = arrayOfNulls(this.MAX)
 
-    val NO_INPUT: Input = Input(0, commonStrings!!.UNKNOWN)
+    val NO_INPUT: Input = Input(0, this.commonStrings!!.UNKNOWN)
 private constructor ()
             : super()
         {
@@ -117,7 +117,7 @@ var id = id
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NO_INPUT
+                        return this.NO_INPUT
 
                                     }
                                 
@@ -125,7 +125,7 @@ var id = id
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputIntegerArray[id]!!
+                        return this.inputIntegerArray[id]!!
 }
 
 

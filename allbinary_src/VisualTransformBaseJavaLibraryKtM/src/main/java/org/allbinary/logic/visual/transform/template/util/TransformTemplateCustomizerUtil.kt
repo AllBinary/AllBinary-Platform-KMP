@@ -51,7 +51,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return TransformTemplateCustomizerUtil.instance
 }
 
 
@@ -110,10 +110,10 @@ var storeName = storeName
 
 hashMap!!.put(arrayOf(viewName +SPACE), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(storeName +SPACE), ONE_EMPTY_STRING_ARRAY)
-hashMap!!.put(arrayOf(CUSTOMIZER_NAME), ONE_EMPTY_STRING_ARRAY)
-hashMap!!.put(arrayOf(BODY_VIEWNAMEKEY), ONE_EMPTY_STRING_ARRAY)
-hashMap!!.put(arrayOf(TITLE_VIEWNAMEKEY), ONE_EMPTY_STRING_ARRAY)
-hashMap!!.put(arrayOf(GLOBALS_NEW), ONE_EMPTY_STRING_ARRAY)
+hashMap!!.put(arrayOf(this.CUSTOMIZER_NAME), ONE_EMPTY_STRING_ARRAY)
+hashMap!!.put(arrayOf(this.BODY_VIEWNAMEKEY), ONE_EMPTY_STRING_ARRAY)
+hashMap!!.put(arrayOf(this.TITLE_VIEWNAMEKEY), ONE_EMPTY_STRING_ARRAY)
+hashMap!!.put(arrayOf(this.GLOBALS_NEW), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(this.GLOBALS_INSERT), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(this.GLOBALS_DELETE), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(this.GLOBALS_EDIT), ONE_EMPTY_STRING_ARRAY)

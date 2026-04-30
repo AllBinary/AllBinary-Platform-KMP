@@ -120,7 +120,7 @@ var emailInterface = emailInterface
                         
                                     {
                                     this.remove(emailInterface)
-processAllUnsent()
+this.processAllUnsent()
 
                                     }
                                 
@@ -152,7 +152,7 @@ processAllUnsent()
                         
                                     {
                                     this.remove(emailInterface)
-processAllUnsent()
+this.processAllUnsent()
 
                                     }
                                 

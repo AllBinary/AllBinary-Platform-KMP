@@ -43,7 +43,7 @@ open public class ColorAtActionScriptConditionJPanel : javax.swing.JPanel {
 public constructor (colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface){
 var colorAtActionScriptConditionInterface = colorAtActionScriptConditionInterface
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 this.colorAtActionScriptConditionInterface= colorAtActionScriptConditionInterface
 this.set()
 }
@@ -114,7 +114,7 @@ this.colorAtActionScriptConditionInterface!!.log()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return colorAtXJTextField
+                        return this.colorAtXJTextField
 }
 
 
@@ -133,7 +133,7 @@ this.colorAtXJTextField= colorAtXJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return colorAtYJTextField
+                        return this.colorAtYJTextField
 }
 
 
@@ -152,7 +152,7 @@ this.colorAtYJTextField= colorAtYJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxBlueJTextField
+                        return this.maxBlueJTextField
 }
 
 
@@ -171,7 +171,7 @@ this.maxBlueJTextField= maxBlueJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxGreenJTextField
+                        return this.maxGreenJTextField
 }
 
 
@@ -190,7 +190,7 @@ this.maxGreenJTextField= maxGreenJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxRedJTextField
+                        return this.maxRedJTextField
 }
 
 
@@ -209,7 +209,7 @@ this.maxRedJTextField= maxRedJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minBlueJTextField
+                        return this.minBlueJTextField
 }
 
 
@@ -228,7 +228,7 @@ this.minBlueJTextField= minBlueJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minGreenJTextField
+                        return this.minGreenJTextField
 }
 
 
@@ -247,7 +247,7 @@ this.minGreenJTextField= minGreenJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minRedJTextField
+                        return this.minRedJTextField
 }
 
 
@@ -266,7 +266,7 @@ this.minRedJTextField= minRedJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return yJLabel
+                        return this.yJLabel
 }
 
 
@@ -285,7 +285,7 @@ this.yJLabel= yJLabel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return colorAtActionJDialog
+                        return this.colorAtActionJDialog
 }
 
 
@@ -334,7 +334,7 @@ this.maxJLabel!!.setText("Maximum")
 this.greenJLabel!!.setText("Green:")
 this.blueJLabel!!.setText("Blue:")
 this.okJButton!!.setText("OK")
-okJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -354,7 +354,7 @@ colorAtActionJDialogLayout!!.setHorizontalGroup(colorAtActionJDialogLayout!!.cre
 colorAtActionJDialogLayout!!.setVerticalGroup(colorAtActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(colorAtActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(titleJLabel)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(colorAtActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(colorAtActionJDialogLayout!!.createSequentialGroup()!!.addGap(15, 15, 15)!!.addGroup(colorAtActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(xJLabel)!!.addComponent(locationJLabel)!!.addComponent(colorAtXJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(yJLabel))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(colorAtActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(minJLabel)!!.addComponent(colorRangeJLabel))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(colorAtActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(minRedJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(redJLabel))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(colorAtActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(greenJLabel)!!.addComponent(minGreenJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(colorAtActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(blueJLabel)!!.addComponent(minBlueJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)!!.addComponent(okJButton))!!.addGroup(colorAtActionJDialogLayout!!.createSequentialGroup()!!.addGap(14, 14, 14)!!.addComponent(colorAtYJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(maxJLabel)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(maxRedJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(maxGreenJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(maxBlueJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))!!.addContainerGap()))
 setPreferredSize(java.awt.Dimension(100, 0))
 this.colorAtActionJButton!!.setText("Edit")
-colorAtActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.colorAtActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

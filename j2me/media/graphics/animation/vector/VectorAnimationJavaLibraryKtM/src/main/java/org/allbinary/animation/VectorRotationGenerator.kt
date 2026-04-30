@@ -51,7 +51,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return VectorRotationGenerator.instance
 }
 
 
@@ -74,7 +74,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getInstanceFrames(vectorRotationInfo!!.getWidth(), vectorRotationInfo!!.getHeight(), vectorRotationInfo!!.getPoints(), vectorRotationInfo!!.getTotalFrames())
+                        return this.getInstanceFrames(vectorRotationInfo!!.getWidth(), vectorRotationInfo!!.getHeight(), vectorRotationInfo!!.getPoints(), vectorRotationInfo!!.getTotalFrames())
 }
 
 

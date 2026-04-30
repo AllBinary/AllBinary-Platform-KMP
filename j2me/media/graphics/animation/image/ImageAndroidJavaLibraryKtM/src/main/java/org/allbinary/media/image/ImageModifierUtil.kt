@@ -64,7 +64,7 @@ companion object {
     //var image = image
     //var imageIndex = imageIndex
     //var basicColor = basicColor
-paint.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode.SRC_IN))
+this.paint.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode.SRC_IN))
 }
 
 
@@ -75,7 +75,7 @@ paint.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode
     //var image = image
     //var imageIndex = imageIndex
     //var basicColor = basicColor
-paint.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode.SRC_IN))
+this.paint.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode.SRC_IN))
 }
 
 

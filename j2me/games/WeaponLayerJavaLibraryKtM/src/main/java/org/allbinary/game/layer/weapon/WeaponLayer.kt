@@ -370,7 +370,7 @@ DestroyedLayerProcessor.getInstance()!!.add(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initDamage
+                        return this.initDamage
 }
 
 
@@ -389,7 +389,7 @@ this.animationInterface= animationInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return animationInterface
+                        return this.animationInterface
 }
 
 
@@ -400,7 +400,7 @@ this.animationInterface= animationInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initAnimationInterface
+                        return this.initAnimationInterface
 }
 
 
@@ -419,7 +419,7 @@ this.initAnimationInterface= initAnimationInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return destroyedAnimationInterface
+                        return this.destroyedAnimationInterface
 }
 
 
@@ -430,7 +430,7 @@ this.initAnimationInterface= initAnimationInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return sourceLayerInterface
+                        return this.sourceLayerInterface
 }
 
 
@@ -471,7 +471,7 @@ this.animationInterface!!.paintThreed(graphics, viewPosition!!.getX() -this.getH
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return movement
+                        return this.movement
 }
 
 
@@ -490,7 +490,7 @@ this.movement= movement
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getStaticType()
+                        return WeaponLayer.getStaticType()
 }
 
 
@@ -501,7 +501,7 @@ this.movement= movement
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return multiPlayerType
+                        return this.multiPlayerType
 }
 
 
@@ -520,7 +520,7 @@ this.weaponProperties= weaponProperties
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return weaponProperties
+                        return this.weaponProperties
 }
 
 

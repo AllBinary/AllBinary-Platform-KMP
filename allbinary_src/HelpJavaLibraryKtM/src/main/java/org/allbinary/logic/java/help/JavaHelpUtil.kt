@@ -52,7 +52,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return JavaHelpUtil.instance
 }
 
 
@@ -108,7 +108,7 @@ var filePath = filePath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getHelpSet(helpSetURL)
+                        return this.getHelpSet(helpSetURL)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
@@ -159,7 +159,7 @@ var helpSet = helpSet
 helpBroker!!.setLocation(this.point)
 helpBroker!!.setSize(this.dimension)
 CSH.DisplayHelpFromSource(helpBroker).
-                            actionPerformed(contextSensitiveHelpActionEvent)
+                            actionPerformed(this.contextSensitiveHelpActionEvent)
 this.logUtil!!.putF("CSH Action", getInstance(), "show")
 } catch(e: Exception)
             {

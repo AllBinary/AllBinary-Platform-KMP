@@ -31,9 +31,9 @@ companion object {
 
     private var currentMainViewId: Int =  -1
 
-    private var mainViewArray: Array<View?> = NULL_VIEW_ARRAY
+    private var mainViewArray: Array<View?> = ViewSwapper.NULL_VIEW_ARRAY
 
-    private var topViewArray: Array<View?> = NULL_VIEW_ARRAY
+    private var topViewArray: Array<View?> = ViewSwapper.NULL_VIEW_ARRAY
 public constructor (activity: Activity, rootViewId: Int)
             : super()
         {

@@ -70,7 +70,7 @@ this.sound= sound
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return sound
+                        return this.sound
 }
 
 
@@ -91,7 +91,7 @@ this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return connectedWaypointList
+                        return this.connectedWaypointList
 }
 
 

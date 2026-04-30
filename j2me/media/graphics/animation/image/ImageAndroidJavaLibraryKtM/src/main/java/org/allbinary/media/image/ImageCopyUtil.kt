@@ -45,7 +45,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ImageCopyUtil.instance
 }
 
 
@@ -90,7 +90,7 @@ private constructor ()
                         if(image.isMutable())
                         
                                     {
-                                    image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
+                                    image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
 
 
 

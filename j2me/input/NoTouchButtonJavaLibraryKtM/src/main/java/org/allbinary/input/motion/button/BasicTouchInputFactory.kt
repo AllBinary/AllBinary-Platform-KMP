@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return BasicTouchInputFactory.SINGLETON
 }
 
 
@@ -154,7 +154,7 @@ touchButtonInput!!.update(inputToGameKeyMapping)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
+                        return this.list
 }
 
 

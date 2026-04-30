@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return RTSLayerHudPaintable.instance
 }
 
 
@@ -130,7 +130,7 @@ this.rtsLayer= rtsLayer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rtsLayer
+                        return this.rtsLayer
 }
 
 

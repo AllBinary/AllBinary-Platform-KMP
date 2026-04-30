@@ -47,7 +47,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return RawKeyEventHandler.instance
 }
 
 
@@ -201,7 +201,7 @@ eventListenerInterface!!.onEvent(keyCode, deviceId, repeated)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return eventListenerInterfaceList
+                        return this.eventListenerInterfaceList
 }
 
 

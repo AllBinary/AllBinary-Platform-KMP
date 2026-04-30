@@ -68,7 +68,7 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NO_TYPE
+                        return this.NO_TYPE
 }
 
 
@@ -83,7 +83,7 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return componentInterface!!.view()
+                        return this.componentInterface!!.view()
 } catch(e: Exception)
             {
 

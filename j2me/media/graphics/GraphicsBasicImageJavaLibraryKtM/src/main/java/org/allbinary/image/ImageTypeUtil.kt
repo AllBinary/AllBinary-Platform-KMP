@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return ImageTypeUtil.SINGLETON
 }
 
 
@@ -59,9 +59,9 @@ companion object {
 private constructor ()
             : super()
         {
-list.add(JPG)
-list.add(GIF)
-list.add(PNG)
+this.list.add(JPG)
+this.list.add(GIF)
+this.list.add(PNG)
 }
 
 

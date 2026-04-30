@@ -95,7 +95,7 @@ this.gameCanvas= gameCanvas
                         if(key == this.gameKeyFactory!!.LEVEL_DOWN.getId())
                         
                                     {
-                                    inputProcessor!!.strafeLeft()
+                                    CheatGameInputProcessor.inputProcessor!!.strafeLeft()
 break;
 
                     
@@ -107,7 +107,7 @@ break;
                         if(key == this.gameKeyFactory!!.LEVEL_UP.getId())
                         
                                     {
-                                    inputProcessor!!.strafeRight()
+                                    CheatGameInputProcessor.inputProcessor!!.strafeRight()
 break;
 
                     
@@ -119,7 +119,7 @@ break;
                         if(key == this.gameKeyFactory!!.LEFT.getId())
                         
                                     {
-                                    inputProcessor!!.left()
+                                    CheatGameInputProcessor.inputProcessor!!.left()
 break;
 
                     
@@ -131,7 +131,7 @@ break;
                         if(key == this.gameKeyFactory!!.RIGHT.getId())
                         
                                     {
-                                    inputProcessor!!.right()
+                                    CheatGameInputProcessor.inputProcessor!!.right()
 break;
 
                     
@@ -143,7 +143,7 @@ break;
                         if(key == this.gameKeyFactory!!.UP.getId())
                         
                                     {
-                                    inputProcessor!!.up()
+                                    CheatGameInputProcessor.inputProcessor!!.up()
 break;
 
                     
@@ -155,7 +155,7 @@ break;
                         if(key == this.gameKeyFactory!!.DOWN.getId())
                         
                                     {
-                                    inputProcessor!!.down()
+                                    CheatGameInputProcessor.inputProcessor!!.down()
 break;
 
                     
@@ -167,7 +167,7 @@ break;
                         if(key == this.gameKeyFactory!!.KEY_NUM1.getId())
                         
                                     {
-                                    inputProcessor!!.special1(gameLayerManager, GameKeyEvent.NONE)
+                                    CheatGameInputProcessor.inputProcessor!!.special1(gameLayerManager, GameKeyEvent.NONE)
 break;
 
                     
@@ -179,7 +179,7 @@ break;
                         if(key == this.gameKeyFactory!!.KEY_NUM3.getId())
                         
                                     {
-                                    inputProcessor!!.special2(gameLayerManager, GameKeyEvent.NONE)
+                                    CheatGameInputProcessor.inputProcessor!!.special2(gameLayerManager, GameKeyEvent.NONE)
 break;
 
                     

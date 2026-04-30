@@ -49,7 +49,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ImageModifierUtil.instance
 }
 
 
@@ -266,7 +266,7 @@ newBufferedImage!!.setRGB(index, index2, (ax shl 24) or (rx shl 16) or (gx shl 8
 
         {
 raster.getPixel(index, index2, colorArray)
-colorArray[0]= alpha and colorArray[0]
+this.colorArray[0]= alpha and this.colorArray[0]
 raster.setPixel(index, index2, colorArray)
 }
 

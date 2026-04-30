@@ -181,7 +181,7 @@ var mappedToInput = mappedToInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return platformToGameKeyMapping!!.size
+                        return this.platformToGameKeyMapping!!.size
 }
 
 
@@ -295,7 +295,7 @@ var canvas = canvas
 
 
 
-                        for (index in mappedGameKeys!!.size  - 1  downTo 0)
+                        for (index in this.mappedGameKeys!!.size  - 1  downTo 0)
 
         {
 nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
@@ -392,7 +392,7 @@ var id = id
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return platformToGameKeyMapping[id]!!
+                        return this.platformToGameKeyMapping[id]!!
 
                                     }
                                 
@@ -414,7 +414,7 @@ var id = id
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameKeyFactory!!.NONE
+                        return this.gameKeyFactory!!.NONE
 
                         }
                             
@@ -434,7 +434,7 @@ var id = id
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return platformToGameKeyMapping[id]!!
+                        return this.platformToGameKeyMapping[id]!!
 
                                     }
                                 
@@ -456,7 +456,7 @@ var id = id
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameKeyFactory!!.NONE
+                        return this.gameKeyFactory!!.NONE
 
                         }
                             

@@ -152,7 +152,7 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 
         try {
             
-    var str: Array<String?> = search()!!
+    var str: Array<String?> = this.search()!!
 
 
 
@@ -214,7 +214,7 @@ var product = product
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return InventorySearchProductUtil.getInstance()!!.getProduct(abeClientInformation, searchRequest, product)
+                        return InventorySearchProductUtil.getInstance()!!.getProduct(abeClientInformation, this.searchRequest, product)
 }
 
 

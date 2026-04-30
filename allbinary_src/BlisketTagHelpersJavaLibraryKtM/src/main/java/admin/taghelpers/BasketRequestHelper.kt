@@ -234,10 +234,10 @@ basket.removeItem(this.id)
     
                         if(this.id != 
                                     null
-                                 && num != 
+                                 && this.num != 
                                     null
                                 )
-                        basket.adjustItem(this.id, num)
+                        basket.adjustItem(this.id, this.num)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))

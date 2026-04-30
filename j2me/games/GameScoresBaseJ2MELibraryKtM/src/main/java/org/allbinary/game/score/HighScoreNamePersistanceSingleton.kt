@@ -65,7 +65,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return HighScoreNamePersistanceSingleton.SINGLETON
 }
 
 
@@ -130,7 +130,7 @@ this.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return platformRecordIdUtil!!.getRecordId(abeClientInformation, RECORD_ID)
+                        return this.platformRecordIdUtil!!.getRecordId(abeClientInformation, RECORD_ID)
 }
 
 

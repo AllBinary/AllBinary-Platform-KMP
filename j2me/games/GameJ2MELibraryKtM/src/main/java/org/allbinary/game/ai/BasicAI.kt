@@ -116,7 +116,7 @@ this.lastKey= lastKey
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return lastKey
+                        return this.lastKey
 }
 
 
@@ -127,7 +127,7 @@ this.lastKey= lastKey
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ownerLayerInterface
+                        return this.ownerLayerInterface
 }
 
 
@@ -138,7 +138,7 @@ this.lastKey= lastKey
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameInput
+                        return this.gameInput
 }
 
 

@@ -136,7 +136,7 @@ sine= (next *this.noDecimalTrigTable!!.sin(angle.toInt())).toLong()
 beamX= (sine /this.noDecimalTrigTable!!.SCALE).toInt()
 cosine= (next *this.noDecimalTrigTable!!.cos(angle.toInt())).toLong()
 beamY=  -(cosine /this.noDecimalTrigTable!!.SCALE).toInt()
-weaponLayer= weaponLayerCircularStaticPool!!.getInstance(sourceLayerInterface, x +beamX, y +beamY, 0, angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
+weaponLayer= this.weaponLayerCircularStaticPool!!.getInstance(sourceLayerInterface, x +beamX, y +beamY, 0, angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
 allbinaryLayerManager!!.append(weaponLayer)
 next += increment
 }

@@ -50,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return INSTANCE
+                        return FeaturedAnimationInterfaceFactoryInterfaceFactory.INSTANCE
 }
 
 
@@ -69,7 +69,7 @@ var resource = resource
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getRectangleXY(resource, 0, 0)
+                        return this.getRectangleXY(resource, 0, 0)
 }
 
 
@@ -147,7 +147,7 @@ var resource = resource
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getBasicAnimationInterfaceFactoryInstance(resource) as ProceduralAnimationInterfaceFactoryInterface
+                        return this.getBasicAnimationInterfaceFactoryInstance(resource) as ProceduralAnimationInterfaceFactoryInterface
 }
 
 
@@ -161,7 +161,7 @@ var resource = resource
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getBasicAnimationInterfaceFactoryInstance(resource) as AnimationInterfaceFactoryInterface
+                        return this.getBasicAnimationInterfaceFactoryInstance(resource) as AnimationInterfaceFactoryInterface
 }
 
 

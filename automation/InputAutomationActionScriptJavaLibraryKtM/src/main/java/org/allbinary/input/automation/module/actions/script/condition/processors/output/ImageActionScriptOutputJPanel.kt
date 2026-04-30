@@ -42,7 +42,7 @@ open public class ImageActionScriptOutputJPanel : javax.swing.JPanel {
 public constructor (capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface){
 var capturedImageActionScriptOutputInterface = capturedImageActionScriptOutputInterface
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 this.capturedImageActionScriptOutputInterface= capturedImageActionScriptOutputInterface
 this.set()
 }
@@ -180,7 +180,7 @@ this.itemTypesJList!!.setModel(defaultListModel)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return capturedImageActionJDialog
+                        return this.capturedImageActionJDialog
 }
 
 
@@ -207,7 +207,7 @@ this.jLabel1= javax.swing.JLabel()
 this.capturedImageActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 250))
 this.titleJLabel!!.setText("Image Output Options")
 this.okJButton!!.setText("OK")
-okJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -225,7 +225,7 @@ this.saveJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.displayJCheckBox!!.setText("Display")
 this.displayJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.displayJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-displayJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.displayJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -237,7 +237,7 @@ displayJCheckBoxActionPerformed(evt)
 
                                 }
                             )
-itemTypesJList!!.setModel(object: javax.swing.AbstractListModel()
+this.itemTypesJList!!.setModel(object: javax.swing.AbstractListModel()
                                 {
                                 
     var strings: Array<String?> = arrayOf("Item 1","Item 2","Item 3","Item 4","Item 5")
@@ -274,7 +274,7 @@ capturedImageActionJDialogLayout!!.setHorizontalGroup(capturedImageActionJDialog
 capturedImageActionJDialogLayout!!.setVerticalGroup(capturedImageActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(capturedImageActionJDialogLayout!!.createSequentialGroup()!!.addComponent(titleJLabel)!!.addGap(5, 5, 5)!!.addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(saveJCheckBox)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(displayJCheckBox)!!.addGap(9, 9, 9)!!.addComponent(okJButton)!!.addContainerGap()))
 setMinimumSize(java.awt.Dimension(100, 0))
 this.capturedImageActionJButton!!.setText("Edit")
-capturedImageActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.capturedImageActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

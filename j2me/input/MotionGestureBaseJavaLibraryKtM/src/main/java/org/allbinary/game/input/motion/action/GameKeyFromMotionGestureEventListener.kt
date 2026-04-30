@@ -78,7 +78,7 @@ var completeMotionGestureInputEvent = completeMotionGestureInputEvent
                         if(this.previousGameKeyEvent != GameKeyEvent.NONE)
                         
                                     {
-                                    UpGameKeyEventHandler.getInstance()!!.fireEvent(previousGameKeyEvent)
+                                    UpGameKeyEventHandler.getInstance()!!.fireEvent(this.previousGameKeyEvent)
 
                                     }
                                 

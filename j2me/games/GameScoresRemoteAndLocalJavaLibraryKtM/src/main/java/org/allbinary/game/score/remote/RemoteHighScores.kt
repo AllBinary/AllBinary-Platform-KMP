@@ -36,6 +36,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.SoftwareInformation
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.EnumerationUtil
 
 open public class RemoteHighScores : HighScores {
         
@@ -88,7 +89,7 @@ companion object {
                         
                                     {
                                     highScores= RemoteHighScores(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending, preload)
-hashTable!!.put(gameInfo, highScores)
+RemoteHighScores.hashTable!!.put(gameInfo, highScores)
 
                                     }
                                 
@@ -116,6 +117,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.g
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     private val abeClientInformation: AbeClientInformationInterface
 
@@ -210,6 +213,9 @@ this.getList()!!.add(highScore)
                                 
                         else {
                             
+    var NEXT_ELEMENT: String = "NextElement: "
+
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
@@ -219,10 +225,10 @@ this.getList()!!.add(highScore)
     var nextElement: Any
 
 
-        while(enumeration.hasMoreElements())
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-nextElement= enumeration.nextElement()!!
-this.logUtil!!.putF("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
+nextElement= this.enumerationUtil!!.nextElement(enumeration)!!
+this.logUtil!!.putF(NEXT_ELEMENT +nextElement, this, commonStrings!!.PROCESS)
 }
 
 
@@ -246,7 +252,7 @@ this.ascending= ascending
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ascending
+                        return this.ascending
 }
 
 
@@ -257,7 +263,7 @@ this.ascending= ascending
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return softwareInformation
+                        return this.softwareInformation
 }
 
 

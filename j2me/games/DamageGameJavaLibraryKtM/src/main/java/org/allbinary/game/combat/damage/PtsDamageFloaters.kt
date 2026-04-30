@@ -122,9 +122,9 @@ var graphics = graphics
                                     
     var delta: Int = 10 *(index +2)
 
-this.basicSetColorUtil!!.setBasicColorP(graphics, basicColorArrayIndexer!!.get())
+this.basicSetColorUtil!!.setBasicColorP(graphics, PtsDamageFloaters.basicColorArrayIndexer!!.get())
 graphics.drawChars(this.lastDamageString[index]!!, 0, this.lastDamageStringSizeArray[index]!!, x -myRandomFactory!!.getNextInt(delta), y -delta, 0)
-basicColorArrayIndexer!!.next()
+PtsDamageFloaters.basicColorArrayIndexer!!.next()
 
                                     }
                                 

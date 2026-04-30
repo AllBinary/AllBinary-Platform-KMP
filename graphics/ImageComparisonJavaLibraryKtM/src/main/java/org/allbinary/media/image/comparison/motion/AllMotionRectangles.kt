@@ -45,7 +45,7 @@ var imageComparisonResult = imageComparisonResult
 
                             //For kotlin this is before the body of the constructor.
                     
-createMotionRectangles(imageComparisonResult)
+this.createMotionRectangles(imageComparisonResult)
 }
 
 
@@ -71,7 +71,7 @@ var imageComparisonInfo = imageComparisonInfo
 
     var pixelDelta: PixelDelta = vector.get(index) as PixelDelta
 
-addPixelDeltaToAMotionRectangle(pixelDelta)
+this.addPixelDeltaToAMotionRectangle(pixelDelta)
 }
 
 }
@@ -212,7 +212,7 @@ var pixelDelta = pixelDelta
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return isPixelDeltaLikelyPartOfMotionRectangle(motionRectangle, pixelDelta)
+                        return this.isPixelDeltaLikelyPartOfMotionRectangle(motionRectangle, pixelDelta)
 
                                     }
                                 

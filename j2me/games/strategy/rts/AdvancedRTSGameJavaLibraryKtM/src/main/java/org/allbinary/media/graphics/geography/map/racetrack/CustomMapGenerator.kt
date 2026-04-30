@@ -122,7 +122,7 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
 
 
     
-                        if(dropCellPositionHistory!!.isCellPositionWithDrop(cellPosition))
+                        if(this.dropCellPositionHistory!!.isCellPositionWithDrop(cellPosition))
                         
                                     {
                                     
@@ -175,7 +175,7 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return customMapArray
+                        return this.customMapArray
 }
 
 

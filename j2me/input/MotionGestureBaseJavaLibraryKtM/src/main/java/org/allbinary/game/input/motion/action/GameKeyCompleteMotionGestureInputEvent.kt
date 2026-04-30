@@ -40,7 +40,7 @@ open public class GameKeyCompleteMotionGestureInputEvent : CompleteMotionGesture
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 
-    private val SOURCE_ID: Int = gameKeyEventFactory!!.MOTION_GESTURE_SOURCE_ID
+    private val SOURCE_ID: Int = this.gameKeyEventFactory!!.MOTION_GESTURE_SOURCE_ID
 
     private var gameKey: GameKey = GameKey.NULL_GAME_KEY
 
@@ -107,7 +107,7 @@ this.gameKeyEvent= gameKeyEvent
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameKeyEvent
+                        return this.gameKeyEvent
 }
 
 
@@ -126,7 +126,7 @@ this.gameKey= gameKey
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameKey
+                        return this.gameKey
 }
 
 

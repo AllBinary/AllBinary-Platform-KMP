@@ -323,7 +323,7 @@ this.processInputKey(key)
 
 
     
-                        if(isSingleKeyProcessing)
+                        if(this.isSingleKeyProcessing)
                         
                                     {
                                     this.clear()

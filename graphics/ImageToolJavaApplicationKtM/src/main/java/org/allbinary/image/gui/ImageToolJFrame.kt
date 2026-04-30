@@ -61,7 +61,7 @@ companion object {
 
     private var imageProcessorInput: ImageProcessorInput
 public constructor (){
-initComponents()
+this.initComponents()
 
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
@@ -119,7 +119,7 @@ this.maxJLabel!!.setText("Maximum")
 this.greenJLabel!!.setText("Green:")
 this.blueJLabel!!.setText("Blue:")
 this.okJButton!!.setText("OK")
-okJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -142,7 +142,7 @@ getContentPane()!!.setLayout(java.awt.GridLayout(1, 0))
 this.jPanel1!!.setLayout(java.awt.GridLayout(1, 0))
 getContentPane()!!.add(this.jPanel1)
 this.fileJMenu!!.setText("File")
-fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
+this.fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -155,7 +155,7 @@ fileJMenuActionPerformed(evt)
                                 }
                             )
 this.openImageJMenuItem!!.setText("Open")
-openImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.openImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -170,7 +170,7 @@ openImageJMenuItemActionPerformed(evt)
 this.fileJMenu!!.add(this.openImageJMenuItem)
 this.mainJMenuBar!!.add(this.fileJMenu)
 this.processingJMenu!!.setText("Processing")
-processingJMenu!!.addActionListener(object: java.awt.event.ActionListener()
+this.processingJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -183,7 +183,7 @@ processingJMenuActionPerformed(evt)
                                 }
                             )
 this.analyzeJMenuItem!!.setText("Image Analyze")
-analyzeJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.analyzeJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -197,7 +197,7 @@ analyzeJMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.analyzeJMenuItem)
 this.generateMirrorSpriteMenuItem!!.setText("Mirror Sprite Generator")
-generateMirrorSpriteMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateMirrorSpriteMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -211,7 +211,7 @@ generateMirrorSpriteMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.generateMirrorSpriteMenuItem)
 this.generateRotationSpriteJMenuItem!!.setText("Rotation Sprite Generator")
-generateRotationSpriteJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateRotationSpriteJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -225,7 +225,7 @@ generateRotationSpriteJMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.generateRotationSpriteJMenuItem)
 this.generateSpriteSplitterMenuItem!!.setText("Sprite Splitter Generator")
-generateSpriteSplitterMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateSpriteSplitterMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -239,7 +239,7 @@ generateSpriteSplitterMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.generateSpriteSplitterMenuItem)
 this.generateRotationMenuItem!!.setText("Rotate Image Generator")
-generateRotationMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateRotationMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -253,7 +253,7 @@ generateRotationMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.generateRotationMenuItem)
 this.createStripImageJMenuItem!!.setText("Multi Image Unifier")
-createStripImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.createStripImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -267,7 +267,7 @@ createStripImageJMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.createStripImageJMenuItem)
 this.mirrorJMenuItem!!.setText("Mirror Image(s)")
-mirrorJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.mirrorJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -281,7 +281,7 @@ mirrorJMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.mirrorJMenuItem)
 this.scaleImagesJMenuItem!!.setText("Scale Image(s)")
-scaleImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.scaleImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -295,7 +295,7 @@ scaleImagesJMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.scaleImagesJMenuItem)
 this.canvasImagesJMenuItem!!.setText("Canvas Image(s)")
-canvasImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.canvasImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -309,7 +309,7 @@ canvasImagesJMenuItemActionPerformed(evt)
                             )
 this.processingJMenu!!.add(this.canvasImagesJMenuItem)
 this.createIconImagesJMenuItem!!.setText("Create Icon Image(s)")
-createIconImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+this.createIconImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -340,7 +340,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(imageUnifierJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= imageUnifierJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= imageUnifierJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "createStripImageJMenuItemActionPerformed", e)
@@ -363,7 +363,7 @@ this.jPanel1!!.removeAll()
 this.jPanel1!!.add(ImageAnalysisResultsJPanel(imageAnalysisResultsArray))
 this.jPanel1!!.updateUI()
 this.analysisActionJDialog!!.setVisible(false)
-imageProcessorInputCompositeInterface= 
+ImageToolJFrame.imageProcessorInputCompositeInterface= 
                                         null
                                     
 } catch(e: Exception)
@@ -489,12 +489,12 @@ this.imageProcessorInput= ImageProcessorInput(files, bufferedImageArray)
 this.fileJDialog!!.setVisible(false)
 
     
-                        if(imageProcessorInputCompositeInterface != 
+                        if(ImageToolJFrame.imageProcessorInputCompositeInterface != 
                                     null
                                 )
                         
                                     {
-                                    imageProcessorInputCompositeInterface!!.setImageProcessorInput(this.imageProcessorInput)
+                                    ImageToolJFrame.imageProcessorInputCompositeInterface!!.setImageProcessorInput(this.imageProcessorInput)
 
                                     }
                                 
@@ -542,7 +542,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(spriteImageJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= spriteImageJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= spriteImageJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateRotationSpriteJMenuItemActionPerformed", e)
@@ -564,7 +564,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(imageJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= imageJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= imageJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
@@ -586,7 +586,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(rotationImageJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= rotationImageJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= rotationImageJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
@@ -608,7 +608,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(resizeImageJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= resizeImageJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= resizeImageJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
@@ -630,7 +630,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(createIconImagesJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= createIconImagesJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= createIconImagesJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
@@ -652,7 +652,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(resizeImageJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= resizeImageJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= resizeImageJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
@@ -674,7 +674,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(spriteImageJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= spriteImageJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= spriteImageJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateMirrorSpriteJMenuItemActionPerformed", e)
@@ -696,7 +696,7 @@ var evt = evt
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(mirrorImageJPanel)
 this.jPanel1!!.updateUI()
-imageProcessorInputCompositeInterface= mirrorImageJPanel
+ImageToolJFrame.imageProcessorInputCompositeInterface= mirrorImageJPanel
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "generateMirrorJMenuItemActionPerformed", e)
@@ -738,7 +738,7 @@ colorRangeInterface!!.setMaxBlue(Integer(this.getMaxBlueJTextField()!!.getText()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxBlueJTextField
+                        return this.maxBlueJTextField
 }
 
 
@@ -746,7 +746,7 @@ colorRangeInterface!!.setMaxBlue(Integer(this.getMaxBlueJTextField()!!.getText()
         //nullable = true from not(false or (false and false)) = true
 {
 var maxBlueJTextField = maxBlueJTextField
-this.maxBlueJTextField= maxBlueJTextField
+this.maxBlueJTextField= this.maxBlueJTextField
 }
 
 
@@ -757,7 +757,7 @@ this.maxBlueJTextField= maxBlueJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxGreenJTextField
+                        return this.maxGreenJTextField
 }
 
 
@@ -765,7 +765,7 @@ this.maxBlueJTextField= maxBlueJTextField
         //nullable = true from not(false or (false and false)) = true
 {
 var maxGreenJTextField = maxGreenJTextField
-this.maxGreenJTextField= maxGreenJTextField
+this.maxGreenJTextField= this.maxGreenJTextField
 }
 
 
@@ -776,7 +776,7 @@ this.maxGreenJTextField= maxGreenJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxRedJTextField
+                        return this.maxRedJTextField
 }
 
 
@@ -784,7 +784,7 @@ this.maxGreenJTextField= maxGreenJTextField
         //nullable = true from not(false or (false and false)) = true
 {
 var maxRedJTextField = maxRedJTextField
-this.maxRedJTextField= maxRedJTextField
+this.maxRedJTextField= this.maxRedJTextField
 }
 
 
@@ -795,7 +795,7 @@ this.maxRedJTextField= maxRedJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minBlueJTextField
+                        return this.minBlueJTextField
 }
 
 
@@ -803,7 +803,7 @@ this.maxRedJTextField= maxRedJTextField
         //nullable = true from not(false or (false and false)) = true
 {
 var minBlueJTextField = minBlueJTextField
-this.minBlueJTextField= minBlueJTextField
+this.minBlueJTextField= this.minBlueJTextField
 }
 
 
@@ -814,7 +814,7 @@ this.minBlueJTextField= minBlueJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minGreenJTextField
+                        return this.minGreenJTextField
 }
 
 
@@ -822,7 +822,7 @@ this.minBlueJTextField= minBlueJTextField
         //nullable = true from not(false or (false and false)) = true
 {
 var minGreenJTextField = minGreenJTextField
-this.minGreenJTextField= minGreenJTextField
+this.minGreenJTextField= this.minGreenJTextField
 }
 
 
@@ -833,7 +833,7 @@ this.minGreenJTextField= minGreenJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minRedJTextField
+                        return this.minRedJTextField
 }
 
 
@@ -841,7 +841,7 @@ this.minGreenJTextField= minGreenJTextField
         //nullable = true from not(false or (false and false)) = true
 {
 var minRedJTextField = minRedJTextField
-this.minRedJTextField= minRedJTextField
+this.minRedJTextField= this.minRedJTextField
 }
 
 

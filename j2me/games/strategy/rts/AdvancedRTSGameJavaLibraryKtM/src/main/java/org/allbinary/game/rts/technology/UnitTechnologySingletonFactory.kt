@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return UnitTechnologySingletonFactory.instance
 }
 
 
@@ -80,7 +80,7 @@ this.setSpeed(0)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return damage
+                        return this.damage
 }
 
 
@@ -99,7 +99,7 @@ this.damage= damage
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return health
+                        return this.health
 }
 
 
@@ -118,7 +118,7 @@ this.health= health
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return reload
+                        return this.reload
 }
 
 
@@ -137,7 +137,7 @@ this.reload= reload
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return repair
+                        return this.repair
 }
 
 
@@ -156,7 +156,7 @@ this.repair= repair
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return speed
+                        return this.speed
 }
 
 

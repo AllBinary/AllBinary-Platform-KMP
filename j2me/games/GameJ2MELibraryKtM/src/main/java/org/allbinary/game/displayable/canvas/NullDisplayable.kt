@@ -29,7 +29,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return NullDisplayable.SINGLETON
 }
 
 
@@ -44,7 +44,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-baseGameStatistics!!.nextRefresh()
+this.baseGameStatistics!!.nextRefresh()
 }
 
 

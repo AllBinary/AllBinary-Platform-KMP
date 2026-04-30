@@ -77,7 +77,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NAME
+                        return LinesGraphicItem.NAME
 }
 
 
@@ -110,7 +110,7 @@ public constructor ()
 this.points= Points()
 
         try {
-            init()
+            this.init()
 this.active= true
 } catch(e: Exception)
             {
@@ -124,7 +124,7 @@ public constructor (linesNode: Node)
         {
 var linesNode = linesNode
 this.points= Points()
-init()
+this.init()
 this.active= false
 
     var lineNodes: BasicArrayList = DomHelper.getInstance()!!.getWithoutTextNodes(linesNode!!.getChildNodes())!!
@@ -183,8 +183,8 @@ this.addPoint(pointTwoNode!!.getChildNodes())
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.treeNode= DefaultMutableTreeNode(PointsDomUtil.getInstance()!!.LINES +item)
-item++
+this.treeNode= DefaultMutableTreeNode(PointsDomUtil.getInstance()!!.LINES +LinesGraphicItem.item)
+LinesGraphicItem.item++
 this.points.init()
 this.pointTreeNodeVector= Vector()
 this.fulcrumPoint= PointFactory.getInstance()!!.createXY(0, 0)
@@ -270,7 +270,7 @@ this.setRotate(this.theta +Math.toRadians(angle))
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NAME
+                        return LinesGraphicItem.NAME
 }
 
 
@@ -592,7 +592,7 @@ this.points= points
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return color
+                        return this.color
 }
 
 

@@ -128,7 +128,7 @@ likelyhoodIntegerKeyArray= likelyhoodIntegerArray[key]!!
                                     {
                                     
     
-                        if(this.i_random >= likelyhoodIntegerKeyArray[0]!!.toInt() && i_random < likelyhoodIntegerKeyArray[1]!!.toInt())
+                        if(this.i_random >= likelyhoodIntegerKeyArray[0]!!.toInt() && this.i_random < likelyhoodIntegerKeyArray[1]!!.toInt())
                         
                                     {
                                     this.setLastKey(key)

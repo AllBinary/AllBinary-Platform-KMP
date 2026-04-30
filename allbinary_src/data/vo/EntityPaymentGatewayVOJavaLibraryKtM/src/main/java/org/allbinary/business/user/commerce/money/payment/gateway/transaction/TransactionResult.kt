@@ -95,7 +95,7 @@ this.result= "Needs to have the hashmap converted to string for other constructo
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return result
+                        return this.result
 }
 
 
@@ -106,7 +106,7 @@ this.result= "Needs to have the hashmap converted to string for other constructo
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return keyValuePairs
+                        return this.keyValuePairs
 }
 
 

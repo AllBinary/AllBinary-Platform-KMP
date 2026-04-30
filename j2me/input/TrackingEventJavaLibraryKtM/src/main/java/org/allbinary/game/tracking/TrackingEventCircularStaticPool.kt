@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return TrackingEventCircularStaticPool.instance
 }
 
 
@@ -59,7 +59,7 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-EVENT_POOL.init(TrackingEventFactory())
+this.EVENT_POOL.init(TrackingEventFactory())
 }
 
 

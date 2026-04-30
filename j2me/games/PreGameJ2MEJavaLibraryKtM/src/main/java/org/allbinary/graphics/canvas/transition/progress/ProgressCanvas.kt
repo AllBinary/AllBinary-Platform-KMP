@@ -79,7 +79,7 @@ paint2(graphics)
 
     private val TEXT: String = commonStrings!!.LOADING
 
-    private var text: String = TEXT
+    private var text: String = this.TEXT
 
     private var background: Boolean = true
 
@@ -324,7 +324,7 @@ var graphics = graphics
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return value
+                        return this.value
 }
 
 
@@ -343,7 +343,7 @@ this.text= text
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return text
+                        return this.text
 }
 
 
@@ -362,7 +362,7 @@ this.background= background
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return background
+                        return this.background
 }
 
 

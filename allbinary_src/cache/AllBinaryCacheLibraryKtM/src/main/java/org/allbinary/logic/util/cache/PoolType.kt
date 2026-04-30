@@ -47,7 +47,7 @@ this.cacheType= cacheType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cacheType
+                        return this.cacheType
 }
 
 

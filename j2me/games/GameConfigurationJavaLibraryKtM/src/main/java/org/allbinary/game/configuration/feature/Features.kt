@@ -52,7 +52,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return Features.SINGLETON
 }
 
 
@@ -105,7 +105,7 @@ this.add(gameFeature)
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, commonStrings!!.ADD)
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, this.commonStrings!!.ADD)
 this.list.add(gameFeature)
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, gameFeature!!.toString()))
 
@@ -210,7 +210,7 @@ var gameFeature = gameFeature
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultList!!.contains(gameFeature)
+                        return this.defaultList!!.contains(gameFeature)
 }
 
 

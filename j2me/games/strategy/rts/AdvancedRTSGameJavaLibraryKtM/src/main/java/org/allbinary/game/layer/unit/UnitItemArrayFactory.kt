@@ -112,7 +112,7 @@ this.resources= resources
     var image: Image = IMAGE_CACHE.getWithKey(flagResources!!.RESOURCE_ICON)!!
 
 
-    var item: CustomItem = LayerInterfaceFactoryImageItem(name, image, ImageItem.LAYOUT_DEFAULT, flagResources!!.NAME, basicColor, arrayOf(RTSLayerTextAnimation(RTSGameStrings.getInstance()!!.DRAGGABLE, image)), layerInterfaceFactoryInterface)
+    var item: CustomItem = LayerInterfaceFactoryImageItem(name, image, ImageItem.LAYOUT_DEFAULT, flagResources!!.NAME, this.basicColor, arrayOf(RTSLayerTextAnimation(RTSGameStrings.getInstance()!!.DRAGGABLE, image)), layerInterfaceFactoryInterface)
 
 
 
@@ -131,7 +131,7 @@ this.resources= resources
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ITEMS
+                        return UnitItemArrayFactory.ITEMS
 }
 
 
@@ -142,7 +142,7 @@ this.resources= resources
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return resources
+                        return this.resources
 }
 
 

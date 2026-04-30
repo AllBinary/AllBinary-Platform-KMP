@@ -39,6 +39,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.EnumerationUtil
 
 open public class PersistentInputMapping
             : Object
@@ -53,6 +54,8 @@ companion object {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     private val inputMapping: InputToGameKeyMapping = InputToGameKeyMapping()
 
@@ -196,9 +199,9 @@ this.inputPersistance!!.loadAll(abeClientInformation)
 hashtable= list.objectArray[index]!! as Hashtable<Any, Any>
 enumeration= hashtable.keys()
 
-        while(enumeration.hasMoreElements())
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-mappedToInput= enumeration.nextElement()!! as Input
+mappedToInput= this.enumerationUtil!!.nextElement(enumeration)!! as Input
 gameActionInput= hashtable.get(mappedToInput as Object) as Input
 totalMappedTo++
 this.getInputMapping()!!.add(gameActionInput, mappedToInput)
@@ -232,7 +235,7 @@ this.inputMappingEventListenerInterface= inputMappingEventListenerInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputMappingEventListenerInterface
+                        return this.inputMappingEventListenerInterface
 }
 
 
@@ -243,7 +246,7 @@ this.inputMappingEventListenerInterface= inputMappingEventListenerInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputMapping
+                        return this.inputMapping
 }
 
 

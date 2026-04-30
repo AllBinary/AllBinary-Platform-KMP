@@ -50,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return OpenGLConfiguration.instance
 }
 
 
@@ -106,13 +106,13 @@ private constructor ()
                                     {
                                     this.logUtil!!.putF("Turning on OpenGL", this, commonStrings!!.INIT)
 features.addDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)
-this.logUtil!!.putF("Using OpenGL Type Feature: " +this.getType(), this, commonStrings!!.INIT)
+this.logUtil!!.putF("Using OpenGL Type Feature: " +this.getType(), this, this.commonStrings!!.INIT)
 features.addDefault(this.getType())
-this.logUtil!!.putF("Using OpenGL ImageColor Feature: " +this.getImageColor(), this, commonStrings!!.INIT)
+this.logUtil!!.putF("Using OpenGL ImageColor Feature: " +this.getImageColor(), this, this.commonStrings!!.INIT)
 features.addDefault(this.getImageColor())
-this.logUtil!!.putF("Using OpenGL Color Feature: " +this.getColor(), this, commonStrings!!.INIT)
+this.logUtil!!.putF("Using OpenGL Color Feature: " +this.getColor(), this, this.commonStrings!!.INIT)
 features.addDefault(this.getColor())
-this.logUtil!!.putF("Using OpenGL Version Selector Feature: " +this.getVersionSelector(), this, commonStrings!!.INIT)
+this.logUtil!!.putF("Using OpenGL Version Selector Feature: " +this.getVersionSelector(), this, this.commonStrings!!.INIT)
 features.addDefault(this.getVersionSelector())
 
                                     }
@@ -350,7 +350,7 @@ this.opengl= opengl
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return opengl
+                        return this.opengl
 }
 
 
@@ -369,7 +369,7 @@ this.imageColor= imageColor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageColor
+                        return this.imageColor
 }
 
 
@@ -388,7 +388,7 @@ this.color= color
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return color
+                        return this.color
 }
 
 
@@ -407,7 +407,7 @@ this.versionSelector= versionSelector
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return versionSelector
+                        return this.versionSelector
 }
 
 
@@ -426,7 +426,7 @@ this.type= type
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return type
+                        return this.type
 }
 
 

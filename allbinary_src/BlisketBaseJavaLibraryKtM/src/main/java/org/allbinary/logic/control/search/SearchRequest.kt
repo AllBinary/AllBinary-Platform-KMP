@@ -61,7 +61,7 @@ var pageContext = pageContext
 this.storeFront= storeFront
 this.searchParams= searchParams
 this.xslFile= xslFile
-this.pageName= pageName
+this.pageName= this.pageName
 this.contentType= contentType
 }
 

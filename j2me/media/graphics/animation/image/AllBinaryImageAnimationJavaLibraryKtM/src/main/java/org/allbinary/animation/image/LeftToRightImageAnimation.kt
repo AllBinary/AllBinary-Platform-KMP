@@ -124,7 +124,7 @@ this.currentWidth= this.getDrawWidth() *this.getFrame() /this.getSize()
     //var graphics = graphics
     //var x = x
     //var y = y
-graphics.drawRegion(this.getImage(), this.getStartX(), this.getStartY(), this.currentWidth, this.getDrawHeight(), Sprite.TRANS_NONE, x, y, anchor)
+graphics.drawRegion(this.getImage(), this.getStartX(), this.getStartY(), this.currentWidth, this.getDrawHeight(), Sprite.TRANS_NONE, x, y, this.anchor)
 }
 
 

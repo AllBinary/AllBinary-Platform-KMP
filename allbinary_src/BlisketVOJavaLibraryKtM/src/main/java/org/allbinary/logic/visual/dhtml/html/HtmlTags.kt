@@ -67,7 +67,7 @@ this.htmlTagVector!!.add(htmlTag)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return htmlTagVector!!.size
+                        return this.htmlTagVector!!.size
 }
 
 

@@ -126,7 +126,7 @@ this.setTime(0)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return time
+                        return this.time
 }
 
 
@@ -187,7 +187,7 @@ this.inputRobotInterface= inputRobotInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputRobotInterface
+                        return this.inputRobotInterface
 }
 
 

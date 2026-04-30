@@ -101,7 +101,7 @@ this.file= File(abPath!!.toFileSystemString())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return file
+                        return this.file
 }
 
 

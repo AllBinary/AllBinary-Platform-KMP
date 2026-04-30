@@ -53,7 +53,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ImageScaleUtil.instance
 }
 
 
@@ -252,7 +252,7 @@ this.scaleYBasicArrayList!!.add(scaleY)
     var matrix: Matrix = Matrix()
 
 this.scale(image, matrix, scaleX, scaleY)
-image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
+image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
 
 
 

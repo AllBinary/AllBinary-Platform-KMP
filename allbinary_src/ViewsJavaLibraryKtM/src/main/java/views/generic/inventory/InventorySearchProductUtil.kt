@@ -56,7 +56,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return InventorySearchProductUtil.instance
 }
 
 
@@ -121,7 +121,7 @@ viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ITEM_NOT_FOUND
+                        return this.ITEM_NOT_FOUND
 
                         }
                             

@@ -418,7 +418,7 @@ graphics.drawRect(point.getX() -allBinaryTiledLayer!!.getXP(), point.getY() -all
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return selectedRTSLayerPlayerGameInput
+                        return this.selectedRTSLayerPlayerGameInput
 }
 
 
@@ -450,7 +450,7 @@ this.selectedRtsFormInput= selectedRtsFormInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rtsPlayerLayerInterface
+                        return this.rtsPlayerLayerInterface
 }
 
 
@@ -461,7 +461,7 @@ this.selectedRtsFormInput= selectedRtsFormInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return towerInfoPaintable
+                        return this.towerInfoPaintable
 }
 
 
@@ -472,7 +472,7 @@ this.selectedRtsFormInput= selectedRtsFormInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return motionGestureInputList
+                        return this.motionGestureInputList
 }
 
 
@@ -483,7 +483,7 @@ this.selectedRtsFormInput= selectedRtsFormInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameCanvas
+                        return this.gameCanvas
 }
 
 
@@ -494,7 +494,7 @@ this.selectedRtsFormInput= selectedRtsFormInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return isSingleKeyProcessing
+                        return this.isSingleKeyProcessing
 }
 
 
@@ -505,7 +505,7 @@ this.selectedRtsFormInput= selectedRtsFormInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return scrollPlayerGameInput
+                        return this.scrollPlayerGameInput
 }
 
 

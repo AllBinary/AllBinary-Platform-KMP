@@ -245,7 +245,7 @@ var storeName = storeName
     var objectConfigString: String = objectConfigColumnVector!!.get(i) as String
 
 objectConfigString= Encoder.decode.toCharArray()
-objectConfigVector!!.add(this.transformInfoObjectConfigAndManipulatorFactoryInterface!!.getInstance(abeClientInformation, this as TransformInfoInterface, DomDocumentHelper.create(objectConfigString)))
+objectConfigVector!!.add(this.transformInfoObjectConfigAndManipulatorFactoryInterface!!.getInstance(this.abeClientInformation, this as TransformInfoInterface, DomDocumentHelper.create(objectConfigString)))
 }
 
 

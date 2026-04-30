@@ -49,7 +49,7 @@ var textField = textField
     var anyType: Any = textField!!.getLabel() as Object
 
 
-    var gameConfigurationTextInput: GameConfigurationTextInput = hashtable.get(anyType as Object) as GameConfigurationTextInput
+    var gameConfigurationTextInput: GameConfigurationTextInput = GameConfigurationTextInput.hashtable.get(anyType as Object) as GameConfigurationTextInput
 
 gameConfigurationTextInput!!.setText(textField!!.getString())
 }
@@ -62,7 +62,7 @@ gameConfigurationTextInput!!.setText(textField!!.getString())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable
+                        return GameConfigurationTextInput.hashtable
 }
 
 
@@ -78,7 +78,7 @@ var label = label
 var text = text
 this.setText(text)
 this.setLabel(label)
-hashtable.put(this.getLabel(), this)
+GameConfigurationTextInput.hashtable.put(this.getLabel(), this)
 }
 
 
@@ -97,7 +97,7 @@ this.text= text
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return text
+                        return this.text
 }
 
 
@@ -116,7 +116,7 @@ this.label= label
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return label
+                        return this.label
 }
 
 

@@ -92,7 +92,7 @@ this.dimension= IntegerDimension(0, 0)
 
 
     
-                        if(name.compareTo(FRAME) == 0)
+                        if(name.compareTo(CanvasDom.FRAME) == 0)
                         
                                     {
                                     this.graphicItemHashMap= HashMap<Any, Any>()
@@ -446,7 +446,7 @@ frameNode!!.appendChild(graphicItemNode)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return dimension
+                        return this.dimension
 }
 
 
@@ -465,7 +465,7 @@ this.dimension= dimension
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return grid
+                        return this.grid
 }
 
 

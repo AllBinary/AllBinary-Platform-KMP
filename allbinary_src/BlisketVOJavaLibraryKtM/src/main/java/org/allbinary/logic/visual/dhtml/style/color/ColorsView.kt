@@ -77,7 +77,7 @@ var blueIndex = blueIndex
 hexColorStringBuffer!!.append(redIndex, HEXRADIX.toString())
 
     
-                        if(greenIndex < HEXRADIX)
+                        if(greenIndex < this.HEXRADIX)
                         
                                     {
                                     hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
@@ -87,7 +87,7 @@ hexColorStringBuffer!!.append(redIndex, HEXRADIX.toString())
 hexColorStringBuffer!!.append(greenIndex, HEXRADIX.toString())
 
     
-                        if(blueIndex < HEXRADIX)
+                        if(blueIndex < this.HEXRADIX)
                         
                                     {
                                     hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
@@ -141,7 +141,7 @@ node.appendChild(blackNode)
 hexColorStringBuffer!!.append(index, HEXRADIX.toString())
 
     
-                        if(index < HEXRADIX)
+                        if(index < this.HEXRADIX)
                         
                                     {
                                     hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)
@@ -151,7 +151,7 @@ hexColorStringBuffer!!.append(index, HEXRADIX.toString())
 hexColorStringBuffer!!.append(index, HEXRADIX.toString())
 
     
-                        if(index < HEXRADIX)
+                        if(index < this.HEXRADIX)
                         
                                     {
                                     hexColorStringBuffer!!.append(this.commonPhoneStrings!!.ZERO)

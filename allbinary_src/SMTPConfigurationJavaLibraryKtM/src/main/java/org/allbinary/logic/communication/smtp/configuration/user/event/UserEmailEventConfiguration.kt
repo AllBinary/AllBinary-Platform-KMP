@@ -81,7 +81,7 @@ this.setEventListenerClassPath(hashMap!!.get(UserEmailEventConfigurationData.LIS
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -100,7 +100,7 @@ this.name= name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return eventListenerClassPath
+                        return this.eventListenerClassPath
 }
 
 

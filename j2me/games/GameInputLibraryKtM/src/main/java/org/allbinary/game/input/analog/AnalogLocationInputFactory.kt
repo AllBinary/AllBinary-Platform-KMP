@@ -29,7 +29,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return AnalogLocationInputFactory.instance
 }
 
 
@@ -90,7 +90,7 @@ var playerInputId = playerInputId
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
+                        return this.list
 }
 
 

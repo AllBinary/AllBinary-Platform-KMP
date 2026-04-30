@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return eventHandlerArray[groupInterface!!.getGroupId().toInt()]!!
+                        return WaypointEventHandlerFactory.eventHandlerArray[groupInterface!!.getGroupId().toInt()]!!
 }
 
 
@@ -54,10 +54,10 @@ companion object {
 
 
 
-                        for (index in eventHandlerArray!!.size -1 downTo 0)
+                        for (index in WaypointEventHandlerFactory.eventHandlerArray!!.size -1 downTo 0)
 
         {
-eventHandlerArray[index]!!.removeAllListeners()
+WaypointEventHandlerFactory.eventHandlerArray[index]!!.removeAllListeners()
 }
 
 }

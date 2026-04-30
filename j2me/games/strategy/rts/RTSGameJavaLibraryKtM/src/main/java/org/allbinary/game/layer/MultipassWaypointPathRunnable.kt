@@ -48,7 +48,7 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
 
     private var done: Boolean = false
 
-    private var list: BasicArrayList = basicArrayListUtil!!.getImmutableInstance()!!
+    private var list: BasicArrayList = this.basicArrayListUtil!!.getImmutableInstance()!!
 
     private var pathFindingInfo: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
@@ -251,7 +251,7 @@ this.setRunning(false)
     open fun reset2()
         //nullable = true from not(false or (false and true)) = true
 {
-multipassState!!.step= 0
+this.multipassState!!.step= 0
 this.multipassState!!.iteration= 0
 this.multipassState!!.iteration2= 0
 this.pathFindingInfo= NullUtil.getInstance()!!.NULL_OBJECT
@@ -274,7 +274,7 @@ this.done= true
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return done
+                        return this.done
 }
 
 

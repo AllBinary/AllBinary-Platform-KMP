@@ -40,7 +40,7 @@ open public class GenericProfileActionsJPanel : javax.swing.JPanel {
 
     private var genericProfileActionJPanel: GenericProfileActionJPanel
 public constructor (){
-initComponents()
+this.initComponents()
 }
 
 
@@ -62,7 +62,7 @@ this.newProfileActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
 this.newProfileActionJDialog!!.setResizable(false)
 this.newProfileActionJLabel!!.setText("New Action Name")
 this.okNewProfileActionJButton!!.setText("Ok")
-okNewProfileActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okNewProfileActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -81,7 +81,7 @@ this.newProfileActionJDialog!!.getContentPane()!!.setLayout(newProfileActionJDia
 newProfileActionJDialogLayout!!.setHorizontalGroup(newProfileActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(newProfileActionJDialogLayout!!.createSequentialGroup()!!.addGroup(newProfileActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(newProfileActionJDialogLayout!!.createSequentialGroup()!!.addGap(93, 93, 93)!!.addComponent(okNewProfileActionJButton))!!.addGroup(newProfileActionJDialogLayout!!.createSequentialGroup()!!.addGap(75, 75, 75)!!.addComponent(newProfileActionJLabel))!!.addGroup(newProfileActionJDialogLayout!!.createSequentialGroup()!!.addGap(29, 29, 29)!!.addComponent(newProfileActionJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))!!.addContainerGap(34, Short.MAX_VALUE)))
 newProfileActionJDialogLayout!!.setVerticalGroup(newProfileActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newProfileActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(newProfileActionJLabel)!!.addGap(21, 21, 21)!!.addComponent(newProfileActionJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)!!.addComponent(okNewProfileActionJButton)!!.addContainerGap()))
 this.genericProfileActionsJPanel!!.setPreferredSize(java.awt.Dimension(10000, 10000))
-genericProfileActionsJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
+this.genericProfileActionsJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
     open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
@@ -95,7 +95,7 @@ genericProfileActionsJListValueChanged(evt)
                             )
 this.genericProfileActionsJScrollPane!!.setViewportView(this.genericProfileActionsJList)
 this.newActionJButton!!.setText("New")
-newActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.newActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -108,7 +108,7 @@ newActionJButtonActionPerformed(evt)
                                 }
                             )
 this.deleteActionJButton!!.setText("Delete")
-deleteActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.deleteActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -121,7 +121,7 @@ deleteActionJButtonActionPerformed(evt)
                                 }
                             )
 this.saveJButton!!.setText("Save")
-saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -321,7 +321,7 @@ this.blankGenericProfileActionJPanel!!.repaint()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfileActionJPanel
+                        return this.genericProfileActionJPanel
 }
 
 
@@ -340,7 +340,7 @@ this.genericProfileActionJPanel= genericProfileActionJPanel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfileActions
+                        return this.genericProfileActions
 }
 
 

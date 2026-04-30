@@ -57,15 +57,15 @@ this.setP2(p2)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getDeltaY() /getDeltaX()
+                        return this.getDeltaY() /this.getDeltaX()
 }
 
 
     open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
-this.deltaX= getP1()!!.getX().toDouble() -getP2()!!.getX()
-this.deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
+this.deltaX= this.getP1()!!.getX().toDouble() -this.getP2()!!.getX()
+this.deltaY= this.getP1()!!.getY().toDouble() -this.getP2()!!.getY()
 }
 
 
@@ -76,7 +76,7 @@ this.deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return deltaX
+                        return this.deltaX
 }
 
 
@@ -87,7 +87,7 @@ this.deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return deltaY
+                        return this.deltaY
 }
 
 
@@ -98,7 +98,7 @@ this.deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return p1
+                        return this.p1
 }
 
 
@@ -109,7 +109,7 @@ this.deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return p2
+                        return this.p2
 }
 
 

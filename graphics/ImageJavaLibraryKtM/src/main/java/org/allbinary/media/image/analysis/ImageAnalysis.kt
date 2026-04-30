@@ -50,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ImageAnalysis.instance
 }
 
 
@@ -96,8 +96,8 @@ var colorRangeInterface = colorRangeInterface
 
     var color: Color = colorCacheable!!.getColor()!!
 
-processColorRangeResults(imageAnalysisResults, colorRangeInterface, color)
-processImageColorResults(imageAnalysisResults!!.getImageColorResults(), colorRangeInterface, color)
+ImageAnalysis.processColorRangeResults(imageAnalysisResults, colorRangeInterface, color)
+ImageAnalysis.processImageColorResults(imageAnalysisResults!!.getImageColorResults(), colorRangeInterface, color)
 redTotal += color.getRed()
 greenTotal += color.getGreen()
 blueTotal += color.getBlue()

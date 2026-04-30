@@ -39,6 +39,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.EnumerationUtil
 
 open public class PersistentInputMapping
             : Object
@@ -53,6 +54,8 @@ companion object {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     private val inputMapping: InputToGameKeyMapping = InputToGameKeyMapping()
 
@@ -169,10 +172,22 @@ this.inputPersistance!!.loadAll(abeClientInformation)
     var list: BasicArrayList = this.inputPersistance!!.getList()!!
 
 
+    var totalMappedTo: Int = 0
+
+
     var size: Int = list.size()!!
 
 
-    var totalMappedTo: Int = 0
+    var hashtable: Hashtable<Any, Any>
+
+
+    var enumeration: Enumeration<Any?>
+
+
+    var mappedToInput: Input
+
+
+    var gameActionInput: Input
 
 
 
@@ -181,21 +196,13 @@ this.inputPersistance!!.loadAll(abeClientInformation)
                         for (index in 0 until size)
 
         {
+hashtable= list.objectArray[index]!! as Hashtable<Any, Any>
+enumeration= hashtable.keys()
 
-    var hashtable: Hashtable<Any, Any> = list.objectArray[index]!! as Hashtable<Any, Any>
-
-
-    var enumeration: Enumeration<Any?> = hashtable.keys()!!
-
-
-        while(enumeration.hasMoreElements())
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-
-    var mappedToInput: Input = enumeration.nextElement()!! as Input
-
-
-    var gameActionInput: Input = hashtable.get(mappedToInput as Object) as Input
-
+mappedToInput= this.enumerationUtil!!.nextElement(enumeration)!! as Input
+gameActionInput= hashtable.get(mappedToInput as Object) as Input
 totalMappedTo++
 this.getInputMapping()!!.add(gameActionInput, mappedToInput)
 }
@@ -228,7 +235,7 @@ this.inputMappingEventListenerInterface= inputMappingEventListenerInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputMappingEventListenerInterface
+                        return this.inputMappingEventListenerInterface
 }
 
 
@@ -239,7 +246,7 @@ this.inputMappingEventListenerInterface= inputMappingEventListenerInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputMapping
+                        return this.inputMapping
 }
 
 

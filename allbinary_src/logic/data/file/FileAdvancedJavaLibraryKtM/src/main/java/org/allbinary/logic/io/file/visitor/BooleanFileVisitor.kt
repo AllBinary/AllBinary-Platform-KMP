@@ -112,7 +112,7 @@ nextFileFilterString= list.get(index) as String
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return filterStringBasicArrayList
+                        return this.filterStringBasicArrayList
 }
 
 

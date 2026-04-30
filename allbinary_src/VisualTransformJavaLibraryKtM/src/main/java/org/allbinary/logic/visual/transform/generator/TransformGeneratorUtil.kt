@@ -50,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return TransformGeneratorUtil.instance
 }
 
 
@@ -138,7 +138,7 @@ StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
     //var abeClientInformation = abeClientInformation
     //var transformInfoDomNode = transformInfoDomNode
     //var ownerTransformInfoInterface = ownerTransformInfoInterface
-generate(abeClientInformation, transformInfoDomNode!!.getTransformInfoInterface(), ownerTransformInfoInterface)
+this.generate(abeClientInformation, transformInfoDomNode!!.getTransformInfoInterface(), ownerTransformInfoInterface)
 }
 
 

@@ -193,7 +193,7 @@ this.value= value
                         if(this.getCommand()!!.compareTo(ShippingAddressData.SELECT) == 0)
                         
                                     {
-                                    set()
+                                    this.set()
 
 
 
@@ -207,7 +207,7 @@ this.value= value
                         if(this.getCommand()!!.compareTo(ShippingAddressData.SETTOBILLINGADDRESS) == 0)
                         
                                     {
-                                    setToBillingAddress()
+                                    this.setToBillingAddress()
 
                                     }
                                 

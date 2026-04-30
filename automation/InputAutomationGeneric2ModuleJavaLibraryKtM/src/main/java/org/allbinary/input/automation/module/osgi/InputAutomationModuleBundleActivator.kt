@@ -239,7 +239,7 @@ this.removeModules(context)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputAutomationModuleInterface
+                        return this.inputAutomationModuleInterface
 }
 
 
@@ -258,7 +258,7 @@ this.inputAutomationModuleInterface= inputAutomationModuleInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return serviceFactory
+                        return this.serviceFactory
 }
 
 

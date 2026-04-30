@@ -36,11 +36,11 @@ companion object {
 
     var CONFIG_PATH: String = "modules/configs/"
 
-    var MODULE_RELATIVE_PATH: String = RELATIVE_PATH +CONFIG_PATH +"allbinary/input/automation/module/"
+    var MODULE_RELATIVE_PATH: String = GenericConfigData.RELATIVE_PATH +GenericConfigData.CONFIG_PATH +"allbinary/input/automation/module/"
 
-    var GAME_MODULE_RELATIVE_PATH: String = MODULE_RELATIVE_PATH +"game/"
+    var GAME_MODULE_RELATIVE_PATH: String = GenericConfigData.MODULE_RELATIVE_PATH +"game/"
 
-    var MMO_GAME_MODULE_RELATIVE_PATH: String = GAME_MODULE_RELATIVE_PATH +"mmog/"
+    var MMO_GAME_MODULE_RELATIVE_PATH: String = GenericConfigData.GAME_MODULE_RELATIVE_PATH +"mmog/"
 
     var FREE_MMO_GAME_MODULE_RELATIVE_PATH: String = "free/"
 

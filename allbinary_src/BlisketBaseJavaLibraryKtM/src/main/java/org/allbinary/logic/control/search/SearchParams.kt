@@ -305,7 +305,7 @@ paramsNode!!.appendChild(this.getLengthNode(document))
 : Node{
 var document = document
 
-    var fieldsNode: Node = ModDomHelper.createNameValueNodes(document, SearchData.FIELDS, Integer(columnsAndSearchValues!!.size()).
+    var fieldsNode: Node = ModDomHelper.createNameValueNodes(document, SearchData.FIELDS, Integer(this.columnsAndSearchValues!!.size()).
                             toString())!!
 
 

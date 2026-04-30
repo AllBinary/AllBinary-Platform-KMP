@@ -68,7 +68,7 @@ this.setPaymentGatewayPrimaryKey(PaymentGatewayPrimaryKey(storeName, gatewayName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return paymentGatewayPrimaryKey
+                        return this.paymentGatewayPrimaryKey
 }
 
 

@@ -41,7 +41,7 @@ open public class GameRunnable
 
     val FAST: Int = 60
 
-    var wait: Long = WAIT.toLong()
+    var wait: Long = this.WAIT.toLong()
 public constructor ()
             : super()
         {

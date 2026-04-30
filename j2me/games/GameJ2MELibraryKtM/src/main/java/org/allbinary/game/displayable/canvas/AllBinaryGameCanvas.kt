@@ -289,7 +289,7 @@ companion object {
 
     private var currentTouchInputFactory: BaseTouchInput = NoButtonsTouchInputFactory.getInstance()!!
 
-    var colorFillPaintable: ColorFillBasePaintable = ColorFillPaintableFactory.getInstance()!!.getInstance(basicColorFactory!!.BLACK, true)!!
+    var colorFillPaintable: ColorFillBasePaintable = ColorFillPaintableFactory.getInstance()!!.getInstance(this.basicColorFactory!!.BLACK, true)!!
 
     private val baseGameStatistics: BaseGameStatistics = GameStatisticsFactory.getInstance()!!
 
@@ -465,10 +465,10 @@ super.processSleep()
                                     {
                                     
     
-                        if(!primaryPlayerQueue!!.process())
+                        if(!this.primaryPlayerQueue!!.process())
                         
                                     {
-                                    secondaryPlayerQueue!!.process()
+                                    this.secondaryPlayerQueue!!.process()
 
                                     }
                                 
@@ -713,7 +713,7 @@ this.menuBehavior!!.popupMenu(this)
     open fun popupMenu2()
         //nullable = true from not(false or (false and true)) = true
 {
-primaryPlayerQueue!!.add(SelectSound.getInstance())
+this.primaryPlayerQueue!!.add(SelectSound.getInstance())
 this.setMenuPaintable(this.getFormPaintable())
 this.setMenuInputProcessor(this.mainMenuInputProcessor)
 this.basicMotionGesturesHandler!!.addListener(this.mainMenuInputProcessor)
@@ -743,7 +743,7 @@ this.popupMenu()
                         if(this.getMenuPaintable() == this.getFormPaintable())
                         
                                     {
-                                    primaryPlayerQueue!!.add(SelectSound.getInstance())
+                                    this.primaryPlayerQueue!!.add(SelectSound.getInstance())
 this.unPause()
 
                                     }
@@ -781,8 +781,8 @@ this.gameKeyEventHandler!!.addListener(this.menuInputProcessor)
 {
 this.basicMotionGesturesHandler!!.removeListener(this.menuInputProcessor)
 this.gameKeyEventHandler!!.removeListener(this.menuInputProcessor)
-primaryPlayerQueue!!.clear()
-secondaryPlayerQueue!!.clear()
+this.primaryPlayerQueue!!.clear()
+this.secondaryPlayerQueue!!.clear()
 }
 
 
@@ -920,7 +920,7 @@ ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
 progressCanvas!!.addNormalPortion(50, "Setting Configurables")
-GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, gameInitializationInterfaceFactoryInterface)
+GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, this.gameInitializationInterfaceFactoryInterface)
 
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
 
@@ -1009,7 +1009,7 @@ this.postInitTouch()
                                     {
                                     this.currentTouchInputFactory= nextTouchInput
 PreLogUtil.put(this.currentTouchInputFactory!!.toString(), this, this.gameInputStrings!!.UDPATE_CURRENT_TOUCH_INPUT_FACTORY)
-touchButtonFactory!!.toggle(this.isPaused(), this.currentTouchInputFactory!!.getList())
+this.touchButtonFactory!!.toggle(this.isPaused(), this.currentTouchInputFactory!!.getList())
 
                                     }
                                 
@@ -1245,7 +1245,7 @@ this.setStartLevel(this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameLayerManager
+                        return this.gameLayerManager
 }
 
 
@@ -1298,7 +1298,7 @@ this.setEndGamePaintable(getEndGameStatePaintable())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return highScoreSubmitted
+                        return this.highScoreSubmitted
 }
 
 
@@ -1330,7 +1330,7 @@ this.logUtil!!.putF(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameState
+                        return this.gameState
 }
 
 
@@ -1448,7 +1448,7 @@ this.gameBehavior!!.updateEndGameProcessor(this)
 {
 
     
-                        if(this.getGameState() == SHOW_END_RESULT_GAME_STATE || this.getGameState() == SHOW_HIGH_SCORE_GAME_STATE)
+                        if(this.getGameState() == AllBinaryGameCanvas.SHOW_END_RESULT_GAME_STATE || this.getGameState() == AllBinaryGameCanvas.SHOW_HIGH_SCORE_GAME_STATE)
                         
                                     {
                                     this.setEndGameProcessor(this.realEndGameProcessor)
@@ -1482,8 +1482,8 @@ this.logUtil!!.putF(commonStrings!!.START, this, this.commonStrings!!.CLEANUP)
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
 progressCanvas!!.addNormalPortion(10, "Cleaning Up")
-primaryPlayerQueue!!.clear()
-secondaryPlayerQueue!!.clear()
+this.primaryPlayerQueue!!.clear()
+this.secondaryPlayerQueue!!.clear()
 GameLevelDisplayChangeEventListenersFactory.getInstance()!!.clear()
 }
 
@@ -1668,7 +1668,7 @@ this.gameCanvasStartListener= gameCanvasStartListener
 {
 this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.LOAD)
 
-    var hashtable: Hashtable<Any, Any> = getLoadStateHashtable()!!
+    var hashtable: Hashtable<Any, Any> = this.getLoadStateHashtable()!!
 
 
     
@@ -1768,7 +1768,7 @@ this.colorFillPaintable!!.paint(graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
-baseGameStatistics!!.nextRefresh()
+this.baseGameStatistics!!.nextRefresh()
 this.draw(graphics)
 this.menuPaintable!!.paint(graphics)
 this.progressPaintable!!.paint(graphics)
@@ -1812,7 +1812,7 @@ var graphics = graphics
 
     private val rawInputProcessor: InputProcessor = FormInputProcessor(this)
 
-    private var inputProcessor: InputProcessor = getRawGameInputProcessor()!!
+    private var inputProcessor: InputProcessor = this.getRawGameInputProcessor()!!
 
     override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -1950,10 +1950,10 @@ super.process()
                                     {
                                     
     
-                        if(!primaryPlayerQueue!!.process())
+                        if(!this.primaryPlayerQueue!!.process())
                         
                                     {
-                                    secondaryPlayerQueue!!.process()
+                                    this.secondaryPlayerQueue!!.process()
 
                                     }
                                 
@@ -1961,9 +1961,9 @@ super.process()
                                     }
                                 
 this.mainStateProcessor!!.process()
-menuInputProcessor!!.processInputList()
+this.menuInputProcessor!!.processInputList()
 this.endGameProcessor!!.process()
-baseGameStatistics!!.nextFrame()
+this.baseGameStatistics!!.nextFrame()
 }
 
 
@@ -2003,7 +2003,7 @@ this.threadObjectUtil!!.notifyObject(this)
                                 
                              else 
     
-                        if(features.isFeature(openGLFeatureFactory!!.OPENGL_2D))
+                        if(features.isFeature(this.openGLFeatureFactory!!.OPENGL_2D))
                         
                                     {
                                     
@@ -2123,7 +2123,7 @@ OpenGLThreadUtil.getInstance()!!.onResume()
                                 
                              else 
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS))
+                        if(features.isDefault(this.openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS))
                         
                                     {
                                     this.logUtil!!.putF(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName(), this, commonStrings!!.RUN)
@@ -2222,9 +2222,9 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
         //nullable = true from not(false or (false and true)) = true
 {
 this.screenCapture!!.endRecording()
-baseGameStatistics!!.add(StringMaker().
+this.baseGameStatistics!!.add(StringMaker().
                             append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
-baseGameStatistics!!.init()
+this.baseGameStatistics!!.init()
 this.gameKeyEventHandler!!.removeListener(this.cheatProcessor)
 this.close()
 this.removeAllGameKeyInputListeners()
@@ -2344,7 +2344,7 @@ open class SaveHighScoreRunnable
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "run", e)
-progressCanvas!!.end()
+this.progressCanvas!!.end()
 }
 
 }
@@ -2367,7 +2367,7 @@ SecondaryThreadPool.getInstance()!!.runTask(SaveHighScoreRunnable())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameStateTimeHelper
+                        return this.gameStateTimeHelper
 }
 
 
@@ -2386,7 +2386,7 @@ this.initialized= initialized
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initialized
+                        return this.initialized
 }
 
 
@@ -2397,7 +2397,7 @@ this.initialized= initialized
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return id
+                        return AllBinaryGameCanvas.id
 }
 
 
@@ -2427,7 +2427,7 @@ this.progressPaintable= paintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return endLevelIntermissionInterface
+                        return this.endLevelIntermissionInterface
 }
 
 
@@ -2446,7 +2446,7 @@ this.touchPaintable= paintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return touchPaintable
+                        return this.touchPaintable
 }
 
 
@@ -2465,7 +2465,7 @@ this.endGamePaintable= endGamePaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return endGamePaintable
+                        return this.endGamePaintable
 }
 
 
@@ -2484,7 +2484,7 @@ this.intermissionPaintable= intermissionPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return intermissionPaintable
+                        return this.intermissionPaintable
 }
 
 
@@ -2495,7 +2495,7 @@ this.intermissionPaintable= intermissionPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return endGameInfo
+                        return this.endGameInfo
 }
 
 
@@ -2514,7 +2514,7 @@ this.highScoresPaintable= highScoresPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return highScoresPaintable
+                        return this.highScoresPaintable
 }
 
 
@@ -2525,7 +2525,7 @@ this.highScoresPaintable= highScoresPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return realHighScoresPaintable
+                        return this.realHighScoresPaintable
 }
 
 
@@ -2573,7 +2573,7 @@ this.menuInputProcessor= menuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return menuInputProcessor
+                        return this.menuInputProcessor
 }
 
 
@@ -2584,7 +2584,7 @@ this.menuInputProcessor= menuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return menuForm
+                        return this.menuForm
 }
 
 
@@ -2603,7 +2603,7 @@ this.menuForm= menuForm
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return startLevel
+                        return this.startLevel
 }
 
 
@@ -2630,7 +2630,7 @@ this.touchButtonsPaintable= touchButtonsPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return touchButtonsPaintable
+                        return this.touchButtonsPaintable
 }
 
 
@@ -2649,7 +2649,7 @@ this.gameInputProcessor= gameInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameInputProcessor
+                        return this.gameInputProcessor
 }
 
 
@@ -2668,7 +2668,7 @@ this.endGameProcessor= endGameProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return endGameProcessor
+                        return this.endGameProcessor
 }
 
 
@@ -2687,7 +2687,7 @@ this.endGameStatePaintable= endGameStatePaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return endGameStatePaintable
+                        return this.endGameStatePaintable
 }
 
 
@@ -2706,7 +2706,7 @@ this.nonBotPaintable= nonBotPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return nonBotPaintable
+                        return this.nonBotPaintable
 }
 
 
@@ -2725,7 +2725,7 @@ this.startIntermissionPaintable= startIntermissionPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return startIntermissionPaintable
+                        return this.startIntermissionPaintable
 }
 
 
@@ -2744,7 +2744,7 @@ this.mainStateProcessor= mainStateProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mainStateProcessor
+                        return this.mainStateProcessor
 }
 
 
@@ -2763,7 +2763,7 @@ this.processGameProcessor= processGameProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return processGameProcessor
+                        return this.processGameProcessor
 }
 
 
@@ -2782,7 +2782,7 @@ this.openMenuPaintable= openMenuPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return openMenuPaintable
+                        return this.openMenuPaintable
 }
 
 
@@ -2801,7 +2801,7 @@ this.popupMenuInputProcessor= popupMenuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return popupMenuInputProcessor
+                        return this.popupMenuInputProcessor
 }
 
 
@@ -2812,7 +2812,7 @@ this.popupMenuInputProcessor= popupMenuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return sensorGameUpdateProcessor
+                        return this.sensorGameUpdateProcessor
 }
 
 
@@ -2823,7 +2823,7 @@ this.popupMenuInputProcessor= popupMenuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rawGameInputProcessor
+                        return this.rawGameInputProcessor
 }
 
 
@@ -2834,7 +2834,7 @@ this.popupMenuInputProcessor= popupMenuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rawInputProcessor
+                        return this.rawInputProcessor
 }
 
 
@@ -2853,7 +2853,7 @@ this.inputProcessor= inputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputProcessor
+                        return this.inputProcessor
 }
 
 
@@ -2872,7 +2872,7 @@ this.menuPaintable= menuPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return menuPaintable
+                        return this.menuPaintable
 }
 
 
@@ -2891,7 +2891,7 @@ this.formPaintable= formPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return formPaintable
+                        return this.formPaintable
 }
 
 
@@ -2910,7 +2910,7 @@ this.gameSpecificPaintable= gameSpecificPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameSpecificPaintable
+                        return this.gameSpecificPaintable
 }
 
 
@@ -2966,7 +2966,7 @@ this.gameSpecificPaintable= gameSpecificPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TYPE
+                        return AllBinaryGameCanvas.TYPE
 }
 
 

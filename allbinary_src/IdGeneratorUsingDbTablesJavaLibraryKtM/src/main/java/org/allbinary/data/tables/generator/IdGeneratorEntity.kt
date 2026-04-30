@@ -146,7 +146,7 @@ this.update(map)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
-super.updateWhere(NAME, hashMap!!.get(NAME as Object) as String, hashMap)
+super.updateWhere(this.NAME, hashMap!!.get(this.NAME) as String, hashMap)
 }
 
 

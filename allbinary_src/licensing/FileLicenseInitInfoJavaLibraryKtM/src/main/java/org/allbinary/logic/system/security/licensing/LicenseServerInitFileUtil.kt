@@ -92,7 +92,7 @@ var len = len
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val NULL_OUTPUT_STREAM: OutputStream = nullOutputStream()!!
+    private val NULL_OUTPUT_STREAM: OutputStream = LicenseServerInitFileUtil.nullOutputStream()!!
 
     open fun init()
         //nullable = true from not(false or (false and true)) = true
@@ -113,7 +113,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(StringUtil.getInstance()!!.EMPTY
                                     }
                                 
                         else {
-                            write()
+                            this.write()
 
                         }
                             

@@ -69,7 +69,7 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return totalColumns
+                        return this.totalColumns
 }
 
 
@@ -80,7 +80,7 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return totalRows
+                        return this.totalRows
 }
 
 
@@ -91,7 +91,7 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return columnsRemainder
+                        return this.columnsRemainder
 }
 
 
@@ -102,7 +102,7 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rowsRemainder
+                        return this.rowsRemainder
 }
 
 
@@ -113,7 +113,7 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return columnsRemainderHalf
+                        return this.columnsRemainderHalf
 }
 
 
@@ -124,7 +124,7 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rowsRemainderHalf
+                        return this.rowsRemainderHalf
 }
 
 

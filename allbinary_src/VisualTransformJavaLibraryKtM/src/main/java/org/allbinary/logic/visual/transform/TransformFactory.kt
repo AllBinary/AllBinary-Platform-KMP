@@ -54,7 +54,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return TransformFactory.instance
 }
 
 
@@ -120,7 +120,7 @@ transformInfoInterface!!.setChild()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    this.logUtil!!.putF("Created Transform: " +viewName, this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Created Transform: " +viewName, this, this.commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -136,7 +136,7 @@ transformInfoInterface!!.setChild()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 
@@ -201,7 +201,7 @@ transformInfoInterface!!.setChild()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    this.logUtil!!.putF("Created Transform: " +propertiesHashMap!!.get(transformInfoData!!.NAME), this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Created Transform: " +propertiesHashMap!!.get(transformInfoData!!.NAME), this, this.commonStrings!!.GET_INSTANCE)
 
                                     }
                                 

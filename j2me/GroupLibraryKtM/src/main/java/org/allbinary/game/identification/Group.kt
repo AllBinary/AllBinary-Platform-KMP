@@ -68,7 +68,7 @@ this.teamId= teamId
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -95,7 +95,7 @@ this.string= stringBuffer!!.toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return teamId
+                        return this.teamId
 }
 
 
@@ -106,7 +106,7 @@ this.string= stringBuffer!!.toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return string
+                        return this.string
 }
 
 

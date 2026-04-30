@@ -276,7 +276,7 @@ this.special= special
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return special
+                        return this.special
 }
 
 
@@ -287,7 +287,7 @@ this.special= special
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return licenseType
+                        return this.licenseType
 }
 
 

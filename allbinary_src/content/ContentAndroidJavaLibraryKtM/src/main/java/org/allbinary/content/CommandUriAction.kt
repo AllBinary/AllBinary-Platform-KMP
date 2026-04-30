@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return CommandUriAction.instance
 }
 
 
@@ -79,7 +79,7 @@ var command = command
 
         try {
             
-    var intent: Intent = getIntent(command)!!
+    var intent: Intent = this.getIntent(command)!!
 
 ResourceUtil.getInstance()!!.getContext()!!.startActivity(intent)
 } catch(e: Exception)

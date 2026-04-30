@@ -154,7 +154,7 @@ this.drop()
                         
                                     {
                                     super.processKeyAI(Canvas.UP)
-velocityInterface!!.limitMaxXYVelocity(this.velocityInterface!!.getMaxForwardVelocity() /this.currentSpeedDivisor)
+this.velocityInterface!!.limitMaxXYVelocity(this.velocityInterface!!.getMaxForwardVelocity() /this.currentSpeedDivisor)
 
                                     }
                                 
@@ -229,7 +229,7 @@ this.baseVelocityInterface!!.zero()
                         if(this.currentSpeedDivisor > 1)
                         
                                     {
-                                    currentSpeedDivisor--
+                                    this.currentSpeedDivisor--
 
                                     }
                                 

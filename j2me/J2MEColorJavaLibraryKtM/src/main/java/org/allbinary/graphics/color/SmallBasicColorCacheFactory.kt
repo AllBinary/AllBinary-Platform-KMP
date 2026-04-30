@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return SmallBasicColorCacheFactory.instance
 }
 
 
@@ -50,9 +50,9 @@ companion object {
             
     private val SIZE: Int = 255
 
-    private val INDEX_TO_COLOR: IntArray = IntArray(SIZE)
+    private val INDEX_TO_COLOR: IntArray = IntArray(this.SIZE)
 
-    private val BASIC_COLOR_ARRAY: Array<BasicColor?> = arrayOfNulls(SIZE)
+    private val BASIC_COLOR_ARRAY: Array<BasicColor?> = arrayOfNulls(this.SIZE)
 
     private var colorIndex: Int = 0
 private constructor ()
@@ -67,7 +67,7 @@ private constructor ()
     //var basicDefaultColor = basicDefaultColor
 this.BASIC_COLOR_ARRAY[this.colorIndex]= basicDefaultColor
 this.INDEX_TO_COLOR[this.colorIndex]= basicDefaultColor!!.toInt()
-colorIndex++
+this.colorIndex++
 }
 
 

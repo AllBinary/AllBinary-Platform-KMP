@@ -41,7 +41,7 @@ open public class TimeIntervalActionScriptConditionJPanel : javax.swing.JPanel {
 public constructor (timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface){
 var timeIntervalActionScriptConditionInterface = timeIntervalActionScriptConditionInterface
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 this.timeIntervalActionScriptConditionInterface= timeIntervalActionScriptConditionInterface
 this.set()
 }
@@ -70,7 +70,7 @@ this.timeIntervalActionScriptConditionInterface!!.log()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return timeIntervalJTextField
+                        return this.timeIntervalJTextField
 }
 
 
@@ -89,7 +89,7 @@ this.timeIntervalJTextField= timeIntervalJTextField
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return timeIntervalActionJDialog
+                        return this.timeIntervalActionJDialog
 }
 
 
@@ -114,7 +114,7 @@ this.jLabel1= javax.swing.JLabel()
 this.timeIntervalActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
 this.titleJLabel!!.setText("Time Interval Condition Options")
 this.okJButton!!.setText("OK")
-okJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -135,7 +135,7 @@ timeIntervalActionJDialogLayout!!.setHorizontalGroup(timeIntervalActionJDialogLa
 timeIntervalActionJDialogLayout!!.setVerticalGroup(timeIntervalActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(timeIntervalActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(titleJLabel)!!.addGap(20, 20, 20)!!.addGroup(timeIntervalActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel2)!!.addComponent(timeIntervalJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addGap(15, 15, 15)!!.addComponent(okJButton)!!.addContainerGap()))
 setMinimumSize(java.awt.Dimension(100, 0))
 this.timeIntervalActionJButton!!.setText("Edit")
-timeIntervalActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.timeIntervalActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

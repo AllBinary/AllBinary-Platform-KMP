@@ -68,7 +68,7 @@ this.imageComparator= ImageComparator(imageComparatorConstraintsInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return running
+                        return this.running
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -159,7 +159,7 @@ this.logUtil!!.putF(StringMaker().
                                     }
                                 
 this.bufferedImageVector!!.remove(0)
-index2++
+this.index2++
 
     var message: String = StringMaker().
                             append("Frame: ")!!.appendint(this.index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.appendlong(timeHelper!!.getElapsedTNT())!!.toString()!!

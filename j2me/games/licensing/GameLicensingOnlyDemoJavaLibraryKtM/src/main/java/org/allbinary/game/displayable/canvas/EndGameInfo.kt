@@ -80,7 +80,7 @@ this.setGameOverStr(this.TEASER_DEMO_GAME_END)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameOverStr
+                        return this.gameOverStr
 }
 
 
@@ -99,7 +99,7 @@ this.gameOverStr= gameOverStr
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return winStr
+                        return this.winStr
 }
 
 

@@ -215,7 +215,7 @@ RTSLayerUtil.getInstance()!!.destroyAndClear(this.getWaypointBehavior()!!.getOwn
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return parentLayer
+                        return this.parentLayer
 }
 
 

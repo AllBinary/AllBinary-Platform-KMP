@@ -50,7 +50,7 @@ this.setColorRangeInterface(ColorRange() as ColorRangeInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return colorRangeInterface
+                        return this.colorRangeInterface
 }
 
 
@@ -69,7 +69,7 @@ this.colorRangeInterface= colorRangeInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return matchingPixelsChecked
+                        return this.matchingPixelsChecked
 }
 
 
@@ -95,14 +95,14 @@ this.matchingPixelsChecked++
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return totalPixelsChecked
+                        return this.totalPixelsChecked
 }
 
 
     open fun addTotalPixelsChecked()
         //nullable = true from not(false or (false and true)) = true
 {
-totalPixelsChecked++
+this.totalPixelsChecked++
 }
 
 

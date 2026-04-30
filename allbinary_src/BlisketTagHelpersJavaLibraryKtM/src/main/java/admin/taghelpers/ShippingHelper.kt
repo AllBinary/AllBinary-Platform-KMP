@@ -55,7 +55,6 @@ open public class ShippingHelper : TagHelper {
 public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
-this.propertiesHashMap= propertiesHashMap
 this.pageContext= pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
 

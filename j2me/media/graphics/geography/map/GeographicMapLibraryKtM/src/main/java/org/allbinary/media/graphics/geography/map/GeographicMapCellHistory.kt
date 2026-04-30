@@ -60,7 +60,7 @@ companion object {
 
     private val MISSED_INFO: String = "Missed"
 
-    private val animation: Animation = TextAnimation(MISSED_INFO, AnimationBehavior.getInstance())
+    private val animation: Animation = TextAnimation(this.MISSED_INFO, AnimationBehavior.getInstance())
 
     private var totalVisited: Int= 0
 

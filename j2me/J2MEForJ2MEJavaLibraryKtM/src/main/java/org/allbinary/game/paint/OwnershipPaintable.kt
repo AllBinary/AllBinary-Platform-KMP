@@ -58,7 +58,7 @@ companion object {
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
-    private var color: Int = basicColor!!.toInt()!!
+    private var color: Int = this.basicColor!!.toInt()!!
 private constructor (){
 }
 
@@ -111,7 +111,7 @@ this.color= basicColor!!.toInt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicColor
+                        return this.basicColor
 }
 
 

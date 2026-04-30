@@ -82,7 +82,7 @@ public constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return installed
+                        return this.installed
 }
 
 
@@ -102,7 +102,7 @@ this.logUtil!!.putF("Installed: " +installed, this, "setIntalled")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputAutomationModuleConfigurationList
+                        return this.inputAutomationModuleConfigurationList
 }
 
 

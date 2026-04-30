@@ -156,7 +156,7 @@ companion object {
             
     val debug: Boolean = true
 
-    val showMoreCaptionStates: Boolean = debug
+    val showMoreCaptionStates: Boolean = this.debug
 
     val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
@@ -212,7 +212,7 @@ companion object {
 
     private var maxLevel: Int = 1
 
-    private var hackVerticleBuild: Int = BUILD_VALUE
+    private var hackVerticleBuild: Int = this.BUILD_VALUE
 
     var slightAngle: Int = 0
 
@@ -487,7 +487,7 @@ this.getAnimationInterface()!!.paintXY(graphics, viewX, viewY)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return id
+                        return RTSLayer.id
 }
 
 
@@ -574,7 +574,7 @@ this.getHudPaintable()!!.updateInfo()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rtsLayerUtil!!.getCost(this)
+                        return this.rtsLayerUtil!!.getCost(this)
 }
 
 
@@ -585,7 +585,7 @@ this.getHudPaintable()!!.updateInfo()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rtsLayerUtil!!.getDowngradeCost(this)
+                        return this.rtsLayerUtil!!.getDowngradeCost(this)
 }
 
 
@@ -596,7 +596,7 @@ this.getHudPaintable()!!.updateInfo()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rtsLayerUtil!!.getUpgradeCost(this)
+                        return this.rtsLayerUtil!!.getUpgradeCost(this)
 }
 
 
@@ -663,7 +663,7 @@ this.getHudPaintable()!!.updateInfo()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return level
+                        return this.level
 }
 
 
@@ -682,7 +682,7 @@ this.level= level
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return verticleBuildAnimationInterface
+                        return this.verticleBuildAnimationInterface
 }
 
 
@@ -693,7 +693,7 @@ this.level= level
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return animationInterface
+                        return this.animationInterface
 }
 
 
@@ -750,7 +750,7 @@ waypointBehaviorBase!!.setTargetWithDistance(targetGameLayer as PathFindingLayer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxLevel
+                        return this.maxLevel
 }
 
 
@@ -769,7 +769,7 @@ this.maxLevel= maxLevel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return healthInterface
+                        return this.healthInterface
 }
 
 
@@ -843,7 +843,7 @@ ViewPositionEventHandler.getInstance()!!.removeListener(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionAreaBase
+                        return this.geographicMapCellPositionAreaBase
 }
 
 
@@ -1135,7 +1135,7 @@ var resource = resource
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rootName
+                        return this.rootName
 }
 
 

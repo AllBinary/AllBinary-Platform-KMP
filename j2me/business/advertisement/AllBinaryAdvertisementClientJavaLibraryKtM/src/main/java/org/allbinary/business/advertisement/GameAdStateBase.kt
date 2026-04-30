@@ -178,7 +178,7 @@ var gameIsReady = gameIsReady
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return advertisementsP
+                        return this.advertisementsP
 }
 
 
@@ -189,7 +189,7 @@ var gameIsReady = gameIsReady
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adConfigurationP
+                        return this.adConfigurationP
 }
 
 
@@ -219,7 +219,7 @@ this.okayToShowAdsP= okayToShowAds
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return okayToShowAdsP
+                        return this.okayToShowAdsP
 }
 
 

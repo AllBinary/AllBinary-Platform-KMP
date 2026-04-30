@@ -51,7 +51,7 @@ open public class MouseActionScriptInputJPanel : javax.swing.JPanel {
 public constructor (mouseActionScriptInputInterface: MouseActionScriptInputInterface){
     //var mouseActionScriptInputInterface = mouseActionScriptInputInterface
 this.logUtil!!.putF(CommonLabels.getInstance()!!.START +mouseActionScriptInputInterface, this, commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 this.mouseActionScriptInputInterface= mouseActionScriptInputInterface
 
     var defaultComboBoxModel: DefaultComboBoxModel = DefaultComboBoxModel()
@@ -236,7 +236,7 @@ this.mouseActionScriptInputInterface!!.log()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mouseActionJDialog
+                        return this.mouseActionJDialog
 }
 
 
@@ -271,7 +271,7 @@ this.jLabel1= javax.swing.JLabel()
 this.mouseActionJDialog!!.setMinimumSize(java.awt.Dimension(275, 185))
 this.titleJLabel!!.setText("Mouse Input Options")
 this.okJButton!!.setText("OK")
-okJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -291,7 +291,7 @@ this.button1JCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 this.button2JCheckBox!!.setText(CommonPhoneStrings.getInstance()!!.TWO)
 this.button2JCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.button2JCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-button2JCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.button2JCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -318,7 +318,7 @@ mouseActionJDialogLayout!!.setHorizontalGroup(mouseActionJDialogLayout!!.createP
 mouseActionJDialogLayout!!.setVerticalGroup(mouseActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(mouseActionJDialogLayout!!.createSequentialGroup()!!.addComponent(titleJLabel)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(mouseActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(inputTypeJLabel)!!.addComponent(inputAutomationTypeJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(mouseActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addGroup(mouseActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(button1JCheckBox)!!.addComponent(button2JCheckBox)))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(mouseActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel6)!!.addComponent(mouseDelayJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addGroup(mouseActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel3)!!.addComponent(jLabel4)!!.addComponent(jLabel5)!!.addComponent(mouseYJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(mouseXJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.addComponent(okJButton)!!.addContainerGap()))
 setMinimumSize(java.awt.Dimension(100, 0))
 this.mouseActionJButton!!.setText("Edit")
-mouseActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.mouseActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

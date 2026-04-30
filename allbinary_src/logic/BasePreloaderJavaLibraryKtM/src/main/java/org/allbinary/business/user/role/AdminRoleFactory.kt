@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return AdminRoleFactory.instance
 }
 
 
@@ -120,7 +120,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return productManagementRoles
+                        return this.productManagementRoles
 }
 
 
@@ -131,7 +131,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adminRoles
+                        return this.adminRoles
 }
 
 
@@ -142,7 +142,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return storeAdminRoles
+                        return this.storeAdminRoles
 }
 
 
@@ -153,7 +153,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return storeManagementRoles
+                        return this.storeManagementRoles
 }
 
 
@@ -164,7 +164,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return reviewManagementRoles
+                        return this.reviewManagementRoles
 }
 
 
@@ -175,7 +175,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return customerManagementRoles
+                        return this.customerManagementRoles
 }
 
 
@@ -186,7 +186,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return workflowManagementRoles
+                        return this.workflowManagementRoles
 }
 
 
@@ -197,7 +197,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return webManagementRoles
+                        return this.webManagementRoles
 }
 
 
@@ -208,7 +208,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return shippingManagementRoles
+                        return this.shippingManagementRoles
 }
 
 
@@ -219,7 +219,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adjusterManagementRoles
+                        return this.adjusterManagementRoles
 }
 
 
@@ -230,7 +230,7 @@ this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return orderManagementRoles
+                        return this.orderManagementRoles
 }
 
 

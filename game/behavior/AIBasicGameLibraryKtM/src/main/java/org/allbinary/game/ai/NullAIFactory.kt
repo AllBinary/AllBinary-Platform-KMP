@@ -46,7 +46,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NULL_AI
+                        return NullAIFactory.NULL_AI
 }
 
 
@@ -67,7 +67,7 @@ var gameInput = gameInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NULL_AI
+                        return NullAIFactory.NULL_AI
 }
 
 

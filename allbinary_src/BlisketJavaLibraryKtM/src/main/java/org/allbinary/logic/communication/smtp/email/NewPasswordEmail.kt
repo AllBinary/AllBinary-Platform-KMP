@@ -102,7 +102,7 @@ this.notifyUser()
     var emailInfo: EmailInfo = EmailInfo(basicEmailInfo)
 
 
-    var adminUserEmailEventHandler: UserEmailEventHandler = AdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(abeClientInformation, UserEmailEventNameData.NEWPASSWORD)!!
+    var adminUserEmailEventHandler: UserEmailEventHandler = AdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, UserEmailEventNameData.NEWPASSWORD)!!
 
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD, emailInfo)
 } catch(e: Exception)
@@ -150,7 +150,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD
     var emailInfo: EmailInfo = EmailInfo(basicEmailInfo)
 
 
-    var userEmailEventHandler: UserEmailEventHandler = UserEmailEventHandlerSingletons.getInstance()!!.getInstance(abeClientInformation, UserEmailEventNameData.NEWPASSWORD, this.userInterface)!!
+    var userEmailEventHandler: UserEmailEventHandler = UserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, UserEmailEventNameData.NEWPASSWORD, this.userInterface)!!
 
 userEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD, emailInfo)
 } catch(e: Exception)

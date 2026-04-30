@@ -239,7 +239,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setMediaTime", e)
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.START_METHOD_NAME, e)
 }
 
 }

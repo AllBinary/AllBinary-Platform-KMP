@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return DirectionUtil.instance
 }
 
 
@@ -80,7 +80,7 @@ var direction = direction
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directionArray2[direction.getValue()]!!
+                        return this.directionArray2[direction.getValue()]!!
 }
 
 
@@ -92,7 +92,7 @@ var direction = direction
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directionArray[direction.getValue()]!!
+                        return this.directionArray[direction.getValue()]!!
 }
 
 

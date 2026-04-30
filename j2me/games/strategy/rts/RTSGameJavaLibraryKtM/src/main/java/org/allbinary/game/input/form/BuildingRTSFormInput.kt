@@ -159,7 +159,7 @@ this.buildFromMotionInput(rtsPlayerLayerInterface, layerManager, item, itemIndex
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return dropCellPositionHistory!!.isCellPositionWithDrop(this.getSelectedGeographicCellPosition())
+                        return this.dropCellPositionHistory!!.isCellPositionWithDrop(this.getSelectedGeographicCellPosition())
 }
 
 
@@ -305,7 +305,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, rtsLayer, itemIndex)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(buildOnPathGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.buildOnPathGameNotificationEvent)
 
                                     }
                                 
@@ -322,7 +322,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, rtsLayer, itemIndex)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(spotTakenGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.spotTakenGameNotificationEvent)
 
                                     }
                                 
@@ -339,7 +339,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, rtsLayer, itemIndex)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(selectBuildSpotGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.selectBuildSpotGameNotificationEvent)
 
                                     }
                                 
@@ -410,7 +410,7 @@ geographicMapCellType= geographicMapInterface!!.getCellTypeAt(occupyList!!.get(i
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(roadCollisionGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.roadCollisionGameNotificationEvent)
 
                                     }
                                 
@@ -464,7 +464,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(noMoneyGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.noMoneyGameNotificationEvent)
 
                                     }
                                 
@@ -503,7 +503,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(buildingCollisionGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.buildingCollisionGameNotificationEvent)
 
                                     }
                                 
@@ -526,7 +526,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(structureToCloseCollisionGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.structureToCloseCollisionGameNotificationEvent)
 
                                     }
                                 
@@ -550,7 +550,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(mapEdgeGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.mapEdgeGameNotificationEvent)
 
                                     }
                                 
@@ -599,7 +599,7 @@ rtsPlayerLayerInterface!!.add(BuildingSound.getInstance())
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(buildingGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.buildingGameNotificationEvent)
 
                                     }
                                 

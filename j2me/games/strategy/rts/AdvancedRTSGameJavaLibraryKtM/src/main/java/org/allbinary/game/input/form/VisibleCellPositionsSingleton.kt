@@ -57,7 +57,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return VisibleCellPositionsSingleton.instance
 }
 
 
@@ -71,9 +71,9 @@ companion object {
 
     val ALL_VISIBLE_TILEDLAYER: SimpleTiledLayer = SimpleTiledLayer(0, 0, 0, 0)
 
-    private var simpleTiledLayer: SimpleTiledLayer = ALL_VISIBLE_TILEDLAYER
+    private var simpleTiledLayer: SimpleTiledLayer = this.ALL_VISIBLE_TILEDLAYER
 
-    private var paintSimpleTiledLayer: SimpleTiledLayer = ALL_VISIBLE_TILEDLAYER
+    private var paintSimpleTiledLayer: SimpleTiledLayer = this.ALL_VISIBLE_TILEDLAYER
 
     private var currentIndex: Int= 0
 private constructor ()
@@ -328,7 +328,7 @@ this.simpleTiledLayer= simpleTiledLayer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return simpleTiledLayer
+                        return this.simpleTiledLayer
 }
 
 

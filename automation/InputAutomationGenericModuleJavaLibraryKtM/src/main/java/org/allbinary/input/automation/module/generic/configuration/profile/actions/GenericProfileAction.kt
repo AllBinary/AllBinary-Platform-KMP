@@ -94,7 +94,7 @@ this.setGenericProfileActionScript(GenericProfileActionScript(this.genericProfil
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -147,7 +147,7 @@ node.appendChild(getGenericProfileActionScript()!!.toXmlNode(document))
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfileActionScript
+                        return this.genericProfileActionScript
 }
 
 

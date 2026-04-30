@@ -50,7 +50,7 @@ this.runtime= Runtime.getRuntime()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return runtime.freeMemory()
+                        return this.runtime.freeMemory()
 }
 
 
@@ -83,7 +83,7 @@ this.runtime= Runtime.getRuntime()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return runtime.maxMemory()
+                        return this.runtime.maxMemory()
 }
 
 
@@ -116,7 +116,7 @@ this.runtime= Runtime.getRuntime()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return runtime.totalMemory()
+                        return this.runtime.totalMemory()
 }
 
 

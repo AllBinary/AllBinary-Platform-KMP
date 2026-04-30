@@ -65,7 +65,7 @@ var transformInfoInterface = transformInfoInterface
                             //For kotlin this is before the body of the constructor.
                     
 this.storeFrontInterface= StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName())
-this.shippingMethods= ShippingMethods(this.abeClientInformation, storeFrontInterface)
+this.shippingMethods= ShippingMethods(this.abeClientInformation, this.storeFrontInterface)
 }
 
 

@@ -138,7 +138,7 @@ var layerInterface = layerInterface
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(atLeastOneHouseGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.atLeastOneHouseGameNotificationEvent)
 
                                     }
                                 

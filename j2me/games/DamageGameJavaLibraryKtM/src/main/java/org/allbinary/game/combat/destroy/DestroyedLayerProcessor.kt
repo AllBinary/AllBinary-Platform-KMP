@@ -53,7 +53,7 @@ DESTROYED_LAYER_PROCESSOR= DestroyedLayerProcessor()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DESTROYED_LAYER_PROCESSOR
+                        return DestroyedLayerProcessor.DESTROYED_LAYER_PROCESSOR
 }
 
 

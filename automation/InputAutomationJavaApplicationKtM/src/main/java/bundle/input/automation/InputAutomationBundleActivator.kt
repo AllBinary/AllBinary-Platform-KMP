@@ -59,7 +59,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return bundleContext
+                        return InputAutomationBundleActivator.bundleContext
 }
 
 
@@ -84,8 +84,8 @@ companion object {
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.START)
 this.bundleContext= bundleContext
-moduleManagementThread= Thread(InputAutomationNewBundleRunnable(this))
-moduleManagementThread!!.start()
+InputAutomationBundleActivator.moduleManagementThread= Thread(InputAutomationNewBundleRunnable(this))
+InputAutomationBundleActivator.moduleManagementThread!!.start()
 InputAutomationJFrame.create(this)
 } catch(e: Exception)
             {

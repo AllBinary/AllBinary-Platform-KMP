@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return Visitor.instance
 }
 
 
@@ -64,7 +64,7 @@ var anyType = anyType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return nullUtil!!.NULL_OBJECT
+                        return this.nullUtil!!.NULL_OBJECT
 }
 
 

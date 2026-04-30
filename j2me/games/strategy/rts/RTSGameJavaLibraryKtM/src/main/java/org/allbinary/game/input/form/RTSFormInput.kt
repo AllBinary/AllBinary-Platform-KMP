@@ -336,7 +336,7 @@ this.logUtil!!.putF(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return selectedGeographicCellPosition
+                        return this.selectedGeographicCellPosition
 }
 
 
@@ -357,7 +357,7 @@ this.selectedGeographicCellPosition= selectedGeographicCellPosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return stickyItemSelected
+                        return this.stickyItemSelected
 }
 
 
@@ -376,7 +376,7 @@ this.stickyItemSelected= stickyItemSelected
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return selectedStickyItem
+                        return this.selectedStickyItem
 }
 
 
@@ -395,7 +395,7 @@ this.selectedStickyItem= selectedStickyItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return selectedStickyItemIndex
+                        return this.selectedStickyItemIndex
 }
 
 
@@ -414,7 +414,7 @@ this.selectedStickyItemIndex= selectedStickyItemIndex
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable
+                        return this.hashtable
 }
 
 

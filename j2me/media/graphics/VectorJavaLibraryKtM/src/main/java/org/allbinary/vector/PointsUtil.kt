@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PointsUtil.instance
 }
 
 
@@ -121,7 +121,7 @@ var both = both
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adjust(points, both, both)
+                        return this.adjust(points, both, both)
 }
 
 

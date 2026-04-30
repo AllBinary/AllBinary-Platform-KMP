@@ -138,7 +138,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
         //nullable = true from not(false or (false and true)) = true
 {
 this.writeOverOriginalJCheckBox= javax.swing.JCheckBox()
-jPanel1= object: javax.swing.JPanel()
+this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
     open override fun paint(graphics: Graphics)
@@ -176,7 +176,7 @@ this.jLabel8= javax.swing.JLabel()
 this.heightReductionTextField1= javax.swing.JTextField()
 this.writeOverOriginalJCheckBox!!.setSelected(true)
 this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
-writeOverOriginalJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.writeOverOriginalJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -195,7 +195,7 @@ this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 0, Short.MAX_VALUE))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 196, Short.MAX_VALUE))
 this.generateJButton!!.setText("Generate")
-generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -210,7 +210,7 @@ generateJButtonActionPerformed(evt)
 this.jLabel4!!.setText("Results:")
 this.jLabel5!!.setText("Right:")
 this.widthReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
-widthReductionTextField!!.addActionListener(object: java.awt.event.ActionListener()
+this.widthReductionTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -225,7 +225,7 @@ widthReductionTextFieldActionPerformed(evt)
 this.jLabel6!!.setText("Bottom")
 this.heightReductionTextField!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
 this.widthReductionTextField1!!.setText(CommonPhoneStrings.getInstance()!!.ZERO)
-widthReductionTextField1!!.addActionListener(object: java.awt.event.ActionListener()
+this.widthReductionTextField1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -317,7 +317,7 @@ var evt = evt
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 

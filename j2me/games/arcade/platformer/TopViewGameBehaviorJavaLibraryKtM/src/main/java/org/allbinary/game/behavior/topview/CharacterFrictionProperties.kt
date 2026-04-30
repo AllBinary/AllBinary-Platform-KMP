@@ -53,7 +53,7 @@ this.WATER_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -waterFrict
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return WATER_FRICTION_NOMINATOR
+                        return this.WATER_FRICTION_NOMINATOR
 }
 
 
@@ -64,7 +64,7 @@ this.WATER_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -waterFrict
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AIR_FRICTION_NOMINATOR
+                        return this.AIR_FRICTION_NOMINATOR
 }
 
 
@@ -75,7 +75,7 @@ this.WATER_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -waterFrict
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return COLLISION_FRICTION_NOMINATOR
+                        return this.COLLISION_FRICTION_NOMINATOR
 }
 
 

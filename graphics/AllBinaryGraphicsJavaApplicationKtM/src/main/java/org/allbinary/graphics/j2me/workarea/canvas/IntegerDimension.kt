@@ -51,7 +51,7 @@ this.setHeight(height)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return width
+                        return this.width
 }
 
 
@@ -70,7 +70,7 @@ this.width= width
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return height
+                        return this.height
 }
 
 

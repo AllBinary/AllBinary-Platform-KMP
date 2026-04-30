@@ -178,7 +178,7 @@ companion object {
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(6000)
 
-    private var basicColor: BasicColor = basicColorFactory!!.RED
+    private var basicColor: BasicColor = this.basicColorFactory!!.RED
 
     val abeClientInformation: AbeClientInformationInterface
 
@@ -399,7 +399,7 @@ commandList!!.add(gameCommandsFactory!!.DISPLAY_ABOUT)
 var cmdListener = cmdListener
 this.removeAllCommands()
 
-    var commandArray: Array<Any?> = getCustomCommands()!!
+    var commandArray: Array<Any?> = this.getCustomCommands()!!
 
 
     var size: Int = commandArray!!.size
@@ -455,7 +455,7 @@ this.close()
     var commandTextItemArrayFactory: CommandTextItemArrayFactory = DemoLimitedCommandTextItemArrayFactory.getInstance()!!.getCommandTextItemArrayFactory()!!
 
 
-    var items: Array<CustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, basicColorFactory!!.BLACK, basicColorFactory!!.WHITE)!!
+    var items: Array<CustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE)!!
 
 
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
@@ -466,7 +466,7 @@ this.close()
 PreLogUtil.put(StringMaker().
                             append(commonLabels!!.START_LABEL)!!.append(displayInfoSingleton!!.toString())!!.toString(), this, "initMenu")
 
-    var scrollSelectionForm: ScrollSelectionForm = CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, formType, 15, true, basicColorFactory!!.BLACK, basicColorFactory!!.WHITE)!!
+    var scrollSelectionForm: ScrollSelectionForm = CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, formType, 15, true, this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE)!!
 
 this.setMenuForm(scrollSelectionForm)
 
@@ -512,7 +512,7 @@ GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return id
+                        return DemoCanvas.id
 }
 
 
@@ -1001,7 +1001,7 @@ this.threadFactoryUtil!!.start(this.canvasThread)
 {
 
     
-                        if(!this.gameCanvas!!.isInitialized() || gameCanvas!!.getTitle() == NullGameCanvas.NO_GAME)
+                        if(!this.gameCanvas!!.isInitialized() || this.gameCanvas!!.getTitle() == NullGameCanvas.NO_GAME)
                         
                                     {
                                     
@@ -1372,9 +1372,9 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
 
     var features: Features = Features.getInstance()!!
 
-baseGameStatistics!!.add(StringMaker().
+this.baseGameStatistics!!.add(StringMaker().
                             append(BOT_GAME_STATS)!!.append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
-baseGameStatistics!!.init()
+this.baseGameStatistics!!.init()
 
     
                         if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
@@ -1416,7 +1416,7 @@ var gameState = gameState
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameCanvas
+                        return this.gameCanvas
 }
 
 
@@ -1467,7 +1467,7 @@ var gameState = gameState
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return state
+                        return this.state
 }
 
 
@@ -1498,7 +1498,7 @@ this.logUtil!!.putF("Wow the AI got a high score!", this, "isHighScoreSubmitted"
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return realHighScoresPaintable
+                        return this.realHighScoresPaintable
 }
 
 
@@ -1518,7 +1518,7 @@ this.specialAnimationInterface= specialAnimationInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return specialAnimationInterface
+                        return this.specialAnimationInterface
 }
 
 
@@ -1537,7 +1537,7 @@ this.paintableInterface= paintableInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return paintableInterface
+                        return this.paintableInterface
 }
 
 
@@ -1556,7 +1556,7 @@ this.defaultPaintableInterface= defaultPaintableInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultPaintableInterface
+                        return this.defaultPaintableInterface
 }
 
 
@@ -1567,7 +1567,7 @@ this.defaultPaintableInterface= defaultPaintableInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return highScoresFactoryInterface
+                        return this.highScoresFactoryInterface
 }
 
 
@@ -1586,7 +1586,7 @@ this.menuInputProcessor= menuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return menuInputProcessor
+                        return this.menuInputProcessor
 }
 
 
@@ -1597,7 +1597,7 @@ this.menuInputProcessor= menuInputProcessor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return menuForm
+                        return this.menuForm
 }
 
 
@@ -1616,7 +1616,7 @@ this.menuForm= menuForm
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initialized
+                        return this.initialized
 }
 
 
@@ -1627,7 +1627,7 @@ this.menuForm= menuForm
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return overlayPaintable
+                        return this.overlayPaintable
 }
 
 
@@ -1646,7 +1646,7 @@ this.basicGameDemoPaintable= basicGameDemoPaintable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicGameDemoPaintable
+                        return this.basicGameDemoPaintable
 }
 
 
@@ -1665,7 +1665,7 @@ this.tempWait= tempWait
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tempWait
+                        return this.tempWait
 }
 
 
@@ -1721,7 +1721,7 @@ this.tempWait= tempWait
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameInitializationInterfaceFactoryInterface
+                        return this.gameInitializationInterfaceFactoryInterface
 }
 
 
@@ -1732,7 +1732,7 @@ this.tempWait= tempWait
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TYPE
+                        return DemoCanvas.TYPE
 }
 
 

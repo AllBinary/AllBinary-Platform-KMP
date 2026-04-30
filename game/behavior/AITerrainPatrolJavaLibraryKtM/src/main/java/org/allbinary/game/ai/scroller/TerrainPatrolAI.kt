@@ -44,7 +44,7 @@ open public class TerrainPatrolAI : PacePatrolAI {
 
     private val DOWN: Angle = AngleFactory.getInstance()!!.DOWN
 
-    private val CLIFF: BasicTerrainInfo = BasicTerrainInfo(DOWN)
+    private val CLIFF: BasicTerrainInfo = BasicTerrainInfo(this.DOWN)
 public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(hashtable, ownerLayerInterface, gameInput){

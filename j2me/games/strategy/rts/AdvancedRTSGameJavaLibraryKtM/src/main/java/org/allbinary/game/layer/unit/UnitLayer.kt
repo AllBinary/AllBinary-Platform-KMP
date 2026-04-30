@@ -170,7 +170,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return partialPositionList
+                        return UnitLayer.partialPositionList
 }
 
 
@@ -331,7 +331,7 @@ this.initPathAnimation!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 hashtable.put(Group.ID, this.getGroupInterface())
 hashtable.put(Layer.ID, this)
 hashtable.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManagerP)
-this.setWaypointBehavior(UnitWaypointBehavior2(this, waypointLayerInterfaceFactoryInterface!!.getNextInstance(hashtable, x, y, z) as AdvancedRTSGameLayer))
+this.setWaypointBehavior(UnitWaypointBehavior2(this, this.waypointLayerInterfaceFactoryInterface!!.getNextInstance(hashtable, x, y, z) as AdvancedRTSGameLayer))
 
     var features: Features = Features.getInstance()!!
 
@@ -688,7 +688,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
     var weaponProperties: WeaponProperties = basicWeaponPart!!.getWeaponProperties()!!
 
 this.weaponRange= weaponProperties!!.getRange()
-this.initRangeAnimation= AdjustedCircleAnimation.createW(weaponRange, weaponRange, this.getWidth(), this.basicColorFactory!!.GREEN)
+this.initRangeAnimation= AdjustedCircleAnimation.createW(this.weaponRange, this.weaponRange, this.getWidth(), this.basicColorFactory!!.GREEN)
 
     var sensorRange: Int = weaponRange *SENSOR_RANGE_MULTIPLIER
 
@@ -1451,7 +1451,7 @@ this.getUnitWaypointBehavior()!!.move()
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-layerPartialCellPositionsUtil!!.getAllDXY(geographicMapInterface, this, velocityXScaled.toInt(), velocityYScaled.toInt(), getPartialpositionlist())
+this.layerPartialCellPositionsUtil!!.getAllDXY(geographicMapInterface, this, velocityXScaled.toInt(), velocityYScaled.toInt(), getPartialpositionlist())
 
     var cellPosition: GeographicMapCellPosition = DropCellPositionHistory.getInstance()!!.getCellPositionWithDrop(getPartialpositionlist()) as GeographicMapCellPosition
 
@@ -1585,7 +1585,7 @@ this.getUnitWaypointBehavior()!!.moveAwayFromBuilding(buildingLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return vehicleProperties
+                        return this.vehicleProperties
 }
 
 
@@ -1703,7 +1703,7 @@ vibration.vibrate(duration *4, 0, 0)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return resourceLoad
+                        return this.resourceLoad
 }
 
 
@@ -1762,7 +1762,7 @@ var ownerLayer = ownerLayer
                         
                                     {
                                     this.CAPITAL_EVENT.setValue(this.getLoad())
-CapitalEventHandlerFactory.getInstance(ownerLayer!!.getGroupInterface()[0]!!)!!.fireEvent(CAPITAL_EVENT)
+CapitalEventHandlerFactory.getInstance(ownerLayer!!.getGroupInterface()[0]!!)!!.fireEvent(this.CAPITAL_EVENT)
 this.setLoad(0)
 
                                     }
@@ -1807,7 +1807,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getStaticType()
+                        return UnitLayer.getStaticType()
 }
 
 
@@ -1829,7 +1829,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return trackingEvent
+                        return this.trackingEvent
 }
 
 
@@ -1840,7 +1840,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return captionAnimationHelper
+                        return this.captionAnimationHelper
 }
 
 
@@ -1862,7 +1862,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxResourceLoad
+                        return this.maxResourceLoad
 }
 
 

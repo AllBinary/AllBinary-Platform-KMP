@@ -52,7 +52,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return context
+                        return AllBinaryPreloaderActivator.context
 }
 
 
@@ -99,12 +99,12 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
     var properties: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 
-    var serviceRegistration: ServiceRegistration = context.registerService(CRYPT_REGISTRY_NAME, CryptServiceFactory(), properties)!!
+    var serviceRegistration: ServiceRegistration = AllBinaryPreloaderActivator.context.registerService(CRYPT_REGISTRY_NAME, CryptServiceFactory(), properties)!!
 
 
     var serviceReference: ServiceReference = serviceRegistration!!.getReference()!!
 
-serviceReference= context.getServiceReference(CRYPT_REGISTRY_NAME)
+serviceReference= AllBinaryPreloaderActivator.context.getServiceReference(CRYPT_REGISTRY_NAME)
 
     
                         if(serviceReference == 

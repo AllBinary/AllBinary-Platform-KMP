@@ -55,7 +55,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return DomHelper.instance
 }
 
 
@@ -259,7 +259,7 @@ var nodeList = nodeList
     var list: BasicArrayList = BasicArrayListD()
 
 
-    var childNodeList: NodeList = getChildNodeList(nodeName, nodeList)!!
+    var childNodeList: NodeList = this.getChildNodeList(nodeName, nodeList)!!
 
 
     var numberOfChildren: Int = childNodeList!!.getLength()!!

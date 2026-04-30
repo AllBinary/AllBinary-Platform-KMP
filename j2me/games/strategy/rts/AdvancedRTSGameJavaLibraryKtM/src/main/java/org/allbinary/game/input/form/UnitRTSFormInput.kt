@@ -214,7 +214,7 @@ advancedPlayerOwnedRTSLayers!!.addUnit(layerInterface)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(newUnitGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.newUnitGameNotificationEvent)
 
                                     }
                                 
@@ -228,7 +228,7 @@ advancedPlayerOwnedRTSLayers!!.addUnit(layerInterface)
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(noMoneyGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.noMoneyGameNotificationEvent)
 
                                     }
                                 

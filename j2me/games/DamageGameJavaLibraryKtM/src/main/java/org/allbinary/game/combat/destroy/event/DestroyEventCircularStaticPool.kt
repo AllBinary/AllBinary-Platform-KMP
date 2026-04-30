@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return DestroyEventCircularStaticPool.instance
 }
 
 
@@ -61,7 +61,7 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var combatGameCanvas = combatGameCanvas
-EVENT_POOL.init(DestroyEventFactory(combatGameCanvas))
+this.EVENT_POOL.init(DestroyEventFactory(combatGameCanvas))
 }
 
 
@@ -72,7 +72,7 @@ EVENT_POOL.init(DestroyEventFactory(combatGameCanvas))
 : DestroyedEvent{
 var layerInterface = layerInterface
 
-    var destroyedEvent: DestroyedEvent = EVENT_POOL.getNextInstance() as DestroyedEvent
+    var destroyedEvent: DestroyedEvent = this.EVENT_POOL.getNextInstance() as DestroyedEvent
 
 destroyedEvent!!.setLayerInterfaceForCircularStaticPool(layerInterface)
 

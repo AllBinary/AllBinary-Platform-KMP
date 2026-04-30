@@ -43,7 +43,7 @@ var logType = logType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return logging.contains(logType!!.toString())
+                        return LOGGING.logging.contains(logType!!.toString())
 }
 
 
@@ -93,7 +93,7 @@ private constructor (value: String)
         {
 var value = value
 this.name= value
-logging.add(value)
+LOGGING.logging.add(value)
 }
 
 
@@ -104,7 +104,7 @@ logging.add(value)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 

@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return AnalogControllerConfigurationFactory.instance
 }
 
 
@@ -70,7 +70,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return available
+                        return this.available
 }
 
 
@@ -81,7 +81,7 @@ private constructor ()
 {
 var available = available
 this.available= available
-AnalogControllerConfigurationEventHandler.getInstance()!!.fireEvent(analogControllerConfigurationEvent)
+AnalogControllerConfigurationEventHandler.getInstance()!!.fireEvent(this.analogControllerConfigurationEvent)
 }
 
 

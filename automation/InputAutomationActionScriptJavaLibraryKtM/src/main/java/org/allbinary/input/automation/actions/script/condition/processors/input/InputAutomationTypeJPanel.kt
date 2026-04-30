@@ -29,7 +29,7 @@
 open public class InputAutomationTypeJPanel : javax.swing.JPanel {
         
 public constructor (){
-initComponents()
+this.initComponents()
 }
 
 
@@ -40,7 +40,7 @@ initComponents()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputAutomationTypeJComboBox
+                        return this.inputAutomationTypeJComboBox
 }
 
 

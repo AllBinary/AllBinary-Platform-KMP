@@ -42,7 +42,7 @@ open public class GenericProfileActionJPanel : javax.swing.JPanel {
 
     private var genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel
 public constructor (){
-initComponents()
+this.initComponents()
 }
 
 
@@ -73,7 +73,7 @@ this.logUtil!!.putF("Updated UI", this, "updateUI")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfileAction
+                        return this.genericProfileAction
 }
 
 
@@ -92,7 +92,7 @@ this.genericProfileAction= genericProfileAction
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfileActionScriptJPanel
+                        return this.genericProfileActionScriptJPanel
 }
 
 
@@ -126,7 +126,7 @@ blankProfileActionScriptJPanelLayout!!.setVerticalGroup(blankProfileActionScript
 this.genericProfileActionScriptJScrollPane!!.setViewportView(this.blankProfileActionScriptJPanel)
 this.ifJLabel!!.setText("Conditions:")
 this.newColorAtJButton!!.setText("Color Range At")
-newColorAtJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.newColorAtJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -139,7 +139,7 @@ newColorAtJButtonActionPerformed(evt)
                                 }
                             )
 this.newTimeIntervalJButton!!.setText("Time Interval")
-newTimeIntervalJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.newTimeIntervalJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -152,7 +152,7 @@ newTimeIntervalJButtonActionPerformed(evt)
                                 }
                             )
 this.newAlwaysJButton!!.setText("Always On/Off")
-newAlwaysJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.newAlwaysJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -178,7 +178,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 {
 var evt = evt
 this.logUtil!!.putF("New Time Interval Action Condition", this, "newTimeIntervalJButtonActionPerformed")
-getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(TimeIntervalActionScriptCondition() as ProfileActionScriptConditionInterface)
+this.getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(TimeIntervalActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }
 
@@ -188,7 +188,7 @@ this.updateProfileActionUI()
 {
 var evt = evt
 this.logUtil!!.putF("New EveryTime Action Condition", this, "newEveryTimeJButtonActionPerformed")
-getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(AlwaysActionScriptCondition() as ProfileActionScriptConditionInterface)
+this.getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(AlwaysActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }
 
@@ -198,7 +198,7 @@ this.updateProfileActionUI()
 {
 var evt = evt
 this.logUtil!!.putF("New Color At Action Condition", this, "newColorAtJButtonActionPerformed")
-getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(ColorAtActionScriptCondition() as ProfileActionScriptConditionInterface)
+this.getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(ColorAtActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }
 

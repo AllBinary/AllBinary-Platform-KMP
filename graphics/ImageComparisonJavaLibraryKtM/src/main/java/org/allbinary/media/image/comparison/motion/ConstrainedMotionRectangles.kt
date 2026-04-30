@@ -166,7 +166,7 @@ this.setVector(vector)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return motionRectangleConstraintsInterface
+                        return this.motionRectangleConstraintsInterface
 }
 
 

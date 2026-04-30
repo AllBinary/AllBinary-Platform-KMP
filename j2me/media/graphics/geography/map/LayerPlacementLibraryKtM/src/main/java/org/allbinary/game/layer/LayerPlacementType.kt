@@ -47,7 +47,7 @@ this.type= type
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return type
+                        return this.type
 }
 
 

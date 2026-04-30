@@ -29,7 +29,7 @@
 open public class ToolJPanel : javax.swing.JPanel {
         
 public constructor (){
-initComponents()
+this.initComponents()
 }
 
 
@@ -54,7 +54,7 @@ this.dottedFillArcJButton= javax.swing.JButton()
 this.dottedFillRountRectJButton= javax.swing.JButton()
 this.colorJPanel= javax.swing.JPanel()
 this.colorJList= javax.swing.JList()
-setLayout(java.awt.GridLayout(17, 1))
+this.setLayout(java.awt.GridLayout(17, 1))
 lineJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 lineJButton!!.setText(LinesGraphicItem.getStaticName())
 lineJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
@@ -72,7 +72,7 @@ lineJButtonMouseClicked(evt)
 add(this.lineJButton)
 this.rectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.rectJButton!!.setText("Rect")
-rectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.rectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mouseClicked(evt: java.awt.event.MouseEvent)
@@ -87,7 +87,7 @@ rectJButtonMouseClicked(evt)
 add(this.rectJButton)
 this.arcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.arcJButton!!.setText("Arc")
-arcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.arcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -102,7 +102,7 @@ arcJButtonMousePressed(evt)
 add(this.arcJButton)
 this.stringJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.stringJButton!!.setText("String")
-stringJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.stringJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -117,7 +117,7 @@ stringJButtonMousePressed(evt)
 add(this.stringJButton)
 this.charJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.charJButton!!.setText("Char")
-charJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.charJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -132,7 +132,7 @@ charJButtonMousePressed(evt)
 add(this.charJButton)
 this.roundRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.roundRectJButton!!.setText("Round Rect")
-roundRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.roundRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -147,7 +147,7 @@ roundRectJButtonMousePressed(evt)
 add(this.roundRectJButton)
 this.imageJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.imageJButton!!.setText("Image")
-imageJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.imageJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -162,7 +162,7 @@ imageJButtonMousePressed(evt)
 add(this.imageJButton)
 this.fillArcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.fillArcJButton!!.setText("Fill Arc")
-fillArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.fillArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -177,7 +177,7 @@ fillArcJButtonMousePressed(evt)
 add(this.fillArcJButton)
 this.fillRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.fillRectJButton!!.setText("Fill Rect")
-fillRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.fillRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -192,7 +192,7 @@ fillRectJButtonMousePressed(evt)
 add(this.fillRectJButton)
 this.fillRoundRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.fillRoundRectJButton!!.setText("Fill Rnd Rect")
-fillRoundRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.fillRoundRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -207,7 +207,7 @@ fillRoundRectJButtonMousePressed(evt)
 add(this.fillRoundRectJButton)
 this.dottedLineJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedLineJButton!!.setText("Dot Line")
-dottedLineJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedLineJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -222,7 +222,7 @@ dottedLineJButtonMousePressed(evt)
 add(this.dottedLineJButton)
 this.dottedRectButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedRectButton!!.setText("Dot Rect")
-dottedRectButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedRectButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -237,7 +237,7 @@ dottedRectButtonMousePressed(evt)
 add(this.dottedRectButton)
 this.dottedArcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedArcJButton!!.setText("Dot Arc")
-dottedArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -252,7 +252,7 @@ dottedArcJButtonMousePressed(evt)
 add(this.dottedArcJButton)
 this.dottedFillRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedFillRectJButton!!.setText("Dot Fill Rect")
-dottedFillRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedFillRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -267,7 +267,7 @@ dottedFillRectJButtonMousePressed(evt)
 add(this.dottedFillRectJButton)
 this.dottedFillArcJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedFillArcJButton!!.setText("Dot Fill Arc")
-dottedFillArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedFillArcJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)
@@ -282,7 +282,7 @@ dottedFillArcJButtonMousePressed(evt)
 add(this.dottedFillArcJButton)
 this.dottedFillRountRectJButton!!.setFont(java.awt.Font("Dialog", 0, 10))
 this.dottedFillRountRectJButton!!.setText("Dot Fill Rnd Rect")
-dottedFillRountRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.dottedFillRountRectJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mousePressed(evt: java.awt.event.MouseEvent)

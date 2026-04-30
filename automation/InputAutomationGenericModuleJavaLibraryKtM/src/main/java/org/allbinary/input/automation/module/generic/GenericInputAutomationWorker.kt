@@ -130,7 +130,7 @@ this.waitForDataWorkers()
                         
                                     {
                                     this.logUtil!!.putF("Image Available", this, this.PROCESS_DATA_WORKER_RESULTS)
-setFrame(keyArray[keyArray!!.size -1]!! as Long)
+this.setFrame(keyArray[keyArray!!.size -1]!! as Long)
 
     
                         if(getFrame() > this.lastFrame)
@@ -174,7 +174,7 @@ this.logUtil!!.putF("Processing Action: " +actionNameString, this, this.PROCESS_
 CaptureWorkerUtil.processProfileActionConditions(vector, getFrame())
 }
 
-this.lastFrame= getFrame()
+this.lastFrame= this.getFrame()
 
                                     }
                                 
@@ -207,7 +207,7 @@ this.processDataWorkerResults()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfile
+                        return this.genericProfile
 }
 
 
@@ -226,7 +226,7 @@ this.genericProfile= genericProfile
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return frame
+                        return this.frame
 }
 
 

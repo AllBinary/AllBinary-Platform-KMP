@@ -194,7 +194,7 @@ this.logUtil!!.putF(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return running
+                        return this.running
 
                                     }
                                 
@@ -245,7 +245,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, IS_RUNNING)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return loopTimeHelper
+                        return this.loopTimeHelper
 }
 
 
@@ -448,7 +448,7 @@ this.logUtil!!.putF(stringMaker!!.append(this.END_PAUSE)!!.appendlong(System.cur
                                     }
                                 
                         else {
-                            processGameSleep(wait -elapsedTime)
+                            this.processGameSleep(wait -elapsedTime)
 
                         }
                             

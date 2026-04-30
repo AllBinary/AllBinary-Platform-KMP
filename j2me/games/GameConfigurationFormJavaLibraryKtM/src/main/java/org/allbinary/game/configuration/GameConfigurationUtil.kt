@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return GameConfigurationUtil.instance
 }
 
 
@@ -262,7 +262,7 @@ this.COMPETITION_VALUE= (this.COMPETITION_VALUE shr 2)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return COMPETITION_VALUE
+                        return this.COMPETITION_VALUE
 }
 
 

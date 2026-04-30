@@ -49,7 +49,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return GameInitializationUtil.instance
 }
 
 
@@ -114,7 +114,7 @@ this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_EARLY)
 
                         }
                             
-GameInitializedEventHandler.getInstance()!!.fireEvent(EVENT)
+GameInitializedEventHandler.getInstance()!!.fireEvent(this.EVENT)
 
                                     }
                                 

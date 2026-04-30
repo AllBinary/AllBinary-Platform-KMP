@@ -146,7 +146,7 @@ this.rtsLayerList!!.remove(gameLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return unitsList
+                        return this.unitsList
 }
 
 
@@ -157,7 +157,7 @@ this.rtsLayerList!!.remove(gameLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return waypointsList
+                        return this.waypointsList
 }
 
 
@@ -168,7 +168,7 @@ this.rtsLayerList!!.remove(gameLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return baseList
+                        return this.baseList
 }
 
 
@@ -179,7 +179,7 @@ this.rtsLayerList!!.remove(gameLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return garrisonList
+                        return this.garrisonList
 }
 
 
@@ -190,7 +190,7 @@ this.rtsLayerList!!.remove(gameLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return houseList
+                        return this.houseList
 }
 
 
@@ -201,7 +201,7 @@ this.rtsLayerList!!.remove(gameLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return labList
+                        return this.labList
 }
 
 
@@ -212,7 +212,7 @@ this.rtsLayerList!!.remove(gameLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return factoryList
+                        return this.factoryList
 }
 
 
@@ -223,7 +223,7 @@ this.rtsLayerList!!.remove(gameLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return baseList!!.size() +this.garrisonList!!.size() +this.houseList!!.size() +this.labList!!.size() +this.factoryList!!.size()
+                        return this.baseList!!.size() +this.garrisonList!!.size() +this.houseList!!.size() +this.labList!!.size() +this.factoryList!!.size()
 }
 
 
@@ -316,7 +316,7 @@ stringBuffer!!.appendint(this.getUnitsList()!!.size())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return buildingList
+                        return this.buildingList
 }
 
 

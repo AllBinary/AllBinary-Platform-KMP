@@ -81,7 +81,7 @@ this.playerType= playerType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameType
+                        return this.gameType
 }
 
 
@@ -92,7 +92,7 @@ this.playerType= playerType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameMode
+                        return this.gameMode
 }
 
 
@@ -103,7 +103,7 @@ this.playerType= playerType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return playerType
+                        return this.playerType
 }
 
 
@@ -114,7 +114,7 @@ this.playerType= playerType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return highestLevel
+                        return this.highestLevel
 }
 
 
@@ -133,7 +133,7 @@ this.highestLevel= highestLevel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentLevel
+                        return this.currentLevel
 }
 
 

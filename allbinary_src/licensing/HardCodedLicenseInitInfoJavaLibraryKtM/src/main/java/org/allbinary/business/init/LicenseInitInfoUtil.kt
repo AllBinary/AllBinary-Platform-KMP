@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LicenseInitInfoUtil.instance
 }
 
 
@@ -88,7 +88,7 @@ var initData = initData
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return readAgain(0)
+                        return this.readAgain(0)
 }
 
 

@@ -195,7 +195,7 @@ capital.removeMoney(upgradeCost)
                         if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(upgradeGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.upgradeGameNotificationEvent)
 
                                     }
                                 
@@ -209,7 +209,7 @@ capital.removeMoney(upgradeCost)
                         if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(noMoneyGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.noMoneyGameNotificationEvent)
 
                                     }
                                 
@@ -274,7 +274,7 @@ capital.addMoney(downgradeCost)
                         if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
                         
                                     {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(downgradeGameNotificationEvent)
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.downgradeGameNotificationEvent)
 
                                     }
                                 
@@ -357,7 +357,7 @@ this.processInputKey(key)
 
 
     
-                        if(isSingleKeyProcessing)
+                        if(this.isSingleKeyProcessing)
                         
                                     {
                                     this.clear()
@@ -384,7 +384,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_I
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return selectedRTSLayersList
+                        return this.selectedRTSLayersList
 }
 
 
@@ -601,7 +601,7 @@ rtsLayer!!.deselect()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return paintSelectedRTSLayersList
+                        return this.paintSelectedRTSLayersList
 }
 
 
@@ -612,7 +612,7 @@ rtsLayer!!.deselect()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return preSelectedRTSLayersList
+                        return this.preSelectedRTSLayersList
 }
 
 

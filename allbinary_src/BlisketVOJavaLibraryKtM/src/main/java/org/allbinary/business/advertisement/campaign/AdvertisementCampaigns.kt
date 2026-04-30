@@ -41,7 +41,7 @@ public constructor (vector: Vector)
             : super()
         {
 var vector = vector
-this.advertisementsVector= advertisementsVector
+this.advertisementsVector= this.advertisementsVector
 }
 
 

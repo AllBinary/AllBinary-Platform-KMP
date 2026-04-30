@@ -112,10 +112,13 @@ import org.allbinary.thread.ThreadFactoryUtil
 import org.allbinary.thread.ThreadUtil
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.EnumerationUtil
 
 open public class GameMidlet : ProgressMidlet
                 , CommandListener {
         
+
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
@@ -138,7 +141,7 @@ open public class GameMidlet : ProgressMidlet
     private val NO_DISPLAYABLE: String = "No Displayable"
 
     private val COMMAND_ACTION: String = StringMaker().
-                            append("GameMidlet::")!!.append(midletStrings!!.COMMAND_ACTION)!!.toString()!!
+                            append("GameMidlet::")!!.append(this.midletStrings!!.COMMAND_ACTION)!!.toString()!!
 
     private val PAUSE_APP_BACKGROUND: String = "pauseAppBackground"
 
@@ -425,7 +428,7 @@ this.setDemo()
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "startApp", e)
-destroyApp(false)
+this.destroyApp(false)
 notifyDestroyed()
 }
 
@@ -918,7 +921,7 @@ stringBuffer!!.appendboolean(this.isResized())
 PreLogUtil.put(stringBuffer!!.toString(), this, COMMAND_ACTION)
 
     
-                        if(this.isResized() || fullScreenUtil!!.isScreenChange(isFullScreen))
+                        if(this.isResized() || this.fullScreenUtil!!.isScreenChange(isFullScreen))
                         
                                     {
                                     this.updateFullScreen()
@@ -982,9 +985,9 @@ this.setStartStateHashtable(keyValuePersistance!!.get(index))
     var menuListener: MenuListener = this.getLoadGameForm()!!
 
 menuListener!!.close()
-PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, COMMAND_ACTION)
+PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, this.COMMAND_ACTION)
 this.commandAction(gameCommandsFactory!!.START_COMMAND, NullCanvas.NULL_CANVAS)
-PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, COMMAND_ACTION)
+PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, this.COMMAND_ACTION)
 
                                     }
                                 
@@ -1300,7 +1303,7 @@ this.logUtil!!.putF(commonStrings!!.END, this, gameStrings!!.STOP_GAME_CANVAS_RU
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return allbinaryGameCanvasRunnableInterface
+                        return this.allbinaryGameCanvasRunnableInterface
 }
 
 
@@ -1377,9 +1380,9 @@ this.logUtil!!.putF(commonStrings!!.START, this, "getCurrentStateHashtable")
     var key: Any
 
 
-        while(enumeration.hasMoreElements())
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-key= enumeration.nextElement()!!
+key= this.enumerationUtil!!.nextElement(enumeration)!!
 hashtable.put(key, currentHashtable!!.get(key as Object))
 }
 
@@ -1428,7 +1431,7 @@ this.resized= resized
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return resized
+                        return this.resized
 }
 
 

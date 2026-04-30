@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return TouchButtonFactory.SINGLETON
 }
 
 
@@ -51,9 +51,9 @@ companion object {
             
     private var LIST: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
-    private var list: BasicArrayList = LIST
+    private var list: BasicArrayList = this.LIST
 
-    private var savedList: BasicArrayList = LIST
+    private var savedList: BasicArrayList = this.LIST
 private constructor ()
             : super()
         {
@@ -161,7 +161,7 @@ this.list= list
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
+                        return this.list
 }
 
 

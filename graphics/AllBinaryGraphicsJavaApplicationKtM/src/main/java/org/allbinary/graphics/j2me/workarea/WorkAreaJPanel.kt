@@ -69,7 +69,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return document
+                        return WorkAreaJPanel.document
 }
 
 
@@ -97,9 +97,9 @@ var x = x
 var y = y
 
         try {
-            initComponents()
+            this.initComponents()
 this.name= name
-initMyComponents(dimension)
+this.initMyComponents(dimension)
 this.workAreaJTreeJPanel= WorkAreaJTreeJPanel(this.name)
 
     var canvasJPanel: CanvasJPanel = CanvasJPanel(this.workAreaJTreeJPanel, this.getSize(), x, y)
@@ -123,9 +123,9 @@ var workAreaDom = workAreaDom
 var dimension = dimension
 
         try {
-            initComponents()
+            this.initComponents()
 this.name= workAreaDom!!.getName()
-initMyComponents(dimension)
+this.initMyComponents(dimension)
 
     var canvasNodeList: BasicArrayList = workAreaDom!!.getCanvasNodes()!!
 
@@ -276,7 +276,7 @@ this.isPlaying= false
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return isPlaying
+                        return this.isPlaying
 }
 
 
@@ -422,7 +422,7 @@ var treeNode = treeNode
 
     var canvasJPanel: CanvasJPanel = this.canvasJPanelList!!.get(frameInteger!!.toInt()) as CanvasJPanel
 
-initDuplicate(canvasJPanel!!.duplicate())
+this.initDuplicate(canvasJPanel!!.duplicate())
 
                                     }
                                 
@@ -453,7 +453,7 @@ var totalAngle = totalAngle
     var newCanvasJPanel: CanvasJPanel = canvasJPanel!!.duplicate()!!
 
 newCanvasJPanel!!.setAngle(incrementAngle *index)
-initDuplicate(newCanvasJPanel)
+this.initDuplicate(newCanvasJPanel)
 }
 
 }
@@ -490,7 +490,7 @@ var explodeType = explodeType
     var newCanvasJPanel: CanvasJPanel = canvasJPanel!!.duplicate()!!
 
 newCanvasJPanel!!.explode(index +1, explodeType)
-initDuplicate(newCanvasJPanel)
+this.initDuplicate(newCanvasJPanel)
 }
 
 }
@@ -508,7 +508,7 @@ initDuplicate(newCanvasJPanel)
     var newCanvasJPanel: CanvasJPanel = canvasJPanel!!.duplicate()!!
 
 newCanvasJPanel!!.mirror()
-initDuplicate(newCanvasJPanel)
+this.initDuplicate(newCanvasJPanel)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -622,7 +622,7 @@ document.appendChild(workAreaNode)
 {
 this.innerJPanel= javax.swing.JPanel()
 setLayout(java.awt.GridLayout(1, 1))
-innerJPanel!!.addKeyListener(object: java.awt.event.KeyAdapter()
+this.innerJPanel!!.addKeyListener(object: java.awt.event.KeyAdapter()
                                 {
                                 
     open override fun keyTyped(evt: java.awt.event.KeyEvent)

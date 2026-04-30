@@ -129,17 +129,17 @@ var hashMap = hashMap
 }
 
 this.logUtil!!.putF("minX: " +this.minX +" minY: " +this.minY +" maxX: " +this.maxX +" maxY: " +this.maxY, this, commonStrings!!.GET_INSTANCE)
-setWidth(this.maxX -this.minX)
-setHeight(this.maxY -this.minY)
+this.setWidth(this.maxX -this.minX)
+this.setHeight(this.maxY -this.minY)
 
-    var max: Int = getWidth()!!
+    var max: Int = this.getWidth()!!
 
 
     
                         if(getHeight() > max)
                         
                                     {
-                                    max= getHeight()
+                                    max= this.getHeight()
 
                                     }
                                 
@@ -155,10 +155,10 @@ setHeight(this.maxY -this.minY)
 
 this.logUtil!!.putF(s, this, commonStrings!!.GET_INSTANCE)
 
-    var currentMiddleX: Int = this.minX +getWidth() /2
+    var currentMiddleX: Int = this.minX +this.getWidth() /2
 
 
-    var currentMiddleY: Int = this.minY +getHeight() /2
+    var currentMiddleY: Int = this.minY +this.getHeight() /2
 
 this.dx= middle -currentMiddleX
 this.dy= middle -currentMiddleY
@@ -192,7 +192,7 @@ this.logUtil!!.putF(StringMaker().
     var item: GraphicItemInterface = hashMap!!.get(graphicItemArray[index]!!) as GraphicItemInterface
 
 
-    var list: BasicArrayList = translate(item.getPointsInterface()!!.getPoints(), dx, dy)!!
+    var list: BasicArrayList = VectorCenterGenerator.translate(item.getPointsInterface()!!.getPoints(), dx, dy)!!
 
 
     var newPoints: Points = Points()
@@ -285,7 +285,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return width
+                        return this.width
 }
 
 
@@ -304,7 +304,7 @@ this.width= width
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return height
+                        return this.height
 }
 
 

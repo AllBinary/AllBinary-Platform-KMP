@@ -39,7 +39,7 @@ open public class VelocityWidget : BasicHud {
 
     private val KILOMETERS_PER_HOUR_STR: CharArray = charArrayOf(' ','k','m','/','h')
 
-    private val totalChars: Int = KILOMETERS_PER_HOUR_STR.size
+    private val totalChars: Int = this.KILOMETERS_PER_HOUR_STR.size
                 
 
     private var velocity: Int
@@ -154,7 +154,7 @@ this.set(this.velocity -value)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paintDXY(graphics, string, 0, this.totalDigits, KILOMETERS_PER_HOUR_STR, 0, this.totalChars, offset2, offset)
+super.paintDXY(graphics, this.string, 0, this.totalDigits, this.KILOMETERS_PER_HOUR_STR, 0, this.totalChars, this.offset2, this.offset)
 }
 
 

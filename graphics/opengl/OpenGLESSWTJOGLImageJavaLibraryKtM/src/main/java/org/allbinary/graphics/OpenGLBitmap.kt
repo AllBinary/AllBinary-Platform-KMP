@@ -34,7 +34,7 @@ this.image= bitmap as Image
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
+                        return this.image
 }
 
 
@@ -144,7 +144,7 @@ this.image.setRGB2(pixels, offset, height, x, y, width, height)
     open fun recycle()
         //nullable = true from not(false or (false and true)) = true
 {
-DisposalUtil.getInstance()!!.disposeImage(image)
+DisposalUtil.getInstance()!!.disposeImage(this.image)
 }
 
 

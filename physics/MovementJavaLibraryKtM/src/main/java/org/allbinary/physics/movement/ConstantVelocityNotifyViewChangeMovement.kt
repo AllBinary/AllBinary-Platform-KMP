@@ -56,7 +56,7 @@ this.speedBasicDecimal= speedBasicDecimal
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
-basicVelocityProperties!!.setVelocityWithBigDecimal(speedBasicDecimal, angleFactory!!.getAt(angle), angleFactory!!.getAt(otherAngle))
+this.basicVelocityProperties!!.setVelocityWithBigDecimal(speedBasicDecimal, angleFactory!!.getAt(angle), angleFactory!!.getAt(otherAngle))
 }
 
 

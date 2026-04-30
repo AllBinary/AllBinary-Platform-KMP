@@ -55,7 +55,7 @@ public constructor (transformInfoInterface: TransformInfoInterface)
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = this.getTransformInfoInterface() as TransformInfoHttpInterface
 
-this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(abeClientInformation, httpTransformInfoInterface!!.getPropertiesHashMap()!!.get(DynamicObjectData.NAME) as String)
+this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeClientInformation, httpTransformInfoInterface!!.getPropertiesHashMap()!!.get(DynamicObjectData.NAME) as String)
 }
 
 

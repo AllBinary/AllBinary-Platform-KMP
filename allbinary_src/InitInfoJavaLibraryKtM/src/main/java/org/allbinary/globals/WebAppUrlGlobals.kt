@@ -58,7 +58,7 @@ open public class WebAppUrlGlobals : UrlGlobalsInterface {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return path
+                        return this.path
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -113,7 +113,7 @@ this.isWebappPathSet= true
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getWebappPath()
+                        return this.getWebappPath()
 
                                     }
                                 

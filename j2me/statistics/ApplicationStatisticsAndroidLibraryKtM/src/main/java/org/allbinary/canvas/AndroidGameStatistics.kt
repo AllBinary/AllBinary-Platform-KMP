@@ -112,7 +112,7 @@ this.STRING_ARRAY[13]= (this.totalOnDraws /totalTime).toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return STRING_ARRAY
+                        return this.STRING_ARRAY
 }
 
 

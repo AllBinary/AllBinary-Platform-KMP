@@ -52,7 +52,7 @@ var imageTypeString = imageTypeString
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashMap!!.get(imageTypeString as Object) as InputImageType
+                        return InputImageType.hashMap!!.get(imageTypeString as Object) as InputImageType
 }
 
 
@@ -63,7 +63,7 @@ var imageTypeString = imageTypeString
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TYPE_VECTOR
+                        return InputImageType.TYPE_VECTOR
 }
 
 
@@ -79,7 +79,7 @@ var name = name
 var index = index
 this.name= name
 this.index= index
-TYPE_VECTOR.add(this)
+InputImageType.TYPE_VECTOR.add(this)
 this.hashMap!!.put(this.getName(), this)
 }
 
@@ -91,7 +91,7 @@ this.hashMap!!.put(this.getName(), this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "ImageType: " +getName()
+                        return "ImageType: " +this.getName()
 }
 
 
@@ -102,7 +102,7 @@ this.hashMap!!.put(this.getName(), this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -113,7 +113,7 @@ this.hashMap!!.put(this.getName(), this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return index
+                        return this.index
 }
 
 

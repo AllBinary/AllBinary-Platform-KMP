@@ -61,11 +61,11 @@ this.setLibraryName(libraryName)
 
     var params: Array<Any?> = arrayOfNulls(1)
 
-params[0]= getLibraryName()
+params[0]= this.getLibraryName()
 
     var classes: Array<KClass<*>?> = arrayOfNulls(1)
 
-classes[0]= getLibraryName()!!.::class
+classes[0]= this.getLibraryName()!!.::class
 this.loader= NativeLibraryClassLoader(this::class.java.classLoader)
 
     var myClass: KClass<*> = this.loader.loadClass("dynamic.NativeLibraryHelper")!!
@@ -118,7 +118,7 @@ System.gc()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return libraryName
+                        return this.libraryName
 }
 
 

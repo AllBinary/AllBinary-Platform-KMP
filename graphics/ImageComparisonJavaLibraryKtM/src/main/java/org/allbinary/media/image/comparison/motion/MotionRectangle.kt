@@ -55,7 +55,7 @@ this.setPixelDeltaVector(Vector())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rectangle
+                        return this.rectangle
 }
 
 
@@ -74,7 +74,7 @@ this.rectangle= rectangle
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return pixelDeltaVector
+                        return this.pixelDeltaVector
 }
 
 

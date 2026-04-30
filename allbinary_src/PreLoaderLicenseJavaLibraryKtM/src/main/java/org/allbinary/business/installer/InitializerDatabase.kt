@@ -133,12 +133,12 @@ this.getFormData(abeClientInformation, initHashMap)
             
     var initializerData: InitializerData = InitializerData.getInstance()!!
 
-setAdminDbUserName(hashMap!!.get(initializerData!!.DBUSER) as String)
-setAdminDbPassword(hashMap!!.get(initializerData!!.DBPASSWORD) as String)
-setAdminJdbcDriver(hashMap!!.get(initializerData!!.ADMINJDBCDRIVER) as String)
-setAdminSchema(hashMap!!.get(initializerData!!.ADMINSCHEMA) as String)
-setAdminServer(hashMap!!.get(initializerData!!.ADMINSERVER) as String)
-setAdminPort(hashMap!!.get(initializerData!!.ADMINPORT) as String)
+this.setAdminDbUserName(hashMap!!.get(initializerData!!.DBUSER) as String)
+this.setAdminDbPassword(hashMap!!.get(initializerData!!.DBPASSWORD) as String)
+this.setAdminJdbcDriver(hashMap!!.get(initializerData!!.ADMINJDBCDRIVER) as String)
+this.setAdminSchema(hashMap!!.get(initializerData!!.ADMINSCHEMA) as String)
+this.setAdminServer(hashMap!!.get(initializerData!!.ADMINSERVER) as String)
+this.setAdminPort(hashMap!!.get(initializerData!!.ADMINPORT) as String)
 
     var dbConnectionInfo: DbConnectionInfo = DbConnectionInfo()
 
@@ -217,7 +217,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.adminDbUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.adminDbUserName, InitializerDatabase.MIN, InitializerDatabase.MAX))
                         
                                     {
                                     isValid= false
@@ -226,7 +226,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.adminDbPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.adminDbPassword, InitializerDatabase.MINPASSWORD, InitializerDatabase.MAX))
                         
                                     {
                                     isValid= false
@@ -286,7 +286,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.adminDbUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.adminDbUserName, InitializerDatabase.MIN, InitializerDatabase.MAX))
                         
                                     {
                                     stringBuffer!!.append("Admin username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -295,7 +295,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.adminDbPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.adminDbPassword, InitializerDatabase.MINPASSWORD, InitializerDatabase.MAX))
                         
                                     {
                                     stringBuffer!!.append("Admin password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -398,7 +398,7 @@ this.logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adminDbUserName
+                        return this.adminDbUserName
 }
 
 
@@ -417,7 +417,7 @@ this.adminDbUserName= adminDbUserName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adminDbPassword
+                        return this.adminDbPassword
 }
 
 
@@ -436,7 +436,7 @@ this.adminDbPassword= adminDbPassword
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adminJdbcDriver
+                        return this.adminJdbcDriver
 }
 
 
@@ -455,7 +455,7 @@ this.adminJdbcDriver= adminJdbcDriver
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adminSchema
+                        return this.adminSchema
 }
 
 
@@ -474,7 +474,7 @@ this.adminSchema= adminSchema
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adminServer
+                        return this.adminServer
 }
 
 
@@ -493,7 +493,7 @@ this.adminServer= adminServer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return adminPort
+                        return this.adminPort
 }
 
 

@@ -181,7 +181,7 @@ super.paint(graphics)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return groupInterface
+                        return this.groupInterface
 }
 
 
@@ -224,7 +224,7 @@ this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return readyForExplosion
+                        return this.readyForExplosion
 }
 
 
@@ -265,7 +265,7 @@ this.readyForExplosion= isReadyForExplosion
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initX
+                        return this.initX
 }
 
 
@@ -276,7 +276,7 @@ this.readyForExplosion= isReadyForExplosion
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initY
+                        return this.initY
 }
 
 
@@ -460,7 +460,7 @@ this.readyForExplosion= isReadyForExplosion
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return pickupBehavior
+                        return this.pickupBehavior
 }
 
 
@@ -496,7 +496,7 @@ this.partInterfaceArrayP= partInterfaceArray
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return partInterfaceArrayP
+                        return this.partInterfaceArrayP
 }
 
 

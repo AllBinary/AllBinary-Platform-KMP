@@ -107,7 +107,7 @@ this.requestHashMap= NameSpaceRequestParams(this.getPageContext()).
                                     }
                                 
 
-    var themeValidation: ThemeValidation = ThemeValidation(this.getTransformInfoInterface(), requestHashMap)
+    var themeValidation: ThemeValidation = ThemeValidation(this.getTransformInfoInterface(), this.requestHashMap)
 
 
     

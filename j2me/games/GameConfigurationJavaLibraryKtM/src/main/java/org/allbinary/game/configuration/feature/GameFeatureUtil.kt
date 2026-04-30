@@ -32,6 +32,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.EnumerationUtil
 import org.allbinary.util.HashtableUtil
 
 open public class GameFeatureUtil
@@ -49,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return GameFeatureUtil.instance
 }
 
 
@@ -61,6 +62,8 @@ companion object {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     val ON_GAME_FEATURE_CHANGE: String = "onGameFeatureChange"
 
@@ -265,7 +268,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
                                     
     var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
 
-updateExclusive(selectedChoiceLabel)
+this.updateExclusive(selectedChoiceLabel)
 
                                     }
                                 
@@ -282,11 +285,12 @@ var itemLabel = itemLabel
     var enumeration: Enumeration<Any?> = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!.keys()!!
 
 
-        while(enumeration.hasMoreElements())
+    var name: String
+
+
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-
-    var name: String = enumeration.nextElement()!! as String
-
+name= this.enumerationUtil!!.nextElement(enumeration)!! as String
 
     
                         if(itemLabel!!.compareTo(name) == 0)
@@ -346,7 +350,7 @@ this.logUtil!!.putF(StringMaker().
         {
 anyType= objectArray[index]!! as Object
 basicArrayList= hashtable.get(anyType as Object) as BasicArrayList
-updateExclusiveList(gameFeature, basicArrayList)
+this.updateExclusiveList(gameFeature, basicArrayList)
 }
 
 }

@@ -49,7 +49,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LockedFeatureNotificationUtil.instance
 }
 
 
@@ -68,7 +68,7 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 {
 PrimaryPlayerQueueFactory.getInstance()!!.add(ErrorSound.getInstance())
-GameNotificationEventHandler.getInstance()!!.fireEvent(gameNotificationEvent)
+GameNotificationEventHandler.getInstance()!!.fireEvent(this.gameNotificationEvent)
 }
 
 
@@ -79,8 +79,8 @@ GameNotificationEventHandler.getInstance()!!.fireEvent(gameNotificationEvent)
 {
 var basicColor = basicColor
 PrimaryPlayerQueueFactory.getInstance()!!.add(ErrorSound.getInstance())
-gameNotificationEvent!!.setBasicColorP(basicColor)
-GameNotificationEventHandler.getInstance()!!.fireEvent(gameNotificationEvent)
+this.gameNotificationEvent!!.setBasicColorP(basicColor)
+GameNotificationEventHandler.getInstance()!!.fireEvent(this.gameNotificationEvent)
 }
 
 

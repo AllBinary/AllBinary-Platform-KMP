@@ -194,7 +194,7 @@ nextParentCategoryInterface= nextParentCategoryInterface!!.getHierarchy()!!.getP
 depthIndex++
 
     
-                        if(depthIndex > MAXDEPTH)
+                        if(depthIndex > CategoryProperties.MAXDEPTH)
                         
                                     {
                                     

@@ -44,7 +44,7 @@ androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_9]= Canvas.KEY_NUM9
 var key = key
 
     
-                        if(key < androidtoJavaMicroEditionKeyMap!!.size)
+                        if(key < AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap!!.size)
                         
                                     {
                                     

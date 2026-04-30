@@ -99,7 +99,7 @@ this.logUtil!!.putF("Label: " +label, this, this.commonStrings!!.CONSTRUCTOR)
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-setJPopupMenu(JPopupMenu())
+this.setJPopupMenu(JPopupMenu())
 
     var jMenuItemEdit: JMenuItem = JMenuItem(EDIT)
 
@@ -108,8 +108,8 @@ setJPopupMenu(JPopupMenu())
 
 jMenuItemEdit!!.addActionListener(this)
 jMenuItemDelete!!.addActionListener(this)
-getJPopupMenu()!!.add(jMenuItemEdit)
-getJPopupMenu()!!.add(jMenuItemDelete)
+this.getJPopupMenu()!!.add(jMenuItemEdit)
+this.getJPopupMenu()!!.add(jMenuItemDelete)
 }
 
 
@@ -133,7 +133,7 @@ var frame = frame
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return jPopupMenu
+                        return this.jPopupMenu
 }
 
 
@@ -153,7 +153,7 @@ var frame = frame
 var actionEvent = actionEvent
 
     
-                        if(actionEvent!!.getActionCommand()!!.compareTo(EDIT) == 0)
+                        if(actionEvent!!.getActionCommand()!!.compareTo(ProfileActionScriptItem.EDIT) == 0)
                         
                                     {
                                     this.showDialog()

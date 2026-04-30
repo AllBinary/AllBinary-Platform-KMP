@@ -86,7 +86,7 @@ var modal = modal
 
                             //For kotlin this is before the body of the constructor.
                     
-initComponents()
+this.initComponents()
 }
 
 
@@ -105,7 +105,7 @@ this.jLabel1!!.setText("Angle Increment:")
 this.totalRotationJTextField!!.setText("360")
 this.jLabel2!!.setText("Total Angular Rotation:")
 this.jButton1!!.setText("OK")
-jButton1!!.addActionListener(object: java.awt.event.ActionListener()
+this.jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

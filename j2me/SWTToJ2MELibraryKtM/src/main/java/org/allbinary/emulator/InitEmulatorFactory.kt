@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return InitEmulatorFactory.instance
 }
 
 
@@ -67,7 +67,7 @@ this.initEmulator= initEmulator
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initEmulator
+                        return this.initEmulator
 }
 
 

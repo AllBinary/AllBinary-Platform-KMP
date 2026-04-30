@@ -91,7 +91,7 @@ this.ownedWaypointList= BasicArrayListS(1)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ownedWaypointList
+                        return this.ownedWaypointList
 }
 
 
@@ -102,7 +102,7 @@ this.ownedWaypointList= BasicArrayListS(1)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return waypoint
+                        return this.waypoint
 }
 
 
@@ -121,7 +121,7 @@ this.waypoint= waypoint
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return steeringVisitorList
+                        return this.steeringVisitorList
 }
 
 
@@ -214,7 +214,7 @@ this.waypoint= waypoint
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return waypointOverridesAttacking
+                        return this.waypointOverridesAttacking
 }
 
 

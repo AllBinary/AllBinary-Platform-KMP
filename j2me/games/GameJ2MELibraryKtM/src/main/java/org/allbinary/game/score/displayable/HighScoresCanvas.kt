@@ -85,7 +85,7 @@ companion object {
 
     private val highScoresCanvasInputProcessor: HighScoresCanvasInputProcessor
 
-    private var currentCommand: Command = highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[0]!!
+    private var currentCommand: Command = this.highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[0]!!
 public constructor (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, gameInfo: GameInfo, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface: HighScoresCanvasInputProcessorFactoryInterface)                        
 
                             : super(commandListener, HighScoresCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
@@ -253,7 +253,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return highScoresPaintable
+                        return this.highScoresPaintable
 }
 
 
@@ -304,7 +304,7 @@ this.logUtil!!.putF(StringMaker().
 
 
     
-                        if(highScoreCommandsFactory!!.isHighScoreCommand(command))
+                        if(this.highScoreCommandsFactory!!.isHighScoreCommand(command))
                         
                                     {
                                     
@@ -368,7 +368,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameInfo
+                        return this.gameInfo
 }
 
 

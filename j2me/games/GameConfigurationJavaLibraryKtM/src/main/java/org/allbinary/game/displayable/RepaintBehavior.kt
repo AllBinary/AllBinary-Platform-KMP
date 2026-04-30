@@ -51,7 +51,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return RepaintBehavior.instance
 }
 
 
@@ -118,7 +118,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
                                 }
-                            , NAME)
+                            , this.NAME)
 
 thread.start()
 

@@ -119,7 +119,7 @@ var values = values
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getUsersWithRole(UserRoleFactory.getInstance()!!.ADMINISTRATOR)
+                        return this.getUsersWithRole(UserRoleFactory.getInstance()!!.ADMINISTRATOR)
 }
 
 
@@ -178,7 +178,7 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getUsersWithRole(UserRoleFactory.getInstance()!!.CUSTOMER)
+                        return this.getUsersWithRole(UserRoleFactory.getInstance()!!.CUSTOMER)
 }
 
 

@@ -165,7 +165,7 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return actionScriptOutputJPanel
+                        return this.actionScriptOutputJPanel
 }
 
 
@@ -232,7 +232,7 @@ this.actionScriptOutputJPanel!!.getCapturedImageActionJDialog()!!.setVisible(tru
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return saved
+                        return this.saved
 }
 
 
@@ -251,7 +251,7 @@ this.saved= saved
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return display
+                        return this.display
 }
 
 
@@ -297,7 +297,7 @@ this.logUtil!!.putF(this.future_toString(), this, "log")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageTypes
+                        return this.imageTypes
 }
 
 

@@ -50,12 +50,12 @@ var activity = activity
                         if(SDK_VERSION <= 2)
                         
                                     {
-                                    virtualKeyboard= VirtualKeyboardAPI1(activity)
+                                    VirtualKeyboardFactory.virtualKeyboard= VirtualKeyboardAPI1(activity)
 
                                     }
                                 
                         else {
-                            virtualKeyboard= VirtualKeyboardAPI3(activity)
+                            VirtualKeyboardFactory.virtualKeyboard= VirtualKeyboardAPI3(activity)
 
                         }
                             
@@ -69,7 +69,7 @@ var activity = activity
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return virtualKeyboard
+                        return VirtualKeyboardFactory.virtualKeyboard
 }
 
 

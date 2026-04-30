@@ -162,7 +162,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERA
 
 
     var searchRequest: SearchRequest = SearchRequest(
-                            null, this.searchParams, xslFile, contentType, this.getPropertiesHashMap(), this.getPageContext())
+                            null, this.searchParams, this.xslFile, contentType, this.getPropertiesHashMap(), this.getPageContext())
 
 
     var success: String = ProductListingFactory.getInstance(searchRequest)!!.generateAll(this.storeName)!!

@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return SqlConnectionPool.instance
 }
 
 
@@ -210,7 +210,7 @@ stringBuffer!!.append(this.NUMBER_OF_SQL_CONNECTIONS_FOR)
 stringBuffer!!.append(url)
 stringBuffer!!.append(this.IS)
 stringBuffer!!.appendint(connectionVector!!.size)
-this.logUtil!!.putF(NUMBER_OF_SQL_CONNECTION_VECTORS +this.connectionHashMap!!.size, this, METHOD_GET)
+this.logUtil!!.putF(NUMBER_OF_SQL_CONNECTION_VECTORS +this.connectionHashMap!!.size, this, this.METHOD_GET)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET)
 
                                     }

@@ -118,7 +118,7 @@ var num = num
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var itemsAndNumberInBasket: HashMap<Any, Any> = getItems()!!
+    var itemsAndNumberInBasket: HashMap<Any, Any> = this.getItems()!!
 
 
     var totalWeight: Money = Money()
@@ -201,7 +201,7 @@ totalWeight!!.add(weightFloat!!.toString())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return items
+                        return this.items
 }
 
 
@@ -226,7 +226,7 @@ var product = product
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
-    var itemsAndNumberInBasket: HashMap<Any, Any> = getItems()!!
+    var itemsAndNumberInBasket: HashMap<Any, Any> = this.getItems()!!
 
 
     var subTotal: Money = Money()

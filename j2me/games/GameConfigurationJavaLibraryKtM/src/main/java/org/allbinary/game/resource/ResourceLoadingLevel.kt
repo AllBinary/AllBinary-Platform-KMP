@@ -51,7 +51,7 @@ this.level= level
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return level
+                        return this.level
 }
 
 
@@ -62,7 +62,7 @@ this.level= level
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 

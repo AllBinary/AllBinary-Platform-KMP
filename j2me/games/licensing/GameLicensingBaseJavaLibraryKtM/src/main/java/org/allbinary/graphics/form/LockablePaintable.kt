@@ -69,7 +69,7 @@ var y = y
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return lockedIndex
+                        return this.lockedIndex
 }
 
 
@@ -80,7 +80,7 @@ var y = y
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return animation
+                        return this.animation
 }
 
 

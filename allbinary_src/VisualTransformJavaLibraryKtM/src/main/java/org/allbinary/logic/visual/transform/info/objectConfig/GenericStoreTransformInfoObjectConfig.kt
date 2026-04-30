@@ -216,7 +216,7 @@ templateNameStringBuffer!!.append(RootTransformInfoData.NAME)
                         
                                     {
                                     
-    var templateInterface: TransformTemplateInterface = TransformTemplateFactory.getInstance()!!.getInstance(abeClientInformation, templateNameStringBuffer!!.toString(), transformInfoHttpStoreInterface!!.getPropertiesHashMap(), transformInfoHttpStoreInterface!!.getPageContext())!!
+    var templateInterface: TransformTemplateInterface = TransformTemplateFactory.getInstance()!!.getInstance(this.abeClientInformation, templateNameStringBuffer!!.toString(), transformInfoHttpStoreInterface!!.getPropertiesHashMap(), transformInfoHttpStoreInterface!!.getPageContext())!!
 
 
     var selectedTemplate: String = templateInterface!!.getName()!!

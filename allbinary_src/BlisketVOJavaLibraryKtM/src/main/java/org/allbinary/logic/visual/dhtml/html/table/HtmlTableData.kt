@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return HtmlTableData.instance
 }
 
 
@@ -75,7 +75,7 @@ companion object {
 
     val ROWS: String = "rows"
 
-    val FRAMES: Array<String?> = arrayOf(this.NONE,TOP,BOTTOM,TOPBOT,SIDES,ALL,this.BORDERED)
+    val FRAMES: Array<String?> = arrayOf(this.NONE,this.TOP,this.BOTTOM,this.TOPBOT,this.SIDES,this.ALL,this.BORDERED)
 
 }
                 

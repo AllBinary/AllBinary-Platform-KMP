@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LocalPlayerInputIdFactory.instance
 }
 
 
@@ -56,11 +56,11 @@ companion object {
 
     private val MAX_FAST_DEVICEID: Int = 65
 
-    private val deviceIdToplayerId: IntArray = IntArray(MAX_FAST_DEVICEID)
+    private val deviceIdToplayerId: IntArray = IntArray(this.MAX_FAST_DEVICEID)
 
-    private val playerIdToDeviceId: IntArray = IntArray(MAX_NUMBER_OF_PLAYERS)
+    private val playerIdToDeviceId: IntArray = IntArray(this.MAX_NUMBER_OF_PLAYERS)
 
-    private val playersInPlay: BooleanArray = BooleanArray(MAX_NUMBER_OF_PLAYERS)
+    private val playersInPlay: BooleanArray = BooleanArray(this.MAX_NUMBER_OF_PLAYERS)
 
     private var totalDevicesMapped: Int = 0
 private constructor ()
@@ -248,7 +248,7 @@ this.playersInPlay[playerInputId]= false
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return playersInPlay
+                        return this.playersInPlay
 }
 
 

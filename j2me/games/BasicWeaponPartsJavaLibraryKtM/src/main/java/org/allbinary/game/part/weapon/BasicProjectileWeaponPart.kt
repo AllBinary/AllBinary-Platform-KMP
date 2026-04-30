@@ -83,7 +83,7 @@ var otherAngle = otherAngle
     //var weaponProperties = weaponProperties
     //var scoreableInterface = scoreableInterface
 
-    var weaponLayer: WeaponLayer = weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), this.relativeRelationship!!.getZ(), angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)!!
+    var weaponLayer: WeaponLayer = this.weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), this.relativeRelationship!!.getZ(), angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)!!
 
 allbinaryLayerManager!!.append(weaponLayer)
 }

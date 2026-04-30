@@ -51,7 +51,7 @@ this.imageColorResults= ImageColorResults()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageColorRangeResults
+                        return this.imageColorRangeResults
 }
 
 
@@ -70,7 +70,7 @@ this.imageColorRangeResults= imageColorRangeResults
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return averageAmbientLevel
+                        return this.averageAmbientLevel
 }
 
 
@@ -89,7 +89,7 @@ this.averageAmbientLevel= averageAmbientLevel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageColorResults
+                        return this.imageColorResults
 }
 
 

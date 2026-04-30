@@ -160,7 +160,7 @@ var filePath = filePath
 
 
         try {
-            init(lineNumberReader, filePath)
+            this.init(lineNumberReader, filePath)
 } catch(e: Exception)
             {
 

@@ -129,7 +129,7 @@ this.priorityP= distanceCategory
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return targetPathFindingLayer
+                        return this.targetPathFindingLayer
 }
 
 

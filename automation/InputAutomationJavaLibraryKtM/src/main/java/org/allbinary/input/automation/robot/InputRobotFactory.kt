@@ -56,7 +56,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputRobotFactory
+                        return InputRobotFactory.inputRobotFactory
 }
 
 
@@ -76,7 +76,7 @@ logUtil!!.putF("Loading Libraries", "InputRobotFactory", "loadLibraries")
 
         while(iterator.hasNext())
         {
-loadLibrary(iterator.next() as InputRobotInterface)
+InputRobotFactory.loadLibrary(iterator.next() as InputRobotInterface)
 }
 
 }
@@ -241,7 +241,7 @@ this.logUtil!!.putF("Loading Libraries", this, "loadLibraries")
 
     var inputRobotInterface: InputRobotInterface = InputRobotFactory.getInstance()!!.get(nameArray[index]!! as String)!!
 
-loadLibrary(inputRobotInterface)
+InputRobotFactory.loadLibrary(inputRobotInterface)
 }
 
 }
@@ -301,7 +301,7 @@ securedNativeLibraryInterface!!.unload()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable
+                        return this.hashtable
 }
 
 

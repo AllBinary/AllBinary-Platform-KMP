@@ -170,7 +170,7 @@ this.shippingVector!!.add(NoShippingModuleView())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return shippingVector
+                        return this.shippingVector
 }
 
 
@@ -181,7 +181,7 @@ this.shippingVector!!.add(NoShippingModuleView())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return defaultShippingMethodInterface
+                        return this.defaultShippingMethodInterface
 }
 
 

@@ -125,7 +125,7 @@ this.getVector()!!.add(InputImageType.getInstance(nextImageTypeString))
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return vector
+                        return this.vector
 }
 
 

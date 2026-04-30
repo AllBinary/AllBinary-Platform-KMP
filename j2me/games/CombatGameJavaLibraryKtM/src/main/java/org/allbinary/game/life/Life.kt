@@ -176,7 +176,7 @@ var lives = lives
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxlives
+                        return this.maxlives
 }
 
 
@@ -244,7 +244,7 @@ var lives = lives
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return startLives
+                        return this.startLives
 }
 
 

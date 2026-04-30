@@ -126,7 +126,7 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tagHelperFactoryInterface
+                        return this.tagHelperFactoryInterface
 }
 
 
@@ -145,7 +145,7 @@ this.tagRequestHelperFactoryInterface= tagHelperFactoryInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tagRequestHelperFactoryInterface
+                        return this.tagRequestHelperFactoryInterface
 }
 
 
@@ -164,7 +164,7 @@ this.current= current
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return current
+                        return this.current
 }
 
 
@@ -183,7 +183,7 @@ this.total= total
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return total
+                        return this.total
 }
 
 
@@ -195,7 +195,7 @@ this.total= total
 
         try {
             
-    var anyType: Any = getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
+    var anyType: Any = this.getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
@@ -245,7 +245,7 @@ this.total= total
 
         try {
             
-    var anyType: Any = getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
+    var anyType: Any = this.getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
@@ -295,7 +295,7 @@ this.total= total
 
         try {
             
-    var anyType: Any = getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
+    var anyType: Any = this.getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
@@ -345,7 +345,7 @@ this.total= total
 
         try {
             
-    var anyType: Any = getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
+    var anyType: Any = this.getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
@@ -612,7 +612,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                         if(this.getCommand()!!.compareTo(commonStrings!!.INSERT) == 0 || this.getCommand()!!.compareTo(SqlStrings.getInstance()!!.INSERT_INTO) == 0 || this.getCommand()!!.compareTo(commonStrings!!.DELETE) == 0 || this.getCommand()!!.compareTo(commonStrings!!.UPDATE) == 0 || this.getCommand()!!.compareTo(SqlStrings.getInstance()!!.UPDATE) == 0)
                         
                                     {
-                                    this.requestObject= getTagRequestHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)
+                                    this.requestObject= this.getTagRequestHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)
 
                                     }
                                 

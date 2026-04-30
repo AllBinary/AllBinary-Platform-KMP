@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return HtmlInputData.instance
 }
 
 
@@ -68,7 +68,7 @@ companion object {
 
     val SUBMIT: String = "submit"
 
-    val TYPES: Array<String?> = arrayOf(this.TEXT,RADIO,CHECKBOX,HIDDEN,IMAGE,this.PASSWORD,RADIO,RESET,this.SUBMIT)
+    val TYPES: Array<String?> = arrayOf(this.TEXT,this.RADIO,this.CHECKBOX,this.HIDDEN,this.IMAGE,this.PASSWORD,this.RADIO,this.RESET,this.SUBMIT)
 
 }
                 

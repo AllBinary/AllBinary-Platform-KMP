@@ -45,7 +45,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DROP_LAYER_FACTORY
+                        return RaceTrackAdjacentDropLayerFactory.DROP_LAYER_FACTORY
 }
 
 
@@ -72,7 +72,7 @@ this.list.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list.size()
+                        return this.list.size()
 }
 
 

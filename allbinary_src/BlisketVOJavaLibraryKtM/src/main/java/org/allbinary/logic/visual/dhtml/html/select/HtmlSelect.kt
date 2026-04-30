@@ -246,7 +246,7 @@ result += "\" "
                         if(this.isMultiple())
                         result += " " +this.multiple +" "
 result += this.END
-result += getOptions()
+result += this.getOptions()
 result += this.ENDSELECT
 result += this.after
 

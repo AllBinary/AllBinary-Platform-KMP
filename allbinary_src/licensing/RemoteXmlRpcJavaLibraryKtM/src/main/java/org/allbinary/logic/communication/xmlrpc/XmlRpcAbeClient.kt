@@ -156,12 +156,12 @@ var anyType = anyType
                         if(getServer() < getMaxServers())
                         
                                     {
-                                    setServer(getServer() +1)
+                                    this.setServer(getServer() +1)
 
                                     }
                                 
                         else {
-                            setServer(0)
+                            this.setServer(0)
 
                         }
                             
@@ -179,7 +179,7 @@ var anyType = anyType
                                     }
                                 
                         else {
-                            setIsDone(true)
+                            this.setIsDone(true)
 
                         }
                             
@@ -197,7 +197,7 @@ var anyType = anyType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return clientInfo
+                        return this.clientInfo
 }
 
 
@@ -208,7 +208,7 @@ var anyType = anyType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return client
+                        return this.client
 }
 
 
@@ -227,7 +227,7 @@ this.client= client
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return server
+                        return this.server
 }
 
 
@@ -246,7 +246,7 @@ this.server= server
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return start
+                        return this.start
 }
 
 
@@ -265,7 +265,7 @@ this.start= start
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxServers
+                        return this.maxServers
 }
 
 
@@ -284,7 +284,7 @@ this.maxServers= maxServers
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return isDone
+                        return this.isDone
 }
 
 
@@ -303,7 +303,7 @@ this.isDone= isDone
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return remoteMethod
+                        return this.remoteMethod
 }
 
 

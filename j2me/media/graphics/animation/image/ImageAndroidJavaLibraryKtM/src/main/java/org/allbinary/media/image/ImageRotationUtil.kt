@@ -47,7 +47,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ImageRotationUtil.instance
 }
 
 
@@ -93,7 +93,7 @@ this.matrix.setRotate(rotationInDegrees.toFloat(), (width shr 1).toFloat(), (hei
                                     (image as AndroidImageInterface).getCanvas()!!
 
 canvas.concat(this.matrix)
-image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
+image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
 
 
 

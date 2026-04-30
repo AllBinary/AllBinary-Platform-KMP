@@ -54,7 +54,7 @@ companion object {
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-    private var firingX: Int = displayInfoSingleton!!.getLastHalfWidth()!!
+    private var firingX: Int = this.displayInfoSingleton!!.getLastHalfWidth()!!
 
     private var firedIndex: Int = 0
 
@@ -75,7 +75,7 @@ var gameInput = gameInput
 
                             //For kotlin this is before the body of the constructor.
                     
-this.sound= hashtable.get(SOUND as Object) as Sound
+this.sound= hashtable.get(HorizontalScreenPatrolAI.SOUND) as Sound
 
     
                         if(this.sound == 
@@ -121,7 +121,7 @@ super.processKeyAI(this.keyDirection)
 
 layerInterface!!.setPosition(this.displayInfoSingleton!!.getLastWidth() +layerInterface!!.getWidth() +50, y, layerInterface!!.getZP())
 this.firedIndex= 0
-this.firingX= this.displayInfoSingleton!!.getLastHalfWidth() +MyRandomFactory.getInstance()!!.getNextInt(displayInfoSingleton!!.getLastHalfWidth())
+this.firingX= this.displayInfoSingleton!!.getLastHalfWidth() +MyRandomFactory.getInstance()!!.getNextInt(this.displayInfoSingleton!!.getLastHalfWidth())
 this.secondaryPlayerQueue!!.add(this.sound)
 
                                     }
@@ -157,7 +157,7 @@ this.firingX= Integer.MIN_VALUE
 
                                     }
                                 
-firedIndex++
+this.firedIndex++
 
                                     }
                                 

@@ -42,7 +42,7 @@ open public class RootCategoryPropertiesAbstract
 
     private val category: String = CategoryData.getInstance()!!.ROOTCATEGORY
 
-    private val fileName: String = category +AbPathData.getInstance()!!.EXTENSION_SEP +CategoryData.getInstance()!!.UNCRYPTED_EXTENSION
+    private val fileName: String = this.category +AbPathData.getInstance()!!.EXTENSION_SEP +CategoryData.getInstance()!!.UNCRYPTED_EXTENSION
 public constructor ()
             : super()
         {
@@ -178,7 +178,7 @@ var categoryHierarchyInterface = categoryHierarchyInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return fileName
+                        return this.fileName
 }
 
 

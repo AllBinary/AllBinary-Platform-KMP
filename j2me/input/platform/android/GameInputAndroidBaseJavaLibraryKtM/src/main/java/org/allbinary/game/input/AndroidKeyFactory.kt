@@ -30,67 +30,67 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
     val UNKNOWN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_UNKNOWN, "UNKNOWN")
 
-    var KEYCODE_BUTTON_L1: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_L1: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_R1: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_R1: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_THUMBR: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_THUMBR: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_THUMBL: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_THUMBL: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_START: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_START: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_MODE: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_MODE: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_B: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_B: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_A: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_A: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_X: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_X: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_Y: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_Y: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_L2: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_L2: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_R2: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_R2: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_SELECT: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_SELECT: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_C: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_C: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_Z: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_Z: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_1: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_1: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_10: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_10: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_11: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_11: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_12: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_12: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_13: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_13: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_14: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_14: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_15: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_15: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_16: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_16: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_2: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_2: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_3: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_3: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_4: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_4: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_5: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_5: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_6: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_6: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_7: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_7: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_8: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_8: AndroidGameKey = this.UNKNOWN
 
-    var KEYCODE_BUTTON_9: AndroidGameKey = UNKNOWN
+    var KEYCODE_BUTTON_9: AndroidGameKey = this.UNKNOWN
 
     val SOFT_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SOFT_LEFT, "SOFT_LEFT")
 
@@ -289,7 +289,7 @@ var input = input
                                 
                              else 
     
-                        if(input == DPAD_CENTER)
+                        if(input == this.DPAD_CENTER)
                         
                                     {
                                     

@@ -107,12 +107,12 @@ super.processKeyAI(this.keys[index]!!.toInt())
                         if(isOn())
                         
                                     {
-                                    setOn(false)
+                                    this.setOn(false)
 
                                     }
                                 
                         else {
-                            setOn(true)
+                            this.setOn(true)
 
                         }
                             
@@ -124,7 +124,7 @@ super.processKeyAI(this.keys[index]!!.toInt())
     open fun disable()
         //nullable = true from not(false or (false and true)) = true
 {
-setOn(false)
+this.setOn(false)
 }
 
 
@@ -133,7 +133,7 @@ setOn(false)
     open fun enable()
         //nullable = true from not(false or (false and true)) = true
 {
-setOn(true)
+this.setOn(true)
 }
 
 
@@ -152,7 +152,7 @@ this.on= on
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return on
+                        return this.on
 }
 
 

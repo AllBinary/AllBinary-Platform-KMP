@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PlatformFormInputMappingFactory.instance
 }
 
 
@@ -66,7 +66,7 @@ companion object {
         try {
             
     
-                        if(SINGLETON == InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING)
+                        if(PlatformFormInputMappingFactory.SINGLETON == InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING)
                         
                                     {
                                     
@@ -80,7 +80,7 @@ inputToGameKeyMapping!!.add(gameKeyFactory!!.DOWN, gameKeyFactory!!.DOWN)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.LEFT, gameKeyFactory!!.LEFT)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.RIGHT, gameKeyFactory!!.RIGHT)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.KEY_NUM1, gameKeyFactory!!.GAME_A)
-SINGLETON= inputToGameKeyMapping
+PlatformFormInputMappingFactory.SINGLETON= inputToGameKeyMapping
 
                                     }
                                 
@@ -96,7 +96,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return PlatformFormInputMappingFactory.SINGLETON
 }
 
 

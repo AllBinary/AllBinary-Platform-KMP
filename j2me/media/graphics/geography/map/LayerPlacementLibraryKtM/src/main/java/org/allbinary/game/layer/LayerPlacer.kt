@@ -33,11 +33,14 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.LayerInterfaceFactory
 import org.allbinary.layer.LayerInterfaceVisitor
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.EnumerationUtil
 
 open public class LayerPlacer
             : Object
          {
         
+
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     val layerInterfaceVisitor: LayerInterfaceVisitor
 
@@ -115,9 +118,9 @@ this.process(layerPlacementInterface)
     var layerInterface: AllBinaryLayer
 
 
-        while(enumeration.hasMoreElements())
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-point= enumeration.nextElement()!! as GPoint
+point= this.enumerationUtil!!.nextElement(enumeration)!! as GPoint
 layerHashtable= hashtable.get(point as Object) as Hashtable<Any, Any>
 x= point.getX() +relativePoint!!.getX()
 y= point.getY() +relativePoint!!.getY()

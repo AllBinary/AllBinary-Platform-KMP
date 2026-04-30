@@ -53,7 +53,7 @@ this.total= hashMap!!.get("total") as Integer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return current
+                        return this.current
 }
 
 
@@ -64,7 +64,7 @@ this.total= hashMap!!.get("total") as Integer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return total
+                        return this.total
 }
 
 

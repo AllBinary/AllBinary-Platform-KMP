@@ -129,7 +129,7 @@ this.setHashMap(HashMap<Any, Any>())
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var idFile: FileOutputStream = FileOutputStream(DEFAULT_PROFILE_ACTIONS_PATH +getName() +".xml")
+    var idFile: FileOutputStream = FileOutputStream(GenericProfileActions.DEFAULT_PROFILE_ACTIONS_PATH +getName() +".xml")
 
 
     var idOutData: DataOutputStream = DataOutputStream(idFile)
@@ -144,7 +144,7 @@ idOutData!!.writeBytes(DomDocumentHelper.toString(this.toXmlDoc()))
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var file: File = getFile(getName())!!
+    var file: File = GenericProfileActions.getFile(getName())!!
 
 
     
@@ -411,7 +411,7 @@ document.appendChild(node)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfileActionsJPanel
+                        return this.genericProfileActionsJPanel
 }
 
 
@@ -430,7 +430,7 @@ this.genericProfileActionsJPanel= genericProfileActionsJPanel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashMap
+                        return this.hashMap
 }
 
 
@@ -449,7 +449,7 @@ this.hashMap= hashMap
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 

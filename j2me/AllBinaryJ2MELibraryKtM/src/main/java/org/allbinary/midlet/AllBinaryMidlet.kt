@@ -69,7 +69,7 @@ companion object {
 
     private var destroyed: Boolean= false
 public constructor (){
-this.logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
+this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
 }
 
 
@@ -94,13 +94,13 @@ this.logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBina
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append(this.SETTING_)!!.append(title)!!.append(this._DISPLAY_)!!.append(StringUtil.getInstance()!!.toString(newDisplay))!!.toString(), this, SET_DISPLAY)
+                            append(this.SETTING_)!!.append(title)!!.append(this._DISPLAY_)!!.append(StringUtil.getInstance()!!.toString(newDisplay))!!.toString(), this, this.SET_DISPLAY)
 
                                     }
                                 
                         else {
                             this.logUtil!!.putF(StringMaker().
-                            append(this.SETTING_NO_TITLE)!!.append(StringUtil.getInstance()!!.toString(newDisplay))!!.toString(), this, SET_DISPLAY)
+                            append(this.SETTING_NO_TITLE)!!.append(StringUtil.getInstance()!!.toString(newDisplay))!!.toString(), this, this.SET_DISPLAY)
 
                         }
                             
@@ -108,7 +108,7 @@ this.logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBina
                                     }
                                 
 
-    var display: Display = getDisplay()!!
+    var display: Display = this.getDisplay()!!
 
 display.setCurrent(newDisplay)
 }
@@ -151,7 +151,7 @@ this.destroyed= destroyed
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return destroyed
+                        return this.destroyed
 }
 
 

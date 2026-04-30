@@ -731,7 +731,7 @@ this.buttonBasicColor= buttonBasicColor
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return buttonBasicColor
+                        return this.buttonBasicColor
 }
 
 

@@ -39,7 +39,7 @@ open public class AlwaysActionScriptConditionJPanel : javax.swing.JPanel {
 public constructor (alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface){
 var alwaysActionScriptConditionInterface = alwaysActionScriptConditionInterface
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 this.alwaysActionScriptConditionInterface= alwaysActionScriptConditionInterface
 this.set()
 }
@@ -94,7 +94,7 @@ this.alwaysActionScriptConditionInterface!!.log()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return alwaysActionJDialog
+                        return this.alwaysActionJDialog
 }
 
 
@@ -119,7 +119,7 @@ this.jLabel1= javax.swing.JLabel()
 this.alwaysActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
 this.titleJLabel!!.setText("Always Condition Options")
 this.okJButton!!.setText("OK")
-okJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -141,7 +141,7 @@ alwaysActionJDialogLayout!!.setHorizontalGroup(alwaysActionJDialogLayout!!.creat
 alwaysActionJDialogLayout!!.setVerticalGroup(alwaysActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(alwaysActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(titleJLabel)!!.addGap(20, 20, 20)!!.addGroup(alwaysActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(alwaysJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addComponent(jLabel2))!!.addGap(15, 15, 15)!!.addComponent(okJButton)!!.addContainerGap()))
 setMinimumSize(java.awt.Dimension(100, 0))
 this.alwaysActionJButton!!.setText("Edit")
-alwaysActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.alwaysActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

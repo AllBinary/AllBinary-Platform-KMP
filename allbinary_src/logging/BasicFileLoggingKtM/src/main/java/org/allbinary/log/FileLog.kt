@@ -53,13 +53,13 @@ companion object {
 
     private val fileName: String = .toCharArray()
 
-    private val backupFileName: String = fileName!!.concat(".bak")!!
+    private val backupFileName: String = FileLog.fileName!!.concat(".bak")!!
 
     private val ORG_ALLBINARY: String = "org.allbinary: "
 
     private var firstTime: Boolean = true
 
-    private var logFile: File = File(logPath, fileName)
+    private var logFile: File = File(FileLog.logPath, FileLog.fileName)
 
     private var logFileBak: File
 
@@ -73,23 +73,23 @@ companion object {
 : Boolean{
 
         try {
-            logFile= File(logPath, fileName)
+            FileLog.logFile= File(logPath, fileName)
 
     
-                        if(!firstTime)
+                        if(!FileLog.firstTime)
                         
                                     {
-                                    fileOut= BufferedWriter(FileWriter(logFile))
+                                    FileLog.fileOut= BufferedWriter(FileWriter(logFile))
 
                                     }
                                 
                         else {
-                            firstTime= false
+                            FileLog.firstTime= false
 
     var raFile: RandomAccessFile = RandomAccessFile(logFile, "rw")
 
 raFile!!.seek(raFile!!.length())
-fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
+FileLog.fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
 
                         }
                             
@@ -120,13 +120,13 @@ System.out.println("Error Creating Log: " +e)
 : Boolean{
 
         try {
-            logFileBak= File(logPath, StringBuilder().
+            FileLog.logFileBak= File(logPath, StringBuilder().
                             append(backupFileName)!!.append(CommonSeps.getInstance()!!.PERIOD)!!.append(backupIndex)!!.toString())
 
-        while(logFileBak!!.isFile())
+        while(FileLog.logFileBak!!.isFile())
         {
-backupIndex++
-logFileBak= File(logPath, StringBuilder().
+FileLog.backupIndex++
+FileLog.logFileBak= File(logPath, StringBuilder().
                             append(backupFileName)!!.append(CommonSeps.getInstance()!!.PERIOD)!!.append(backupIndex)!!.toString())
 }
 
@@ -151,7 +151,7 @@ tmpOut!!.newLine()
 tmpOut!!.flush()
 tmpOut!!.close()
 tmpIn!!.close()
-logFile!!.delete()
+FileLog.logFile!!.delete()
 
 
 
@@ -181,7 +181,7 @@ var functionName = functionName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return put(specialMessage, anyType, functionName, 
+                        return FileLog.put(specialMessage, anyType, functionName, 
                             null)
 }
 
@@ -198,10 +198,10 @@ var exception = exception
         try {
             
     
-                        if(firstTime == true)
+                        if(FileLog.firstTime == true)
                         
                                     {
-                                    createLogFileBackup()
+                                    FileLog.createLogFileBackup()
 
     
                         if(createLogFile() == false)
@@ -223,7 +223,7 @@ var exception = exception
 
 
     
-                        if(length > logLength)
+                        if(length > FileLog.logLength)
                         
                                     {
                                     
@@ -250,13 +250,13 @@ var exception = exception
                         if(functionName == 
                                     null
                                 )
-                        functionName= stringUtil!!.NULL_STRING.toCharArray()
+                        functionName= FileLog.stringUtil!!.NULL_STRING.toCharArray()
 
     
                         if(specialMessage == 
                                     null
                                 )
-                        specialMessage= stringUtil!!.NULL_STRING.toCharArray()
+                        specialMessage= FileLog.stringUtil!!.NULL_STRING.toCharArray()
 
     
                         if(anyType!!::class.toString()!! != 
@@ -267,9 +267,9 @@ var exception = exception
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-fileOut!!.write(message, 0, message.length)
-fileOut!!.newLine()
-fileOut!!.flush()
+FileLog.fileOut!!.write(message, 0, message.length)
+FileLog.fileOut!!.newLine()
+FileLog.fileOut!!.flush()
 
 
 
@@ -298,7 +298,7 @@ fileOut!!.flush()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return put(specialMessage, className, functionName, 
+                        return FileLog.put(specialMessage, className, functionName, 
                             null)
 }
 
@@ -315,10 +315,10 @@ var functionName = functionName
         try {
             
     
-                        if(firstTime == true)
+                        if(FileLog.firstTime == true)
                         
                                     {
-                                    createLogFileBackup()
+                                    FileLog.createLogFileBackup()
 
     
                         if(createLogFile() == false)
@@ -340,7 +340,7 @@ var functionName = functionName
 
 
     
-                        if(length > logLength)
+                        if(length > FileLog.logLength)
                         
                                     {
                                     
@@ -364,19 +364,19 @@ var functionName = functionName
                         if(functionName == 
                                     null
                                 )
-                        functionName= stringUtil!!.NULL_STRING.toCharArray()
+                        functionName= FileLog.stringUtil!!.NULL_STRING.toCharArray()
 
     
                         if(specialMessage == 
                                     null
                                 )
-                        specialMessage= stringUtil!!.NULL_STRING.toCharArray()
+                        specialMessage= FileLog.stringUtil!!.NULL_STRING.toCharArray()
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-fileOut!!.write(message, 0, message.length)
-fileOut!!.newLine()
-fileOut!!.flush()
+FileLog.fileOut!!.write(message, 0, message.length)
+FileLog.fileOut!!.newLine()
+FileLog.fileOut!!.flush()
 
 
 
@@ -401,7 +401,7 @@ fileOut!!.flush()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return logPath +fileName
+                        return FileLog.logPath +FileLog.fileName
 }
 
 

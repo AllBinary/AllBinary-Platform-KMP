@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return WeaponLayerArrayLayerCircularStaticPool.instance
 }
 
 
@@ -55,7 +55,7 @@ companion object {
         
     private val MAX: Int = 5
 
-    private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(MAX)!!
+    private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(this.MAX)!!
 
     private var ALL_WEAPONLAYER_ARRAY: Array<Array<Array<Any?>?>?> = arrayOfNulls(4)
                                                         

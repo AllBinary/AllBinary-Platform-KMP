@@ -713,7 +713,7 @@ this.enabled= value
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return downloads
+                        return this.downloads
 }
 
 
@@ -776,7 +776,7 @@ this.downloadable= downloadable
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return downloadable
+                        return this.downloadable
 }
 
 

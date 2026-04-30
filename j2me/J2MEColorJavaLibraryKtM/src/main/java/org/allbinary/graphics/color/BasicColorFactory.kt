@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return BasicColorFactory.instance
 }
 
 
@@ -165,9 +165,9 @@ companion object {
 
     val TRANSPARENT_RED: BasicColor = this.createInstanceAN(0x52000000, 0xFF0000, StringUtil.getInstance()!!.EMPTY_STRING)!!
 
-    val CLEAR_COLOR: BasicColor = BLACK
+    val CLEAR_COLOR: BasicColor = this.BLACK
 
-    val BORDER_COLOR: BasicColor = WHITE
+    val BORDER_COLOR: BasicColor = this.WHITE
 
 }
                 

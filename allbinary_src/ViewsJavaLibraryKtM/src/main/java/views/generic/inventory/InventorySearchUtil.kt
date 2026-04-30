@@ -75,7 +75,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return InventorySearchUtil.instance
 }
 
 
@@ -165,8 +165,8 @@ column.addAll(substoreIdColumn)
 : String{
 var viewDocumentInterface = viewDocumentInterface
 var inventoryNode = inventoryNode
-inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_PAGES, commonPhoneStrings!!.ZERO))
-inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_ITEMS, commonPhoneStrings!!.ZERO))
+inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_PAGES, this.commonPhoneStrings!!.ZERO))
+inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_ITEMS, this.commonPhoneStrings!!.ZERO))
 
     var success: String = DomDocumentHelper.toString(viewDocumentInterface!!.getDoc())!!
 
@@ -325,7 +325,7 @@ keywords= keywords.uppercase()
     var itemNode: Node = BasicItemView(itemInterface, Vector()).
                             toXmlNode(viewDocumentInterface!!.getDoc())!!
 
-itemNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), BasketData.ITEMTOTALINBASKET, commonPhoneStrings!!.ONE))
+itemNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), BasketData.ITEMTOTALINBASKET, this.commonPhoneStrings!!.ONE))
 inventoryNode!!.appendChild(itemNode!!.cloneNode(true))
 
                                     }

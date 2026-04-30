@@ -81,7 +81,7 @@ var transformInfoInterface = transformInfoInterface
 
 
     
-                        if(StringValidationUtil.getInstance()!!.isEmpty(command) || (command.compareTo(ADDPRODUCT) != 0 && command.compareTo(NEXTSTEP) != 0))
+                        if(StringValidationUtil.getInstance()!!.isEmpty(command) || (command.compareTo(AddFileValidationView.ADDPRODUCT) != 0 && command.compareTo(NEXTSTEP) != 0))
                         
                                     {
                                     
@@ -288,7 +288,7 @@ var document = document
 
 
     
-                        if(StringValidationUtil.getInstance()!!.isEmpty(command) || (command.compareTo(ADDPRODUCT) != 0 && command.compareTo(NEXTSTEP) != 0))
+                        if(StringValidationUtil.getInstance()!!.isEmpty(command) || (command.compareTo(AddFileValidationView.ADDPRODUCT) != 0 && command.compareTo(NEXTSTEP) != 0))
                         
                                     {
                                     

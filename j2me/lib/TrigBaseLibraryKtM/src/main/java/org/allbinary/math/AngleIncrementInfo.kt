@@ -77,7 +77,7 @@ var frame = frame
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return frameUtil!!.getFrameAngle(frame, this.angleIncrement.toInt())
+                        return this.frameUtil!!.getFrameAngle(frame, this.angleIncrement.toInt())
 }
 
 
@@ -88,7 +88,7 @@ var frame = frame
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return angleIncrement
+                        return this.angleIncrement
 }
 
 
@@ -100,7 +100,7 @@ var frame = frame
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(INCREMENT)!!.appendshort(this.angleIncrement)!!.toString()
+                            append(AngleIncrementInfo.INCREMENT)!!.appendshort(this.angleIncrement)!!.toString()
 }
 
 

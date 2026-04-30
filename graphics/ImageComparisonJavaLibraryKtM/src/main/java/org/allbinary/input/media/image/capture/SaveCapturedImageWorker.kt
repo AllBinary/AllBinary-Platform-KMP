@@ -57,7 +57,7 @@ public constructor (){
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return running
+                        return this.running
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -74,8 +74,8 @@ this.running= running
         //nullable = true from not(false or (false and false)) = true
 {
 var capturedImageEvent = capturedImageEvent
-capturedImageWorkerResultsEventVector!!.add(capturedImageEvent)
-run()
+this.capturedImageWorkerResultsEventVector!!.add(capturedImageEvent)
+this.run()
 }
 
 
@@ -83,7 +83,7 @@ run()
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryEventObject = allBinaryEventObject
-onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
+this.onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 }
 
 
@@ -93,7 +93,7 @@ onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
-setRunning(true)
+this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
 
@@ -108,7 +108,7 @@ CapturedImageInputOutput().
                             save(screenBufferedImage, capturedImageWorkerResultsEvent!!.getFrame())
 this.capturedImageWorkerResultsEventVector!!.remove(capturedImageWorkerResultsEvent)
 this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
-setRunning(false)
+this.setRunning(false)
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {

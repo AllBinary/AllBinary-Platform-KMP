@@ -57,7 +57,7 @@ open public class RTSLayerCostAnimation : Animation
 
     private val DOLLAR: String = "$"
 
-    private val adjustedCostX: Int = myFont!!.stringWidth(DOLLAR)!!
+    private val adjustedCostX: Int = this.myFont!!.stringWidth(this.DOLLAR)!!
 
     private val layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface
 public constructor (image: Image, layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface){

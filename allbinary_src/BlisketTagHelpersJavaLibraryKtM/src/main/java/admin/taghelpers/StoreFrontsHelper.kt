@@ -262,7 +262,7 @@ this.portion= Portion(hashMap)
     var storeNamesVector: Vector = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.getStoreFrontNames()!!
 
 
-    var storeSelect: HtmlSelect = HtmlSelect(StringUtil.getInstance()!!.EMPTY_STRING, commonPhoneStrings!!.ONE, StoreFrontData.getInstance()!!.SELECTSTORENAME, StringUtil.getInstance()!!.EMPTY_STRING)
+    var storeSelect: HtmlSelect = HtmlSelect(StringUtil.getInstance()!!.EMPTY_STRING, this.commonPhoneStrings!!.ONE, StoreFrontData.getInstance()!!.SELECTSTORENAME, StringUtil.getInstance()!!.EMPTY_STRING)
 
 storeSelect!!.addAttribute(CLASS, TEXT)
 

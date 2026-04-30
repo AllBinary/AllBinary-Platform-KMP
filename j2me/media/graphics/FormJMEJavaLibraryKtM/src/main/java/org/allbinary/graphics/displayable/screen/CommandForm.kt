@@ -70,7 +70,7 @@ var foregroundBasicColor = foregroundBasicColor
 this.commandStack= Stack<Any>()
 
         try {
-            repaintProcessor!!.process()
+            this.repaintProcessor!!.process()
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)

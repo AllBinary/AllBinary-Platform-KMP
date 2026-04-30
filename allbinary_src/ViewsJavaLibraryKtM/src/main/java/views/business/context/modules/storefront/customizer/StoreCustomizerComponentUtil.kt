@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return StoreCustomizerComponentUtil.instance
 }
 
 
@@ -108,7 +108,7 @@ var transformInfoInterface = transformInfoInterface
 
                                     }
                                 
-generate(abeClientInformation, transformInfoInterface, allViewsToBeModified)
+this.generate(abeClientInformation, transformInfoInterface, allViewsToBeModified)
 }
 
 

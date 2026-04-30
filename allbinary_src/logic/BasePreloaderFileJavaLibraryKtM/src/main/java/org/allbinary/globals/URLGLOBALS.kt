@@ -49,7 +49,7 @@ URLGLOBALS.urlGlobalsInterface= urlGlobalsInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return urlGlobalsInterface!!.isTestingMode()
+                        return URLGLOBALS.urlGlobalsInterface!!.isTestingMode()
 }
 
 
@@ -60,7 +60,7 @@ URLGLOBALS.urlGlobalsInterface= urlGlobalsInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return urlGlobalsInterface!!.getWebappPath()
+                        return URLGLOBALS.urlGlobalsInterface!!.getWebappPath()
 }
 
 
@@ -71,7 +71,7 @@ URLGLOBALS.urlGlobalsInterface= urlGlobalsInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return urlGlobalsInterface!!.getTestHtmlPath()
+                        return URLGLOBALS.urlGlobalsInterface!!.getTestHtmlPath()
 }
 
 
@@ -84,7 +84,7 @@ URLGLOBALS.urlGlobalsInterface= urlGlobalsInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return urlGlobalsInterface!!.getMainPath()
+                        return URLGLOBALS.urlGlobalsInterface!!.getMainPath()
 }
 
 

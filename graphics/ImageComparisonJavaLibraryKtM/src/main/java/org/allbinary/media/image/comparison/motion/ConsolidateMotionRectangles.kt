@@ -65,7 +65,7 @@ var motionRectangles = motionRectangles
 vector.add(motionRectangle!!.clone())
 }
 
-consolidateMotionRectangles()
+this.consolidateMotionRectangles()
 }
 
 

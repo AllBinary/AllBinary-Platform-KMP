@@ -520,7 +520,7 @@ this.objectConfigFileName= value
 {
 var value = value
 this.objectConfigFileName= value
-this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.getInstance()!!.getInstance(abeClientInformation, this, this.getObjectConfigFilePath()))
+this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.getInstance()!!.getInstance(this.abeClientInformation, this, this.getObjectConfigFilePath()))
 }
 
 
@@ -533,7 +533,7 @@ var value = value
 
     var document: Document = DomDocumentHelper.create(value)!!
 
-this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.getInstance()!!.getInstance(abeClientInformation, this, document))
+this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.getInstance()!!.getInstance(this.abeClientInformation, this, document))
 }
 
 
@@ -947,7 +947,7 @@ this.isChild= true
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return objectConfigInterface
+                        return this.objectConfigInterface
 }
 
 

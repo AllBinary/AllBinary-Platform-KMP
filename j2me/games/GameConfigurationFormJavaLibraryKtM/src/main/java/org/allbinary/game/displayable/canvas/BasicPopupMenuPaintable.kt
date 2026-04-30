@@ -70,7 +70,7 @@ public constructor (rectangle: Rectangle, backgroundBasicColor: BasicColor, fore
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
-this.label= NAME
+this.label= BasicPopupMenuPaintable.NAME
 this.rectangle= rectangle
 
     var features: Features = Features.getInstance()!!

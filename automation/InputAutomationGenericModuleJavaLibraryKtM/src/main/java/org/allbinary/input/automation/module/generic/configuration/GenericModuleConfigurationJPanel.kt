@@ -49,7 +49,7 @@ open public class GenericModuleConfigurationJPanel : javax.swing.JPanel
 
     private var selectedGenericProfile: GenericProfile
 public constructor (){
-initComponents()
+this.initComponents()
 this.setGenericProfiles(GenericProfiles(GenericProfiles.DEFAULT_FILE))
 this.selectFirstElement()
 }
@@ -81,7 +81,7 @@ this.blankGenericProfileActionsJPanel= javax.swing.JPanel()
 this.newProfileJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
 this.newProfileJDialog!!.setResizable(false)
 this.okNewProfileJButton!!.setText("Ok")
-okNewProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.okNewProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -107,7 +107,7 @@ this.genericJTabbedPane!!.setToolTipText(this.stringUtil!!.EMPTY_STRING)
 this.genericJTabbedPane!!.setMinimumSize(java.awt.Dimension(800, 600))
 this.genericProfilesJPanel!!.setMinimumSize(java.awt.Dimension(400, 300))
 this.genericProfilesJPanel!!.setPreferredSize(java.awt.Dimension(0, 0))
-genericProfilesJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
+this.genericProfilesJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
     open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
@@ -122,7 +122,7 @@ genericProfilesJListValueChanged(evt)
 this.genericProfilesJScrollPane!!.setViewportView(this.genericProfilesJList)
 this.newProfileJButton!!.setText("New")
 this.newProfileJButton!!.setToolTipText("Creates a new profile")
-newProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.newProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -136,7 +136,7 @@ newProfileJButtonActionPerformed(evt)
                             )
 this.deleteProfileJButton!!.setText("Delete")
 this.deleteProfileJButton!!.setToolTipText("Deletes the selected profile")
-deleteProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.deleteProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -153,7 +153,7 @@ this.screenCaptureJRadioButton!!.setText("Screen Captures")
 this.screenCaptureJRadioButton!!.setToolTipText("Records the screen into memory for logical processing")
 this.screenCaptureJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.screenCaptureJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-screenCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.screenCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -171,7 +171,7 @@ this.savedCaptureJRadioButton!!.setText("Saved Images")
 this.savedCaptureJRadioButton!!.setToolTipText("Loads images from files for logical processing.  Usually for debugging your profile actions")
 this.savedCaptureJRadioButton!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.savedCaptureJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-savedCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.savedCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -187,7 +187,7 @@ this.captureMotionAnalysisJCheckBox!!.setText("Motion Analysis")
 this.captureMotionAnalysisJCheckBox!!.setToolTipText("Uses image comparison and contraints to locate moving objects")
 this.captureMotionAnalysisJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.captureMotionAnalysisJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-captureMotionAnalysisJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.captureMotionAnalysisJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -203,7 +203,7 @@ this.captureComparisonJCheckBox!!.setText("Comparison")
 this.captureComparisonJCheckBox!!.setToolTipText("Compares the last two input images for multi image logic")
 this.captureComparisonJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 this.captureComparisonJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-captureComparisonJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.captureComparisonJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -504,7 +504,7 @@ this.logUtil!!.putF(this.commonStrings!!.END, this, "updateProfileOptions")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return blankGenericProfileActionsJPanel
+                        return this.blankGenericProfileActionsJPanel
 }
 
 
@@ -523,7 +523,7 @@ this.blankGenericProfileActionsJPanel= blankGenericProfileActionsJPanel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfiles
+                        return this.genericProfiles
 }
 
 
@@ -542,7 +542,7 @@ this.genericProfiles= genericProfiles
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return selectedGenericProfile
+                        return this.selectedGenericProfile
 }
 
 

@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ImagePersistanceUtil.instance
 }
 
 
@@ -95,7 +95,7 @@ this.logUtil!!.putF("Wrote Image: " +file.getAbsolutePath(), this, commonStrings
 {
 var filePath = filePath
 var bufferedImage = bufferedImage
-saveWithImageIO(File(filePath), bufferedImage)
+this.saveWithImageIO(File(filePath), bufferedImage)
 }
 
 

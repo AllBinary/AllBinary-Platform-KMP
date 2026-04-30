@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogConfigTypeFactory.instance
 }
 
 
@@ -51,15 +51,15 @@ companion object {
             
     private val NO_DESCRIPTION: String = "No Description"
 
-    val INIT_SERVER: LogConfigType = LogConfigType("Init Server", NO_DESCRIPTION)
+    val INIT_SERVER: LogConfigType = LogConfigType("Init Server", this.NO_DESCRIPTION)
 
-    val LOBBY_SERVER: LogConfigType = LogConfigType("Lobby Server", NO_DESCRIPTION)
+    val LOBBY_SERVER: LogConfigType = LogConfigType("Lobby Server", this.NO_DESCRIPTION)
 
-    val GAME_SERVER: LogConfigType = LogConfigType("Game Server", NO_DESCRIPTION)
+    val GAME_SERVER: LogConfigType = LogConfigType("Game Server", this.NO_DESCRIPTION)
 
-    val GAME_SIMULATOR: LogConfigType = LogConfigType("Game Simulator", NO_DESCRIPTION)
+    val GAME_SIMULATOR: LogConfigType = LogConfigType("Game Simulator", this.NO_DESCRIPTION)
 
-    val CUSTOM_TYPES: LogConfigType = LogConfigType("Custom Types", NO_DESCRIPTION)
+    val CUSTOM_TYPES: LogConfigType = LogConfigType("Custom Types", this.NO_DESCRIPTION)
 private constructor ()
             : super()
         {

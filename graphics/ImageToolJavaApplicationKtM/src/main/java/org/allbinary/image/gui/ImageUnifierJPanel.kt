@@ -70,7 +70,7 @@ open public class ImageUnifierJPanel : javax.swing.JPanel
     private var isImageFillIn: Boolean = true
 public constructor (imageProcessorInput: ImageProcessorInput){
     //var imageProcessorInput = imageProcessorInput
-initComponents()
+this.initComponents()
 this.setImageProcessorInput(imageProcessorInput)
 }
 
@@ -336,7 +336,7 @@ setPreferredSize(java.awt.Dimension(0, 0))
 this.imageJList!!.setMinimumSize(java.awt.Dimension(50, 0))
 this.jScrollPane1!!.setViewportView(this.imageJList)
 this.jButton1!!.setText("Save")
-jButton1!!.addActionListener(object: java.awt.event.ActionListener()
+this.jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -349,7 +349,7 @@ jButton1ActionPerformed(evt)
                                 }
                             )
 this.upJButton!!.setText("Up")
-upJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.upJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -362,7 +362,7 @@ upJButtonActionPerformed(evt)
                                 }
                             )
 this.downJButton!!.setText("Down")
-downJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.downJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -375,7 +375,7 @@ downJButtonActionPerformed(evt)
                                 }
                             )
 this.fudgeItJButton!!.setText("Fudge It!")
-fudgeItJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.fudgeItJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -389,7 +389,7 @@ fudgeItJButtonActionPerformed(evt)
                             )
 this.jLabel2!!.setText("Columns:")
 this.columnsJTextField!!.setText(commonPhoneStrings!!.TWO)
-columnsJTextField!!.addActionListener(object: java.awt.event.ActionListener()
+this.columnsJTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -401,7 +401,7 @@ columnsJTextFieldActionPerformed(evt)
 
                                 }
                             )
-columnsJTextField!!.addPropertyChangeListener(object: java.beans.PropertyChangeListener()
+this.columnsJTextField!!.addPropertyChangeListener(object: java.beans.PropertyChangeListener()
                                 {
                                 
     open override fun propertyChange(evt: java.beans.PropertyChangeEvent)
@@ -413,7 +413,7 @@ columnsJTextFieldPropertyChange(evt)
 
                                 }
                             )
-columnsJTextField!!.addKeyListener(object: java.awt.event.KeyAdapter()
+this.columnsJTextField!!.addKeyListener(object: java.awt.event.KeyAdapter()
                                 {
                                 
     open override fun keyPressed(evt: java.awt.event.KeyEvent)
@@ -434,7 +434,7 @@ columnsJTextFieldKeyTyped(evt)
                             )
 this.jLabel1!!.setText("Rows:")
 this.rowsJTextField!!.setText(commonPhoneStrings!!.TWO)
-rowsJTextField!!.addActionListener(object: java.awt.event.ActionListener()
+this.rowsJTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -448,7 +448,7 @@ rowsJTextFieldActionPerformed(evt)
                             )
 this.jLabel3!!.setText("Cell Width:")
 this.cellWidthJTextField!!.setText("200")
-cellWidthJTextField!!.addActionListener(object: java.awt.event.ActionListener()
+this.cellWidthJTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -462,7 +462,7 @@ cellWidthJTextFieldActionPerformed(evt)
                             )
 this.jLabel4!!.setText("Cell Height:")
 this.cellHeightJTextField!!.setText("150")
-cellHeightJTextField!!.addActionListener(object: java.awt.event.ActionListener()
+this.cellHeightJTextField!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -479,7 +479,7 @@ this.cellRatioJTextField!!.setEditable(false)
 this.jLabel6!!.setText("Avg Image Ratio:")
 this.avgRatioJTextField!!.setEditable(false)
 this.jButton2!!.setText(this.commonStrings!!.UPDATE)
-jButton2!!.addActionListener(object: java.awt.event.ActionListener()
+this.jButton2!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -492,7 +492,7 @@ jButton2ActionPerformed(evt)
                                 }
                             )
 this.jButtonOrder!!.setText("Order")
-jButtonOrder!!.addActionListener(object: java.awt.event.ActionListener()
+this.jButtonOrder!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -765,7 +765,7 @@ this.updateImage()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 

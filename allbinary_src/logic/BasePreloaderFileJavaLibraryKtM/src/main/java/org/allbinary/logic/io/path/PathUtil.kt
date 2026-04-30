@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PathUtil.instance
 }
 
 
@@ -376,7 +376,7 @@ var path = path
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return abPathData!!.SEPARATOR
+                        return this.abPathData!!.SEPARATOR
 
                                     }
                                 

@@ -330,7 +330,7 @@ this.setRelease(true)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return keyArray
+                        return this.keyArray
 }
 
 
@@ -362,7 +362,7 @@ this.keyboardActionScriptInputJPanel!!.getKeyActionJDialog()!!.setVisible(true)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getText(this.getKeyArray())
+                        return this.getText(this.getKeyArray())
 }
 
 

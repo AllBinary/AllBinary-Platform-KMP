@@ -56,7 +56,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ImageUtil.instance
 }
 
 
@@ -310,7 +310,7 @@ ratioY= heightRatio
                                     }
                                 
 this.logUtil!!.putF(StringMaker().
-                            appendfloat(width)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendfloat(height)!!.append(this.commonSeps!!.COLON)!!.appendint(newWidth)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendint(newHeight)!!.append(this.commonSeps!!.COLON)!!.appendfloat(widthRatio)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendfloat(heightRatio)!!.toString(), this, CREATE_BUFFERED_IMAGE)
+                            appendfloat(width)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendfloat(height)!!.append(this.commonSeps!!.COLON)!!.appendint(newWidth)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendint(newHeight)!!.append(this.commonSeps!!.COLON)!!.appendfloat(widthRatio)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendfloat(heightRatio)!!.toString(), this, this.CREATE_BUFFERED_IMAGE)
 
     var dx: Float = 0
 

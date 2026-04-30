@@ -185,7 +185,7 @@ Sounds(soundsFactoryInterface).
                             closeAll()
 System.gc()
 soundsFactoryInterface!!.setInitialized(false)
-mostUsedTotal= 0
+AllBinaryMediaManager.mostUsedTotal= 0
 
                                     }
                                 
@@ -199,7 +199,7 @@ logUtil!!.putF(commonString!!.START, THIS, "shutdown")
         //nullable = true from not(false or (false and false)) = true
 : Player{
 var resource = resource
-mostUsedTotal++
+AllBinaryMediaManager.mostUsedTotal++
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -217,7 +217,7 @@ mostUsedTotal++
                         return AndroidMediaPlayerWrapper(resource)
 } catch(e: Exception)
             {
-logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +CommonLabels.getInstance()!!.TOTAL_LABEL +mostUsedTotal, THIS, "createPlayer", e)
+logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +CommonLabels.getInstance()!!.TOTAL_LABEL +AllBinaryMediaManager.mostUsedTotal, AllBinaryMediaManager.THIS, "createPlayer", e)
 
 
 

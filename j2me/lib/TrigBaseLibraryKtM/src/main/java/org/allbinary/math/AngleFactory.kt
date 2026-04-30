@@ -46,7 +46,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return AngleFactory.instance
 }
 
 
@@ -82,11 +82,11 @@ LogUtil.getInstance()!!.putF(stringMaker!!.toString(), "main", "main")
 
     val QUARTER_TOTAL_ANGLE: Short = 90
 
-    private val angleArray: Array<Angle?> = arrayOfNulls(TOTAL_ANGLE.toInt())
+    private val angleArray: Array<Angle?> = arrayOfNulls(this.TOTAL_ANGLE.toInt())
 
     private val NEGATIVE_ONE: Short =  -1
 
-    val NOT_ANGLE: NamedAngle = NamedAngle(NEGATIVE_ONE, CommonStrings.getInstance()!!.EMPTY)
+    val NOT_ANGLE: NamedAngle = NamedAngle(this.NEGATIVE_ONE, CommonStrings.getInstance()!!.EMPTY)
 
     val DOWN: NamedAngle
 
@@ -168,7 +168,7 @@ this.angleArray[index]= Angle(index.toShort())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return angleArray[adjustedIndex]!!
+                        return this.angleArray[adjustedIndex]!!
 }
 
 
@@ -242,7 +242,7 @@ var angle = angle
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NOT_ANGLE
+                        return this.NOT_ANGLE
 }
 
 

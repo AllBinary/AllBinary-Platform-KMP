@@ -34,7 +34,7 @@ open public class ImageAnalysisResultsJPanel : javax.swing.JPanel {
         
 public constructor (imageAnalysisResultsArray: Array<ImageAnalysisResults?>){
     //var imageAnalysisResultsArray = imageAnalysisResultsArray
-initComponents()
+this.initComponents()
 
     var imageAnalysisResults: ImageAnalysisResults = imageAnalysisResultsArray[0]!!
 

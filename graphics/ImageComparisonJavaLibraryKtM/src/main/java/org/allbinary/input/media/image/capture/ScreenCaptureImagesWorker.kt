@@ -65,7 +65,7 @@ index= ProcessingFrameIndexFactory.next()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return running
+                        return this.running
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -93,7 +93,7 @@ var thread = thread
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
-setRunning(true)
+this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
 
@@ -107,14 +107,14 @@ timeHelper!!.setStartTimeTNT()
 
     var frame: Long = index as Long
 
-index++
+ScreenCaptureImagesWorker.index++
 CapturedBufferedImagesCacheSingleton.getInstance()!!.add(BufferedImageFrameCacheable(bufferedImage, frame))
 
     var capturedImageEvent: CapturedImageWorkerResultsEvent = CapturedImageWorkerResultsEvent(this, frame, bufferedImage)
 
 fireEvent(capturedImageEvent)
 this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsedTNT(), this, this.commonStrings!!.RUN)
-setRunning(false)
+this.setRunning(false)
 }
 
 this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)

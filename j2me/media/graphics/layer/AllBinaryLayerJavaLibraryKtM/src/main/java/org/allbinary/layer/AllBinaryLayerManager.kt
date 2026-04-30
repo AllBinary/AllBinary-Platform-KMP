@@ -55,7 +55,7 @@ protected constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicLayerProcessorArray
+                        return this.basicLayerProcessorArray
 }
 
 
@@ -135,7 +135,7 @@ super.appendAt(layerInterface, index)
 {
     //var layerInterface = layerInterface
 this.createLayerManagerEvent!!.setLayerInterface(layerInterface)
-layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
+this.layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
 
     var layerProcessorInterface: LayerProcessor
 
@@ -169,7 +169,7 @@ layerProcessorInterface= this.basicLayerProcessorArray[index]!!
 {
     //var layerInterface = layerInterface
 this.deleteLayerManagerEvent!!.setLayerInterface(layerInterface)
-layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
+this.layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
 
     var layerProcessorInterface: LayerProcessor
 

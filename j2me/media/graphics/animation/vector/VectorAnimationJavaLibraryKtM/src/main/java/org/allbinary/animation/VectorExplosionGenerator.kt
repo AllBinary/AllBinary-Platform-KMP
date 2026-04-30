@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return VectorExplosionGenerator.instance
 }
 
 
@@ -111,7 +111,7 @@ points[index]!![1]= point.getY()
     //var howMuch = howMuch
     //var type = type
 
-    var pointsBasicArrayList: BasicArrayList = getInstanceStartFrame(points, howMuch, type, true)!!
+    var pointsBasicArrayList: BasicArrayList = this.getInstanceStartFrame(points, howMuch, type, true)!!
 
 
     var tempBasicArrayList: BasicArrayList = pointsBasicArrayList!!.objectArray[0]!! as BasicArrayList
@@ -155,7 +155,7 @@ pointsBasicArrayList!!.add(createPointsBasicArrayList(points))
         while(frameIndex < howMuch)
         {
 tempBasicArrayList= pointsBasicArrayList!!.objectArray[frameIndex]!! as BasicArrayList
-pointBasicArrayList= createListFromPoints(tempBasicArrayList, points, howMuch, type)
+pointBasicArrayList= this.createListFromPoints(tempBasicArrayList, points, howMuch, type)
 pointsBasicArrayList!!.add(pointBasicArrayList)
 frameIndex++
 }

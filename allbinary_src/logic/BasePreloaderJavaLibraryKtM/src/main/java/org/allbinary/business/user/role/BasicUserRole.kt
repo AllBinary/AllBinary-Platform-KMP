@@ -130,7 +130,7 @@ this.role= aRole
 this.displayValue= aDisplayValue
 this.sessionTimeout= aSessionTimeout
 this.sessionInactivityTimeout= aSessionInactivityTimeout
-roleVector!!.add(this)
+BasicUserRole.roleVector!!.add(this)
 }
 
 

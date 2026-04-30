@@ -197,7 +197,7 @@ this.textFieldItem!!.paint(graphics, x, y)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return textFieldItem
+                        return this.textFieldItem
 }
 
 

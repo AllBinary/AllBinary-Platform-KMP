@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return VIBRATION
+                        return AllBinaryVibration.VIBRATION
 }
 
 
@@ -55,12 +55,12 @@ companion object {
                         if(GameConfigurationCentral.getInstance()!!.VIBRATION.getValue()!!.toInt() == 0)
                         
                                     {
-                                    VIBRATION= AllBinaryNoVibration.NO_VIBRATION
+                                    AllBinaryVibration.VIBRATION= AllBinaryNoVibration.NO_VIBRATION
 
                                     }
                                 
                         else {
-                            VIBRATION= AllBinaryVibration()
+                            AllBinaryVibration.VIBRATION= AllBinaryVibration()
 
                         }
                             
@@ -80,7 +80,7 @@ protected constructor (){
 var duration = duration
 var type = type
 var volume = volume
-vibrator.vibrate(duration.toLong())
+this.vibrator.vibrate(duration.toLong())
 }
 
 

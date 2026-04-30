@@ -78,7 +78,7 @@ companion object {
                                     
     var highScores: HighScores = RecordStoreHighScores(abeClientInformation, gameInfo, highScoreName, heading, columnTwoHeading, recordComparatorInterface)
 
-hashTable!!.put(highScores!!.getName(), highScores)
+RecordStoreHighScores.hashTable!!.put(highScores!!.getName(), highScores)
 
 
 
@@ -140,7 +140,7 @@ this.load()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return platformRecordIdUtil!!.getRecordId(abeClientInformation, StringMaker().
+                        return this.platformRecordIdUtil!!.getRecordId(abeClientInformation, StringMaker().
                             append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(this.getName())!!.append(this.RECORD_ID)!!.toString())
 }
 
@@ -473,7 +473,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
     
                         if(this.getList() != 
                                     null
-                                 && this.getList()!!.size() < MAXHIGHSCORES)
+                                 && this.getList()!!.size() < this.MAXHIGHSCORES)
                         
                                     {
                                     

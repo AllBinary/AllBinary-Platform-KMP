@@ -233,7 +233,7 @@ this.colorAtActionScriptConditionJPanel= ColorAtActionScriptConditionJPanel(this
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return point
+                        return this.point
 }
 
 
@@ -357,7 +357,7 @@ this.logUtil!!.putF(message, this, "log")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return colorRangeInterface
+                        return this.colorRangeInterface
 }
 
 

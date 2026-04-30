@@ -126,10 +126,10 @@ var gl = gl
 var gl = gl
 
     
-                        if(!texture2dList!!.contains(this))
+                        if(!OpenGLESImage.texture2dList!!.contains(this))
                         
                                     {
-                                    texture2dList!!.add(this)
+                                    OpenGLESImage.texture2dList!!.add(this)
 
     var textures: IntArray = IntArray(1)
 
@@ -198,7 +198,7 @@ var z = z
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TYPE
+                        return OpenGLESImage.TYPE
 }
 
 

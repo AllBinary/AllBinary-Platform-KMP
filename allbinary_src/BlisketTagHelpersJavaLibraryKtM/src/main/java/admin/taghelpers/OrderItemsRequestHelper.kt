@@ -78,7 +78,7 @@ var newStatus = newStatus
 
     var success: String = "Status successfully set to: " +newStatus
 
-OrderItemsEntityFactory.getInstance()!!.setStatus(this.id, groupId, newStatus)
+OrderItemsEntityFactory.getInstance()!!.setStatus(this.id, this.groupId, newStatus)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
@@ -125,7 +125,7 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(this.id, groupId, newStatus)
             
     var success: String = "Status successfully set to: " +this.status
 
-OrderItemsEntityFactory.getInstance()!!.setStatus(this.id, groupId, this.status)
+OrderItemsEntityFactory.getInstance()!!.setStatus(this.id, this.groupId, this.status)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))

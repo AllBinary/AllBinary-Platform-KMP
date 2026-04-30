@@ -45,7 +45,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameFeatureChoiceGroupsExclusive
+                        return InGameFeatureChoiceGroups.gameFeatureChoiceGroupsExclusive
 }
 
 
@@ -56,7 +56,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gameFeatureChoiceGroupsMultiple
+                        return InGameFeatureChoiceGroups.gameFeatureChoiceGroupsMultiple
 }
 
 
@@ -76,7 +76,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable
+                        return this.hashtable
 }
 
 

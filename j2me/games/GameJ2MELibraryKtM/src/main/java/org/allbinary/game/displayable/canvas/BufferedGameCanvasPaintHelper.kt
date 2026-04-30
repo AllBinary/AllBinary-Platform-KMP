@@ -44,7 +44,7 @@ companion object {
             
     private var gameCanvas: Canvas = NullCanvas.NULL_CANVAS
 
-    private val offScreenImage: Array<Image?> = arrayOfNulls(MAX_IMAGES)
+    private val offScreenImage: Array<Image?> = arrayOfNulls(BufferedGameCanvasPaintHelper.MAX_IMAGES)
 
     private var previousImage: Image = NullCanvas.NULL_IMAGE
 

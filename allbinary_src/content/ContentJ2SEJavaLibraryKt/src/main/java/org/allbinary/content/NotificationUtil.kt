@@ -48,7 +48,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return NotificationUtil.SINGLETON
 }
 
 
@@ -83,7 +83,7 @@ var message = message
     var pendingIntent: PendingIntent = PendingIntent.getActivity(context, 0, intent, 0)!!
 
 notification.setLatestEventInfo(context, command.getLabel(), message, pendingIntent)
-notificationManager!!.notify(TsUtil.getInstance()!!.hashCode(command), notification)
+this.notificationManager!!.notify(TsUtil.getInstance()!!.hashCode(command), notification)
 }
 
 

@@ -141,7 +141,7 @@ this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.initRange(this.assoc
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return nextUnvisitedPathGeographicMapCellPosition
+                        return this.nextUnvisitedPathGeographicMapCellPosition
 }
 
 
@@ -186,7 +186,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                                     {
                                     
     
-                        if(waypointPathsListP != runningWaypointPathList)
+                        if(waypointPathsListP != UnitWaypointBehavior2.runningWaypointPathList)
                         
                                     {
                                     this.waypointPathRunnable!!.setRunning(false)
@@ -1222,7 +1222,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return positionList
+                        return this.positionList
 }
 
 

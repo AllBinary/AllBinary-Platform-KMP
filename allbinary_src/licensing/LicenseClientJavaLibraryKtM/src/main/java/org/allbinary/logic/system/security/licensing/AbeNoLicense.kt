@@ -45,7 +45,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return abeNoLicense
+                        return AbeNoLicense.abeNoLicense
 }
 
 
@@ -110,7 +110,7 @@ var keyName = keyName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return serverVector
+                        return this.serverVector
 }
 
 

@@ -118,7 +118,7 @@ this.rootNameList!!.clear()
 
     private val TOTAL: String = "Total Selected: "
 
-    private val totalWidth: Int = MyFont.getInstance()!!.stringWidth(TOTAL)!!
+    private val totalWidth: Int = MyFont.getInstance()!!.stringWidth(this.TOTAL)!!
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
 

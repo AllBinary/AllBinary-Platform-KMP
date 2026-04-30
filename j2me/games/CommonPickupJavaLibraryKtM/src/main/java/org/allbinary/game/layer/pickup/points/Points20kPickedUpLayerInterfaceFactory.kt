@@ -58,7 +58,7 @@ pickedUpLayerInterfaceFactoryInterface= Points20kPickedUpLayerInterfaceFactory()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return pickedUpLayerInterfaceFactoryInterface
+                        return Points20kPickedUpLayerInterfaceFactory.pickedUpLayerInterfaceFactoryInterface
 }
 
 
@@ -92,7 +92,7 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var sourceLayerInterface = sourceLayerInterface
-pool.visit(sourceLayerInterface)
+this.pool.visit(sourceLayerInterface)
 }
 
 

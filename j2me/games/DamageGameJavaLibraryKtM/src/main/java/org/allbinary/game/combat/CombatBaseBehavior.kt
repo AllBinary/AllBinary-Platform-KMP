@@ -60,7 +60,7 @@ this.destroyableBaseBehavior= destroyableBaseBehavior
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return damageableBaseBehavior
+                        return this.damageableBaseBehavior
 }
 
 
@@ -71,7 +71,7 @@ this.destroyableBaseBehavior= destroyableBaseBehavior
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return destroyableBaseBehavior
+                        return this.destroyableBaseBehavior
 }
 
 
@@ -82,7 +82,7 @@ this.destroyableBaseBehavior= destroyableBaseBehavior
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return readyForExplosion
+                        return this.readyForExplosion
 }
 
 

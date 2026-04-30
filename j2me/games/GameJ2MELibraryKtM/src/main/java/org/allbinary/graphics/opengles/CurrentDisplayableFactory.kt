@@ -64,7 +64,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return CurrentDisplayableFactory.instance
 }
 
 
@@ -164,7 +164,7 @@ this.update()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return openGlReadydisplayable
+                        return this.openGlReadydisplayable
 }
 
 
@@ -244,7 +244,7 @@ this.setUsedRunnable(this.runnable)
                                 
                              else 
     
-                        if(openGlReadydisplayable is DemoCanvas || openGlReadydisplayable is AllBinaryGameCanvas || features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(this.openGlReadydisplayable is DemoCanvas || this.openGlReadydisplayable is AllBinaryGameCanvas || features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(OpenGLFeatureFactory.getInstance()!!.OPENGL.toString())!!.append(commonSeps!!.SPACE)!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(this.runnable))!!.toString(), this, commonStrings!!.UPDATE)
@@ -270,7 +270,7 @@ this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return displayable
+                        return this.displayable
 }
 
 
@@ -281,7 +281,7 @@ this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return usedRunnable
+                        return this.usedRunnable
 }
 
 

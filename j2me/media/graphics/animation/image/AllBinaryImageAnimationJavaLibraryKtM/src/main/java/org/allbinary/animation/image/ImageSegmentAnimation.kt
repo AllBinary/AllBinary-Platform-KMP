@@ -142,7 +142,7 @@ var y = y
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return startX
+                        return this.startX
 }
 
 
@@ -161,7 +161,7 @@ this.startX= startX
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return startY
+                        return this.startY
 }
 
 
@@ -180,7 +180,7 @@ this.startY= startY
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return drawWidth
+                        return this.drawWidth
 }
 
 
@@ -199,7 +199,7 @@ this.drawWidth= drawWidth
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return drawHeight
+                        return this.drawHeight
 }
 
 

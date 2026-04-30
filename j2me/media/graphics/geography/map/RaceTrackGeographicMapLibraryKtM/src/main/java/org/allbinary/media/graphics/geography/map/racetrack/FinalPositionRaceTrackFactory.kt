@@ -34,7 +34,7 @@ companion object {
             
     val FIRST_POSITION: Int = 1
 
-    private var index: Int = FIRST_POSITION
+    private var index: Int = FinalPositionRaceTrackFactory.FIRST_POSITION
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
     open fun getInstance()
@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return index++
+                        return FinalPositionRaceTrackFactory.index++
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.

@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return ThreadUtil.instance
 }
 
 
@@ -101,7 +101,7 @@ var thread = thread
                         if(ThreadUtil.getInstance()!!.isRunning(thread))
                         
                                     {
-                                    this.logUtil!!.putF("Waiting for Thread To Join/End", this, JOIN)
+                                    this.logUtil!!.putF("Waiting for Thread To Join/End", this, this.JOIN)
 thread.join()
 
                                     }

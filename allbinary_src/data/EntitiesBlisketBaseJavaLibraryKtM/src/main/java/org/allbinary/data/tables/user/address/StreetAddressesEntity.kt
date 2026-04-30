@@ -444,7 +444,7 @@ var value = value
 
 whereKeyAndValue!!.put(UserData.USERNAME, userName)
 
-    var streetAddress: StreetAddress = getDefault()!!
+    var streetAddress: StreetAddress = this.getDefault()!!
 
 
     

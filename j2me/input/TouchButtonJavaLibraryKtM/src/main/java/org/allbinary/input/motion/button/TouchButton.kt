@@ -162,7 +162,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cellPositionP
+                        return this.cellPositionP
 }
 
 
@@ -173,7 +173,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rectangleP
+                        return this.rectangleP
 }
 
 
@@ -184,7 +184,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return touchButtonInput
+                        return this.touchButtonInput
 }
 
 

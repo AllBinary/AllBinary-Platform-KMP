@@ -59,7 +59,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return OpenGLCapabilities.instance
 }
 
 
@@ -73,21 +73,21 @@ companion object {
 
     private var initialized: Boolean = false
 
-    private var glVersionString: String = stringUtil!!.EMPTY_STRING
+    private var glVersionString: String = this.stringUtil!!.EMPTY_STRING
 
-    private var glShaderVersionString: String = stringUtil!!.EMPTY_STRING
+    private var glShaderVersionString: String = this.stringUtil!!.EMPTY_STRING
 
     var shaderVersion: Int = 0
 
-    private var glRenderer: String = stringUtil!!.EMPTY_STRING
+    private var glRenderer: String = this.stringUtil!!.EMPTY_STRING
 
-    private var glVendor: String = stringUtil!!.EMPTY_STRING
+    private var glVendor: String = this.stringUtil!!.EMPTY_STRING
 
-    private var glExtensions: String = stringUtil!!.EMPTY_STRING
+    private var glExtensions: String = this.stringUtil!!.EMPTY_STRING
 
     private var possiblyAccelerated: Boolean= false
 
-    private var acceleratedString: String = stringUtil!!.EMPTY_STRING
+    private var acceleratedString: String = this.stringUtil!!.EMPTY_STRING
 
     var maxTextureSize: Int = 64
 
@@ -113,7 +113,7 @@ companion object {
 
     private var glVersion: String = this.glVersionString
 
-    var glInstanceVersion: String = VERSION_UNK
+    var glInstanceVersion: String = this.VERSION_UNK
 
     private var glExtensionDrawTexture: Boolean= false
 
@@ -137,7 +137,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return initialized
+                        return this.initialized
 }
 
 

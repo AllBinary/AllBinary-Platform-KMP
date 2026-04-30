@@ -62,7 +62,7 @@ var imageProcessorInput = imageProcessorInput
                             //For kotlin this is before the body of the constructor.
                     
 this.logUtil!!.putF("Starting", this, this.commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 this.imageProcessorInput= imageProcessorInput
 }
 
@@ -143,7 +143,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
         //nullable = true from not(false or (false and true)) = true
 {
 jLayeredPane1= javax.swing.JLayeredPane()
-jPanel1= object: javax.swing.JPanel()
+this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
     open override fun paint(graphics: Graphics)
@@ -185,7 +185,7 @@ jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(org.jdeskto
 this.imageHeightIsFrameSizeJCheckBox!!.setSelected(true)
 this.imageHeightIsFrameSizeJCheckBox!!.setText("Image Height Is Frame Size")
 this.imageHeightIsFrameSizeJCheckBox!!.setEnabled(false)
-imageHeightIsFrameSizeJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.imageHeightIsFrameSizeJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -204,7 +204,7 @@ this.verticleJCheckBox!!.setText("Verticle")
 this.verticleJCheckBox!!.setEnabled(false)
 this.writeOverOriginalJCheckBox!!.setText("Write Over Original")
 this.generateJButton!!.setText("Generate")
-generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -280,7 +280,7 @@ var evt = evt
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 

@@ -48,7 +48,7 @@ open public class GenericProfileActionScriptJPanel : javax.swing.JPanel
     private var genericProfileActionScript: GenericProfileActionScript
 public constructor (){
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 }
 
 
@@ -71,7 +71,7 @@ this.logUtil!!.putF("Updated UI", this, "updateJTree")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return genericProfileActionScript
+                        return this.genericProfileActionScript
 }
 
 
@@ -90,7 +90,7 @@ this.genericProfileActionScript= genericProfileActionScript
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return actionScriptJTree
+                        return this.actionScriptJTree
 }
 
 
@@ -109,7 +109,7 @@ this.jScrollPane1= javax.swing.JScrollPane()
 this.actionScriptJTree= javax.swing.JTree()
 setLayout(java.awt.GridLayout(1, 0))
 this.actionScriptJTree!!.setPreferredSize(java.awt.Dimension(500, 500))
-actionScriptJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
+this.actionScriptJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
     open override fun mouseClicked(evt: java.awt.event.MouseEvent)

@@ -50,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cacheInterface
+                        return CapturedBufferedImagesCacheSingleton.cacheInterface
 }
 
 
@@ -70,7 +70,7 @@ companion object {
 
         try {
             logUtil!!.putF(commonStrings!!.START, instance, STATIC_BLOCK)
-cacheInterface= CacheInterfaceFactory.getInstance((), ()) as AutomaticCacheInterface
+CapturedBufferedImagesCacheSingleton.cacheInterface= CacheInterfaceFactory.getInstance((), ()) as AutomaticCacheInterface
 logUtil!!.putF(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
             {

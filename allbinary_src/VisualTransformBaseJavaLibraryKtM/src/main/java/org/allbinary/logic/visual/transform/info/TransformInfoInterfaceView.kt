@@ -55,7 +55,7 @@ var document = document
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ModDomHelper.createNameValueNodes(document, TransformInfoData.getInstance()!!.NAME, transformInfoInterface!!.toHashMap())
+                        return ModDomHelper.createNameValueNodes(document, TransformInfoData.getInstance()!!.NAME, this.transformInfoInterface!!.toHashMap())
 }
 
 

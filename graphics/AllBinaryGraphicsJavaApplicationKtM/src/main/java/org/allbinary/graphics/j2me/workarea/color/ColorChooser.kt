@@ -29,7 +29,7 @@
 open public class ColorChooser : javax.swing.JPanel {
         
 public constructor (){
-initComponents()
+this.initComponents()
 }
 
 

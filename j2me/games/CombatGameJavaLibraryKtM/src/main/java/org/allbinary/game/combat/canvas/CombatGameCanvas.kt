@@ -99,15 +99,15 @@ ProgressCanvasFactory.getInstance()!!.addNormalPortion(portion, "Basic Processor
                         if(features.isFeature(gameFeatureFactory!!.DROPPED_ITEMS) && features.isFeature(gameFeatureFactory!!.DROPPED_ITEMS_FROM_DEATH))
                         
                                     {
-                                    basicLayerProcessor= arrayOfNulls(2)
-basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
-basicLayerProcessor[1]= DropLayerProcessor.getInstance()
+                                    CombatGameCanvas.basicLayerProcessor= arrayOfNulls(2)
+CombatGameCanvas.basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
+CombatGameCanvas.basicLayerProcessor[1]= DropLayerProcessor.getInstance()
 
                                     }
                                 
                         else {
-                            basicLayerProcessor= arrayOfNulls(1)
-basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
+                            CombatGameCanvas.basicLayerProcessor= arrayOfNulls(1)
+CombatGameCanvas.basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
 
                         }
                             
@@ -124,10 +124,10 @@ super.processPlayingGame()
 
 
 
-                        for (index in basicLayerProcessor!!.size  - 1  downTo 0)
+                        for (index in CombatGameCanvas.basicLayerProcessor!!.size  - 1  downTo 0)
 
         {
-basicLayerProcessor[index]!!.process(this.gameLayerManager)
+CombatGameCanvas.basicLayerProcessor[index]!!.process(this.gameLayerManager)
 }
 
 }
@@ -143,10 +143,10 @@ super.cleanupGame()
 
 
 
-                        for (index in basicLayerProcessor!!.size  - 1  downTo 0)
+                        for (index in CombatGameCanvas.basicLayerProcessor!!.size  - 1  downTo 0)
 
         {
-basicLayerProcessor[index]!!.getList()!!.clear()
+CombatGameCanvas.basicLayerProcessor[index]!!.getList()!!.clear()
 }
 
 GroupLayerManagerListener.getInstance()!!.clear()

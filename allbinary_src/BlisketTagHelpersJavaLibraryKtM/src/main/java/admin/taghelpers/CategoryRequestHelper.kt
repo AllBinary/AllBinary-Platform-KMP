@@ -132,12 +132,12 @@ this.getXmlData()
     var index: Int = 1
 
 
-        while(index < size && !xmlRequest!!.startsWith(categoryRequest))
+        while(index < size && !xmlRequest!!.startsWith(CategoryRequestHelper.categoryRequest))
         {
 xmlRequest= keyArray[index]!! as String
 
     
-                        if(xmlRequest!!.startsWith(categoryRequest))
+                        if(xmlRequest!!.startsWith(CategoryRequestHelper.categoryRequest))
                         
                                     //Otherwise - thenStmt - BreakStmt
 
@@ -274,7 +274,7 @@ var requestNode = requestNode
                                     
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(storeName)!!
 
-this.transformInfoInterface= TransformInfoBasic(storeFrontInterface, hashMap, pageContext) as TransformInfoInterface
+this.transformInfoInterface= TransformInfoBasic(storeFrontInterface, this.hashMap, this.pageContext) as TransformInfoInterface
 
     
                         if(this.transformInfoInterface == 

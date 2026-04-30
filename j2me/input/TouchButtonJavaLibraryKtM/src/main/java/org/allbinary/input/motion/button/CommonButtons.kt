@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return CommonButtons.instance
 }
 
 
@@ -100,8 +100,8 @@ commonButtonSize= commonButtonSize shr 1
 }
 
 this.STANDARD_BUTTON_SIZE= commonButtonSize
-this.NORMAL_BUTTON= Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, STANDARD_BUTTON_SIZE, STANDARD_BUTTON_SIZE)
-this.LARGE_BUTTON= Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, STANDARD_BUTTON_SIZE shl 1, STANDARD_BUTTON_SIZE shl 1)
+this.NORMAL_BUTTON= Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, this.STANDARD_BUTTON_SIZE, this.STANDARD_BUTTON_SIZE)
+this.LARGE_BUTTON= Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, this.STANDARD_BUTTON_SIZE shl 1, this.STANDARD_BUTTON_SIZE shl 1)
 }
 
 

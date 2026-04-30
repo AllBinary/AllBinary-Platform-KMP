@@ -33,7 +33,7 @@ this.data= data
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
-stringBuilder!!.delete(0, stringBuilder!!.length())
+this.stringBuilder!!.delete(0, stringBuilder!!.length())
 this.print(this.data, stringBuilder)
 
 

@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return UpGameKeyEventHandler.instance
 }
 
 
@@ -62,7 +62,7 @@ var deviceId = deviceId
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instanceArray[playerInputId]!!
+                        return UpGameKeyEventHandler.instanceArray[playerInputId]!!
 }
 
 
@@ -74,7 +74,7 @@ var playerInputId = playerInputId
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instanceArray[playerInputId]!!
+                        return UpGameKeyEventHandler.instanceArray[playerInputId]!!
 }
 
 private constructor (){
@@ -89,10 +89,10 @@ super.removeAllListeners()
 
 
 
-                        for (index in instanceArray!!.size -1 downTo 0)
+                        for (index in UpGameKeyEventHandler.instanceArray!!.size -1 downTo 0)
 
         {
-instanceArray[index]!!.removeAllListeners()
+UpGameKeyEventHandler.instanceArray[index]!!.removeAllListeners()
 }
 
 }
@@ -107,10 +107,10 @@ super.removeListenerSingleThreaded(eventListenerInterface)
 
 
 
-                        for (index in instanceArray!!.size -1 downTo 0)
+                        for (index in UpGameKeyEventHandler.instanceArray!!.size -1 downTo 0)
 
         {
-instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
+UpGameKeyEventHandler.instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
 }
 
 }
@@ -125,10 +125,10 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in instanceArray!!.size -1 downTo 0)
+                        for (index in UpGameKeyEventHandler.instanceArray!!.size -1 downTo 0)
 
         {
-instanceArray[index]!!.removeListener(eventListenerInterface)
+UpGameKeyEventHandler.instanceArray[index]!!.removeListener(eventListenerInterface)
 }
 
 }

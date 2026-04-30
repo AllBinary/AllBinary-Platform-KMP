@@ -436,7 +436,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
     
                         if(this.dateType == 
                                     null
-                                 || (dateType!!.compareTo(OrderHistoryData.TYPELONG) != 0 && dateType!!.compareTo(OrderHistoryData.TYPECAESAR) != 0))
+                                 || (this.dateType!!.compareTo(OrderHistoryData.TYPELONG) != 0 && this.dateType!!.compareTo(OrderHistoryData.TYPECAESAR) != 0))
                         
                                     {
                                     isValid= Boolean.FALSE
@@ -549,10 +549,10 @@ this.toDate= time
                                     
     var calendar: Calendar = Calendar.getInstance()!!
 
-TimeUtil.getInstance()!!.setCalendar(calendar, fromYear, fromMonth, fromDay, fromHour)
+TimeUtil.getInstance()!!.setCalendar(calendar, this.fromYear, this.fromMonth, this.fromDay, this.fromHour)
 this.fromDate= calendar.getTimeInMillis() as Long.
                             toString()
-TimeUtil.getInstance()!!.setCalendar(calendar, toYear, toMonth, toDay, toHour)
+TimeUtil.getInstance()!!.setCalendar(calendar, this.toYear, this.toMonth, this.toDay, this.toHour)
 this.toDate= calendar.getTimeInMillis() as Long.
                             toString()
 
@@ -659,7 +659,7 @@ var document = document
     
                         if(this.dateType == 
                                     null
-                                 || (dateType!!.compareTo(OrderHistoryData.TYPELONG) != 0 && dateType!!.compareTo(OrderHistoryData.TYPECAESAR) != 0))
+                                 || (this.dateType!!.compareTo(OrderHistoryData.TYPELONG) != 0 && this.dateType!!.compareTo(OrderHistoryData.TYPECAESAR) != 0))
                         
                                     {
                                     result.append("DATETYPE not recognized")

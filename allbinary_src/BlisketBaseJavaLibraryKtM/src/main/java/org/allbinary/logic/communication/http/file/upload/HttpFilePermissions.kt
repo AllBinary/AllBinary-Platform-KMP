@@ -97,7 +97,7 @@ this.file= AbFile(AbPath(fullPath!!.toFileSystemString(), FileUploadData.getInst
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return userRoles
+                        return this.userRoles
 }
 
 

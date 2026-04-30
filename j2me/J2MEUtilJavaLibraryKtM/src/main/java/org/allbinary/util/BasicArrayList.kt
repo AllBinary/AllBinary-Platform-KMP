@@ -55,7 +55,7 @@ this.objectArray= objectArray
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
 stringBuffer!!.appendint(index)
-stringBuffer!!.append(SIZE)
+stringBuffer!!.append(BasicArrayList.SIZE)
 stringBuffer!!.appendint(this.currentIndex)
 
 
@@ -64,10 +64,10 @@ stringBuffer!!.appendint(this.currentIndex)
 
                                     }
                                 
-ensureCapacity(this.currentIndex +1)
-System.arraycopy(objectArray, index, objectArray, index +1, currentIndex -index)
-objectArray[index]= element
-currentIndex++
+this.ensureCapacity(this.currentIndex +1)
+System.arraycopy(this.objectArray, index, this.objectArray, index +1, this.currentIndex -index)
+this.objectArray[index]= element
+this.currentIndex++
 }
 
 
@@ -75,8 +75,8 @@ currentIndex++
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var anyType = anyType
-ensureCapacity(this.currentIndex +1)
-this.objectArray[currentIndex++]= anyType
+this.ensureCapacity(this.currentIndex +1)
+this.objectArray[this.currentIndex++]= anyType
 
 
 
@@ -99,7 +99,7 @@ this.objectArray[currentIndex++]= anyType
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
 stringBuffer!!.appendint(index)
-stringBuffer!!.append(SIZE)
+stringBuffer!!.append(BasicArrayList.SIZE)
 stringBuffer!!.appendint(this.currentIndex)
 
 
@@ -112,13 +112,18 @@ stringBuffer!!.appendint(this.currentIndex)
     var oldValue: Any = this.objectArray[index]!!
 
 
-    var numMoved: Int = currentIndex -index -1
+    var numMoved: Int = this.currentIndex -index -1
 
 
     
                         if(numMoved > 0)
-                        System.arraycopy(objectArray, index +1, objectArray, index, numMoved)
-objectArray[--this.currentIndex]= 
+                        
+                                    {
+                                    System.arraycopy(this.objectArray, index +1, this.objectArray, index, numMoved)
+
+                                    }
+                                
+this.objectArray[--this.currentIndex]= 
                                         null
                                     
 
@@ -155,18 +160,18 @@ objectArray[--this.currentIndex]=
                         
                                     {
                                     
-    var numMoved: Int = currentIndex -index -1
+    var numMoved: Int = this.currentIndex -index -1
 
 
     
                         if(numMoved > 0)
                         
                                     {
-                                    System.arraycopy(objectArray, index +1, objectArray, index, numMoved)
+                                    System.arraycopy(this.objectArray, index +1, this.objectArray, index, numMoved)
 
                                     }
                                 
-objectArray[--this.currentIndex]= 
+this.objectArray[--this.currentIndex]= 
                                         null
                                     
 
@@ -192,22 +197,22 @@ objectArray[--this.currentIndex]=
         {
 
     
-                        if(anyType == objectArray[index] || anyType!!.equals(objectArray[index]!!))
+                        if(anyType == this.objectArray[index] || anyType!!.equals(this.objectArray[index]!!))
                         
                                     {
                                     
-    var numMoved: Int = currentIndex -index -1
+    var numMoved: Int = this.currentIndex -index -1
 
 
     
                         if(numMoved > 0)
                         
                                     {
-                                    System.arraycopy(objectArray, index +1, objectArray, index, numMoved)
+                                    System.arraycopy(this.objectArray, index +1, this.objectArray, index, numMoved)
 
                                     }
                                 
-objectArray[--this.currentIndex]= 
+this.objectArray[--this.currentIndex]= 
                                         null
                                     
 
@@ -275,7 +280,7 @@ objectArray[--this.currentIndex]=
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var list = list
-ensureCapacity(this.currentIndex +list.currentIndex)
+this.ensureCapacity(this.currentIndex +list.currentIndex)
 
     var listSize: Int = list.currentIndex
 
@@ -286,7 +291,7 @@ ensureCapacity(this.currentIndex +list.currentIndex)
                         for (index in 0 until listSize)
 
         {
-this.objectArray[currentIndex++]= list.objectArray[index]!!
+this.objectArray[this.currentIndex++]= list.objectArray[index]!!
 }
 
 
@@ -320,9 +325,9 @@ this.objectArray[currentIndex++]= list.objectArray[index]!!
     var numSize: Int = newObjectArray!!.size
                 
 
-ensureCapacity(this.currentIndex +numSize)
-System.arraycopy(newObjectArray, 0, objectArray, currentIndex, numSize)
-currentIndex += numSize
+this.ensureCapacity(this.currentIndex +numSize)
+System.arraycopy(newObjectArray, 0, this.objectArray, this.currentIndex, numSize)
+this.currentIndex += numSize
 
 
 
@@ -350,7 +355,12 @@ currentIndex += numSize
 
     
                         if(newCapacity < minSize)
-                        newCapacity= minSize
+                        
+                                    {
+                                    newCapacity= minSize
+
+                                    }
+                                
 this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
 
                                     }
@@ -368,7 +378,12 @@ this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
 
     
                         if(this.currentIndex < oldCapacity)
-                        this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, currentIndex)
+                        
+                                    {
+                                    this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, this.currentIndex)
+
+                                    }
+                                
 }
 
 
@@ -396,10 +411,15 @@ this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
                                     null
                                 )
                         
+                                    {
+                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return i
+
+                                    }
+                                
 }
 
 
@@ -417,10 +437,15 @@ this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
     
                         if(anyType!!.equals(this.objectArray[i]!!))
                         
+                                    {
+                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return i
+
+                                    }
+                                
 }
 
 
@@ -458,10 +483,15 @@ this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
                                     null
                                 )
                         
+                                    {
+                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return i
+
+                                    }
+                                
 }
 
 
@@ -479,10 +509,15 @@ this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
     
                         if(anyType!!.equals(this.objectArray[i]!!))
                         
+                                    {
+                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return i
+
+                                    }
+                                
 }
 
 
@@ -510,7 +545,7 @@ this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
 stringBuffer!!.appendint(index)
-stringBuffer!!.append(SIZE)
+stringBuffer!!.append(BasicArrayList.SIZE)
 stringBuffer!!.appendint(this.currentIndex)
 
 
@@ -523,7 +558,7 @@ stringBuffer!!.appendint(this.currentIndex)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return objectArray[index]!!
+                        return this.objectArray[index]!!
 }
 
 
@@ -542,7 +577,7 @@ stringBuffer!!.appendint(this.currentIndex)
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
 stringBuffer!!.appendint(index)
-stringBuffer!!.append(SIZE)
+stringBuffer!!.append(BasicArrayList.SIZE)
 stringBuffer!!.appendint(this.currentIndex)
 
 
@@ -552,7 +587,7 @@ stringBuffer!!.appendint(this.currentIndex)
                                     }
                                 
 
-    var oldValue: Any = objectArray[index]!!
+    var oldValue: Any = this.objectArray[index]!!
 
 this.objectArray[index]= element
 
@@ -589,7 +624,7 @@ this.currentIndex= 0
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentIndex
+                        return this.currentIndex
 }
 
 
@@ -600,7 +635,7 @@ this.currentIndex= 0
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return currentIndex == 0
+                        return this.currentIndex == 0
 }
 
 
@@ -612,7 +647,7 @@ this.currentIndex= 0
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return indexOf(anyType) >= 0
+                        return this.indexOf(anyType) >= 0
 }
 
 
@@ -623,7 +658,7 @@ this.currentIndex= 0
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return arrayUtil!!.copyOf(this.objectArray, currentIndex)
+                        return this.arrayUtil!!.copyOf(this.objectArray, this.currentIndex)
 }
 
 
@@ -635,17 +670,27 @@ this.currentIndex= 0
     
                         if(objectArray!!.size < this.currentIndex)
                         
+                                    {
+                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return arrayUtil!!.copyOfType(this.objectArray, currentIndex, objectArray!!::class)
-System.arraycopy(this.objectArray, 0, objectArray, 0, currentIndex)
+                        return this.arrayUtil!!.copyOfType(this.objectArray, this.currentIndex, objectArray!!::class)
+
+                                    }
+                                
+System.arraycopy(this.objectArray, 0, objectArray, 0, this.currentIndex)
 
     
-                        if(objectArray!!.size > currentIndex)
-                        objectArray[currentIndex]= 
+                        if(objectArray!!.size > this.currentIndex)
+                        
+                                    {
+                                    objectArray[this.currentIndex]= 
                                         null
                                     
+
+                                    }
+                                
 
 
 

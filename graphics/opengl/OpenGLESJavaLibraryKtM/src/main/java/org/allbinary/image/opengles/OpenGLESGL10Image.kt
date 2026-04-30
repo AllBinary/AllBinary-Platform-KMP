@@ -191,15 +191,15 @@ this.initVertices()
     open fun initVertices()
         //nullable = true from not(false or (false and true)) = true
 {
-textureVertexFloatBuffer!!.put(0)
-textureVertexFloatBuffer!!.put(1)
-textureVertexFloatBuffer!!.put(1)
-textureVertexFloatBuffer!!.put(1)
-textureVertexFloatBuffer!!.put(0)
-textureVertexFloatBuffer!!.put(0)
-textureVertexFloatBuffer!!.put(1)
-textureVertexFloatBuffer!!.put(0)
-textureVertexFloatBuffer!!.rewind()
+this.textureVertexFloatBuffer!!.put(0)
+this.textureVertexFloatBuffer!!.put(1)
+this.textureVertexFloatBuffer!!.put(1)
+this.textureVertexFloatBuffer!!.put(1)
+this.textureVertexFloatBuffer!!.put(0)
+this.textureVertexFloatBuffer!!.put(0)
+this.textureVertexFloatBuffer!!.put(1)
+this.textureVertexFloatBuffer!!.put(0)
+this.textureVertexFloatBuffer!!.rewind()
 }
 
 

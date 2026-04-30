@@ -90,7 +90,7 @@ ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return collidableInferface
+                        return this.collidableInferface
 }
 
 

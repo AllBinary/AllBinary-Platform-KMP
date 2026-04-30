@@ -50,8 +50,8 @@ this.geographicMapCellPositionEvent= GeographicMapCellPositionEvent(anyType, Cel
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPositionTracking = geographicMapCellPositionTracking
-geographicMapCellPositionEvent!!.setGeographicMapCellPosition(geographicMapCellPositionTracking!!.getCurrentGeographicMapCellPosition())
-geographicMapCellPositionEventHandler!!.fireEvent(geographicMapCellPositionEvent)
+this.geographicMapCellPositionEvent!!.setGeographicMapCellPosition(geographicMapCellPositionTracking!!.getCurrentGeographicMapCellPosition())
+this.geographicMapCellPositionEventHandler!!.fireEvent(this.geographicMapCellPositionEvent)
 }
 
 
@@ -61,8 +61,8 @@ geographicMapCellPositionEventHandler!!.fireEvent(geographicMapCellPositionEvent
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPositionTracking = geographicMapCellPositionTracking
-geographicMapCellPositionEvent!!.setGeographicMapCellPosition(geographicMapCellPositionTracking!!.getCurrentGeographicMapCellPosition())
-geographicMapCellPositionEventHandler!!.fireRemoveEvent(geographicMapCellPositionEvent)
+this.geographicMapCellPositionEvent!!.setGeographicMapCellPosition(geographicMapCellPositionTracking!!.getCurrentGeographicMapCellPosition())
+this.geographicMapCellPositionEventHandler!!.fireRemoveEvent(this.geographicMapCellPositionEvent)
 }
 
 

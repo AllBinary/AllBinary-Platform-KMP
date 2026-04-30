@@ -27,7 +27,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return PlatformKeyFactory.SINGLETON
 }
 
 
@@ -60,7 +60,7 @@ var input = input
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return androidKeyFactory!!.isSubmission(input)
+                        return this.androidKeyFactory!!.isSubmission(input)
 }
 
 
@@ -72,7 +72,7 @@ var input = input
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return androidKeyFactory!!.isDelete(input)
+                        return this.androidKeyFactory!!.isDelete(input)
 }
 
 
@@ -84,7 +84,7 @@ var input = input
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return androidKeyFactory!!.isBackSpace(input)
+                        return this.androidKeyFactory!!.isBackSpace(input)
 }
 
 
@@ -96,7 +96,7 @@ var input = input
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return androidKeyFactory!!.isLeft(input)
+                        return this.androidKeyFactory!!.isLeft(input)
 }
 
 
@@ -108,7 +108,7 @@ var input = input
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return androidKeyFactory!!.isRight(input)
+                        return this.androidKeyFactory!!.isRight(input)
 }
 
 
@@ -120,7 +120,7 @@ var input = input
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return androidKeyFactory!!.isUp(input)
+                        return this.androidKeyFactory!!.isUp(input)
 }
 
 
@@ -132,7 +132,7 @@ var input = input
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return androidKeyFactory!!.isDown(input)
+                        return this.androidKeyFactory!!.isDown(input)
 }
 
 
@@ -144,7 +144,7 @@ var input = input
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return androidKeyFactory!!.isEnter(input)
+                        return this.androidKeyFactory!!.isEnter(input)
 }
 
 

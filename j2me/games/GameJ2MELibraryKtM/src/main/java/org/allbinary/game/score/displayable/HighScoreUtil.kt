@@ -102,7 +102,7 @@ this.saveHighScore()
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
-HighScoreNamePersistanceSingleton.getInstance()!!.save(this.abeClientInformation, gameInfo, name)
+HighScoreNamePersistanceSingleton.getInstance()!!.save(this.abeClientInformation, this.gameInfo, name)
 this.highScore!!.setName(name)
 }
 

@@ -88,8 +88,8 @@ this.inputToGameKeyMapping!!.init(this.allBinaryGameCanvas)
                                     
     var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this.allBinaryGameCanvas, gameKey)!!
 
-downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
+this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 
                                     }
                                 
@@ -102,8 +102,8 @@ downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEven
 
     var keyCodeAsInteger: Integer = smallIntegerSingletonFactory!!.getAtNoThrow(keyCode)!!
 
-downKeyEventHandler!!.fireEvent(keyCodeAsInteger)
-downKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(keyCodeAsInteger)
+this.downKeyEventHandler!!.fireEvent(keyCodeAsInteger)
+this.downKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(keyCodeAsInteger)
 } catch(e: Exception)
             {
 this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)

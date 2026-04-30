@@ -57,7 +57,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return BlisketBackupFactory.instance
 }
 
 
@@ -90,7 +90,7 @@ var pathString = pathString
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directory.search(file, true)
+                        return this.directory.search(file, true)
 }
 
 

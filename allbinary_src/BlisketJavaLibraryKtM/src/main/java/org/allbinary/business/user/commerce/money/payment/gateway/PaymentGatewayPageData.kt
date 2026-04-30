@@ -40,9 +40,9 @@ companion object {
 
     val FORWARDMAKEPAYMENT: String = "MakePayment.jsp"
 
-    val PAYMENTOPTIONS: String = "PaymentOptions" +EXTENSION
+    val PAYMENTOPTIONS: String = "PaymentOptions" +PaymentGatewayPageData.EXTENSION
 
-    val STARTCHECKOUT: String = "StartCheckout" +EXTENSION
+    val STARTCHECKOUT: String = "StartCheckout" +PaymentGatewayPageData.EXTENSION
 
         }
             

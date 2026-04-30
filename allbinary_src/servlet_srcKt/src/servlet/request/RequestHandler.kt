@@ -126,7 +126,7 @@ response.sendRedirect(abcs.globals.URLGLOBALS.ERRORPAGE)
 {
 var request = request
 var response = response
-processRequest(request, response)
+this.processRequest(request, response)
 }
 
 
@@ -137,7 +137,7 @@ processRequest(request, response)
 {
 var request = request
 var response = response
-processRequest(request, response)
+this.processRequest(request, response)
 }
 
 

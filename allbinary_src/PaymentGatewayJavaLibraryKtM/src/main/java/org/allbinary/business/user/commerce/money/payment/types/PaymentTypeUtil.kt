@@ -63,7 +63,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PaymentTypeUtil.instance
 }
 
 
@@ -186,7 +186,7 @@ stringBuffer!!.append(storeName)
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 stringBuffer!!.append(this.PAYMENTGATEWAYFILEPATHSTRING)
 
-    var abPath: AbPath = AbPath(stringBuffer!!.toString(), SHIPPINGMETHODSFILENAME) as AbPath
+    var abPath: AbPath = AbPath(stringBuffer!!.toString(), this.SHIPPINGMETHODSFILENAME) as AbPath
 
 
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).

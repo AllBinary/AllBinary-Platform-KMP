@@ -45,7 +45,7 @@ open public class PopupMenuInputProcessor : BasicMenuInputProcessor {
 
     private val CLICK_DELAY: Int = 120
 
-    private val clickTimeHelper: TimeDelayHelper = TimeDelayHelper(CLICK_DELAY)
+    private val clickTimeHelper: TimeDelayHelper = TimeDelayHelper(this.CLICK_DELAY)
 
     private var rectangle: Rectangle
 public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, rectangle: Rectangle)                        

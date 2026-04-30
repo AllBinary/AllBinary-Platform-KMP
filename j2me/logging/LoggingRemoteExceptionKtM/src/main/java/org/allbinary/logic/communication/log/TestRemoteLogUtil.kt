@@ -50,7 +50,7 @@ TestRemoteLogUtil()
             public constructor ()
             : super()
         {
-Globals.getInstance()!!.init(this::class.java.classLoader, PATH)
+Globals.getInstance()!!.init(this::class.java.classLoader, TestRemoteLogUtil.PATH)
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 

@@ -55,7 +55,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return SimpleFileUtil.instance
 }
 
 
@@ -259,9 +259,9 @@ var n = n
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    val NULL_WRITER: Writer = nullWriter()!!
+    val NULL_WRITER: Writer = SimpleFileUtil.nullWriter()!!
 
-    val NULL_READER: Reader = nullReader()!!
+    val NULL_READER: Reader = SimpleFileUtil.nullReader()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

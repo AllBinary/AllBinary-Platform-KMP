@@ -72,7 +72,7 @@ var log = log
 
     var exception: Any = log.getThrowable()!!
 
-put(specialMessage, anyType, functionName, exception)
+this.put(specialMessage, anyType, functionName, exception)
 }
 
 

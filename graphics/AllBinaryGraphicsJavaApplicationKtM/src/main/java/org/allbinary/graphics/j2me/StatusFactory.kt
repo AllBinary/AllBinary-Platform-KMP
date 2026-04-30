@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return StatusFactory.instance
 }
 
 
@@ -71,7 +71,7 @@ MyFrame.statusJLabel!!.setText(status)
         //nullable = true from not(false or (false and false)) = true
 {
 var status = status
-setStatusNoLog(status)
+this.setStatusNoLog(status)
 this.logUtil!!.putF(this.STATUS_LABEL +status, this, SETSTATUS)
 }
 

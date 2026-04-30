@@ -64,7 +64,7 @@ var transformInfoInterface = transformInfoInterface
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
 
 
-    var fullPath: String = URLGLOBALS.getWebappPath() +storeFrontInterface!!.getCurrentHostNamePath() +LOGOPATH
+    var fullPath: String = URLGLOBALS.getWebappPath() +storeFrontInterface!!.getCurrentHostNamePath() +this.LOGOPATH
 
 multipartRequestHashMap!!.put(LogoData.getInstance()!!.IMAGEPATH, fullPath)
 this.heading= HeadingValidation(multipartRequestHashMap)

@@ -192,7 +192,7 @@ this.logUtil!!.putF("Time Interval: " +this.timeHelper!!.delay, this, "log")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return timeHelper
+                        return this.timeHelper
 }
 
 

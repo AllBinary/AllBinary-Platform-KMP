@@ -143,7 +143,7 @@ this.totalRefreshes++
 
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    private val STRING_ARRAY: Array<String?> = arrayOf(" Total Time: ",EMPTY_STRING," Total Frames: ",EMPTY_STRING," Frames/10 Sec: ",EMPTY_STRING," Total Paints: ",this.EMPTY_STRING," Paints/10 Sec: ",this.EMPTY_STRING)
+    private val STRING_ARRAY: Array<String?> = arrayOf(" Total Time: ",this.EMPTY_STRING," Total Frames: ",this.EMPTY_STRING," Frames/10 Sec: ",this.EMPTY_STRING," Total Paints: ",this.EMPTY_STRING," Paints/10 Sec: ",this.EMPTY_STRING)
 
     private val SPACE_CHAR: Char = 
                 ' '
@@ -181,8 +181,8 @@ totalTime= (totalTime shr DEFAULT_SCALE_FACTOR)
                         if(framesPerSec < 10)
                         
                                     {
-                                    CHAR_ARRAY[1]!![0]= this.SPACE_CHAR
-CHAR_ARRAY[1]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec]!!
+                                    this.CHAR_ARRAY[1]!![0]= this.SPACE_CHAR
+this.CHAR_ARRAY[1]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec]!!
 
                                     }
                                 
@@ -197,14 +197,14 @@ CHAR_ARRAY[1]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec
 
     var removeTens: Int = tens *10
 
-CHAR_ARRAY[1]!![0]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[tens]!!
-CHAR_ARRAY[1]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec -removeTens]!!
+this.CHAR_ARRAY[1]!![0]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[tens]!!
+this.CHAR_ARRAY[1]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec -removeTens]!!
 
                                     }
                                 
                         else {
-                            CHAR_ARRAY[1]!![0]= this.PLUS_CHAR
-CHAR_ARRAY[1]!![1]= this.PLUS_CHAR
+                            this.CHAR_ARRAY[1]!![0]= this.PLUS_CHAR
+this.CHAR_ARRAY[1]!![1]= this.PLUS_CHAR
 
                         }
                             
@@ -216,8 +216,8 @@ CHAR_ARRAY[1]!![1]= this.PLUS_CHAR
                         if(refreshesPerSec < 10)
                         
                                     {
-                                    CHAR_ARRAY[3]!![0]= this.X_CHAR
-CHAR_ARRAY[3]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec]!!
+                                    this.CHAR_ARRAY[3]!![0]= this.X_CHAR
+this.CHAR_ARRAY[3]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec]!!
 
                                     }
                                 
@@ -232,14 +232,14 @@ CHAR_ARRAY[3]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPer
 
     var removeTens: Int = tens *10
 
-CHAR_ARRAY[3]!![0]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec /10]!!
-CHAR_ARRAY[3]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec -removeTens]!!
+this.CHAR_ARRAY[3]!![0]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec /10]!!
+this.CHAR_ARRAY[3]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec -removeTens]!!
 
                                     }
                                 
                         else {
-                            CHAR_ARRAY[3]!![0]= this.PLUS_CHAR
-CHAR_ARRAY[3]!![1]= this.PLUS_CHAR
+                            this.CHAR_ARRAY[3]!![0]= this.PLUS_CHAR
+this.CHAR_ARRAY[3]!![1]= this.PLUS_CHAR
 
                         }
                             
@@ -250,7 +250,7 @@ CHAR_ARRAY[3]!![1]= this.PLUS_CHAR
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CHAR_ARRAY
+                        return this.CHAR_ARRAY
 }
 
 
@@ -266,11 +266,11 @@ totalTime= (totalTime /10000)
                         if(totalTime > 0)
                         
                                     {
-                                    STRING_ARRAY[1]= (totalTime).toString()
-STRING_ARRAY[3]= (this.totalFrames).toString()
-STRING_ARRAY[5]= (this.totalFrames /totalTime).toString()
-STRING_ARRAY[7]= (this.totalRefreshes).toString()
-STRING_ARRAY[9]= (this.totalRefreshes /totalTime).toString()
+                                    this.STRING_ARRAY[1]= (totalTime).toString()
+this.STRING_ARRAY[3]= (this.totalFrames).toString()
+this.STRING_ARRAY[5]= (this.totalFrames /totalTime).toString()
+this.STRING_ARRAY[7]= (this.totalRefreshes).toString()
+this.STRING_ARRAY[9]= (this.totalRefreshes /totalTime).toString()
 
                                     }
                                 
@@ -278,11 +278,11 @@ STRING_ARRAY[9]= (this.totalRefreshes /totalTime).toString()
                             
     var string: String = this.EMPTY_STRING
 
-STRING_ARRAY[1]= string
-STRING_ARRAY[3]= string
-STRING_ARRAY[5]= string
-STRING_ARRAY[7]= string
-STRING_ARRAY[9]= string
+this.STRING_ARRAY[1]= string
+this.STRING_ARRAY[3]= string
+this.STRING_ARRAY[5]= string
+this.STRING_ARRAY[7]= string
+this.STRING_ARRAY[9]= string
 
                         }
                             
@@ -290,7 +290,7 @@ STRING_ARRAY[9]= string
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return STRING_ARRAY
+                        return this.STRING_ARRAY
 }
 
 
@@ -353,7 +353,7 @@ totalTime= (totalTime /1000)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NOT
+                        return this.NOT
 
                         }
                             

@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return OperatingSystems.instance
 }
 
 
@@ -65,7 +65,7 @@ companion object {
 
     val WINDOWS_XP: String = "Windows XP"
 
-    val ANDROID: String = LINUX
+    val ANDROID: String = this.LINUX
 private constructor ()
             : super()
         {
@@ -81,7 +81,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return unknownSpecificOSAllowed
+                        return this.unknownSpecificOSAllowed
 }
 
 

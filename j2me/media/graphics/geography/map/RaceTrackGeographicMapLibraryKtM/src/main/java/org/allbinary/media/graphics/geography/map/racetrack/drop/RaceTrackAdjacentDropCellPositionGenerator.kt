@@ -62,7 +62,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return RaceTrackAdjacentDropCellPositionGenerator.SINGLETON
 }
 
 
@@ -188,7 +188,7 @@ super.update(allBinaryGameLayerManager, geographicMapInterface)
                         
                                     {
                                     
-    var direction: Direction = geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(randomGeographicMapCellPosition, geographicMapCellPosition)!!
+    var direction: Direction = this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(randomGeographicMapCellPosition, geographicMapCellPosition)!!
 
 
     var objectCanBeNull: Any? = this.hashtable.get(Group.ID)

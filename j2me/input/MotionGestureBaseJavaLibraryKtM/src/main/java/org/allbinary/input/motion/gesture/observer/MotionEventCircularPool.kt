@@ -52,12 +52,12 @@ var id = id
 
         }
             
-    private var eventPool: AllBinaryEventCircularPool = AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX -1) -MIN)
+    private var eventPool: AllBinaryEventCircularPool = AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX -1) -MotionEventCircularPool.MIN)
 private constructor (id: Int)
             : super()
         {
 var id = id
-eventPool!!.init(MotionEventFactory(eventPool, id))
+this.eventPool!!.init(MotionEventFactory(eventPool, id))
 }
 
 
@@ -72,7 +72,7 @@ var motionGestureInput = motionGestureInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return eventPool!!.getInstance(motionGestureInput!!.getId() -MIN) as MotionGestureEvent
+                        return this.eventPool!!.getInstance(motionGestureInput!!.getId() -MotionEventCircularPool.MIN) as MotionGestureEvent
 }
 
 

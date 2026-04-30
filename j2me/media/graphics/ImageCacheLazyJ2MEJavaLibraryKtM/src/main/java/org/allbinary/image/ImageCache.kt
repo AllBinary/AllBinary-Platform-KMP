@@ -337,14 +337,14 @@ this.firstTime= false
                                 
                              else 
     
-                        if(gameGlobalsFactory!!.newCanvas)
+                        if(this.gameGlobalsFactory!!.newCanvas)
                         
                                     {
                                     
                                     }
                                 
                         else {
-                            loadNextImage()
+                            this.loadNextImage()
 
                         }
                             
@@ -487,8 +487,8 @@ this.loadNowList!!.remove(lazyImageRotationAnimation)
 
         while(!this.loadList!!.isEmpty() || !this.loadNowList!!.isEmpty())
         {
-loadImageForAnimations()
-loadNextImage()
+this.loadImageForAnimations()
+this.loadNextImage()
 }
 
 }
@@ -502,7 +502,7 @@ loadNextImage()
 
         while(!this.loadNowList!!.isEmpty())
         {
-loadImageForAnimation()
+this.loadImageForAnimation()
 }
 
 }
@@ -519,7 +519,7 @@ loadImageForAnimation()
 
         while(!this.loadNowList!!.isEmpty())
         {
-loadImageForAnimation()
+this.loadImageForAnimation()
 }
 
 

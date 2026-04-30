@@ -60,7 +60,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PathFindingInfoFactory.instance
 }
 
 
@@ -92,7 +92,7 @@ private constructor (pathFinderGraphVisitorFactoryInterface: PathFinderGraphVisi
 PreLogUtil.put("Using Dynamic Path Finding", this, commonStrings!!.GET_INSTANCE)
 this.basicGeographicMapPathFinder= BasicGeographicMapPathFinder(max)
 this.pathFindingInfo= PathFindingInfo(PathFindingNodeCostInfoFactory(max), BasicArrayListS(1), BasicArrayListS(1))
-this.basicGeographicMapGraph= BasicGeographicMapGraph(pathFindingInfo!!.getPathFindingNodeCostInfoFactoryInterface() as PathFindingNodeCostInfoFactory)
+this.basicGeographicMapGraph= BasicGeographicMapGraph(this.pathFindingInfo!!.getPathFindingNodeCostInfoFactoryInterface() as PathFindingNodeCostInfoFactory)
 this.pathFinderGraphVisitorFactoryInterface= pathFinderGraphVisitorFactoryInterface
 }
 
@@ -109,7 +109,7 @@ this.pathFinderGraphVisitorFactoryInterface= pathFinderGraphVisitorFactoryInterf
 
 RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
 this.init(geographicMapInterface, pathFindingInfo, mapArray)
-this.basicGeographicMapPathFinder!!.init(geographicMapInterface, basicGeographicMapGraph, pathFinderGraphVisitorFactoryInterface!!.getInstance(geographicMapInterface))
+this.basicGeographicMapPathFinder!!.init(geographicMapInterface, this.basicGeographicMapGraph, this.pathFinderGraphVisitorFactoryInterface!!.getInstance(geographicMapInterface))
 pathFindingInfo!!.setPathFinder(this.basicGeographicMapPathFinder)
 
 

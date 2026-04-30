@@ -76,7 +76,7 @@ this.startTime= this.gameTickTimeDelayHelper!!.startTime
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hundredthTime
+                        return this.hundredthTime
 }
 
 
@@ -109,7 +109,7 @@ this.hundredthTime= currentTime /100
                         if(this.startTime > 0)
                         
                                     {
-                                    this.hundrethsString= MAX
+                                    this.hundrethsString= this.MAX
 
                                     }
                                 
@@ -163,7 +163,7 @@ this.modifier += value
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return totalDigits
+                        return this.totalDigits
 }
 
 

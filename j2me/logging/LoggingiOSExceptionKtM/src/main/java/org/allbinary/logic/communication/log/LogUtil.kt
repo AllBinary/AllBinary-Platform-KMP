@@ -103,7 +103,7 @@ private constructor ()
 
     var functionName: String = log.getFunctionName()!!
 
-put(specialMessage, anyType, functionName, exception)
+this.put(specialMessage, anyType, functionName, exception)
 }
 
 

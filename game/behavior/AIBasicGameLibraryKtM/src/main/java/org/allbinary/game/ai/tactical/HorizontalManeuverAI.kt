@@ -95,7 +95,7 @@ this.drop()
                                 
                              else 
     
-                        if(currentRelativeAngle == 180)
+                        if(this.currentRelativeAngle == 180)
                         
                                     {
                                     x -= this.currentSpeed
@@ -114,7 +114,7 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
                                 
                              else 
     
-                        if(currentRelativeAngle == 180)
+                        if(this.currentRelativeAngle == 180)
                         
                                     {
                                     super.processKeyAI(Canvas.KEY_POUND)
@@ -138,7 +138,7 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
                                 
                              else 
     
-                        if(currentRelativeAngle == 0)
+                        if(this.currentRelativeAngle == 0)
                         
                                     {
                                     this.currentRelativeAngle= 180
@@ -156,7 +156,7 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
                         if(this.currentSpeed < 20)
                         
                                     {
-                                    currentSpeed++
+                                    this.currentSpeed++
 
                                     }
                                 

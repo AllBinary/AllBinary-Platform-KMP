@@ -45,7 +45,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return UpgradableRTSLayerHudPaintable.instance
 }
 
 
@@ -137,7 +137,7 @@ this.percentComplete= rtsLayer!!.getPercentComplete()
                                 
                              else 
     
-                        if(percentComplete < 100)
+                        if(this.percentComplete < 100)
                         
                                     {
                                     this.percentCompleteX= 24
@@ -160,7 +160,7 @@ this.currentTotalDigits= this.getPrimitiveLongUtil()!!.getCurrentTotalDigits()
 var graphics = graphics
 super.paint(graphics)
 this.rtsLayerCompositePaintableLateInit!!.paint(graphics)
-graphics.drawChars(percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, costY, 0)
+graphics.drawChars(this.percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, this.costY, 0)
 graphics.drawString(this.PERCENT, this.percentCompleteX2, costY, 0)
 this.getAnimationInterface()!!.paintXY(graphics, this.imageX, y)
 }
@@ -181,7 +181,7 @@ this.rtsLayer= rtsLayer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rtsLayer
+                        return this.rtsLayer
 }
 
 

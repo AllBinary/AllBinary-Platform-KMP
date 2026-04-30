@@ -61,7 +61,7 @@ var imageProcessorInput = imageProcessorInput
                             //For kotlin this is before the body of the constructor.
                     
 this.logUtil!!.putF("Starting", this, this.commonStrings!!.CONSTRUCTOR)
-initComponents()
+this.initComponents()
 this.imageProcessorInput= imageProcessorInput
 }
 
@@ -147,7 +147,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 {
 jLayeredPane1= javax.swing.JLayeredPane()
 this.buttonGroup= javax.swing.ButtonGroup()
-jPanel1= object: javax.swing.JPanel()
+this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
     open override fun paint(graphics: Graphics)
@@ -192,7 +192,7 @@ this.horizontalJCheckBox!!.setEnabled(false)
 this.verticleJCheckBox!!.setText("Verticle")
 this.verticleJCheckBox!!.setEnabled(false)
 this.generateJButton!!.setText("Generate")
-generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -205,7 +205,7 @@ generateJButtonActionPerformed(evt)
                                 }
                             )
 this.renameJRadioButton!!.setText("Save As filename_mirror")
-renameJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.renameJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -284,7 +284,7 @@ var evt = evt
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 

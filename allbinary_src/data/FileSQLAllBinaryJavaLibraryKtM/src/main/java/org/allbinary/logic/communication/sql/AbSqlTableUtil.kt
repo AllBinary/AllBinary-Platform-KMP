@@ -60,7 +60,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return AbSqlTableUtil.instance
 }
 
 
@@ -154,7 +154,7 @@ var tableName = tableName
                         if(backupFile!!.exists())
                         
                                     {
-                                    backupFile(backupFilePath, backupPath, tableName)
+                                    this.backupFile(backupFilePath, backupPath, tableName)
 backupFile!!.delete()
 
                                     }

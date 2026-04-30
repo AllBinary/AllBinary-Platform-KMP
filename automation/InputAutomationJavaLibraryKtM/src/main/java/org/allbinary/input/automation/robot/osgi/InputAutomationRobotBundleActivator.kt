@@ -237,7 +237,7 @@ this.removeRobots(context)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return serviceFactory
+                        return this.serviceFactory
 }
 
 
@@ -256,7 +256,7 @@ this.serviceFactory= serviceObject
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputRobotInterface
+                        return this.inputRobotInterface
 }
 
 

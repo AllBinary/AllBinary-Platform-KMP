@@ -65,7 +65,7 @@ this.maxBlue= 0
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minRed
+                        return this.minRed
 }
 
 
@@ -84,7 +84,7 @@ this.minRed= minRed
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxRed
+                        return this.maxRed
 }
 
 
@@ -103,7 +103,7 @@ this.maxRed= maxRed
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minGreen
+                        return this.minGreen
 }
 
 
@@ -122,7 +122,7 @@ this.minGreen= minGreen
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxGreen
+                        return this.maxGreen
 }
 
 
@@ -141,7 +141,7 @@ this.maxGreen= maxGreen
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return minBlue
+                        return this.minBlue
 }
 
 
@@ -160,7 +160,7 @@ this.minBlue= minBlue
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return maxBlue
+                        return this.maxBlue
 }
 
 

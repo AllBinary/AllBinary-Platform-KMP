@@ -109,8 +109,8 @@ this.grid= Grid()
 
         try {
             this.workAreaJTreeJPanel= workAreaJTreeJPanel
-initComponents()
-initMyComponents()
+this.initComponents()
+this.initMyComponents()
 this.setSize(dimension)
 this.setCanvasSize(x, y)
 } catch(e: Exception)
@@ -120,7 +120,7 @@ this.setCanvasSize(x, y)
                         if(LOGGING.contains(LOGGING.GRAPHICSCREATION))
                         
                                     {
-                                    guiLog!!.put("Constructor Error", this, "contructor", e)
+                                    this.guiLog!!.put("Constructor Error", this, "contructor", e)
 
                                     }
                                 
@@ -136,8 +136,8 @@ this.grid= Grid(canvasDom!!.getGrid())
 
         try {
             this.workAreaJTreeJPanel= workAreaJTreeJPanel
-initComponents()
-initMyComponents()
+this.initComponents()
+this.initMyComponents()
 this.setSize(dimension)
 this.setCanvasSize(canvasDom!!.getDimension()!!.getWidth(), canvasDom!!.getDimension()!!.getHeight())
 this.graphicItemHashMap= canvasDom!!.getGraphicItemHashMap()
@@ -187,10 +187,10 @@ this.workAreaJTreeJPanel!!.repaint()
     open fun initMyComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-this.frameLabel= CanvasTreeLabel("FrameLabel" +Integer(frame).
+this.frameLabel= CanvasTreeLabel("FrameLabel" +Integer(CanvasJPanel.frame).
                             toString())
 this.canvasTreeNode= DefaultMutableTreeNode(this.frameLabel)
-frame++
+CanvasJPanel.frame++
 this.workAreaJTreeJPanel!!.add(this.getTreeNode())
 this.graphicItemHashMap= HashMap<Any, Any>()
 this.grid.grid= PointFactory.getInstance()!!.createXY(0, 0)
@@ -1307,7 +1307,7 @@ var event = event
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return canvasDimension
+                        return this.canvasDimension
 }
 
 
@@ -1326,7 +1326,7 @@ this.canvasDimension= canvasDimension
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return grid
+                        return this.grid
 }
 
 

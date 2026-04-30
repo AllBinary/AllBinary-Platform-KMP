@@ -62,7 +62,7 @@ var imageProcessorInput = imageProcessorInput
 
                             //For kotlin this is before the body of the constructor.
                     
-initComponents()
+this.initComponents()
 this.imageProcessorInput= imageProcessorInput
 }
 
@@ -101,7 +101,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-jPanel1= object: javax.swing.JPanel()
+this.jPanel1= object: javax.swing.JPanel()
                                 {
                                 
     open override fun paint(graphics: Graphics)
@@ -141,7 +141,7 @@ this.jPanel1!!.setLayout(jPanel1Layout)
 jPanel1Layout!!.setHorizontalGroup(jPanel1Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(0, 436, Short.MAX_VALUE))
 jPanel1Layout!!.setVerticalGroup(jPanel1Layout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(0, 227, Short.MAX_VALUE))
 this.generateJButton!!.setText("Generate")
-generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.generateJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -154,7 +154,7 @@ generateJButtonActionPerformed(evt)
                                 }
                             )
 this.totalAngleJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(commonStrings!!.UP,commonStrings!!.DOWN,"-90","90")))
-totalAngleJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
+this.totalAngleJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)
@@ -230,7 +230,7 @@ var evt = evt
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 

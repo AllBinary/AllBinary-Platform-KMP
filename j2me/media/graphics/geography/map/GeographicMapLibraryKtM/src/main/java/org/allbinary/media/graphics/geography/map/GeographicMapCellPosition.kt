@@ -69,7 +69,7 @@ this.midPoint= pointFactory!!.createXY(x +(width shr 1), y +(height shr 1))
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return point
+                        return this.point
 }
 
 
@@ -80,7 +80,7 @@ this.midPoint= pointFactory!!.createXY(x +(width shr 1), y +(height shr 1))
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return midPoint
+                        return this.midPoint
 }
 
 

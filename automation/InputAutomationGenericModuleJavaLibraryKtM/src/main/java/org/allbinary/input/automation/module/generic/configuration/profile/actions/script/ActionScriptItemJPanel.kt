@@ -29,7 +29,7 @@
 open public class ActionScriptItemJPanel : javax.swing.JPanel {
         
 public constructor (){
-initComponents()
+this.initComponents()
 }
 
 
@@ -40,7 +40,7 @@ initComponents()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return newActionScriptInputJPanel
+                        return this.newActionScriptInputJPanel
 }
 
 
@@ -59,7 +59,7 @@ this.newActionScriptInputJPanel= newActionScriptInputJPanel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return removeJPanel
+                        return this.removeJPanel
 }
 
 
@@ -78,7 +78,7 @@ this.removeJPanel= removeJPanel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return scriptItemJPanel
+                        return this.scriptItemJPanel
 }
 
 
@@ -97,7 +97,7 @@ this.scriptItemJPanel= scriptItemJPanel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return newActionScriptConditionJPanel
+                        return this.newActionScriptConditionJPanel
 }
 
 
@@ -116,7 +116,7 @@ this.newActionScriptConditionJPanel= newActionScriptConditionJPanel
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return childActionScriptConditionJPanel
+                        return this.childActionScriptConditionJPanel
 }
 
 

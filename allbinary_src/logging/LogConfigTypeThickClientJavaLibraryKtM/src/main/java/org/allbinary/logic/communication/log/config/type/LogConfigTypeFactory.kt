@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return LogConfigTypeFactory.instance
 }
 
 
@@ -54,17 +54,17 @@ companion object {
         
     private val NO_DESCRIPTION: String = "No Description"
 
-    val FILE: LogConfigType = LogConfigType("File", NO_DESCRIPTION)
+    val FILE: LogConfigType = LogConfigType("File", this.NO_DESCRIPTION)
 
-    val FILEERROR: LogConfigType = LogConfigType("File Error", NO_DESCRIPTION)
+    val FILEERROR: LogConfigType = LogConfigType("File Error", this.NO_DESCRIPTION)
 
-    val IDLOGGING: LogConfigType = LogConfigType("ID Logging", NO_DESCRIPTION)
+    val IDLOGGING: LogConfigType = LogConfigType("ID Logging", this.NO_DESCRIPTION)
 
-    val REPLACE: LogConfigType = LogConfigType("Replace", NO_DESCRIPTION)
+    val REPLACE: LogConfigType = LogConfigType("Replace", this.NO_DESCRIPTION)
 
-    val REPLACE_INFO: LogConfigType = LogConfigType("Replace Info", NO_DESCRIPTION)
+    val REPLACE_INFO: LogConfigType = LogConfigType("Replace Info", this.NO_DESCRIPTION)
 
-    val REPLACEERROR: LogConfigType = LogConfigType("Replace Error", NO_DESCRIPTION)
+    val REPLACEERROR: LogConfigType = LogConfigType("Replace Error", this.NO_DESCRIPTION)
 
 }
                 

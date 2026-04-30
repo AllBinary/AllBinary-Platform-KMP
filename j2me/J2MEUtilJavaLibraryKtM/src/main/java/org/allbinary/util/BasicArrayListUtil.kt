@@ -47,7 +47,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return BasicArrayListUtil.instance
 }
 
 
@@ -112,7 +112,7 @@ var list = list
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return myRandomFactory!!.getAbsoluteNextInt(list.size())
+                        return this.myRandomFactory!!.getAbsoluteNextInt(list.size())
 }
 
 
@@ -192,7 +192,7 @@ stringBuffer!!.appendint(usedList!!.size())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return immutableInstance
+                        return this.immutableInstance
 }
 
 

@@ -220,7 +220,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageProcessorInput
+                        return this.imageProcessorInput
 }
 
 
@@ -237,7 +237,7 @@ this.imageProcessorInput= imageProcessorInput
 {
 this.aboveJButton= javax.swing.JButton()
 this.aboveJButton!!.setText("Process")
-aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
+this.aboveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
     open override fun actionPerformed(evt: java.awt.event.ActionEvent)

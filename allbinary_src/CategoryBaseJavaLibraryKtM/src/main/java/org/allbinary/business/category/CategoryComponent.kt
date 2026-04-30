@@ -54,7 +54,7 @@ var categoryInterface = categoryInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NO_TYPE
+                        return this.NO_TYPE
 }
 
 

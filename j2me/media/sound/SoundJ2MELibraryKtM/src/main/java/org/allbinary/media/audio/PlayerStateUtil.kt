@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PlayerStateUtil.instance
 }
 
 
@@ -139,7 +139,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return commonStrings!!.UNKNOWN
+                        return this.commonStrings!!.UNKNOWN
 }
 
 

@@ -27,6 +27,7 @@
         
 import java.util.Enumeration
 import java.util.Hashtable
+import org.allbinary.logic.NullUtil
 
 open public class HashtableUtil
             : Object
@@ -43,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return HashtableUtil.instance
 }
 
 
@@ -54,26 +55,30 @@ companion object {
             {
             }            
         
+    private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
+
     open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
-var fromHashtable = fromHashtable
-var hashtable = hashtable
+    //var fromHashtable = fromHashtable
+    //var hashtable = hashtable
 
     var enumeration: Enumeration<Any?> = fromHashtable!!.keys()!!
 
 
-        while(enumeration.hasMoreElements())
+    var keyCanBeNull: Any?
+
+
+    var valueCanBeNull: Any?
+
+
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-
-    var key: Any = enumeration.nextElement()!!!!
-
-
-    var value: Any = hashtable.get(key as Object)!!
-
+keyCanBeNull= this.enumerationUtil!!.nextElement(enumeration)!!
+valueCanBeNull= hashtable.get(keyCanBeNull as Object)
 
     
-                        if(value == 
+                        if(valueCanBeNull == 
                                     null
                                 )
                         
@@ -82,7 +87,7 @@ var hashtable = hashtable
                                     }
                                 
                         else {
-                            hashtable.put(key, value)
+                            hashtable.put(keyCanBeNull, valueCanBeNull)
 
                         }
                             
@@ -94,7 +99,7 @@ var hashtable = hashtable
     open fun getKeysAsArray(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
-var hashtable = hashtable
+    //var hashtable = hashtable
 
     var objectArray: Array<Any?> = arrayOfNulls(hashtable.size)
 
@@ -105,9 +110,9 @@ var hashtable = hashtable
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
 
 
-        while(enumeration.hasMoreElements())
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-objectArray[index++]= enumeration.nextElement()!!
+objectArray[index++]= this.enumerationUtil!!.nextElement(enumeration)!!
 }
 
 
@@ -121,7 +126,7 @@ objectArray[index++]= enumeration.nextElement()!!
     open fun getKeysAsList(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var hashtable = hashtable
+    //var hashtable = hashtable
 
     var list: BasicArrayList = BasicArrayListS(hashtable.size)
 
@@ -129,9 +134,9 @@ var hashtable = hashtable
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
 
 
-        while(enumeration.hasMoreElements())
+        while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-list.add(enumeration.nextElement()!!)
+list.add(this.enumerationUtil!!.nextElement(enumeration)!!)
 }
 
 

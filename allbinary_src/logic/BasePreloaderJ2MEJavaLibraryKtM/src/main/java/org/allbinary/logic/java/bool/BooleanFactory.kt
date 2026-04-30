@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return BooleanFactory.instance
 }
 
 
@@ -56,9 +56,9 @@ companion object {
 
     val FALSE: Boolean = false
 
-    val TRUE_STRING: String = TRUE.toString()!!
+    val TRUE_STRING: String = this.TRUE.toString()!!
 
-    val FALSE_STRING: String = FALSE.toString()!!
+    val FALSE_STRING: String = this.FALSE.toString()!!
 
     val YES: String = "yes"
 
@@ -77,7 +77,7 @@ var bool = bool
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TRUE_STRING
+                        return this.TRUE_STRING
 
                                     }
                                 
@@ -86,7 +86,7 @@ var bool = bool
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return FALSE_STRING
+                        return this.FALSE_STRING
 
                         }
                             

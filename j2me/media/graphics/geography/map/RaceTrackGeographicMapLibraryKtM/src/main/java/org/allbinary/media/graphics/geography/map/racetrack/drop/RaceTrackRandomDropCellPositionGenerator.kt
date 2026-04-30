@@ -50,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return RaceTrackRandomDropCellPositionGenerator.SINGLETON
 }
 
 
@@ -60,7 +60,7 @@ companion object {
 
     private val cellsPerRowOrColumn: Int = 3
 
-    private val totalCells: Int = cellsPerRowOrColumn *cellsPerRowOrColumn
+    private val totalCells: Int = this.cellsPerRowOrColumn *this.cellsPerRowOrColumn
 
     private val rowArray: IntArray = intArrayOf(0,1,2,0,1,2,0,1,2)
 

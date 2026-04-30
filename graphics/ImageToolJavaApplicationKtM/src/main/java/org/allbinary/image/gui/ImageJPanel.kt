@@ -45,7 +45,7 @@ open public class ImageJPanel : javax.swing.JPanel {
     private var bufferedImage: BufferedImage
 public constructor (bufferedImage: BufferedImage){
 var bufferedImage = bufferedImage
-initComponents()
+this.initComponents()
 this.bufferedImage= bufferedImage
 this.setSize(this.bufferedImage!!.getWidth(
                             null), this.bufferedImage!!.getHeight(

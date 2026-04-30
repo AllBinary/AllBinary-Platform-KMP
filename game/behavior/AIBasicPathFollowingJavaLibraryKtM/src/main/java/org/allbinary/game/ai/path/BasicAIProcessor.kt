@@ -83,8 +83,8 @@ this.init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.geographicMapCellPathHistoryInfo= GeographicMapCellPathHistoryInfo()
-this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPosition(geographicMapCellPositionBasicArrayList!!.get(geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition)
-this.geographicMapCellPathHistoryInfo!!.setNextOnPathGeographicMapCellPosition(geographicMapCellPositionBasicArrayList!!.get(geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition)
+this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPosition(this.geographicMapCellPositionBasicArrayList!!.get(this.geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition)
+this.geographicMapCellPathHistoryInfo!!.setNextOnPathGeographicMapCellPosition(this.geographicMapCellPositionBasicArrayList!!.get(this.geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition)
 this.update()
 }
 
@@ -104,14 +104,14 @@ var currentGeographicMapCellPosition = currentGeographicMapCellPosition
     var goToGeographicMapCellPosition: GeographicMapCellPosition = this.geographicMapCellPathHistoryInfo!!.getNextChosenOnPathGeographicMapCellPosition()!!
 
 
-    var geographicMapDirectionData: Direction = geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition)!!
+    var geographicMapDirectionData: Direction = this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition)!!
 
 
     
                         if(geographicMapDirectionData == DirectionFactory.getInstance()!!.NOT_BORDERED_WITH)
                         
                                     {
-                                    geographicMapDirectionData= geographicMapDirectionUtil!!.getDirectionFromCellPositionToCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition)
+                                    geographicMapDirectionData= this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition)
 
                                     }
                                 
@@ -173,7 +173,7 @@ this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPositi
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return name
+                        return this.name
 }
 
 
@@ -192,7 +192,7 @@ this.name= name
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPathHistoryInfo
+                        return this.geographicMapCellPathHistoryInfo
 }
 
 
@@ -211,7 +211,7 @@ this.geographicMapCellPathHistoryInfo= geographicMapCellPathHistoryInfo
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellHistory
+                        return this.geographicMapCellHistory
 }
 
 
