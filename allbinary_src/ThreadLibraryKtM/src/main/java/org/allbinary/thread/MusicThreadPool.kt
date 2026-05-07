@@ -79,7 +79,7 @@ super.runTask(task)
 {
 var task = task
 this.logUtil!!.putF(StringMaker().
-                            append(this.threadPoolStrings!!.START_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
+                            append(this.threadPoolStrings!!.START_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
 }
 
 
@@ -88,7 +88,7 @@ this.logUtil!!.putF(StringMaker().
 {
 var task = task
 this.logUtil!!.putF(StringMaker().
-                            append(this.threadPoolStrings!!.COMPLETE_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
+                            append(this.threadPoolStrings!!.COMPLETE_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
 }
 
 

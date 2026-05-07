@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.NullUtil
-
+//NoPlatform
 expect open public class PreLogUtil
             : Object
          {

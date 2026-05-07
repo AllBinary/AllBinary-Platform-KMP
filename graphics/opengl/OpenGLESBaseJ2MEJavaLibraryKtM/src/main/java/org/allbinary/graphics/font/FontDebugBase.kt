@@ -13,14 +13,14 @@
         
 import javax.microedition.lcdui.Font
 import org.allbinary.logic.string.StringMaker
-
+//OpenGLESBaseJ2MEJavaLibrary
 open public class FontDebugBase
             : Object
          {
         
 companion object {
             
-    private val instance: FontDebugBase = FontDebugBase()
+    private val instanceBase: FontDebugBase = FontDebugBase()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -29,7 +29,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return FontDebugBase.instance
+                        return FontDebugBase.instanceBase
 }
 
 

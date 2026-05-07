@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.RTSLayerFormFactory
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.graphics.form.ScrollSelectionForm
@@ -47,7 +47,7 @@ protected constructor (label: String, itemArrayFactoryInterface: ItemArraySingle
 
         try {
             
-    var items: Array<CustomItem?> = itemArrayFactoryInterface!!.getItems()!!
+    var items: Array<ABCustomItem?> = itemArrayFactoryInterface!!.getItems()!!
 
 scrollSelectionForm= RTSScrollSelectionFormFactory.getInstance(label, items)
 } catch(e: Exception)

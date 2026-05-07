@@ -55,6 +55,7 @@ import org.allbinary.graphics.pipeline.RandomRotationFactory
 import org.allbinary.log.LOGGING
 import org.allbinary.logic.communication.log.GuiLog
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
@@ -1031,15 +1032,15 @@ this.repaint()
     open fun logMouseEvent(mouseEvent: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 : String{
-var mouseEvent = mouseEvent
+    //var mouseEvent = mouseEvent
 
-    var stringBuffer: StringBuilder = StringBuilder()
+    var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(PositionStrings.getInstance()!!.X_LABEL)
-stringBuffer!!.append(mouseEvent!!.getX() /this.getXPixelsPerWorkAreaPixel())
+stringBuffer!!.appendint(mouseEvent!!.getX() /this.getXPixelsPerWorkAreaPixel())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(PositionStrings.getInstance()!!.Y_LABEL)
-stringBuffer!!.append(mouseEvent!!.getY() /this.getYPixelsPerWorkAreaPixel())
+stringBuffer!!.appendint(mouseEvent!!.getY() /this.getYPixelsPerWorkAreaPixel())
 
 
 

@@ -17,6 +17,7 @@ import android.content.Intent
 import org.allbinary.android.AndroidServicesUtil
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.communication.log.PreLogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.NoSound
 import org.allbinary.media.audio.Sound
@@ -224,8 +225,8 @@ this.timeDelayHelper!!.delay= 0
 
     var duration: Long = sound.getDuration().toLong()
 
-PreLogUtil.put(StringBuilder().
-                            append(this.PLAY)!!.append(sound.getResource())!!.append(this.FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
+PreLogUtil.put(StringMaker().
+                            append(this.PLAY)!!.append(sound.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, commonStrings!!.PROCESS)
 }
 
 }
@@ -255,8 +256,8 @@ this.nextSongSound= NoSound.getInstance()
 
     var duration: Long = this.currentSongSound!!.getDuration().toLong()
 
-PreLogUtil.put(StringBuilder().
-                            append(this.PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(this.FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
+PreLogUtil.put(StringMaker().
+                            append(this.PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, commonStrings!!.PROCESS)
 this.timeDelayHelper!!.delay= duration.toInt()
 this.currentIntent!!.putExtra(this.musicStrings!!.SONG_EXTRA, this.resourceUtil!!.getResourceId(this.currentSongSound!!.getResource())!!.toInt())
 this.currentIntent!!.putExtra(this.musicStrings!!.LEFT_VOLUME, leftVolume)

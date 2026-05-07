@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import android.os.Parcelable
+import android.os.Parcel
 
 open public class NullParcelable
             : Object
@@ -53,7 +54,7 @@ companion object {
 }
 
 
-    override fun writeToParcel(dest: android.os.Parcel, flags: Int)
+    override fun writeToParcel(dest: Parcel, flags: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dest = dest

@@ -39,16 +39,6 @@ open public class KeylessBasicArrayListCache : IndexedBasicArrayListCache {
 public constructor (){
 }
 
-public constructor (size: Int)                        
-
-                            : super(size){
-var size = size
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
@@ -60,12 +50,12 @@ var size = size
                         if(this.index >= this.list.size())
                         
                                     {
-                                    this.add()
+                                    this.addDefault()
 
                                     }
                                 
 
-    var list: BasicArrayList = this.get(this.index++) as BasicArrayList
+    var list: BasicArrayList = this.getAt(this.index++) as BasicArrayList
 
 
 
@@ -74,7 +64,7 @@ var size = size
                         return list
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET, e)
 
 
 

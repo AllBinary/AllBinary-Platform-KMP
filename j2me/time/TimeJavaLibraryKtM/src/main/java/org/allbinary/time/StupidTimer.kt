@@ -43,7 +43,7 @@ open public class StupidTimer
 : Boolean{
     //var visitorInterface = visitorInterface
 
-    var result: Boolean = visitorInterface!!.visit(nullUtil!!.NULL_OBJECT) as Boolean
+    var result: Boolean = visitorInterface!!.visit(this.nullUtil!!.NULL_OBJECT) as Boolean
 
 
     var result2: Boolean = result!!
@@ -70,7 +70,7 @@ open public class StupidTimer
     var WAITING_FOR: String = "Waiting for: "
 
 PreLogUtil.put(StringMaker().
-                            append(WAITING_FOR)!!.append(StringUtil.getInstance()!!.toString(visitorInterface))!!.toString(), this, commonStrings!!.VISIT)
+                            append(WAITING_FOR)!!.append(StringUtil.getInstance()!!.toString(visitorInterface))!!.toString(), this, this.commonStrings!!.VISIT)
 
     var index: Int = 0
 
@@ -83,7 +83,7 @@ PreLogUtil.put(StringMaker().
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(WAITING_FOR)!!.appendint(index)!!.toString(), this, commonStrings!!.VISIT)
+                            append(WAITING_FOR)!!.appendint(index)!!.toString(), this, this.commonStrings!!.VISIT)
 
                                     }
                                 
@@ -95,7 +95,7 @@ index++
 
         //mutex.withLock
         {
-this.threadObjectUtil!!.waitObject(this, 1800)
+this.threadObjectUtil!!.waitObjectFor(this, 1800)
 }
 
 
@@ -123,7 +123,7 @@ break;
                                     }
                                 
                         else {
-                            PreLogUtil.put(timeDelayHelper!!.toString(), this, commonStrings!!.VISIT)
+                            PreLogUtil.put(timeDelayHelper!!.toString(), this, this.commonStrings!!.VISIT)
 
                         }
                             

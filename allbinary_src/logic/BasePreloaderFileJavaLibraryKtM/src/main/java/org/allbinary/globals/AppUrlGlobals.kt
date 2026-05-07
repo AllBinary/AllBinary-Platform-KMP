@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringUtil
-
+//implements
 open public class AppUrlGlobals : UrlGlobalsInterface {
         
 companion object {

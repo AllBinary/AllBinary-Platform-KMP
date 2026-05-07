@@ -41,7 +41,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-
+//containing string values and other hashmaps of the like
 open public class NameSpaceRequestParams : RequestParams {
         
 

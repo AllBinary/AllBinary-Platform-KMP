@@ -28,7 +28,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.midlet.MIDlet
-
+//SWTWithoutJOGL
 open public class SWTJOGLProcessor
             : Object
         

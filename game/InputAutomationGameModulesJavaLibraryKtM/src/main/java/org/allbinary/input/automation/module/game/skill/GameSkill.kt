@@ -47,7 +47,7 @@ var extra = extra
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameSkill.hashMap!!.get(StringBuilder().
+                        return GameSkill.hashMap!!.get(StringMaker().
                             append(gameSkillType!!.getName())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(extra)!!.toString()) as GameSkill
 }
 
@@ -77,7 +77,7 @@ this.setGameSkillType(gameSkillType)
 this.setExtra(extra)
 this.setTime(time)
 this.vector= Vector()
-GameSkill.hashMap!!.put(StringBuilder().
+GameSkill.hashMap!!.put(StringMaker().
                             append(this.getGameSkillType()!!.getName())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(extra)!!.toString(), this)
 }
 

@@ -50,12 +50,12 @@ var y = y
 
     open fun getLabelStringComponent()
         //nullable = true from not(false or (false and true)) = true
-: StringComponent{
+: ABStringComponent{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringComponent.NULL_STRING_COMPONENT
+                        return ABStringComponent.NULL_STRING_COMPONENT
 }
 
 

@@ -32,7 +32,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.game.graphics.hud.BasicHud
 import org.allbinary.graphics.color.BasicColor
-
+//super.paint(graphics, positionString, currentPostString, offset2, offset);
 open public class PositionWidget : BasicHud {
         
 companion object {

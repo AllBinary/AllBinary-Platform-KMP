@@ -30,7 +30,7 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import playn.core.PlayN
-
+//ActualPlatform
 /*actual*/ open public class PreLogUtil
             : Object
          {
@@ -62,7 +62,7 @@ className= StringMaker().
 
     var message: String = LogFormatUtil.getInstance()!!.getS(className, functionName, specialMessage)!!
 
-PlayN.log()!!.debug(LOG_SUCCESS +message)
+PlayN.log()!!.debug(PreLogUtil.LOG_SUCCESS +message)
 }
 
 
@@ -94,7 +94,7 @@ className= StringMaker().
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
+PlayN.log()!!.error(PreLogUtil.LOG_SUCCESS +message, exception as Throwable)
 }
 
 
@@ -107,7 +107,7 @@ PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
 
     var message: String = LogFormatUtil.getInstance()!!.getS(className, functionName, specialMessage)!!
 
-PlayN.log()!!.debug(LOG_SUCCESS +message)
+PlayN.log()!!.debug(PreLogUtil.LOG_SUCCESS +message)
 }
 
 
@@ -121,7 +121,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
+PlayN.log()!!.error(PreLogUtil.LOG_SUCCESS +message, exception as Throwable)
 }
 
 

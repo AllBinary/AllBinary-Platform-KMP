@@ -62,11 +62,11 @@ private constructor (){
 }
 
 
-    override fun init(view: View)
+    override fun initView(view: View)
         //nullable = true from not(false or (false and false)) = true
 {
 var view = view
-super.init(view)
+super.initView(view)
 this.frameProcessingTimeElapsed= this.getTimeDelayHelper()!!.getStartTime()
 this.bestFrameProcessingTime= Integer.MAX_VALUE
 this.worstFrameProcessingTime= 0

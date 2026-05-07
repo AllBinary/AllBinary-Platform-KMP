@@ -31,7 +31,7 @@ import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.communication.log.LogUtil
-
+//This is mainly for network communications.
 open public class ImageThreadPool : ThreadPool {
         
 companion object {

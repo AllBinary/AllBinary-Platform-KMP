@@ -58,7 +58,7 @@ var anyType = anyType
 
                 @Throws(Exception::class)
             
-    open fun waitObject(anyType: Object, delay: Long)
+    open fun waitObjectFor(anyType: Object, delay: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType

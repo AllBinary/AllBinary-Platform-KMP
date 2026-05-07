@@ -36,7 +36,7 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.form.item.CommandTextItem
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.form.item.CustomItemInterface
 
 open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm {
@@ -45,7 +45,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm {
     val selectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
 
     val unSelectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
-public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<ABCustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, ItemPaintableFactory.getInstance(), rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -94,7 +94,7 @@ this.unSelectedAnimationArray[index]= nullAnimation
 }
 
 
-    open fun update(items: Array<CustomItem?>)
+    open fun update(items: Array<ABCustomItem?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var items = items
@@ -111,7 +111,7 @@ this.updateAt(index, items[index]!!)
 }
 
 
-    open fun updateAt(index: Int, item: CustomItem)
+    open fun updateAt(index: Int, item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -186,7 +186,7 @@ adjustedBorder= 4
 }
 
 
-    override fun append(item: CustomItem)
+    override fun append(item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var item = item
@@ -218,7 +218,7 @@ super.deleteAll()
 }
 
 
-    override fun insert(itemNum: Int, item: CustomItem)
+    override fun insert(itemNum: Int, item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var itemNum = itemNum
@@ -227,7 +227,7 @@ super.insert(itemNum, item)
 }
 
 
-    override fun set(itemNum: Int, item: CustomItem)
+    override fun set(itemNum: Int, item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var itemNum = itemNum

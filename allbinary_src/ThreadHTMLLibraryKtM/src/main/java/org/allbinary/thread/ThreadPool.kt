@@ -40,7 +40,7 @@ open public class ThreadPool
         
 companion object {
             
-    var NORMAL_PRIORITY: Int = 5
+    val NORMAL_PRIORITY: Int = 5
 
         }
             

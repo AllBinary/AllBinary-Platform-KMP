@@ -36,7 +36,7 @@ import org.allbinary.business.user.quoterequest.QuoteRequest
 import org.allbinary.data.tables.user.quoterequest.QuoteRequestEntityFactory
 import org.allbinary.logic.communication.http.request.session.WeblisketSession
 import org.allbinary.logic.communication.log.LogUtil
-
+//TWB - Am I missing the correct Quote Request? Probably not
 open public class QuoteRequestHelper : ModifyTable {
         
 

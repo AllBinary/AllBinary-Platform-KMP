@@ -66,7 +66,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return PaymentTransactionInterfaceRequestFactory.instance
 }
 
 
@@ -112,7 +112,7 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return generateFromTestData(transformInfoInterface)
+                        return this.generateFromTestData(transformInfoInterface)
 
                                     }
                                 

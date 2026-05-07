@@ -33,7 +33,6 @@
         
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
@@ -47,7 +46,7 @@ companion object {
             
     private val ROOT_NAME: String = "-PooledThread-"
 
-    var NORMAL_PRIORITY: Int = Thread.NORM_PRIORITY
+    val NORMAL_PRIORITY: Int = Thread.NORM_PRIORITY
 
         }
             
@@ -72,6 +71,8 @@ companion object {
     private var threadID: Int= 0
 
     private var numThreads: Int
+
+    var runningTask: Boolean= false
 public constructor (poolName: String, numThreads: Int, priority: Int)
             : super()
         {
@@ -104,7 +105,7 @@ this.taskQueue= BasicArrayListD()
                         for (i in 0 until this.numThreads)
 
         {
-pooledThread= PooledThread()
+pooledThread= PooledThread(this)
 pooledThread!!.setPriority(this.priority)
 pooledThread!!.start()
 }
@@ -202,7 +203,7 @@ this.taskQueue!!.addAt(index, task)
 
                         }
                             
-notify()
+this.notify()
 
                                     }
                                 
@@ -239,7 +240,7 @@ notify()
                         
                                     {
                                     this.taskQueue!!.add(task)
-notify()
+this.notify()
 
                                     }
                                 
@@ -353,7 +354,7 @@ this.taskQueue!!.clear()
         {
 this.isAlive= false
 this.taskQueue!!.clear()
-notifyAll()
+this.notifyAll()
 }
 
 }
@@ -445,92 +446,18 @@ this.taskQueue!!.clear()
 }
 
 
-    private var runningTask: Boolean= false
-
-open public inner class PooledThread : Thread {
-        
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
-        }
-            */
-
-public constructor ()                        
-
-                            : super(StringMaker().
-                            append(poolName)!!.append(ROOT_NAME)!!.appendint(threadID++)!!.toString()){
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
-}
-
-
-    private val INTERRUPT_EXCEPTION: String = "Exit InterruptedException"
-
-    override fun run()
+    open fun createName()
         //nullable = true from not(false or (false and true)) = true
-{
-threadStarted()
-
-        while(true)
-        {
-
-    var task2: Runnable = threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
+: String{
 
 
-        try {
-            task2= getTask()
-runningTask= true
-startTask(task2)
-} catch(ex: InterruptedException)
-            {
 
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-logUtil!!.putF(INTERRUPT_EXCEPTION, this, commonStrings!!.RUN)
-break;
-
-                    
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return StringMaker().
+                            append(this.poolName)!!.append(ThreadPool.ROOT_NAME)!!.appendint(this.threadID++)!!.toString()
 }
 
 
-    
-                        if(task2 == threadObjectUtil!!.NULL_PRIORITY_RUNNABLE)
-                        
-                                    {
-                                    break;
-
-                    
-
-                                    }
-                                
-
-        try {
-            task2.run()
-completedTask(task2)
-runningTask= false
-} catch(e: Exception)
-            {
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-logUtil!!.put(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(task2))!!.toString(), this, commonStrings!!.RUN, e)
-}
-
-}
-
-threadStopped()
-}
-
-
-}
-                
-            
 }
                 
             

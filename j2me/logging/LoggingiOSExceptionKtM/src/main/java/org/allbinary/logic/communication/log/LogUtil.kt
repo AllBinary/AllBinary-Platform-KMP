@@ -28,7 +28,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.string.CommonStrings
-
+//ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
          {

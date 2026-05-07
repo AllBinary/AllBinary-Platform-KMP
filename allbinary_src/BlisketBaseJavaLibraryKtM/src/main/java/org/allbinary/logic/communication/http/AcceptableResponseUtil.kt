@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Vector
-import org.allbinary.logic.TsUtil
+import org.allbinary.TsUtil
 
 open public class AcceptableResponseUtil
             : Object

@@ -32,7 +32,7 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.form.item.CustomItemInterface
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -44,7 +44,7 @@ open public class ScrollSelectionForm : PaintableForm {
         
 companion object {
             
-    open fun createForm(title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun createForm(title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : ScrollSelectionForm{
     //var title = title
@@ -110,7 +110,7 @@ companion object {
     private var buttonBasicColor: BasicColor
 
     var paintable: ItemPaintable = ItemPaintableFactory.getInstance()!!
-public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, rectangle, formType, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -132,7 +132,7 @@ this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
 }
 
 
-    override fun append(item: CustomItem)
+    override fun append(item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var item = item
@@ -148,7 +148,7 @@ this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
             
     open fun getSelectedItem(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: ABCustomItem{
     //var point = point
 
     var index: Int = this.getSelectedIndex(point)!!
@@ -171,7 +171,7 @@ this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CustomItem.NULL_CUSTOM_ITEM
+                        return ABCustomItem.NULL_CUSTOM_ITEM
 
                         }
                             
@@ -180,7 +180,7 @@ this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
 
                 @Throws(Exception::class)
             
-    open fun getItemIndex(item: CustomItem)
+    open fun getItemIndex(item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var item = item

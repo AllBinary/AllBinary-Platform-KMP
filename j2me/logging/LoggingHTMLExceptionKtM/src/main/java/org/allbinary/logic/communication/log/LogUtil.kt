@@ -27,7 +27,7 @@
         
 import org.allbinary.string.CommonStrings
 import playn.core.PlayN
-
+//ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
          {

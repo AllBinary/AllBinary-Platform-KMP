@@ -13,6 +13,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.visitor.Visitor
 import org.allbinary.string.CommonSeps
 
@@ -21,17 +22,17 @@ open public class IntPermutationVisitor : Visitor {
 
     val data: IntArray
 public constructor (data: IntArray){
-var data = data
+    //var data = data
 this.data= data
 }
 
 
-    private var stringBuilder: StringBuilder = StringBuilder()
+    private var stringBuilder: StringMaker = StringMaker()
 
     open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
-var anyType = anyType
+    //var anyType = anyType
 this.stringBuilder!!.delete(0, stringBuilder!!.length())
 this.print(this.data, stringBuilder)
 
@@ -45,19 +46,22 @@ this.print(this.data, stringBuilder)
     open fun print(data: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
-var data = data
+    //var data = data
 
-    var stringBuilder: StringBuilder = StringBuilder()
+    var stringBuilder: StringMaker = StringMaker()
 
 this.print(data, stringBuilder)
 }
 
 
-    open fun print(data: IntArray, stringBuilder: StringBuilder)
+    open fun print(data: IntArray, stringBuilder: StringMaker)
         //nullable = true from not(false or (false and false)) = true
 {
-var data = data
-var stringBuilder = stringBuilder
+    //var data = data
+    //var stringBuilder = stringBuilder
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
 
     var size: Int = data.size
                 
@@ -69,8 +73,8 @@ var stringBuilder = stringBuilder
                         for (i in 0 until size)
 
         {
-stringBuilder!!.append(data[i]!!)
-stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)
+stringBuilder!!.appendint(data[i]!!)
+stringBuilder!!.append(commonSeps!!.SPACE)
 }
 
 System.out.println(stringBuilder!!.toString())

@@ -37,7 +37,7 @@ interface CacheInterface {
 
                 @Throws(Exception::class)
             
-    open fun add(cacheableInterfaces: Array<CacheableInterface?>)
+    open fun addArray(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
 
 

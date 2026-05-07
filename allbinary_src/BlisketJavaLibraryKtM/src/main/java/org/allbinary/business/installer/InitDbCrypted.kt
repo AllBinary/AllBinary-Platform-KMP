@@ -55,7 +55,7 @@ import org.allbinary.logic.io.DataOutputStreamFactory
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.FileFactory
 import org.allbinary.logic.string.StringMaker
-
+//Warning you must have sql root access
 open public class InitDbCrypted : AbDatabaseManagement {
         
 

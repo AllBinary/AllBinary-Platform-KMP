@@ -163,7 +163,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGPOOL))
                         
                                     {
-                                    this.logUtil!!.putF(StringBuilder().
+                                    this.logUtil!!.putF(StringMaker().
                             append(this.NEW_CONNECTION_FOR)!!.append(url)!!.append(this.CREATED)!!.toString(), this, METHOD_GET)
 
                                     }

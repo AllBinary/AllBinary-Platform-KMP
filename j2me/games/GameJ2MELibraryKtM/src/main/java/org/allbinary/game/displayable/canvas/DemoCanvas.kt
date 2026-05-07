@@ -92,7 +92,7 @@ import org.allbinary.graphics.form.FormTypeFactory
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.graphics.form.ScrollSelectionFormNoneFactory
 import org.allbinary.graphics.form.item.CommandTextItemArrayFactory
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.opengles.CurrentDisplayableFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
@@ -455,7 +455,7 @@ this.close()
     var commandTextItemArrayFactory: CommandTextItemArrayFactory = DemoLimitedCommandTextItemArrayFactory.getInstance()!!.getCommandTextItemArrayFactory()!!
 
 
-    var items: Array<CustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE)!!
+    var items: Array<ABCustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE)!!
 
 
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!

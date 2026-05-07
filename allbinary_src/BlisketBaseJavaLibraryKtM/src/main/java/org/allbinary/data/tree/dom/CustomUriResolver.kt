@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -29,11 +29,14 @@ import javax.xml.transform.Source
 import javax.xml.transform.TransformerException
 import javax.xml.transform.URIResolver
 import javax.xml.transform.stream.StreamSource
+import org.allbinary.globals.FREEBLISKET_PATH_GLOBALS
+import org.allbinary.globals.URLGLOBALS
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.crypt.file.CryptFileReader
 import org.allbinary.logic.io.path.AbFilePath
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.transform.info.template.TransformInfoTemplateData
 
 open public class CustomUriResolver
@@ -43,6 +46,8 @@ open public class CustomUriResolver
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val uriResolverStrings: URIResolverStrings = URIResolverStrings.getInstance()!!
 
     private var path: String
 
@@ -67,14 +72,31 @@ var base = base
 
         try {
             
-    var fileAbPath: AbPath = AbFilePath(this.path +AbPathData.getInstance()!!.SEPARATOR +href) as AbPath
+    var stringBuffer: StringMaker = StringMaker()
+
+stringBuffer!!.append(this.path)
+stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
+stringBuffer!!.append(href)
+
+    var fileAbPath: AbPath = AbFilePath(stringBuffer!!.toString()) as AbPath
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XMLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF("attempt to use xsl:import: href=" +href +"\nBase= " +base +"\nNew path= " +fileAbPath!!.toString() +"\nRequired Extension: " +this.basicURIResolver!!.getExtension(), this, "resolve")
+                                    stringBuffer!!.delete(0, stringBuffer!!.length())
+stringBuffer!!.append(this.uriResolverStrings!!.ATTEMPT)
+stringBuffer!!.append(href)
+stringBuffer!!.append(this.uriResolverStrings!!.BASE)
+stringBuffer!!.append(base)
+stringBuffer!!.append(this.uriResolverStrings!!.NEW_PATH)
+stringBuffer!!.append(fileAbPath!!.toString())
+stringBuffer!!.append(this.uriResolverStrings!!.NOTE)
+stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
+stringBuffer!!.append(this.uriResolverStrings!!.URL_GLOBAL)
+stringBuffer!!.append(this.uriResolverStrings!!.REQUIRED_EXTENSION)
+stringBuffer!!.append(this.basicURIResolver!!.getExtension())
 
                                     }
                                 
@@ -109,7 +131,7 @@ var base = base
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return path
+                        return this.path
 }
 
 

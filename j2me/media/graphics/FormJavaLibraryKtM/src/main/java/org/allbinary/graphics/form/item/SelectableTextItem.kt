@@ -63,7 +63,7 @@ var graphics = graphics
 var x = x
 var y = y
 
-    var stringComponent: StringComponent = this.getLabelStringComponent()!!
+    var stringComponent: ABStringComponent = this.getLabelStringComponent()!!
 
 
     

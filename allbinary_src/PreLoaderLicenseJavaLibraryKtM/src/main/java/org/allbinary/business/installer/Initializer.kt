@@ -286,7 +286,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.userName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.userName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     isValid= false
@@ -295,7 +295,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.userUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.userUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -304,7 +304,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.userPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.userPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -322,7 +322,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.historyName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.historyName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     isValid= false
@@ -331,7 +331,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.historyUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.historyUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -340,7 +340,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.historyPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.historyPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -358,7 +358,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.logName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.logName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     isValid= false
@@ -367,7 +367,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.logUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.logUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -376,7 +376,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.logPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.logPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -394,7 +394,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.inventoryName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     isValid= false
@@ -403,7 +403,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.inventoryUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -412,7 +412,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.inventoryPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.inventoryPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -430,7 +430,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     isValid= false
@@ -439,7 +439,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -448,7 +448,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.staticPagesPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.staticPagesPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     isValid= false
@@ -528,7 +528,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.userJdbcDriver))
 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.userName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.userName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     stringBuffer!!.append("User db name should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -537,7 +537,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.userJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.userUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.userUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("User db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -546,7 +546,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.userJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.userPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.userPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("User DB password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -565,7 +565,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.historyJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.historyName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.historyName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     stringBuffer!!.append("History db should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -574,7 +574,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.historyJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.historyUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.historyUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("History db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -583,7 +583,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.historyJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.historyPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.historyPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("History db password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -602,7 +602,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.logJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.logName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.logName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     stringBuffer!!.append("Log db should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -611,7 +611,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.logJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.logUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.logUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("Log db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -620,7 +620,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.logJdbcDriver))
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.logPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.logPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("Log db password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -639,7 +639,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.inventoryJdbcDriver)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.inventoryName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     stringBuffer!!.append("Inventory db should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -648,7 +648,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.inventoryJdbcDriver)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.inventoryUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.inventoryUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("Inventory db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -657,7 +657,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.inventoryJdbcDriver)
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.inventoryPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.inventoryPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("Inventory DB password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
@@ -676,7 +676,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesName, MIN, MAXDB))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesName, Initializer.MIN, Initializer.MAXDB))
                         
                                     {
                                     stringBuffer!!.append("Static Pages db should be < " +MAXDB +" and > " +MIN +" characters in length.<br />")
@@ -685,7 +685,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesUserName, MIN, MAX))
+                        if(!stringValidationUtil!!.isValidRequired(this.staticPagesUserName, Initializer.MIN, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("Static Pages db username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
@@ -694,7 +694,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
                                 
 
     
-                        if(!stringValidationUtil!!.isValidNotRequired(this.staticPagesPassword, MINPASSWORD, MAX))
+                        if(!stringValidationUtil!!.isValidNotRequired(this.staticPagesPassword, Initializer.MINPASSWORD, Initializer.MAX))
                         
                                     {
                                     stringBuffer!!.append("Static Pages DB password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")

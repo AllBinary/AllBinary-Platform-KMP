@@ -33,7 +33,7 @@ import java.util.Random
 import org.allbinary.logic.math.MathUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
-
+//Do not use in client code for money related things.
 open public class MyRandomFactory
             : Object
          {

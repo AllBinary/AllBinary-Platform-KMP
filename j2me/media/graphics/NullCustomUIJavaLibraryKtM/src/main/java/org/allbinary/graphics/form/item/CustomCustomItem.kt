@@ -13,7 +13,7 @@
         
 import org.allbinary.graphics.color.BasicColor
 
-open public class CustomCustomItem : CustomItem {
+open public class CustomCustomItem : ABCustomItem {
         
 protected constructor (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 

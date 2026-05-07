@@ -32,7 +32,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.java.exception.ExceptionUtil
 import org.allbinary.string.CommonLabels
-
+//ActualPlatform
 /*actual*/ open public class LogFormatUtil
             : Object
          {

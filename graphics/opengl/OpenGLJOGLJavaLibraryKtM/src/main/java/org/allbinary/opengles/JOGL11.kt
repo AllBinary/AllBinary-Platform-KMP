@@ -27,7 +27,7 @@
         
 import com.jogamp.opengl.GL
 import com.jogamp.opengl.GL2
-
+//JOGLEToKhronosGL11
 open public class JOGL11 : JOGL10
                 , javax.microedition.khronos.opengles.GL11 {
         

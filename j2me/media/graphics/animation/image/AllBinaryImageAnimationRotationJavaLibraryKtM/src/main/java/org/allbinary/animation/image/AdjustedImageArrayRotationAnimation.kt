@@ -29,7 +29,7 @@ import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.math.AngleInfo
-
+//TWB - Adjustments should be done in the resource creation and not at the animation level
 open public class AdjustedImageArrayRotationAnimation : ImageArrayRotationAnimation {
         
 companion object {

@@ -98,7 +98,7 @@ var value = value
 
 
     
-                        if(!isNumber(digit) && digit != '.')
+                        if(!this.isNumberFromChar(digit) && digit != '.')
                         
                                     {
                                     
@@ -141,7 +141,7 @@ var value = value
 }
 
 
-    open fun isNumber(digit: Char)
+    open fun isNumberFromChar(digit: Char)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var digit = digit
@@ -330,7 +330,7 @@ var string = string
     
                         if(string != 
                                     null
-                                 && string.compareTo(stringUtil!!.NULL_STRING) != 0 && string.compareTo(stringUtil!!.EMPTY_STRING) != 0)
+                                 && string.compareTo(this.stringUtil!!.NULL_STRING) != 0 && string.compareTo(this.stringUtil!!.EMPTY_STRING) != 0)
                         
                                     {
                                     

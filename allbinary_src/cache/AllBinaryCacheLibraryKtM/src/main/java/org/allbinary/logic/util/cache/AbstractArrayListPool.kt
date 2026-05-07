@@ -85,7 +85,7 @@ this.buffers.add(cacheableInterface)
 
                 @Throws(Exception::class)
             
-    override fun add(cacheableInterfaces: Array<CacheableInterface?>)
+    override fun addArray(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var cacheableInterfaces = cacheableInterfaces

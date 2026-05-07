@@ -50,23 +50,24 @@ companion object {
 }
 
 
-    private var hardwareInterface: HardwareInterface = NoHardware.getInstance()!!
-
     open fun static_toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
+
+    var systemHardwareFactory: SystemHardwareFactory = SystemHardwareFactory.getInstance()!!
+
 
     var osBuffer: StringMaker = StringMaker()
 
 osBuffer!!.append("Hardware Info: \n")
 
     
-                        if(SystemHardwareFactory.hardwareInterface != 
+                        if(systemHardwareFactory!!.hardwareInterface != 
                                     null
                                 )
                         
                                     {
-                                    osBuffer!!.append(hardwareInterface!!.toString())
+                                    osBuffer!!.append(systemHardwareFactory!!.hardwareInterface!!.toString())
 
                                     }
                                 
@@ -88,6 +89,8 @@ osBuffer!!.append("Hardware Info: \n")
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    private var hardwareInterface: HardwareInterface = NoHardware.getInstance()!!
 private constructor ()
             : super()
         {
@@ -102,24 +105,24 @@ var operatingSystemInterface = operatingSystemInterface
         try {
             
     
-                        if(SystemHardwareFactory.hardwareInterface == NoHardware.getInstance())
+                        if(this.hardwareInterface == NoHardware.getInstance())
                         
                                     {
-                                    SystemHardwareFactory.hardwareInterface= HardwareFactory.getInstance()!!.getInstance(operatingSystemInterface)
+                                    this.hardwareInterface= HardwareFactory.getInstance()!!.getInstance(operatingSystemInterface)
 
                                     }
                                 
-this.logUtil!!.putF("Found Hardware", this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("Found Hardware", this, this.commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 }
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SystemHardwareFactory.hardwareInterface
+                        return this.hardwareInterface
 }
 
 

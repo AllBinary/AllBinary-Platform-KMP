@@ -28,7 +28,7 @@
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.form.item.CustomItemInterface
 
 open public class ScrollCurrentSelectionForm : ScrollSelectionForm {
@@ -41,7 +41,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm {
     private var maxWidth: Int = 0
 
     private val moveForSmallScreen: Boolean
-public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -152,7 +152,7 @@ this.dy= y +(this.rectangle.getHeight() shr 1)
     var size: Int = this.size()!!
 
 
-    var item2: CustomItem
+    var item2: ABCustomItem
 
 
 

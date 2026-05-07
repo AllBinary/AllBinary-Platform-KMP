@@ -11,6 +11,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
 open public class SqlTypeStrings
@@ -61,25 +62,25 @@ companion object {
 
     val TWELVE_SIZE: String = "(12)"
 
-    val ONE_KB_CHAR_COLUMN: String = StringBuilder().
+    val ONE_KB_CHAR_COLUMN: String = StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append("(1024)")!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
 
-    val MAX_CHAR_COLUMN: String = StringBuilder().
+    val MAX_CHAR_COLUMN: String = StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(MAX_SIZE)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
 
-    val MAX_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
+    val MAX_CHAR_COLUMN_NOT_NULL: String = StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(MAX_SIZE)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
 
-    val SIXTY_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
+    val SIXTY_CHAR_COLUMN_NOT_NULL: String = StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(SIXTY_SIZE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
 
-    val ONE_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
+    val ONE_CHAR_COLUMN_NOT_NULL: String = StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(ONE_SIZE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
 
-    val SIX_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
+    val SIX_CHAR_COLUMN_NOT_NULL: String = StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(SIX_SIZE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
 
-    val TWELVE_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
+    val TWELVE_CHAR_COLUMN_NOT_NULL: String = StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(this.TWELVE_SIZE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
 
     val TWO_INT_NOT_NULL: String = " INT(2) NOT NULL, "

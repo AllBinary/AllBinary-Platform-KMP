@@ -106,7 +106,7 @@ this.totalRefreshes++
                         
                                     {
                                     
-    var time: Short = (this.totalRefreshes /(elapsed shr DEFAULT_SCALE_FACTOR)).toShort()
+    var time: Short = (this.totalRefreshes /(elapsed shr this.DEFAULT_SCALE_FACTOR)).toShort()
 
 
 
@@ -167,7 +167,7 @@ this.totalRefreshes++
 
     var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
-totalTime= (totalTime shr DEFAULT_SCALE_FACTOR)
+totalTime= (totalTime shr this.DEFAULT_SCALE_FACTOR)
 
     
                         if(totalTime > 0 && this.updateDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
@@ -301,20 +301,20 @@ var totalTime = totalTime
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(STRING_ARRAY[0]!!)
+stringBuffer!!.append(this.STRING_ARRAY[0]!!)
 stringBuffer!!.appendlong(totalTime)
-stringBuffer!!.append(STRING_ARRAY[2]!!)
+stringBuffer!!.append(this.STRING_ARRAY[2]!!)
 stringBuffer!!.appendlong(this.totalFrames)
-stringBuffer!!.append(STRING_ARRAY[4]!!)
+stringBuffer!!.append(this.STRING_ARRAY[4]!!)
 stringBuffer!!.appendlong(this.totalFrames /totalTime)
 
     
                         if(this.totalRefreshes > 0)
                         
                                     {
-                                    stringBuffer!!.append(STRING_ARRAY[6]!!)
+                                    stringBuffer!!.append(this.STRING_ARRAY[6]!!)
 stringBuffer!!.appendlong(this.totalRefreshes)
-stringBuffer!!.append(STRING_ARRAY[8]!!)
+stringBuffer!!.append(this.STRING_ARRAY[8]!!)
 stringBuffer!!.appendlong(this.totalRefreshes /totalTime)
 stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 

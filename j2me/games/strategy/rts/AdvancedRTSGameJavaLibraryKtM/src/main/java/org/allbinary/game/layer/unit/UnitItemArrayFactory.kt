@@ -32,7 +32,7 @@ import org.allbinary.game.layer.item.LayerInterfaceFactoryImageItem
 import org.allbinary.game.layer.item.RTSLayerTextAnimation
 import org.allbinary.game.layer.resources.BasicGameResources
 import org.allbinary.game.layer.waypoint.FlagGameResources
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.string.CommonSeps
 import org.allbinary.animation.Animation
@@ -50,7 +50,7 @@ open public class UnitItemArrayFactory
         
 companion object {
             
-    private val ITEMS: Array<CustomItem?> = CustomItemUtil.getInstance()!!.CUSTOM_ITEM_ARRAY
+    private val ITEMS: Array<ABCustomItem?> = CustomItemUtil.getInstance()!!.CUSTOM_ITEM_ARRAY
 
         }
             
@@ -71,7 +71,7 @@ this.resources= resources
             
     open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: ABCustomItem{
     //var flagResources = flagResources
     //var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
@@ -101,7 +101,7 @@ this.resources= resources
             
     open fun createNamedFlagItem(flagResources: FlagGameResources, name: String, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: ABCustomItem{
     //var flagResources = flagResources
     //var name = name
     //var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
@@ -112,7 +112,7 @@ this.resources= resources
     var image: Image = IMAGE_CACHE.getWithKey(flagResources!!.RESOURCE_ICON)!!
 
 
-    var item: CustomItem = LayerInterfaceFactoryImageItem(name, image, ImageItem.LAYOUT_DEFAULT, flagResources!!.NAME, this.basicColor, arrayOf(RTSLayerTextAnimation(RTSGameStrings.getInstance()!!.DRAGGABLE, image)), layerInterfaceFactoryInterface)
+    var item: ABCustomItem = LayerInterfaceFactoryImageItem(name, image, ImageItem.LAYOUT_DEFAULT, flagResources!!.NAME, this.basicColor, arrayOf(RTSLayerTextAnimation(RTSGameStrings.getInstance()!!.DRAGGABLE, image)), layerInterfaceFactoryInterface)
 
 
 
@@ -126,7 +126,7 @@ this.resources= resources
             
     override fun getItems()
         //nullable = true from not(false or (false and true)) = true
-: Array<CustomItem?>{
+: Array<ABCustomItem?>{
 
 
 

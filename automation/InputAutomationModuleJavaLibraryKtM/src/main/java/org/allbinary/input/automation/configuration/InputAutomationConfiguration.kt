@@ -42,7 +42,7 @@ import org.allbinary.logic.io.file.FileUtil
 import org.allbinary.logic.io.file.FileWrapperUtil
 import org.allbinary.logic.io.path.AbPath
 import org.w3c.dom.Document
-
+//name="inputAutomationConfiguration", 
 open public class InputAutomationConfiguration
             : Object
          {

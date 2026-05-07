@@ -43,7 +43,7 @@ import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.system.Memory
-
+// MIDlet methods not overridden are final
 open public class AllBinaryMidlet : MIDlet
                 , CommandListener {
         

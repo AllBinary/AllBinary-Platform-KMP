@@ -29,7 +29,7 @@ import java.util.logging.Level
 import org.allbinary.logic.string.StringMaker
 import java.util.logging.Logger
 import org.allbinary.string.CommonStrings
-
+//ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
          {

@@ -33,7 +33,7 @@ import org.allbinary.string.CommonSeps
 open public class AndroidOS : GenericOperatingSystem {
         
 
-    private var stringBuffer: StringBuilder = StringBuilder()
+    private var stringBuffer: StringMaker = StringMaker()
 
     private val DEVICE_ID: String = "DeviceId"
 
@@ -85,11 +85,11 @@ this.stringBuffer!!.append(properties.getNetworkOperatorName())
 this.stringBuffer!!.append(commonStrings!!.SPACE)
 this.stringBuffer!!.append("NetworkType")
 this.stringBuffer!!.append(commonStrings!!.EQUALS)
-this.stringBuffer!!.append(properties.getNetworkType())
+this.stringBuffer!!.appendint(properties.getNetworkType())
 this.stringBuffer!!.append(commonStrings!!.SPACE)
 this.stringBuffer!!.append("PhoneType")
 this.stringBuffer!!.append(commonStrings!!.EQUALS)
-this.stringBuffer!!.append(properties.getPhoneType())
+this.stringBuffer!!.appendint(properties.getPhoneType())
 this.stringBuffer!!.append(commonStrings!!.SPACE)
 this.stringBuffer!!.append("SimCountryIso")
 this.stringBuffer!!.append(commonStrings!!.EQUALS)

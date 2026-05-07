@@ -32,7 +32,7 @@ import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.font.MyFont
 import org.allbinary.graphics.paint.Paintable
-
+//J2SEForJ2ME
 open public class AboutPaintable : Paintable {
         
 companion object {

@@ -13,7 +13,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.TsUtil
+import org.allbinary.TsUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.visitor.Visitor
 import org.allbinary.string.CommonSeps
 
@@ -22,17 +23,17 @@ open public class ObjectPermutationVisitor : Visitor {
 
     val data: Array<Any?>
 public constructor (data: Array<Any?>){
-var data = data
+    //var data = data
 this.data= data
 }
 
 
-    private var stringBuilder: StringBuilder = StringBuilder()
+    private var stringBuilder: StringMaker = StringMaker()
 
     open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
-var anyType = anyType
+    //var anyType = anyType
 this.stringBuilder!!.delete(0, stringBuilder!!.length())
 this.print(this.data, stringBuilder)
 
@@ -46,19 +47,19 @@ this.print(this.data, stringBuilder)
     open fun print(data: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 {
-var data = data
+    //var data = data
 
-    var stringBuilder: StringBuilder = StringBuilder()
+    var stringBuilder: StringMaker = StringMaker()
 
 this.print(data, stringBuilder)
 }
 
 
-    open fun print(data: Array<Any?>, stringBuilder: StringBuilder)
+    open fun print(data: Array<Any?>, stringBuilder: StringMaker)
         //nullable = true from not(false or (false and false)) = true
 {
-var data = data
-var stringBuilder = stringBuilder
+    //var data = data
+    //var stringBuilder = stringBuilder
 
     var tsUtil: TsUtil = TsUtil.getInstance()!!
 
@@ -73,7 +74,7 @@ var stringBuilder = stringBuilder
                         for (i in 0 until size)
 
         {
-stringBuilder!!.append(tsUtil!!.hashCode(data[i]!!))
+stringBuilder!!.appendint(tsUtil!!.hashCode(data[i]!!))
 stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)
 }
 

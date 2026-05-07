@@ -36,7 +36,7 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 import org.allbinary.canvas.SpecialMessageUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.TimeDelayHelper
-
+//ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
          {

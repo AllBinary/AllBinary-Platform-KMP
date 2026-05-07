@@ -1,0 +1,148 @@
+
+        /* Generated Code Do Not Modify */
+        package org.allbinary.graphics.form
+
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import javax.microedition.lcdui.Graphics
+import org.allbinary.graphics.color.BasicColor
+import org.allbinary.graphics.form.item.ABCustomItem
+import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringUtil
+import org.allbinary.string.CommonStrings
+
+open public class ABCustomForm : CustomScreen {
+        
+
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+public constructor (title: String, items: Array<ABCustomItem?>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+var title = title
+var items = items
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
+}
+
+
+    open fun size()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+
+    open fun setSelectedIndex(index: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+var index = index
+}
+
+
+    open fun getSelectedIndex()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+
+    open fun deleteAll()
+        //nullable = true from not(false or (false and true)) = true
+{
+}
+
+
+    open fun delete(itemNum: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+var itemNum = itemNum
+}
+
+
+    open fun append(item: ABCustomItem)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+var item = item
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return  -1
+}
+
+
+    open fun insert(itemNum: Int, item: ABCustomItem)
+        //nullable = true from not(false or (false and false)) = true
+{
+var itemNum = itemNum
+var item = item
+}
+
+
+    open fun set(itemNum: Int, item: ABCustomItem)
+        //nullable = true from not(false or (false and false)) = true
+{
+var itemNum = itemNum
+var item = item
+}
+
+
+    open fun get(itemNum: Int)
+        //nullable = true from not(false or (false and false)) = true
+: ABCustomItem{
+var itemNum = itemNum
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ABCustomItem.NULL_CUSTOM_ITEM
+}
+
+
+    open fun getWidth()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                            throw RuntimeException()
+}
+
+
+    open fun paint(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+}
+
+
+    open fun getTitle()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return StringUtil.getInstance()!!.EMPTY_STRING
+}
+
+
+}
+                
+            
+

@@ -27,7 +27,7 @@
         
 import org.allbinary.util.BasicArrayList
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
-
+//1.4.2
 open public class PathFinderGraphHackVisitor : BasePathFinderGraphVisitor {
         
 public constructor (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)                        

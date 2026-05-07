@@ -11,7 +11,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-
+//J2SE to J2ME compatibility
 open public class Deprecated
             : Object
          {

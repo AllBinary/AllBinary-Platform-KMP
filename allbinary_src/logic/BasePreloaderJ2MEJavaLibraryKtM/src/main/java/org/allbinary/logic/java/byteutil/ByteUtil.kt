@@ -223,7 +223,7 @@ index++
 }
 
 
-    open fun compare(newByteArray: ByteArray, newSize: Int, oldByteArray: ByteArray, stats: IntArray)
+    open fun compareWithStats(newByteArray: ByteArray, newSize: Int, oldByteArray: ByteArray, stats: IntArray)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var newByteArray = newByteArray

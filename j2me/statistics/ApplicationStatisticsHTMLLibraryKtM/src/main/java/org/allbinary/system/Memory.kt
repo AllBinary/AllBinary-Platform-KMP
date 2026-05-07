@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringUtil
-
+//ActualPlatform
 /*actual*/ open public class Memory
             : Object
          {

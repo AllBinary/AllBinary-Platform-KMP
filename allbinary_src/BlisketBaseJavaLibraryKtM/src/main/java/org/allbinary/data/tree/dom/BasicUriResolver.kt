@@ -46,21 +46,7 @@ open public class BasicUriResolver
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val IMPORT_URL: String = "/{import url}"
-
-    private val ATTEMPT: String = "attempt to use xsl:import: href="
-
-    private val BASE: String = "\nBase= "
-
-    private val NEW_PATH: String = "\nNew path= "
-
-    private val NOTE: String = "\nNote: "
-
-    private val URL_GLOBAL: String = " is a urlglobal"
-
-    private val REQUIRED_EXTENSION: String = "\nRequired Extension: "
-
-    private val RESOLVE: String = "resolve"
+    private val uriResolverStrings: URIResolverStrings = URIResolverStrings.getInstance()!!
 
     private var extension: String
 public constructor (extension: String)
@@ -106,18 +92,18 @@ stringBuffer!!.append(href)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(this.ATTEMPT)
+stringBuffer!!.append(this.uriResolverStrings!!.ATTEMPT)
 stringBuffer!!.append(href)
-stringBuffer!!.append(this.BASE)
+stringBuffer!!.append(this.uriResolverStrings!!.BASE)
 stringBuffer!!.append(base)
-stringBuffer!!.append(this.NEW_PATH)
+stringBuffer!!.append(this.uriResolverStrings!!.NEW_PATH)
 stringBuffer!!.append(abPath!!.toString())
-stringBuffer!!.append(this.NOTE)
+stringBuffer!!.append(this.uriResolverStrings!!.NOTE)
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
-stringBuffer!!.append(this.URL_GLOBAL)
-stringBuffer!!.append(this.REQUIRED_EXTENSION)
+stringBuffer!!.append(this.uriResolverStrings!!.URL_GLOBAL)
+stringBuffer!!.append(this.uriResolverStrings!!.REQUIRED_EXTENSION)
 stringBuffer!!.append(this.extension)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, RESOLVE)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.uriResolverStrings!!.RESOLVE)
 
                                     }
                                 
@@ -155,7 +141,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, RESOLVE)
 
 stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
-stringBuffer!!.append(this.IMPORT_URL)
+stringBuffer!!.append(this.uriResolverStrings!!.IMPORT_URL)
 
 
 

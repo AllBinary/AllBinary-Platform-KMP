@@ -29,11 +29,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.TsUtil
+import org.allbinary.TsUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
-
+//ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
          {

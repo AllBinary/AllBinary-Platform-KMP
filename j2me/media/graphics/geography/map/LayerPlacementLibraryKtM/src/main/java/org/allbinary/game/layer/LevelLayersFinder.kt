@@ -77,26 +77,26 @@ companion object {
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
 
 
-    var layerHashtable: Hashtable<Any, Any>
+    var layerHashtableCanBeNull: Hashtable<Any, Any>?
 
 
-    var integer: Integer
+    var integerCanBeNull: Integer?
 
 
-    var cachedInteger: Integer
+    var cachedIntegerCanBeNull: Integer?
 
 
         while(this.enumerationUtil!!.hasMoreElements(enumeration))
         {
-layerHashtable= hashtable.get(this.enumerationUtil!!.nextElement(enumeration)!! as Object) as Hashtable<Any, Any>
-integer= layerHashtable!!.get(Layer.ID as Object) as Integer
-cachedInteger= smallIntegerSingletonFactory!!.getAt(integer.toInt())
+layerHashtableCanBeNull= hashtable.get(this.enumerationUtil!!.nextElement(enumeration)!! as Object) as Hashtable<Any, Any>
+integerCanBeNull= layerHashtableCanBeNull!!.get(Layer.ID as Object) as Integer
+cachedIntegerCanBeNull= smallIntegerSingletonFactory!!.getAt(integerCanBeNull!!.toInt())
 
     
-                        if(!list.contains(cachedInteger))
+                        if(!list.contains(cachedIntegerCanBeNull))
                         
                                     {
-                                    list.add(cachedInteger)
+                                    list.add(cachedIntegerCanBeNull)
 
                                     }
                                 

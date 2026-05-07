@@ -36,7 +36,7 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.font.MyFont
-import org.allbinary.graphics.form.item.CustomGaugeItem
+import org.allbinary.graphics.form.item.ABCustomGaugeItem
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.graphics.paint.PaintableInterface
@@ -63,7 +63,7 @@ open public class ProgressCanvas : RunnableCanvas
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-paint2(graphics)
+this@ProgressCanvas.paint2(graphics)
 }
 
                                 }
@@ -75,15 +75,15 @@ paint2(graphics)
 
     private val maxValue: Float = 100.0f
 
-    val gauge: CustomGaugeItem
+    val gauge: ABCustomGaugeItem
 
-    private val TEXT: String = commonStrings!!.LOADING
+    private val TEXT: String = this.commonStrings!!.LOADING
 
     private var text: String = this.TEXT
 
     private var background: Boolean = true
 
-    var paintable: PaintableInterface = GAUGE_PAINTABLE
+    var paintable: PaintableInterface = this.GAUGE_PAINTABLE
 
     var inProgress: Boolean = false
 
@@ -97,7 +97,7 @@ paint2(graphics)
     open override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-pathFindingThreadPool!!.runAPriorityTask()
+this.pathFindingThreadPool!!.runAPriorityTask()
 }
 
                                 }
@@ -115,7 +115,7 @@ pathFindingThreadPool!!.runAPriorityTask()
                             //For kotlin this is before the body of the constructor.
                     
 this.backgroundBasicColor= backgroundBasicColor
-this.gauge= CustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, this.maxValue.toInt(), 0, backgroundBasicColor, foregroundBasicColor)
+this.gauge= ABCustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, this.maxValue.toInt(), 0, backgroundBasicColor, foregroundBasicColor)
 }
 
 
@@ -157,14 +157,14 @@ var cmdListener = cmdListener
     open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.START_METHOD_NAME)
 this.setBackground(true)
 this.gauge.setHeight(30)
-this.gauge.setLabel(commonStrings!!.PLEASE_WAIT)
+this.gauge.setLabel(this.commonStrings!!.PLEASE_WAIT)
 this.setText(this.TEXT)
 this.setValue(0)
 this.inGameProcessor= Processor.getInstance()
-this.paintable= GAUGE_PAINTABLE
+this.paintable= this.GAUGE_PAINTABLE
 this.inProgress= true
 }
 
@@ -177,7 +177,7 @@ this.inProgress= true
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
-this.logUtil!!.putF(commonStrings!!.START, this, START_BACKGROUND)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.START_BACKGROUND)
 
     var myFont: MyFont = MyFont.getInstance()!!
 
@@ -187,7 +187,7 @@ this.gauge.setLabel(this.backgroundLabel)
 this.setText(this.TEXT)
 this.setValue(0)
 this.inGameProcessor= Processor.getInstance()
-this.paintable= GAUGE_PAINTABLE
+this.paintable= this.GAUGE_PAINTABLE
 }
 
 
@@ -203,14 +203,14 @@ this.inGame()
     open fun inGame()
         //nullable = true from not(false or (false and true)) = true
 {
-this.inGameProcessor= IN_GAME_PROCESSOR
+this.inGameProcessor= this.IN_GAME_PROCESSOR
 }
 
 
     open fun end()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.END_METHOD_NAME)
 this.gauge.setValue(this.getMaxValue())
 this.endActual()
 this.paintable= NullPaintable.getInstance()
@@ -221,7 +221,7 @@ this.paintable= NullPaintable.getInstance()
         //nullable = true from not(false or (false and true)) = true
 {
 this.gauge.setValue(this.getMaxValue())
-this.inGameProcessor= IN_GAME_PROCESSOR
+this.inGameProcessor= this.IN_GAME_PROCESSOR
 }
 
 
@@ -255,7 +255,7 @@ var text = text
 var index = index
 this.setText(StringMaker().
                             append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getAt(index)!!.toString())!!.toString())
-PreLogUtil.put(this.text, this, ADD_PORTION)
+PreLogUtil.put(this.text, this, this.ADD_PORTION)
 this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
@@ -270,7 +270,7 @@ var text = text
                         if(this.text != text)
                         
                                     {
-                                    PreLogUtil.put(text, this, ADD_PORTION)
+                                    PreLogUtil.put(text, this, this.ADD_PORTION)
 
                                     }
                                 

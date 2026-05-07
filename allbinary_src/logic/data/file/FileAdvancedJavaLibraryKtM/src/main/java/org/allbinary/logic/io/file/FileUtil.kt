@@ -47,7 +47,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
-
+//data/init/views/TestStore/template/type/genericTemplateObjectConfig.xml
 open public class FileUtil
             : Object
          {
@@ -1280,7 +1280,7 @@ var string = string
 
 
         try {
-            PreLogUtil.put(StringBuilder().
+            PreLogUtil.put(StringMaker().
                             append(this.WRITE_LABEL)!!.append(filePath)!!.append(this.DATA_LABEL)!!.append(string)!!.toString(), this, this.WRITE_METHOD)
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!

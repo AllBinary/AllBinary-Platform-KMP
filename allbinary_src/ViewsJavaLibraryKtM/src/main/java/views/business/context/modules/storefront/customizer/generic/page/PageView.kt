@@ -28,7 +28,7 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import views.business.context.modules.storefront.HttpStoreComponentView
-
+//implements DomNodeInterface
 open public class PageView : HttpStoreComponentView {
         
 

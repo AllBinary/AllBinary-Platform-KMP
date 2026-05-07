@@ -33,7 +33,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.system.os.OperatingSystemFactory
 import org.allbinary.string.CommonStrings
-
+// This is the information sent to the license server
 open public class AbeClientInformation : ClientInformation {
         
 

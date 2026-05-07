@@ -79,7 +79,7 @@ hashtable.put(remoteHighScores!!.ASCENDING, remoteHighScores!!.getAscending()!!.
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-hashtable.put(displayInfoSingleton!!.ORIENTATION, BooleanFactory.getInstance()!!.toString(displayInfoSingleton!!.isPortrait()))
+hashtable.put(displayInfoSingleton!!.ORIENTATION, BooleanFactory.getInstance()!!.toStringb(displayInfoSingleton!!.isPortrait()))
 hashtable.put(RemoteHighScoresData.getInstance()!!.GAME_CONFIGURATION, GameConfigurationCentral.getInstance()!!.toString())
 hashtable.put(RemoteHighScoresData.getInstance()!!.SCORE, (highScore!!.getScore()).toString())
 

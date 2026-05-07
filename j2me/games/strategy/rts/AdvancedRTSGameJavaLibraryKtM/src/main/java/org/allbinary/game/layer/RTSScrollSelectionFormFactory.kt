@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColorFactory
@@ -43,7 +43,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun getInstance(formLabel: String, items: Array<CustomItem?>)
+    open fun getInstance(formLabel: String, items: Array<ABCustomItem?>)
         //nullable =  from not(true or (false and false)) = 
 : MultipleScrollSelectionHorizontalForm{
     //var formLabel = formLabel

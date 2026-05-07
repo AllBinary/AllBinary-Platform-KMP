@@ -114,7 +114,7 @@ import org.allbinary.graphics.form.FormTypeFactory
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.graphics.form.ScrollSelectionFormNoneFactory
 import org.allbinary.graphics.form.item.CommandTextItemArrayFactory
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.opengles.CurrentDisplayableFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
@@ -544,7 +544,7 @@ this.closeMenu()
     var commandTextItemArrayFactory: CommandTextItemArrayFactory = gameLimitedCommandTextItemArrayFactory!!.getCommandTextItemArrayFactory()!!
 
 
-    var items: Array<CustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())!!
+    var items: Array<ABCustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())!!
 
 
     var rectangle: Rectangle = formUtil!!.createFormRectangle()!!
@@ -617,7 +617,7 @@ scrollSelectionForm!!.deleteAll()
     var commandTextItemArrayFactory: CommandTextItemArrayFactory = gameLimitedCommandTextItemArrayFactory!!.getCommandTextItemArrayFactory()!!
 
 
-    var items: Array<CustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())!!
+    var items: Array<ABCustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())!!
 
 
     var size: Int = items.size

@@ -27,7 +27,7 @@
         
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
-
+//NoPlatform
 expect open public class LogFactory
             : Object
          {

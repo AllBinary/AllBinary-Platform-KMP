@@ -29,7 +29,7 @@ import java.util.Hashtable
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.item.LayerInterfaceFactoryImageItem
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.identification.Group
@@ -63,7 +63,7 @@ open public class RTSFormInput
 
     private var selectedStickyItemIndex: Int= 0
 
-    private var selectedStickyItem: CustomItem = CustomItem.NULL_CUSTOM_ITEM
+    private var selectedStickyItem: ABCustomItem = ABCustomItem.NULL_CUSTOM_ITEM
 public constructor (groupInterfaceArray: Array<Group?>)
             : super()
         {
@@ -136,7 +136,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getIn
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
 
 
-    var item: CustomItem = scrollSelectionForm!!.get(index)!!
+    var item: ABCustomItem = scrollSelectionForm!!.get(index)!!
 
 
     
@@ -169,7 +169,7 @@ this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
 
                 @Throws(Exception::class)
             
-    open fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -209,7 +209,7 @@ this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
 
 
-    var item: CustomItem = scrollSelectionForm!!.get(index)!!
+    var item: ABCustomItem = scrollSelectionForm!!.get(index)!!
 
 
     
@@ -237,7 +237,7 @@ this.processStickyGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, laye
 
                 @Throws(Exception::class)
             
-    open fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var associatedRtsLayer = associatedRtsLayer
@@ -252,7 +252,7 @@ var index = index
             
     open fun getItemAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: ABCustomItem{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var point = point
 this.logUtil!!.putF(StringMaker().
@@ -290,7 +290,7 @@ this.logUtil!!.putF(StringMaker().
 
                 @Throws(Exception::class)
             
-    open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getInstance(layerManager: AllBinaryLayerManager, aItem: ABCustomItem, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
 : CollidableDestroyableDamageableLayer{
     //var layerManager = layerManager
@@ -371,7 +371,7 @@ this.stickyItemSelected= stickyItemSelected
 
     open fun getSelectedStickyItem()
         //nullable = true from not(false or (false and true)) = true
-: CustomItem{
+: ABCustomItem{
 
 
 
@@ -380,7 +380,7 @@ this.stickyItemSelected= stickyItemSelected
 }
 
 
-    open fun setSelectedStickyItem(selectedStickyItem: CustomItem)
+    open fun setSelectedStickyItem(selectedStickyItem: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedStickyItem = selectedStickyItem

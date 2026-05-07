@@ -28,10 +28,10 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.NullUtil
-import org.allbinary.logic.TsUtil
+import org.allbinary.TsUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
-
+//ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
          {

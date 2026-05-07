@@ -30,7 +30,7 @@ import org.allbinary.business.DynamicObjectData
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.log.LogUtil
 import tags.StoreWorkFlowTag
-
+//and remove the hidden fields
 open public class BasicWorkFlowTag : StoreWorkFlowTag {
         
 

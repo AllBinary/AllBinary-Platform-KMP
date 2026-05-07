@@ -33,7 +33,7 @@ import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.visual.transform.info.objectConfig.TransformInfoObjectConfigInterface
 import org.w3c.dom.Document
-
+//Hack class should not exist
 open public class TransformInfoBasic : AbContext
                 , TransformInfoHttpInterface {
         

@@ -17,12 +17,10 @@ import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.CanvasStrings
-import org.allbinary.graphics.form.item.CustomItem
-import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.logic.string.StringUtil
-import org.allbinary.string.CommonStrings
 
-open public class PaintableForm : CustomForm {
+open public class PaintableForm : ABCustomForm {
         
 companion object {
             
@@ -39,7 +37,7 @@ companion object {
     var y: Int= 0
 
     var formType: FormType = FormTypeFactory.getInstance()!!.NULL_FORM_TYPE
-public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<ABCustomItem?>, rectangle: Rectangle, formType: FormType, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, backgroundBasicColor, foregroundBasicColor){
     //var title = title

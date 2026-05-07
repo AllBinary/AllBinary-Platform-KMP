@@ -25,13 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Calendar
 import java.util.HashMap
 import java.util.Vector
-import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
+import org.allbinary.logic.string.StringMaker
 
 open public class IdGeneratorEntity : AbSqlBean
                 , IdGeneratorEntityInterface {
@@ -53,7 +52,7 @@ public constructor ()
 
                             //For kotlin this is before the body of the constructor.
                     
-this.tableData= StringBuilder().
+this.tableData= StringMaker().
                             append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(VALUE)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(NAME)!!.append(this.sqlStrings!!.END)!!.toString()
 super.setTableName(this.tableName)
 }

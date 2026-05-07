@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-
+//NoPlatform
 expect open public class LogUtil
             : Object
          {

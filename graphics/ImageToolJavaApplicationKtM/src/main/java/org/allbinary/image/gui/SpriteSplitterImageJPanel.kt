@@ -462,7 +462,7 @@ this.getParent()!!.repaint()
 
     var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
 
-filePath= StringBuilder().
+filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(this.commonSeps!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
 file= File(filePath)
 

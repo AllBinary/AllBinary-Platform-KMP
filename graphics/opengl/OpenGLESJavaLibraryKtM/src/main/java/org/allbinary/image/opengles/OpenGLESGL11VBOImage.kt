@@ -36,7 +36,7 @@ import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.opengles.GLUtil
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.opengles.PlatformTextureBaseFactory
-
+//This is not actually VBO impl
 open public class OpenGLESGL11VBOImage : OpenGLESImage {
         
 

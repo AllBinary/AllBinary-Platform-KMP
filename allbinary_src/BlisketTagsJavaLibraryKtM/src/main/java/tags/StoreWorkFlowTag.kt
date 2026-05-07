@@ -34,7 +34,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
 import org.allbinary.logic.visual.transform.info.TransformInfoData
 import taghelpers.StoreTagWorkFlowHelperFactory
-
+//and hidden field removal
 open public class StoreWorkFlowTag : HelperTag {
         
 

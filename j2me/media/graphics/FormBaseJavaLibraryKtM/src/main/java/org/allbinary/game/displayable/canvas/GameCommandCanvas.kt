@@ -62,7 +62,7 @@ import org.allbinary.graphics.form.PaintableForm
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.graphics.form.ScrollSelectionFormNoneFactory
 import org.allbinary.graphics.form.item.CommandTextItemArrayFactory
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.form.item.validation.AllCommandsVisitor
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
@@ -223,7 +223,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
         //nullable = true from not(false or (false and true)) = true
 : ScrollSelectionForm{
 
-    var items: Array<CustomItem?> = CommandTextItemArrayFactory(AllCommandsVisitor()).
+    var items: Array<ABCustomItem?> = CommandTextItemArrayFactory(AllCommandsVisitor()).
                             getInstance(this.getCommandStack() as Vector<Any>, this.backgroundBasicColor, this.foregroundBasicColor)!!
 
 

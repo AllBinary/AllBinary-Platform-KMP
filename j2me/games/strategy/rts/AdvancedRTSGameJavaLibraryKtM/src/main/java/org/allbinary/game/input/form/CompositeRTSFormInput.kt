@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.RTSPlayerLayerInterface
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.string.CommonStrings
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
@@ -142,7 +142,7 @@ var point = point
 
                 @Throws(Exception::class)
             
-    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -204,7 +204,7 @@ var point = point
 
                 @Throws(Exception::class)
             
-    override fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    override fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -248,7 +248,7 @@ this.rtsFormInputArray[0]!!.setStickyItemSelected(stickyItemSelected)
 
     override fun getSelectedStickyItem()
         //nullable = true from not(false or (false and true)) = true
-: CustomItem{
+: ABCustomItem{
 
 
 
@@ -257,7 +257,7 @@ this.rtsFormInputArray[0]!!.setStickyItemSelected(stickyItemSelected)
 }
 
 
-    override fun setSelectedStickyItem(selectedStickyItem: CustomItem)
+    override fun setSelectedStickyItem(selectedStickyItem: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedStickyItem = selectedStickyItem

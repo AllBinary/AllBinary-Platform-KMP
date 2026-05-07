@@ -46,7 +46,7 @@ import org.w3c.dom.Node
 import views.business.context.modules.storefront.HttpStoreComponentView
 import views.business.context.modules.storefront.customizer.template.objectConfig.InsertTemplateCustomizerTransformInfoObjectConfig
 import views.business.context.modules.storefront.customizer.template.objectConfig.NoTemplateTransformInfoObjectConfig
-
+//Sets Template Type
 open public class InsertCustomizerValidationView : HttpStoreComponentView
                 , ValidationComponentInterface {
         

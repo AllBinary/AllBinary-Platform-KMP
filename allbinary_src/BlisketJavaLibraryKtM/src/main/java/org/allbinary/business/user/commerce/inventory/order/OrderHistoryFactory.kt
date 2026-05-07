@@ -28,7 +28,7 @@
 import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
-
+//Retrieves a single order for a user
 open public class OrderHistoryFactory
             : Object
          {

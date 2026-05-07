@@ -178,7 +178,7 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 this.process(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, eventStrings!!.FIRE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.eventStrings!!.FIRE_EVENT, e)
 }
 
 index++
@@ -233,7 +233,7 @@ stringBuffer!!.append(this.eventStrings!!.LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.TOSTRING, e)
 }
 
 index++

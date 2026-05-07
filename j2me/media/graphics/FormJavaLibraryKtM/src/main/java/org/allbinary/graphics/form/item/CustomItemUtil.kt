@@ -52,7 +52,7 @@ companion object {
             {
             }            
         
-    val CUSTOM_ITEM_ARRAY: Array<CustomItem?> = arrayOfNulls(0)
+    val CUSTOM_ITEM_ARRAY: Array<ABCustomItem?> = arrayOfNulls(0)
 
 }
                 

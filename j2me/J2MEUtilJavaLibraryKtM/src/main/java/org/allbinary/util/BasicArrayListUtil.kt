@@ -71,7 +71,7 @@ list.add(commonPhoneStrings!!.SEVEN)
 list.add(commonPhoneStrings!!.EIGHT)
 list.add(commonPhoneStrings!!.NINE)
 BasicArrayListUtil.getInstance()!!.reverse(list)
-System.out.println(list)
+System.out.println(list.toString())
 }
 
 

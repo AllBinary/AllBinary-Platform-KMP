@@ -31,6 +31,7 @@ import java.util.Enumeration
 import java.util.HashMap
 import java.util.Vector
 import javax.servlet.http.HttpServletRequest
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
 
@@ -152,7 +153,7 @@ vector.add(this.requestedFilePath)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringBuilder().
+                        return StringMaker().
                             append(this.NAME)!!.append(this.commonSeps!!.COLON_SEP)!!.append(abeHttpRequestInfoData!!.HTTP_USER_AGENT)!!.append(this.commonSeps!!.COLON_SEP)!!.append(this.httpUserAgent)!!.append(this.commonSeps!!.SPACE)!!.append(abeHttpRequestInfoData!!.REMOTE_ADDRESS)!!.append(this.commonSeps!!.COLON_SEP)!!.append(this.remoteAddress)!!.append(this.commonSeps!!.SPACE)!!.append(abeHttpRequestInfoData!!.REMOTE_HOST)!!.append(this.commonSeps!!.COLON_SEP)!!.append(this.remoteHost)!!.append(this.commonSeps!!.SPACE)!!.append(abeHttpRequestInfoData!!.REMOTE_HOST_BY_ADDRESS)!!.append(this.commonSeps!!.COLON_SEP)!!.append(this.remoteHostByAddr)!!.append(this.commonSeps!!.SPACE)!!.append(abeHttpRequestInfoData!!.REMOTE_PORT)!!.append(this.commonSeps!!.COLON_SEP)!!.append(this.remotePort)!!.append(this.commonSeps!!.SPACE)!!.append(abeHttpRequestInfoData!!.REQUEST_FILE_PATH)!!.append(this.commonSeps!!.COLON_SEP)!!.append(this.requestedFilePath)!!.toString()
 }
 

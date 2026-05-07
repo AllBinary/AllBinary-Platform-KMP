@@ -32,7 +32,7 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
-
+//This is mainly for network communications.
 open public class SecondaryThreadPool : ThreadPool {
         
 companion object {

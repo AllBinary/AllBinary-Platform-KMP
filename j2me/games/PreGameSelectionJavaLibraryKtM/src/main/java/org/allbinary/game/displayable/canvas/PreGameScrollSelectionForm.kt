@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.form.FormTypeFactory
@@ -34,7 +34,7 @@ import org.allbinary.graphics.form.ScrollCurrentSelectionForm
 
 open public class PreGameScrollSelectionForm : ScrollCurrentSelectionForm {
         
-public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, formPaintableFactory, rectangle, FormTypeFactory.getInstance()!!.TEMP_HORIZONTAL_FORM, 0, false, backgroundBasicColor, foregroundBasicColor){
 var title = title

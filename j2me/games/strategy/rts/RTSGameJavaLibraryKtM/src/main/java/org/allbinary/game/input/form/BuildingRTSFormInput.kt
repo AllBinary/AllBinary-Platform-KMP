@@ -33,7 +33,7 @@ import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.capital.Capital
 import org.allbinary.game.layer.item.LayerInterfaceFactoryImageItem
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.media.audio.BuildingSound
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
@@ -139,7 +139,7 @@ this.mapEdgeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -163,7 +163,7 @@ this.buildFromMotionInput(rtsPlayerLayerInterface, layerManager, item, itemIndex
 }
 
 
-    open fun isDemoLocked(item: CustomItem)
+    open fun isDemoLocked(item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var item = item
@@ -200,7 +200,7 @@ this.buildFromMotionInput(rtsPlayerLayerInterface, layerManager, item, itemIndex
 
                 @Throws(Exception::class)
             
-    open fun buildFromMotionInput(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    open fun buildFromMotionInput(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface

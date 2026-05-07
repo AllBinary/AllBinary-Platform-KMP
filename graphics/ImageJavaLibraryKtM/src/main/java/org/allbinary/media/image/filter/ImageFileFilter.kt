@@ -27,7 +27,7 @@
         
 import java.io.File
 import javax.swing.filechooser.FileFilter
-
+//TWB - replace with file visitor version
 open public class ImageFileFilter : FileFilter {
         
 

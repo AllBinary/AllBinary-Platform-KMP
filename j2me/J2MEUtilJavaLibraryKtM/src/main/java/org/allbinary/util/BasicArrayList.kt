@@ -16,7 +16,7 @@
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
-
+//This is a very fast and simple resizable list.
 open public class BasicArrayList
             : Object
          {

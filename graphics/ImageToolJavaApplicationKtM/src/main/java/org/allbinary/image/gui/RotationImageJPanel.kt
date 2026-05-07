@@ -34,6 +34,7 @@ import java.io.File
 import java.io.IOException
 import javax.imageio.ImageIO
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.image.ImageArrayRotationUtil
 import org.allbinary.media.image.ImageProcessedVisitor
 import org.allbinary.media.image.ImageProcessorInput
@@ -266,7 +267,7 @@ this.getParent()!!.repaint()
 
     var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
 
-filePath= StringBuilder().
+filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
 file= File(filePath)
 

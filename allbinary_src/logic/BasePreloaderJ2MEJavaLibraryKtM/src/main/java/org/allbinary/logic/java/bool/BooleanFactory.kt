@@ -64,8 +64,8 @@ companion object {
 
     val NO: String = "no"
 
-    open fun toString(bool: Boolean)
-        //nullable = true from not(false or (true and false)) = true
+    open fun toStringb(bool: Boolean)
+        //nullable = true from not(false or (false and false)) = true
 : String{
 var bool = bool
 

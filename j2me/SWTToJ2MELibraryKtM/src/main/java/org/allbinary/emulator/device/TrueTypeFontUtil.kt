@@ -45,7 +45,7 @@ import org.allbinary.image.opengles.OpenGLESImage
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
-
+//TTF
 open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
         
 companion object {

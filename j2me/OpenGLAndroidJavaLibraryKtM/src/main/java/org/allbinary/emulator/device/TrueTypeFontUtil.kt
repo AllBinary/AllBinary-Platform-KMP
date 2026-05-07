@@ -44,7 +44,7 @@ import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
 import org.microemu.android.device.AndroidImageInterface
 import org.microemu.android.device.AndroidImmutableImage
-
+//TTF
 open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
         
 companion object {

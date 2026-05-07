@@ -34,7 +34,7 @@ import org.allbinary.logic.NullUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.media.ScaleProperties
 import org.allbinary.media.image.ImageToRotationImageArrayUtil
-
+//TWB - Adjustments should be done in the resource creation and not at the animation level
 open public class PooledImageArrayRotationAnimationFactory
             : Object
         

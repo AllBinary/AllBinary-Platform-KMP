@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringMaker
-
+//NoPlatform
 expect open public class Memory
             : Object
          {

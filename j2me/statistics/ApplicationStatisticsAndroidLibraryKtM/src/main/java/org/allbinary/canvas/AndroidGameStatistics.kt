@@ -38,7 +38,7 @@ open public class AndroidGameStatistics : BaseGameStatistics {
 
     private var totalOnDraws: Long= 0
 
-    private val STRING_ARRAY: Array<String?> = arrayOfNulls(14)
+    private val ANDROID_STRING_ARRAY: Array<String?> = arrayOfNulls(14)
 public constructor (){
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
@@ -47,16 +47,16 @@ public constructor (){
 
 
 
-                        for (index in 0 until this.STRING_ARRAY.size)
+                        for (index in 0 until this.ANDROID_STRING_ARRAY.size)
 
         {
-this.STRING_ARRAY[index]= stringUtil!!.EMPTY_STRING
+this.ANDROID_STRING_ARRAY[index]= stringUtil!!.EMPTY_STRING
 }
 
 }
 
 
-    open fun init(view: View)
+    open fun initView(view: View)
         //nullable = true from not(false or (false and false)) = true
 {
 var view = view
@@ -97,22 +97,22 @@ this.totalOnDraws++
                         for (index in 0 until stringArray!!.size)
 
         {
-this.STRING_ARRAY[index]= stringArray[index]!!
+this.ANDROID_STRING_ARRAY[index]= stringArray[index]!!
 }
 
 
-    var totalTime: Long = getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+    var totalTime: Long = this.getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
 totalTime= (totalTime /10000)
-this.STRING_ARRAY[10]= this.TOTAL_ONDRAWS
-this.STRING_ARRAY[11]= (this.totalOnDraws).toString()
-this.STRING_ARRAY[12]= this.ONDRAWS_RATE
-this.STRING_ARRAY[13]= (this.totalOnDraws /totalTime).toString()
+this.ANDROID_STRING_ARRAY[10]= this.TOTAL_ONDRAWS
+this.ANDROID_STRING_ARRAY[11]= (this.totalOnDraws).toString()
+this.ANDROID_STRING_ARRAY[12]= this.ONDRAWS_RATE
+this.ANDROID_STRING_ARRAY[13]= (this.totalOnDraws /totalTime).toString()
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.STRING_ARRAY
+                        return this.ANDROID_STRING_ARRAY
 }
 
 
@@ -120,7 +120,7 @@ this.STRING_ARRAY[13]= (this.totalOnDraws /totalTime).toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-    var totalTime: Long = getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+    var totalTime: Long = this.getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
 totalTime= (totalTime /1000)
 
@@ -160,7 +160,7 @@ stringBuffer!!.append(drawsOverTime)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NOT
+                        return this.NOT
 
                         }
                             

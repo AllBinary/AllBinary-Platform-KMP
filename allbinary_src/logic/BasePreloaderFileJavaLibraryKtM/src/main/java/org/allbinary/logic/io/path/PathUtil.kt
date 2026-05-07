@@ -28,7 +28,7 @@
 import org.allbinary.logic.io.file.FilePathData
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
-
+//Used to correct user input for paths
 open public class PathUtil
             : Object
          {

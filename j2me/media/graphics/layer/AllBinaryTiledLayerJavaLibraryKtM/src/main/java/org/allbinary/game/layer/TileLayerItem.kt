@@ -27,11 +27,11 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Screen
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.graphics.form.item.CustomItemInterface
 import org.allbinary.graphics.color.BasicColor
 
-open public class TileLayerItem : CustomItem
+open public class TileLayerItem : ABCustomItem
                 , CustomItemInterface {
         
 

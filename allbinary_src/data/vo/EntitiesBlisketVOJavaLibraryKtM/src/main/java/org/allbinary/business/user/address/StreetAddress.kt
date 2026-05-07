@@ -32,6 +32,7 @@ import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.string.CommonStrings
@@ -99,7 +100,7 @@ this.log()
 public constructor (streetAddress: StreetAddress)
             : super()
         {
-var streetAddress = streetAddress
+    //var streetAddress = streetAddress
 this.id= streetAddress!!.getId()
 this.name= streetAddress!!.getName()
 this.street= streetAddress!!.getStreet()
@@ -114,7 +115,7 @@ this.log()
 public constructor (request: HttpServletRequest)
             : super()
         {
-var request = request
+    //var request = request
 this.setId(request.getParameter(StreetAddressData.ID))
 this.setName(request.getParameter(StreetAddressData.NAME))
 this.setStreet(request.getParameter(StreetAddressData.STREET))
@@ -128,12 +129,12 @@ this.log()
 public constructor (name: String, street: String, city: String, state: String, code: String, country: String)
             : super()
         {
-var name = name
-var street = street
-var city = city
-var state = state
-var code = code
-var country = country
+    //var name = name
+    //var street = street
+    //var city = city
+    //var state = state
+    //var code = code
+    //var country = country
 this.name= name
 this.street= street
 this.city= city
@@ -146,7 +147,7 @@ this.log()
 public constructor (address: HashMap<Any, Any>)
             : super()
         {
-var address = address
+    //var address = address
 this.id= address.get(StreetAddressData.ID) as String
 this.name= address.get(StreetAddressData.NAME) as String
 this.street= address.get(StreetAddressData.STREET) as String
@@ -195,7 +196,7 @@ this.log()
     open fun setId(id: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var id = id
+    //var id = id
 this.id= id
 }
 
@@ -418,7 +419,7 @@ this.country= value
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var stringBuffer: StringBuilder = StringBuilder()
+    var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Address Failed To Validate - All fields must contain data.<br></br>")
 

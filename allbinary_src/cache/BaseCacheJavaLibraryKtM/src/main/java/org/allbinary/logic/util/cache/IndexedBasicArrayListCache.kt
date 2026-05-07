@@ -30,18 +30,34 @@ import org.allbinary.string.CommonStrings
 open public class IndexedBasicArrayListCache : BaseBasicArrayListCache
                 , CacheInterface {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun createCache(size: Int)
+        //nullable = true from not(false or (false and false)) = true
+: IndexedBasicArrayListCache{
+var size = size
 
+    var indexedBasicArrayListCache: IndexedBasicArrayListCache = IndexedBasicArrayListCache()
+
+indexedBasicArrayListCache!!.init(size)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return indexedBasicArrayListCache
+}
+
+
+        }
+            
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var size: Int = 0
 
     var index: Int = 0
 public constructor (){
-}
-
-public constructor (size: Int){
-var size = size
-this.init(size)
 }
 
 
@@ -64,7 +80,7 @@ var size = size
                         for (index in size -1 downTo this.size)
 
         {
-this.add()
+this.addDefault()
 }
 
 this.size= size
@@ -74,7 +90,7 @@ this.size= size
 }
 
 
-    open fun get(index: Int)
+    open fun getAt(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var index = index
@@ -88,7 +104,7 @@ var index = index
 
                 @Throws(Exception::class)
             
-    open fun add()
+    open fun addDefault()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -96,7 +112,7 @@ var index = index
 
                 @Throws(Exception::class)
             
-    open fun add(anyType: Any)
+    open fun addObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -116,7 +132,7 @@ this.list.add(cacheableInterface)
 
                 @Throws(Exception::class)
             
-    override fun add(cacheableInterfaces: Array<CacheableInterface?>)
+    override fun addArray(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var cacheableInterfaces = cacheableInterfaces

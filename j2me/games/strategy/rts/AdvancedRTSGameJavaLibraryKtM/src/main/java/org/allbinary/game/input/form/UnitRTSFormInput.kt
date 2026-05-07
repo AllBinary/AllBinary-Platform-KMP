@@ -26,6 +26,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.game.layer.AdvancedPlayerOwnedRTSLayers
 import org.allbinary.game.layer.AdvancedRTSGameLayer
@@ -36,7 +37,6 @@ import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.capital.Capital
 import org.allbinary.game.layer.unit.UnitLayer
 import org.allbinary.game.layer.waypoint.WorkWaypoint
-import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.media.audio.BuildingSound
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
@@ -106,7 +106,7 @@ this.newUnitGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer

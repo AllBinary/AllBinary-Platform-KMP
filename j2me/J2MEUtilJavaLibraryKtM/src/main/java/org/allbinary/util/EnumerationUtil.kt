@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Enumeration
-
+//ArkTs does not have this.  So this is for the ArkTs build.
 open public class EnumerationUtil
             : Object
          {

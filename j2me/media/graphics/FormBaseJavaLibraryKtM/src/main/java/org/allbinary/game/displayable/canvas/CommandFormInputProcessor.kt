@@ -47,7 +47,7 @@ import org.allbinary.media.audio.SelectSound
 import org.allbinary.thread.PrimaryThreadPool
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
-
+//In general allow scrolling of the menu and selection the center item
 open public class CommandFormInputProcessor : BasicMenuInputProcessor {
         
 

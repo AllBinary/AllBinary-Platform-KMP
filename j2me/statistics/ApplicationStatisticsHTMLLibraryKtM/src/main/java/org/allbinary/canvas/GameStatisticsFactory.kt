@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringMaker
-
+//ActualPlatform
 /*actual*/ open public class GameStatisticsFactory : BaseGameStatistics {
         
 /*actual*/ companion object {

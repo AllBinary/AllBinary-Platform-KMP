@@ -35,7 +35,7 @@ import org.allbinary.media.graphics.geography.pathfinding.PathFinder
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactory
 import org.allbinary.util.BasicArrayListS
-
+//1.4.2
 open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         
 companion object {

@@ -54,7 +54,7 @@ this.visitorInterface= visitorInterface
 
     open fun getInstance(vector: Vector<Any>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: Array<CustomItem?>{
+: Array<ABCustomItem?>{
 var vector = vector
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
@@ -118,7 +118,7 @@ this.list.add(textItem)
 }
 
 
-    var textItemArray: Array<CustomItem?> = arrayOfNulls(this.list.size())
+    var textItemArray: Array<ABCustomItem?> = arrayOfNulls(this.list.size())
 
 
     var size2: Int = textItemArray!!.size
@@ -131,7 +131,7 @@ this.list.add(textItem)
                         for (index in 0 until size2)
 
         {
-textItemArray[index]= this.list.objectArray[index]!! as CustomItem
+textItemArray[index]= this.list.objectArray[index]!! as ABCustomItem
 }
 
 

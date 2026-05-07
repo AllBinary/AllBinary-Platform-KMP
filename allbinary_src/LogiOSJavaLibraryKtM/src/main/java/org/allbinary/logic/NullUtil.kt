@@ -27,7 +27,7 @@
         
 import java.util.Hashtable
 import java.util.Vector
-
+//ActualPlatform
 /*actual*/ open public class NullUtil
             : Object
          {

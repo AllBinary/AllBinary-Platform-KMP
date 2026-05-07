@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import com.jogamp.opengl.glu.GLU
-
+//JOGLEToKhronosGL10
 open public class JOGL10
             : Object
         

@@ -33,7 +33,7 @@ interface ItemArraySingletonFactoryInterface {
             
     open fun getItems()
         //nullable = true from not(false or (false and true)) = true
-: Array<CustomItem?>
+: Array<ABCustomItem?>
 
 }
                 

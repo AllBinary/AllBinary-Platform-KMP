@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.TsUtil
+import org.allbinary.TsUtil
 
 open public class ComparableObject
             : Object

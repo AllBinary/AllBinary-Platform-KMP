@@ -27,7 +27,7 @@
         
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogFormatUtil
-
+//ActualPlatform
 /*actual*/ open public class PreLogUtil
             : Object
          {

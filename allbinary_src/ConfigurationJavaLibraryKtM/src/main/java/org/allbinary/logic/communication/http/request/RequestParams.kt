@@ -36,7 +36,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-
+//Note: if request is destroyed or messed up this will not work. Use fileRequestParams
 open public class RequestParams
             : Object
          {

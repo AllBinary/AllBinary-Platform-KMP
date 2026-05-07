@@ -38,7 +38,7 @@ import org.allbinary.game.layer.capital.Capital
 import org.allbinary.game.layer.waypoint.WaypointCellPositionHistory
 import org.allbinary.game.layer.waypoint.WaypointLayer
 import org.allbinary.game.layer.waypoint.event.WaypointEventHandlerFactory
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.util.BasicArrayList
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
@@ -253,7 +253,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRT
 
                 @Throws(Exception::class)
             
-    override fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    override fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer

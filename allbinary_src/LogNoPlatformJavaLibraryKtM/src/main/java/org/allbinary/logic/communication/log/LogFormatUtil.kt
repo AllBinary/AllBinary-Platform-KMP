@@ -32,7 +32,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.time.TimeStampUtil
-
+//NoPlatform
 expect open public class LogFormatUtil
             : Object
          {

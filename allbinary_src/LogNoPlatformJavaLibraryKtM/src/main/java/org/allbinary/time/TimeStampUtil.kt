@@ -27,7 +27,7 @@
         
 import java.util.Calendar
 import java.util.Date
-
+//NoPlatform
 expect open public class TimeStampUtil
             : Object
          {

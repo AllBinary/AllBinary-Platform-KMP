@@ -28,7 +28,7 @@
 import java.lang.reflect.Method
 import org.allbinary.business.init.db.DbConnectionInfo
 import org.allbinary.logic.system.security.licensing.LicensingException
-
+//Warning you must have sql root access
 open public class InitDb
             : Object
          {

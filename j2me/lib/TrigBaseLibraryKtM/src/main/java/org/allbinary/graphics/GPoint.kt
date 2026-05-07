@@ -52,16 +52,16 @@ companion object {
     open fun toStringStatic(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
-var x = x
-var y = y
-var z = z
+    //var x = x
+    //var y = y
+    //var z = z
 
     var stringBuffer: StringMaker = StringMaker()
 
 
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
 
-stringBuffer!!.append(POINT_LABEL)
+stringBuffer!!.append(GPoint.POINT_LABEL)
 stringBuffer!!.append(positionStrings!!.X_LABEL)
 stringBuffer!!.appendint(x)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
@@ -88,9 +88,9 @@ stringBuffer!!.appendint(z)
 public constructor (x: Int, y: Int, z: Int)
             : super()
         {
-var x = x
-var y = y
-var z = z
+    //var x = x
+    //var y = y
+    //var z = z
 this.x= x
 this.y= y
 this.z= z

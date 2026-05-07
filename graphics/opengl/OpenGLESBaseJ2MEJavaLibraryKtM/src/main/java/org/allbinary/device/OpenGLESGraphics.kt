@@ -34,7 +34,7 @@ open public class OpenGLESGraphics
 }
 
 
-    open fun update(gl: GL)
+    open fun updateGL(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -87,7 +87,7 @@ var gl = gl
 }
 
 
-    override fun setFont(font: Font, fontDebug: FontDebugBase)
+    override fun setFontDebug(font: Font, fontDebug: FontDebugBase)
         //nullable = true from not(false or (false and false)) = true
 {
     //var font = font

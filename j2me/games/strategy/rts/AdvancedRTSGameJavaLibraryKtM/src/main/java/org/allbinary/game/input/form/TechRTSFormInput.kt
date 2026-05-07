@@ -31,7 +31,7 @@ import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.TechnologyRTSInterfaceImageItem
 import org.allbinary.game.layer.capital.Capital
 import org.allbinary.game.rts.technology.event.TechEventHandler
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.media.audio.BuildingSound
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.java.bool.BooleanFactory
@@ -89,7 +89,7 @@ this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer

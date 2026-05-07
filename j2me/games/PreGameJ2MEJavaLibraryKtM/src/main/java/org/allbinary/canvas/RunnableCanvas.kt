@@ -340,7 +340,7 @@ var wait = wait
                         if(wait > 0)
                         
                                     {
-                                    this.threadObjectUtil!!.waitObject(this, wait.toLong())
+                                    this.threadObjectUtil!!.waitObjectFor(this, wait.toLong())
 
                                     }
                                 

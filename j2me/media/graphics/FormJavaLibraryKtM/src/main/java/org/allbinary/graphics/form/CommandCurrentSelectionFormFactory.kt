@@ -29,7 +29,7 @@ import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.TouchFeatureFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 
 open public class CommandCurrentSelectionFormFactory
             : Object
@@ -39,7 +39,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun getInstance(title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun getInstance(title: String, items: Array<ABCustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : ScrollSelectionForm{
     //var title = title

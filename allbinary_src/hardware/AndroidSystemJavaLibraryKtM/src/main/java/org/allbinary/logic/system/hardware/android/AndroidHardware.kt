@@ -32,6 +32,7 @@ import java.util.Hashtable
 import org.allbinary.logic.io.NullCloseable
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.hardware.HardwareInterface
 import org.allbinary.logic.system.hardware.components.android.UnknownHardware
 import org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface
@@ -93,7 +94,7 @@ this.init(this.DEVICES)
             lineNumberReader= this.get(filePath)
 } catch(e: Exception)
             {
-this.logUtil!!.put("Hardware Data: " +this.toString(), this, commonStrings!!.INIT, e)
+this.logUtil!!.put("Hardware Data: " +this.toString(), this, this.commonStrings!!.INIT, e)
 
 
 
@@ -131,7 +132,7 @@ this.componentInterfaceVector= BasicArrayListD()
 
     var lineNumberReader: LineNumberReader = LineNumberReader(pciFile)
 
-this.logUtil!!.putF("File Found", this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("File Found", this, this.commonStrings!!.CONSTRUCTOR)
 
     var nextLine: String = lineNumberReader!!.readLine()!!
 
@@ -168,7 +169,7 @@ var index = index
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-    var hardwareBuffer: StringBuilder = StringBuilder()
+    var hardwareBuffer: StringMaker = StringMaker()
 
 
     var size: Int = this.componentInterfaceVector!!.size()!!

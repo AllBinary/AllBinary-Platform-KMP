@@ -33,7 +33,7 @@ import org.allbinary.logic.TsUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
-
+//ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
          {

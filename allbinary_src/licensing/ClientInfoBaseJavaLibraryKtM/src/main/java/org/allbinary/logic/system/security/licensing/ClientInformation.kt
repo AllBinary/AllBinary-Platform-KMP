@@ -35,7 +35,7 @@ import org.allbinary.logic.system.os.NoOperatingSystem
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
-
+// This is the information sent to the license server
 open public class ClientInformation
             : Object
         
@@ -175,18 +175,21 @@ var index = index
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
 
 
+    var genericOperatingSystem: GenericOperatingSystem = this.getOperatingSystemInterface()!!
+
+
     var clientInfoHashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 clientInfoHashtable!!.put(abeClientInformationData!!.NAME, this.name)
 clientInfoHashtable!!.put(abeClientInformationData!!.VERSION, this.version)
 clientInfoHashtable!!.put(abeClientInformationData!!.SPECIALNAME, this.specialName)
 clientInfoHashtable!!.put(abeClientInformationData!!.LICENSEID, this.getLicenseId())
-clientInfoHashtable!!.put(abeClientInformationData!!.OSNAME, this.getOperatingSystemInterface()!!.getName())
-clientInfoHashtable!!.put(abeClientInformationData!!.OSARCH, this.getOperatingSystemInterface()!!.getArch())
-clientInfoHashtable!!.put(abeClientInformationData!!.OSVERSION, this.getOperatingSystemInterface()!!.getVersion())
-clientInfoHashtable!!.put(abeClientInformationData!!.OS, this.getOperatingSystemInterface()!!.toString())
+clientInfoHashtable!!.put(abeClientInformationData!!.OSNAME, genericOperatingSystem!!.getName())
+clientInfoHashtable!!.put(abeClientInformationData!!.OSARCH, genericOperatingSystem!!.getArch())
+clientInfoHashtable!!.put(abeClientInformationData!!.OSVERSION, genericOperatingSystem!!.getVersion())
+clientInfoHashtable!!.put(abeClientInformationData!!.OS, genericOperatingSystem!!.toString())
 
-    var hardwareInterface: HardwareInterface = SystemHardwareFactory.getInstance()!!.getInstance(getOperatingSystemInterface())!!
+    var hardwareInterface: HardwareInterface = SystemHardwareFactory.getInstance()!!.getInstance(genericOperatingSystem)!!
 
 
     var hardwareString: String = hardwareInterface!!.toString()!!

@@ -27,7 +27,7 @@
         
 import org.allbinary.graphics.GPoint
 import org.allbinary.layer.AllBinaryLayer
-
+// tileLayer location
 open public class ViewPosition : GPoint {
         
 companion object {

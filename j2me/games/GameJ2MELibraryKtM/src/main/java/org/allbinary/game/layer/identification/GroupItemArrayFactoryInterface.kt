@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.identification.Group
-import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.graphics.form.item.ABCustomItem
 
 interface GroupItemArrayFactoryInterface {
         
@@ -35,7 +35,7 @@ interface GroupItemArrayFactoryInterface {
             
     open fun getInstance(groupInterface: Group)
         //nullable =  from not(true or (false and false)) = 
-: Array<CustomItem?>
+: Array<ABCustomItem?>
 
 }
                 

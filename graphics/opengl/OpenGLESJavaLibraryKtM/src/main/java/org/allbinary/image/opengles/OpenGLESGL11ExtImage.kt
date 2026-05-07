@@ -37,7 +37,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.opengles.PlatformTextureBaseFactory
-
+//Many devices don't support this even though it is supposed to
 open public class OpenGLESGL11ExtImage : OpenGLESImage {
         
 

@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -36,6 +36,7 @@ import org.allbinary.logic.control.crypt.file.CryptFileReader
 import org.allbinary.logic.io.path.AbFilePath
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpStoreInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.allbinary.logic.visual.transform.info.template.TransformInfoTemplateData
@@ -47,6 +48,8 @@ open public class StoreUriResolver
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val uriResolverStrings: URIResolverStrings = URIResolverStrings.getInstance()!!
 
     private var basicURIResolver: BasicUriResolver
 
@@ -71,17 +74,33 @@ var base = base
 
         try {
             
+    var stringBuffer: StringMaker = StringMaker()
+
+
     var transformInfoHttpStoreInterface: TransformInfoHttpStoreInterface = this.parentTransformInfoInterface as TransformInfoHttpStoreInterface
 
+stringBuffer!!.append(URLGLOBALS.getMainPath())!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)!!.append(transformInfoHttpStoreInterface!!.getStoreName())!!.append(AbPathData.getInstance()!!.SEPARATOR)!!.append(href)
 
-    var fileAbPath: AbPath = AbFilePath(URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH +transformInfoHttpStoreInterface!!.getStoreName() +AbPathData.getInstance()!!.SEPARATOR +href) as AbPath
+    var fileAbPath: AbPath = AbFilePath(stringBuffer!!.toString()) as AbPath
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XMLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF("attempt to use xsl:import: href=" +href +"\nBase= " +base +"\nNew path= " +fileAbPath!!.toString() +"\nNote: " +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH +" is a urlglobal" +"\nRequired Extension: " +this.basicURIResolver!!.getExtension(), this, "resolve")
+                                    stringBuffer!!.delete(0, stringBuffer!!.length())
+stringBuffer!!.append(this.uriResolverStrings!!.ATTEMPT)
+stringBuffer!!.append(href)
+stringBuffer!!.append(this.uriResolverStrings!!.BASE)
+stringBuffer!!.append(base)
+stringBuffer!!.append(this.uriResolverStrings!!.NEW_PATH)
+stringBuffer!!.append(fileAbPath!!.toString())
+stringBuffer!!.append(this.uriResolverStrings!!.NOTE)
+stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
+stringBuffer!!.append(this.uriResolverStrings!!.URL_GLOBAL)
+stringBuffer!!.append(this.uriResolverStrings!!.REQUIRED_EXTENSION)
+stringBuffer!!.append(this.basicURIResolver!!.getExtension())
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.uriResolverStrings!!.RESOLVE)
 
                                     }
                                 

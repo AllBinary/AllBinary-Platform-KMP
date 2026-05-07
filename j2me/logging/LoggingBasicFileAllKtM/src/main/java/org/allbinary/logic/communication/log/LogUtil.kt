@@ -29,7 +29,7 @@ import org.allbinary.log.FileLog
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-
+//ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
          {
