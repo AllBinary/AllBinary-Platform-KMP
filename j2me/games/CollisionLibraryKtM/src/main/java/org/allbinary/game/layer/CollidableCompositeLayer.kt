@@ -74,7 +74,7 @@ public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositi
     open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
 : ArtificialIntelligenceInterface{
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 
 
 

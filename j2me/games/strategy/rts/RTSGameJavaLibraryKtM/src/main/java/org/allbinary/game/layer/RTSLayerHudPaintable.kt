@@ -72,7 +72,7 @@ this.setName(this.getRtsLayer()!!.getName())
     var partInterface: BasicWeaponPart = this.getRtsLayer()!!.getPartInterfaceArray()[0]!! as BasicWeaponPart
 
 this.weaponProperties= partInterface!!.getWeaponProperties()!!.toStringArray()
-this.costY1= (y +((this.weaponProperties!!.size +1) *charHeight))
+this.costY1= (this.y +((this.weaponProperties!!.size +1) *charHeight))
 
     
                         if(!AndroidUtil.isAndroid())
@@ -83,7 +83,7 @@ this.costY1= (y +((this.weaponProperties!!.size +1) *charHeight))
                                     }
                                 
                         else {
-                            this.costY= (y +((this.weaponProperties!!.size +2) *charHeight))
+                            this.costY= (this.y +((this.weaponProperties!!.size +2) *charHeight))
 
                         }
                             

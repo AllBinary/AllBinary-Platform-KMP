@@ -112,7 +112,7 @@ this.surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getAt(colum
 
         {
 geographicMapCellPosition= this.surroundingCellPositions[index]!!
-raceTrackGeographicMapCellType= raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
+raceTrackGeographicMapCellType= this.raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
 
     
                         if(!raceTrackGeographicMapCellTypeFactory!!.isPath(raceTrackGeographicMapCellType))
@@ -256,7 +256,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
 geographicMapCellType= this.raceTrackGeographicMap!!.getCellTypeAt(list.get(index2) as GeographicMapCellPosition)
 
     
-                        if(raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellType))
+                        if(this.raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellType))
                         
                                     {
                                     

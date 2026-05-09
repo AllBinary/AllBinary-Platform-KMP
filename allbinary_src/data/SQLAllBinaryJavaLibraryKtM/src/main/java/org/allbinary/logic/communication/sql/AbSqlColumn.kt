@@ -67,15 +67,15 @@ public constructor (databaseConnectionInfoInterface: DbConnectionInfo)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(sqlStrings!!.SELECT)
+stringBuffer!!.append(this.sqlStrings!!.SELECT)
 stringBuffer!!.append(columnName)
-stringBuffer!!.append(sqlStrings!!.FROM)
+stringBuffer!!.append(this.sqlStrings!!.FROM)
 stringBuffer!!.append(this.getTableName())
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 stringBuffer!!.append(key)
-stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(value)
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
 
@@ -114,11 +114,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(sqlStrings!!.SQL_STATEMENT_LABEL)
+stringBuffer!!.append(this.sqlStrings!!.SQL_STATEMENT_LABEL)
 stringBuffer!!.append(sqlStatement)
 stringBuffer!!.append(this.LARGEST_INT_VALUE_IN_COLUMN)
 stringBuffer!!.append(largestAsString)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_IN_COLUMN)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_LARGETS_INTEGER_IN_COLUMN)
 
                                     }
                                 
@@ -158,9 +158,9 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(sqlStrings!!.SELECT)
+stringBuffer!!.append(this.sqlStrings!!.SELECT)
 stringBuffer!!.append(columnName)
-stringBuffer!!.append(sqlStrings!!.FROM)
+stringBuffer!!.append(this.sqlStrings!!.FROM)
 stringBuffer!!.append(this.getTableName())
 
     var sqlStatement: String = stringBuffer!!.toString()!!
@@ -185,11 +185,11 @@ column.add(field)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(sqlStrings!!.SQL_STATEMENT_LABEL)
+stringBuffer!!.append(this.sqlStrings!!.SQL_STATEMENT_LABEL)
 stringBuffer!!.append(sqlStatement)
-stringBuffer!!.append(sqlStrings!!.COLUMN_VALUE)
+stringBuffer!!.append(this.sqlStrings!!.COLUMN_VALUE)
 stringBuffer!!.append(column.toString())
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_COLUMN)
 
                                     }
                                 
@@ -228,15 +228,15 @@ var value = value
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(sqlStrings!!.SELECT)
+stringBuffer!!.append(this.sqlStrings!!.SELECT)
 stringBuffer!!.append(columnName)
-stringBuffer!!.append(sqlStrings!!.FROM)
+stringBuffer!!.append(this.sqlStrings!!.FROM)
 stringBuffer!!.append(this.getTableName())
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 stringBuffer!!.append(key)
-stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(value)
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
 
@@ -265,11 +265,11 @@ column.add(field)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(sqlStrings!!.SQL_STATEMENT_LABEL)
+stringBuffer!!.append(this.sqlStrings!!.SQL_STATEMENT_LABEL)
 stringBuffer!!.append(sqlStatement)
-stringBuffer!!.append(sqlStrings!!.COLUMN_VALUE)
+stringBuffer!!.append(this.sqlStrings!!.COLUMN_VALUE)
 stringBuffer!!.append(column.toString())
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET_COLUMN_WHERE)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_COLUMN_WHERE)
 
                                     }
                                 

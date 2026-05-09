@@ -70,7 +70,7 @@ companion object {
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
-    var geographicMapCellPositionFactoryCanBeNull: Any? = hashtable.get(allBinaryTiledLayer!!.getDataId())
+    var geographicMapCellPositionFactoryCanBeNull: Any? = GeographicMapCellPositionFactory.hashtable.get(allBinaryTiledLayer!!.getDataId())
 
 
     

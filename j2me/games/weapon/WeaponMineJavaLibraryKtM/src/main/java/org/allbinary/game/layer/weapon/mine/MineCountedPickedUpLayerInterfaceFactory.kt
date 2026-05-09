@@ -50,7 +50,7 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-pickedUpLayerInterfaceFactoryInterface= MineCountedPickedUpLayerInterfaceFactory()
+MineCountedPickedUpLayerInterfaceFactory.pickedUpLayerInterfaceFactoryInterface= MineCountedPickedUpLayerInterfaceFactory()
 }
 
 

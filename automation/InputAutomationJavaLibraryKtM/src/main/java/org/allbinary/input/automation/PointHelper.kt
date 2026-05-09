@@ -40,10 +40,10 @@ companion object {
 : Point{
 var rectangle = rectangle
 
-    var x: Double = rectangle.getX() +rectangle.getWidth() /two
+    var x: Double = rectangle.getX() +rectangle.getWidth() /PointHelper.two
 
 
-    var y: Double = rectangle.getY() +rectangle.getHeight() /two
+    var y: Double = rectangle.getY() +rectangle.getHeight() /PointHelper.two
 
 
 

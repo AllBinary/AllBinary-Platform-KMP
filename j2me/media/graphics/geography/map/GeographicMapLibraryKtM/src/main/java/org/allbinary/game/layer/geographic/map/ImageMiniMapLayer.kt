@@ -55,12 +55,12 @@ var viewPosition = viewPosition
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var aWidth: Int = allBinaryTiledLayer!!.getWidth()!!
+    var aWidth: Int = this.allBinaryTiledLayer!!.getWidth()!!
 
 
-    var aHeight: Int = allBinaryTiledLayer!!.getHeight()!!
+    var aHeight: Int = this.allBinaryTiledLayer!!.getHeight()!!
 
-this.image= PaintableToImageUtil.getImage(allBinaryTiledLayer, aWidth, aHeight)
+this.image= PaintableToImageUtil.getImage(this.allBinaryTiledLayer, aWidth, aHeight)
 }
 
 
@@ -70,7 +70,7 @@ this.image= PaintableToImageUtil.getImage(allBinaryTiledLayer, aWidth, aHeight)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-graphics.drawImage(this.image, x, y, anchor)
+graphics.drawImage(this.image, x, y, this.anchor)
 this.paintDots(graphics)
 }
 

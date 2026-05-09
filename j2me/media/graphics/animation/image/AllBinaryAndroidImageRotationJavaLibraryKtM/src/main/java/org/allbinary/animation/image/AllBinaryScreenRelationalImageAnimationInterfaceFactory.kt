@@ -54,7 +54,7 @@ public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFac
                         
                                     {
                                     
-    var androidImageInterface: AndroidImageInterface = lastImage as AndroidImageInterface
+    var androidImageInterface: AndroidImageInterface = this.lastImage as AndroidImageInterface
 
 androidImageInterface!!.getBitmap()!!.recycle()
 

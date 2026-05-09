@@ -60,7 +60,7 @@ public constructor (image: Image, dx: Int, dy: Int, animationBehaviorFactory: An
                         if(this.animationFactoryInitializationVisitor!!.dx != 0 || this.animationFactoryInitializationVisitor!!.dy != 0)
                         
                                     {
-                                    animationFactoryImageScaleUtil!!.processAdjust(this)
+                                    this.animationFactoryImageScaleUtil!!.processAdjust(this)
 
 
 

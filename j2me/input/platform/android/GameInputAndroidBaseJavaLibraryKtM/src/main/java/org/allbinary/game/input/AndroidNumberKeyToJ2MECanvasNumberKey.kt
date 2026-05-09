@@ -25,16 +25,16 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_0]= Canvas.KEY_NUM0
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_1]= Canvas.KEY_NUM1
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_2]= Canvas.KEY_NUM2
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_3]= Canvas.KEY_NUM3
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_4]= Canvas.KEY_NUM4
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_5]= Canvas.KEY_NUM5
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_6]= Canvas.KEY_NUM6
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_7]= Canvas.KEY_NUM7
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_8]= Canvas.KEY_NUM8
-androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_9]= Canvas.KEY_NUM9
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_0]= Canvas.KEY_NUM0
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_1]= Canvas.KEY_NUM1
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_2]= Canvas.KEY_NUM2
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_3]= Canvas.KEY_NUM3
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_4]= Canvas.KEY_NUM4
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_5]= Canvas.KEY_NUM5
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_6]= Canvas.KEY_NUM6
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_7]= Canvas.KEY_NUM7
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_8]= Canvas.KEY_NUM8
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_9]= Canvas.KEY_NUM9
 }
 
 
@@ -48,7 +48,7 @@ var key = key
                         
                                     {
                                     
-    var value: Int = androidtoJavaMicroEditionKeyMap[key]!!
+    var value: Int = AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[key]!!
 
 
     

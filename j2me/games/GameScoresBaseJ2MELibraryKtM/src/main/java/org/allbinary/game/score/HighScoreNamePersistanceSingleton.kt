@@ -130,7 +130,7 @@ this.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.platformRecordIdUtil!!.getRecordId(abeClientInformation, RECORD_ID)
+                        return this.platformRecordIdUtil!!.getRecordId(abeClientInformation, this.RECORD_ID)
 }
 
 
@@ -250,7 +250,7 @@ this.nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getAt(id))
             {
 this.save(abeClientInformation, gameInfo, this.name)
 this.logUtil!!.putF(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(ExceptionUtil.getInstance()!!.getStackTrace(e))!!.toString(), this, this.commonStrings!!.LOAD)
+                            append(this.commonStrings!!.EXCEPTION_LABEL)!!.append(ExceptionUtil.getInstance()!!.getStackTrace(e))!!.toString(), this, this.commonStrings!!.LOAD)
 }
 
          finally {

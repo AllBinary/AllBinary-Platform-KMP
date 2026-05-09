@@ -62,7 +62,7 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
-    var path: String = URLGLOBALS.getWebappPath() +PACKAGE
+    var path: String = URLGLOBALS.getWebappPath() +LoggingInitInfo.PACKAGE
 
 
     var FILEABPATH: AbPath = AbPath(path, INITFILENAME)

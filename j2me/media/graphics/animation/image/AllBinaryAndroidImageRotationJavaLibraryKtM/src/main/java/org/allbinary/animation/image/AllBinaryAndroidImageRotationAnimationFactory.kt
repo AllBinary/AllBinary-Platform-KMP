@@ -193,7 +193,7 @@ this.resizeCanvasForRotation= resizeCanvasForRotation
     var canvasImage: Image = this.getCanvasImage()!!
 
 
-    var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(canvasImage, this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
+    var scaledImage: Image = this.animationFactoryImageScaleUtil!!.createImage(canvasImage, this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
 
 
     var copyOfScaledImage: Image = ImageCopyUtil.getInstance()!!.createImage(scaledImage)!!
@@ -203,7 +203,7 @@ this.resizeCanvasForRotation= resizeCanvasForRotation
                         if(this.animationFactoryInitializationVisitor!!.dx != 0 || this.animationFactoryInitializationVisitor!!.dy != 0)
                         
                                     {
-                                    animationFactoryImageScaleUtil!!.processAdjust(this)
+                                    this.animationFactoryImageScaleUtil!!.processAdjust(this)
 
 
 

@@ -113,7 +113,7 @@ var filePath = filePath
                                     }
                                 
 
-    var beginIndex: Int = filePath!!.length -MIN
+    var beginIndex: Int = filePath!!.length -AbPathUtilOld.MIN
 
 
     var extension: String = filePath!!.substring(beginIndex +1)!!
@@ -182,7 +182,7 @@ var filePath = filePath
                                     }
                                 
 
-    var endIndex: Int = filePath!!.length -MIN
+    var endIndex: Int = filePath!!.length -AbPathUtilOld.MIN
 
 
     var pathWithoutExtension: String = filePath!!.substring(0, endIndex)!!
@@ -372,7 +372,7 @@ var path = path
                         if(path.indexOf("\\") >= 0)
                         
                                     {
-                                    path= path.replace('\\', abPathData!!.SEPARATORCHAR)
+                                    path= path.replace('\\', this.abPathData!!.SEPARATORCHAR)
 
                                     }
                                 

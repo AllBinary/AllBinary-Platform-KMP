@@ -233,7 +233,7 @@ sectionBasicArrayList= RandomTranslation.getInstance(sectionBasicArrayList, howM
                         if(type == this.ROTATION)
                         
                                     {
-                                    sectionBasicArrayList= randomRotationFactory!!.getInstanceList(sectionBasicArrayList, howMuch)
+                                    sectionBasicArrayList= this.randomRotationFactory!!.getInstanceList(sectionBasicArrayList, howMuch)
 
                                     }
                                 

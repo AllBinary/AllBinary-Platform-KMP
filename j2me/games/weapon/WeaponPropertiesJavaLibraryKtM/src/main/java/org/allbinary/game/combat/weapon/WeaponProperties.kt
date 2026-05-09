@@ -186,11 +186,11 @@ var range = range
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringArray[index++]= stringBuffer!!.append(DAMAGE)!!.appendint(this.getDamage())!!.toString()
+stringArray[index++]= stringBuffer!!.append(WeaponProperties.DAMAGE)!!.appendint(this.getDamage())!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringArray[index++]= stringBuffer!!.append(RANGE)!!.appendint(this.getRange())!!.toString()
+stringArray[index++]= stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange())!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringArray[index++]= stringBuffer!!.append(RELOAD)!!.appendlong(this.getReloadTime())!!.toString()
+stringArray[index++]= stringBuffer!!.append(WeaponProperties.RELOAD)!!.appendlong(this.getReloadTime())!!.toString()
 
 
 
@@ -205,11 +205,11 @@ stringArray[index++]= stringBuffer!!.append(RELOAD)!!.appendlong(this.getReloadT
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(DAMAGE)!!.appendint(this.getDamage())
+stringBuffer!!.append(WeaponProperties.DAMAGE)!!.appendint(this.getDamage())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(RANGE)!!.appendint(this.getRange())
+stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(RELOAD)!!.appendlong(this.getReloadTime())
+stringBuffer!!.append(WeaponProperties.RELOAD)!!.appendlong(this.getReloadTime())
 
 
 

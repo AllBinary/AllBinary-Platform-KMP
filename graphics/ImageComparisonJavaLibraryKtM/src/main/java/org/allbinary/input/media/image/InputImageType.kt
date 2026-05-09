@@ -80,7 +80,7 @@ var index = index
 this.name= name
 this.index= index
 InputImageType.TYPE_VECTOR.add(this)
-this.hashMap!!.put(this.getName(), this)
+InputImageType.hashMap!!.put(this.getName(), this)
 }
 
 

@@ -123,7 +123,7 @@ this.DEFAULT_CHILD_NAME_LIST.add(HighScoresCanvas.NAME)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append("Child Displayable is already set for: ")!!.append(this.stringUtil!!.toString(displayable))!!.toString(), this, SET_DISPLAYABLE)
+                            append("Child Displayable is already set for: ")!!.append(this.stringUtil!!.toString(displayable))!!.toString(), this, this.SET_DISPLAYABLE)
 
 
 
@@ -173,7 +173,7 @@ this.update()
 {
     //var runnable = runnable
 PreLogUtil.put(StringMaker().
-                            append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(runnable))!!.toString(), this, SET_RUNNABLE)
+                            append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(runnable))!!.toString(), this, this.SET_RUNNABLE)
 this.runnable= runnable
 
     
@@ -186,7 +186,7 @@ this.runnable= runnable
                                 
                         else {
                             PreLogUtil.put(StringMaker().
-                            append(this.RUNNABLE_WAS_ALREADY_IN_USE)!!.append(this.stringUtil!!.toString(runnable))!!.toString(), this, SET_RUNNABLE)
+                            append(this.RUNNABLE_WAS_ALREADY_IN_USE)!!.append(this.stringUtil!!.toString(runnable))!!.toString(), this, this.SET_RUNNABLE)
 
                         }
                             
@@ -197,7 +197,7 @@ this.runnable= runnable
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put(StringMaker().
-                            append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(NullRunnable.getInstance()))!!.toString(), this, CLEAR_RUNNABLE)
+                            append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(NullRunnable.getInstance()))!!.toString(), this, this.CLEAR_RUNNABLE)
 this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 }
 
@@ -290,7 +290,7 @@ this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 {
 var usedRunnable = usedRunnable
 PreLogUtil.put(StringMaker().
-                            append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(this.runnable))!!.toString(), this, SET_USED_RUNNABLE)
+                            append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(this.runnable))!!.toString(), this, this.SET_USED_RUNNABLE)
 this.usedRunnable= usedRunnable
 }
 

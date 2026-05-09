@@ -101,7 +101,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -114,7 +114,7 @@ var allBinaryGameLayerManager = allBinaryGameLayerManager
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 

@@ -95,9 +95,9 @@ var transformInfoInterface = transformInfoInterface
 stringBuffer!!.append("Invalid AdminCommand: ")
 stringBuffer!!.append(command)
 stringBuffer!!.append(" must be: ")
-stringBuffer!!.append(ADDPRODUCT)
+stringBuffer!!.append(AddFileValidationView.ADDPRODUCT)
 stringBuffer!!.append(" or ")
-stringBuffer!!.append(NEXTSTEP)
+stringBuffer!!.append(AddFileValidationView.NEXTSTEP)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }

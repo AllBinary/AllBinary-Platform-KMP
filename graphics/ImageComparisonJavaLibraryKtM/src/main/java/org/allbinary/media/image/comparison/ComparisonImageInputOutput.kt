@@ -118,7 +118,7 @@ this.save(imageComparisonResult, imageComparisonResultFrameCacheable!!.getFrame(
 
 filePathStringBuffer!!.append(ImageOutputData.SAVE_PATH)
 filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
-filePathStringBuffer!!.append(ROOT_NAME)
+filePathStringBuffer!!.append(ComparisonImageInputOutput.ROOT_NAME)
 
     var filePathStringBuffer1: StringMaker = StringMaker()
 

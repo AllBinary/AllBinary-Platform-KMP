@@ -109,7 +109,7 @@ this.put(specialMessage, anyType, functionName, exception)
 
     var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
-System.out.print(this.LOG_SUCCESS)
+System.out.print(LogUtil.LOG_SUCCESS)
 System.out.println(message)
 }
 
@@ -140,7 +140,7 @@ System.out.println(message)
 
     var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
-System.out.print(this.LOG_SUCCESS)
+System.out.print(LogUtil.LOG_SUCCESS)
 System.out.println(message)
 }
 

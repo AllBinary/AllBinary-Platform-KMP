@@ -399,7 +399,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             this.menuBehavior!!.onDisplayChangeEvent(this, displayChangeEvent)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
 }
 
 }
@@ -595,7 +595,7 @@ this.closeMenu()
             this.menuBehavior!!.updateMenu(this)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "initMenu", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "initMenu", e)
 }
 
 }
@@ -1149,7 +1149,7 @@ var item = item
     var itemLabel: String = item.getLabel()!!
 
 this.logUtil!!.putF(StringMaker().
-                            append(commonLabels!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, "itemStateChanged")
+                            append(this.commonLabels!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, "itemStateChanged")
 
     
                         if(item is ChoiceGroup)
@@ -1603,13 +1603,13 @@ this.setInitialized(true)
                         if(this.getCustomCommandListener() == NullCommandListener.NULL_COMMAND_LISTENER)
                         
                                     {
-                                    this.logUtil!!.putF("Show Game Paintable in DemoCanvas Thread", this, BUILD_GAME)
+                                    this.logUtil!!.putF("Show Game Paintable in DemoCanvas Thread", this, this.BUILD_GAME)
 this.gameCanvasStartListener!!.showGamePaintable()
 
                                     }
                                 
                         else {
-                            this.logUtil!!.putF("No GameCanvasStartListener", this, BUILD_GAME)
+                            this.logUtil!!.putF("No GameCanvasStartListener", this, this.BUILD_GAME)
 
                         }
                             

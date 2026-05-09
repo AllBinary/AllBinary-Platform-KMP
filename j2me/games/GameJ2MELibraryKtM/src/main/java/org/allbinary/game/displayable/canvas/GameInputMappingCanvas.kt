@@ -366,9 +366,9 @@ this.setSelectedAction(gameKey)
 
 stringBuffer!!.append("Start GameKey: ")
 stringBuffer!!.append("Remove Key Mapping: GameKey: ")
-stringBuffer!!.append(stringUtil!!.toString(this.selectedGameKey))
+stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
 stringBuffer!!.append(" Input: ")
-stringBuffer!!.append(stringUtil!!.toString(this.selectedInput))
+stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 this.inputMapping!!.getInputMapping()!!.remove(this.selectedGameKey, this.selectedInput)
 this.selectedInput= this.NONE
@@ -390,7 +390,7 @@ this.update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.inputMapping!!.setDefault(this.abeClientInformation)
-this.helpPaintable!!.update(NONE, NONE)
+this.helpPaintable!!.update(this.NONE, this.NONE)
 this.repaintBehavior!!.onChangeRepaint(this)
 }
 

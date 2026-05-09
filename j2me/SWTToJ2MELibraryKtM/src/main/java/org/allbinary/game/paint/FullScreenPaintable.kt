@@ -81,7 +81,7 @@ var graphics = graphics
 
     var Y: Int = 4 *myFont!!.DEFAULT_CHAR_HEIGHT
 
-graphics.drawString(this.FULLSCREEN_TEXT, halfWidth -beginWidth, height -Y, anchor)
+graphics.drawString(this.FULLSCREEN_TEXT, halfWidth -beginWidth, height -Y, this.anchor)
 }
 
 

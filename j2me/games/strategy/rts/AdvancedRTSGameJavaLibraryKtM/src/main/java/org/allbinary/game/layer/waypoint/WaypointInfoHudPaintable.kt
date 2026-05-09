@@ -61,10 +61,10 @@ this.keyvalueDrawString!!.update(rtsLayer!!.getParentLayer()!!.getName())
 var graphics = graphics
 super.paint(graphics)
 
-    var textLine2Y: Int = (y +myFont!!.DEFAULT_CHAR_HEIGHT)
+    var textLine2Y: Int = (this.y +this.myFont!!.DEFAULT_CHAR_HEIGHT)
 
 this.keyvalueDrawString!!.paint(graphics, textLine2Y)
-this.getAnimationInterface()!!.paintXY(graphics, this.imageX, y)
+this.getAnimationInterface()!!.paintXY(graphics, this.imageX, this.y)
 }
 
 

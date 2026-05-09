@@ -260,8 +260,8 @@ PreLogUtil.put(StringMaker().
                             append(this.PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, this.commonStrings!!.PROCESS)
 this.timeDelayHelper!!.delay= duration.toInt()
 this.currentIntent!!.putExtra(this.musicStrings!!.SONG_EXTRA, this.resourceUtil!!.getResourceId(this.currentSongSound!!.getResource())!!.toInt())
-this.currentIntent!!.putExtra(this.musicStrings!!.LEFT_VOLUME, leftVolume)
-this.currentIntent!!.putExtra(this.musicStrings!!.RIGHT_VOLUME, rightVolume)
+this.currentIntent!!.putExtra(this.musicStrings!!.LEFT_VOLUME, this.leftVolume)
+this.currentIntent!!.putExtra(this.musicStrings!!.RIGHT_VOLUME, this.rightVolume)
 this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
 } catch(e: Exception)
             {
@@ -279,7 +279,7 @@ this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
 
                                     }
                                 
-PreLogUtil.putOE(commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.PROCESS, e)
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.PROCESS, e)
 }
 
 }

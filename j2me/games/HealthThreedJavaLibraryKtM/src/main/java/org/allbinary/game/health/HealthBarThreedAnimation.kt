@@ -91,7 +91,7 @@ colorBufferList!!.set(index, this.basicColor)
     var number3dBufferList: Number3dBufferList = this.rectangle.getVertices()!!.getPointsOnFacesNumber3dBufferList()!!
 
 
-    var width: Int = x2
+    var width: Int = this.x2
 
 
     var height: Int = this.thickness *2

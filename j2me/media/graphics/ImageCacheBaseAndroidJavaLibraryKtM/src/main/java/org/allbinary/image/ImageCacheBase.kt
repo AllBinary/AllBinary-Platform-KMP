@@ -289,16 +289,16 @@ this.logUtil!!.putF(StringMaker().
 
         {
 
-    var width: Int = widths[index]!!
+    var width: Int = this.widths[index]!!
 
 
-    var height: Int = heights[index]!!
+    var height: Int = this.heights[index]!!
 
 
-    var total: Int = listOfList[index]!!.size()!!
+    var total: Int = this.listOfList[index]!!.size()!!
 
 
-    var totalAvailable: Int = availableListOfList[index]!!.size()!!
+    var totalAvailable: Int = this.availableListOfList[index]!!.size()!!
 
 stringBuffer!!.append(" w: ")
 stringBuffer!!.appendint(width)

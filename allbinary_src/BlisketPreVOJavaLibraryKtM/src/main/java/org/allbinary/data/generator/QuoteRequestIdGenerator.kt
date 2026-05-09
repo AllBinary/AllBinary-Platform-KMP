@@ -41,7 +41,7 @@ stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.INIT_PATH)
 stringBuffer!!.append(this.IDFILE)
 stringBuffer!!.append(UniqueIdGenerator.EXT)
-super.setFile(stringBuffer!!.toString(), IDFILE)
+super.setFile(stringBuffer!!.toString(), this.IDFILE)
 }
 
 

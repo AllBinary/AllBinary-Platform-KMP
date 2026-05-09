@@ -86,7 +86,7 @@ this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeC
                 
 
 
-    var sizeY: Int = costArray[0]!!.size
+    var sizeY: Int = this.costArray[0]!!.size
                 
 
 
@@ -295,7 +295,7 @@ this.closedSet!!.clear()
                 
 
 
-    var sizeY: Int = costArray[0]!!.size
+    var sizeY: Int = this.costArray[0]!!.size
                 
 
 
@@ -321,7 +321,7 @@ node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
 }
 
 
-    var startNode: PathFindingNodeCost = costArray[start.getColumn()]!![start.getRow()]!!
+    var startNode: PathFindingNodeCost = this.costArray[start.getColumn()]!![start.getRow()]!!
 
 this.openPriorityQueue!!.add(startNode)
 
@@ -334,7 +334,7 @@ this.openPriorityQueue!!.add(startNode)
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
-    var targetNode: PathFindingNodeCost = costArray[target.getColumn()]!![target.getRow()]!!
+    var targetNode: PathFindingNodeCost = this.costArray[target.getColumn()]!![target.getRow()]!!
 
 
     var current: PathFindingNodeCost
@@ -472,7 +472,7 @@ this.closedSet!!.clear()
                 
 
 
-    var sizeY: Int = costArray[0]!!.size
+    var sizeY: Int = this.costArray[0]!!.size
                 
 
 
@@ -498,7 +498,7 @@ node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
 }
 
 
-    var startNode: PathFindingNodeCost = costArray[start.getColumn()]!![start.getRow()]!!
+    var startNode: PathFindingNodeCost = this.costArray[start.getColumn()]!![start.getRow()]!!
 
 this.openPriorityQueue!!.add(startNode)
 multipassState!!.step++
@@ -523,7 +523,7 @@ multipassState!!.step++
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
-    var targetNode: PathFindingNodeCost = costArray[target.getColumn()]!![target.getRow()]!!
+    var targetNode: PathFindingNodeCost = this.costArray[target.getColumn()]!![target.getRow()]!!
 
 
     var current: PathFindingNodeCost

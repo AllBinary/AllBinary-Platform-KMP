@@ -210,7 +210,7 @@ this.paintable.paint(graphics)
 
     var viewY: Int = viewPosition!!.getY()!!
 
-this.basicSetColorUtil!!.setBasicColorP(graphics, RED)
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.RED)
 graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight())
 }
 

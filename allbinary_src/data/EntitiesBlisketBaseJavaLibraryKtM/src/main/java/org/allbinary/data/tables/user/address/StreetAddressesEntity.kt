@@ -78,7 +78,7 @@ var index = index
             
     var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-whereHashMap!!.put(UserData.USERNAME, userName)
+whereHashMap!!.put(UserData.USERNAME, this.userName)
 whereHashMap!!.put(StreetAddressData.ID, index.toString() as String)
 super.deleteWhere(whereHashMap)
 
@@ -232,7 +232,7 @@ this.setDefault(address.getId())
 
     var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
 
-keyAndValue!!.put(UserData.USERNAME, userName)
+keyAndValue!!.put(UserData.USERNAME, this.userName)
 
     var addressList: Vector = super.getRows(keyAndValue)!!
 
@@ -300,7 +300,7 @@ var index = index
             
     var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
 
-keyAndValue!!.put(UserData.USERNAME, userName)
+keyAndValue!!.put(UserData.USERNAME, this.userName)
 keyAndValue!!.put(StreetAddressData.ID, index.toString())
 
     var addressHashMap: HashMap<Any, Any> = super.getRow(keyAndValue)!!
@@ -362,7 +362,7 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
     var updateKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
 
 updateKeyAndValue!!.put(StreetAddressData.DEFAULT, StreetAddressData.DEFAULT)
-updateKeyAndValue!!.put(UserData.USERNAME, userName)
+updateKeyAndValue!!.put(UserData.USERNAME, this.userName)
 addressHashMap= super.getRow(updateKeyAndValue)
 
     
@@ -442,7 +442,7 @@ var value = value
 
     var whereKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
 
-whereKeyAndValue!!.put(UserData.USERNAME, userName)
+whereKeyAndValue!!.put(UserData.USERNAME, this.userName)
 
     var streetAddress: StreetAddress = this.getDefault()!!
 

@@ -144,7 +144,7 @@ downGameKeyEventListenerInterface!!.onDownGameKeyEvent(eventObject as GameKeyEve
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(TOTAL_LISTENERS)
+stringBuffer!!.append(DownGameKeyEventHandlerBase.TOTAL_LISTENERS)
 stringBuffer!!.appendint(this.list.size())
 
     var eventListenerInterface: EventListenerInterface
@@ -161,7 +161,7 @@ stringBuffer!!.appendint(this.list.size())
 
         try {
             eventListenerInterface= this.list.get(index) as EventListenerInterface
-stringBuffer!!.append(LISTENER_LABEL)
+stringBuffer!!.append(DownGameKeyEventHandlerBase.LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
             {

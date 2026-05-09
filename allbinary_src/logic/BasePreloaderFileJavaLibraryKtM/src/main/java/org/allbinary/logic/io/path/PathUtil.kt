@@ -385,7 +385,7 @@ var path = path
                         if(path.indexOf("\\") >= 0)
                         
                                     {
-                                    path= path.replace('\\', abPathData!!.SEPARATORCHAR)
+                                    path= path.replace('\\', this.abPathData!!.SEPARATORCHAR)
 
                                     }
                                 

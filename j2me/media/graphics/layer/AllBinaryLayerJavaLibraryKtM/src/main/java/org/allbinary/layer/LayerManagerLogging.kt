@@ -85,8 +85,8 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
-this.stringBuilder!!.delete(0, stringBuilder!!.length())
-this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.APPEND_)!!.append(layerInterface!!.getName())!!.toString(), this, APPEND)
+this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
+this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.APPEND_)!!.append(layerInterface!!.getName())!!.toString(), this, this.APPEND)
 }
 
 
@@ -96,7 +96,7 @@ this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(th
     //var layerInterface = layerInterface
     //var index = index
 this.stringBuilder!!.delete(0, stringBuilder!!.length())
-this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.APPEND_)!!.append(layerInterface!!.getName())!!.append(this._AT_)!!.appendint(index)!!.toString(), this, APPEND)
+this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.APPEND_)!!.append(layerInterface!!.getName())!!.append(this._AT_)!!.appendint(index)!!.toString(), this, this.APPEND)
 }
 
 
@@ -111,14 +111,14 @@ this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(th
                                 )
                         
                                     {
-                                    this.stringBuilder!!.delete(0, stringBuilder!!.length())
-this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.ATTEMPT_REMOVE_)!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, REMOVE)
+                                    this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
+this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.ATTEMPT_REMOVE_)!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, this.REMOVE)
 
                                     }
                                 
                         else {
-                            this.stringBuilder!!.delete(0, stringBuilder!!.length())
-this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.ATTEMPT_REMOVE_)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
+                            this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
+this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.ATTEMPT_REMOVE_)!!.append(layerInterface!!.getName())!!.toString(), this, this.REMOVE)
 
                         }
                             
@@ -138,8 +138,8 @@ this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(th
                                 )
                         
                                     {
-                                    this.stringBuilder!!.delete(0, stringBuilder!!.length())
-this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.REMOVE_)!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, REMOVE)
+                                    this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
+this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.REMOVE_)!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, this.REMOVE)
 
                                     }
                                 
@@ -153,8 +153,8 @@ this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(th
                         if(LayerManagerLogging.removeFailed)
                         
                                     {
-                                    this.stringBuilder!!.delete(0, stringBuilder!!.length())
-this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.REMOVE_)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
+                                    this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
+this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.REMOVE_)!!.append(layerInterface!!.getName())!!.toString(), this, this.REMOVE)
 
                                     }
                                 
@@ -162,8 +162,8 @@ this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(th
                                     }
                                 
                         else {
-                            this.stringBuilder!!.delete(0, stringBuilder!!.length())
-this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.DID_NOT_REMOVE)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
+                            this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
+this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.DID_NOT_REMOVE)!!.append(layerInterface!!.getName())!!.toString(), this, this.REMOVE)
 LayerManagerLogging.removeFailed= true
 
                         }
@@ -198,7 +198,7 @@ allBinaryLayer= (layerManager!!.getLayerAt(index) as AllBinaryLayer)
 this.stringBuilder!!.append(allBinaryLayer!!.getName())!!.append(commonSeps!!.COMMA)
 }
 
-this.logUtil!!.putF(stringBuilder!!.toString(), this, REMOVE)
+this.logUtil!!.putF(this.stringBuilder!!.toString(), this, this.REMOVE)
 }
 
 
@@ -206,7 +206,7 @@ this.logUtil!!.putF(stringBuilder!!.toString(), this, REMOVE)
         //nullable = true from not(false or (false and true)) = true
 {
 this.stringBuilder!!.delete(0, stringBuilder!!.length())
-this.logUtil!!.putF(stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(CLEAR)!!.toString(), this, CLEAR)
+this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.CLEAR)!!.toString(), this, this.CLEAR)
 }
 
 

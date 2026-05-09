@@ -76,7 +76,7 @@ this.addDomNodeInterface(UserDomNode(this.user) as DomNodeInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

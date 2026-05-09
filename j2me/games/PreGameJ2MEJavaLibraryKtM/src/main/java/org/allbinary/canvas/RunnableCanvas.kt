@@ -169,7 +169,7 @@ this.threadObjectUtil!!.notifyObject(this)
                                     }
                                 
 this.logUtil!!.putF(StringMaker().
-                            append(this.IS_RUNNING)!!.appendboolean(this.running)!!.toString(), this, SET_RUNNING)
+                            append(this.IS_RUNNING)!!.appendboolean(this.running)!!.toString(), this, this.SET_RUNNING)
 }
 
 
@@ -226,7 +226,7 @@ stringBuffer!!.append(this.NOT_EQUAL)
 
                                     }
                                 
-this.logUtil!!.putF(stringBuffer!!.toString(), this, IS_RUNNING)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.IS_RUNNING)
 
 
 
@@ -295,7 +295,7 @@ this.currentThread= this.thread
             this.stopWaiting()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "showNotify", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "showNotify", e)
 }
 
 }
@@ -407,7 +407,7 @@ this.runnableCanvasRefreshHelper!!.process()
                                     
     var stringMaker: StringMaker = StringMaker()
 
-this.logUtil!!.putF(stringMaker!!.append(this.START_PAUSE)!!.appendlong(System.currentTimeMillis())!!.append(this.PAUSE_SLEEP)!!.appendlong(this.pauseWait)!!.toString(), this, PROCESS_LOOP_SLEEP)
+this.logUtil!!.putF(stringMaker!!.append(this.START_PAUSE)!!.appendlong(System.currentTimeMillis())!!.append(this.PAUSE_SLEEP)!!.appendlong(this.pauseWait)!!.toString(), this, this.PROCESS_LOOP_SLEEP)
 
         while(this.isPaused() && this.isRunning() && !this.isSingleThread())
         {
@@ -418,7 +418,7 @@ this.processSleep()
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-this.logUtil!!.putF(stringMaker!!.append(this.END_PAUSE)!!.appendlong(System.currentTimeMillis())!!.toString(), this, PROCESS_LOOP_SLEEP)
+this.logUtil!!.putF(stringMaker!!.append(this.END_PAUSE)!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.PROCESS_LOOP_SLEEP)
 
 
 

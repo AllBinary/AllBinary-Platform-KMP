@@ -156,7 +156,7 @@ stringBuffer!!.appendshort(angleIncrement)
                                 
 stringBuffer!!.append(" Evading: ")
 stringBuffer!!.appendboolean(evading)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, TRACKTO_TURNTO)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.TRACKTO_TURNTO)
 }
 
 

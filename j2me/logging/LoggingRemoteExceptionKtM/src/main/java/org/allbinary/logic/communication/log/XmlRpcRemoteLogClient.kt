@@ -81,7 +81,7 @@ xmlRpcClient!!.setBasicAuthentication(
 
 param.add(hashtable)
 
-    var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, noCrypt)!!
+    var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, this.noCrypt)!!
 
 System.out.println("Result: \n" +result.toString())
 

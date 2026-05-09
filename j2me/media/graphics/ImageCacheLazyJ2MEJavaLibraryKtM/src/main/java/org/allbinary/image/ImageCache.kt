@@ -466,7 +466,7 @@ this.loadNowList!!.remove(lazyImageRotationAnimation)
                         if(this.totalLoaded % 10 == 0)
                         
                                     {
-                                    progressCanvas!!.addNormalPortion(1, LOAD_IMAGE_FOR_ANIMATION)
+                                    progressCanvas!!.addNormalPortion(1, this.LOAD_IMAGE_FOR_ANIMATION)
 
                                     }
                                 
@@ -759,21 +759,21 @@ image.setName(key)
                         if(image == NullCanvas.NULL_IMAGE)
                         
                                     {
-                                    volume += width *height
+                                    this.volume += width *height
 
     
-                        if(volume > 32000)
+                        if(this.volume > 32000)
                         
                                     {
                                     System.gc()
-volume= 0
+this.volume= 0
 
                                     }
                                 
 image= this.createImage(caller, width, height)
 
     
-                        if(nextIndex > widths.length -1)
+                        if(this.nextIndex > this.widths.length -1)
                         
                                     {
                                     
@@ -781,14 +781,14 @@ image= this.createImage(caller, width, height)
                         if(foundIndex ==  -1)
                         
                                     {
-                                    foundIndex= nextIndex
-widths[nextIndex]= width
-heights[nextIndex]= height
+                                    foundIndex= this.nextIndex
+this.widths[this.nextIndex]= width
+this.heights[this.nextIndex]= height
 nextIndex++
 
                                     }
                                 
-listOfList[foundIndex]!!.add(image)
+this.listOfList[foundIndex]!!.add(image)
 
                                     }
                                 

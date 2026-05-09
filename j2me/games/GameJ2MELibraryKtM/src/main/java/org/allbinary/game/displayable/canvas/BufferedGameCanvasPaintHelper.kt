@@ -48,9 +48,9 @@ companion object {
 
     private var previousImage: Image = NullCanvas.NULL_IMAGE
 
-    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(MAX_IMAGES)!!
+    private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(BufferedGameCanvasPaintHelper.MAX_IMAGES)!!
 
-    private val drawCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstanceAt(MAX_IMAGES -1, MAX_IMAGES)!!
+    private val drawCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstanceAt(BufferedGameCanvasPaintHelper.MAX_IMAGES -1, BufferedGameCanvasPaintHelper.MAX_IMAGES)!!
 public constructor (gameCanvas: AllBinaryGameCanvas){
 var gameCanvas = gameCanvas
 
@@ -79,7 +79,7 @@ this.drawCircularIndexUtil!!.next()
 {
 var graphics = graphics
 this.previousImage= this.offScreenImage[this.drawCircularIndexUtil!!.getIndex()]!!
-graphics.drawImage(this.previousImage, 0, 0, anchor)
+graphics.drawImage(this.previousImage, 0, 0, this.anchor)
 }
 
 

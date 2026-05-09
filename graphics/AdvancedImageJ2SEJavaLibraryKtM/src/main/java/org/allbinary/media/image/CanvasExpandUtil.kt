@@ -93,7 +93,7 @@ companion object {
         {
 bufferedImage= bufferedImageArray[index]!!
 subBufferedImageArray[index]= imageUtil!!.createBufferedImage(bufferedImage, bufferedImage!!.getWidth() +increaseX, bufferedImage!!.getHeight() +increaseY, false)
-visitor.visit(subBufferedImageArray[index]!!, stringUtil!!.EMPTY_STRING, index)
+visitor.visit(subBufferedImageArray[index]!!, this.stringUtil!!.EMPTY_STRING, index)
 }
 
 }

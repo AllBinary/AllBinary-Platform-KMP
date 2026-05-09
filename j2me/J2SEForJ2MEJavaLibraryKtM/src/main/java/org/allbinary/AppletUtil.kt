@@ -37,7 +37,7 @@ companion object {
     open fun setApplet()
         //nullable = true from not(false or (false and true)) = true
 {
-applet= true
+AppletUtil.applet= true
 }
 
 

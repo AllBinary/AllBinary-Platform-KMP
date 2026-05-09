@@ -76,8 +76,8 @@ super.update()
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
-this.costY= (y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE)
-this.costY1= (y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -(charHeight))
+this.costY= (this.y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE)
+this.costY1= (this.y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -(charHeight))
 this.percentCompleteX2= this.imageX +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -myFont!!.defaultCharWidth()
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -162,7 +162,7 @@ super.paint(graphics)
 this.rtsLayerCompositePaintableLateInit!!.paint(graphics)
 graphics.drawChars(this.percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, this.costY, 0)
 graphics.drawString(this.PERCENT, this.percentCompleteX2, costY, 0)
-this.getAnimationInterface()!!.paintXY(graphics, this.imageX, y)
+this.getAnimationInterface()!!.paintXY(graphics, this.imageX, this.y)
 }
 
 

@@ -71,7 +71,7 @@ companion object {
 
     private val highScoreCommandsFactory: HighScoreCommandsFactory = HighScoreCommandsFactory.getInstance()!!
 
-    private val waitPaintable: SimpleTextPaintable = SimpleTextPaintable(commonStrings!!.PLEASE_WAIT_FOR_SERVER, BasicColorFactory.getInstance()!!.WHITE)
+    private val waitPaintable: SimpleTextPaintable = SimpleTextPaintable(this.commonStrings!!.PLEASE_WAIT_FOR_SERVER, BasicColorFactory.getInstance()!!.WHITE)
 
     private val highScoresPaintable: HighScoresPaintable
 
@@ -271,7 +271,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UP
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append(commonStrings!!.START)!!.appendint(highScoresArray!!.size)!!.toString(), this, "setHighScoresArray")
+                            append(this.commonStrings!!.START)!!.appendint(highScoresArray!!.size)!!.toString(), this, "setHighScoresArray")
 
                                     }
                                 
@@ -298,7 +298,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UP
 {
 var command = command
 this.logUtil!!.putF(StringMaker().
-                            append(commonStrings!!.START)!!.append(this.stringUtil!!.toString(command))!!.toString(), this, this.commonStrings!!.UPDATE)
+                            append(this.commonStrings!!.START)!!.append(this.stringUtil!!.toString(command))!!.toString(), this, this.commonStrings!!.UPDATE)
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 

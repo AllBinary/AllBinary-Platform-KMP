@@ -41,10 +41,10 @@ capitalEventHandlerArray= arrayOfNulls(10)
 
 
 
-                        for (index in capitalEventHandlerArray!!.size -1 downTo 0)
+                        for (index in CapitalEventHandlerFactory.capitalEventHandlerArray!!.size -1 downTo 0)
 
         {
-capitalEventHandlerArray[index]= CapitalEventHandler()
+CapitalEventHandlerFactory.capitalEventHandlerArray[index]= CapitalEventHandler()
 }
 
 }

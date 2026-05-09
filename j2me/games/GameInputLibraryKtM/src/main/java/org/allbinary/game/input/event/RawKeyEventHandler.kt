@@ -211,7 +211,7 @@ eventListenerInterface!!.onEvent(keyCode, deviceId, repeated)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(TOTAL_LISTENERS)
+stringBuffer!!.append(RawKeyEventHandler.TOTAL_LISTENERS)
 stringBuffer!!.appendint(this.eventListenerInterfaceList!!.size())
 
     var eventListenerInterface: RawKeyEventListener
@@ -225,7 +225,7 @@ stringBuffer!!.appendint(this.eventListenerInterfaceList!!.size())
 
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
-stringBuffer!!.append(LISTENER_LABEL)
+stringBuffer!!.append(RawKeyEventHandler.LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
             {

@@ -114,7 +114,7 @@ super.removeListener(eventListenerInterface)
 playerGameInput!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 }
@@ -147,7 +147,7 @@ upGameKeyEventListenerInterface!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
     var size: Int = this.list.size()!!
 
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(TOTAL_LISTENERS)
+stringBuffer!!.append(UpGameKeyEventHandlerBase.TOTAL_LISTENERS)
 stringBuffer!!.appendint(size)
 
 
@@ -161,7 +161,7 @@ stringBuffer!!.appendint(size)
             
     var eventListenerInterface: EventListenerInterface = this.list.get(index) as EventListenerInterface
 
-stringBuffer!!.append(LISTENER_LABEL)
+stringBuffer!!.append(UpGameKeyEventHandlerBase.LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
             {

@@ -308,7 +308,7 @@ this.currentSongSound!!.getPlayerP()!!.start()
 
                                     }
                                 
-PreLogUtil.putOE(commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.PROCESS, e)
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.PROCESS, e)
 }
 
 }
@@ -358,7 +358,7 @@ currentSongSound!!.getPlayerP()!!.stop()
                                 
 this.timeDelayHelper!!.setStartTime(0)
 PreLogUtil.put(StringMaker().
-                            append(commonStrings!!.END)!!.append(StringUtil.getInstance()!!.toString(currentSongSound))!!.toString(), this, this.commonStrings!!.END)
+                            append(this.commonStrings!!.END)!!.append(StringUtil.getInstance()!!.toString(currentSongSound))!!.toString(), this, this.commonStrings!!.END)
 } catch(e: Exception)
             {
 
@@ -373,7 +373,7 @@ PreLogUtil.put(StringMaker().
 
                                     }
                                 
-PreLogUtil.putOE(commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.END, e)
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.END, e)
 }
 
 }

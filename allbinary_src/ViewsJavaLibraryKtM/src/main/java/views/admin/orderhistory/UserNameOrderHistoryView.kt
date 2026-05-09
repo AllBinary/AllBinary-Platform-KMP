@@ -110,7 +110,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 
@@ -209,7 +209,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Started", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Started", this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 

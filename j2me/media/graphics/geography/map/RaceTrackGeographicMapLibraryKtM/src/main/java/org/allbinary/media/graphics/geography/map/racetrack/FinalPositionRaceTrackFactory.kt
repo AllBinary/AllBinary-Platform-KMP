@@ -52,7 +52,7 @@ companion object {
     open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
-index= FIRST_POSITION
+FinalPositionRaceTrackFactory.index= FinalPositionRaceTrackFactory.FIRST_POSITION
 }
 
 

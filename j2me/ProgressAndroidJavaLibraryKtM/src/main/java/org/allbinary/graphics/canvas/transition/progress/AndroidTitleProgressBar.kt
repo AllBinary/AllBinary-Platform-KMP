@@ -142,7 +142,7 @@ this.portion= value
 this.progressActivity!!.runOnUiThread(this.progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
@@ -160,7 +160,7 @@ this.portion= value
 this.progressActivity!!.runOnUiThread(this.progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
@@ -176,7 +176,7 @@ var value = value
 this.progressActivity!!.runOnUiThread(this.progressDialogSetProgressRunnable)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 }

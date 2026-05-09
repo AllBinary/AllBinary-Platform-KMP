@@ -47,7 +47,7 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-pickedUpLayerInterfaceFactoryInterface= Points30kPickedUpLayerInterfaceFactory()
+Points30kPickedUpLayerInterfaceFactory.pickedUpLayerInterfaceFactoryInterface= Points30kPickedUpLayerInterfaceFactory()
 }
 
 

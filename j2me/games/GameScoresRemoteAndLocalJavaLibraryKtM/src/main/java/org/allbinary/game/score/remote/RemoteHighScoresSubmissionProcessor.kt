@@ -89,7 +89,7 @@ hashtable.put(RemoteHighScoresData.getInstance()!!.SCORE, (highScore!!.getScore(
                                     {
                                     
     var resultHashtable: Hashtable<Any, Any> = XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresubmissionservicessl.php", "HighScoreSubmissionService.process").
-                            get(hashtable, noCrypt) as Hashtable<Any, Any>
+                            get(hashtable, this.noCrypt) as Hashtable<Any, Any>
 
 remoteHighScores!!.update(resultHashtable)
 

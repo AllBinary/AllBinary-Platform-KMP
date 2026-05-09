@@ -109,7 +109,7 @@ var transformInfoInterface = transformInfoInterface
             
     var inventoryEntity: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
 
-this.itemInterface= inventoryEntity!!.getItem(id)
+this.itemInterface= inventoryEntity!!.getItem(this.id)
 } catch(e: MoneyException)
             {
 

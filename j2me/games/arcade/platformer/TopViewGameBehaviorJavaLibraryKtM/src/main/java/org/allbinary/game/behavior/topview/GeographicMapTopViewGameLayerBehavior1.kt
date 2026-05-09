@@ -89,7 +89,7 @@ this.offsetY= offsetY
                         if(!hasSolidBlock)
                         
                                     {
-                                    this.gravityUtil!!.process(velocityProperties, gravityUtil!!.GAME_GRAVITY_VELOCITY)
+                                    this.gravityUtil!!.process(velocityProperties, this.gravityUtil!!.GAME_GRAVITY_VELOCITY)
 velocityProperties!!.limitXYToForwardAndReverseMaxVelocity()
 this.gravity()
 

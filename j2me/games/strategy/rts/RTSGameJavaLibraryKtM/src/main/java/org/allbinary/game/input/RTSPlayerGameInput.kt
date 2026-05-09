@@ -153,7 +153,7 @@ var displayChangeEvent = displayChangeEvent
 this.getRTSLayerInfoPaintable()!!.update()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onDisplayChangeEvent", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onDisplayChangeEvent", e)
 }
 
 }
@@ -244,7 +244,7 @@ this.removeInputProcessorArray[key]!!.processEvent(layerManager, gameKeyEvent)
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.PROCESS_INPUT, e)
 }
 
 }

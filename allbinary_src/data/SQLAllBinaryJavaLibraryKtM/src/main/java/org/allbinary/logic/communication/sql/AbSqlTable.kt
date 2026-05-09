@@ -93,7 +93,7 @@ var data = data
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.tableName +sqlStrings!!.CREATE_RETURN
+                        return this.tableName +this.sqlStrings!!.CREATE_RETURN
 } catch(e: Exception)
             {
 
@@ -120,7 +120,7 @@ var data = data
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var sqlStatement: String = sqlStrings!!.DROP_TABLE +this.tableName
+    var sqlStatement: String = this.sqlStrings!!.DROP_TABLE +this.tableName
 
 
         try {

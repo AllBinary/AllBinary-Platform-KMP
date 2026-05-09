@@ -68,7 +68,7 @@ public constructor (savedCaptureGenericProfileDataWorkerType: SavedCaptureGeneri
 var savedCaptureGenericProfileDataWorkerType = savedCaptureGenericProfileDataWorkerType
 this.savedCaptureGenericProfileDataWorkerType= savedCaptureGenericProfileDataWorkerType
 this.screenScavangerRobot= ScreenScavangerRobot()
-index= ProcessingFrameIndexFactory.next()
+SavedCaptureImagesWorker.index= ProcessingFrameIndexFactory.next()
 }
 
 

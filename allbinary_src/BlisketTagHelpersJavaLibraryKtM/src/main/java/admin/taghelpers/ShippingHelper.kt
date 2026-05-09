@@ -119,7 +119,7 @@ order.setShippingMethod(this.shippingType)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setShippingType()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setShippingType()", e)
 
                                     }
                                 

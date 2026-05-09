@@ -104,7 +104,7 @@ this.colorFillPaintable!!.paint(graphics)
     var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.TITLE) shr 1)
 
 graphics.setColor(this.foregroundColor)
-graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
+graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, this.anchor)
 this.drawStringUtil!!.drawCenterStrings(graphics, instructions, displayInfo!!.getLastWidth(), halfWidth, 3 *charHeight)
 super.paint(graphics)
 }

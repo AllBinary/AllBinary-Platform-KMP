@@ -248,7 +248,7 @@ this.initInputProcessors()
 this.rootName= rootName
 this.healthInterface= healthInterface
 this.rtsFormInput= rtsFormInput
-this.setPosition(x, y, z)
+this.setPosition(x, y, this.z)
 this.verticleBuildAnimationInterface= verticleBuildAnimationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
 this.buildAnimationInterface= buildAnimationInterfaceFactoryInterface!!.getInstance(0)
 this.baseAnimationInterface= baseAnimationInterfaceFactoryInterface!!.getInstance(0)
@@ -415,7 +415,7 @@ this.animationInterface= this.indexedButShouldBeRotationAnimationInterface
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
 }

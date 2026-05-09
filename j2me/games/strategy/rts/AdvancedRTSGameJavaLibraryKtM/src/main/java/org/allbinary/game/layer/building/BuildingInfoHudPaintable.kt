@@ -91,7 +91,7 @@ private constructor (){
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
 
 
-    var DEFAULT_CHAR_HEIGHT: Int = myFont!!.DEFAULT_CHAR_HEIGHT
+    var DEFAULT_CHAR_HEIGHT: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
 
 productivityHud= NumberStringHud("Productivity:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 index++
@@ -138,7 +138,7 @@ this.productivityHud!!.paint(graphics)
 this.efficiencyHud!!.paint(graphics)
 this.healthHud!!.paint(graphics)
 this.maxHealthHud!!.paint(graphics)
-this.getAnimationInterface()!!.paintXY(graphics, this.imageX, y)
+this.getAnimationInterface()!!.paintXY(graphics, this.imageX, this.y)
 }
 
 

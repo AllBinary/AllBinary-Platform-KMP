@@ -162,7 +162,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-damageUtil!!.process(this.ownerLayer as DamageableInterface, collidableInterfaceCompositeInterface as DamageableInterface)
+this.damageUtil!!.process(this.ownerLayer as DamageableInterface, collidableInterfaceCompositeInterface as DamageableInterface)
 this.collided= true
 }
 

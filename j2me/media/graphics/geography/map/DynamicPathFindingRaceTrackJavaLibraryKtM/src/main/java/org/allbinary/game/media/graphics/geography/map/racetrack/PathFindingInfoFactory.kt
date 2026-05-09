@@ -68,7 +68,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var max = max
-instance= PathFindingInfoFactory(SimplePathFinderGraphVisitorFactory(1, 1, Integer.MAX_VALUE), max)
+PathFindingInfoFactory.instance= PathFindingInfoFactory(SimplePathFinderGraphVisitorFactory(1, 1, Integer.MAX_VALUE), max)
 }
 
 

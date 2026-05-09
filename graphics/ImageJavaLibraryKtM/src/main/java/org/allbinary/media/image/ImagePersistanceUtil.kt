@@ -171,7 +171,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.SA
                                 )
                         
                                     {
-                                    this.logUtil!!.putF(ios.toString(), ios, commonStrings!!.CLOSE)
+                                    this.logUtil!!.putF(ios.toString(), ios, this.commonStrings!!.CLOSE)
 ios.close()
 
                                     }

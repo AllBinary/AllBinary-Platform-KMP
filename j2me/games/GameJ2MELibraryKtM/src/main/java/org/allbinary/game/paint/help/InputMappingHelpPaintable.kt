@@ -89,7 +89,7 @@ protected constructor (gameInputMappingArray: Array<GameInputMapping?>, backgrou
                             //For kotlin this is before the body of the constructor.
                     
 this.gameInputMappingArray= gameInputMappingArray
-this.update(NONE, NONE)
+this.update(this.NONE, this.NONE)
 
     
                         if(backgroundBasicColor == this.basicColorFactory!!.WHITE || basicColor == this.basicColorFactory!!.WHITE)
@@ -242,7 +242,7 @@ stringBuffer!!.append(key.getName())
                         if(keyList!!.size() == 2)
                         
                                     {
-                                    stringBuffer!!.append(AND)
+                                    stringBuffer!!.append(InputMappingHelpPaintable.AND)
 
                                     }
                                 
@@ -252,12 +252,12 @@ stringBuffer!!.append(key.getName())
                         if(index +2 == keyList!!.size())
                         
                                     {
-                                    stringBuffer!!.append(MORE_THAN_TWO_IN_LIST_AND)
+                                    stringBuffer!!.append(InputMappingHelpPaintable.MORE_THAN_TWO_IN_LIST_AND)
 
                                     }
                                 
                         else {
-                            stringBuffer!!.append(SEP)
+                            stringBuffer!!.append(InputMappingHelpPaintable.SEP)
 
                         }
                             
@@ -328,7 +328,7 @@ stringBuffer!!.append(key.getName())
     var beginWidth: Int = (font.stringWidth(this.title) shr 1)
 
 graphics.setColor(this.basicColor!!.toInt())
-graphics.drawString(this.title, halfWidth -beginWidth, charHeight, anchor)
+graphics.drawString(this.title, halfWidth -beginWidth, charHeight, this.anchor)
 
     var inputInfo: Array<String?> = this.inputInfo
 
@@ -377,7 +377,7 @@ actionString= stringMaker!!.append(inputInfo[index]!!)!!.append(commonSeps!!.COL
 stringMaker!!.delete(0, stringMaker!!.length())
 beginWidth= (font.stringWidth(stringMaker!!.append(actionString)!!.append(keyMappings)!!.toString()) shr 1)
 graphics.setColor(this.actionBasicColor[index]!!.toInt())
-graphics.drawString(actionString, halfWidth -beginWidth +deltaX, y, anchor)
+graphics.drawString(actionString, halfWidth -beginWidth +deltaX, y, this.anchor)
 deltaX += font.stringWidth(actionString)
 
 
@@ -388,7 +388,7 @@ deltaX += font.stringWidth(actionString)
         {
 input= list.objectArray[index2]!! as Input
 graphics.setColor(this.inputBasicColorArray[index]!![index2]!!.toInt())
-graphics.drawString(input.getName(), halfWidth -beginWidth +deltaX, y, anchor)
+graphics.drawString(input.getName(), halfWidth -beginWidth +deltaX, y, this.anchor)
 deltaX += font.stringWidth(input.getName())
 sep= EMPTY_STRING
 
@@ -401,7 +401,7 @@ sep= EMPTY_STRING
                         if(list.size() == 2)
                         
                                     {
-                                    sep= AND
+                                    sep= InputMappingHelpPaintable.AND
 
                                     }
                                 
@@ -411,12 +411,12 @@ sep= EMPTY_STRING
                         if(index2 +2 == list.size())
                         
                                     {
-                                    sep= MORE_THAN_TWO_IN_LIST_AND
+                                    sep= InputMappingHelpPaintable.MORE_THAN_TWO_IN_LIST_AND
 
                                     }
                                 
                         else {
-                            sep= SEP
+                            sep= InputMappingHelpPaintable.SEP
 
                         }
                             
@@ -432,7 +432,7 @@ sep= EMPTY_STRING
                         
                                     {
                                     graphics.setColor(this.basicColor!!.toInt())
-graphics.drawString(sep, halfWidth -beginWidth +deltaX, y, anchor)
+graphics.drawString(sep, halfWidth -beginWidth +deltaX, y, this.anchor)
 deltaX += font.stringWidth(sep)
 
                                     }

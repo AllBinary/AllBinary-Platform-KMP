@@ -162,7 +162,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.INIT)
             this.inputPersistance!!.loadAll(abeClientInformation)
 } catch(e: Exception)
             {
-PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 this.inputPersistance!!.deleteRecoreStore(abeClientInformation)
 this.setDefault(abeClientInformation)
 this.inputPersistance!!.loadAll(abeClientInformation)

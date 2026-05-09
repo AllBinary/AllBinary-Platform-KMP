@@ -160,13 +160,13 @@ stringBuffer!!.append(this.EQUAL_QUOTE)
                                     }
                                 
                         else {
-                            columnValue= Replace(sqlStrings!!.CLOSE_QUOTE, ESCAPE_QUOTES).
+                            columnValue= Replace(this.sqlStrings!!.CLOSE_QUOTE, this.ESCAPE_QUOTES).
                             all(columnValue)
 
                         }
                             
 stringBuffer!!.append(this.getValue(columnValue))
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     
                         if(i < size -1)
@@ -178,11 +178,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                                 
 }
 
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 stringBuffer!!.append(key)
-stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(this.getValue(value))
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
 
@@ -192,7 +192,7 @@ this.executeSQLStatement(sqlStatement)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(this.SUCCESS_SQL_STATEMENT +sqlStatement, this, METHOD_UPDATE_WHERE)
+                                    this.logUtil!!.putF(this.SUCCESS_SQL_STATEMENT +sqlStatement, this, this.METHOD_UPDATE_WHERE)
 
                                     }
                                 
@@ -253,7 +253,7 @@ stringBuffer!!.append(this.EQUAL_QUOTE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(this.COLUMN_NAME_LABEL +columnName, this, METHOD_UPDATE_WHERE)
+                                    this.logUtil!!.putF(this.COLUMN_NAME_LABEL +columnName, this, this.METHOD_UPDATE_WHERE)
 
                                     }
                                 
@@ -272,13 +272,13 @@ stringBuffer!!.append(this.EQUAL_QUOTE)
                                     }
                                 
                         else {
-                            columnValue= Replace(sqlStrings!!.CLOSE_QUOTE, this.ESCAPE_QUOTES).
+                            columnValue= Replace(this.sqlStrings!!.CLOSE_QUOTE, this.ESCAPE_QUOTES).
                             all(columnValue)
 
                         }
                             
 stringBuffer!!.append(this.getValue(columnValue))
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     
                         if(i < size -1)
@@ -290,7 +290,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                                 
 }
 
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
     var set: Set = whereKeyValuePairs!!.keySet()!!
 
@@ -318,15 +318,15 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                             {
                             stringBuffer!!.append(key)
-stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(this.getValue(value))
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     
                         if(i < size2 -1)
                         
                                     {
-                                    stringBuffer!!.append(sqlStrings!!.AND)
+                                    stringBuffer!!.append(this.sqlStrings!!.AND)
 
                                     }
                                 
@@ -344,7 +344,7 @@ this.executeSQLStatement(sqlStatement)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(this.SUCCESS_SQL_STATEMENT +sqlStatement, this, METHOD_UPDATE_WHERE)
+                                    this.logUtil!!.putF(this.SUCCESS_SQL_STATEMENT +sqlStatement, this, this.METHOD_UPDATE_WHERE)
 
                                     }
                                 
@@ -380,11 +380,11 @@ this.executeSQLStatement(sqlStatement)
 stringBuffer!!.append(this.sqlStrings!!.DELETE)
 stringBuffer!!.append(this.sqlStrings!!.FROM)
 stringBuffer!!.append(this.getTableName())
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 stringBuffer!!.append(key)
-stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(value)
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         try {
             
@@ -541,7 +541,7 @@ this.executeSQLStatement(sqlStatement)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(this.SUCCESS_SQL_STATEMENT +sqlStatement, this, INSERT)
+                                    this.logUtil!!.putF(this.SUCCESS_SQL_STATEMENT +sqlStatement, this, this.INSERT)
 
                                     }
                                 
@@ -570,7 +570,7 @@ this.executeSQLStatement(sqlStatement)
 
 stringBuffer!!.append(this.sqlStrings!!.SELECT_ALL_FROM)
 stringBuffer!!.append(this.getTableName())
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
         try {
             
@@ -602,15 +602,15 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
     var value: String = .toCharArray()
 
 stringBuffer!!.append(key)
-stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(this.getValue(value))
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     
                         if(index < size -1)
                         
                                     {
-                                    stringBuffer!!.append(sqlStrings!!.AND)
+                                    stringBuffer!!.append(this.sqlStrings!!.AND)
 
                                     }
                                 
@@ -624,7 +624,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(sqlStrings!!.SQL_STATEMENT_LABEL +sqlStatement, this, this.METHOD_GET_ROW)
+                                    this.logUtil!!.putF(this.sqlStrings!!.SQL_STATEMENT_LABEL +sqlStatement, this, this.METHOD_GET_ROW)
 
                                     }
                                 
@@ -730,7 +730,7 @@ result.put(columnName, field)
 
 stringBuffer!!.append(this.sqlStrings!!.SELECT_ALL_FROM)
 stringBuffer!!.append(this.getTableName())
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
         try {
             
@@ -760,15 +760,15 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
     var value: String = .toCharArray()
 
 stringBuffer!!.append(key)
-stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(this.getValue(value))
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     
                         if(index < size -1)
                         
                                     {
-                                    stringBuffer!!.append(sqlStrings!!.AND)
+                                    stringBuffer!!.append(this.sqlStrings!!.AND)
 
                                     }
                                 
@@ -779,7 +779,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(sqlStrings!!.SQL_STATEMENT_LABEL +stringBuffer, this, this.METHOD_GET_ROWS)
+                                    this.logUtil!!.putF(this.sqlStrings!!.SQL_STATEMENT_LABEL +stringBuffer, this, this.METHOD_GET_ROWS)
 
                                     }
                                 
@@ -874,7 +874,7 @@ stringBuffer!!.append(this.getTableName())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(sqlStrings!!.SQL_STATEMENT_LABEL +stringBuffer, this, this.METHOD_GET_ALL_ROWS)
+                                    this.logUtil!!.putF(this.sqlStrings!!.SQL_STATEMENT_LABEL +stringBuffer, this, this.METHOD_GET_ALL_ROWS)
 
                                     }
                                 
@@ -970,7 +970,7 @@ stringBuffer!!.append(this.getTableName())
             
     var rows: Vector = Vector()
 
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
     var set: Set = whereKeyValuePairs!!.keySet()!!
 
@@ -997,21 +997,21 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 key= keyArray[index]!! as String
 value= whereKeyValuePairs!!.get(key) as String
 stringBuffer!!.append(key)
-stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(this.getValue(value))
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
-stringBuffer!!.append(sqlStrings!!.AND)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.AND)
 }
 
 stringBuffer!!.append(betweenColumn)
 stringBuffer!!.append(this.sqlStrings!!.MORE_THAN_QUOTE)
 stringBuffer!!.append(smallest)
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
-stringBuffer!!.append(sqlStrings!!.AND)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.AND)
 stringBuffer!!.append(betweenColumn)
 stringBuffer!!.append(this.sqlStrings!!.LESS_THAN_QUOTE)
 stringBuffer!!.append(largest)
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
 
@@ -1020,7 +1020,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(sqlStrings!!.SQL_STATEMENT_LABEL +sqlStatement, this, METHOD_GET_ROWS_WHERE_BETWEEN)
+                                    this.logUtil!!.putF(this.sqlStrings!!.SQL_STATEMENT_LABEL +sqlStatement, this, this.METHOD_GET_ROWS_WHERE_BETWEEN)
 
                                     }
                                 
@@ -1068,7 +1068,7 @@ result.put(columnName, field)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(this.ROW_VALUE_LABEL +result.toString(), this, METHOD_GET_ROWS_WHERE_BETWEEN)
+                                    this.logUtil!!.putF(this.ROW_VALUE_LABEL +result.toString(), this, this.METHOD_GET_ROWS_WHERE_BETWEEN)
 
                                     }
                                 
@@ -1117,16 +1117,16 @@ stringBuffer!!.append(this.getTableName())
             
     var rows: Vector = Vector()
 
-stringBuffer!!.append(sqlStrings!!.WHERE)
+stringBuffer!!.append(this.sqlStrings!!.WHERE)
 stringBuffer!!.append(betweenColumn)
 stringBuffer!!.append(this.sqlStrings!!.MORE_THAN_QUOTE)
 stringBuffer!!.append(smallest)
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
-stringBuffer!!.append(sqlStrings!!.AND)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.AND)
 stringBuffer!!.append(betweenColumn)
 stringBuffer!!.append(this.sqlStrings!!.LESS_THAN_QUOTE)
 stringBuffer!!.append(largest)
-stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
 
@@ -1135,7 +1135,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(sqlStrings!!.SQL_STATEMENT_LABEL +sqlStatement, this, METHOD_GET_ROWS_WHERE_BETWEEN)
+                                    this.logUtil!!.putF(this.sqlStrings!!.SQL_STATEMENT_LABEL +sqlStatement, this, this.METHOD_GET_ROWS_WHERE_BETWEEN)
 
                                     }
                                 
@@ -1183,7 +1183,7 @@ result.put(columnName, field)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(this.ROW_VALUE_LABEL +result.toString(), this, METHOD_GET_ROWS_WHERE_BETWEEN)
+                                    this.logUtil!!.putF(this.ROW_VALUE_LABEL +result.toString(), this, this.METHOD_GET_ROWS_WHERE_BETWEEN)
 
                                     }
                                 

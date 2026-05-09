@@ -99,7 +99,7 @@ var graphics = graphics
 
     var beginWidth: Int = (font.stringWidth(this.ABOUT) shr 1)
 
-graphics.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, anchor)
+graphics.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, this.anchor)
 
     var infoSize: Int = this.info.size
                 

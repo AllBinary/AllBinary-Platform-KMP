@@ -171,11 +171,11 @@ var hourString = hourString
 var minuteString = minuteString
 var secondString = secondString
 
-    var time: Long = calendar.getTimeInMillis()!!
+    var time: Long = TimeUtil.calendar.getTimeInMillis()!!
 
 this.setExpirationCalendar(calendar, yearString, monthString, dayString, hourString, minuteString, secondString)
 
-    var timeDelta: Long = calendar.getTimeInMillis()!!
+    var timeDelta: Long = TimeUtil.calendar.getTimeInMillis()!!
 
 
 

@@ -83,7 +83,7 @@ LogUtil.getInstance()!!.put(CommonStrings.getInstance()!!.EXCEPTION, "NullGameCa
     var nullGameCanvas: NullGameCanvas = NullGameCanvas(gameLayerManager)
 
 nullGameCanvas!!.setInitialized(true)
-nullGameCanvas!!.setTitle(NO_GAME)
+nullGameCanvas!!.setTitle(NullGameCanvas.NO_GAME)
 
 
 

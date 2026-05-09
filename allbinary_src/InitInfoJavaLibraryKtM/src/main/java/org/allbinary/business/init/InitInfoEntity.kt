@@ -93,7 +93,7 @@ this.setTable(this.tableName)
             
     var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
 
-keyAndValue!!.put(NOTHING, NOTHING)
+keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
     var hashMap: HashMap<Any, Any> = getRow(keyAndValue)!!
 
@@ -160,7 +160,7 @@ keyAndValue!!.put(NOTHING, NOTHING)
             
     var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
 
-keyAndValue!!.put(NOTHING, NOTHING)
+keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
     var hashMap: HashMap<Any, Any> = getRow(keyAndValue)!!
 

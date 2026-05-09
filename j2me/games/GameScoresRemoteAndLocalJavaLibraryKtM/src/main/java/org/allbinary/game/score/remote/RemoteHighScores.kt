@@ -79,7 +79,7 @@ companion object {
 
         try {
             
-    var highScores: HighScores = hashTable!!.get(gameInfo) as HighScores
+    var highScores: HighScores = RemoteHighScores.hashTable!!.get(gameInfo) as HighScores
 
 
     

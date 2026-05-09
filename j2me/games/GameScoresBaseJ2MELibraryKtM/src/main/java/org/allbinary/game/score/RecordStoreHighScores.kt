@@ -66,7 +66,7 @@ companion object {
     //var columnTwoHeading = columnTwoHeading
     //var recordComparatorInterface = recordComparatorInterface
 
-    var highScoresCanBeNull: Any? = hashTable!!.get(highScoreName as Object)
+    var highScoresCanBeNull: Any? = RecordStoreHighScores.hashTable!!.get(highScoreName as Object)
 
 
     
@@ -293,11 +293,11 @@ recordStore!!.deleteRecord(bestHighScore!!.getId())
                                 
 } catch(e: RecordStoreException)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
  catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
 
          finally {
@@ -429,15 +429,15 @@ this.logUtil!!.put("No High Scores", this, this.commonStrings!!.LOAD, e)
 }
  catch(e: RecordStoreException)
             {
-this.logUtil!!.put(commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
+this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
 }
  catch(e: IOException)
             {
-this.logUtil!!.put(commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
+this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
 }
  catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
+this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
 }
 
          finally {

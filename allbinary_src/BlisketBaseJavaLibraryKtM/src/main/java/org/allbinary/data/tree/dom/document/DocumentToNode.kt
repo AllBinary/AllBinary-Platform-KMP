@@ -52,8 +52,8 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : String{
 var documentString = documentString
-documentString= DocumentToNode.remove(documentString, XMLJSPROOTSTART, XMLEND)
-documentString= DocumentToNode.remove(documentString, XMLJSPROOTENDSTART, XMLEND)
+documentString= DocumentToNode.remove(documentString, DocumentToNode.XMLJSPROOTSTART, DocumentToNode.XMLEND)
+documentString= DocumentToNode.remove(documentString, DocumentToNode.XMLJSPROOTENDSTART, DocumentToNode.XMLEND)
 
     var replaceXmlRoot: Replace = Replace(XMLROOT, StringUtil.getInstance()!!.EMPTY_STRING)
 

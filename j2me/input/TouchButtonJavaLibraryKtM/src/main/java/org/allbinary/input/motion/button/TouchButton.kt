@@ -114,7 +114,7 @@ this.logUtil!!.putF(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this.hintAnimationInterface!!.paintXY(graphics, animationX, this.hintAnimationY)
+this.hintAnimationInterface!!.paintXY(graphics, this.animationX, this.hintAnimationY)
 }
 
 
@@ -122,7 +122,7 @@ this.hintAnimationInterface!!.paintXY(graphics, animationX, this.hintAnimationY)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this.animationInterface!!.paintXY(graphics, animationX, animationY)
+this.animationInterface!!.paintXY(graphics, this.animationX, this.animationY)
 }
 
 
@@ -140,7 +140,7 @@ this.animationInterface!!.paintXY(graphics, animationX, animationY)
 
     var y: Int = this.rawRectangle!!.getHeight() *this.cellPositionP!!.getRow()
 
-this.rectangleP= Rectangle(pointFactory!!.createXY(x +xBorder, y +yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
+this.rectangleP= Rectangle(pointFactory!!.createXY(x +this.xBorder, y +this.yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
 
     var point: GPoint = this.rectangleP!!.getPoint()!!
 

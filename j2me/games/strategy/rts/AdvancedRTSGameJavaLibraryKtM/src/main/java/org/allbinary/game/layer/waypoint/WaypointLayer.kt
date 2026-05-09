@@ -114,7 +114,7 @@ var allBinaryLayerManager = allBinaryLayerManager
             this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
 }

@@ -325,7 +325,7 @@ this.logUtil!!.putF(StringMaker().
                                     dx= (newWidth -width) /2
 dy= (newHeight -height) /2
 this.logUtil!!.putF(StringMaker().
-                            append("Translate dx: ")!!.appendfloat(dx)!!.append(" dy: ")!!.appendfloat(dy)!!.toString(), this, CREATE_BUFFERED_IMAGE)
+                            append("Translate dx: ")!!.appendfloat(dx)!!.append(" dy: ")!!.appendfloat(dy)!!.toString(), this, this.CREATE_BUFFERED_IMAGE)
 
                                     }
                                 

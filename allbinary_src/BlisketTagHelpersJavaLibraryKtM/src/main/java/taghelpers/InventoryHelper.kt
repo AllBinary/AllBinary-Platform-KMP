@@ -138,7 +138,7 @@ this.id= this.request.getParameter(BasicItemData.ID)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "viewSummary()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "viewSummary()", e)
 
                                     }
                                 
@@ -208,7 +208,7 @@ this.id= this.request.getParameter(BasicItemData.ID)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "searchSingleDynamicPage()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "searchSingleDynamicPage()", e)
 
                                     }
                                 

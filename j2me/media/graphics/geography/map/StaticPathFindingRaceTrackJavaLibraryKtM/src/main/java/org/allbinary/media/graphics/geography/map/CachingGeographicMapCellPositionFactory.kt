@@ -67,7 +67,7 @@ var geographicMapInterface = geographicMapInterface
                         
                                     {
                                     cellPositionCanBeNull= this.geographicMapCellPositionFactoryInterface!!.getInstance(this.geographicMapInterface, i_column, i_row, this.getColumns(), this.getRows(), width, height)
-geographicMapCellPositionArray[i_row]!![i_column]= cellPositionCanBeNull as GeographicMapCellPosition
+this.geographicMapCellPositionArray[i_row]!![i_column]= cellPositionCanBeNull as GeographicMapCellPosition
 hashtable.put(cellPositionKey, cellPositionCanBeNull)
 
                                     }

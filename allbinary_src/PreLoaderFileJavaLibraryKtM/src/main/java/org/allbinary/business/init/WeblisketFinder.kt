@@ -98,7 +98,7 @@ var path = path
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.subDirectory!!.search(KEY, AbFile(path))
+                        return this.subDirectory!!.search(WeblisketFinder.KEY, AbFile(path))
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "findAll", e)

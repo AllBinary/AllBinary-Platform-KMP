@@ -154,7 +154,7 @@ generateJButtonActionPerformed(evt)
 
                                 }
                             )
-this.totalAngleJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(commonStrings!!.UP,commonStrings!!.DOWN,"-90","90")))
+this.totalAngleJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf(this.commonStrings!!.UP,this.commonStrings!!.DOWN,"-90","90")))
 this.totalAngleJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 

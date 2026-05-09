@@ -48,7 +48,7 @@ var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 {
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
-selectedRTSLayersPlayerGameInput!!.downgrade()
+this.selectedRTSLayersPlayerGameInput!!.downgrade()
 }
 
 

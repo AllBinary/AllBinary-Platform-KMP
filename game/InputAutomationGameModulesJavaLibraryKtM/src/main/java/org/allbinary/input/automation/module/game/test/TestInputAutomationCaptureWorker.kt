@@ -82,7 +82,7 @@ this.setGenericProfileActions(genericProfileActions)
                         if(cacheInterface!!.keySet()!!.size() > 0)
                         
                                     {
-                                    this.logUtil!!.putF(this.IMAGE_AVAILABLE_SO_PROCESSING, this, PROCESS_DATA_WORKER_RESULTS)
+                                    this.logUtil!!.putF(this.IMAGE_AVAILABLE_SO_PROCESSING, this, this.PROCESS_DATA_WORKER_RESULTS)
 
     var anyType: Any = cacheInterface!!.keySet()!!.toTypedArray()[0]!!
 
@@ -125,7 +125,7 @@ cacheInterface!!.get(anyType)
                                     }
                                 
                         else {
-                            this.logUtil!!.putF(this.IMAGE_NOT_AVAILABLE, this, PROCESS_DATA_WORKER_RESULTS)
+                            this.logUtil!!.putF(this.IMAGE_NOT_AVAILABLE, this, this.PROCESS_DATA_WORKER_RESULTS)
 
                         }
                             

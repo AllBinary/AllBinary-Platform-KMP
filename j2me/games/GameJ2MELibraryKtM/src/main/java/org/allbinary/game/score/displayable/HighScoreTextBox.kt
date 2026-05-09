@@ -54,7 +54,7 @@ open public class HighScoreTextBox : CustomTextBox {
 
     private val highScoreUtil: HighScoreUtil
 
-    private val pleaseWait: Paintable = SimpleTextPaintable(commonStrings!!.PLEASE_WAIT, BasicColorFactory.getInstance()!!.WHITE)
+    private val pleaseWait: Paintable = SimpleTextPaintable(this.commonStrings!!.PLEASE_WAIT, BasicColorFactory.getInstance()!!.WHITE)
 
     private var paintable: Paintable = NullPaintable.getInstance()!!
 

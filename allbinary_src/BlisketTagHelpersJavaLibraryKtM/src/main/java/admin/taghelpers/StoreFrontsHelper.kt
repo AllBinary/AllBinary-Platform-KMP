@@ -264,7 +264,7 @@ this.portion= Portion(hashMap)
 
     var storeSelect: HtmlSelect = HtmlSelect(StringUtil.getInstance()!!.EMPTY_STRING, this.commonPhoneStrings!!.ONE, StoreFrontData.getInstance()!!.SELECTSTORENAME, StringUtil.getInstance()!!.EMPTY_STRING)
 
-storeSelect!!.addAttribute(CLASS, TEXT)
+storeSelect!!.addAttribute(StoreFrontsHelper.CLASS, StoreFrontsHelper.TEXT)
 
     var size: Int = storeNamesVector!!.size!!
 

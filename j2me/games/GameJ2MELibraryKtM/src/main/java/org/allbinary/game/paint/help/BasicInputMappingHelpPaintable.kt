@@ -53,7 +53,7 @@ protected constructor (gameInputMappingArray: Array<GameInputMapping?>, basicCol
                             //For kotlin this is before the body of the constructor.
                     
 this.gameInputMappingArray= gameInputMappingArray
-this.update(NONE, NONE)
+this.update(this.NONE, this.NONE)
 }
 
 

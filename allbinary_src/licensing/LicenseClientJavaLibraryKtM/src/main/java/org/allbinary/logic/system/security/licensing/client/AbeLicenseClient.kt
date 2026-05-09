@@ -60,7 +60,7 @@ public constructor ()
     //var abeClientInformation = abeClientInformation
 
         try {
-            this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.GET)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.GET)
 
     var xmlRpcAbeLicenseClient: XmlRpcAbeClient = XmlRpcAbeLicenseRetrievalClient(abeClientInformation)
 

@@ -105,7 +105,7 @@ var array = array
         try {
             this.cipher.init(Cipher.ENCRYPT_MODE, secretKey)
 
-    var ivArray: ByteArray = secretKey!!.getEncoded()!!
+    var ivArray: ByteArray = this.secretKey!!.getEncoded()!!
 
 
     var encrypted: ByteArray = this.cipher.doFinal(array)!!

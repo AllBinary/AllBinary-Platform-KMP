@@ -62,8 +62,8 @@ var string = string
 
     var simplifiedString: String = string.lowercase()!!
 
-simplifiedString= simplifiedString!!.replace(commonSeps!!.SPACE, commonSeps!!.UNDERSCORE)
-simplifiedString= simplifiedString!!.replace(commonSeps!!.DASH, commonSeps!!.UNDERSCORE)
+simplifiedString= simplifiedString!!.replace(this.commonSeps!!.SPACE, this.commonSeps!!.UNDERSCORE)
+simplifiedString= simplifiedString!!.replace(this.commonSeps!!.DASH, this.commonSeps!!.UNDERSCORE)
 
 
 

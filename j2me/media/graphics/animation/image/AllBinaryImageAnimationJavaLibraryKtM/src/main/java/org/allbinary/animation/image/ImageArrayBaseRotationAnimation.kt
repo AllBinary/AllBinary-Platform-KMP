@@ -172,7 +172,7 @@ this.circularIndexUtil= CircularIndexUtil.createInstance(this.totalFrames)
     //var graphics = graphics
     //var x = x
     //var y = y
-graphics.drawImage(this.currentImage, x, y, anchor)
+graphics.drawImage(this.currentImage, x, y, this.anchor)
 }
 
 

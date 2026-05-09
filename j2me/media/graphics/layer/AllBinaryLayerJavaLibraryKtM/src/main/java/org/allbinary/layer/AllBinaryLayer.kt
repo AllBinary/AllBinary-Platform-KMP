@@ -336,7 +336,7 @@ this.viewPosition= viewPosition
 
 stringBuffer!!.append(this.getName())
 stringBuffer!!.append(commonSeps!!.COLON)
-stringBuffer!!.append(TYPE)
+stringBuffer!!.append(AllBinaryLayer.TYPE)
 stringBuffer!!.appendint(this.getType())
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.X_LABEL)

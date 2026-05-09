@@ -130,7 +130,7 @@ var sequence = sequence
 var graphics = graphics
 var x = x
 var y = y
-graphics.drawImage(this.image, x, y, anchor)
+graphics.drawImage(this.image, x, y, this.anchor)
 }
 
 

@@ -89,7 +89,7 @@ this.canvasSurfaceArray[1]= this.getCanvasSurface(this.twoImages[1]!!)
 
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
 
-canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeight() /2)
+canvasSurface!!.translate(this.originalImage!!.getWidth() /2, this.originalImage!!.getHeight() /2)
 
 
 
@@ -226,7 +226,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 var graphics = graphics
 var x = x
 var y = y
-graphics.drawImage(this.imageToShow, x, y, anchor)
+graphics.drawImage(this.imageToShow, x, y, this.anchor)
 }
 
 

@@ -91,7 +91,7 @@ graphics.setColor(this.basicColor!!.toInt())
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
-graphics.drawString(this.title, halfWidth -beginWidth, charHeight, anchor)
+graphics.drawString(this.title, halfWidth -beginWidth, charHeight, this.anchor)
 
     var size: Int = this.inputInfo!!.size
                 
@@ -104,7 +104,7 @@ graphics.drawString(this.title, halfWidth -beginWidth, charHeight, anchor)
 
         {
 beginWidth= (graphics.getFont()!!.stringWidth(this.inputInfo[index]!!) shr 1)
-graphics.drawString(this.inputInfo[index]!!, halfWidth -beginWidth, (index +3) *charHeight, anchor)
+graphics.drawString(this.inputInfo[index]!!, halfWidth -beginWidth, (index +3) *charHeight, this.anchor)
 }
 
 }

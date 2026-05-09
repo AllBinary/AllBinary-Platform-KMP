@@ -189,7 +189,7 @@ this.titleValidation= TitleNotRequiredValidation(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("TitleBodyValidation: " +isValid, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("TitleBodyValidation: " +isValid, this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 

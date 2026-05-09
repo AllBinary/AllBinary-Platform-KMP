@@ -84,8 +84,8 @@ this.initForm()
                         if(this.formType == formTypeFactory!!.TEMP_HORIZONTAL_FORM)
                         
                                     {
-                                    this.dx= x -30 +(this.rectangle.getWidth() shr 1)
-this.dy= y
+                                    this.dx= this.x -30 +(this.rectangle.getWidth() shr 1)
+this.dy= this.y
 
                                     }
                                 
@@ -111,11 +111,11 @@ this.dy= y
 
         {
 item= this.get(index)
-totalWidth += item.getMinimumWidth() +border
+totalWidth += item.getMinimumWidth() +this.border
 }
 
-this.dx= x +(this.rectangle.getWidth() shr 1) -(totalWidth shr 1)
-this.dy= y +(this.rectangle.getHeight() shr 1)
+this.dx= this.x +(this.rectangle.getWidth() shr 1) -(totalWidth shr 1)
+this.dy= this.y +(this.rectangle.getHeight() shr 1)
 
     
                         if(this.moveForSmallScreen)
@@ -170,7 +170,7 @@ item2= this.get(index)
 
                                     }
                                 
-totalHeight += item2.getMinimumHeight() +border
+totalHeight += item2.getMinimumHeight() +this.border
 }
 
 this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
@@ -179,7 +179,7 @@ this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
                         if(this.size() > 0)
                         
                                     {
-                                    this.dy= y +((this.rectangle.getHeight() -totalHeight) /2)
+                                    this.dy= this.y +((this.rectangle.getHeight() -totalHeight) /2)
 
     
                         if(this.moveForSmallScreen)
@@ -204,7 +204,7 @@ this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
                                     }
                                 
                         else {
-                            this.dy= y
+                            this.dy= this.y
 
                         }
                             
@@ -342,7 +342,7 @@ this.paintable.paint(graphics, index, deltaX +diffX, deltaY)
 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.PAINT, e)
 }
 
 }

@@ -257,7 +257,7 @@ scrollSelectionForm!!.init(rectangle, formType)
 this.overlayPaintable!!.init()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
 }
 
 }
@@ -406,7 +406,7 @@ AllBinaryMediaManager.init(EarlySoundsFactory.getInstance())
         //nullable = true from not(false or (false and false)) = true
 {
 var item = item
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 
@@ -634,7 +634,7 @@ this.setPaused(false)
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 this.logUtil!!.putF(StringMaker().
-                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(" since not a game")!!.toString(), this, "isGameOver")
+                            append(this.commonStrings!!.NOT_IMPLEMENTED)!!.append(" since not a game")!!.toString(), this, "isGameOver")
 
 
 
@@ -781,7 +781,7 @@ this.updateDemoState()
     open fun updateDemoState()
         //nullable = true from not(false or (false and true)) = true
 {
-PreLogUtil.put(SmallIntegerSingletonFactory.getInstance()!!.createInstance(this.state)!!.toString(), this, SET_STATE)
+PreLogUtil.put(SmallIntegerSingletonFactory.getInstance()!!.createInstance(this.state)!!.toString(), this, this.SET_STATE)
 this.getBasicGameDemoPaintable()!!.setState(this.state)
 
     
@@ -827,7 +827,7 @@ gameAdState!!.processPageAdState()
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -840,7 +840,7 @@ var randomValue = randomValue
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -853,7 +853,7 @@ var randomLevel = randomLevel
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -1027,7 +1027,7 @@ this.end()
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
 }
 
 }
@@ -1044,7 +1044,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
 this.baseGameStatistics!!.add(StringMaker().
-                            append(BOT_GAME_STATS)!!.append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
+                            append(StartCanvas.BOT_GAME_STATS)!!.append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
 this.baseGameStatistics!!.init()
 
     

@@ -659,7 +659,7 @@ waypoint.reset()
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onDestroyed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onDestroyed", e)
 }
 
 }

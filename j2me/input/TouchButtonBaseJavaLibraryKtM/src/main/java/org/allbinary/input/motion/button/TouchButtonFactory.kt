@@ -64,7 +64,7 @@ private constructor ()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list= this.LIST
-this.toggle(false, LIST)
+this.toggle(false, this.LIST)
 }
 
 

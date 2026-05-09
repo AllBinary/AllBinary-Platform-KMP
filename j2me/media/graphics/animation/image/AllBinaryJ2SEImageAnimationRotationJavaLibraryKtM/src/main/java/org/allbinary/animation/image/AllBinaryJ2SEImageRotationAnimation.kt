@@ -283,7 +283,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
     //var graphics = graphics
     //var x = x
     //var y = y
-graphics.drawImage(this.imageToShow, x, y, anchor)
+graphics.drawImage(this.imageToShow, x, y, this.anchor)
 }
 
 

@@ -50,7 +50,7 @@ open public class AndroidDebug
         //nullable = true from not(false or (false and true)) = true
 {
 this.setStartTime(System.currentTimeMillis())
-Debug.startMethodTracing("trace", bufferSize)
+Debug.startMethodTracing("trace", this.bufferSize)
 this.setRunning(true)
 }
 

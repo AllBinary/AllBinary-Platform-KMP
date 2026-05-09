@@ -195,7 +195,7 @@ var document = document
 
 
     
-                        if(id == 
+                        if(this.id == 
                                     null
                                  || !StringValidationUtil.getInstance()!!.isNumber(this.id))
                         

@@ -52,7 +52,7 @@ this.angleInfo!!.adjustAngle(this.getFrame())
 {
     //var direction = direction
 
-    var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
+    var angle: Angle = this.directionUtil!!.getFrameAngle(direction)!!
 
 this.adjustFrameToAngle(angle)
 }
@@ -79,7 +79,7 @@ this.angleInfo!!.adjustAngle(this.getFrame())
         //nullable = true from not(false or (false and false)) = true
 {
     //var newAngle = newAngle
-this.setFrame(frameUtil!!.getFrameForAngle(newAngle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
+this.setFrame(this.frameUtil!!.getFrameForAngle(newAngle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
 }
 
 

@@ -138,7 +138,7 @@ played= true
                                     }
                                 
 PreLogUtil.put(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(resource)!!.toString(), this, this.commonStrings!!.PROCESS)
+                            append(this.commonStrings!!.EXCEPTION_LABEL)!!.append(resource)!!.toString(), this, this.commonStrings!!.PROCESS)
 
 
 

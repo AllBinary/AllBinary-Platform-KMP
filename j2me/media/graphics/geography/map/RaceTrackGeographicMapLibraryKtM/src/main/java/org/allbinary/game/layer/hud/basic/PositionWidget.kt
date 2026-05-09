@@ -128,7 +128,7 @@ this.positionString= PositionWidget.toString(this.get())
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paint(graphics, positionString)
+super.paint(graphics, this.positionString)
 }
 
 

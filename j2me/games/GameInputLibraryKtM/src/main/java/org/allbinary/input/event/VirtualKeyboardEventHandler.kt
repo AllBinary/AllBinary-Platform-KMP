@@ -83,7 +83,7 @@ virtualKeyboardEventListenerInterface!!.onVirtualKeyboardEvent(eventObject as Vi
 this.fireEvent(this.SHOW_EVENT)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 }

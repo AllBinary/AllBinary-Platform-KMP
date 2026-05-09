@@ -104,12 +104,12 @@ var sizeString = sizeString
 
     var string: String = this.getString()!!
 
-BasicGameResources.stringBuffer!!.delete(0, stringBuffer!!.length())
+BasicGameResources.stringBuffer!!.delete(0, BasicGameResources.stringBuffer!!.length())
 BasicGameResources.stringBuffer!!.append(ROOT)
 BasicGameResources.stringBuffer!!.append(string)
 BasicGameResources.stringBuffer!!.append(sizeString)
 this.RESOURCE= BasicGameResources.stringBuffer!!.toString()
-BasicGameResources.stringBuffer!!.delete(0, stringBuffer!!.length())
+BasicGameResources.stringBuffer!!.delete(0, BasicGameResources.stringBuffer!!.length())
 BasicGameResources.stringBuffer!!.append(ROOT)
 BasicGameResources.stringBuffer!!.append(DESTROY)
 BasicGameResources.stringBuffer!!.append(string)

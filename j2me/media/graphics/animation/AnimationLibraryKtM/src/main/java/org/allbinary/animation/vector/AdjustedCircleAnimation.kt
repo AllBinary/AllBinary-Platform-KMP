@@ -112,13 +112,13 @@ this.yAdjustment= yAdjustment
                                     
     var widthPortion: Int = (((innerWidth /3) *10) /7)
 
-this.xAdjustment=  -((width shr 1) -widthPortion)
+this.xAdjustment=  -((this.width shr 1) -widthPortion)
 this.yAdjustment= this.xAdjustment
 
                                     }
                                 
                         else {
-                            this.xAdjustment=  -((width shr 1) -innerWidth)
+                            this.xAdjustment=  -((this.width shr 1) -innerWidth)
 this.yAdjustment= this.xAdjustment
 
                         }

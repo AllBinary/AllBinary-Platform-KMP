@@ -148,7 +148,7 @@ this.jPanel1= javax.swing.JPanel()
 this.mainJPanel= javax.swing.JPanel()
 this.jTabbedPane= javax.swing.JTabbedPane()
 this.statusJPanel= javax.swing.JPanel()
-statusJLabel= javax.swing.JLabel()
+MyFrame.statusJLabel= javax.swing.JLabel()
 this.menuJMenuBar= javax.swing.JMenuBar()
 this.fileJMenu= javax.swing.JMenu()
 this.newJMenuItem= javax.swing.JMenuItem()
@@ -305,8 +305,8 @@ this.mainJPanel!!.add(this.jTabbedPane)
 this.jPanel1!!.add(this.mainJPanel)
 getContentPane()!!.add(this.jPanel1, java.awt.BorderLayout.CENTER)
 this.statusJPanel!!.setLayout(java.awt.GridLayout(1, 0))
-statusJLabel!!.setText("Status Bar")
-this.statusJPanel!!.add(statusJLabel)
+MyFrame.statusJLabel!!.setText("Status Bar")
+this.statusJPanel!!.add(MyFrame.statusJLabel)
 getContentPane()!!.add(this.statusJPanel, java.awt.BorderLayout.SOUTH)
 this.fileJMenu!!.setText("File")
 this.fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
@@ -783,7 +783,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onFiles", e)
 
         try {
             
-    var newName: String = "graphic" +this.numberOfWorkAreas
+    var newName: String = "graphic" +MyFrame.numberOfWorkAreas
 
 
     var dim: Dimension = this.getSize()!!
@@ -845,7 +845,7 @@ this.fileJDialog!!.setVisible(true)
     var document: Document = workAreaJPanel!!.toDocument()!!
 
 this.logUtil!!.putF("Export: " +DomHelper.getInstance()!!.toString(document), this, "exportJMenuItem1ActionPerformed")
-this.xslHelper!!.export(file, this.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, document)
+this.xslHelper!!.export(file, MyFrame.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, document)
 } catch(e: Exception)
             {
 

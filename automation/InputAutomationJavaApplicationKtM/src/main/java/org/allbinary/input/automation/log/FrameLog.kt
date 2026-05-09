@@ -117,13 +117,13 @@ filePathStringBuffer!!.append(".txt")
 
     var fileOutputStream: FileOutputStream = FileOutputStream(File(filePath))
 
-fileOutputStream!!.write(frameBytes)
+fileOutputStream!!.write(FrameLog.frameBytes)
 fileOutputStream!!.write(getFrame()!!.toString()!!.encodeToByteArray())
 fileOutputStream!!.write('\n')
-fileOutputStream!!.write(info)
+fileOutputStream!!.write(FrameLog.info)
 fileOutputStream!!.write(this.infoStringBuffer!!.toString()!!.encodeToByteArray())
 fileOutputStream!!.write('\n')
-fileOutputStream!!.write(actions)
+fileOutputStream!!.write(FrameLog.actions)
 fileOutputStream!!.write(this.actionsStringBuffer!!.toString()!!.encodeToByteArray())
 fileOutputStream!!.close()
 }

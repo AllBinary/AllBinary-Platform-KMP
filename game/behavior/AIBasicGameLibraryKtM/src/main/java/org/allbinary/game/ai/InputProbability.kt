@@ -112,7 +112,7 @@ this.timeDelayHelper= timeDelayHelper
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-hashtable.put(INPUT_PROBABILITY, this)
+hashtable.put(InputProbability.INPUT_PROBABILITY, this)
 
 
 

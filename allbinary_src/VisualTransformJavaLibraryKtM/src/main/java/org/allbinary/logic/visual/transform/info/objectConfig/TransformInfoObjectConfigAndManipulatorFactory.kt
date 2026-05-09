@@ -84,7 +84,7 @@ private constructor (){
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    this.logUtil!!.put("Could Not Load Object Config", getInstance(), commonStrings!!.GET_INSTANCE, e)
+                                    this.logUtil!!.put("Could Not Load Object Config", getInstance(), this.commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 

@@ -146,7 +146,7 @@ this.animationFactoryInitializationVisitor!!.originalDy= dy
                         for (index in 0 until size)
 
         {
-scaledImageArray[index]= animationFactoryImageScaleUtil!!.createImage(image, image.getWidth(), image.getHeight(), this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)
+scaledImageArray[index]= this.animationFactoryImageScaleUtil!!.createImage(image, image.getWidth(), image.getHeight(), this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)
 }
 
 
@@ -154,7 +154,7 @@ scaledImageArray[index]= animationFactoryImageScaleUtil!!.createImage(image, ima
                         if(this.animationFactoryInitializationVisitor!!.dx != 0 || this.animationFactoryInitializationVisitor!!.dy != 0)
                         
                                     {
-                                    animationFactoryImageScaleUtil!!.processAdjust(this)
+                                    this.animationFactoryImageScaleUtil!!.processAdjust(this)
 
 
 

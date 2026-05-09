@@ -147,7 +147,7 @@ this.highestLevel= highestLevel
     //var currentLevel = currentLevel
 this.currentLevel= currentLevel
 this.logUtil!!.putF(StringMaker().
-                            append(this.NEW_LEVEL)!!.appendint(this.getCurrentLevel())!!.toString(), this, SET_CURRENT_LEVEL)
+                            append(this.NEW_LEVEL)!!.appendint(this.getCurrentLevel())!!.toString(), this, this.SET_CURRENT_LEVEL)
 }
 
 
@@ -168,7 +168,7 @@ this.logUtil!!.putF(StringMaker().
                                     }
                                 
 this.logUtil!!.putF(StringMaker().
-                            append(this.NEXT)!!.append(this.NEW_LEVEL)!!.appendint(this.getCurrentLevel())!!.toString(), this, NEXT_GAME_LEVEL)
+                            append(this.NEXT)!!.append(this.NEW_LEVEL)!!.appendint(this.getCurrentLevel())!!.toString(), this, this.NEXT_GAME_LEVEL)
 }
 
 

@@ -83,7 +83,7 @@ graphics.setColor(getBasicColorP()!!.toInt())
 
     var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(heading) shr 1)
 
-graphics.drawString(heading, (width shr 1) -topScoresWidth, charHeight, anchor)
+graphics.drawString(heading, (width shr 1) -topScoresWidth, charHeight, this.anchor)
 graphics.drawString(this.highScores!!.getColumnOneHeading(), 10, charHeight *3, anchor)
 
     var columnTwoHeading: String = this.highScores!!.getColumnTwoHeading()!!

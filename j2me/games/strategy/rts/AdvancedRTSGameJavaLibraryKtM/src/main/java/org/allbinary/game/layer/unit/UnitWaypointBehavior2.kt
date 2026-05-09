@@ -186,7 +186,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                                     {
                                     
     
-                        if(waypointPathsListP != UnitWaypointBehavior2.runningWaypointPathList)
+                        if(this.waypointPathsListP != UnitWaypointBehavior2.runningWaypointPathList)
                         
                                     {
                                     this.waypointPathRunnable!!.setRunning(false)
@@ -409,7 +409,7 @@ this.targetList!!.clear()
                         
                                     {
                                     
-    var geographicMapCellPosition: GeographicMapCellPosition = associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
+    var geographicMapCellPosition: GeographicMapCellPosition = this.associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
 
 
     var pathFindingLayerInterface: PathFindingLayerInterface = (this.currentTargetLayerInterfaceP as PathFindingLayerInterface)
@@ -531,7 +531,7 @@ this.removeWaypoint(targetLayer, this.unitWaypointStrings!!.WAYPOINT_DESTROYED)
                                 
                         else {
                             
-    var geographicMapCellPosition: GeographicMapCellPosition = associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
+    var geographicMapCellPosition: GeographicMapCellPosition = this.associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
 
 
     
@@ -840,8 +840,8 @@ this.clearTarget()
 
     var point: GPoint = this.nextUnvisitedPathGeographicMapCellPosition!!.getMidPoint()!!
 
-dx= associatedAdvancedRTSGameLayer!!.getXP() +associatedAdvancedRTSGameLayer!!.getHalfWidth() -point.getX()
-dy= associatedAdvancedRTSGameLayer!!.getYP() +associatedAdvancedRTSGameLayer!!.getHalfHeight() -point.getY()
+dx= this.associatedAdvancedRTSGameLayer!!.getXP() +this.associatedAdvancedRTSGameLayer!!.getHalfWidth() -point.getX()
+dy= this.associatedAdvancedRTSGameLayer!!.getYP() +this.associatedAdvancedRTSGameLayer!!.getHalfHeight() -point.getY()
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.processTargeting(this.associatedAdvancedRTSGameLayer, dx, dy)
 
                                     }
@@ -914,7 +914,7 @@ this.afterNextUnvisitedPathGeographicMapCellPosition= this.currentGeographicMapC
     //var waypointLayer = waypointLayer
 
     
-                        if(waypointPathsListP!!.size() != 0)
+                        if(this.waypointPathsListP!!.size() != 0)
                         
                                     {
                                     this.setCurrentTargetLayerInterface(waypointLayer)
@@ -922,7 +922,7 @@ this.afterNextUnvisitedPathGeographicMapCellPosition= this.currentGeographicMapC
     var MAX: Int = Integer.MAX_VALUE
 
 this.setCurrentTargetDistance(MAX)
-this.setRandomGeographicMapCellHistory(waypointPathsListP)
+this.setRandomGeographicMapCellHistory(this.waypointPathsListP)
 
                                     }
                                 
@@ -942,7 +942,7 @@ this.removeWaypoint(waypointLayer, this.unitWaypointStrings!!.ALREADY_THERE)
         //nullable = true from not(false or (false and false)) = true
 {
     //var waypointLayer = waypointLayer
-setWaypointPathsList(runningWaypointPathList)
+setWaypointPathsList(UnitWaypointBehavior2.runningWaypointPathList)
 
     
                         if(this.waypointPathRunnable!!.isRunning())
@@ -1090,12 +1090,12 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.associatedAdvancedRTSGameLay
                         if(this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
                         
                                     {
-                                    stringBuffer!!.append(TARGET_LAYER)
-stringBuffer!!.append(commonSeps!!.SPACE)
+                                    stringBuffer!!.append(UnitWaypointBehavior2.TARGET_LAYER)
+stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(this.currentTargetLayerInterfaceP!!.getName())
 stringBuffer!!.append(" with ")
-stringBuffer!!.append(TARGET_DISTANCE)
-stringBuffer!!.append(commonSeps!!.SPACE)
+stringBuffer!!.append(UnitWaypointBehavior2.TARGET_DISTANCE)
+stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.appendint(getCurrentTargetDistance())
 
                                     }

@@ -55,7 +55,7 @@ var z = z
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(HASHTABLE)
+stringBuffer!!.append(LayerUtil.HASHTABLE)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(hashtable))
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.X_LABEL)

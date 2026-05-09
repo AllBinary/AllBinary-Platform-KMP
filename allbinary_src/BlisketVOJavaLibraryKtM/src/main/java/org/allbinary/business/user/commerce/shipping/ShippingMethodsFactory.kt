@@ -94,7 +94,7 @@ stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 stringBuffer!!.append(storeFrontInterface!!.getName())
 stringBuffer!!.append(sep)
-stringBuffer!!.append(this.SHIPPINGMETHODSFILEPATHSTRING)
+stringBuffer!!.append(ShippingMethodsFactory.SHIPPINGMETHODSFILEPATHSTRING)
 
     var abPath: AbPath = AbPath(stringBuffer!!.toString(), this.SHIPPINGMETHODSFILENAME) as AbPath
 

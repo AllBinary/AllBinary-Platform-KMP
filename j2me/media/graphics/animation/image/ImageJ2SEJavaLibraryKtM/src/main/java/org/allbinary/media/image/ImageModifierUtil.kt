@@ -265,9 +265,9 @@ newBufferedImage!!.setRGB(index, index2, (ax shl 24) or (rx shl 16) or (gx shl 8
                         for (index2 in 0 until height)
 
         {
-raster.getPixel(index, index2, colorArray)
+raster.getPixel(index, index2, this.colorArray)
 this.colorArray[0]= alpha and this.colorArray[0]
-raster.setPixel(index, index2, colorArray)
+raster.setPixel(index, index2, this.colorArray)
 }
 
 }

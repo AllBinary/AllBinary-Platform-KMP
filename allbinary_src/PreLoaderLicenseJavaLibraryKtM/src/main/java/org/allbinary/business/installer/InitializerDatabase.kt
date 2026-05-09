@@ -289,7 +289,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
                         if(!stringValidationUtil!!.isValidRequired(this.adminDbUserName, InitializerDatabase.MIN, InitializerDatabase.MAX))
                         
                                     {
-                                    stringBuffer!!.append("Admin username should be < " +MAX +" and > " +MIN +" characters in length.<br />")
+                                    stringBuffer!!.append("Admin username should be < " +InitializerDatabase.MAX +" and > " +InitializerDatabase.MIN +" characters in length.<br />")
 
                                     }
                                 
@@ -298,7 +298,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
                         if(!stringValidationUtil!!.isValidNotRequired(this.adminDbPassword, InitializerDatabase.MINPASSWORD, InitializerDatabase.MAX))
                         
                                     {
-                                    stringBuffer!!.append("Admin password should be < " +MAX +" and > " +MINPASSWORD +" characters in length.<br />")
+                                    stringBuffer!!.append("Admin password should be < " +InitializerDatabase.MAX +" and > " +InitializerDatabase.MINPASSWORD +" characters in length.<br />")
 
                                     }
                                 

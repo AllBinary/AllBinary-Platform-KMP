@@ -158,7 +158,7 @@ var y = y
 
     var currentY: Int = this.dy *frame
 
-graphics.drawImage(this.image, x +currentX, y +currentY, anchor)
+graphics.drawImage(this.image, x +currentX, y +currentY, this.anchor)
 }
 
 

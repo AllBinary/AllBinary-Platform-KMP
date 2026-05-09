@@ -53,7 +53,7 @@ companion object {
     private var screenScavangerRobot: ScreenScavangerRobot
 public constructor (){
 screenScavangerRobot= ScreenScavangerRobot()
-index= ProcessingFrameIndexFactory.next()
+ScreenCaptureImagesWorker.index= ProcessingFrameIndexFactory.next()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.

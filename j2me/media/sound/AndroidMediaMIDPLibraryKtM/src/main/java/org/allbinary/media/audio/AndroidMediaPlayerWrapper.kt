@@ -251,7 +251,7 @@ this.mediaPlayer!!.prepare()
 super.stop()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 }

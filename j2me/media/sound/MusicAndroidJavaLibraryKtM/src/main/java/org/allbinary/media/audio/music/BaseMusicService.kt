@@ -176,7 +176,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.
                         
                                     {
                                     
-    var command: Int = intent.getIntExtra(commonStateStrings!!.ON_START_COMMAND,  -1)!!
+    var command: Int = intent.getIntExtra(this.commonStateStrings!!.ON_START_COMMAND,  -1)!!
 
 this.logUtil!!.putF(CommonLabels.getInstance()!!.COMMAND_LABEL +command, this, this.commonStateStrings!!.ON_START_COMMAND)
 

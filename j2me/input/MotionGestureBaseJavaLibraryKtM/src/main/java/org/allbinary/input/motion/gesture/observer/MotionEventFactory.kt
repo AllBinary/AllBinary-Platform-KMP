@@ -53,7 +53,7 @@ var source = source
 var id = id
 this.source= source
 this.id= id
-index= TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()
+MotionEventFactory.index= TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()
 }
 
 
@@ -64,7 +64,7 @@ index= TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()
     var inputFactory: InputFactory = InputFactory.getInstance()!!
 
 
-    var input: Input = inputFactory!!.getInstanceById(index++)!!
+    var input: Input = inputFactory!!.getInstanceById(MotionEventFactory.index++)!!
 
 
     

@@ -185,7 +185,7 @@ this.storeCancelComment= this.request.getParameter(OrderData.STORECANCELCOMMENT)
 
     var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-orderHashMap!!.put(EntryData.getInstance()!!.ID, entryId)
+orderHashMap!!.put(EntryData.getInstance()!!.ID, this.entryId)
 orderHashMap!!.put(OrderData.ID, this.orderId)
 orderHashMap!!.put(UserData.USERNAME, userName)
 orderHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
@@ -215,7 +215,7 @@ orderHashMap!!.put(OrderHistoryData.SUBTOTAL, this.subTotal)
 orderHashMap!!.put(OrderHistoryData.SHIPPINGCOST, this.shippingCost)
 orderHashMap!!.put(OrderHistoryData.TAX, this.tax)
 orderHashMap!!.put(OrderHistoryData.TOTAL, this.total)
-orderHashMap!!.put(EntryData.getInstance()!!.SPECIAL, special)
+orderHashMap!!.put(EntryData.getInstance()!!.SPECIAL, this.special)
 orderHashMap!!.put(OrderData.CUSTOMERCOMMENT, this.userComment)
 orderHashMap!!.put(OrderData.CUSTOMERCANCELCOMMENT, this.userCancelComment)
 orderHashMap!!.put(OrderData.STORECOMMENT, this.storeComment)
@@ -246,7 +246,7 @@ OrderHistoryEntityFactory.getInstance()!!.update(whereHashMap, orderHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 

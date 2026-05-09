@@ -121,7 +121,7 @@ this.totalDigits= this.timer.getCurrentTotalDigits()
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-super.paintDX(graphics, TIME_CHAR_ARRAY, 0, TIME_CHAR_ARRAY.size, string, 0, totalDigits, offset)
+super.paintDX(graphics, TIME_CHAR_ARRAY, 0, TIME_CHAR_ARRAY.size, string, 0, totalDigits, this.offset)
 }
 
 

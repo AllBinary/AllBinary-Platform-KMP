@@ -42,7 +42,7 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-DESTROYED_LAYER_PROCESSOR= DestroyedLayerProcessor()
+DestroyedLayerProcessor.DESTROYED_LAYER_PROCESSOR= DestroyedLayerProcessor()
 }
 
 

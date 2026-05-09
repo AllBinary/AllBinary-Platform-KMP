@@ -48,12 +48,12 @@ var commandListener = commandListener
 var title = title
 var backgrounBasicColor = backgrounBasicColor
 var foregroundBasicColor = foregroundBasicColor
-FORM= SaveGameForm(commandListener, title, backgrounBasicColor, foregroundBasicColor)
+SaveGameForm.FORM= SaveGameForm(commandListener, title, backgrounBasicColor, foregroundBasicColor)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return FORM
+                        return SaveGameForm.FORM
 }
 
 

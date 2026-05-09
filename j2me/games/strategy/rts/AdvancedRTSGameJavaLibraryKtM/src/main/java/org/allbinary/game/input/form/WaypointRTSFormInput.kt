@@ -392,7 +392,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "attemptBuild")
                         
                                     {
                                     layerInterface!!.construct(rtsPlayerLayerInterface)
-newUnconstructedRTSLayerInterfaceArray[itemIndex]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 capital.removeMoney(cost)
 WaypointCellPositionHistory.getInstance()!!.addList(list, layerInterface)
 
@@ -461,7 +461,7 @@ rtsPlayerLayerInterface!!.add(waypointAvancedRTSGameLayer!!.getWaypointBehavior(
 {
     //var layerInterface = layerInterface
 
-    var stickyAssociatedAdvandedRtsLayer: AdvancedRTSGameLayer = stickyAssociatedRtsLayer as AdvancedRTSGameLayer
+    var stickyAssociatedAdvandedRtsLayer: AdvancedRTSGameLayer = this.stickyAssociatedRtsLayer as AdvancedRTSGameLayer
 
 
     var list: BasicArrayList = stickyAssociatedAdvandedRtsLayer!!.getWaypointBehavior()!!.getOwnedWaypointList()!!

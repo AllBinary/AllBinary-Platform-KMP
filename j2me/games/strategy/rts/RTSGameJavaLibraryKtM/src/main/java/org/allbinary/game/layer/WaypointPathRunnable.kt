@@ -44,12 +44,12 @@ public constructor (){
 {
 
         try {
-            pathFindingLayer!!.getWaypointRunnableLogHelper()!!.start(pathFindingLayer)
+            this.pathFindingLayer!!.getWaypointRunnableLogHelper()!!.start(this.pathFindingLayer)
 
-    var waypointBehavior: WaypointBehaviorBase = pathFindingLayer!!.getWaypointBehavior()!!
+    var waypointBehavior: WaypointBehaviorBase = this.pathFindingLayer!!.getWaypointBehavior()!!
 
 
-    var geographicMapCellPosition: GeographicMapCellPosition = pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
+    var geographicMapCellPosition: GeographicMapCellPosition = this.pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
 
 
     
@@ -66,7 +66,7 @@ public constructor (){
                                     }
                                 
 waypointBehavior!!.setWaypointPathsList(this.targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsListRunnable(geographicMapCellPosition))
-pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(pathFindingLayer)
+this.pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(this.pathFindingLayer)
 Thread.sleep(15.toLong() +(this.priorityP *2))
 } catch(e: Exception)
             {

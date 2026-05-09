@@ -76,14 +76,14 @@ public constructor (){
                         if(image == NullCanvas.NULL_IMAGE)
                         
                                     {
-                                    volume += width *height
+                                    this.volume += width *height
 
     
-                        if(volume > 32000)
+                        if(this.volume > 32000)
                         
                                     {
                                     System.gc()
-volume= 0
+this.volume= 0
 
                                     }
                                 
@@ -93,14 +93,14 @@ image= this.createImage(caller, width, height)
                         if(foundIndex ==  -1)
                         
                                     {
-                                    foundIndex= nextIndex
-widths[nextIndex]= width
-heights[nextIndex]= height
+                                    foundIndex= this.nextIndex
+this.widths[this.nextIndex]= width
+this.heights[this.nextIndex]= height
 nextIndex++
 
                                     }
                                 
-listOfList[foundIndex]!!.add(image)
+this.listOfList[foundIndex]!!.add(image)
 
                                     }
                                 

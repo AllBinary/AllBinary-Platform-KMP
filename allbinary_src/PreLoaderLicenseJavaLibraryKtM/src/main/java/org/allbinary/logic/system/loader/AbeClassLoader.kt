@@ -70,7 +70,7 @@ var key = key
                             //For kotlin this is before the body of the constructor.
                     
 this.key= key
-this.PATH= org.allbinary.globals.URLGLOBALS.getWebappPath() +"WEB-INF/classes/"
+AbeClassLoader.PATH= org.allbinary.globals.URLGLOBALS.getWebappPath() +"WEB-INF/classes/"
 }
 
 
@@ -244,7 +244,7 @@ var name = name
 
 
         try {
-            cname= PATH +name.replace('.', AbPathData.getInstance()!!.SEPARATORCHAR) +this.ENCRYPTED_EXTENSION
+            cname= AbeClassLoader.PATH +name.replace('.', AbPathData.getInstance()!!.SEPARATORCHAR) +this.ENCRYPTED_EXTENSION
 in= FileInputStream(cname)
 
     var decrypted: ByteArray = this.abCryptUtil!!.decrypt(in, this.key)!!

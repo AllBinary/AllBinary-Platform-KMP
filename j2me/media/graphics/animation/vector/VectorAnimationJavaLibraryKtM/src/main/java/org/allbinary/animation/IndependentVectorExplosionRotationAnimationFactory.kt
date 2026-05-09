@@ -90,7 +90,7 @@ frame= rotationAnimationInterface!!.getFrame()
                                     }
                                 
 
-    var points: Array<Array<IntArray?>?> = this.vectorExplosionGenerator!!.getInstance(this.framePoints[frame]!!, 6, vectorExplosionGenerator!!.ROTATION)!!
+    var points: Array<Array<IntArray?>?> = this.vectorExplosionGenerator!!.getInstance(this.framePoints[frame]!!, 6, this.vectorExplosionGenerator!!.ROTATION)!!
 
 
 

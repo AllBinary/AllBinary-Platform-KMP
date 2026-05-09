@@ -123,7 +123,7 @@ node.appendChild(styleNode)
 styleNode!!.appendChild(ColorsView().
                             toXmlNode(document))
 
-    var size: Int = cssStyleElementVector!!.size()!!
+    var size: Int = this.cssStyleElementVector!!.size()!!
 
 
 

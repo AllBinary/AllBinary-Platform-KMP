@@ -103,7 +103,7 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(this.id, this.groupId, newStat
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setOrderStatus(newStatus)", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setOrderStatus(newStatus)", e)
 
                                     }
                                 
@@ -150,7 +150,7 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(this.id, this.groupId, this.st
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setOrderStatus(newStatus)", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setOrderStatus(newStatus)", e)
 
                                     }
                                 

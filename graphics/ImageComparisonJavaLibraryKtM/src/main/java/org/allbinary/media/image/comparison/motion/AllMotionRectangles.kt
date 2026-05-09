@@ -245,7 +245,7 @@ var pixelDelta = pixelDelta
 
 
     
-                        if(horizontalDistance < MAX_PIXEL_DISTANCE_THRESHOLD && verticalDistance < MAX_PIXEL_DISTANCE_THRESHOLD)
+                        if(horizontalDistance < this.MAX_PIXEL_DISTANCE_THRESHOLD && verticalDistance < this.MAX_PIXEL_DISTANCE_THRESHOLD)
                         
                                     {
                                     

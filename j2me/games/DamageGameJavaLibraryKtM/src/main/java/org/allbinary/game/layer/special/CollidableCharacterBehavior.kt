@@ -84,7 +84,7 @@ collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickupLayer(colli
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 

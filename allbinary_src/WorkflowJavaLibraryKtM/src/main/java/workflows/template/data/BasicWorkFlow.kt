@@ -121,7 +121,7 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(th
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
                         
                                     {
-                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 
                                     }
                                 

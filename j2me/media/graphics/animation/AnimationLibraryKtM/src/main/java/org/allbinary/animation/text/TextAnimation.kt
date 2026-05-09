@@ -85,7 +85,7 @@ this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.g
                         for (index in 0 until size)
 
         {
-graphics.drawString(this.textArrayP[index]!!, x, y +(index *height), anchor)
+graphics.drawString(this.textArrayP[index]!!, x, y +(index *height), this.anchor)
 }
 
 }

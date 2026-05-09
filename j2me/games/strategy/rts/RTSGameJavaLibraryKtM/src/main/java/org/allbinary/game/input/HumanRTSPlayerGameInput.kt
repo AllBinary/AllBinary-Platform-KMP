@@ -283,7 +283,7 @@ stringBuffer!!.append(this.SPACE)
 stringBuffer!!.appendint(rectX2)
 stringBuffer!!.append(this.SPACE)
 stringBuffer!!.appendint(rectY2)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD)
 
     var rtsLayer: RTSLayer
 
@@ -303,14 +303,14 @@ stringBuffer!!.append(this.AT)
 stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth()))
 stringBuffer!!.append(this.SPACE)
 stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD)
 
     
                         if(this.rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth(), rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append(this.ADDING)!!.append(rtsLayer!!.getName())!!.toString(), this, METHOD)
+                            append(this.ADDING)!!.append(rtsLayer!!.getName())!!.toString(), this, this.METHOD)
 rtsLayer!!.select()
 this.getSelectedBuildingPlayerGameInput()!!.addSelectedRTSLayer(rtsLayer)
 

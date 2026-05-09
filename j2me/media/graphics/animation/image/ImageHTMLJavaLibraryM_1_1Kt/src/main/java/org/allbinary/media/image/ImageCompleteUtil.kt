@@ -110,7 +110,7 @@ var name = name
                         if(!image.isReady())
                         
                                     {
-                                    PreLogUtil.put("Waiting for Not Ready Image: " +image.getName(), this, ISREADY)
+                                    PreLogUtil.put("Waiting for Not Ready Image: " +image.getName(), this, this.ISREADY)
 
                                     }
                                 

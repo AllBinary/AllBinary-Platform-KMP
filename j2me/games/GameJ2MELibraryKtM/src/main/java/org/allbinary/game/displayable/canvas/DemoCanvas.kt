@@ -268,7 +268,7 @@ var displayChangeEvent = displayChangeEvent
 
         try {
             this.logUtil!!.putF(StringMaker().
-                            append(commonLabels!!.START_LABEL)!!.append(displayInfoSingleton!!.toString())!!.append(MyFont.getInstance()!!.toString())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+                            append(this.commonLabels!!.START_LABEL)!!.append(this.displayInfoSingleton!!.toString())!!.append(MyFont.getInstance()!!.toString())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
 
     var scrollSelectionForm: ScrollSelectionForm = this.getMenuForm()!!
 
@@ -292,7 +292,7 @@ scrollSelectionForm!!.init(rectangle, formType)
 this.overlayPaintable!!.init()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
 }
 
 }
@@ -441,7 +441,7 @@ AllBinaryMediaManager.init(EarlySoundsFactory.getInstance())
         //nullable = true from not(false or (false and false)) = true
 {
 var item = item
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 
@@ -464,7 +464,7 @@ this.close()
     var rectangle: Rectangle = FormUtil.getInstance()!!.createFormRectangle()!!
 
 PreLogUtil.put(StringMaker().
-                            append(commonLabels!!.START_LABEL)!!.append(displayInfoSingleton!!.toString())!!.toString(), this, "initMenu")
+                            append(this.commonLabels!!.START_LABEL)!!.append(this.displayInfoSingleton!!.toString())!!.toString(), this, "initMenu")
 
     var scrollSelectionForm: ScrollSelectionForm = CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, formType, 15, true, this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE)!!
 
@@ -718,7 +718,7 @@ this.setPaused(false)
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 this.logUtil!!.putF(StringMaker().
-                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(" since not a game")!!.toString(), this, "isGameOver")
+                            append(this.commonStrings!!.NOT_IMPLEMENTED)!!.append(" since not a game")!!.toString(), this, "isGameOver")
 
 
 
@@ -866,7 +866,7 @@ this.updateDemoState()
     open fun updateDemoState()
         //nullable = true from not(false or (false and true)) = true
 {
-PreLogUtil.put(SmallIntegerSingletonFactory.getInstance()!!.createInstance(this.state)!!.toString(), this, SET_STATE)
+PreLogUtil.put(SmallIntegerSingletonFactory.getInstance()!!.createInstance(this.state)!!.toString(), this, this.SET_STATE)
 this.getBasicGameDemoPaintable()!!.setState(this.state)
 
     
@@ -920,7 +920,7 @@ gameAdState!!.processPageAdState()
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -933,7 +933,7 @@ var randomValue = randomValue
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -946,7 +946,7 @@ var randomLevel = randomLevel
 
 
 
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
+                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
@@ -955,7 +955,7 @@ var randomLevel = randomLevel
     open fun create()
         //nullable = true from not(false or (false and true)) = true
 {
-PreLogUtil.put(commonStrings!!.START, this, "create")
+PreLogUtil.put(this.commonStrings!!.START, this, "create")
 this.highScoresPaintable= NullPaintable.getInstance()
 
     var randomLevel: Int = this.getNextRandom()!!
@@ -1137,7 +1137,7 @@ ThreadUtil.getInstance()!!.join(this.canvasThread)
 
     var METHOD_NAME: String = "showGamePaintable"
 
-PreLogUtil.put(commonStrings!!.START, this, METHOD_NAME)
+PreLogUtil.put(this.commonStrings!!.START, this, METHOD_NAME)
 
     var isDefault: Boolean = J2MEUtil.isHTML()!!
 
@@ -1353,7 +1353,7 @@ this.end()
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
 }
 
 }
@@ -1373,7 +1373,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
     var features: Features = Features.getInstance()!!
 
 this.baseGameStatistics!!.add(StringMaker().
-                            append(BOT_GAME_STATS)!!.append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
+                            append(DemoCanvas.BOT_GAME_STATS)!!.append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
 this.baseGameStatistics!!.init()
 
     

@@ -48,7 +48,7 @@ var rtsPlayerGameInput = rtsPlayerGameInput
 {
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
-rtsPlayerGameInput!!.right()
+this.rtsPlayerGameInput!!.right()
 }
 
 

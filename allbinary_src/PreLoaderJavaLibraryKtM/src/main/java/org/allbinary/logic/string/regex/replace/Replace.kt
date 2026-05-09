@@ -266,7 +266,7 @@ totalNumberOfReplaces++
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
-                                    this.logUtil!!.putF("Total Number Of Replaces: " +totalNumberOfReplaces, this, ALL)
+                                    this.logUtil!!.putF("Total Number Of Replaces: " +totalNumberOfReplaces, this, this.ALL)
 
                                     }
                                 
@@ -367,7 +367,7 @@ totalNumberOfReplaces++
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
-                                    this.logUtil!!.putF("Total Number Of Replaces: " +totalNumberOfReplaces, this, ALL)
+                                    this.logUtil!!.putF("Total Number Of Replaces: " +totalNumberOfReplaces, this, this.ALL)
 
                                     }
                                 

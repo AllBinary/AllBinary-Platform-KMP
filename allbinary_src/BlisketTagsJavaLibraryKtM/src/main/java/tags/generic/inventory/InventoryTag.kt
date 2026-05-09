@@ -87,7 +87,7 @@ pageContext!!.getOut()!!.print(result)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "search()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "search()", e)
 
                                     }
                                 
@@ -153,7 +153,7 @@ pageContext!!.getOut()!!.print(result)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "viewSummary()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "viewSummary()", e)
 
                                     }
                                 

@@ -95,10 +95,10 @@ public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFac
     var size: Int = this.size()!!
 
 
-    var dx: Int = x
+    var dx: Int = this.x
 
 
-    var dy: Int = y
+    var dy: Int = this.y
 
 
     
@@ -145,7 +145,7 @@ item= this.get(index)
                         else {
                             this.logged= true
 PreLogUtil.put(StringMaker().
-                            append("painting beyond maxx: ")!!.appendint(this.rectangle.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
+                            append("painting beyond maxx: ")!!.appendint(this.rectangle.getMaxX())!!.toString(), this, this.canvasStrings!!.PAINT)
 
                         }
                             
@@ -158,7 +158,7 @@ PreLogUtil.put(StringMaker().
                         
                                     {
                                     
-    var dx2: Int = this.paintItem(graphics, index, item, dx, dy) +border
+    var dx2: Int = this.paintItem(graphics, index, item, dx, dy) +this.border
 
 this.paintable.paint(graphics, index, dx, dy)
 dx= dx2
@@ -187,7 +187,7 @@ this.paintable.paint(graphics, index, dx, dy)
 
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT)
+PreLogUtil.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.PAINT)
 }
 
 }

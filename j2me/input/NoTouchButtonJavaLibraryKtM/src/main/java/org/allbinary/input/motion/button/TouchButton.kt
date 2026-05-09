@@ -86,7 +86,7 @@ this.logUtil!!.putF(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this.animationInterface!!.paintXY(graphics, animationX, animationY)
+this.animationInterface!!.paintXY(graphics, animationX, this.animationY)
 }
 
 

@@ -125,7 +125,7 @@ this.htmlRowsVector!!.add(htmlRow)
     var result: String = stringUtil!!.EMPTY_STRING
 
 
-    var attributeKeys: Array<Any?> = otherAttributes!!.keySet()!!.toTypedArray()!!
+    var attributeKeys: Array<Any?> = this.otherAttributes!!.keySet()!!.toTypedArray()!!
 
 result= this.before
 result += this.START

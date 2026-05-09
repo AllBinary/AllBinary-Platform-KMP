@@ -131,7 +131,7 @@ dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 
 } catch(e: Exception)
             {
-this.logUtil!!.put("Command Failed: " +INITFILENAME, this, "write", e)
+this.logUtil!!.put("Command Failed: " +this.INITFILENAME, this, "write", e)
 FileStreamFactory.getInstance()!!.delete(this.filePath, this.INITFILENAME)
 
 
@@ -240,7 +240,7 @@ this.logUtil!!.putF(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
                             
 
 
-                            throw Exception("Could Not Load License InitInfo: " +INITFILENAME)
+                            throw Exception("Could Not Load License InitInfo: " +this.INITFILENAME)
 
                         }
                             
@@ -248,16 +248,16 @@ this.logUtil!!.putF(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
             {
 
         try {
-            this.logUtil!!.put("Command Failed: " +INITFILENAME, this, METHOD_NAME, e)
+            this.logUtil!!.put("Command Failed: " +this.INITFILENAME, this, METHOD_NAME, e)
 } catch(e2: Exception)
             {
-this.logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()", e2)
+this.logUtil!!.put("LicenseInitInfo Read Retry: " +this.INITFILENAME, this, "readAgain()", e2)
 }
 
 
 
 
-                            throw Exception("LicenseInitInfo Read Error: " +INITFILENAME)
+                            throw Exception("LicenseInitInfo Read Error: " +this.INITFILENAME)
 }
 
 }

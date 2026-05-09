@@ -98,10 +98,10 @@ this.rtsInterface= rtsInterface
 
                                     }
                                 
-this.adjustedCostLabelY=  -yOffset +imageHeight -(3 *DEFAULT_CHAR_HEIGHT)
-this.adjustedCostY=  -yOffset +imageHeight -(2 *DEFAULT_CHAR_HEIGHT)
+this.adjustedCostLabelY=  -this.yOffset +imageHeight -(3 *DEFAULT_CHAR_HEIGHT)
+this.adjustedCostY=  -this.yOffset +imageHeight -(2 *DEFAULT_CHAR_HEIGHT)
 this.adjustedCostX= 2 +(this.DOLLAR.length *(DEFAULT_CHAR_HEIGHT -1))
-this.adjustedLevelY=  -yOffset +imageHeight -DEFAULT_CHAR_HEIGHT
+this.adjustedLevelY=  -this.yOffset +imageHeight -DEFAULT_CHAR_HEIGHT
 this.adjustedLevelX= 2 +(this.LEVEL.length *(DEFAULT_CHAR_HEIGHT -1))
 this.update()
 }

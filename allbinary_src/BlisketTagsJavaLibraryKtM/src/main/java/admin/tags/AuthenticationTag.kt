@@ -149,7 +149,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "changePassword()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "changePassword()", e)
 
                                     }
                                 
@@ -204,7 +204,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "newPassword()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "newPassword()", e)
 
                                     }
                                 
@@ -259,7 +259,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "invalidateSession()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "invalidateSession()", e)
 
                                     }
                                 
@@ -314,7 +314,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "isSessionOld()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "isSessionOld()", e)
 
                                     }
                                 
@@ -373,7 +373,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "isRoleValid()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "isRoleValid()", e)
 
                                     }
                                 
@@ -431,7 +431,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "validRole()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "validRole()", e)
 
                                     }
                                 
@@ -489,7 +489,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "invalidRole()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "invalidRole()", e)
 
                                     }
                                 
@@ -548,7 +548,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "isAuthenticationSessionValid()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "isAuthenticationSessionValid()", e)
 
                                     }
                                 
@@ -607,7 +607,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "processIfNewLogin()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processIfNewLogin()", e)
 
                                     }
                                 
@@ -662,7 +662,7 @@ this.roles= values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "isSetToInvalidate()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "isSetToInvalidate()", e)
 
                                     }
                                 

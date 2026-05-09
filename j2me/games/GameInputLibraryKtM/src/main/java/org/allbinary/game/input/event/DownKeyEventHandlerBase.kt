@@ -134,7 +134,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!
 this.process(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 index++
@@ -187,7 +187,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!
 this.processEvent(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 index++
@@ -231,7 +231,7 @@ downKeyEventListenerInterface!!.onDownKeyEvent(eventObject)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(TOTAL_LISTENERS)
+stringBuffer!!.append(DownKeyEventHandlerBase.TOTAL_LISTENERS)
 stringBuffer!!.appendint(this.list.size())
 
     var eventListenerInterface: EventListenerInterface
@@ -246,7 +246,7 @@ stringBuffer!!.appendint(this.list.size())
 
         try {
             eventListenerInterface= this.list.get(index) as EventListenerInterface
-stringBuffer!!.append(LISTENER_LABEL)
+stringBuffer!!.append(DownKeyEventHandlerBase.LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
             {

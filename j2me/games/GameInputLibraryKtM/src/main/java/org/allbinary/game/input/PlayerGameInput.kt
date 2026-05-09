@@ -93,7 +93,7 @@ this.addForRemoval(gameKeyEvent)
 {
     //var gameKeyEvent = gameKeyEvent
 PreLogUtil.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameKeyEvent!!.toString())!!.toString(), this, gameInputStrings!!.ON_DOWN_GAME_KEY)
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameKeyEvent!!.toString())!!.toString(), this, this.gameInputStrings!!.ON_DOWN_GAME_KEY)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.

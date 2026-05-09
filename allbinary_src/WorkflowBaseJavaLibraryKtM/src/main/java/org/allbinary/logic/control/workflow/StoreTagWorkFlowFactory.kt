@@ -87,7 +87,7 @@ private constructor ()
 stringBuffer!!.append("Creating WorkFlow: ")
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append("->")
-stringBuffer!!.append(instance::class.toString()!!)
+stringBuffer!!.append(StoreTagWorkFlowFactory.instance::class.toString()!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -126,7 +126,7 @@ params[1]= pageContext as Object
 stringBuffer!!.append("Error Creating WorkFlow: ")
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append("->")
-stringBuffer!!.append(instance::class.toString()!!)
+stringBuffer!!.append(StoreTagWorkFlowFactory.instance::class.toString()!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -155,7 +155,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE
 stringBuffer!!.append("Error Creating WorkFlow: ")
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append("->")
-stringBuffer!!.append(instance::class.toString()!!)
+stringBuffer!!.append(StoreTagWorkFlowFactory.instance::class.toString()!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
