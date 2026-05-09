@@ -31,7 +31,7 @@ import org.allbinary.graphics.color.ColorChangeListener
 import org.allbinary.graphics.form.FormPaintable
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.graphics.form.item.ABStringComponent
-import org.allbinary.graphics.form.item.TextItem
+import org.allbinary.graphics.form.item.ABTextItem
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.logic.util.event.AllBinaryEventObject
 
@@ -92,7 +92,7 @@ scrollSelectionForm!!.setButtonBasicColor(basicColor)
 
         {
 
-    var item: TextItem = scrollSelectionForm!!.get(index) as TextItem
+    var item: ABTextItem = scrollSelectionForm!!.get(index) as ABTextItem
 
 
     var stringComponent: ABStringComponent = item.getLabelStringComponent()!!

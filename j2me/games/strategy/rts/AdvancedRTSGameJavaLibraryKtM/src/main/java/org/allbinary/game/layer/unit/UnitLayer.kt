@@ -1630,7 +1630,7 @@ this.damageFloaters!!.add(damage)
         //nullable = true from not(false or (false and false)) = true
 {
     //var destroyed = destroyed
-this.logUtil!!.putF(commonStrings!!.START, this, "setDestroyed")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "setDestroyed")
 super.setDestroyed(destroyed)
 
     

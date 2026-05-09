@@ -108,7 +108,7 @@ companion object {
 
         {
 bufferedImage= bufferedImageArray[index]!!
-this.logUtil!!.putF(spriteType, this, commonStrings!!.RUN)
+this.logUtil!!.putF(spriteType, this, this.commonStrings!!.RUN)
 
     
                         if(spriteType == this.HORIZONTAL_SPRITE)
@@ -128,8 +128,8 @@ this.logUtil!!.putF(spriteType, this, commonStrings!!.RUN)
 
 generatedBufferedImageArray= Array(rows) { arrayOfNulls<BufferedImage?>(columns) }
                                                             
-this.logUtil!!.putF("Processing Individual Cells columns: " +columns +" rows: " +rows, this, commonStrings!!.RUN)
-this.logUtil!!.putF("Processing Individual Cells cellHeight: " +cellHeight +" cellWidth: " +cellWidth, this, commonStrings!!.RUN)
+this.logUtil!!.putF("Processing Individual Cells columns: " +columns +" rows: " +rows, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF("Processing Individual Cells cellHeight: " +cellHeight +" cellWidth: " +cellWidth, this, this.commonStrings!!.RUN)
 
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
 
@@ -177,7 +177,7 @@ visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index
 
 }
 
-this.logUtil!!.putF("Processing Rows from Cells", this, commonStrings!!.RUN)
+this.logUtil!!.putF("Processing Rows from Cells", this, this.commonStrings!!.RUN)
 
     var imageUnifierProperties: ImageUnifierProperties = ImageUnifierProperties()
 
@@ -249,7 +249,7 @@ visitor.visit(generatedBufferedImage, nameEnding, index)
 
 generatedBufferedImageArray= Array(rows) { arrayOfNulls<BufferedImage?>(columns) }
                                                             
-this.logUtil!!.putF("Processing Individual Cells for each Direction", this, commonStrings!!.RUN)
+this.logUtil!!.putF("Processing Individual Cells for each Direction", this, this.commonStrings!!.RUN)
 
     var nameEnding: String = 
                 null
@@ -303,7 +303,7 @@ imageUnifierProperties!!.setColumns(columns.valueOf())
     var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(Integer(Integer.valueOf(cellWidth -(2 *widthReduction))) +increaseWidth, Integer(Integer.valueOf(cellHeight -(2 *heightReduction) +increaseHeight)))
 
 imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
-this.logUtil!!.putF("Processing Rows from Cells for each Direction", this, commonStrings!!.RUN)
+this.logUtil!!.putF("Processing Rows from Cells for each Direction", this, this.commonStrings!!.RUN)
 
 
 

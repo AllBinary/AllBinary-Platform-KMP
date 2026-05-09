@@ -358,7 +358,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_DATABAS
             
     var stringBuffer: StringMaker = StringMaker()
 
-this.logUtil!!.putF(commonStrings!!.START, this, this.METHOD_ADD_TABLES)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.METHOD_ADD_TABLES)
 stringBuffer!!.append(UserEntityFactory.getInstance()!!.createTable())
 stringBuffer!!.append(StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.createTable())
 stringBuffer!!.append(BillingAddressesEntityFactory.getInstance()!!.getInstance(this.stringUtil!!.EMPTY_STRING)!!.createTable())

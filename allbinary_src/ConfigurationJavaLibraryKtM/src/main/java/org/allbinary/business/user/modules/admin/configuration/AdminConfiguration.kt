@@ -52,7 +52,7 @@ open public class AdminConfiguration
 public constructor ()
             : super()
         {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.contextConfigurationInterface= ContextConfigurationInterfaceFactory.getInstance()!!.getInstance(AdminConfigurationData.CONTEXTNAME)
 }
 
@@ -60,7 +60,7 @@ public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.getFormData(RequestParams(request).
                             toHashMap())
 }
@@ -69,7 +69,7 @@ public constructor (storeHashMap: HashMap<Any, Any>)
             : super()
         {
 var storeHashMap = storeHashMap
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.getFormData(storeHashMap)
 }
 

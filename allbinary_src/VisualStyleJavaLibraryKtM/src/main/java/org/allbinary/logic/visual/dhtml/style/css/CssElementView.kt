@@ -133,7 +133,7 @@ this.title= stringUtil!!.EMPTY_STRING
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append("Value: ")!!.append(this.value)!!.append("\nTitle: ")!!.append(this.title)!!.append("\nDescription: ")!!.append(this.description)!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+                            append("Value: ")!!.append(this.value)!!.append("\nTitle: ")!!.append(this.title)!!.append("\nDescription: ")!!.append(this.description)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 

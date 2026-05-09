@@ -73,7 +73,7 @@ this.commandStack= Stack<Any>()
             this.repaintProcessor!!.process()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -96,7 +96,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, "open")
     override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.CLOSE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CLOSE)
 }
 
 

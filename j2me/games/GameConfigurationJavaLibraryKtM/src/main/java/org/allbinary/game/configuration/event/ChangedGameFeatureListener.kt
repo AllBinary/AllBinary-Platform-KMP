@@ -51,7 +51,7 @@ companion object {
             {
             }            
         
-    open fun isChanged(gameConfiguration: GameConfiguration)
+    open fun isChangedGameConfiguration(gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gameConfiguration = gameConfiguration
@@ -59,7 +59,7 @@ var gameConfiguration = gameConfiguration
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list.contains(gameConfiguration)
+                        return this.list.contains(gameConfiguration)
 }
 
 

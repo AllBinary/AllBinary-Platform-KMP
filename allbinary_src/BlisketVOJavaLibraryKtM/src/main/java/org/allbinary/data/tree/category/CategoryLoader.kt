@@ -58,7 +58,7 @@ var categoryFactoryInterface = categoryFactoryInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.START, this, "CategoryLoader(CategoryFactoryInterface categoryFactoryInterface)")
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, "CategoryLoader(CategoryFactoryInterface categoryFactoryInterface)")
 
                                     }
                                 
@@ -191,7 +191,7 @@ var categoryInterface = categoryInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.GET, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.GET, e)
 
                                     }
                                 
@@ -230,7 +230,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.GET, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.GET, e)
 
                                     }
                                 
@@ -266,7 +266,7 @@ var categoryInterface = categoryInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.GET, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.GET, e)
 
                                     }
                                 
@@ -305,7 +305,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.GET, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.GET, e)
 
                                     }
                                 
@@ -375,7 +375,7 @@ parentCategoryInterface!!.addChild(categoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.GET, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.GET, e)
 
                                     }
                                 
@@ -445,7 +445,7 @@ loadedCategoryInterface!!.addChildProperty(categoryPropertiesInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.GET, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.GET, e)
 
                                     }
                                 

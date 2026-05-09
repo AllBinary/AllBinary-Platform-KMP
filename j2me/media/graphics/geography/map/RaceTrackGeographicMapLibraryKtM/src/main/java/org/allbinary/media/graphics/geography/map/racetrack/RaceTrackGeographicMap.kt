@@ -86,7 +86,7 @@ stringBuffer!!.append("Column: ")
 stringBuffer!!.appendint(geographicMapCellPosition!!.getColumn())
 stringBuffer!!.append(" not in: ")
 stringBuffer!!.appendint(customMapArray[0]!!.size)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
     
                         if(geographicMapCellPosition!!.getColumn() == customMapArray[0]!!.size)
@@ -124,7 +124,7 @@ stringBuffer!!.append("Row: ")
 stringBuffer!!.appendint(geographicMapCellPosition!!.getRow())
 stringBuffer!!.append(" not in: ")
 stringBuffer!!.appendint(customMapArray!!.size)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
     
                         if(geographicMapCellPosition!!.getRow() == customMapArray!!.size)

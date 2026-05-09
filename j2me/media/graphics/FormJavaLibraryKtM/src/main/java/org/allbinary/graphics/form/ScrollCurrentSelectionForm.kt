@@ -29,7 +29,6 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.form.item.ABCustomItem
-import org.allbinary.graphics.form.item.CustomItemInterface
 
 open public class ScrollCurrentSelectionForm : ScrollSelectionForm {
         
@@ -102,7 +101,7 @@ this.dy= y
     var totalWidth: Int = 0
 
 
-    var item: CustomItemInterface
+    var item: ABCustomItem
 
 
 
@@ -111,7 +110,7 @@ this.dy= y
                         for (index in 0 until size)
 
         {
-item= this.get(index) as CustomItemInterface
+item= this.get(index)
 totalWidth += item.getMinimumWidth() +border
 }
 
@@ -213,7 +212,7 @@ this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
                                     }
                                 
                         else {
-                            this.logUtil!!.putF(formTypeFactory!!.UNK, this, commonStrings!!.INIT)
+                            this.logUtil!!.putF(formTypeFactory!!.UNK, this, this.commonStrings!!.INIT)
 
                         }
                             
@@ -242,7 +241,7 @@ this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
 
-    var item: CustomItemInterface
+    var item: ABCustomItem
 
 
 
@@ -251,7 +250,7 @@ this.dx= ((this.rectangle.getWidth() -this.maxWidth) /2)
                         for (index in 0 until size)
 
         {
-item= this.get(index) as CustomItemInterface
+item= this.get(index)
 
     var diffX: Int = 0
 
@@ -349,7 +348,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 }
 
 
-    override fun getDiffX(item: CustomItemInterface)
+    override fun getDiffX(item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var item = item

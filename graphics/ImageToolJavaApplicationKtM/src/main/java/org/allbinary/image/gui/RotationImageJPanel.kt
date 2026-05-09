@@ -276,7 +276,7 @@ file= File(filePath)
 
     var isWritten: Boolean = ImageIO.write(this@RotationImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
 
-this.logUtil!!.putF("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
+this.logUtil!!.putF("File: " +file +" Wrote: " +isWritten, this, this.commonStrings!!.RUN)
 }
 
 

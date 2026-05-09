@@ -31,7 +31,7 @@
         
 import javax.microedition.lcdui.Command
 import org.allbinary.data.resource.ResourceUtil
-import org.allbinary.logic.TsUtil
+import org.allbinary.TsUtil
 
 open public class NotificationUtil
             : Object

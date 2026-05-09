@@ -98,7 +98,7 @@ private constructor ()
                         if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.put(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR, Exception())
+                                    this.logUtil!!.put(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR, Exception())
 
 
 
@@ -148,7 +148,7 @@ private constructor ()
                         if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.put(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR, Exception())
+                                    this.logUtil!!.put(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR, Exception())
 
 
 

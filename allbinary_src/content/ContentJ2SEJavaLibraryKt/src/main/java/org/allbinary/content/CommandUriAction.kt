@@ -28,7 +28,7 @@
 import java.util.Hashtable
 import javax.microedition.lcdui.Command
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.data.resource.ResourceUtil
+import org.allbinary.string.CommonStrings
 
 open public class CommandUriAction
             : Object
@@ -58,6 +58,8 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     open fun add(command: Command, url: String)
@@ -77,7 +79,7 @@ var command = command
         try {
             } catch(e: Exception)
             {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
 }

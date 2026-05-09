@@ -58,7 +58,7 @@ open public class BaseMusicService : Service {
         //nullable = true from not(false or (false and false)) = true
 : IBinder?{
     //var intent = intent
-this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.BIND)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.BIND)
 
 
 
@@ -70,20 +70,20 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.BIND)
     override fun onCreate()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.CREATE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.CREATE)
 }
 
 
     override fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.DESTROY)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.DESTROY)
 
     
                         if(this.player != NullAndroidCanvas.NULL_MEDIA_PLAYER)
                         
                                     {
-                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.PAUSE)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.PAUSE)
 this.player.stop()
 this.player.reset()
 this.player.release()
@@ -101,7 +101,7 @@ this.player.release()
                         if(this.player != NullAndroidCanvas.NULL_MEDIA_PLAYER)
                         
                                     {
-                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.PAUSE)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.PAUSE)
 this.player.pause()
 
                                     }
@@ -117,7 +117,7 @@ this.player.pause()
                         if(this.player != NullAndroidCanvas.NULL_MEDIA_PLAYER && !this.player.isPlaying())
                         
                                     {
-                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.RESUME)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.RESUME)
 this.player.start()
 
                                     }
@@ -141,7 +141,7 @@ this.player.start()
     //var intent = intent
     //var startid = startid
 this.onStartCommandIntent(intent)
-this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.START)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.START)
 }
 
 
@@ -164,7 +164,7 @@ this.onStartCommandIntent(intent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intent = intent
-this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.ON_START_COMMAND)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.ON_START_COMMAND)
 
     var musicStrings: MusicStrings = MusicStrings.getInstance()!!
 
@@ -178,7 +178,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, commonStateStrings!!.ON_ST
                                     
     var command: Int = intent.getIntExtra(commonStateStrings!!.ON_START_COMMAND,  -1)!!
 
-this.logUtil!!.putF(CommonLabels.getInstance()!!.COMMAND_LABEL +command, this, commonStateStrings!!.ON_START_COMMAND)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.COMMAND_LABEL +command, this, this.commonStateStrings!!.ON_START_COMMAND)
 
     
                         if(command == 1)
@@ -239,7 +239,7 @@ this.rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
                                     
     var player: MediaPlayer = this.player
 
-this.logUtil!!.putF(this.ALREADY_PLAYING, this, commonStateStrings!!.ON_START_COMMAND)
+this.logUtil!!.putF(this.ALREADY_PLAYING, this, this.commonStateStrings!!.ON_START_COMMAND)
 
     var runnable: Runnable = object: ARunnable()
                                 {

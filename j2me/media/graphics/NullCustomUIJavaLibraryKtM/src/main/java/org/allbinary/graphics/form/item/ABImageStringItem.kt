@@ -12,9 +12,16 @@
         import kotlin.reflect.KClass
         
 
-interface ChoiceItemInterface {
+open public class ABImageStringItem
+            : Object
+         {
         
 
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
 }
                 
             

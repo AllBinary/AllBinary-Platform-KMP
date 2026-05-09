@@ -15,7 +15,7 @@ import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
 import org.allbinary.graphics.color.BasicColor
 
-open public class CustomImageItem : ABCustomItem {
+open public class ABCustomImageItem : ABCustomItem {
         
 
     var yOffset: Int = 0

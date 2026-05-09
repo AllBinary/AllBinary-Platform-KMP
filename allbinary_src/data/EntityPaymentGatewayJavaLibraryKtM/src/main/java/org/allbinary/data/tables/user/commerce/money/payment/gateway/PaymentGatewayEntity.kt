@@ -110,7 +110,7 @@ super.insert(vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.END, this, "add")
+                                    this.logUtil!!.putF(this.commonStrings!!.END, this, "add")
 
                                     }
                                 

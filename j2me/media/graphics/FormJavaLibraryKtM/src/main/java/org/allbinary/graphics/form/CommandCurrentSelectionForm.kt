@@ -37,7 +37,6 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.form.item.CommandTextItem
 import org.allbinary.graphics.form.item.ABCustomItem
-import org.allbinary.graphics.form.item.CustomItemInterface
 
 open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm {
         
@@ -238,7 +237,7 @@ super.set(itemNum, item)
 
                 @Throws(Exception::class)
             
-    override fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
+    override fun paintItem(graphics: Graphics, index: Int, item: ABCustomItem, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphics = graphics
@@ -257,7 +256,7 @@ this.selectedAnimationArray[index]!!.paintXY(graphics, x, y)
 
                 @Throws(Exception::class)
             
-    override fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
+    override fun paintUnselectedItem(graphics: Graphics, index: Int, item: ABCustomItem, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphics = graphics

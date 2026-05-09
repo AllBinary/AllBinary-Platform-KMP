@@ -71,7 +71,7 @@ this.portion= Portion(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    this.logUtil!!.putF(success, this, commonStrings!!.DROP)
+                                    this.logUtil!!.putF(success, this, this.commonStrings!!.DROP)
 
                                     }
                                 
@@ -90,7 +90,7 @@ this.portion= Portion(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.DROP, e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.DROP, e)
 
                                     }
                                 

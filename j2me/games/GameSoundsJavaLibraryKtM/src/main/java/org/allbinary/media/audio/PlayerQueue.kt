@@ -72,7 +72,7 @@ var sound = sound
                                 
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
+PreLogUtil.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD)
 }
 
 }
@@ -138,7 +138,7 @@ played= true
                                     }
                                 
 PreLogUtil.put(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(resource)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(resource)!!.toString(), this, this.commonStrings!!.PROCESS)
 
 
 

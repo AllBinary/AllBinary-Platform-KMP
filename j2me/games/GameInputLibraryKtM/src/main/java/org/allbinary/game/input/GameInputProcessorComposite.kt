@@ -62,7 +62,7 @@ this.gameInputProcessorInterface= gameInputProcessorInterface
 this.gameInputProcessorInterface!!.onInput(list)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
 }
 
 }

@@ -118,10 +118,10 @@ var value = value
 
         try {
             super.deleteWhere(this.NAME, value)
-this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
+this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, this.commonStrings!!.delete)
 } catch(e: Exception)
             {
-this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
+this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.delete, e)
 }
 
 }

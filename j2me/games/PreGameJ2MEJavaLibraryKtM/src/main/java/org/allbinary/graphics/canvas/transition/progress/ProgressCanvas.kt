@@ -305,7 +305,7 @@ var graphics = graphics
 
 graphics.setColor(this.backgroundBasicColor!!.toInt())
 graphics.fillRect(0, 0, displayInfoSingleton!!.getLastWidth(), displayInfoSingleton!!.getLastHeight())
-this.gauge.paint(graphics, 0, 0)
+this.gauge.paintXY(graphics, 0, 0)
 this.hasPainted= true
 }
 

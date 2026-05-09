@@ -28,7 +28,7 @@
 import javax.microedition.lcdui.Command
 import org.allbinary.graphics.color.BasicColor
 
-open public class CommandTextItem : TextItem {
+open public class CommandTextItem : ABTextItem {
         
 
     private val command: Command

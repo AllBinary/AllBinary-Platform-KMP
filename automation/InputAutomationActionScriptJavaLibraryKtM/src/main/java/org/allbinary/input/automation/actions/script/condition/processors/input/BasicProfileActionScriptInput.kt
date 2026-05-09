@@ -61,7 +61,7 @@ public constructor (label: String, node: Node)
 
                             //For kotlin this is before the body of the constructor.
                     
-this.logUtil!!.putF(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START +label, this, this.commonStrings!!.CONSTRUCTOR)
 
     var actionNode: Node = DomSearchHelper.getNode(GenericProfileActionScriptInputData.TYPE, node.getChildNodes())!!
 
@@ -101,7 +101,7 @@ public constructor (label: String)
 
                             //For kotlin this is before the body of the constructor.
                     
-this.logUtil!!.putF(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START +label, this, this.commonStrings!!.CONSTRUCTOR)
 
     var inputRobotFactory: InputRobotFactory = InputRobotFactory.getInstance()!!
 

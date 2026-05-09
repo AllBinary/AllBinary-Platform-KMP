@@ -98,7 +98,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 this.fireEvent(this.HIDE_EVENT)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CLOSE, e)
 }
 
 }

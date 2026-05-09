@@ -99,7 +99,7 @@ public constructor (commandListener: CommandListener, allBinaryGameLayerManager:
 
                             //For kotlin this is before the body of the constructor.
                     
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.highScoresPaintable= paintable
 this.highScoresFactoryInterface= highScoresFactoryInterface
 this.highScoresCanvasInputProcessor= highScoresCanvasInputProcessorFactoryInterface!!.getInstance(this)
@@ -117,7 +117,7 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
                                     }
                                 
                         else {
-                            this.logUtil!!.putF("Show HighScores that are already loaded", this, commonStrings!!.CONSTRUCTOR)
+                            this.logUtil!!.putF("Show HighScores that are already loaded", this, this.commonStrings!!.CONSTRUCTOR)
 this.updateCommand(this.currentCommand)
 this.setPaintable(this.getHighScoresPaintable())
 
@@ -240,7 +240,7 @@ this.hasPainted= true
             this.highScoresFactoryInterface!!.fetchHighScores(this.getGameInfo(), this)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
 }
 
 }
@@ -276,7 +276,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
                                     }
                                 
                         else {
-                            this.logUtil!!.putF(commonStrings!!.START, this, "setHighScoresArray")
+                            this.logUtil!!.putF(this.commonStrings!!.START, this, "setHighScoresArray")
 
                         }
                             
@@ -285,7 +285,7 @@ this.updateCommand(this.currentCommand)
 this.setPaintable(this.getHighScoresPaintable())
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
 }
 
 }
@@ -298,7 +298,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 {
 var command = command
 this.logUtil!!.putF(StringMaker().
-                            append(commonStrings!!.START)!!.append(this.stringUtil!!.toString(command))!!.toString(), this, commonStrings!!.UPDATE)
+                            append(commonStrings!!.START)!!.append(this.stringUtil!!.toString(command))!!.toString(), this, this.commonStrings!!.UPDATE)
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 

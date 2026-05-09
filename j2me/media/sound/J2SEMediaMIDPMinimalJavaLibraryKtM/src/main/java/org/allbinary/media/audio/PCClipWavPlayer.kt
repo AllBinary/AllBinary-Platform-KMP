@@ -73,7 +73,7 @@ clip= this.create(audioInputStream)
                                 )
                         
                                     {
-                                    this.logUtil!!.put("Clip was null", this, commonStrings!!.CONSTRUCTOR, Exception())
+                                    this.logUtil!!.put("Clip was null", this, this.commonStrings!!.CONSTRUCTOR, Exception())
 
 
 
@@ -83,7 +83,7 @@ clip= this.create(audioInputStream)
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 }
 
 this.audioInputStream= audioInputStream

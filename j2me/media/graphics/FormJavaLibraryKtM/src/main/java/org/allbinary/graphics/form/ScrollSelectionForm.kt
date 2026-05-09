@@ -33,7 +33,6 @@ import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.form.item.ABCustomItem
-import org.allbinary.graphics.form.item.CustomItemInterface
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.RectangleCollisionUtil
@@ -151,7 +150,7 @@ this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
 : ABCustomItem{
     //var point = point
 
-    var index: Int = this.getSelectedIndex(point)!!
+    var index: Int = this.getSelectedIndexForPoint(point)!!
 
 
     
@@ -195,7 +194,7 @@ this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
 
         {
 
-    var nextItem: CustomItemInterface = this.get(index) as CustomItemInterface
+    var nextItem: ABCustomItem = this.get(index) as ABCustomItem
 
 
     
@@ -233,7 +232,7 @@ this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
 
                 @Throws(Exception::class)
             
-    open fun getSelectedIndex(point: GPoint)
+    open fun getSelectedIndexForPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var point = point
@@ -263,9 +262,9 @@ stringBuffer!!.appendint(start)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(commonLabels!!.TOTAL_LABEL)
 stringBuffer!!.appendint(size)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, ScrollSelectionForm.GET_SELECTED_INDEX)
 
-    var item: CustomItemInterface
+    var item: ABCustomItem
 
 
     var width: Int= 0
@@ -280,7 +279,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
                         for (index in start until size)
 
         {
-item= this.get(index) as CustomItemInterface
+item= this.get(index)
 width= item.getMinimumWidth()
 height= item.getMinimumHeight()
 
@@ -323,7 +322,7 @@ stringBuffer!!.append(item.getLabel())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
 stringBuffer!!.appendint(index)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, ScrollSelectionForm.GET_SELECTED_INDEX)
 
 
 
@@ -392,7 +391,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
                 @Throws(Exception::class)
             
-    open fun processInput(gameKeyCode: Int)
+    open fun processInputKey(gameKeyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var gameKeyCode = gameKeyCode
@@ -515,11 +514,11 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
     //var point = point
 
     
-                        if(this.rectangleCollisionUtil!!.isInside(x, y -this.halfBorder, this.rectangle.getMaxX() +this.border, this.rectangle.getMaxY() +this.border, point.getX(), point.getY()))
+                        if(this.rectangleCollisionUtil!!.isInside(this.x, this.y -this.halfBorder, this.rectangle.getMaxX() +this.border, this.rectangle.getMaxY() +this.border, point.getX(), point.getY()))
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append(StringUtil.getInstance()!!.toString(point))!!.append(INSIDE_FORM)!!.toString(), this, IS_IN_FORM)
+                            append(StringUtil.getInstance()!!.toString(point))!!.append(ScrollSelectionForm.INSIDE_FORM)!!.toString(), this, ScrollSelectionForm.IS_IN_FORM)
 
 
 
@@ -538,7 +537,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
                 @Throws(Exception::class)
             
-    open fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
+    open fun paintItem(graphics: Graphics, index: Int, item: ABCustomItem, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphics = graphics
@@ -555,7 +554,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
-item.paint(graphics, x, y)
+item.paintXY(graphics, x, y)
 graphics.setColor(this.getButtonBasicColor()!!.toInt())
 
     var adjustedBorder: Int = 3
@@ -613,7 +612,7 @@ graphics.drawRect(x -this.halfBorder -adjustedBorder, y -this.halfBorder -adjust
 
                 @Throws(Exception::class)
             
-    open fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
+    open fun paintUnselectedItem(graphics: Graphics, index: Int, item: ABCustomItem, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphics = graphics
@@ -682,7 +681,7 @@ item.paintUnselected(graphics, x, y)
 }
 
 
-    open fun getDiffX(item: CustomItemInterface)
+    open fun getDiffX(item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var item = item
@@ -701,7 +700,7 @@ item.paintUnselected(graphics, x, y)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return x
+                        return this.x
 }
 
 
@@ -712,7 +711,7 @@ item.paintUnselected(graphics, x, y)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return y
+                        return this.y
 }
 
 

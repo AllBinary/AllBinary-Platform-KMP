@@ -86,7 +86,7 @@ StreamUtil.getInstance()!!.close(fileOutputStream)
 
          }
         
-this.logUtil!!.putF("Wrote Image: " +file.getAbsolutePath(), this, commonStrings!!.SAVE)
+this.logUtil!!.putF("Wrote Image: " +file.getAbsolutePath(), this, this.commonStrings!!.SAVE)
 }
 
 
@@ -124,7 +124,7 @@ var bufferedImage = bufferedImage
                         if(!iter.hasNext())
                         
                                     {
-                                    this.logUtil!!.putF("Unable to save image to jpeg file type.", this, commonStrings!!.SAVE)
+                                    this.logUtil!!.putF("Unable to save image to jpeg file type.", this, this.commonStrings!!.SAVE)
 
 
 
@@ -145,10 +145,10 @@ writer.write(
                             null, IIOImage(bufferedImage, 
                             null, 
                             null), iwp)
-this.logUtil!!.putF("Wrote Image: " +file.getAbsolutePath(), this, commonStrings!!.SAVE)
+this.logUtil!!.putF("Wrote Image: " +file.getAbsolutePath(), this, this.commonStrings!!.SAVE)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.SAVE, e)
 }
 
          finally {
@@ -197,7 +197,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, ios, commonStrings!!.CLOSE, e)
                                 
 } catch(e2: IOException)
             {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e2)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.SAVE, e2)
 }
 
 

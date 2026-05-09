@@ -120,7 +120,7 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
 
 
         try {
-            logUtil!!.putF(commonStrings!!.START, this, FETCH)
+            logUtil!!.putF(this@BasicHighScoresFactory.commonStrings!!.START, this, FETCH)
 highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, gameInfo, TOP, PERSONAL_HIGH_SCORES, SCORES, ScoreComparator(true))
 
     var gameType: GameType = gameInfo!!.getGameType()!!
@@ -150,7 +150,7 @@ highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, game
                                     }
                                 
 highScoresArray[1]= RemoteHighScores.getInstancePreload(abeClientInformation, softwareInformation, gameInfo2, WORLD_TOP_SCORES, SCORES, BooleanFactory.getInstance()!!.FALSE, preload)
-logUtil!!.putF(commonStrings!!.END, this, FETCH)
+logUtil!!.putF(this@BasicHighScoresFactory.commonStrings!!.END, this, FETCH)
 LastFetchHighScoresFactory.getInstance()!!.highScoresArray= highScoresArray
 highScoresResultsListener!!.setHighScoresArray(highScoresArray)
 } catch(e: Exception)

@@ -42,7 +42,16 @@ var owner = owner
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paintXY(graphics: Graphics, x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+var x = x
+var y = y
+}
+
+
+    open fun paintUnselected(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

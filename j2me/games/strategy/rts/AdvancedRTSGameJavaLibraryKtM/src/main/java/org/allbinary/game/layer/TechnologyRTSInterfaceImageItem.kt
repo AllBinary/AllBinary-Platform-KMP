@@ -28,13 +28,13 @@
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
-import org.allbinary.graphics.form.item.CustomImageItem
+import org.allbinary.graphics.form.item.ABCustomImageItem
 import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.font.MyFont
 import org.allbinary.logic.math.PrimitiveLongUtil
 
-open public class TechnologyRTSInterfaceImageItem : CustomImageItem {
+open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem {
         
 
     private val myFont: MyFont = MyFont.getInstance()!!
@@ -126,13 +126,13 @@ this.levelString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 var x = x
 var y = y
-super.paint(graphics, x, y)
+super.paintXY(graphics, x, y)
 
     var xa: Int = x +2
 

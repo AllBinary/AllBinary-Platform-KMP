@@ -28,11 +28,11 @@
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Screen
 import org.allbinary.graphics.form.item.ABCustomItem
-import org.allbinary.graphics.form.item.CustomItemInterface
+import org.allbinary.graphics.form.item.ABCustomItemInterface
 import org.allbinary.graphics.color.BasicColor
 
 open public class TileLayerItem : ABCustomItem
-                , CustomItemInterface {
+                , ABCustomItemInterface {
         
 
     private val tiledLayer: AllBinaryTiledLayer
@@ -128,7 +128,7 @@ var height = height
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

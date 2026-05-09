@@ -68,7 +68,7 @@ this.rectangle= intArrayOf(0,this.getHeight(), this.getWidth(),  -this.getHeight
     //var displayChangeEvent = displayChangeEvent
 
         try {
-            this.logUtil!!.putF(commonStrings!!.START, this, "onResize")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "onResize")
 this.a= DisplayInfoSingleton.getInstance()!!.getLastHeight() -this.getHeight()
 } catch(e: Exception)
             {

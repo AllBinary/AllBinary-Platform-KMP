@@ -117,7 +117,7 @@ public constructor (musicServiceClass: KClass<*>, songList: BasicArrayList)
         {
     //var musicServiceClass = musicServiceClass
     //var songList = songList
-PreLogUtil.put(this.commonStateStrings!!.CONTEXT +this.resourceUtil!!.getContext(), this, commonStrings!!.CONSTRUCTOR)
+PreLogUtil.put(this.commonStateStrings!!.CONTEXT +this.resourceUtil!!.getContext(), this, this.commonStrings!!.CONSTRUCTOR)
 this.musicServiceClass= musicServiceClass
 this.currentIntent= Intent(this.resourceUtil!!.getContext(), musicServiceClass::class.java)
 this.songList= songList
@@ -226,7 +226,7 @@ this.timeDelayHelper!!.delay= 0
     var duration: Long = sound.getDuration().toLong()
 
 PreLogUtil.put(StringMaker().
-                            append(this.PLAY)!!.append(sound.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(this.PLAY)!!.append(sound.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, this.commonStrings!!.PROCESS)
 }
 
 }
@@ -257,7 +257,7 @@ this.nextSongSound= NoSound.getInstance()
     var duration: Long = this.currentSongSound!!.getDuration().toLong()
 
 PreLogUtil.put(StringMaker().
-                            append(this.PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(this.PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, this.commonStrings!!.PROCESS)
 this.timeDelayHelper!!.delay= duration.toInt()
 this.currentIntent!!.putExtra(this.musicStrings!!.SONG_EXTRA, this.resourceUtil!!.getResourceId(this.currentSongSound!!.getResource())!!.toInt())
 this.currentIntent!!.putExtra(this.musicStrings!!.LEFT_VOLUME, leftVolume)
@@ -279,7 +279,7 @@ this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
 
                                     }
                                 
-PreLogUtil.putOE(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.PROCESS, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.PROCESS, e)
 }
 
 }

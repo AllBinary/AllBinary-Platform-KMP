@@ -84,7 +84,7 @@ stringBuffer!!.append(TRYING)
 stringBuffer!!.appendint(this.getServer())
 stringBuffer!!.append(SEP)
 stringBuffer!!.append(serverUrl)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.GET)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.GET)
 
     var xmlRpcClient: XmlRpcClient = XmlRpcClient(serverUrl)
 
@@ -95,12 +95,12 @@ xmlRpcClient!!.setBasicAuthentication(
 
     var hashtable: Hashtable<Any, Any> = anyType as Hashtable<Any, Any>
 
-this.logUtil!!.putF(CLIENT_INFO +hashtable.toString(), this, commonStrings!!.GET)
+this.logUtil!!.putF(CLIENT_INFO +hashtable.toString(), this, this.commonStrings!!.GET)
 param.addElement(hashtable)
 
     var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
 
-this.logUtil!!.putF(RESULT +result.toString(), this, commonStrings!!.GET)
+this.logUtil!!.putF(RESULT +result.toString(), this, this.commonStrings!!.GET)
 isOnline= true
 
 
@@ -109,7 +109,7 @@ isOnline= true
                         return result
 } catch(e: IOException)
             {
-this.logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, commonStrings!!.GET, e)
+this.logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, this.commonStrings!!.GET, e)
 
     
                         if(!e.getMessage()!!.startsWith(HOST_NOT_RESOLVED))
@@ -134,7 +134,7 @@ this.logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackT
 }
  catch(e: XmlRpcException)
             {
-this.logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
+this.logUtil!!.put(SERVER_REPORTED_ERROR, this, this.commonStrings!!.GET, e)
 
 
 
@@ -143,7 +143,7 @@ this.logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
 }
  catch(e: Exception)
             {
-this.logUtil!!.put(UNKNOWN_ERROR, this, commonStrings!!.GET, e)
+this.logUtil!!.put(UNKNOWN_ERROR, this, this.commonStrings!!.GET, e)
 
 
 

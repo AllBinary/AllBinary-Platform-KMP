@@ -117,7 +117,7 @@ var renderer = renderer
 }
 
 
-    open fun onSurfaceChanged(event: Any)
+    open fun onSurfaceChangedForEvent(event: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
@@ -130,7 +130,7 @@ var renderer = renderer
 }
 
 
-    open fun onSurfaceChanged(width: Int, height: Int)
+    open fun onSurfaceChangedWH(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var width = width

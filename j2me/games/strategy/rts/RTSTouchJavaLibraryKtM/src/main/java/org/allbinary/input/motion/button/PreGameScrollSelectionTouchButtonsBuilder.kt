@@ -45,7 +45,7 @@ open public class PreGameScrollSelectionTouchButtonsBuilder : BaseTouchInput {
 : BasicArrayList{
 
         try {
-            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.GET_LIST)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.GET_LIST)
 
     var list: BasicArrayList = BasicArrayListD()
 
@@ -77,7 +77,7 @@ list.add(START)
                         return list
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_LIST, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET_LIST, e)
 
 
 

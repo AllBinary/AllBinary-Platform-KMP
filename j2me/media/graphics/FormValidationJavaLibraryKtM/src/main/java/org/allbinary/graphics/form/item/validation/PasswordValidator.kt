@@ -25,11 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.graphics.form.item.TextFieldItem
+import org.allbinary.graphics.form.item.ABTextFieldItem
 
 open public class PasswordValidator : TextFieldItemValidator {
         
-public constructor (textFieldItem: TextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean)                        
+public constructor (textFieldItem: ABTextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean)                        
 
                             : super(textFieldItem, min, max, allowOnEmpty){
 var textFieldItem = textFieldItem

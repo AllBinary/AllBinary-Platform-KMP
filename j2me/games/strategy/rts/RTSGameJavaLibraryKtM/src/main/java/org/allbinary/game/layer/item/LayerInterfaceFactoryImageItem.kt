@@ -27,12 +27,12 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
-import org.allbinary.graphics.form.item.CustomImageItem
+import org.allbinary.graphics.form.item.ABCustomImageItem
 import org.allbinary.animation.Animation
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.layer.LayerInterfaceFactoryInterface
 
-open public class LayerInterfaceFactoryImageItem : CustomImageItem {
+open public class LayerInterfaceFactoryImageItem : ABCustomImageItem {
         
 
     private val animationArray: Array<Animation?>
@@ -68,13 +68,13 @@ this.layerInterfaceFactoryInterface= layerInterfaceFactoryInterface
 }
 
 
-    override fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 var x = x
 var y = y
-super.paint(graphics, x, y)
+super.paintXY(graphics, x, y)
 
 
 

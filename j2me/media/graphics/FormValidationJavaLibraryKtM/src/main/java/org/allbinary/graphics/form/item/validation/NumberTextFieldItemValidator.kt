@@ -28,7 +28,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Vector
-import org.allbinary.graphics.form.item.TextFieldItem
+import org.allbinary.graphics.form.item.ABTextFieldItem
 import org.allbinary.logic.control.validate.ValidatorBase
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
@@ -39,14 +39,14 @@ import org.allbinary.util.BasicArrayListD
 open public class NumberTextFieldItemValidator : ValidatorBase {
         
 
-    private val textFieldItem: TextFieldItem
+    private val textFieldItem: ABTextFieldItem
 
     private val min: Int
 
     private val max: Int
 
     private val maxChars: Int
-public constructor (textFieldItem: TextFieldItem, maxChars: Int, min: Int, max: Int){
+public constructor (textFieldItem: ABTextFieldItem, maxChars: Int, min: Int, max: Int){
 var textFieldItem = textFieldItem
 var maxChars = maxChars
 var min = min

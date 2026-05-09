@@ -107,7 +107,7 @@ var point = point
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
 
 
-    var index: Int = scrollSelectionForm!!.getSelectedIndex(point)!!
+    var index: Int = scrollSelectionForm!!.getSelectedIndexForPoint(point)!!
 
 
     

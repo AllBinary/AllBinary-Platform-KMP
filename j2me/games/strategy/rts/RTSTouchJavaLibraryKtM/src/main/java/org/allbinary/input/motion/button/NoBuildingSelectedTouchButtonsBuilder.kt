@@ -45,7 +45,7 @@ open public class NoBuildingSelectedTouchButtonsBuilder : BaseTouchInput {
 : BasicArrayList{
 
         try {
-            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
     var list: BasicArrayList = BasicArrayListD()
 
@@ -60,7 +60,7 @@ list.addAllList(BuildingScrollTouchButtonsBuilder().
                         return list
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 
 
 

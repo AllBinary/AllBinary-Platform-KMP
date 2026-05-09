@@ -13,7 +13,7 @@
         
 import javax.microedition.lcdui.Graphics
 
-interface CustomItemInterface {
+interface ABCustomItemInterface {
         
 
     open fun getMinimumWidth()
@@ -28,7 +28,7 @@ interface CustomItemInterface {
         //nullable = true from not(false or (false and true)) = true
 : String
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

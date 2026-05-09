@@ -92,7 +92,7 @@ var transformInfoInterface = transformInfoInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Invalid AdminCommand=" +command, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Invalid AdminCommand=" +command, this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -117,7 +117,7 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.put("Existing Item With MoneyException", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Existing Item With MoneyException", this, this.commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -135,7 +135,7 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Item Does Not Exist", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Item Does Not Exist", this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -158,7 +158,7 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("BasicItem is not valid", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("BasicItem is not valid", this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -190,7 +190,7 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Category Does Not Exist: " +fullCategory, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Category Does Not Exist: " +fullCategory, this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -384,7 +384,7 @@ this.downloadableItem= DownloadableItem(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("DownloadableItem is not valid", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("DownloadableItem is not valid", this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -408,7 +408,7 @@ this.downloadableItem= DownloadableItem(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    this.logUtil!!.put("Exception in validation", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Exception in validation", this, this.commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -640,7 +640,7 @@ this.validationInfo(stringBuffer, fileName, size)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF(log, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF(log, this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -713,7 +713,7 @@ var size = size
 
 stringBuffer!!.append("File name is not valid: ")
 stringBuffer!!.append(fileName)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -745,7 +745,7 @@ stringBuffer!!.append("File Size To Large: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
 stringBuffer!!.appendint(fileData!!.MAXDOWNLOADABLEFILESIZE)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -773,7 +773,7 @@ stringBuffer!!.append("File Size To Small: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
 stringBuffer!!.appendint(fileData!!.MINDOWNLOADABLEFILESIZE)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 

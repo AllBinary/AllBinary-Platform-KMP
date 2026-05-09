@@ -47,7 +47,7 @@ public constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.INIT)
 J2MEKeyFactory.getInstance()!!.init()
 super.init(abeClientInformation)
 

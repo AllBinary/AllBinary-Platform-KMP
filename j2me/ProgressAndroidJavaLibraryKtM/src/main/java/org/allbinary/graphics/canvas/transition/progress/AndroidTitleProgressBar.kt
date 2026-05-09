@@ -102,12 +102,12 @@ this.progressActivity= activity
 {
 
         try {
-            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.START_METHOD_NAME)
 super.start()
 this.progressActivity!!.runOnUiThread(this.showTitleProgressBarRunnable)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
@@ -118,12 +118,12 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD
 {
 
         try {
-            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.END_METHOD_NAME)
 this.progressActivity!!.runOnUiThread(this.dismissTitleProgressBarRunnable)
 super.end()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.END_METHOD_NAME, e)
 }
 
 }

@@ -98,7 +98,7 @@ stringBuffer!!.append(" must be: ")
 stringBuffer!!.append(ADDPRODUCT)
 stringBuffer!!.append(" or ")
 stringBuffer!!.append(NEXTSTEP)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -123,7 +123,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF(basicItemValidation!!.validationInfo(), this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF(basicItemValidation!!.validationInfo(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -156,7 +156,7 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Category Does Not Exist: " +fullCategory, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Category Does Not Exist: " +fullCategory, this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -180,7 +180,7 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Item Already Exists", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Item Already Exists", this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -238,7 +238,7 @@ HttpFileUploadUtil.log(fileItem)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    this.logUtil!!.put("Exception in validation", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Exception in validation", this, this.commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -493,7 +493,7 @@ stringBuffer!!.append("File Size To Large: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
 stringBuffer!!.appendint(fileData!!.MAXIMAGEFILESIZE)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -522,7 +522,7 @@ stringBuffer!!.append("File Size To Small: ")
 stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
 stringBuffer!!.appendint(fileData!!.MINIMAGEFILESIZE)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 

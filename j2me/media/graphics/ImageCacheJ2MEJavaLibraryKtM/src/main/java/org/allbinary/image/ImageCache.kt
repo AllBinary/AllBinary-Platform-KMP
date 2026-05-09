@@ -96,7 +96,7 @@ var renderer = renderer
 }
 
 this.logUtil!!.putF(StringMaker().
-                            append("unable to find key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString(), this, commonStrings!!.RUN)
+                            append("unable to find key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString(), this, this.commonStrings!!.RUN)
 
 
 
@@ -210,12 +210,12 @@ listOfList[foundIndex]!!.add(image)
             image= this.createImageFromInputStream(key, inputStream)
 } catch(e: Exception)
             {
-this.logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
+this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
 this.logUtil!!.putF(StringMaker().
-                            append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, commonStrings!!.GET)
+                            append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, this.commonStrings!!.GET)
 System.gc()
 System.gc()
-this.logUtil!!.putF(Memory.getInfo(), this, commonStrings!!.GET)
+this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
 Thread.sleep(100)
 image= this.createImageFromInputStream(key, inputStream)
 }

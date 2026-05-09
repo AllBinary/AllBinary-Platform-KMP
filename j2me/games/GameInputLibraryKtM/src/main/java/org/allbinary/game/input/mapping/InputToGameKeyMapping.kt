@@ -54,7 +54,7 @@ companion object {
 
     private val platformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 public constructor (){
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.clear()
 }
 
@@ -150,7 +150,7 @@ var mappedToInput = mappedToInput
 this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(input))!!.append(" == ")!!.append(StringUtil.getInstance()!!.toString(mappedToInput))!!.toString(), this, "InputToGameKeyMapping::remove")
 super.remove(input, mappedToInput)
-this.set(input, gameKeyFactory!!.NONE)
+this.set(input, this.gameKeyFactory!!.NONE)
 }
 
 
@@ -272,7 +272,7 @@ var gameKey = gameKey
                                 
                         else {
                             PreLogUtil.putOE(StringMaker().
-                            append(gameKey!!.toString())!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.appendint(key)!!.toString(), this, commonStrings!!.INIT, Exception())
+                            append(gameKey!!.toString())!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.appendint(key)!!.toString(), this, this.commonStrings!!.INIT, Exception())
 
                         }
                             
@@ -298,7 +298,7 @@ var canvas = canvas
                         for (index in this.mappedGameKeys!!.size  - 1  downTo 0)
 
         {
-nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
+nextKey= canvas.getKeyCode(this.mappedGameKeys[index]!!.getId())
 
     
                         if(nextKey < smallestKey)
@@ -364,15 +364,15 @@ this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
 
 
 
-                        for (index in mappedGameKeys!!.size  - 1  downTo 0)
+                        for (index in this.mappedGameKeys!!.size  - 1  downTo 0)
 
         {
-this.initGameKey(canvas, mappedGameKeys[index]!!)
+this.initGameKey(canvas, this.mappedGameKeys[index]!!)
 }
 
 } catch(t: Throwable)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, t)
 }
 
 }

@@ -66,11 +66,11 @@ this.setOsgiServiceVisitorInterface(osgiServiceVisitorInterface)
     open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 
     var vector: Vector = this.osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
 
-this.logUtil!!.putF("Processing " +vector.size +" Services", this, commonStrings!!.PROCESS)
+this.logUtil!!.putF("Processing " +vector.size +" Services", this, this.commonStrings!!.PROCESS)
 
     var size: Int = vector.size!!
 

@@ -337,7 +337,7 @@ this.imageProcessorInput= imageProcessorInput
     //var generatedBufferedImage = generatedBufferedImage
     //var name = name
     //var index = index
-this.logUtil!!.putF(commonStrings!!.VISIT, this, commonStrings!!.VISIT)
+this.logUtil!!.putF(this.commonStrings!!.VISIT, this, this.commonStrings!!.VISIT)
 this.result= generatedBufferedImage
 this.getParent()!!.repaint()
 
@@ -364,7 +364,7 @@ file= File(filePath)
     var isWritten: Boolean = ImageIO.write(this@CanvasImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
 
 this.logUtil!!.putF(StringMaker().
-                            append("File: ")!!.append(StringUtil.getInstance()!!.toString(file))!!.append(" Wrote: ")!!.appendboolean(isWritten)!!.toString(), this, commonStrings!!.RUN)
+                            append("File: ")!!.append(StringUtil.getInstance()!!.toString(file))!!.append(" Wrote: ")!!.appendboolean(isWritten)!!.toString(), this, this.commonStrings!!.RUN)
 }
 
 

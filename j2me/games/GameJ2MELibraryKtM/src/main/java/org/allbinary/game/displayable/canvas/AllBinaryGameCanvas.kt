@@ -662,7 +662,7 @@ System.gc()
     override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, gameStrings!!.UNPAUSE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, gameStrings!!.UNPAUSE)
 this.closeMenu()
 System.gc()
 super.unPause()
@@ -726,7 +726,7 @@ this.gameKeyEventHandler!!.addListener(this.mainMenuInputProcessor)
     override fun toggleMenu()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, this.gameStrings!!.TOGGLE_MENU)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.gameStrings!!.TOGGLE_MENU)
 
     
                         if(this.getMenuPaintable() == this.getOpenMenuPaintable())
@@ -821,7 +821,7 @@ this.setLayerManager(gameLayerManager)
                                     
     var BUFF_MESSAGE: String = "XXX Not Buffering Causes Concurrency Issues XXX"
 
-this.logUtil!!.putF(BUFF_MESSAGE, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(BUFF_MESSAGE, this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -1477,7 +1477,7 @@ this.gameBehavior!!.updateEndGameProcessor(this)
     open fun cleanupGame()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, this.commonStrings!!.CLEANUP)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CLEANUP)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -1666,7 +1666,7 @@ this.gameCanvasStartListener= gameCanvasStartListener
     open fun loadState()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.LOAD)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.LOAD)
 
     var hashtable: Hashtable<Any, Any> = this.getLoadStateHashtable()!!
 
@@ -2038,7 +2038,7 @@ Thread.sleep(this.YIELD_SLEEP)
 {
 
         try {
-            this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
+            this.logUtil!!.putF(this.commonStrings!!.START_RUNNABLE, this, this.commonStrings!!.RUN)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -2072,10 +2072,10 @@ this.open()
 gameAdState!!.init()
 gameAdState!!.setGameIsReady(true)
 this.gameBehavior!!.run(this)
-this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END_RUNNABLE, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }
@@ -2099,7 +2099,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                         if(features.isDefault(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
-                                    this.logUtil!!.putF(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName(), this, commonStrings!!.RUN)
+                                    this.logUtil!!.putF(this.openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName(), this, this.commonStrings!!.RUN)
 
                                     }
                                 
@@ -2108,7 +2108,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                         if(J2MEUtil.isHTML())
                         
                                     {
-                                    this.logUtil!!.putF(GraphicsStrings.getInstance()!!.HTML, this, commonStrings!!.RUN)
+                                    this.logUtil!!.putF(GraphicsStrings.getInstance()!!.HTML, this, this.commonStrings!!.RUN)
 
                                     }
                                 
@@ -2126,7 +2126,7 @@ OpenGLThreadUtil.getInstance()!!.onResume()
                         if(features.isDefault(this.openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS))
                         
                                     {
-                                    this.logUtil!!.putF(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName(), this, commonStrings!!.RUN)
+                                    this.logUtil!!.putF(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName(), this, this.commonStrings!!.RUN)
 OpenGLThreadUtil.getInstance()!!.onResume()
 
         while(this.isRunning())
@@ -2139,7 +2139,7 @@ this.end()
                                     }
                                 
                         else {
-                            this.logUtil!!.putF("this thread", this, commonStrings!!.RUN)
+                            this.logUtil!!.putF("this thread", this, this.commonStrings!!.RUN)
 
         while(this.isRunning())
         {

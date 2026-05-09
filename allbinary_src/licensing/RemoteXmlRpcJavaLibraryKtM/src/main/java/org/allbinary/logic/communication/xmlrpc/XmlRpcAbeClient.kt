@@ -126,7 +126,7 @@ stringBuffer!!.append(this.START_SERVER)
 stringBuffer!!.appendint(this.getServer())
 stringBuffer!!.append(this.SEP)
 stringBuffer!!.append(clientInfo!!.getLicenseServer(this.getServer()))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 

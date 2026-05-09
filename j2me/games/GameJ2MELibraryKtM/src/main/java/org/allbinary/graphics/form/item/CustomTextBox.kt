@@ -42,7 +42,7 @@ import org.allbinary.string.CommonSeps
 open public class CustomTextBox : GameCommandCanvas {
         
 
-    private val textFieldItem: TextFieldItem
+    private val textFieldItem: ABTextFieldItem
 public constructor (cmdListener: CommandListener, label: String, text: String, maxSize: Int, constraints: Int, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(cmdListener, label, backgroundBasicColor, foregroundBasicColor){
@@ -62,7 +62,7 @@ public constructor (cmdListener: CommandListener, label: String, text: String, m
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
-    var textFieldItem: TextFieldItem = TextFieldItem(this, TextItemVisitor(), stringUtil!!.EMPTY_STRING, stringUtil!!.EMPTY_STRING, maxSize, 0, stringUtil!!.EMPTY_STRING, font, backgroundBasicColor, foregroundBasicColor)
+    var textFieldItem: ABTextFieldItem = ABTextFieldItem(this, TextItemVisitor(), stringUtil!!.EMPTY_STRING, stringUtil!!.EMPTY_STRING, maxSize, 0, stringUtil!!.EMPTY_STRING, font, backgroundBasicColor, foregroundBasicColor)
 
 textFieldItem!!.setString(text)
 this.textFieldItem= textFieldItem
@@ -186,13 +186,13 @@ super.paint(graphics)
     //var graphics = graphics
     //var x = x
     //var y = y
-this.textFieldItem!!.paint(graphics, x, y)
+this.textFieldItem!!.paintXY(graphics, x, y)
 }
 
 
     open fun getTextFieldItem()
         //nullable = true from not(false or (false and true)) = true
-: TextFieldItem{
+: ABTextFieldItem{
 
 
 

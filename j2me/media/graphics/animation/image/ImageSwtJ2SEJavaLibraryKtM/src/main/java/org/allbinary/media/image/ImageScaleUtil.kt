@@ -108,7 +108,7 @@ private constructor ()
                         if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
-                                    this.logUtil!!.putF(this.NO_COPY, this, commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR)
 
 
 

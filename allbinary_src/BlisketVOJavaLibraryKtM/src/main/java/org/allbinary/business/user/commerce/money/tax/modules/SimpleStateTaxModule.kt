@@ -198,7 +198,7 @@ this.document= DomDocumentHelper.create(data)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
-                                    this.logUtil!!.putF("Tax Doc: " +DomDocumentHelper.toString(this.document), this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Tax Doc: " +DomDocumentHelper.toString(this.document), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -304,7 +304,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    this.logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate", this, this.commonStrings!!.IS_VALID, e)
 
                                     }
                                 

@@ -81,7 +81,7 @@ var hashMap = hashMap
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -90,7 +90,7 @@ var hashMap = hashMap
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("End: " +isValid, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("End: " +isValid, this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -106,7 +106,7 @@ var hashMap = hashMap
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate form", this, this.commonStrings!!.IS_VALID, e)
 
                                     }
                                 

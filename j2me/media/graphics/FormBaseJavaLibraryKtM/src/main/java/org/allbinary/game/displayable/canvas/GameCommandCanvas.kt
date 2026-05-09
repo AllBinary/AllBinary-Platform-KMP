@@ -93,9 +93,9 @@ companion object {
 
     val backgroundBasicColor: BasicColor
 
-    private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
+    val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
 
-    private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
+    val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 
@@ -170,7 +170,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     //var displayChangeEvent = displayChangeEvent
 
         try {
-            this.logUtil!!.putF(commonStrings!!.START, this, canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
 
     var rectangle: Rectangle = this.createRectangle(this.menuForm!!.size())!!
 
@@ -178,7 +178,7 @@ this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_
 this.update()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 }
@@ -267,7 +267,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
     override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, "open")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "open")
 BasicMotionGesturesHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
@@ -277,7 +277,7 @@ DisplayChangeEventHandler.getInstance()!!.addListener(this)
     override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CLOSE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CLOSE)
 BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.removeListener(this)
@@ -334,7 +334,7 @@ this.keyRepeatedByDevice(keyCode, 0)
     //var keyCode = keyCode
     //var deviceId = deviceId
 this.logUtil!!.putF(StringMaker().
-                            append(CommonSeps.getInstance()!!.SPACE)!!.appendint(keyCode)!!.toString(), this, gameInputStrings!!.KEY_PRESSED)
+                            append(CommonSeps.getInstance()!!.SPACE)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.KEY_PRESSED)
 this.addGameKeyEvent(keyCode, 0, false)
 }
 

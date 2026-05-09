@@ -12,16 +12,9 @@
         import kotlin.reflect.KClass
         
 
-open public class ImageStringItem
-            : Object
-         {
+interface ABChoiceItemInterface {
         
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
 }
                 
             

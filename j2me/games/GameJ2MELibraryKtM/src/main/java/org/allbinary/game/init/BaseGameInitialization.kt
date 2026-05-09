@@ -221,7 +221,7 @@ this.allLoaded= true
 
 
     
-                        if(changedGameFeatureListener!!.isChanged(gameConfigurationCentral!!.SCALE))
+                        if(changedGameFeatureListener!!.isChangedGameConfiguration(gameConfigurationCentral!!.SCALE))
                         
                                     {
                                     

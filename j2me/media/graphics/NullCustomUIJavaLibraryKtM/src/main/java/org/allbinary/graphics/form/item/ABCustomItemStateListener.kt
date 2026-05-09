@@ -12,7 +12,7 @@
         import kotlin.reflect.KClass
         
 
-interface CustomItemStateListener {
+interface ABCustomItemStateListener {
         
 
 }

@@ -64,7 +64,7 @@ public constructor ()
     //var highScore = highScore
 
         try {
-            this.logUtil!!.putF("Begin Remote HighScores Submission", this, commonStrings!!.PROCESS)
+            this.logUtil!!.putF("Begin Remote HighScores Submission", this, this.commonStrings!!.PROCESS)
 
     var gameInfoData: GameInfoData = GameInfoData.getInstance()!!
 
@@ -97,7 +97,7 @@ remoteHighScores!!.update(resultHashtable)
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
 }

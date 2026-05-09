@@ -102,7 +102,7 @@ this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
-this.logUtil!!.putF(commonStrings!!.NOT_IMPLEMENTED, this, "initCommands")
+this.logUtil!!.putF(this.commonStrings!!.NOT_IMPLEMENTED, this, "initCommands")
 }
 
 

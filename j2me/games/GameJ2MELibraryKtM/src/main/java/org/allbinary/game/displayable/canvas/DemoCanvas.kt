@@ -980,7 +980,7 @@ this.getHighScoresFactoryInterface()!!.fetchHighScores(gameInfo, this.highScores
     var gameCanvas: AllBinaryGameCanvas = this.gameCanvas
 
 PreLogUtil.put(StringMaker().
-                            append("Game Thread in DemoCanvas: ")!!.append(this.stringUtil!!.toString(gameCanvas))!!.toString(), this, commonStrings!!.START)
+                            append("Game Thread in DemoCanvas: ")!!.append(this.stringUtil!!.toString(gameCanvas))!!.toString(), this, this.commonStrings!!.START)
 this.canvasThread= this.threadFactoryUtil!!.getInstanceGameCanvasRunnable(gameCanvas)
 this.gameCanvas!!.setThread(this.canvasThread)
 this.threadFactoryUtil!!.start(this.canvasThread)
@@ -1208,7 +1208,7 @@ this.gameRunnable!!.run()
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.START_RUNNABLE, this, this.commonStrings!!.RUN)
 
         try {
             
@@ -1295,10 +1295,10 @@ this.end()
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
-this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END_RUNNABLE, this, this.commonStrings!!.RUN)
 }
 
 
@@ -1384,7 +1384,7 @@ this.baseGameStatistics!!.init()
 
                                     }
                                 
-this.logUtil!!.putF("Demo End", this, commonStrings!!.RUN)
+this.logUtil!!.putF("Demo End", this, this.commonStrings!!.RUN)
 this.close()
 DisplayChangeEventHandler.getInstance()!!.removeListener(this)
 this.stopGameDemo()

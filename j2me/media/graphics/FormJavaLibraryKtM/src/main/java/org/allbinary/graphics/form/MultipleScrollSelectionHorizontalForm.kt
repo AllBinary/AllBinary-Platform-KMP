@@ -18,7 +18,6 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.font.MyFont
 import org.allbinary.graphics.form.item.ABCustomItem
-import org.allbinary.graphics.form.item.CustomItemInterface
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 
@@ -120,7 +119,7 @@ graphics.fillRect(x, y, this.rectangle.getWidth(), this.rectangle.getHeight())
 
 graphics.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
 
-    var item: CustomItemInterface
+    var item: ABCustomItem
 
 
 
@@ -129,7 +128,7 @@ graphics.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
                         for (index in start until size)
 
         {
-item= this.get(index) as CustomItemInterface
+item= this.get(index)
 
     
                         if(dx >= this.rectangle.getMaxX())

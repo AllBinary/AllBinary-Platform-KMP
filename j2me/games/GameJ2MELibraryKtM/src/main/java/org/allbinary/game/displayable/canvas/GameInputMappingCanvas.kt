@@ -70,8 +70,6 @@ companion object {
 
     private val inputMapping: PersistentInputMapping
 
-    private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
-
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 
     private val abeClientInformation: AbeClientInformationInterface
@@ -90,7 +88,7 @@ public constructor (abeClientInformation: AbeClientInformationInterface, command
 
                             //For kotlin this is before the body of the constructor.
                     
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
     
                         if(helpPaintable == 
@@ -210,7 +208,7 @@ stringBuffer!!.append("Start Passed GameKey: ")
 stringBuffer!!.append(this.stringUtil!!.toString(gameKey))
 stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(this.stringUtil!!.toString(input))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.PROCESS)
 
     
                         if(this.selectedGameKey != this.NONE)
@@ -315,7 +313,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
     var METHOD_NAME: String = "addNewMapping"
 
-this.logUtil!!.putF(commonStrings!!.START, this, METHOD_NAME)
+this.logUtil!!.putF(this.commonStrings!!.START, this, METHOD_NAME)
 
     var isInputAlreadyMapped: Boolean = this.inputMapping!!.getInputMapping()!!.isMapped(input)!!
 

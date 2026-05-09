@@ -14,8 +14,8 @@
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.color.BasicColor
 
-open public class TextItem : CustomCustomItem
-                , CustomItemInterface {
+open public class ABTextItem : CustomCustomItem
+                , ABCustomItemInterface {
         
 public constructor (label: String, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 

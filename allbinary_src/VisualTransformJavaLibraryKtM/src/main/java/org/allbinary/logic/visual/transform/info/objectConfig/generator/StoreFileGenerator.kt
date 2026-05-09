@@ -171,7 +171,7 @@ var input = input
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Processing", this, commonStrings!!.PROCESS)
+                                    this.logUtil!!.putF("Processing", this, this.commonStrings!!.PROCESS)
 
                                     }
                                 
@@ -209,7 +209,7 @@ FileUtil.getInstance()!!.write(inputStream, this.file)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Processed", this, commonStrings!!.PROCESS)
+                                    this.logUtil!!.putF("Processed", this, this.commonStrings!!.PROCESS)
 
                                     }
                                 

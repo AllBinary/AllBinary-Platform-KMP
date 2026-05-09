@@ -149,7 +149,7 @@ var allBinaryGameLayerManager = allBinaryGameLayerManager
     override fun setDemo()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, "setDemo")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "setDemo")
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -167,7 +167,7 @@ PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
 
     var CREATE_GAME: String = "createGame"
 
-this.logUtil!!.putF(commonStrings!!.START, this, CREATE_GAME)
+this.logUtil!!.putF(this.commonStrings!!.START, this, CREATE_GAME)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -177,7 +177,7 @@ progressCanvas!!.start()
 
 this.setStartStateHashtable(NullUtil.getInstance()!!.NULL_TABLE)
 PrimaryThreadPool.getInstance()!!.runTask(CreateGameRunnable(this, hashtable))
-this.logUtil!!.putF(commonStrings!!.END, this, CREATE_GAME)
+this.logUtil!!.putF(this.commonStrings!!.END, this, CREATE_GAME)
 }
 
 

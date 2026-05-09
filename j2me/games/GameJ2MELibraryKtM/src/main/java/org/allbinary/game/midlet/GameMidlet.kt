@@ -252,7 +252,7 @@ gameAdState!!.getAdvertisements()!!.stopAll()
         //nullable = true from not(false or (false and false)) = true
 {
     //var background = background
-this.logUtil!!.putF(commonStrings!!.START, this, PAUSE_APP_BACKGROUND)
+this.logUtil!!.putF(this.commonStrings!!.START, this, PAUSE_APP_BACKGROUND)
 
     
                         if(this.allbinaryGameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
@@ -286,7 +286,7 @@ gameAdState!!.getAdvertisements()!!.startAll()
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
-this.logUtil!!.putF(commonStrings!!.START, this, UN_PAUSE_APP_BACKGROUND)
+this.logUtil!!.putF(this.commonStrings!!.START, this, UN_PAUSE_APP_BACKGROUND)
 AllBinarySensorManager.getInstance()!!.init()
 
     var gameCanvasRunnableInterface: GameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface
@@ -376,7 +376,7 @@ PreLogUtil.put(commonStrings!!.END, this, METHOD_NAME)
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
-this.logUtil!!.putF(commonStrings!!.END, this, METHOD_NAME)
+this.logUtil!!.putF(this.commonStrings!!.END, this, METHOD_NAME)
 }
 
 
@@ -392,7 +392,7 @@ gameAdState!!.getAdvertisements()!!.startAll()
 
     var START_APP: String = "startApp"
 
-this.logUtil!!.putF(commonStrings!!.START, this, START_APP)
+this.logUtil!!.putF(this.commonStrings!!.START, this, START_APP)
 
     var gameCanvasRunnableInterface: GameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface
 
@@ -1252,7 +1252,7 @@ threadFactoryUtil!!.start(this.thread)
     open fun stopGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 GameNotificationEventHandler.getInstance()!!.removeAllListeners()
 ColorChangeEventHandler.getInstance()!!.removeAllListeners()
 GameEventHandlerUtil.removeAllListeners()
@@ -1292,7 +1292,7 @@ ThreadUtil.getInstance()!!.join(this.thread)
 
                         }
                             
-this.logUtil!!.putF(commonStrings!!.END, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+this.logUtil!!.putF(this.commonStrings!!.END, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 }
 
 
@@ -1348,7 +1348,7 @@ this.allbinaryGameCanvasRunnableInterface= gameCanvasRunnableInterface
     open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.SAVE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.SAVE)
 
     var hashtable: Hashtable<Any, Any> = this.getCurrentStateHashtable()!!
 
@@ -1361,7 +1361,7 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
     override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
-this.logUtil!!.putF(commonStrings!!.START, this, "getCurrentStateHashtable")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "getCurrentStateHashtable")
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 

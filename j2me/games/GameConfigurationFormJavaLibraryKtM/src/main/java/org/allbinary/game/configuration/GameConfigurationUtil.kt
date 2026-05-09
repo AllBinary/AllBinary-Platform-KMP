@@ -114,7 +114,7 @@ stringBuffer!!.append(this.FROM)
 stringBuffer!!.appendint(gameConfiguration!!.getValue()!!.toInt())
 stringBuffer!!.append(this.TO)
 stringBuffer!!.appendint(value.toInt())
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.UPDATE)
 gameConfiguration!!.setValue(value)
 }
 

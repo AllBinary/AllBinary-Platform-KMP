@@ -149,7 +149,7 @@ this.selectedRTSLayerPlayerGameInput!!.setAllBinaryGameLayerManager(allBinaryGam
 var displayChangeEvent = displayChangeEvent
 
         try {
-            this.logUtil!!.putF(commonStrings!!.START, this, "onDisplayChangeEvent")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "onDisplayChangeEvent")
 this.getRTSLayerInfoPaintable()!!.update()
 } catch(e: Exception)
             {
@@ -164,7 +164,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onDisplayChangeEvent", e)
     open fun left()
         //nullable = true from not(false or (false and true)) = true
 {
-this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInput(Canvas.LEFT)
+this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInputKey(Canvas.LEFT)
 }
 
 
@@ -173,7 +173,7 @@ this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInput(Ca
     open fun right()
         //nullable = true from not(false or (false and true)) = true
 {
-this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInput(Canvas.RIGHT)
+this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInputKey(Canvas.RIGHT)
 }
 
 

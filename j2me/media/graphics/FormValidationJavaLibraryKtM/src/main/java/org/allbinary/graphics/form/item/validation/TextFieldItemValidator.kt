@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.graphics.form.item.TextFieldItem
+import org.allbinary.graphics.form.item.ABTextFieldItem
 import org.allbinary.logic.control.validate.ValidatorBase
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.string.StringMaker
@@ -35,14 +35,14 @@ import org.allbinary.util.BasicArrayListD
 open public class TextFieldItemValidator : ValidatorBase {
         
 
-    private val textFieldItem: TextFieldItem
+    private val textFieldItem: ABTextFieldItem
 
     private var min: Int
 
     private var max: Int
 
     private var allowOnEmpty: Boolean
-public constructor (textFieldItem: TextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean){
+public constructor (textFieldItem: ABTextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean){
 var textFieldItem = textFieldItem
 var min = min
 var max = max

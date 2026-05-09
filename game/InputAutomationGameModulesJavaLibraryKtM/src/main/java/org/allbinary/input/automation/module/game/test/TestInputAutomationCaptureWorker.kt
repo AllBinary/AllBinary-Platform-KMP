@@ -64,7 +64,7 @@ var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
 
                             //For kotlin this is before the body of the constructor.
                     
-this.logUtil!!.putF(this.MESSAGE, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.MESSAGE, this, this.commonStrings!!.CONSTRUCTOR)
 this.setGenericProfileActions(genericProfileActions)
 }
 
@@ -137,7 +137,7 @@ cacheInterface!!.get(anyType)
     open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.PROCESS)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 this.startDataWorkers()
 this.processDataWorkerResults()
 }

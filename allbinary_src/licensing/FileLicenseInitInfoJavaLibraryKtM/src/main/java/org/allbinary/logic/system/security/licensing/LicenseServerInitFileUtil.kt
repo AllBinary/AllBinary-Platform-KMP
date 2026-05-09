@@ -108,7 +108,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(StringUtil.getInstance()!!.EMPTY
                         if(FileFactory.getInstance()!!.isFile(filePath))
                         
                                     {
-                                    this.logUtil!!.putF("Using Existing License File", this, commonStrings!!.INIT)
+                                    this.logUtil!!.putF("Using Existing License File", this, this.commonStrings!!.INIT)
 
                                     }
                                 
@@ -119,7 +119,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(StringUtil.getInstance()!!.EMPTY
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 }
 
 }
@@ -142,7 +142,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(filePath)!!
 
-this.logUtil!!.putF("Writing Default License File", this, commonStrings!!.INIT)
+this.logUtil!!.putF("Writing Default License File", this, this.commonStrings!!.INIT)
 
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
@@ -172,11 +172,11 @@ fileOutputStream!!.write(b)
 index++
 }
 
-this.logUtil!!.putF("Wrote Bytes: " +index, this, commonStrings!!.INIT)
+this.logUtil!!.putF("Wrote Bytes: " +index, this, this.commonStrings!!.INIT)
 fileOutputStream!!.flush()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 }
 
          finally {

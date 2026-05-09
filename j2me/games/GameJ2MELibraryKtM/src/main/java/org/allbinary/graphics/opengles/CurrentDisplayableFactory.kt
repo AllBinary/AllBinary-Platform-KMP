@@ -227,7 +227,7 @@ stringMaker!!.append(this.stringUtil!!.toString(this.openGlReadydisplayable))
                         if(SWTUtil.isSWT && !features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
-                                    PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(SWTUtil.SWT)!!.append(commonSeps!!.SPACE)!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(NullRunnable.getInstance()))!!.toString(), this, commonStrings!!.UPDATE)
+                                    PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(SWTUtil.SWT)!!.append(commonSeps!!.SPACE)!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(NullRunnable.getInstance()))!!.toString(), this, this.commonStrings!!.UPDATE)
 this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 
                                     }
@@ -237,7 +237,7 @@ this.setUsedRunnable(NullWaitGameRunnable.getInstance())
                         if(J2MEUtil.isHTML())
                         
                                     {
-                                    PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(GraphicsStrings.getInstance()!!.HTML)!!.append(commonSeps!!.SPACE)!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(this.runnable))!!.toString(), this, commonStrings!!.UPDATE)
+                                    PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(GraphicsStrings.getInstance()!!.HTML)!!.append(commonSeps!!.SPACE)!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(this.runnable))!!.toString(), this, this.commonStrings!!.UPDATE)
 this.setUsedRunnable(this.runnable)
 
                                     }
@@ -247,13 +247,13 @@ this.setUsedRunnable(this.runnable)
                         if(this.openGlReadydisplayable is DemoCanvas || this.openGlReadydisplayable is AllBinaryGameCanvas || features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
-                                    PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(OpenGLFeatureFactory.getInstance()!!.OPENGL.toString())!!.append(commonSeps!!.SPACE)!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(this.runnable))!!.toString(), this, commonStrings!!.UPDATE)
+                                    PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(OpenGLFeatureFactory.getInstance()!!.OPENGL.toString())!!.append(commonSeps!!.SPACE)!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(this.runnable))!!.toString(), this, this.commonStrings!!.UPDATE)
 this.setUsedRunnable(this.runnable)
 
                                     }
                                 
                         else {
-                            PreLogUtil.put(stringMaker!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(NullRunnable.getInstance()))!!.toString(), this, commonStrings!!.UPDATE)
+                            PreLogUtil.put(stringMaker!!.append(this.RUNNABLE)!!.append(this.stringUtil!!.toString(NullRunnable.getInstance()))!!.toString(), this, this.commonStrings!!.UPDATE)
 this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 
                         }

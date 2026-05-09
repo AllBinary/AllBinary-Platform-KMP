@@ -68,8 +68,8 @@ companion object {
 private constructor ()
             : super()
         {
-list= BasicArrayListD()
-defaultList= BasicArrayListD()
+this.list= BasicArrayListD()
+this.defaultList= BasicArrayListD()
 this.init()
 }
 
@@ -138,7 +138,7 @@ this.defaultList!!.remove(gameFeature)
                         if(this.list.contains(gameFeature))
                         
                                     {
-                                    this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.REMOVE)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.REMOVE)
 this.list.remove(gameFeature)
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, gameFeature!!.toString()))
 
@@ -196,7 +196,7 @@ this.addDefault(MainFeatureFactory.getInstance()!!.FULL_SCREEN)
 this.addDefault(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND)
 } catch(e: Exception)
             {
-PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 }
 
 }

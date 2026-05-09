@@ -61,7 +61,9 @@ open public class MyCanvas : Canvas
 
     private val commandStack: Stack<Any>
 
-    private var isPaused: Boolean= false
+    private var commandListener: CommandListener = NullCommandListener.NULL_COMMAND_LISTENER
+
+    private var paused: Boolean= false
 public constructor (name: String, childNameList: BasicArrayList){
     //var name = name
     //var childNameList = childNameList
@@ -163,14 +165,12 @@ super.removeCommand(this.commandStack!!.pop() as Command)
 }
 
 
-    private var listener: CommandListener = NullCommandListener.NULL_COMMAND_LISTENER
-
     override fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var l = l
 super.setCommandListener(l)
-this.listener= l
+this.commandListener= l
 }
 
 
@@ -181,7 +181,7 @@ this.listener= l
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.listener
+                        return this.commandListener
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -193,7 +193,7 @@ this.listener= l
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.isPaused
+                        return this.paused
 }
 
 
@@ -272,7 +272,7 @@ this.logUtil!!.putF("Destroyed MyCanvas", this, "destroy")
         //nullable = true from not(false or (false and false)) = true
 {
 var isPaused = isPaused
-this.isPaused= isPaused
+this.paused= isPaused
 }
 
 

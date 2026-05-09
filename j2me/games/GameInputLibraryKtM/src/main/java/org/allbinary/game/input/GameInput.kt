@@ -87,7 +87,7 @@ var gameKeyEvent = gameKeyEvent
                                     }
                                 
                         else {
-                            this.logUtil!!.putF("Danger Passed Null GameKeyEvent", this, commonStrings!!.ADD)
+                            this.logUtil!!.putF("Danger Passed Null GameKeyEvent", this, this.commonStrings!!.ADD)
 
                         }
                             

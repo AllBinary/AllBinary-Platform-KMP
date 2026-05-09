@@ -106,7 +106,7 @@ this.xBorder= xBorder
 this.yBorder= yBorder
 this.updateRectangle()
 this.logUtil!!.putF(StringMaker().
-                            append("Created: ")!!.append(this.toString())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+                            append("Created: ")!!.append(this.toString())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 

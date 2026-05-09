@@ -878,7 +878,7 @@ DomHelper.getInstance()!!.save(File(this.SAVE_PATH +"/" +workAreaJPanel!!.getNam
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
                                     {
-                                    this.guiLog!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
+                                    this.guiLog!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.SAVE, e)
 
                                     }
                                 

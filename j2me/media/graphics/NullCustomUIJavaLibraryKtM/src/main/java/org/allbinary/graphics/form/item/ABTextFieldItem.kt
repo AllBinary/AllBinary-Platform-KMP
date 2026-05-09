@@ -17,7 +17,7 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.visitor.Visitor
 
-open public class TextFieldItem : TextItem {
+open public class ABTextFieldItem : ABTextItem {
         
 public constructor (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 

@@ -71,7 +71,7 @@ Thread.sleep(2000)
     open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 
     var hashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
 

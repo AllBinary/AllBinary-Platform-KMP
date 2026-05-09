@@ -61,7 +61,7 @@ this.soundsFactoryInterface= soundsFactoryInterface
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.INIT)
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
@@ -108,7 +108,7 @@ stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
 stringBuffer!!.append(indexString)
 stringBuffer!!.append(this.soundStrings!!.SOUND)
 stringBuffer!!.append(soundInterface!!::class.toString()!!)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.INIT)
 soundInterface!!.init()
 progressCanvas!!.addNormalPortion(100, StringMaker().
                             append(this.soundStrings!!.INIT_SOUND)!!.append(indexString)!!.toString())
@@ -118,7 +118,7 @@ progressCanvas!!.addNormalPortion(100, StringMaker().
 }
 
 this.soundsFactoryInterface!!.setInitialized(true)
-this.logUtil!!.putF(commonStrings!!.END, this, commonStrings!!.INIT)
+this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.INIT)
 }
 
 

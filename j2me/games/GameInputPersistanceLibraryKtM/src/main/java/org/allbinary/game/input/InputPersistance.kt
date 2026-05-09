@@ -34,6 +34,7 @@ import java.io.DataOutputStream
 import java.util.Hashtable
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
+import org.allbinary.TsUtil
 import org.allbinary.game.configuration.persistance.BasicPersitance
 import org.allbinary.game.configuration.persistance.NullRecordComparator
 import org.allbinary.game.configuration.persistance.NullRecordFilter
@@ -49,6 +50,8 @@ import org.allbinary.util.HashtableUtil
 
 open public class InputPersistance : BasicPersitance {
         
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val hashtableUtil: HashtableUtil = HashtableUtil.getInstance()!!
 public constructor (name: String)                        
@@ -121,7 +124,7 @@ public constructor (name: String)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 this.logUtil!!.putF(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.appendint(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
-recordAsBytes= recordStore!!.getRecord(id)
+recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
 
     
                         if(recordAsBytes != 

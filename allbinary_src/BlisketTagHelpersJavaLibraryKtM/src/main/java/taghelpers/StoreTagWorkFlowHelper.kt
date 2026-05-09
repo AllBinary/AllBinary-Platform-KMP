@@ -72,7 +72,7 @@ this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    this.logUtil!!.putF("Process", this, commonStrings!!.PROCESS)
+                                    this.logUtil!!.putF("Process", this, this.commonStrings!!.PROCESS)
 
                                     }
                                 

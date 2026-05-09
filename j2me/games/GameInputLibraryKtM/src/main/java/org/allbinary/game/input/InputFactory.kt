@@ -68,7 +68,7 @@ private constructor ()
             : super()
         {
 
-    var size: Int = inputIntegerArray!!.size
+    var size: Int = this.inputIntegerArray!!.size
                 
 
 
@@ -112,7 +112,7 @@ var id = id
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append("Warning id: ")!!.appendint(id)!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append("Warning id: ")!!.appendint(id)!!.toString(), this, this.commonStrings!!.GET_INSTANCE)
 
 
 

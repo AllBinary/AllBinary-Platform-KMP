@@ -298,7 +298,7 @@ graphics.drawImage(image, 0, 0, Anchor.TOP_LEFT)
 imageArray[index]= image2
 } catch(e: Exception)
             {
-this.logUtil!!.putF(commonStrings!!.EXCEPTION_LABEL +resourceCallbackStrings!!.DONE, this, resourceCallbackStrings!!.HANDLE_IMAGE)
+this.logUtil!!.putF(this.commonStrings!!.EXCEPTION_LABEL +resourceCallbackStrings!!.DONE, this, resourceCallbackStrings!!.HANDLE_IMAGE)
 }
 
 }

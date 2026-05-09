@@ -38,7 +38,7 @@ public constructor (layerManagerLogging: LayerManagerLoggingBase)
             : super()
         {
     //var layerManagerLogging = layerManagerLogging
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.layerManagerLogging= layerManagerLogging
 }
 
