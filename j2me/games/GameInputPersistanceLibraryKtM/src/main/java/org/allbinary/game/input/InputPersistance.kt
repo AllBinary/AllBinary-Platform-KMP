@@ -47,7 +47,7 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.HashtableUtil
-
+//GameInputPersistanceLibrary
 open public class InputPersistance : BasicPersitance {
         
 

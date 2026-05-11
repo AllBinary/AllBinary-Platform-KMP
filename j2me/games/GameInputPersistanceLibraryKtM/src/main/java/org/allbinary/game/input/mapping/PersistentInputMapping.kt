@@ -40,7 +40,7 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.EnumerationUtil
-
+//GameInputPersistanceLibrary
 open public class PersistentInputMapping
             : Object
          {

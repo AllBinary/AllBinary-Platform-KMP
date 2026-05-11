@@ -33,7 +33,7 @@ import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
-
+//NotDeviceSpecificNoMediaMIDP1Library
 open public class AllBinaryMediaManager
             : Object
          {
@@ -83,7 +83,7 @@ var soundsFactoryInterface = soundsFactoryInterface
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.putF(commonString!!.START, THIS, commonString!!.INIT)
+logUtil!!.putF(commonString!!.START, AllBinaryMediaManager.THIS, commonString!!.INIT)
 ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()
@@ -115,7 +115,7 @@ var type = type
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.putF(commonString!!.START, THIS, "creatPlayer(InputStream)")
+logUtil!!.putF(commonString!!.START, AllBinaryMediaManager.THIS, "creatPlayer(InputStream)")
 
 
 
@@ -134,7 +134,7 @@ var locator = locator
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.putF(commonString!!.START, THIS, "creatPlayer(locator)")
+logUtil!!.putF(commonString!!.START, AllBinaryMediaManager.THIS, "creatPlayer(locator)")
 
 
 

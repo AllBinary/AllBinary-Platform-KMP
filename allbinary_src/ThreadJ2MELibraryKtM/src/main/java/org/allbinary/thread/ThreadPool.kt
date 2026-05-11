@@ -188,7 +188,7 @@ break;
 
 
     
-                        if(lowerPriorityRunnable == this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE || lowerPriorityRunnable == this.NULL_RUNNABLE)
+                        if(lowerPriorityRunnable == this.threadObjectUtil!!.NULL_PRIORITY_RUNNABLE)
                         
                                     {
                                     this.taskQueue!!.add(task)

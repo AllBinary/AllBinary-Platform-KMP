@@ -109,7 +109,7 @@ this.mediaPlayer!!.setLooping(false)
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.CONSTRUCTOR, e)
 
 
 

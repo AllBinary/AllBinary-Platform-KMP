@@ -33,7 +33,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
-
+//BasicPlayerJavaLibrary
 open public class BasicPlayer
             : Object
         
@@ -48,11 +48,11 @@ companion object {
             
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var state: Int= 0
-
-    private var loopCount: Int= 0
-
     val listenersList: BasicArrayList = BasicArrayListD()
+
+    var stateP: Int= 0
+
+    var loopCountP: Int= 0
 public constructor ()
             : super()
         {
@@ -133,7 +133,7 @@ this.listenersList!!.remove(playerListener)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.state
+                        return this.stateP
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -142,7 +142,7 @@ this.listenersList!!.remove(playerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
-this.state= state
+this.stateP= state
 }
 
 
@@ -195,7 +195,7 @@ this.state= state
         //nullable = true from not(false or (false and false)) = true
 {
 var count = count
-this.loopCount= count
+this.loopCountP= count
 }
 
 
@@ -206,7 +206,7 @@ this.loopCount= count
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.loopCount
+                        return this.loopCountP
 }
 
 

@@ -38,7 +38,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.HashtableUtil
-
+//GameInputNoPersistanceLibrary
 open public class InputPersistance : BasicPersitance {
         
 

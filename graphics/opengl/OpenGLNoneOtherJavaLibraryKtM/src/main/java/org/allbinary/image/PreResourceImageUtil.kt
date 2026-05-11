@@ -67,7 +67,7 @@ var image = image
 }
 
 
-    open fun update(gl: GL, image: Image)
+    open fun updateGL(gl: GL, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

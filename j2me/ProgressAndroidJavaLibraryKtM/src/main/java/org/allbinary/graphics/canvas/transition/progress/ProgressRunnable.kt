@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import android.app.Activity
+import org.allbinary.android.activity.MidletActivityBase
 import org.allbinary.android.activity.SimpleProgressActivityInterface
 import org.allbinary.thread.ARunnable
 
@@ -38,7 +39,10 @@ open public class ProgressRunnable : ARunnable {
 public constructor (midletActivity: Activity, progressCanvas: ProgressCanvas){
     //var midletActivity = midletActivity
     //var progressCanvas = progressCanvas
-this.midletActivity= midletActivity as SimpleProgressActivityInterface
+
+    var midletActivity2: MidletActivityBase = midletActivity as MidletActivityBase
+
+this.midletActivity= midletActivity2 as SimpleProgressActivityInterface
 this.progressCanvas= progressCanvas
 }
 

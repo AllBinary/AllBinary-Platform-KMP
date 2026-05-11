@@ -60,7 +60,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun wait(mediaPlayer: MediaPlayer)
+    open fun waitForMediaPlayer(mediaPlayer: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var mediaPlayer = mediaPlayer

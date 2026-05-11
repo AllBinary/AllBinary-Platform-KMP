@@ -41,7 +41,7 @@ open public class GameRunnable
 
     val FAST: Int = 60
 
-    var wait: Long = this.WAIT.toLong()
+    var waitInMillis: Long = this.WAIT.toLong()
 public constructor ()
             : super()
         {
@@ -60,7 +60,7 @@ DisplayInfoSingleton.getInstance()!!.process()
     open fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
-Thread.sleep(this.wait)
+Thread.sleep(this.waitInMillis)
 }
 
 

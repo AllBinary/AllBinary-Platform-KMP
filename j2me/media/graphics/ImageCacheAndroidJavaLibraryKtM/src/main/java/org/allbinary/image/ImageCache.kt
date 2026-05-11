@@ -115,7 +115,7 @@ this.logUtil!!.putF(StringMaker().
     //var width = width
     //var height = height
 
-    var foundIndex: Int = this.getIndex(width, height)!!
+    var foundIndex: Int = this.getIndexWH(width, height)!!
 
 
     var image: Image = this.getFromAvailable(foundIndex, width, height)!!
@@ -145,7 +145,7 @@ image= this.createImage(caller, width, height)
                                     foundIndex= this.nextIndex
 this.widths[this.nextIndex]= width
 this.heights[this.nextIndex]= height
-nextIndex++
+this.nextIndex++
 
                                     }
                                 

@@ -237,8 +237,10 @@ this.resources= resources
     var id: Int = integer.toInt()!!
 
 
-    var inputStream: InputStream = 
-                                    (resources as Resources).openRawResource(id)!!
+    var resources: Resources = (this.resources as Resources)
+
+
+    var inputStream: InputStream = resources.openRawResource(id)!!
 
 
     

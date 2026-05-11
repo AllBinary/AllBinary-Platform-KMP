@@ -213,6 +213,23 @@ open public inner class FirstProcessor : Processor {
     open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
+this@ImageCache.firstProcess()
+}
+
+
+}
+                
+            
+    private var processor: Processor = FirstProcessor()
+
+    private var endProcessor: Processor = Processor.getInstance()!!
+public constructor (){
+}
+
+
+    open fun firstProcess()
+        //nullable = true from not(false or (false and true)) = true
+{
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -224,35 +241,25 @@ open public inner class FirstProcessor : Processor {
                         if(isHTML)
                         
                                     {
-                                    processor= Processor.getInstance()
-endProcessor= HTMLEndProcessor()
+                                    this.processor= Processor.getInstance()
+this.endProcessor= HTMLEndProcessor()
 
                                     }
                                 
                         else {
-                            processor= NotHTMLProcessor()
-endProcessor= NotHTMLEndProcessor()
+                            this.processor= NotHTMLProcessor()
+this.endProcessor= NotHTMLEndProcessor()
 
         try {
             runTask()
 } catch(e: Exception)
             {
-logUtil!!.putF(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
+logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.END_METHOD_NAME)
 }
 
 
                         }
                             
-}
-
-
-}
-                
-            
-    private var processor: Processor = FirstProcessor()
-
-    private var endProcessor: Processor = Processor.getInstance()!!
-public constructor (){
 }
 
 
@@ -749,7 +756,7 @@ image.setName(key)
     //var width = width
     //var height = height
 
-    var foundIndex: Int = this.getIndex(width, height)!!
+    var foundIndex: Int = this.getIndexWH(width, height)!!
 
 
     var image: Image = this.getFromAvailable(foundIndex, width, height)!!
@@ -784,7 +791,7 @@ image= this.createImage(caller, width, height)
                                     foundIndex= this.nextIndex
 this.widths[this.nextIndex]= width
 this.heights[this.nextIndex]= height
-nextIndex++
+this.nextIndex++
 
                                     }
                                 

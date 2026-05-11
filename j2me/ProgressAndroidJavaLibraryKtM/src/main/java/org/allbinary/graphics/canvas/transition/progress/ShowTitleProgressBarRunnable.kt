@@ -53,7 +53,7 @@ var progressCanvas = progressCanvas
 {
 
         try {
-            this.midletActivity!!.onShowProgress(false, FADE_IN_HALF)
+            this.midletActivity!!.onShowProgress(false, this.FADE_IN_HALF)
 } catch(e: Exception)
             {
 

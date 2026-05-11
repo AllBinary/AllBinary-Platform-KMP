@@ -35,7 +35,7 @@ import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
-
+//MediaMIDP2ForHTMLJavaLibrary
 open public class AllBinaryMediaManager
             : Object
          {
@@ -85,7 +85,7 @@ var soundsFactoryInterface = soundsFactoryInterface
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.putF(commonString!!.START, THIS, commonString!!.INIT)
+logUtil!!.putF(commonString!!.START, AllBinaryMediaManager.THIS, commonString!!.INIT)
 ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()

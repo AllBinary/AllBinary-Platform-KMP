@@ -131,7 +131,7 @@ var gl = gl
                         for (index in 0 until size)
 
         {
-preResourceImageUtil!!.update(gl, imageArray[index]!!)
+preResourceImageUtil!!.updateGL(gl, imageArray[index]!!)
 }
 
 

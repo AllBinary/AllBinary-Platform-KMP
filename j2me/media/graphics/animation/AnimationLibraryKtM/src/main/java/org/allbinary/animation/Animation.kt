@@ -50,7 +50,7 @@ open public class Animation
     var changeColorP: Int= 0
 
     var alphaP: Int= 0
-protected constructor ()
+public constructor ()
             : super()
         {
 }

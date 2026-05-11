@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-
+//PlatformNullImageJavaLibrary
 open public class PostLoadPlatformImage : PlatformImage {
         
 companion object {

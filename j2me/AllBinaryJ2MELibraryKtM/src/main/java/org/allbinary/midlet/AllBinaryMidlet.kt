@@ -67,7 +67,7 @@ companion object {
 
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-    private var destroyed: Boolean= false
+    private var midletDestroyed: Boolean= false
 public constructor (){
 this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
 }
@@ -140,7 +140,7 @@ display.setCurrent(newDisplay)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed
-this.destroyed= destroyed
+this.midletDestroyed= destroyed
 }
 
 
@@ -151,7 +151,7 @@ this.destroyed= destroyed
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.destroyed
+                        return this.midletDestroyed
 }
 
 

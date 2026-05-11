@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.PlayerGameInput
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
@@ -114,7 +113,7 @@ var eventObject = eventObject
 playerGameInput!!.onDownGameKeyEvent(eventObject as GameKeyEvent)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 }

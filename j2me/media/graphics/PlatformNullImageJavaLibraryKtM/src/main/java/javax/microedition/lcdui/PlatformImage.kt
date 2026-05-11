@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.NullUtil
-
+//PlatformNullImageJavaLibrary
 open public class PlatformImage
             : Object
          {

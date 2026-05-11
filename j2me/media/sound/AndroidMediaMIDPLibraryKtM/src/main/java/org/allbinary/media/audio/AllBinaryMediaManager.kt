@@ -37,7 +37,7 @@ import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
-
+//AndroidMediaMIDPLibrary
 open public class AllBinaryMediaManager
             : Object
          {
@@ -89,13 +89,13 @@ var aMuted = aMuted
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.putF(commonString!!.START, THIS, commonString!!.INIT)
+logUtil!!.putF(commonString!!.START, AllBinaryMediaManager.THIS, commonString!!.INIT)
 AllBinaryMediaManager.shutdown(soundsFactoryInterface)
 ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Media Manager")
 System.gc()
 Sounds(soundsFactoryInterface).
                             init()
-logUtil!!.putF(commonString!!.END, THIS, commonString!!.INIT)
+logUtil!!.putF(commonString!!.END, AllBinaryMediaManager.THIS, commonString!!.INIT)
 }
 
 
@@ -111,7 +111,7 @@ logUtil!!.putF(commonString!!.END, THIS, commonString!!.INIT)
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.putF(commonString!!.START, THIS, "shutdown")
+logUtil!!.putF(commonString!!.START, AllBinaryMediaManager.THIS, "shutdown")
 
     
                         if(soundsFactoryInterface!!.isInitialized())
@@ -161,7 +161,7 @@ logUtil!!.putF(commonString!!.START, THIS, "shutdown")
                         
                                     {
                                     androidMediaPlayerWrapper= player2 as AndroidMediaPlayerWrapper
-MediaPlayerUtil.getInstance()!!.wait(androidMediaPlayerWrapper!!.getMediaPlayer())
+MediaPlayerUtil.getInstance()!!.waitForMediaPlayer(androidMediaPlayerWrapper!!.getMediaPlayer())
 
                                     }
                                 
@@ -189,7 +189,7 @@ AllBinaryMediaManager.mostUsedTotal= 0
 
                                     }
                                 
-logUtil!!.putF(commonString!!.START, THIS, "shutdown")
+logUtil!!.putF(commonString!!.START, AllBinaryMediaManager.THIS, "shutdown")
 }
 
 
@@ -242,7 +242,7 @@ logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +C
 
                 @Throws(IOException::class, MediaException::class)
             
-    open fun createPlayer(stream: InputStream, type: String)
+    open fun createPlayerFromInputStream(stream: InputStream, type: String)
         //nullable = true from not(false or (false and false)) = true
 : Player{
 var stream = stream

@@ -70,10 +70,10 @@ private constructor ()
 
 
 
-                        for (index in deviceIdToplayerId!!.size -1 downTo 0)
+                        for (index in this.deviceIdToplayerId!!.size -1 downTo 0)
 
         {
-deviceIdToplayerId[index]=  -1
+this.deviceIdToplayerId[index]=  -1
 }
 
 }
@@ -166,7 +166,7 @@ index= this.totalDevicesMapped
                             
 this.playerIdToDeviceId[index]= deviceId
 AnalogLocationInputFactory.getInstance()!!.addPlayer(this.totalDevicesMapped)
-totalDevicesMapped++
+this.totalDevicesMapped++
 this.logUtil!!.putF(StringMaker().
                             append("Added DeviceId: ")!!.appendint(deviceId)!!.append(" at: ")!!.appendint(index)!!.append(" Total: ")!!.appendint(this.totalDevicesMapped)!!.toString(), this, "getPlayerForDevice")
 

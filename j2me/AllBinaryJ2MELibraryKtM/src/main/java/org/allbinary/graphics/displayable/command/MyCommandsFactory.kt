@@ -49,15 +49,15 @@ companion object {
 
         }
             
-    val NO_COMMAND: Command = Command(StringUtil.getInstance()!!.EMPTY_STRING,  -1,  -1)
+    val NO_COMMAND: Command = Command(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING,  -1,  -1)
 
-    val GAUGE_CHANGE: Command = Command("GAUGE_CHANGE", Command.ITEM, 1)
+    val GAUGE_CHANGE: Command = Command("GAUGE_CHANGE", StringUtil.getInstance()!!.EMPTY_STRING, Command.ITEM, 1)
 
-    val SET_DISPLAYABLE: Command = Command("Display", Command.SCREEN, 2)
+    val SET_DISPLAYABLE: Command = Command("Display", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 2)
 
-    val PAUSE_COMMAND: Command = Command("Pause", Command.SCREEN, 0)
+    val PAUSE_COMMAND: Command = Command("Pause", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 0)
 
-    val RESUME_COMMAND: Command = Command("Resume", Command.SCREEN, 0)
+    val RESUME_COMMAND: Command = Command("Resume", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 0)
 protected constructor ()
             : super()
         {

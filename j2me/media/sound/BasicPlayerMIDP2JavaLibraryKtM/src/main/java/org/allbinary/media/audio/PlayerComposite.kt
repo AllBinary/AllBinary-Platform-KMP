@@ -277,8 +277,7 @@ var controlType = controlType
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getControls()
+                            throw RuntimeException()
 }
 
 
@@ -287,9 +286,10 @@ var controlType = controlType
 {
     //var leftVolume = leftVolume
     //var rightVolume = rightVolume
-player = this.playerplayer as Controllable2
-player.
-                    setVolume(leftVolume, rightVolume)
+
+    var controllable2: Controllable2 = (this.player as Controllable2)
+
+controllable2.setVolume(leftVolume, rightVolume)
 }
 
 

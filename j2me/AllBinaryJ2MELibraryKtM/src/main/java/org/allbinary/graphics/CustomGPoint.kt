@@ -59,11 +59,11 @@ companion object {
 
         }
             
-    private var x: Int= 0
+    private var cx: Int= 0
 
-    private var y: Int= 0
+    private var cy: Int= 0
 
-    private var z: Int= 0
+    private var cz: Int= 0
 public constructor (x: Int, y: Int, z: Int)                        
 
                             : super(x, y, z){
@@ -81,7 +81,7 @@ var z = z
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
-this.x= x
+this.cx= x
 }
 
 
@@ -92,7 +92,7 @@ this.x= x
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.x
+                        return this.cx
 }
 
 
@@ -100,7 +100,7 @@ this.x= x
         //nullable = true from not(false or (false and false)) = true
 {
 var y = y
-this.y= y
+this.cy= y
 }
 
 
@@ -111,7 +111,7 @@ this.y= y
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.y
+                        return this.cy
 }
 
 
@@ -119,7 +119,7 @@ this.y= y
         //nullable = true from not(false or (false and false)) = true
 {
 var z = z
-this.z= z
+this.cz= z
 }
 
 
@@ -130,7 +130,7 @@ this.z= z
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.z
+                        return this.cz
 }
 
 

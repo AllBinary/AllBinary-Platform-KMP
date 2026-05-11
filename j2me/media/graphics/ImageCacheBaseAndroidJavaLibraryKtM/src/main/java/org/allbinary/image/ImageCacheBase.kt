@@ -135,7 +135,7 @@ this.logUtil!!.putF(StringMaker().
 }
 
 
-    open fun getIndex(width: Int, height: Int)
+    open fun getIndexWH(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var width = width
