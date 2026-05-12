@@ -36,6 +36,7 @@ import org.allbinary.game.configuration.persistance.GameDifficultyFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 
 open public class GameDifficultyOptions : CommandForm {
@@ -45,11 +46,11 @@ open public class GameDifficultyOptions : CommandForm {
 public constructor (commandListener: CommandListener, title: String, list: BasicArrayList, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
-var commandListener = commandListener
-var title = title
-var list = list
-var backgrounBasicColor = backgrounBasicColor
-var foregroundBasicColor = foregroundBasicColor
+    //var commandListener = commandListener
+    //var title = title
+    //var list = list
+    //var backgrounBasicColor = backgrounBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -95,7 +96,7 @@ gameDifficultyFactory!!.setLevel(this.getSelectedId())
     override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
-var cmdListener = cmdListener
+    //var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
@@ -119,9 +120,9 @@ super.update()
     open fun add(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var list = list
-var name = name
-var option = option
+    //var list = list
+    //var name = name
+    //var option = option
 
     var choiceGroup: ChoiceGroup = this.getChoiceGroup(list, name, option)!!
 
@@ -141,9 +142,9 @@ this.append(choiceGroup)
     open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 : ChoiceGroup{
-var list = list
-var name = name
-var option = option
+    //var list = list
+    //var name = name
+    //var option = option
 
     var METHOD_NAME: String = "addChoiceGroup"
 
@@ -151,7 +152,7 @@ var option = option
     var NAME: String = "Adding Choice: "
 
 
-    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option)
+    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option, StringUtil.getInstance()!!.getArrayInstance(), NullCanvas.NULL_IMAGE_ARRAY)
 
 
     var size: Int = list.size()!!
@@ -182,7 +183,7 @@ choiceGroup!!.append(anyType!!.toString(), NullCanvas.NULL_IMAGE)
     open fun setSelectedId(id: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var id = id
+    //var id = id
 
     var choiceGroup: ChoiceGroup = this.get(0) as ChoiceGroup
 

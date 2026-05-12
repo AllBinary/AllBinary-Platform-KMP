@@ -2,13 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.allbinary</groupId>
-    <artifactId>ImageCacheJ2MEJavaLibraryKt</artifactId>
+    <artifactId>ImageCacheBaseNonJ2MEJavaLibraryKt</artifactId>
     <packaging>jar</packaging>
     <!-- AllBinary Platform Version Start -->
     <version>1.0.0-SNAPSHOT</version>
     <!-- AllBinary Platform Version End -->
 
-    <name>ImageCacheJ2MEJavaLibraryKt</name>
+    <name>ImageCacheBaseNonJ2MEJavaLibraryKt</name>
     <url>http://www.allbinary.com/</url>
     <distributionManagement>
         <snapshotRepository>
@@ -26,12 +26,12 @@
 
 
     <dependencies>
-        <dependency>
+<!--        <dependency>
             <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <artifactId>junitKt</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -41,25 +41,6 @@
             <!-- AllBinary Platform Version End -->
 
             <optional>true</optional>
-        </dependency>
-                
-        <dependency>
-            <groupId>org.allbinary.game</groupId>
-            <artifactId>GameResourceNoneJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>DebugJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
@@ -72,53 +53,16 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>ImageCacheBaseJ2MEJavaLibraryKt</artifactId>
+            <artifactId>NullJ2MELibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>ApplicationStatisticsJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>ApplicationStatisticsJ2MELibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>PCResourceLibraryKt</artifactId>
-<!--
-            <artifactId>ResourceJ2MEJavaLibraryKt</artifactId>
-            <artifactId>PCResourceLibraryKt</artifactId>
-            <artifactId>AndroidResourceLibraryKt</artifactId>
-            <artifactId>ResourceLibraryKt</artifactId>
-            for HTML it is in ABDKPlaynJavaLibrary
--->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-            <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-midpKt</artifactId>
-            <version>2.0.4</version>
+            <version>2.0.2-SPECIAL-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
         <!--
@@ -138,17 +82,11 @@
         </dependency>
         -->
 
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
-            <version>2.3.21</version><!-- kotlin -->
-            <scope>provided</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
+            
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -206,5 +144,4 @@
     </build>
 
 </project>
-
 

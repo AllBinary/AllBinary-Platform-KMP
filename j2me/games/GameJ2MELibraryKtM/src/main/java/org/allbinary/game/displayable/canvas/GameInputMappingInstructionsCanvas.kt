@@ -35,16 +35,15 @@ import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.draw.DrawStringUtil
 import org.allbinary.graphics.font.MyFont
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 
 open public class GameInputMappingInstructionsCanvas : GameCommandCanvas {
         
 companion object {
             
-    val DISPLAY: Command = Command("Help", Command.SCREEN, 1)
+    val DISPLAY: Command = Command("Help", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
-    val CLOSE: Command = Command("Close", Command.SCREEN, 1)
+    val CLOSE: Command = Command("Close", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
     val NAME: String = "GameInputMappingInstructionsCanvas"
 

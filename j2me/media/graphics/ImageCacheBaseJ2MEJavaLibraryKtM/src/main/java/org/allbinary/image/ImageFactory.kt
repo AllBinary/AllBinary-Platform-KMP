@@ -27,7 +27,7 @@
         
 import java.io.InputStream
 import javax.microedition.lcdui.Image
-
+//ImageCacheBaseJavaLibrary - J2ME
 open public class ImageFactory
             : Object
          {
@@ -80,7 +80,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Image.createImageWH(width, height)
+                        return Image.createImage(width, height)
 }
 
 
@@ -92,7 +92,7 @@ companion object {
     //var key = key
     //var inputStream = inputStream
 
-    var image: Image = Image.createImageFromInputStream(inputStream)!!
+    var image: Image = Image.createImage(inputStream)!!
 
 
 

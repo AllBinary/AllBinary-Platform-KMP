@@ -35,6 +35,7 @@ import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
 import javax.microedition.rms.RecordStoreException
 import javax.microedition.rms.RecordStoreNotFoundException
+import org.allbinary.TsUtil
 import org.allbinary.game.GameInfo
 import org.allbinary.game.configuration.persistance.NullRecordComparator
 import org.allbinary.game.configuration.persistance.NullRecordFilter
@@ -102,6 +103,8 @@ RecordStoreHighScores.hashTable!!.put(highScores!!.getName(), highScores)
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val platformRecordIdUtil: PlatformRecordIdUtil = PlatformRecordIdUtil.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val RECORD_ID: String = "_HS"
 
@@ -247,7 +250,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.AD
 
     var id: Int = recordEnum!!.nextRecordId()!!
 
-recordAsBytes= recordStore!!.getRecord(id)
+recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
 
     
                         if(recordAsBytes != 
@@ -354,7 +357,7 @@ this.setList(BasicArrayListD())
 
     var id: Int = recordEnum!!.nextRecordId()!!
 
-recordAsBytes= recordStore!!.getRecord(id)
+recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
 
     
                         if(recordAsBytes != 

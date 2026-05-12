@@ -48,7 +48,7 @@ open public class HighScoreUtil
         
 companion object {
             
-    val SUBMIT_TEXTBOX_COMMAND: Command = Command("Submit", Command.SCREEN, 1)
+    val SUBMIT_TEXTBOX_COMMAND: Command = Command("Submit", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
         }
             

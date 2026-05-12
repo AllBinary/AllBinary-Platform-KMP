@@ -34,6 +34,7 @@ import org.allbinary.game.configuration.GameConfigurationUtil
 import org.allbinary.graphics.displayable.screen.CommandForm
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.HashtableUtil
 
@@ -75,7 +76,7 @@ var option = option
     var stringMaker: StringMaker = StringMaker()
 
 
-    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option)
+    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option, StringUtil.getInstance()!!.getArrayInstance(), NullCanvas.NULL_IMAGE_ARRAY)
 
 
     var list: BasicArrayList = hashtable.get(name as Object) as BasicArrayList

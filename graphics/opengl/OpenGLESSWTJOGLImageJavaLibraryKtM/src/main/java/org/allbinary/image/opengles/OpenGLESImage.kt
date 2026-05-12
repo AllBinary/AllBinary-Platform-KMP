@@ -32,7 +32,6 @@ import javax.microedition.lcdui.NullCanvas
 import javax.microedition.lcdui.OpenGLESPostLoadPlatformImage
 import javax.microedition.lcdui.PostLoadImageProcessor
 import org.allbinary.graphics.GraphicsStrings
-import org.allbinary.graphics.OpenGLBitmap
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.platform.graphics.PlatformBitmapBase
@@ -41,7 +40,7 @@ import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
-
+//OpenGLESSWTJOGLImageJavaLibrary
 open public class OpenGLESImage : Image
                 , OpenGLSurfaceChangedInterface {
         

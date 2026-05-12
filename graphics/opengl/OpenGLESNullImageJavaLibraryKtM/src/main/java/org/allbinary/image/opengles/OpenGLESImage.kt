@@ -35,7 +35,7 @@ import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
-
+//OpenGLESNullImageJavaLibrary
 open public class OpenGLESImage : Image
                 , OpenGLSurfaceChangedInterface {
         

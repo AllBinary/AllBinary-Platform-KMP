@@ -28,7 +28,6 @@
 import android.app.Activity
 import android.view.MotionEvent
 import android.view.View
-import android.view.WindowManager
 import org.allbinary.android.GenericMotionEventVerifyInterface
 import org.allbinary.game.configuration.event.GameFeatureEvent
 import org.allbinary.game.configuration.event.GameFeatureListenerInterface
@@ -112,16 +111,6 @@ var animationSequence = animationSequence
     override fun getView()
         //nullable = true from not(false or (false and true)) = true
 : View{
-
-
-
-                            throw RuntimeException()
-}
-
-
-    override fun getWindowManager()
-        //nullable = true from not(false or (false and true)) = true
-: WindowManager{
 
 
 

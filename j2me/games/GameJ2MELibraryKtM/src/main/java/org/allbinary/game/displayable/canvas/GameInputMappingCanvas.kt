@@ -46,6 +46,7 @@ import org.allbinary.game.paint.help.HelpPaintable
 import org.allbinary.game.paint.help.InputMappingHelpPaintable
 import org.allbinary.graphics.paint.ProcessPaintable
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.util.BasicArrayList
 
@@ -56,9 +57,9 @@ companion object {
             
     val NAME: String = "GameInputMappingCanvas"
 
-    val DISPLAY: Command = Command("Controls", Command.SCREEN, 2)
+    val DISPLAY: Command = Command("Controls", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 2)
 
-    val DEFAULT: Command = Command("Default", Command.SCREEN, 2)
+    val DEFAULT: Command = Command("Default", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 2)
 
         }
             

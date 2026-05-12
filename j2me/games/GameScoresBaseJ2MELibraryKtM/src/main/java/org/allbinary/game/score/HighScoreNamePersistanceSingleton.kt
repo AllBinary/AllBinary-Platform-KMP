@@ -34,6 +34,7 @@ import java.io.DataOutputStream
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
 import javax.microedition.rms.RecordStoreException
+import org.allbinary.TsUtil
 import org.allbinary.game.GameInfo
 import org.allbinary.game.configuration.persistance.NullRecordComparator
 import org.allbinary.game.configuration.persistance.NullRecordFilter
@@ -77,6 +78,8 @@ companion object {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -231,7 +234,7 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
 this.logUtil!!.putF(StringMaker().
                             append(LOADING_ID)!!.appendint(id)!!.toString(), this, this.commonStrings!!.LOAD)
-recordAsBytes= recordStore!!.getRecord(id)
+recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
 byteArrayInputStream= ByteArrayInputStream(recordAsBytes)
 inputStream= DataInputStream(byteArrayInputStream)
 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Command
+import org.allbinary.logic.string.StringUtil
 
 open public class HighScoreCommands
             : Object
@@ -53,11 +54,11 @@ companion object {
             {
             }            
         
-    val DISPLAY: Command = Command("Scores", Command.SCREEN, 1)
+    val DISPLAY: Command = Command("Scores", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
-    val PERSONAL: Command = Command("Personal", Command.SCREEN, 1)
+    val PERSONAL: Command = Command("Personal", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
-    val WORLD: Command = Command("World", Command.SCREEN, 1)
+    val WORLD: Command = Command("World", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
 }
                 

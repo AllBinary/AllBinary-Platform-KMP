@@ -46,9 +46,9 @@ open public class LicenseRegistrationTextBox : CustomTextBox {
         
 companion object {
             
-    val DISPLAY_COMMAND: Command = Command("Register", Command.SCREEN, 3)
+    val DISPLAY_COMMAND: Command = Command("Register", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 3)
 
-    val SUBMIT_COMMAND: Command = Command("Submit", Command.SCREEN, 3)
+    val SUBMIT_COMMAND: Command = Command("Submit", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 3)
 
         }
             

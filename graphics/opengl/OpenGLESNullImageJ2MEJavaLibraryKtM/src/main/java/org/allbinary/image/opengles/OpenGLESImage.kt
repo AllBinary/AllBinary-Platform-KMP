@@ -35,7 +35,7 @@ import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
-
+//OpenGLESNullImageJ2MEJavaLibrary
 open public class OpenGLESImage
             : Object
         

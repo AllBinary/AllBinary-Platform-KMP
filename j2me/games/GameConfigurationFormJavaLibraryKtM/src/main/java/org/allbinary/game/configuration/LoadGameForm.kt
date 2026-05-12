@@ -47,10 +47,10 @@ open public class LoadGameForm : CommandForm {
 public constructor (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
-var commandListener = commandListener
-var title = title
-var backgrounBasicColor = backgrounBasicColor
-var foregroundBasicColor = foregroundBasicColor
+    //var commandListener = commandListener
+    //var title = title
+    //var backgrounBasicColor = backgrounBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,7 +64,7 @@ this.initCommands(commandListener)
     override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
-var cmdListener = cmdListener
+    //var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
@@ -96,7 +96,7 @@ this.areChoices= true
                                     }
                                 
                         else {
-                            this.append(StringItem("No Saved Games", StringUtil.getInstance()!!.EMPTY_STRING))
+                            this.append(StringItem("No Saved Games", StringUtil.getInstance()!!.EMPTY_STRING, StringItem.PLAIN))
 this.areChoices= false
 
                         }
@@ -108,9 +108,9 @@ super.update()
     open fun add(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var list = list
-var name = name
-var option = option
+    //var list = list
+    //var name = name
+    //var option = option
 
     var choiceGroup: ChoiceGroup = this.getChoiceGroup(list, name, option)!!
 
@@ -130,14 +130,17 @@ this.append(choiceGroup)
     open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 : ChoiceGroup{
-var list = list
-var name = name
-var option = option
+    //var list = list
+    //var name = name
+    //var option = option
 
     var METHOD_NAME: String = "getChoiceGroup"
 
 
-    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option)
+    var ADDING_CHOICE: String = "Adding Choice: "
+
+
+    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option, StringUtil.getInstance()!!.getArrayInstance(), NullCanvas.NULL_IMAGE_ARRAY)
 
 
     var size: Int = list.size()!!
@@ -153,7 +156,7 @@ var option = option
     var anyType: Any = list.objectArray[index]!!
 
 this.logUtil!!.putF(StringMaker().
-                            append("Adding Choice: ")!!.append(anyType!!.toString())!!.toString(), this, METHOD_NAME)
+                            append(ADDING_CHOICE)!!.append(anyType!!.toString())!!.toString(), this, METHOD_NAME)
 choiceGroup!!.append(anyType!!.toString(), NullCanvas.NULL_IMAGE)
 }
 

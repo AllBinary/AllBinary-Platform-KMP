@@ -33,17 +33,17 @@ import org.allbinary.game.configuration.feature.GameFeatureFormUtil
 import org.allbinary.game.configuration.feature.InGameFeatureChoiceGroups
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
-import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringUtil
 
 open public class InGameOptionsForm : CommandForm {
         
 companion object {
             
-    val DISPLAY: Command = Command("Options In Game", Command.SCREEN, 1)
+    val DISPLAY: Command = Command("Options In Game", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
-    val SAVE: Command = Command("Save", Command.SCREEN, 1)
+    val SAVE: Command = Command("Save", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
-    val DEFAULT: Command = Command("Default", Command.SCREEN, 1)
+    val DEFAULT: Command = Command("Default", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
 
         }
              constructor (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        

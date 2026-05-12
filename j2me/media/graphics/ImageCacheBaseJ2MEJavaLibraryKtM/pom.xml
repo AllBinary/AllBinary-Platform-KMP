@@ -2,13 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.allbinary</groupId>
-    <artifactId>ImageCacheBaseJavaLibraryKt</artifactId>
+    <artifactId>ImageCacheBaseJ2MEJavaLibraryKt</artifactId>
     <packaging>jar</packaging>
     <!-- AllBinary Platform Version Start -->
     <version>1.0.0-SNAPSHOT</version>
     <!-- AllBinary Platform Version End -->
 
-    <name>ImageCacheBaseJavaLibraryKt</name>
+    <name>ImageCacheBaseJ2MEJavaLibraryKt</name>
     <url>http://www.allbinary.com/</url>
     <distributionManagement>
         <snapshotRepository>

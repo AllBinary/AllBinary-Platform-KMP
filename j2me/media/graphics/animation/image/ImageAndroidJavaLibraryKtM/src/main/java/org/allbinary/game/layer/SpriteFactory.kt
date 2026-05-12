@@ -71,7 +71,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Sprite(image, frameWidth, frameHeight, 0, 0)
+                        return Sprite(image, frameWidth, frameHeight, image.getWidth() /frameWidth, image.getHeight() /frameHeight)
 }
 
 

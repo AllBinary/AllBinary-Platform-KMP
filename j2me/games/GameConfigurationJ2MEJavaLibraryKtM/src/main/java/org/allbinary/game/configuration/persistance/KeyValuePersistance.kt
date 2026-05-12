@@ -32,6 +32,7 @@ import java.io.DataOutputStream
 import java.util.Hashtable
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
+import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
@@ -42,6 +43,8 @@ import org.allbinary.util.HashtableUtil
 
 open public class KeyValuePersistance : BasicPersitance {
         
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 protected constructor (recordId: String)                        
 
                             : super(recordId){
@@ -111,7 +114,7 @@ var size = size
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 this.logUtil!!.putF(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.appendint(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
-recordAsBytes= recordStore!!.getRecord(id)
+recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
 
     
                         if(recordAsBytes != 
