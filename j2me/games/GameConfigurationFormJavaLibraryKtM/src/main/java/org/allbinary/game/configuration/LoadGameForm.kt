@@ -30,6 +30,7 @@
 import javax.microedition.lcdui.Choice
 import javax.microedition.lcdui.ChoiceGroup
 import javax.microedition.lcdui.CommandListener
+import javax.microedition.lcdui.Item
 import javax.microedition.lcdui.NullCanvas
 import javax.microedition.lcdui.StringItem
 import org.allbinary.game.commands.GameCommandsFactory
@@ -96,7 +97,7 @@ this.areChoices= true
                                     }
                                 
                         else {
-                            this.append(StringItem("No Saved Games", StringUtil.getInstance()!!.EMPTY_STRING, StringItem.PLAIN))
+                            this.append(StringItem("No Saved Games", StringUtil.getInstance()!!.EMPTY_STRING, Item.PLAIN))
 this.areChoices= false
 
                         }
