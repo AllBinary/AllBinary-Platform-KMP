@@ -86,7 +86,7 @@ this.circularIndexUtil= CircularIndexUtil.createInstance(0)
     var gameNotificationEventHandler: GameNotificationEventHandler = GameNotificationEventHandler.getInstance()!!
 
 gameNotificationEventHandler!!.removeAllListeners()
-gameNotificationEventHandler!!.addListener(this)
+gameNotificationEventHandler!!.addListenerInterface(this)
 }
 
 

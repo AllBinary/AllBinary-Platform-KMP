@@ -79,8 +79,8 @@ companion object {
 private constructor ()
             : super()
         {
-LocalPlayerBuildingEventHandler.getInstance()!!.addListener(this)
-ScrollMapEventHandler.getInstance()!!.addListener(this)
+LocalPlayerBuildingEventHandler.getInstance()!!.addListenerInterface(this)
+ScrollMapEventHandler.getInstance()!!.addListenerInterface(this)
 }
 
 

@@ -262,7 +262,7 @@ this.motionGestureEventList!!.clear()
 
 
     
-                        if(this.rectangleCollisionUtil!!.isInside(rectPoint!!.getX(), rectPoint!!.getY(), rectangle.getMaxX() +20, rectangle.getMaxY(), point.getX(), point.getY()))
+                        if(this.rectangleCollisionUtil!!.isInside(rectPoint!!.getX(), rectPoint!!.getY(), this.rectangle.getMaxX() +20, this.rectangle.getMaxY(), point.getX(), point.getY()))
                         
                                     {
                                     

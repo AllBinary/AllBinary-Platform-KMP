@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.communication.log.PreLogUtil
-
+//import org.allbinary.logic.communication.log.config.type.LogConfigTypes;
 open public class DbInitInfo : DbConnectionInfo {
         
 public constructor (initFileName: String, read: Boolean)                        

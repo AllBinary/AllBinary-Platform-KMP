@@ -100,7 +100,7 @@ this.downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKe
                         }
                             
 
-    var keyCodeAsInteger: Integer = smallIntegerSingletonFactory!!.getAtNoThrow(keyCode)!!
+    var keyCodeAsInteger: Integer = this.smallIntegerSingletonFactory!!.getAtNoThrow(keyCode)!!
 
 this.downKeyEventHandler!!.fireEvent(keyCodeAsInteger)
 this.downKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(keyCodeAsInteger)

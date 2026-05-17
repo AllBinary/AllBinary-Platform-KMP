@@ -33,7 +33,7 @@ open public class ActivityFractureUtilAPI19 : ActivityFractureUtilAPI5 {
         
 companion object {
             
-    private val instance: ActivityFractureUtilAPI19 = ActivityFractureUtilAPI19()
+    private val instance19: ActivityFractureUtilAPI19 = ActivityFractureUtilAPI19()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -42,7 +42,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ActivityFractureUtilAPI19.instance
+                        return ActivityFractureUtilAPI19.instance19
 }
 
 

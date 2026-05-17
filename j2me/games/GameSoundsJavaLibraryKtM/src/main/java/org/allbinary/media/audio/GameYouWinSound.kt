@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-
+//Use 8hz16bitmono for most J2ME
 open public class GameYouWinSound : CompositeSound {
         
 companion object {

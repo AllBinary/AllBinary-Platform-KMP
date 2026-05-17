@@ -109,7 +109,7 @@ this.touchButtonsBuilderFactory= touchButtonsBuilderFactory
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
 this.notYoursGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NOT_YOURS, SmallIntegerSingletonFactory.getInstance()!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-BasicMotionGesturesHandler.getInstance()!!.addListener(this)
+BasicMotionGesturesHandler.getInstance()!!.addListenerInterface(this)
 }
 
 

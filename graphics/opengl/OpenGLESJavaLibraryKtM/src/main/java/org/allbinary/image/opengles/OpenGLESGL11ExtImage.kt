@@ -34,7 +34,6 @@ import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.graphics.opengles.OpenGLLogUtil
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 //Many devices don't support this even though it is supposed to
@@ -72,7 +71,7 @@ this.rectangle= intArrayOf(0,this.getHeight(), this.getWidth(),  -this.getHeight
 this.a= DisplayInfoSingleton.getInstance()!!.getLastHeight() -this.getHeight()
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 }
@@ -93,7 +92,7 @@ this.onDisplayChangeEvent(
                         
                                     {
                                     this.textureFactory!!.load(gl11, GL10.GL_TEXTURE_2D, 0, this, 0, true)
-gl11.glTexParameteriv(GL10.GL_TEXTURE_2D, GL11Ext.GL_TEXTURE_CROP_RECT_OES, rectangle, 0)
+gl11.glTexParameteriv(GL10.GL_TEXTURE_2D, GL11Ext.GL_TEXTURE_CROP_RECT_OES, this.rectangle, 0)
 gl11.glDisable(GL10.GL_TEXTURE_2D)
 OpenGLLogUtil.getInstance()!!.logError(gl11, this)
 
@@ -110,7 +109,7 @@ OpenGLLogUtil.getInstance()!!.logError(gl11, this)
     //var y = y
     //var z = z
 gl.glEnable(GL10.GL_TEXTURE_2D)
-gl.glBindTexture(GL10.GL_TEXTURE_2D, openGLESImageProperties!!.textureID)
+gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties!!.textureID)
 gl = glgl as GL11Ext
 gl.
                     glDrawTexfOES(x, this.a -y, z, this.getWidth(), this.getHeight())

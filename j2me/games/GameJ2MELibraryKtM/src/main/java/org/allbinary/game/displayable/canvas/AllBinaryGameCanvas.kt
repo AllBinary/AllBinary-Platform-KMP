@@ -347,7 +347,7 @@ this.menuBehavior= this.getInGameMenuBehavior()
 this.initSpecialPaint()
 this.initPopupMenu()
 this.initMenu()
-DisplayChangeEventHandler.getInstance()!!.addListener(this)
+DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
 }
 
 
@@ -519,7 +519,7 @@ this.setPopupMenuInputProcessor(PopupMenuInputProcessor(BasicArrayListD(),  -1, 
             this.menuBehavior!!.initMenu(this)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "initMenu", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "initMenu", e)
 }
 
 }
@@ -662,7 +662,7 @@ System.gc()
     override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
-this.logUtil!!.putF(this.commonStrings!!.START, this, gameStrings!!.UNPAUSE)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.gameStrings!!.UNPAUSE)
 this.closeMenu()
 System.gc()
 super.unPause()
@@ -716,7 +716,7 @@ this.menuBehavior!!.popupMenu(this)
 this.primaryPlayerQueue!!.add(SelectSound.getInstance())
 this.setMenuPaintable(this.getFormPaintable())
 this.setMenuInputProcessor(this.mainMenuInputProcessor)
-this.basicMotionGesturesHandler!!.addListener(this.mainMenuInputProcessor)
+this.basicMotionGesturesHandler!!.addListenerInterface(this.mainMenuInputProcessor)
 this.gameKeyEventHandler!!.addListener(this.mainMenuInputProcessor)
 }
 
@@ -771,7 +771,7 @@ this.setMenuInputProcessor(this.getPopupMenuInputProcessor())
     override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
-this.basicMotionGesturesHandler!!.addListener(this.menuInputProcessor)
+this.basicMotionGesturesHandler!!.addListenerInterface(this.menuInputProcessor)
 this.gameKeyEventHandler!!.addListener(this.menuInputProcessor)
 }
 
@@ -905,7 +905,7 @@ var enable = enable
     open fun mediaInit()
         //nullable = true from not(false or (false and true)) = true
 {
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 
@@ -1181,7 +1181,7 @@ this.updateScreenButtonPaintable()
 this.sensorGameUpdateProcessor!!.sendNotifications(this.gameLayerManager)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "itemStateChanged", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "itemStateChanged", e)
 }
 
 }
@@ -1283,10 +1283,10 @@ this.gameOver= gameOver
     override fun processGameOver()
         //nullable = true from not(false or (false and true)) = true
 {
-PreLogUtil.put(commonStrings!!.START, this, this.gameStrings!!.SET_GAME_OVER)
+PreLogUtil.put(this.commonStrings!!.START, this, this.gameStrings!!.SET_GAME_OVER)
 this.setGameOver(true)
 removePauseCommand()
-this.setGameState(SHOW_END_RESULT_GAME_STATE)
+this.setGameState(AllBinaryGameCanvas.SHOW_END_RESULT_GAME_STATE)
 this.setEndGamePaintable(getEndGameStatePaintable())
 }
 
@@ -1356,7 +1356,7 @@ this.gameBehavior!!.setGameState(this)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
+    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
 gameAdState!!.processAdState(this.gameState, this.gameLayerManager!!.getGameInfo()!!.getGameType())
 
@@ -1622,7 +1622,7 @@ this.gameBehavior!!.buildGame(this)
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put(StringMaker().
-                            append(this.gameInputStrings!!.ENABLE_PLAYER_GAME_INPUTS)!!.appendint(this.localPlayerGameInputList!!.size())!!.toString(), this, BUILD_GAME)
+                            append(this.gameInputStrings!!.ENABLE_PLAYER_GAME_INPUTS)!!.appendint(this.localPlayerGameInputList!!.size())!!.toString(), this, this.BUILD_GAME)
 
     var playerGameInput: PlayerGameInput
 
@@ -1635,7 +1635,7 @@ PreLogUtil.put(StringMaker().
         {
 playerGameInput= this.localPlayerGameInputList!!.get(index) as PlayerGameInput
 PreLogUtil.put(StringMaker().
-                            append(this.gameInputStrings!!.ENABLE_PLAYER_GAME_INPUT)!!.append(playerGameInput!!.toString())!!.toString(), this, BUILD_GAME)
+                            append(this.gameInputStrings!!.ENABLE_PLAYER_GAME_INPUT)!!.append(playerGameInput!!.toString())!!.toString(), this, this.BUILD_GAME)
 playerGameInput!!.removeNonAIInputGameKeyEvents()
 this.addKeyInputListener(playerGameInput)
 }
@@ -1699,7 +1699,7 @@ gameInfo!!.setCurrentLevel(level)
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 this.logUtil!!.putF(StringMaker().
-                            append(commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(this.hashtable))!!.toString(), this, "getLoadStateHashtable")
+                            append(this.commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(this.hashtable))!!.toString(), this, "getLoadStateHashtable")
 
 
 
@@ -1713,7 +1713,7 @@ this.logUtil!!.putF(StringMaker().
 {
     //var hashtable = hashtable
 this.logUtil!!.putF(StringMaker().
-                            append(commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, "setLoadStateHashtable")
+                            append(this.commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, "setLoadStateHashtable")
 this.hashtable= hashtable
 }
 
@@ -1742,7 +1742,7 @@ this.logUtil!!.putF(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 
@@ -2126,7 +2126,7 @@ OpenGLThreadUtil.getInstance()!!.onResume()
                         if(features.isDefault(this.openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS))
                         
                                     {
-                                    this.logUtil!!.putF(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName(), this, this.commonStrings!!.RUN)
+                                    this.logUtil!!.putF(this.openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName(), this, this.commonStrings!!.RUN)
 OpenGLThreadUtil.getInstance()!!.onResume()
 
         while(this.isRunning())
@@ -2158,7 +2158,7 @@ this.end()
     open fun run3()
         //nullable = true from not(false or (false and true)) = true
 {
-this.loopTimeHelper!!.setStartTime(gameTickTimeDelayHelper!!.setStartTime())
+this.loopTimeHelper!!.setStartTime(this.gameTickTimeDelayHelper!!.setStartTime())
 this.gameTickDisplayInfoSingleton!!.update()
 this.processGame()
 this.processLoopSleep()
@@ -2210,7 +2210,7 @@ this.end()
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.SET_RUNNING, e)
 }
 
 }
@@ -2223,7 +2223,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
 {
 this.screenCapture!!.endRecording()
 this.baseGameStatistics!!.add(StringMaker().
-                            append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
+                            append(this.baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
 this.baseGameStatistics!!.init()
 this.gameKeyEventHandler!!.removeListener(this.cheatProcessor)
 this.close()
@@ -2343,7 +2343,7 @@ open class SaveHighScoreRunnable
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "run", e)
+logUtil!!.put(this@AllBinaryGameCanvas.commonStrings!!.EXCEPTION, this, "run", e)
 this.progressCanvas!!.end()
 }
 

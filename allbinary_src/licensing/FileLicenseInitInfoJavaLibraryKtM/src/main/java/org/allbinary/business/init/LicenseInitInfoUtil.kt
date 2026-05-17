@@ -182,7 +182,7 @@ var initializeCounter = initializeCounter
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
 
-    var iFile: AbFileInputStream = fileStreamFactory!!.getFileInputStreamInstance(this.filePath, INITFILENAME)!!
+    var iFile: AbFileInputStream = fileStreamFactory!!.getFileInputStreamInstance(this.filePath, this.INITFILENAME)!!
 
 
     

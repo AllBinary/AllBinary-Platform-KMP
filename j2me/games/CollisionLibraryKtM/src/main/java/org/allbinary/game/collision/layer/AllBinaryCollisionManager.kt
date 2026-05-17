@@ -27,6 +27,7 @@
         
 import org.allbinary.game.collision.CollidableBaseBehavior
 import org.allbinary.game.collision.CollidableInterfaceCompositeInterface
+import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.layer.LayerManager
 
 open public class AllBinaryCollisionManager
@@ -98,16 +99,16 @@ var collidableInterfaceCompositeInterface2 = collidableInterfaceCompositeInterfa
 
 
     
-                        if(collidableBase2!!.isCollidable())
+                        if(collidableBase2!!.isCollidable(collidableInterfaceCompositeInterface as CollidableCompositeLayer))
                         
                                     {
                                     
     
-                        if(collidableBase!!.isCollisionInterface(collidableInterfaceCompositeInterface2))
+                        if(collidableBase!!.isCollisionInterface(collidableInterfaceCompositeInterface as CollidableCompositeLayer, collidableInterfaceCompositeInterface2))
                         
                                     {
-                                    collidableBase!!.collideInterface(collidableInterfaceCompositeInterface2)
-collidableBase2!!.collideInterface(collidableInterfaceCompositeInterface)
+                                    collidableBase!!.collideInterface(collidableInterfaceCompositeInterface as CollidableCompositeLayer, collidableInterfaceCompositeInterface2)
+collidableBase2!!.collideInterface(collidableInterfaceCompositeInterface as CollidableCompositeLayer, collidableInterfaceCompositeInterface)
 
                                     }
                                 

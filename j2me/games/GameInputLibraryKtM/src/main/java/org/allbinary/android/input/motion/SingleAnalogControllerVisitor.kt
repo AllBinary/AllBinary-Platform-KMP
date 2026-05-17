@@ -45,7 +45,7 @@ this.playerInputId= playerInputId
     //var allbinaryLayerManager = allbinaryLayerManager
     //var analogLocationInputProcessor = analogLocationInputProcessor
 
-    var analogLocationInput: AnalogLocationInput = AnalogLocationInputFactory.getInstance()!!.getInstanceForPlayer(playerInputId)!!
+    var analogLocationInput: AnalogLocationInput = AnalogLocationInputFactory.getInstance()!!.getInstanceForPlayer(this.playerInputId)!!
 
 analogLocationInputProcessor!!.process(allbinaryLayerManager, analogLocationInput)
 }

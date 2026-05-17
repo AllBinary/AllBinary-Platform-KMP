@@ -51,7 +51,7 @@ public constructor (key: Int)
 var key = key
 
         try {
-            this.abCrypt!!.init(keys[key]!!)
+            this.abCrypt!!.init(WeakCrypt.keys[key]!!)
 } catch(e: Exception)
             {
 

@@ -125,7 +125,7 @@ var eventListenerInterface = eventListenerInterface
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun addListener(eventListenerInterface: EventListenerInterface)
+    open fun addListenerInterface(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface

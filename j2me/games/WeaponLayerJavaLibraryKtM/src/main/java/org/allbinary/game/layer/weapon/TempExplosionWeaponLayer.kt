@@ -55,7 +55,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                         if(this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
                         
                                     {
-                                    this.getCollidableInferface()!!.collide(this)
+                                    this.getCollidableInferface()!!.collide(this, this)
 this.totalDamage= this.getInitDamage() +1
 
                                     }

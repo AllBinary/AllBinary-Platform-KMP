@@ -46,7 +46,7 @@ companion object {
         }
             public constructor (viewPosition: ViewPosition)                        
 
-                            : super(NAME, RemoteInfo.REMOTE_INFO,  -1, NoMovementFactory.getInstance()!!.getMovmentInstance(), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.RESOURCE)!!.getInstance(0), SimpleWeaponLayer.createDestroyed(), Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 10, 10), viewPosition){
+                            : super(MineLayer.NAME, RemoteInfo.REMOTE_INFO,  -1, NoMovementFactory.getInstance()!!.getMovmentInstance(), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.RESOURCE)!!.getInstance(0), SimpleWeaponLayer.createDestroyed(), Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 10, 10), viewPosition){
 var viewPosition = viewPosition
 
 

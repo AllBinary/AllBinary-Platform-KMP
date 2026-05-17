@@ -53,7 +53,7 @@ this.foregroundColor= basicColor!!.toInt()
 {
 var graphics = graphics
 
-    var list: BasicArrayList = touchButtonFactory!!.getList()!!
+    var list: BasicArrayList = this.touchButtonFactory!!.getList()!!
 
 this.basicSetColorUtil!!.setBasicColorP3(graphics, this.foregroundBasicColor, this.foregroundColor)
 

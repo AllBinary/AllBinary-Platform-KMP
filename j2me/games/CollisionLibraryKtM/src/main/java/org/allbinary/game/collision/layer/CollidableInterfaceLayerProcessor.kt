@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.collision.CollidableInterfaceCompositeInterface
+import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.LayerProcessor
@@ -55,7 +56,7 @@ var index = index
 
 
     
-                        if(collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.isCollidable())
+                        if(collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.isCollidable(collidableInterfaceCompositeInterface as CollidableCompositeLayer))
                         
                                     {
                                     AllBinaryCollisionManager.getInstance()!!.process(this.getLayerManager(), collidableInterfaceCompositeInterface, index)

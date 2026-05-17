@@ -59,12 +59,7 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
                 , TrackingEventListenerInterface
                 , DestroyedEventListenerInterface {
         
-companion object {
-            
-    private val directionToKeyMap: IntArray = intArrayOf(Canvas.LEFT,Canvas.DOWN,Canvas.UP,Canvas.RIGHT)
 
-        }
-            
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(500)
@@ -74,6 +69,8 @@ companion object {
     private val directionalInterface: DirectionalInterface
 
     private val velocityInterface: BasicVelocityProperties
+
+    private val directionToKeyMap: IntArray = intArrayOf(Canvas.LEFT,Canvas.DOWN,Canvas.UP,Canvas.RIGHT)
 
     private var initialDropped: Boolean= false
 
@@ -115,7 +112,7 @@ this.directionalInterface= directionalCompositeInterface!!.getDirectionalInterfa
     var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface = this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
 
 this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityProperties()
-DestroyedEventHandler.getInstance()!!.addListener(this)
+DestroyedEventHandler.getInstance()!!.addListenerInterface(this)
 this.init()
 }
 
@@ -160,7 +157,7 @@ this.list.clear()
 {
 this.dive= false
 this.directionOfTarget= DirectionFactory.getInstance()!!.NOT_BORDERED_WITH
-TrackingEventHandler.getInstance()!!.addListener(this)
+TrackingEventHandler.getInstance()!!.addListenerInterface(this)
 }
 
 
@@ -661,7 +658,7 @@ this.lastDirection= lastDirection
                         if(value < 4)
                         
                                     {
-                                    super.setLastKey(directionToKeyMap[value]!!)
+                                    super.setLastKey(this.directionToKeyMap[value]!!)
 
                                     }
                                 

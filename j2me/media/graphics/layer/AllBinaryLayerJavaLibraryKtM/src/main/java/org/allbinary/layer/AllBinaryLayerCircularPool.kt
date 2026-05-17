@@ -42,7 +42,7 @@ protected constructor (){
 var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
 var total = total
 this.circularIndexUtil= CircularIndexUtil.createInstance(total)
-OBJECT_ARRAY= arrayOfNulls(total)
+this.OBJECT_ARRAY= arrayOfNulls(total)
 
 
 
@@ -50,7 +50,7 @@ OBJECT_ARRAY= arrayOfNulls(total)
                         for (localIndex in 0 until total)
 
         {
-OBJECT_ARRAY[localIndex]= allbinaryLayerFactoryInterface!!.getInstance()
+this.OBJECT_ARRAY[localIndex]= allbinaryLayerFactoryInterface!!.getInstance()
 }
 
 }

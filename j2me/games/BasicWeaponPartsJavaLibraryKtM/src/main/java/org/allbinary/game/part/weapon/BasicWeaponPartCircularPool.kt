@@ -53,7 +53,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicWeaponPartFactoryInterface = basicWeaponPartFactoryInterface
-basicWeaponPart= basicWeaponPartFactoryInterface!!.getInstance()
+this.basicWeaponPart= basicWeaponPartFactoryInterface!!.getInstance()
 }
 
 

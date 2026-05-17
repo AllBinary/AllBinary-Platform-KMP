@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.nio.FloatBuffer
@@ -41,23 +40,27 @@ import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 open public class OpenGLESGL10Image : OpenGLESImage {
         
 
-    private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-    private val glUtil: GLUtil = GLUtil.getInstance()!!
-
     private val textureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
 
-    val regionRectangleFloatArray: FloatArray = floatArrayOf(0,0,0,0,0,0,0,0,0,0,0,0)
+    private val realOpenGLESImageDraw: OpenGLESImageDraw = object: OpenGLESImageDraw()
+                                {
+                                
+    private val glUtil: GLUtil = GLUtil.getInstance()!!
 
-    val regionRectangleVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *3)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
+    private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+    private val textureVertexFloatBuffer: FloatBuffer = this@OpenGLESGL10Image.textureVertexFloatBuffer
 
     private val regionTextureRectangleFloatArray: FloatArray = FloatArray(8)
 
     private val regionTextureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
 
-    private val realOpenGLESImageDraw: OpenGLESImageDraw = object: OpenGLESImageDraw()
-                                {
-                                
+    private val regionRectangleFloatArray: FloatArray = floatArrayOf(0,0,0,0,0,0,0,0,0,0,0,0)
+
+    val regionRectangleVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *3)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
+
+    val openGLESImageProperties: OpenGLESImageProperties = this@OpenGLESGL10Image.openGLESImageProperties
+
     open override fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -76,42 +79,45 @@ open public class OpenGLESGL10Image : OpenGLESImage {
 
     var imageHeight: Int = getHeight()!!
 
-regionRectangleFloatArray[7]= viewHeight
-regionRectangleFloatArray[1]= regionRectangleFloatArray[7] -height
-regionRectangleFloatArray[3]= width
-regionRectangleFloatArray[4]= regionRectangleFloatArray[1]!!
-regionRectangleFloatArray[9]= regionRectangleFloatArray[3]!!
-regionRectangleFloatArray[10]= regionRectangleFloatArray[7]!!
-regionTextureRectangleFloatArray[0]= x_src /imageWidth
-regionTextureRectangleFloatArray[1]= () /imageHeight
-regionTextureRectangleFloatArray[2]= () /imageWidth
-regionTextureRectangleFloatArray[3]= regionTextureRectangleFloatArray[1]!!
-regionTextureRectangleFloatArray[4]= regionTextureRectangleFloatArray[0]!!
-regionTextureRectangleFloatArray[5]= y_src /imageHeight
-regionTextureRectangleFloatArray[6]= regionTextureRectangleFloatArray[2]!!
-regionTextureRectangleFloatArray[7]= regionTextureRectangleFloatArray[5]!!
+this.regionRectangleFloatArray[7]= viewHeight
+this.regionRectangleFloatArray[1]= this.regionRectangleFloatArray[7] -height
+this.regionRectangleFloatArray[3]= width
+this.regionRectangleFloatArray[4]= this.regionRectangleFloatArray[1]!!
+this.regionRectangleFloatArray[9]= this.regionRectangleFloatArray[3]!!
+this.regionRectangleFloatArray[10]= this.regionRectangleFloatArray[7]!!
+this.regionTextureRectangleFloatArray[0]= x_src /imageWidth
+this.regionTextureRectangleFloatArray[1]= () /imageHeight
+this.regionTextureRectangleFloatArray[2]= () /imageWidth
+this.regionTextureRectangleFloatArray[3]= this.regionTextureRectangleFloatArray[1]!!
+this.regionTextureRectangleFloatArray[4]= this.regionTextureRectangleFloatArray[0]!!
+this.regionTextureRectangleFloatArray[5]= y_src /imageHeight
+this.regionTextureRectangleFloatArray[6]= this.regionTextureRectangleFloatArray[2]!!
+this.regionTextureRectangleFloatArray[7]= this.regionTextureRectangleFloatArray[5]!!
 
-    var u_center: Float = (regionTextureRectangleFloatArray[0] +regionTextureRectangleFloatArray[2]) /2.0f
+    var u_center: Float = (this.regionTextureRectangleFloatArray[0] +this.regionTextureRectangleFloatArray[2]) /2.0f
 
 
-    var v_center: Float = (regionTextureRectangleFloatArray[5] +regionTextureRectangleFloatArray[1]) /2.0f
+    var v_center: Float = (this.regionTextureRectangleFloatArray[5] +this.regionTextureRectangleFloatArray[1]) /2.0f
 
-glUtil!!.rotateUVs(regionTextureRectangleFloatArray,  -openGLESImageProperties!!.angle, u_center, v_center)
+this.glUtil!!.rotateUVs(this.regionTextureRectangleFloatArray,  -this.openGLESImageProperties!!.angle, u_center, v_center)
 gl.glPushMatrix()
-openGLESImageTranslate!!.translate(gl, this@OpenGLESGL10Image, x,  -y)
-imageProcessor!!.scale(gl, openGLESImageProperties!!.scaleX, openGLESImageProperties!!.scaleY)
-imageProcessor!!.colorMask(gl, openGLESImageProperties!!.redf, openGLESImageProperties!!.greenf, openGLESImageProperties!!.bluef, openGLESImageProperties!!.alphaf)
-openGLESImageTranslate!!.translate2(gl, this@OpenGLESGL10Image)
-regionRectangleVertexFloatBuffer!!.put(regionRectangleFloatArray)
-glUtil!!.position(regionRectangleVertexFloatBuffer, 0)
-gl.glVertexPointer(3, GL10.GL_FLOAT, 0, regionRectangleVertexFloatBuffer)
+
+    var imageProcessor: OpenGLESImageProcessor = this@OpenGLESGL10Image.imageProcessor
+
+this@OpenGLESGL10Image.openGLESImageTranslate!!.translate(gl, this@OpenGLESGL10Image, x,  -y)
+imageProcessor!!.scale(gl, this.openGLESImageProperties!!.scaleX, this.openGLESImageProperties!!.scaleY)
+imageProcessor!!.colorMask(gl, this.openGLESImageProperties!!.redf, this.openGLESImageProperties!!.greenf, this.openGLESImageProperties!!.bluef, this.openGLESImageProperties!!.alphaf)
+this@OpenGLESGL10Image.openGLESImageTranslate!!.translate2(gl, this@OpenGLESGL10Image)
+this.regionRectangleVertexFloatBuffer!!.put(this.regionRectangleFloatArray)
+this.glUtil!!.position(this.regionRectangleVertexFloatBuffer, 0)
+gl.glVertexPointer(3, GL10.GL_FLOAT, 0, this.regionRectangleVertexFloatBuffer)
 gl.glEnableClientState(GL10.GL_VERTEX_ARRAY)
 gl.glEnable(GL10.GL_TEXTURE_2D)
-gl.glBindTexture(GL10.GL_TEXTURE_2D, openGLESImageProperties!!.textureID)
+gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties!!.textureID)
 gl.glEnableClientState(GL10.GL_TEXTURE_COORD_ARRAY)
-regionTextureVertexFloatBuffer!!.put(regionTextureRectangleFloatArray)
-glUtil!!.position(regionTextureVertexFloatBuffer, 0)
-gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, regionTextureVertexFloatBuffer)
+this.regionTextureVertexFloatBuffer!!.put(this.regionTextureRectangleFloatArray)
+this.glUtil!!.position(this.regionTextureVertexFloatBuffer, 0)
+gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, this.regionTextureVertexFloatBuffer)
 gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, 4)
 gl.glDisableClientState(GL10.GL_VERTEX_ARRAY)
 gl.glDisableClientState(GL10.GL_TEXTURE_COORD_ARRAY)
@@ -132,37 +138,40 @@ gl.glPopMatrix()
 
     var height: Int = getHeight()!!
 
-regionRectangleFloatArray[7]= displayInfoSingleton!!.getLastHeight()
-regionRectangleFloatArray[1]= regionRectangleFloatArray[7] -height
-regionRectangleFloatArray[3]= width
-regionRectangleFloatArray[4]= regionRectangleFloatArray[1]!!
-regionRectangleFloatArray[9]= regionRectangleFloatArray[3]!!
-regionRectangleFloatArray[10]= regionRectangleFloatArray[7]!!
-regionTextureRectangleFloatArray[0]= 0
-regionTextureRectangleFloatArray[1]= 1
-regionTextureRectangleFloatArray[2]= 1
-regionTextureRectangleFloatArray[3]= 1
-regionTextureRectangleFloatArray[4]= 0
-regionTextureRectangleFloatArray[5]= 0
-regionTextureRectangleFloatArray[6]= 1
-regionTextureRectangleFloatArray[7]= 0
+this.regionRectangleFloatArray[7]= this.displayInfoSingleton!!.getLastHeight()
+this.regionRectangleFloatArray[1]= this.regionRectangleFloatArray[7] -height
+this.regionRectangleFloatArray[3]= width
+this.regionRectangleFloatArray[4]= this.regionRectangleFloatArray[1]!!
+this.regionRectangleFloatArray[9]= this.regionRectangleFloatArray[3]!!
+this.regionRectangleFloatArray[10]= this.regionRectangleFloatArray[7]!!
+this.regionTextureRectangleFloatArray[0]= 0
+this.regionTextureRectangleFloatArray[1]= 1
+this.regionTextureRectangleFloatArray[2]= 1
+this.regionTextureRectangleFloatArray[3]= 1
+this.regionTextureRectangleFloatArray[4]= 0
+this.regionTextureRectangleFloatArray[5]= 0
+this.regionTextureRectangleFloatArray[6]= 1
+this.regionTextureRectangleFloatArray[7]= 0
 gl.glPushMatrix()
-openGLESImageTranslate!!.translate(gl, this@OpenGLESGL10Image, x,  -y)
-imageProcessor!!.scale(gl, openGLESImageProperties!!.scaleX, openGLESImageProperties!!.scaleY)
-imageProcessor!!.colorMask(gl, openGLESImageProperties!!.redf, openGLESImageProperties!!.greenf, openGLESImageProperties!!.bluef, openGLESImageProperties!!.alphaf)
-openGLESImageTranslate!!.translate2(gl, this@OpenGLESGL10Image)
-regionRectangleVertexFloatBuffer!!.put(regionRectangleFloatArray)
-glUtil!!.position(regionRectangleVertexFloatBuffer, 0)
-gl.glVertexPointer(3, GL10.GL_FLOAT, 0, regionRectangleVertexFloatBuffer)
+this@OpenGLESGL10Image.openGLESImageTranslate!!.translate(gl, this@OpenGLESGL10Image, x,  -y)
+
+    var imageProcessor: OpenGLESImageProcessor = this@OpenGLESGL10Image.imageProcessor
+
+imageProcessor!!.scale(gl, this.openGLESImageProperties!!.scaleX, this.openGLESImageProperties!!.scaleY)
+imageProcessor!!.colorMask(gl, this.openGLESImageProperties!!.redf, this.openGLESImageProperties!!.greenf, this.openGLESImageProperties!!.bluef, this.openGLESImageProperties!!.alphaf)
+this@OpenGLESGL10Image.openGLESImageTranslate!!.translate2(gl, this@OpenGLESGL10Image)
+this.regionRectangleVertexFloatBuffer!!.put(this.regionRectangleFloatArray)
+this.glUtil!!.position(this.regionRectangleVertexFloatBuffer, 0)
+gl.glVertexPointer(3, GL10.GL_FLOAT, 0, this.regionRectangleVertexFloatBuffer)
 gl.glEnableClientState(GL10.GL_VERTEX_ARRAY)
 gl.glEnable(GL10.GL_TEXTURE_2D)
-gl.glBindTexture(GL10.GL_TEXTURE_2D, openGLESImageProperties!!.textureID)
+gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties!!.textureID)
 gl.glEnableClientState(GL10.GL_TEXTURE_COORD_ARRAY)
-glUtil!!.rotateUVs(regionTextureRectangleFloatArray,  -openGLESImageProperties!!.angle, 0.5f, 0.5f)
-glUtil!!.position(textureVertexFloatBuffer, 0)
-textureVertexFloatBuffer!!.put(regionTextureRectangleFloatArray)
-glUtil!!.position(textureVertexFloatBuffer, 0)
-gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, textureVertexFloatBuffer)
+this.glUtil!!.rotateUVs(this.regionTextureRectangleFloatArray,  -this.openGLESImageProperties!!.angle, 0.5f, 0.5f)
+this.glUtil!!.position(this.textureVertexFloatBuffer, 0)
+this.textureVertexFloatBuffer!!.put(this.regionTextureRectangleFloatArray)
+this.glUtil!!.position(this.textureVertexFloatBuffer, 0)
+gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, this.textureVertexFloatBuffer)
 gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, 4)
 gl.glDisableClientState(GL10.GL_VERTEX_ARRAY)
 gl.glDisableClientState(GL10.GL_TEXTURE_COORD_ARRAY)

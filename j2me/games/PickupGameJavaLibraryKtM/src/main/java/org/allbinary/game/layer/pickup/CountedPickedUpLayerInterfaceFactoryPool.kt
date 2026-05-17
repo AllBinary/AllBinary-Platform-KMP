@@ -60,7 +60,7 @@ CountedPickedUpLayerInterfaceFactoryPool.SINGLETON= CountedPickedUpLayerInterfac
 private constructor ()
             : super()
         {
-list= BasicArrayListD()
+this.list= BasicArrayListD()
 }
 
 

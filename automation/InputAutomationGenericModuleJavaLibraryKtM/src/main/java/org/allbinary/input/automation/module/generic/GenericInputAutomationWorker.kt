@@ -93,7 +93,7 @@ this.logUtil!!.putF("Adding Listener: " +genericProfileDataWorkerType, this, thi
                         if(genericProfileDataWorkerType == GenericProfileDataWorkerType.COMPARISON)
                         
                                     {
-                                    this.getCaptureWorker()!!.addListener(this.getImageComparisonWorker())
+                                    this.getCaptureWorker()!!.addListenerInterface(this.getImageComparisonWorker())
 
                                     }
                                 
@@ -102,7 +102,7 @@ this.logUtil!!.putF("Adding Listener: " +genericProfileDataWorkerType, this, thi
                         if(genericProfileDataWorkerType == GenericProfileDataWorkerType.MOTION)
                         
                                     {
-                                    this.getImageComparisonWorker()!!.addListener(this.getMotionRectanglesWorker())
+                                    this.getImageComparisonWorker()!!.addListenerInterface(this.getMotionRectanglesWorker())
 
                                     }
                                 

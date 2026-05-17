@@ -28,6 +28,7 @@
 import org.allbinary.ai.ArtificialIntelligence
 import org.allbinary.ai.ArtificialIntelligenceInterface
 import org.allbinary.game.collision.CollidableBaseBehavior
+import org.allbinary.game.collision.CollidableBaseBehaviorFactory
 import org.allbinary.game.collision.CollidableInterfaceCompositeInterface
 import org.allbinary.game.collision.CollidableNeverCollideBehaviorFactory
 import org.allbinary.graphics.Rectangle
@@ -47,24 +48,24 @@ companion object {
 
         }
             
-    private var collidableInferface: CollidableBaseBehavior = CollidableNeverCollideBehaviorFactory.getInstance()!!
-public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
+    private var collidableInferface: CollidableBaseBehavior = CollidableNeverCollideBehaviorFactory.getInstance()!!.createBehavior()!!
+public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition, collidableBaseBehaviorFactory: CollidableBaseBehaviorFactory)                        
 
                             : super(name, layerInfo, viewPosition){
     //var name = name
     //var layerInfo = layerInfo
     //var viewPosition = viewPosition
-    //var collidableInferface = collidableInferface
+    //var collidableBaseBehaviorFactory = collidableBaseBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
                     
 
     
-                        if(collidableInferface != CollidableNeverCollideBehaviorFactory.getInstance())
+                        if(collidableBaseBehaviorFactory != CollidableNeverCollideBehaviorFactory.getInstance())
                         
                                     {
-                                    this.setCollidableInferface(collidableInferface)
+                                    this.setCollidableInferface(collidableBaseBehaviorFactory!!.createBehavior())
 
                                     }
                                 

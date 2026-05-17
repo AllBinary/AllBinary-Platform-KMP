@@ -63,7 +63,7 @@ public constructor (inputMappingInterface: InputMappingInterface, basicColor: Ba
     //var inputMappingInterface = inputMappingInterface
     //var basicColor = basicColor
 this.inputMappingInterface= inputMappingInterface
-CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(this)
+CompleteMotionGestureInputEventHandler.getInstance()!!.addListenerInterface(this)
 this.touchButtonsPaintable= TouchButtonsMappingPaintable(basicColor)
 }
 
@@ -152,7 +152,7 @@ this.logUtil!!.putF(StringMaker().
 this.inputMappingInterface!!.process(gameKey, motionGestureInput)
 } catch(e: Exception)
             {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_NAME, e)
 }
 
 }

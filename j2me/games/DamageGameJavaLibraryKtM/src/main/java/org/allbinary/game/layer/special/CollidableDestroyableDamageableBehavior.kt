@@ -35,10 +35,9 @@ open public class CollidableDestroyableDamageableBehavior : CollidableBaseBehavi
         
 
     val damageUtil: DamageUtil = DamageUtil.getInstance()!!
-public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable){
-    //var ownerLayer = ownerLayer
+                            : super(collidable){
     //var collidable = collidable
 
 
@@ -47,20 +46,21 @@ public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
 }
 
 
-    override fun isCollision(collisionLayer: CollidableCompositeLayer)
+    override fun isCollision(ownerLayer: CollidableCompositeLayer, collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
     //var collisionLayer = collisionLayer
 
     
-                        if(this.ownerLayer!!.getGroupInterface()[0] != collisionLayer!!.getGroupInterface()[0])
+                        if(ownerLayer!!.getGroupInterface()[0] != collisionLayer!!.getGroupInterface()[0])
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return super.isCollision(collisionLayer)
+                        return super.isCollision(ownerLayer, collisionLayer)
 
                                     }
                                 
@@ -74,12 +74,13 @@ public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
 
                 @Throws(Exception::class)
             
-    override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    override fun collide(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
-    var ownerCollidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayer as CollidableDestroyableDamageableLayer
+    var ownerCollidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = ownerLayer as CollidableDestroyableDamageableLayer
 
 
     var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = collidableInterfaceCompositeInterface as CollidableDestroyableDamageableLayer
@@ -88,9 +89,10 @@ ownerCollidableDestroyableDamageableLayer!!.damage(collidableDestroyableDamageab
 }
 
 
-    override fun isCollisionInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun isCollisionInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log("No Longer Used", this)
 
@@ -103,9 +105,10 @@ ForcedLogUtil.log("No Longer Used", this)
 
                 @Throws(Exception::class)
             
-    override fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log("No Longer Used", this)
 }

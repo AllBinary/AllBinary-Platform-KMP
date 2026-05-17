@@ -31,10 +31,9 @@ import org.allbinary.game.collision.CollidableInterfaceCompositeInterface
 
 open public class CollidableWaypointBehavior : CollidableRTSBehavior {
         
-public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable){
-var ownerLayer = ownerLayer
+                            : super(collidable){
 var collidable = collidable
 
 
@@ -43,9 +42,10 @@ var collidable = collidable
 }
 
 
-    override fun isCollision(collisionLayer: CollidableCompositeLayer)
+    override fun isCollision(ownerLayer: CollidableCompositeLayer, collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
 var collisionLayer = collisionLayer
 
 
@@ -57,16 +57,18 @@ var collisionLayer = collisionLayer
 
                 @Throws(Exception::class)
             
-    override fun collide(collisionLayer: CollidableCompositeLayer)
+    override fun collide(ownerLayer: CollidableCompositeLayer, collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
 var collisionLayer = collisionLayer
 }
 
 
-    override fun isCollisionInterface(collidableInterface: CollidableInterfaceCompositeInterface)
+    override fun isCollisionInterface(ownerLayer: CollidableCompositeLayer, collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
 var collidableInterface = collidableInterface
 
 
@@ -78,9 +80,10 @@ var collidableInterface = collidableInterface
 
                 @Throws(Exception::class)
             
-    override fun collideInterface(collidableInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(ownerLayer: CollidableCompositeLayer, collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
 var collidableInterface = collidableInterface
 }
 

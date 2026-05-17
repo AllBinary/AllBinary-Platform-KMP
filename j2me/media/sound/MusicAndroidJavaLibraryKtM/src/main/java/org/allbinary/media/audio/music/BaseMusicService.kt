@@ -128,7 +128,7 @@ this.player.start()
     open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
-player= MediaPlayer.create(this, songId)
+this.player= MediaPlayer.create(this, this.songId)
 this.player.setVolume((this.leftVolume.toFloat()) /100.0f, (this.rightVolume.toFloat()) /100.0f)
 this.player.setLooping(false)
 this.player.start()
@@ -156,7 +156,7 @@ this.onStartCommandIntent(intent)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return START_STICKY
+                        return Service.START_STICKY
 }
 
 
@@ -251,11 +251,17 @@ this.logUtil!!.putF(this.ALREADY_PLAYING, this, this.commonStateStrings!!.ON_STA
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
+    var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
+
+
         try {
             
         while(player.isPlaying())
         {
-logUtil!!.putF(WAITING_FOR_MUSIC_TO_END, this, commonStateStrings!!.ON_START_COMMAND)
+logUtil!!.putF(this@BaseMusicService.WAITING_FOR_MUSIC_TO_END, this, commonStateStrings!!.ON_START_COMMAND)
 Thread.sleep(1200)
 }
 

@@ -68,7 +68,7 @@ var p_a = p_a
 var p_b = p_b
 var p_c = p_c
 
-    var b: ByteBuffer = ByteBuffer.allocateDirect(3 *BYTES_PER_FLOAT)!!
+    var b: ByteBuffer = ByteBuffer.allocateDirect(3 *this.BYTES_PER_FLOAT)!!
 
 b.order(ByteOrder.nativeOrder())
 
@@ -94,7 +94,7 @@ var p_b = p_b
 var p_c = p_c
 var p_d = p_d
 
-    var b: ByteBuffer = ByteBuffer.allocateDirect(4 *BYTES_PER_FLOAT)!!
+    var b: ByteBuffer = ByteBuffer.allocateDirect(4 *this.BYTES_PER_FLOAT)!!
 
 b.order(ByteOrder.nativeOrder())
 
@@ -118,7 +118,7 @@ this.position(buffer, 0)
 : FloatBuffer{
     //var byteBuffer = byteBuffer
 
-    var b: ByteBuffer = ByteBuffer.allocateDirect(byteBuffer!!.limit() *BYTES_PER_FLOAT)!!
+    var b: ByteBuffer = ByteBuffer.allocateDirect(byteBuffer!!.limit() *this.BYTES_PER_FLOAT)!!
 
 b.order(ByteOrder.nativeOrder())
 

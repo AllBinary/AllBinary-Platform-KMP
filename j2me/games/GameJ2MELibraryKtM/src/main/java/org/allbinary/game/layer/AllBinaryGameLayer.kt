@@ -68,7 +68,7 @@ open public class AllBinaryGameLayer : AllBinaryLayer
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-basicSetColorUtil!!.setBasicColorP(graphics, BLACK)
+this@AllBinaryGameLayer.basicSetColorUtil!!.setBasicColorP(graphics, this.BLACK)
 }
 
                                 }

@@ -84,14 +84,14 @@ graphics.setColor(getBasicColorP()!!.toInt())
     var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(heading) shr 1)
 
 graphics.drawString(heading, (width shr 1) -topScoresWidth, charHeight, this.anchor)
-graphics.drawString(this.highScores!!.getColumnOneHeading(), 10, charHeight *3, anchor)
+graphics.drawString(this.highScores!!.getColumnOneHeading(), 10, charHeight *3, this.anchor)
 
     var columnTwoHeading: String = this.highScores!!.getColumnTwoHeading()!!
 
 
     var columnTwoHeadingWidth: Int = graphics.getFont()!!.stringWidth(columnTwoHeading)!!
 
-graphics.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeight *3, anchor)
+graphics.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeight *3, this.anchor)
 
     var index: Int = 4
 
@@ -135,8 +135,8 @@ vectorIndex= 0
 
     var highScore: HighScore = list.objectArray[vectorIndex]!! as HighScore
 
-graphics.drawString(highScore!!.getName(), 10, charHeight *index, anchor)
-graphics.drawString(highScore!!.getScoreString(), width -10 -largestSecondColumnWidth, charHeight *index, anchor)
+graphics.drawString(highScore!!.getName(), 10, charHeight *index, this.anchor)
+graphics.drawString(highScore!!.getScoreString(), width -10 -largestSecondColumnWidth, charHeight *index, this.anchor)
 index++
 vectorIndex++
 }

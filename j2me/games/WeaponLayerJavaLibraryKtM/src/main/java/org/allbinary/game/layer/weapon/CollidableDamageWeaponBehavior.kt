@@ -42,10 +42,9 @@ open public class CollidableDamageWeaponBehavior : CollidableDestroyableDamageab
     private var collided: Boolean= false
 
     var collisionHelper: CollisionHelper
-public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable){
-var ownerLayer = ownerLayer
+                            : super(collidable){
 var collidable = collidable
 
 
@@ -66,9 +65,10 @@ this.collisionHelper!!.setOwnerLayerInterface(sourceLayerInterface)
 }
 
 
-    override fun isCollision(collisionLayer: CollidableCompositeLayer)
+    override fun isCollision(ownerLayer: CollidableCompositeLayer, collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
 var collisionLayer = collisionLayer
 
     
@@ -77,14 +77,14 @@ var collisionLayer = collisionLayer
                                     {
                                     
     
-                        if(this.ownerLayer!!.getGroupInterface()[0] != collisionLayer!!.getGroupInterface()[0])
+                        if(ownerLayer!!.getGroupInterface()[0] != collisionLayer!!.getGroupInterface()[0])
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return super.isCollision(collisionLayer)
+                        return super.isCollision(ownerLayer, collisionLayer)
 
                                     }
                                 
@@ -101,20 +101,22 @@ var collisionLayer = collisionLayer
 
                 @Throws(Exception::class)
             
-    override fun collide(collisionLayer: CollidableCompositeLayer)
+    override fun collide(ownerLayer: CollidableCompositeLayer, collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
 var collisionLayer = collisionLayer
-super.collide(collisionLayer)
+super.collide(ownerLayer, collisionLayer)
 this.collided= true
 }
 
 
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
 
-    override fun isCollisionInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun isCollisionInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     
@@ -126,12 +128,12 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
 
 
     
-                        if(this.ownerLayer!!.getGroupInterface()[0] != layerInterface!!.getGroupInterface()[0])
+                        if(ownerLayer!!.getGroupInterface()[0] != layerInterface!!.getGroupInterface()[0])
                         
                                     {
                                     
     
-                        if(this.layerCollisionUtil!!.isCollision(this.ownerLayer, layerInterface))
+                        if(this.layerCollisionUtil!!.isCollision(ownerLayer, layerInterface))
                         
                                     {
                                     
@@ -158,11 +160,12 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
 
                 @Throws(Exception::class)
             
-    override fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-this.damageUtil!!.process(this.ownerLayer as DamageableInterface, collidableInterfaceCompositeInterface as DamageableInterface)
+this.damageUtil!!.process(ownerLayer as DamageableInterface, collidableInterfaceCompositeInterface as DamageableInterface)
 this.collided= true
 }
 

@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.input.AllBinarySensorListener
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.Orientation
 
 open public class NoGyroSensor : AllBinaryOrientationSensor

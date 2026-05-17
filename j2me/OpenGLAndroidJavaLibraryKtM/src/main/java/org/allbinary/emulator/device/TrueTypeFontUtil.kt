@@ -115,7 +115,7 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 }
 
 
-    open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmapGL(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var gl = gl
@@ -128,28 +128,28 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
                         
                                     {
                                     
-    var cellsPerRow2: Int = CELLS_PER_ROW *2
+    var cellsPerRow2: Int = this.CELLS_PER_ROW *2
 
 
-    var cellsPerRow3: Int = CELLS_PER_ROW *3
+    var cellsPerRow3: Int = this.CELLS_PER_ROW *3
 
 
-    var cellsPerRow4: Int = CELLS_PER_ROW *4
+    var cellsPerRow4: Int = this.CELLS_PER_ROW *4
 
 
-    var cellsPerRow5: Int = CELLS_PER_ROW *5
+    var cellsPerRow5: Int = this.CELLS_PER_ROW *5
 
 
-    var cellsPerRow6: Int = CELLS_PER_ROW *6
+    var cellsPerRow6: Int = this.CELLS_PER_ROW *6
 
 
-    var cellsPerRow7: Int = CELLS_PER_ROW *7
+    var cellsPerRow7: Int = this.CELLS_PER_ROW *7
 
 
     var typeface: Typeface = Typeface.DEFAULT
 
 
-    var textureSize: Int = this.getAsTextureSize(CELLS_PER_ROW *cellSize)!!
+    var textureSize: Int = this.getAsTextureSize(this.CELLS_PER_ROW *cellSize)!!
 
 
     var bitmap: Bitmap = Bitmap.createBitmap(textureSize, textureSize, Bitmap.Config.ARGB_8888)!!
@@ -180,12 +180,12 @@ paint.setColor(basicColor!!.toInt())
 
 
 
-                        for (index in 0 until size)
+                        for (index in 0 until this.size)
 
         {
-characterArray[0]= pattern[index]
-paint.getTextBounds(characterArray, 0, 1, bounds)
-_characterWidth[index]= bounds.right
+this.characterArray[0]= this.pattern[index]
+paint.getTextBounds(this.characterArray, 0, 1, bounds)
+this._characterWidth[index]= bounds.right
 
     
                         if(bounds.bottom -bounds.top > biggestHeight)
@@ -195,13 +195,13 @@ _characterWidth[index]= bounds.right
 
                                     }
                                 
-x= (index % CELLS_PER_ROW) *cellSize
+x= (index % this.CELLS_PER_ROW) *cellSize
 x += (cellSize shr 1)
-x -= (_characterWidth[index] shr 1)
+x -= (this._characterWidth[index] shr 1)
 y= 0
 
     
-                        if(index >= CELLS_PER_ROW)
+                        if(index >= this.CELLS_PER_ROW)
                         
                                     {
                                     y += cellSize
@@ -264,7 +264,7 @@ y= 0
                                 
 y += cellSize
 y -= (cellSize shr 2)
-canvas.drawText(characterArray, 0, 1, x.toFloat() -3, y.toFloat() -6, paint)
+canvas.drawText(this.characterArray, 0, 1, x.toFloat() -3, y.toFloat() -6, paint)
 }
 
 canvas.save()
@@ -313,81 +313,81 @@ paint.setARGB(255, 255, 255, 255)
 
 
 
-                        for (index in 0 until size)
+                        for (index in 0 until this.size)
 
         {
-characterArray[0]= pattern[index]
-paint.getTextBounds(characterArray, 0, 1, bounds)
+this.characterArray[0]= this.pattern[index]
+paint.getTextBounds(this.characterArray, 0, 1, bounds)
 
     
-                        if(index < lastCapIndex)
+                        if(index < this.lastCapIndex)
                         
                                     {
                                     
     
-                        if(characterArray[0] == '1')
+                        if(this.characterArray[0] == '1')
                         
                                     {
-                                    _characterWidth[index]= bounds.right +3
+                                    this._characterWidth[index]= bounds.right +3
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'J' || characterArray[0] == 'V' || characterArray[0] == '2' || characterArray[0] == '9' || characterArray[0] == 'I' || characterArray[0] == 'N' || characterArray[0] == 'U')
+                        if(this.characterArray[0] == 'J' || this.characterArray[0] == 'V' || this.characterArray[0] == '2' || this.characterArray[0] == '9' || this.characterArray[0] == 'I' || this.characterArray[0] == 'N' || this.characterArray[0] == 'U')
                         
                                     {
-                                    _characterWidth[index]= bounds.right +1
+                                    this._characterWidth[index]= bounds.right +1
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == '4' || characterArray[0] == 'C' || characterArray[0] == 'E' || characterArray[0] == 'O')
+                        if(this.characterArray[0] == '4' || this.characterArray[0] == 'C' || this.characterArray[0] == 'E' || this.characterArray[0] == 'O')
                         
                                     {
-                                    _characterWidth[index]= bounds.right -2
+                                    this._characterWidth[index]= bounds.right -2
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'B' || characterArray[0] == 'D' || characterArray[0] == 'G' || characterArray[0] == 'H' || characterArray[0] == 'T' || characterArray[0] == 'W')
+                        if(this.characterArray[0] == 'B' || this.characterArray[0] == 'D' || this.characterArray[0] == 'G' || this.characterArray[0] == 'H' || this.characterArray[0] == 'T' || this.characterArray[0] == 'W')
                         
                                     {
-                                    _characterWidth[index]= bounds.right -3
+                                    this._characterWidth[index]= bounds.right -3
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'A' || characterArray[0] == 'Q' || characterArray[0] == 'R')
+                        if(this.characterArray[0] == 'A' || this.characterArray[0] == 'Q' || this.characterArray[0] == 'R')
                         
                                     {
-                                    _characterWidth[index]= bounds.right -5
+                                    this._characterWidth[index]= bounds.right -5
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'M')
+                        if(this.characterArray[0] == 'M')
                         
                                     {
-                                    _characterWidth[index]= bounds.right -6
+                                    this._characterWidth[index]= bounds.right -6
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'm')
+                        if(this.characterArray[0] == 'm')
                         
                                     {
-                                    _characterWidth[index]= bounds.right -8
+                                    this._characterWidth[index]= bounds.right -8
 
                                     }
                                 
                         else {
-                            _characterWidth[index]= bounds.right
+                            this._characterWidth[index]= bounds.right
 
                         }
                             
@@ -397,69 +397,69 @@ paint.getTextBounds(characterArray, 0, 1, bounds)
                         else {
                             
     
-                        if(characterArray[0] == ' ')
+                        if(this.characterArray[0] == ' ')
                         
                                     {
-                                    _characterWidth[index]= bounds.right +10
+                                    this._characterWidth[index]= bounds.right +10
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'l' || characterArray[0] == 'i' || characterArray[0] == 'j' || characterArray[0] == '.' || characterArray[0] == '!' || characterArray[0] == '|')
+                        if(this.characterArray[0] == 'l' || this.characterArray[0] == 'i' || this.characterArray[0] == 'j' || this.characterArray[0] == '.' || this.characterArray[0] == '!' || this.characterArray[0] == '|')
                         
                                     {
-                                    _characterWidth[index]= bounds.right +6
+                                    this._characterWidth[index]= bounds.right +6
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'f' || characterArray[0] == 't' || characterArray[0] == 'u' || characterArray[0] == 'v')
+                        if(this.characterArray[0] == 'f' || this.characterArray[0] == 't' || this.characterArray[0] == 'u' || this.characterArray[0] == 'v')
                         
                                     {
-                                    _characterWidth[index]= bounds.right +1
+                                    this._characterWidth[index]= bounds.right +1
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'r')
+                        if(this.characterArray[0] == 'r')
                         
                                     {
-                                    _characterWidth[index]= bounds.right +2
+                                    this._characterWidth[index]= bounds.right +2
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'a' || characterArray[0] == 'b' || characterArray[0] == 'g' || characterArray[0] == 'u')
+                        if(this.characterArray[0] == 'a' || this.characterArray[0] == 'b' || this.characterArray[0] == 'g' || this.characterArray[0] == 'u')
                         
                                     {
-                                    _characterWidth[index]= bounds.right -1
+                                    this._characterWidth[index]= bounds.right -1
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'o' || characterArray[0] == 'e')
+                        if(this.characterArray[0] == 'o' || this.characterArray[0] == 'e')
                         
                                     {
-                                    _characterWidth[index]= bounds.right -2
+                                    this._characterWidth[index]= bounds.right -2
 
                                     }
                                 
                              else 
     
-                        if(characterArray[0] == 'm')
+                        if(this.characterArray[0] == 'm')
                         
                                     {
-                                    _characterWidth[index]= bounds.right -7
+                                    this._characterWidth[index]= bounds.right -7
 
                                     }
                                 
                         else {
-                            _characterWidth[index]= bounds.right
+                            this._characterWidth[index]= bounds.right
 
                         }
                             
@@ -468,12 +468,12 @@ paint.getTextBounds(characterArray, 0, 1, bounds)
                             
 }
 
-_characterWidth[0]= (fontSize shr 1) -2
+this._characterWidth[0]= (fontSize shr 1) -2
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return _characterWidth
+                        return this._characterWidth
 }
 
 

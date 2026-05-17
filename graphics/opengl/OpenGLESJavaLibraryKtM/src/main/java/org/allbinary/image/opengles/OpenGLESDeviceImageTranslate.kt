@@ -50,7 +50,7 @@ open public class OpenGLESDeviceImageTranslate : OpenGLESImageTranslate {
     //var openGLESImage = openGLESImage
     //var x = x
     //var y = y
-openGLESImage!!.imageProcessor!!.translate(gl, translateX +(openGLESImage!!.openGLESImageProperties!!.scaleX *x), translateY +(openGLESImage!!.openGLESImageProperties!!.scaleY *y))
+openGLESImage!!.imageProcessor!!.translate(gl, this.translateX +(openGLESImage!!.openGLESImageProperties!!.scaleX *x), this.translateY +(openGLESImage!!.openGLESImageProperties!!.scaleY *y))
 }
 
 
@@ -59,7 +59,7 @@ openGLESImage!!.imageProcessor!!.translate(gl, translateX +(openGLESImage!!.open
 {
     //var gl = gl
     //var openGLESImage = openGLESImage
-openGLESImage!!.imageProcessor!!.translate(gl, translateX2, translateY2)
+openGLESImage!!.imageProcessor!!.translate(gl, this.translateX2, this.translateY2)
 }
 
 

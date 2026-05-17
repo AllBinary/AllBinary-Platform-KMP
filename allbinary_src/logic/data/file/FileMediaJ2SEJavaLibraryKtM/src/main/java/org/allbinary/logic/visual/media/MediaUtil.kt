@@ -21,7 +21,7 @@ import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.image.ImageUtil
 import org.allbinary.string.CommonLabels
-
+//import com.sun.imageio.plugins.common.ImageUtil;
 open public class MediaUtil
             : Object
          {

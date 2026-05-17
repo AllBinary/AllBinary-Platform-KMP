@@ -54,7 +54,7 @@ public constructor ()
     var gameInitializedEventHandler: GameInitializedEventHandler = GameInitializedEventHandler.getInstance()!!
 
 gameInitializedEventHandler!!.removeAllListeners()
-gameInitializedEventHandler!!.addListener(this as GameInitializedListenerInterface)
+gameInitializedEventHandler!!.addListenerInterface(this as GameInitializedListenerInterface)
 }
 
 

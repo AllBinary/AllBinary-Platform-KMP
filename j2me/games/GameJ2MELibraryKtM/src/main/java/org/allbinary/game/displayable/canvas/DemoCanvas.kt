@@ -249,7 +249,7 @@ this.setPaintableInterface(this.getDefaultPaintableInterface())
                                     }
                                 
 this.demoGameRunnable= DemoGameStartupRunnable(this)
-DisplayChangeEventHandler.getInstance()!!.addListener(this)
+DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
 }
 
 
@@ -492,7 +492,7 @@ this.open()
     override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
-BasicMotionGesturesHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
+BasicMotionGesturesHandler.getInstance()!!.addListenerInterface(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 }
 
@@ -1353,7 +1353,7 @@ this.end()
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.SET_RUNNING, e)
 }
 
 }
@@ -1373,7 +1373,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
     var features: Features = Features.getInstance()!!
 
 this.baseGameStatistics!!.add(StringMaker().
-                            append(DemoCanvas.BOT_GAME_STATS)!!.append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
+                            append(DemoCanvas.BOT_GAME_STATS)!!.append(this.baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
 this.baseGameStatistics!!.init()
 
     

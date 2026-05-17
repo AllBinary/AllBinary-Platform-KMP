@@ -60,7 +60,7 @@ companion object {
 : String{
 var key = key
 
-    var value: String = MAP.get(key as Object) as String
+    var value: String = this.MAP.get(key as Object) as String
 
 
     

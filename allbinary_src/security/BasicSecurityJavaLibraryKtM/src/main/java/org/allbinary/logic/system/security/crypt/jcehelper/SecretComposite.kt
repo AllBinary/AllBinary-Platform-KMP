@@ -27,7 +27,6 @@
         
 import javax.crypto.Cipher
 import javax.crypto.SecretKey
-import org.allbinary.logic.NullUtil
 import org.allbinary.logic.java.byteutil.ByteUtil
 
 open public class SecretComposite : BaseSecretComposite {
@@ -72,7 +71,7 @@ this.cipher.init(Cipher.ENCRYPT_MODE, this.secretKey)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array
-this.cipher.init(Cipher.DECRYPT_MODE, secretKey)
+this.cipher.init(Cipher.DECRYPT_MODE, this.secretKey)
 
 
 

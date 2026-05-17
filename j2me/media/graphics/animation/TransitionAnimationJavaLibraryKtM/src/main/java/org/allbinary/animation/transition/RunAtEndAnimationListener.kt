@@ -43,19 +43,19 @@ this.runnable= runnable
 }
 
 
-    override fun onAnimationStart()
+    override fun onPlatformAnimationStart()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-    override fun onAnimationEnd()
+    override fun onPlatformAnimationEnd()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-    override fun onAnimationRepeat()
+    override fun onPlatformAnimationRepeat()
         //nullable = true from not(false or (false and true)) = true
 {
 }

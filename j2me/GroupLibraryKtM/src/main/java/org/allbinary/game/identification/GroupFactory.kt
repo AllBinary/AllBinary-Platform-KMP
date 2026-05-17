@@ -71,7 +71,7 @@ companion object {
 
     var group: Group = this.list.objectArray[this.index]!! as Group
 
-index++
+this.index++
 
 
 

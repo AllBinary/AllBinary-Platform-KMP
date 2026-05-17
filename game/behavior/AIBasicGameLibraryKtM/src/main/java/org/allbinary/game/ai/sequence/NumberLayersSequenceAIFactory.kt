@@ -42,10 +42,10 @@ open public class NumberLayersSequenceAIFactory
     open fun getInstance(numberOfEnemiesLeft: Int, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterface{
-var numberOfEnemiesLeft = numberOfEnemiesLeft
-var artificialIntelligenceInterface = artificialIntelligenceInterface
-var ownerLayerInterface = ownerLayerInterface
-var gameInput = gameInput
+    //var numberOfEnemiesLeft = numberOfEnemiesLeft
+    //var artificialIntelligenceInterface = artificialIntelligenceInterface
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
 
 

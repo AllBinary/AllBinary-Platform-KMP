@@ -320,7 +320,7 @@ byteArray= this.streamUtil!!.getByteArray(inputStream, outputStream2, byteArray1
 this.streamUtil!!.close(inputStream)
 } catch(e: Exception)
             {
-streamUtil!!.close(inputStream)
+this.streamUtil!!.close(inputStream)
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
 }
 

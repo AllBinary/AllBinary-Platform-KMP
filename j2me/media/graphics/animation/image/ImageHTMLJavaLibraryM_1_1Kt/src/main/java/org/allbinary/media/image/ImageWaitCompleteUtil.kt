@@ -50,7 +50,7 @@ public constructor (){
 
                 @Throws(Exception::class)
             
-    override fun waitFor(image: Image, name: String)
+    override fun waitForImage(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image

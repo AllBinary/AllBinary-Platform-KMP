@@ -33,6 +33,7 @@ import org.allbinary.android.activity.ProgressActivityInterface
 import org.allbinary.android.activity.SimpleProgressActivityInterface
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.string.CommonStrings
 
 open public class AndroidTitleProgressBar : ProgressCanvas {
         
@@ -142,7 +143,7 @@ this.portion= value
 this.progressActivity!!.runOnUiThread(this.progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.ADD_PORTION, e)
 }
 
 }
@@ -160,7 +161,7 @@ this.portion= value
 this.progressActivity!!.runOnUiThread(this.progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.ADD_PORTION, e)
 }
 
 }
@@ -213,6 +214,9 @@ open public inner class TitleProgressBarSetProgressRunnable
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
         try {
             
     var value: Int = this@AndroidTitleProgressBar.getValue().toInt()
@@ -247,9 +251,12 @@ open public inner class TitleProgressBarPortionSetProgressRunnable
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
         try {
             
-    var value: Int = (this@AndroidTitleProgressBar.getValue() +this@AndroidTitleProgressBar.getMaxValue() /portion).toInt()
+    var value: Int = (this@AndroidTitleProgressBar.getValue() +this@AndroidTitleProgressBar.getMaxValue() /this@AndroidTitleProgressBar.portion).toInt()
 
 this@AndroidTitleProgressBar.progressActivity!!.onTitleProgressBarSetProgress(value)
 } catch(e: Exception)
@@ -279,6 +286,9 @@ open public inner class ShowTitleProgressBarRunnable
 {
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
         try {
@@ -313,6 +323,9 @@ open public inner class DismissTitleProgressBarRunnable
 {
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
         try {

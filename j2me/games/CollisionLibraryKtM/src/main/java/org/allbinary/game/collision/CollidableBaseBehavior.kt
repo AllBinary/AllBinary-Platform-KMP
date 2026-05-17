@@ -44,14 +44,10 @@ open public class CollidableBaseBehavior
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var collidable: Boolean = true
-
-    val ownerLayer: CollidableCompositeLayer
-public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
+public constructor (collidable: Boolean)
             : super()
         {
-var ownerLayer = ownerLayer
-var collidable = collidable
-this.ownerLayer= ownerLayer
+    //var collidable = collidable
 this.collidable= collidable
 }
 
@@ -81,9 +77,10 @@ this.collidable= collidable
 }
 
 
-    override fun isCollidable()
-        //nullable = true from not(false or (false and true)) = true
+    override fun isCollidable(ownerLayer: CollidableCompositeLayer)
+        //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
 
 
 
@@ -94,10 +91,11 @@ this.collidable= collidable
 
                 @Throws(Exception::class)
             
-    override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
+    override fun collide(ownerLayer: CollidableCompositeLayer, allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
-var allbinaryCollidableLayer = allbinaryCollidableLayer
+    //var ownerLayer = ownerLayer
+    //var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
 
@@ -108,35 +106,38 @@ var allbinaryCollidableLayer = allbinaryCollidableLayer
 
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
 
-    override fun isCollision(collisionLayer: CollidableCompositeLayer)
+    override fun isCollision(ownerLayer: CollidableCompositeLayer, collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var collisionLayer = collisionLayer
+    //var ownerLayer = ownerLayer
+    //var collisionLayer = collisionLayer
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.layerCollisionUtil!!.isCollision(this.ownerLayer, collisionLayer)
+                        return this.layerCollisionUtil!!.isCollision(ownerLayer, collisionLayer)
 }
 
 
-    open fun isCollisionInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    open fun isCollisionInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.layerCollisionUtil!!.isCollision(this.ownerLayer, collidableInterfaceCompositeInterface as AllBinaryLayer)
+                        return this.layerCollisionUtil!!.isCollision(ownerLayer, collidableInterfaceCompositeInterface as AllBinaryLayer)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    open fun collideInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 

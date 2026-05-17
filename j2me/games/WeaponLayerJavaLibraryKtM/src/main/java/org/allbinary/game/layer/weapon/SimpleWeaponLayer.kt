@@ -67,7 +67,7 @@ companion object {
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setCollidableInferface(CollidableWeaponBehavior(this, true))
+this.setCollidableInferface(CollidableWeaponBehavior(true))
 }
 
 

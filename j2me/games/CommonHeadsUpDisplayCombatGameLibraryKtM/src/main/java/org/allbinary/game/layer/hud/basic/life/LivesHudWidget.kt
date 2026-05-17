@@ -118,7 +118,7 @@ var graphics = graphics
                         for (index in this.getLifeInterface()!!.get().toInt()  - 1  downTo 0)
 
         {
-this.animationInterface!!.paintXY(graphics, xArray[index]!!, this.getY())
+this.animationInterface!!.paintXY(graphics, this.xArray[index]!!, this.getY())
 }
 
 }

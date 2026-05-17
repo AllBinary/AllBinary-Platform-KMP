@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.game.configuration.feature.Features
 
 open public class OpenGLFeatureUtil

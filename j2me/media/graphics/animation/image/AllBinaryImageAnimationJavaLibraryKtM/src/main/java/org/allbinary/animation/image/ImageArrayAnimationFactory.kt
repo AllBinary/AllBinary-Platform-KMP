@@ -74,7 +74,7 @@ this.dy= dy
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdjustedImageArrayAnimation(this.imageArray, dx, dy, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return AdjustedImageArrayAnimation(this.imageArray, this.dx, this.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
 
                                     }
                                 

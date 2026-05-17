@@ -182,7 +182,7 @@ this.loadGameForm= CommandForm.NULL_COMMAND_FORM
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
 progressCanvas!!.init(this)
-GameFeatureEventHandler.getInstance()!!.addListener(ChangedGameFeatureListener.getInstance())
+GameFeatureEventHandler.getInstance()!!.addListenerInterface(ChangedGameFeatureListener.getInstance())
 GamePersistanceSingleton.getInstance()!!.clear()
 this.debugInterface= DebugFactory.getInstance()
 this.init()
@@ -921,7 +921,7 @@ stringBuffer!!.appendboolean(this.isResized())
 PreLogUtil.put(stringBuffer!!.toString(), this, this.COMMAND_ACTION)
 
     
-                        if(this.isResized() || this.fullScreenUtil!!.isScreenChange(isFullScreen))
+                        if(this.isResized() || this.fullScreenUtil!!.isScreenChange(this.isFullScreen))
                         
                                     {
                                     this.updateFullScreen()

@@ -297,7 +297,7 @@ this.paintXY(graphics, x, y)
                         if(this.widthP != Integer.MIN_VALUE)
                         
                                     {
-                                    x= ((displayInfoSingleton!!.getLastWidth() -this.widthP) /2)
+                                    x= ((this.displayInfoSingleton!!.getLastWidth() -this.widthP) /2)
 
                                     }
                                 

@@ -205,7 +205,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
         {
 gameKeyEvent= (list.objectArray[index]!! as GameKeyEvent)
 key= gameKeyEvent!!.getKey()
-inputProcessorArray[key]!!.processEvent(allbinaryLayerManager, GameKeyEvent.NONE)
+this.inputProcessorArray[key]!!.processEvent(allbinaryLayerManager, GameKeyEvent.NONE)
 }
 
 }

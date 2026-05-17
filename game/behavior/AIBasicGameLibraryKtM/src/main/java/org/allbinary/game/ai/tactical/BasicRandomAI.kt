@@ -102,7 +102,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
 this.i_random= this.myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
 
-    var size: Int = keyArray!!.size
+    var size: Int = this.keyArray!!.size
                 
 
 
@@ -116,7 +116,7 @@ this.i_random= this.myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!
 
         {
 
-    var key: Int = keyArray[index]!!
+    var key: Int = this.keyArray[index]!!
 
 likelyhoodIntegerKeyArray= likelyhoodIntegerArray[key]!!
 

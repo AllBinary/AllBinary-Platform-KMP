@@ -26,15 +26,12 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.CollidableCompositeLayer
-import org.allbinary.graphics.RectangleFactory
-import org.allbinary.logic.string.StringUtil
-import org.allbinary.view.ViewPosition
 
 open public class CollidableNeverCollideBehavior : CollidableBaseBehavior {
         
  constructor (isCollidable: Boolean)                        
 
-                            : super(CollidableCompositeLayer(StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.getInstanceD(), CollidableNeverCollideBehaviorFactory.getInstance()), isCollidable){
+                            : super(isCollidable){
 var isCollidable = isCollidable
 
 
@@ -43,10 +40,11 @@ var isCollidable = isCollidable
 }
 
 
-    override fun isCollision(allbinaryCollidableLayer: CollidableCompositeLayer)
+    override fun isCollision(ownerLayer: CollidableCompositeLayer, allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var allbinaryCollidableLayer = allbinaryCollidableLayer
+    //var ownerLayer = ownerLayer
+    //var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
 
@@ -57,23 +55,26 @@ var allbinaryCollidableLayer = allbinaryCollidableLayer
 
                 @Throws(Exception::class)
             
-    override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
+    override fun collide(ownerLayer: CollidableCompositeLayer, allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
-var allbinaryCollidableLayer = allbinaryCollidableLayer
+    //var ownerLayer = ownerLayer
+    //var allbinaryCollidableLayer = allbinaryCollidableLayer
 }
 
 
-    override fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 }
 
 
-    override fun isCollisionInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun isCollisionInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
+    //var ownerLayer = ownerLayer
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 

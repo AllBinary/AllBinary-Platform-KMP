@@ -173,7 +173,7 @@ var secondString = secondString
 
     var time: Long = TimeUtil.calendar.getTimeInMillis()!!
 
-this.setExpirationCalendar(calendar, yearString, monthString, dayString, hourString, minuteString, secondString)
+this.setExpirationCalendar(TimeUtil.calendar, yearString, monthString, dayString, hourString, minuteString, secondString)
 
     var timeDelta: Long = TimeUtil.calendar.getTimeInMillis()!!
 

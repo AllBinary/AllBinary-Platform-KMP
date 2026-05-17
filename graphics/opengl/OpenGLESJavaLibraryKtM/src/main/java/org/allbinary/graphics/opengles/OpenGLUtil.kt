@@ -100,7 +100,7 @@ PreLogUtil.put(CommonLabels.getInstance()!!.START_LABEL +OpenGLCapabilities.getI
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
 }
 
 }
@@ -117,7 +117,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURF
 OpenGLLogUtil.getInstance()!!.logError(gl)
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
 }
 
 }
@@ -160,7 +160,7 @@ this.set(gl)
 : Image{
     //var image = image
 
-    var encapsulateImage: Image = preResourceImageUtil!!.encapsulate(image)!!
+    var encapsulateImage: Image = this.preResourceImageUtil!!.encapsulate(image)!!
 
 
     

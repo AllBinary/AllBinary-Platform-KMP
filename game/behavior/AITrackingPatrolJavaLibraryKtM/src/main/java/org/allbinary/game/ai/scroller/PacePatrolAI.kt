@@ -64,7 +64,7 @@ var gameInput = gameInput
 
                             //For kotlin this is before the body of the constructor.
                     
-TrackingEventHandler.getInstance()!!.addListener(this)
+TrackingEventHandler.getInstance()!!.addListenerInterface(this)
 this.trackingList= BasicArrayListD()
 }
 

@@ -27,7 +27,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogUtil
 //This is mainly for network communications.
 open public class PathFindingThreadPool : ThreadPool {
         

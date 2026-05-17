@@ -26,22 +26,20 @@
         import kotlin.reflect.KClass
         
 
-open public class CollidableAlwaysPickupNeverCollideBehaviorFactory
-            : Object
-         {
+open public class CollidableAlwaysPickupNeverCollideBehaviorFactory : CollidableBaseBehaviorFactory {
         
 companion object {
             
-    private val instance: CollidableAlwaysPickupNeverCollideBehavior = CollidableAlwaysPickupNeverCollideBehavior()
+    private val instance2: CollidableAlwaysPickupNeverCollideBehaviorFactory = CollidableAlwaysPickupNeverCollideBehaviorFactory()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CollidableAlwaysPickupNeverCollideBehavior{
+: CollidableAlwaysPickupNeverCollideBehaviorFactory{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CollidableAlwaysPickupNeverCollideBehaviorFactory.instance
+                        return CollidableAlwaysPickupNeverCollideBehaviorFactory.instance2
 }
 
 
@@ -52,6 +50,19 @@ companion object {
             {
             }            
         
+    private val instance: CollidableAlwaysPickupNeverCollideBehavior = CollidableAlwaysPickupNeverCollideBehavior()
+
+    override fun createBehavior()
+        //nullable = true from not(false or (false and true)) = true
+: CollidableBaseBehavior{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.instance
+}
+
+
 }
                 
             

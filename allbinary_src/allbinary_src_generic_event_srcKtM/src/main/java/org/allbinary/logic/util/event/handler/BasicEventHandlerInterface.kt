@@ -31,7 +31,7 @@ import org.allbinary.logic.util.event.EventListenerInterface
 interface BasicEventHandlerInterface {
         
 
-    open fun addListener(eventListenerInterface: EventListenerInterface)
+    open fun addListenerInterface(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

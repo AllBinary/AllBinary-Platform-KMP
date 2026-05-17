@@ -28,7 +28,6 @@
         import kotlin.reflect.KClass
         
 import android.view.View
-import android.view.WindowManager
 
 interface ViewCompositeInterface {
         
@@ -40,10 +39,6 @@ interface ViewCompositeInterface {
     open fun getView()
         //nullable = true from not(false or (false and true)) = true
 : View
-
-    open fun getWindowManager()
-        //nullable = true from not(false or (false and true)) = true
-: WindowManager
 
     open fun runOnUiThread(action: Runnable)
         //nullable = true from not(false or (false and false)) = true

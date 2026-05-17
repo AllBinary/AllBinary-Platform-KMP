@@ -78,7 +78,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UP
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(super.toString())!!.append(NAME_LABEL)!!.append(name)!!.toString()
+                            append(super.toString())!!.append(this.NAME_LABEL)!!.append(this.name)!!.toString()
 }
 
 

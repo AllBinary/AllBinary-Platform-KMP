@@ -55,11 +55,11 @@ companion object {
 
     val openGLBitmap: PlatformBitmapBase
 
+    val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
+
     var imageProcessor: OpenGLESImageProcessor = OpenGLESImageProcessor.getInstance()!!
 
     var openGLESImageTranslate: OpenGLESImageTranslate = OpenGLESImageTranslate.getInstance()!!
-
-    val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
 public constructor (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory){
     //var image = image
     //var bitmapFactory = bitmapFactory

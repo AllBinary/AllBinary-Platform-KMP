@@ -30,7 +30,6 @@ import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.NullEventListener
 import org.allbinary.logic.util.event.handler.BasicEventHandler
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 
 open public class GameNotificationEventHandler : BasicEventHandler {
         
@@ -81,7 +80,7 @@ super.removeAllListeners()
                         if(eventListenerInterface != NullEventListener.NULL_EVENT_LISTENER)
                         
                                     {
-                                    this.addListener(eventListenerInterface)
+                                    this.addListenerInterface(eventListenerInterface)
 
                                     }
                                 

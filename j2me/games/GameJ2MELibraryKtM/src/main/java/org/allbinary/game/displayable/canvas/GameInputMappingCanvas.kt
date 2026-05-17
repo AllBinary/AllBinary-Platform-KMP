@@ -80,7 +80,7 @@ companion object {
     private var selectedInput: Input = this.NONE
 public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, helpPaintable: HelpPaintable)                        
 
-                            : super(commandListener, NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
+                            : super(commandListener, GameInputMappingCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
     //var abeClientInformation = abeClientInformation
     //var commandListener = commandListener
     //var allBinaryGameLayerManager = allBinaryGameLayerManager

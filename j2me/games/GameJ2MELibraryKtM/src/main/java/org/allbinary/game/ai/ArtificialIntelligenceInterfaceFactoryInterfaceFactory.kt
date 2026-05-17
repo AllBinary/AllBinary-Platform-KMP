@@ -63,7 +63,7 @@ companion object {
     open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
-list= BasicArrayListD()
+this.list= BasicArrayListD()
 }
 
 

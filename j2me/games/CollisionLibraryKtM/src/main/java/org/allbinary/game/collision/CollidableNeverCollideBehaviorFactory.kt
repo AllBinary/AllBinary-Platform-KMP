@@ -26,22 +26,20 @@
         import kotlin.reflect.KClass
         
 
-open public class CollidableNeverCollideBehaviorFactory
-            : Object
-         {
+open public class CollidableNeverCollideBehaviorFactory : CollidableBaseBehaviorFactory {
         
 companion object {
             
-    private val instance: CollidableNeverCollideBehavior = CollidableNeverCollideBehavior(false)
+    private val instance2: CollidableNeverCollideBehaviorFactory = CollidableNeverCollideBehaviorFactory()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CollidableNeverCollideBehavior{
+: CollidableNeverCollideBehaviorFactory{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CollidableNeverCollideBehaviorFactory.instance
+                        return CollidableNeverCollideBehaviorFactory.instance2
 }
 
 
@@ -52,6 +50,19 @@ companion object {
             {
             }            
         
+    private val instance: CollidableNeverCollideBehavior = CollidableNeverCollideBehavior(false)
+
+    override fun createBehavior()
+        //nullable = true from not(false or (false and true)) = true
+: CollidableBaseBehavior{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.instance
+}
+
+
 }
                 
             

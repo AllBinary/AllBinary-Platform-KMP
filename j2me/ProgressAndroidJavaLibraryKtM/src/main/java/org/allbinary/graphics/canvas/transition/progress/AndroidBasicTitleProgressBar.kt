@@ -102,7 +102,7 @@ var foregroundBasicColor = foregroundBasicColor
                             //For kotlin this is before the body of the constructor.
                     
 this.init()
-DisplayChangeEventHandler.getInstance()!!.addListener(this)
+DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
 
     var size: Int = this.IMAGE.size
                 

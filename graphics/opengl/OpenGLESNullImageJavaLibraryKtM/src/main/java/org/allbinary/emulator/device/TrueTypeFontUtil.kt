@@ -102,7 +102,7 @@ var cellSize = cellSize
 }
 
 
-    open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmapGL(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var gl = gl

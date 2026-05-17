@@ -108,7 +108,7 @@ this.widthScale= if((this.scale == 2)) {
 }
 
 
-    open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmapGL(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var gl = gl
@@ -208,7 +208,7 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var image: Image = this.getFontBitmap2(
+    var image: Image = this.getFontBitmap(
                             null, cellSize, BasicColorFactory.getInstance()!!.WHITE)!!
 
 
@@ -225,7 +225,7 @@ imageLoader!!.save(CommonSeps.getInstance()!!.PERIOD +CanvasStrings.getInstance(
 }
 
 
-    open fun getFontBitmap2(filename: String, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmap(filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var filename = filename

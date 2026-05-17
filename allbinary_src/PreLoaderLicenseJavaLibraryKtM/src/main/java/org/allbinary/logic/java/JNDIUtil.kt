@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-
+//import org.omg.CosNaming.NamingContext;
 open public class JNDIUtil
             : Object
          {

@@ -95,7 +95,7 @@ this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCo
 {
     //var layerInterface = layerInterface
     //var index = index
-this.stringBuilder!!.delete(0, stringBuilder!!.length())
+this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
 this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.APPEND_)!!.append(layerInterface!!.getName())!!.append(this._AT_)!!.appendint(index)!!.toString(), this, this.APPEND)
 }
 
@@ -175,7 +175,7 @@ LayerManagerLogging.removeFailed= true
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
-this.stringBuilder!!.delete(0, stringBuilder!!.length())
+this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
 
     var size: Int = layerManager!!.getSize()!!
 
@@ -205,7 +205,7 @@ this.logUtil!!.putF(this.stringBuilder!!.toString(), this, this.REMOVE)
     override fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
-this.stringBuilder!!.delete(0, stringBuilder!!.length())
+this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
 this.logUtil!!.putF(this.stringBuilder!!.appendint(TsUtil.getInstance()!!.hashCode(this))!!.append(this.CLEAR)!!.toString(), this, this.CLEAR)
 }
 

@@ -57,7 +57,7 @@ private constructor (id: Int)
             : super()
         {
 var id = id
-this.eventPool!!.init(MotionEventFactory(eventPool, id))
+this.eventPool!!.init(MotionEventFactory(this.eventPool, id))
 }
 
 

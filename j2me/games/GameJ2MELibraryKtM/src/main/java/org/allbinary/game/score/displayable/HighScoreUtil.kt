@@ -162,7 +162,7 @@ this.highScoresHelper!!.setHighScoresArray(this.highScoresArray)
 
     var commandListener: CommandListener = myCanvas!!.getCustomCommandListener()!!
 
-commandListener!!.commandAction(SUBMIT_TEXTBOX_COMMAND, myCanvas)
+commandListener!!.commandAction(HighScoreUtil.SUBMIT_TEXTBOX_COMMAND, myCanvas)
 }
 
 

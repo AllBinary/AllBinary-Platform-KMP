@@ -34,10 +34,9 @@ import org.allbinary.logic.communication.log.ForcedLogUtil
 
 open public class CollidableCharacterNoDamageBehavior : CollidableDestroyableDamageableBehavior {
         
-public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable){
-var ownerLayer = ownerLayer
+                            : super(collidable){
 var collidable = collidable
 
 
@@ -48,15 +47,16 @@ var collidable = collidable
 
                 @Throws(Exception::class)
             
-    override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    override fun collide(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
 
 
-    var collisionType: CollisionType = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.getCollisionTypeWith(this.ownerLayer)!!
+    var collisionType: CollisionType = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.getCollisionTypeWith(ownerLayer)!!
 
 
     
@@ -64,7 +64,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
                         
                                     {
                                     
-    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayer as CollidableDestroyableDamageableLayer
+    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = ownerLayer as CollidableDestroyableDamageableLayer
 
 collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickupLayer(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
 
@@ -79,9 +79,10 @@ collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickupLayer(colli
 
                 @Throws(Exception::class)
             
-    override fun collideInterface(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collideInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
 }

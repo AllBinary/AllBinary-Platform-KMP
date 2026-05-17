@@ -76,7 +76,7 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
     var increment: Short = ((this.total -1) /this.TOTAL_ANGLE).toShort()
 
 
-    var minAngle: Short = (angle -((increment *total) shr 1)).toShort()
+    var minAngle: Short = (angle -((increment *this.total) shr 1)).toShort()
 
 
     var next: Int = 0

@@ -79,7 +79,7 @@ this.eventListenerInterfaceList= BasicArrayListD()
 
         {
 eventListenerInterface= vector.get(index) as EventListenerInterface
-this.addListener(eventListenerInterface)
+this.addListenerInterface(eventListenerInterface)
 }
 
 }
@@ -125,7 +125,7 @@ this.removeListener(eventListenerInterface)
 }
 
 
-    override fun addListener(eventListenerInterface: EventListenerInterface)
+    override fun addListenerInterface(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface

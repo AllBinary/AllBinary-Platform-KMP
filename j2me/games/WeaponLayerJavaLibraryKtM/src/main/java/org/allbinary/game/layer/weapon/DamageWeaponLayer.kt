@@ -51,7 +51,7 @@ public constructor (name: String, remoteInfo: RemoteInfo, movement: Movement, an
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setCollidableInferface(CollidableDamageWeaponBehavior(this, true))
+this.setCollidableInferface(CollidableDamageWeaponBehavior(true))
 }
 
 

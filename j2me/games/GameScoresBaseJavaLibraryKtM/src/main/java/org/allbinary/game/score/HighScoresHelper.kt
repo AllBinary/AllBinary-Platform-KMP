@@ -79,7 +79,7 @@ this.lastIndex= this.circularIndexUtil!!.getIndex()
 : Boolean{
 
     
-                        if(highScoresArrayP!!.size < 1)
+                        if(this.highScoresArrayP!!.size < 1)
                         
                                     {
                                     
@@ -100,10 +100,10 @@ this.lastIndex= this.circularIndexUtil!!.getIndex()
 
 
 
-                        for (index in highScoresArrayP!!.size -1 downTo 0)
+                        for (index in this.highScoresArrayP!!.size -1 downTo 0)
 
         {
-highScores= highScoresArrayP[index]!!
+highScores= this.highScoresArrayP[index]!!
 
     
                         if(highScores!!.getTotal() > 0)

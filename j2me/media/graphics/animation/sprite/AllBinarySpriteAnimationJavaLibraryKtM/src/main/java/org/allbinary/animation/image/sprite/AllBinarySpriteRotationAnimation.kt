@@ -105,7 +105,7 @@ this.adjustFrame(angle.getValue())
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle
-this.setFrame(frameUtil!!.getFrameForAngle(angle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
+this.setFrame(this.frameUtil!!.getFrameForAngle(angle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
 }
 
 

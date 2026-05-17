@@ -59,7 +59,7 @@ var startIndex = startIndex
 
 
     
-                        if(collidableBase!!.isCollidable())
+                        if(collidableBase!!.isCollidable(collidableInterfaceCompositeInterface))
                         
                                     {
                                     
@@ -85,11 +85,11 @@ collidableInterfaceCompositeInterface2= layerManager!!.getLayerAt(index) as Coll
 collidableBase2= collidableInterfaceCompositeInterface2!!.getCollidableInferface()
 
     
-                        if(collidableBase2!!.isCollidable() && collidableBase!!.isCollision(collidableInterfaceCompositeInterface2))
+                        if(collidableBase2!!.isCollidable(collidableInterfaceCompositeInterface) && collidableBase!!.isCollision(collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2))
                         
                                     {
-                                    collidableBase!!.collide(collidableInterfaceCompositeInterface2)
-collidableBase2!!.collide(collidableInterfaceCompositeInterface)
+                                    collidableBase!!.collide(collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2)
+collidableBase2!!.collide(collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface)
 
                                     }
                                 

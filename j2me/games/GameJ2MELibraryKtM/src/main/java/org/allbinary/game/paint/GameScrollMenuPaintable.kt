@@ -50,7 +50,7 @@ var basicColor = basicColor
                             //For kotlin this is before the body of the constructor.
                     
 this.setColor(basicColor)
-ColorChangeEventHandler.getInstance()!!.addListener(this)
+ColorChangeEventHandler.getInstance()!!.addListenerInterface(this)
 }
 
 

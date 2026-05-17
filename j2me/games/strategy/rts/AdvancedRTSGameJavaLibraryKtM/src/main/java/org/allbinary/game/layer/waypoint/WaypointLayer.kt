@@ -74,7 +74,7 @@ companion object {
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setCollidableInferface(CollidableWaypointBehavior(this, true))
+this.setCollidableInferface(CollidableWaypointBehavior(true))
 this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, AttackSound.getInstance()))
 this.setAnimationInterface(this.indexedButShouldBeRotationAnimationInterface)
 }

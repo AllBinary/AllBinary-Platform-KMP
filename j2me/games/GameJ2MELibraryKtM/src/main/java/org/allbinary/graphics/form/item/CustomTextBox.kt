@@ -85,7 +85,7 @@ this.setTitle(label)
     //var deviceId = deviceId
     //var repeated = repeated
 this.logUtil!!.putF(StringMaker().
-                            append(commonStrings!!.START)!!.appendint(keyCode)!!.toString(), this, "onEvent")
+                            append(this.commonStrings!!.START)!!.appendint(keyCode)!!.toString(), this, "onEvent")
 this.keyPressedByDevice(keyCode, deviceId)
 }
 
@@ -145,7 +145,7 @@ this.keyRepeatedByDevice(keyCode, 0)
                             
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.KEY_PRESSED, e)
 }
 
 }

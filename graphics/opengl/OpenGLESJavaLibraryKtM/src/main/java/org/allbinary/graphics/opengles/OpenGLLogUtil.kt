@@ -135,7 +135,7 @@ stringBuffer!!.appendint(maxTextureSize[0]!!)
                                 
 stringBuffer!!.append(this.IMAGE)
 stringBuffer!!.append(image.toString())
-PreLogUtil.put(stringBuffer!!.toString(), this, LOG_ERROR)
+PreLogUtil.put(stringBuffer!!.toString(), this, this.LOG_ERROR)
 
                                     }
                                 

@@ -114,7 +114,6 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.Layer
 import org.allbinary.layer.LayerInterfaceFactoryInterface
-import org.allbinary.logic.NullUtil
 import org.allbinary.logic.math.BasicDecimal
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.math.AngleFactory
@@ -261,7 +260,7 @@ protected constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInte
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setCollidableInferface(CollidableUnitBehavior(this, true))
+this.setCollidableInferface(CollidableUnitBehavior(true))
 this.waypointLayerInterfaceFactoryInterface= waypointLayerInterfaceFactoryInterface
 this.maxResourceLoad= maxResourceLoad!!.toShort()
 this.moveSoundInterface= moveSoundInterface
@@ -358,9 +357,9 @@ this.initRangeHack()
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 super.construct(rtsPlayerLayerInterface)
-TrackingEventHandler.getInstance()!!.addListener(this)
-WaypointEventHandlerFactory.getInstance(this.getGroupInterface()[0]!!)!!.addListener(this.getUnitWaypointBehavior())
-BuildingEventHandler.getInstance()!!.addListener(this)
+TrackingEventHandler.getInstance()!!.addListenerInterface(this)
+WaypointEventHandlerFactory.getInstance(this.getGroupInterface()[0]!!)!!.addListenerInterface(this.getUnitWaypointBehavior())
+BuildingEventHandler.getInstance()!!.addListenerInterface(this)
 this.getUnitWaypointBehavior()!!.setCurrentPathGeographicMapCellPosition(this.getCurrentGeographicMapCellPosition())
 this.updateSensorGeographicMapCellPositionList()
 this.getUnitWaypointBehavior()!!.setLastPathGeographicMapCellPosition(this.getUnitWaypointBehavior()!!.getCurrentPathGeographicMapCellPosition())
@@ -1354,7 +1353,7 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
     var steeringVisitor: SteeringVisitor = list.get(index) as SteeringVisitor
 
 
-    var anyType: Any = steeringVisitor!!.visit(NullUtil.getInstance()!!.NULL_OBJECT)!!
+    var anyType: Any = steeringVisitor!!.visit(this)!!
 
 
     

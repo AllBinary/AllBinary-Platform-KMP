@@ -50,10 +50,10 @@ this.androidMediaPlayerWrapper= androidMediaPlayerWrapper
 
     var mediaPlayer: MediaPlayer = androidMediaPlayerWrapper!!.getMediaPlayer()!!
 
-mediaPlayer!!.setOnCompletionListener(mOnCompletionListener)
-mediaPlayer!!.setOnBufferingUpdateListener(mOnBufferingUpdateListener)
-mediaPlayer!!.setOnPreparedListener(mOnPreparedListener)
-mediaPlayer!!.setOnErrorListener(mOnErrorListener)
+mediaPlayer!!.setOnCompletionListener(this.mOnCompletionListener)
+mediaPlayer!!.setOnBufferingUpdateListener(this.mOnBufferingUpdateListener)
+mediaPlayer!!.setOnPreparedListener(this.mOnPreparedListener)
+mediaPlayer!!.setOnErrorListener(this.mOnErrorListener)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)

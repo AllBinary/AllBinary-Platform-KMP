@@ -151,7 +151,7 @@ public constructor (remoteInfo: RemoteInfo, buildingPropertiesFactory: BuildingP
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setCollidableInferface(CollidableRTSBehavior(this, true))
+this.setCollidableInferface(CollidableRTSBehavior(true))
 this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, SelectSound.getInstance()))
 this.damageFloaters= buildingPropertiesFactory!!.getDamageFloaters(this)
 this.damageFloatersPaintableInterface= buildingPropertiesFactory!!.damageFloatersPaintableInterface
@@ -202,7 +202,7 @@ super.initVisibility(rtsPlayerLayerInterface)
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 super.construct(rtsPlayerLayerInterface)
-TrackingEventHandler.getInstance()!!.addListener(this)
+TrackingEventHandler.getInstance()!!.addListenerInterface(this)
 }
 
 

@@ -32,7 +32,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-
+//extends StoreFrontComponent
 open public class ValidationStoreFrontStatisticsView : StoreFrontStatisticsComponent
                 , ValidationComponentInterface {
         

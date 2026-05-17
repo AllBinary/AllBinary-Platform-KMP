@@ -63,8 +63,6 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
     private val resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
     private val SERVICE_LIMIT_MAX: Int = 1000
@@ -78,10 +76,10 @@ companion object {
 : Boolean{
 var name = name
 
-    var activityManager: ActivityManager = resourceUtil!!.getContext()!!.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+    var activityManager: ActivityManager = this.resourceUtil!!.getContext()!!.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
 
 
-    var runningServicesList: List<RunningServiceInfo> = activityManager!!.getRunningServices(SERVICE_LIMIT_MAX)!!
+    var runningServicesList: List<RunningServiceInfo> = activityManager!!.getRunningServices(this.SERVICE_LIMIT_MAX)!!
 
 
     var runningServiceInfo: ActivityManager.RunningServiceInfo
@@ -120,7 +118,7 @@ serviceName= serviceComponent!!.toString()
                                 
 }
 
-this.logUtil!!.putF(SERVICE_NOT_FOUND_RUNNING +name, this, IS_SERVICE_RUNNING)
+this.logUtil!!.putF(this.SERVICE_NOT_FOUND_RUNNING +name, this, this.IS_SERVICE_RUNNING)
 
 
 

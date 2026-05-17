@@ -62,7 +62,7 @@ public constructor (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLa
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setCollidableInferface(CollidableAlwaysPickupNeverCollideBehaviorFactory.getInstance())
+this.setCollidableInferface(CollidableAlwaysPickupNeverCollideBehaviorFactory.getInstance()!!.createBehavior())
 this.setLayerWidth(10)
 this.setLayerHeight(10)
 this.init(pickedUpLayerInterfaceFactoryInterface, animationInterface)

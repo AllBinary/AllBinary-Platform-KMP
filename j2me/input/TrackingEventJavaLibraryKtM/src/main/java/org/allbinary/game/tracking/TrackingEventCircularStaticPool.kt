@@ -71,7 +71,7 @@ this.EVENT_POOL.init(TrackingEventFactory())
 : TrackingEvent{
 var layerInterface = layerInterface
 
-    var trackingEvent: TrackingEvent = EVENT_POOL.getNextInstance() as TrackingEvent
+    var trackingEvent: TrackingEvent = this.EVENT_POOL.getNextInstance() as TrackingEvent
 
 trackingEvent!!.setLayerInterfaceForCircularStaticPool(layerInterface)
 

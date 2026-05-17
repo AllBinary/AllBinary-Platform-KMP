@@ -29,15 +29,15 @@
 interface AnimationListenerInterface {
         
 
-    open fun onAnimationStart()
+    open fun onPlatformAnimationStart()
         //nullable = true from not(false or (false and true)) = true
 
 
-    open fun onAnimationEnd()
+    open fun onPlatformAnimationEnd()
         //nullable = true from not(false or (false and true)) = true
 
 
-    open fun onAnimationRepeat()
+    open fun onPlatformAnimationRepeat()
         //nullable = true from not(false or (false and true)) = true
 
 

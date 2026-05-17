@@ -33,7 +33,6 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.J2MEUtil
 import org.allbinary.game.GameInfo
 import org.allbinary.game.commands.GameCommandsFactory
-import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.displayable.canvas.GameCommandCanvas
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.paint.ColorFillBasePaintable
@@ -55,6 +54,7 @@ import org.allbinary.graphics.paint.Paintable
 import org.allbinary.graphics.paint.SimpleTextPaintable
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonStrings
 import org.allbinary.thread.ARunnable
 import org.allbinary.thread.SecondaryThreadPool
 
@@ -130,6 +130,9 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 
@@ -143,11 +146,11 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
                         
                                     {
                                     
-        while(!hasPainted)
+        while(!this@HighScoresCanvas.hasPainted)
         {
 }
 
-hasPainted= false
+this@HighScoresCanvas.hasPainted= false
 
                                     }
                                 
@@ -155,14 +158,14 @@ hasPainted= false
     var stringMaker: StringMaker = StringMaker()
 
 logUtil!!.putF(stringMaker!!.append("HighScoresCanvas - Request repaint to be sure: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
-repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
+this@HighScoresCanvas.repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
 
     
                         if(!isHTML)
                         
                                     {
                                     
-        while(!hasPainted)
+        while(!this@HighScoresCanvas.hasPainted)
         {
 }
 
@@ -308,7 +311,7 @@ this.logUtil!!.putF(StringMaker().
                         
                                     {
                                     
-    var index: Int = highScoreCommandsFactory!!.getIndex(command)!!
+    var index: Int = this.highScoreCommandsFactory!!.getIndex(command)!!
 
 
     var nextIndex: Int = index +1
@@ -346,7 +349,7 @@ this.logUtil!!.putF(StringMaker().
                                     {
                                     this.removeAllCommands()
 this.addCommand(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS)
-this.addCommand(highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[nextIndex]!!)
+this.addCommand(this.highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[nextIndex]!!)
 
                                     }
                                 

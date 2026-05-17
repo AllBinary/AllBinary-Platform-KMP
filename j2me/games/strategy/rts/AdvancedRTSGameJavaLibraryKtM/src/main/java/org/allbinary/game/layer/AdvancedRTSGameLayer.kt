@@ -182,7 +182,7 @@ var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 super.construct(rtsPlayerLayerInterface)
 this.initVisibility(rtsPlayerLayerInterface)
-BuildingEventHandler.getInstance()!!.addListener(this.getWaypointBehavior()!!.getWaypoint())
+BuildingEventHandler.getInstance()!!.addListenerInterface(this.getWaypointBehavior()!!.getWaypoint())
 }
 
 
