@@ -119,7 +119,7 @@ pointsBasicArrayList!!.add(pointBasicArrayList)
                         for (index in 0 until points.size)
 
         {
-pointsBasicArrayList!!.add(getInstance(pointsBasicArrayList!!.objectArray[index]!! as BasicArrayList, width))
+pointsBasicArrayList!!.add(this.getInstance(pointsBasicArrayList!!.objectArray[index]!! as BasicArrayList, width))
 }
 
 

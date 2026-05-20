@@ -28,6 +28,7 @@
 import java.util.Enumeration
 import java.util.Hashtable
 import javax.microedition.lcdui.ChoiceGroup
+import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
@@ -62,6 +63,8 @@ companion object {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
@@ -293,7 +296,7 @@ var itemLabel = itemLabel
 name= this.enumerationUtil!!.nextElement(enumeration)!! as String
 
     
-                        if(itemLabel!!.compareTo(name) == 0)
+                        if(this.tsUtil!!.compareTo(itemLabel, name) == 0)
                         
                                     {
                                     

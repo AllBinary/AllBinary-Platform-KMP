@@ -70,7 +70,7 @@ var howMuch = howMuch
     var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(vector)
 
 graphicsPipe!!.createMatrix()
-graphicsPipe!!.rotateToAngle(this.angleFactory!!.getAt(getNextRandomAngle(howMuch)))
+graphicsPipe!!.rotateToAngle(this.angleFactory!!.getAt(this.getNextRandomAngle(howMuch)))
 
 
 

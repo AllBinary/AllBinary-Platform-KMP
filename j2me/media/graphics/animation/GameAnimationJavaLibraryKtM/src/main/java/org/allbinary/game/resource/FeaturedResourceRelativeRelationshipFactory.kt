@@ -69,7 +69,7 @@ var layer = layer
     var featureReleaseList: BasicArrayList = this.getList()!!
 
 
-    var size: Int = getList()!!.size()!!
+    var size: Int = this.getList()!!.size()!!
 
 
 

@@ -28,7 +28,6 @@
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.input.motion.gesture.observer.MotionGestureEvent
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
 
 open public class PopupCommandFormInputProcessor : CommandFormInputProcessor {

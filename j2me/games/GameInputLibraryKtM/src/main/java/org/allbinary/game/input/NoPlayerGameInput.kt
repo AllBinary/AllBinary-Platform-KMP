@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.event.GameKeyEvent
-import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
 open public class NoPlayerGameInput : PlayerGameInput {

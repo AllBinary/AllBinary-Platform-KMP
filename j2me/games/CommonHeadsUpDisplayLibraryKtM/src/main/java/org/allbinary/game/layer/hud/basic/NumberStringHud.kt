@@ -191,7 +191,7 @@ var y = y
 
     var len2: Int = this.valueTotalDigits
 
-this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 graphics.drawChars(charArray, 0, len, x, y, 0)
 graphics.drawChars(charArray2, 0, len2, x -this.offset, y, 0)
 }

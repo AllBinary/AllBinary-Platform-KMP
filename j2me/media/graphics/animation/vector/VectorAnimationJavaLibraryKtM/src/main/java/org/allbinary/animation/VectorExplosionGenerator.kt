@@ -98,7 +98,7 @@ points[index]!![1]= point.getY()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return createListFromPoints(list, points, howMuch, type)
+                        return this.createListFromPoints(list, points, howMuch, type)
 }
 
 
@@ -141,7 +141,7 @@ points[index]!![1]= point.getY()
             
     var pointsBasicArrayList: BasicArrayList = BasicArrayListS(howMuch)
 
-pointsBasicArrayList!!.add(createPointsBasicArrayList(points))
+pointsBasicArrayList!!.add(this.createPointsBasicArrayList(points))
 
     var frameIndex: Int = 0
 

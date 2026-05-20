@@ -28,7 +28,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.PlayerGameInput
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.EventStrings

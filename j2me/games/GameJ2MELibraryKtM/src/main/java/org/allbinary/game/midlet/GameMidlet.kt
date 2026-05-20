@@ -429,7 +429,7 @@ this.setDemo()
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "startApp", e)
 this.destroyApp(false)
-notifyDestroyed()
+this.notifyDestroyed()
 }
 
 }

@@ -104,7 +104,7 @@ super.processKeyAI(this.keys[index]!!.toInt())
 {
 
     
-                        if(isOn())
+                        if(this.isOn())
                         
                                     {
                                     this.setOn(false)

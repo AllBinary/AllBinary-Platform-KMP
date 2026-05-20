@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
-import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 

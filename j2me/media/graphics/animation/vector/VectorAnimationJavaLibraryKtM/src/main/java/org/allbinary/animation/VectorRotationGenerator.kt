@@ -124,7 +124,7 @@ pointBasicArrayList!!.add(pointFactory!!.createXY(points[index]!![0]!!, points[i
 
         while(index < totalAngle)
         {
-pointsBasicArrayList!!.add(getListAtAngle(width, height, pointBasicArrayList, this.angleFactory!!.getAt(index)))
+pointsBasicArrayList!!.add(this.getListAtAngle(width, height, pointBasicArrayList, this.angleFactory!!.getAt(index)))
 index += angleIncrement
 }
 

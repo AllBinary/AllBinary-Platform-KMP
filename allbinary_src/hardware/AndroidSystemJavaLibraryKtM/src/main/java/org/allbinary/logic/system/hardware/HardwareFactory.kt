@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.hardware.android.AndroidHardware
 import org.allbinary.logic.system.os.GenericOperatingSystem
@@ -53,6 +54,8 @@ companion object {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 private constructor ()
             : super()
         {
@@ -69,7 +72,7 @@ var os = os
         try {
             
     
-                        if(os.getName()!!.compareTo(OperatingSystems.getInstance()!!.ANDROID) == 0)
+                        if(this.tsUtil!!.compareTo(os.getName(), OperatingSystems.getInstance()!!.ANDROID) == 0)
                         
                                     {
                                     

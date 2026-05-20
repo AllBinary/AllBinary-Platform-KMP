@@ -84,7 +84,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
 
     
-                        if(isOn())
+                        if(this.isOn())
                         
                                     {
                                     

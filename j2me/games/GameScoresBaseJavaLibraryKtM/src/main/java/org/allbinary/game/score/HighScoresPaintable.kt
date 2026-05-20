@@ -76,7 +76,7 @@ var graphics = graphics
 
     var height: Int = this.displayInfoSingleton!!.getLastHeight()!!
 
-graphics.setColor(getBasicColorP()!!.toInt())
+graphics.setColor(this.getBasicColorP()!!.toInt())
 
     var heading: String = this.highScores!!.getHeading()!!
 

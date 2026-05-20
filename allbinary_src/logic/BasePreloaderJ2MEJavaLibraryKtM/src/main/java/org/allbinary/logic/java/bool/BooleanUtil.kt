@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.TsUtil
 import org.allbinary.logic.string.StringValidationUtil
 
 open public class BooleanUtil
@@ -47,7 +48,9 @@ companion object {
 
 
         }
-            private constructor ()
+            
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
+private constructor ()
             : super()
         {
 }
@@ -83,7 +86,7 @@ companion object {
 
 
     
-                        if(booleanStringLowerCase!!.compareTo(booleanFactory!!.TRUE_STRING) == 0)
+                        if(this.tsUtil!!.compareTo(booleanStringLowerCase, booleanFactory!!.TRUE_STRING) == 0)
                         
                                     {
                                     
@@ -96,7 +99,7 @@ companion object {
                                 
                              else 
     
-                        if(booleanStringLowerCase!!.compareTo(booleanFactory!!.FALSE_STRING) == 0)
+                        if(this.tsUtil!!.compareTo(booleanStringLowerCase, booleanFactory!!.FALSE_STRING) == 0)
                         
                                     {
                                     

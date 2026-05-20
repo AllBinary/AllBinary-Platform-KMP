@@ -136,8 +136,8 @@ ChangedGameFeatureListener.getInstance()!!.remove(InputFeatureFactory.getInstanc
                                     }
                                 
 this.setInitialized(true)
-this.initKey(getPortion())
-this.initKeyMapping(abeClientInformation, getPortion())
+this.initKey(this.getPortion())
+this.initKeyMapping(abeClientInformation, this.getPortion())
 GameKeyEventFactory.getInstance()!!.init()
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!

@@ -33,7 +33,6 @@ import android.content.ComponentName
 import android.content.Context
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
 
 open public class AndroidServicesUtil
             : Object

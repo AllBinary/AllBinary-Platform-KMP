@@ -79,7 +79,7 @@ companion object {
 
         {
 nextBasicArrayList= vector.objectArray[index]!! as BasicArrayList
-framePoints= toFrameArrayFromPointBasicArrayList(nextBasicArrayList)
+framePoints= this.toFrameArrayFromPointBasicArrayList(nextBasicArrayList)
 
 
 
@@ -125,7 +125,7 @@ points[index]!![pointIndex]!![1]= framePoints[pointIndex]!![1]!!
 
         {
 nextBasicArrayList= vector.objectArray[index]!! as BasicArrayList
-framePoints= toFrameArrayFromPointBasicArrayList(nextBasicArrayList)
+framePoints= this.toFrameArrayFromPointBasicArrayList(nextBasicArrayList)
 points[index]= Array(framePoints!!.size) { IntArray(2) }
 
 

@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.TsUtil
 
 open public class StringValidationUtil
             : Object
@@ -48,6 +49,8 @@ companion object {
         }
             
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 private constructor ()
             : super()
         {
@@ -287,7 +290,7 @@ var max = max
                                     {
                                     
     
-                        if(value.compareTo(this.stringUtil!!.NULL_STRING) == 0 || value.length < min || value.length > max)
+                        if(this.tsUtil!!.compareTo(value, this.stringUtil!!.NULL_STRING) == 0 || value.length < min || value.length > max)
                         
                                     {
                                     
@@ -330,7 +333,7 @@ var string = string
     
                         if(string != 
                                     null
-                                 && string.compareTo(this.stringUtil!!.NULL_STRING) != 0 && string.compareTo(this.stringUtil!!.EMPTY_STRING) != 0)
+                                 && this.tsUtil!!.compareTo(string, this.stringUtil!!.NULL_STRING) != 0 && this.tsUtil!!.compareTo(string, this.stringUtil!!.EMPTY_STRING) != 0)
                         
                                     {
                                     

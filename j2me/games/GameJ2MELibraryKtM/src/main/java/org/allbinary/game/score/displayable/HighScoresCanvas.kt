@@ -174,7 +174,7 @@ this@HighScoresCanvas.repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
 logUtil!!.putF(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
-executeUpdate()
+this@HighScoresCanvas.executeUpdate()
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)

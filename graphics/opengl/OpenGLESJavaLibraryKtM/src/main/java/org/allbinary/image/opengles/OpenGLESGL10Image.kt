@@ -74,10 +74,10 @@ open public class OpenGLESGL10Image : OpenGLESImage {
     //var y = y
     //var z = z
 
-    var imageWidth: Int = getWidth()!!
+    var imageWidth: Int = this@OpenGLESGL10Image.getWidth()!!
 
 
-    var imageHeight: Int = getHeight()!!
+    var imageHeight: Int = this@OpenGLESGL10Image.getHeight()!!
 
 this.regionRectangleFloatArray[7]= viewHeight
 this.regionRectangleFloatArray[1]= this.regionRectangleFloatArray[7] -height
@@ -133,10 +133,10 @@ gl.glPopMatrix()
     //var y = y
     //var z = z
 
-    var width: Int = getWidth()!!
+    var width: Int = this@OpenGLESGL10Image.getWidth()!!
 
 
-    var height: Int = getHeight()!!
+    var height: Int = this@OpenGLESGL10Image.getHeight()!!
 
 this.regionRectangleFloatArray[7]= this.displayInfoSingleton!!.getLastHeight()
 this.regionRectangleFloatArray[1]= this.regionRectangleFloatArray[7] -height

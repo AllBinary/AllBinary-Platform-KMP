@@ -265,7 +265,7 @@ logUtil!!.putF(this@BaseMusicService.WAITING_FOR_MUSIC_TO_END, this, commonState
 Thread.sleep(1200)
 }
 
-onStartCommandIntent(intent)
+this@BaseMusicService.onStartCommandIntent(intent)
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStateStrings!!.ON_START_COMMAND, e)

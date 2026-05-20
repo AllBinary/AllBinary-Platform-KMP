@@ -1040,7 +1040,7 @@ this.gameBehavior!!.updateTouch(this)
                                     {
                                     
     
-                        if(this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel() -getStartLevel() == 1)
+                        if(this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel() -this.getStartLevel() == 1)
                         
                                     {
                                     this.setTouchPaintableP(NullPaintable.getInstance())
@@ -1285,9 +1285,9 @@ this.gameOver= gameOver
 {
 PreLogUtil.put(this.commonStrings!!.START, this, this.gameStrings!!.SET_GAME_OVER)
 this.setGameOver(true)
-removePauseCommand()
+this.removePauseCommand()
 this.setGameState(AllBinaryGameCanvas.SHOW_END_RESULT_GAME_STATE)
-this.setEndGamePaintable(getEndGameStatePaintable())
+this.setEndGamePaintable(this.getEndGameStatePaintable())
 }
 
 

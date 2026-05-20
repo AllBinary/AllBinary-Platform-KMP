@@ -66,6 +66,8 @@ companion object {
     val WINDOWS_XP: String = "Windows XP"
 
     val ANDROID: String = this.LINUX
+
+    val HARMONY: String = "Harmony"
 private constructor ()
             : super()
         {

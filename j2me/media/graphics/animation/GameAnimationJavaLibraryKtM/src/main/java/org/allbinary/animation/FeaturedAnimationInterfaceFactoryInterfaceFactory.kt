@@ -91,7 +91,7 @@ var resource = resource
     var scale: Int = GameConfigurationCentral.getInstance()!!.SCALE.getValue()!!.toInt()!!
 
 
-    var size: Int = getList()!!.size()!!
+    var size: Int = this.getList()!!.size()!!
 
 
 
@@ -178,7 +178,7 @@ var resource = resource
     var resourceTypeAvailableList: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = getList()!!.size()!!
+    var size: Int = this.getList()!!.size()!!
 
 
     var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface

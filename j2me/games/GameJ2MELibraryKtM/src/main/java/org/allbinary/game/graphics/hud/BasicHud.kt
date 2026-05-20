@@ -358,9 +358,9 @@ var graphics = graphics
 var string = string
 var string2 = string2
 var offset = offset
-this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
-graphics.drawString(string, this.x, getY(), this.hudGraphicsPosition!!.getAnchor())
-graphics.drawString(string2, this.x +offset, getY(), this.hudGraphicsPosition!!.getAnchor())
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+graphics.drawString(string, this.x, this.getY(), this.hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string2, this.x +offset, this.getY(), this.hudGraphicsPosition!!.getAnchor())
 }
 
 
@@ -373,8 +373,8 @@ var string2 = string2
 var offset = offset
 var offset2 = offset2
 graphics.setColor(this.getColor())
-graphics.drawString(string, this.x +offset, getY(), this.hudGraphicsPosition!!.getAnchor())
-graphics.drawString(string2, this.x +offset2, getY(), this.hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string, this.x +offset, this.getY(), this.hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string2, this.x +offset2, this.getY(), this.hudGraphicsPosition!!.getAnchor())
 }
 
 
@@ -390,7 +390,7 @@ var offset2 = offset2
 var len2 = len2
 var xOffset = xOffset
 var xOffset2 = xOffset2
-this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
     var y: Int = this.getY()!!
 
@@ -410,7 +410,7 @@ var charArray2 = charArray2
 var offset2 = offset2
 var len2 = len2
 var xOffset = xOffset
-this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
     var y: Int = this.getY()!!
 
@@ -426,7 +426,7 @@ var graphics = graphics
 var charArray = charArray
 var offset = offset
 var len = len
-this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
     var y: Int = this.getY()!!
 
@@ -441,7 +441,7 @@ graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition!!
 {
 var graphics = graphics
 var string = string
-this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
     var y: Int = this.getY() +this.offsetY
 

@@ -27,6 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Displayable
+import javax.microedition.lcdui.Form
 import javax.microedition.rms.InvalidRecordIDException
 import javax.microedition.rms.RecordStore
 import javax.microedition.rms.RecordStoreException
@@ -121,6 +123,61 @@ recordStore!!.getRecord(recordId, data, 0)
                             data
                             }
     
+}
+
+
+    open fun compareTo(a: String, b: String)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var a = a
+    //var b = b
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return a.compareTo(b)
+}
+
+
+    open fun matchIgnoreCase(a: String, b: String)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var a = a
+    //var b = b
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return a.equals(b, ignoreCase = true)
+}
+
+
+    open fun isItemListener(owner: Displayable)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+var owner = owner
+
+    
+                        if(owner is Form)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+
+                                    }
+                                
+                        else {
+                            
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+
+                        }
+                            
 }
 
 

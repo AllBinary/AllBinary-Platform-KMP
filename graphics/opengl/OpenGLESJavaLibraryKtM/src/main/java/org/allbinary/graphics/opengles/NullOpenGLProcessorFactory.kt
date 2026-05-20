@@ -11,7 +11,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.graphics.opengles.OpenGLProcessor
 
 open public class NullOpenGLProcessorFactory
             : Object

@@ -12,7 +12,6 @@
         import kotlin.reflect.KClass
         
 import java.util.Stack
-import org.allbinary.logic.string.StringUtil
 
 open public class NullCanvas : Canvas {
         
@@ -23,8 +22,6 @@ companion object {
     val NULL_IMAGE: Image = Image()
 
     val NULL_CANVAS: NullCanvas = NullCanvas()
-
-    val NULL_SCREEN: Form = Form(StringUtil.getInstance()!!.EMPTY_STRING)
 
         }
             public constructor (){

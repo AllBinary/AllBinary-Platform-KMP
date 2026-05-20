@@ -88,7 +88,19 @@ private constructor ()
                         if(osName!!.indexOf(OperatingSystems.getInstance()!!.ANDROID) >= 0)
                         
                                     {
-                                    this.logUtil!!.putF("Found a Linux OS", this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Found a Android OS", this, commonStrings!!.GET_INSTANCE)
+this.genericOperatingSystem= AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+this.logUtil!!.putF(StringMaker().
+                            append("Operating System Info: ")!!.append(this.genericOperatingSystem!!.toString())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+
+                                    }
+                                
+                             else 
+    
+                        if(osName!!.indexOf(OperatingSystems.getInstance()!!.HARMONY) >= 0)
+                        
+                                    {
+                                    this.logUtil!!.putF("Found a Harmony OS", this, commonStrings!!.GET_INSTANCE)
 this.genericOperatingSystem= AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
 this.logUtil!!.putF(StringMaker().
                             append("Operating System Info: ")!!.append(this.genericOperatingSystem!!.toString())!!.toString(), this, commonStrings!!.GET_INSTANCE)
