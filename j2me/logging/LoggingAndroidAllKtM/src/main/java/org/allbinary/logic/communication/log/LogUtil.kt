@@ -94,6 +94,16 @@ this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OB
 }
 
 
+    open fun putFS(specialMessage: String, string: String, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var string = string
+var functionName = functionName
+this.putS(specialMessage, string, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+}
+
+
     /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -106,6 +116,26 @@ var exception = exception
 
 className= StringMaker().
                             append(anyType!!::class.toString()!!)!!.append(this.commonSeps!!.COLON)!!.append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(anyType)))!!.toString().toCharArray().concatToString()
+                                
+
+    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+
+android.util.Log.i(this.LABEL, message)
+}
+
+
+    /*actual*/ open fun putS(specialMessage: String, string: String, functionName: String, exception: Any)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var string = string
+var functionName = functionName
+var exception = exception
+
+    var className: String = this.LABEL
+
+className= StringMaker().
+                            append(string)!!.append(this.commonSeps!!.COLON)!!.append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(string)))!!.toString().toCharArray().concatToString()
                                 
 
     var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!

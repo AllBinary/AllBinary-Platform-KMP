@@ -45,7 +45,7 @@ open public class PlatformImage
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullCanvas.NULL_IMAGE
+                        return NullImage.NULL_IMAGE
 }
 
 

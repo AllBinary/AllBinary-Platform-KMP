@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.game.configuration.GameConfigurationCentral
@@ -82,7 +82,7 @@ arrayImageRotationAnimationFactory!!.initDXY(dx, dy)
 
         }
             
-    private var imageArray: Array<Image?> = NullCanvas.NULL_IMAGE_ARRAY
+    private var imageArray: Array<Image?> = NullImage.NULL_IMAGE_ARRAY
 
     private var angleIncrement: Int
 public constructor (image: Image, width: Int, height: Int, angleIncrement: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        

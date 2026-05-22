@@ -116,6 +116,15 @@ this.put(specialMessage, anyType, functionName, exception)
 }
 
 
+    /*actual*/ open fun putF(specialMessage: String, className: String, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
+}
+
+
     /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {

@@ -12,7 +12,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.graphics.color.BasicColor
 
 open public class ABCustomImageItem : ABCustomItem {
@@ -42,7 +42,7 @@ var yOffset = yOffset
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullCanvas.NULL_IMAGE
+                        return NullImage.NULL_IMAGE
 }
 
 

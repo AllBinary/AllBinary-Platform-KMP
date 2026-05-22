@@ -27,7 +27,7 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.DisposalUtil
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.RotationAnimation
@@ -44,7 +44,7 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
 
     private val originalImageArray: Array<Image?>
 
-    private var imageArray: Array<Image?> = NullCanvas.NULL_IMAGE_ARRAY
+    private var imageArray: Array<Image?> = NullImage.NULL_IMAGE_ARRAY
 
     private var currentImage: Image
 

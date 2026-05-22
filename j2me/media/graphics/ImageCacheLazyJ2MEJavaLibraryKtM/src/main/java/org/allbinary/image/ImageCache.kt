@@ -31,7 +31,7 @@
         
 import java.io.InputStream
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.J2MEUtil
 import org.allbinary.animation.image.LazyImageRotationAnimation
 import org.allbinary.canvas.GameGlobalsFactory
@@ -763,7 +763,7 @@ image.setName(key)
 
 
     
-                        if(image == NullCanvas.NULL_IMAGE)
+                        if(image == NullImage.NULL_IMAGE)
                         
                                     {
                                     this.volume += width *height
@@ -821,7 +821,7 @@ this.listOfList[foundIndex]!!.add(image)
 
 
     
-                        if(image == NullCanvas.NULL_IMAGE)
+                        if(image == NullImage.NULL_IMAGE)
                         
                                     {
                                     

@@ -112,6 +112,20 @@ System.out.println(message)
 }
 
 
+    /*actual*/ open fun putFS(specialMessage: String, className: String, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
+
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
+
+System.out.print(this.LOG_SUCCESS)
+System.out.println(message)
+}
+
+
     private val LOG_SUCCESS: String = "org.allbinary: "
 
     /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)

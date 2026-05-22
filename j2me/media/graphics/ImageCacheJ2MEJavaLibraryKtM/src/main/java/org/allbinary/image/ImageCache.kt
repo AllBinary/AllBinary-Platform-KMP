@@ -31,7 +31,7 @@
         
 import java.io.InputStream
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.gd.resource.GDResources
 import org.allbinary.logic.string.StringMaker
@@ -120,7 +120,7 @@ this.logUtil!!.putF(StringMaker().
 
 
     
-                        if(image == NullCanvas.NULL_IMAGE)
+                        if(image == NullImage.NULL_IMAGE)
                         
                                     {
                                     this.volume += width *height
@@ -181,7 +181,7 @@ this.listOfList[foundIndex]!!.add(image)
 
 
     
-                        if(image == NullCanvas.NULL_IMAGE)
+                        if(image == NullImage.NULL_IMAGE)
                         
                                     {
                                     

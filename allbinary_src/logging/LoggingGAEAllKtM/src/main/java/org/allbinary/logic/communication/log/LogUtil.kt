@@ -90,6 +90,16 @@ this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OB
 }
 
 
+    /*actual*/ open fun putFS(specialMessage: String, className: String, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
+this.putS(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+}
+
+
     /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -117,6 +127,41 @@ this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OB
                                     }
                                 
 
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
+
+
+    
+                        if(exception != 
+                                    null
+                                )
+                        
+                                    {
+                                    this.logger.log(Level.SEVERE, message, exception)
+
+                                    }
+                                
+                        else {
+                            this.logger.log(Level.INFO, message)
+
+                        }
+                            
+} catch(e: Exception)
+            {
+}
+
+}
+
+
+    /*actual*/ open fun putS(specialMessage: String, className: String, functionName: String, exception: Any)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
+    //var exception = exception
+
+        try {
+            
     var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
 

@@ -29,7 +29,7 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import android.app.Activity
 import org.allbinary.AndroidUtil
 import org.allbinary.image.GameFeatureImageCacheFactory
@@ -88,7 +88,7 @@ AndroidBasicTitleProgressBar.background= background
 
     private val IMAGE: Array<Image?> = arrayOfNulls(4)
 
-    private var image: Image = NullCanvas.NULL_IMAGE
+    private var image: Image = NullImage.NULL_IMAGE
 
     private var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
  constructor (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
@@ -114,7 +114,7 @@ DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
                         for (index in 0 until size)
 
         {
-this.IMAGE[index]= NullCanvas.NULL_IMAGE
+this.IMAGE[index]= NullImage.NULL_IMAGE
 }
 
 }
@@ -465,7 +465,7 @@ var lastHeight = lastHeight
 
 
     
-                        if(image != NullCanvas.NULL_IMAGE)
+                        if(image != NullImage.NULL_IMAGE)
                         
                                     {
                                     
@@ -475,7 +475,7 @@ var lastHeight = lastHeight
                                     {
                                     
     
-                        if(this.IMAGE[index] == NullCanvas.NULL_IMAGE)
+                        if(this.IMAGE[index] == NullImage.NULL_IMAGE)
                         
                                     {
                                     this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage2(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -20, image.getHeight().toFloat(), false)
@@ -491,7 +491,7 @@ var lastHeight = lastHeight
 
 
     
-                        if(this.IMAGE[nextIndex] == NullCanvas.NULL_IMAGE)
+                        if(this.IMAGE[nextIndex] == NullImage.NULL_IMAGE)
                         
                                     {
                                     this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage2(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -28, image.getHeight().toFloat(), false)
@@ -531,7 +531,7 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(AndroidBasic
         {
 
     
-                        if(this.IMAGE[index] != NullCanvas.NULL_IMAGE)
+                        if(this.IMAGE[index] != NullImage.NULL_IMAGE)
                         
                                     {
                                     this.IMAGE[index]= preResourceImageUtil!!.encapsulate(this.IMAGE[index]!!)
@@ -569,7 +569,7 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(AndroidBasic
         {
 
     
-                        if(this.IMAGE[index] != NullCanvas.NULL_IMAGE)
+                        if(this.IMAGE[index] != NullImage.NULL_IMAGE)
                         
                                     {
                                     preResourceImageUtil!!.update(graphics, this.IMAGE[index]!!)
@@ -588,7 +588,7 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(AndroidBasic
 : Image{
 var index = index
 
-    var image: Image = NullCanvas.NULL_IMAGE
+    var image: Image = NullImage.NULL_IMAGE
 
 
     

@@ -29,7 +29,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Matrix
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.graphics.Anchor
 import org.allbinary.image.ImageCache
 import org.allbinary.logic.communication.log.LogUtil
@@ -227,7 +227,7 @@ this.scaleYBasicArrayList!!.add(scaleY)
     //var height = height
     //var cached = cached
 
-    var image: Image = NullCanvas.NULL_IMAGE
+    var image: Image = NullImage.NULL_IMAGE
 
 
     

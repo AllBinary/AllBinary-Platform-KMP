@@ -28,7 +28,7 @@
 import java.io.InputStream
 import java.util.Hashtable
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
@@ -104,7 +104,7 @@ this.availableListOfList[index]= BasicArrayListD()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullCanvas.NULL_IMAGE
+                        return NullImage.NULL_IMAGE
 
                                     }
                                 
@@ -212,7 +212,7 @@ this.logUtil!!.putF(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullCanvas.NULL_IMAGE
+                        return NullImage.NULL_IMAGE
 }
 
 

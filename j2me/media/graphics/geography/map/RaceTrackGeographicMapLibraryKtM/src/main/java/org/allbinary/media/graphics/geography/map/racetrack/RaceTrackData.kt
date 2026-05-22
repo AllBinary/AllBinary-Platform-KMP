@@ -28,7 +28,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.graphics.CellPosition
 import org.allbinary.logic.NullUtil
 
@@ -37,9 +37,9 @@ open public class RaceTrackData
          {
         
 
-    private var tileSetImage: Image = NullCanvas.NULL_IMAGE
+    private var tileSetImage: Image = NullImage.NULL_IMAGE
 
-    private var miniTileSetImage: Image = NullCanvas.NULL_IMAGE
+    private var miniTileSetImage: Image = NullImage.NULL_IMAGE
 
     private var cellWidth: Int = 0
 

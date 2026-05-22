@@ -114,6 +114,23 @@ System.out.println(message)
 }
 
 
+    /*actual*/ open fun putFS(specialMessage: String, className: String, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+var className = className
+    //var functionName = functionName
+className= StringMaker().
+                            append(className)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(anyType)))!!.toString().toCharArray().concatToString()
+                                
+
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
+
+System.out.print(LogUtil.LOG_SUCCESS)
+System.out.println(message)
+}
+
+
     /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {

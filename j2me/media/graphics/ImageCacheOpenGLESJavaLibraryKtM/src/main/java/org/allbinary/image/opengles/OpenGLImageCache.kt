@@ -28,7 +28,7 @@
 import java.io.InputStream
 import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.device.NullGL10
 import org.allbinary.graphics.opengles.renderer.AllBinaryRendererBase3
 import org.allbinary.util.BasicArrayList
@@ -147,7 +147,7 @@ height= textureSize
         {
 
     
-                        if(image != NullCanvas.NULL_IMAGE)
+                        if(image != NullImage.NULL_IMAGE)
                         
                                     {
                                     this.list.add(image)
@@ -186,7 +186,7 @@ height= textureSize
         {
 
     
-                        if(image != NullCanvas.NULL_IMAGE)
+                        if(image != NullImage.NULL_IMAGE)
                         
                                     {
                                     this.list.add(image)

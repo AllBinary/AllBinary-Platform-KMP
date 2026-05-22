@@ -2,7 +2,7 @@
         /*
                 *  
                 *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
+                *  Copyright (c) 2025 AllBinary 
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.platform.graphics
+        package javax.microedition.lcdui
 
 
 
@@ -25,30 +25,24 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullImage
 
-open public class PlatformBitmapBase
+open public class NullImage
             : Object
          {
         
+companion object {
+            
+    val NULL_IMAGE_ARRAY: Array<Image?> = arrayOfNulls(0)
 
+    val NULL_IMAGE: Image = Image()
+
+        }
+            
             //Auto Generated
             public constructor() : super()
             {
             }            
         
-    open fun getImage()
-        //nullable = true from not(false or (false and true)) = true
-: Image{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullImage.NULL_IMAGE
-}
-
-
 }
                 
             

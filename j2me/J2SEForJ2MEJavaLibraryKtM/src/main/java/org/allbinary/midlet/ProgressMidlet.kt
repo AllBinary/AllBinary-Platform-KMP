@@ -50,7 +50,7 @@ this.abeClientInformation= clientInformationFactory!!.getInstance()
 }
 
 
-    open fun exit(isProgress: Boolean)
+    open fun exitProgress(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isProgress = isProgress

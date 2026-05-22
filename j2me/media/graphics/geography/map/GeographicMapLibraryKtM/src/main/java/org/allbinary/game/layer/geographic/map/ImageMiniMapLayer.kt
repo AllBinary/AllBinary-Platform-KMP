@@ -27,7 +27,7 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.graphics.Anchor
 import org.allbinary.image.PaintableToImageUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -36,7 +36,7 @@ import org.allbinary.view.ViewPosition
 open public class ImageMiniMapLayer : MiniMapLayer {
         
 
-    private var image: Image = NullCanvas.NULL_IMAGE
+    private var image: Image = NullImage.NULL_IMAGE
 public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
 
                             : super(geographicMapInterface, viewPosition){

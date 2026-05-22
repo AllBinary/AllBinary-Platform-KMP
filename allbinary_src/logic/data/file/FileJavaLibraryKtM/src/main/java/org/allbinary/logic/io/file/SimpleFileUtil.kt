@@ -35,7 +35,6 @@ import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
@@ -279,11 +278,11 @@ var n = n
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.loadFileAsList(inputStream, max, byteArray1, 0)
+                        return this.loadFileAsListReturnLine(inputStream, max, byteArray1, 0)
 }
 
 
-    open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray, includeReturnLine: Int)
+    open fun loadFileAsListReturnLine(inputStream: InputStream, max: Int, byteArray1: ByteArray, includeReturnLine: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var inputStream = inputStream

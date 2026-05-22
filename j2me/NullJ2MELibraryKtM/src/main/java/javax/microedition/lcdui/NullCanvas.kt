@@ -17,10 +17,6 @@ open public class NullCanvas : Canvas {
         
 companion object {
             
-    val NULL_IMAGE_ARRAY: Array<Image?> = arrayOfNulls(0)
-
-    val NULL_IMAGE: Image = Image()
-
     val NULL_CANVAS: NullCanvas = NullCanvas()
 
         }

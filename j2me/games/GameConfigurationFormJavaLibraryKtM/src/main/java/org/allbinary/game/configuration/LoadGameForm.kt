@@ -31,7 +31,7 @@ import javax.microedition.lcdui.Choice
 import javax.microedition.lcdui.ChoiceGroup
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Item
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import javax.microedition.lcdui.StringItem
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.persistance.GamePersistanceSingleton
@@ -141,7 +141,7 @@ this.append(choiceGroup)
     var ADDING_CHOICE: String = "Adding Choice: "
 
 
-    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option, StringUtil.getInstance()!!.getArrayInstance(), NullCanvas.NULL_IMAGE_ARRAY)
+    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option, StringUtil.getInstance()!!.getArrayInstance(), NullImage.NULL_IMAGE_ARRAY)
 
 
     var size: Int = list.size()!!
@@ -158,7 +158,7 @@ this.append(choiceGroup)
 
 this.logUtil!!.putF(StringMaker().
                             append(ADDING_CHOICE)!!.append(anyType!!.toString())!!.toString(), this, METHOD_NAME)
-choiceGroup!!.append(anyType!!.toString(), NullCanvas.NULL_IMAGE)
+choiceGroup!!.append(anyType!!.toString(), NullImage.NULL_IMAGE)
 }
 
 

@@ -23,6 +23,8 @@
         
         import java.lang.InterruptedException
         
+        import java.lang.ClassLoader
+        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -139,7 +141,7 @@ recordStore!!.getRecord(recordId, data, 0)
 }
 
 
-    open fun matchIgnoreCase(a: String, b: String)
+    open fun equalIgnoreCase(a: String, b: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var a = a
@@ -149,6 +151,18 @@ recordStore!!.getRecord(recordId, data, 0)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return a.equals(b, ignoreCase = true)
+}
+
+
+    open fun getClassClassLoader(anyType: Any)
+        //nullable = true from not(false or (false and false)) = true
+: ClassLoader{
+    //var anyType = anyType
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return anyType!!::class.java.classLoader
 }
 
 

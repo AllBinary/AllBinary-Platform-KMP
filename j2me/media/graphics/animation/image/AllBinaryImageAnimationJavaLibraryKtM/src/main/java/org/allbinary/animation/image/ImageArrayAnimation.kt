@@ -27,7 +27,7 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.graphics.Anchor
@@ -37,7 +37,7 @@ import org.allbinary.util.CircularIndexUtil
 open public class ImageArrayAnimation : IndexedAnimation {
         
 
-    private var imageArray: Array<Image?> = NullCanvas.NULL_IMAGE_ARRAY
+    private var imageArray: Array<Image?> = NullImage.NULL_IMAGE_ARRAY
 
     private var totalFrames: Int= 0
 

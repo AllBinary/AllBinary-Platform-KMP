@@ -28,7 +28,7 @@
 import java.util.Hashtable
 import javax.microedition.lcdui.ChoiceGroup
 import javax.microedition.lcdui.Item
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.game.configuration.GameConfigurationGauge
 import org.allbinary.game.configuration.GameConfigurationUtil
 import org.allbinary.graphics.displayable.screen.CommandForm
@@ -76,7 +76,7 @@ var option = option
     var stringMaker: StringMaker = StringMaker()
 
 
-    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option, StringUtil.getInstance()!!.getArrayInstance(), NullCanvas.NULL_IMAGE_ARRAY)
+    var choiceGroup: ChoiceGroup = ChoiceGroup(name, option, StringUtil.getInstance()!!.getArrayInstance(), NullImage.NULL_IMAGE_ARRAY)
 
 
     var list: BasicArrayList = hashtable.get(name as Object) as BasicArrayList
@@ -105,7 +105,7 @@ var option = option
 
 stringMaker!!.delete(0, stringMaker!!.length())
 this.logUtil!!.putF(stringMaker!!.append(name)!!.append(ADD_CHOICE)!!.append(gameFeature!!.toString())!!.toString(), this, GET_CHOICE_GROUP)
-choiceGroup!!.append(gameFeature!!.toString(), NullCanvas.NULL_IMAGE)
+choiceGroup!!.append(gameFeature!!.toString(), NullImage.NULL_IMAGE)
 
     
                         if(features.isFeature(gameFeature))

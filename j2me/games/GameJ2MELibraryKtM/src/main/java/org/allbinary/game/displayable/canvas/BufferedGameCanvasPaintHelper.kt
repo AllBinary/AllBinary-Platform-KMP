@@ -29,6 +29,7 @@ import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.graphics.paint.ProcessPaintable
@@ -46,7 +47,7 @@ companion object {
 
     private val offScreenImage: Array<Image?> = arrayOfNulls(BufferedGameCanvasPaintHelper.MAX_IMAGES)
 
-    private var previousImage: Image = NullCanvas.NULL_IMAGE
+    private var previousImage: Image = NullImage.NULL_IMAGE
 
     private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.createInstance(BufferedGameCanvasPaintHelper.MAX_IMAGES)!!
 

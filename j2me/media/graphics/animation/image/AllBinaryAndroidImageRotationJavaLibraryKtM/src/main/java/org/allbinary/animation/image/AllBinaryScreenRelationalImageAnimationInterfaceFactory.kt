@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
-import javax.microedition.lcdui.NullCanvas
+import javax.microedition.lcdui.NullImage
 import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
@@ -38,7 +38,7 @@ import org.microemu.android.device.AndroidImageInterface
 open public class AllBinaryScreenRelationalImageAnimationInterfaceFactory : BaseImageAnimationFactory {
         
 
-    private var lastImage: Image = NullCanvas.NULL_IMAGE
+    private var lastImage: Image = NullImage.NULL_IMAGE
 public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(image, PrimitiveIntUtil.getArrayInstance(), 0, 0, 0, 0, animationBehaviorFactory){
@@ -50,7 +50,7 @@ public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFac
                     
 
     
-                        if(this.lastImage != NullCanvas.NULL_IMAGE)
+                        if(this.lastImage != NullImage.NULL_IMAGE)
                         
                                     {
                                     

@@ -57,7 +57,7 @@ Globals.getInstance()!!.init(this::class.java.classLoader, TestRemoteLogUtil.PAT
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, "Test", "TestClass", Exception("Pretend Exception"))
+logUtil!!.put(commonStrings!!.EXCEPTION, "Test", "TestClass", Exception("Pretend Exception"))
 }
 
 
