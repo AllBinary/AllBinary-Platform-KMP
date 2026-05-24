@@ -312,7 +312,7 @@ var document = document
     var set: Set = this.columnsAndSearchValues!!.keySet()!!
 
 
-    var searchValueArray: Array<Any?> = set.toArray()!!
+    var searchValueArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = searchValueArray!!.size

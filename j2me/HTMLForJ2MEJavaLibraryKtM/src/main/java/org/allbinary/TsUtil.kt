@@ -166,6 +166,30 @@ recordStore!!.getRecord(recordId, data, 0)
 }
 
 
+    open fun toNumber(value: Char)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var value = value
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return value.toInt()
+}
+
+
+    open fun toNumber(value: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var value = value
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return value
+}
+
+
     open fun isItemListener(owner: Displayable)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{

@@ -145,7 +145,7 @@ this.setFrame(keyArray[keyArray!!.size -1]!! as Long)
 
 this.logUtil!!.putF("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORKER_RESULTS)
 
-    var actionNameArray: Array<Any?> = set.toArray()!!
+    var actionNameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = actionNameArray!!.size

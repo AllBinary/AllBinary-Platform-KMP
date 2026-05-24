@@ -27,7 +27,6 @@
         
 import java.util.Enumeration
 import java.util.Hashtable
-import org.allbinary.logic.NullUtil
 
 open public class HashtableUtil
             : Object

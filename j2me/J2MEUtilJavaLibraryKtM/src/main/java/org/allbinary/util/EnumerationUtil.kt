@@ -26,6 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.Enumeration
+import java.util.HashMap
+import java.util.Map
 //ArkTs does not have this.  So this is for the ArkTs build.
 open public class EnumerationUtil
             : Object
@@ -74,6 +76,57 @@ companion object {
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return enumeration.nextElement()!!
+}
+
+
+    open fun getHashMapAsArray(hashMap: HashMap<Any, Any>)
+        //nullable = true from not(false or (false and false)) = true
+: Array<Any?>{
+    //var hashMap = hashMap
+
+    var objectArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return objectArray
+}
+
+
+    open fun getMapAsArray(map: Map<Any, Any>)
+        //nullable = true from not(false or (false and false)) = true
+: Array<Any?>{
+    //var map = map
+
+    var objectArray: Array<Any?> = map.keySet()!!.toTypedArray()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return objectArray
+}
+
+
+    open fun getAsArray(enumeration: Enumeration<Any?>)
+        //nullable = true from not(false or (false and false)) = true
+: Array<Any?>{
+    //var enumeration = enumeration
+
+    var basicArrayList: BasicArrayList = BasicArrayListD()
+
+
+        while(this.hasMoreElements(enumeration))
+        {
+basicArrayList!!.add(this.nextElement(enumeration)!!)
+}
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return basicArrayList!!.toArray()
 }
 
 

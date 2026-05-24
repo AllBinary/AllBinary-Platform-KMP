@@ -93,7 +93,7 @@ this.setGenericProfileActions(genericProfileActions)
     var set: Set = hashMap!!.keys!!
 
 
-    var actionNameArray: Array<Any?> = set.toArray()!!
+    var actionNameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = actionNameArray!!.size

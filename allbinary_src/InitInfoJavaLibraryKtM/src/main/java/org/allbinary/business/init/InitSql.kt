@@ -214,7 +214,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
     var set: Set = keysAndValues!!.keySet()!!
 
 
-    var keyArray: Array<Any?> = set.toArray()!!
+    var keyArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size

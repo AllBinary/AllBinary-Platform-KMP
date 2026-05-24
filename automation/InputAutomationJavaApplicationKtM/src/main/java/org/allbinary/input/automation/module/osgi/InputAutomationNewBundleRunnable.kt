@@ -379,7 +379,7 @@ this.logUtil!!.putF("All: " +hashMap, this, "findNewModules")
     var set: Set = hashMap!!.keys!!
 
 
-    var symbolicNameArray: Array<Any?> = set.toArray()!!
+    var symbolicNameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = symbolicNameArray!!.size

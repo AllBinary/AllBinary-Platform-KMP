@@ -47,7 +47,7 @@ companion object {
     var set: Set = InputRobotFactory.getInstance()!!.get()!!.keySet()!!
 
 
-    var nameArray: Array<Any?> = set.toArray()!!
+    var nameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = nameArray!!.size

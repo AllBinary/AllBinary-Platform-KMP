@@ -244,7 +244,7 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
     var set: Set = this.getRequestHashMap()!!.keys!!
 
 
-    var fieldNameArray: Array<Any?> = set.toArray()!!
+    var fieldNameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = fieldNameArray!!.size

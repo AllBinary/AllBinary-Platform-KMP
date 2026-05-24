@@ -55,7 +55,7 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable {
     override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
-this.baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.toCharArray()
+this.baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.to2DCharArray()
 }
 
 

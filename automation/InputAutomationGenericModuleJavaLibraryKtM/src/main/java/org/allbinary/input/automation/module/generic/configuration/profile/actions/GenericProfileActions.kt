@@ -354,7 +354,7 @@ var document = document
     var set: Set = this.getHashMap()!!.keys!!
 
 
-    var actionNameArray: Array<Any?> = set.toArray()!!
+    var actionNameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = actionNameArray!!.size

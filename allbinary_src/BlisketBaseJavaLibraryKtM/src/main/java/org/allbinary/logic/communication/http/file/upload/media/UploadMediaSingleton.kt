@@ -86,7 +86,7 @@ this.writerFileTypesHashMap= HashMap<Any, Any>()
     var set: Set = hashMap!!.keys!!
 
 
-    var mediaDataNameArray: Array<Any?> = set.toArray()!!
+    var mediaDataNameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = mediaDataNameArray!!.size

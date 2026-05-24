@@ -126,7 +126,7 @@ var document = document
                                     }
                                 
 
-    var eventNameArray: Array<Any?> = set.toArray()!!
+    var eventNameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = eventNameArray!!.size

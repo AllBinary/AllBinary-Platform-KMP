@@ -225,7 +225,7 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
 
 this.logUtil!!.putF("Loading Libraries", this, "loadLibraries")
 
-    var nameArray: Array<Any?> = set.toArray()!!
+    var nameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = nameArray!!.size
@@ -260,7 +260,7 @@ this.logUtil!!.putF("Unloading Libraries", this, "unloadLibraries")
     var inputRobotInterface: InputRobotInterface
 
 
-    var inputRobotArray: Array<Any?> = set.toArray()!!
+    var inputRobotArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = inputRobotArray!!.size

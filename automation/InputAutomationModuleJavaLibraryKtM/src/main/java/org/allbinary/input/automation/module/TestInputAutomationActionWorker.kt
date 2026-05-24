@@ -79,7 +79,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCE
     var set: Set = hashtable.keys!!
 
 
-    var inputTypeNameArray: Array<Any?> = set.toArray()!!
+    var inputTypeNameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = inputTypeNameArray!!.size

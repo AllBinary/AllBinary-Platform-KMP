@@ -295,7 +295,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
     var set: Set = whereKeyValuePairs!!.keySet()!!
 
 
-    var keyArray2: Array<Any?> = set.toArray()!!
+    var keyArray2: Array<Any?> = set.toTypedArray()!!
 
 
     var size2: Int = keyArray2!!.size
@@ -434,7 +434,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
     var set: Set = keysAndValues!!.keySet()!!
 
 
-    var keyArray: Array<Any?> = set.toArray()!!
+    var keyArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size
@@ -582,7 +582,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
     var set: Set = keysAndValues!!.keySet()!!
 
 
-    var keyArray: Array<Any?> = set.toArray()!!
+    var keyArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size
@@ -740,7 +740,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
     var set: Set = keysAndValues!!.keySet()!!
 
 
-    var keyArray: Array<Any?> = set.toArray()!!
+    var keyArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size
@@ -981,7 +981,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
     var value: String
 
 
-    var keyArray: Array<Any?> = set.toArray()!!
+    var keyArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size

@@ -50,9 +50,7 @@ companion object {
             
     val EXTENSION_SEP: String = CommonSeps.getInstance()!!.PERIOD
 
-    val SEPARATORCHAR: Char = 
-                '/'
-            
+    val SEPARATORCHAR: Char = '/'
 
     val SEPARATOR: String = CommonSeps.getInstance()!!.FORWARD_SLASH
 private constructor ()

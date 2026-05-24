@@ -141,38 +141,20 @@ this.append(f.toString())
                         
                                     {
                                     this.ensureCapacity(this.currentLength +4)
-this.charArray[this.currentLength++]= 
-                                    't'
-                                    
-this.charArray[this.currentLength++]= 
-                                    'r'
-                                    
-this.charArray[this.currentLength++]= 
-                                    'u'
-                                    
-this.charArray[this.currentLength++]= 
-                                    'e'
-                                    
+this.charArray[this.currentLength++]= 't'
+this.charArray[this.currentLength++]= 'r'
+this.charArray[this.currentLength++]= 'u'
+this.charArray[this.currentLength++]= 'e'
 
                                     }
                                 
                         else {
                             this.ensureCapacity(this.currentLength +5)
-this.charArray[this.currentLength++]= 
-                                    'f'
-                                    
-this.charArray[this.currentLength++]= 
-                                    'a'
-                                    
-this.charArray[this.currentLength++]= 
-                                    'l'
-                                    
-this.charArray[this.currentLength++]= 
-                                    's'
-                                    
-this.charArray[this.currentLength++]= 
-                                    'e'
-                                    
+this.charArray[this.currentLength++]= 'f'
+this.charArray[this.currentLength++]= 'a'
+this.charArray[this.currentLength++]= 'l'
+this.charArray[this.currentLength++]= 's'
+this.charArray[this.currentLength++]= 'e'
 
                         }
                             

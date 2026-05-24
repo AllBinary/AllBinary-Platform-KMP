@@ -250,7 +250,7 @@ var document = document
     var set: Set = this.hashMap!!.keys!!
 
 
-    var nameArray: Array<Any?> = set.toArray()!!
+    var nameArray: Array<Any?> = set.toTypedArray()!!
 
 
     var size: Int = nameArray!!.size

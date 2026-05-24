@@ -145,23 +145,17 @@ this.totalRefreshes++
 
     private val STRING_ARRAY: Array<String?> = arrayOf(" Total Time: ",this.EMPTY_STRING," Total Frames: ",this.EMPTY_STRING," Frames/10 Sec: ",this.EMPTY_STRING," Total Paints: ",this.EMPTY_STRING," Paints/10 Sec: ",this.EMPTY_STRING)
 
-    private val SPACE_CHAR: Char = 
-                ' '
-            
+    private val SPACE_CHAR: Char = ' '
 
-    private val PLUS_CHAR: Char = 
-                '+'
-            
+    private val PLUS_CHAR: Char = '+'
 
-    private val X_CHAR: Char = 
-                'X'
-            
+    private val X_CHAR: Char = 'X'
 
     private val CHAR_ARRAY: Array<CharArray?> = arrayOf(charArrayOf('F','r','a','m','e','s','/','1','0',' ','S','e','c',':'),charArrayOf('X','X'),charArrayOf('P','a','i','n','t','s','/','1','0',' ','S','e','c',':'),charArrayOf('X','X'))
 
     private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
 
-    open fun toCharArray()
+    open fun to2DCharArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<CharArray?>{
 
