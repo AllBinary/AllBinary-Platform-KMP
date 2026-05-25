@@ -110,7 +110,7 @@ companion object {
 }
 
 
-    open fun getSetAsArray(set: Set<String>)
+    open fun getSetAsArray(set: MutableSet<String>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
     //var set = set
