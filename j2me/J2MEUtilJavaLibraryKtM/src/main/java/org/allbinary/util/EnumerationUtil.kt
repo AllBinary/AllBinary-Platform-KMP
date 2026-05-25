@@ -28,6 +28,7 @@
 import java.util.Enumeration
 import java.util.HashMap
 import java.util.Map
+import java.util.Set
 //ArkTs does not have this.  So this is for the ArkTs build.
 open public class EnumerationUtil
             : Object
@@ -100,6 +101,21 @@ companion object {
     //var map = map
 
     var objectArray: Array<Any?> = map.keySet()!!.toTypedArray()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return objectArray
+}
+
+
+    open fun getSetAsArray(set: Set<String>)
+        //nullable = true from not(false or (false and false)) = true
+: Array<Any?>{
+    //var set = set
+
+    var objectArray: Array<Any?> = set.toTypedArray()!!
 
 
 

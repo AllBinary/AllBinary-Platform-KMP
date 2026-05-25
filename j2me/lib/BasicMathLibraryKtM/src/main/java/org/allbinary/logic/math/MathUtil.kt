@@ -11,6 +11,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class MathUtil
             : Object
@@ -97,6 +99,59 @@ result= (accumulated +(value /accumulated)) shr 1
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return accumulated
+}
+
+
+    private val ACCURACY: Int = 100
+
+    open fun sqrtd(x: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Double{
+var x = x
+
+    
+                        if(x == 0)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0.0f.toDouble()
+
+                                    }
+                                
+
+    
+                        if(x < 0)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return  -1.0f.toDouble()
+
+                                    }
+                                
+
+    var result: Double = x.toDouble()
+
+
+
+
+
+                        for (index in 0 until ACCURACY)
+
+        {
+result= (result +(x /result)) /2
+}
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return result
 }
 
 
