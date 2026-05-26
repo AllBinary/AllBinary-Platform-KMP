@@ -125,7 +125,7 @@ this.directory.create(PATH)
 
         try {
             
-    var newFile: AbFile = AbFile(FILEABPATH)
+    var newFile: AbFile = AbFile.createAbFile(FILEABPATH)!!
 
 newFile!!.createNewFile()
 
@@ -202,7 +202,7 @@ this.hasRead= false
 
         try {
             
-    var file: AbFile = AbFile(FILEABPATH)
+    var file: AbFile = AbFile.createAbFile(FILEABPATH)!!
 
 
     

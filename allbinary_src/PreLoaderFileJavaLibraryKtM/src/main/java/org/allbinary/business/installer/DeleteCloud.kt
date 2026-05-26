@@ -69,7 +69,7 @@ stringBuffer!!.append(prePath)
     var path: AbPath = AbPath(stringBuffer!!.toString())
 
 
-    var file: AbFile = AbFile(path)
+    var file: AbFile = AbFile.createAbFile(path)!!
 
 
     var fileBasicArrayList: BasicArrayList = Directory.getInstance()!!.search(file, true)!!

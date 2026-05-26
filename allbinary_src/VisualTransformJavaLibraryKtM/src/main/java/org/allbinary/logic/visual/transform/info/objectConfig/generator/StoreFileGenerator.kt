@@ -147,7 +147,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 stringBuffer!!.append(this.output)
 abPath= AbPath(abPath!!.toString(), stringBuffer!!.toString())
 this.fileAbPath= abPath
-this.file= AbFile(this.fileAbPath)
+this.file= AbFile.createAbFile(this.fileAbPath)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))

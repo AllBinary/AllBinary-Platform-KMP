@@ -78,7 +78,7 @@ var fileBasicArrayList = fileBasicArrayList
 
         try {
             
-    var zipFile: AbFile = AbFile(outFilename)
+    var zipFile: AbFile = AbFile.createAbFile(outFilename)!!
 
 
     
@@ -212,7 +212,7 @@ var fileName = fileName
                                 
                         else {
                             
-    var entryFile: AbFile = AbFile(path +entryName)
+    var entryFile: AbFile = AbFile.createAbFile(path +entryName)!!
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("ZipEntry Name: ")

@@ -268,7 +268,7 @@ stringBuffer!!.append(filePath)
 stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 stringBuffer!!.append(transformInfoTemplateData!!.ENCRYPTED_EXTENSION)
 
-    var encFile: AbFile = AbFile(stringBuffer!!.toString())
+    var encFile: AbFile = AbFile.createAbFile(stringBuffer!!.toString())!!
 
 
     
@@ -309,7 +309,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "setTemplateAsInputStream()
                                 
                         else {
                             
-    var file: AbFile = AbFile(this.getTransformInfoInterface()!!.getTemplateFilePath())
+    var file: AbFile = AbFile.createAbFile(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
 
 
     
@@ -374,7 +374,7 @@ stringBuffer!!.append(filePath)
 stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 stringBuffer!!.append(transformInfoTemplateData!!.ENCRYPTED_EXTENSION)
 
-    var file: AbFile = AbFile(stringBuffer!!.toString())
+    var file: AbFile = AbFile.createAbFile(stringBuffer!!.toString())!!
 
 
     

@@ -1783,7 +1783,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         
                                     {
                                     
-    var file: AbFile = AbFile(fromSpecialDirectoryAbPath)
+    var file: AbFile = AbFile.createAbFile(fromSpecialDirectoryAbPath)!!
 
 
     

@@ -68,7 +68,7 @@ companion object {
     var FILEABPATH: AbPath = AbPath(path, INITFILENAME)
 
 
-    var file: AbFile = AbFile(FILEABPATH)
+    var file: AbFile = AbFile.createAbFile(FILEABPATH)!!
 
 
     var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(file))!!

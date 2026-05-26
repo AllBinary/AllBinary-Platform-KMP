@@ -137,7 +137,7 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
     var fullCategory: String = stringBuffer!!.toString()!!
 
 
-    var categoryFile: AbFile = AbFile(fullCategory)
+    var categoryFile: AbFile = AbFile.createAbFile(fullCategory)!!
 
 
     

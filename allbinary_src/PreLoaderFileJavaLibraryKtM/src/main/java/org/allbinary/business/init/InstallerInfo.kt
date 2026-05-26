@@ -86,7 +86,7 @@ public constructor ()
 
         try {
             
-    var newFile: AbFile = AbFile(FILEABPATH)
+    var newFile: AbFile = AbFile.createAbFile(FILEABPATH)!!
 
 newFile!!.createNewFile()
 
@@ -135,7 +135,7 @@ InstallerInfo.hasRead= false
 
         try {
             
-    var file: AbFile = AbFile(FILEABPATH)
+    var file: AbFile = AbFile.createAbFile(FILEABPATH)!!
 
 
     

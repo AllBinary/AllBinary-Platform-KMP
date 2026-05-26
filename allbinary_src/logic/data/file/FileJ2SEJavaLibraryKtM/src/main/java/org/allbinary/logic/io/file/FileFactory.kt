@@ -62,7 +62,7 @@ var filePath = filePath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFile(filePath, false)
+                        return AbFile.createAbFile(filePath, false)
 }
 
 
@@ -77,7 +77,7 @@ var childFilePath = childFilePath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFile(file, childFilePath)
+                        return AbFile.createAbFile(file, childFilePath)
 }
 
 
@@ -88,7 +88,7 @@ var childFilePath = childFilePath
 : Boolean{
 var path = path
 
-    var file: AbFile = AbFile(path)
+    var file: AbFile = AbFile.createAbFile(path)!!
 
 
     

@@ -174,7 +174,7 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
                             append(URLGLOBALS.getWebappPath())!!.append(storeFrontInterface!!.getCurrentHostNamePath())!!.append(this.itemInterface!!.getCategory())!!.toString()!!
 
 
-    var categoryFile: AbFile = AbFile(fullCategory)
+    var categoryFile: AbFile = AbFile.createAbFile(fullCategory)!!
 
 
     
@@ -522,7 +522,7 @@ stringBuffer!!.append("<br/>")
                                     }
                                 
 
-    var categoryFile: AbFile = AbFile(fullCategory)
+    var categoryFile: AbFile = AbFile.createAbFile(fullCategory)!!
 
 
     

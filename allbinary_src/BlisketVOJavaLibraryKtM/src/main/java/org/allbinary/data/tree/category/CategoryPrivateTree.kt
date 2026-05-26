@@ -112,7 +112,7 @@ var categoryInterface = categoryInterface
                         
                                     {
                                     
-    var categoryFile: AbFile = AbFile(categoryInterface!!.getFilePath())
+    var categoryFile: AbFile = AbFile.createAbFile(categoryInterface!!.getFilePath())!!
 
 
     

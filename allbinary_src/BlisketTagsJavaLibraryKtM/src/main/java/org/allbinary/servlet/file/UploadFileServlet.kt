@@ -216,7 +216,7 @@ var filePath = filePath
                                     }
                                 
 
-    var file: AbFile = AbFile(URLGLOBALS.getWebappPath() +filePath)
+    var file: AbFile = AbFile.createAbFile(URLGLOBALS.getWebappPath() +filePath)!!
 
 
     

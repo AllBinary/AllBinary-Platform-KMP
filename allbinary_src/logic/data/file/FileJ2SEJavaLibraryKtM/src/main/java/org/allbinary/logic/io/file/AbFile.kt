@@ -41,56 +41,87 @@ open public class AbFile
         
 companion object {
             
-    val NULL_FILE: AbFile = AbFile(StringUtil.getInstance()!!.EMPTY_STRING, false)
+    val NULL_FILE: AbFile = AbFile.createAbFile(StringUtil.getInstance()!!.EMPTY_STRING, false)!!
+
+                @Throws(Exception::class)
+            
+    open fun createAbFile(file: AbFile, childPathName: String)
+        //nullable = true from not(false or (false and false)) = true
+: AbFile{
+    //var file = file
+    //var childPathName = childPathName
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFile(File(file.getFile(), childPathName))
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createAbFile(filePath: String)
+        //nullable = true from not(false or (false and false)) = true
+: AbFile{
+    //var filePath = filePath
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFile(File(AbPath(filePath).
+                            toFileSystemString()))
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createAbFile(filePath: String, fileName: String)
+        //nullable = true from not(false or (false and false)) = true
+: AbFile{
+    //var filePath = filePath
+    //var fileName = fileName
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFile(File(AbPath(filePath).
+                            toFileSystemString(), fileName))
+}
+
+
+    open fun createAbFile(abPath: AbPath)
+        //nullable = true from not(false or (false and false)) = true
+: AbFile{
+    //var abPath = abPath
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFile(File(abPath!!.toFileSystemString()))
+}
+
+
+    open fun createAbFile(filePath: String, unknown: Boolean)
+        //nullable = true from not(false or (false and false)) = true
+: AbFile{
+    //var filePath = filePath
+    //var unknown = unknown
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFile(File(filePath))
+}
+
 
         }
             
     private val file: File
- constructor (filePath: String, unknown: Boolean)
-            : super()
-        {
-    //var filePath = filePath
-    //var unknown = unknown
-this.file= File(filePath)
-}
-
  constructor (file: File)
             : super()
         {
     //var file = file
 this.file= file
-}
-
-public constructor (file: AbFile, childPathName: String)
-            : super()
-        {
-    //var file = file
-    //var childPathName = childPathName
-this.file= File(file.getFile(), childPathName)
-}
-
-public constructor (filePath: String)
-            : super()
-        {
-    //var filePath = filePath
-this.file= File(AbPath(filePath).
-                            toFileSystemString())
-}
-
-public constructor (filePath: String, fileName: String)
-            : super()
-        {
-    //var filePath = filePath
-    //var fileName = fileName
-this.file= File(AbPath(filePath).
-                            toFileSystemString(), fileName)
-}
-
-public constructor (abPath: AbPath)
-            : super()
-        {
-    //var abPath = abPath
-this.file= File(abPath!!.toFileSystemString())
 }
 
 

@@ -70,7 +70,7 @@ open public class CloudImageServlet : HttpServlet {
     var requestURI: String = request.getRequestURI()!!
 
 
-    var file: AbFile = AbFile(URLGLOBALS.getWebappPath() +requestURI)
+    var file: AbFile = AbFile.createAbFile(URLGLOBALS.getWebappPath() +requestURI)!!
 
 inputStream= CloudStreamUtil.getInstance()!!.getFile(file)
 

@@ -141,7 +141,7 @@ var x = x
 
 
 
-                        for (index in 0 until ACCURACY)
+                        for (index in 0 until this.ACCURACY)
 
         {
 result= (result +(x /result)) /2

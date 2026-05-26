@@ -123,7 +123,7 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
     var fullPath: String = stringBuffer!!.toString()!!
 
 
-    var imageDirectoryFile: AbFile = AbFile(fullPath)
+    var imageDirectoryFile: AbFile = AbFile.createAbFile(fullPath)!!
 
 
     
@@ -143,7 +143,7 @@ stringBuffer!!.append(fileName)
 stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 stringBuffer!!.append(mediaData!!.getName())
 
-    var originalImageFile: AbFile = AbFile(stringBuffer!!.toString())
+    var originalImageFile: AbFile = AbFile.createAbFile(stringBuffer!!.toString())!!
 
 
     
@@ -266,17 +266,17 @@ this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getLargeI
                                 
                         else {
                             
-    var smallImageFile: AbFile = AbFile(this.itemInterface!!.getSmallImage())
+    var smallImageFile: AbFile = AbFile.createAbFile(this.itemInterface!!.getSmallImage())!!
 
 smallImageFile!!.createNewFile()
 fileUtil!!.write(ByteArrayInputStream(byteArray), smallImageFile)
 
-    var mediumImageFile: AbFile = AbFile(this.itemInterface!!.getMediumImage())
+    var mediumImageFile: AbFile = AbFile.createAbFile(this.itemInterface!!.getMediumImage())!!
 
 smallImageFile!!.createNewFile()
 fileUtil!!.write(ByteArrayInputStream(byteArray), mediumImageFile)
 
-    var largeImageFile: AbFile = AbFile(this.itemInterface!!.getSmallImage())
+    var largeImageFile: AbFile = AbFile.createAbFile(this.itemInterface!!.getSmallImage())!!
 
 largeImageFile!!.createNewFile()
 fileUtil!!.write(ByteArrayInputStream(byteArray), largeImageFile)

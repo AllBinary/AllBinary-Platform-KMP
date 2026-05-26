@@ -96,7 +96,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 {
 var filePathName = filePathName
 var name = name
-this.newFile= AbFile(filePathName)
+this.newFile= AbFile.createAbFile(filePathName)
 }
 
 

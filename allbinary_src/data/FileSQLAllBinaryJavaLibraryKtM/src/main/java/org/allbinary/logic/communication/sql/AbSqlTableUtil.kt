@@ -147,7 +147,7 @@ var tableName = tableName
     var backupFilePath: AbPath = AbPath(backupPath, fileName)
 
 
-    var backupFile: AbFile = AbFile(backupFilePath)
+    var backupFile: AbFile = AbFile.createAbFile(backupFilePath)!!
 
 
     
@@ -235,7 +235,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_BACKUP_FILE)
                                 
 Directory.create(backupAbPath)
 
-    var backupFileBak: AbFile = AbFile(backupAbPath!!.toFileSystemString())
+    var backupFileBak: AbFile = AbFile.createAbFile(backupAbPath!!.toFileSystemString())!!
 
 backupFileBak!!.createNewFile()
 FileUtil.getInstance()!!.copy(path, backupAbPath)
@@ -483,7 +483,7 @@ var portion = portion
                                     }
                                 
 
-    var backupFile: AbFile = AbFile(path, tableName +this.EXTENSION)
+    var backupFile: AbFile = AbFile.createAbFile(path, tableName +this.EXTENSION)!!
 
 
     var bufferedLineReader: BufferedLineReader = BufferedLineReader(backupFile)

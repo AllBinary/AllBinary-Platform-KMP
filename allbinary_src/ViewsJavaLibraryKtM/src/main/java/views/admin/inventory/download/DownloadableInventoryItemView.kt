@@ -183,7 +183,7 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
     var fullPath: String = this.getItemFilePath()!!
 
 
-    var itemResourceFile: AbFile = AbFile(fullPath)
+    var itemResourceFile: AbFile = AbFile.createAbFile(fullPath)!!
 
 itemResourceFile!!.mkdir()
 
@@ -193,7 +193,7 @@ stringBuffer!!.append(fullPath)
 stringBuffer!!.append(fileName)
 this.logUtil!!.putF("FileName: " +fileName, this, "processFile()")
 
-    var file: AbFile = AbFile(stringBuffer!!.toString())
+    var file: AbFile = AbFile.createAbFile(stringBuffer!!.toString())!!
 
 this.logUtil!!.putF(file.getPath(), this, "processFiles()")
 file.createNewFile()
@@ -223,7 +223,7 @@ stringBuffer!!.append(fullPath)
 stringBuffer!!.append(fileName)
 this.logUtil!!.putF("FileName: " +fileName, this, "unzip()")
 
-    var file: AbFile = AbFile(stringBuffer!!.toString())
+    var file: AbFile = AbFile.createAbFile(stringBuffer!!.toString())!!
 
 this.logUtil!!.putF(file.getPath(), this, "unzip()")
 ZipFileUtil.getInstance()!!.unzip(fullPath, file, fileName)

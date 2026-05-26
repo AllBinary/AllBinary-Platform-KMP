@@ -157,7 +157,7 @@ var data = data
                                     }
                                 
 
-    var newFile: AbFile = AbFile(file)
+    var newFile: AbFile = AbFile.createAbFile(file)!!
 
 
     

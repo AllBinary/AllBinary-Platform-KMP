@@ -127,7 +127,7 @@ this.cpuHashMap= HashMap<Any, Any>()
                         
                                     {
                                     
-    var fileVector: BasicArrayList = SubDirectory.getInstance()!!.search(filePath, AbFile(FilePathData.getInstance()!!.SEPARATOR))!!
+    var fileVector: BasicArrayList = SubDirectory.getInstance()!!.search(filePath, AbFile.createAbFile(FilePathData.getInstance()!!.SEPARATOR))!!
 
 
     

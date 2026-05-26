@@ -190,11 +190,11 @@ stringMaker!!.append(path)!!.append(ANDROID)!!.appendint(width)!!.append(CanvasS
 
     var newFilePath: String = stringMaker!!.toString()!!
 
-imagePersistanceUtil!!.saveWithBatik(AbFile(newFilePath), generatedBufferedImageArray[index]!!)
+imagePersistanceUtil!!.saveWithBatik(AbFile.createAbFile(newFilePath), generatedBufferedImageArray[index]!!)
 stringMaker!!.delete(0, stringMaker!!.length())
 stringMaker!!.append(path)!!.append(IOS)!!.appendint(width)!!.append(CanvasStrings.getInstance()!!._PNG)
 newFilePath= stringMaker!!.toString()
-imagePersistanceUtil!!.saveWithBatik(AbFile(newFilePath), generatedBufferedImageArray[index]!!)
+imagePersistanceUtil!!.saveWithBatik(AbFile.createAbFile(newFilePath), generatedBufferedImageArray[index]!!)
 }
 
 }

@@ -205,7 +205,7 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.INIT_PATH)
 stringBuffer!!.append(this.getFileName())
 
-    var file: AbFile = AbFile(stringBuffer!!.toString())
+    var file: AbFile = AbFile.createAbFile(stringBuffer!!.toString())!!
 
 
     var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(file))!!

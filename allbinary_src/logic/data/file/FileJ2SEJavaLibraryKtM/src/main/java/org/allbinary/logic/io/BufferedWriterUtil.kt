@@ -64,7 +64,7 @@ companion object {
     //var path = path
     //var data = data
 
-    var abFile: AbFile = AbFile(path)
+    var abFile: AbFile = AbFile.createAbFile(path)!!
 
 
     
