@@ -211,7 +211,7 @@ var isRecursiveSearch = isRecursiveSearch
                         
                                     {
                                     
-    var fileArray: Array<Any?> = file.listFiles(fileFilter)!!
+    var fileArray: Array<Any?> = file.listFilesFileFilter(fileFilter)!!
 
 
     

@@ -275,7 +275,7 @@ var overwriteAll = overwriteAll
     var outPath: AbPath = this.fixPath(file, path, realPath, cloud)!!
 
 
-    var outFile: AbFile = AbFile.createAbFile(outPath)!!
+    var outFile: AbFile = AbFile.createAbFileFromAbPath(outPath)!!
 
 
     
@@ -649,7 +649,7 @@ var overwriteAll = overwriteAll
 var current = current
 var total = total
 
-    var file: AbFile = AbFile.createAbFile(fromDirectoryAbPath)!!
+    var file: AbFile = AbFile.createAbFileFromAbPath(fromDirectoryAbPath)!!
 
 
     
@@ -747,7 +747,7 @@ stringBuffer!!.appendint(end)
     var newPath: String = toDirectoryAbPath!!.toFileSystemString() +path.substring(beginIndex)
 
 
-    var toFile: AbFile = AbFile.createAbFile(AbPath(newPath))!!
+    var toFile: AbFile = AbFile.createAbFileFromAbPath(AbPath(newPath))!!
 
 this.copyFile(nextFile, toFile, overwriteNewer, overwriteAll)
 
@@ -841,7 +841,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyDirectory")
                         if(file.isFile())
                         
                                     {
-                                    this.copyFile(file, AbFile.createAbFile(newDirectoryAbPath!!.toString(), file.getName()))
+                                    this.copyFile(file, AbFile.createAbFilePathAndName(newDirectoryAbPath!!.toString(), file.getName()))
 
                                     }
                                 
@@ -850,7 +850,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyDirectory")
                         if(file.isDirectory())
                         
                                     {
-                                    this.copyDirectory(file, AbFile.createAbFile(newDirectoryAbPath))
+                                    this.copyDirectory(file, AbFile.createAbFileFromAbPath(newDirectoryAbPath))
 
                                     }
                                 
@@ -949,10 +949,10 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), COPY)
                                     }
                                 
 
-    var fromLocationFile: AbFile = AbFile.createAbFile(fromAbPath)!!
+    var fromLocationFile: AbFile = AbFile.createAbFileFromAbPath(fromAbPath)!!
 
 
-    var toLocationFile: AbFile = AbFile.createAbFile(to)!!
+    var toLocationFile: AbFile = AbFile.createAbFileFromAbPath(to)!!
 
 
     
@@ -965,7 +965,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), COPY)
                         
                                     {
                                     
-    var file: AbFile = AbFile.createAbFile(toLocationFile, fromLocationFile!!.getName())!!
+    var file: AbFile = AbFile.createAbFileWithChild(toLocationFile, fromLocationFile!!.getName())!!
 
 this.copyFile(fromLocationFile, file)
 
@@ -1052,7 +1052,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), COPY)
                         
                                     {
                                     
-    var aFile: AbFile = AbFile.createAbFile(toLocationFile, file.getName())!!
+    var aFile: AbFile = AbFile.createAbFileWithChild(toLocationFile, file.getName())!!
 
 this.copyFile(file, aFile)
 

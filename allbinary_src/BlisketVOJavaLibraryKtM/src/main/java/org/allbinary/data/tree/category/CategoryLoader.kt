@@ -85,7 +85,7 @@ var categoryInterface = categoryInterface
                         
                                     {
                                     
-    var rootAbFile: AbFile = AbFile.createAbFile(categoryInterface!!.getRootFilePath())!!
+    var rootAbFile: AbFile = AbFile.createAbFileFromAbPath(categoryInterface!!.getRootFilePath())!!
 
 
     

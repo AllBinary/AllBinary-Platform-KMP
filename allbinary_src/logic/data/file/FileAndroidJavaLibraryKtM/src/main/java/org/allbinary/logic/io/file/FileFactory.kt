@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.io.File
 import java.io.FileNotFoundException
 import android.content.Context
 import org.allbinary.data.resource.ResourceUtil
@@ -107,7 +106,7 @@ var filePath = filePath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFile.createAbFile(filePath, false)
+                        return AbFile.createAbFileFromRawPath(filePath)
 }
 
 
@@ -122,7 +121,7 @@ var childFilePath = childFilePath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFile.createAbFile(file, childFilePath)
+                        return AbFile.createAbFileWithChild(file, childFilePath)
 }
 
 

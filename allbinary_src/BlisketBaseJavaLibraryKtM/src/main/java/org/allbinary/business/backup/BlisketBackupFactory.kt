@@ -84,7 +84,7 @@ var pathString = pathString
     var path: AbPath = AbPath(pathString)
 
 
-    var file: AbFile = AbFile.createAbFile(path)!!
+    var file: AbFile = AbFile.createAbFileFromAbPath(path)!!
 
 
 

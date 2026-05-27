@@ -309,7 +309,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "setTemplateAsInputStream()
                                 
                         else {
                             
-    var file: AbFile = AbFile.createAbFile(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
+    var file: AbFile = AbFile.createAbFileFromAbPath(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
 
 
     

@@ -65,7 +65,7 @@ var fileName = fileName
     var FILEABPATH: AbPath = AbPath(path, fileName)
 
 
-    var file: AbFile = AbFile.createAbFile(FILEABPATH)!!
+    var file: AbFile = AbFile.createAbFileFromAbPath(FILEABPATH)!!
 
 
 
@@ -86,7 +86,7 @@ var fileName = fileName
     var FILEABPATH: AbPath = AbPath(path, fileName)
 
 
-    var file: AbFile = AbFile.createAbFile(FILEABPATH)!!
+    var file: AbFile = AbFile.createAbFileFromAbPath(FILEABPATH)!!
 
 
     
@@ -117,7 +117,7 @@ var fileName = fileName
     var FILEABPATH: AbPath = AbPath(path, fileName)
 
 
-    var file: AbFile = AbFile.createAbFile(FILEABPATH)!!
+    var file: AbFile = AbFile.createAbFileFromAbPath(FILEABPATH)!!
 
 file.delete()
 }

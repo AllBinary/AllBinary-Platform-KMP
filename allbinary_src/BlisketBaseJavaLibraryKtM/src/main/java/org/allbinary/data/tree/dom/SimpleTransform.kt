@@ -57,10 +57,10 @@ this.dataFilePath= dataFilePath
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var inputStream: AbFileLocalInputStream = AbFileLocalInputStream(AbFile.createAbFile(this.xsltFilePath))
+    var inputStream: AbFileLocalInputStream = AbFileLocalInputStream(AbFile.createAbFileFromAbPath(this.xsltFilePath))
 
 
-    var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(AbFile.createAbFile(this.dataFilePath)))!!
+    var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(AbFile.createAbFileFromAbPath(this.dataFilePath)))!!
 
 
     var result: String = XslHelper.getInstance()!!.translate(StreamSource(inputStream), StreamSource(StringBufferInputStream(DomDocumentHelper.toString(document))))!!

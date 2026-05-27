@@ -41,11 +41,11 @@ open public class AbFile
         
 companion object {
             
-    val NULL_FILE: AbFile = AbFile.createAbFile(StringUtil.getInstance()!!.EMPTY_STRING, false)!!
+    val NULL_FILE: AbFile = AbFile.createAbFileFromRawPath(StringUtil.getInstance()!!.EMPTY_STRING)!!
 
                 @Throws(Exception::class)
             
-    open fun createAbFile(file: AbFile, childPathName: String)
+    open fun createAbFileWithChild(file: AbFile, childPathName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFile{
     //var file = file
@@ -75,7 +75,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun createAbFile(filePath: String, fileName: String)
+    open fun createAbFilePathAndName(filePath: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFile{
     //var filePath = filePath
@@ -89,7 +89,7 @@ companion object {
 }
 
 
-    open fun createAbFile(abPath: AbPath)
+    open fun createAbFileFromAbPath(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : AbFile{
     //var abPath = abPath
@@ -101,11 +101,10 @@ companion object {
 }
 
 
-    open fun createAbFile(filePath: String, unknown: Boolean)
+    open fun createAbFileFromRawPath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFile{
     //var filePath = filePath
-    //var unknown = unknown
 
 
 
@@ -382,7 +381,7 @@ this.file.deleteOnExit()
 }
 
 
-    override fun list(filter: FilenameFilter)
+    override fun listWithFilter(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>{
     //var filter = filter
@@ -405,7 +404,7 @@ this.file.deleteOnExit()
 }
 
 
-    open fun listFiles(filter: FilenameFilter)
+    open fun listFilesFileNameFilter(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
     //var filter = filter
@@ -417,7 +416,7 @@ this.file.deleteOnExit()
 }
 
 
-    open fun listFiles(filter: FileFilter)
+    open fun listFilesFileFilter(filter: FileFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
     //var filter = filter
@@ -608,7 +607,7 @@ this.file.deleteOnExit()
     open fun compareTo(pathname: File)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-var pathname = pathname
+    //var pathname = pathname
 
 
 
@@ -620,12 +619,12 @@ var pathname = pathname
     override fun equals(obj: Any?)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var obj = obj
+    //var obj = obj
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.equals(obj)
+                        return TsUtil.getInstance()!!.equalsNotstring(this.file, obj)
 }
 
 
@@ -636,7 +635,7 @@ var obj = obj
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TsUtil.getInstance()!!.hashCode(this.file)
+                        return this.file.hashCode()
 }
 
 

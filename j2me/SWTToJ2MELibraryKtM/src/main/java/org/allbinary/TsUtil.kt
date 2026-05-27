@@ -154,6 +154,19 @@ recordStore!!.getRecord(recordId, data, 0)
 }
 
 
+    open fun equalsNotstring(anyType: Any?, object2: Any?)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var anyType = anyType
+    //var object2 = object2
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return anyType!!.equals(object2)
+}
+
+
     open fun getClassClassLoader(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : ClassLoader{

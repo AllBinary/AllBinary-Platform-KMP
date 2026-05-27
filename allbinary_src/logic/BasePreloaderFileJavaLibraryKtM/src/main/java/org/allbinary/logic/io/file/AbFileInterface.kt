@@ -106,7 +106,7 @@ interface AbFileInterface {
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>
 
-    open fun list(filter: FilenameFilter)
+    open fun listWithFilter(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>
 
