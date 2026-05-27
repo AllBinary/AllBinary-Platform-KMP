@@ -219,7 +219,7 @@ var cloud = cloud
     var fixedPathString: String = realPath!!.toFileSystemString() +file.getPath()!!.substring(beginIndex, endIndex)
 
 
-    var fixedPath: AbPath = AbPath(fixedPathString)
+    var fixedPath: AbPath = AbPath(fixedPathString, StringUtil.getInstance()!!.EMPTY_STRING)
 
 this.directory.create(fixedPath)
 
@@ -727,7 +727,7 @@ stringBuffer!!.appendint(end)
                                 
                         else {
                             
-    var path: String = AbPath(nextFile!!.getPath()).
+    var path: String = AbPath(nextFile!!.getPath(), StringUtil.getInstance()!!.EMPTY_STRING).
                             getPath()!!
 
 
@@ -738,7 +738,7 @@ stringBuffer!!.appendint(end)
                         if(path.indexOf(URLGLOBALS.getWebappPath()) < 0)
                         
                                     {
-                                    beginIndex -= AbPath(URLGLOBALS.getWebappPath()).
+                                    beginIndex -= AbPath(URLGLOBALS.getWebappPath(), StringUtil.getInstance()!!.EMPTY_STRING).
                             getPath()!!.length()
 
                                     }
@@ -747,7 +747,7 @@ stringBuffer!!.appendint(end)
     var newPath: String = toDirectoryAbPath!!.toFileSystemString() +path.substring(beginIndex)
 
 
-    var toFile: AbFile = AbFile.createAbFileFromAbPath(AbPath(newPath))!!
+    var toFile: AbFile = AbFile.createAbFileFromAbPath(AbPath(newPath, StringUtil.getInstance()!!.EMPTY_STRING))!!
 
 this.copyFile(nextFile, toFile, overwriteNewer, overwriteAll)
 
@@ -787,7 +787,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyDirectory")
     var newDirectory: String = FileUtil.getNewDirectory(fromFile)!!
 
 
-    var newDirectoryAbPath: AbPath = AbPath(to.getPath() +AbPathData.getInstance()!!.SEPARATOR +newDirectory)
+    var newDirectoryAbPath: AbPath = AbPath(to.getPath() +AbPathData.getInstance()!!.SEPARATOR +newDirectory, StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     

@@ -167,7 +167,7 @@ var categoryHierarchyInterface = categoryHierarchyInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath()
+                        return AbPath.createAbPath()
 }
 
 

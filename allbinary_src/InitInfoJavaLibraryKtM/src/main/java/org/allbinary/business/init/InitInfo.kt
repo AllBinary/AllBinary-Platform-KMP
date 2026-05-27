@@ -31,6 +31,7 @@ import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.java.bool.BooleanUtil
+import org.allbinary.logic.string.StringUtil
 
 open public class InitInfo
             : Object
@@ -155,8 +156,8 @@ var hashMap = hashMap
 
         try {
             this.testing= hashMap!!.get(this.TESTING) as String
-this.mainPath= AbPath(hashMap!!.get(this.MAINPATH) as String)
-this.testHtmlPath= AbPath(hashMap!!.get(this.TESTHTMLPATH) as String)
+this.mainPath= AbPath(hashMap!!.get(this.MAINPATH) as String, StringUtil.getInstance()!!.EMPTY_STRING)
+this.testHtmlPath= AbPath(hashMap!!.get(this.TESTHTMLPATH) as String, StringUtil.getInstance()!!.EMPTY_STRING)
 } catch(e: Exception)
             {
 

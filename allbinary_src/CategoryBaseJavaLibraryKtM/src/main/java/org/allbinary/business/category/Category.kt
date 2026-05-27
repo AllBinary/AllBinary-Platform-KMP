@@ -37,6 +37,7 @@ import org.allbinary.business.category.properties.root.RootCategoryPropertiesInt
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -126,7 +127,7 @@ this.log()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
-    var rootAbPath: AbPath = AbPath(NOT_ROOT)
+    var rootAbPath: AbPath = AbPath(NOT_ROOT, StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var categoryInterface: CategoryInterface = this.categoryHierarchyInterface!!.getRoot()!!

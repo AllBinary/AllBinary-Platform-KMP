@@ -234,7 +234,7 @@ var hashMap = hashMap
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath(this.create(this.EMPTY_STRING, key, hashMap))
+                        return AbPath(this.create(this.EMPTY_STRING, key, hashMap), StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -250,7 +250,7 @@ var hashMap = hashMap
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath(this.create(append, key, hashMap))
+                        return AbPath(this.create(append, key, hashMap), StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1434,7 +1434,7 @@ this.homeHostName= value
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-this.homeHostNamePath= AbPath(value)
+this.homeHostNamePath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1452,7 +1452,7 @@ this.hostName= value
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-this.hostNamePath= AbPath(value)
+this.hostNamePath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1470,7 +1470,7 @@ this.testHomeHostName= value
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-this.testHomeHostNamePath= AbPath(value)
+this.testHomeHostNamePath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1488,7 +1488,7 @@ this.testHostName= value
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-this.testHostNamePath= AbPath(value)
+this.testHostNamePath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1498,7 +1498,7 @@ this.testHostNamePath= AbPath(value)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-this.imagePath= AbPath(value)
+this.imagePath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1508,7 +1508,7 @@ this.imagePath= AbPath(value)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-this.staticPath= AbPath(value)
+this.staticPath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1518,7 +1518,7 @@ this.staticPath= AbPath(value)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
-this.categoryPath= AbPath(value)
+this.categoryPath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1632,7 +1632,7 @@ this.lastModified= value
         //nullable = true from not(false or (false and false)) = true
 {
     //var value = value
-this.ftpPath= AbPath(value)
+this.ftpPath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1642,7 +1642,7 @@ this.ftpPath= AbPath(value)
         //nullable = true from not(false or (false and false)) = true
 {
     //var value = value
-this.testFtpPath= AbPath(value)
+this.testFtpPath= AbPath(value, StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 
@@ -1652,7 +1652,7 @@ this.testFtpPath= AbPath(value)
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-    var storeAbPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.getCurrentHomeHostNamePath())
+    var storeAbPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.getCurrentHomeHostNamePath(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     
@@ -1669,7 +1669,7 @@ this.testFtpPath= AbPath(value)
                                 
 
     
-                        if(!this.directory.create(AbPath(storeAbPath +this.getCategoryPath())))
+                        if(!this.directory.create(AbPath(storeAbPath +this.getCategoryPath(), StringUtil.getInstance()!!.EMPTY_STRING)))
                         
                                     {
                                     
@@ -1682,7 +1682,7 @@ this.testFtpPath= AbPath(value)
                                 
 
     
-                        if(!this.directory.create(AbPath(storeAbPath +this.getStaticPath())))
+                        if(!this.directory.create(AbPath(storeAbPath +this.getStaticPath(), StringUtil.getInstance()!!.EMPTY_STRING)))
                         
                                     {
                                     
@@ -1735,21 +1735,21 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(viewPath)
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.INSTALLPATH)
 
-    var fromDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString())
+    var fromDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(viewPath)
 stringBuffer!!.append("special")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
-    var fromSpecialDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString())
+    var fromSpecialDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(viewPath)
 stringBuffer!!.append(this.getName())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
-    var toDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString())
+    var toDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     
@@ -1885,7 +1885,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 stringBuffer!!.append("Resources")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
-    var installCategoryAbPath: AbPath = AbPath(stringBuffer!!.toString())
+    var installCategoryAbPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getMainPath())
@@ -1893,7 +1893,7 @@ stringBuffer!!.append(this.getCurrentHomeHostNamePath())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 stringBuffer!!.append(this.getCategoryPath())
 
-    var categoryAbPath: AbPath = AbPath(stringBuffer!!.toString())
+    var categoryAbPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 FileUtil.getInstance()!!.copyDirectoryPortion(installCategoryAbPath, categoryAbPath, true, false, current, total)
 }
@@ -1916,10 +1916,10 @@ stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.TEMPLATEPATH)
 stringBuffer!!.append("images")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
-    var viewStoreImagesDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString())
+    var viewStoreImagesDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
-    var storeAbPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.getCurrentHomeHostNamePath())
+    var storeAbPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.getCurrentHomeHostNamePath(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 FileUtil.getInstance()!!.copyDirectoryPortion(viewStoreImagesDirectoryAbPath, storeAbPath, true, false, current, total)
 }

@@ -47,6 +47,7 @@ import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.io.path.PathUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.visual.transform.info.CompositeTransformInfoInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
@@ -104,7 +105,7 @@ var transformInfoInterface = transformInfoInterface
 var hashMap = hashMap
 this.transformInfoInterface= transformInfoInterface
 
-    var categoryThemeAbPath: AbPath = AbPath(hashMap!!.get(ThemeData.getInstance()!!.PATH) as String)
+    var categoryThemeAbPath: AbPath = AbPath(hashMap!!.get(ThemeData.getInstance()!!.PATH) as String, StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
@@ -182,7 +183,7 @@ this.init(rootStoreThemeCategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeThemeCategoryInterface = storeThemeCategoryInterface
-this.fileAbPath= AbPath(storeThemeCategoryInterface!!.getRootFilePath()!!.toString() +this.categoryAbPath!!.toString())
+this.fileAbPath= AbPath(storeThemeCategoryInterface!!.getRootFilePath()!!.toString() +this.categoryAbPath!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
 }
 

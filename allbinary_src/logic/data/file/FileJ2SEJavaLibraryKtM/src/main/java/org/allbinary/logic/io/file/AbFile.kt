@@ -68,7 +68,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFile(File(AbPath(filePath).
+                        return AbFile(File(AbPath(filePath, StringUtil.getInstance()!!.EMPTY_STRING).
                             toFileSystemString()))
 }
 
@@ -84,7 +84,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFile(File(AbPath(filePath).
+                        return AbFile(File(AbPath(filePath, StringUtil.getInstance()!!.EMPTY_STRING).
                             toFileSystemString(), fileName))
 }
 

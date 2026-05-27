@@ -35,6 +35,7 @@ import org.allbinary.globals.URLGLOBALS
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpStoreInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.w3c.dom.Node
@@ -105,13 +106,13 @@ stringBuffer!!.append(storeFrontInterface!!.getName())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.THEMEPATH)
 
-    var abPath: AbPath = AbPath(stringBuffer!!.toString())
+    var abPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var httpServletRequest: HttpServletRequest = transformInfoHttpStoreInterface!!.getPageContext()!!.getRequest() as HttpServletRequest
 
-this.webAppAbPath= AbPath(httpServletRequest!!.getContextPath() +abPath!!.toString())
-this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +abPath!!.toString()))
+this.webAppAbPath= AbPath(httpServletRequest!!.getContextPath() +abPath!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
+this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +abPath!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING))
 }
 
 

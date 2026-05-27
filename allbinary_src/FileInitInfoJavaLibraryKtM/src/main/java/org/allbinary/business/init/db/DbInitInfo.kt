@@ -116,7 +116,7 @@ this.initFileName= initFileName
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var PATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.PACKAGE)
+    var PATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.PACKAGE, StringUtil.getInstance()!!.EMPTY_STRING)
 
 this.directory.create(PATH)
 

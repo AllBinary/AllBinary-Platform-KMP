@@ -38,6 +38,7 @@ import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.io.file.zip.ZipFileUtil
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
@@ -70,6 +71,8 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    private val stringUtil: StringUtil = StringUtil.getInstance()!!
+
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val directory: Directory = Directory.getInstance()!!
@@ -81,7 +84,7 @@ companion object {
 : BasicArrayList{
 var pathString = pathString
 
-    var path: AbPath = AbPath(pathString)
+    var path: AbPath = AbPath(pathString, this.stringUtil!!.EMPTY_STRING)
 
 
     var file: AbFile = AbFile.createAbFileFromAbPath(path)!!
@@ -109,7 +112,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var backupPath: String = stringBuffer!!.toString()!!
 
 
-    var path: AbPath = AbPath(backupPath)
+    var path: AbPath = AbPath(backupPath, this.stringUtil!!.EMPTY_STRING)
 
 
     var fileBasicArrayList: BasicArrayList = this.getFileBasicArrayList(backupPath)!!
@@ -138,7 +141,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var backupPath: String = stringBuffer!!.toString()!!
 
 
-    var path: AbPath = AbPath(backupPath)
+    var path: AbPath = AbPath(backupPath, this.stringUtil!!.EMPTY_STRING)
 
 
     var fileBasicArrayList: BasicArrayList = BasicArrayListD()
@@ -202,7 +205,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var backupPath: String = stringBuffer!!.toString()!!
 
 
-    var path: AbPath = AbPath(backupPath)
+    var path: AbPath = AbPath(backupPath, this.stringUtil!!.EMPTY_STRING)
 
 
     var fileBasicArrayList: BasicArrayList = BasicArrayListD()
@@ -269,7 +272,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var backupPath: String = stringBuffer!!.toString()!!
 
 
-    var path: AbPath = AbPath(backupPath)
+    var path: AbPath = AbPath(backupPath, this.stringUtil!!.EMPTY_STRING)
 
 
     var fileBasicArrayList: BasicArrayList = BasicArrayListD()

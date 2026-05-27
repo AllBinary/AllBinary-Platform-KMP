@@ -67,7 +67,7 @@ this.logoFile=
 public constructor (node: Node){
 var node = node
 this.isFile= false
-this.logoAbPath= AbPath(DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEPATH, node.getChildNodes())!!.getNodeValue())
+this.logoAbPath= AbPath(DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEPATH, node.getChildNodes())!!.getNodeValue(), StringUtil.getInstance()!!.EMPTY_STRING)
 this.logoFile= DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEFILENAME, node.getChildNodes())!!.getNodeValue()
 }
 
@@ -85,7 +85,7 @@ this.getFormData(hashMap)
 {
 var hashMap = hashMap
 this.logoFileItem= hashMap!!.get(LogoData.getInstance()!!.IMAGE) as FileItem
-this.logoAbPath= AbPath(hashMap!!.get(LogoData.getInstance()!!.IMAGEPATH) as String)
+this.logoAbPath= AbPath(hashMap!!.get(LogoData.getInstance()!!.IMAGEPATH) as String, StringUtil.getInstance()!!.EMPTY_STRING)
 
     
                         if(this.logoFileItem != 

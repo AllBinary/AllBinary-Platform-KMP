@@ -33,6 +33,7 @@ import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 
 open public class DeleteCloud
@@ -66,7 +67,7 @@ var total = total
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(prePath)
 
-    var path: AbPath = AbPath(stringBuffer!!.toString())
+    var path: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var file: AbFile = AbFile.createAbFileFromAbPath(path)!!

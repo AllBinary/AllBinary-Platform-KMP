@@ -103,7 +103,7 @@ var filePath = filePath
 }
 
 
-    open fun getExtension(abFilePath: AbFilePath)
+    open fun getExtensionWithAbFilePath(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abFilePath = abFilePath
@@ -115,7 +115,7 @@ var abFilePath = abFilePath
 }
 
 
-    open fun getExtension(abPath: AbPath)
+    open fun getExtensionWithAbPath(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abPath = abPath
@@ -156,7 +156,7 @@ var filePath = filePath
 
                 @Throws(Exception::class)
             
-    open fun getWithoutExtension(abFilePath: AbFilePath)
+    open fun getWithoutExtensionWithAbFilePath(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abFilePath = abFilePath
@@ -170,7 +170,7 @@ var abFilePath = abFilePath
 
                 @Throws(Exception::class)
             
-    open fun getWithoutExtension(abPath: AbPath)
+    open fun getWithoutExtensionWithAbPath(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abPath = abPath
@@ -481,7 +481,7 @@ var path = path
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath()
+                        return AbPath.createAbPath()
 
                                     }
                                 
@@ -506,7 +506,7 @@ var path = path
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath(categoryName)
+                        return AbPath(categoryName, StringUtil.getInstance()!!.EMPTY_STRING)
 
                         }
                             

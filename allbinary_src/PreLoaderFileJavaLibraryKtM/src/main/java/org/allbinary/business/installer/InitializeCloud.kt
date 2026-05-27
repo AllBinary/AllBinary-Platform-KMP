@@ -34,6 +34,7 @@ import org.allbinary.logic.io.file.FileUtil
 import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 
 open public class InitializeCloud
@@ -77,12 +78,12 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(cloud)
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.DATA_PATH)
 
-    var path: AbPath = AbPath(stringBuffer!!.toString())
+    var path: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 
-    var realPath: AbPath = AbPath(stringBuffer!!.toString())
+    var realPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var file: AbFile = AbFile.createAbFileFromAbPath(path)!!

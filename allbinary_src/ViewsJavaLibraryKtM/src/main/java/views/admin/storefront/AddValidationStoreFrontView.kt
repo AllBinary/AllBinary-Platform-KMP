@@ -36,6 +36,7 @@ import org.allbinary.logic.control.validate.ValidationComponentInterface
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -96,7 +97,7 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
                                 
 
     
-                        if(AbFile.createAbFileFromAbPath(AbPath(this.getStoreViewsPath()))!!.isFile())
+                        if(AbFile.createAbFileFromAbPath(AbPath(this.getStoreViewsPath(), StringUtil.getInstance()!!.EMPTY_STRING))!!.isFile())
                         
                                     {
                                     valid= Boolean.FALSE
@@ -178,7 +179,7 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
                                 
 
     
-                        if(AbFile.createAbFileFromAbPath(AbPath(this.getStoreViewsPath()))!!.isFile())
+                        if(AbFile.createAbFileFromAbPath(AbPath(this.getStoreViewsPath(), StringUtil.getInstance()!!.EMPTY_STRING))!!.isFile())
                         
                                     {
                                     stringBuffer!!.append("Store name clashes with template name<br/>")

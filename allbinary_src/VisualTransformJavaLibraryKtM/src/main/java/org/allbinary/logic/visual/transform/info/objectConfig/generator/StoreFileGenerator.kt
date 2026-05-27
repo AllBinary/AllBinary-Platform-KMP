@@ -74,7 +74,7 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(weblisketSession!!.getStoreName())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
-    var abPath: AbPath = AbPath(stringBuffer!!.toString())
+    var abPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var fileName: String = httpTransformInfoInterface!!.getPropertiesHashMap()!!.get(InputOutputTypeData.getInstance()!!.FILE) as String

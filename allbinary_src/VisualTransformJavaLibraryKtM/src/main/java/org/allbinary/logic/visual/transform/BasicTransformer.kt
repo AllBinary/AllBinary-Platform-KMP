@@ -242,10 +242,10 @@ this.streamUtil!!.close(inputStream)
                         
                                     {
                                     
-    var extension: String = pathUtil!!.getExtension(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
+    var extension: String = pathUtil!!.getExtensionWithAbPath(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
 
 
-    var filePath: String = pathUtil!!.getWithoutExtension(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
+    var filePath: String = pathUtil!!.getWithoutExtensionWithAbPath(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
 
 
     

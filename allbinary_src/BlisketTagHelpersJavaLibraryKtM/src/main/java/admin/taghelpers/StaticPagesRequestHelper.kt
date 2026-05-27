@@ -48,6 +48,7 @@ import org.allbinary.logic.control.search.SearchRequest
 import org.allbinary.logic.io.file.FileUtil
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.ServiceClientInformationInterfaceFactory
 import org.allbinary.logic.visual.transform.info.TransformInfoData
@@ -215,10 +216,10 @@ this.email()
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.storeName)!!
 
 
-    var fromAbPath: AbPath = AbPath(storeFrontInterface!!.getTestHtmlPath() +storeFrontInterface!!.getStaticPath())
+    var fromAbPath: AbPath = AbPath(storeFrontInterface!!.getTestHtmlPath() +storeFrontInterface!!.getStaticPath(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
-    var toAbPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +storeFrontInterface!!.getName() +AbPathData.getInstance()!!.SEPARATOR +storeFrontInterface!!.getStaticPath())
+    var toAbPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +storeFrontInterface!!.getName() +AbPathData.getInstance()!!.SEPARATOR +storeFrontInterface!!.getStaticPath(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 FileUtil.getInstance()!!.copy(fromAbPath, toAbPath)
 

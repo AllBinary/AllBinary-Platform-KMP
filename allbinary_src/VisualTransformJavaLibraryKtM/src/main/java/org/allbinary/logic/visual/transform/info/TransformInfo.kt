@@ -188,7 +188,7 @@ stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 stringBuffer!!.append(this.storeName)
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
-    var fileAbPath: AbPath = AbPath(stringBuffer!!.toString())
+    var fileAbPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var aObject: String = hashMap!!.get(transformInfoData!!.OBJECT) as String

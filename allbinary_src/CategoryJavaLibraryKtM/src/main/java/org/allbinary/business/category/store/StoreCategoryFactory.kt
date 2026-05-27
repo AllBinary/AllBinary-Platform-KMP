@@ -34,6 +34,7 @@ import org.allbinary.business.category.properties.CategoryPropertiesFactoryInter
 import org.allbinary.business.category.properties.root.store.RootStoreCategoryPropertiesFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.path.AbPath
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.w3c.dom.Node
 
@@ -141,7 +142,7 @@ var node = node
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreCategoryPropertiesFactory(this.transformInfoInterface, node) as CategoryPropertiesFactoryInterface
 
 
-    var categoryPath: AbPath = AbPath(CategoryUtil.getNameFromNode(node))
+    var categoryPath: AbPath = AbPath(CategoryUtil.getNameFromNode(node), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var level: Int = CategoryUtil.getPathLevel(categoryPath)!!

@@ -367,7 +367,7 @@ stringBuffer!!.append(storeFront!!.getName())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 stringBuffer!!.append(storeFront!!.getStaticPath())
 
-    var staticPath: AbPath = AbPath(stringBuffer!!.toString())
+    var staticPath: AbPath = AbPath(stringBuffer!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     

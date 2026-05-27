@@ -30,6 +30,7 @@ import org.allbinary.business.category.CategoryInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.io.path.AbPath
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
 open public class CategoryModifierTree : CategoryPrivateTree
@@ -85,7 +86,7 @@ var newChildCategoryInterface = newChildCategoryInterface
                                     {
                                     parentCategoryInterface!!.addChild(newChildCategoryInterface)
 
-    var directoryToBeCreatedAbPath: AbPath = AbPath(newChildCategoryInterface!!.getRootFilePath()!!.toString() +newChildCategoryInterface!!.getPath()!!.toString())
+    var directoryToBeCreatedAbPath: AbPath = AbPath(newChildCategoryInterface!!.getRootFilePath()!!.toString() +newChildCategoryInterface!!.getPath()!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 this.directory.create(directoryToBeCreatedAbPath)
 
@@ -137,7 +138,7 @@ var existingChildCategoryInterface = existingChildCategoryInterface
                                     {
                                     parentCategoryInterface!!.addChild(existingChildCategoryInterface)
 
-    var directoryToBeDeletedAbPath: AbPath = AbPath(existingChildCategoryInterface!!.getRootFilePath()!!.toString() +existingChildCategoryInterface!!.getPath()!!.toString())
+    var directoryToBeDeletedAbPath: AbPath = AbPath(existingChildCategoryInterface!!.getRootFilePath()!!.toString() +existingChildCategoryInterface!!.getPath()!!.toString(), StringUtil.getInstance()!!.EMPTY_STRING)
 
 this.delete(existingChildCategoryInterface)
 parentCategoryInterface!!.removeChild(existingChildCategoryInterface)

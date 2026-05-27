@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringUtil
 
 open public class AbFilePath : AbPath {
         
 public constructor (aPath: String)                        
 
-                            : super(){
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING){
 var aPath = aPath
 
 
@@ -41,7 +42,7 @@ var aPath = aPath
 
 this.schema= this.getSchema(aPath)
 this.setName(abPathUtil!!.getNameFromPath(aPath))
-this.setPath(abPathUtil!!.adjust(this.getPath(abPathUtil!!.removeNameFromPath(aPath)!!.toString())))
+this.setPath(abPathUtil!!.adjust(this.getPathFromPath(abPathUtil!!.removeNameFromPath(aPath)!!.toString())))
 }
 
 

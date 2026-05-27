@@ -52,7 +52,7 @@ companion object {
             {
             }            
         
-    val NO_ABPATH: AbPath = AbPath()
+    val NO_ABPATH: AbPath = AbPath.createAbPath()!!
 
 }
                 

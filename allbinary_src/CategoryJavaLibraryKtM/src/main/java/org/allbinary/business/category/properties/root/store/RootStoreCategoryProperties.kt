@@ -41,6 +41,7 @@ import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.io.path.PathUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoHttpInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
@@ -72,7 +73,7 @@ public constructor (transformInfoInterface: TransformInfoInterface)
         {
     //var transformInfoInterface = transformInfoInterface
 this.transformInfoInterface= transformInfoInterface
-this.abPath= AbPath()
+this.abPath= AbPath.createAbPath()
 this.category= CategoryData.getInstance()!!.ROOTCATEGORY
 this.isRealRoot= true
 this.initPath()
@@ -110,7 +111,7 @@ this.transformInfoInterface= transformInfoInterface
 
     var categoryPath: String = CategoryUtil.getNameFromNode(node)!!
 
-this.abPath= AbPath(categoryPath)
+this.abPath= AbPath(categoryPath, StringUtil.getInstance()!!.EMPTY_STRING)
 this.category= PathUtil.getInstance()!!.getNameFromPath(categoryPath)
 
     
@@ -135,7 +136,7 @@ this.transformInfoInterface= transformInfoInterface
 
     var categoryPath: String = .toCharArray()
 
-this.abPath= AbPath(categoryPath)
+this.abPath= AbPath(categoryPath, StringUtil.getInstance()!!.EMPTY_STRING)
 this.category= PathUtil.getInstance()!!.getNameFromPath(categoryPath)
 
     
@@ -169,8 +170,8 @@ this.log()
 
     var httpServletRequest: HttpServletRequest = transformInfoHttpStoreInterface!!.getPageContext()!!.getRequest() as HttpServletRequest
 
-this.webAppAbPath= AbPath(httpServletRequest!!.getContextPath() +postPath)
-this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +postPath))
+this.webAppAbPath= AbPath(httpServletRequest!!.getContextPath() +postPath, StringUtil.getInstance()!!.EMPTY_STRING)
+this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +postPath, StringUtil.getInstance()!!.EMPTY_STRING))
 }
 
 

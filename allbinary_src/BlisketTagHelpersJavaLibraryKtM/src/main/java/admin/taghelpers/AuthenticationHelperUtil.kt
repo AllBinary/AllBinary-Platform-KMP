@@ -33,6 +33,7 @@ import org.allbinary.logic.communication.http.file.upload.HttpFilePermissions
 import org.allbinary.logic.communication.http.request.HttpRequestUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.path.AbPath
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonLabels
 
 open public class AuthenticationHelperUtil
@@ -83,7 +84,7 @@ var filePath = filePath
     var endIndex: Int = HttpRequestUtil.getInstance()!!.getLastSeparatorIndex(filePath)!!
 
 
-    var fullPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +filePath!!.substring(0, endIndex))
+    var fullPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +filePath!!.substring(0, endIndex), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
     var downloadFilePermissions: HttpFilePermissions = HttpFilePermissions(fullPath)

@@ -41,6 +41,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.FileUtil
 import org.allbinary.logic.io.file.FileWrapperUtil
 import org.allbinary.logic.io.path.AbPath
+import org.allbinary.logic.string.StringUtil
 import org.w3c.dom.Document
 //name="inputAutomationConfiguration", 
 open public class InputAutomationConfiguration
@@ -120,7 +121,7 @@ this.logUtil!!.putF("Installed: " +installed, this, "setIntalled")
 
     var file: File = File(FILENAME)
 
-FileUtil.getInstance()!!.copy(AbPath(file.getAbsolutePath()), AbPath(file.getAbsolutePath() +".bak.xml"))
+FileUtil.getInstance()!!.copy(AbPath(file.getAbsolutePath(), StringUtil.getInstance()!!.EMPTY_STRING), AbPath(file.getAbsolutePath() +".bak.xml", StringUtil.getInstance()!!.EMPTY_STRING))
 
     var jaxbContext: JAXBContext = JAXBContext.newInstance(InputAutomationConfiguration::class)!!
 

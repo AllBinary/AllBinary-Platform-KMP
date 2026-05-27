@@ -30,6 +30,7 @@ import org.allbinary.logic.io.file.FilePathData
 import org.allbinary.logic.io.path.AbFilePath
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 //Used to correct user input for paths
 open public class AbPathUtilOld
@@ -468,7 +469,7 @@ var categoryPath = categoryPath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath()
+                        return AbPath.createAbPath()
 
                                     }
                                 
@@ -493,7 +494,7 @@ var categoryPath = categoryPath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath(categoryName)
+                        return AbPath(categoryName, StringUtil.getInstance()!!.EMPTY_STRING)
 
                         }
                             

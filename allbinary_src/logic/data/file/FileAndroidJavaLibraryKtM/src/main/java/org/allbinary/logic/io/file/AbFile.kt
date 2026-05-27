@@ -68,7 +68,7 @@ var filePath = filePath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFile(File(AbPath(filePath).
+                        return AbFile(File(AbPath(filePath, StringUtil.getInstance()!!.EMPTY_STRING).
                             toFileSystemString()))
 }
 
@@ -84,7 +84,7 @@ var fileName = fileName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFile(File(AbPath(filePath).
+                        return AbFile(File(AbPath(filePath, StringUtil.getInstance()!!.EMPTY_STRING).
                             toFileSystemString(), fileName))
 }
 
@@ -119,7 +119,7 @@ var filePath = filePath
 protected constructor (file: File)
             : super()
         {
-var file = file
+    //var file = file
 this.file= file
 }
 
@@ -384,7 +384,7 @@ this.file.deleteOnExit()
     override fun listWithFilter(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>{
-var filter = filter
+    //var filter = filter
 
 
 
@@ -407,7 +407,7 @@ var filter = filter
     open fun listFilesFileNameFilter(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
-var filter = filter
+    //var filter = filter
 
 
 
@@ -419,7 +419,7 @@ var filter = filter
     open fun listFilesFileFilter(filter: FileFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
-var filter = filter
+    //var filter = filter
 
 
 
@@ -453,7 +453,7 @@ var filter = filter
     open fun renameTo(dest: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var dest = dest
+    //var dest = dest
 
 
 
@@ -465,7 +465,7 @@ var dest = dest
     override fun setLastModified(time: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var time = time
+    //var time = time
 
 
 
@@ -488,7 +488,7 @@ var time = time
     open fun compareTo(pathname: File)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-var pathname = pathname
+    //var pathname = pathname
 
 
 
@@ -500,7 +500,7 @@ var pathname = pathname
     override fun equals(obj: Any?)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var obj = obj
+    //var obj = obj
 
 
 

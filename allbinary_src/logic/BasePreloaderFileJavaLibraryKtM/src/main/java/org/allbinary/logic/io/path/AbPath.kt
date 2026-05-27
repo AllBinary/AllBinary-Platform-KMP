@@ -38,6 +38,30 @@ open public class AbPath
         
 companion object {
             
+    open fun createAbPath()
+        //nullable = true from not(false or (false and true)) = true
+: AbPath{
+
+        try {
+            
+    var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbPath(EMPTY_STRING, EMPTY_STRING)
+} catch(ex: Exception)
+            {
+
+
+
+                            throw RuntimeException()
+}
+
+}
+
+
     private val NETWORK_SEP: String = ":/"
 
         }
@@ -46,50 +70,19 @@ companion object {
 
     private val abPathData: AbPathData = AbPathData.getInstance()!!
 
-    var schema: String = StringUtil.getInstance()!!.EMPTY_STRING
-
-    private var path: String = StringUtil.getInstance()!!.EMPTY_STRING
-
-    var nameP: String = StringUtil.getInstance()!!.EMPTY_STRING
-
-    private var hasSchema: Boolean = false
-
-    private var numberOfSeps: Int = 0
-
     private val abPathUtil: PathUtil = PathUtil.getInstance()!!
-public constructor ()
-            : super()
-        {
-this.init()
-}
-
 
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor (aPath: String)
-            : super()
-        {
-var aPath = aPath
 
-    var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
+    var schema: String = this.EMPTY_STRING
 
+    private var path: String = this.EMPTY_STRING
 
-    
-                        if(!stringValidationUtil!!.isEmpty(aPath))
-                        
-                                    {
-                                    this.schema= this.getSchema(aPath)
-this.nameP= this.EMPTY_STRING
-this.path= this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPath(aPath)))
+    var nameP: String = this.EMPTY_STRING
 
-                                    }
-                                
-                        else {
-                            this.init()
+    private var hasSchemaP: Boolean = false
 
-                        }
-                            
-}
-
+    private var numberOfSeps: Int = 0
 public constructor (aPath: String, name: String)
             : super()
         {
@@ -105,7 +98,7 @@ var name = name
                                     {
                                     this.schema= this.getSchema(aPath)
 this.nameP= name
-this.path= this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPath(aPath)))
+this.path= this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPathFromPath(aPath)))
 
                                     }
                                 
@@ -147,7 +140,7 @@ var aPath = aPath
                         if(beginIndex >= 0)
                         
                                     {
-                                    this.hasSchema= true
+                                    this.hasSchemaP= true
 
 
 
@@ -156,7 +149,7 @@ var aPath = aPath
 
                                     }
                                 
-this.hasSchema= false
+this.hasSchemaP= false
 
 
 
@@ -172,13 +165,13 @@ this.hasSchema= false
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hasSchema
+                        return this.hasSchemaP
 }
 
 
                 @Throws(Exception::class)
             
-    open fun getPath(aPath: String)
+    open fun getPathFromPath(aPath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var aPath = aPath
