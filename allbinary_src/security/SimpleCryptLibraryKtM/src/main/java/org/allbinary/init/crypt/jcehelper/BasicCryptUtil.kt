@@ -116,7 +116,7 @@ buffer.write(ch)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ByteArrayInputStream(this.tsUtil!!.encodeToByteArray())
+                        return ByteArrayInputStream(this.tsUtil!!.getByteArray(decryptedString))
 }
 
 

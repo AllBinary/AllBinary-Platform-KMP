@@ -203,7 +203,7 @@ recordStore!!.getRecord(recordId, data, 0)
 }
 
 
-    open fun getBytes(string: String)
+    open fun getByteArray(string: String)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var string = string

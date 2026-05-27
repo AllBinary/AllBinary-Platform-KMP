@@ -74,7 +74,7 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
-    var key: ByteArray = this.tsUtil!!.encodeToByteArray()!!
+    var key: ByteArray = this.tsUtil!!.getByteArray(keyAsString)!!
 
 
     var keySpec: KeySpec = KeySpecFactory.getInstance()!!.getInstance(this.algorithm, key)!!

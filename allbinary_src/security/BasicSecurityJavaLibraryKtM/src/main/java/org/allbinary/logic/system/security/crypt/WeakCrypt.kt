@@ -73,7 +73,7 @@ var value = value
 
         try {
             
-    var crypted: ByteArray = this.abCrypt!!.encrypt(this.tsUtil!!.encodeToByteArray())!!
+    var crypted: ByteArray = this.abCrypt!!.encrypt(this.tsUtil!!.getByteArray(value))!!
 
 
 

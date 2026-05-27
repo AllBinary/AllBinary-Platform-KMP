@@ -227,7 +227,7 @@ outputStream!!.writeUTF(value)
     var tsUtil: TsUtil = TsUtil.getInstance()!!
 
 
-    var savedGameBytes: ByteArray = tsUtil!!.encodeToByteArray()!!
+    var savedGameBytes: ByteArray = tsUtil!!.getByteArray(byteArrayOutputStream!!.toString())!!
 
 recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
 } catch(e: Exception)

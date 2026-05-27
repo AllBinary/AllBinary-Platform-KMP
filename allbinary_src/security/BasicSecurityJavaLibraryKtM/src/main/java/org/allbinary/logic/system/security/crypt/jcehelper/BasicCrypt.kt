@@ -50,7 +50,7 @@ var keyAsString = keyAsString
 
 
         try {
-            key= TsUtil.getInstance()!!.encodeToByteArray()
+            key= TsUtil.getInstance()!!.getByteArray(keyAsString)
 } catch(e: Exception)
             {
 

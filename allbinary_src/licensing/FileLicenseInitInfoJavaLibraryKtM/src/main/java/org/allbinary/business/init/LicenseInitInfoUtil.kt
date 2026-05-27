@@ -110,7 +110,8 @@ var initData = initData
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(this.filePath, this.INITFILENAME)!!
 
 
-    var licenseIdCrypted: ByteArray = tsUtil!!.encodeToByteArray()!!
+    var licenseIdCrypted: ByteArray = tsUtil!!.getByteArray(WeakCrypt(1).
+                            encrypt(initData!!.getLicenseId()))!!
 
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseIdCrypted))
 
@@ -127,7 +128,8 @@ dataOutputStream!!.writeInt(numberOfLicenseServers)
                         for (index in 0 until numberOfLicenseServers)
 
         {
-licenseServerCrypted= tsUtil!!.encodeToByteArray()
+licenseServerCrypted= tsUtil!!.getByteArray(WeakCrypt(3).
+                            encrypt(initData!!.getServer(index)))
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 }
 
