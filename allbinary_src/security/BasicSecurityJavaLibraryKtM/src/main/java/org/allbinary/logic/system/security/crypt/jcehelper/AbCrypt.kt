@@ -30,10 +30,10 @@ import java.security.spec.KeySpec
 import javax.crypto.Cipher
 import javax.crypto.SecretKey
 import javax.crypto.SecretKeyFactory
+import org.allbinary.TsUtil
 import org.allbinary.init.crypt.jcehelper.CryptInterface
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.PreLogUtil
-import org.allbinary.logic.java.byteutil.ByteUtil
 import org.allbinary.string.CommonStrings
 import org.bouncycastle.jce.provider.BouncyCastleProvider
 
@@ -42,6 +42,8 @@ open public class AbCrypt
         
                 , CryptInterface {
         
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private var secretComposite: BaseSecretComposite = BaseSecretComposite.NULL_SECRET_COMPOSITE
 
@@ -72,7 +74,7 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
-    var key: ByteArray = keyAsString!!.encodeToByteArray()!!
+    var key: ByteArray = this.tsUtil!!.encodeToByteArray()!!
 
 
     var keySpec: KeySpec = KeySpecFactory.getInstance()!!.getInstance(this.algorithm, key)!!

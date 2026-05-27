@@ -93,7 +93,7 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
 
     var tokenizer: Tokenizer = Tokenizer(this.commonSeps!!.UNDERSCORE)
 
-tokenizer.getTokens(string, list)
+tokenizer.getTokensFromString(string, list)
 
     var size: Int = list.size()!!
 

@@ -132,7 +132,7 @@ private constructor ()
 var inputStream = inputStream
 var file = file
 
-    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(file)!!
+    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(file)!!
 
 this.write(inputStream, dataOutputStream)
 }
@@ -312,7 +312,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyToCloud")
                         }
                             
 
-    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(outFile)!!
+    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(outFile)!!
 
 
     var fileInputStream: AbFileInputStream = AbFileLocalInputStream(file)
@@ -402,7 +402,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyToCloud")
                         }
                             
 
-    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(outFile)!!
+    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(outFile)!!
 
 
     var fileInputStream: AbFileInputStream = AbFileLocalInputStream(file)
@@ -604,7 +604,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyFile")
                                     }
                                 
 
-    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(toFile)!!
+    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(toFile)!!
 
 
     var fileInputStream: AbFileInputStream = AbFileInputStream(fromFile)

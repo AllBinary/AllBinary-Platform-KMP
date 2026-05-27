@@ -28,6 +28,7 @@
 import java.security.spec.KeySpec
 import javax.crypto.spec.DESKeySpec
 import javax.crypto.spec.DESedeKeySpec
+import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
 
@@ -71,8 +72,11 @@ var keyData = keyData
 
         try {
             
+    var tsUtil: TsUtil = TsUtil.getInstance()!!
+
+
     
-                        if(algorithm.compareTo(this.DES) == 0)
+                        if(tsUtil!!.compareTo(algorithm, this.DES) == 0)
                         
                                     {
                                     
@@ -85,7 +89,7 @@ var keyData = keyData
                                 
                              else 
     
-                        if(algorithm.compareTo(this.DESEDE) == 0)
+                        if(tsUtil!!.compareTo(algorithm, this.DESEDE) == 0)
                         
                                     {
                                     

@@ -29,6 +29,7 @@ import java.io.Closeable
 import java.io.DataInputStream
 import java.io.InputStream
 import java.io.OutputStream
+import org.allbinary.TsUtil
 import org.allbinary.logic.io.AbDataOutputStream
 import org.allbinary.logic.io.FileStreamFactory
 import org.allbinary.logic.io.StreamUtil
@@ -70,6 +71,8 @@ companion object {
     private val FILE: String = "OpenGLConfiguration.dat"
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private var opengl: Boolean = false
 
@@ -158,7 +161,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
 
 
     
-                        if(version.compareTo(openGLFeatureFactory!!.OPENGL_AUTO_SELECT.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(version, openGLFeatureFactory!!.OPENGL_AUTO_SELECT.getName()) == 0)
                         
                                     {
                                     this.setVersionSelector(openGLFeatureFactory!!.OPENGL_AUTO_SELECT)
@@ -167,7 +170,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
                                 
                              else 
     
-                        if(version.compareTo(openGLFeatureFactory!!.OPENGL_MINIMUM.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(version, openGLFeatureFactory!!.OPENGL_MINIMUM.getName()) == 0)
                         
                                     {
                                     this.setVersionSelector(openGLFeatureFactory!!.OPENGL_MINIMUM)
@@ -187,7 +190,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
 
 
     
-                        if(type.compareTo(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(type, openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName()) == 0)
                         
                                     {
                                     this.setType(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD)
@@ -196,7 +199,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
                                 
                              else 
     
-                        if(type.compareTo(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(type, openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName()) == 0)
                         
                                     {
                                     this.setType(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS)
@@ -216,7 +219,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
 
 
     
-                        if(imageColor!!.compareTo(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(imageColor, openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444.getName()) == 0)
                         
                                     {
                                     this.setImageColor(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444)
@@ -225,7 +228,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
                                 
                              else 
     
-                        if(imageColor!!.compareTo(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(imageColor, openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444.getName()) == 0)
                         
                                     {
                                     this.setImageColor(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444)
@@ -234,7 +237,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
                                 
                              else 
     
-                        if(imageColor!!.compareTo(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(imageColor, openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444.getName()) == 0)
                         
                                     {
                                     this.setImageColor(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444)
@@ -254,7 +257,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
 
 
     
-                        if(color.compareTo(openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_4444.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(color, openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_4444.getName()) == 0)
                         
                                     {
                                     this.setColor(openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_4444)
@@ -263,7 +266,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
                                 
                              else 
     
-                        if(color.compareTo(openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_565.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(color, openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_565.getName()) == 0)
                         
                                     {
                                     this.setColor(openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_565)
@@ -272,7 +275,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CO
                                 
                              else 
     
-                        if(color.compareTo(openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_8888.getName()) == 0)
+                        if(this.tsUtil!!.compareTo(color, openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_8888.getName()) == 0)
                         
                                     {
                                     this.setColor(openGLFeatureFactory!!.OPENGL_COLOR_DEPTH_8888)

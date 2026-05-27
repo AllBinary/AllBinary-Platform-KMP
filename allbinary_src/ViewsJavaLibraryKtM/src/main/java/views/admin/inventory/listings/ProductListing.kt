@@ -175,7 +175,7 @@ newFile!!.createNewFile()
                         
                                     {
                                     
-    var idOutData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(newFile)!!
+    var idOutData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(newFile)!!
 
 idOutData!!.writeBytes(data)
 idOutData!!.flush()

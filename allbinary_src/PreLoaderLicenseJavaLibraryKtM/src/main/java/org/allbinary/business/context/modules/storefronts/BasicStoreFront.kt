@@ -434,7 +434,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SEMICOLON)
 
 
-    var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayListD())!!
+    var subStoreVector: BasicArrayList = tokenizer.getTokensFromString(this.subStores, BasicArrayListD())!!
 
 
 

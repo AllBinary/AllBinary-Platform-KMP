@@ -66,7 +66,7 @@ var value = value
         try {
             this.newFile!!.createNewFile()
 
-    var idData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(this.newFile)!!
+    var idData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(this.newFile)!!
 
 idData!!.writeLong(value)
 } catch(e: Exception)

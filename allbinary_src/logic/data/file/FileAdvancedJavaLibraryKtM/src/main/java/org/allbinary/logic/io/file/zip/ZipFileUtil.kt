@@ -225,7 +225,7 @@ stringBuffer!!.append(" getParent: ")
 stringBuffer!!.append(entryFile!!.getParent())
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "unzip")
 
-    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(entryFile)!!
+    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(entryFile)!!
 
 fileUtil!!.write(inputStream, dataOutputStream, buffer)
 

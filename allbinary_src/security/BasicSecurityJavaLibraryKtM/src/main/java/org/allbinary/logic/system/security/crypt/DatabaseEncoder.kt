@@ -104,7 +104,7 @@ var value = value
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SPACE)
 
 
-    var vector: BasicArrayList = tokenizer.getTokens(value, BasicArrayListD())!!
+    var vector: BasicArrayList = tokenizer.getTokensFromString(value, BasicArrayListD())!!
 
 
     var byteVector: BasicArrayList = BasicArrayListD()

@@ -329,7 +329,7 @@ this.logDbInitInfo= LogDbInitInfo()
 
 file.createNewFile()
 
-    var idOutData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(file)!!
+    var idOutData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(file)!!
 
 idOutData!!.writeBytes(this.sqlCommandLog!!.toString())
 

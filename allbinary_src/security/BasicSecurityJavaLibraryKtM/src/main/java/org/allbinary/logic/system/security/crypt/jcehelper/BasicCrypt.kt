@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.TsUtil
 import org.allbinary.init.crypt.jcehelper.CryptInterface
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -49,7 +50,7 @@ var keyAsString = keyAsString
 
 
         try {
-            key= keyAsString!!.encodeToByteArray()
+            key= TsUtil.getInstance()!!.encodeToByteArray()
 } catch(e: Exception)
             {
 

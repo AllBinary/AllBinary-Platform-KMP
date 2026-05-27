@@ -99,7 +99,7 @@ var stringVector = stringVector
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.COMMA)
 
 
-    var keywordVector: BasicArrayList = tokenizer.getTokens(keywords, BasicArrayListD())!!
+    var keywordVector: BasicArrayList = tokenizer.getTokensFromString(keywords, BasicArrayListD())!!
 
 
 
@@ -127,7 +127,7 @@ hashSet!!.add(cleanString)
     var spaceTokenizer: Tokenizer = Tokenizer(commonSeps!!.SPACE)
 
 
-    var subKeywordVector: BasicArrayList = spaceTokenizer!!.getTokens(cleanString, BasicArrayListD())!!
+    var subKeywordVector: BasicArrayList = spaceTokenizer!!.getTokensFromString(cleanString, BasicArrayListD())!!
 
 
 

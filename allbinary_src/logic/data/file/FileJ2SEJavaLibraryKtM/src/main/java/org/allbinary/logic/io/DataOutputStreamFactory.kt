@@ -55,8 +55,8 @@ companion object {
         
                 @Throws(Exception::class)
             
-    open fun getInstance(file: AbFile)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceForAbFile(file: AbFile)
+        //nullable = true from not(false or (false and false)) = true
 : AbDataOutputStream{
 var file = file
 

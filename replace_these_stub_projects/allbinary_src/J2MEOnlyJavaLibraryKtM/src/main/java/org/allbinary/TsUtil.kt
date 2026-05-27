@@ -203,6 +203,18 @@ recordStore!!.getRecord(recordId, data, 0)
 }
 
 
+    open fun getBytes(string: String)
+        //nullable = true from not(false or (false and false)) = true
+: ByteArray{
+    //var string = string
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return string.encodeToByteArray()
+}
+
+
     open fun isItemListener(owner: Displayable)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{

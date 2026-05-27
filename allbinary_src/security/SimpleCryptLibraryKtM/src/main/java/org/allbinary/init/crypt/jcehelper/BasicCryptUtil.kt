@@ -28,6 +28,7 @@
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
+import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class BasicCryptUtil
@@ -57,6 +58,8 @@ companion object {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val XML_START: String = "<?xml"
 
@@ -113,7 +116,7 @@ buffer.write(ch)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ByteArrayInputStream(decryptedString!!.encodeToByteArray())
+                        return ByteArrayInputStream(this.tsUtil!!.encodeToByteArray())
 }
 
 

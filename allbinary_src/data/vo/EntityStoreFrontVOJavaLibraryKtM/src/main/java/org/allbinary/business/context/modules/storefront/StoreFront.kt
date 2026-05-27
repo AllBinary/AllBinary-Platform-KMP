@@ -1254,7 +1254,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SEMICOLON)
 
 
-    var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayListD())!!
+    var subStoreVector: BasicArrayList = tokenizer.getTokensFromString(this.subStores, BasicArrayListD())!!
 
 
 

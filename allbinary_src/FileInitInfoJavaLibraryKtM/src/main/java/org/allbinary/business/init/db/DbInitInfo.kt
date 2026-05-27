@@ -129,7 +129,7 @@ this.directory.create(PATH)
 
 newFile!!.createNewFile()
 
-    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(newFile)!!
+    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(newFile)!!
 
 
         try {

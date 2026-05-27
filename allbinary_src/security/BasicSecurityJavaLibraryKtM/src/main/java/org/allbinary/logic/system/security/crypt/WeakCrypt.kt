@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.crypt.jcehelper.AbCrypt
@@ -44,6 +45,8 @@ companion object {
 
         }
             
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
+
     private var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.getInstance()!!.DES)
 public constructor (key: Int)
             : super()
@@ -70,7 +73,7 @@ var value = value
 
         try {
             
-    var crypted: ByteArray = this.abCrypt!!.encrypt(value.encodeToByteArray())!!
+    var crypted: ByteArray = this.abCrypt!!.encrypt(this.tsUtil!!.encodeToByteArray())!!
 
 
 

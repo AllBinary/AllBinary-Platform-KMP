@@ -60,7 +60,7 @@ var result = result
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.AMPERSAND)
 
 
-    var tokens: BasicArrayList = tokenizer.getTokens(result, BasicArrayListD())!!
+    var tokens: BasicArrayList = tokenizer.getTokensFromString(result, BasicArrayListD())!!
 
 
     var tokenizer2: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.EQUALS)

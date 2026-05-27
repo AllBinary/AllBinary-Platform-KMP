@@ -90,7 +90,7 @@ public constructor ()
 
 newFile!!.createNewFile()
 
-    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(newFile)!!
+    var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(newFile)!!
 
 
     var cryptedUserName: ByteArray = WeakCrypt(1).

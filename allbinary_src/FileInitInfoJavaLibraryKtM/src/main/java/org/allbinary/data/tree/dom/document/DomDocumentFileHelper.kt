@@ -99,7 +99,7 @@ var document = document
                                     }
                                 
 file.createNewFile()
-dataOutputStream= DataOutputStreamFactory.getInstance()!!.getInstance(file)
+dataOutputStream= DataOutputStreamFactory.getInstance()!!.getInstanceForAbFile(file)
 
     var streamResult: StreamResult = StreamResult(dataOutputStream)
 

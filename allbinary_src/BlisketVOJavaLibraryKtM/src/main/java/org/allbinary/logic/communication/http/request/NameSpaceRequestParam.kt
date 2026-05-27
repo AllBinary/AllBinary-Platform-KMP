@@ -78,7 +78,7 @@ this.value= value
     var sepTokenizer: Tokenizer = Tokenizer(NameSpaceRequestParamData.SEP)
 
 
-    var nameSpaceWithPropertiesVector: BasicArrayList = sepTokenizer!!.getTokens(packages, BasicArrayListD())!!
+    var nameSpaceWithPropertiesVector: BasicArrayList = sepTokenizer!!.getTokensFromString(packages, BasicArrayListD())!!
 
 
     
@@ -112,7 +112,7 @@ this.value= value
 
 list.clear()
 
-    var nameSpaceAndPropertiesVector: BasicArrayList = nameSpaceAndPropertiesTokenizer!!.getTokens(nameSpaceWithProperties, list)!!
+    var nameSpaceAndPropertiesVector: BasicArrayList = nameSpaceAndPropertiesTokenizer!!.getTokensFromString(nameSpaceWithProperties, list)!!
 
 
     
@@ -267,7 +267,7 @@ var properties = properties
     var packagePropertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
-    var propertyVector: BasicArrayList = propertiesTokenizer!!.getTokens(properties, BasicArrayListD())!!
+    var propertyVector: BasicArrayList = propertiesTokenizer!!.getTokensFromString(properties, BasicArrayListD())!!
 
 
     var list: BasicArrayList = BasicArrayListD()
@@ -289,7 +289,7 @@ var properties = properties
 
 list.clear()
 
-    var propertyNameValueVector: BasicArrayList = propertyTokenizer!!.getTokens(property, list)!!
+    var propertyNameValueVector: BasicArrayList = propertyTokenizer!!.getTokensFromString(property, list)!!
 
 
     var index2: Int = 0

@@ -639,7 +639,7 @@ stringBuffer!!.append(" GL_EXTENSIONS: ")
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.SPACE)
 
 
-    var list: BasicArrayList = tokenizer.getTokens(this.glExtensions, BasicArrayListD())!!
+    var list: BasicArrayList = tokenizer.getTokensFromString(this.glExtensions, BasicArrayListD())!!
 
 
     var size: Int = list.size()!!

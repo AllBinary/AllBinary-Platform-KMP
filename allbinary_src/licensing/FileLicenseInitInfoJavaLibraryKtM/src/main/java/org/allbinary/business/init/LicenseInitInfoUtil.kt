@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.TsUtil
 import org.allbinary.globals.PATH_GLOBALS
 import org.allbinary.globals.URLGLOBALS
 import org.allbinary.logic.communication.log.LogUtil
@@ -103,11 +104,13 @@ var initData = initData
 
         try {
             
+    var tsUtil: TsUtil = TsUtil.getInstance()!!
+
+
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(this.filePath, this.INITFILENAME)!!
 
 
-    var licenseIdCrypted: ByteArray = WeakCrypt(1).
-                            encrypt(initData!!.getLicenseId())!!.encodeToByteArray()!!
+    var licenseIdCrypted: ByteArray = tsUtil!!.encodeToByteArray()!!
 
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseIdCrypted))
 
@@ -124,8 +127,7 @@ dataOutputStream!!.writeInt(numberOfLicenseServers)
                         for (index in 0 until numberOfLicenseServers)
 
         {
-licenseServerCrypted= WeakCrypt(3).
-                            encrypt(initData!!.getServer(index))!!.encodeToByteArray()
+licenseServerCrypted= tsUtil!!.encodeToByteArray()
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 }
 

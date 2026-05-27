@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
+import org.allbinary.TsUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
@@ -46,7 +47,7 @@ var sep = sep
     
                         if(sep == 
                                     null
-                                 || sep.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) == 0)
+                                 || TsUtil.getInstance()!!.compareTo(sep, StringUtil.getInstance()!!.EMPTY_STRING) == 0)
                         
                                     {
                                     
@@ -135,7 +136,7 @@ index= end +this.endSep!!.length
 }
 
 
-    open fun getTokens(string: String, tokenVector: BasicArrayList)
+    open fun getTokensFromString(string: String, tokenVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var string = string
