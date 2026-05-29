@@ -91,7 +91,7 @@ var fileBasicArrayList = fileBasicArrayList
                                 
 zipFile!!.createNewFile()
 
-    var outputStream: ZipOutputStream = ZipOutputStream(AbFileOutputStream(zipFile))
+    var outputStream: ZipOutputStream = ZipOutputStream(AbFileOutputStream.createFromAbFile(zipFile))
 
 
     var streamUtil: StreamUtil = StreamUtil.getInstance()!!

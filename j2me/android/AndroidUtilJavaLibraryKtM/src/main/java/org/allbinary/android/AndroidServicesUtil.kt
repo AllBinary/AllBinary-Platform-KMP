@@ -81,7 +81,7 @@ var name = name
     var runningServicesList: List<RunningServiceInfo> = activityManager!!.getRunningServices(this.SERVICE_LIMIT_MAX)!!
 
 
-    var runningServiceInfo: ActivityManager.RunningServiceInfo
+    var runningServiceInfo: RunningServiceInfo
 
 
     var serviceComponent: ComponentName

@@ -68,13 +68,13 @@ companion object {
     open fun saveWithBatik(file: AbFile, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
-var file = file
-var bufferedImage = bufferedImage
+    //var file = file
+    //var bufferedImage = bufferedImage
 
     var batikPNGImageWriter: PNGImageWriter = PNGImageWriter()
 
 
-    var fileOutputStream: AbFileOutputStream = AbFileOutputStream(file)
+    var fileOutputStream: AbFileOutputStream = AbFileOutputStream.createFromAbFile(file)!!
 
 
         try {
@@ -93,8 +93,8 @@ this.logUtil!!.putF("Wrote Image: " +file.getAbsolutePath(), this, this.commonSt
     open fun saveWithImageIO(filePath: String, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
-var filePath = filePath
-var bufferedImage = bufferedImage
+    //var filePath = filePath
+    //var bufferedImage = bufferedImage
 this.saveWithImageIO(File(filePath), bufferedImage)
 }
 
@@ -102,8 +102,8 @@ this.saveWithImageIO(File(filePath), bufferedImage)
     open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
-var file = file
-var bufferedImage = bufferedImage
+    //var file = file
+    //var bufferedImage = bufferedImage
 
     var writer: ImageWriter = 
                 null

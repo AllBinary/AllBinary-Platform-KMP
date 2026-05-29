@@ -59,8 +59,8 @@ companion object {
     open fun getFileInputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFileInputStream{
-var path = path
-var fileName = fileName
+    //var path = path
+    //var fileName = fileName
 
     var FILEABPATH: AbPath = AbPath(path, fileName)
 
@@ -80,8 +80,8 @@ var fileName = fileName
     open fun getFileOutputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFileOutputStream{
-var path = path
-var fileName = fileName
+    //var path = path
+    //var fileName = fileName
 
     var FILEABPATH: AbPath = AbPath(path, fileName)
 
@@ -102,7 +102,7 @@ file.createNewFile()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFileOutputStream(file)
+                        return AbFileOutputStream.createFromAbFile(file)
 }
 
 
@@ -111,8 +111,8 @@ file.createNewFile()
     open fun delete(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var path = path
-var fileName = fileName
+    //var path = path
+    //var fileName = fileName
 
     var FILEABPATH: AbPath = AbPath(path, fileName)
 

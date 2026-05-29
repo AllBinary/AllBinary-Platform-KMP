@@ -61,7 +61,7 @@ public constructor ()
     open fun initialize(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var value = value
+    //var value = value
 
         try {
             this.newFile!!.createNewFile()
@@ -94,8 +94,8 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
     open fun setFile(filePathName: String, name: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var filePathName = filePathName
-var name = name
+    //var filePathName = filePathName
+    //var name = name
 this.newFile= AbFile.createAbFile(filePathName)
 }
 
@@ -124,7 +124,7 @@ this.newFile= AbFile.createAbFile(filePathName)
 idData= AbDataInputStream(idFile)
 this.id= idData!!.readLong()
 
-    var idOutFile: AbFileOutputStream = AbFileOutputStream(this.newFile)
+    var idOutFile: AbFileOutputStream = AbFileOutputStream.createFromAbFile(this.newFile)!!
 
 idOutData= AbDataOutputStream(idOutFile)
 idOutData!!.writeLong(this.id +1)

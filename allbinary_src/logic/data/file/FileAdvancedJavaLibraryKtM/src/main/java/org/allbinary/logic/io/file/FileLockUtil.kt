@@ -183,7 +183,7 @@ var file = file
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getLock(AbFileOutputStream(file, true))
+                        return this.getLock(AbFileOutputStream.createFromAbFileAppend(file, true))
 } catch(e: Exception)
             {
 this.logUtil!!.put("Exception returns null", this, "getLock", e)

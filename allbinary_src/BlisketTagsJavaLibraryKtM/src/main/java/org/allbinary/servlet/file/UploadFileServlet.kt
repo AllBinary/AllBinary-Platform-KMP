@@ -248,7 +248,7 @@ file.createNewFile()
 
                                     }
                                 
-fileOutputStream= AbFileOutputStream(file)
+fileOutputStream= AbFileOutputStream.createFromAbFile(file)
 fileOutputStream!!.write(byteArray)
 
                                     }
@@ -277,8 +277,8 @@ fileOutputStream!!.write(byteArray)
     open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
 {
-var request = request
-var response = response
+    //var request = request
+    //var response = response
 this.processRequest(request, response)
 }
 
@@ -288,8 +288,8 @@ this.processRequest(request, response)
     open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
 {
-var request = request
-var response = response
+    //var request = request
+    //var response = response
 this.processRequest(request, response)
 }
 

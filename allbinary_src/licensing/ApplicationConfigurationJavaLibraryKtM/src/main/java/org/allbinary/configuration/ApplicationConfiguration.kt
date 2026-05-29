@@ -17,6 +17,7 @@ import java.io.OutputStream
 import org.allbinary.game.configuration.feature.Feature
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.MainFeatureFactory
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.AbDataInputStream
 import org.allbinary.logic.io.AbDataOutputStream
@@ -34,16 +35,25 @@ open public class ApplicationConfiguration
         
 companion object {
             
-    private val instance: ApplicationConfiguration = ApplicationConfiguration()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ApplicationConfiguration{
 
+    
+                        if(ApplicationConfiguration.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    ApplicationConfiguration.instance= ApplicationConfiguration()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ApplicationConfiguration.instance
+                        return ApplicationConfiguration.instance as ApplicationConfiguration
 }
 
 
@@ -278,7 +288,7 @@ dataOutputStream!!.flush()
     open fun update(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
-var gameFeature = gameFeature
+    //var gameFeature = gameFeature
 
     
                         if(gameFeature == MainFeatureFactory.getInstance()!!.FULL_SCREEN)
@@ -328,7 +338,7 @@ this.write()
     open fun setFullscreen(fullscreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var fullscreen = fullscreen
+    //var fullscreen = fullscreen
 this.fullscreen= fullscreen
 }
 
@@ -347,7 +357,7 @@ this.fullscreen= fullscreen
     open fun setShowTitleBar(showTitleBar: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var showTitleBar = showTitleBar
+    //var showTitleBar = showTitleBar
 this.showTitleBar= showTitleBar
 }
 
@@ -366,7 +376,7 @@ this.showTitleBar= showTitleBar
     open fun setProgressBarView(progressBarView: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var progressBarView = progressBarView
+    //var progressBarView = progressBarView
 this.progressBarView= progressBarView
 }
 

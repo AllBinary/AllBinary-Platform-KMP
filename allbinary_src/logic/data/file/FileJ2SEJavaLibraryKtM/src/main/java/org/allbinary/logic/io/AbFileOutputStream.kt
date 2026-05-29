@@ -32,42 +32,72 @@ import org.allbinary.logic.io.file.AbFileNativeUtil
 
 open public class AbFileOutputStream : FileOutputStream {
         
-public constructor (name: String)                        
+companion object {
+            
+                @Throws(FileNotFoundException::class)
+            
+    open fun createFromAbFile(file: AbFile)
+        //nullable = true from not(false or (false and false)) = true
+: AbFileOutputStream{
+    //var file = file
 
-                            : super(name){
-var name = name
 
 
-                            //For kotlin this is before the body of the constructor.
-                    
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFileOutputStream(file.getPath(), false)
 }
 
-public constructor (name: String, append: Boolean)                        
+
+                @Throws(FileNotFoundException::class)
+            
+    open fun createFromAbFileAppend(file: AbFile, append: Boolean)
+        //nullable = true from not(false or (false and false)) = true
+: AbFileOutputStream{
+    //var file = file
+    //var append = append
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFileOutputStream(file.getPath(), append)
+}
+
+
+                @Throws(FileNotFoundException::class)
+            
+    open fun createFromFilePath(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: AbFileOutputStream{
+    //var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFileOutputStream(name, false)
+}
+
+
+                @Throws(FileNotFoundException::class)
+            
+    open fun createFromFilePathAppend(name: String, append: Boolean)
+        //nullable = true from not(false or (false and false)) = true
+: AbFileOutputStream{
+    //var name = name
+    //var append = append
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AbFileOutputStream(name, append)
+}
+
+
+        }
+            public constructor (name: String, append: Boolean)                        
 
                             : super(name, append){
-var name = name
-var append = append
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (file: AbFile)                        
-
-                            : super(AbFileNativeUtil.get(file)){
-var file = file
-
-
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-public constructor (file: AbFile, append: Boolean)                        
-
-                            : super(AbFileNativeUtil.get(file), append){
-var file = file
-var append = append
+    //var name = name
+    //var append = append
 
 
                             //For kotlin this is before the body of the constructor.

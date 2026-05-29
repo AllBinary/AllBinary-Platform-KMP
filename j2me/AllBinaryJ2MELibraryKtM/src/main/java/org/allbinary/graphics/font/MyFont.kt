@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Font
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
@@ -35,16 +36,25 @@ open public class MyFont
         
 companion object {
             
-    private val instance: MyFont = MyFont()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MyFont{
 
+    
+                        if(MyFont.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    MyFont.instance= MyFont()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return MyFont.instance
+                        return MyFont.instance as MyFont
 }
 
 

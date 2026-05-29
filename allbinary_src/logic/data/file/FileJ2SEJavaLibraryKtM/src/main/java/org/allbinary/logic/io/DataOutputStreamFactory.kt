@@ -58,9 +58,9 @@ companion object {
     open fun getInstanceForAbFile(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : AbDataOutputStream{
-var file = file
+    //var file = file
 
-    var idFileOutputStream: AbFileOutputStream = AbFileOutputStream(file)
+    var idFileOutputStream: AbFileOutputStream = AbFileOutputStream.createFromAbFile(file)!!
 
 
     var idOutData: AbDataOutputStream = AbDataOutputStream(idFileOutputStream)
@@ -78,8 +78,8 @@ var file = file
     open fun getInstance(filePath: String, fileName: String)
         //nullable =  from not(true or (false and false)) = 
 : AbDataOutputStream{
-var filePath = filePath
-var fileName = fileName
+    //var filePath = filePath
+    //var fileName = fileName
 
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 

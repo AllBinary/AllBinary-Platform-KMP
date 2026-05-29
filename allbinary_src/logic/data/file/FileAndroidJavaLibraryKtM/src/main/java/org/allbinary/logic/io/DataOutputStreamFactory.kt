@@ -60,7 +60,7 @@ companion object {
 : AbDataOutputStream{
 var file = file
 
-    var idFileOutputStream: AbFileOutputStream = AbFileOutputStream(file)
+    var idFileOutputStream: AbFileOutputStream = AbFileOutputStream.createFromAbFile(file)!!
 
 
     var idOutData: AbDataOutputStream = AbDataOutputStream(idFileOutputStream)

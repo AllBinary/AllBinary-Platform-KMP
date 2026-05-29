@@ -33,6 +33,7 @@ import org.allbinary.game.configuration.event.ChangedGameFeatureListener
 import org.allbinary.game.configuration.feature.Feature
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.MainFeatureFactory
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
 
 open public class OpenGLConfiguration
@@ -41,16 +42,25 @@ open public class OpenGLConfiguration
         
 companion object {
             
-    private val instance: OpenGLConfiguration = OpenGLConfiguration()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLConfiguration{
 
+    
+                        if(OpenGLConfiguration.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    OpenGLConfiguration.instance= OpenGLConfiguration()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLConfiguration.instance
+                        return OpenGLConfiguration.instance as OpenGLConfiguration
 }
 
 

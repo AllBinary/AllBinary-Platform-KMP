@@ -68,7 +68,7 @@ open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem {
     private val DOLLAR: String = "$"
 public constructor (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, rtsInterface: RTSInterface)                        
 
-                            : super(label, img, layout, altText, basicColor){
+                            : super(label, img, layout, altText, basicColor, 0){
 var label = label
 var img = img
 var layout = layout

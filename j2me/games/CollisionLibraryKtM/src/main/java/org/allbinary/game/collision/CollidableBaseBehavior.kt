@@ -123,7 +123,7 @@ this.collidable= collidable
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var ownerLayer = ownerLayer
-var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+    //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 
 
@@ -138,7 +138,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
         //nullable = true from not(false or (false and false)) = true
 {
     //var ownerLayer = ownerLayer
-var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+    //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 
 
@@ -146,9 +146,10 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
 }
 
 
-    open fun paint(graphics: Graphics)
+    open fun paint(ownerLayer: CollidableCompositeLayer, graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
+    //var ownerLayer = ownerLayer
     //var graphics = graphics
 }
 
