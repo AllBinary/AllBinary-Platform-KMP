@@ -35,16 +35,25 @@ open public class FileStreamFactory
         
 companion object {
             
-    private val SINGLETON: FileStreamFactory = FileStreamFactory(ResourceUtil.getInstance()!!.getContext())
+    private var SINGLETON: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileStreamFactory{
 
+    
+                        if(FileStreamFactory.SINGLETON == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    FileStreamFactory.SINGLETON= FileStreamFactory(ResourceUtil.getInstance()!!.getContext())
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return FileStreamFactory.SINGLETON
+                        return FileStreamFactory.SINGLETON as FileStreamFactory
 }
 
 
