@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.util
+        package org.allbinary
 
 
 
@@ -25,24 +25,26 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Enumeration
+import java.util.HashMap
+import java.util.Map
+import java.util.Set
 //ArkTs does not have this.  So this is for the ArkTs build.
-open public class EnumerationUtil
+open public class J2SEUtil
             : Object
          {
         
 companion object {
             
-    private val instance: EnumerationUtil = EnumerationUtil()
+    private val instance: J2SEUtil = J2SEUtil()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: EnumerationUtil{
+: J2SEUtil{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return EnumerationUtil.instance
+                        return J2SEUtil.instance
 }
 
 
@@ -53,48 +55,48 @@ companion object {
             {
             }            
         
-    open fun hasMoreElements(enumeration: Enumeration<Any?>)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var enumeration = enumeration
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return enumeration.hasMoreElements()
-}
-
-
-    open fun nextElement(enumeration: Enumeration<Any?>)
-        //nullable = true from not(false or (false and false)) = true
-: Any{
-    //var enumeration = enumeration
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return enumeration.nextElement()!!
-}
-
-
-    open fun getAsArray(enumeration: Enumeration<Any?>)
+    open fun getHashMapAsArray(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
-    //var enumeration = enumeration
+    //var hashMap = hashMap
 
-    var basicArrayList: BasicArrayList = BasicArrayListD()
-
-
-        while(this.hasMoreElements(enumeration))
-        {
-basicArrayList!!.add(this.nextElement(enumeration)!!)
-}
+    var objectArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayList!!.toArray()
+                        return objectArray
+}
+
+
+    open fun getMapAsArray(map: Map<Any, Any>)
+        //nullable = true from not(false or (false and false)) = true
+: Array<Any?>{
+    //var map = map
+
+    var objectArray: Array<Any?> = map.keySet()!!.toTypedArray()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return objectArray
+}
+
+
+    open fun getSetAsArray(set: MutableSet<String>)
+        //nullable = true from not(false or (false and false)) = true
+: Array<Any?>{
+    //var set = set
+
+    var objectArray: Array<Any?> = set.toTypedArray()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return objectArray
 }
 
 
