@@ -52,14 +52,14 @@ this.adConfigurationP= adConfiguration
     open fun initViewArray(viewArray: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 {
-var viewArray = viewArray
+    //var viewArray = viewArray
 }
 
 
     open fun onStart(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
-var anyType = anyType
+    //var anyType = anyType
 this.init()
 }
 
@@ -73,7 +73,7 @@ this.init()
     open fun isShowingAtLocation(location: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var location = location
+    //var location = location
 
 
 
@@ -108,7 +108,7 @@ var location = location
     open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventObject = eventObject
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -116,8 +116,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     open fun processAdState(gameState: GameState, gameType: GameType)
         //nullable = true from not(false or (false and false)) = true
 {
-var gameState = gameState
-var gameType = gameType
+    //var gameState = gameState
+    //var gameType = gameType
 }
 
 
@@ -137,11 +137,11 @@ var gameType = gameType
 
                 @Throws(Exception::class)
             
-    open fun playingAdState(width: Int, height: Int)
+    open fun playingAdStateWH(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var width = width
-var height = height
+    //var width = width
+    //var height = height
 }
 
 
@@ -156,7 +156,7 @@ var height = height
     open fun setGameIsReady(gameIsReady: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var gameIsReady = gameIsReady
+    //var gameIsReady = gameIsReady
 }
 
 
@@ -207,7 +207,7 @@ var gameIsReady = gameIsReady
     open fun setOkayToShowAds(okayToShowAds: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var okayToShowAds = okayToShowAds
+    //var okayToShowAds = okayToShowAds
 this.okayToShowAdsP= okayToShowAds
 }
 

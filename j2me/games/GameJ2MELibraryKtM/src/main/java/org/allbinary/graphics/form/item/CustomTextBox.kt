@@ -33,13 +33,15 @@ import org.allbinary.game.displayable.canvas.GameCommandCanvas
 import org.allbinary.game.input.Input
 import org.allbinary.game.input.InputFactory
 import org.allbinary.game.input.PlatformKeyFactory
+import org.allbinary.game.input.event.RawKeyEventListener
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.form.item.validation.TextItemVisitor
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
 
-open public class CustomTextBox : GameCommandCanvas {
+open public class CustomTextBox : GameCommandCanvas
+                , RawKeyEventListener {
         
 
     private val textFieldItem: ABTextFieldItem
@@ -78,7 +80,7 @@ this.setTitle(label)
 
     private val inputFactory: InputFactory = InputFactory.getInstance()!!
 
-    open fun onEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
+    override fun onEventRaw(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode

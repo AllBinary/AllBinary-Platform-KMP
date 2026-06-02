@@ -25,9 +25,9 @@ open public class RemoteInfo
         
 companion object {
             
-    val REMOTE_INFO: RemoteInfo = RemoteInfo(StringUtil.getInstance()!!.EMPTY_STRING,  -1,  -1, RemoteInfo.NEW_PLAYER_ID)
-
     val NEW_PLAYER_ID: Int = 0
+
+    val REMOTE_INFO: RemoteInfo = RemoteInfo(StringUtil.getInstance()!!.EMPTY_STRING,  -1,  -1, RemoteInfo.NEW_PLAYER_ID)
 
         }
             public constructor (username: String, actorSessionId: Int, playerInputId: Int, id: Int)

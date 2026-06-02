@@ -54,7 +54,10 @@ var direction = direction
                             //For kotlin this is before the body of the constructor.
                     
 this.lifeInterface= lifeInterface
-this.xArray= IntArray(this.getLifeInterface()!!.getMaxlives().toInt())
+
+    var size: Int = this.getLifeInterface()!!.getMaxlives().toInt()
+
+this.xArray= IntArray(size)
 this.update()
 this.animationInterface= animationInterface
 }

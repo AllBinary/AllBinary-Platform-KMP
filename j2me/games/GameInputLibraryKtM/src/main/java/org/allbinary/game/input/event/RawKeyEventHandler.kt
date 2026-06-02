@@ -190,7 +190,7 @@ index++
     //var deviceId = deviceId
     //var repeated = repeated
     //var eventListenerInterface = eventListenerInterface
-eventListenerInterface!!.onEvent(keyCode, deviceId, repeated)
+eventListenerInterface!!.onEventRaw(keyCode, deviceId, repeated)
 }
 
 

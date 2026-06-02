@@ -69,12 +69,6 @@ companion object {
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
 
-    var chars: CharArray = 
-                                                        
-                                                        CharArray(30)
-                                                    
-
-
     var partnerString: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 

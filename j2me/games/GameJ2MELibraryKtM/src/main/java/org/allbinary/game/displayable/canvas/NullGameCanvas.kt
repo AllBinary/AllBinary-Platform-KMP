@@ -121,13 +121,13 @@ super.setWait(1200)
 }
 
 
-    private var running: Boolean = true
+    private var runningNull: Boolean = true
 
     override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
-this.running= running
+this.runningNull= running
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -139,7 +139,7 @@ this.running= running
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.running
+                        return this.runningNull
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
