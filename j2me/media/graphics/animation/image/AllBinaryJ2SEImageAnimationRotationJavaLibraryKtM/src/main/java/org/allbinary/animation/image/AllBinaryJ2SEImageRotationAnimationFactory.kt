@@ -111,7 +111,7 @@ this.resizeCanvasForRotation= resizeCanvasForRotation
 
     var openGLUtil: OpenGLUtil = OpenGLUtil.getInstance()!!
 
-scaledImage= openGLUtil!!.add(scaledImage)
+scaledImage= openGLUtil!!.addImage(scaledImage)
 
     var copyOfScaledImage: Image = imageCopyUtil!!.createImageForRotation(scaledImage)!!
 

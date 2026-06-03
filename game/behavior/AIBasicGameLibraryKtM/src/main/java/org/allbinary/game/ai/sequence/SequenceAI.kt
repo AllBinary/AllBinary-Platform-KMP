@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.ai.ArtificialIntelligence
 import org.allbinary.ai.ArtificialIntelligenceInterface
 import org.allbinary.ai.ArtificialIntelligenceTransitionInterface
 import org.allbinary.game.ai.ArrayAI
@@ -46,9 +47,9 @@ companion object {
 public constructor (artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(artificialIntelligenceInterfaceArray, ownerLayerInterface, gameInput){
-var artificialIntelligenceInterfaceArray = artificialIntelligenceInterfaceArray
-var ownerLayerInterface = ownerLayerInterface
-var gameInput = gameInput
+    //var artificialIntelligenceInterfaceArray = artificialIntelligenceInterfaceArray
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,7 +62,7 @@ var gameInput = gameInput
     override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
-var allBinaryLayerManager = allBinaryLayerManager
+    //var allBinaryLayerManager = allBinaryLayerManager
 this.getArtificialIntelligenceInterface()[this.index]!!.processAI(allBinaryLayerManager)
 }
 
@@ -75,11 +76,11 @@ this.index++
 
 
     
-                        if(artificialIntelligenceInterface!!.getId() == ArtificialIntelligenceTransitionInterface.ID)
+                        if(artificialIntelligenceInterface!!.getId() == ArtificialIntelligence.AI_ID)
                         
                                     {
                                     
-    var artificialIntelligenceTransitionInterface: ArtificialIntelligenceTransitionInterface = (artificialIntelligenceInterface as ArtificialIntelligenceTransitionInterface)
+    var artificialIntelligenceTransitionInterface: ArtificialIntelligenceTransitionInterface = artificialIntelligenceInterface as ArtificialIntelligenceTransitionInterface
 
 artificialIntelligenceTransitionInterface!!.transition()
 
@@ -102,7 +103,7 @@ artificialIntelligenceTransitionInterface!!.transition()
     open fun setIndex(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var index = index
+    //var index = index
 this.index= index
 }
 

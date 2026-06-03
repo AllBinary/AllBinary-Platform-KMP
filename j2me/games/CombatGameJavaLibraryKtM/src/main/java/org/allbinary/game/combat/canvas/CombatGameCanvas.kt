@@ -82,7 +82,7 @@ super.initApp(abeClientInformation)
 }
 
 
-    open fun initConfigurable(portion: Int)
+    open fun initConfigurablePortion(portion: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var portion = portion

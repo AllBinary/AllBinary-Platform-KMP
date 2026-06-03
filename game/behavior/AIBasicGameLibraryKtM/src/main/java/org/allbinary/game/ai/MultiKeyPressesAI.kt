@@ -29,7 +29,6 @@
         
 import java.util.Hashtable
 import org.allbinary.game.input.GameInput
-import org.allbinary.game.input.event.GameKeyEventFactory
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.time.GameTickTimeDelayHelper
@@ -45,9 +44,9 @@ open public class MultiKeyPressesAI : KeyPressesAI {
 public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(hashtable, ownerLayerInterface, gameInput){
-var hashtable = hashtable
-var ownerLayerInterface = ownerLayerInterface
-var gameInput = gameInput
+    //var hashtable = hashtable
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,11 +60,9 @@ this.update()
     override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
-var allBinaryLayerManager = allBinaryLayerManager
+    //var allBinaryLayerManager = allBinaryLayerManager
 }
 
-
-    private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 
                 @Throws(Exception::class)
             

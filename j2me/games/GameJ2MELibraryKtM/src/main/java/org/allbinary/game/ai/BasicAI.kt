@@ -55,13 +55,13 @@ companion object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+    val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
+
     private val ownerLayerInterface: AllBinaryLayer
 
     private val gameInput: GameInput
 
     private var lastKey: Int =  -1
-
-    private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput){
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput

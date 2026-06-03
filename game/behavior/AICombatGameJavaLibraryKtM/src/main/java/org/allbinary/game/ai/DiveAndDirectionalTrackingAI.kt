@@ -62,6 +62,10 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
 
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
+    private val directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
+
+    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
+
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(500)
 
     private val list: BasicArrayList = BasicArrayListD()
@@ -74,7 +78,7 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
 
     private var initialDropped: Boolean= false
 
-    private var dive: Boolean= false
+    private var diveP: Boolean= false
 
     private var directionOfTarget: Direction = Direction.getInstance(0)!!
 
@@ -87,10 +91,6 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
     private val aiVistor: Visitor
 
     private var lastDirection: Direction = DirectionFactory.getInstance()!!.NO_DIRECTION
-
-    private val directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-
-    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor (ownerLayerInterface: AllBinaryLayer, artificialIntelligenceInterface: ArtificialIntelligenceInterface, gameInput: GameInput, visitor: Visitor)                        
 
                             : super(ownerLayerInterface, gameInput){
@@ -135,7 +135,7 @@ this.velocityInterface!!.zero()
                                 
 
     
-                        if(!this.dive)
+                        if(!this.diveP)
                         
                                     {
                                     this.target(allBinaryLayerManager)
@@ -155,7 +155,7 @@ this.list.clear()
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.dive= false
+this.diveP= false
 this.directionOfTarget= DirectionFactory.getInstance()!!.NOT_BORDERED_WITH
 TrackingEventHandler.getInstance()!!.addListenerInterface(this)
 }
@@ -390,7 +390,7 @@ var y = y
     open fun setDive()
         //nullable = true from not(false or (false and true)) = true
 {
-this.dive= true
+this.diveP= true
 this.velocityInterface!!.zero()
 TrackingEventHandler.getInstance()!!.removeListener(this)
 }

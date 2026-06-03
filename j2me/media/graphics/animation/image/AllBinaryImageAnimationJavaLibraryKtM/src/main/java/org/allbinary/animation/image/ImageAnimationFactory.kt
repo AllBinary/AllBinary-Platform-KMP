@@ -78,7 +78,7 @@ companion object {
 
     var openGLUtil: OpenGLUtil = OpenGLUtil.getInstance()!!
 
-scaledImage= openGLUtil!!.add(scaledImage)
+scaledImage= openGLUtil!!.addImage(scaledImage)
 
     
                         if(this.animationFactoryInitializationVisitor!!.dx != 0 || this.animationFactoryInitializationVisitor!!.dy != 0)

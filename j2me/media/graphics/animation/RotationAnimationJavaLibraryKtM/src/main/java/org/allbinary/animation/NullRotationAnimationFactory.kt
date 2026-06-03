@@ -56,9 +56,23 @@ companion object {
             
     val NULL_ROTATION_ANIMATION_ARRAY: Array<RotationAnimation?> = arrayOfNulls(0)
 
-    private val NULL_ANIMATION: Animation = object: NullRotationAnimation(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), AnimationBehavior.getInstance())
-                                {
-                                
+open public inner class NullRotationAnimation2 : NullRotationAnimation {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+ constructor ()                        
+
+                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), AnimationBehavior.getInstance()){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -67,8 +81,11 @@ companion object {
     //var y = y
 }
 
-                                }
-                            
+
+}
+                
+            
+    private val NULL_ANIMATION: Animation = NullRotationAnimation2()
 private constructor ()
             : super()
         {

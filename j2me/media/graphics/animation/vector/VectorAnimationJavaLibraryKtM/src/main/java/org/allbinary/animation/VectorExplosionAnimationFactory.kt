@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -34,6 +34,8 @@ open public class VectorExplosionAnimationFactory
                 , ProceduralAnimationInterfaceFactoryInterface {
         
 
+    private val vectorExplosionGenerator: VectorExplosionGenerator = VectorExplosionGenerator.getInstance()!!
+
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     val animationBehaviorFactory: AnimationBehaviorFactory
@@ -46,8 +48,6 @@ this.animationBehaviorFactory= animationBehaviorFactory
 this.setBasicColorP(basicColor)
 }
 
-
-    private val vectorExplosionGenerator: VectorExplosionGenerator = VectorExplosionGenerator.getInstance()!!
 
                 @Throws(Exception::class)
             

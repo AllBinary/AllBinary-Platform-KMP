@@ -34,6 +34,8 @@ open public class ArtificialIntelligence
         
 companion object {
             
+    val AI_ID: Int = 2
+
     private val instance: ArtificialIntelligence = ArtificialIntelligence()
 
     open fun getInstance()

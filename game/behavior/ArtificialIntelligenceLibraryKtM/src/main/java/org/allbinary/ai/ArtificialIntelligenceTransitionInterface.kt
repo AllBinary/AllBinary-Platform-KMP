@@ -28,12 +28,7 @@
 
 interface ArtificialIntelligenceTransitionInterface {
         
-companion object {
-            
-    val ID: Int = 2
 
-        }
-            
     open fun transition()
         //nullable = true from not(false or (false and true)) = true
 

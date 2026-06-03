@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Canvas
+import org.allbinary.ai.ArtificialIntelligence
 import org.allbinary.ai.ArtificialIntelligenceTransitionInterface
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.animation.RotationAnimationInterface
@@ -240,10 +241,10 @@ this.baseVelocityInterface!!.zero()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-
-
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+
+    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
 
     var y: Int = ownerLayerInterface!!.getYP()!!
@@ -273,7 +274,7 @@ ownerLayerInterface!!.setPosition(ownerLayerInterface!!.getXP(), y, ownerLayerIn
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ArtificialIntelligenceTransitionInterface.ID
+                        return ArtificialIntelligence.AI_ID
 }
 
 

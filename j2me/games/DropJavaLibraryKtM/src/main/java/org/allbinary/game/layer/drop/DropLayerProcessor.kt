@@ -65,19 +65,22 @@ var allBinaryLayerManager = allBinaryLayerManager
     var size: Int = list.size()!!
 
 
+    var layerInterface: AllBinaryLayer
+
+
+    var dropLayerInterface: DropLayerInterface
+
+
 
 
 
                         for (index in 0 until size)
 
         {
-
-    var layerInterface: AllBinaryLayer = list.objectArray[index]!! as AllBinaryLayer
-
-
-    var dropLayerInterface: DropLayerInterface = layerInterface as DropLayerInterface
-
-allBinaryLayerManager!!.append(dropLayerInterface!!.getDroppedLayer() as AllBinaryLayer)
+layerInterface= list.objectArray[index]!! as AllBinaryLayer
+dropLayerInterface= layerInterface as DropLayerInterface
+layerInterface= dropLayerInterface!!.getDroppedLayer() as AllBinaryLayer
+allBinaryLayerManager!!.append(layerInterface)
 }
 
 list.clear()

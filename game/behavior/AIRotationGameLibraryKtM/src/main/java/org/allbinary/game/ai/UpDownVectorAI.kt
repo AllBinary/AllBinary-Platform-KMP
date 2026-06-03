@@ -35,14 +35,14 @@ import org.allbinary.logic.math.BasicDecimal
 open public class UpDownVectorAI : BasicAI {
         
 
-    private var velocityInterface: BasicVelocityProperties
+    private val velocityInterface: BasicVelocityProperties
 
     private var index: Int = 0
 public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
-var ownerLayerInterface = ownerLayerInterface
-var gameInput = gameInput
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,7 +60,7 @@ this.velocityInterface!!.getVelocityYBasicDecimalP()!!.setint(0)
     override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
-var allBinaryLayerManager = allBinaryLayerManager
+    //var allBinaryLayerManager = allBinaryLayerManager
 
     var y: Int = this.getOwnerLayerInterface()!!.getHeight() *270
 

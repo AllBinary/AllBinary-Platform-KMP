@@ -106,7 +106,7 @@ companion object {
                         if((scaleX == 1.0f && scaleY == 1.0f) || (scaleX == 0.0f || scaleY == 0.0f))
                         
                                     {
-                                    scaledImage= this.openGLUtil!!.add(image)
+                                    scaledImage= this.openGLUtil!!.addImage(image)
 sprite= spriteFactory!!.createSprite(scaledImage, width, height)
 
                                     }
@@ -167,7 +167,7 @@ sprite= spriteFactory!!.createSprite(scaledImage, (width *scaleX).toInt(), (heig
                                     }
                                 
                         else {
-                            scaledImage= this.openGLUtil!!.add(image)
+                            scaledImage= this.openGLUtil!!.addImage(image)
 sprite= spriteFactory!!.createSprite(scaledImage, width, height)
 
                         }

@@ -41,7 +41,7 @@ companion object {
             {
             }            
         
-    open fun add(image: Image)
+    open fun addImage(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var image = image
@@ -59,7 +59,7 @@ companion object {
 }
 
 
-    open fun add(runnable: Runnable)
+    open fun addRunnable(runnable: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var runnable = runnable
