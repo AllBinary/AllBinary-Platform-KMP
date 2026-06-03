@@ -33,7 +33,6 @@ import org.allbinary.game.input.Input
 import org.allbinary.game.input.PlatformInputMappingFactory
 import org.allbinary.game.input.mapping.GameInputMapping
 import org.allbinary.game.input.mapping.PersistentInputMapping
-import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
@@ -62,7 +61,7 @@ companion object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    var stringUtil: StringUtil = StringUtil.getInstance()!!
+    val stringUtil: StringUtil = StringUtil.getInstance()!!
 
     private var gameInputMappingArray: Array<GameInputMapping?>
 
@@ -296,8 +295,6 @@ stringBuffer!!.append(key.getName())
                         return myFont!!.DEFAULT_CHAR_HEIGHT *size
 }
 
-
-    private var anchor: Int = Anchor.TOP_LEFT
 
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true

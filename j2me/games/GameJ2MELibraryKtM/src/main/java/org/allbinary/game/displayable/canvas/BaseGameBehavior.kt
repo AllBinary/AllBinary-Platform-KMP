@@ -36,7 +36,7 @@ open public class BaseGameBehavior : DemoGameBehavior {
         
 companion object {
             
-    private val instance: BaseGameBehavior = BaseGameBehavior()
+    private val instanceC: BaseGameBehavior = BaseGameBehavior()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -45,7 +45,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BaseGameBehavior.instance
+                        return BaseGameBehavior.instanceC
 }
 
 

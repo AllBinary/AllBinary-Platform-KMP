@@ -40,7 +40,7 @@ open public class AlwaysRepaintBehavior : RepaintBehavior {
         
 companion object {
             
-    private val instance: AlwaysRepaintBehavior = AlwaysRepaintBehavior()
+    private val instanceC: AlwaysRepaintBehavior = AlwaysRepaintBehavior()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -49,7 +49,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AlwaysRepaintBehavior.instance
+                        return AlwaysRepaintBehavior.instanceC
 }
 
 

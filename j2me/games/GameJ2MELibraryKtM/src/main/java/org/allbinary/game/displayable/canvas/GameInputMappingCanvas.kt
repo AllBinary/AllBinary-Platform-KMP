@@ -37,7 +37,6 @@ import org.allbinary.game.input.Input
 import org.allbinary.game.input.InputFactory
 import org.allbinary.game.input.PlatformInputMappingFactory
 import org.allbinary.game.input.mapping.InputMappingInterface
-import org.allbinary.game.input.mapping.InputToGameKeyMapping
 import org.allbinary.game.input.mapping.PersistentInputMapping
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.paint.ColorFillBasePaintable
@@ -164,14 +163,14 @@ this.keyRepeatedByDevice(keyCode, 0)
 {
     //var keyCode = keyCode
     //var deviceId = deviceId
-this.addGameKeyEvent(keyCode, false)
+this.addGameKey(keyCode, false)
 super.keyPressedByDevice(keyCode, 0)
 }
 
 
     private val inputFactory: InputFactory = InputFactory.getInstance()!!
 
-    open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
+    open fun addGameKey(keyCode: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -186,7 +185,7 @@ super.keyPressedByDevice(keyCode, 0)
 
     var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
-this.process(gameKey, input)
+this.processInputMapping(gameKey, input)
 } catch(e: Exception)
             {
 this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
@@ -197,7 +196,7 @@ this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVEN
 
                 @Throws(Exception::class)
             
-    override fun process(gameKey: GameKey, input: Input)
+    override fun processInputMapping(gameKey: GameKey, input: Input)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKey = gameKey

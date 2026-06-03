@@ -60,7 +60,7 @@ open public inner class ReleaseHelper
 public constructor (touchButtonRecognizer: TouchButtonRecognizer)
             : super()
         {
-var touchButtonRecognizer = touchButtonRecognizer
+    //var touchButtonRecognizer = touchButtonRecognizer
 this.touchButtonRecognizer= touchButtonRecognizer
 }
 
@@ -70,8 +70,14 @@ this.touchButtonRecognizer= touchButtonRecognizer
     open fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var touchButtonInput = touchButtonInput
-var deviceId = deviceId
+    //var touchButtonInput = touchButtonInput
+    //var deviceId = deviceId
+
+    var nextTouchButtonInput: TouchButtonInput
+
+
+    var gameKeyEvent: GameKeyEvent
+
 
 
 
@@ -79,12 +85,8 @@ var deviceId = deviceId
                         for (index in this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
 
         {
-
-    var nextTouchButtonInput: TouchButtonInput = this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.get(index)!!
-
-
-    var gameKeyEvent: GameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
-
+nextTouchButtonInput= this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.get(index)
+gameKeyEvent= nextTouchButtonInput!!.getGameKeyEvent()
 this@TouchButtonRecognizer.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 this@TouchButtonRecognizer.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.removeAt(index)
@@ -101,7 +103,7 @@ open public inner class MultitouchReleaseHelper : ReleaseHelper {
 public constructor (touchButtonRecognizer: TouchButtonRecognizer)                        
 
                             : super(touchButtonRecognizer){
-var touchButtonRecognizer = touchButtonRecognizer
+    //var touchButtonRecognizer = touchButtonRecognizer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -114,10 +116,16 @@ var touchButtonRecognizer = touchButtonRecognizer
     override fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var touchButtonInput = touchButtonInput
-var deviceId = deviceId
+    //var touchButtonInput = touchButtonInput
+    //var deviceId = deviceId
 
     var cancelTouchButtonInput: TouchButtonInput = CancelTouchButtonInputFactory.getInstance()!!.getCancel(touchButtonInput)!!
+
+
+    var nextTouchButtonInput: TouchButtonInput
+
+
+    var gameKeyEvent: GameKeyEvent
 
 
 
@@ -126,17 +134,13 @@ var deviceId = deviceId
                         for (index in this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
 
         {
-
-    var nextTouchButtonInput: TouchButtonInput = this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.get(index)!!
-
+nextTouchButtonInput= this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.get(index)
 
     
                         if(cancelTouchButtonInput == nextTouchButtonInput)
                         
                                     {
-                                    
-    var gameKeyEvent: GameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
-
+                                    gameKeyEvent= nextTouchButtonInput!!.getGameKeyEvent()
 this@TouchButtonRecognizer.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 this@TouchButtonRecognizer.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.removeAt(index)
@@ -177,7 +181,7 @@ public constructor ()
     open fun processRelease(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var touchButtonInput = touchButtonInput
+    //var touchButtonInput = touchButtonInput
 var deviceId = deviceId
 this.releaseHelper!!.release(touchButtonInput, deviceId)
 
@@ -273,9 +277,9 @@ this.processRelease(touchButtonInput, deviceId)
     open fun pressTouchButtonInput(x: Int, y: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var x = x
-var y = y
-var deviceId = deviceId
+    //var x = x
+    //var y = y
+    //var deviceId = deviceId
 
     var list: BasicArrayList = TouchButtonFactory.getInstance()!!.getList()!!
 
@@ -290,6 +294,9 @@ var deviceId = deviceId
 
 
     var touchButtonInput: TouchButtonInput
+
+
+    var gameKeyEvent: GameKeyEvent
 
 
 
@@ -315,9 +322,7 @@ point= rectangle.getPoint()
                                     this.releaseHelper!!.release(touchButtonInput, deviceId)
 this.lastPressedTouchButtonInput= touchButtonInput
 this.currentlyPressedTouchButtonSingleton!!.add(touchButtonInput)
-
-    var gameKeyEvent: GameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
-
+gameKeyEvent= touchButtonInput!!.getGameKeyEvent()
 this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 this.downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 

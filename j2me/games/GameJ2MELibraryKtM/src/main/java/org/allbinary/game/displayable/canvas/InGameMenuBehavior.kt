@@ -31,7 +31,7 @@ open public class InGameMenuBehavior : BaseMenuBehavior {
         
 companion object {
             
-    private val instance: InGameMenuBehavior = InGameMenuBehavior()
+    private val instanceC: InGameMenuBehavior = InGameMenuBehavior()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -40,7 +40,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return InGameMenuBehavior.instance
+                        return InGameMenuBehavior.instanceC
 }
 
 

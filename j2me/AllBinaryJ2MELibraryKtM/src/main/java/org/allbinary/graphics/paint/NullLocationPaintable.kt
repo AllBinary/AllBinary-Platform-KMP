@@ -30,7 +30,7 @@ open public class NullLocationPaintable : LocationPaintable {
         
 companion object {
             
-    private val instance: NullLocationPaintable = NullLocationPaintable()
+    private val instanceC: NullLocationPaintable = NullLocationPaintable()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -39,7 +39,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullLocationPaintable.instance
+                        return NullLocationPaintable.instanceC
 }
 
 

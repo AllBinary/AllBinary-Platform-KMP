@@ -41,7 +41,7 @@ open public class RTSLayerSelectedLogHelper : RTSLayerLogHelper {
         
 companion object {
             
-    private val instance: RTSLayerSelectedLogHelper = RTSLayerSelectedLogHelper()
+    private val instanceC: RTSLayerSelectedLogHelper = RTSLayerSelectedLogHelper()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -50,7 +50,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return RTSLayerSelectedLogHelper.instance
+                        return RTSLayerSelectedLogHelper.instanceC
 }
 
 

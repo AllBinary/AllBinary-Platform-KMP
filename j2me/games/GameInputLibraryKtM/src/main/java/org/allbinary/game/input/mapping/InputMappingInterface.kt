@@ -33,7 +33,7 @@ interface InputMappingInterface {
 
                 @Throws(Exception::class)
             
-    open fun process(gameKey: GameKey, input: Input)
+    open fun processInputMapping(gameKey: GameKey, input: Input)
         //nullable = true from not(false or (false and false)) = true
 
 

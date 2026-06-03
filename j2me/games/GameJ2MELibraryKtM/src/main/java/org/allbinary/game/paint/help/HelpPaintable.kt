@@ -36,6 +36,8 @@ import org.allbinary.logic.string.StringUtil
 open public class HelpPaintable : Paintable {
         
 
+    var anchor: Int = Anchor.TOP_LEFT
+
     val title: String
 
     var inputInfo: Array<String?> = StringUtil.getInstance()!!.getArrayInstance()!!
@@ -71,8 +73,6 @@ this.inputInfo= inputInfo
                         return myFont!!.DEFAULT_CHAR_HEIGHT *(this.inputInfo!!.size +2)
 }
 
-
-    private var anchor: Int = Anchor.TOP_LEFT
 
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true

@@ -85,6 +85,25 @@ var value = value
 }
 
 
+    open fun absdouble(value: Double)
+        //nullable = true from not(false or (false and false)) = true
+: Double{
+var value = value
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return if((value < 0)) {
+                            
+                             -value
+                        
+                            } else {
+                            value
+                            }
+    
+}
+
+
 }
                 
             

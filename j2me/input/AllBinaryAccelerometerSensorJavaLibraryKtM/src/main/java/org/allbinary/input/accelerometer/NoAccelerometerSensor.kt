@@ -30,12 +30,10 @@ import org.allbinary.logic.math.Orientation
 
 open public class NoAccelerometerSensor : AllBinaryOrientationSensor {
         
+public constructor (){
+}
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+
                 @Throws(Exception::class)
             
     override fun getOrientation()

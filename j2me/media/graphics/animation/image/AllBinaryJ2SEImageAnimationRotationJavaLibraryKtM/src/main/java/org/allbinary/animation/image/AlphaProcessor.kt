@@ -32,7 +32,7 @@ open public class AlphaProcessor : ModifierBaseProcessor {
         
 companion object {
             
-    private val instance: AlphaProcessor = AlphaProcessor()
+    private val instanceC: AlphaProcessor = AlphaProcessor()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AlphaProcessor.instance
+                        return AlphaProcessor.instanceC
 }
 
 

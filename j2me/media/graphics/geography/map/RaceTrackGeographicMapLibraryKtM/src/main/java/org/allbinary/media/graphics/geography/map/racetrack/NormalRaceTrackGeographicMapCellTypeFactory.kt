@@ -30,7 +30,7 @@ open public class NormalRaceTrackGeographicMapCellTypeFactory : RaceTrackGeograp
         
 companion object {
             
-    private val instance: NormalRaceTrackGeographicMapCellTypeFactory = NormalRaceTrackGeographicMapCellTypeFactory()
+    private val instanceC: NormalRaceTrackGeographicMapCellTypeFactory = NormalRaceTrackGeographicMapCellTypeFactory()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -39,7 +39,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NormalRaceTrackGeographicMapCellTypeFactory.instance
+                        return NormalRaceTrackGeographicMapCellTypeFactory.instanceC
 }
 
 

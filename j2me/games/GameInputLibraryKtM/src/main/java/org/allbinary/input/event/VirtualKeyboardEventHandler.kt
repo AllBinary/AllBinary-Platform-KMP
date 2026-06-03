@@ -31,7 +31,6 @@ import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.handler.BasicEventHandler
-import org.allbinary.string.CommonStrings
 
 open public class VirtualKeyboardEventHandler : BasicEventHandler {
         

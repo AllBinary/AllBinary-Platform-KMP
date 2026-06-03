@@ -30,7 +30,7 @@ open public class SimpleShaderInitializer : ShaderInitializer {
         
 companion object {
             
-    private val instance: SimpleShaderInitializer = SimpleShaderInitializer()
+    private val instanceC: SimpleShaderInitializer = SimpleShaderInitializer()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -39,7 +39,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SimpleShaderInitializer.instance
+                        return SimpleShaderInitializer.instanceC
 }
 
 

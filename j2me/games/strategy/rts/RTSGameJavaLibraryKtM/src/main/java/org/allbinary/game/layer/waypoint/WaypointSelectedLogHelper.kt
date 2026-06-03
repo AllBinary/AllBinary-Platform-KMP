@@ -40,7 +40,7 @@ open public class WaypointSelectedLogHelper : WaypointLogHelper {
         
 companion object {
             
-    private val instance: WaypointSelectedLogHelper = WaypointSelectedLogHelper()
+    private val instanceC: WaypointSelectedLogHelper = WaypointSelectedLogHelper()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -49,7 +49,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return WaypointSelectedLogHelper.instance
+                        return WaypointSelectedLogHelper.instanceC
 }
 
 

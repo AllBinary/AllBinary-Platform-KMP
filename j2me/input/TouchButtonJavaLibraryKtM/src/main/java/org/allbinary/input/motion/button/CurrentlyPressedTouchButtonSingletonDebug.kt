@@ -34,7 +34,7 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
         
 companion object {
             
-    private val instance: CurrentlyPressedTouchButtonSingletonDebug = CurrentlyPressedTouchButtonSingletonDebug()
+    private val instanceC: CurrentlyPressedTouchButtonSingletonDebug = CurrentlyPressedTouchButtonSingletonDebug()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -43,7 +43,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CurrentlyPressedTouchButtonSingletonDebug.instance
+                        return CurrentlyPressedTouchButtonSingletonDebug.instanceC
 }
 
 

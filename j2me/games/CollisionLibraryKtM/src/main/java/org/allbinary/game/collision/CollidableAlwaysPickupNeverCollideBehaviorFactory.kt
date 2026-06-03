@@ -30,7 +30,7 @@ open public class CollidableAlwaysPickupNeverCollideBehaviorFactory : Collidable
         
 companion object {
             
-    private val instance2: CollidableAlwaysPickupNeverCollideBehaviorFactory = CollidableAlwaysPickupNeverCollideBehaviorFactory()
+    private val instanceC: CollidableAlwaysPickupNeverCollideBehaviorFactory = CollidableAlwaysPickupNeverCollideBehaviorFactory()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -39,7 +39,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CollidableAlwaysPickupNeverCollideBehaviorFactory.instance2
+                        return CollidableAlwaysPickupNeverCollideBehaviorFactory.instanceC
 }
 
 

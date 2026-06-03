@@ -35,6 +35,7 @@ import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Displayable
 import javax.microedition.lcdui.NullCanvas
 import org.allbinary.J2MEUtil
+import org.allbinary.TsUtil
 import org.allbinary.business.advertisement.GameAdStateFactory
 import org.allbinary.canvas.FullScreenUtil
 import org.allbinary.canvas.GameStatisticsFactory
@@ -131,6 +132,8 @@ open public class GameMidlet : ProgressMidlet
     val gameStrings: GameStrings = GameStrings.getInstance()!!
 
     val gameAdStateFactory: GameAdStateFactory = GameAdStateFactory.getInstance()!!
+
+    val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val DISPLAYABLE: String = " Displayable: "
 
@@ -394,7 +397,7 @@ gameAdState!!.getAdvertisements()!!.startAll()
 
 this.logUtil!!.putF(this.commonStrings!!.START, this, START_APP)
 
-    var gameCanvasRunnableInterface: GameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface
+    var gameCanvasRunnableInterface: Any = this.allbinaryGameCanvasRunnableInterface
 
 
     
@@ -477,16 +480,22 @@ PreLogUtil.put(StringMaker().
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
 
+    var allbinaryGameCanvasRunnableInterface: GameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface
+
+
+    var gameCanvasRunnableInterface: Any = allbinaryGameCanvasRunnableInterface
+
+
     
                         if(command == gameCommandsFactory!!.SHOW_GAME_CANVAS)
                         
                                     {
                                     
     
-                        if(this.getDisplay()!!.getCurrent() != this.allbinaryGameCanvasRunnableInterface && this.allbinaryGameCanvasRunnableInterface!!.getType() != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE.getType())
+                        if(this.getDisplay()!!.getCurrent() != gameCanvasRunnableInterface && allbinaryGameCanvasRunnableInterface!!.getType() != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE.getType())
                         
                                     {
-                                    this.setDisplay(this.allbinaryGameCanvasRunnableInterface as Displayable)
+                                    this.setDisplay(gameCanvasRunnableInterface as Displayable)
 
                                     }
                                 
@@ -503,7 +512,7 @@ this.unPauseAppBackground(false)
     var menuListener: MenuListener = displayable as MenuListener
 
 menuListener!!.close()
-this.setDisplay(this.allbinaryGameCanvasRunnableInterface as Displayable)
+this.setDisplay(gameCanvasRunnableInterface as Displayable)
 this.unPauseAppBackground(false)
 
                                     }
@@ -696,7 +705,7 @@ this.setDisplay(displayable)
                                     {
                                     this.debugInterface!!.start()
 
-    var gameCanvas: AllBinaryGameCanvas = this.allbinaryGameCanvasRunnableInterface as AllBinaryGameCanvas
+    var gameCanvas: AllBinaryGameCanvas = allbinaryGameCanvasRunnableInterface as AllBinaryGameCanvas
 
 gameCanvas!!.addCommand(gameCommandsFactory!!.STOP_TRACE)
 gameCanvas!!.removeCommand(gameCommandsFactory!!.START_TRACE)
@@ -712,7 +721,7 @@ gameCanvas!!.removeCommand(gameCommandsFactory!!.START_TRACE)
 this.debugInterface!!.stop()
 this.unPauseAppBackground(false)
 
-    var gameCanvas: AllBinaryGameCanvas = this.allbinaryGameCanvasRunnableInterface as AllBinaryGameCanvas
+    var gameCanvas: AllBinaryGameCanvas = allbinaryGameCanvasRunnableInterface as AllBinaryGameCanvas
 
 gameCanvas!!.addCommand(gameCommandsFactory!!.START_TRACE)
 gameCanvas!!.removeCommand(gameCommandsFactory!!.STOP_TRACE)
@@ -869,7 +878,7 @@ inGameOptionsFormFactory!!.init(this, InGameFeatures(), "Options In Game", layer
 
     var inGameOptionsForm: CommandForm = inGameOptionsFormFactory!!.get()!!
 
-inGameOptionsForm!!.setItemStateListener(this.allbinaryGameCanvasRunnableInterface)
+inGameOptionsForm!!.setItemStateListener(allbinaryGameCanvasRunnableInterface)
 this.commandAction(gameCommandsFactory!!.SET_MENU_DISPLAYABLE, inGameOptionsForm)
 
                                     }
@@ -1046,13 +1055,13 @@ this.unPauseAppBackground(false)
                         
                                     {
                                     
-    var menuListener: HighScoreTextBox = displayable as HighScoreTextBox
+    var highScoreTextBox: HighScoreTextBox = displayable as HighScoreTextBox
 
-menuListener!!.submitted= true
+highScoreTextBox!!.submitted= true
 
                                     }
                                 
-this.allbinaryGameCanvasRunnableInterface!!.setHighScoreSubmitted(true)
+allbinaryGameCanvasRunnableInterface!!.setHighScoreSubmitted(true)
 this.commandAction(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS, displayable)
 
                                     }
@@ -1089,7 +1098,7 @@ virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT
                                 
                              else 
     
-                        if(command.getLabel()!!.compareTo(gameCommandsFactory!!.TOGGLE_FULLSCREEN.getLabel()) == 0)
+                        if(this.tsUtil!!.compareTo(command.getLabel(), gameCommandsFactory!!.TOGGLE_FULLSCREEN.getLabel()) == 0)
                         
                                     {
                                     

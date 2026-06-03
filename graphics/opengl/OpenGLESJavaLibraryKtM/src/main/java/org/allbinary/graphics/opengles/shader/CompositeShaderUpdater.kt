@@ -35,7 +35,7 @@ open public class CompositeShaderUpdater : ShaderUpdater {
         
 companion object {
             
-    private val instance: CompositeShaderUpdater = CompositeShaderUpdater(StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance(), NullUtil.getInstance()!!.NULL_INT_ARRAY)
+    private val instanceC: CompositeShaderUpdater = CompositeShaderUpdater(StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance(), NullUtil.getInstance()!!.NULL_INT_ARRAY)
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -44,7 +44,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CompositeShaderUpdater.instance
+                        return CompositeShaderUpdater.instanceC
 }
 
 

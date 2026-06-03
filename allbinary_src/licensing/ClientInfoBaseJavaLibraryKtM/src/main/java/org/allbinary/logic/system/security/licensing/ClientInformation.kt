@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
+import org.allbinary.TsUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.hardware.HardwareInterface
@@ -43,6 +44,8 @@ open public class ClientInformation
         
 
     private var operatingSystemInterface: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val name: String
 
@@ -209,7 +212,7 @@ clientInfoHashtable!!.put(abeClientInformationData!!.HARDWARE, hardwareString)
 var alicenseId = alicenseId
 
     
-                        if(this.getLicenseId()!!.compareTo(alicenseId) == 0)
+                        if(this.tsUtil!!.compareTo(this.getLicenseId(), alicenseId) == 0)
                         
                                     {
                                     
@@ -277,7 +280,7 @@ var list = list
 
 
     
-                        if(newServerName!!.compareTo(nextOldServerName) != 0)
+                        if(this.tsUtil!!.compareTo(newServerName, nextOldServerName) != 0)
                         
                                     {
                                     
