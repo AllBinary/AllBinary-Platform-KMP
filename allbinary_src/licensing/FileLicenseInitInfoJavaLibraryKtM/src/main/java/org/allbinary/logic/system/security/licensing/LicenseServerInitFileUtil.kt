@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
 import org.allbinary.business.init.LicenseInitInfoUtil
@@ -34,6 +33,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.FileStreamFactory
 import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.io.file.FileFactory
+import org.allbinary.logic.io.file.SimpleFileUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
@@ -41,48 +41,7 @@ open public class LicenseServerInitFileUtil
             : Object
          {
         
-companion object {
-            
-    open fun nullOutputStream()
-        //nullable = true from not(false or (false and true)) = true
-: OutputStream{
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return object: OutputStream()
-                                {
-                                
-                @Throws(IOException::class)
-            
-    override fun write(b: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var b = b
-}
-
-                @Throws(IOException::class)
-            
-    override fun write(b: ByteArray, off: Int, len: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var b = b
-var off = off
-var len = len
-}
-
-    override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
-                                }
-                            
-}
-
-
-        }
-            
             //Auto Generated
             public constructor() : super()
             {
@@ -92,7 +51,7 @@ var len = len
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val NULL_OUTPUT_STREAM: OutputStream = LicenseServerInitFileUtil.nullOutputStream()!!
+    private val NULL_OUTPUT_STREAM: OutputStream = SimpleFileUtil.nullOutputStream()!!
 
     open fun init()
         //nullable = true from not(false or (false and true)) = true

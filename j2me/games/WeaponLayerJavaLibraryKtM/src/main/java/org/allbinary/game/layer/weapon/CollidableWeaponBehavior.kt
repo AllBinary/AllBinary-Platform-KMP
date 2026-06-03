@@ -30,7 +30,6 @@ import org.allbinary.game.collision.CollidableInterfaceCompositeInterface
 import org.allbinary.game.collision.CollisionHelper
 import org.allbinary.game.collision.CollisionType
 import org.allbinary.game.collision.CollisionTypeFactory
-import org.allbinary.game.collision.LayerCollisionUtil
 import org.allbinary.game.combat.damage.DamageableInterface
 import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableBehavior
@@ -50,7 +49,7 @@ companion object {
 public constructor (collidable: Boolean)                        
 
                             : super(collidable){
-var collidable = collidable
+    //var collidable = collidable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,7 +63,7 @@ this.collisionHelper= CollidableHelperFactory.getInstance()
     open fun init(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
-var sourceLayerInterface = sourceLayerInterface
+    //var sourceLayerInterface = sourceLayerInterface
 this.setCollided(false)
 this.collisionHelper!!.setOwnerLayerInterface(sourceLayerInterface)
 }
@@ -74,7 +73,7 @@ this.collisionHelper!!.setOwnerLayerInterface(sourceLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var ownerLayer = ownerLayer
-var collisionLayer = collisionLayer
+    //var collisionLayer = collisionLayer
 
     
                         if(this.collisionHelper!!.isCollidable(collisionLayer))
@@ -110,19 +109,17 @@ var collisionLayer = collisionLayer
         //nullable = true from not(false or (false and false)) = true
 {
     //var ownerLayer = ownerLayer
-var collisionLayer = collisionLayer
+    //var collisionLayer = collisionLayer
 super.collide(ownerLayer, collisionLayer)
 this.collided= true
 }
 
 
-    private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
-
     override fun isCollisionInterface(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var ownerLayer = ownerLayer
-var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+    //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     
                         if(this.collisionHelper!!.isCollidable(collidableInterfaceCompositeInterface as CollidableCompositeLayer))
@@ -169,8 +166,14 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
         //nullable = true from not(false or (false and false)) = true
 {
     //var ownerLayer = ownerLayer
-var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-this.damageUtil!!.process(ownerLayer as DamageableInterface, collidableInterfaceCompositeInterface as DamageableInterface)
+    //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+
+    var ownerDamageableInterface: DamageableInterface = ownerLayer as DamageableInterface
+
+
+    var damageableInterface: DamageableInterface = collidableInterfaceCompositeInterface as DamageableInterface
+
+this.damageUtil!!.process(ownerDamageableInterface, damageableInterface)
 this.collided= true
 }
 
@@ -178,7 +181,7 @@ this.collided= true
     override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : CollisionType{
-var layerInterface = layerInterface
+    //var layerInterface = layerInterface
 
 
 
@@ -201,7 +204,7 @@ var layerInterface = layerInterface
     open fun setCollided(collided: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var collided = collided
+    //var collided = collided
 this.collided= collided
 }
 

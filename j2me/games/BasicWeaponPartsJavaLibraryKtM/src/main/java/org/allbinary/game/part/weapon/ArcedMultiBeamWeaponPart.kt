@@ -91,7 +91,7 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
                         for (index in 0 until this.total)
 
         {
-weaponLayer= this.weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), 0, (minAngle +increment).toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
+weaponLayer= this.weaponLayerCircularStaticPool!!.getInstanceWeaponLayer(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), 0, (minAngle +increment).toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
 allbinaryLayerManager!!.append(weaponLayer)
 next += increment
 }

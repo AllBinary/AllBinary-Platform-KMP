@@ -157,14 +157,14 @@ this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paintXY(grap
 }
 
 
-    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
     //var x = x
     //var y = y
     //var z = z
-this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paintThreed(graphics, x, y, z)
+this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paintThreedXYZ(graphics, x, y, z)
 }
 
 

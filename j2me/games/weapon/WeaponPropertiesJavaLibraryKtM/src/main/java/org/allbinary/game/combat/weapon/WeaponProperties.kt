@@ -162,7 +162,7 @@ this.speed= speed
 }
 
 
-    open fun getDamage(range: Int)
+    open fun getDamageI(range: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var range = range

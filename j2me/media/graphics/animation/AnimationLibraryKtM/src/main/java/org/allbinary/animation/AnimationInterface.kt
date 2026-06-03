@@ -37,7 +37,7 @@ interface AnimationInterface : LocationPaintableInterface {
         //nullable = true from not(false or (false and true)) = true
 
 
-    open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    open fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

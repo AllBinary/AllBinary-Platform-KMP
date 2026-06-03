@@ -208,7 +208,7 @@ this.animationInterfaceArray[index]!!.paintXY(graphics, x, y)
 }
 
 
-    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -222,7 +222,7 @@ this.animationInterfaceArray[index]!!.paintXY(graphics, x, y)
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
         {
-this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
+this.animationInterfaceArray[index]!!.paintThreedXYZ(graphics, x, y, z)
 }
 
 }

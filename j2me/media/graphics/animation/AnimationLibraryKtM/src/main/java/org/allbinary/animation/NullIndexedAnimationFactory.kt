@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -53,9 +53,23 @@ companion object {
 
         }
             
-    private val NULL_ANIMATION: Animation = object: NullIndexedAnimation(AnimationBehavior.getInstance())
-                                {
-                                
+open public inner class NullIndexedAnimationInner : NullIndexedAnimation {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+ constructor ()                        
+
+                            : super(AnimationBehavior.getInstance()){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -64,8 +78,11 @@ companion object {
     //var y = y
 }
 
-                                }
-                            
+
+}
+                
+            
+    private val NULL_ANIMATION: Animation = NullIndexedAnimationInner()
 private constructor ()
             : super()
         {

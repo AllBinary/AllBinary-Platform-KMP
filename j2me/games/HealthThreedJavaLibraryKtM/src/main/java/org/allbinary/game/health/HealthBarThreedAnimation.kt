@@ -157,7 +157,7 @@ this.updateSize()
 
     private val object3dProcessor: Object3dProcessor = Object3dProcessorUtil.getInstance()!!.getInstanceObject3dProcessor()!!
 
-    open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    open fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

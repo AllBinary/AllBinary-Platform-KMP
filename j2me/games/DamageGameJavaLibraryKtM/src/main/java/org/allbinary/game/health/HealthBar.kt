@@ -70,7 +70,7 @@ this.animationInterface!!.paintXY(graphics, 0, 0)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this.animationInterface!!.paintThreed(graphics, 0, 0, 0)
+this.animationInterface!!.paintThreedXYZ(graphics, 0, 0, 0)
 }
 
 

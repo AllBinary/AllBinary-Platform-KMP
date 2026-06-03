@@ -134,7 +134,10 @@ collidableDestroyableDamageableLayer!!.addPart(pickedUpLayerInterfaceFactoryInte
                                     }
                                 
                         else {
-                            this.doPickup(pickedUpLayerInterfaceFactoryInterface as PickupProcessorInterface)
+                            
+    var pickupProcessorInterface: PickupProcessorInterface = pickedUpLayerInterfaceFactoryInterface as PickupProcessorInterface
+
+this.doPickup(pickupProcessorInterface)
 
                         }
                             

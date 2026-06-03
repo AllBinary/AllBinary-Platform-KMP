@@ -113,7 +113,10 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!
     var gameKey: GameKey = GameKeyFactory.getInstance()!!.KEY_NUM0
 
 
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(canvas as GameKeyEventSourceInterface, gameKey)!!
+    var gameKeyEventSourceInterface: GameKeyEventSourceInterface = canvas as GameKeyEventSourceInterface
+
+
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(gameKeyEventSourceInterface, gameKey)!!
 
 this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 this.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)

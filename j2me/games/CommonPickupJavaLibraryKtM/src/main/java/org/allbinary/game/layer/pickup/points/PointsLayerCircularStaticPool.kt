@@ -35,7 +35,7 @@ open public class PointsLayerCircularStaticPool : AllBinaryLayerCircularPool {
 public constructor (allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int){
 var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
 var total = total
-super.init(allbinaryLayerFactoryInterface, total)
+super.initAllBinaryLayerCircularPool(allbinaryLayerFactoryInterface, total)
 }
 
 

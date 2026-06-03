@@ -58,7 +58,7 @@ companion object {
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.EVENT_POOL.init(TerrainEventFactory())
+this.EVENT_POOL.initAllBinaryEventCircularPool(TerrainEventFactory())
 }
 
 

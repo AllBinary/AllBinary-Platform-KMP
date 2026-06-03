@@ -43,7 +43,7 @@ companion object {
 {
 var viewPositionFactoryInterface = viewPositionFactoryInterface
 MineCountedPickedUpLayerInterfaceFactory.init()
-MineLayerCircularStaticPool.WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInterface), 20)
+MineLayerCircularStaticPool.WEAPON_LAYER_CIRCULAR_STATIC_POOL.initAllBinaryLayerCircularPool(MineLayerFactory(viewPositionFactoryInterface), 20)
 }
 
 

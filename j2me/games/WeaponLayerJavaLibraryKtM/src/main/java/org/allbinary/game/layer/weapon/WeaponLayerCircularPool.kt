@@ -38,17 +38,17 @@ public constructor (){
 
                 @Throws(Exception::class)
             
-    open fun getInstance(sourceLayerInterface: AllBinaryLayer, x: Int, y: Int, z: Int, angle: Int, otherAngle: Int, weaponProperties: WeaponProperties, scoreable: ScoreableInterface)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstanceWeaponLayer(sourceLayerInterface: AllBinaryLayer, x: Int, y: Int, z: Int, angle: Int, otherAngle: Int, weaponProperties: WeaponProperties, scoreable: ScoreableInterface)
+        //nullable = true from not(false or (false and false)) = true
 : WeaponLayer{
-var sourceLayerInterface = sourceLayerInterface
-var x = x
-var y = y
-var z = z
-var angle = angle
-var otherAngle = otherAngle
-var weaponProperties = weaponProperties
-var scoreable = scoreable
+    //var sourceLayerInterface = sourceLayerInterface
+    //var x = x
+    //var y = y
+    //var z = z
+    //var angle = angle
+    //var otherAngle = otherAngle
+    //var weaponProperties = weaponProperties
+    //var scoreable = scoreable
 
     var weaponLayer: WeaponLayer = super.getNextInstance() as WeaponLayer
 

@@ -43,6 +43,8 @@ open public class CollidableBaseBehavior
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+    val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
+
     private var collidable: Boolean = true
 public constructor (collidable: Boolean)
             : super()
@@ -103,8 +105,6 @@ this.collidable= collidable
                             append(this.commonStrings!!.NOT_IMPLEMENTED)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.append(this::class.toString()!!)!!.toString())
 }
 
-
-    private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
 
     override fun isCollision(ownerLayer: CollidableCompositeLayer, collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true

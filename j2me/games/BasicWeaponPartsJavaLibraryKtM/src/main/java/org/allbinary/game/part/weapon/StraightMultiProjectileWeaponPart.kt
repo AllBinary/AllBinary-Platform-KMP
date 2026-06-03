@@ -40,7 +40,7 @@ open public class StraightMultiProjectileWeaponPart : BasicWeaponPart {
         
 companion object {
             
-    open fun createPart(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
+    open fun createStraightMultiProjectileWeaponPart(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
         //nullable = true from not(false or (false and false)) = true
 : StraightMultiProjectileWeaponPart{
     //var animationInterface = animationInterface
@@ -136,7 +136,7 @@ sine= (next *this.noDecimalTrigTable!!.sin(angle.toInt())).toLong()
 beamX= (sine /this.noDecimalTrigTable!!.SCALE).toInt()
 cosine= (next *this.noDecimalTrigTable!!.cos(angle.toInt())).toLong()
 beamY=  -(cosine /this.noDecimalTrigTable!!.SCALE).toInt()
-weaponLayer= this.weaponLayerCircularStaticPool!!.getInstance(sourceLayerInterface, x +beamX, y +beamY, 0, angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
+weaponLayer= this.weaponLayerCircularStaticPool!!.getInstanceWeaponLayer(sourceLayerInterface, x +beamX, y +beamY, 0, angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
 allbinaryLayerManager!!.append(weaponLayer)
 next += increment
 }

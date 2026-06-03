@@ -102,8 +102,8 @@ this.downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKe
 
     var keyCodeAsInteger: Integer = this.smallIntegerSingletonFactory!!.getAtNoThrow(keyCode)!!
 
-this.downKeyEventHandler!!.fireEvent(keyCodeAsInteger)
-this.downKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(keyCodeAsInteger)
+this.downKeyEventHandler!!.fireEventI(keyCodeAsInteger)
+this.downKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEventI(keyCodeAsInteger)
 } catch(e: Exception)
             {
 this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
@@ -140,7 +140,10 @@ this.removeGameKeyEvent(canvas, keyCode, deviceId, false)
                         
                                     {
                                     
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(canvas as GameKeyEventSourceInterface, gameKey)!!
+    var gameKeyEventSourceInterface: GameKeyEventSourceInterface = canvas as GameKeyEventSourceInterface
+
+
+    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(gameKeyEventSourceInterface, gameKey)!!
 
 this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 this.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)

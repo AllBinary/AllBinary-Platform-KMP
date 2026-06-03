@@ -148,7 +148,7 @@ this.setReadyForExplosion(false)
 this.setAnimationInterface(this.getInitAnimationInterfaceP())
 this.setOwnerLayerInterface(sourceLayerInterface)
 this.collidableWeaponBehavior!!.init(sourceLayerInterface)
-this.setGroupInterface()
+this.setGroupInterfaces()
 
     
                         if(scoreable != 
@@ -167,7 +167,7 @@ this.movement.init(weaponProperties!!.getSpeed(), angle, otherAngle)
 }
 
 
-    open fun setGroupInterface()
+    open fun setGroupInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -460,7 +460,7 @@ var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
 
-this.animationInterface!!.paintThreed(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight(), viewPosition!!.getZ() -this.getHalfDepth())
+this.animationInterface!!.paintThreedXYZ(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight(), viewPosition!!.getZ() -this.getHalfDepth())
 }
 
 

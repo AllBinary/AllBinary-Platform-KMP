@@ -34,9 +34,9 @@ import org.allbinary.layer.AllBinaryLayerFactoryInterface
 open public class LifeLayerCircularStaticPool : AllBinaryLayerCircularPool {
         
 public constructor (allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int){
-var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
-var total = total
-super.init(allbinaryLayerFactoryInterface, total)
+    //var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
+    //var total = total
+super.initAllBinaryLayerCircularPool(allbinaryLayerFactoryInterface, total)
 }
 
 
@@ -45,7 +45,7 @@ super.init(allbinaryLayerFactoryInterface, total)
     open fun visit(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
-var sourceLayerInterface = sourceLayerInterface
+    //var sourceLayerInterface = sourceLayerInterface
 
     var lifeLayer: LifeLayer = this.getNextInstance() as LifeLayer
 

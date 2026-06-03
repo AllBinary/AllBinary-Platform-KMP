@@ -37,7 +37,7 @@ this.circularIndexUtil= CircularIndexUtil.createInstance(max)
 }
 
 
-    open fun init(allBinaryEventObjectFactoryInterface: AllBinaryEventObjectFactoryInterface)
+    open fun initAllBinaryEventCircularPool(allBinaryEventObjectFactoryInterface: AllBinaryEventObjectFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryEventObjectFactoryInterface = allBinaryEventObjectFactoryInterface

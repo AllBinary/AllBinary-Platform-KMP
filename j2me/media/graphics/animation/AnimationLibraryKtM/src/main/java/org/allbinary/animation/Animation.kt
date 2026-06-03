@@ -82,7 +82,7 @@ this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.g
 }
 
 
-    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

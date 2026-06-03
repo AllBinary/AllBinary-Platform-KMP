@@ -57,7 +57,7 @@ private constructor (id: Int)
             : super()
         {
 var id = id
-this.eventPool!!.init(MotionEventFactory(this.eventPool, id))
+this.eventPool!!.initAllBinaryEventCircularPool(MotionEventFactory(this.eventPool, id))
 }
 
 

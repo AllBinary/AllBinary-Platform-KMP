@@ -28,6 +28,7 @@
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.io.InputStream
+import java.io.OutputStream
 import java.io.Reader
 import java.io.Writer
 import java.nio.CharBuffer
@@ -55,6 +56,44 @@ companion object {
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SimpleFileUtil.instance
+}
+
+
+    open fun nullOutputStream()
+        //nullable = true from not(false or (false and true)) = true
+: OutputStream{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return object: OutputStream()
+                                {
+                                
+                @Throws(IOException::class)
+            
+    override fun write(b: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+var b = b
+}
+
+                @Throws(IOException::class)
+            
+    override fun write(b: ByteArray, off: Int, len: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+var b = b
+var off = off
+var len = len
+}
+
+    override fun close()
+        //nullable = true from not(false or (false and true)) = true
+{
+}
+
+                                }
+                            
 }
 
 

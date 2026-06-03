@@ -46,7 +46,7 @@ open public class BasicWeaponPart
         
 companion object {
             
-    open fun createPart(animationInterface: Animation)
+    open fun createBasicWeaponPart(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
 : BasicWeaponPart{
     //var animationInterface = animationInterface
@@ -58,7 +58,7 @@ companion object {
 }
 
 
-    val NULL_BASIC_WEAPON_PART: BasicWeaponPart = BasicWeaponPart.createPart(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))!!
+    val NULL_BASIC_WEAPON_PART: BasicWeaponPart = BasicWeaponPart.createBasicWeaponPart(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))!!
 
         }
             

@@ -36,11 +36,11 @@ protected constructor (){
 
                 @Throws(Exception::class)
             
-    open fun init(allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int)
+    open fun initAllBinaryLayerCircularPool(allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
-var total = total
+    //var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
+    //var total = total
 this.circularIndexUtil= CircularIndexUtil.createInstance(total)
 this.OBJECT_ARRAY= arrayOfNulls(total)
 

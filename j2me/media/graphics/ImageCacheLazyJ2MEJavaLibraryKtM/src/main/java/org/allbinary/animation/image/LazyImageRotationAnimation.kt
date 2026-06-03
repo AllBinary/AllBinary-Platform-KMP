@@ -130,7 +130,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS
 
 }
 
-    open override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    open override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -501,7 +501,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS
 }
 
 
-    open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    open fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -510,7 +510,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS
     //var z = z
 
         try {
-            this.animation.paintThreed(graphics, x, y, z)
+            this.animation.paintThreedXYZ(graphics, x, y, z)
 } catch(e: Exception)
             {
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)

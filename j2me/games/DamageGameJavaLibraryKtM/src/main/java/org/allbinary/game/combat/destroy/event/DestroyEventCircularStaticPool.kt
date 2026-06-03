@@ -61,7 +61,7 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var combatGameCanvas = combatGameCanvas
-this.EVENT_POOL.init(DestroyEventFactory(combatGameCanvas))
+this.EVENT_POOL.initAllBinaryEventCircularPool(DestroyEventFactory(combatGameCanvas))
 }
 
 

@@ -95,7 +95,7 @@ super.removeListener(eventListenerInterface)
 
                 @Throws(Exception::class)
             
-    open fun fireEvent(eventObject: Integer)
+    open fun fireEventI(eventObject: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -131,7 +131,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstanc
 
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
-this.process(eventObject, eventListenerInterface)
+this.processI(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
@@ -198,7 +198,7 @@ index++
 
                 @Throws(Exception::class)
             
-    open fun process(eventObject: Integer, eventListenerInterface: EventListenerInterface)
+    open fun processI(eventObject: Integer, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject

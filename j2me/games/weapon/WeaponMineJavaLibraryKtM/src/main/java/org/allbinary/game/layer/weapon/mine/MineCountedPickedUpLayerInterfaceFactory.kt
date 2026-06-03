@@ -109,10 +109,13 @@ private constructor ()
     var angle: Integer = hashtable.get(this.smallIntegerSingletonFactory!!.getAt(1) as Object) as Integer
 
 
+    var scoreableInterface: ScoreableInterface = sourceLayerInterface as ScoreableInterface
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.weaponLayerCircularStaticPool!!.getInstance(sourceLayerInterface, x, y, z, angle.toInt().toInt(), 0, this.weaponProperties, sourceLayerInterface as ScoreableInterface)
+                        return this.weaponLayerCircularStaticPool!!.getInstanceWeaponLayer(sourceLayerInterface, x, y, z, angle.toInt().toInt(), 0, this.weaponProperties, scoreableInterface)
 }
 
 

@@ -706,7 +706,7 @@ this.progressPaintable!!.paint(graphics)
 {
 var graphics = graphics
 this.paintableInterface!!.paintThreed(graphics)
-this.paintedSpecialAnimationInterface!!.paintThreed(graphics, 0, 0, 0)
+this.paintedSpecialAnimationInterface!!.paintThreedXYZ(graphics, 0, 0, 0)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.

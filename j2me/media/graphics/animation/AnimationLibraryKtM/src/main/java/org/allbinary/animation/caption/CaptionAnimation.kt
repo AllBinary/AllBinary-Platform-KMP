@@ -77,15 +77,15 @@ this.overlayAnimationInterface!!.paintXY(graphics, x +this.captionDx +this.dx, y
 }
 
 
-    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
     //var x = x
     //var y = y
     //var z = z
-this.animationInterface!!.paintThreed(graphics, x +this.captionDx, y +this.captionDy, z)
-this.overlayAnimationInterface!!.paintThreed(graphics, x +this.captionDx +this.dx, y +this.captionDy +this.dy, z)
+this.animationInterface!!.paintThreedXYZ(graphics, x +this.captionDx, y +this.captionDy, z)
+this.overlayAnimationInterface!!.paintThreedXYZ(graphics, x +this.captionDx +this.dx, y +this.captionDy +this.dy, z)
 }
 
 

@@ -39,7 +39,7 @@ open public class BasicProjectileWeaponPart : BasicWeaponPart {
         
 companion object {
             
-    open fun createPart(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
+    open fun createBasicProjectileWeaponPart(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
         //nullable = true from not(false or (false and false)) = true
 : BasicProjectileWeaponPart{
     //var animationInterface = animationInterface
@@ -83,7 +83,7 @@ var otherAngle = otherAngle
     //var weaponProperties = weaponProperties
     //var scoreableInterface = scoreableInterface
 
-    var weaponLayer: WeaponLayer = this.weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), this.relativeRelationship!!.getZ(), angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)!!
+    var weaponLayer: WeaponLayer = this.weaponLayerCircularStaticPool!!.getInstanceWeaponLayer(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), this.relativeRelationship!!.getZ(), angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)!!
 
 allbinaryLayerManager!!.append(weaponLayer)
 }
