@@ -2,7 +2,7 @@
         /*
                 *  
                 *  AllBinary Open License Version 1 
-                *  Copyright (c) 2011 AllBinary 
+                *  Copyright (c) 2025 AllBinary 
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
@@ -25,10 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.graphics.GPoint
 import org.allbinary.layer.AllBinaryLayer
-// tileLayer location
-open public class ViewPosition : GPoint {
+
+open public class ViewPosition : ViewPositionBase {
         
 companion object {
             
@@ -42,8 +41,6 @@ companion object {
                         return ViewPosition(0, 0, 0)
 }
 
-
-    val NULL_VIEW_POSITION: ViewPosition = ViewPosition.getInstanceD()!!
 
         }
             
@@ -94,7 +91,7 @@ var z = z
 }
 
 
-    open fun getX2()
+    override fun getX2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -105,7 +102,7 @@ var z = z
 }
 
 
-    open fun getY2()
+    override fun getY2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -116,7 +113,7 @@ var z = z
 }
 
 
-    open fun getZ2()
+    override fun getZ2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -127,11 +124,11 @@ var z = z
 }
 
 
-    open fun setAllbinaryLayer(allbinaryLayer: AllBinaryLayer)
+    override fun setAllbinaryLayer(allbinaryLayer: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayer = allbinaryLayer
-this.allbinaryLayer= allbinaryLayer
+this.allbinaryLayer= allbinaryLayer as AllBinaryLayer
 }
 
 

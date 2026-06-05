@@ -19,7 +19,7 @@ import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.physics.movement.Movement
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class TempExplosionWeaponLayer : SimpleWeaponLayer {
         
@@ -27,7 +27,7 @@ open public class TempExplosionWeaponLayer : SimpleWeaponLayer {
     val weaponProperties: WeaponProperties = WeaponProperties( -1L,  -1L, 0, 1000, 0.toShort())
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(0)
-public constructor (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition, timeDelay: Int)                        
+public constructor (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPositionBase, timeDelay: Int)                        
 
                             : super(name, RemoteInfo.REMOTE_INFO,  -1, movement, animationInterface, SimpleWeaponLayer.createDestroyed(), rectangle, viewPosition){
     //var name = name

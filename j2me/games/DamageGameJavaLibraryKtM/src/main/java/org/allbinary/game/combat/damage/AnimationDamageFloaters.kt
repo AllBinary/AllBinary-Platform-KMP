@@ -33,6 +33,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.CircularIndexUtil
 import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class AnimationDamageFloaters : DamageFloaters {
         
@@ -90,7 +91,7 @@ var graphics = graphics
 
         try {
             
-    var viewPosition: ViewPosition = this.layerInterface!!.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.layerInterface!!.getViewPosition()!!
 
 
     var x: Int = viewPosition!!.getX()!!

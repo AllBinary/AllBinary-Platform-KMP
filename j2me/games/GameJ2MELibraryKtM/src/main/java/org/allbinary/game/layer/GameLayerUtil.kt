@@ -27,7 +27,7 @@
         
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.layer.AllBinaryLayer
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class GameLayerUtil
             : Object
@@ -43,7 +43,7 @@ var layer = layer
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
 
-    var viewPosition: ViewPosition = layer.getViewPosition()!!
+    var viewPosition: ViewPositionBase = layer.getViewPosition()!!
 
 
 

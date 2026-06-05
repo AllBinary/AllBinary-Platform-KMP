@@ -28,13 +28,12 @@
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.Rectangle
-import org.allbinary.logic.string.StringUtil
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class MultiPlayerGameLayer : CollidableDestroyableDamageableLayer
                 , MultiPlayerGameLayerInterface {
         
-public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPositionBase)                        
 
                             : super(groupInterface, name, layerInfo, viewPosition){
     //var remoteInfo = remoteInfo

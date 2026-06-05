@@ -48,6 +48,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class CollidableDestroyableDamageableLayer : CollidableCompositeLayer
                 , DestroyableInterface
@@ -57,7 +58,7 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
         
 companion object {
             
-    val NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
+    val NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPositionBase.NULL_VIEW_POSITION)
 
     private val READYFOREXPLOSION: String = "ReadyForExplosion: "
 
@@ -86,7 +87,7 @@ companion object {
     var isDraggable: Boolean = false
 
     var isDragged: Boolean = false
-public constructor (groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPositionBase)                        
 
                             : super(name, layerInfo, viewPosition, CollidableNeverCollideBehaviorFactory.getInstance()){
     //var groupInterface = groupInterface

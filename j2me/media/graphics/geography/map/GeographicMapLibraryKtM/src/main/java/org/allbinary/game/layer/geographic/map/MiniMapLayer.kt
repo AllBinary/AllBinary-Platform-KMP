@@ -47,7 +47,7 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEvent
 import org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEventHandler
 import org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEventListenerInterface
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class MiniMapLayer : AllBinaryLayer
                 , GeographicMapCellPositionEventListenerInterface {
@@ -64,7 +64,7 @@ open public class MiniMapLayer : AllBinaryLayer
     private val positionList: BasicArrayList
 
     private var animationInterface: CircleFilledAnimation
-public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
+public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPositionBase)                        
 
                             : super(StringUtil.getInstance()!!.EMPTY_STRING, Rectangle(PointFactory.getInstance()!!.createXY(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition){
 var geographicMapInterface = geographicMapInterface

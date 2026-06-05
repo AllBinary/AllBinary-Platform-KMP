@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 import org.allbinary.view.ViewPositionFactoryInterface
 
 open public class StaticTileLayerViewPositionFactory
@@ -43,7 +43,7 @@ open public class StaticTileLayerViewPositionFactory
             
     override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ViewPosition{
+: ViewPositionBase{
 
 
 

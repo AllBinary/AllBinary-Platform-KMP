@@ -36,6 +36,7 @@ import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.logic.math.PrimitiveLongUtil
 import org.allbinary.util.CircularIndexUtil
 import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class PtsDamageFloaters : DamageFloaters {
         
@@ -99,7 +100,7 @@ this.circularIndexUtil!!.next()
 {
 var graphics = graphics
 
-    var viewPosition: ViewPosition = this.layerInterface!!.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.layerInterface!!.getViewPosition()!!
 
 
     var x: Int = viewPosition!!.getX()!!

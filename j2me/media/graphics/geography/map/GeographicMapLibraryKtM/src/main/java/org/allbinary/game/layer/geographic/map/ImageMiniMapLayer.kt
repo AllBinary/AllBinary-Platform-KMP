@@ -31,13 +31,13 @@ import javax.microedition.lcdui.NullImage
 import org.allbinary.graphics.Anchor
 import org.allbinary.image.PaintableToImageUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class ImageMiniMapLayer : MiniMapLayer {
         
 
     private var image: Image = NullImage.NULL_IMAGE
-public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
+public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPositionBase)                        
 
                             : super(geographicMapInterface, viewPosition){
 var geographicMapInterface = geographicMapInterface

@@ -39,7 +39,7 @@ public constructor ()
 
     open fun getInstance(z: Int)
         //nullable =  from not(true or (false and false)) = 
-: ViewPosition{
+: ViewPositionBase{
 var z = z
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!

@@ -45,6 +45,7 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.physics.movement.Movement
 import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class WeaponLayer : MultiPlayerGameLayer
                 , TickableInterface {
@@ -85,7 +86,7 @@ companion object {
     private var weaponProperties: WeaponProperties = WeaponProperties.NULL_WEAPON_PROPERTIES
 
     private val multiPlayerType: Int
-protected constructor (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
+protected constructor (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPositionBase)                        
 
                             : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
     //var name = name
@@ -447,7 +448,7 @@ this.sourceLayerInterface= sourceLayerInterface
 {
 var graphics = graphics
 
-    var viewPosition: ViewPosition = this.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
 this.animationInterface!!.paintXY(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight())
 }
@@ -458,7 +459,7 @@ this.animationInterface!!.paintXY(graphics, viewPosition!!.getX() -this.getHalfW
 {
 var graphics = graphics
 
-    var viewPosition: ViewPosition = this.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
 this.animationInterface!!.paintThreedXYZ(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight(), viewPosition!!.getZ() -this.getHalfDepth())
 }

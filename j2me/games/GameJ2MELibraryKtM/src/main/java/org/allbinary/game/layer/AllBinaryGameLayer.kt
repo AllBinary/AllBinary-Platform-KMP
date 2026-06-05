@@ -42,7 +42,7 @@ import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 import org.allbinary.view.event.ViewPositionEvent
 import org.allbinary.view.event.ViewPositionEventListenerInterface
 
@@ -80,7 +80,7 @@ this@AllBinaryGameLayer.basicSetColorUtil!!.setBasicColorP(graphics, this.BLACK)
     
 
     private val gameKeyEventList: BasicArrayList = BasicArrayListD()
-public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositionBase)                        
 
                             : super(name, layerInfo, viewPosition){
     //var name = name
@@ -202,7 +202,7 @@ this.paintable.paint(graphics)
 {
     //var graphics = graphics
 
-    var viewPosition: ViewPosition = this.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
 
     var viewX: Int = viewPosition!!.getX()!!

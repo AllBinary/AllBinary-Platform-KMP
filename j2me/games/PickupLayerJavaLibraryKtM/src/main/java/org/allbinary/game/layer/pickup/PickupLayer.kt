@@ -36,7 +36,7 @@ import org.allbinary.game.multiplayer.layer.MultiPlayerGameLayer
 import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.graphics.Rectangle
 import org.allbinary.image.opengles.OpenGLSurfaceChangedInterface
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class PickupLayer : MultiPlayerGameLayer
                 , PickedUpLayerInterface
@@ -48,7 +48,7 @@ open public class PickupLayer : MultiPlayerGameLayer
     private var destroyed: Boolean= false
 
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-public constructor (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
+public constructor (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPositionBase)                        
 
                             : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
     //var name = name
@@ -95,7 +95,7 @@ this.setPosition(x, y, z)
 {
 var graphics = graphics
 
-    var viewPosition: ViewPosition = this.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
 
     var viewX: Int = viewPosition!!.getX()!!
@@ -112,7 +112,7 @@ this.animationInterface!!.paintXY(graphics, viewX, viewY)
 {
 var graphics = graphics
 
-    var viewPosition: ViewPosition = this.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
 
     var viewX: Int = viewPosition!!.getX()!!

@@ -36,7 +36,7 @@ import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.string.CommonStrings
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class BasicWeaponPart
             : Object
@@ -170,7 +170,7 @@ this.animationInterface= animationInterface
 {
     //var graphics = graphics
 
-    var viewPosition: ViewPosition = this.getOwnerLayerInterface()!!.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.getOwnerLayerInterface()!!.getViewPosition()!!
 
 
     var viewX: Int = viewPosition!!.getX()!!

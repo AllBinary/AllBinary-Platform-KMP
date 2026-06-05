@@ -33,7 +33,7 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.physics.movement.NoMovementFactory
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 import org.allbinary.view.event.ViewPositionEventHandler
 import org.allbinary.weapon.media.audio.DropWeaponSound
 
@@ -44,7 +44,7 @@ companion object {
     private val NAME: String = "MineLayer"
 
         }
-            public constructor (viewPosition: ViewPosition)                        
+            public constructor (viewPosition: ViewPositionBase)                        
 
                             : super(MineLayer.NAME, RemoteInfo.REMOTE_INFO,  -1, NoMovementFactory.getInstance()!!.getMovmentInstance(), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.RESOURCE)!!.getInstance(0), SimpleWeaponLayer.createDestroyed(), Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 10, 10), viewPosition){
 var viewPosition = viewPosition

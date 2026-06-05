@@ -32,7 +32,7 @@ import org.allbinary.game.combat.damage.ExplosionResources
 import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.graphics.Rectangle
 import org.allbinary.physics.movement.Movement
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class SimpleWeaponLayer : WeaponLayer {
         
@@ -52,7 +52,7 @@ companion object {
 
 
         }
-            public constructor (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
+            public constructor (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPositionBase)                        
 
                             : super(name, remoteInfo, multiPlayerType, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
     //var name = name

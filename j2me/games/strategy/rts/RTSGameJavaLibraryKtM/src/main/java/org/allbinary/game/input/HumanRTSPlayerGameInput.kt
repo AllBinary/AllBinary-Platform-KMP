@@ -69,6 +69,7 @@ import org.allbinary.media.audio.ErrorSound
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
+import org.allbinary.view.ViewPositionBase
 
 open public class HumanRTSPlayerGameInput : RTSPlayerGameInput
                 , BaseMotionGestureEventListener {
@@ -296,17 +297,20 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD)
         {
 rtsLayer= rtsLayerList!!.get(index) as RTSLayer
 stringBuffer!!.delete(0, stringBuffer!!.length())
+
+    var viewPosition: ViewPositionBase = rtsLayer!!.getViewPosition()!!
+
 stringBuffer!!.append(this.POSSIBLE)
 stringBuffer!!.append(rtsLayer!!.getName())
 stringBuffer!!.append(this.SPACE)
 stringBuffer!!.append(this.AT)
-stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth()))
+stringBuffer!!.appendint((viewPosition!!.getX() +rtsLayer!!.getHalfWidth()))
 stringBuffer!!.append(this.SPACE)
-stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
+stringBuffer!!.appendint((viewPosition!!.getY() +rtsLayer!!.getHalfHeight()))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD)
 
     
-                        if(this.rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth(), rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
+                        if(this.rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, viewPosition!!.getX() +rtsLayer!!.getHalfWidth(), viewPosition!!.getY() +rtsLayer!!.getHalfHeight()))
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().

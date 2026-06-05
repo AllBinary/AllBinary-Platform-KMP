@@ -45,7 +45,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun createFactory(image: Image, sequenceArray: IntArray, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+    open fun createFactoryBase(image: Image, sequenceArray: IntArray, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
         //nullable = true from not(false or (false and false)) = true
 : BaseImageAnimationFactory{
     //var image = image

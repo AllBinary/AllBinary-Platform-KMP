@@ -36,7 +36,7 @@ import org.allbinary.graphics.threed.min3d.renderer.Object3dProcessor
 import org.allbinary.graphics.threed.min3d.renderer.Object3dProcessorUtil
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayer
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class HealthBarThreedAnimation : HealthBarAnimation {
         
@@ -171,7 +171,7 @@ this.updateSize()
     var gl: GL10 = openGLESGraphics!!.getGl10()!!
 
 
-    var viewPosition: ViewPosition = this.allbinaryLayer!!.getViewPosition()!!
+    var viewPosition: ViewPositionBase = this.allbinaryLayer!!.getViewPosition()!!
 
 
     var positionNumber3d: Number3d = this.rectangle.getPosition()!!

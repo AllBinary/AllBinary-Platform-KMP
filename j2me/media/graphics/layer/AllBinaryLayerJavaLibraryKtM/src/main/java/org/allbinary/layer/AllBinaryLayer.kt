@@ -41,6 +41,7 @@ import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 import org.allbinary.view.event.ViewPositionEvent
 
 open public class AllBinaryLayer : Layer
@@ -48,7 +49,7 @@ open public class AllBinaryLayer : Layer
         
 companion object {
             
-    val NULL_ALLBINARY_LAYER: AllBinaryLayer = AllBinaryLayer(StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
+    val NULL_ALLBINARY_LAYER: AllBinaryLayer = AllBinaryLayer(StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPositionBase.NULL_VIEW_POSITION)
 
     private val TYPE: String = "Type: "
 
@@ -62,8 +63,8 @@ companion object {
 
     private val name: String
 
-    private var viewPosition: ViewPosition = ViewPosition.NULL_VIEW_POSITION
-public constructor (name: String, rectangle: Rectangle, viewPosition: ViewPosition)                        
+    private var viewPosition: ViewPositionBase = ViewPositionBase.NULL_VIEW_POSITION
+public constructor (name: String, rectangle: Rectangle, viewPosition: ViewPositionBase)                        
 
                             : super(rectangle.getWidth(), rectangle.getHeight()){
     //var name = name
@@ -216,7 +217,7 @@ this.halfHeight= halfHeight
 
     open fun getViewPosition()
         //nullable = true from not(false or (false and true)) = true
-: ViewPosition{
+: ViewPositionBase{
 
 
 
@@ -225,7 +226,7 @@ this.halfHeight= halfHeight
 }
 
 
-    open fun setViewPosition(viewPosition: ViewPosition)
+    open fun setViewPosition(viewPosition: ViewPositionBase)
         //nullable = true from not(false or (false and false)) = true
 {
     //var viewPosition = viewPosition

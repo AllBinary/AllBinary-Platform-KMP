@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -56,8 +56,8 @@ public constructor (teamName: String, teamId: Short)
         {
 var teamName = teamName
 var teamId = teamId
-this.setName(teamName)
 this.teamId= teamId
+this.setName(teamName)
 }
 
 

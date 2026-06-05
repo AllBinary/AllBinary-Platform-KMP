@@ -37,19 +37,19 @@ import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
-import org.allbinary.view.ViewPosition
+import org.allbinary.view.ViewPositionBase
 
 open public class CollidableCompositeLayer : AllBinaryGameLayer
                 , CollidableInterfaceCompositeInterface {
         
 companion object {
             
-    val NULL_COLLIDABLE_COMPOSITE_LAYER: CollidableCompositeLayer = CollidableCompositeLayer(StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION, CollidableNeverCollideBehaviorFactory.getInstance())
+    val NULL_COLLIDABLE_COMPOSITE_LAYER: CollidableCompositeLayer = CollidableCompositeLayer(StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPositionBase.NULL_VIEW_POSITION, CollidableNeverCollideBehaviorFactory.getInstance())
 
         }
             
     private var collidableInferface: CollidableBaseBehavior = CollidableNeverCollideBehaviorFactory.getInstance()!!.createBehavior()!!
-public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition, collidableBaseBehaviorFactory: CollidableBaseBehaviorFactory)                        
+public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositionBase, collidableBaseBehaviorFactory: CollidableBaseBehaviorFactory)                        
 
                             : super(name, layerInfo, viewPosition){
     //var name = name
