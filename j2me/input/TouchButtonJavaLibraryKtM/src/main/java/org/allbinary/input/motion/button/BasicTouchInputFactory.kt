@@ -27,6 +27,7 @@
         
 import org.allbinary.game.input.InputFactory
 import org.allbinary.game.input.mapping.InputToGameKeyMapping
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
@@ -39,16 +40,25 @@ open public class BasicTouchInputFactory
         
 companion object {
             
-    private val SINGLETON: BasicTouchInputFactory = BasicTouchInputFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicTouchInputFactory{
 
+    
+                        if(BasicTouchInputFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    BasicTouchInputFactory.instance= BasicTouchInputFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicTouchInputFactory.SINGLETON
+                        return BasicTouchInputFactory.instance as BasicTouchInputFactory
 }
 
 
@@ -132,7 +142,6 @@ this.list.add(this.SPECIAL_BUTTON_SIX)
 this.list.add(this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY)
 this.list.add(this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY)
 this.updateAllFromList(this.list, inputToGameKeyMapping)
-CancelTouchButtonInputFactory.getInstance()
 
                                     }
                                 

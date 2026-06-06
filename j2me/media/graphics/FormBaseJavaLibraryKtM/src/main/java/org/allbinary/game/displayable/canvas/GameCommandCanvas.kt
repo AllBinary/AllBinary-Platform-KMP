@@ -113,7 +113,7 @@ companion object {
 
     private var menuPaintable: Paintable = NullPaintable.getInstance()!!
 
-    private var menuForm: PaintableForm = PaintableForm.NULL_PAINTABLE_FORM
+    private var menuForm: PaintableForm = PaintableForm.getNullPaintableForm()!!
 
     private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
 public constructor (cmdListener: CommandListener, name: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        

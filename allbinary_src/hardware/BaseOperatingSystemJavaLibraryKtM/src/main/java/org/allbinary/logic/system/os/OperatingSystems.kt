@@ -67,7 +67,7 @@ companion object {
 
     val ANDROID: String = this.LINUX
 
-    val HARMONY: String = "Harmony"
+    val HARMONY: String = "HarmonyOS"
 private constructor ()
             : super()
         {

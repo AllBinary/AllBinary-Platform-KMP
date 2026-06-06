@@ -25,10 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.graphics.RectangleFactory
-import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.graphics.form.item.ABCustomItem
-import org.allbinary.logic.string.StringUtil
 
 open public class ScrollSelectionFormNoneFactory
             : Object
@@ -43,7 +39,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ScrollSelectionForm.NULL_SCROLL_SELECTION_HORIZONTAL_FORM
+                        return ScrollSelectionForm.getNullScrollSelectionFormHorizontal()
 }
 
 

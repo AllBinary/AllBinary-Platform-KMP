@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.InputFactory
+import org.allbinary.logic.NullUtil
 
 open public class TouchMotionGestureFactory
             : Object
@@ -33,16 +34,25 @@ open public class TouchMotionGestureFactory
         
 companion object {
             
-    private val instance: TouchMotionGestureFactory = TouchMotionGestureFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TouchMotionGestureFactory{
 
+    
+                        if(TouchMotionGestureFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    TouchMotionGestureFactory.instance= TouchMotionGestureFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TouchMotionGestureFactory.instance
+                        return TouchMotionGestureFactory.instance as TouchMotionGestureFactory
 }
 
 

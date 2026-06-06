@@ -167,7 +167,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)
 
     open fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresHelperBase{
+: HighScoresHelperBaseInterface{
 
 
 

@@ -31,22 +31,32 @@ import org.allbinary.game.input.PlatformInputMappingFactory
 import org.allbinary.game.input.event.GameKeyEventFactory
 import org.allbinary.game.input.motion.action.GameKeyCompleteMotionGestureInputEvent
 import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
+import org.allbinary.logic.NullUtil
 import org.allbinary.string.CommonStrings
 
 open public class ReleaseTouchInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
 companion object {
             
-    private val SINGLETON: GameKeyCompleteMotionGestureInputEvent = ReleaseTouchInputToGameKeyEventAction()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
+    
+                        if(ReleaseTouchInputToGameKeyEventAction.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    ReleaseTouchInputToGameKeyEventAction.instance= ReleaseTouchInputToGameKeyEventAction()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ReleaseTouchInputToGameKeyEventAction.SINGLETON
+                        return ReleaseTouchInputToGameKeyEventAction.instance as GameKeyCompleteMotionGestureInputEvent
 }
 
 

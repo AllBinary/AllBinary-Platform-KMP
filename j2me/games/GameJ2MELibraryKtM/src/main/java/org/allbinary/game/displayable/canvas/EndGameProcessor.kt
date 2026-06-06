@@ -27,6 +27,7 @@
         
 import org.allbinary.canvas.Processor
 import org.allbinary.game.score.HighScores
+import org.allbinary.game.score.HighScoresHelperBase
 import org.allbinary.game.score.NullHighScoresSingletonFactory
 import org.allbinary.graphics.paint.NullPaintable
 
@@ -63,14 +64,17 @@ this.gameCanvas= gameCanvas
                         
                                     {
                                     
-    var highScores: HighScores = this.gameCanvas!!.highScoresHelper!!.getSelectedHighScores()!!
+    var highScoresBase: HighScoresHelperBase = this.gameCanvas!!.highScoresHelper as HighScoresHelperBase
+
+
+    var highScores: HighScores = highScoresBase!!.getSelectedHighScores()!!
 
 
     
                         if(highScores != NullHighScoresSingletonFactory.getInstance())
                         
                                     {
-                                    this.gameCanvas!!.highScoresHelper!!.selectHighScores()
+                                    highScoresBase!!.selectHighScores()
 this.gameCanvas!!.getRealHighScoresPaintable()!!.setHighScores(highScores)
 this.gameCanvas!!.setGameState(AllBinaryGameCanvas.SHOW_HIGH_SCORE_GAME_STATE)
 this.gameCanvas!!.setHighScoresPaintable(this.gameCanvas!!.getRealHighScoresPaintable())

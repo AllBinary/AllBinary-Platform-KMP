@@ -33,6 +33,7 @@ import org.allbinary.game.graphics.hud.BasicHudFactory
 import org.allbinary.game.layer.NullPathFindingLayer
 import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.hud.basic.NumberStringHud
+import org.allbinary.game.layer.hud.basic.NumberStringHudFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.font.MyFont
 import org.allbinary.logic.math.MathUtil
@@ -71,16 +72,19 @@ companion object {
     private var rtsLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 private constructor (){
 
-    var productivityHud: NumberStringHud = NumberStringHud.NULL_NUMBER_STRING_HUD
+    var numberStringHudFactory: NumberStringHudFactory = NumberStringHudFactory.getInstance()!!
 
 
-    var efficiencyHud: NumberStringHud = NumberStringHud.NULL_NUMBER_STRING_HUD
+    var productivityHud: NumberStringHud = numberStringHudFactory!!.NULL_NUMBER_STRING_HUD
 
 
-    var healthHud: NumberStringHud = NumberStringHud.NULL_NUMBER_STRING_HUD
+    var efficiencyHud: NumberStringHud = numberStringHudFactory!!.NULL_NUMBER_STRING_HUD
 
 
-    var maxHealthHud: NumberStringHud = NumberStringHud.NULL_NUMBER_STRING_HUD
+    var healthHud: NumberStringHud = numberStringHudFactory!!.NULL_NUMBER_STRING_HUD
+
+
+    var maxHealthHud: NumberStringHud = numberStringHudFactory!!.NULL_NUMBER_STRING_HUD
 
 
         try {

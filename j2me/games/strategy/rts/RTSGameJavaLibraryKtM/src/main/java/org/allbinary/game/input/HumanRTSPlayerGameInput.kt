@@ -335,7 +335,7 @@ this.getSelectedBuildingPlayerGameInput()!!.addSelectedRTSLayer(rtsLayer)
 
 
     
-                        if(lastRTSLayer!!.getScrollSelectionForm() != ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM)
+                        if(lastRTSLayer!!.getScrollSelectionForm() != ScrollSelectionForm.getNullScrollSelectionForm())
                         
                                     {
                                     this.updateForm(lastRTSLayer!!.getScrollSelectionForm(), lastRTSLayer!!.getRTSFormInput())
@@ -466,7 +466,7 @@ this.setSelectedRtsLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DE
 
 
     
-                        if(scrollSelectionForm != ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM && this.getRtsPlayerLayerInterface()!!.getGroupInterface()[0] == rtsLayer!!.getGroupInterface()[0])
+                        if(scrollSelectionForm != ScrollSelectionForm.getNullScrollSelectionForm() && this.getRtsPlayerLayerInterface()!!.getGroupInterface()[0] == rtsLayer!!.getGroupInterface()[0])
                         
                                     {
                                     this.updateForm(scrollSelectionForm, rtsLayer!!.getRTSFormInput())

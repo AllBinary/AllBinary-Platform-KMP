@@ -30,6 +30,7 @@ import org.allbinary.game.configuration.feature.GraphicsFeature
 import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -41,16 +42,25 @@ open public class GameGraphicsResourceUtil
         
 companion object {
             
-    private val instance: GameGraphicsResourceUtil = GameGraphicsResourceUtil()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameGraphicsResourceUtil{
 
+    
+                        if(GameGraphicsResourceUtil.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    GameGraphicsResourceUtil.instance= GameGraphicsResourceUtil()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameGraphicsResourceUtil.instance
+                        return GameGraphicsResourceUtil.instance as GameGraphicsResourceUtil
 }
 
 

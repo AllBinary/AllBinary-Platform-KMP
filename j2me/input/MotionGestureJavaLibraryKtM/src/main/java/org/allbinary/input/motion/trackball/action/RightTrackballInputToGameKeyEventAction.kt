@@ -28,21 +28,31 @@
 import org.allbinary.game.input.PlatformInputMappingFactory
 import org.allbinary.game.input.motion.action.GameKeyCompleteMotionGestureInputEvent
 import org.allbinary.input.motion.gesture.TrackballMotionGestureFactory
+import org.allbinary.logic.NullUtil
 
 open public class RightTrackballInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
 companion object {
             
-    private val SINGLETON: GameKeyCompleteMotionGestureInputEvent = RightTrackballInputToGameKeyEventAction()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
+    
+                        if(RightTrackballInputToGameKeyEventAction.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    RightTrackballInputToGameKeyEventAction.instance= RightTrackballInputToGameKeyEventAction()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return RightTrackballInputToGameKeyEventAction.SINGLETON
+                        return RightTrackballInputToGameKeyEventAction.instance as GameKeyCompleteMotionGestureInputEvent
 }
 
 

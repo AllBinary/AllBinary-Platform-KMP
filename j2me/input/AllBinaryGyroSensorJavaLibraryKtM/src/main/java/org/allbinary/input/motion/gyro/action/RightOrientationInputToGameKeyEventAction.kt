@@ -28,21 +28,31 @@
 import org.allbinary.game.input.PlatformInputMappingFactory
 import org.allbinary.game.input.motion.action.GameKeyCompleteMotionGestureInputEvent
 import org.allbinary.input.gyro.OrientationMotionGestureFactory
+import org.allbinary.logic.NullUtil
 
 open public class RightOrientationInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
 companion object {
             
-    private val instance: GameKeyCompleteMotionGestureInputEvent = RightOrientationInputToGameKeyEventAction()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
+    
+                        if(RightOrientationInputToGameKeyEventAction.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    RightOrientationInputToGameKeyEventAction.instance= RightOrientationInputToGameKeyEventAction()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return RightOrientationInputToGameKeyEventAction.instance
+                        return RightOrientationInputToGameKeyEventAction.instance as GameKeyCompleteMotionGestureInputEvent
 }
 
 

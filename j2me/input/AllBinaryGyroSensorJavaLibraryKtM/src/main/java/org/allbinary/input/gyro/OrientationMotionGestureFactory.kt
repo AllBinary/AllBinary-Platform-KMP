@@ -27,6 +27,7 @@
         
 import org.allbinary.game.input.InputFactory
 import org.allbinary.input.motion.gesture.MotionGestureInput
+import org.allbinary.logic.NullUtil
 
 open public class OrientationMotionGestureFactory
             : Object
@@ -34,16 +35,25 @@ open public class OrientationMotionGestureFactory
         
 companion object {
             
-    private val instance: OrientationMotionGestureFactory = OrientationMotionGestureFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OrientationMotionGestureFactory{
 
+    
+                        if(OrientationMotionGestureFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    OrientationMotionGestureFactory.instance= OrientationMotionGestureFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OrientationMotionGestureFactory.instance
+                        return OrientationMotionGestureFactory.instance as OrientationMotionGestureFactory
 }
 
 

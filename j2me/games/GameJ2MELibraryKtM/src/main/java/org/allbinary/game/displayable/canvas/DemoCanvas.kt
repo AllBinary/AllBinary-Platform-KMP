@@ -186,7 +186,7 @@ companion object {
 
     private var menuInputProcessor: BasicMenuInputProcessor = NoMenuInputProcessor.getInstance()!!
 
-    private var menuForm: ScrollSelectionForm = ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM
+    private var menuForm: ScrollSelectionForm = ScrollSelectionForm.getNullScrollSelectionForm()!!
 
     private val gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory
 

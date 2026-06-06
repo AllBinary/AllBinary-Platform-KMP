@@ -27,6 +27,7 @@
         
 import org.allbinary.game.input.mapping.InputToGameKeyMapping
 import org.allbinary.input.motion.button.BasicTouchInputFactory
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -36,16 +37,25 @@ open public class PlatformFormInputMappingFactory
         
 companion object {
             
-    private val instance: PlatformFormInputMappingFactory = PlatformFormInputMappingFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PlatformFormInputMappingFactory{
 
+    
+                        if(PlatformFormInputMappingFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    PlatformFormInputMappingFactory.instance= PlatformFormInputMappingFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PlatformFormInputMappingFactory.instance
+                        return PlatformFormInputMappingFactory.instance as PlatformFormInputMappingFactory
 }
 
 
@@ -58,7 +68,7 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var SINGLETON: InputToGameKeyMapping = InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING
+    private var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping.getNullInstance()!!
 
     open fun getOrCreate()
         //nullable = true from not(false or (false and true)) = true
@@ -67,7 +77,7 @@ companion object {
         try {
             
     
-                        if(this.SINGLETON == InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING)
+                        if(this.inputToGameKeyMapping == InputToGameKeyMapping.getNullInstance())
                         
                                     {
                                     
@@ -91,7 +101,7 @@ inputToGameKeyMapping!!.add(gameKeyFactory!!.UP, basicTouchInputFactory!!.UP)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.LEFT, basicTouchInputFactory!!.LEFT)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.RIGHT, basicTouchInputFactory!!.RIGHT)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.DOWN, basicTouchInputFactory!!.DOWN)
-this.SINGLETON= inputToGameKeyMapping
+this.inputToGameKeyMapping= inputToGameKeyMapping
 
                                     }
                                 
@@ -107,7 +117,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.SINGLETON
+                        return this.inputToGameKeyMapping
 }
 
 

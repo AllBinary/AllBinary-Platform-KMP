@@ -32,7 +32,7 @@ import org.allbinary.game.score.HighScore
 import org.allbinary.game.score.HighScoreNamePersistanceSingleton
 import org.allbinary.game.score.HighScores
 import org.allbinary.game.score.HighScoresFactoryInterface
-import org.allbinary.game.score.HighScoresHelperBase
+import org.allbinary.game.score.HighScoresHelperBaseInterface
 import org.allbinary.game.score.HighScoresResultsListener
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.logic.communication.log.LogUtil
@@ -66,10 +66,10 @@ companion object {
 
     private val gameInfo: GameInfo
 
-    private val highScoresHelper: HighScoresHelperBase
+    private val highScoresHelper: HighScoresHelperBaseInterface
 
     private var firstTime: Boolean = true
-public constructor (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore)
+public constructor (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBaseInterface, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore)
             : super()
         {
     //var highScoresFactoryInterface = highScoresFactoryInterface

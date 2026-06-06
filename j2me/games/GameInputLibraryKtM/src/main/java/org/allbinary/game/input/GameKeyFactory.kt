@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Canvas
+import org.allbinary.logic.NullUtil
 import org.allbinary.string.CommonPhoneStrings
 
 open public class GameKeyFactory
@@ -34,16 +35,25 @@ open public class GameKeyFactory
         
 companion object {
             
-    private val instance: GameKeyFactory = GameKeyFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyFactory{
 
+    
+                        if(GameKeyFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    GameKeyFactory.instance= GameKeyFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameKeyFactory.instance
+                        return GameKeyFactory.instance as GameKeyFactory
 }
 
 

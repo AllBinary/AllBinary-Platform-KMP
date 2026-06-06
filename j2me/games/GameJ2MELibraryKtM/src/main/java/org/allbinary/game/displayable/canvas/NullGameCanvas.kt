@@ -31,6 +31,7 @@ import javax.microedition.lcdui.NullCommandListener
 import org.allbinary.game.init.BasicBuildGameInitializerFactory
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.score.NoHighScoresFactory
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -60,16 +61,25 @@ LogUtil.getInstance()!!.put(CommonStrings.getInstance()!!.EXCEPTION, "NullGameCa
 }
 
 
-    private val SINGLETON: NullGameCanvas = NullGameCanvas.createNull()!!
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullGameCanvas{
 
+    
+                        if(NullGameCanvas.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    NullGameCanvas.instance= NullGameCanvas.createNull()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullGameCanvas.SINGLETON
+                        return NullGameCanvas.instance as NullGameCanvas
 }
 
 

@@ -68,7 +68,7 @@ protected constructor ()
 
     override fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresHelperBase{
+: HighScoresHelperBaseInterface{
 
 
 

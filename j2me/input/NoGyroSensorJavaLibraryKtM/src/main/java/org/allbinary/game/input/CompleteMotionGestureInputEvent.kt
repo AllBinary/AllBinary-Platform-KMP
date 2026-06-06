@@ -35,12 +35,7 @@ import org.allbinary.string.CommonStrings
 open public class CompleteMotionGestureInputEvent : AllBinaryEventObject
                 , CompleteMotionGestureInputInterface {
         
-companion object {
-            
-    val NULL_COMPLETE_MOTION_GESTURE_INPUT_EVENT: CompleteMotionGestureInputEvent = CompleteMotionGestureInputEvent(StringUtil.getInstance()!!.EMPTY_STRING, TouchMotionGestureFactory.getInstance()!!.NO_MOTION)
 
-        }
-            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING

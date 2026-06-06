@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.InputFactory
+import org.allbinary.logic.NullUtil
 
 open public class CancelTouchButtonInputFactory
             : Object
@@ -33,16 +34,25 @@ open public class CancelTouchButtonInputFactory
         
 companion object {
             
-    private val instance: CancelTouchButtonInputFactory = CancelTouchButtonInputFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CancelTouchButtonInputFactory{
 
+    
+                        if(CancelTouchButtonInputFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    CancelTouchButtonInputFactory.instance= CancelTouchButtonInputFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CancelTouchButtonInputFactory.instance
+                        return CancelTouchButtonInputFactory.instance as CancelTouchButtonInputFactory
 }
 
 

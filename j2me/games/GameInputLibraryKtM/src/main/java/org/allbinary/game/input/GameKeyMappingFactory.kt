@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class GameKeyMappingFactory
             : Object
@@ -32,16 +33,25 @@ open public class GameKeyMappingFactory
         
 companion object {
             
-    private val SINGLETON: GameKeyMappingFactory = GameKeyMappingFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyMappingFactory{
 
+    
+                        if(GameKeyMappingFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    GameKeyMappingFactory.instance= GameKeyMappingFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameKeyMappingFactory.SINGLETON
+                        return GameKeyMappingFactory.instance as GameKeyMappingFactory
 }
 
 

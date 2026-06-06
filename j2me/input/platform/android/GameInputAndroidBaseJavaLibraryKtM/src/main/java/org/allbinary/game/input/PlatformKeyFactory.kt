@@ -11,6 +11,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class PlatformKeyFactory
             : Object
@@ -18,16 +19,25 @@ open public class PlatformKeyFactory
         
 companion object {
             
-    private val SINGLETON: PlatformKeyFactory = PlatformKeyFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PlatformKeyFactory{
 
+    
+                        if(PlatformKeyFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    PlatformKeyFactory.instance= PlatformKeyFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PlatformKeyFactory.SINGLETON
+                        return PlatformKeyFactory.instance as PlatformKeyFactory
 }
 
 

@@ -57,7 +57,7 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var SINGLETON: PersistentInputMapping = PersistentInputMapping.NULL_PERSISTENT_INPUT_MAPPING
+    private var inputToGameKeyMapping: PersistentInputMapping = PersistentInputMapping.getNullInstance()!!
 
     open fun getPersistentInputMappingInstance()
         //nullable = true from not(false or (false and true)) = true
@@ -66,10 +66,10 @@ companion object {
         try {
             
     
-                        if(this.SINGLETON == PersistentInputMapping.NULL_PERSISTENT_INPUT_MAPPING)
+                        if(this.inputToGameKeyMapping == PersistentInputMapping.getNullInstance())
                         
                                     {
-                                    this.SINGLETON= NormalJ2MEGameInputMapping()
+                                    this.inputToGameKeyMapping= NormalJ2MEGameInputMapping()
 
                                     }
                                 
@@ -85,7 +85,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.SINGLETON
+                        return this.inputToGameKeyMapping
 }
 
 

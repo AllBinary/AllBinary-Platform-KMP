@@ -26,21 +26,31 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.resources.BasicGameResources
+import org.allbinary.logic.NullUtil
 
 open public class MineWeaponResources : BasicGameResources {
         
 companion object {
             
-    private val SINGLETON: MineWeaponResources = MineWeaponResources()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MineWeaponResources{
 
+    
+                        if(MineWeaponResources.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    MineWeaponResources.instance= MineWeaponResources()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return MineWeaponResources.SINGLETON
+                        return MineWeaponResources.instance as MineWeaponResources
 }
 
 

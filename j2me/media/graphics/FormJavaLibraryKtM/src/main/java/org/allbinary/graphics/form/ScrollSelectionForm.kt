@@ -33,6 +33,7 @@ import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.form.item.ABCustomItem
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.RectangleCollisionUtil
@@ -88,9 +89,49 @@ companion object {
 }
 
 
-    val NULL_SCROLL_SELECTION_FORM: ScrollSelectionForm = ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)!!
+    private var NULL_SCROLL_SELECTION_FORM: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    val NULL_SCROLL_SELECTION_HORIZONTAL_FORM: ScrollSelectionForm = ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)!!
+    open fun getNullScrollSelectionForm()
+        //nullable = true from not(false or (false and true)) = true
+: ScrollSelectionForm{
+
+    
+                        if(ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM= ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM as ScrollSelectionForm
+}
+
+
+    private var NULL_SCROLL_SELECTION_HORIZONTAL_FORM: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+    open fun getNullScrollSelectionFormHorizontal()
+        //nullable = true from not(false or (false and true)) = true
+: ScrollSelectionForm{
+
+    
+                        if(ScrollSelectionForm.NULL_SCROLL_SELECTION_HORIZONTAL_FORM == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    ScrollSelectionForm.NULL_SCROLL_SELECTION_HORIZONTAL_FORM= ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ScrollSelectionForm.NULL_SCROLL_SELECTION_HORIZONTAL_FORM as ScrollSelectionForm
+}
+
 
     private val GET_SELECTED_INDEX: String = "getSelectedIndex"
 

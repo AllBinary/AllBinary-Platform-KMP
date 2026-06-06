@@ -31,7 +31,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 open public class InputMappingEvent : AllBinaryEventObject {
         
 
-    private var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING
+    private var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping.getNullInstance()!!
 public constructor (anyType: Any)                        
 
                             : super(anyType){

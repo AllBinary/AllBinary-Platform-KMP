@@ -82,7 +82,7 @@ protected constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING
+                        return InputToGameKeyMapping.getNullInstance()
 }
 
 

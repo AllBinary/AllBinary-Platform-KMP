@@ -60,7 +60,7 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var SINGLETON: CommandForm = CommandForm.NULL_COMMAND_FORM
+    private var SINGLETON: CommandForm = CommandForm.getNullCommandForm()!!
 
     open fun init(commandListener: CommandListener, initInterface: Init, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
@@ -74,7 +74,7 @@ var foregroundBasicColor = foregroundBasicColor
         try {
             
     
-                        if(this.SINGLETON == CommandForm.NULL_COMMAND_FORM)
+                        if(this.SINGLETON == CommandForm.getNullCommandForm())
                         
                                     {
                                     initInterface!!.init()

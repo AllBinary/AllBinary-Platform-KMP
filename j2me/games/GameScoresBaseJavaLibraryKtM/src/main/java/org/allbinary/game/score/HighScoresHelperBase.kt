@@ -32,7 +32,7 @@ import org.allbinary.string.CommonStrings
 open public class HighScoresHelperBase
             : Object
         
-                , HighScoresResultsListener {
+                , HighScoresHelperBaseInterface {
         
 
             //Auto Generated
@@ -96,7 +96,7 @@ this.highScoresArrayP= highScoresArrayP
 }
 
 
-    open fun setSelectedHighScores(selectedHighScores: HighScores)
+    override fun setSelectedHighScores(selectedHighScores: HighScores)
         //nullable = true from not(false or (false and false)) = true
 {
     //var selectedHighScores = selectedHighScores
@@ -114,7 +114,7 @@ this.highScoresArrayP= highScoresArrayP
 }
 
 
-    open fun getHighScoresArray()
+    override fun getHighScoresArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<HighScores?>{
 

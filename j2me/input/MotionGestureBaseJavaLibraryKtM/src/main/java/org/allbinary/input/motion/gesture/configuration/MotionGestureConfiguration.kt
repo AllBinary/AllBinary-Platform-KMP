@@ -29,6 +29,7 @@ import org.allbinary.game.input.CompleteMotionGestureInputEvent
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.input.motion.gesture.MotionGestureToMotionGestureActionAssociation
+import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
@@ -56,31 +57,6 @@ open public class MotionGestureConfiguration
 public constructor ()
             : super()
         {
-}
-
-
-    open fun getMotionGestureAction(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-: CompleteMotionGestureInputEvent{
-var index = index
-
-    
-                        if(index >= this.activeCommands!!.size())
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CompleteMotionGestureInputEvent.NULL_COMPLETE_MOTION_GESTURE_INPUT_EVENT
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.activeCommands!!.objectArray[index]!! as CompleteMotionGestureInputEvent
 }
 
 

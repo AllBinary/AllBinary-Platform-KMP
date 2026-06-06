@@ -83,7 +83,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CommandForm.NULL_COMMAND_FORM
+                        return CommandForm.getNullCommandForm()
 }
 
 }

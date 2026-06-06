@@ -37,7 +37,7 @@ open public class SaveGameForm : CommandForm {
         
 companion object {
             
-    private var FORM: CommandForm = CommandForm.NULL_COMMAND_FORM
+    private var FORM: CommandForm = CommandForm.getNullCommandForm()!!
 
                 @Throws(Exception::class)
             

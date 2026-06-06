@@ -86,8 +86,8 @@ import org.allbinary.game.paint.ColorFillPaintableFactory
 import org.allbinary.game.resource.ResourceLoadingLevel
 import org.allbinary.game.resource.ResourceLoadingLevelFactory
 import org.allbinary.game.score.HighScore
+import org.allbinary.game.score.HighScoresHelperBaseInterface
 import org.allbinary.game.score.HighScoresFactoryInterface
-import org.allbinary.game.score.HighScoresHelperBase
 import org.allbinary.game.score.HighScoresPaintable
 import org.allbinary.game.score.NullHighScoresSingletonFactory
 import org.allbinary.game.score.displayable.HighScoreTextBox
@@ -221,7 +221,7 @@ companion object {
 
     private val gameStateTimeHelper: TimeDelayHelper = TimeDelayHelper(0)
 
-    val highScoresHelper: HighScoresHelperBase
+    val highScoresHelper: HighScoresHelperBaseInterface
 
     private var highScoreSubmitted: Boolean= false
 
@@ -279,7 +279,7 @@ companion object {
 
     private var menuInputProcessor: BasicMenuInputProcessor = NoMenuInputProcessor.getInstance()!!
 
-    private var menuForm: ScrollSelectionForm = ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM
+    private var menuForm: ScrollSelectionForm = ScrollSelectionForm.getNullScrollSelectionForm()!!
 
     private var formPaintable: Paintable = NullPaintable.getInstance()!!
 

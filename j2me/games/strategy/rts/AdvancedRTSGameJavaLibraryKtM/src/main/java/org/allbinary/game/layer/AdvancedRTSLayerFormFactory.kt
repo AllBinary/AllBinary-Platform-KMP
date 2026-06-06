@@ -42,7 +42,7 @@ protected constructor (label: String, itemArrayFactoryInterface: ItemArraySingle
     //var label = label
     //var itemArrayFactoryInterface = itemArrayFactoryInterface
 
-    var scrollSelectionForm: ScrollSelectionForm = ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM
+    var scrollSelectionForm: ScrollSelectionForm = ScrollSelectionForm.getNullScrollSelectionForm()!!
 
 
         try {

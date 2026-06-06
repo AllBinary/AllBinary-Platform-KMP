@@ -41,6 +41,7 @@ import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
 import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.input.motion.CompleteMotionGestureInputToGameMotionGestureInput
 import org.allbinary.input.motion.button.BasicTouchInputFactory
+import org.allbinary.input.motion.button.CancelTouchButtonInputFactory
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 
 open public class BaseGameInitialization
@@ -144,6 +145,7 @@ GameKeyEventFactory.getInstance()!!.init()
 
 progressCanvas!!.addNormalPortion(localPortion, "Game Key Events")
 BasicTouchInputFactory.getInstance()!!.init(PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping())
+CancelTouchButtonInputFactory.getInstance()
 progressCanvas!!.addNormalPortion(localPortion, "Touch Input")
 CompleteMotionGestureInputToGameMotionGestureInput.getInstance()!!.init()
 progressCanvas!!.addNormalPortion(localPortion, "Motion Input")

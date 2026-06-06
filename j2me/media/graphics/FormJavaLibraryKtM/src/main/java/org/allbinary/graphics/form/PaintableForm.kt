@@ -18,13 +18,34 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.form.item.ABCustomItem
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
 
 open public class PaintableForm : ABCustomForm {
         
 companion object {
             
-    val NULL_PAINTABLE_FORM: PaintableForm = PaintableForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+    private var NULL_PAINTABLE_FORM: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+    open fun getNullPaintableForm()
+        //nullable = true from not(false or (false and true)) = true
+: PaintableForm{
+
+    
+                        if(PaintableForm.NULL_PAINTABLE_FORM == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    PaintableForm.NULL_PAINTABLE_FORM= PaintableForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return PaintableForm.NULL_PAINTABLE_FORM as PaintableForm
+}
+
 
         }
             

@@ -35,6 +35,7 @@ import org.allbinary.game.displayable.canvas.MenuListener
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.command.MyCommandInterface
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
@@ -45,7 +46,27 @@ open public class CommandForm : Form
         
 companion object {
             
-    val NULL_COMMAND_FORM: CommandForm = CommandForm(NullCommandListener.NULL_COMMAND_LISTENER, StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+    private var NULL_COMMAND_FORM: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+    open fun getNullCommandForm()
+        //nullable = true from not(false or (false and true)) = true
+: CommandForm{
+
+    
+                        if(CommandForm.NULL_COMMAND_FORM == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    CommandForm.NULL_COMMAND_FORM= CommandForm(NullCommandListener.NULL_COMMAND_LISTENER, StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return CommandForm.NULL_COMMAND_FORM as CommandForm
+}
+
 
         }
             

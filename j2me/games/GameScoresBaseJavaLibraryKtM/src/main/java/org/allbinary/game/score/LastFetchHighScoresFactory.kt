@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class LastFetchHighScoresFactory
             : Object
@@ -32,16 +33,25 @@ open public class LastFetchHighScoresFactory
         
 companion object {
             
-    private val instance: LastFetchHighScoresFactory = LastFetchHighScoresFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LastFetchHighScoresFactory{
 
+    
+                        if(LastFetchHighScoresFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    LastFetchHighScoresFactory.instance= LastFetchHighScoresFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return LastFetchHighScoresFactory.instance
+                        return LastFetchHighScoresFactory.instance as LastFetchHighScoresFactory
 }
 
 

@@ -33,6 +33,7 @@ import org.allbinary.game.input.InputPersistance
 import org.allbinary.game.input.mapping.event.InputMappingEvent
 import org.allbinary.game.input.mapping.event.InputMappingEventListenerInterface
 import org.allbinary.game.input.mapping.event.NullInputMappingEventListener
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
@@ -47,7 +48,27 @@ open public class PersistentInputMapping
         
 companion object {
             
-    val NULL_PERSISTENT_INPUT_MAPPING: PersistentInputMapping = PersistentInputMapping(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
+    var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+    open fun getNullInstance()
+        //nullable = true from not(false or (false and true)) = true
+: PersistentInputMapping{
+
+    
+                        if(PersistentInputMapping.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    PersistentInputMapping.instance= PersistentInputMapping(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return PersistentInputMapping.instance as PersistentInputMapping
+}
+
 
         }
             
@@ -99,7 +120,7 @@ this.inputPersistance= InputPersistance(name)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING
+                        return InputToGameKeyMapping.getNullInstance()
 }
 
 

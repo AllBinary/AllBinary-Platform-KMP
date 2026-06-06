@@ -37,16 +37,25 @@ open public class GameKeyEventFactory
         
 companion object {
             
-    private val instance: GameKeyEventFactory = GameKeyEventFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyEventFactory{
 
+    
+                        if(GameKeyEventFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    GameKeyEventFactory.instance= GameKeyEventFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameKeyEventFactory.instance
+                        return GameKeyEventFactory.instance as GameKeyEventFactory
 }
 
 

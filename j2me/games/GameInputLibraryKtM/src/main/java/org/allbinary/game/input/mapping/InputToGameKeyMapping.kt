@@ -30,6 +30,7 @@ import org.allbinary.game.input.GameKey
 import org.allbinary.game.input.GameKeyFactory
 import org.allbinary.game.input.Input
 import org.allbinary.game.input.InputFactory
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -42,7 +43,27 @@ open public class InputToGameKeyMapping : InputMapping {
         
 companion object {
             
-    val NULL_INPUT_TO_GAME_KEY_MAPPING: InputToGameKeyMapping = InputToGameKeyMapping()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+    open fun getNullInstance()
+        //nullable = true from not(false or (false and true)) = true
+: InputToGameKeyMapping{
+
+    
+                        if(InputToGameKeyMapping.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    InputToGameKeyMapping.instance= InputToGameKeyMapping()
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return InputToGameKeyMapping.instance as InputToGameKeyMapping
+}
+
 
         }
             
@@ -50,9 +71,9 @@ companion object {
 
     private val mappedGameKeys: Array<GameKey?> = arrayOf(this.gameKeyFactory!!.UP,this.gameKeyFactory!!.DOWN,this.gameKeyFactory!!.LEFT,this.gameKeyFactory!!.RIGHT)
 
-    var negativePlatformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(0)
-
     private val platformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
+
+    var negativePlatformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(0)
 public constructor (){
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.clear()

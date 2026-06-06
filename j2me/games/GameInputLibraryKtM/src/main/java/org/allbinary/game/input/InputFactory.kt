@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
@@ -36,16 +37,25 @@ open public class InputFactory
         
 companion object {
             
-    private val instance: InputFactory = InputFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputFactory{
 
+    
+                        if(InputFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    InputFactory.instance= InputFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return InputFactory.instance
+                        return InputFactory.instance as InputFactory
 }
 
 
@@ -59,7 +69,7 @@ companion object {
 
     val DEVICE_ID_LABEL: String = "DeviceId: "
 
-    val MAX: Int = SmallIntegerSingletonFactory.getInstance()!!.MIN
+    val MAX: Int = SmallIntegerSingletonFactory.getInstance()!!.getMin()!!
 
     val inputIntegerArray: Array<Input?> = arrayOfNulls(this.MAX)
 

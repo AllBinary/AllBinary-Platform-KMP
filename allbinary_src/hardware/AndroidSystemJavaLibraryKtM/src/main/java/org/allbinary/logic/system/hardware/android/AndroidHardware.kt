@@ -169,7 +169,7 @@ var index = index
         //nullable =  from not(false or (true and true)) = 
 : String{
 
-    var hardwareBuffer: StringMaker = StringMaker()
+    var stringBuilder: StringMaker = StringMaker()
 
 
     var size: Int = this.componentInterfaceVector!!.size()!!
@@ -184,15 +184,15 @@ var index = index
 
     var componentInterface: HardwareComponentInterface = this.componentInterfaceVector!!.get(index) as HardwareComponentInterface
 
-hardwareBuffer!!.append(componentInterface!!.toString())
-hardwareBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+stringBuilder!!.append(componentInterface!!.toString())
+stringBuilder!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hardwareBuffer!!.toString()
+                        return stringBuilder!!.toString()
 }
 
 

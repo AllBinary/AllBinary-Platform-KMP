@@ -27,6 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringUtil
 
 open public class SmallIntegerSingletonFactory
             : Object
@@ -57,11 +59,34 @@ companion object {
 
     private val STRING_ARRAY: Array<String?> = arrayOfNulls(this.NEGATIVE_MAX +this.POSITIVE_MAX)
 
-    var MIN: Int = 0
+    private var MIN: Int = 0
 
-    var lastMin: Int = 0
+    private var lastMin: Int = 0
 
-    var lastNegativeMin: Int = 0
+    private var lastNegativeMin: Int = 0
+
+    open fun getMin()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+    
+                        if(this.MIN == 0)
+                        
+                                    {
+                                    
+
+
+                            throw RuntimeException()
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.MIN
+}
+
 
     open fun initWithRange(value: Int, negativeValue: Int)
         //nullable = true from not(false or (false and false)) = true

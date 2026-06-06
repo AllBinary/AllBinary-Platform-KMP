@@ -12,21 +12,31 @@
         import kotlin.reflect.KClass
         
 import android.view.KeyEvent
+import org.allbinary.logic.NullUtil
 
 open public class AndroidAPI12KeyFactory : AndroidAPI9KeyFactory {
         
 companion object {
             
-    private val SINGLETON12: AndroidAPI12KeyFactory = AndroidAPI12KeyFactory()
+    private var instance12: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getAPI12Instance()
         //nullable = true from not(false or (false and true)) = true
 : AndroidAPI12KeyFactory{
 
+    
+                        if(AndroidAPI12KeyFactory.instance12 == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    AndroidAPI12KeyFactory.instance12= AndroidAPI12KeyFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AndroidAPI12KeyFactory.SINGLETON12
+                        return AndroidAPI12KeyFactory.instance12 as AndroidAPI12KeyFactory
 }
 
 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.InputFactory
+import org.allbinary.logic.NullUtil
 
 open public class TrackballMotionGestureFactory
             : Object
@@ -33,16 +34,25 @@ open public class TrackballMotionGestureFactory
         
 companion object {
             
-    private val MOTION: TrackballMotionGestureFactory = TrackballMotionGestureFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TrackballMotionGestureFactory{
 
+    
+                        if(TrackballMotionGestureFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    TrackballMotionGestureFactory.instance= TrackballMotionGestureFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TrackballMotionGestureFactory.MOTION
+                        return TrackballMotionGestureFactory.instance as TrackballMotionGestureFactory
 }
 
 

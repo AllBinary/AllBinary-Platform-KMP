@@ -39,9 +39,7 @@ open public class CountedLayersHudPaintable
         
 companion object {
             
-    private val XXString: String = "XX"
-
-    private val XXStringWidth: Int = MyFont.getInstance()!!.stringWidth(CountedLayersHudPaintable.XXString)!!
+    private var XXStringWidth: Int = 0
 
         }
             
@@ -69,6 +67,18 @@ this.startIndex= startIndex
 this.countedTotalStringColor= countedTotalStringColor
 this.countedPartsBorder= countedPartsBorder
 this.dropSize= dropSize
+
+    
+                        if(CountedLayersHudPaintable.XXStringWidth == 0)
+                        
+                                    {
+                                    
+    var XXString: String = "XX"
+
+CountedLayersHudPaintable.XXStringWidth= MyFont.getInstance()!!.stringWidth(XXString)
+
+                                    }
+                                
 }
 
 

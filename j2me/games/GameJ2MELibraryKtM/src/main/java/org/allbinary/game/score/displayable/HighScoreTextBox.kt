@@ -32,8 +32,8 @@ import javax.microedition.lcdui.TextField
 import org.allbinary.PostGameCommandFactory
 import org.allbinary.game.GameInfo
 import org.allbinary.game.score.HighScore
+import org.allbinary.game.score.HighScoresHelperBaseInterface
 import org.allbinary.game.score.HighScoresFactoryInterface
-import org.allbinary.game.score.HighScoresHelperBase
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.form.item.CustomTextBox
@@ -41,7 +41,6 @@ import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.graphics.paint.SimpleTextPaintable
 import org.allbinary.input.event.VirtualKeyboardEventHandler
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.os.GenericOperatingSystem
 import org.allbinary.logic.system.os.OperatingSystemFactory
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
@@ -59,7 +58,7 @@ open public class HighScoreTextBox : CustomTextBox {
     private var paintable: Paintable = NullPaintable.getInstance()!!
 
     var submitted: Boolean = false
-public constructor (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBaseInterface, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, Font.getDefaultFont(), backgrounBasicColor, foregroundBasicColor){
     //var highScoresFactoryInterface = highScoresFactoryInterface
