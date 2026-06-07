@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class GameStateFactory
             : Object
@@ -32,25 +33,54 @@ open public class GameStateFactory
         
 companion object {
             
-    private var index: Int = 0
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    open fun getInstance(name: String)
-        //nullable =  from not(true or (false and false)) = 
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: GameStateFactory{
+
+    
+                        if(GameStateFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    GameStateFactory.instance= GameStateFactory()
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return GameStateFactory.instance as GameStateFactory
+}
+
+
+        }
+            
+    private var index: Int = 0
+
+    val NO_GAME_STATE: GameState = this.createGameState("NO_GAME_STATE")!!
+
+    val PLAYING_GAME_STATE: GameState = this.createGameState("PLAYING_GAME_STATE")!!
+
+    val SHOW_END_RESULT_GAME_STATE: GameState = this.createGameState("SHOW_END_RESULT_GAME_STATE")!!
+
+    val SHOW_HIGH_SCORE_GAME_STATE: GameState = this.createGameState("SHOW_HIGH_SCORE_GAME_STATE")!!
+private constructor ()
+            : super()
+        {
+}
+
+
+    open fun createGameState(name: String)
+        //nullable = true from not(false or (false and false)) = true
 : GameState{
 var name = name
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameState(name, GameStateFactory.index++)
-}
-
-
-        }
-            private constructor ()
-            : super()
-        {
+                        return GameState(name, this.index++)
 }
 
 

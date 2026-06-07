@@ -169,10 +169,6 @@ companion object {
             
     private val id: Int = 0
 
-    val SHOW_END_RESULT_GAME_STATE: GameState = GameStateFactory.getInstance("SHOW_END_RESULT_GAME_STATE")!!
-
-    val SHOW_HIGH_SCORE_GAME_STATE: GameState = GameStateFactory.getInstance("SHOW_HIGH_SCORE_GAME_STATE")!!
-
     val TYPE: Int = 2
 
         }
@@ -192,6 +188,8 @@ companion object {
     val gameStrings: GameStrings = GameStrings.getInstance()!!
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
+
+    val gameStateFactory: GameStateFactory = GameStateFactory.getInstance()!!
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 
@@ -213,7 +211,7 @@ companion object {
 
     var gameLayerManager: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
 
-    private var gameState: GameState = GameState.NO_GAME_STATE
+    private var gameState: GameState = this.gameStateFactory!!.NO_GAME_STATE
 
     private var gameOver: Boolean= false
 
@@ -1286,7 +1284,7 @@ this.gameOver= gameOver
 PreLogUtil.put(this.commonStrings!!.START, this, this.gameStrings!!.SET_GAME_OVER)
 this.setGameOver(true)
 this.removePauseCommand()
-this.setGameState(AllBinaryGameCanvas.SHOW_END_RESULT_GAME_STATE)
+this.setGameState(this.gameStateFactory!!.SHOW_END_RESULT_GAME_STATE)
 this.setEndGamePaintable(this.getEndGameStatePaintable())
 }
 
@@ -1361,7 +1359,7 @@ this.gameBehavior!!.setGameState(this)
 gameAdState!!.processAdState(this.gameState, this.gameLayerManager!!.getGameInfo()!!.getGameType())
 
     
-                        if(this.gameState != GameState.PLAYING_GAME_STATE)
+                        if(this.gameState != this.gameStateFactory!!.PLAYING_GAME_STATE)
                         
                                     {
                                     gameAdState!!.processPageAdState()
@@ -1376,7 +1374,7 @@ gameAdState!!.processAdState(this.gameState, this.gameLayerManager!!.getGameInfo
 {
 
     
-                        if(this.getGameState() != GameState.PLAYING_GAME_STATE || this.isCheating)
+                        if(this.getGameState() != this.gameStateFactory!!.PLAYING_GAME_STATE || this.isCheating)
                         
                                     {
                                     
@@ -1448,7 +1446,7 @@ this.gameBehavior!!.updateEndGameProcessor(this)
 {
 
     
-                        if(this.getGameState() == AllBinaryGameCanvas.SHOW_END_RESULT_GAME_STATE || this.getGameState() == AllBinaryGameCanvas.SHOW_HIGH_SCORE_GAME_STATE)
+                        if(this.getGameState() == this.gameStateFactory!!.SHOW_END_RESULT_GAME_STATE || this.getGameState() == this.gameStateFactory!!.SHOW_HIGH_SCORE_GAME_STATE)
                         
                                     {
                                     this.setEndGameProcessor(this.realEndGameProcessor)

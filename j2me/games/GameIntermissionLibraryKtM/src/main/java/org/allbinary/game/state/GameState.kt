@@ -30,14 +30,7 @@ open public class GameState
             : Object
          {
         
-companion object {
-            
-    var NO_GAME_STATE: GameState = GameStateFactory.getInstance("NO_GAME_STATE")!!
 
-    var PLAYING_GAME_STATE: GameState = GameStateFactory.getInstance("PLAYING_GAME_STATE")!!
-
-        }
-            
     private var name: String
 public constructor (name: String, state: Int)
             : super()

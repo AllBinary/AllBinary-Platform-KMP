@@ -29,10 +29,13 @@ import org.allbinary.canvas.Processor
 import org.allbinary.game.score.HighScores
 import org.allbinary.game.score.HighScoresHelperBase
 import org.allbinary.game.score.NullHighScoresSingletonFactory
+import org.allbinary.game.state.GameStateFactory
 import org.allbinary.graphics.paint.NullPaintable
 
 open public class EndGameProcessor : Processor {
         
+
+    val gameStateFactory: GameStateFactory = GameStateFactory.getInstance()!!
 
     private var gameCanvas: AllBinaryGameCanvas
 
@@ -60,7 +63,7 @@ this.gameCanvas= gameCanvas
                                     {
                                     
     
-                        if(this.gameCanvas!!.getGameState() == AllBinaryGameCanvas.SHOW_END_RESULT_GAME_STATE)
+                        if(this.gameCanvas!!.getGameState() == this.gameStateFactory!!.SHOW_END_RESULT_GAME_STATE)
                         
                                     {
                                     
@@ -76,7 +79,7 @@ this.gameCanvas= gameCanvas
                                     {
                                     highScoresBase!!.selectHighScores()
 this.gameCanvas!!.getRealHighScoresPaintable()!!.setHighScores(highScores)
-this.gameCanvas!!.setGameState(AllBinaryGameCanvas.SHOW_HIGH_SCORE_GAME_STATE)
+this.gameCanvas!!.setGameState(this.gameStateFactory!!.SHOW_HIGH_SCORE_GAME_STATE)
 this.gameCanvas!!.setHighScoresPaintable(this.gameCanvas!!.getRealHighScoresPaintable())
 
                                     }
@@ -86,10 +89,10 @@ this.gameCanvas!!.setHighScoresPaintable(this.gameCanvas!!.getRealHighScoresPain
                                 
                              else 
     
-                        if(this.gameCanvas!!.getGameState() == AllBinaryGameCanvas.SHOW_HIGH_SCORE_GAME_STATE)
+                        if(this.gameCanvas!!.getGameState() == this.gameStateFactory!!.SHOW_HIGH_SCORE_GAME_STATE)
                         
                                     {
-                                    this.gameCanvas!!.setGameState(AllBinaryGameCanvas.SHOW_END_RESULT_GAME_STATE)
+                                    this.gameCanvas!!.setGameState(this.gameStateFactory!!.SHOW_END_RESULT_GAME_STATE)
 this.gameCanvas!!.setHighScoresPaintable(NullPaintable.getInstance())
 
                                     }

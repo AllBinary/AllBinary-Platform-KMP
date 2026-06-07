@@ -32,6 +32,7 @@ import org.allbinary.game.layer.RTSGameStrings
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSLayerInfoPaintable
 import org.allbinary.game.layer.RTSPlayerLayerInterface
+import org.allbinary.game.state.GameStateFactory
 import org.allbinary.input.motion.button.EndLevelNoBuildingSelectedTouchButtonsBuilder
 import org.allbinary.input.motion.button.EndLevelTouchButtonsBuilder
 import org.allbinary.input.motion.button.NoBuildingSelectedTouchButtonsBuilder
@@ -47,7 +48,6 @@ import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.hud.event.GameNotificationEvent
 import org.allbinary.game.layer.hud.event.GameNotificationEventHandler
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
-import org.allbinary.game.state.GameState
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.color.BasicColorFactory
@@ -76,6 +76,8 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput
         
 
     private var isDragging: Boolean = false
+
+    val gameStateFactory: GameStateFactory = GameStateFactory.getInstance()!!
 
     private val rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
 
@@ -533,7 +535,7 @@ rtsLayer!!.select()
 this.updateFormForLayer(rtsLayer)
 
     
-                        if(gameCanvas!!.getGameState() == GameState.PLAYING_GAME_STATE)
+                        if(gameCanvas!!.getGameState() == this.gameStateFactory!!.PLAYING_GAME_STATE)
                         
                                     {
                                     
@@ -582,7 +584,7 @@ this.setSelectedRtsFormInput(this.getRtsPlayerLayerInterface()!!.getRTSFormInput
 this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
 
     
-                        if(gameCanvas!!.getGameState() == GameState.PLAYING_GAME_STATE)
+                        if(gameCanvas!!.getGameState() == this.gameStateFactory!!.PLAYING_GAME_STATE)
                         
                                     {
                                     gameCanvas!!.updateCurrentTouchInputFactory(NoBuildingSelectedTouchButtonsBuilder())

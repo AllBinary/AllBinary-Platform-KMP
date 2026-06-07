@@ -29,6 +29,7 @@ import javax.microedition.lcdui.CommandListener
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
 import org.allbinary.init.Init
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -38,16 +39,25 @@ open public class InGameOptionsFormFactory
         
 companion object {
             
-    private val instance: InGameOptionsFormFactory = InGameOptionsFormFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InGameOptionsFormFactory{
 
+    
+                        if(InGameOptionsFormFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    InGameOptionsFormFactory.instance= InGameOptionsFormFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return InGameOptionsFormFactory.instance
+                        return InGameOptionsFormFactory.instance as InGameOptionsFormFactory
 }
 
 

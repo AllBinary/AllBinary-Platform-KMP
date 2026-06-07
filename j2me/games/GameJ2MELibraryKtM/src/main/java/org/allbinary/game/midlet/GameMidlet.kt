@@ -79,7 +79,7 @@ import org.allbinary.game.score.HighScoreCommandsFactory
 import org.allbinary.game.score.displayable.HighScoreTextBox
 import org.allbinary.game.score.displayable.HighScoreUtil
 import org.allbinary.game.score.displayable.HighScoresCanvas
-import org.allbinary.game.state.GameState
+import org.allbinary.game.state.GameStateFactory
 import org.allbinary.graphics.ResizableListenerHandler
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
@@ -132,6 +132,8 @@ open public class GameMidlet : ProgressMidlet
     val gameStrings: GameStrings = GameStrings.getInstance()!!
 
     val gameAdStateFactory: GameAdStateFactory = GameAdStateFactory.getInstance()!!
+
+    val gameStateFactory: GameStateFactory = GameStateFactory.getInstance()!!
 
     val tsUtil: TsUtil = TsUtil.getInstance()!!
 
@@ -404,7 +406,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, START_APP)
                         if(gameCanvasRunnableInterface == NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
                         
                                     {
-                                    this.gameMidletStateFactory!!.setCurrentGameState(GameState.NO_GAME_STATE)
+                                    this.gameMidletStateFactory!!.setCurrentGameState(this.gameStateFactory!!.NO_GAME_STATE)
 this.setDemo()
 
                                     }
@@ -551,7 +553,7 @@ GameMidletEventHandler.getInstance()!!.fireEvent(DemoGameMidletEvent(this, DemoG
                                     {
                                     
     
-                        if(this.gameMidletStateFactory!!.getCurrentGameState() != GameState.PLAYING_GAME_STATE || command == gameCommandsFactory!!.RESTART_COMMAND)
+                        if(this.gameMidletStateFactory!!.getCurrentGameState() != this.gameStateFactory!!.PLAYING_GAME_STATE || command == gameCommandsFactory!!.RESTART_COMMAND)
                         
                                     {
                                     
@@ -571,7 +573,7 @@ GameMidletEventHandler.getInstance()!!.fireEvent(DemoGameMidletEvent(this, DemoG
                         else {
                             this.startedBefore= true
 this.createGame()
-this.gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
+this.gameMidletStateFactory!!.setCurrentGameState(this.gameStateFactory!!.PLAYING_GAME_STATE)
 
                         }
                             
@@ -648,7 +650,7 @@ menuListener!!.close()
                                     }
                                 
 this.stopGameCanvasRunnableInterface()
-this.gameMidletStateFactory!!.setCurrentGameState(GameState.NO_GAME_STATE)
+this.gameMidletStateFactory!!.setCurrentGameState(this.gameStateFactory!!.NO_GAME_STATE)
 this.setDemo()
 
                                     }

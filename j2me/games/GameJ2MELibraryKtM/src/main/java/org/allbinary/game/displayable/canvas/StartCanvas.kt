@@ -69,6 +69,7 @@ import org.allbinary.game.score.HighScoresHelper
 import org.allbinary.game.score.HighScoresPaintable
 import org.allbinary.game.score.NullHighScoresSingletonFactory
 import org.allbinary.game.state.GameState
+import org.allbinary.game.state.GameStateFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.ResizableListenerHandler
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas
@@ -132,6 +133,8 @@ companion object {
     val myCommandsFactory: MyCommandsFactory = MyCommandsFactory.getInstance()!!
 
     val gameAdStateFactory: GameAdStateFactory = GameAdStateFactory.getInstance()!!
+
+    val gameStateFactory: GameStateFactory = GameStateFactory.getInstance()!!
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
@@ -1075,7 +1078,7 @@ var gameState = gameState
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameState.PLAYING_GAME_STATE
+                        return this.gameStateFactory!!.PLAYING_GAME_STATE
 }
 
 

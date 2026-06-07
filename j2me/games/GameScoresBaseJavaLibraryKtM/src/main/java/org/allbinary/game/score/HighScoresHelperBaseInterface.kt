@@ -37,6 +37,10 @@ interface HighScoresHelperBaseInterface : HighScoresResultsListener {
         //nullable = true from not(false or (false and true)) = true
 : Array<HighScores?>
 
+    open fun getSelectedHighScores()
+        //nullable = true from not(false or (false and true)) = true
+: HighScores
+
 }
                 
             

@@ -32,6 +32,7 @@ import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Item
 import org.allbinary.game.state.GameState
+import org.allbinary.game.state.GameStateFactory
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
 
@@ -51,6 +52,8 @@ companion object {
             {
             }            
         
+    val gameStateFactory: GameStateFactory = GameStateFactory.getInstance()!!
+
     override fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String{
@@ -204,7 +207,7 @@ var gameState = gameState
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameState.NO_GAME_STATE
+                        return this.gameStateFactory!!.NO_GAME_STATE
 }
 
 

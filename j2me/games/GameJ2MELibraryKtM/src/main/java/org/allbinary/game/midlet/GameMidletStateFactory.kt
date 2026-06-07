@@ -12,6 +12,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.state.GameState
+import org.allbinary.game.state.GameStateFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -39,7 +40,7 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var currentGameState: GameState = GameState.NO_GAME_STATE
+    private var currentGameState: GameState = GameStateFactory.getInstance()!!.NO_GAME_STATE
 private constructor ()
             : super()
         {

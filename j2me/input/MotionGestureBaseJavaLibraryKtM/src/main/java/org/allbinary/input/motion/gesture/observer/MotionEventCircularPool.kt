@@ -48,11 +48,11 @@ var id = id
 }
 
 
-    private val MIN: Int = TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()!!
-
         }
             
-    private var eventPool: AllBinaryEventCircularPool = AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX -1) -MotionEventCircularPool.MIN)
+    private val MIN: Int = TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()!!
+
+    private var eventPool: AllBinaryEventCircularPool = AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX -1) -this.MIN)
 private constructor (id: Int)
             : super()
         {
@@ -72,7 +72,7 @@ var motionGestureInput = motionGestureInput
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.eventPool!!.getInstance(motionGestureInput!!.getId() -MotionEventCircularPool.MIN) as MotionGestureEvent
+                        return this.eventPool!!.getInstance(motionGestureInput!!.getId() -this.MIN) as MotionGestureEvent
 }
 
 

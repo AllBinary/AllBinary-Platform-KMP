@@ -103,7 +103,7 @@ this.highScoresArrayP= highScoresArrayP
 }
 
 
-    open fun getSelectedHighScores()
+    override fun getSelectedHighScores()
         //nullable = true from not(false or (false and true)) = true
 : HighScores{
 
