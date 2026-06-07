@@ -110,6 +110,22 @@ private constructor ()
             : super()
         {
 
+    var size: Int = this.last.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+this.last[index]= 0
+this.lastHalf[index]= 0
+this.full[index]= 0
+}
+
+
     
                         if(AndroidUtil.isAndroid())
                         

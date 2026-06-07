@@ -68,6 +68,18 @@ companion object {
     open fun getMin()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+this.checkMe()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.MIN
+}
+
+
+    open fun checkMe()
+        //nullable = true from not(false or (false and true)) = true
+{
 
     
                         if(this.MIN == 0)
@@ -80,11 +92,6 @@ companion object {
 
                                     }
                                 
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.MIN
 }
 
 
@@ -180,6 +187,7 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var index = index
+this.checkMe()
 
 
 
@@ -192,6 +200,7 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var index = index
+this.checkMe()
 
     
                         if(index +this.NEGATIVE_MAX > this.INTEGER_ARRAY.size -1)

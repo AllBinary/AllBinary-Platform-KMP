@@ -55,6 +55,7 @@ import org.allbinary.game.health.Health
 import org.allbinary.game.health.HealthBar
 import org.allbinary.game.health.HealthBarTwodAnimation
 import org.allbinary.game.identification.Group
+import org.allbinary.game.identification.GroupCommonFactory
 import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.game.input.event.GameKeyEventFactory
 import org.allbinary.game.input.event.GameKeyEventUtil
@@ -177,6 +178,8 @@ companion object {
         }
             
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
+
+    private val groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
 
     private val layerPartialCellPositionsUtil: LayerPartialCellPositionsUtil = LayerPartialCellPositionsUtil.getInstance()!!
 
@@ -328,7 +331,7 @@ this.initPathAnimation!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-hashtable.put(Group.ID, this.getGroupInterface())
+hashtable.put(this.groupCommonFactory!!.ID, this.getGroupInterface())
 hashtable.put(Layer.ID, this)
 hashtable.put(AllBinaryGameLayerManager.ID, this.allBinaryGameLayerManagerP)
 this.setWaypointBehavior(UnitWaypointBehavior2(this, this.waypointLayerInterfaceFactoryInterface!!.getNextInstance(hashtable, x, y, z) as AdvancedRTSGameLayer))

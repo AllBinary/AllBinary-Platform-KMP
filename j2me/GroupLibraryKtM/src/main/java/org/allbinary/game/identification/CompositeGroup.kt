@@ -36,14 +36,7 @@ open public class CompositeGroup
             : Object
          {
         
-companion object {
-            
-    private val ADDING_LABEL: String = "Adding: "
 
-    private val TO_LABEL: String = " to: "
-
-        }
-            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val groupInterface: Group
@@ -72,11 +65,14 @@ this.list.clear()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
+    var groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
+
+
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(CompositeGroup.ADDING_LABEL)
+stringBuffer!!.append(groupCommonFactory!!.ADDING_LABEL)
 stringBuffer!!.append(groupInterface!!.toString())
-stringBuffer!!.append(CompositeGroup.TO_LABEL)
+stringBuffer!!.append(groupCommonFactory!!.TO_LABEL)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.groupInterface))
 this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.ADD)
 this.list.add(groupInterface)

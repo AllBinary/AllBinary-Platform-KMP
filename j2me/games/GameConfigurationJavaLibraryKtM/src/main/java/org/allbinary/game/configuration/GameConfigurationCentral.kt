@@ -30,6 +30,7 @@
 import java.util.Hashtable
 import org.allbinary.game.configuration.persistance.GameConfigurationPersistanceSingleton
 import org.allbinary.game.configuration.persistance.KeyValuePersistance
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
@@ -44,16 +45,25 @@ open public class GameConfigurationCentral
         
 companion object {
             
-    private val SINGLETON: GameConfigurationCentral = GameConfigurationCentral()
+    private var SINGLETON: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameConfigurationCentral{
 
+    
+                        if(GameConfigurationCentral.SINGLETON == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    GameConfigurationCentral.SINGLETON= GameConfigurationCentral()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameConfigurationCentral.SINGLETON
+                        return GameConfigurationCentral.SINGLETON as GameConfigurationCentral
 }
 
 

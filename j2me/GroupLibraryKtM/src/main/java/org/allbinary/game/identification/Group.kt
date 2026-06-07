@@ -21,13 +21,10 @@
 
         import java.lang.Object        
         
-        import java.lang.Integer
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 
@@ -36,16 +33,7 @@ open public class Group
         
                 , GroupInterface {
         
-companion object {
-            
-    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(10)!!
 
-    private val GROUP_NAME_LABEL: String = "Group Name: "
-
-    private val ID_LABEL: String = " Id: "
-
-        }
-            
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private val teamId: Short
@@ -78,11 +66,14 @@ this.setName(teamName)
     //var name = name
 this.name= name
 
+    var groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
+
+
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(Group.GROUP_NAME_LABEL)
+stringBuffer!!.append(groupCommonFactory!!.GROUP_NAME_LABEL)
 stringBuffer!!.append(this.name)
-stringBuffer!!.append(Group.ID_LABEL)
+stringBuffer!!.append(groupCommonFactory!!.ID_LABEL)
 stringBuffer!!.appendshort(this.teamId)
 this.string= stringBuffer!!.toString()
 }

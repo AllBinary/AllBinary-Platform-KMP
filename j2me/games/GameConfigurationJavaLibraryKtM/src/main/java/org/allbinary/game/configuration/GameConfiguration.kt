@@ -38,12 +38,17 @@ open public class GameConfiguration
             : Object
          {
         
+companion object {
+            
+    private val MIN_VALUE: Integer = Integer(Integer.MIN_VALUE)
 
+        }
+            
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var defaultValue: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
-    private var value: Integer
+    private var value: Integer = GameConfiguration.MIN_VALUE
 
     private var minValue: Integer = this.defaultValue
 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
+import org.allbinary.game.identification.GroupCommonFactory
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.item.LayerInterfaceFactoryImageItem
@@ -50,6 +51,8 @@ open public class RTSFormInput
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
 
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -91,7 +94,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getIn
                                 )
                         
                                     {
-                                    this.hashtable.put(Group.ID, groupInterfaceArray)
+                                    this.hashtable.put(this.groupCommonFactory!!.ID, groupInterfaceArray)
 
                                     }
                                 

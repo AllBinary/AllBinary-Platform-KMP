@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
+import org.allbinary.game.identification.GroupCommonFactory
 import org.allbinary.util.BasicArrayList
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.direction.DirectionFactory
@@ -68,6 +69,8 @@ companion object {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
 
     open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel: Int, lastLevel: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -375,7 +378,7 @@ list.clear()
 layerManager!!.setGeographicMapInterface(arrayOf(baseRaceTrackGeographicMap))
 hashtable.put(AllBinaryGameLayerManager.ID, layerManager)
 hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.LEFT)
-hashtable.put(Group.ID, BasicGroupFactory.getInstance()!!.NONE_ARRAY)
+hashtable.put(this.groupCommonFactory!!.ID, BasicGroupFactory.getInstance()!!.NONE_ARRAY)
 
 
 

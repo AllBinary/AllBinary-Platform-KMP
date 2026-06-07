@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
+import org.allbinary.game.identification.GroupCommonFactory
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.direction.Direction
@@ -69,6 +70,8 @@ companion object {
         }
             
     private val layerCoveringCellPositionsUtil: LayerCoveringCellPositionsUtil = LayerCoveringCellPositionsUtil.getInstance()!!
+
+    private val groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
 
     private var surroundingCellPositions: Array<GeographicMapCellPosition?> = arrayOfNulls(4)
 private constructor (){
@@ -191,7 +194,7 @@ super.update(allBinaryGameLayerManager, geographicMapInterface)
     var direction: Direction = this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(randomGeographicMapCellPosition, geographicMapCellPosition)!!
 
 
-    var objectCanBeNull: Any? = this.hashtable.get(Group.ID)
+    var objectCanBeNull: Any? = this.hashtable.get(this.groupCommonFactory!!.ID)
 
 
     
@@ -204,7 +207,7 @@ super.update(allBinaryGameLayerManager, geographicMapInterface)
                                     }
                                 
                         else {
-                            this.hashtable.put(Group.ID, BasicGroupFactory.getInstance()!!.NONE_ARRAY)
+                            this.hashtable.put(this.groupCommonFactory!!.ID, BasicGroupFactory.getInstance()!!.NONE_ARRAY)
 
                         }
                             
