@@ -43,11 +43,11 @@ import org.allbinary.game.part.PartInterfaceUtil
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.RectangleFactory
 import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonSeps
-import org.allbinary.view.ViewPosition
 import org.allbinary.view.ViewPositionBase
 
 open public class CollidableDestroyableDamageableLayer : CollidableCompositeLayer
@@ -58,7 +58,27 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
         
 companion object {
             
-    val NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPositionBase.NULL_VIEW_POSITION)
+    var NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+    open fun getNullInstance()
+        //nullable = true from not(false or (false and true)) = true
+: CollidableDestroyableDamageableLayer{
+
+    
+                        if(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER= CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPositionBase.NULL_VIEW_POSITION)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER as CollidableDestroyableDamageableLayer
+}
+
 
     private val READYFOREXPLOSION: String = "ReadyForExplosion: "
 

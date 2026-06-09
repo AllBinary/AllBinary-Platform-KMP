@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class BasicGroupFactory
             : Object
@@ -32,16 +33,25 @@ open public class BasicGroupFactory
         
 companion object {
             
-    private val instance: BasicGroupFactory = BasicGroupFactory()
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicGroupFactory{
 
+    
+                        if(BasicGroupFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    BasicGroupFactory.instance= BasicGroupFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicGroupFactory.instance
+                        return BasicGroupFactory.instance as BasicGroupFactory
 }
 
 

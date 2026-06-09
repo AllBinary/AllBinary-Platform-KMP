@@ -42,6 +42,15 @@ companion object {
         //nullable =  from not(true or (false and true)) = 
 : GroupCommonFactory{
 
+    
+                        if(GroupCommonFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    GroupCommonFactory.instance= GroupCommonFactory()
+
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
