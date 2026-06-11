@@ -97,7 +97,7 @@ companion object {
 
     private var waitingOnWaypointPath: Boolean= false
 
-    private var targetWithoutCachedPathLayerInterface: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+    private var targetWithoutCachedPathLayerInterface: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.getNullInstance()!!
 public constructor (ownerAdvancedRTSGameLayer: UnitLayer, fakeWaypoint: AdvancedRTSGameLayer)                        
 
                             : super(ownerAdvancedRTSGameLayer, fakeWaypoint){
@@ -326,7 +326,7 @@ var layerInterface = layerInterface
     var isShorterThanCurrentTargetDistance: Boolean = this.getCurrentTargetDistance() > anotherTargetDistance
 
 
-    var isCurrentTargetDestroyed: Boolean = this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER && this.currentTargetLayerInterfaceP!!.isDestroyed()
+    var isCurrentTargetDestroyed: Boolean = this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.getNullInstance() && this.currentTargetLayerInterfaceP!!.isDestroyed()
 
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.processPossibleTarget(this.associatedAdvancedRTSGameLayer, this, layerInterface, anotherTargetDistance, isShorterThanCurrentTargetDistance, isCurrentTargetDestroyed)
 
@@ -454,7 +454,7 @@ this.setWaypointPathsList(list)
 {
 
     
-                        if(this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+                        if(this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.getNullInstance())
                         
                                     {
                                     
@@ -550,7 +550,7 @@ this.removeWaypoint(targetLayer, this.unitWaypointStrings!!.WAYPOINT_DESTROYED)
                                 
 
     
-                        if(this.currentGeographicMapCellHistoryP!!.isAllVisited2() && this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+                        if(this.currentGeographicMapCellHistoryP!!.isAllVisited2() && this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.getNullInstance())
                         
                                     {
                                     
@@ -757,7 +757,7 @@ this.associatedAdvancedRTSGameLayer!!.trackTo(this.unitWaypointStrings!!.NEXT_PA
     open fun processTargetList()
         //nullable = true from not(false or (false and true)) = true
 {
-this.targetWithoutCachedPathLayerInterface= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+this.targetWithoutCachedPathLayerInterface= CollidableDestroyableDamageableLayer.getNullInstance()
 
 
 
@@ -786,7 +786,7 @@ this.targetWithoutCachedPathLayerInterface= CollidableDestroyableDamageableLayer
 
 
     
-                        if(this.targetWithoutCachedPathLayerInterface != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+                        if(this.targetWithoutCachedPathLayerInterface != CollidableDestroyableDamageableLayer.getNullInstance())
                         
                                     {
                                     this.waitingOnTargetPath= true
@@ -806,7 +806,7 @@ this.getPossibleTargetList()!!.clear()
 {
 
     
-                        if(this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER && (this.isInSensorRange(this.currentTargetLayerInterfaceP, this.getCurrentTargetDistance()) || this.isTrackingWaypoint()))
+                        if(this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.getNullInstance() && (this.isInSensorRange(this.currentTargetLayerInterfaceP, this.getCurrentTargetDistance()) || this.isTrackingWaypoint()))
                         
                                     {
                                     
@@ -991,7 +991,7 @@ this.clearTarget()
         //nullable = true from not(false or (false and true)) = true
 {
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.clearTarget(this.associatedAdvancedRTSGameLayer)
-this.setCurrentTargetLayerInterface(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+this.setCurrentTargetLayerInterface(CollidableDestroyableDamageableLayer.getNullInstance())
 this.setTrackingWaypoint(false)
 
     var MAX: Int = Integer.MAX_VALUE
@@ -1087,7 +1087,7 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.associatedAdvancedRTSGameLay
 
 
     
-                        if(this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+                        if(this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.getNullInstance())
                         
                                     {
                                     stringBuffer!!.append(UnitWaypointBehavior2.TARGET_LAYER)

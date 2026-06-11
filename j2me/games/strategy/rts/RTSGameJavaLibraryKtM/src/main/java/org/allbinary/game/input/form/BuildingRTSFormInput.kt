@@ -272,7 +272,7 @@ LockedFeatureNotificationUtil.getInstance()!!.fireWithColor(geographicMapInterfa
                                     {
                                     
     
-                        if(this.newUnconstructedRTSLayerInterfaceArray[itemIndex] == CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+                        if(this.newUnconstructedRTSLayerInterfaceArray[itemIndex] == CollidableDestroyableDamageableLayer.getNullInstance())
                         
                                     {
                                     this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= this.getInstance(layerManager, item, geographicMapCellPosition)
@@ -446,7 +446,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "attemptBuild")
                         
                                     {
                                     layerInterface!!.construct(rtsPlayerLayerInterface)
-this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= CollidableDestroyableDamageableLayer.getNullInstance()
 capital.removeMoney(cost)
 this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
 

@@ -82,7 +82,7 @@ public constructor (groupInterfaceArray: Array<Group?>)
                         for (index in 0 until size)
 
         {
-this.newUnconstructedRTSLayerInterfaceArray[index]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+this.newUnconstructedRTSLayerInterfaceArray[index]= CollidableDestroyableDamageableLayer.getNullInstance()
 }
 
 this.groupInterfaceArray= groupInterfaceArray
@@ -328,7 +328,7 @@ this.logUtil!!.putF(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+                        return CollidableDestroyableDamageableLayer.getNullInstance()
 }
 
 

@@ -118,7 +118,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
                                 }
-                            , this@RepaintBehavior.NAME)
+                            , this.NAME)
 
 thread.start()
 

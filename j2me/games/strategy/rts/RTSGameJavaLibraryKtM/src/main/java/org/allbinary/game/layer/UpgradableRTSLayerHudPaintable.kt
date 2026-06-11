@@ -53,7 +53,7 @@ companion object {
             
     private val PERCENT: String = "%"
 
-    private var rtsLayer: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+    private var rtsLayer: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.getNullInstance()!!
 
     var costY: Int= 0
 

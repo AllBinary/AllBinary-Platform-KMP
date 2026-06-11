@@ -22,18 +22,7 @@ open public class AndroidMediaPlayerWrapperListener
             : Object
          {
         
-companion object {
-            
-    private val ON_BUFFERING_UPDATE: String = "onBufferingUpdate()"
 
-    private val ON_PREPARE: String = "onPrepare()"
-
-    private val ON_ERROR: String = "onError()"
-
-    private val ON_COMPLETE: String = "onComplete()"
-
-        }
-            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -67,11 +56,6 @@ open public inner class MediaPlayerOnBufferingUpdateListener
         
                 , MediaPlayer.OnBufferingUpdateListener {
         
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
-        }
-            */
-
 
             //Auto Generated
             public constructor() : super()
@@ -94,11 +78,6 @@ open public inner class MediaPlayerOnPreparedListener
         
                 , MediaPlayer.OnPreparedListener {
         
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
-        }
-            */
-
 
             //Auto Generated
             public constructor() : super()
@@ -120,11 +99,6 @@ open public inner class MediaPlayerOnErrorListener
         
                 , MediaPlayer.OnErrorListener {
         
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
-        }
-            */
-
 
             //Auto Generated
             public constructor() : super()
@@ -153,11 +127,6 @@ open public inner class MediaPlayerOnCompletionListener
         
                 , MediaPlayer.OnCompletionListener {
         
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
-        }
-            */
-
 
             //Auto Generated
             public constructor() : super()
@@ -174,9 +143,18 @@ open public inner class MediaPlayerOnCompletionListener
 }
                 
             
-    private var mOnBufferingUpdateListener: MediaPlayer.OnBufferingUpdateListener = object: MediaPlayerOnBufferingUpdateListener()
-                                {
-                                
+open public inner class AndroidMediaPlayerOnBufferingUpdateListener : MediaPlayerOnBufferingUpdateListener {
+        
+
+    private val ON_BUFFERING_UPDATE: String = "onBufferingUpdate()"
+
+    private val androidMediaPlayerWrapperListener: AndroidMediaPlayerWrapperListener
+public constructor (androidMediaPlayerWrapperListener: AndroidMediaPlayerWrapperListener){
+    //var androidMediaPlayerWrapperListener = androidMediaPlayerWrapperListener
+this.androidMediaPlayerWrapperListener= androidMediaPlayerWrapperListener
+}
+
+
     override fun onBufferingUpdate(mediaPlayer: MediaPlayer, i: Int)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -186,16 +164,28 @@ open public inner class MediaPlayerOnCompletionListener
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 logUtil!!.putF(StringMaker().
-                            append("Update buffer: ")!!.appendint(i)!!.append("%")!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_BUFFERING_UPDATE)
-this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_UNAVAILABLE)
+                            append("Update buffer: ")!!.appendint(i)!!.append("%")!!.toString(), this, this.ON_BUFFERING_UPDATE)
+this.androidMediaPlayerWrapperListener!!.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_UNAVAILABLE)
 }
 
-                                }
-                            
 
-    private var mOnPreparedListener: MediaPlayer.OnPreparedListener = object: MediaPlayerOnPreparedListener()
-                                {
-                                
+}
+                
+            
+    private var mOnBufferingUpdateListener: MediaPlayer.OnBufferingUpdateListener = AndroidMediaPlayerOnBufferingUpdateListener(this)
+
+open public inner class AndroidMediaPlayerOnPreparedListener : MediaPlayerOnPreparedListener {
+        
+
+    private val ON_PREPARE: String = "onPrepare()"
+
+    private val androidMediaPlayerWrapperListener: AndroidMediaPlayerWrapperListener
+public constructor (androidMediaPlayerWrapperListener: AndroidMediaPlayerWrapperListener){
+    //var androidMediaPlayerWrapperListener = androidMediaPlayerWrapperListener
+this.androidMediaPlayerWrapperListener= androidMediaPlayerWrapperListener
+}
+
+
     override fun onPrepared(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -206,17 +196,29 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.putF(commonStrings!!.START, this, AndroidMediaPlayerWrapperListener.ON_PREPARE)
-this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_AVAILABLE)
+logUtil!!.putF(commonStrings!!.START, this, this.ON_PREPARE)
+this.androidMediaPlayerWrapperListener!!.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_AVAILABLE)
 }
 
-                                }
-                            
 
-    private var mOnErrorListener: MediaPlayer.OnErrorListener = object: MediaPlayerOnErrorListener()
-                                {
-                                
-    open override fun onError(mp: MediaPlayer, what: Int, extra: Int)
+}
+                
+            
+    private var mOnPreparedListener: MediaPlayer.OnPreparedListener = AndroidMediaPlayerOnPreparedListener(this)
+
+open public inner class AndroidMediaPlayerOnErrorListener : MediaPlayerOnErrorListener {
+        
+
+    private val ON_ERROR: String = "onError()"
+
+    private val androidMediaPlayerWrapperListener: AndroidMediaPlayerWrapperListener
+public constructor (androidMediaPlayerWrapperListener: AndroidMediaPlayerWrapperListener){
+    //var androidMediaPlayerWrapperListener = androidMediaPlayerWrapperListener
+this.androidMediaPlayerWrapperListener= androidMediaPlayerWrapperListener
+}
+
+
+    override fun onError(mp: MediaPlayer, what: Int, extra: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var mp = mp
@@ -226,8 +228,8 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append("What: ")!!.appendint(what)!!.append(" Extra: ")!!.appendint(extra)!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_ERROR)
-this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.ERROR)
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append("What: ")!!.appendint(what)!!.append(" Extra: ")!!.appendint(extra)!!.toString(), this, this.ON_ERROR)
+this.androidMediaPlayerWrapperListener!!.androidMediaPlayerWrapper!!.update(PlayerListener.ERROR)
 
 
 
@@ -235,13 +237,25 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
                         return true
 }
 
-                                }
-                            
 
-    private var mOnCompletionListener: MediaPlayer.OnCompletionListener = object: MediaPlayerOnCompletionListener()
-                                {
-                                
-    open override fun onCompletion(mp: MediaPlayer)
+}
+                
+            
+    private var mOnErrorListener: MediaPlayer.OnErrorListener = AndroidMediaPlayerOnErrorListener(this)
+
+open public inner class AndroidMediaPlayerOnCompletionListener : MediaPlayerOnCompletionListener {
+        
+
+    private val ON_COMPLETE: String = "onComplete()"
+
+    private val androidMediaPlayerWrapperListener: AndroidMediaPlayerWrapperListener
+public constructor (androidMediaPlayerWrapperListener: AndroidMediaPlayerWrapperListener){
+    //var androidMediaPlayerWrapperListener = androidMediaPlayerWrapperListener
+this.androidMediaPlayerWrapperListener= androidMediaPlayerWrapperListener
+}
+
+
+    override fun onCompletion(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mp = mp
@@ -251,12 +265,15 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.putF(commonStrings!!.START, this, AndroidMediaPlayerWrapperListener.ON_COMPLETE)
-this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.END_OF_MEDIA)
+logUtil!!.putF(commonStrings!!.START, this, this.ON_COMPLETE)
+this.androidMediaPlayerWrapperListener!!.androidMediaPlayerWrapper!!.update(PlayerListener.END_OF_MEDIA)
 }
 
-                                }
-                            
+
+}
+                
+            
+    private var mOnCompletionListener: MediaPlayer.OnCompletionListener = AndroidMediaPlayerOnCompletionListener(this)
 
 }
                 

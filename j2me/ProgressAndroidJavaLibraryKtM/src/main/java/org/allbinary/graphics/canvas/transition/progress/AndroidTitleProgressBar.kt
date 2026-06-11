@@ -30,7 +30,6 @@
 import javax.microedition.lcdui.Graphics
 import org.allbinary.android.activity.NullProgressActivity
 import org.allbinary.android.activity.ProgressActivityInterface
-import org.allbinary.android.activity.SimpleProgressActivityInterface
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -38,13 +37,174 @@ import org.allbinary.string.CommonStrings
 open public class AndroidTitleProgressBar : ProgressCanvas {
         
 
-    private var showTitleProgressBarRunnable: ShowTitleProgressBarRunnable = ShowTitleProgressBarRunnable()
+open public inner class TitleProgressBarSetProgressRunnable
+            : Object
+        
+                , Runnable {
+        
 
-    private var dismissTitleProgressBarRunnable: DismissTitleProgressBarRunnable = DismissTitleProgressBarRunnable()
+    private val androidTitleProgressBar: AndroidTitleProgressBar
+ constructor (androidTitleProgressBar: AndroidTitleProgressBar)
+            : super()
+        {
+    //var androidTitleProgressBar = androidTitleProgressBar
+this.androidTitleProgressBar= androidTitleProgressBar
+}
 
-    private var progressDialogPortionSetProgressRunnable: TitleProgressBarPortionSetProgressRunnable = TitleProgressBarPortionSetProgressRunnable()
 
-    private var progressDialogSetProgressRunnable: TitleProgressBarSetProgressRunnable = TitleProgressBarSetProgressRunnable()
+    override fun run()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
+        try {
+            
+    var value: Int = this.androidTitleProgressBar!!.getValue().toInt()
+
+this.androidTitleProgressBar!!.progressActivity!!.onTitleProgressBarSetProgress(value)
+} catch(e: Exception)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+}
+
+}
+
+
+}
+                
+            
+open public inner class TitleProgressBarPortionSetProgressRunnable
+            : Object
+        
+                , Runnable {
+        
+
+    private val androidTitleProgressBar: AndroidTitleProgressBar
+ constructor (androidTitleProgressBar: AndroidTitleProgressBar)
+            : super()
+        {
+    //var androidTitleProgressBar = androidTitleProgressBar
+this.androidTitleProgressBar= androidTitleProgressBar
+}
+
+
+    override fun run()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
+        try {
+            
+    var value: Int = (this.androidTitleProgressBar!!.getValue() +this.androidTitleProgressBar!!.getMaxValue() /this.androidTitleProgressBar!!.portion).toInt()
+
+this.androidTitleProgressBar!!.progressActivity!!.onTitleProgressBarSetProgress(value)
+} catch(e: Exception)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+}
+
+}
+
+
+}
+                
+            
+open public inner class ShowTitleProgressBarRunnable
+            : Object
+        
+                , Runnable {
+        
+
+    private val androidTitleProgressBar: AndroidTitleProgressBar
+ constructor (androidTitleProgressBar: AndroidTitleProgressBar)
+            : super()
+        {
+    //var androidTitleProgressBar = androidTitleProgressBar
+this.androidTitleProgressBar= androidTitleProgressBar
+}
+
+
+    override fun run()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
+        try {
+            
+    var maxValue: Int = this.androidTitleProgressBar!!.getMaxValue().toInt()
+
+this.androidTitleProgressBar!!.progressActivity!!.onShowTitleProgressBar(maxValue, false)
+} catch(e: Exception)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+}
+
+}
+
+
+}
+                
+            
+open public inner class DismissTitleProgressBarRunnable
+            : Object
+        
+                , Runnable {
+        
+
+    private val androidTitleProgressBar: AndroidTitleProgressBar
+ constructor (androidTitleProgressBar: AndroidTitleProgressBar)
+            : super()
+        {
+    //var androidTitleProgressBar = androidTitleProgressBar
+this.androidTitleProgressBar= androidTitleProgressBar
+}
+
+
+    override fun run()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
+        try {
+            this.androidTitleProgressBar!!.progressActivity!!.onDismissTitleProgressBar()
+} catch(e: Exception)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+}
+
+}
+
+
+}
+                
+            
+    private var showTitleProgressBarRunnable: ShowTitleProgressBarRunnable = ShowTitleProgressBarRunnable(this)
+
+    private var dismissTitleProgressBarRunnable: DismissTitleProgressBarRunnable = DismissTitleProgressBarRunnable(this)
+
+    private var progressDialogPortionSetProgressRunnable: TitleProgressBarPortionSetProgressRunnable = TitleProgressBarPortionSetProgressRunnable(this)
+
+    private var progressDialogSetProgressRunnable: TitleProgressBarSetProgressRunnable = TitleProgressBarSetProgressRunnable(this)
 
     private var progressActivity: ProgressActivityInterface = NullProgressActivity.NULL_PROGRESS_ACTIVITY
 
@@ -196,151 +356,6 @@ var graphics = graphics
 }
 
 
-open public inner class TitleProgressBarSetProgressRunnable
-            : Object
-        
-                , Runnable {
-        
-
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-
-        try {
-            
-    var value: Int = this@AndroidTitleProgressBar.getValue().toInt()
-
-this@AndroidTitleProgressBar.progressActivity!!.onTitleProgressBarSetProgress(value)
-} catch(e: Exception)
-            {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-}
-
-}
-
-
-}
-                
-            
-open public inner class TitleProgressBarPortionSetProgressRunnable
-            : Object
-        
-                , Runnable {
-        
-
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-
-        try {
-            
-    var value: Int = (this@AndroidTitleProgressBar.getValue() +this@AndroidTitleProgressBar.getMaxValue() /this@AndroidTitleProgressBar.portion).toInt()
-
-this@AndroidTitleProgressBar.progressActivity!!.onTitleProgressBarSetProgress(value)
-} catch(e: Exception)
-            {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-}
-
-}
-
-
-}
-                
-            
-open public inner class ShowTitleProgressBarRunnable
-            : Object
-        
-                , Runnable {
-        
-
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-
-        try {
-            
-    var maxValue: Int = this@AndroidTitleProgressBar.getMaxValue().toInt()
-
-this@AndroidTitleProgressBar.progressActivity!!.onShowTitleProgressBar(maxValue, false)
-} catch(e: Exception)
-            {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-}
-
-}
-
-
-}
-                
-            
-open public inner class DismissTitleProgressBarRunnable
-            : Object
-        
-                , Runnable {
-        
-
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-
-        try {
-            this@AndroidTitleProgressBar.progressActivity!!.onDismissTitleProgressBar()
-} catch(e: Exception)
-            {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-}
-
-}
-
-
-}
-                
-            
 }
                 
             

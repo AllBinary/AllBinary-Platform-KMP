@@ -56,18 +56,28 @@ open public class ProgressCanvas : RunnableCanvas
 
     private val backgroundBasicColor: BasicColor
 
-    val GAUGE_PAINTABLE: Paintable = object: Paintable()
-                                {
-                                
-    open override fun paint(graphics: Graphics)
+open public inner class ProgressPaintable : Paintable {
+        
+
+    val progressCanvas: ProgressCanvas
+ constructor (progressCanvas: ProgressCanvas){
+    //var progressCanvas = progressCanvas
+this.progressCanvas= progressCanvas
+}
+
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this@ProgressCanvas.paint2(graphics)
+this.progressCanvas!!.paint2(graphics)
 }
 
-                                }
-                            
+
+}
+                
+            
+    val GAUGE_PAINTABLE: Paintable = ProgressPaintable(this)
 
     var allbinaryMidlet: AllBinaryMidlet = AllBinaryMidlet.NULL_ALLBINARY_MIDLET
 

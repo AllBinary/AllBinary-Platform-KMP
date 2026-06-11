@@ -82,13 +82,13 @@ this.touchButtonRecognizer= touchButtonRecognizer
 
 
 
-                        for (index in this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
+                        for (index in this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
 
         {
-nextTouchButtonInput= this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.get(index)
+nextTouchButtonInput= this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.get(index)
 gameKeyEvent= nextTouchButtonInput!!.getGameKeyEvent()
-this@TouchButtonRecognizer.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this@TouchButtonRecognizer.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
+this.touchButtonRecognizer!!.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.touchButtonRecognizer!!.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.removeAt(index)
 }
 
@@ -131,18 +131,18 @@ public constructor (touchButtonRecognizer: TouchButtonRecognizer)
 
 
 
-                        for (index in this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
+                        for (index in this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
 
         {
-nextTouchButtonInput= this@TouchButtonRecognizer.currentlyPressedTouchButtonSingleton!!.get(index)
+nextTouchButtonInput= this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.get(index)
 
     
                         if(cancelTouchButtonInput == nextTouchButtonInput)
                         
                                     {
                                     gameKeyEvent= nextTouchButtonInput!!.getGameKeyEvent()
-this@TouchButtonRecognizer.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this@TouchButtonRecognizer.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
+this.touchButtonRecognizer!!.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+this.touchButtonRecognizer!!.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
 this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.removeAt(index)
 
                                     }

@@ -300,7 +300,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!
                         if(layer == AllBinaryLayer.NULL_ALLBINARY_LAYER)
                         
                                     {
-                                    layer= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+                                    layer= CollidableDestroyableDamageableLayer.getNullInstance()
 
                                     }
                                 

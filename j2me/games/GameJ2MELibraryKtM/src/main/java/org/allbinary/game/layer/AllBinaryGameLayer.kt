@@ -53,22 +53,24 @@ open public class AllBinaryGameLayer : AllBinaryLayer
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    val RED: BasicColor = BasicColorFactory.getInstance()!!.RED
-
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
+
+    val RED: BasicColor = BasicColorFactory.getInstance()!!.RED
 
     private val paintable: Paintable = if(SWTUtil.isSWT) {
                             
                             object: Paintable()
                                 {
                                 
+    private val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
+
     private val BLACK: BasicColor = BasicColorFactory.getInstance()!!.BLACK
 
     open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-this@AllBinaryGameLayer.basicSetColorUtil!!.setBasicColorP(graphics, this.BLACK)
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.BLACK)
 }
 
                                 }

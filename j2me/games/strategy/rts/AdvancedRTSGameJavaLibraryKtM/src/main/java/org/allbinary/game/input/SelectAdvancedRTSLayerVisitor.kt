@@ -54,7 +54,7 @@ var anyType = anyType
 
 
     
-                        if(selectedLayer != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER && selectedLayer!!.getType() == BuildingLayer.getStaticType())
+                        if(selectedLayer != CollidableDestroyableDamageableLayer.getNullInstance() && selectedLayer!!.getType() == BuildingLayer.getStaticType())
                         
                                     {
                                     

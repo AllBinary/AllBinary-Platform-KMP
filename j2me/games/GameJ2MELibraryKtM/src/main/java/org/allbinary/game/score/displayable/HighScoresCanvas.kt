@@ -41,7 +41,6 @@ import org.allbinary.game.score.HighScoreCommandsFactory
 import org.allbinary.game.score.HighScores
 import org.allbinary.game.score.HighScoresCanvasInputProcessor
 import org.allbinary.game.score.HighScoresCanvasInputProcessorFactoryInterface
-import org.allbinary.game.score.HighScoresCanvasNoInputProcessorFactory
 import org.allbinary.game.score.HighScoresFactoryInterface
 import org.allbinary.game.score.HighScoresHelperBase
 import org.allbinary.game.score.HighScoresPaintable
@@ -86,6 +85,8 @@ companion object {
     private val highScoresCanvasInputProcessor: HighScoresCanvasInputProcessor
 
     private var currentCommand: Command = this.highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[0]!!
+
+    private var hasPainted: Boolean = false
 public constructor (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, gameInfo: GameInfo, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface: HighScoresCanvasInputProcessorFactoryInterface)                        
 
                             : super(commandListener, HighScoresCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
@@ -123,9 +124,17 @@ this.setPaintable(this.getHighScoresPaintable())
 
                         }
                             
-SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
-                                {
-                                
+
+open class HighScoreRunnable : ARunnable {
+        
+
+    val highScoresCanvas: HighScoresCanvas
+ constructor (highScoresCanvas: HighScoresCanvas){
+    //var highScoresCanvas = highScoresCanvas
+this.highScoresCanvas= highScoresCanvas
+}
+
+
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -134,6 +143,9 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
 
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var highScoresCanvas: HighScoresCanvas = this.highScoresCanvas
 
 
         try {
@@ -146,11 +158,11 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
                         
                                     {
                                     
-        while(!this@HighScoresCanvas.hasPainted)
+        while(!highScoresCanvas!!.hasPainted)
         {
 }
 
-this@HighScoresCanvas.hasPainted= false
+highScoresCanvas!!.hasPainted= false
 
                                     }
                                 
@@ -158,14 +170,14 @@ this@HighScoresCanvas.hasPainted= false
     var stringMaker: StringMaker = StringMaker()
 
 logUtil!!.putF(stringMaker!!.append("HighScoresCanvas - Request repaint to be sure: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
-this@HighScoresCanvas.repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
+highScoresCanvas!!.repaintBehavior!!.onChangeRepaint(highScoresCanvas)
 
     
                         if(!isHTML)
                         
                                     {
                                     
-        while(!this@HighScoresCanvas.hasPainted)
+        while(!highScoresCanvas!!.hasPainted)
         {
 }
 
@@ -174,7 +186,7 @@ this@HighScoresCanvas.repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
 logUtil!!.putF(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
-this@HighScoresCanvas.executeUpdate()
+highScoresCanvas!!.executeUpdate()
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
@@ -182,8 +194,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 }
 
-                                }
-                            )
+
+}
+                
+            
+
+                    //Otherwise - statement - EmptyStmt
+
+SecondaryThreadPool.getInstance()!!.runTask(HighScoreRunnable(this))
 }
 
 
@@ -212,8 +230,6 @@ super.close()
 this.highScoresCanvasInputProcessor!!.close()
 }
 
-
-    var hasPainted: Boolean = false
 
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true

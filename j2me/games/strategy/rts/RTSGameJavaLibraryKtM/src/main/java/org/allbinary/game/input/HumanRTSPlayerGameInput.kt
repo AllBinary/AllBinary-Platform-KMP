@@ -91,7 +91,7 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput
 
     private val notYoursGameNotificationEvent: GameNotificationEvent
 
-    private var selectedRtsLayer: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+    private var selectedRtsLayer: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.getNullInstance()!!
 public constructor (gameCanvas: AllBinaryGameCanvas, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface, touchButtonsBuilderFactory: TouchButtonsBuilderFactory)                        
 
                             : super(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface){
@@ -329,7 +329,7 @@ this.getSelectedBuildingPlayerGameInput()!!.addSelectedRTSLayer(rtsLayer)
 
 
     
-                        if(gameLayer != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+                        if(gameLayer != CollidableDestroyableDamageableLayer.getNullInstance())
                         
                                     {
                                     
@@ -455,7 +455,7 @@ getMotionGestureInputList()!!.clear()
 this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START)!!.append(StringUtil.getInstance()!!.toString(selectedRtsFormInput))!!.toString(), this, "setSelectedRtsFormInput")
 super.setSelectedRtsFormInput(selectedRtsFormInput)
-this.setSelectedRtsLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+this.setSelectedRtsLayer(CollidableDestroyableDamageableLayer.getNullInstance())
 }
 
 
@@ -472,7 +472,7 @@ this.setSelectedRtsLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DE
                         
                                     {
                                     this.updateForm(scrollSelectionForm, rtsLayer!!.getRTSFormInput())
-this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestroyableDamageableLayer.getNullInstance())
 this.setSelectedRtsLayer(rtsLayer)
 
                                     }
@@ -480,7 +480,7 @@ this.setSelectedRtsLayer(rtsLayer)
                         else {
                             this.getRtsPlayerLayerInterface()!!.setCurrentScrollSelectionForm(this.getRtsPlayerLayerInterface()!!.getBuildingScrollSelectionForm())
 this.setSelectedRtsFormInput(this.getRtsPlayerLayerInterface()!!.getRTSFormInput())
-this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestroyableDamageableLayer.getNullInstance())
 
                         }
                             
@@ -506,7 +506,7 @@ this.setSelectedRtsFormInput(rtfFormInput)
     //var geographicMapCellPosition = geographicMapCellPosition
 
     
-                        if(rtSLayer != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER && this.getRtsPlayerLayerInterface()!!.getGroupInterface()[0] != rtSLayer!!.getGroupInterface()[0])
+                        if(rtSLayer != CollidableDestroyableDamageableLayer.getNullInstance() && this.getRtsPlayerLayerInterface()!!.getGroupInterface()[0] != rtSLayer!!.getGroupInterface()[0])
                         
                                     {
                                     this.getRtsPlayerLayerInterface()!!.add(ErrorSound.getInstance())
@@ -581,7 +581,7 @@ gameCanvas!!.updateCurrentTouchInputFactory(endLevelTouchButtonsBuilder)
                             this.logUtil!!.putF("Set Player Default Form", this, "setSelectedRTSLayer")
 this.getRtsPlayerLayerInterface()!!.setCurrentScrollSelectionForm(this.getRtsPlayerLayerInterface()!!.getBuildingScrollSelectionForm())
 this.setSelectedRtsFormInput(this.getRtsPlayerLayerInterface()!!.getRTSFormInput())
-this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
+this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestroyableDamageableLayer.getNullInstance())
 
     
                         if(gameCanvas!!.getGameState() == this.gameStateFactory!!.PLAYING_GAME_STATE)

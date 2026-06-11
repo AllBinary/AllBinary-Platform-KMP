@@ -148,6 +148,7 @@ import org.allbinary.media.audio.PrimaryPlayerQueueFactory
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.SelectSound
 import org.allbinary.string.CommonSeps
+import org.allbinary.string.CommonStrings
 import org.allbinary.thread.SecondaryThreadPool
 import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
@@ -2341,7 +2342,10 @@ open class SaveHighScoreRunnable
                             
 } catch(e: Exception)
             {
-logUtil!!.put(this@AllBinaryGameCanvas.commonStrings!!.EXCEPTION, this, "run", e)
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "run", e)
 this.progressCanvas!!.end()
 }
 

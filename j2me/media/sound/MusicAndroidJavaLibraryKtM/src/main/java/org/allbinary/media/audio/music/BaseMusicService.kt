@@ -241,9 +241,16 @@ this.rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
 
 this.logUtil!!.putF(this.ALREADY_PLAYING, this, this.commonStateStrings!!.ON_START_COMMAND)
 
-    var runnable: Runnable = object: ARunnable()
-                                {
-                                
+open class MusicRunnable : ARunnable {
+        
+
+    private val baseMusicService: BaseMusicService
+ constructor (baseMusicService: BaseMusicService){
+    //var baseMusicService = baseMusicService
+this.baseMusicService= baseMusicService
+}
+
+
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -261,11 +268,11 @@ this.logUtil!!.putF(this.ALREADY_PLAYING, this, this.commonStateStrings!!.ON_STA
             
         while(player.isPlaying())
         {
-logUtil!!.putF(this@BaseMusicService.WAITING_FOR_MUSIC_TO_END, this, commonStateStrings!!.ON_START_COMMAND)
+logUtil!!.putF(this.baseMusicService!!.WAITING_FOR_MUSIC_TO_END, this, commonStateStrings!!.ON_START_COMMAND)
 Thread.sleep(1200)
 }
 
-this@BaseMusicService.onStartCommandIntent(intent)
+this.baseMusicService!!.onStartCommandIntent(intent)
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStateStrings!!.ON_START_COMMAND, e)
@@ -273,8 +280,15 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStateStrings!!.ON_START_COM
 
 }
 
-                                }
-                            
+
+}
+                
+            
+
+                    //Otherwise - statement - EmptyStmt
+
+
+    var runnable: Runnable = MusicRunnable(this)
 
 
     var thread: Thread = Thread(runnable)

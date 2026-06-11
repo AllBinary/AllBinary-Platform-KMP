@@ -180,6 +180,7 @@ this.lastNegativeMin= this.NEGATIVE_MAX
 private constructor ()
             : super()
         {
+this.initWithRange(23, 0)
 }
 
 
@@ -187,7 +188,15 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var index = index
-this.checkMe()
+
+    
+                        if(index >= 0 && index < 24)
+                        
+                                    {
+                                    this.checkMe()
+
+                                    }
+                                
 
 
 
@@ -200,7 +209,15 @@ this.checkMe()
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var index = index
-this.checkMe()
+
+    
+                        if(index >= 0 && index < 24)
+                        
+                                    {
+                                    this.checkMe()
+
+                                    }
+                                
 
     
                         if(index +this.NEGATIVE_MAX > this.INTEGER_ARRAY.size -1)
