@@ -189,15 +189,6 @@ this.initWithRange(23, 0)
 : Integer{
 var index = index
 
-    
-                        if(index >= 0 && index < 24)
-                        
-                                    {
-                                    this.checkMe()
-
-                                    }
-                                
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -209,15 +200,6 @@ var index = index
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var index = index
-
-    
-                        if(index >= 0 && index < 24)
-                        
-                                    {
-                                    this.checkMe()
-
-                                    }
-                                
 
     
                         if(index +this.NEGATIVE_MAX > this.INTEGER_ARRAY.size -1)
