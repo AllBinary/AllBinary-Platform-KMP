@@ -60,7 +60,7 @@ companion object {
             
     override fun getInstanceForApp(softwareInformation: SoftwareInformation)
         //nullable = true from not(false or (false and false)) = true
-: GameAdState{
+: GameAdStateBase{
     //var softwareInformation = softwareInformation
 this.gameAdState= this.gameAdStateArray[0]!!
 

@@ -31,15 +31,8 @@
     <modules>
 
         <!--
-        <module>../../../android/AndroidAPI3AndUpJavaLibraryKtM</module>
-        -->
-
-        <!--
         <module>../../OpenGLAndroidJavaLibraryKtM</module>
-        <module>../../AndroidBaseJavaLibraryKtM</module>
-        <module>../../android/AndroidAPI5AndUpJavaLibraryKtM</module>
         <module>../../android/AndroidThroughAPI2JavaLibraryKtM</module>
-        <module>../../android/AndroidThroughAPI4JavaLibraryKtM</module>
         -->
         
         <!--

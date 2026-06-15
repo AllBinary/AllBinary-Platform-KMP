@@ -89,7 +89,7 @@ collidableBase2= collidableInterfaceCompositeInterface2!!.getCollidableInferface
                         
                                     {
                                     collidableBase!!.collide(collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2)
-collidableBase2!!.collide(collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface)
+collidableBase2!!.collide(collidableInterfaceCompositeInterface2, collidableInterfaceCompositeInterface)
 
                                     }
                                 
