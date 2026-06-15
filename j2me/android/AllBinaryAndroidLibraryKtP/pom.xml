@@ -34,9 +34,8 @@
         <module>../../../android/AndroidAPI3AndUpJavaLibraryKtM</module>
         -->
                 
-        <!--
-        <module>../AndroidToJ2MELibraryKtM</module>
-        -->
+        <module>../../AndroidToJ2MELibraryKtM</module>
+
         <!--
         <module>../../OpenGLAndroidJavaLibraryKtM</module>
         <module>../../AndroidBaseJavaLibraryKtM</module>
@@ -44,19 +43,11 @@
         <module>../../android/AndroidThroughAPI2JavaLibraryKtM</module>
         <module>../../android/AndroidThroughAPI4JavaLibraryKtM</module>
         -->
-
-        <!--
-        <module>../../AndroidToAllBinaryJavaLibraryKtM</module>
-        -->
         
         <!--
         <module>../../input/android/MotionInputAndroidResourcesJavaLibraryKtM</module>
         -->
         
-        <!--
-        <module>../../../../working/j2me/AndroidToJ2MELibraryKtM</module>
-        -->
-
         <!--
         <module>../../android/VirtualKeyboardDynamicJavaLibraryKtM</module>
         -->
