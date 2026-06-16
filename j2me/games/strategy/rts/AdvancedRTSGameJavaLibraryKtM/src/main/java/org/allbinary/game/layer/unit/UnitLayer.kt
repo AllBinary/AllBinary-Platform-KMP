@@ -334,7 +334,7 @@ this.initPathAnimation!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 hashtable.put(this.groupCommonFactory!!.ID, this.getGroupInterface())
 hashtable.put(Layer.ID, this)
 hashtable.put(AllBinaryGameLayerManager.ID, this.allBinaryGameLayerManagerP)
-this.setWaypointBehavior(UnitWaypointBehavior2(this, this.waypointLayerInterfaceFactoryInterface!!.getNextInstance(hashtable, x, y, z) as AdvancedRTSGameLayer))
+this.setWaypointBehavior(UnitWaypointBehavior2(this, this.waypointLayerInterfaceFactoryInterface!!.getNextInstance(hashtable, this.x, this.y, this.z) as AdvancedRTSGameLayer))
 
     var features: Features = Features.getInstance()!!
 
@@ -967,7 +967,7 @@ this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocityi(accelerate.
 
     var angle: Int = (angleInfo!!.getAngle() +this.slightAngle).toInt()
 
-hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getAt(1), SmallIntegerSingletonFactory.getInstance()!!.getAt(AngleFactory.getInstance()!!.getAt(angle)!!.getValue().toInt()))
+this.hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getAt(1), SmallIntegerSingletonFactory.getInstance()!!.getAt(AngleFactory.getInstance()!!.getAt(angle)!!.getValue().toInt()))
 
     var salvoInterface: SalvoInterface = this.getPartInterfaceArray()[0]!! as SalvoInterface
 
@@ -980,7 +980,7 @@ salvoInterface!!.process(layerManager, angle.toShort(), 90.toShort())
 {
 
     
-                        if(getLevel() > 1)
+                        if(this.getLevel() > 1)
                         
                                     {
                                     super.downgrade()
@@ -1082,7 +1082,7 @@ targetAngle += 180
 
     var angle: Int = FrameUtil.getInstance()!!.adjustAngleToFrameAngle(angleInfo!!.getAngle() -270)!!
 
-this.rtsLogHelper!!.turnTo(this, dx, dy, angleInfo, angle, movementAngle, evading, targetAngle)
+this.rtsLogHelper!!.turnTo(this, dx, dy, angleInfo, angle, this.movementAngle, evading, targetAngle)
 
     var gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 
@@ -1454,9 +1454,9 @@ this.getUnitWaypointBehavior()!!.move()
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-this.layerPartialCellPositionsUtil!!.getAllDXY(geographicMapInterface, this, velocityXScaled.toInt(), velocityYScaled.toInt(), getPartialpositionlist())
+this.layerPartialCellPositionsUtil!!.getAllDXY(geographicMapInterface, this, velocityXScaled.toInt(), velocityYScaled.toInt(), UnitLayer.getPartialpositionlist())
 
-    var cellPosition: GeographicMapCellPosition = DropCellPositionHistory.getInstance()!!.getCellPositionWithDrop(getPartialpositionlist()) as GeographicMapCellPosition
+    var cellPosition: GeographicMapCellPosition = DropCellPositionHistory.getInstance()!!.getCellPositionWithDrop(UnitLayer.getPartialpositionlist()) as GeographicMapCellPosition
 
 
     
@@ -1518,7 +1518,7 @@ this.getUnitWaypointBehavior()!!.addBuildingChase(allbinaryLayer, cellPosition)
                                 
 } catch(e: Exception)
             {
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "move", e)
 }
 
 }

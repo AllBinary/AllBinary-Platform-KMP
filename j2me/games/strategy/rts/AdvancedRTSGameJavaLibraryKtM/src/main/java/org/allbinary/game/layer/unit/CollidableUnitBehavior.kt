@@ -42,6 +42,7 @@ import org.allbinary.math.AngleInfo
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
 import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
+import org.allbinary.string.CommonStrings
 
 open public class CollidableUnitBehavior : CollidableRTSBehavior {
         
@@ -141,6 +142,9 @@ open public inner class SimpleSteeringVisitor : SteeringVisitor {
                         return NullUtil.getInstance()!!.NULL_OBJECT
 } catch(e: Exception)
             {
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
 

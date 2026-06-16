@@ -230,7 +230,7 @@ this.removeInputProcessorArray[key]!!.processEvent(layerManager, gameKeyEvent)
 
 
     
-                        if(isIsSingleKeyProcessing())
+                        if(this.isIsSingleKeyProcessing())
                         
                                     {
                                     this.clear()

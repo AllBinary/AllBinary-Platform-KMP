@@ -111,9 +111,7 @@ var point = point
 
 
     
-                        if(this.isStickyItemSelected() && associatedRtsLayer == 
-                                    null
-                                )
+                        if(this.isStickyItemSelected() && associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance())
                         
                                     {
                                     
@@ -156,9 +154,7 @@ var index = index
 this.logUtil!!.putF(CommonLabels.getInstance()!!.INDEX_LABEL +index +" > " +this.itemIndex[0], this, commonStrings!!.PROCESS)
 
     
-                        if(this.isStickyItemSelected() && associatedRtsLayer == 
-                                    null
-                                )
+                        if(this.isStickyItemSelected() && associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance())
                         
                                     {
                                     

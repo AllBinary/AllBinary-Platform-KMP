@@ -63,7 +63,7 @@ companion object {
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(commonStrings!!.START_RUNNABLE)!!.toString(), this, this.commonStrings!!.RUN)
+                            append(pathFindingLayerInterface!!.getName())!!.append(this.commonStrings!!.START_RUNNABLE)!!.toString(), this, this.commonStrings!!.RUN)
 }
 
 
@@ -72,7 +72,7 @@ this.logUtil!!.putF(StringMaker().
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(commonStrings!!.END_RUNNABLE)!!.toString(), this, this.commonStrings!!.RUN)
+                            append(pathFindingLayerInterface!!.getName())!!.append(this.commonStrings!!.END_RUNNABLE)!!.toString(), this, this.commonStrings!!.RUN)
 }
 
 

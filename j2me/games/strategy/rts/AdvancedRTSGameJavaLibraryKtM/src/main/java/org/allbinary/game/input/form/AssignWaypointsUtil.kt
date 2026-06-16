@@ -27,7 +27,6 @@
         
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.NullPathFindingLayer
-import org.allbinary.game.layer.NullRTSLayer
 import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSLayerEvent

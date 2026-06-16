@@ -138,9 +138,9 @@ super.paintXY(graphics, x, y)
 
 graphics.drawString(this.COST, xa, y +this.adjustedCostLabelY, 0)
 graphics.drawString(this.DOLLAR, xa, y +this.adjustedCostY, 0)
-graphics.drawChars(costString, 0, this.costLength, x +this.adjustedCostX, y +this.adjustedCostY, 0)
+graphics.drawChars(this.costString, 0, this.costLength, x +this.adjustedCostX, y +this.adjustedCostY, 0)
 graphics.drawString(this.LEVEL, xa, y +this.adjustedLevelY, 0)
-graphics.drawChars(levelString, 0, this.levelLength, x +this.adjustedLevelX, y +this.adjustedLevelY, 0)
+graphics.drawChars(this.levelString, 0, this.levelLength, x +this.adjustedLevelX, y +this.adjustedLevelY, 0)
 }
 
 

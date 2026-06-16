@@ -107,6 +107,7 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 this.endList= this.ownerLayer!!.getEndGeographicMapCellPositionList()
 this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(tiledLayer!!.getRows()) }
                                                             
+this.clearPaths()
 }
 
 
@@ -358,6 +359,13 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
+this.clearPaths()
+}
+
+
+    open fun clearPaths()
+        //nullable = true from not(false or (false and true)) = true
+{
 
 
 

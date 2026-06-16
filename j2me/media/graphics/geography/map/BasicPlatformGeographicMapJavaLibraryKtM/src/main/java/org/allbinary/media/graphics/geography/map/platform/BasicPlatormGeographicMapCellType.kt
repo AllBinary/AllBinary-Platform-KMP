@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListS
@@ -44,11 +45,10 @@ companion object {
 
     var types: BasicArrayList = BasicArrayListS(1)
 
-types.add(type.toString())
+types.add(SmallIntegerSingletonFactory.getInstance()!!.getAt(type))
 
     var basicPlatormGeographicMapCellType: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType(types)
 
-GeographicMapCellType(type, 0)
 
 
 

@@ -466,11 +466,6 @@ this.logUtil!!.putF(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABE
                         if(aLastWidth > 0 && aLastHeight > 0)
                         
                                     {
-                                    
-    
-                        if(this.last[this.WIDTH] != aLastWidth || this.last[this.HEIGHT] != aLastHeight)
-                        
-                                    {
                                     stringMaker!!.delete(0, stringMaker!!.length())
 this.logUtil!!.putF(stringMaker!!.append(this.UPDATE_FROM_ORIENTATION_CHANGE)!!.toString(), this, this.commonStrings!!.UPDATE)
 
@@ -563,14 +558,6 @@ this.last[this.HEIGHT]= aLastHeight
 this.lastHalf[this.HEIGHT]= (this.last[this.HEIGHT] shr 1)
 SWTJOGLProcessor.getInstance()!!.setCustom(aLastWidth, aLastHeight, this.ratio)
 this.add(this.commonStrings!!.UPDATE)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
-
-                                    }
-                                
 
                                     }
                                 

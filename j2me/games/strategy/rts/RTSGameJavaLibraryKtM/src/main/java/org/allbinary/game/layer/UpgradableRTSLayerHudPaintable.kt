@@ -161,7 +161,7 @@ var graphics = graphics
 super.paint(graphics)
 this.rtsLayerCompositePaintableLateInit!!.paint(graphics)
 graphics.drawChars(this.percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, this.costY, 0)
-graphics.drawString(this.PERCENT, this.percentCompleteX2, costY, 0)
+graphics.drawString(this.PERCENT, this.percentCompleteX2, this.costY, 0)
 this.getAnimationInterface()!!.paintXY(graphics, this.imageX, this.y)
 }
 

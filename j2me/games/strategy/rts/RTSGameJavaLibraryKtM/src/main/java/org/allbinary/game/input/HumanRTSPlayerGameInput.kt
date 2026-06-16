@@ -441,7 +441,7 @@ this.endPoint= PointFactory.getInstance()!!.ZERO_ZERO
 
                                     }
                                 
-getMotionGestureInputList()!!.clear()
+this.getMotionGestureInputList()!!.clear()
 }
 
 
@@ -718,7 +718,7 @@ graphics.drawRect(rectX1, rectY1, rectX2 -rectX1, rectY2 -rectY1)
         //nullable = true from not(false or (false and false)) = true
 {
     //var motionGestureEvent = motionGestureEvent
-getMotionGestureInputList()!!.add(motionGestureEvent)
+this.getMotionGestureInputList()!!.add(motionGestureEvent)
 }
 
 

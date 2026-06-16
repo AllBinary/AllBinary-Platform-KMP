@@ -126,7 +126,7 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
                         
                                     {
                                     
-    var layer: AllBinaryLayer = dropCellPositionHistory!!.getLayerInterface(cellPosition)!!
+    var layer: AllBinaryLayer = this.dropCellPositionHistory!!.getLayerInterface(cellPosition)!!
 
 
     

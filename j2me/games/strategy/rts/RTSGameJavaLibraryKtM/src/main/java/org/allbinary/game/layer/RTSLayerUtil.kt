@@ -35,7 +35,6 @@ import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.GameInfo
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.identification.BasicGroupFactory
-import org.allbinary.game.identification.Group
 import org.allbinary.game.part.PartInterface
 import org.allbinary.game.part.weapon.BasicWeaponPart
 import org.allbinary.logic.string.StringMaker

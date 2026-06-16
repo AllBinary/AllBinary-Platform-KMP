@@ -714,7 +714,7 @@ this.animationInterface= animationInterface
 {
     //var targetGameLayer = targetGameLayer
 
-    var anotherTargetDistance: Int = layerDistanceUtil!!.getDistance(this as AllBinaryLayer, targetGameLayer as AllBinaryLayer)!!
+    var anotherTargetDistance: Int = this.layerDistanceUtil!!.getDistance(this as AllBinaryLayer, targetGameLayer as AllBinaryLayer)!!
 
 
     var waypointBehaviorBase: WaypointBehaviorBase = this.getWaypointBehavior()!!

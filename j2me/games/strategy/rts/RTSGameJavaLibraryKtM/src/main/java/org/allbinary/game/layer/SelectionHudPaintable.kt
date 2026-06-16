@@ -106,9 +106,9 @@ this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +this.myFont!!
 {
 var graphics = graphics
 graphics.setColor(this.backgroundColor)
-graphics.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
+graphics.drawRect(this.getX(), this.y, this.getWidth(), this.getHeight())
 graphics.setColor(this.getColor())
-graphics.drawString(getName(), this.textX, y, 0)
+graphics.drawString(this.getName(), this.textX, this.y, 0)
 }
 
 

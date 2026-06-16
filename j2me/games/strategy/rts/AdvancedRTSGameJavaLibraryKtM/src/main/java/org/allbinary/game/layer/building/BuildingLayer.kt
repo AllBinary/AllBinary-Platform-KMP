@@ -341,7 +341,7 @@ this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var downgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential(((this.getLevel() -1) *getBuildingLevelCost()).toLong())!!
+    var downgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential(((this.getLevel() -1) *this.getBuildingLevelCost()).toLong())!!
 
 this.logUtil!!.putF("Cost: " +downgradeCost, this, "getDowngradeCost")
 
@@ -356,7 +356,7 @@ this.logUtil!!.putF("Cost: " +downgradeCost, this, "getDowngradeCost")
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var upgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential(((this.getLevel() +1) *getBuildingLevelCost()).toLong())!!
+    var upgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential(((this.getLevel() +1) *this.getBuildingLevelCost()).toLong())!!
 
 
 

@@ -52,142 +52,71 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
 
     private var pathFindingInfo: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    private val FIRST_RUNNABLE: Runnable = object: ARunnable()
-                                {
-                                
+open public inner class FirstRunnable : ARunnable {
+        
+
+    private val multipassWaypointPathRunnable: MultipassWaypointPathRunnable
+ constructor (multipassWaypointPathRunnable: MultipassWaypointPathRunnable){
+    //var multipassWaypointPathRunnable = multipassWaypointPathRunnable
+this.multipassWaypointPathRunnable= multipassWaypointPathRunnable
+}
+
+
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-
-        try {
-            pathFindingLayer!!.getWaypointRunnableLogHelper()!!.start(pathFindingLayer)
-reset2()
-
-    var geographicMapCellPosition: GeographicMapCellPosition = pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
-
-
-    
-                        if(geographicMapCellPosition == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-
-
-                            throw Exception("Should never be running here")
-
-                                    }
-                                
-pathFindingInfo= targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathFindingInfo(geographicMapCellPosition)
-
-    var localPathFindingInfo: PathFindingInfo = pathFindingInfo as PathFindingInfo
-
-list= targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, localPathFindingInfo, multipassState)
-
-    
-                        if(list != basicArrayListUtil!!.getImmutableInstance())
-                        
-                                    {
-                                    END_RUNNABLE.run()
-
-                                    }
-                                
-                        else {
-                            currentPassRunnable= SECOND_RUNNABLE
-
-                        }
-                            
-} catch(e: Exception)
-            {
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-setRunning(false)
-finish()
+this.multipassWaypointPathRunnable!!.processFirstRunnable()
 }
 
+
 }
-
-                                }
-                            
-
-    private val SECOND_RUNNABLE: Runnable = object: ARunnable()
-                                {
-                                
-    override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-
-        try {
+                
             
-    var geographicMapCellPosition: GeographicMapCellPosition = pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
+    private val FIRST_RUNNABLE: Runnable = FirstRunnable(this)
+//    private boolean first = true;
+open public inner class SecondRunnable : ARunnable {
+        
 
-
-    var localPathFindingInfo: PathFindingInfo = pathFindingInfo as PathFindingInfo
-
-list= targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, localPathFindingInfo, multipassState)
-
-    
-                        if(list != basicArrayListUtil!!.getImmutableInstance())
-                        
-                                    {
-                                    END_RUNNABLE.run()
-
-                                    }
-                                
-} catch(e: Exception)
-            {
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-setRunning(false)
-finish()
+    private val multipassWaypointPathRunnable: MultipassWaypointPathRunnable
+ constructor (multipassWaypointPathRunnable: MultipassWaypointPathRunnable){
+    //var multipassWaypointPathRunnable = multipassWaypointPathRunnable
+this.multipassWaypointPathRunnable= multipassWaypointPathRunnable
 }
 
-}
 
-                                }
-                            
-
-    private val END_RUNNABLE: Runnable = object: ARunnable()
-                                {
-                                
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+this.multipassWaypointPathRunnable!!.processSecondRunnable()
+}
 
-    var logUtil: LogUtil = LogUtil.getInstance()!!
 
-
-        try {
+}
+                
             
-    var waypointBehavior: WaypointBehaviorBase = pathFindingLayer!!.getWaypointBehavior()!!
+    private val SECOND_RUNNABLE: Runnable = SecondRunnable(this)
 
-waypointBehavior!!.setWaypointPathsList(list)
-pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(pathFindingLayer)
-} catch(e: Exception)
-            {
+open public inner class EndRunnable : ARunnable {
+        
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-setRunning(false)
+    private val multipassWaypointPathRunnable: MultipassWaypointPathRunnable
+ constructor (multipassWaypointPathRunnable: MultipassWaypointPathRunnable){
+    //var multipassWaypointPathRunnable = multipassWaypointPathRunnable
+this.multipassWaypointPathRunnable= multipassWaypointPathRunnable
 }
 
-finish()
+
+    override fun run()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.multipassWaypointPathRunnable!!.processEndRunnable()
 }
 
-                                }
-                            
+
+}
+                
+            
+    private val END_RUNNABLE: Runnable = EndRunnable(this)
 
     private val ALREADY_ENDED_RUNNABLE: Runnable = object: ARunnable()
                                 {
@@ -204,7 +133,7 @@ finish()
                                 }
                             
 
-    private var currentPassRunnable: Runnable = FIRST_RUNNABLE
+    private var currentPassRunnable: Runnable = this.FIRST_RUNNABLE
 public constructor (){
 }
 
@@ -262,7 +191,7 @@ this.pathFindingInfo= NullUtil.getInstance()!!.NULL_OBJECT
         //nullable = true from not(false or (false and true)) = true
 {
 this.reset2()
-this.currentPassRunnable= ALREADY_ENDED_RUNNABLE
+this.currentPassRunnable= this.ALREADY_ENDED_RUNNABLE
 this.done= true
 }
 
@@ -282,8 +211,121 @@ this.done= true
         //nullable = true from not(false or (false and true)) = true
 {
 this.reset2()
-this.currentPassRunnable= FIRST_RUNNABLE
+this.currentPassRunnable= this.FIRST_RUNNABLE
 this.done= false
+}
+
+
+    open fun processFirstRunnable()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+        try {
+            this.pathFindingLayer!!.getWaypointRunnableLogHelper()!!.start(this.pathFindingLayer)
+this.reset2()
+
+    var geographicMapCellPosition: GeographicMapCellPosition = this.pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
+
+
+    
+                        if(geographicMapCellPosition == 
+                                    null
+                                )
+                        
+                                    {
+                                    
+
+
+                            throw Exception("Should never be running here")
+
+                                    }
+                                
+this.pathFindingInfo= this.targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathFindingInfo(geographicMapCellPosition)
+
+    var localPathFindingInfo: PathFindingInfo = this.pathFindingInfo as PathFindingInfo
+
+this.list= this.targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, localPathFindingInfo, this.multipassState)
+
+    
+                        if(this.list != this.basicArrayListUtil!!.getImmutableInstance())
+                        
+                                    {
+                                    this.END_RUNNABLE.run()
+
+                                    }
+                                
+                        else {
+                            this.currentPassRunnable= this.SECOND_RUNNABLE
+
+                        }
+                            
+} catch(e: Exception)
+            {
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.setRunning(false)
+this.finish()
+}
+
+}
+
+
+    open fun processSecondRunnable()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+        try {
+            
+    var geographicMapCellPosition: GeographicMapCellPosition = this.pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
+
+
+    var localPathFindingInfo: PathFindingInfo = this.pathFindingInfo as PathFindingInfo
+
+this.list= this.targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, localPathFindingInfo, this.multipassState)
+
+    
+                        if(this.list != this.basicArrayListUtil!!.getImmutableInstance())
+                        
+                                    {
+                                    this.END_RUNNABLE.run()
+
+                                    }
+                                
+} catch(e: Exception)
+            {
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.setRunning(false)
+this.finish()
+}
+
+}
+
+
+    open fun processEndRunnable()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+        try {
+            
+    var waypointBehavior: WaypointBehaviorBase = this.pathFindingLayer!!.getWaypointBehavior()!!
+
+waypointBehavior!!.setWaypointPathsList(this.list)
+this.pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(this.pathFindingLayer)
+} catch(e: Exception)
+            {
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.setRunning(false)
+}
+
+this.finish()
 }
 
 

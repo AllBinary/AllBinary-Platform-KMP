@@ -63,7 +63,7 @@ companion object {
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Up")!!.toString(), this, TRACK_TO_FIRE_OR_MOVE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Up")!!.toString(), this, this.TRACK_TO_FIRE_OR_MOVE)
 }
 
 
@@ -72,7 +72,7 @@ this.logUtil!!.putF(StringMaker().
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Fire/All Stop")!!.toString(), this, TRACK_TO_FIRE_OR_MOVE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Fire/All Stop")!!.toString(), this, this.TRACK_TO_FIRE_OR_MOVE)
 }
 
 
@@ -81,7 +81,7 @@ this.logUtil!!.putF(StringMaker().
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Above")!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Above")!!.toString(), this, this.BUILDING_CHASE)
 }
 
 
@@ -91,7 +91,7 @@ this.logUtil!!.putF(StringMaker().
     //var pathFindingLayerInterface = pathFindingLayerInterface
     //var angle = angle
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Left: ")!!.appendint(angle)!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Left: ")!!.appendint(angle)!!.toString(), this, this.BUILDING_CHASE)
 }
 
 
@@ -101,7 +101,7 @@ this.logUtil!!.putF(StringMaker().
     //var pathFindingLayerInterface = pathFindingLayerInterface
     //var angle = angle
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Right: ")!!.appendint(angle)!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Right: ")!!.appendint(angle)!!.toString(), this, this.BUILDING_CHASE)
 }
 
 
@@ -110,7 +110,7 @@ this.logUtil!!.putF(StringMaker().
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Below")!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Below")!!.toString(), this, this.BUILDING_CHASE)
 }
 
 
@@ -120,7 +120,7 @@ this.logUtil!!.putF(StringMaker().
     //var pathFindingLayerInterface = pathFindingLayerInterface
     //var angle = angle
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Down: ")!!.appendint(angle)!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Down: ")!!.appendint(angle)!!.toString(), this, this.BUILDING_CHASE)
 }
 
 
@@ -130,7 +130,7 @@ this.logUtil!!.putF(StringMaker().
     //var pathFindingLayerInterface = pathFindingLayerInterface
     //var angle = angle
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Up: ")!!.appendint(angle)!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Up: ")!!.appendint(angle)!!.toString(), this, this.BUILDING_CHASE)
 }
 
 
@@ -139,7 +139,7 @@ this.logUtil!!.putF(StringMaker().
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Left")!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Left")!!.toString(), this, this.BUILDING_CHASE)
 }
 
 
@@ -148,7 +148,7 @@ this.logUtil!!.putF(StringMaker().
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Right")!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Right")!!.toString(), this, this.BUILDING_CHASE)
 }
 
 

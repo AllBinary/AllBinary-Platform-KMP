@@ -32,8 +32,12 @@ import org.allbinary.graphics.opengles.OpenGLUtil
 import org.allbinary.image.ImageCache
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.image.opengles.OpenGLESImageExclusionUtil
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.J2SEMath
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.image.ImageScaleUtil
+import org.allbinary.string.CommonLabels
+import org.allbinary.string.CommonStrings
 
 open public class AnimationFactorySpriteScaleUtil
             : Object

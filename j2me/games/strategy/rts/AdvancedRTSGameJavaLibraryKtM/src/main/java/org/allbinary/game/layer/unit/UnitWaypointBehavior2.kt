@@ -942,7 +942,7 @@ this.removeWaypoint(waypointLayer, this.unitWaypointStrings!!.ALREADY_THERE)
         //nullable = true from not(false or (false and false)) = true
 {
     //var waypointLayer = waypointLayer
-setWaypointPathsList(UnitWaypointBehavior2.runningWaypointPathList)
+this.setWaypointPathsList(UnitWaypointBehavior2.runningWaypointPathList)
 
     
                         if(this.waypointPathRunnable!!.isRunning())
@@ -1096,7 +1096,7 @@ stringBuffer!!.append(this.currentTargetLayerInterfaceP!!.getName())
 stringBuffer!!.append(" with ")
 stringBuffer!!.append(UnitWaypointBehavior2.TARGET_DISTANCE)
 stringBuffer!!.append(this.commonSeps!!.SPACE)
-stringBuffer!!.appendint(getCurrentTargetDistance())
+stringBuffer!!.appendint(this.getCurrentTargetDistance())
 
                                     }
                                 
