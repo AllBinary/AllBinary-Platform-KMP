@@ -21,8 +21,6 @@
 
         import java.lang.Object        
         
-        import java.lang.Thread
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -43,6 +41,7 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.SelectSound
 import org.allbinary.thread.ABRunnable
+import org.allbinary.thread.ThreadObjectUtil
 import org.allbinary.time.TimeDelayHelper
 
 open public class PreGameSelectionGameInputProcessor : Processor
@@ -177,10 +176,7 @@ break;
                         
                                     {
                                     abRunnable!!.setRunning(true)
-
-    var thread: Thread = Thread(abRunnable)
-
-thread.start()
+ThreadObjectUtil.getInstance()!!.processThread(abRunnable)
 
                                     }
                                 

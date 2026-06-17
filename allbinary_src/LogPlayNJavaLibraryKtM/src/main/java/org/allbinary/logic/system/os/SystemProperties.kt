@@ -21,8 +21,6 @@
 
         import java.lang.Object        
         
-        import java.lang.System
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -67,7 +65,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(this.OS_NAME)
+                        return this.OS_NAME
 }
 
 
@@ -78,7 +76,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(this.OS_ARCH)
+                        return this.OS_ARCH
 }
 
 
@@ -89,7 +87,7 @@ private constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(this.OS_VERSION)
+                        return this.OS_VERSION
 }
 
 

@@ -23,8 +23,6 @@
         
         import java.lang.InterruptedException
         
-        import java.lang.ClassLoader
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -83,9 +81,9 @@ var anyType = anyType
 var any = any
     //var timeoutMillis = timeoutMillis
 
-    var anyType: Object = any as Object
 
-anyType!!.wait(timeoutMillis)
+
+                            throw RuntimeException()
 }
 
 
@@ -164,18 +162,6 @@ recordStore!!.getRecord(recordId, data, 0)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType!!.equals(object2)
-}
-
-
-    open fun getClassClassLoader(anyType: Any)
-        //nullable = true from not(false or (false and false)) = true
-: ClassLoader{
-    //var anyType = anyType
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return anyType!!::class.java.classLoader
 }
 
 

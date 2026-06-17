@@ -7,6 +7,10 @@
 
         import java.lang.Object        
         
+        import java.lang.Runnable
+        
+        import java.lang.Thread
+        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -67,6 +71,17 @@ anyType!!.wait()
 var anyType = anyType
 var delay = delay
 TsUtil.getInstance()!!.waitFor(anyType, delay)
+}
+
+
+    open fun processThread(runnable: Runnable)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var runnable = runnable
+
+    var thread: Thread = Thread(runnable)
+
+thread.start()
 }
 
 

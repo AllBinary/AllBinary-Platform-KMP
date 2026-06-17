@@ -7,6 +7,8 @@
 
         import java.lang.Object        
         
+        import java.lang.Runnable
+        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -63,6 +65,14 @@ var anyType = anyType
 {
 var anyType = anyType
 var delay = delay
+}
+
+
+    open fun processThread(runnable: Runnable)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var runnable = runnable
+runnable.run()
 }
 
 
