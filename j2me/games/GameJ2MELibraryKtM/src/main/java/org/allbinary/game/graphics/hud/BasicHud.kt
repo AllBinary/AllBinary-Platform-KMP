@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -36,20 +36,35 @@ import org.allbinary.graphics.color.BasicColorSetUtil
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.displayable.event.DisplayChangeEvent
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonStrings
 
 open public class BasicHud
             : Object
-         {
+        
+                , UpdateMyFontInterface {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
     val canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
+
+    val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
+
+    private val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+    val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    var myFontProcessor: MyFontProcessor = updateMyFontProcessor
 
     private var location: Int= 0
 
@@ -59,38 +74,55 @@ open public class BasicHud
 
     private var bufferZoneY: Int= 0
 
-    private var maxWidth: Int= 0
-
-    private var maxHeight: Int= 0
-
     private var hudGraphicsPosition: HudGraphicsPosition = HudGraphicsPosition.NULL_HUD_GRAPHICS_POSITION
 
     private var x: Int= 0
 
     private var y: Int= 0
 
-    val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.BLACK
 
     private var color: Int
-public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)
+
+    var updateMaxWidth: Int= 0
+
+    var updateMaxHeight: Int= 0
+
+    var offsetY: Int= 0
+public constructor (location: Int, direction: Int, bufferZone: Int, basicColor: BasicColor)
             : super()
         {
-var location = location
-var direction = direction
-var maxHeight = maxHeight
-var maxWidth = maxWidth
-var bufferZone = bufferZone
-var basicColor = basicColor
+    //var location = location
+    //var direction = direction
+    //var bufferZone = bufferZone
+    //var basicColor = basicColor
 this.setLocation(location)
 this.setDirection(direction)
 this.setBufferZone(bufferZone)
-this.setMaxWidth(maxWidth)
-this.setMaxHeight(maxHeight)
 this.onDisplayChangeEvent(DisplayInfoSingleton.getInstance()!!.displayChangeEvent)
 this.setBasicColorP(basicColor)
 this.color= basicColor!!.toInt()
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+        try {
+            this.hudGraphicsPosition= this.getHudGraphicsPositionWH(this.displayInfo!!.getLastWidth(), this.displayInfo!!.getLastHeight(), this.updateMaxWidth, this.updateMaxHeight)
+this.x= this.hudGraphicsPosition!!.getPoint()!!.getX()
+this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
+} catch(e: Exception)
+            {
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
+}
+
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -118,11 +150,13 @@ this.color= basicColor!!.toInt()
 
                 @Throws(Exception::class)
             
-    open fun getHudGraphicsPositionWH(width: Int, height: Int)
+    open fun getHudGraphicsPositionWH(width: Int, height: Int, maxWidth: Int, maxHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : HudGraphicsPosition{
-var width = width
-var height = height
+    //var width = width
+    //var height = height
+    //var maxWidth = maxWidth
+    //var maxHeight = maxHeight
 
     var x: Int = 0
 
@@ -141,7 +175,7 @@ var height = height
                         
                                     {
                                     x= this.bufferZone +2
-y= height -this.maxHeight -this.bufferZone
+y= height -maxHeight -this.bufferZone
 anchor= Graphics.BOTTOM and Graphics.LEFT
 
                                     }
@@ -151,8 +185,8 @@ anchor= Graphics.BOTTOM and Graphics.LEFT
                         if(basicHudFactory!!.BOTTOMRIGHT == this.getLocation())
                         
                                     {
-                                    x= width -this.maxWidth
-y= height -this.maxHeight -this.bufferZone
+                                    x= width -maxWidth
+y= height -maxHeight -this.bufferZone
 anchor= Graphics.BOTTOM and Graphics.RIGHT
 
                                     }
@@ -173,7 +207,7 @@ anchor= Anchor.TOP_LEFT
                         if(basicHudFactory!!.TOPRIGHT == this.getLocation())
                         
                                     {
-                                    x= width -this.maxWidth
+                                    x= width -maxWidth
 y= this.bufferZoneY
 anchor= Graphics.TOP and Graphics.RIGHT
 
@@ -184,7 +218,7 @@ anchor= Graphics.TOP and Graphics.RIGHT
                         if(basicHudFactory!!.TOPCENTER == this.getLocation())
                         
                                     {
-                                    x= ((width -this.maxWidth) /2)
+                                    x= ((width -maxWidth) /2)
 y= this.bufferZoneY
 anchor= Graphics.TOP and Graphics.HCENTER
 
@@ -195,8 +229,8 @@ anchor= Graphics.TOP and Graphics.HCENTER
                         if(basicHudFactory!!.BOTTOMCENTER == this.getLocation())
                         
                                     {
-                                    x= ((width -this.maxWidth) /2)
-y= height -this.maxHeight -this.bufferZone
+                                    x= ((width -maxWidth) /2)
+y= height -maxHeight -this.bufferZone
 anchor= Graphics.BOTTOM and Graphics.HCENTER
 
                                     }
@@ -206,8 +240,8 @@ anchor= Graphics.BOTTOM and Graphics.HCENTER
                         if(basicHudFactory!!.ABSOLUTE == this.getLocation())
                         
                                     {
-                                    x= this.maxHeight
-y= this.maxWidth
+                                    x= maxHeight
+y= maxWidth
 anchor= 0
 
                                     }
@@ -223,7 +257,7 @@ anchor= 0
     open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventObject = eventObject
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -231,31 +265,16 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-var displayChangeEvent = displayChangeEvent
-
-        try {
-            
-    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-this.hudGraphicsPosition= this.getHudGraphicsPositionWH(displayInfo!!.getLastWidth(), displayInfo!!.getLastHeight())
-this.x= this.hudGraphicsPosition!!.getPoint()!!.getX()
-this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
-} catch(e: Exception)
-            {
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
-}
-
+    //var displayChangeEvent = displayChangeEvent
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 
     open fun getPoint(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GPoint{
-var x = x
-var y = y
+    //var x = x
+    //var y = y
 
 
 
@@ -278,7 +297,7 @@ var y = y
     open fun setBufferZone(bufferZone: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var bufferZone = bufferZone
+    //var bufferZone = bufferZone
 this.bufferZone= bufferZone
 
     
@@ -297,48 +316,10 @@ this.bufferZone= bufferZone
 }
 
 
-    open fun getMaxWidth()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.maxWidth
-}
-
-
-    open fun setMaxWidth(maxWidth: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var maxWidth = maxWidth
-this.maxWidth= maxWidth
-}
-
-
-    open fun getMaxHeight()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.maxHeight
-}
-
-
-    open fun setMaxHeight(maxHeight: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var maxHeight = maxHeight
-this.maxHeight= maxHeight
-}
-
-
     open fun setLocation(location: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var location = location
+    //var location = location
 this.location= location
 }
 
@@ -346,106 +327,8 @@ this.location= location
     open fun setDirection(direction: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var direction = direction
+    //var direction = direction
 this.direction= direction
-}
-
-
-    open fun paintSSO(graphics: Graphics, string: String, string2: String, offset: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-var string = string
-var string2 = string2
-var offset = offset
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
-graphics.drawString(string, this.x, this.getY(), this.hudGraphicsPosition!!.getAnchor())
-graphics.drawString(string2, this.x +offset, this.getY(), this.hudGraphicsPosition!!.getAnchor())
-}
-
-
-    open fun paintSSOO(graphics: Graphics, string: String, string2: String, offset: Int, offset2: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-var string = string
-var string2 = string2
-var offset = offset
-var offset2 = offset2
-graphics.setColor(this.getColor())
-graphics.drawString(string, this.x +offset, this.getY(), this.hudGraphicsPosition!!.getAnchor())
-graphics.drawString(string2, this.x +offset2, this.getY(), this.hudGraphicsPosition!!.getAnchor())
-}
-
-
-    open fun paintDXY(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int, xOffset2: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-var charArray = charArray
-var offset = offset
-var len = len
-var charArray2 = charArray2
-var offset2 = offset2
-var len2 = len2
-var xOffset = xOffset
-var xOffset2 = xOffset2
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
-
-    var y: Int = this.getY()!!
-
-graphics.drawChars(charArray, offset, len, this.x +xOffset, y, this.hudGraphicsPosition!!.getAnchor())
-graphics.drawChars(charArray2, offset2, len2, this.x +xOffset2, y, this.hudGraphicsPosition!!.getAnchor())
-}
-
-
-    open fun paintDX(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-var charArray = charArray
-var offset = offset
-var len = len
-var charArray2 = charArray2
-var offset2 = offset2
-var len2 = len2
-var xOffset = xOffset
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
-
-    var y: Int = this.getY()!!
-
-graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition!!.getAnchor())
-graphics.drawChars(charArray2, offset2, len2, this.x +xOffset, y, this.hudGraphicsPosition!!.getAnchor())
-}
-
-
-    open fun paintOffsetAndLength(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-var charArray = charArray
-var offset = offset
-var len = len
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
-
-    var y: Int = this.getY()!!
-
-graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition!!.getAnchor())
-}
-
-
-    var offsetY: Int= 0
-
-    open fun paint(graphics: Graphics, string: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-var string = string
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
-
-    var y: Int = this.getY() +this.offsetY
-
-graphics.drawString(string, this.x, y, this.hudGraphicsPosition!!.getAnchor())
 }
 
 
@@ -485,7 +368,7 @@ graphics.drawString(string, this.x, y, this.hudGraphicsPosition!!.getAnchor())
     open fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var x = x
+    //var x = x
 this.x= x
 }
 
@@ -493,7 +376,7 @@ this.x= x
     open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
-var basicColor = basicColor
+    //var basicColor = basicColor
 this.basicColor= basicColor
 }
 
@@ -512,7 +395,7 @@ this.basicColor= basicColor
     open fun setY(y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var y = y
+    //var y = y
 this.y= y
 }
 
@@ -525,6 +408,108 @@ this.y= y
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.y
+}
+
+
+    open fun paintSSO(graphics: Graphics, string: String, string2: String, offset: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var string = string
+    //var string2 = string2
+    //var offset = offset
+this.myFontProcessor!!.process(graphics)
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+graphics.drawString(string, this.x, this.getY(), this.hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string2, this.x +offset, this.getY(), this.hudGraphicsPosition!!.getAnchor())
+}
+
+
+    open fun paintSSOO(graphics: Graphics, string: String, string2: String, offset: Int, offset2: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var string = string
+    //var string2 = string2
+    //var offset = offset
+    //var offset2 = offset2
+this.myFontProcessor!!.process(graphics)
+graphics.setColor(this.getColor())
+graphics.drawString(string, this.x +offset, this.getY(), this.hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string2, this.x +offset2, this.getY(), this.hudGraphicsPosition!!.getAnchor())
+}
+
+
+    open fun paintDXY(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int, xOffset2: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var charArray = charArray
+    //var offset = offset
+    //var len = len
+    //var charArray2 = charArray2
+    //var offset2 = offset2
+    //var len2 = len2
+    //var xOffset = xOffset
+    //var xOffset2 = xOffset2
+this.myFontProcessor!!.process(graphics)
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+
+    var y: Int = this.getY()!!
+
+graphics.drawChars(charArray, offset, len, this.x +xOffset, y, this.hudGraphicsPosition!!.getAnchor())
+graphics.drawChars(charArray2, offset2, len2, this.x +xOffset2, y, this.hudGraphicsPosition!!.getAnchor())
+}
+
+
+    open fun paintDX(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var charArray = charArray
+    //var offset = offset
+    //var len = len
+    //var charArray2 = charArray2
+    //var offset2 = offset2
+    //var len2 = len2
+    //var xOffset = xOffset
+this.myFontProcessor!!.process(graphics)
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+
+    var y: Int = this.getY()!!
+
+graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition!!.getAnchor())
+graphics.drawChars(charArray2, offset2, len2, this.x +xOffset, y, this.hudGraphicsPosition!!.getAnchor())
+}
+
+
+    open fun paintOffsetAndLength(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var charArray = charArray
+    //var offset = offset
+    //var len = len
+this.myFontProcessor!!.process(graphics)
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+
+    var y: Int = this.getY()!!
+
+graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition!!.getAnchor())
+}
+
+
+    open fun paint(graphics: Graphics, string: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var string = string
+this.myFontProcessor!!.process(graphics)
+this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+
+    var y: Int = this.getY() +this.offsetY
+
+graphics.drawString(string, this.x, y, this.hudGraphicsPosition!!.getAnchor())
 }
 
 

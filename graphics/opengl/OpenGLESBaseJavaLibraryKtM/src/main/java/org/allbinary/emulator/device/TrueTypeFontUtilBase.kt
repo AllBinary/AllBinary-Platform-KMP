@@ -26,9 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Font
-import org.allbinary.AndroidUtil
 import org.allbinary.AvianUtil
-import org.allbinary.graphics.font.MyFont
 import org.allbinary.logic.string.StringUtil
 
 open public class TrueTypeFontUtilBase
@@ -99,10 +97,6 @@ shortPattern= shortPatterAsByteArray.decodeToString()
                             
 this.shortPattern= shortPattern
 this.scale= scale
-
-    
-                        if(!AndroidUtil.isAndroid())
-                        MyFont.getInstance()
 this.CELLS_PER_ROW= 16
 this.fontSize= (20 +6) *this.scale
 this.baseCharWidth= this.fontSize +(6 *this.scale)

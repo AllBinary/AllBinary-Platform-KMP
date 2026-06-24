@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.animation.Animation
@@ -32,20 +33,25 @@ import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.paint.InitUpdatePaintable
 import org.allbinary.input.motion.button.CommonButtons
 import org.allbinary.input.motion.button.TouchButtonLocationHelper
 import org.allbinary.logic.math.PrimitiveLongUtil
 
-open public class SelectionHudPaintable : InitUpdatePaintable {
+open public class SelectionHudPaintable : InitUpdatePaintable
+                , UpdateMyFontInterface {
         
-
-    val myFont: MyFont = MyFont.getInstance()!!
 
     val y: Int = CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +17
 
     private val primitiveLongUtil: PrimitiveLongUtil
+
+    val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    var myFontProcessor: MyFontProcessor = updateMyFontProcessor
 
     private var x: Int= 0
 
@@ -64,9 +70,26 @@ open public class SelectionHudPaintable : InitUpdatePaintable {
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
+
+    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
 protected constructor (){
 this.update()
 this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(10000)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var commonButtons: CommonButtons = CommonButtons.getInstance()!!
+
+
+    var font: Font = graphics.getFont()!!
+
+this.setHeight(commonButtons!!.STANDARD_BUTTON_SIZE +font.getHeight())
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -74,16 +97,19 @@ this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(10000)
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var commonButtons: CommonButtons = CommonButtons.getInstance()!!
+
+
     var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()
 
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-this.x= CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +touchButtonLocationHelper!!.getColumnsRemainderHalf()
+this.x= commonButtons!!.STANDARD_BUTTON_SIZE +touchButtonLocationHelper!!.getColumnsRemainderHalf()
 this.textX= this.getX() +4
 this.width= displayInfoSingleton!!.getLastWidth() -this.getX() *2
 this.imageX= this.getWidth() +touchButtonLocationHelper!!.getColumnsRemainderHalf() -10
-this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +this.myFont!!.DEFAULT_CHAR_HEIGHT)
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 
@@ -96,19 +122,6 @@ this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +this.myFont!!
     open fun updateInfo()
         //nullable = true from not(false or (false and true)) = true
 {
-}
-
-
-    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
-
-    override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-graphics.setColor(this.backgroundColor)
-graphics.drawRect(this.getX(), this.y, this.getWidth(), this.getHeight())
-graphics.setColor(this.getColor())
-graphics.drawString(this.getName(), this.textX, this.y, 0)
 }
 
 
@@ -238,6 +251,18 @@ this.height= height
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.x
+}
+
+
+    override fun paint(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+this.myFontProcessor!!.process(graphics)
+graphics.setColor(this.backgroundColor)
+graphics.drawRect(this.getX(), this.y, this.getWidth(), this.getHeight())
+graphics.setColor(this.getColor())
+graphics.drawString(this.getName(), this.textX, this.y, 0)
 }
 
 

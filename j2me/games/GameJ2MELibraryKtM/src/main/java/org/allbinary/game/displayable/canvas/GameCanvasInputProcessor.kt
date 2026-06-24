@@ -70,7 +70,7 @@ this.inputToGameKeyMapping!!.init(this.allBinaryGameCanvas)
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 
-    override fun keyPressed(keyCode: Int, deviceId: Int)
+    override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -112,7 +112,7 @@ this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVEN
 }
 
 
-    override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
+    override fun keyReleasedByDevice(canvas: Canvas, keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas

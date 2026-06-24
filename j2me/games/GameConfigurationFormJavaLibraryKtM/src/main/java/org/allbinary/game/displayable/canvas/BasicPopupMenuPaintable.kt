@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.AndroidUtil
 import org.allbinary.J2MEUtil
@@ -38,13 +39,16 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.color.BasicColorSetUtil
-import org.allbinary.graphics.draw.DrawStringUtil
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.draw.DrawVerticalStringUtil
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
 import org.allbinary.graphics.paint.Paintable
 
-open public class BasicPopupMenuPaintable : Paintable {
+open public class BasicPopupMenuPaintable : Paintable
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -54,13 +58,19 @@ companion object {
             
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
 
-    private val label: String
+    private val drawStringUtil: DrawVerticalStringUtil = DrawVerticalStringUtil.getInstance()!!
 
-    private val BORDER: Int
+    private val label: String
 
     private val foregroundBasicColor: BasicColor
 
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
     private var rectangle: Rectangle
+
+    private var BORDER: Int= 0
+
+    private var heightOffset: Int= 0
 
     private var offset: Int= 0
 
@@ -72,39 +82,6 @@ public constructor (rectangle: Rectangle, backgroundBasicColor: BasicColor, fore
 this.foregroundBasicColor= foregroundBasicColor
 this.label= BasicPopupMenuPaintable.NAME
 this.rectangle= rectangle
-
-    var features: Features = Features.getInstance()!!
-
-
-    var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
-
-
-    var BORDER: Int = 0
-
-
-    
-                        if(J2MEUtil.isHTML() || (AndroidUtil.isAndroid() && isOpenGL))
-                        
-                                    {
-                                    BORDER= MyFont.getInstance()!!.defaultCharWidth() /2
-
-                                    }
-                                
-                             else 
-    
-                        if(AndroidUtil.isAndroid() || J2MEUtil.isJ2SE() || SWTUtil.isSWT)
-                        
-                                    {
-                                    BORDER= MyFont.getInstance()!!.defaultCharWidth()
-
-                                    }
-                                
-                        else {
-                            BORDER= MyFont.getInstance()!!.defaultCharWidth() *2
-
-                        }
-                            
-this.BORDER= BORDER
 
     
                         if(J2MEUtil.isJ2ME())
@@ -123,6 +100,76 @@ this.init(rectangle)
 }
 
 
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+
+    var features: Features = Features.getInstance()!!
+
+
+    var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
+
+this.drawStringUtil!!.updateMeasurement(graphics, this.label)
+
+    var BORDER: Int = 0
+
+
+    
+                        if(J2MEUtil.isHTML() || (AndroidUtil.isAndroid() && isOpenGL))
+                        
+                                    {
+                                    BORDER= MyFontProcessor.defaultCharWidth(font) /2
+
+                                    }
+                                
+                             else 
+    
+                        if(AndroidUtil.isAndroid() || J2MEUtil.isJ2SE() || SWTUtil.isSWT)
+                        
+                                    {
+                                    BORDER= MyFontProcessor.defaultCharWidth(font)
+
+                                    }
+                                
+                        else {
+                            BORDER= MyFontProcessor.defaultCharWidth(font) *2
+
+                        }
+                            
+this.BORDER= BORDER
+this.heightOffset= this.rectangle.getHeight() -(font.getHeight() *BasicPopupMenuPaintable.NAME.length)
+
+    
+                        if(OpenGLFeatureUtil.getInstance()!!.isAnyThreed())
+                        
+                                    {
+                                    this.heightOffset -= font.getHeight() +2
+
+    
+                        if(AndroidUtil.isAndroid())
+                        
+                                    {
+                                    this.heightOffset= font.getHeight()
+
+                                    }
+                                
+                        else {
+                            this.heightOffset -= font.getHeight() +2
+
+                        }
+                            
+
+                                    }
+                                
+this.offset= (this.heightOffset shr 1)
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
+
+
                 @Throws(Exception::class)
             
     open fun init(rectangle: Rectangle)
@@ -130,36 +177,6 @@ this.init(rectangle)
 {
     //var rectangle = rectangle
 this.rectangle= rectangle
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-
-    var heightOffset: Int = rectangle.getHeight() -(myFont!!.DEFAULT_CHAR_HEIGHT *BasicPopupMenuPaintable.NAME.length)
-
-
-    
-                        if(OpenGLFeatureUtil.getInstance()!!.isAnyThreed())
-                        
-                                    {
-                                    heightOffset -= myFont!!.DEFAULT_CHAR_HEIGHT +2
-
-    
-                        if(AndroidUtil.isAndroid())
-                        
-                                    {
-                                    heightOffset= myFont!!.DEFAULT_CHAR_HEIGHT
-
-                                    }
-                                
-                        else {
-                            heightOffset -= myFont!!.DEFAULT_CHAR_HEIGHT +2
-
-                        }
-                            
-
-                                    }
-                                
-this.offset= (heightOffset shr 1)
 
     var width: Int = this.rectangle.getWidth()!!
 
@@ -186,12 +203,11 @@ rectangleFilledAnimation!!.setHeight(height)
 }
 
 
-    private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
-
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 
     var point: GPoint = this.rectangle.getPoint()!!
 

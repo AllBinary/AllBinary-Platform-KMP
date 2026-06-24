@@ -29,10 +29,13 @@ import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.paint.Paintable
-
-open public class FullScreenPaintable : Paintable {
+//SwtToJ2ME
+open public class FullScreenPaintable : Paintable
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -49,39 +52,46 @@ companion object {
 
         }
             
+    private val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
     private val FULLSCREEN_TEXT: String = "F11 - Toggle Fullscreen"
+
+    private var anchor: Int = Anchor.TOP_LEFT
+
+    private var Y: Int= 0
+
+    private var beginWidth: Int= 0
 private constructor (){
 }
 
 
-    private var anchor: Int = Anchor.TOP_LEFT
-
-    open fun paint(graphics: Graphics)
+    override fun updateMeasurement(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
-var graphics = graphics
-
-    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-
-    var halfWidth: Int = displayInfo!!.getLastHalfWidth()!!
-
-
-    var height: Int = displayInfo!!.getLastHeight()!!
-
+    //var graphics = graphics
 
     var font: Font = graphics.getFont()!!
 
+this.Y= 4 *font.getHeight()
+this.beginWidth= (font.stringWidth(this.FULLSCREEN_TEXT) shr 1)
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
 
-    var beginWidth: Int = (font.stringWidth(this.FULLSCREEN_TEXT) shr 1)
+
+    override fun paint(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+this.myFontProcessor!!.process(graphics)
+
+    var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()!!
 
 
-    var myFont: MyFont = MyFont.getInstance()!!
+    var height: Int = this.displayInfo!!.getLastHeight()!!
 
-
-    var Y: Int = 4 *myFont!!.DEFAULT_CHAR_HEIGHT
-
-graphics.drawString(this.FULLSCREEN_TEXT, halfWidth -beginWidth, height -Y, this.anchor)
+graphics.drawString(this.FULLSCREEN_TEXT, halfWidth -this.beginWidth, height -this.Y, this.anchor)
 }
 
 

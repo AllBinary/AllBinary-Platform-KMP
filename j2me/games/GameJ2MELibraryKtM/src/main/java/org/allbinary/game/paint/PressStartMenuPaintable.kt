@@ -25,30 +25,38 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.AppletUtil
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.input.motion.button.TouchScreenFactory
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.time.TimeDelayHelper
 
-open public class PressStartMenuPaintable : Paintable {
+open public class PressStartMenuPaintable : Paintable
+                , UpdateMyFontInterface {
         
 
-    private var startString: String = StringUtil.getInstance()!!.EMPTY_STRING
-
-    private var timeDelayHelper: TimeDelayHelper = TimeDelayHelper(1100)
-
-    private var flash: Boolean= false
+    private val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
     private val PRESS_START: String = "Press Screen To Start"
 
     private val KEY_START: String = "Press or Click F2 To Begin"
 
     private val MENU_START: String = "Press Start From The Menu To Begin"
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var startString: String = StringUtil.getInstance()!!.EMPTY_STRING
+
+    private var timeDelayHelper: TimeDelayHelper = TimeDelayHelper(1100)
+
+    private var flash: Boolean= false
 public constructor (){
 
     
@@ -77,6 +85,23 @@ public constructor (){
 
 
     private var anchor: Int = Anchor.TOP_LEFT
+
+    private var beginWidth: Int= 0
+
+    private var line: Int= 0
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.beginWidth= (graphics.getFont()!!.stringWidth(this.startString) shr 1)
+this.line= (4 *MyFontProcessor.defaultCharWidth(font)) +(font.getHeight() shr 1)
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
+
 
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
@@ -109,18 +134,7 @@ var graphics = graphics
                         if(this.isFlash())
                         
                                     {
-                                    
-    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-
-    var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.startString) shr 1)
-
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-
-    var line: Int = (4 *myFont!!.DEFAULT_CHAR_HEIGHT) +(myFont!!.DEFAULT_CHAR_HEIGHT shr 1)
-
+                                    this.myFontProcessor!!.process(graphics)
 graphics.drawString(this.startString, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHeight() -line, this.anchor)
 
                                     }

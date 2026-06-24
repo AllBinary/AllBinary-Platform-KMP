@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -25,17 +25,21 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.layer.AllBinaryLayer
 
 open public class CountedLayersHudPaintable
             : Object
         
-                , PaintableInterface {
+                , PaintableInterface
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -43,7 +47,7 @@ companion object {
 
         }
             
-    private val myFont: MyFont = MyFont.getInstance()!!
+    private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
     private val partInterfaceArray: Array<PartInterface?>
 
@@ -54,6 +58,10 @@ companion object {
     private val startIndex: Int
 
     private val dropSize: Int
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var height: Int= 0
 public constructor (partInterfaceArray: Array<PartInterface?>, dropSize: Int, startIndex: Int, countedTotalStringColor: Int, countedPartsBorder: Int)
             : super()
         {
@@ -67,6 +75,26 @@ this.startIndex= startIndex
 this.countedTotalStringColor= countedTotalStringColor
 this.countedPartsBorder= countedPartsBorder
 this.dropSize= dropSize
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.height= font.getHeight()
+
+    
+                        if(this.dropSize > font.getHeight())
+                        
+                                    {
+                                    this.height= this.dropSize
+
+                                    }
+                                
 
     
                         if(CountedLayersHudPaintable.XXStringWidth == 0)
@@ -75,10 +103,11 @@ this.dropSize= dropSize
                                     
     var XXString: String = "XX"
 
-CountedLayersHudPaintable.XXStringWidth= MyFont.getInstance()!!.stringWidth(XXString)
+CountedLayersHudPaintable.XXStringWidth= font.stringWidth(XXString)
 
                                     }
                                 
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -86,33 +115,22 @@ CountedLayersHudPaintable.XXStringWidth= MyFont.getInstance()!!.stringWidth(XXSt
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 
-    var height: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
-
-
-    
-                        if(this.dropSize > this.myFont!!.DEFAULT_CHAR_HEIGHT)
-                        
-                                    {
-                                    height= this.dropSize
-
-                                    }
-                                
-
-    var lastWidth: Int = DisplayInfoSingleton.getInstance()!!.getLastWidth()!!
-
-
-    var count: Int = 0
+    var lastWidth: Int = this.displayInfoSingleton!!.getLastWidth()!!
 
 
     var widthEdge: Int = lastWidth -this.dropSize
 
 
-    var y: Int= 0
-
-
     var size: Int = this.partInterfaceArray!!.size
                 
+
+
+    var count: Int = 0
+
+
+    var y: Int= 0
 
 
     var countedLayerInterfaceFactory: CountedLayerInterfaceFactoryPart
@@ -141,10 +159,11 @@ countedLayerInterfaceFactory= this.partInterfaceArray[index]!! as CountedLayerIn
                                     {
                                     pickedUpLayerInterfaceFactoryInterface= countedLayerInterfaceFactory!!.getCountedPickedUpLayerInterfaceFactory()
 layerInterface= pickedUpLayerInterfaceFactoryInterface!!.getIconLayer()
-y= 40 +(count *height)
+y= 40 +(count *this.height)
 layerInterface!!.setPosition(widthEdge, y, layerInterface!!.getZP())
 layerInterface!!.paint(graphics)
 graphics.setColor(this.countedTotalStringColor)
+countedLayerInterfaceFactory!!.paint(graphics)
 charArray= countedLayerInterfaceFactory!!.getTotalString()
 graphics.drawChars(charArray, 0, charArray!!.size, widthEdge -countedLayerInterfaceFactory!!.getXOffset(), y, 0)
 count++
@@ -159,7 +178,7 @@ count++
                         
                                     {
                                     graphics.setColor(this.countedPartsBorder)
-graphics.drawRect(lastWidth -(CountedLayersHudPaintable.XXStringWidth +this.dropSize), 40, CountedLayersHudPaintable.XXStringWidth +this.dropSize, (count *height) +3)
+graphics.drawRect(lastWidth -(CountedLayersHudPaintable.XXStringWidth +this.dropSize), 40, CountedLayersHudPaintable.XXStringWidth +this.dropSize, (count *this.height) +3)
 
                                     }
                                 

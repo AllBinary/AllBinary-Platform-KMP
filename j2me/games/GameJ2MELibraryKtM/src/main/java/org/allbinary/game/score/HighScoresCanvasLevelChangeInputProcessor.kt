@@ -26,31 +26,51 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Canvas
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.input.event.GameKeyEventHandler
 import org.allbinary.game.input.event.GameKeyEventUtil
 import org.allbinary.game.score.displayable.HighScoresCanvas
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.util.BasicArrayList
 
-open public class HighScoresCanvasLevelChangeInputProcessor : HighScoresCanvasInputProcessor {
+open public class HighScoresCanvasLevelChangeInputProcessor : HighScoresCanvasInputProcessor
+                , UpdateMyFontInterface {
         
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
     private val INSTRUCTIONS: String = "(Right = Next Track, Left = Previous Track)"
 
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
     private var anchor: Int = Anchor.TOP_LEFT
+
+    private var fontHeight: Int = 0
 public constructor (highScoresCanvas: HighScoresCanvas)                        
 
                             : super(highScoresCanvas){
-var highScoresCanvas = highScoresCanvas
+    //var highScoresCanvas = highScoresCanvas
 
 
                             //For kotlin this is before the body of the constructor.
                     
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.fontHeight= font.getHeight()
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -120,16 +140,14 @@ list.clear()
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
+this.myFontProcessor!!.process(graphics)
 
     var width: Int = this.displayInfoSingleton!!.getLastWidth()!!
 
 
     var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(this.INSTRUCTIONS) shr 1)
 
-graphics.drawString(this.INSTRUCTIONS, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_CHAR_HEIGHT *2, this.anchor)
+graphics.drawString(this.INSTRUCTIONS, (width shr 1) -topScoresWidth, this.fontHeight *2, this.anchor)
 }
 
 

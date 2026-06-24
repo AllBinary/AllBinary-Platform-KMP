@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -62,7 +62,28 @@ private constructor ()
             
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
 
-this.gameNotificationHud= GameNotificationHud(basicHudFactory!!.TOPCENTER, basicHudFactory!!.HORIZONTAL, 14, 40, 2, BasicColorFactory.getInstance()!!.RED)
+
+open class NoGameGameNotificationHud : GameNotificationHud {
+        
+ constructor ()                        
+
+                            : super(basicHudFactory!!.TOPCENTER, basicHudFactory!!.HORIZONTAL, 2, BasicColorFactory.getInstance()!!.RED){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+this.updateMaxWidth= 40
+this.updateMaxHeight= 14
+}
+
+
+}
+                
+            
+
+                    //Otherwise - statement - EmptyStmt
+
+this.gameNotificationHud= NoGameGameNotificationHud()
 } catch(e: Exception)
             {
 

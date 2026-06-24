@@ -25,14 +25,18 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.canvas.GameStatisticsFactory
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.paint.InitUpdatePaintable
 
-open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable {
+open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable
+                , UpdateMyFontInterface {
         
 
             //Auto Generated
@@ -44,7 +48,23 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable {
 
     private val yArray: IntArray = intArrayOf(this.halfHeight +30,this.halfHeight +30,this.halfHeight +30 +15,this.halfHeight +30 +15,this.halfHeight +30 +30,this.halfHeight +30 +30,this.halfHeight +30 +45,this.halfHeight +30 +45)
 
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
     private var baseRefreshHelperCharArray: Array<CharArray?> = Array(0) { CharArray(0) }
+
+    private var defaultStringWidth: Int= 0
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.defaultStringWidth= MyFontProcessor.defaultStringWidth(font, 2)
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
+
 
     override fun init()
         //nullable = true from not(false or (false and true)) = true
@@ -65,9 +85,7 @@ this.baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.to2DCharA
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
+this.myFontProcessor!!.process(graphics)
 graphics.setColor(this.RED)
 
     var charArray: CharArray
@@ -96,7 +114,7 @@ charArray2= this.baseRefreshHelperCharArray[index +1]!!
 size2= charArray!!.size
 size3= charArray2!!.size
 graphics.drawChars(charArray, 0, size2, 0, this.yArray[index]!!, 0)
-graphics.drawChars(charArray2, 0, size3, size2 *myFont!!.defaultStringWidth(2), this.yArray[index +1]!!, 0)
+graphics.drawChars(charArray2, 0, size3, size2 *this.defaultStringWidth, this.yArray[index +1]!!, 0)
 }
 
 }

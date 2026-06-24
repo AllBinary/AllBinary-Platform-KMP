@@ -86,7 +86,6 @@ import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.graphics.displayable.event.DisplayChangeEventHandler
 import org.allbinary.graphics.displayable.event.DisplayChangeEventListener
 import org.allbinary.graphics.displayable.screen.FullScreenPaintableFactory
-import org.allbinary.graphics.font.MyFont
 import org.allbinary.graphics.form.CommandCurrentSelectionFormFactory
 import org.allbinary.graphics.form.FormType
 import org.allbinary.graphics.form.FormTypeFactory
@@ -156,6 +155,8 @@ companion object {
     val gameStateFactory: GameStateFactory = GameStateFactory.getInstance()!!
 
     private val threadFactoryUtil: ThreadFactoryUtil = ThreadFactoryUtil.getInstance()!!
+
+    val formUtil: FormUtil = FormUtil.getInstance()!!
 
     var fullscreenPaintable: Paintable = FullScreenPaintableFactory.getInstance()!!.paintable
 
@@ -271,7 +272,7 @@ var displayChangeEvent = displayChangeEvent
 
         try {
             this.logUtil!!.putF(StringMaker().
-                            append(this.commonLabels!!.START_LABEL)!!.append(this.displayInfoSingleton!!.toString())!!.append(MyFont.getInstance()!!.toString())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+                            append(this.commonLabels!!.START_LABEL)!!.append(this.displayInfo!!.toString())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
 
     var scrollSelectionForm: ScrollSelectionForm = this.getMenuForm()!!
 
@@ -286,7 +287,7 @@ var displayChangeEvent = displayChangeEvent
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
 
-    var rectangle: Rectangle = FormUtil.getInstance()!!.createFormRectangle()!!
+    var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
 
 scrollSelectionForm!!.init(rectangle, formType)
 
@@ -464,10 +465,10 @@ this.close()
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
 
-    var rectangle: Rectangle = FormUtil.getInstance()!!.createFormRectangle()!!
+    var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
 
 PreLogUtil.put(StringMaker().
-                            append(this.commonLabels!!.START_LABEL)!!.append(this.displayInfoSingleton!!.toString())!!.toString(), this, "initMenu")
+                            append(this.commonLabels!!.START_LABEL)!!.append(this.displayInfo!!.toString())!!.toString(), this, "initMenu")
 
     var scrollSelectionForm: ScrollSelectionForm = CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, formType, 15, true, this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE)!!
 
@@ -476,7 +477,7 @@ this.setMenuForm(scrollSelectionForm)
     var formType2: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
 
-    var rectangle2: Rectangle = FormUtil.getInstance()!!.createFormRectangle()!!
+    var rectangle2: Rectangle = this.formUtil!!.createFormRectangle()!!
 
 scrollSelectionForm!!.init(rectangle2, formType2)
 

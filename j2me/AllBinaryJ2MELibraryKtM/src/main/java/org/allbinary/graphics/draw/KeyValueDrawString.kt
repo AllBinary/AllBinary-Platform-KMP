@@ -26,21 +26,24 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.logic.string.StringUtil
 
 open public class KeyValueDrawString
             : Object
-         {
         
+                , UpdateMyFontInterface {
+        
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
 
     private val LABEL: String
 
-    private val labelWidth: Int
-
     private val labelX: Int
 
-    private var valueX: Int
+    private var valueX: Int= 0
 
     private var value: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor (label: String, x: Int)
@@ -49,9 +52,19 @@ public constructor (label: String, x: Int)
 var label = label
 var x = x
 this.LABEL= label
-this.labelWidth= MyFont.getInstance()!!.stringWidth(this.LABEL) -this.LABEL.length
 this.labelX= x
-this.valueX= this.labelWidth +x
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var labelWidth: Int = graphics.getFont()!!.stringWidth(this.LABEL) -this.LABEL.length
+
+this.valueX= labelWidth +this.labelX
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -60,6 +73,7 @@ this.valueX= this.labelWidth +x
 {
     //var graphics = graphics
     //var y = y
+this.myFontProcessor!!.process(graphics)
 graphics.drawString(this.LABEL, this.labelX, y, 0)
 graphics.drawString(this.value, this.valueX, y, 0)
 }
@@ -74,7 +88,12 @@ var value = value
                         if(value != 
                                     null
                                 )
-                        this.value= value
+                        
+                                    {
+                                    this.value= value
+
+                                    }
+                                
 }
 
 

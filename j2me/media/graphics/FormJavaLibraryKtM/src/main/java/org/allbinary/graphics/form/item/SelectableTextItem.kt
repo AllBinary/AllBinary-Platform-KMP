@@ -62,6 +62,7 @@ var foregroundBasicColor = foregroundBasicColor
 var graphics = graphics
 var x = x
 var y = y
+this.myFontProcessor!!.process(graphics)
 
     var stringComponent: ABStringComponent = this.getLabelStringComponent()!!
 

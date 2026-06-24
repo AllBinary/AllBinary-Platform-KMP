@@ -145,7 +145,7 @@ index++
 
                 @Throws(Exception::class)
             
-    open fun fireEventForEvent(eventObject: GameKeyEvent)
+    open fun fireEventForGameKeyEvent(eventObject: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject

@@ -31,11 +31,14 @@ import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.logic.communication.log.LogUtil
-
-open public class OwnershipPaintable : Paintable {
+//J2SEForJ2ME
+open public class OwnershipPaintable : Paintable
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -54,44 +57,35 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    private val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
     private val COPYRIGHT: String = "AllBinary Copyright (c) 2011"
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var color: Int = this.basicColor!!.toInt()!!
+
+    private var anchor: Int = Anchor.TOP_LEFT
+
+    private var COPYRIGHT_Y: Int= 0
+
+    private var beginWidth: Int= 0
 private constructor (){
 }
 
 
-    private var anchor: Int = Anchor.TOP_LEFT
-
-    override fun paint(graphics: Graphics)
+    override fun updateMeasurement(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
-graphics.setColor(this.color)
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-
-    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-
-    var halfWidth: Int = displayInfo!!.getLastHalfWidth()!!
-
-
-    var height: Int = displayInfo!!.getLastHeight()!!
-
 
     var font: Font = graphics.getFont()!!
 
-
-    var beginWidth: Int = (font.stringWidth(this.COPYRIGHT) shr 1)
-
-
-    var COPYRIGHT_Y: Int = 2 *myFont!!.DEFAULT_CHAR_HEIGHT
-
-graphics.drawString(this.COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, this.anchor)
+this.COPYRIGHT_Y= 2 *font.getHeight()
+this.beginWidth= (font.stringWidth(this.COPYRIGHT) shr 1)
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -112,6 +106,22 @@ this.color= basicColor!!.toInt()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.basicColor
+}
+
+
+    override fun paint(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+this.myFontProcessor!!.process(graphics)
+graphics.setColor(this.color)
+
+    var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()!!
+
+
+    var height: Int = this.displayInfo!!.getLastHeight()!!
+
+graphics.drawString(this.COPYRIGHT, halfWidth -this.beginWidth, height -COPYRIGHT_Y, this.anchor)
 }
 
 

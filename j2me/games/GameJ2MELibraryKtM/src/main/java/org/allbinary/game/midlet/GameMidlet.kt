@@ -981,7 +981,10 @@ this.commandAction(gameCommandsFactory!!.SET_MENU_DISPLAYABLE, this.getLoadGameF
                         
                                     {
                                     
-    var index: Int = this.getLoadGameForm()!!.getSelectedId()!!
+    var loadGameForm: LoadGameForm = this.getLoadGameForm() as LoadGameForm
+
+
+    var index: Int = loadGameForm!!.getSelectedId()!!
 
 
     
@@ -1011,7 +1014,10 @@ PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, this
                         
                                     {
                                     
-    var index: Int = this.getLoadGameForm()!!.getSelectedText()!!
+    var loadGameForm: LoadGameForm = this.getLoadGameForm() as LoadGameForm
+
+
+    var index: Int = loadGameForm!!.getSelectedText()!!
 
 
     
@@ -1418,12 +1424,12 @@ this.loadGameForm= loadGameForm
 
     open fun getLoadGameForm()
         //nullable = true from not(false or (false and true)) = true
-: LoadGameForm{
+: CommandForm{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.loadGameForm as LoadGameForm
+                        return this.loadGameForm
 }
 
 

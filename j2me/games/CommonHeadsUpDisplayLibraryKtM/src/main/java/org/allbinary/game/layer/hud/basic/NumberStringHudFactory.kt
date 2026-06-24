@@ -76,7 +76,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NumberStringHud(StringUtil.getInstance()!!.EMPTY_STRING, 9, BasicHudFactory.getInstance()!!.ABSOLUTE, 1, 0, 0, 0, BasicColorFactory.getInstance()!!.NULL_COLOR)
+                        return NumberStringHud(StringUtil.getInstance()!!.EMPTY_STRING, 9, BasicHudFactory.getInstance()!!.ABSOLUTE, 1, 0, BasicColorFactory.getInstance()!!.NULL_COLOR)
 } catch(e: Exception)
             {
 
@@ -85,7 +85,7 @@ companion object {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, "NumberStringHud", commonStrings!!.CONSTRUCTOR, e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 
 

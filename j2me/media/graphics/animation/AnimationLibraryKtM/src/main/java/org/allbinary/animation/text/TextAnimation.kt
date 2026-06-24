@@ -25,24 +25,36 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.graphics.Anchor
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class TextAnimation : IndexedAnimation {
+open public class TextAnimation : IndexedAnimation
+                , UpdateMyFontInterface {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
+
     var textArrayP: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
 
     private var anchor: Int = Anchor.TOP_LEFT
+
+    private var fontHeight: Int = 0
+
+    private var textChangeListener: TextChangeListener = TextChangeListener.getInstance()!!
 public constructor (text: String, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
@@ -53,6 +65,20 @@ public constructor (text: String, animationBehavior: AnimationBehavior)
                             //For kotlin this is before the body of the constructor.
                     
 this.setText(text)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.fontHeight= font.getHeight()
+this.textChangeListener!!.onMeasure()
+this.textChangeListener= TextChangeListener.getInstance()
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -70,10 +96,18 @@ this.setText(text)
 var graphics = graphics
 var x = x
 var y = y
+this.myFontProcessor!!.process(graphics)
+this.paintXYNoUpdate(graphics, x, y)
+}
+
+
+    open fun paintXYNoUpdate(graphics: Graphics, x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+var x = x
+var y = y
 this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
-
-    var height: Int = this.getHeight()!!
-
 
     var size: Int = this.textArrayP!!.size
                 
@@ -85,16 +119,26 @@ this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.g
                         for (index in 0 until size)
 
         {
-graphics.drawString(this.textArrayP[index]!!, x, y +(index *height), this.anchor)
+graphics.drawString(this.textArrayP[index]!!, x, y +(index *this.fontHeight), this.anchor)
 }
 
+}
+
+
+    open fun setTextWithOnMeasure(text: String, textChangeListener: TextChangeListener)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var text = text
+    //var textChangeListener = textChangeListener
+this.setText(text)
+this.textChangeListener= textChangeListener
 }
 
 
     open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var text = text
+    //var text = text
 
     var list: BasicArrayList = BasicArrayListD()
 
@@ -177,6 +221,7 @@ this.textArrayP= textArray
 
                         }
                             
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 
@@ -191,17 +236,14 @@ this.textArrayP= textArray
 }
 
 
-    open fun getHeight()
+    open fun getFontHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return myFont!!.DEFAULT_CHAR_HEIGHT
+                        return this.fontHeight
 }
 
 

@@ -70,6 +70,10 @@ companion object {
 
     val ON_DISPLAY_CHANGE_EVENT: String = "onDisplayChangeEvent"
 
+    val FD_WIDTH: String = " font/display width: "
+
+    val FD_HEIGHT: String = " font/display height: "
+
     val EMPTY_CHILD_NAME_LIST: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
     val ABOUT: String = "About"

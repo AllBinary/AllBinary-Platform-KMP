@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.layer.NullPathFindingLayer
 import org.allbinary.game.layer.PathFindingLayerInterface
@@ -38,8 +39,22 @@ open public class WaypointInfoHudPaintable : SelectionHudPaintable {
     private val keyvalueDrawString: KeyValueDrawString
 
     var rtsLayerP: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
+
+    private var textLine2Y: Int= 0
 public constructor (){
 this.keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+super.updateMeasurement(graphics)
+
+    var font: Font = graphics.getFont()!!
+
+this.textLine2Y= (this.y +font.getHeight())
 }
 
 
@@ -52,19 +67,6 @@ this.keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
 this.setName(rtsLayer!!.getName())
 this.setAnimationInterface(rtsLayer!!.getVerticleBuildAnimationInterface())
 this.keyvalueDrawString!!.update(rtsLayer!!.getParentLayer()!!.getName())
-}
-
-
-    override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-super.paint(graphics)
-
-    var textLine2Y: Int = (this.y +this.myFont!!.DEFAULT_CHAR_HEIGHT)
-
-this.keyvalueDrawString!!.paint(graphics, textLine2Y)
-this.getAnimationInterface()!!.paintXY(graphics, this.imageX, this.y)
 }
 
 
@@ -84,6 +86,16 @@ this.rtsLayerP= rtsLayer
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.rtsLayerP
+}
+
+
+    override fun paint(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+super.paint(graphics)
+this.keyvalueDrawString!!.paint(graphics, this.textLine2Y)
+this.getAnimationInterface()!!.paintXY(graphics, this.imageX, this.y)
 }
 
 

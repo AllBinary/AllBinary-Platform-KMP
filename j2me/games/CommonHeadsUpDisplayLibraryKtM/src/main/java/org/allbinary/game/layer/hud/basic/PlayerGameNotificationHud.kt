@@ -27,8 +27,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.business.advertisement.GameAdStateFactory
+import org.allbinary.canvas.Processor
 import org.allbinary.game.GameAdState
 import org.allbinary.game.layer.hud.basic.notification.GameNotification
 import org.allbinary.game.layer.hud.basic.notification.GameNotificationHud
@@ -37,7 +39,8 @@ import org.allbinary.graphics.CustomGPoint
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
@@ -46,14 +49,13 @@ import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.CircularIndexUtil
 
-open public class PlayerGameNotificationHud : GameNotificationHud {
+open public class PlayerGameNotificationHud : GameNotificationHud
+                , UpdateMyFontInterface {
         
 
+    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
+
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
-
-    private var string: String = this.EMPTY_STRING
-
-    private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -65,18 +67,72 @@ open public class PlayerGameNotificationHud : GameNotificationHud {
 
     private val permanentGameNotification: GameNotification = GameNotification()
 
+open public inner class SetAndRemoveProcessor : Processor {
+        
+
+    private val updateMeasurementProcessor: PlayerGameNotificationHud
+public constructor (updateMeasurementProcessor: PlayerGameNotificationHud){
+    //var updateMeasurementProcessor = updateMeasurementProcessor
+this.updateMeasurementProcessor= updateMeasurementProcessor
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun process()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.updateMeasurementProcessor!!.setAndRemoveProcess()
+}
+
+
+}
+                
+            
+open public inner class NextUnremoveableProcessor : Processor {
+        
+
+    private val updateMeasurementProcessor: PlayerGameNotificationHud
+public constructor (updateMeasurementProcessor: PlayerGameNotificationHud){
+    //var updateMeasurementProcessor = updateMeasurementProcessor
+this.updateMeasurementProcessor= updateMeasurementProcessor
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun process()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.updateMeasurementProcessor!!.setNextUnremoveableProcess()
+}
+
+
+}
+                
+            
+    private val setAndRemoveProcessor: Processor = SetAndRemoveProcessor(this)
+
+    private val nextUnremoveableProcessor: Processor = NextUnremoveableProcessor(this)
+
+    private var processor: Processor = Processor.getInstance()!!
+
+    private val PERMANENT_GAME_NOTIFICATION: String = "Permanent Game Notification: "
+
+    private var lastString: String = StringUtil.getInstance()!!.EMPTY_STRING
+
+    private var string: String = this.EMPTY_STRING
+
     private var point: CustomGPoint = CustomGPoint.NULL_CUSTOM_POINT
 
-    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
+    private var width: Int= 0
+public constructor (location: Int, direction: Int, bufferZone: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
-var location = location
-var direction = direction
-var maxHeight = maxHeight
-var maxWidth = maxWidth
-var bufferZone = bufferZone
-var basicColor = basicColor
+                            : super(location, direction, bufferZone, basicColor){
+    //var location = location
+    //var direction = direction
+    //var bufferZone = bufferZone
+    //var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -87,6 +143,33 @@ this.circularIndexUtil= CircularIndexUtil.createInstance(0)
 
 gameNotificationEventHandler!!.removeAllListeners()
 gameNotificationEventHandler!!.addListenerInterface(this)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+        try {
+            super.updateMeasurement(graphics)
+
+    var font: Font = graphics.getFont()!!
+
+this.width= font.stringWidth(this.string)
+this.processor.process()
+this.processor= Processor.getInstance()
+} catch(e: Exception)
+            {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+}
+
 }
 
 
@@ -105,10 +188,6 @@ this.point.setY(y)
                         return this.point
 }
 
-
-    private val PERMANENT_GAME_NOTIFICATION: String = "Permanent Game Notification: "
-
-    private var lastString: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     override fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)
         //nullable = true from not(false or (false and false)) = true
@@ -208,10 +287,16 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
         //nullable = true from not(false or (false and true)) = true
 {
 this.string= this.gameNotification!!.stringList!!.removeAt(0) as String
+this.processor= this.setAndRemoveProcessor
+}
 
-    var width: Int = MyFont.getInstance()!!.stringWidth2(this.string)!!
 
-this.setX((this.displayInfo!!.getLastWidth() -width) shr 1)
+                @Throws(Exception::class)
+            
+    open fun setAndRemoveProcess()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.setX((this.displayInfo!!.getLastWidth() -this.width) shr 1)
 this.point.setX(this.getX())
 this.point.setY(this.getY())
 
@@ -243,10 +328,19 @@ this.setBasicColorP(this.gameNotification!!.colorList!!.removeAt(0) as BasicColo
     var index: Int = this.circularIndexUtil!!.getIndex()!!
 
 this.string= this.permanentGameNotification!!.stringList!!.objectArray[index]!! as String
+this.processor= this.nextUnremoveableProcessor
+}
 
-    var width: Int = MyFont.getInstance()!!.stringWidth2(this.string)!!
 
-this.setX((this.displayInfo!!.getLastWidth() -width) shr 1)
+                @Throws(Exception::class)
+            
+    open fun setNextUnremoveableProcess()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var index: Int = this.circularIndexUtil!!.getIndex()!!
+
+this.setX((this.displayInfo!!.getLastWidth() -this.width) shr 1)
 this.point.setX(this.getX())
 this.point.setY(this.getY())
 
@@ -270,6 +364,7 @@ this.permanentGameNotification!!.clear()
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 super.paint(graphics, this.string)
 }
 

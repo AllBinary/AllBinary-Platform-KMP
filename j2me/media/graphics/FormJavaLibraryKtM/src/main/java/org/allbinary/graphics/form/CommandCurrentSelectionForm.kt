@@ -35,15 +35,23 @@ import org.allbinary.animation.vector.RectangleFilledAdjustedAnimation
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.form.item.CommandTextItem
 import org.allbinary.graphics.form.item.ABCustomItem
 
-open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm {
+open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm
+                , UpdateMyFontInterface {
         
 
     val selectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
 
     val unSelectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
+
+    private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
 public constructor (title: String, items: Array<ABCustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, ItemPaintableFactory.getInstance(), rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor){
@@ -60,7 +68,16 @@ public constructor (title: String, items: Array<ABCustomItem?>, rectangle: Recta
                             //For kotlin this is before the body of the constructor.
                     
 this.initAnimations()
-this.update(items)
+this.addAll(items)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+this.updateAll(graphics, getAllitems())
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -93,7 +110,7 @@ this.unSelectedAnimationArray[index]= nullAnimation
 }
 
 
-    open fun update(items: Array<ABCustomItem?>)
+    open fun addAll(items: Array<ABCustomItem?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var items = items
@@ -104,13 +121,13 @@ this.unSelectedAnimationArray[index]= nullAnimation
                         for (index in items.size  - 1  downTo 0)
 
         {
-this.updateAt(index, items[index]!!)
+this.addAt(index, items[index]!!)
 }
 
 }
 
 
-    open fun updateAt(index: Int, item: ABCustomItem)
+    open fun addAt(index: Int, item: ABCustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -168,6 +185,111 @@ adjustedBorder= 4
 }
 
 
+    open fun updateAll(graphics: Graphics, items: Array<ABCustomItem?>)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var items = items
+
+
+
+
+                        for (index in items.size  - 1  downTo 0)
+
+        {
+items[index]!!.preMeasurement(graphics)
+this.updateAt(index, items[index]!!)
+}
+
+}
+
+
+    open fun updateAt(index: Int, item: ABCustomItem)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var index = index
+    //var item = item
+
+    var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
+
+
+    var buttonColor: BasicColor = basicColorFactory!!.TRANSPARENT_GREY
+
+
+    var selectedButtonColor: BasicColor = basicColorFactory!!.TRANSPARENT_RED
+
+
+    var width: Int = item.getMinimumWidth()!!
+
+
+    var height: Int = item.getMinimumHeight()!!
+
+
+    var adjustedBorder: Int = 3
+
+
+    var offset: Int =  -(this.halfBorder +adjustedBorder)
+
+
+    
+                        if(J2MEUtil.isJ2ME())
+                        
+                                    {
+                                    
+    var rectangleAdjustedAnimation: RectangleAdjustedAnimation = this.selectedAnimationArray[index]!! as RectangleAdjustedAnimation
+
+rectangleAdjustedAnimation!!.setWidth(width +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setHeight(height +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setOffsetX(offset)
+rectangleAdjustedAnimation!!.setOffsetY(offset)
+rectangleAdjustedAnimation!!.setBasicColorP(selectedButtonColor)
+
+                                    }
+                                
+                        else {
+                            
+    var rectangleAdjustedAnimation: RectangleFilledAdjustedAnimation = this.selectedAnimationArray[index]!! as RectangleFilledAdjustedAnimation
+
+rectangleAdjustedAnimation!!.setWidth(width +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setHeight(height +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setOffsetX(offset)
+rectangleAdjustedAnimation!!.setOffsetY(offset)
+rectangleAdjustedAnimation!!.setBasicColorP(selectedButtonColor)
+
+                        }
+                            
+adjustedBorder= 4
+
+    
+                        if(J2MEUtil.isJ2ME())
+                        
+                                    {
+                                    
+    var rectangleAdjustedAnimation: RectangleAdjustedAnimation = this.unSelectedAnimationArray[index]!! as RectangleAdjustedAnimation
+
+rectangleAdjustedAnimation!!.setWidth(width +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setHeight(height +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setOffsetX(offset)
+rectangleAdjustedAnimation!!.setOffsetY(offset)
+rectangleAdjustedAnimation!!.setBasicColorP(buttonColor)
+
+                                    }
+                                
+                        else {
+                            
+    var rectangleAdjustedAnimation: RectangleFilledAdjustedAnimation = this.unSelectedAnimationArray[index]!! as RectangleFilledAdjustedAnimation
+
+rectangleAdjustedAnimation!!.setWidth(width +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setHeight(height +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setOffsetX(offset)
+rectangleAdjustedAnimation!!.setOffsetY(offset)
+rectangleAdjustedAnimation!!.setBasicColorP(buttonColor)
+
+                        }
+                            
+}
+
+
     open fun getSelectedCommand()
         //nullable = true from not(false or (false and true)) = true
 : Command{
@@ -192,7 +314,7 @@ adjustedBorder= 4
 
     var result: Int = super.append(item)!!
 
-this.updateAt(result, item)
+this.addAt(result, item)
 
 
 
@@ -232,6 +354,15 @@ super.insert(itemNum, item)
     //var itemNum = itemNum
     //var item = item
 super.set(itemNum, item)
+}
+
+
+    override fun paint(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+this.myFontProcessor!!.process(graphics)
+super.paint(graphics)
 }
 
 

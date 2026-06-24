@@ -25,11 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.input.motion.button.CommonButtons
 
 open public class UpgradableRTSLayerHudPaintable : SelectionHudPaintable {
@@ -62,7 +63,24 @@ companion object {
     private var percentCompleteX2: Int= 0
 
     private lateinit var rtsLayerCompositePaintableLateInit: RTSLayerCompositePaintable
+
+    private var charHeight: Int= 0
+
+    private var charWidth: Int= 0
 private constructor (){
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+super.updateMeasurement(graphics)
+
+    var font: Font = graphics.getFont()!!
+
+this.charHeight= font.getHeight()
+this.charWidth= MyFontProcessor.defaultCharWidth(font)
 }
 
 
@@ -71,14 +89,11 @@ private constructor (){
 {
 super.update()
 
-    var myFont: MyFont = MyFont.getInstance()!!
+    var commonButtons: CommonButtons = CommonButtons.getInstance()!!
 
-
-    var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
-
-this.costY= (this.y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE)
-this.costY1= (this.y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -(charHeight))
-this.percentCompleteX2= this.imageX +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -myFont!!.defaultCharWidth()
+this.costY= (this.y +commonButtons!!.STANDARD_BUTTON_SIZE)
+this.costY1= (this.y +commonButtons!!.STANDARD_BUTTON_SIZE -this.charHeight)
+this.percentCompleteX2= this.imageX +commonButtons!!.STANDARD_BUTTON_SIZE -this.charWidth
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 

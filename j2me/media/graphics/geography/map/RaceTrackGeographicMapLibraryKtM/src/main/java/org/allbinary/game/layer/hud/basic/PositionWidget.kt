@@ -92,7 +92,7 @@ stringBuffer!!.append(position.toString())
     private var positionString: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor (position: Int, location: Int, direction: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, 10, 40, 2, basicColor){
+                            : super(location, direction, 2, basicColor){
 var position = position
 var location = location
 var direction = direction
@@ -101,6 +101,8 @@ var basicColor = basicColor
 
                             //For kotlin this is before the body of the constructor.
                     
+this.updateMaxHeight= 10
+this.updateMaxWidth= 40
 }
 
 

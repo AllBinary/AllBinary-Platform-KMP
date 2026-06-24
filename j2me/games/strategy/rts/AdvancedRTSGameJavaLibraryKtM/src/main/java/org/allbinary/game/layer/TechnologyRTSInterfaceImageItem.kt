@@ -25,39 +25,23 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
 import org.allbinary.graphics.form.item.ABCustomImageItem
 import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.logic.math.PrimitiveLongUtil
 
-open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem {
+open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem
+                , UpdateMyFontInterface {
         
 
-    private val myFont: MyFont = MyFont.getInstance()!!
-
     private val rtsInterface: RTSInterface
-
-    private val adjustedCostLabelY: Int
-
-    private val adjustedCostX: Int
-
-    private val adjustedCostY: Int
-
-    private var costString: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
-
-    private var costLength: Int= 0
-
-    private val adjustedLevelX: Int
-
-    private val adjustedLevelY: Int
-
-    private var levelString: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
-
-    private var levelLength: Int= 0
 
     private val primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(10000)!!
 
@@ -66,22 +50,53 @@ open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem {
     private val COST: String = "Cost"
 
     private val DOLLAR: String = "$"
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var costString: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
+
+    private var costLength: Int= 0
+
+    private var levelString: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
+
+    private var levelLength: Int= 0
+
+    private var adjustedCostLabelY: Int= 0
+
+    private var adjustedCostX: Int= 0
+
+    private var adjustedCostY: Int= 0
+
+    private var adjustedLevelX: Int= 0
+
+    private var adjustedLevelY: Int= 0
 public constructor (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, rtsInterface: RTSInterface)                        
 
                             : super(label, img, layout, altText, basicColor, 0){
-var label = label
-var img = img
-var layout = layout
-var altText = altText
-var basicColor = basicColor
-var rtsInterface = rtsInterface
+    //var label = label
+    //var img = img
+    //var layout = layout
+    //var altText = altText
+    //var basicColor = basicColor
+    //var rtsInterface = rtsInterface
 
 
                             //For kotlin this is before the body of the constructor.
                     
 this.rtsInterface= rtsInterface
+this.update()
+}
 
-    var DEFAULT_CHAR_HEIGHT: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+
+    var fontHeight: Int = font.getHeight()!!
 
 
     var imageHeight: Int = 0
@@ -98,12 +113,12 @@ this.rtsInterface= rtsInterface
 
                                     }
                                 
-this.adjustedCostLabelY=  -this.yOffset +imageHeight -(3 *DEFAULT_CHAR_HEIGHT)
-this.adjustedCostY=  -this.yOffset +imageHeight -(2 *DEFAULT_CHAR_HEIGHT)
-this.adjustedCostX= 2 +(this.DOLLAR.length *(DEFAULT_CHAR_HEIGHT -1))
-this.adjustedLevelY=  -this.yOffset +imageHeight -DEFAULT_CHAR_HEIGHT
-this.adjustedLevelX= 2 +(this.LEVEL.length *(DEFAULT_CHAR_HEIGHT -1))
-this.update()
+this.adjustedCostLabelY=  -this.yOffset +imageHeight -(3 *fontHeight)
+this.adjustedCostY=  -this.yOffset +imageHeight -(2 *fontHeight)
+this.adjustedCostX= 2 +(this.DOLLAR.length *(fontHeight -1))
+this.adjustedLevelY=  -this.yOffset +imageHeight -fontHeight
+this.adjustedLevelX= 2 +(this.LEVEL.length *(fontHeight -1))
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -129,9 +144,10 @@ this.levelString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var graphics = graphics
-var x = x
-var y = y
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+this.myFontProcessor!!.process(graphics)
 super.paintXY(graphics, x, y)
 
     var xa: Int = x +2

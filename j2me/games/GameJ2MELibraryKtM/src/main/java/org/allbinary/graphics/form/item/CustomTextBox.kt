@@ -166,7 +166,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!
 {
     //var graphics = graphics
 graphics.setColor(this.backgroundColor)
-graphics.fillRect(0, 0, this.displayInfoSingleton!!.getLastWidth(), this.displayInfoSingleton!!.getLastHeight())
+graphics.fillRect(0, 0, this.displayInfo!!.getLastWidth(), this.displayInfo!!.getLastHeight())
 graphics.setColor(this.foregroundColor)
 
     

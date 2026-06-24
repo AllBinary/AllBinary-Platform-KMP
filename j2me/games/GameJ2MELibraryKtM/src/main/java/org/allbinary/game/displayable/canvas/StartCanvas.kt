@@ -138,6 +138,8 @@ companion object {
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
+    val formUtil: FormUtil = FormUtil.getInstance()!!
+
     private var basicGameDemoPaintable: StatePaintable = StatePaintableFactory.getInstance()!!
 
     private var specialAnimationInterface: SpecialAnimation = SpecialAnimation.getInstance()!!
@@ -251,7 +253,7 @@ var displayChangeEvent = displayChangeEvent
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
 
-    var rectangle: Rectangle = FormUtil.getInstance()!!.createFormRectangle()!!
+    var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
 
 scrollSelectionForm!!.init(rectangle, formType)
 

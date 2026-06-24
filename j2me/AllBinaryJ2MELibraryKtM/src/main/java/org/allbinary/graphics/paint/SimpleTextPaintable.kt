@@ -25,18 +25,34 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 
-open public class SimpleTextPaintable : Paintable {
+open public class SimpleTextPaintable : Paintable
+                , UpdateMyFontInterface {
         
+
+    private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+    private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
 
     private var text: String
 
     private var basicColor: BasicColor
+
+    private var topScoresWidth: Int = 0
+
+    private var fontHeight: Int = 0
+
+    private var anchor: Int = Anchor.TOP_LEFT
 public constructor (text: String, basicColor: BasicColor){
     //var text = text
     //var basicColor = basicColor
@@ -45,25 +61,29 @@ this.basicColor= basicColor
 }
 
 
-    private var anchor: Int = Anchor.TOP_LEFT
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
 
-    private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+    var font: Font = graphics.getFont()!!
+
+this.topScoresWidth= (font.stringWidth(this.text) shr 1)
+this.fontHeight= font.getHeight()
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
+
 
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
+this.myFontProcessor!!.process(graphics)
 
     var width: Int = this.displayInfoSingleton!!.getLast()[this.displayInfoSingleton!!.WIDTH]!!
 
-
-    var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(this.text) shr 1)
-
 graphics.setColor(this.getBasicColorP()!!.toInt())
-graphics.drawString(this.text, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_CHAR_HEIGHT *3, this.anchor)
+graphics.drawString(this.text, (width shr 1) -this.topScoresWidth, this.fontHeight, this.anchor)
 }
 
 
@@ -91,6 +111,7 @@ this.basicColor= basicColor
 {
     //var text = text
 this.text= text
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 

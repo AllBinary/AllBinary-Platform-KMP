@@ -25,12 +25,16 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 
 open public class CanvasDrawLineString
             : Object
-         {
+        
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -38,9 +42,15 @@ companion object {
 
         }
             
+    private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
     private var x: Int
 
     private var y: Int
+
+    private var fontHeight: Int = 0
 public constructor (x: Int, y: Int)
             : super()
         {
@@ -51,18 +61,26 @@ this.y= y
 }
 
 
-    private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.fontHeight= font.getHeight()
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
+
 
     open fun paint(graphics: Graphics, string: String, line: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var graphics = graphics
-var string = string
-var line = line
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-this.drawStringUtil!!.drawCenterString(graphics, string, 0, string.length, this.x, this.y +(line *myFont!!.DEFAULT_CHAR_HEIGHT))
+    //var graphics = graphics
+    //var string = string
+    //var line = line
+this.myFontProcessor!!.process(graphics)
+this.drawStringUtil!!.drawCenterString(graphics, string, 0, string.length, this.x, this.y +(line *this.fontHeight))
 }
 
 

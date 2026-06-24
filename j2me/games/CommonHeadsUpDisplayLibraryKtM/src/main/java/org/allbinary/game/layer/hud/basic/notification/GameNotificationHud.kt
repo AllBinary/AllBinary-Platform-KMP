@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -43,18 +43,16 @@ open public class GameNotificationHud : BasicHud
         
 companion object {
             
-    val NULL_GAME_NOTIFICATION: GameNotificationHud = GameNotificationHud(BasicHudFactory.getInstance()!!.TOPCENTER, BasicHudFactory.getInstance()!!.HORIZONTAL, 0, 0, 0, BasicColorFactory.getInstance()!!.RED)
+    val NULL_GAME_NOTIFICATION: GameNotificationHud = GameNotificationHud(BasicHudFactory.getInstance()!!.TOPCENTER, BasicHudFactory.getInstance()!!.HORIZONTAL, 0, BasicColorFactory.getInstance()!!.RED)
 
         }
-            public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
+            public constructor (location: Int, direction: Int, bufferZone: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
-var location = location
-var direction = direction
-var maxHeight = maxHeight
-var maxWidth = maxWidth
-var bufferZone = bufferZone
-var basicColor = basicColor
+                            : super(location, direction, bufferZone, basicColor){
+    //var location = location
+    //var direction = direction
+    //var bufferZone = bufferZone
+    //var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,7 +63,7 @@ var basicColor = basicColor
     override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventObject = eventObject
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -97,10 +95,10 @@ this.add(gameNotificationEvent!!.getString(), gameNotificationEvent!!.getSeconds
     open fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-var string = string
-var seconds = seconds
-var basicColor = basicColor
-var permanent = permanent
+    //var string = string
+    //var seconds = seconds
+    //var basicColor = basicColor
+    //var permanent = permanent
 }
 
 
@@ -115,7 +113,7 @@ var permanent = permanent
     open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
-var graphics = graphics
+    //var graphics = graphics
 }
 
 

@@ -30,10 +30,13 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.paint.Paintable
 //J2MEForJ2ME
-open public class AboutPaintable : Paintable {
+open public class AboutPaintable : Paintable
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -52,6 +55,8 @@ var developers = developers
 
         }
             
+    private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
     private val ABOUT: String = CanvasStrings.getInstance()!!.ABOUT
 
     private val info: Array<String?>
@@ -59,11 +64,66 @@ var developers = developers
     private val developers: Array<String?>
 
     private val paintableArray: Array<Paintable?> = arrayOf(this)
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var charHeight: Int= 0
+
+    private var aboutBeginWidth: Int= 0
+
+    private var infoBeginWidth: IntArray
+
+    private var developersBeginWidth: IntArray
+
+    private var anchor: Int = Anchor.TOP_LEFT
 private constructor (info: Array<String?>, developers: Array<String?>){
 var info = info
 var developers = developers
 this.info= info
+this.infoBeginWidth= IntArray(this.info.size)
 this.developers= developers
+this.developersBeginWidth= IntArray(this.developers.size)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.charHeight= font.getHeight()
+this.aboutBeginWidth= (font.stringWidth(this.ABOUT) shr 1)
+
+    var infoSize: Int = this.info.size
+                
+
+
+
+
+
+                        for (index in 0 until infoSize)
+
+        {
+this.infoBeginWidth[index]= (font.stringWidth(this.info[index]!!) shr 1)
+}
+
+
+    var size: Int = this.developers.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+this.developersBeginWidth[index]= (font.stringWidth(this.developers[index]!!) shr 1)
+}
+
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -78,28 +138,15 @@ this.developers= developers
 }
 
 
-    private var anchor: Int = Anchor.TOP_LEFT
-
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 
-    var myFont: MyFont = MyFont.getInstance()!!
+    var halfWidth: Int = this.displayInfoSingleton!!.getLastHalfWidth()!!
 
-
-    var halfWidth: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfWidth()!!
-
-
-    var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
-
-
-    var font: Font = graphics.getFont()!!
-
-
-    var beginWidth: Int = (font.stringWidth(this.ABOUT) shr 1)
-
-graphics.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, this.anchor)
+graphics.drawString(this.ABOUT, halfWidth -this.aboutBeginWidth, 2 *this.charHeight, this.anchor)
 
     var infoSize: Int = this.info.size
                 
@@ -111,8 +158,7 @@ graphics.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, this.ancho
                         for (index in 0 until infoSize)
 
         {
-beginWidth= (font.stringWidth(this.info[index]!!) shr 1)
-graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charHeight, this.anchor)
+graphics.drawString(this.info[index]!!, halfWidth -this.infoBeginWidth[index], (4 +index) *this.charHeight, this.anchor)
 }
 
 
@@ -126,8 +172,7 @@ graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charH
                         for (index in 0 until size)
 
         {
-beginWidth= (font.stringWidth(this.developers[index]!!) shr 1)
-graphics.drawString(this.developers[index]!!, halfWidth -beginWidth, (5 +infoSize +index) *charHeight, this.anchor)
+graphics.drawString(this.developers[index]!!, halfWidth -this.developersBeginWidth[index], (5 +infoSize +index) *this.charHeight, this.anchor)
 }
 
 }

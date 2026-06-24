@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -26,11 +26,14 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.game.layer.pickup.CountedPickedUpLayerInterfaceFactory
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.math.PrimitiveLongUtil
@@ -38,7 +41,8 @@ import org.allbinary.logic.math.PrimitiveLongUtil
 open public class CountedLayerInterfaceFactoryPart
             : Object
         
-                , PartInterface {
+                , PartInterface
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -46,6 +50,10 @@ companion object {
 
         }
             
+    private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
+
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
     private var total: Int= 0
@@ -60,18 +68,30 @@ companion object {
 public constructor (total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
             : super()
         {
-var total = total
-var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
+    //var total = total
+    //var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
 this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(1000)
 this.init(total, countedPickedUpLayerInterfaceFactory)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.setXOffset(font.charsWidth(this.totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +(font.getSize() shr 1))
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
     open fun init(total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
         //nullable = true from not(false or (false and false)) = true
 {
-var total = total
-var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
+    //var total = total
+    //var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
 this.setCountedPickedUpLayerInterfaceFactory(countedPickedUpLayerInterfaceFactory)
 this.total= total
 }
@@ -128,10 +148,7 @@ var z = z
 var total = total
 this.total= total
 this.totalString= this.primitiveLongUtil!!.getCharArray(total)
-
-    var font: MyFont = MyFont.getInstance()!!
-
-this.setXOffset(font.charsWidth(this.totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +(font.getSize() shr 1))
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 
@@ -139,6 +156,7 @@ this.setXOffset(font.charsWidth(this.totalString, 0, this.primitiveLongUtil!!.ge
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 }
 
 

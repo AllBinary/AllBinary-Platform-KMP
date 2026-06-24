@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
@@ -37,12 +38,15 @@ import org.allbinary.animation.text.TextAnimation
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.logic.math.BasicDecimal
 
 open public class GeographicMapCellHistory
             : Object
-         {
+        
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -62,15 +66,31 @@ companion object {
 
     private val animation: Animation = TextAnimation(this.MISSED_INFO, AnimationBehavior.getInstance())
 
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
     private var totalVisited: Int= 0
 
     private var halfWidth: Int = 0
+
+    private var fontHeight: Int = 0
 public constructor ()
             : super()
         {
 this.list= BasicArrayListD()
 this.visitedList= BasicArrayListD()
 this.init()
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.fontHeight= font.getHeight()
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -577,10 +597,7 @@ this.totalVisited= 0
                                     }
                                 
 
-    var myFont: MyFont = MyFont.getInstance()!!
-
-
-    var height: Int = 2 *myFont!!.DEFAULT_CHAR_HEIGHT
+    var height: Int = 2 *this.fontHeight
 
 this.animation.paintXY(graphics, x +halfWidth, y +(height))
 }
@@ -595,7 +612,8 @@ this.animation.paintXY(graphics, x +halfWidth, y +(height))
     //var geographicMapInterface = geographicMapInterface
 
         try {
-            graphics.setColor(this.RED)
+            this.myFontProcessor!!.process(graphics)
+graphics.setColor(this.RED)
 
     var localVisitedList: BasicArrayList = this.visitedList
 

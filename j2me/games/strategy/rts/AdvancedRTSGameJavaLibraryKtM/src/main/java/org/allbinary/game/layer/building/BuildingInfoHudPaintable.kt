@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.string.CommonStrings
@@ -35,7 +36,7 @@ import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.hud.basic.NumberStringHud
 import org.allbinary.game.layer.hud.basic.NumberStringHudFactory
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.logic.math.MathUtil
 
 open public class BuildingInfoHudPaintable : SelectionHudPaintable {
@@ -70,6 +71,8 @@ companion object {
     private val maxHealthHud: NumberStringHud
 
     private var rtsLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
+
+    private var currentHealth: Int = 0
 private constructor (){
 
     var numberStringHudFactory: NumberStringHudFactory = NumberStringHudFactory.getInstance()!!
@@ -95,17 +98,166 @@ private constructor (){
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
 
 
-    var DEFAULT_CHAR_HEIGHT: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
+    var basicColor: BasicColor = this.getBasicColorP()!!
 
-productivityHud= NumberStringHud("Productivity:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, this.y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+
+    var textX: Int = this.textX
+
+
+    var y: Int = this.y
+
+
+    var firstIndex: Int = index
+
+
+open class ProductivityNumberStringHud : NumberStringHud {
+        
+ constructor ()                        
+
+                            : super("Productivity:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, 0, basicColor){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.updateMaxWidth= textX
+this.updateMaxHeight= y +((firstIndex +1) *font.getHeight())
+super.updateMeasurement(graphics)
+}
+
+
+}
+                
+            
+
+                    //Otherwise - statement - EmptyStmt
+
+productivityHud= ProductivityNumberStringHud()
 index++
-efficiencyHud= NumberStringHud("Efficiency:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, this.y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+
+    var secondIndex: Int = index
+
+
+open class EfficiencyNumberStringHud : NumberStringHud {
+        
+ constructor ()                        
+
+                            : super("Efficiency:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, 0, basicColor){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+super.updateMeasurement(graphics)
+
+    var font: Font = graphics.getFont()!!
+
+this.updateMaxWidth= textX
+this.updateMaxHeight= y +((secondIndex +1) *font.getHeight())
+}
+
+
+}
+                
+            
+
+                    //Otherwise - statement - EmptyStmt
+
+efficiencyHud= EfficiencyNumberStringHud()
 index++
 
-    var totalLength: Int = this.HEALTH.length +1
+    var HEALTH: String = this.HEALTH
 
-healthHud= NumberStringHud(this.HEALTH, 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, this.y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
-maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX +(totalLength *DEFAULT_CHAR_HEIGHT), this.y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+
+    var thirdIndex: Int = index
+
+
+open class HealthNumberStringHud : NumberStringHud {
+        
+ constructor ()                        
+
+                            : super(HEALTH, 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, 0, basicColor){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.updateMaxWidth= textX
+this.updateMaxHeight= y +((thirdIndex +1) *font.getHeight())
+super.updateMeasurement(graphics)
+}
+
+
+}
+                
+            
+
+                    //Otherwise - statement - EmptyStmt
+
+
+    var totalLength: Int = HEALTH.length +1
+
+healthHud= HealthNumberStringHud()
+
+    var fourthIndex: Int = index
+
+
+open class MaxHealthNumberStringHud : NumberStringHud {
+        
+ constructor ()                        
+
+                            : super("/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, 0, basicColor){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+super.updateMeasurement(graphics)
+
+    var font: Font = graphics.getFont()!!
+
+this.updateMaxWidth= textX +(totalLength *font.getHeight())
+this.updateMaxHeight= y +((fourthIndex +1) *font.getHeight())
+}
+
+
+}
+                
+            
+
+                    //Otherwise - statement - EmptyStmt
+
+maxHealthHud= MaxHealthNumberStringHud()
 } catch(e: Exception)
             {
 
@@ -118,6 +270,21 @@ this.productivityHud= productivityHud
 this.efficiencyHud= efficiencyHud
 this.healthHud= healthHud
 this.maxHealthHud= maxHealthHud
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+
+    var totalLength: Int = this.HEALTH.length +MathUtil.getInstance()!!.getTotalDigits(this.currentHealth)
+
+this.maxHealthHud!!.setX(this.textX +MyFontProcessor.defaultStringWidth(font, totalLength))
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -138,6 +305,7 @@ this.maxHealthHud!!.setBasicColorP(basicColor)
 {
 var graphics = graphics
 super.paint(graphics)
+this.myFontProcessor!!.process(graphics)
 this.productivityHud!!.paint(graphics)
 this.efficiencyHud!!.paint(graphics)
 this.healthHud!!.paint(graphics)
@@ -156,14 +324,9 @@ this.setName(buildingLayer!!.getName())
 this.setAnimationInterface(buildingLayer!!.getVerticleBuildAnimationInterface())
 this.productivityHud!!.set(buildingLayer!!.getProductivity())
 this.efficiencyHud!!.set(buildingLayer!!.getEfficiency() /100)
-
-    var health: Int = buildingLayer!!.getHealthInterface()!!.getHealth()!!
-
-this.healthHud!!.set(health)
-
-    var totalLength: Int = this.HEALTH.length +MathUtil.getInstance()!!.getTotalDigits(health)
-
-this.maxHealthHud!!.setX(this.textX +MyFont.getInstance()!!.defaultStringWidth(totalLength))
+this.currentHealth= buildingLayer!!.getHealthInterface()!!.getHealth()
+this.healthHud!!.set(this.currentHealth)
+this.myFontProcessor= this.updateMyFontProcessor
 this.maxHealthHud!!.set(buildingLayer!!.getHealthInterface()!!.getMaxHealth())
 }
 

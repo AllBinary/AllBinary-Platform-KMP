@@ -37,6 +37,7 @@ import java.util.Hashtable
 import java.util.Vector
 import javax.microedition.lcdui.ChoiceGroup
 import javax.microedition.lcdui.CommandListener
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Item
 import javax.microedition.lcdui.NullCommandListener
@@ -102,11 +103,15 @@ import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.color.BasicColorSetUtil
 import org.allbinary.graphics.displayable.CanvasStrings
+import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.displayable.GameTickDisplayInfoSingleton
 import org.allbinary.graphics.displayable.command.MyCommandsFactory
 import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.graphics.displayable.event.DisplayChangeEventHandler
 import org.allbinary.graphics.displayable.event.DisplayChangeEventListener
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.form.CommandCurrentSelectionFormFactory
 import org.allbinary.graphics.form.FormPaintable
 import org.allbinary.graphics.form.FormType
@@ -164,7 +169,8 @@ open public class AllBinaryGameCanvas : RunnableCanvas
                 , IntermissionCompositeInterface
                 , IntermissionEnableListenerInterface
                 , PopupMenuInterface
-                , DisplayChangeEventListener {
+                , DisplayChangeEventListener
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -199,6 +205,14 @@ companion object {
     val gameRunnable: GameCanvasRunnable = GameCanvasRunnable(this)
 
     val gamePauseRunnable: GameCanvasPauseRunnable = GameCanvasPauseRunnable(this)
+
+    val formUtil: FormUtil = FormUtil.getInstance()!!
+
+    val myFormUtil: MyFormUtil = MyFormUtil.getInstance()!!
+
+    private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
 
     var gameSpecificPaintable: Paintable = NullPaintable.getInstance()!!
 
@@ -311,6 +325,8 @@ companion object {
     private val menuBehavior: BaseMenuBehavior
 
     private var progressPaintable: PaintableInterface = ProgressCanvasFactory.getLazyInstance()!!
+
+    var fontHeight: Int= 0
 public constructor (commandListener: CommandListener, gameLayerManager: AllBinaryGameLayerManager, highScoresFactoryInterface: HighScoresFactoryInterface, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, buffered: Boolean)                        
 
                             : super(commandListener, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST, true){
@@ -343,10 +359,51 @@ this.menuBehavior= this.getInGameMenuBehavior()
 
                         }
                             
-this.initSpecialPaint()
 this.initPopupMenu()
 this.initMenu()
+this.initSpecialPaint()
 DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+        try {
+            
+    var font: Font = graphics.getFont()!!
+
+this.logUtil!!.putF(StringMaker().
+                            append(this.commonStrings!!.START)!!.append(DisplayInfoSingleton.getInstance()!!.toString())!!.append(this.canvasStrings!!.FD_WIDTH)!!.appendint(MyFontProcessor.defaultCharWidth(font))!!.append(this.canvasStrings!!.FD_HEIGHT)!!.appendint(font.getHeight())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+this.fontHeight= font.getHeight()
+this.myFormUtil!!.updateMeasurement(graphics)
+
+    var popupMenuRectangle: Rectangle = this.myFormUtil!!.getPopupMenuRectangle()!!
+
+
+    var basicPopupMenuPaintable: BasicPopupMenuPaintable = (this.getOpenMenuPaintable() as BasicPopupMenuPaintable)
+
+basicPopupMenuPaintable!!.init(popupMenuRectangle)
+
+    
+                        if(this.getPopupMenuInputProcessor() != NoMenuInputProcessor.getInstance())
+                        
+                                    {
+                                    
+    var popupMenuInputProcessor: PopupMenuInputProcessor = (this.getPopupMenuInputProcessor() as PopupMenuInputProcessor)
+
+popupMenuInputProcessor!!.init(popupMenuRectangle)
+
+                                    }
+                                
+this.myFontProcessor= MyFontProcessor.getInstance()
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
+}
+
 }
 
 
@@ -395,7 +452,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     //var displayChangeEvent = displayChangeEvent
 
         try {
-            this.menuBehavior!!.onDisplayChangeEvent(this, displayChangeEvent)
+            this.myFontProcessor= this.updateMyFontProcessor
+this.menuBehavior!!.onDisplayChangeEvent(this, displayChangeEvent)
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
@@ -411,32 +469,10 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON
 {
     //var displayChangeEvent = displayChangeEvent
 
-    var formUtil: FormUtil = FormUtil.getInstance()!!
-
-
-    var popupMenuRectangle: Rectangle = formUtil!!.createPopupMenuRectangle()!!
-
-
-    var basicPopupMenuPaintable: BasicPopupMenuPaintable = (this.getOpenMenuPaintable() as BasicPopupMenuPaintable)
-
-basicPopupMenuPaintable!!.init(popupMenuRectangle)
-
-    
-                        if(this.getPopupMenuInputProcessor() != NoMenuInputProcessor.getInstance())
-                        
-                                    {
-                                    
-    var popupMenuInputProcessor: PopupMenuInputProcessor = (this.getPopupMenuInputProcessor() as PopupMenuInputProcessor)
-
-popupMenuInputProcessor!!.init(popupMenuRectangle)
-
-                                    }
-                                
-
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
 
-    var rectangle: Rectangle = formUtil!!.createFormRectangle()!!
+    var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
 
 this.menuForm!!.init(rectangle, formType)
 
@@ -448,6 +484,7 @@ this.menuForm!!.init(rectangle, formType)
 
                                     }
                                 
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 
@@ -492,10 +529,15 @@ super.processSleep()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    
+                        if(this.popupMenuInputProcessor == NoMenuInputProcessor.getInstance())
+                        
+                                    {
+                                    
     var features: Features = Features.getInstance()!!
 
 
-    var popupMenuRectangle: Rectangle = FormUtil.getInstance()!!.createPopupMenuRectangle()!!
+    var popupMenuRectangle: Rectangle = this.myFormUtil!!.getPopupMenuRectangle()!!
 
 
     
@@ -507,6 +549,13 @@ this.setPopupMenuInputProcessor(PopupMenuInputProcessor(BasicArrayListD(),  -1, 
 
                                     }
                                 
+
+                                    }
+                                
+                        else {
+                            
+                        }
+                            
 }
 
 
@@ -531,9 +580,6 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "initMenu", e)
 {
 this.closeMenu()
 
-    var formUtil: FormUtil = FormUtil.getInstance()!!
-
-
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
 
@@ -546,7 +592,7 @@ this.closeMenu()
     var items: Array<ABCustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())!!
 
 
-    var rectangle: Rectangle = formUtil!!.createFormRectangle()!!
+    var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
 
 this.setMenuForm(CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, formType, 25, false, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor()))
 
@@ -633,13 +679,10 @@ scrollSelectionForm!!.append(items[index]!!)
 }
 
 
-    var formUtil: FormUtil = FormUtil.getInstance()!!
-
-
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
 
-    var rectangle: Rectangle = formUtil!!.createFormRectangle()!!
+    var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
 
 scrollSelectionForm!!.init(rectangle, formType)
 }
@@ -1095,9 +1138,6 @@ this.addCommand(myCommandsFactory!!.PAUSE_COMMAND)
 this.addCommand(gameCommandsFactory!!.QUIT_COMMAND)
 
     var isOverScan: Boolean = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!.isOverScan()!!
-
-
-    var features: Features = Features.getInstance()!!
 
 
     
@@ -1767,6 +1807,7 @@ this.colorFillPaintable!!.paint(graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 this.baseGameStatistics!!.nextRefresh()
 this.draw(graphics)
 this.menuPaintable!!.paint(graphics)
@@ -1842,7 +1883,7 @@ this.keyRepeatedByDevice(keyCode, 0)
 {
 var keyCode = keyCode
 var deviceId = deviceId
-this.inputProcessor!!.keyPressed(keyCode, deviceId)
+this.inputProcessor!!.keyPressedByDevice(keyCode, deviceId)
 }
 
 
@@ -1856,7 +1897,7 @@ var deviceId = deviceId
                         if(this.isSingleKeyRepeatableProcessing)
                         
                                     {
-                                    this.inputProcessor!!.keyPressed(keyCode, deviceId)
+                                    this.inputProcessor!!.keyPressedByDevice(keyCode, deviceId)
 
                                     }
                                 
@@ -1868,7 +1909,7 @@ var deviceId = deviceId
 {
     //var keyCode = keyCode
     //var deviceId = deviceId
-this.inputProcessor!!.keyReleased(this, keyCode, deviceId)
+this.inputProcessor!!.keyReleasedByDevice(this, keyCode, deviceId)
 }
 
 

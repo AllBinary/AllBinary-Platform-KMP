@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.CommandListener
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.NullCanvas
 import javax.microedition.lcdui.NullCommandListener
@@ -34,8 +35,9 @@ import org.allbinary.canvas.RunnableCanvas
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.CanvasStrings
-import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.form.item.ABCustomGaugeItem
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
@@ -49,7 +51,8 @@ import org.allbinary.thread.PathFindingThreadPool
 import org.allbinary.thread.ThreadPool
 
 open public class ProgressCanvas : RunnableCanvas
-                , PaintableInterface {
+                , PaintableInterface
+                , UpdateMyFontInterface {
         
 
     var hasPainted: Boolean= false
@@ -79,15 +82,19 @@ this.progressCanvas!!.paint2(graphics)
             
     val GAUGE_PAINTABLE: Paintable = ProgressPaintable(this)
 
-    var allbinaryMidlet: AllBinaryMidlet = AllBinaryMidlet.NULL_ALLBINARY_MIDLET
-
-    private var value: Float= 0.0f
-
     private val maxValue: Float = 100.0f
 
     val gauge: ABCustomGaugeItem
 
     private val TEXT: String = this.commonStrings!!.LOADING
+
+    private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
+
+    var allbinaryMidlet: AllBinaryMidlet = AllBinaryMidlet.NULL_ALLBINARY_MIDLET
+
+    private var value: Float= 0.0f
 
     private var text: String = this.TEXT
 
@@ -126,6 +133,18 @@ this.pathFindingThreadPool!!.runAPriorityTask()
                     
 this.backgroundBasicColor= backgroundBasicColor
 this.gauge= ABCustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, this.maxValue.toInt(), 0, backgroundBasicColor, foregroundBasicColor)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.gauge.setHeight(font.getHeight() +2)
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -188,11 +207,8 @@ this.inProgress= true
 {
 var background = background
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.START_BACKGROUND)
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
 this.setBackground(background)
-this.gauge.setHeight(myFont!!.DEFAULT_CHAR_HEIGHT +2)
+this.myFontProcessor= this.updateMyFontProcessor
 this.gauge.setLabel(this.backgroundLabel)
 this.setText(this.TEXT)
 this.setValue(0)
@@ -310,11 +326,9 @@ this.paintable.paint(graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-
-    var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
+this.myFontProcessor!!.process(graphics)
 graphics.setColor(this.backgroundBasicColor!!.toInt())
-graphics.fillRect(0, 0, displayInfoSingleton!!.getLastWidth(), displayInfoSingleton!!.getLastHeight())
+graphics.fillRect(0, 0, this.displayInfo!!.getLastWidth(), this.displayInfo!!.getLastHeight())
 this.gauge.paintXY(graphics, 0, 0)
 this.hasPainted= true
 }

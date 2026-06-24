@@ -147,6 +147,13 @@ var value = value
 }
 
 
+    open fun preMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+}
+
+
 }
                 
             

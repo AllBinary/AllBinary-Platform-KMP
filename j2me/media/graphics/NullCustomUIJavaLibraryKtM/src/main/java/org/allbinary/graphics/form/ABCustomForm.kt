@@ -32,6 +32,17 @@ var foregroundBasicColor = foregroundBasicColor
 }
 
 
+    open fun getAllitems()
+        //nullable = true from not(false or (false and true)) = true
+: Array<ABCustomItem?>{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayOfNulls(0)
+}
+
+
     open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{

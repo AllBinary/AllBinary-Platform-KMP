@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.game.layer.CostLayerInterfaceFactoryInterface
@@ -33,39 +34,57 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.Animation
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.math.PrimitiveLongUtil
 import org.allbinary.logic.util.event.EventStrings
 
 open public class RTSLayerCostAnimation : Animation
-                , TechEventListenerInterface {
+                , TechEventListenerInterface
+                , UpdateMyFontInterface {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val myFont: MyFont = MyFont.getInstance()!!
-
     private val primitiveLongUtil: PrimitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(10000)!!
 
+    private val DOLLAR: String = "$"
+
     private val image: Image
+
+    private val layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
 
     private var costString: CharArray = NullUtil.getInstance()!!.NULL_CHAR_ARRAY
 
     private var len: Int= 0
 
-    private val DOLLAR: String = "$"
+    private var adjustedCostX: Int= 0
 
-    private val adjustedCostX: Int = this.myFont!!.stringWidth(this.DOLLAR)!!
-
-    private val layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface
+    private var fontHeight: Int = 0
 public constructor (image: Image, layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface){
 var image = image
 var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 this.image= image
 this.layerInterfaceFactoryInterface= layerInterfaceFactoryInterface
 this.update()
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.fontHeight= font.getHeight()
+this.adjustedCostX= font.stringWidth(this.DOLLAR)
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -112,9 +131,10 @@ this.len= this.primitiveLongUtil!!.getCurrentTotalDigits()
 var graphics = graphics
 var x = x
 var y = y
+this.myFontProcessor!!.process(graphics)
 super.paintXY(graphics, x, y)
 
-    var adjustedCostY: Int = this.image.getHeight() -this.myFont!!.DEFAULT_CHAR_HEIGHT
+    var adjustedCostY: Int = this.image.getHeight() -this.fontHeight
 
 
     var xa: Int = x +2

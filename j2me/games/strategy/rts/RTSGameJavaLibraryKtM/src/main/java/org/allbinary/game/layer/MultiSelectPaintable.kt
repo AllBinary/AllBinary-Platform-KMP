@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
@@ -32,7 +33,6 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.graphics.font.MyFont
 import org.allbinary.logic.NullUtil
 
 open public class MultiSelectPaintable : SelectionHudPaintable {
@@ -43,7 +43,28 @@ open public class MultiSelectPaintable : SelectionHudPaintable {
     private var totalCharArray: CharArray = NullUtil.getInstance()!!.NULL_CHAR_ARRAY
 
     private var rootNamesString: String = StringUtil.getInstance()!!.EMPTY_STRING
+
+    private val TOTAL: String = "Total Selected: "
+
+    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
+
+    private var totalWidth: Int= 0
+
+    private var textLine2Y: Int= 0
 public constructor (){
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+super.updateMeasurement(graphics)
+
+    var font: Font = graphics.getFont()!!
+
+this.totalWidth= font.stringWidth(this.TOTAL)
+this.textLine2Y= (this.y +font.getHeight())
 }
 
 
@@ -116,12 +137,6 @@ this.rootNameList!!.clear()
 }
 
 
-    private val TOTAL: String = "Total Selected: "
-
-    private val totalWidth: Int = MyFont.getInstance()!!.stringWidth(this.TOTAL)!!
-
-    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
-
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -131,10 +146,7 @@ graphics.drawRect(this.getX(), this.y, this.getWidth(), this.getHeight())
 graphics.setColor(this.getColor())
 graphics.drawString(this.TOTAL, this.textX, this.y, 0)
 graphics.drawChars(this.totalCharArray, 0, this.getPrimitiveLongUtil()!!.getCurrentTotalDigits(), this.textX +this.totalWidth, this.y, 0)
-
-    var textLine2Y: Int = (this.y +this.myFont!!.DEFAULT_CHAR_HEIGHT)
-
-graphics.drawString(this.rootNamesString, this.textX, textLine2Y, 0)
+graphics.drawString(this.rootNamesString, this.textX, this.textLine2Y, 0)
 }
 
 

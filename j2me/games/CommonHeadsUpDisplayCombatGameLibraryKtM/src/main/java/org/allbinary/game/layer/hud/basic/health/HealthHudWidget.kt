@@ -55,7 +55,7 @@ open public class HealthHudWidget : BasicHud
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor (animationInterface: Animation, healthInterface: Health, location: Int, direction: Int)                        
 
-                            : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2, BasicColorFactory.getInstance()!!.WHITE){
+                            : super(location, direction, 2, BasicColorFactory.getInstance()!!.WHITE){
 var animationInterface = animationInterface
 var healthInterface = healthInterface
 var location = location
@@ -69,6 +69,8 @@ this.healthInterface= healthInterface
 this.healthInterface!!.addListener(this)
 this.healthScale= (this.healthInterface!!.getMaxHealth() /6) +1
 this.onHealthChange()
+this.updateMaxWidth= healthInterface!!.getMaxHealth() *16
+this.updateMaxHeight= 16
 this.xArray= IntArray(30)
 this.update()
 }
@@ -161,6 +163,7 @@ this.timeDelayHelper= NoTimeDelayHelper.SINGLETON
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 
 
 

@@ -53,7 +53,7 @@ open public class MyCanvas : Canvas
 
     val stringUtil: StringUtil = StringUtil.getInstance()!!
 
-    val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+    val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
     private val name: String
 
@@ -68,7 +68,7 @@ public constructor (name: String, childNameList: BasicArrayList){
     //var name = name
     //var childNameList = childNameList
 this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, this.commonStrings!!.CONSTRUCTOR)
-this.displayInfoSingleton!!.update(this, this.canvasStrings!!.CONSTRUCTOR)
+this.displayInfo!!.update(this, this.canvasStrings!!.CONSTRUCTOR)
 this.name= name
 this.childNameList= childNameList
 this.commandStack= Stack()
@@ -80,7 +80,7 @@ this.commandStack= Stack()
 {
 var mode = mode
 super.setFullScreenMode(mode)
-this.displayInfoSingleton!!.update(this, this.canvasStrings!!.SET_FULL_SCREEN_MODE)
+this.displayInfo!!.update(this, this.canvasStrings!!.SET_FULL_SCREEN_MODE)
 }
 
 
@@ -89,7 +89,7 @@ this.displayInfoSingleton!!.update(this, this.canvasStrings!!.SET_FULL_SCREEN_MO
 {
 var w = w
 var h = h
-this.displayInfoSingleton!!.update(this, this.canvasStrings!!.SIZE_CHANGED)
+this.displayInfo!!.update(this, this.canvasStrings!!.SIZE_CHANGED)
 }
 
 
@@ -231,7 +231,7 @@ this.setPaused(false)
     open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-this.displayInfoSingleton!!.process()
+this.displayInfo!!.process()
 }
 
 

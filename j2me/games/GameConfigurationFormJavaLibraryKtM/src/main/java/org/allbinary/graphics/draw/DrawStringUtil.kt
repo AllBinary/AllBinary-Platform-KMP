@@ -25,13 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.AndroidUtil
 import org.allbinary.J2MEUtil
-import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.Anchor
-import org.allbinary.graphics.font.MyFont
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -62,88 +62,7 @@ companion object {
             {
             }            
         
-    open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var string = string
-    //var x = x
-    //var y = y
-    //var anchor = anchor
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-
-    var openGLFeatureUtil: OpenGLFeatureUtil = OpenGLFeatureUtil.getInstance()!!
-
-
-    var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
-
-
-    var offsetY: Int = 0
-
-
-    
-                        if(J2MEUtil.isHTML())
-                        
-                                    {
-                                    charHeight += 1
-
-                                    }
-                                
-                             else 
-    
-                        if(openGLFeatureUtil!!.isAnyThreed())
-                        
-                                    {
-                                    charHeight += 2
-
-    
-                        if(AndroidUtil.isAndroid())
-                        
-                                    {
-                                    
-                                    }
-                                
-                        else {
-                            offsetY= 2 +(charHeight *2 /3)
-
-                        }
-                            
-
-                                    }
-                                
-
-    var size: Int = string.length!!
-
-
-    var offsetX: Int = 0
-
-
-    var aChar: Char
-
-
-
-
-
-                        for (index in size -1 downTo 0)
-
-        {
-aChar= string[index]
-
-    
-                        if(openGLFeatureUtil!!.isAnyThreed())
-                        
-                                    {
-                                    offsetX= myFont!!.charWidth(aChar) /2
-
-                                    }
-                                
-graphics.drawChar(aChar, x +offsetX, y +(charHeight *index) +offsetY, anchor)
-}
-
-}
-
+    private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var anchor: Int = Anchor.TOP_LEFT
 
@@ -171,22 +90,15 @@ PreLogUtil.put(StringMaker().
 }
 
 
-    private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
-
-    open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxWidth: Int, x: Int, y: Int)
+    open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxWidth: Int, charHeight: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
     //var stringArray = stringArray
     //var maxWidth = maxWidth
+    //var charHeight = charHeight
     //var x = x
     //var y = y
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-
-    var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
-
 
     var extraLines: Int = 0
 

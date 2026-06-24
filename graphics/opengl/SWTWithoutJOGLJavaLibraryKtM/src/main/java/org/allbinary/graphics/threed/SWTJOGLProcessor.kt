@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.midlet.MIDlet
 //SWTWithoutJOGL
 open public class SWTJOGLProcessor
@@ -175,6 +176,58 @@ var renderer = renderer
     open fun setRatioProcessor()
         //nullable = true from not(false or (false and true)) = true
 {
+}
+
+
+    open fun charWidth(font: Font, ch: Char)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+var font = font
+var ch = ch
+
+
+
+                            throw RuntimeException()
+}
+
+
+    open fun charsWidth(font: Font, ch: CharArray, offset: Int, length: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+var font = font
+var ch = ch
+var offset = offset
+var length = length
+
+
+
+                            throw RuntimeException()
+}
+
+
+    open fun stringWidth(font: Font, str: String)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+var font = font
+var str = str
+
+
+
+                            throw RuntimeException()
+}
+
+
+    open fun substringWidth(font: Font, str: String, offset: Int, len: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+var font = font
+var str = str
+var offset = offset
+var len = len
+
+
+
+                            throw RuntimeException()
 }
 
 

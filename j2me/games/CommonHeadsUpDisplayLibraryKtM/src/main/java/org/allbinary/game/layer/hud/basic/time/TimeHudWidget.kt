@@ -25,11 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.graphics.hud.BasicHud
-import org.allbinary.game.graphics.hud.BasicHudFactory
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.logic.math.PrimitiveLongSingleton
 
 open public class TimeHudWidget : BasicHud {
@@ -49,7 +49,7 @@ var timer = timer
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TimeHudWidget(location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, basicColor, timer)
+                        return TimeHudWidget(location, direction, 2, basicColor, timer)
 }
 
 
@@ -59,45 +59,41 @@ var timer = timer
 
     private val TIME_CHAR_ARRAY: CharArray = charArrayOf('T','i','m','e',' ')
 
-    private var offset: Int
+    private var offset: Int= 0
 
     private var string: CharArray = PrimitiveLongSingleton.getInstance()!!.ZERO
 
     private var totalDigits: Int = 1
 
     private val timer: Timer
-public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor, timer: Timer)                        
+public constructor (location: Int, direction: Int, bufferZone: Int, basicColor: BasicColor, timer: Timer)                        
 
-                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
-var location = location
-var direction = direction
-var maxHeight = maxHeight
-var maxWidth = maxWidth
-var bufferZone = bufferZone
-var basicColor = basicColor
-var timer = timer
+                            : super(location, direction, bufferZone, basicColor){
+    //var location = location
+    //var direction = direction
+    //var bufferZone = bufferZone
+    //var basicColor = basicColor
+    //var timer = timer
 
 
                             //For kotlin this is before the body of the constructor.
                     
 this.timer= timer
 this.set()
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-this.offset= myFont!!.stringWidth(this.TIME_STRING) +myFont!!.defaultStringWidth(3)
-
-    
-                        if(direction == 0)
-                        
-                                    {
-                                    
+this.updateMaxHeight= 14
+}
 
 
-                            throw Exception(BasicHudFactory.getInstance()!!.DIRECTION_EXCEPTION)
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
 
-                                    }
-                                
+    var font: Font = graphics.getFont()!!
+
+this.updateMaxWidth= font.getSize() *5
+this.offset= font.stringWidth(this.TIME_STRING) +MyFontProcessor.defaultStringWidth(font, 3)
+super.updateMeasurement(graphics)
 }
 
 
@@ -117,14 +113,6 @@ this.totalDigits= this.timer.getCurrentTotalDigits()
 }
 
 
-    open fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-super.paintDX(graphics, this.TIME_CHAR_ARRAY, 0, this.TIME_CHAR_ARRAY.size, this.string, 0, this.totalDigits, this.offset)
-}
-
-
     open fun getTimer()
         //nullable = true from not(false or (false and true)) = true
 : Timer{
@@ -133,6 +121,14 @@ super.paintDX(graphics, this.TIME_CHAR_ARRAY, 0, this.TIME_CHAR_ARRAY.size, this
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.timer
+}
+
+
+    open fun paint(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+super.paintDX(graphics, this.TIME_CHAR_ARRAY, 0, this.TIME_CHAR_ARRAY.size, this.string, 0, this.totalDigits, this.offset)
 }
 
 

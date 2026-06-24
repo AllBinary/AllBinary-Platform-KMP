@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.color.BasicColor
@@ -32,21 +33,42 @@ import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.color.ColorChangeEvent
 import org.allbinary.graphics.color.ColorChangeListener
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.util.BasicArrayList
 
 open public class HighScoresPaintable : Paintable
-                , ColorChangeListener {
+                , ColorChangeListener
+                , UpdateMyFontInterface {
         
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var highScores: HighScores = NullHighScoresSingletonFactory.getInstance()!!
+
+    private var anchor: Int = Anchor.TOP_LEFT
+
+    private var charHeight: Int= 0
 public constructor (){
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.charHeight= font.getHeight()
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 
@@ -61,15 +83,11 @@ this.basicColor= colorChangeEvent!!.getBasicColorP()
 }
 
 
-    private var anchor: Int = Anchor.TOP_LEFT
-
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-
-    var charHeight: Int = MyFont.getInstance()!!.DEFAULT_CHAR_HEIGHT
-
+this.myFontProcessor!!.process(graphics)
 
     var width: Int = this.displayInfoSingleton!!.getLastWidth()!!
 
@@ -82,6 +100,9 @@ graphics.setColor(this.getBasicColorP()!!.toInt())
 
 
     var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(heading) shr 1)
+
+
+    var charHeight: Int = this.charHeight
 
 graphics.drawString(heading, (width shr 1) -topScoresWidth, charHeight, this.anchor)
 graphics.drawString(this.highScores!!.getColumnOneHeading(), 10, charHeight *3, this.anchor)
@@ -108,11 +129,12 @@ graphics.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeig
     var vectorIndex: Int = 0
 
 
+    var highScore: HighScore
+
+
         while(vectorIndex < size && charHeight *index < height -(charHeight *2))
         {
-
-    var highScore: HighScore = list.objectArray[vectorIndex]!! as HighScore
-
+highScore= list.objectArray[vectorIndex]!! as HighScore
 
     var nextScoreWidth: Int = graphics.getFont()!!.stringWidth(highScore!!.getScoreString())!!
 
@@ -132,9 +154,7 @@ vectorIndex= 0
 
         while(vectorIndex < size && charHeight *index < height -(charHeight *2))
         {
-
-    var highScore: HighScore = list.objectArray[vectorIndex]!! as HighScore
-
+highScore= list.objectArray[vectorIndex]!! as HighScore
 graphics.drawString(highScore!!.getName(), 10, charHeight *index, this.anchor)
 graphics.drawString(highScore!!.getScoreString(), width -10 -largestSecondColumnWidth, charHeight *index, this.anchor)
 index++

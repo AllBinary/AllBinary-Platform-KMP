@@ -25,11 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
 import org.allbinary.game.graphics.hud.BasicHud
 import org.allbinary.graphics.color.BasicColor
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.logic.math.MathUtil
 import org.allbinary.logic.math.PrimitiveLongSingleton
 import org.allbinary.logic.math.PrimitiveLongUtil
@@ -50,14 +51,16 @@ open public class VelocityWidget : BasicHud {
 
     private var totalDigits: Int = 1
 
+    private val powerOfTenVelocity: Int
+
     private val primitiveLongUtil: PrimitiveLongUtil
 
-    private val offset: Int
+    private var offset: Int = 0
 
-    private var offset2: Int= 0
+    private var offset2: Int = 0
 public constructor (powerOfTenVelocity: Int, location: Int, direction: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, 14, MyFont.getInstance()!!.getSize() *(5 +MathUtil.getInstance()!!.getTotalDigits(powerOfTenVelocity) +1), 2, basicColor){
+                            : super(location, direction, 2, basicColor){
 var powerOfTenVelocity = powerOfTenVelocity
 var location = location
 var direction = direction
@@ -66,13 +69,25 @@ var basicColor = basicColor
 
                             //For kotlin this is before the body of the constructor.
                     
+this.powerOfTenVelocity= powerOfTenVelocity
 this.maxVelocity= powerOfTenVelocity
 this.velocity= 0
 this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(powerOfTenVelocity)
+this.updateMaxHeight= 14
+}
 
-    var myFont: MyFont = MyFont.getInstance()!!
 
-this.offset= myFont!!.defaultStringWidth(this.primitiveLongUtil!!.getMaxDigits()) +myFont!!.defaultStringWidth(2)
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.updateMaxWidth= font.getSize() *(5 +MathUtil.getInstance()!!.getTotalDigits(this.powerOfTenVelocity) +1)
+super.updateMeasurement(graphics)
+this.offset= MyFontProcessor.defaultStringWidth(font, this.primitiveLongUtil!!.getMaxDigits()) +MyFontProcessor.defaultStringWidth(font, 2)
+this.offset2= this.offset -MyFontProcessor.defaultStringWidth(font, this.totalDigits) -MyFontProcessor.defaultStringWidth(font, 2)
 }
 
 
@@ -132,10 +147,7 @@ this.velocity= value
 
                         }
                             
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-this.offset2= this.offset -myFont!!.defaultStringWidth(this.totalDigits) -myFont!!.defaultStringWidth(2)
+this.myFontProcessor= this.updateMyFontProcessor
 
                                     }
                                 

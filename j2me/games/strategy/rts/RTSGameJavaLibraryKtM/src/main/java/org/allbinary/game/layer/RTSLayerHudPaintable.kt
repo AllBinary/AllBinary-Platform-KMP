@@ -25,13 +25,16 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.AndroidUtil
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.part.weapon.BasicWeaponPart
+import org.allbinary.graphics.font.UpdateMyFontInterface
 
-open public class RTSLayerHudPaintable : SelectionHudPaintable {
+open public class RTSLayerHudPaintable : SelectionHudPaintable
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -57,22 +60,22 @@ companion object {
     var costY: Int= 0
 
     var costY1: Int= 0
+
+    private var fontHeight: Int= 0
 private constructor (){
 }
 
 
-    override fun updateSelectionInfo()
-        //nullable = true from not(false or (false and true)) = true
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
 {
+    //var graphics = graphics
+super.updateMeasurement(graphics)
 
-    var charHeight: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
+    var font: Font = graphics.getFont()!!
 
-this.setName(this.getRtsLayer()!!.getName())
-
-    var partInterface: BasicWeaponPart = this.getRtsLayer()!!.getPartInterfaceArray()[0]!! as BasicWeaponPart
-
-this.weaponProperties= partInterface!!.getWeaponProperties()!!.toStringArray()
-this.costY1= (this.y +((this.weaponProperties!!.size +1) *charHeight))
+this.fontHeight= font.getHeight()
+this.costY1= (this.y +((this.weaponProperties!!.size +1) *this.fontHeight))
 
     
                         if(!AndroidUtil.isAndroid())
@@ -83,10 +86,22 @@ this.costY1= (this.y +((this.weaponProperties!!.size +1) *charHeight))
                                     }
                                 
                         else {
-                            this.costY= (this.y +((this.weaponProperties!!.size +2) *charHeight))
+                            this.costY= (this.y +((this.weaponProperties!!.size +2) *this.fontHeight))
 
                         }
                             
+}
+
+
+    override fun updateSelectionInfo()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.setName(this.getRtsLayer()!!.getName())
+
+    var partInterface: BasicWeaponPart = this.getRtsLayer()!!.getPartInterfaceArray()[0]!! as BasicWeaponPart
+
+this.weaponProperties= partInterface!!.getWeaponProperties()!!.toStringArray()
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 
@@ -95,9 +110,6 @@ this.costY1= (this.y +((this.weaponProperties!!.size +1) *charHeight))
 {
 var graphics = graphics
 super.paint(graphics)
-
-    var charHeight: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
-
 
     var size: Int = this.weaponProperties!!.size
                 
@@ -109,7 +121,7 @@ super.paint(graphics)
                         for (index in 0 until size)
 
         {
-graphics.drawString(this.weaponProperties[index]!!, this.textX, this.y +((index +1) *charHeight), 0)
+graphics.drawString(this.weaponProperties[index]!!, this.textX, this.y +((index +1) *this.fontHeight), 0)
 }
 
 }

@@ -44,7 +44,7 @@ open public class LivesHudWidget : BasicHud
     private val animationInterface: Animation
 public constructor (animationInterface: Animation, lifeInterface: Life, location: Int, direction: Int)                        
 
-                            : super(location, direction, 16, lifeInterface!!.getMaxlives() *16, 2, BasicColorFactory.getInstance()!!.WHITE){
+                            : super(location, direction, 2, BasicColorFactory.getInstance()!!.WHITE){
 var animationInterface = animationInterface
 var lifeInterface = lifeInterface
 var location = location
@@ -60,6 +60,8 @@ this.lifeInterface= lifeInterface
 this.xArray= IntArray(size)
 this.update()
 this.animationInterface= animationInterface
+this.updateMaxWidth= this.lifeInterface!!.getMaxlives() *16
+this.updateMaxHeight= 16
 }
 
 
@@ -114,6 +116,7 @@ this.update()
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 
 
 

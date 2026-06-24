@@ -133,13 +133,226 @@ companion object {
 }
 
 
-    private val GET_SELECTED_INDEX: String = "getSelectedIndex"
-
     private val INSIDE_FORM: String = " inside form"
 
     private val IS_IN_FORM: String = "isInForm"
 
+    private val GET_SELECTED_INDEX: String = "getSelectedIndex"
+
         }
+            
+open public inner class ScrollSelectionFormHorizontalPaintable : ItemIndexPaintable {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+
+    private val scrollSelectionForm: ScrollSelectionForm
+ constructor (scrollSelectionForm: ScrollSelectionForm){
+    //var scrollSelectionForm = scrollSelectionForm
+this.scrollSelectionForm= scrollSelectionForm
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun paint(graphics: Graphics, index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.scrollSelectionForm!!.paintItemHorizontal(graphics, index, item, dx, dy)
+}
+
+
+}
+                
+            
+open public inner class ScrollSelectionFormVerticalPaintable : ItemIndexPaintable {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+
+    private val scrollSelectionForm: ScrollSelectionForm
+ constructor (scrollSelectionForm: ScrollSelectionForm){
+    //var scrollSelectionForm = scrollSelectionForm
+this.scrollSelectionForm= scrollSelectionForm
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun paint(graphics: Graphics, index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.scrollSelectionForm!!.paintItemVertical(graphics, index, item, dx, dy)
+}
+
+
+}
+                
+            
+open public inner class ScrollSelectionFormTempHorizontalPaintable : ItemIndexPaintable {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+
+    private val scrollSelectionForm: ScrollSelectionForm
+ constructor (scrollSelectionForm: ScrollSelectionForm){
+    //var scrollSelectionForm = scrollSelectionForm
+this.scrollSelectionForm= scrollSelectionForm
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun paint(graphics: Graphics, index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.scrollSelectionForm!!.paintItemTempHorizontal(graphics, index, item, dx, dy)
+}
+
+
+}
+                
+            
+open public inner class ScrollSelectionFormHorizontalDx : ItemIndexDx {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+
+    private val scrollSelectionForm: ScrollSelectionForm
+ constructor (multipleScrollSelectionForm: ScrollSelectionForm){
+    //var multipleScrollSelectionForm = multipleScrollSelectionForm
+this.scrollSelectionForm= multipleScrollSelectionForm
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getDx(index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.scrollSelectionForm!!.getSelectedIndexForPointHorizontalDx(index, item, dx, dy)
+}
+
+
+}
+                
+            
+open public inner class ScrollSelectionFormVericalDx : ItemIndexDx {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+
+    private val scrollSelectionForm: ScrollSelectionForm
+ constructor (multipleScrollSelectionForm: ScrollSelectionForm){
+    //var multipleScrollSelectionForm = multipleScrollSelectionForm
+this.scrollSelectionForm= multipleScrollSelectionForm
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getDx(index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.scrollSelectionForm!!.getSelectedIndexForPointVerticalDx(index, item, dx, dy)
+}
+
+
+}
+                
+            
+open public inner class ScrollSelectionFormTempHorizontalDx : ItemIndexDx {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
+        }
+            */
+
+
+    private val scrollSelectionForm: ScrollSelectionForm
+ constructor (multipleScrollSelectionForm: ScrollSelectionForm){
+    //var multipleScrollSelectionForm = multipleScrollSelectionForm
+this.scrollSelectionForm= multipleScrollSelectionForm
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getDx(index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.scrollSelectionForm!!.getSelectedIndexForPointTempHorizontalDx(index, item, dx, dy)
+}
+
+
+}
+                
             
     private val rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
 
@@ -148,6 +361,10 @@ companion object {
     val halfBorder: Int
 
     private var buttonBasicColor: BasicColor
+
+    private var formTypeItemIndexPaintable: ItemIndexPaintable = ItemIndexPaintable.getInstance()!!
+
+    private var formTypeItemIndexDx: ItemIndexDx = ItemIndexDx.getInstance()!!
 
     var paintable: ItemPaintable = ItemPaintableFactory.getInstance()!!
 public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
@@ -169,6 +386,154 @@ this.buttonBasicColor= foregroundBasicColor
 this.border= border
 this.halfBorder= (border shr 1)
 this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
+
+    var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
+
+
+    
+                        if(formType == formTypeFactory!!.HORIZONTAL_FORM)
+                        
+                                    {
+                                    this.formTypeItemIndexPaintable= ScrollSelectionFormHorizontalPaintable(this)
+this.formTypeItemIndexDx= ScrollSelectionFormHorizontalDx(this)
+
+                                    }
+                                
+                             else 
+    
+                        if(formType == formTypeFactory!!.VERTICAL_CENTER_FORM)
+                        
+                                    {
+                                    this.formTypeItemIndexPaintable= ScrollSelectionFormVerticalPaintable(this)
+this.formTypeItemIndexDx= ScrollSelectionFormVericalDx(this)
+
+                                    }
+                                
+                             else 
+    
+                        if(formType == formTypeFactory!!.TEMP_HORIZONTAL_FORM)
+                        
+                                    {
+                                    this.formTypeItemIndexPaintable= ScrollSelectionFormTempHorizontalPaintable(this)
+this.formTypeItemIndexDx= ScrollSelectionFormTempHorizontalDx(this)
+
+                                    }
+                                
+                             else 
+    
+                        if(formType == formTypeFactory!!.NULL_FORM_TYPE)
+                        
+                                    {
+                                    
+                                    }
+                                
+                        else {
+                            
+
+
+                            throw Exception(formTypeFactory!!.UNK)
+
+                        }
+                            
+}
+
+
+    open fun paintItemHorizontal(graphics: Graphics, index: Int, item: ABCustomItem, x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+    //var x = x
+    //var y = y
+
+    var width: Int = item.getMinimumWidth()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return x +width +this.border
+}
+
+
+    open fun paintItemVertical(graphics: Graphics, index: Int, item: ABCustomItem, x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+    //var x = x
+    //var y = y
+
+    var height: Int = item.getMinimumHeight()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return y +height +this.border
+}
+
+
+    open fun paintItemTempHorizontal(graphics: Graphics, index: Int, item: ABCustomItem, x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+    //var x = x
+    //var y = y
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+
+    open fun getSelectedIndexForPointHorizontalDx(index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return dx -this.halfBorder
+}
+
+
+    open fun getSelectedIndexForPointVerticalDx(index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return dx +this.getDiffX(item)
+}
+
+
+    open fun getSelectedIndexForPointTempHorizontalDx(index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return dx +this.getDiffX(item)
 }
 
 
@@ -314,6 +679,9 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, ScrollSelectionForm.GET_SEL
     var height: Int= 0
 
 
+    var diffX: Int= 0
+
+
 
 
 
@@ -323,35 +691,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, ScrollSelectionForm.GET_SEL
 item= this.get(index)
 width= item.getMinimumWidth()
 height= item.getMinimumHeight()
-
-    var diffX: Int = 0
-
-
-    
-                        if(this.formType == formTypeFactory!!.HORIZONTAL_FORM)
-                        
-                                    {
-                                    diffX= dx -this.halfBorder
-
-                                    }
-                                
-                             else 
-    
-                        if(this.formType == formTypeFactory!!.VERTICAL_CENTER_FORM || this.formType == formTypeFactory!!.TEMP_HORIZONTAL_FORM)
-                        
-                                    {
-                                    diffX= dx +this.getDiffX(item)
-
-                                    }
-                                
-                        else {
-                            
-
-
-                            throw Exception(formTypeFactory!!.UNK)
-
-                        }
-                            
+diffX= this.formTypeItemIndexDx!!.getDx(index, item, dx, dy)
 
     
                         if(this.rectangleCollisionUtil!!.isInside(diffX, dy -this.halfBorder, diffX +width +this.border, dy +height +this.halfBorder +1, point.getX(), point.getY()))
@@ -410,6 +750,14 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, ScrollSelectionForm.GET_SEL
                                     }
                                 
 
+                                    }
+                                
+                             else 
+    
+                        if(this.formType == formTypeFactory!!.NULL_FORM_TYPE)
+                        
+                                    {
+                                    
                                     }
                                 
                         else {
@@ -507,6 +855,14 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, ScrollSelectionForm.GET_SEL
 
                                     }
                                 
+                             else 
+    
+                        if(this.formType == formTypeFactory!!.NULL_FORM_TYPE)
+                        
+                                    {
+                                    
+                                    }
+                                
                         else {
                             
 
@@ -586,68 +942,23 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, ScrollSelectionForm.GET_SEL
     //var item = item
     //var x = x
     //var y = y
+item.paintXY(graphics, x, y)
 
     var width: Int = item.getMinimumWidth()!!
 
 
     var height: Int = item.getMinimumHeight()!!
 
-
-    var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-
-item.paintXY(graphics, x, y)
 graphics.setColor(this.getButtonBasicColor()!!.toInt())
 
     var adjustedBorder: Int = 3
 
 graphics.drawRect(x -this.halfBorder -adjustedBorder, y -this.halfBorder -adjustedBorder, width +this.border -adjustedBorder, height +this.border -adjustedBorder)
 
-    
-                        if(this.formType == formTypeFactory!!.HORIZONTAL_FORM)
-                        
-                                    {
-                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return x +width +this.border
-
-                                    }
-                                
-                             else 
-    
-                        if(this.formType == formTypeFactory!!.VERTICAL_CENTER_FORM)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return y +height +this.border
-
-                                    }
-                                
-                             else 
-    
-                        if(this.formType == formTypeFactory!!.TEMP_HORIZONTAL_FORM)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-
-                                    }
-                                
-                        else {
-                            
-
-
-                            throw Exception(formTypeFactory!!.UNK)
-
-                        }
-                            
+                        return this.formTypeItemIndexPaintable!!.paint(graphics, index, item, x, y)
 }
 
 
@@ -661,64 +972,13 @@ graphics.drawRect(x -this.halfBorder -adjustedBorder, y -this.halfBorder -adjust
     //var item = item
     //var x = x
     //var y = y
-
-    var width: Int = item.getMinimumWidth()!!
-
-
-    var height: Int = item.getMinimumHeight()!!
-
 graphics.setColor(this.getButtonBasicColor()!!.toInt())
 item.paintUnselected(graphics, x, y)
 
-    var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-
-
-    
-                        if(this.formType == formTypeFactory!!.HORIZONTAL_FORM)
-                        
-                                    {
-                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return x +width +this.border
-
-                                    }
-                                
-                             else 
-    
-                        if(this.formType == formTypeFactory!!.VERTICAL_CENTER_FORM)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return y +height +this.border
-
-                                    }
-                                
-                             else 
-    
-                        if(this.formType == formTypeFactory!!.TEMP_HORIZONTAL_FORM)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-
-                                    }
-                                
-                        else {
-                            
-
-
-                            throw Exception(formTypeFactory!!.UNK)
-
-                        }
-                            
+                        return this.formTypeItemIndexPaintable!!.paint(graphics, index, item, x, y)
 }
 
 

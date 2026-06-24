@@ -42,7 +42,7 @@ open public class LapWidget : BasicHud {
     private var string: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor (location: Int, direction: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, 15, 40, 2, basicColor){
+                            : super(location, direction, 2, basicColor){
 var location = location
 var direction = direction
 var basicColor = basicColor
@@ -50,6 +50,8 @@ var basicColor = basicColor
 
                             //For kotlin this is before the body of the constructor.
                     
+this.updateMaxHeight= 15
+this.updateMaxWidth= 40
 }
 
 

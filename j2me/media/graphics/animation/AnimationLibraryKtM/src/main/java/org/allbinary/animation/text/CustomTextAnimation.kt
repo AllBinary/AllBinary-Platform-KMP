@@ -65,11 +65,12 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
     //var graphics = graphics
     //var x = x
     //var y = y
+this.myFontProcessor!!.process(graphics)
 
     var existingFont: Font = graphics.getFont()!!
 
 this.fontDebugFactory!!.setFont(this.font, graphics)
-super.paintXY(graphics, x, y)
+super.paintXYNoUpdate(graphics, x, y)
 this.fontDebugFactory!!.setFont(existingFont, graphics)
 }
 
@@ -148,7 +149,7 @@ this.hasChanged= false
 }
 
 
-    override fun getHeight()
+    override fun getFontHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

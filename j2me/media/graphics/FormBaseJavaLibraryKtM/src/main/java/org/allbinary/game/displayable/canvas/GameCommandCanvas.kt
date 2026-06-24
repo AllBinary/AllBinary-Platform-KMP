@@ -27,6 +27,7 @@
         
 import java.util.Vector
 import javax.microedition.lcdui.CommandListener
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.NullCommandListener
 import org.allbinary.canvas.Processor
@@ -54,7 +55,9 @@ import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.graphics.displayable.event.DisplayChangeEventHandler
 import org.allbinary.graphics.displayable.event.DisplayChangeEventListener
 import org.allbinary.graphics.displayable.screen.ScreenRepaintProcessorFactory
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.form.CommandCurrentSelectionFormFactory
 import org.allbinary.graphics.form.FormPaintable
 import org.allbinary.graphics.form.FormTypeFactory
@@ -77,7 +80,8 @@ import org.allbinary.util.BasicArrayListD
 
 open public class GameCommandCanvas : MyCanvas
                 , MenuListener
-                , DisplayChangeEventListener {
+                , DisplayChangeEventListener
+                , UpdateMyFontInterface {
         
 companion object {
             
@@ -105,6 +109,10 @@ companion object {
 
     val repaintBehavior: RepaintBehavior
 
+    val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
+
     var foregroundColor: Int
 
     var backgroundColor: Int
@@ -116,6 +124,8 @@ companion object {
     private var menuForm: PaintableForm = PaintableForm.getNullPaintableForm()!!
 
     private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
+
+    var fontHeight: Int = 0
 public constructor (cmdListener: CommandListener, name: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(name, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST){
@@ -156,6 +166,32 @@ this.repaintProcessor!!.process()
 }
 
 
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+        try {
+            
+    var font: Font = graphics.getFont()!!
+
+this.logUtil!!.putF(StringMaker().
+                            append(this.commonStrings!!.START)!!.append(DisplayInfoSingleton.getInstance()!!.toString())!!.append(this.canvasStrings!!.FD_WIDTH)!!.appendint(MyFontProcessor.defaultCharWidth(font))!!.append(this.canvasStrings!!.FD_HEIGHT)!!.appendint(font.getHeight())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+this.fontHeight= font.getHeight()
+
+    var rectangle: Rectangle = this.createRectangle(this.menuForm!!.size())!!
+
+this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM)
+this.update()
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
+}
+
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
+
+
     override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -168,19 +204,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
         //nullable = true from not(false or (false and false)) = true
 {
     //var displayChangeEvent = displayChangeEvent
-
-        try {
-            this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
-
-    var rectangle: Rectangle = this.createRectangle(this.menuForm!!.size())!!
-
-this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM)
-this.update()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onResize", e)
-}
-
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 
@@ -242,19 +267,16 @@ this.repaintBehavior!!.onChangeRepaint(this)
 : Rectangle{
     //var size = size
 
-    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+    var height: Int = size *this.fontHeight
 
 
-    var height: Int = size *MyFont.getInstance()!!.DEFAULT_CHAR_HEIGHT
-
-
-    var startY: Int = (displayInfo!!.getLastHeight() *2 /3) -height
+    var startY: Int = (this.displayInfo!!.getLastHeight() *2 /3) -height
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
 
 
-    var rectangle: Rectangle = Rectangle(pointFactory!!.createXY(30, startY), displayInfo!!.getLastWidth() -30, startY)
+    var rectangle: Rectangle = Rectangle(pointFactory!!.createXY(30, startY), this.displayInfo!!.getLastWidth() -30, startY)
 
 
 
@@ -445,6 +467,7 @@ this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_E
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
+this.myFontProcessor!!.process(graphics)
 this.menuPaintable!!.paint(graphics)
 this.repaintBehavior!!.repaint(this)
 }

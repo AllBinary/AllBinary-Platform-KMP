@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.khronos.opengles.GL10
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 
 open public class OpenGLESStrings
@@ -140,6 +141,54 @@ open public class OpenGLESStrings
     //var x = x
     //var y = y
     //var anchor = anchor
+
+
+
+                            throw RuntimeException()
+}
+
+
+    open fun charWidth(ch: Char)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var ch = ch
+
+
+
+                            throw RuntimeException()
+}
+
+
+    open fun charsWidth(ch: CharArray, offset: Int, length: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var ch = ch
+    //var offset = offset
+    //var length = length
+
+
+
+                            throw RuntimeException()
+}
+
+
+    open fun stringWidth(string: String)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var string = string
+
+
+
+                            throw RuntimeException()
+}
+
+
+    open fun stringWidth(string: String, offset: Int, len: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var string = string
+    //var offset = offset
+    //var len = len
 
 
 

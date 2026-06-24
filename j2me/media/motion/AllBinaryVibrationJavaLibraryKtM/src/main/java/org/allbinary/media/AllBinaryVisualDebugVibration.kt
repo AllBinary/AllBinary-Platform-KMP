@@ -27,13 +27,17 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.time.TimeDelayHelper
 
-open public class AllBinaryVisualDebugVibration : AllBinaryVibrationME {
+open public class AllBinaryVisualDebugVibration : AllBinaryVibrationME
+                , UpdateMyFontInterface {
         
 
             //Auto Generated
@@ -41,7 +45,29 @@ open public class AllBinaryVisualDebugVibration : AllBinaryVibrationME {
             {
             }            
         
+    private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(Integer.MAX_VALUE)
+
+    private val VIBRATING: String = "Vibrating"
+
+    private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    private var anchor: Int = Anchor.TOP_LEFT
+
+    private var width: Int= 0
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.width= font.stringWidth(this.VIBRATING)
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
+
 
     override fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -53,10 +79,6 @@ this.timeDelayHelper!!.delay= duration
 }
 
 
-    private val VIBRATING: String = "Vibrating"
-
-    private var anchor: Int = Anchor.TOP_LEFT
-
     open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -67,16 +89,8 @@ var graphics = graphics
                         
                                     {
                                     this.timeDelayHelper!!.delay= Integer.MAX_VALUE
-
-    var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-
-    var width: Int = myFont!!.stringWidth(this.VIBRATING)!!
-
-graphics.drawString(this.VIBRATING, displayInfoSingleton!!.getLastHalfWidth() -(width shr 1), 0, this.anchor)
+this.myFontProcessor!!.process(graphics)
+graphics.drawString(this.VIBRATING, this.displayInfoSingleton!!.getLastHalfWidth() -(width shr 1), 0, this.anchor)
 
                                     }
                                 

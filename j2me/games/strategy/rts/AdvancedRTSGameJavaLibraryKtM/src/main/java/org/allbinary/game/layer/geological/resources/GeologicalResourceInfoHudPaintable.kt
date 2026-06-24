@@ -25,12 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.waypoint.WaypointInfoHudPaintable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.graphics.draw.KeyValueDrawCharArray
-import org.allbinary.graphics.font.MyFont
 
 open public class GeologicalResourceInfoHudPaintable : WaypointInfoHudPaintable {
         
@@ -41,8 +41,22 @@ companion object {
         }
             
     private val keyvalueDrawString: KeyValueDrawCharArray
+
+    private var fontHeight: Int = 0
 public constructor (){
 this.keyvalueDrawString= KeyValueDrawCharArray(GeologicalResourceInfoHudPaintable.RESOURCES, this.textX)
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+super.updateMeasurement(graphics)
+
+    var font: Font = graphics.getFont()!!
+
+this.fontHeight= (2 *font.getHeight())
 }
 
 
@@ -81,7 +95,7 @@ this.keyvalueDrawString!!.update(this.getPrimitiveLongUtil()!!.getCharArray(tota
 {
 var graphics = graphics
 super.paint(graphics)
-this.keyvalueDrawString!!.paint(graphics, (this.y +(2 *MyFont.getInstance()!!.DEFAULT_CHAR_HEIGHT)))
+this.keyvalueDrawString!!.paint(graphics, (this.y +this.fontHeight))
 }
 
 

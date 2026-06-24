@@ -27,9 +27,7 @@
         
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
-import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
-import org.allbinary.graphics.font.MyFont
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class FormUtil
@@ -58,8 +56,6 @@ companion object {
             {
             }            
         
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     open fun createFormRectangle()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
@@ -77,43 +73,6 @@ companion object {
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rectangle
-}
-
-
-    open fun createPopupMenuRectangle()
-        //nullable = true from not(false or (false and true)) = true
-: Rectangle{
-
-    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
-
-    var popupMenuRectangle: Rectangle = RectangleFactory.SINGLETON
-
-
-    var pointFactory: PointFactory = PointFactory.getInstance()!!
-
-
-    
-                        if(displayInfo!!.getLastHeight() < 320)
-                        
-                                    {
-                                    popupMenuRectangle= Rectangle(pointFactory!!.createXY(0, 25), myFont!!.defaultStringWidth(3), (myFont!!.DEFAULT_CHAR_HEIGHT *4) +2)
-
-                                    }
-                                
-                        else {
-                            popupMenuRectangle= Rectangle(pointFactory!!.createXY(0, displayInfo!!.getLastHalfHeight() -70), myFont!!.defaultStringWidth(3), (myFont!!.DEFAULT_CHAR_HEIGHT *5))
-
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return popupMenuRectangle
 }
 
 

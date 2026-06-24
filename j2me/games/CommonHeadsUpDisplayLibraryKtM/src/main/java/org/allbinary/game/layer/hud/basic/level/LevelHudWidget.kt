@@ -25,10 +25,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.graphics.hud.BasicHud
 import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.graphics.font.MyFont
 import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.math.PrimitiveLongUtil
@@ -50,7 +50,7 @@ var direction = direction
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return LevelHudWidget(maxlevel, location, direction, MyFont.getInstance()!!.getSize() *4)
+                        return LevelHudWidget(maxlevel, location, direction)
 }
 
 
@@ -66,32 +66,41 @@ var direction = direction
 
     private var levelNumberTotalDigits: Int= 0
 
-    private val offset: Int
+    private var offset: Int= 0
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor (maxlevel: Int, location: Int, direction: Int, maxWidth: Int)                        
+public constructor (maxlevel: Int, location: Int, direction: Int)                        
 
-                            : super(location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY){
+                            : super(location, direction, 2, BasicColorFactory.getInstance()!!.GREY){
 var maxlevel = maxlevel
 var location = location
 var direction = direction
-var maxWidth = maxWidth
 
 
                             //For kotlin this is before the body of the constructor.
                     
-
-    var myFont: MyFont = MyFont.getInstance()!!
-
 this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(1000)
 
     var LEVEL: String = "Lv "
 
 this.levelString= LEVEL.toCharArray()
-this.offset= myFont!!.charsWidth(this.levelString, 0, this.levelString!!.size) +myFont!!.getSize()
 this.maxlevel= maxlevel
 this.level= maxlevel
 this.update()
+this.updateMaxHeight= 14
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+
+    var font: Font = graphics.getFont()!!
+
+this.updateMaxWidth= font.getSize() *4
+this.offset= font.charsWidth(this.levelString, 0, this.levelString!!.size) +font.getSize()
+super.updateMeasurement(graphics)
 }
 
 
