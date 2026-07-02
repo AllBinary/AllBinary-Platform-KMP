@@ -39,7 +39,7 @@ companion object {
                             null, NullOpenGLProcessorFactory.getInstance())
                                 {
                                 
-    open override fun init(gl: GL10)
+    override fun init(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

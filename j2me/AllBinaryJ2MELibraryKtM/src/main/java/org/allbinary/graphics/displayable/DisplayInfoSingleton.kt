@@ -206,6 +206,10 @@ this.scaleLargestTo= scaleLargestTo.toFloat()
 
     private val LAST_HEIGHT: String = " LastHeight: "
 
+    private val PORTRAIT: String = "Portrait"
+
+    private val LANDSCAPE: String = "Landscape"
+
     open fun setLastSize(aLastWidth: Int, aLastHeight: Int, reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -529,8 +533,7 @@ this.scalableListener!!.scale(this.ratio.toFloat())
                                     }
                                 
                         else {
-                            this.logUtil!!.putF("Found Landscape Orientation", this, this.commonStrings!!.UPDATE)
-
+                            
     
                         if(aLastWidth > this.scaleLargestTo)
                         
@@ -630,6 +633,15 @@ stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(this.LAST_HALF)
 stringBuffer!!.append(this.commonLabels!!.HEIGHT_LABEL)
 stringBuffer!!.appendint(this.lastHalf[this.HEIGHT]!!)
+stringBuffer!!.append(this.commonSeps!!.SPACE)
+stringBuffer!!.append(if(this.isPortrait()) {
+                            
+                            this.PORTRAIT
+                        
+                            } else {
+                            this.LANDSCAPE
+                            }
+    )
 
 
 

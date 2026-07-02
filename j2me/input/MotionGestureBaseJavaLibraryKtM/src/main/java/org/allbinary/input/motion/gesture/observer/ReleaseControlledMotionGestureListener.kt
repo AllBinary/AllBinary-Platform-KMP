@@ -144,6 +144,13 @@ this.onMotionGestureEvent(ev)
 }
 
 
+    override fun onScrolledMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+var motionGestureEvent = motionGestureEvent
+}
+
+
     override fun released(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {

@@ -43,7 +43,7 @@ open public class PropsTileMapPlacementVisitor : TileMapPlacementVisitor {
 
     private val randomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 
-    open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
+    override fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var lastMap = lastMap

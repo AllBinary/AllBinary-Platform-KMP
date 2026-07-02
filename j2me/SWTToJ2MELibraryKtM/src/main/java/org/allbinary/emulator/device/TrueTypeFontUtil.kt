@@ -232,22 +232,22 @@ imageLoader!!.save(CommonSeps.getInstance()!!.PERIOD +CanvasStrings.getInstance(
     //var cellSize = cellSize
     //var basicColor = basicColor
 
-    var cellsPerRow2: Int = CELLS_PER_ROW *2
+    var cellsPerRow2: Int = this.CELLS_PER_ROW *2
 
 
-    var cellsPerRow3: Int = CELLS_PER_ROW *3
+    var cellsPerRow3: Int = this.CELLS_PER_ROW *3
 
 
-    var cellsPerRow4: Int = CELLS_PER_ROW *4
+    var cellsPerRow4: Int = this.CELLS_PER_ROW *4
 
 
-    var cellsPerRow5: Int = CELLS_PER_ROW *5
+    var cellsPerRow5: Int = this.CELLS_PER_ROW *5
 
 
-    var cellsPerRow6: Int = CELLS_PER_ROW *6
+    var cellsPerRow6: Int = this.CELLS_PER_ROW *6
 
 
-    var cellsPerRow7: Int = CELLS_PER_ROW *7
+    var cellsPerRow7: Int = this.CELLS_PER_ROW *7
 
 
     var image: Image = Image.createImage(textureSize, textureSize)!!
@@ -275,19 +275,19 @@ graphics.setColor(basicColor!!.toInt())
                         for (index in 0 until size)
 
         {
-characterArray[0]= pattern[index]
+this.characterArray[0]= pattern[index]
 _characterWidth[index]= bounds.getMaxX()
 
     
                         if(bounds.getMaxY() -bounds.getPoint()!!.getX() > biggestHeight)
                         biggestHeight= bounds.getMaxY() -bounds.getPoint()!!.getX()
-x= (index % CELLS_PER_ROW) *cellSize
+x= (index % this.CELLS_PER_ROW) *cellSize
 x += (cellSize shr 1)
 x -= (_characterWidth[index] shr 1)
 y=  -(cellSize shr 1)
 
     
-                        if(index >= CELLS_PER_ROW)
+                        if(index >= this.CELLS_PER_ROW)
                         y += cellSize
 
     
@@ -315,7 +315,7 @@ y=  -(cellSize shr 1)
                         y += cellSize
 y += cellSize
 y -= (cellSize shr 2)
-graphics.drawChar(characterArray[0]!!, x, y, 0)
+graphics.drawChar(this.characterArray[0]!!, x, y, 0)
 }
 
 
@@ -341,10 +341,10 @@ var fontSize = fontSize
                         for (index in 0 until size)
 
         {
-characterArray[0]= pattern[index]
+this.characterArray[0]= pattern[index]
 
     
-                        if(characterArray[0] == ' ')
+                        if(this.characterArray[0] == ' ')
                         
                                     {
                                     _characterWidth[index]= (fontSize /4)
@@ -353,7 +353,7 @@ characterArray[0]= pattern[index]
                                 
                         else {
                             
-    var shortPatternIndex: Int = this.shortPattern!!.indexOf(characterArray[0]!!)!!
+    var shortPatternIndex: Int = this.shortPattern!!.indexOf(this.characterArray[0]!!)!!
 
 
     var w: Int = (this.widthFloatArray[shortPatternIndex] /75).toInt() +19
@@ -361,27 +361,27 @@ characterArray[0]= pattern[index]
 _characterWidth[index]= w.toInt()
 
     
-                        if(characterArray[0] == '.' || characterArray[0] == '1')
+                        if(this.characterArray[0] == '.' || this.characterArray[0] == '1')
                         _characterWidth[index] += 4
 
     
-                        if(characterArray[0] >= 'a' && characterArray[0] < 'k')
+                        if(this.characterArray[0] >= 'a' && this.characterArray[0] < 'k')
                         _characterWidth[index] -= 2
 
     
-                        if(characterArray[0] >= 'k' && characterArray[0] < 'v')
+                        if(this.characterArray[0] >= 'k' && this.characterArray[0] < 'v')
                         _characterWidth[index] -= 4
 
     
-                        if(characterArray[0] >= 'v' && characterArray[0] < 'z')
+                        if(this.characterArray[0] >= 'v' && this.characterArray[0] < 'z')
                         _characterWidth[index] -= 8
 
     
-                        if(characterArray[0] == 'D')
+                        if(this.characterArray[0] == 'D')
                         _characterWidth[index] -= 4
 
     
-                        if(characterArray[0] >= 'A' && characterArray[0] <= 'Z')
+                        if(this.characterArray[0] >= 'A' && this.characterArray[0] <= 'Z')
                         _characterWidth[index] -= 2
 
                         }

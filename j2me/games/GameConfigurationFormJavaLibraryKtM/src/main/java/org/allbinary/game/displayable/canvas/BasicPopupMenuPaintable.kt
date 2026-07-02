@@ -46,6 +46,7 @@ import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
 import org.allbinary.graphics.paint.Paintable
+import org.allbinary.graphics.threed.SWTJOGLProcessor
 
 open public class BasicPopupMenuPaintable : Paintable
                 , UpdateMyFontInterface {
@@ -119,7 +120,7 @@ this.drawStringUtil!!.updateMeasurement(graphics, this.label)
 
 
     
-                        if(J2MEUtil.isHTML() || (AndroidUtil.isAndroid() && isOpenGL))
+                        if(J2MEUtil.isHTML() || isOpenGL)
                         
                                     {
                                     BORDER= MyFontProcessor.defaultCharWidth(font) /2
@@ -165,7 +166,14 @@ this.heightOffset= this.rectangle.getHeight() -(font.getHeight() *BasicPopupMenu
 
                                     }
                                 
-this.offset= (this.heightOffset shr 1)
+this.offset= (this.heightOffset shr 1) +(if(SWTJOGLProcessor.getInstance()!!.isJOGL()) {
+                            
+                            4
+                        
+                            } else {
+                            0
+                            }
+    )
 this.myFontProcessor= MyFontProcessor.getInstance()
 }
 

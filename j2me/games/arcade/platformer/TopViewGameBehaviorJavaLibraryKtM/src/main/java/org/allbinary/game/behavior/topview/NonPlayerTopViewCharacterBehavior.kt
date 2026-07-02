@@ -119,7 +119,7 @@ TerrainEventHandler.getInstance(layer)!!.fireEvent(terrainEvent)
 }
 
 
-    open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
+    override fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layer = layer

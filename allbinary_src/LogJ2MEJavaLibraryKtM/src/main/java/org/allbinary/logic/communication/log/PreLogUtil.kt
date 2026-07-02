@@ -29,7 +29,6 @@
         
 import org.allbinary.logic.NullUtil
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFormatUtil
 //ActualPlatform
 /*actual*/ open public class PreLogUtil
             : Object
@@ -76,6 +75,16 @@ PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!
 
 System.out.print(PreLogUtil.LOG_SUCCESS)
 System.out.println(message)
+}
+
+
+    /*actual*/ open fun putS(specialMessage: String, className: String, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+var specialMessage = specialMessage
+var className = className
+var functionName = functionName
+PreLogUtil.putSE(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 

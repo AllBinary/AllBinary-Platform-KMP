@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
+import org.allbinary.logic.string.StringUtil
 
 open public class FormTypeFactory
             : Object
@@ -55,13 +56,13 @@ companion object {
         
     val UNK: String = "Unknown FormType"
 
-    val NULL_FORM_TYPE: FormType = FormType()
+    val NULL_FORM_TYPE: FormType = FormType(StringUtil.getInstance()!!.NULL_STRING)
 
-    val TEMP_HORIZONTAL_FORM: FormType = FormType()
+    val TEMP_HORIZONTAL_FORM: FormType = FormType("TempHorizontal")
 
-    val HORIZONTAL_FORM: FormType = FormType()
+    val HORIZONTAL_FORM: FormType = FormType("Horizontal")
 
-    val VERTICAL_CENTER_FORM: FormType = FormType()
+    val VERTICAL_CENTER_FORM: FormType = FormType("Vertical")
 
     open fun getFormType()
         //nullable = true from not(false or (false and true)) = true

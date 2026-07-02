@@ -31,11 +31,26 @@ open public class FormType
          {
         
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    val name: String
+public constructor (name: String)
+            : super()
+        {
+    //var name = name
+this.name= name
+}
+
+
+    override fun toString()
+        //nullable =  from not(false or (true and true)) = 
+: String{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.name
+}
+
+
 }
                 
             

@@ -28,7 +28,7 @@
 import org.allbinary.globals.URLGLOBALS
 import org.allbinary.logic.communication.http.file.upload.FileUploadData
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.logic.io.AbFileSystem
+import org.allbinary.logic.io.AbIOSystem
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.io.path.AbPath
@@ -58,7 +58,7 @@ var total = total
         try {
             
     
-                        if(AbFileSystem.getInstance()!!.isType("com.vobject.appengine.java.io"))
+                        if(AbIOSystem.getInstance()!!.isType("com.vobject.appengine.java.io"))
                         
                                     {
                                     
@@ -107,15 +107,16 @@ stringBuffer!!.append(" - ")
 stringBuffer!!.appendint(end)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "initialize()")
 
+    var nextFile: AbFile
+
+
 
 
 
                         for (index in start until end)
 
         {
-
-    var nextFile: AbFile = fileBasicArrayList!!.get(index) as AbFile
-
+nextFile= fileBasicArrayList!!.get(index) as AbFile
 
         try {
             

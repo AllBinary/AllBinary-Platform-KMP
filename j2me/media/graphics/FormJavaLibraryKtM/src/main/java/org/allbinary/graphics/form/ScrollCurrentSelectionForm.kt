@@ -29,9 +29,13 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.canvas.Processor
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
+import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.form.item.ABCustomItem
 
-open public class ScrollCurrentSelectionForm : ScrollSelectionForm {
+open public class ScrollCurrentSelectionForm : ScrollSelectionForm
+                , UpdateMyFontInterface {
         
 
     private val moveForSmallScreen: Boolean
@@ -195,6 +199,10 @@ var dx = dx
 }
                 
             
+    val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
+
+    var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
+
     private var processor: Processor = Processor.getInstance()!!
 
     private var preItemIndexDx: ItemIndexDx = ItemIndexDx.getInstance()!!
@@ -204,15 +212,14 @@ var dx = dx
     private var dy: Int= 0
 
     private var maxWidth: Int = 0
-public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, border: Int, adjustedExtraBorder: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, formPaintableFactory, border, adjustedExtraBorder, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var formPaintableFactory = formPaintableFactory
-    //var rectangle = rectangle
-    //var formType = formType
     //var border = border
+    //var adjustedExtraBorder = adjustedExtraBorder
     //var moveForSmallScreen = moveForSmallScreen
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
@@ -221,6 +228,17 @@ public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFac
                             //For kotlin this is before the body of the constructor.
                     
 this.moveForSmallScreen= moveForSmallScreen
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun init(rectangle: Rectangle, formType: FormType)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var rectangle = rectangle
+    //var formType = formType
+super.init(rectangle, formType)
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
@@ -267,6 +285,15 @@ this.preItemIndexDx= VerticalItemIndexDx(this)
 
                         }
                             
+this.myFontProcessor= this.updateMyFontProcessor
+}
+
+
+    override fun updateMeasurement(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+this.myFontProcessor= MyFontProcessor.getInstance()
 }
 
 

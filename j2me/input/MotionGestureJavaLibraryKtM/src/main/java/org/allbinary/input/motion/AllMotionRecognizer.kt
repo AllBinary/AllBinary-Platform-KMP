@@ -202,6 +202,24 @@ this.motionGestureRecognizer!!.processMovedMotionEvent(point, deviceId, modifier
 }
 
 
+                @Throws(Exception::class)
+            
+    open fun processScrolledMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var x = x
+    //var y = y
+    //var deviceId = deviceId
+    //var modifiers = modifiers
+
+    var point: CustomGPoint = AllMotionRecognizer.pointCircularPool!!.getNextInstance() as CustomGPoint
+
+point.setX(x)
+point.setY(y)
+this.motionGestureRecognizer!!.processScrolledMotionEvent(point, deviceId, modifiers)
+}
+
+
     open fun getMotionGestureRecognizer()
         //nullable = true from not(false or (false and true)) = true
 : MotionGestureRecognizer{

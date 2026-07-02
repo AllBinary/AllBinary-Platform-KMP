@@ -52,6 +52,10 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : String
 
+    open fun getUserHomePath()
+        //nullable = true from not(false or (false and true)) = true
+: String
+
 }
                 
             

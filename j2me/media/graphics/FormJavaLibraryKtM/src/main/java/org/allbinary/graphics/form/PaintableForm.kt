@@ -35,7 +35,7 @@ companion object {
                         if(PaintableForm.NULL_PAINTABLE_FORM == NullUtil.getInstance()!!.NULL_OBJECT)
                         
                                     {
-                                    PaintableForm.NULL_PAINTABLE_FORM= PaintableForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+                                    PaintableForm.NULL_PAINTABLE_FORM= PaintableForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
                                     }
                                 
@@ -58,13 +58,11 @@ companion object {
     var y: Int= 0
 
     var formType: FormType = FormTypeFactory.getInstance()!!.NULL_FORM_TYPE
-public constructor (title: String, items: Array<ABCustomItem?>, rectangle: Rectangle, formType: FormType, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<ABCustomItem?>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
-    //var rectangle = rectangle
-    //var formType = formType
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
 
@@ -72,14 +70,6 @@ public constructor (title: String, items: Array<ABCustomItem?>, rectangle: Recta
                             //For kotlin this is before the body of the constructor.
                     
 this.setSelectedIndex(0)
-
-        try {
-            this.init(rectangle, formType)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
-}
-
 }
 
 

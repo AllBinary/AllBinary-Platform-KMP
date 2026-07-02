@@ -39,6 +39,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.validate.ValidationComponentInterface
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.FileData
+import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.io.path.PathUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -453,10 +454,10 @@ var size = size
                                 
                         else {
                             
-    var pathUtil: PathUtil = PathUtil.getInstance()!!
+    var pathData: AbPathData = AbPathData.getInstance()!!
 
 
-    var extension: String = pathUtil!!.getExtension(fileName)!!
+    var extension: String = pathData!!.getExtension(fileName)!!
 
 
     var uploadMedia: UploadMediaSingleton = UploadMediaSingleton.getInstance()!!
@@ -582,10 +583,10 @@ stringBuffer!!.append("<br/>")
                                 
                         else {
                             
-    var pathUtil: PathUtil = PathUtil.getInstance()!!
+    var pathData: AbPathData = AbPathData.getInstance()!!
 
 
-    var extension: String = pathUtil!!.getExtension(fileName)!!
+    var extension: String = pathData!!.getExtension(fileName)!!
 
 
     var uploadMedia: UploadMediaSingleton = UploadMediaSingleton.getInstance()!!

@@ -78,6 +78,10 @@ companion object {
 
     val DIAGONAL_UP_LEFT: MotionGestureInput
 
+    val SCROLL_UP: MotionGestureInput
+
+    val SCROLL_DOWN: MotionGestureInput
+
     val NO_MOTION: MotionGestureInput
 
     val LAST_MOTION: MotionGestureInput
@@ -97,6 +101,8 @@ this.DIAGONAL_DOWN_RIGHT= MotionGestureInput(MAX -9, "Diagonal Dn R")
 this.DIAGONAL_DOWN_LEFT= MotionGestureInput(MAX -10, "Diagonal Dn L")
 this.DIAGONAL_UP_RIGHT= MotionGestureInput(MAX -11, "Diagonal Up R")
 this.DIAGONAL_UP_LEFT= MotionGestureInput(MAX -12, "Diagonal Up L")
+this.SCROLL_UP= MotionGestureInput(MAX -13, "Scroll Up")
+this.SCROLL_DOWN= MotionGestureInput(MAX -14, "Scroll Down")
 this.NO_MOTION= MotionGestureInput(MAX -2, "No Motion")
 this.LAST_MOTION= MotionGestureInput(MAX -19, "Last Motion")
 }

@@ -34,6 +34,10 @@ interface BaseMotionGestureEventListener : EventListenerInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
+    open fun onScrolledMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+        //nullable = true from not(false or (false and false)) = true
+
+
 }
                 
             

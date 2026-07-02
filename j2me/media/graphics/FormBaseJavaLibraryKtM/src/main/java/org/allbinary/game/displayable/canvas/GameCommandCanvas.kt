@@ -176,7 +176,7 @@ this.repaintProcessor!!.process()
     var font: Font = graphics.getFont()!!
 
 this.logUtil!!.putF(StringMaker().
-                            append(this.commonStrings!!.START)!!.append(DisplayInfoSingleton.getInstance()!!.toString())!!.append(this.canvasStrings!!.FD_WIDTH)!!.appendint(MyFontProcessor.defaultCharWidth(font))!!.append(this.canvasStrings!!.FD_HEIGHT)!!.appendint(font.getHeight())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+                            append(this.commonStrings!!.START)!!.append(this.canvasStrings!!.FD_WIDTH)!!.appendint(MyFontProcessor.defaultCharWidth(font))!!.append(this.canvasStrings!!.FD_HEIGHT)!!.appendint(font.getHeight())!!.toString(), this, this.canvasStrings!!.UPDATE_MEASUREMENT)
 this.fontHeight= font.getHeight()
 
     var rectangle: Rectangle = this.createRectangle(this.menuForm!!.size())!!
@@ -204,7 +204,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
         //nullable = true from not(false or (false and false)) = true
 {
     //var displayChangeEvent = displayChangeEvent
-this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+this.logUtil!!.putF(StringMaker().
+                            append(this.commonStrings!!.START)!!.append(DisplayInfoSingleton.getInstance()!!.toString())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
 this.myFontProcessor= this.updateMyFontProcessor
 }
 

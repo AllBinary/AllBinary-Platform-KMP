@@ -211,8 +211,8 @@ reusableSurroundingList!!.clear()
                         for (index in 0 until 8)
 
         {
-column= layerGeographicMapCellPosition!!.getColumn() +surroundArray[index]!![0]
-row= layerGeographicMapCellPosition!!.getRow() +surroundArray[index]!![1]
+column= layerGeographicMapCellPosition!!.getColumn() +this.surroundArray[index]!![0]
+row= layerGeographicMapCellPosition!!.getRow() +this.surroundArray[index]!![1]
 
     
                         if(tiledLayer!!.isOnTileLayer(column, row))

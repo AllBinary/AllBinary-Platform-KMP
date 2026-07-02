@@ -27,7 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.io.File
+import org.allbinary.logic.io.file.FilePathData
+import org.allbinary.logic.string.StringMaker
 
 open public class ImageOutputData
             : Object
@@ -35,7 +36,8 @@ open public class ImageOutputData
         
 companion object {
             
-    val SAVE_PATH: String = System.getProperty("user.dir") +File.separator +"saves" +File.separator
+    val SAVE_PATH: String = StringMaker().
+                            append(System.getProperty("user.dir"))!!.appendchar(FilePathData.getInstance()!!.SEPARATORCHAR)!!.append("saves")!!.appendchar(FilePathData.getInstance()!!.SEPARATORCHAR)!!.toString()!!
 
         }
             private constructor ()

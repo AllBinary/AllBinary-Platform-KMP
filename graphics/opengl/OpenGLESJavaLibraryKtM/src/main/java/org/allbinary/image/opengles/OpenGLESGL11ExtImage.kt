@@ -77,7 +77,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 
-    open fun set(gl: GL)
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

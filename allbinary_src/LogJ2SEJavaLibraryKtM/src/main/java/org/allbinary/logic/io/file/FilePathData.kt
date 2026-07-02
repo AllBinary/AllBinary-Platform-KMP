@@ -10,11 +10,11 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.logic.io.path
+        package org.allbinary.logic.io.file
 
 
 
@@ -25,37 +25,44 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.string.CommonSeps
+import java.io.File
 
-open public class AbPathData
+open public class FilePathData
             : Object
          {
         
 companion object {
             
-    private val instance: AbPathData = AbPathData()
+    private val instance: FilePathData = FilePathData()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbPathData{
+: FilePathData{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPathData.instance
+                        return FilePathData.instance
 }
 
 
         }
             
-    val EXTENSION_SEP: String = CommonSeps.getInstance()!!.PERIOD
+    val SEPARATORCHAR: Char = File.separatorChar
 
-    val SEPARATORCHAR: Char = '/'
-
-    val SEPARATOR: String = CommonSeps.getInstance()!!.FORWARD_SLASH
+    var PATH_START: String = File.separator
 private constructor ()
             : super()
         {
+
+    
+                        if(File.separatorChar == '\\')
+                        
+                                    {
+                                    this.PATH_START= File.separator +File.separator
+
+                                    }
+                                
 }
 
 

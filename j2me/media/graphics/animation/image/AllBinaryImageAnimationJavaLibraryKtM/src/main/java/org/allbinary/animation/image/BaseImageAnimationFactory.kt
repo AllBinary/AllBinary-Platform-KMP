@@ -131,31 +131,6 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
 
-    override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
-
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-
-
-    var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-
-
-    var stringBuffer: StringMaker = StringMaker()
-
-stringBuffer!!.append(super.toString())
-stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.appendint(this.image.getHeight())
-stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(this.animationFactoryInitializationVisitor!!.toString())
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
-
     override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -197,6 +172,31 @@ this.scaleProperties!!.scaleHeight= (this.animationFactoryInitializationVisitor!
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.scaleProperties
+}
+
+
+    override fun toString()
+        //nullable =  from not(false or (true and true)) = 
+: String{
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+
+    var commonLabels: CommonLabels = CommonLabels.getInstance()!!
+
+
+    var stringBuffer: StringMaker = StringMaker()
+
+stringBuffer!!.append(super.toString())
+stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
+stringBuffer!!.appendint(this.image.getHeight())
+stringBuffer!!.append(commonSeps!!.SPACE)
+stringBuffer!!.append(this.animationFactoryInitializationVisitor!!.toString())
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return stringBuffer!!.toString()
 }
 
 

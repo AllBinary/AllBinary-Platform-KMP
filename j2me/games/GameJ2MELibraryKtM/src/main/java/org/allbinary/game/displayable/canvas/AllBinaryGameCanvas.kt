@@ -376,7 +376,7 @@ DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
     var font: Font = graphics.getFont()!!
 
 this.logUtil!!.putF(StringMaker().
-                            append(this.commonStrings!!.START)!!.append(DisplayInfoSingleton.getInstance()!!.toString())!!.append(this.canvasStrings!!.FD_WIDTH)!!.appendint(MyFontProcessor.defaultCharWidth(font))!!.append(this.canvasStrings!!.FD_HEIGHT)!!.appendint(font.getHeight())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+                            append(this.commonStrings!!.START)!!.append(this.canvasStrings!!.FD_WIDTH)!!.appendint(MyFontProcessor.defaultCharWidth(font))!!.append(this.canvasStrings!!.FD_HEIGHT)!!.appendint(font.getHeight())!!.toString(), this, this.canvasStrings!!.UPDATE_MEASUREMENT)
 this.fontHeight= font.getHeight()
 this.myFormUtil!!.updateMeasurement(graphics)
 
@@ -452,7 +452,9 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     //var displayChangeEvent = displayChangeEvent
 
         try {
-            this.myFontProcessor= this.updateMyFontProcessor
+            this.logUtil!!.putF(StringMaker().
+                            append(this.commonStrings!!.START)!!.append(DisplayInfoSingleton.getInstance()!!.toString())!!.toString(), this, this.canvasStrings!!.UPDATE_MEASUREMENT)
+this.myFontProcessor= this.updateMyFontProcessor
 this.menuBehavior!!.onDisplayChangeEvent(this, displayChangeEvent)
 } catch(e: Exception)
             {

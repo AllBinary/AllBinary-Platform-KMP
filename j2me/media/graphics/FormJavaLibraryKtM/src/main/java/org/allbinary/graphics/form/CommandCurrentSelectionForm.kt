@@ -32,12 +32,9 @@ import org.allbinary.animation.Animation
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.animation.vector.RectangleAdjustedAnimation
 import org.allbinary.animation.vector.RectangleFilledAdjustedAnimation
-import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.graphics.font.UpdateMyFontInterface
-import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.form.item.CommandTextItem
 import org.allbinary.graphics.form.item.ABCustomItem
 
@@ -48,17 +45,11 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm
     val selectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
 
     val unSelectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
+public constructor (title: String, items: Array<ABCustomItem?>, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-    private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
-
-    var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
-public constructor (title: String, items: Array<ABCustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
-
-                            : super(title, items, ItemPaintableFactory.getInstance(), rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, ItemPaintableFactory.getInstance(), border,  -3, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
-    //var rectangle = rectangle
-    //var formType = formType
     //var border = border
     //var moveForSmallScreen = moveForSmallScreen
     //var backgroundBasicColor = backgroundBasicColor
@@ -77,7 +68,7 @@ this.addAll(items)
 {
     //var graphics = graphics
 this.updateAll(graphics, getAllitems())
-this.myFontProcessor= MyFontProcessor.getInstance()
+super.updateMeasurement(graphics)
 }
 
 
@@ -154,16 +145,22 @@ this.addAt(index, items[index]!!)
     var offset: Int =  -(this.halfBorder +adjustedBorder)
 
 
+    var rectWidth: Int = width +this.border -adjustedBorder
+
+
+    var rectHeight: Int = height +this.border -adjustedBorder
+
+
     
                         if(J2MEUtil.isJ2ME())
                         
                                     {
-                                    this.selectedAnimationArray[index]= RectangleAdjustedAnimation(width +this.border -adjustedBorder, height +this.border -adjustedBorder, offset, offset, selectedButtonColor)
+                                    this.selectedAnimationArray[index]= RectangleAdjustedAnimation(rectWidth, rectHeight, offset, offset, selectedButtonColor)
 
                                     }
                                 
                         else {
-                            this.selectedAnimationArray[index]= RectangleFilledAdjustedAnimation(width +this.border -adjustedBorder, height +this.border -adjustedBorder, offset, offset, selectedButtonColor)
+                            this.selectedAnimationArray[index]= RectangleFilledAdjustedAnimation(rectWidth, rectHeight, offset, offset, selectedButtonColor)
 
                         }
                             
@@ -173,12 +170,12 @@ adjustedBorder= 4
                         if(J2MEUtil.isJ2ME())
                         
                                     {
-                                    this.unSelectedAnimationArray[index]= RectangleAdjustedAnimation(width +this.border -adjustedBorder, height +this.border -adjustedBorder, offset, offset, buttonColor)
+                                    this.unSelectedAnimationArray[index]= RectangleAdjustedAnimation(rectWidth, rectHeight, offset, offset, buttonColor)
 
                                     }
                                 
                         else {
-                            this.unSelectedAnimationArray[index]= RectangleFilledAdjustedAnimation(width +this.border -adjustedBorder, height +this.border -adjustedBorder, offset, offset, buttonColor)
+                            this.unSelectedAnimationArray[index]= RectangleFilledAdjustedAnimation(rectWidth, rectHeight, offset, offset, buttonColor)
 
                         }
                             
@@ -231,6 +228,12 @@ this.updateAt(index, items[index]!!)
     var offset: Int =  -(this.halfBorder +adjustedBorder)
 
 
+    var rectWidth: Int = width +this.border -adjustedBorder
+
+
+    var rectHeight: Int = height +this.border -adjustedBorder
+
+
     
                         if(J2MEUtil.isJ2ME())
                         
@@ -238,8 +241,8 @@ this.updateAt(index, items[index]!!)
                                     
     var rectangleAdjustedAnimation: RectangleAdjustedAnimation = this.selectedAnimationArray[index]!! as RectangleAdjustedAnimation
 
-rectangleAdjustedAnimation!!.setWidth(width +this.border -adjustedBorder)
-rectangleAdjustedAnimation!!.setHeight(height +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setWidth(rectWidth)
+rectangleAdjustedAnimation!!.setHeight(rectHeight)
 rectangleAdjustedAnimation!!.setOffsetX(offset)
 rectangleAdjustedAnimation!!.setOffsetY(offset)
 rectangleAdjustedAnimation!!.setBasicColorP(selectedButtonColor)
@@ -250,8 +253,8 @@ rectangleAdjustedAnimation!!.setBasicColorP(selectedButtonColor)
                             
     var rectangleAdjustedAnimation: RectangleFilledAdjustedAnimation = this.selectedAnimationArray[index]!! as RectangleFilledAdjustedAnimation
 
-rectangleAdjustedAnimation!!.setWidth(width +this.border -adjustedBorder)
-rectangleAdjustedAnimation!!.setHeight(height +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setWidth(rectWidth)
+rectangleAdjustedAnimation!!.setHeight(rectHeight)
 rectangleAdjustedAnimation!!.setOffsetX(offset)
 rectangleAdjustedAnimation!!.setOffsetY(offset)
 rectangleAdjustedAnimation!!.setBasicColorP(selectedButtonColor)
@@ -267,8 +270,8 @@ adjustedBorder= 4
                                     
     var rectangleAdjustedAnimation: RectangleAdjustedAnimation = this.unSelectedAnimationArray[index]!! as RectangleAdjustedAnimation
 
-rectangleAdjustedAnimation!!.setWidth(width +this.border -adjustedBorder)
-rectangleAdjustedAnimation!!.setHeight(height +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setWidth(rectWidth)
+rectangleAdjustedAnimation!!.setHeight(rectHeight)
 rectangleAdjustedAnimation!!.setOffsetX(offset)
 rectangleAdjustedAnimation!!.setOffsetY(offset)
 rectangleAdjustedAnimation!!.setBasicColorP(buttonColor)
@@ -279,8 +282,8 @@ rectangleAdjustedAnimation!!.setBasicColorP(buttonColor)
                             
     var rectangleAdjustedAnimation: RectangleFilledAdjustedAnimation = this.unSelectedAnimationArray[index]!! as RectangleFilledAdjustedAnimation
 
-rectangleAdjustedAnimation!!.setWidth(width +this.border -adjustedBorder)
-rectangleAdjustedAnimation!!.setHeight(height +this.border -adjustedBorder)
+rectangleAdjustedAnimation!!.setWidth(rectWidth)
+rectangleAdjustedAnimation!!.setHeight(rectHeight)
 rectangleAdjustedAnimation!!.setOffsetX(offset)
 rectangleAdjustedAnimation!!.setOffsetY(offset)
 rectangleAdjustedAnimation!!.setBasicColorP(buttonColor)

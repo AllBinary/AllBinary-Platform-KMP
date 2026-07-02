@@ -59,50 +59,6 @@ private constructor ()
 }
 
 
-    open fun getExtensionIndex(filePath: String)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var filePath = filePath
-
-    var indexOfFileExtensionDelmiter: Int = filePath!!.lastIndexOf(this.abPathData!!.EXTENSION_SEP)!!
-
-
-    var indexOfLatDelimiter: Int = filePath!!.lastIndexOf(this.abPathData!!.SEPARATORCHAR)!!
-
-
-    
-                        if(indexOfFileExtensionDelmiter < 0)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-
-                                    }
-                                
-
-    
-                        if(indexOfFileExtensionDelmiter < indexOfLatDelimiter)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return indexOfFileExtensionDelmiter
-}
-
-
     open fun getExtensionWithAbFilePath(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -111,7 +67,7 @@ var abFilePath = abFilePath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getExtension(abFilePath!!.toString())
+                        return this.abPathData!!.getExtension(abFilePath!!.toString())
 }
 
 
@@ -123,34 +79,7 @@ var abPath = abPath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getExtension(abPath!!.toString())
-}
-
-
-    open fun getExtension(filePath: String)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-var filePath = filePath
-
-    var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
-
-
-    var extension: String = StringUtil.getInstance()!!.EMPTY_STRING
-
-
-    
-                        if(indexOfFileExtensionDelmiter >= 0)
-                        
-                                    {
-                                    extension= filePath!!.substring(indexOfFileExtensionDelmiter +1)
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return extension
+                        return this.abPathData!!.getExtension(abPath!!.toString())
 }
 
 
@@ -189,7 +118,7 @@ var abPath = abPath
 : String{
 var filePath = filePath
 
-    var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
+    var indexOfFileExtensionDelmiter: Int = this.abPathData!!.getExtensionIndex(filePath)!!
 
 
     var pathWithoutExtension: String = filePath
@@ -396,7 +325,6 @@ var path = path
                         return path
 }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
     open fun getNameFromPath(categoryPath: String)
         //nullable = true from not(false or (false and false)) = true
@@ -454,8 +382,7 @@ var categoryPath = categoryPath
 
 
                 @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+            
     open fun removeNameFromPath(path: String)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
@@ -500,13 +427,13 @@ var path = path
                                 
                         else {
                             
-    var categoryName: String = path.substring(0, endIndex)!!
+    var pathWithoutName: String = path.substring(0, endIndex)!!
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath(categoryName, StringUtil.getInstance()!!.EMPTY_STRING)
+                        return AbPath(pathWithoutName, StringUtil.getInstance()!!.EMPTY_STRING)
 
                         }
                             

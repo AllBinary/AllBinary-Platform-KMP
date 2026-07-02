@@ -70,6 +70,8 @@ companion object {
 
     val ON_DISPLAY_CHANGE_EVENT: String = "onDisplayChangeEvent"
 
+    val UPDATE_MEASUREMENT: String = "updateMeasurement"
+
     val FD_WIDTH: String = " font/display width: "
 
     val FD_HEIGHT: String = " font/display height: "

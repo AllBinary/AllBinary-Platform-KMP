@@ -74,7 +74,7 @@ this.textureVertexFloatBuffer!!.rewind()
 }
 
 
-    open fun set(gl: GL)
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

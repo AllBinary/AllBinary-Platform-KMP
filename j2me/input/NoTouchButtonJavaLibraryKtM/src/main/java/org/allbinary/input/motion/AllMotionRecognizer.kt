@@ -92,6 +92,18 @@ var modifiers = modifiers
 }
 
 
+                @Throws(Exception::class)
+            
+    open fun processScrolledMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var x = x
+    //var y = y
+    //var deviceId = deviceId
+    //var modifiers = modifiers
+}
+
+
     open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{

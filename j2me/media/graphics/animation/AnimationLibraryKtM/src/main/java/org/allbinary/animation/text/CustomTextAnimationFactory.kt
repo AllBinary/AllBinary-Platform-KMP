@@ -39,7 +39,31 @@ open public class CustomTextAnimationFactory
         
                 , AnimationInterfaceFactoryInterface {
         
+companion object {
+            
+    open fun createDXY(text: String, fontSize: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: CustomTextAnimationFactory{
+    //var text = text
+    //var fontSize = fontSize
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 
+    var customTextAnimationFactory: CustomTextAnimationFactory = CustomTextAnimationFactory(text, fontSize, animationBehaviorFactory)
+
+customTextAnimationFactory!!.dx= dx
+customTextAnimationFactory!!.dy= dy
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return customTextAnimationFactory
+}
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
@@ -49,6 +73,10 @@ open public class CustomTextAnimationFactory
     private var text: String
 
     private var initScaleHeight: Int
+
+    var dx: Int = 0
+
+    var dy: Int = 0
 
     var font: Font
 
@@ -77,7 +105,20 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight
 
     var customTextAnimation: CustomTextAnimation
 
-customTextAnimation= CustomTextAnimation(this.text, this.scaleProperties!!.scaleHeight, this.animationBehaviorFactory!!.getOrCreateInstance())
+
+    
+                        if(this.dx != 0 || this.dy != 0)
+                        
+                                    {
+                                    customTextAnimation= AdjustCustomTextAnimation(this.text, this.scaleProperties!!.scaleHeight, this.dx, this.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
+
+                                    }
+                                
+                        else {
+                            customTextAnimation= CustomTextAnimation(this.text, this.scaleProperties!!.scaleHeight, this.animationBehaviorFactory!!.getOrCreateInstance())
+
+                        }
+                            
 customTextAnimation!!.setBasicColorP(this.basicColor)
 
 

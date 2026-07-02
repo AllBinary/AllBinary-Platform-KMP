@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -54,6 +54,8 @@
     private val OS_ARCH: String = "os.arch"
 
     private val OS_VERSION: String = "os.version"
+
+    private val USER_HOME: String = "user.home"
 private constructor ()
             : super()
         {
@@ -90,6 +92,17 @@ private constructor ()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty(this.OS_VERSION)
+}
+
+
+    open fun getUserHomePath()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return System.getProperty(this.USER_HOME)
 }
 
 

@@ -31,7 +31,8 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.form.FormTypeFactory
-import org.allbinary.graphics.form.MultipleScrollSelectionForm
+import org.allbinary.graphics.form.MultipleScrollSelectionHorizontalForm
+import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.input.motion.button.CommonButtons
 import org.allbinary.input.motion.button.TouchButtonLocationHelper
 
@@ -45,7 +46,7 @@ companion object {
             
     open fun getInstance(formLabel: String, items: Array<ABCustomItem?>)
         //nullable =  from not(true or (false and false)) = 
-: MultipleScrollSelectionForm{
+: ScrollSelectionForm{
     //var formLabel = formLabel
     //var items = items
 
@@ -70,7 +71,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return MultipleScrollSelectionForm.createForm(formLabel, items, menuRectangle, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, basicColorFactory!!.BLACK, basicColorFactory!!.WHITE)
+                        return MultipleScrollSelectionHorizontalForm.createForm(formLabel, items, menuRectangle, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, basicColorFactory!!.BLACK, basicColorFactory!!.WHITE)
 }
 
 

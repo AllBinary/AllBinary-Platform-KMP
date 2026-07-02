@@ -62,6 +62,22 @@ open public class RunnableCanvas : MyCanvas
     val commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
     val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
+
+    val SET_RUNNING: String = "setRunning"
+
+    private val IS_RUNNING: String = "isRunning"
+
+    private val THREAD: String = "Thread: "
+
+    private val NOT_EQUAL: String = " != "
+
+    private val PAUSE_SLEEP: String = "pause sleep"
+
+    private val START_PAUSE: String = "start pause - game thread sleep at: "
+
+    private val END_PAUSE: String = "end pause - game thread sleep at: "
+
+    private val PROCESS_LOOP_SLEEP: String = "processLoopSleep"
 public constructor (commandListener: CommandListener, childNameList: BasicArrayList, hasParam: Boolean)                        
 
                             : super(CommonStrings.getInstance()!!.UNKNOWN, childNameList){
@@ -172,14 +188,6 @@ this.logUtil!!.putF(StringMaker().
                             append(this.IS_RUNNING)!!.appendboolean(this.running)!!.toString(), this, this.SET_RUNNING)
 }
 
-
-    val SET_RUNNING: String = "setRunning"
-
-    private val IS_RUNNING: String = "isRunning"
-
-    private val THREAD: String = "Thread: "
-
-    private val NOT_EQUAL: String = " != "
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
     override fun isRunning()
@@ -355,8 +363,6 @@ var wait = wait
 }
 
 
-    private val PAUSE_SLEEP: String = "pause sleep"
-
                 @Throws(Exception::class)
             
     open fun processSleep()
@@ -387,12 +393,6 @@ Thread.sleep(sleep)
 }
 
 
-    private val START_PAUSE: String = "start pause - game thread sleep at: "
-
-    private val END_PAUSE: String = "end pause - game thread sleep at: "
-
-    private val PROCESS_LOOP_SLEEP: String = "processLoopSleep"
-
                 @Throws(Exception::class)
             
     open fun processLoopSleep()
@@ -401,12 +401,18 @@ Thread.sleep(sleep)
 this.runnableCanvasRefreshHelper!!.process()
 
     
-                        if(this.isPaused() && this.isRunning() && !this.isSingleThread())
+                        if(this.isPaused())
                         
                                     {
                                     
     var stringMaker: StringMaker = StringMaker()
 
+
+    
+                        if(this.isRunning() && !this.isSingleThread())
+                        
+                                    {
+                                    stringMaker!!.delete(0, stringMaker!!.length())
 this.logUtil!!.putF(stringMaker!!.append(this.START_PAUSE)!!.appendlong(System.currentTimeMillis())!!.append(this.PAUSE_SLEEP)!!.appendlong(this.pauseWait)!!.toString(), this, this.PROCESS_LOOP_SLEEP)
 
         while(this.isPaused() && this.isRunning() && !this.isSingleThread())
@@ -429,6 +435,9 @@ this.logUtil!!.putF(stringMaker!!.append(this.END_PAUSE)!!.appendlong(System.cur
                                 
 }
 
+
+                                    }
+                                
 
                                     }
                                 

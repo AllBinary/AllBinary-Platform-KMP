@@ -137,7 +137,7 @@ this.types= typeArray
 : Boolean{
     //var type = type
 
-    var size: Int = types.size
+    var size: Int = this.types.size
                 
 
 

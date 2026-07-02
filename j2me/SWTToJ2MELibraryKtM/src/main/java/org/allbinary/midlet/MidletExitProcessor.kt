@@ -42,7 +42,7 @@ this.midlet= midlet
 
                 @Throws(Exception::class)
             
-    open fun process()
+    override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 System.exit(0)

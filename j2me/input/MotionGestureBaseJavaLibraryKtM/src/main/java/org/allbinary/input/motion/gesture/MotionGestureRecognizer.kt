@@ -36,9 +36,12 @@ import org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler
 import org.allbinary.input.motion.gesture.observer.MotionEventCircularPool
 import org.allbinary.input.motion.gesture.observer.MotionGestureEvent
 import org.allbinary.input.motion.gesture.observer.MovedMotionGesturesHandler
+import org.allbinary.input.motion.gesture.observer.ScrolledMotionGesturesHandler
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.J2SEMath
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.handler.BasicEventHandler
+import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 
 open public class MotionGestureRecognizer
@@ -62,6 +65,8 @@ open public class MotionGestureRecognizer
 
     private val movedMotionGesturesHandler: BasicEventHandler
 
+    private val scrolledMotionGesturesHandler: BasicEventHandler
+
     private val motionEventCircularPool: MotionEventCircularPool
 public constructor (id: Int)
             : super()
@@ -75,9 +80,13 @@ this.motionEventCircularPool= MotionEventCircularPool.createPool(id)
     var movedMotionGesturesHandler: BasicEventHandler = motionGesturesHandler
 
 
+    var scrolledMotionGesturesHandler: BasicEventHandler = motionGesturesHandler
+
+
         try {
             motionGesturesHandler= BasicMotionGesturesHandler.getInstance()
 movedMotionGesturesHandler= MovedMotionGesturesHandler.getInstance()
+scrolledMotionGesturesHandler= ScrolledMotionGesturesHandler.getInstance()
 } catch(e: Exception)
             {
 
@@ -88,6 +97,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR,
 
 this.motionGesturesHandler= motionGesturesHandler as BasicMotionGesturesHandler
 this.movedMotionGesturesHandler= movedMotionGesturesHandler
+this.scrolledMotionGesturesHandler= scrolledMotionGesturesHandler
 }
 
 
@@ -332,6 +342,52 @@ this.motionGesturesHandler!!.fireEvent(event)
 event.setPreviousPoint(this.previous)
 event.setCurrentPoint(current)
 this.movedMotionGesturesHandler!!.fireEvent(event)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun processScrolledMotionEvent(current: GPoint, deviceId: Int, button: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var current = current
+    //var deviceId = deviceId
+    //var button = button
+
+    var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
+
+
+    var newMotionGesture: MotionGestureInput = touchMotionGestureFactory!!.NO_MOTION
+
+
+    
+                        if(button > 0)
+                        
+                                    {
+                                    newMotionGesture= touchMotionGestureFactory!!.SCROLL_UP
+
+                                    }
+                                
+                             else 
+    
+                        if(button < 0)
+                        
+                                    {
+                                    newMotionGesture= touchMotionGestureFactory!!.SCROLL_DOWN
+
+                                    }
+                                
+
+    var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(newMotionGesture)!!
+
+event.setPreviousPoint(this.previous)
+event.setCurrentPoint(current)
+this.scrolledMotionGesturesHandler!!.fireEvent(event)
 
 
 

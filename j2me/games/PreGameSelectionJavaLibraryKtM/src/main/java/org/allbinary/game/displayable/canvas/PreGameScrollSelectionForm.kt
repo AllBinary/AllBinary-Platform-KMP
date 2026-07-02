@@ -34,15 +34,14 @@ import org.allbinary.graphics.form.ScrollCurrentSelectionForm
 
 open public class PreGameScrollSelectionForm : ScrollCurrentSelectionForm {
         
-public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, formPaintableFactory, rectangle, FormTypeFactory.getInstance()!!.TEMP_HORIZONTAL_FORM, 0, false, backgroundBasicColor, foregroundBasicColor){
-var title = title
-var items = items
-var formPaintableFactory = formPaintableFactory
-var rectangle = rectangle
-var backgroundBasicColor = backgroundBasicColor
-var foregroundBasicColor = foregroundBasicColor
+                            : super(title, items, formPaintableFactory, 0, 3, false, backgroundBasicColor, foregroundBasicColor){
+    //var title = title
+    //var items = items
+    //var formPaintableFactory = formPaintableFactory
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,7 +54,7 @@ var foregroundBasicColor = foregroundBasicColor
     open fun init(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 {
-var rectangle = rectangle
+    //var rectangle = rectangle
 super.init(rectangle, FormTypeFactory.getInstance()!!.TEMP_HORIZONTAL_FORM)
 }
 

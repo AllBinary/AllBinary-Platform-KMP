@@ -43,16 +43,17 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>LogKt</artifactId>
+            <artifactId>LogJ2MEJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
+            
+            <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>LogJ2MEJavaLibraryKt</artifactId>
+            <artifactId>LogKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->

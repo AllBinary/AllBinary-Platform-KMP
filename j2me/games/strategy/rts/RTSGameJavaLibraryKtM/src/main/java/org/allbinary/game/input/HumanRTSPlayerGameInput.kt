@@ -722,6 +722,13 @@ this.getMotionGestureInputList()!!.add(motionGestureEvent)
 }
 
 
+    override fun onScrolledMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+var motionGestureEvent = motionGestureEvent
+}
+
+
     open fun getSelectedRtsLayer()
         //nullable = true from not(false or (false and true)) = true
 : CollidableDestroyableDamageableLayer{

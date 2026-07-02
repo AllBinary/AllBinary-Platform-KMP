@@ -39,7 +39,7 @@ open public class LivesHudWidget : BasicHud
 
     private val lifeInterface: Life
 
-    private var xArray: IntArray
+    private val xArray: IntArray
 
     private val animationInterface: Animation
 public constructor (animationInterface: Animation, lifeInterface: Life, location: Int, direction: Int)                        
@@ -58,33 +58,18 @@ this.lifeInterface= lifeInterface
     var size: Int = this.getLifeInterface()!!.getMaxlives().toInt()
 
 this.xArray= IntArray(size)
-this.update()
 this.animationInterface= animationInterface
 this.updateMaxWidth= this.lifeInterface!!.getMaxlives() *16
 this.updateMaxHeight= 16
 }
 
 
-    override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+    override fun updateMeasurement(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
-var displayChangeEvent = displayChangeEvent
-super.onDisplayChangeEvent(displayChangeEvent)
-this.update()
-}
+    //var graphics = graphics
+super.updateMeasurement(graphics)
 
-
-    open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-    
-                        if(this.xArray != 
-                                    null
-                                )
-                        
-                                    {
-                                    
     var maxLives: Int = this.getLifeInterface()!!.getMaxlives().toInt()
 
 
@@ -97,9 +82,15 @@ this.update()
 this.xArray[index]= this.getX() +(index *16)
 }
 
+}
 
-                                    }
-                                
+
+    override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+var displayChangeEvent = displayChangeEvent
+super.onDisplayChangeEvent(displayChangeEvent)
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 
@@ -108,7 +99,7 @@ this.xArray[index]= this.getX() +(index *16)
 {
 var x = x
 super.setX(x)
-this.update()
+this.myFontProcessor= this.updateMyFontProcessor
 }
 
 

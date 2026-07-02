@@ -29,7 +29,6 @@ import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.Rectangle
-import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.form.item.ABCustomItem
@@ -44,14 +43,12 @@ open public class ScrollSelectionForm : PaintableForm {
         
 companion object {
             
-    open fun createForm(title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun createForm(title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : ScrollSelectionForm{
     //var title = title
     //var items = items
     //var formPaintableFactory = formPaintableFactory
-    //var rectangle = rectangle
-    //var formType = formType
     //var border = border
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
@@ -66,7 +63,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ScrollSelectionForm(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
+                        return ScrollSelectionForm(title, items, formPaintableFactory, border,  -3, backgroundBasicColor, foregroundBasicColor)
 
                                     }
                                 
@@ -99,7 +96,7 @@ companion object {
                         if(ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM == NullUtil.getInstance()!!.NULL_OBJECT)
                         
                                     {
-                                    ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM= ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+                                    ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM= ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
                                     }
                                 
@@ -121,7 +118,7 @@ companion object {
                         if(ScrollSelectionForm.NULL_SCROLL_SELECTION_HORIZONTAL_FORM == NullUtil.getInstance()!!.NULL_OBJECT)
                         
                                     {
-                                    ScrollSelectionForm.NULL_SCROLL_SELECTION_HORIZONTAL_FORM= ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+                                    ScrollSelectionForm.NULL_SCROLL_SELECTION_HORIZONTAL_FORM= ScrollSelectionForm.createForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), ItemPaintableFactory.getInstance(), 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
                                     }
                                 
@@ -137,7 +134,7 @@ companion object {
 
     private val IS_IN_FORM: String = "isInForm"
 
-    private val GET_SELECTED_INDEX: String = "getSelectedIndex"
+    private val GET_SELECTED_INDEX: String = "getSelectedIndexForPoint"
 
         }
             
@@ -362,30 +359,43 @@ var dx = dx
 
     private var buttonBasicColor: BasicColor
 
-    private var formTypeItemIndexPaintable: ItemIndexPaintable = ItemIndexPaintable.getInstance()!!
+    var scrollSelectionFormFormTypeItemIndexPaintable: ItemIndexPaintable = ItemIndexPaintable.getInstance()!!
 
     private var formTypeItemIndexDx: ItemIndexDx = ItemIndexDx.getInstance()!!
 
     var paintable: ItemPaintable = ItemPaintableFactory.getInstance()!!
-public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, rectangle, formType, backgroundBasicColor, foregroundBasicColor){
+    private val adjustedExtraBorder: Int
+public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, border: Int, adjustedExtraBorder: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+
+                            : super(title, items, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var formPaintableFactory = formPaintableFactory
-    //var rectangle = rectangle
-    //var formType = formType
     //var border = border
+    //var adjustedExtraBorder = adjustedExtraBorder
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
                     
+this.adjustedExtraBorder= adjustedExtraBorder
 this.buttonBasicColor= foregroundBasicColor
 this.border= border
 this.halfBorder= (border shr 1)
 this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun init(rectangle: Rectangle, formType: FormType)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var rectangle = rectangle
+    //var formType = formType
+super.init(rectangle, formType)
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
@@ -394,7 +404,7 @@ this.paintable= formPaintableFactory!!.getInstanceItemPaintable(this)
                         if(formType == formTypeFactory!!.HORIZONTAL_FORM)
                         
                                     {
-                                    this.formTypeItemIndexPaintable= ScrollSelectionFormHorizontalPaintable(this)
+                                    this.scrollSelectionFormFormTypeItemIndexPaintable= ScrollSelectionFormHorizontalPaintable(this)
 this.formTypeItemIndexDx= ScrollSelectionFormHorizontalDx(this)
 
                                     }
@@ -404,7 +414,7 @@ this.formTypeItemIndexDx= ScrollSelectionFormHorizontalDx(this)
                         if(formType == formTypeFactory!!.VERTICAL_CENTER_FORM)
                         
                                     {
-                                    this.formTypeItemIndexPaintable= ScrollSelectionFormVerticalPaintable(this)
+                                    this.scrollSelectionFormFormTypeItemIndexPaintable= ScrollSelectionFormVerticalPaintable(this)
 this.formTypeItemIndexDx= ScrollSelectionFormVericalDx(this)
 
                                     }
@@ -414,7 +424,7 @@ this.formTypeItemIndexDx= ScrollSelectionFormVericalDx(this)
                         if(formType == formTypeFactory!!.TEMP_HORIZONTAL_FORM)
                         
                                     {
-                                    this.formTypeItemIndexPaintable= ScrollSelectionFormTempHorizontalPaintable(this)
+                                    this.scrollSelectionFormFormTypeItemIndexPaintable= ScrollSelectionFormTempHorizontalPaintable(this)
 this.formTypeItemIndexDx= ScrollSelectionFormTempHorizontalDx(this)
 
                                     }
@@ -590,6 +600,9 @@ var dx = dx
 : Int{
     //var item = item
 
+    var nextItem: ABCustomItem
+
+
     var size: Int = this.size()!!
 
 
@@ -599,9 +612,7 @@ var dx = dx
                         for (index in 0 until size)
 
         {
-
-    var nextItem: ABCustomItem = this.get(index) as ABCustomItem
-
+nextItem= this.get(index) as ABCustomItem
 
     
                         if(nextItem == item)
@@ -953,12 +964,12 @@ graphics.setColor(this.getButtonBasicColor()!!.toInt())
 
     var adjustedBorder: Int = 3
 
-graphics.drawRect(x -this.halfBorder -adjustedBorder, y -this.halfBorder -adjustedBorder, width +this.border -adjustedBorder, height +this.border -adjustedBorder)
+graphics.drawRect(x -this.halfBorder -adjustedBorder, y -this.halfBorder -adjustedBorder, width +this.border +this.adjustedExtraBorder, height +this.border +this.adjustedExtraBorder)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.formTypeItemIndexPaintable!!.paint(graphics, index, item, x, y)
+                        return this.scrollSelectionFormFormTypeItemIndexPaintable!!.paint(graphics, index, item, x, y)
 }
 
 
@@ -978,7 +989,7 @@ item.paintUnselected(graphics, x, y)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.formTypeItemIndexPaintable!!.paint(graphics, index, item, x, y)
+                        return this.scrollSelectionFormFormTypeItemIndexPaintable!!.paint(graphics, index, item, x, y)
 }
 
 

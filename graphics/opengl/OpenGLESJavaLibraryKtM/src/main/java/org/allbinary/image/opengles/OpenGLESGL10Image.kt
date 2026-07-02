@@ -61,7 +61,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
 
     val openGLESImageProperties: OpenGLESImageProperties = this@OpenGLESGL10Image.openGLESImageProperties
 
-    open override fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
+    override fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

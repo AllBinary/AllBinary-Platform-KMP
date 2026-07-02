@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -90,6 +90,16 @@ private constructor ()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty(this.OS_VERSION)
+}
+
+
+    open fun getUserHomePath()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+
+                            throw RuntimeException()
 }
 
 

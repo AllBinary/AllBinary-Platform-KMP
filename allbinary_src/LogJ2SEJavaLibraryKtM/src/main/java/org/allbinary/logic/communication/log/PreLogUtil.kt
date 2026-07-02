@@ -39,9 +39,9 @@ import org.allbinary.string.CommonStrings
     /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var specialMessage = specialMessage
-var anyType = anyType
-var functionName = functionName
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
 PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
@@ -51,10 +51,10 @@ PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!
     /*actual*/ open fun putOE(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
-var specialMessage = specialMessage
-var anyType = anyType
-var functionName = functionName
-var exception = exception
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
+    //var exception = exception
 
     var className: String = CommonStrings.getInstance()!!.EMPTY
 
@@ -73,7 +73,7 @@ var exception = exception
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-System.out.print(LOG_SUCCESS)
+System.out.print(PreLogUtil.LOG_SUCCESS)
 System.out.println(message)
 }
 
@@ -91,14 +91,14 @@ PreLogUtil.putSE(specialMessage, className, functionName, NullUtil.getInstance()
     /*actual*/ open fun putSE(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
-var specialMessage = specialMessage
-var className = className
-var functionName = functionName
-var exception = exception
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
+    //var exception = exception
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-System.out.print(LOG_SUCCESS)
+System.out.print(PreLogUtil.LOG_SUCCESS)
 System.out.println(message)
 }
 

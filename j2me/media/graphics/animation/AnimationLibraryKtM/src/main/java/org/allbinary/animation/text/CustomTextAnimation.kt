@@ -29,19 +29,24 @@ import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.graphics.font.FontDebugFactory
-import org.allbinary.logic.string.StringUtil
+import org.allbinary.logic.string.StringMaker
 
 open public class CustomTextAnimation : TextAnimation
                 , GetTextInterface {
         
+companion object {
+            
+    private val INIT_STRING: String = ""
 
+        }
+            
     val fontDebugFactory: FontDebugFactory = FontDebugFactory.getInstance()!!
 
     val fontSize: Int
 
     var font: Font
 
-    private var lastText: String = StringUtil.getInstance()!!.EMPTY_STRING
+    private var lastText: String = CustomTextAnimation.INIT_STRING
 
     var hasChanged: Boolean = true
 public constructor (text: String, fontSize: Int, animationBehavior: AnimationBehavior)                        

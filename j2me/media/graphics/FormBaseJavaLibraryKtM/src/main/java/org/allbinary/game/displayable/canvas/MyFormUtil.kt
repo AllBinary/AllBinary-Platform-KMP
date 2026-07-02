@@ -27,11 +27,14 @@
         
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
+import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.opengles.OpenGLFeatureFactory
+import org.allbinary.graphics.threed.SWTJOGLProcessor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -78,7 +81,23 @@ companion object {
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
 
-    var width: Int = MyFontProcessor.defaultStringWidth(font, 3)!!
+    var features: Features = Features.getInstance()!!
+
+
+    var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
+
+
+    var TOTAL_CHAR_WIDTH: Int = if(SWTJOGLProcessor.getInstance()!!.isJOGL() && isOpenGL) {
+                            
+                            2
+                        
+                            } else {
+                            3
+                            }
+    
+
+
+    var width: Int = MyFontProcessor.defaultStringWidth(font, TOTAL_CHAR_WIDTH)!!
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!

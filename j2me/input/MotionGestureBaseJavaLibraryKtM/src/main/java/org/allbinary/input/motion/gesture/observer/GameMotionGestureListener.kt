@@ -50,6 +50,8 @@ open public class GameMotionGestureListener
 
     private var touchGestureCollection: BasicArrayList = BasicArrayListD()
 
+    private var scrolledGestureCollection: BasicArrayList = BasicArrayListD()
+
     private var signed: CompleteMotionGestureListenerInterface
 public constructor (signed: CompleteMotionGestureListenerInterface)
             : super()
@@ -159,6 +161,13 @@ stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture())
 this.logUtil!!.put(stringBuffer!!.toString(), this, "release", e)
 }
 
+}
+
+
+    override fun onScrolledMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+var motionGestureEvent = motionGestureEvent
 }
 
 

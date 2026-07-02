@@ -245,11 +245,11 @@ ZipFileUtil.getInstance()!!.unzip(fullPath, file, fileName)
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(storeFrontInterface!!.getCurrentHostNamePath())
 stringBuffer!!.append(this.itemInterface!!.getCategory())
-stringBuffer!!.append(filePathData!!.SEPARATOR)
+stringBuffer!!.appendchar(filePathData!!.SEPARATORCHAR)
 stringBuffer!!.append(this.itemInterface!!.getId())
-stringBuffer!!.append(filePathData!!.SEPARATOR)
+stringBuffer!!.appendchar(filePathData!!.SEPARATORCHAR)
 stringBuffer!!.append(this.downloadableItem!!.getId())
-stringBuffer!!.append(filePathData!!.SEPARATOR)
+stringBuffer!!.appendchar(filePathData!!.SEPARATORCHAR)
 
 
 

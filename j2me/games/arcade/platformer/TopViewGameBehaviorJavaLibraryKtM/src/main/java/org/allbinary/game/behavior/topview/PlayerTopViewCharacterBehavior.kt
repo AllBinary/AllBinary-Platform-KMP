@@ -48,7 +48,7 @@ open public class PlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
 
                 @Throws(Exception::class)
             
-    open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
+    override fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layer = layer

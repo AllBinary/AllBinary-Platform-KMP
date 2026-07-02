@@ -295,7 +295,7 @@ stringBuffer!!.append(this.nameP)
 
 stringBuffer!!.append(this.schema)
 stringBuffer!!.append(this.commonSeps!!.COLON)
-stringBuffer!!.append(filePathData!!.SEPARATOR)
+stringBuffer!!.append(filePathData!!.PATH_START)
 stringBuffer!!.append(FilePathUtil.adjust(this.getPath()))
 stringBuffer!!.append(this.nameP)
 

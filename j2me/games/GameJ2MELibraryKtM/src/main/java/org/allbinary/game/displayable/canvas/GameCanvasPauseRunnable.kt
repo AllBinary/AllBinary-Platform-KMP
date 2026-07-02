@@ -55,11 +55,6 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
         //nullable = true from not(false or (false and true)) = true
 {
 
-    
-                        if(AndroidUtil.isAndroid())
-                        
-                                    {
-                                    
         try {
             
     var features: Features = Features.getInstance()!!
@@ -84,9 +79,6 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
 this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
-
-                                    }
-                                
 }
 
 

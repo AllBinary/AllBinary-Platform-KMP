@@ -27,7 +27,6 @@
         
 import java.util.Hashtable
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory

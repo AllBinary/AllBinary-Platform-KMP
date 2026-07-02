@@ -34,7 +34,7 @@ var gl = gl
 }
 
 
-    open fun process(gl: GL10)
+    override fun process(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

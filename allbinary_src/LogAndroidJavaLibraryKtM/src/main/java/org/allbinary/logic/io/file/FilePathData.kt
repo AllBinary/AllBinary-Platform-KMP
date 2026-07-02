@@ -50,7 +50,7 @@ companion object {
             
     val SEPARATORCHAR: Char = File.separatorChar
 
-    var SEPARATOR: String = File.separator
+    var PATH_START: String = File.separator
 private constructor ()
             : super()
         {
@@ -59,7 +59,7 @@ private constructor ()
                         if(File.separatorChar == '\\')
                         
                                     {
-                                    this.SEPARATOR= File.separator +File.separator
+                                    this.PATH_START= File.separator +File.separator
 
                                     }
                                 

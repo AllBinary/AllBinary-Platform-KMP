@@ -56,10 +56,14 @@ companion object {
                         
                                     {
                                     
+    var scrollSelectionForm: ScrollSelectionForm = CommandCurrentSelectionForm(title, items, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor)
+
+scrollSelectionForm!!.init(rectangle, formType)
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CommandCurrentSelectionForm(title, items, rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor)
+                        return scrollSelectionForm
 
                                     }
                                 

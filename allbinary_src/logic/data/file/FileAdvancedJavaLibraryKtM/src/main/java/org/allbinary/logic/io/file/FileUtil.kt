@@ -35,7 +35,7 @@ import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 import org.allbinary.logic.io.AbDataOutputStream
 import org.allbinary.logic.io.AbFileInputStream
 import org.allbinary.logic.io.AbFileLocalInputStream
-import org.allbinary.logic.io.AbFileSystem
+import org.allbinary.logic.io.AbIOSystem
 import org.allbinary.logic.io.DataOutputStreamFactory
 import org.allbinary.logic.io.FileStreamFactory
 import org.allbinary.logic.io.StreamUtil
@@ -70,16 +70,16 @@ companion object {
     open fun getNewDirectory(fromFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : String{
-var fromFile = fromFile
+    //var fromFile = fromFile
 
     var newDirectory: String = fromFile!!.getPath()!!
 
 
-    var separatorChar: String = java.io.File.separator
+    var separatorChar: String = FilePathData.getInstance()!!.PATH_START
 
 
     
-                        if(AbFileSystem.getInstance()!!.isType("com.vobject.appengine.java.io"))
+                        if(AbIOSystem.getInstance()!!.isType("com.vobject.appengine.java.io"))
                         
                                     {
                                     separatorChar= AbPathData.getInstance()!!.SEPARATOR
@@ -642,12 +642,12 @@ this.logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile", e)
     open fun copyDirectoryPortion(fromDirectoryAbPath: AbPath, toDirectoryAbPath: AbPath, overwriteNewer: Boolean, overwriteAll: Boolean, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var fromDirectoryAbPath = fromDirectoryAbPath
-var toDirectoryAbPath = toDirectoryAbPath
-var overwriteNewer = overwriteNewer
-var overwriteAll = overwriteAll
-var current = current
-var total = total
+    //var fromDirectoryAbPath = fromDirectoryAbPath
+    //var toDirectoryAbPath = toDirectoryAbPath
+    //var overwriteNewer = overwriteNewer
+    //var overwriteAll = overwriteAll
+    //var current = current
+    //var total = total
 
     var file: AbFile = AbFile.createAbFileFromAbPath(fromDirectoryAbPath)!!
 
@@ -708,15 +708,16 @@ stringBuffer!!.appendint(end)
                                     }
                                 
 
+    var nextFile: AbFile
+
+
 
 
 
                         for (index in start until end)
 
         {
-
-    var nextFile: AbFile = fileList!!.get(index) as AbFile
-
+nextFile= fileList!!.get(index) as AbFile
 
     
                         if(nextFile!!.isDirectory())
@@ -827,15 +828,16 @@ this.logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "copyDirectory")
                                     }
                                 
 
+    var file: AbFile
+
+
 
 
 
                         for (index in 0 until size)
 
         {
-
-    var file: AbFile = fileArray[index]!!
-
+file= fileArray[index]!!
 
     
                         if(file.isFile())
@@ -897,8 +899,8 @@ this.logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory", e)
     open fun copy(fromAbPath: AbPath, to: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var fromAbPath = fromAbPath
-var to = to
+    //var fromAbPath = fromAbPath
+    //var to = to
 
     var COPY: String = "copy"
 
@@ -1271,8 +1273,8 @@ skipFile= skipFiles[index]!!
     open fun write(filePath: String, string: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var filePath = filePath
-var string = string
+    //var filePath = filePath
+    //var string = string
 
     var dataOutputStream: AbDataOutputStream = 
                 null
