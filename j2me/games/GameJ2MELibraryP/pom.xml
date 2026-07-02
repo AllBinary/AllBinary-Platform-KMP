@@ -51,8 +51,8 @@
 
         <module>../../DebugJavaLibraryKtM</module>
         <module>../../ResourceLibraryKtM</module>
-<!--
-        <module>../../ResourceJ2MEJavaLibraryKtM</module>-->
+
+        <module>../../ResourceJ2MEJavaLibraryKtM</module>
         <module>../../AndroidResourceLibraryKtM</module>
         
         <module>../../../allbinary_src/hardware/AndroidSystemJavaLibraryKtM</module>
