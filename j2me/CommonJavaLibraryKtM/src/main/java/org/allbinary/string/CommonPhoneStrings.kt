@@ -1,57 +1,40 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.string
+/* Generated Code Do Not Modify */
+package org.allbinary.string
 
+import java.lang.Object
 
+open public class CommonPhoneStrings : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: CommonPhoneStrings = CommonPhoneStrings()
 
-open public class CommonPhoneStrings
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: CommonPhoneStrings = CommonPhoneStrings()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CommonPhoneStrings {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CommonPhoneStrings{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CommonPhoneStrings.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CommonPhoneStrings.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val UP: String = "UP"
 
     val DOWN: String = "DOWN"
@@ -85,8 +68,4 @@ companion object {
     val STAR: String = "*"
 
     val FIRE: String = "FIRE"
-
 }
-                
-            
-

@@ -1,58 +1,41 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2011 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.string
+/* Generated Code Do Not Modify */
+package org.allbinary.string
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 
-open public class CommonSeps
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: CommonSeps = CommonSeps()
+open public class CommonSeps : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CommonSeps{
+    companion object {
 
+        private val instance: CommonSeps = CommonSeps()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CommonSeps {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CommonSeps.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CommonSeps.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val NEW_LINE: String = "\n"
 
     val SEMICOLON: String = ";"
@@ -69,11 +52,9 @@ companion object {
 
     val UNDERSCORE: String = "_"
 
-    val COLON_SEP: String = StringMaker().
-                            append(this.COLON)!!.append(this.SPACE)!!.toString()!!
+    val COLON_SEP: String = StringMaker().append(this.COLON)!!.append(this.SPACE)!!.toString()!!
 
-    val COMMA_SEP: String = StringMaker().
-                            append(this.COMMA)!!.append(this.SPACE)!!.toString()!!
+    val COMMA_SEP: String = StringMaker().append(this.COMMA)!!.append(this.SPACE)!!.toString()!!
 
     val PARENTHESIS_OPEN: String = "("
 
@@ -104,8 +85,4 @@ companion object {
     val QUOTE_END: String = "\","
 
     val COMMENT: String = "//"
-
 }
-                
-            
-

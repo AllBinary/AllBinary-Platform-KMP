@@ -1,57 +1,40 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot 
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.string
+/* Generated Code Do Not Modify */
+package org.allbinary.string
 
+import java.lang.Object
 
+open public class CommonLabels : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: CommonLabels = CommonLabels()
 
-open public class CommonLabels
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: CommonLabels = CommonLabels()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CommonLabels {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CommonLabels{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CommonLabels.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CommonLabels.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val WIDTH_LABEL: String = " Width: "
 
     val HEIGHT_LABEL: String = " Height: "
@@ -77,8 +60,4 @@ companion object {
     val ITEM_LABEL: String = "Item: "
 
     val COLON_SEP: String = ": "
-
 }
-                
-            
-
