@@ -1,140 +1,112 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input.event
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input.event
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import kotlin.Array
 import org.allbinary.game.input.LocalPlayerInputIdFactory
 import org.allbinary.logic.util.event.EventListenerInterface
 
 open public class UpGameKeyEventHandler : UpGameKeyEventHandlerBase {
-        
-companion object {
-            
-    private val instance: UpGameKeyEventHandler = UpGameKeyEventHandler()
 
-    private val instanceArray: Array<UpGameKeyEventHandlerBase?> = arrayOf(UpGameKeyEventHandlerBase(),UpGameKeyEventHandlerBase(),UpGameKeyEventHandlerBase(),UpGameKeyEventHandlerBase(),UpGameKeyEventHandlerBase(),UpGameKeyEventHandlerBase())
+    companion object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: UpGameKeyEventHandler{
+        private val instance: UpGameKeyEventHandler = UpGameKeyEventHandler()
 
+        private val instanceArray: Array<UpGameKeyEventHandlerBase?> =
+            arrayOf(
+                UpGameKeyEventHandlerBase(),
+                UpGameKeyEventHandlerBase(),
+                UpGameKeyEventHandlerBase(),
+                UpGameKeyEventHandlerBase(),
+                UpGameKeyEventHandlerBase(),
+                UpGameKeyEventHandlerBase(),
+            )
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : UpGameKeyEventHandler {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return UpGameKeyEventHandler.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return UpGameKeyEventHandler.instance
         }
-            
-    private val playerInputIdFactory: LocalPlayerInputIdFactory = LocalPlayerInputIdFactory.getInstance()!!
+    }
 
-    open fun getInstanceForDevice(deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-: UpGameKeyEventHandlerBase{
-var deviceId = deviceId
+    private val playerInputIdFactory: LocalPlayerInputIdFactory =
+        LocalPlayerInputIdFactory.getInstance()!!
 
-    var playerInputId: Int = this.playerInputIdFactory!!.getPlayerForDevice(deviceId)!!
+    open fun getInstanceForDevice(
+        deviceId: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : UpGameKeyEventHandlerBase {
+        var deviceId = deviceId
 
+        var playerInputId: Int = this.playerInputIdFactory!!.getPlayerForDevice(deviceId)!!
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return UpGameKeyEventHandler.instanceArray[playerInputId]!!
+    }
 
+    open fun getInstanceForPlayer(
+        playerInputId: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : UpGameKeyEventHandlerBase {
+        var playerInputId = playerInputId
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return UpGameKeyEventHandler.instanceArray[playerInputId]!!
-}
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return UpGameKeyEventHandler.instanceArray[playerInputId]!!
+    }
 
-
-    open fun getInstanceForPlayer(playerInputId: Int)
-        //nullable = true from not(false or (false and false)) = true
-: UpGameKeyEventHandlerBase{
-var playerInputId = playerInputId
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return UpGameKeyEventHandler.instanceArray[playerInputId]!!
-}
-
-private constructor (){
-}
-
+    private constructor() {}
 
     override fun removeAllListeners()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.removeAllListeners()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.removeAllListeners()
 
+        for (index in UpGameKeyEventHandler.instanceArray!!.size - 1 downTo 0) {
 
-
-
-                        for (index in UpGameKeyEventHandler.instanceArray!!.size -1 downTo 0)
-
-        {
-UpGameKeyEventHandler.instanceArray[index]!!.removeAllListeners()
-}
-
-}
-
+            UpGameKeyEventHandler.instanceArray[index]!!.removeAllListeners()
+        }
+    }
 
     override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var eventListenerInterface = eventListenerInterface
-super.removeListenerSingleThreaded(eventListenerInterface)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var eventListenerInterface = eventListenerInterface
+        super.removeListenerSingleThreaded(eventListenerInterface)
 
+        for (index in UpGameKeyEventHandler.instanceArray!!.size - 1 downTo 0) {
 
-
-
-                        for (index in UpGameKeyEventHandler.instanceArray!!.size -1 downTo 0)
-
-        {
-UpGameKeyEventHandler.instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
-}
-
-}
-
+            UpGameKeyEventHandler.instanceArray[index]!!.removeListenerSingleThreaded(
+                eventListenerInterface
+            )
+        }
+    }
 
     override fun removeListener(eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var eventListenerInterface = eventListenerInterface
-super.removeListener(eventListenerInterface)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var eventListenerInterface = eventListenerInterface
+        super.removeListener(eventListenerInterface)
 
+        for (index in UpGameKeyEventHandler.instanceArray!!.size - 1 downTo 0) {
 
-
-
-                        for (index in UpGameKeyEventHandler.instanceArray!!.size -1 downTo 0)
-
-        {
-UpGameKeyEventHandler.instanceArray[index]!!.removeListener(eventListenerInterface)
+            UpGameKeyEventHandler.instanceArray[index]!!.removeListener(eventListenerInterface)
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

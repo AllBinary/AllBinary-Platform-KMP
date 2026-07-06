@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.ai.tactical
+/* Generated Code Do Not Modify */
+package org.allbinary.game.ai.tactical
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Canvas
 import org.allbinary.game.ai.BasicAI
 import org.allbinary.game.input.GameInput
@@ -33,164 +23,115 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 
 open public class HorizontalManeuverAI : BasicAI {
-        
 
     var currentRelativeAngle: Int = 0
 
     private var currentSpeed: Int
-public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput){
-var ownerLayerInterface = ownerLayerInterface
-var gameInput = gameInput
+    public constructor(
+        ownerLayerInterface: AllBinaryLayer,
+        gameInput: GameInput,
+    ) : super(ownerLayerInterface, gameInput) {
+        var ownerLayerInterface = ownerLayerInterface
+        var gameInput = gameInput
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.currentSpeed= 5
-}
+        this.currentSpeed = 5
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
 
-    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
+        var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
+        var x: Int = ownerLayerInterface!!.getXP()!!
 
-    var x: Int = ownerLayerInterface!!.getXP()!!
+        if (ownerLayerInterface!!.getXP() - this.currentSpeed <= 0) {
 
+            this.reverse()
+            this.drop()
+        }
 
-    
-                        if(ownerLayerInterface!!.getXP() -this.currentSpeed <= 0)
-                        
-                                    {
-                                    this.reverse()
-this.drop()
+        if (
+            ownerLayerInterface!!.getX2() + this.currentSpeed >
+                DisplayInfoSingleton.getInstance()!!.getLastWidth()
+        ) {
+            this.reverse()
+            this.accelerate()
+            this.drop()
+        }
 
-                                    }
-                                
+        if (this.currentRelativeAngle == 0) {
 
-    
-                        if(ownerLayerInterface!!.getX2() +this.currentSpeed > DisplayInfoSingleton.getInstance()!!.getLastWidth())
-                        
-                                    {
-                                    this.reverse()
-this.accelerate()
-this.drop()
+            x += this.currentSpeed
+        } else if (this.currentRelativeAngle == 180) {
 
-                                    }
-                                
+            x -= this.currentSpeed
+        }
 
-    
-                        if(this.currentRelativeAngle == 0)
-                        
-                                    {
-                                    x += this.currentSpeed
+        ownerLayerInterface!!.setPosition(
+            x,
+            ownerLayerInterface!!.getYP(),
+            ownerLayerInterface!!.getZP(),
+        )
 
-                                    }
-                                
-                             else 
-    
-                        if(this.currentRelativeAngle == 180)
-                        
-                                    {
-                                    x -= this.currentSpeed
+        if (this.currentRelativeAngle == 0) {
 
-                                    }
-                                
-ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerInterface!!.getZP())
+            super.processKeyAI(Canvas.KEY_NUM0)
+        } else if (this.currentRelativeAngle == 180) {
 
-    
-                        if(this.currentRelativeAngle == 0)
-                        
-                                    {
-                                    super.processKeyAI(Canvas.KEY_NUM0)
-
-                                    }
-                                
-                             else 
-    
-                        if(this.currentRelativeAngle == 180)
-                        
-                                    {
-                                    super.processKeyAI(Canvas.KEY_POUND)
-
-                                    }
-                                
-}
-
+            super.processKeyAI(Canvas.KEY_POUND)
+        }
+    }
 
     open fun reverse()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.currentRelativeAngle == 180)
-                        
-                                    {
-                                    this.currentRelativeAngle= 0
+        if (this.currentRelativeAngle == 180) {
 
-                                    }
-                                
-                             else 
-    
-                        if(this.currentRelativeAngle == 0)
-                        
-                                    {
-                                    this.currentRelativeAngle= 180
+            this.currentRelativeAngle = 0
+        } else if (this.currentRelativeAngle == 0) {
 
-                                    }
-                                
-}
-
+            this.currentRelativeAngle = 180
+        }
+    }
 
     open fun accelerate()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.currentSpeed < 20)
-                        
-                                    {
-                                    this.currentSpeed++
+        if (this.currentSpeed < 20) {
 
-                                    }
-                                
-}
-
+            this.currentSpeed++
+        }
+    }
 
     open fun drop()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
+        var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
+        var y: Int = ownerLayerInterface!!.getYP()!!
 
-    var y: Int = ownerLayerInterface!!.getYP()!!
+        if (
+            ownerLayerInterface!!.getY2() + ownerLayerInterface!!.getHeight() >
+                DisplayInfoSingleton.getInstance()!!.getLastHeight()
+        ) {
+            y = 0
+        } else {
+            y += ownerLayerInterface!!.getHeight() + 1
+        }
 
-
-    
-                        if(ownerLayerInterface!!.getY2() +ownerLayerInterface!!.getHeight() > DisplayInfoSingleton.getInstance()!!.getLastHeight())
-                        
-                                    {
-                                    y= 0
-
-                                    }
-                                
-                        else {
-                            y += ownerLayerInterface!!.getHeight() +1
-
-                        }
-                            
-ownerLayerInterface!!.setPosition(ownerLayerInterface!!.getXP(), y, ownerLayerInterface!!.getZP())
+        ownerLayerInterface!!.setPosition(
+            ownerLayerInterface!!.getXP(),
+            y,
+            ownerLayerInterface!!.getZP(),
+        )
+    }
 }
-
-
-}
-                
-            
-

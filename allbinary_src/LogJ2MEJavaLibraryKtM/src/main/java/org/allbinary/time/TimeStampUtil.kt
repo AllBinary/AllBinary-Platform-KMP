@@ -1,77 +1,51 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.time
+/* Generated Code Do Not Modify */
+package org.allbinary.time
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Calendar
 import java.util.Date
-//ActualPlatform
-/*actual*/ open public class TimeStampUtil
-            : Object
-         {
-        
-/*actual*/ companion object {
-            
-    private val instance: TimeStampUtil = TimeStampUtil()
 
-    /*actual*/ open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: TimeStampUtil{
+// ActualPlatform
+/*actual*/ open public class TimeStampUtil : Object {
 
+    /*actual*/ companion object {
 
+        private val instance: TimeStampUtil = TimeStampUtil()
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return TimeStampUtil.instance
-}
+        /*actual*/ open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : TimeStampUtil {
 
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return TimeStampUtil.instance
         }
-            private constructor ()
-            : super()
-        {
-}
+    }
 
+    private constructor() : super() {}
 
     /*actual*/ open fun getAsString()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-    var calendar: Calendar = Calendar.getInstance()!!
+        var calendar: Calendar = Calendar.getInstance()!!
 
+        var date: Date = calendar.getTime()!!
 
-    var date: Date = calendar.getTime()!!
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return date.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return date.toString()
+    }
 }
-
-
-}
-                
-            
-

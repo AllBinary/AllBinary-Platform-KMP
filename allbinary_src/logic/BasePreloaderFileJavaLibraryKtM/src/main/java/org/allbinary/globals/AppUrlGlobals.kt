@@ -1,112 +1,79 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.globals
+/* Generated Code Do Not Modify */
+package org.allbinary.globals
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.logic.string.StringUtil
-//implements
-open public class AppUrlGlobals : UrlGlobalsInterface {
-        
-companion object {
-            
-    val NULL_APP_URL_GLOBALS: AppUrlGlobals = AppUrlGlobals()
 
-        }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+// implements
+open public class AppUrlGlobals : UrlGlobalsInterface {
+
+    companion object {
+
+        val NULL_APP_URL_GLOBALS: AppUrlGlobals = AppUrlGlobals()
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     private var path: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     override fun isTestingMode()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     override fun getWebappPath()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.path
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.path
-}
-
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     open fun setWebappPath(path: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var path = path
-this.path= path
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var path = path
+        this.path = path
 
-    
-                        if(!(this.path.endsWith("\\") || this.path.endsWith("/")))
-                        
-                                    {
-                                    this.path= this.path +"\\"
+        if (!(this.path.endsWith("\\") || this.path.endsWith("/"))) {
 
-                                    }
-                                
-}
-
+            this.path = this.path + "\\"
+        }
+    }
 
     override fun getTestHtmlPath()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return StringUtil.getInstance()!!.EMPTY_STRING
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringUtil.getInstance()!!.EMPTY_STRING
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getMainPath()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.path
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.path
+    }
 }
-
-
-}
-                
-            
-

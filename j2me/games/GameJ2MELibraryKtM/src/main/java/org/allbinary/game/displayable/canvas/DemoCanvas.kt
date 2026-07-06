@@ -1,38 +1,28 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Thread
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Thread
 import java.util.Hashtable
 import java.util.Vector
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Item
+import kotlin.Array
 import org.allbinary.J2MEUtil
 import org.allbinary.animation.Animation
 import org.allbinary.animation.IndexedAnimationBehavior
@@ -91,8 +81,8 @@ import org.allbinary.graphics.form.FormType
 import org.allbinary.graphics.form.FormTypeFactory
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.graphics.form.ScrollSelectionFormNoneFactory
-import org.allbinary.graphics.form.item.CommandTextItemArrayFactory
 import org.allbinary.graphics.form.item.ABCustomItem
+import org.allbinary.graphics.form.item.CommandTextItemArrayFactory
 import org.allbinary.graphics.opengles.CurrentDisplayableFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
@@ -128,22 +118,22 @@ import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class DemoCanvas : RunnableCanvas
-                , GameCanvasRunnableInterface
-                , MenuListener
-                , DisplayChangeEventListener
-                , DemoPaintableInterface {
-        
-companion object {
-            
-    private val id: Int = 0
+open public class DemoCanvas :
+    RunnableCanvas,
+    GameCanvasRunnableInterface,
+    MenuListener,
+    DisplayChangeEventListener,
+    DemoPaintableInterface {
 
-    private val BOT_GAME_STATS: String = "Bot Game Statistics: "
+    companion object {
 
-    val TYPE: Int = 3
+        private val id: Int = 0
 
-        }
-            
+        private val BOT_GAME_STATS: String = "Bot Game Statistics: "
+
+        val TYPE: Int = 3
+    }
+
     val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
     val myCommandsFactory: MyCommandsFactory = MyCommandsFactory.getInstance()!!
@@ -194,7 +184,7 @@ companion object {
 
     private val gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory
 
-    private var initialized: Boolean= false
+    private var initialized: Boolean = false
 
     private val demoGameRunnable: DemoGameStartupRunnable
 
@@ -208,1539 +198,1233 @@ companion object {
 
     private var tempWait: Int = NullWaitGameRunnable.getInstance()!!.WAIT
 
-    private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
+    private val inputToGameKeyMapping: InputToGameKeyMapping =
+        PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
+            .getInputMapping()!!
 
     var gameRunnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
-public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, highScoresFactoryInterface: HighScoresFactoryInterface, paintable: Paintable, overlayPaintable: InitUpdatePaintable, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, isContinue: Boolean)                        
 
-                            : super(commandListener, CurrentDisplayableFactory.getInstance()!!.DEFAULT_CHILD_NAME_LIST, true){
-    //var abeClientInformation = abeClientInformation
-    //var commandListener = commandListener
-    //var highScoresFactoryInterface = highScoresFactoryInterface
-    //var paintable = paintable
-    //var overlayPaintable = overlayPaintable
-    //var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
-    //var isContinue = isContinue
+    public constructor(
+        abeClientInformation: AbeClientInformationInterface,
+        commandListener: CommandListener,
+        highScoresFactoryInterface: HighScoresFactoryInterface,
+        paintable: Paintable,
+        overlayPaintable: InitUpdatePaintable,
+        gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory,
+        isContinue: Boolean,
+    ) : super(
+        commandListener,
+        CurrentDisplayableFactory.getInstance()!!.DEFAULT_CHILD_NAME_LIST,
+        true,
+    ) {
+        // var abeClientInformation = abeClientInformation
+        // var commandListener = commandListener
+        // var highScoresFactoryInterface = highScoresFactoryInterface
+        // var paintable = paintable
+        // var overlayPaintable = overlayPaintable
+        // var gameInitializationInterfaceFactoryInterface =
+        // gameInitializationInterfaceFactoryInterface
+        // var isContinue = isContinue
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.abeClientInformation= abeClientInformation
-this.setWait(NullWaitGameRunnable.getInstance()!!.WAIT)
-this.gameInitializationInterfaceFactoryInterface= gameInitializationInterfaceFactoryInterface
-GameInitializationUtil.getInstance()!!.initDemo(abeClientInformation, this, gameInitializationInterfaceFactoryInterface)
-ResizableListenerHandler.getInstance()!!.fireEvent(false)
-this.overlayPaintable= overlayPaintable
-this.highScoresFactoryInterface= highScoresFactoryInterface
-this.setDefaultPaintableInterface(paintable)
-this.setPaintableInterface(this.getDefaultPaintableInterface())
+        this.abeClientInformation = abeClientInformation
+        this.setWait(NullWaitGameRunnable.getInstance()!!.WAIT)
+        this.gameInitializationInterfaceFactoryInterface =
+            gameInitializationInterfaceFactoryInterface
+        GameInitializationUtil.getInstance()!!.initDemo(
+            abeClientInformation,
+            this,
+            gameInitializationInterfaceFactoryInterface,
+        )
+        ResizableListenerHandler.getInstance()!!.fireEvent(false)
+        this.overlayPaintable = overlayPaintable
+        this.highScoresFactoryInterface = highScoresFactoryInterface
+        this.setDefaultPaintableInterface(paintable)
+        this.setPaintableInterface(this.getDefaultPaintableInterface())
 
-    
-                        if(isContinue)
-                        
-                                    {
-                                    this.addCommand(GameCommandsFactory.getInstance()!!.CONTINUE_COMMAND)
+        if (isContinue) {
 
-                                    }
-                                
+            this.addCommand(GameCommandsFactory.getInstance()!!.CONTINUE_COMMAND)
+        }
 
-    
-                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(GameFeatureFactory.getInstance()!!.SOUND))
-                        
-                                    {
-                                    this.mediaInit()
+        if (
+            ChangedGameFeatureListener.getInstance()!!.isChangedFeature(
+                GameFeatureFactory.getInstance()!!.SOUND
+            )
+        ) {
+            this.mediaInit()
+        }
 
-                                    }
-                                
-this.demoGameRunnable= DemoGameStartupRunnable(this)
-DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
-}
-
+        this.demoGameRunnable = DemoGameStartupRunnable(this)
+        DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
+    }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-var eventObject = eventObject
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var eventObject = eventObject
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
     override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-var displayChangeEvent = displayChangeEvent
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var displayChangeEvent = displayChangeEvent
 
         try {
-            this.logUtil!!.putF(StringMaker().
-                            append(this.commonLabels!!.START_LABEL)!!.append(this.displayInfo!!.toString())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append(this.commonLabels!!.START_LABEL)!!
+                    .append(this.displayInfo!!.toString())!!
+                    .toString(),
+                this,
+                this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT,
+            )
 
-    var scrollSelectionForm: ScrollSelectionForm = this.getMenuForm()!!
+            var scrollSelectionForm: ScrollSelectionForm = this.getMenuForm()!!
 
+            if (scrollSelectionForm != null) {
 
-    
-                        if(scrollSelectionForm != 
-                                    null
-                                )
-                        
-                                    {
-                                    
-    var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
+                var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
+                var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
 
-    var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
+                scrollSelectionForm!!.init(rectangle, formType)
+            }
 
-scrollSelectionForm!!.init(rectangle, formType)
-
-                                    }
-                                
-this.overlayPaintable!!.init()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
-}
-
-}
-
+            this.overlayPaintable!!.init()
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT,
+                e,
+            )
+        }
+    }
 
     open fun getCustomCommands()
-        //nullable = true from not(false or (false and true)) = true
-: Array<Any?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<Any?> {
 
-    var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
+        var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
+        if (J2MEUtil.isHTML()) {
 
-    
-                        if(J2MEUtil.isHTML())
-                        
-                                    {
-                                    
-    var commandArray: Array<Any?> = arrayOf(gameCommandsFactory!!.START_COMMAND,HighScoreCommands.getInstance()!!.DISPLAY,GameInputMappingCanvas.DISPLAY,gameCommandsFactory!!.DISPLAY_ABOUT)
+            var commandArray: Array<Any?> =
+                arrayOf(
+                    gameCommandsFactory!!.START_COMMAND,
+                    HighScoreCommands.getInstance()!!.DISPLAY,
+                    GameInputMappingCanvas.DISPLAY,
+                    gameCommandsFactory!!.DISPLAY_ABOUT,
+                )
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return commandArray
+        } else {
 
+            var commandList: BasicArrayList = BasicArrayListD()
 
+            commandList!!.add(gameCommandsFactory!!.START_COMMAND)
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return commandArray
+            var inApplicationPurchaseFactory: InApplicationPurchaseFactory =
+                InApplicationPurchaseFactory.getInstance()!!
 
-                                    }
-                                
-                        else {
-                            
-    var commandList: BasicArrayList = BasicArrayListD()
+            if (inApplicationPurchaseFactory!!.isEnabled()) {
 
-commandList!!.add(gameCommandsFactory!!.START_COMMAND)
+                var list: BasicArrayList = LockableFeatureFactory.getInstance()!!.getList()!!
 
-    var inApplicationPurchaseFactory: InApplicationPurchaseFactory = InApplicationPurchaseFactory.getInstance()!!
+                if (
+                    list.size() > 0 &&
+                        !inApplicationPurchaseFactory!!.isPurchased(list.get(0) as LockableFeature)
+                ) {
+                    commandList!!.add(gameCommandsFactory!!.BUY_COMMAND)
+                }
+            }
 
+            commandList!!.add(HighScoreCommands.getInstance()!!.DISPLAY)
 
-    
-                        if(inApplicationPurchaseFactory!!.isEnabled())
-                        
-                                    {
-                                    
-    var list: BasicArrayList = LockableFeatureFactory.getInstance()!!.getList()!!
+            try {
 
+                var isOverScan: Boolean =
+                    OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
+                        .isOverScan()!!
 
-    
-                        if(list.size() > 0 && !inApplicationPurchaseFactory!!.isPurchased(list.get(0) as LockableFeature))
-                        
-                                    {
-                                    commandList!!.add(gameCommandsFactory!!.BUY_COMMAND)
+                if (SWTUtil.isSWT) {
 
-                                    }
-                                
+                    commandList!!.add(GameInputMappingCanvas.DISPLAY)
+                } else if (!isOverScan) {
 
-                                    }
-                                
-commandList!!.add(HighScoreCommands.getInstance()!!.DISPLAY)
+                    commandList!!.add(gameCommandsFactory!!.DISPLAY_OPTIONS)
+                    commandList!!.add(gameCommandsFactory!!.DISPLAY_LOAD_FORM)
+                    commandList!!.add(GameInputMappingCanvas.DISPLAY)
+                }
+            } catch (e: Exception) {}
 
-        try {
-            
-    var isOverScan: Boolean = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!.isOverScan()!!
+            commandList!!.add(gameCommandsFactory!!.DISPLAY_ABOUT)
 
+            var commandArray: Array<Any?> = commandList!!.toArray()!!
 
-    
-                        if(SWTUtil.isSWT)
-                        
-                                    {
-                                    commandList!!.add(GameInputMappingCanvas.DISPLAY)
-
-                                    }
-                                
-                             else 
-    
-                        if(!isOverScan)
-                        
-                                    {
-                                    commandList!!.add(gameCommandsFactory!!.DISPLAY_OPTIONS)
-commandList!!.add(gameCommandsFactory!!.DISPLAY_LOAD_FORM)
-commandList!!.add(GameInputMappingCanvas.DISPLAY)
-
-                                    }
-                                
-} catch(e: Exception)
-            {
-}
-
-commandList!!.add(gameCommandsFactory!!.DISPLAY_ABOUT)
-
-    var commandArray: Array<Any?> = commandList!!.toArray()!!
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return commandArray
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return commandArray
+        }
+    }
 
     override fun initCommands(cmdListener: CommandListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var cmdListener = cmdListener
-this.removeAllCommands()
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var cmdListener = cmdListener
+        this.removeAllCommands()
 
-    var commandArray: Array<Any?> = this.getCustomCommands()!!
+        var commandArray: Array<Any?> = this.getCustomCommands()!!
 
+        var size: Int = commandArray!!.size
 
-    var size: Int = commandArray!!.size
-                
+        for (index in 0 until size) {
 
+            this.addCommand(commandArray[index]!! as Command)
+        }
 
+        CustomGameMenuUtil.add(this)
+        this.setCommandListener(cmdListener)
+    }
 
-
-
-                        for (index in 0 until size)
-
-        {
-this.addCommand(commandArray[index]!! as Command)
-}
-
-CustomGameMenuUtil.add(this)
-this.setCommandListener(cmdListener)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun initPostPaint()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun mediaInit()
-        //nullable = true from not(false or (false and true)) = true
-{
-AllBinaryMediaManager.init(EarlySoundsFactory.getInstance())
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        AllBinaryMediaManager.init(EarlySoundsFactory.getInstance())
+    }
 
     override fun itemStateChanged(item: Item)
-        //nullable = true from not(false or (false and false)) = true
-{
-var item = item
-ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var item = item
+        ForcedLogUtil.log(this.commonStrings!!.NOT_IMPLEMENTED, this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun initMenu()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.close()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.close()
 
-    var commandTextItemArrayFactory: CommandTextItemArrayFactory = DemoLimitedCommandTextItemArrayFactory.getInstance()!!.getCommandTextItemArrayFactory()!!
+        var commandTextItemArrayFactory: CommandTextItemArrayFactory =
+            DemoLimitedCommandTextItemArrayFactory.getInstance()!!
+                .getCommandTextItemArrayFactory()!!
 
+        var items: Array<ABCustomItem?> =
+            commandTextItemArrayFactory!!.getInstance(
+                this.getCommandStack() as Vector<Any>,
+                this.basicColorFactory!!.BLACK,
+                this.basicColorFactory!!.WHITE,
+            )!!
 
-    var items: Array<ABCustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE)!!
+        var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
+        var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
 
-    var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
+        PreLogUtil.put(
+            StringMaker()
+                .append(this.commonLabels!!.START_LABEL)!!
+                .append(this.displayInfo!!.toString())!!
+                .toString(),
+            this,
+            "initMenu",
+        )
 
+        var scrollSelectionForm: ScrollSelectionForm =
+            CommandCurrentSelectionFormFactory.getInstance(
+                StringUtil.getInstance()!!.EMPTY_STRING,
+                items,
+                rectangle,
+                formType,
+                15,
+                true,
+                this.basicColorFactory!!.BLACK,
+                this.basicColorFactory!!.WHITE,
+            )!!
 
-    var rectangle: Rectangle = this.formUtil!!.createFormRectangle()!!
+        this.setMenuForm(scrollSelectionForm)
 
-PreLogUtil.put(StringMaker().
-                            append(this.commonLabels!!.START_LABEL)!!.append(this.displayInfo!!.toString())!!.toString(), this, "initMenu")
+        var formType2: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 
-    var scrollSelectionForm: ScrollSelectionForm = CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, formType, 15, true, this.basicColorFactory!!.BLACK, this.basicColorFactory!!.WHITE)!!
+        var rectangle2: Rectangle = this.formUtil!!.createFormRectangle()!!
 
-this.setMenuForm(scrollSelectionForm)
+        scrollSelectionForm!!.init(rectangle2, formType2)
 
-    var formType2: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
+        if (this.getMenuForm() != ScrollSelectionFormNoneFactory.getInstance()) {
 
+            this.setMenuInputProcessor(
+                CommandFormInputProcessor(BasicArrayListD(), -1, this, this.getMenuForm())
+            )
+        }
 
-    var rectangle2: Rectangle = this.formUtil!!.createFormRectangle()!!
-
-scrollSelectionForm!!.init(rectangle2, formType2)
-
-    
-                        if(this.getMenuForm() != ScrollSelectionFormNoneFactory.getInstance())
-                        
-                                    {
-                                    this.setMenuInputProcessor(CommandFormInputProcessor(BasicArrayListD(),  -1, this, this.getMenuForm()))
-
-                                    }
-                                
-this.open()
-}
-
+        this.open()
+    }
 
     override fun open()
-        //nullable = true from not(false or (false and true)) = true
-{
-BasicMotionGesturesHandler.getInstance()!!.addListenerInterface(this.getMenuInputProcessor())
-GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        BasicMotionGesturesHandler.getInstance()!!.addListenerInterface(
+            this.getMenuInputProcessor()
+        )
+        GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
+    }
 
     override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
-GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
+        GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
+    }
 
     override fun getSourceId()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return DemoCanvas.id
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return DemoCanvas.id
+    }
 
     override fun keyPressed(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-this.keyPressedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        this.keyPressedByDevice(keyCode, 0)
+    }
 
     override fun keyReleased(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-this.keyReleasedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        this.keyReleasedByDevice(keyCode, 0)
+    }
 
     override fun keyRepeated(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-this.keyRepeatedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        this.keyRepeatedByDevice(keyCode, 0)
+    }
 
     override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-var deviceId = deviceId
-this.addGameKeyEvent(keyCode, false)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        var deviceId = deviceId
+        this.addGameKeyEvent(keyCode, false)
+    }
 
     override fun keyReleasedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-var deviceId = deviceId
-this.removeGameKeyEvent(keyCode, false)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        var deviceId = deviceId
+        this.removeGameKeyEvent(keyCode, false)
+    }
 
-
-    private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
+    private var isSingleKeyRepeatableProcessing: Boolean =
+        Features.getInstance()!!.isFeature(
+            InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS
+        )!!
 
     override fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-var deviceId = deviceId
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        var deviceId = deviceId
 
-    
-                        if(this.isSingleKeyRepeatableProcessing)
-                        
-                                    {
-                                    this.addGameKeyEvent(keyCode, true)
+        if (this.isSingleKeyRepeatableProcessing) {
 
-                                    }
-                                
-}
-
+            this.addGameKeyEvent(keyCode, true)
+        }
+    }
 
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 
-    private var lastKeyNotMapped: Int =  -1
+    private var lastKeyNotMapped: Int = -1
 
     open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-var repeated = repeated
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        var repeated = repeated
 
         try {
-            
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
+            var gameKey: GameKey =
+                this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
-    
-                        if(gameKey != this.NONE)
-                        
-                                    {
-                                    
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
+            if (gameKey != this.NONE) {
 
-DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
+                var gameKeyEvent: GameKeyEvent =
+                    this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
 
-                                    }
-                                
-                        else {
-                            
-    
-                        if(this.lastKeyNotMapped != keyCode)
-                        
-                                    {
-                                    this.lastKeyNotMapped= keyCode
-this.logUtil!!.putF(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
+                DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
+            } else {
 
-                                    }
-                                
+                if (this.lastKeyNotMapped != keyCode) {
 
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
-}
-
-}
-
+                    this.lastKeyNotMapped = keyCode
+                    this.logUtil!!.putF(
+                        StringMaker()
+                            .append(this.gameInputStrings!!.NO_KEY)!!
+                            .appendint(keyCode)!!
+                            .toString(),
+                        this,
+                        this.gameInputStrings!!.ADD_KEY_EVENT,
+                    )
+                }
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+        }
+    }
 
     open fun removeGameKeyEvent(keyCode: Int, repeated: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-var repeated = repeated
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        var repeated = repeated
 
         try {
-            
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
+            var gameKey: GameKey =
+                this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
-    
-                        if(gameKey != this.NONE)
-                        
-                                    {
-                                    
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
+            if (gameKey != this.NONE) {
 
-UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
+                var gameKeyEvent: GameKeyEvent =
+                    this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
 
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
+                UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
+            } else {
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append(this.gameInputStrings!!.NO_KEY)!!
+                        .appendint(keyCode)!!
+                        .toString(),
+                    this,
+                    this.gameInputStrings!!.REMOVE_KEY_EVENT,
+                )
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+        }
+    }
 
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
-}
-
-}
-
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun pause()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.close()
-this.setPaused(true)
-this.gameRunnable= NullWaitGameRunnable.getInstance()
-this.gameCanvas!!.pause()
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.close()
+        this.setPaused(true)
+        this.gameRunnable = NullWaitGameRunnable.getInstance()
+        this.gameCanvas!!.pause()
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun unPause()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.open()
-this.gameCanvas!!.unPause()
-this.gameRunnable= this.gameCanvas!!.gameRunnable
-this.setPaused(false)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.open()
+        this.gameCanvas!!.unPause()
+        this.gameRunnable = this.gameCanvas!!.gameRunnable
+        this.setPaused(false)
+    }
 
     override fun isPausable()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(CurrentDisplayableFactory.getInstance()!!.getUsedRunnable() == NullWaitGameRunnable.getInstance())
-                        
-                                    {
-                                    
+        if (
+            CurrentDisplayableFactory.getInstance()!!.getUsedRunnable() ==
+                NullWaitGameRunnable.getInstance()
+        ) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
     override fun isGameOver()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-this.logUtil!!.putF(StringMaker().
-                            append(this.commonStrings!!.NOT_IMPLEMENTED)!!.append(" since not a game")!!.toString(), this, "isGameOver")
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(this.commonStrings!!.NOT_IMPLEMENTED)!!
+                .append(" since not a game")!!
+                .toString(),
+            this,
+            "isGameOver",
+        )
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
-        //nullable = true from not(false or (false and false)) = true
-{
-var hashtable = hashtable
-this.logUtil!!.putF("Trying to continue a demo lol - only continue a game canvas not the demo", this, "setLoadStateHashtable")
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var hashtable = hashtable
+        this.logUtil!!.putF(
+            "Trying to continue a demo lol - only continue a game canvas not the demo",
+            this,
+            "setLoadStateHashtable",
+        )
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getLoadStateHashtable()
-        //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
-this.logUtil!!.putF("Trying to continue a demo lol - only continue a game canvas not the demo", this, "getLoadStateHashtable")
+    // nullable = true from not(false or (false and true)) = true
+    : Hashtable<Any, Any> {
+        this.logUtil!!.putF(
+            "Trying to continue a demo lol - only continue a game canvas not the demo",
+            this,
+            "getLoadStateHashtable",
+        )
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.nullUtil!!.NULL_TABLE
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.nullUtil!!.NULL_TABLE
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getCurrentStateHashtable()
-        //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
-this.logUtil!!.putF("Trying to save the AI lol", this, "getCurrentStateHashtable")
+    // nullable = true from not(false or (false and true)) = true
+    : Hashtable<Any, Any> {
+        this.logUtil!!.putF("Trying to save the AI lol", this, "getCurrentStateHashtable")
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.nullUtil!!.NULL_TABLE
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.nullUtil!!.NULL_TABLE
+    }
 
     override fun setHighScoreSubmitted(isNotUsed: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var isNotUsed = isNotUsed
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var isNotUsed = isNotUsed
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-this.paintableInterface!!.paint(graphics)
-this.paintedSpecialAnimationInterface!!.paintXY(graphics, 0, 0)
-this.highScoresPaintable!!.paint(graphics)
-this.getBasicGameDemoPaintable()!!.paint(graphics)
-this.overlayPaintable!!.paint(graphics)
-this.fullscreenPaintable!!.paint(graphics)
-this.progressPaintable!!.paint(graphics)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        this.paintableInterface!!.paint(graphics)
+        this.paintedSpecialAnimationInterface!!.paintXY(graphics, 0, 0)
+        this.highScoresPaintable!!.paint(graphics)
+        this.getBasicGameDemoPaintable()!!.paint(graphics)
+        this.overlayPaintable!!.paint(graphics)
+        this.fullscreenPaintable!!.paint(graphics)
+        this.progressPaintable!!.paint(graphics)
+    }
 
     override fun paintThreed(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-this.paintableInterface!!.paintThreed(graphics)
-this.paintedSpecialAnimationInterface!!.paintThreedXYZ(graphics, 0, 0, 0)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        this.paintableInterface!!.paintThreed(graphics)
+        this.paintedSpecialAnimationInterface!!.paintThreedXYZ(graphics, 0, 0, 0)
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun processGameOver()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF("Not Implemented since not a game", this, "setGameOver")
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF("Not Implemented since not a game", this, "setGameOver")
+    }
 
     open fun demoStateChange()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var newState: Int = this.state +1
+        var newState: Int = this.state + 1
 
+        if (newState > 2) {
 
-    
-                        if(newState > 2)
-                        
-                                    {
-                                    newState= 0
+            newState = 0
+        } else if (newState == 2) {
 
-                                    }
-                                
-                             else 
-    
-                        if(newState == 2)
-                        
-                                    {
-                                    
-    
-                        if(!this.highScoresHelper!!.isAnyHighScores())
-                        
-                                    {
-                                    newState= 0
+            if (!this.highScoresHelper!!.isAnyHighScores()) {
 
-                                    }
-                                
-                        else {
-                            
-    var highScores: HighScores = this.highScoresHelper!!.getNextHighScores()!!
+                newState = 0
+            } else {
 
+                var highScores: HighScores = this.highScoresHelper!!.getNextHighScores()!!
 
-    
-                        if(highScores == NullHighScoresSingletonFactory.getInstance())
-                        
-                                    {
-                                    newState= 0
+                if (highScores == NullHighScoresSingletonFactory.getInstance()) {
 
-                                    }
-                                
-                        else {
-                            this.getRealHighScoresPaintable()!!.setHighScores(highScores)
+                    newState = 0
+                } else {
+                    this.getRealHighScoresPaintable()!!.setHighScores(highScores)
+                }
+            }
+        }
 
-                        }
-                            
-
-                        }
-                            
-
-                                    }
-                                
-this.setState(newState)
-this.updateDemoState()
-}
-
+        this.setState(newState)
+        this.updateDemoState()
+    }
 
     private val SET_STATE: String = "setState"
 
     open fun updateDemoState()
-        //nullable = true from not(false or (false and true)) = true
-{
-PreLogUtil.put(SmallIntegerSingletonFactory.getInstance()!!.createInstance(this.state)!!.toString(), this, this.SET_STATE)
-this.getBasicGameDemoPaintable()!!.setState(this.state)
+        // nullable = true from not(false or (false and true)) = true
+    {
+        PreLogUtil.put(
+            SmallIntegerSingletonFactory.getInstance()!!.createInstance(this.state)!!.toString(),
+            this,
+            this.SET_STATE,
+        )
+        this.getBasicGameDemoPaintable()!!.setState(this.state)
 
-    
-                        if(this.state == 0)
-                        
-                                    {
-                                    this.highScoresPaintable= NullPaintable.getInstance()
-this.paintedSpecialAnimationInterface= this.getSpecialAnimationInterface()
+        if (this.state == 0) {
 
-    
-                        if(!this.demoGameRunnable!!.isRunning() && this.gameCanvas!!.isInitialized())
-                        
-                                    {
-                                    this.getSpecialAnimationInterface()!!.reset()
+            this.highScoresPaintable = NullPaintable.getInstance()
+            this.paintedSpecialAnimationInterface = this.getSpecialAnimationInterface()
 
-                                    }
-                                
+            if (!this.demoGameRunnable!!.isRunning() && this.gameCanvas!!.isInitialized()) {
 
-                                    }
-                                
-                             else 
-    
-                        if(this.state == 1)
-                        
-                                    {
-                                    this.paintedSpecialAnimationInterface= SpecialAnimation.getInstance()
+                this.getSpecialAnimationInterface()!!.reset()
+            }
+        } else if (this.state == 1) {
 
-                                    }
-                                
-                             else 
-    
-                        if(this.state == 2)
-                        
-                                    {
-                                    this.highScoresPaintable= this.getRealHighScoresPaintable()
+            this.paintedSpecialAnimationInterface = SpecialAnimation.getInstance()
+        } else if (this.state == 2) {
 
-                                    }
-                                
+            this.highScoresPaintable = this.getRealHighScoresPaintable()
+        }
 
-    var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
+        var gameAdState: GameAdState = this.gameAdStateFactory!!.getCurrentInstance()!!
 
-gameAdState!!.processPageAdState()
-}
+        gameAdState!!.processPageAdState()
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun getNextRandom()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
+    @Throws(Exception::class)
+    open fun createGameLayerManager(
+        randomValue: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : AllBinaryGameLayerManager {
+        var randomValue = randomValue
 
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
+    @Throws(Exception::class)
+    open fun createRunnable(
+        randomLevel: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : GameCanvasRunnableInterface {
+        var randomLevel = randomLevel
 
-                @Throws(Exception::class)
-            
-    open fun createGameLayerManager(randomValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-: AllBinaryGameLayerManager{
-var randomValue = randomValue
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
-
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun createRunnable(randomLevel: Int)
-        //nullable = true from not(false or (false and false)) = true
-: GameCanvasRunnableInterface{
-var randomLevel = randomLevel
-
-
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun create()
-        //nullable = true from not(false or (false and true)) = true
-{
-PreLogUtil.put(this.commonStrings!!.START, this, "create")
-this.highScoresPaintable= NullPaintable.getInstance()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        PreLogUtil.put(this.commonStrings!!.START, this, "create")
+        this.highScoresPaintable = NullPaintable.getInstance()
 
-    var randomLevel: Int = this.getNextRandom()!!
+        var randomLevel: Int = this.getNextRandom()!!
 
-this.gameCanvas= this.createRunnable(randomLevel) as AllBinaryGameCanvas
-this.basicColor= this.gameCanvas!!.getLayerManager()!!.getForegroundBasicColor()
-this.getRealHighScoresPaintable()!!.setBasicColorP(this.basicColor)
-this.gameCanvas!!.setGameCanvasStartListener(this)
+        this.gameCanvas = this.createRunnable(randomLevel) as AllBinaryGameCanvas
+        this.basicColor = this.gameCanvas!!.getLayerManager()!!.getForegroundBasicColor()
+        this.getRealHighScoresPaintable()!!.setBasicColorP(this.basicColor)
+        this.gameCanvas!!.setGameCanvasStartListener(this)
 
-    var gameInfo: GameInfo = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!
+        var gameInfo: GameInfo = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!
 
-this.getHighScoresFactoryInterface()!!.fetchHighScores(gameInfo, this.highScoresHelper)
-}
+        this.getHighScoresFactoryInterface()!!.fetchHighScores(gameInfo, this.highScoresHelper)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun start()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var gameCanvas: AllBinaryGameCanvas = this.gameCanvas
+        var gameCanvas: AllBinaryGameCanvas = this.gameCanvas
 
-PreLogUtil.put(StringMaker().
-                            append("Game Thread in DemoCanvas: ")!!.append(this.stringUtil!!.toString(gameCanvas))!!.toString(), this, this.commonStrings!!.START)
-this.canvasThread= this.threadFactoryUtil!!.getInstanceGameCanvasRunnable(gameCanvas)
-this.gameCanvas!!.setThread(this.canvasThread)
-this.threadFactoryUtil!!.start(this.canvasThread)
+        PreLogUtil.put(
+            StringMaker()
+                .append("Game Thread in DemoCanvas: ")!!
+                .append(this.stringUtil!!.toString(gameCanvas))!!
+                .toString(),
+            this,
+            this.commonStrings!!.START,
+        )
+        this.canvasThread = this.threadFactoryUtil!!.getInstanceGameCanvasRunnable(gameCanvas)
+        this.gameCanvas!!.setThread(this.canvasThread)
+        this.threadFactoryUtil!!.start(this.canvasThread)
 
-    
-                        if(this.getWait() == NullWaitGameRunnable.getInstance()!!.WAIT)
-                        
-                                    {
-                                    this.setWait(this.getTempWait())
+        if (this.getWait() == NullWaitGameRunnable.getInstance()!!.WAIT) {
 
-                                    }
-                                
-}
-
+            this.setWait(this.getTempWait())
+        }
+    }
 
     open fun preDemoProcess()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(!this.gameCanvas!!.isInitialized() || this.gameCanvas!!.getTitle() == NullGameCanvas.NO_GAME)
-                        
-                                    {
-                                    
-    
-                        if(AllBinaryMediaManager.update())
-                        
-                                    {
-                                    
-    
-                        if(!PrimaryPlayerQueueFactory.getInstance()!!.process())
-                        
-                                    {
-                                    SecondaryPlayerQueueFactory.getInstance()!!.process()
+        if (
+            !this.gameCanvas!!.isInitialized() ||
+                this.gameCanvas!!.getTitle() == NullGameCanvas.NO_GAME
+        ) {
 
-                                    }
-                                
+            if (AllBinaryMediaManager.update()) {
 
-                                    }
-                                
+                if (!PrimaryPlayerQueueFactory.getInstance()!!.process()) {
 
-                                    }
-                                
-this.overlayPaintable!!.update()
-}
+                    SecondaryPlayerQueueFactory.getInstance()!!.process()
+                }
+            }
+        }
 
+        this.overlayPaintable!!.update()
+    }
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.process()
-this.getMenuInputProcessor()!!.processInputList()
-this.preDemoProcess()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.process()
+        this.getMenuInputProcessor()!!.processInputList()
+        this.preDemoProcess()
 
-    
-                        if(this.state == 0)
-                        
-                                    {
-                                    
-    var indexedAnimationBehavior: IndexedAnimationBehavior = (this.getSpecialAnimationInterface()!!.getAnimationBehavior() as IndexedAnimationBehavior)
+        if (this.state == 0) {
 
+            var indexedAnimationBehavior: IndexedAnimationBehavior =
+                (this.getSpecialAnimationInterface()!!.getAnimationBehavior()
+                    as IndexedAnimationBehavior)
 
-    
-                        if(indexedAnimationBehavior!!.loopIndex < 1)
-                        
-                                    {
-                                    this.timeDelayHelper!!.setStartTimeTNT()
+            if (indexedAnimationBehavior!!.loopIndex < 1) {
 
-                                    }
-                                
+                this.timeDelayHelper!!.setStartTimeTNT()
+            }
 
-    var demoGameMidlet: DemoGameMidlet = this.getCustomCommandListener() as DemoGameMidlet
+            var demoGameMidlet: DemoGameMidlet = this.getCustomCommandListener() as DemoGameMidlet
 
+            if (this.gameCanvas != NullGameCanvas.getInstance() && this.gameCanvas!!.isGameOver()) {
 
-    
-                        if(this.gameCanvas != NullGameCanvas.getInstance() && this.gameCanvas!!.isGameOver())
-                        
-                                    {
-                                    this.stopGameDemo()
+                this.stopGameDemo()
 
-    var randomLevel: Int = this.getNextRandom()!!
+                var randomLevel: Int = this.getNextRandom()!!
 
+                var gameInfo: GameInfo = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!
 
-    var gameInfo: GameInfo = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!
+                gameInfo!!.setCurrentLevel(randomLevel)
+                this.gameCanvas!!.setGameOver(false)
+                this.start()
+            } else if (
+                this.gameCanvas == NullGameCanvas.getInstance() && demoGameMidlet!!.isReady()
+            ) {
 
-gameInfo!!.setCurrentLevel(randomLevel)
-this.gameCanvas!!.setGameOver(false)
-this.start()
+                if (!this.demoGameRunnable!!.isRunning()) {
 
-                                    }
-                                
-                             else 
-    
-                        if(this.gameCanvas == NullGameCanvas.getInstance() && demoGameMidlet!!.isReady())
-                        
-                                    {
-                                    
-    
-                        if(!this.demoGameRunnable!!.isRunning())
-                        
-                                    {
-                                    this.startDemoGame()
-this.demoGameRunnable!!.setRunning(true)
+                    this.startDemoGame()
+                    this.demoGameRunnable!!.setRunning(true)
 
-    var thread: Thread = this.threadFactoryUtil!!.getInstanceForRunnable(this.demoGameRunnable)!!
+                    var thread: Thread =
+                        this.threadFactoryUtil!!.getInstanceForRunnable(this.demoGameRunnable)!!
 
-this.demoGameRunnable!!.setThread(thread)
-this.threadFactoryUtil!!.start(thread)
+                    this.demoGameRunnable!!.setThread(thread)
+                    this.threadFactoryUtil!!.start(thread)
+                }
+            }
+        }
+    }
 
-                                    }
-                                
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun startDemoGame()
-        //nullable = true from not(false or (false and true)) = true
-{
-DemoCanvasProgressUtil.showProgress(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        DemoCanvasProgressUtil.showProgress(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun stopGameDemo()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.gameCanvas != NullGameCanvas.getInstance())
-                        
-                                    {
-                                    this.logUtil!!.putF("Set Running False", this, "stopGameDemo")
-this.gameCanvas!!.setRunning(false)
+        if (this.gameCanvas != NullGameCanvas.getInstance()) {
 
-                                    }
-                                
-ThreadUtil.getInstance()!!.join(this.canvasThread)
-}
+            this.logUtil!!.putF("Set Running False", this, "stopGameDemo")
+            this.gameCanvas!!.setRunning(false)
+        }
 
+        ThreadUtil.getInstance()!!.join(this.canvasThread)
+    }
 
     override fun showGamePaintable()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var METHOD_NAME: String = "showGamePaintable"
+        var METHOD_NAME: String = "showGamePaintable"
 
-PreLogUtil.put(this.commonStrings!!.START, this, METHOD_NAME)
+        PreLogUtil.put(this.commonStrings!!.START, this, METHOD_NAME)
 
-    var isDefault: Boolean = J2MEUtil.isHTML()!!
+        var isDefault: Boolean = J2MEUtil.isHTML()!!
 
-
-    
-                        if(this.gameCanvas != NullGameCanvas.getInstance() && (this.gameCanvas!!.isRunning() || isDefault || SWTUtil.isSWT) && !(this.gameCanvas!!.getType() == NullGameCanvas.TYPE))
-                        
-                                    {
-                                    this.gameRunnable= this.gameCanvas!!.gameRunnable
-PreLogUtil.put("Showing Game", this, METHOD_NAME)
-this.setPaintableInterface(this.gameCanvas)
-
-                                    }
-                                
-                        else {
-                            this.gameRunnable= NullWaitGameRunnable.getInstance()
-PreLogUtil.put("Not Showing Game", this, METHOD_NAME)
-this.setPaintableInterface(this.getDefaultPaintableInterface())
-
-                        }
-                            
-}
-
+        if (
+            this.gameCanvas != NullGameCanvas.getInstance() &&
+                (this.gameCanvas!!.isRunning() || isDefault || SWTUtil.isSWT) &&
+                !(this.gameCanvas!!.getType() == NullGameCanvas.TYPE)
+        ) {
+            this.gameRunnable = this.gameCanvas!!.gameRunnable
+            PreLogUtil.put("Showing Game", this, METHOD_NAME)
+            this.setPaintableInterface(this.gameCanvas)
+        } else {
+            this.gameRunnable = NullWaitGameRunnable.getInstance()
+            PreLogUtil.put("Not Showing Game", this, METHOD_NAME)
+            this.setPaintableInterface(this.getDefaultPaintableInterface())
+        }
+    }
 
     open fun isReadyForStateChange()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return !this.demoGameRunnable!!.isRunning() && this.gameCanvas!!.isInitialized()
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return !this.demoGameRunnable!!.isRunning() && this.gameCanvas!!.isInitialized()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processGame()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.gameRunnable!!.run()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.gameRunnable!!.run()
 
-    
-                        if(!this.specialAnimationInterface!!.isComplete() && this.isReadyForStateChange())
-                        
-                                    {
-                                    this.specialAnimationInterface!!.nextFrame()
+        if (!this.specialAnimationInterface!!.isComplete() && this.isReadyForStateChange()) {
 
-                                    }
-                                
+            this.specialAnimationInterface!!.nextFrame()
+        }
 
-    
-                        if(this.timeDelayHelper!!.isTimeTNT() && this.isReadyForStateChange())
-                        
-                                    {
-                                    this.demoStateChange()
+        if (this.timeDelayHelper!!.isTimeTNT() && this.isReadyForStateChange()) {
 
-                                    }
-                                
-                        else {
-                            this.process()
-
-                        }
-                            
-}
-
+            this.demoStateChange()
+        } else {
+            this.process()
+        }
+    }
 
     override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(this.commonStrings!!.START_RUNNABLE, this, this.commonStrings!!.RUN)
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(this.commonStrings!!.START_RUNNABLE, this, this.commonStrings!!.RUN)
 
         try {
-            
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
+            var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-    var features: Features = Features.getInstance()!!
+            var features: Features = Features.getInstance()!!
 
+            var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
-    var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
+            progressCanvas!!.addNormalPortion(50, "Demo Thread")
+            this.setCurrentThread()
+            this.setRunning(true)
 
-progressCanvas!!.addNormalPortion(50, "Demo Thread")
-this.setCurrentThread()
-this.setRunning(true)
+            if (features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND)) {
 
-    
-                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
-                        
-                                    {
-                                    progressCanvas!!.end()
+                progressCanvas!!.end()
+            } else {
+                progressCanvas!!.addNormalPortion(50, "Demo Thread Running")
+            }
 
-                                    }
-                                
-                        else {
-                            progressCanvas!!.addNormalPortion(50, "Demo Thread Running")
+            this.fullScreenUtil!!.initOnRun(this, this.getCustomCommandListener())
+            this.initMenu()
+            this.initPostPaint()
+            this.updateDemoState()
 
-                        }
-                            
-this.fullScreenUtil!!.initOnRun(this, this.getCustomCommandListener())
-this.initMenu()
-this.initPostPaint()
-this.updateDemoState()
+            if (features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD)) {
 
-    
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
-                        
-                                    {
-                                    
-        while(this.gameCanvas == NullGameCanvas.getInstance() || !this.gameCanvas!!.isInitialized())
-        {
-this.loopTimeHelper!!.setStartTimeTNT()
-this.processGame()
-this.processLoopSleep()
-}
+                while (
+                    this.gameCanvas == NullGameCanvas.getInstance() ||
+                        !this.gameCanvas!!.isInitialized()
+                ) {
+                    this.loopTimeHelper!!.setStartTimeTNT()
+                    this.processGame()
+                    this.processLoopSleep()
+                }
 
+                var demoGameRunnable: DemoGameRunnable = DemoGameRunnable(this)
 
-    var demoGameRunnable: DemoGameRunnable = DemoGameRunnable(this)
+                var currentDisplayableFactory: CurrentDisplayableFactory =
+                    CurrentDisplayableFactory.getInstance()!!
 
+                currentDisplayableFactory!!.setRunnable(demoGameRunnable)
+                currentDisplayableFactory!!.setMyCanvas(this)
+                OpenGLThreadUtil.getInstance()!!.onResume()
+            }
 
-    var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
+            if (
+                features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) ||
+                    J2MEUtil.isHTML()
+            ) {
 
-currentDisplayableFactory!!.setRunnable(demoGameRunnable)
-currentDisplayableFactory!!.setMyCanvas(this)
-OpenGLThreadUtil.getInstance()!!.onResume()
+                var demoGameRunnable: DemoGameRunnable = DemoGameRunnable(this)
 
-                                    }
-                                
+                var currentDisplayableFactory: CurrentDisplayableFactory =
+                    CurrentDisplayableFactory.getInstance()!!
 
-    
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML())
-                        
-                                    {
-                                    
-    var demoGameRunnable: DemoGameRunnable = DemoGameRunnable(this)
+                currentDisplayableFactory!!.setRunnable(demoGameRunnable)
+                currentDisplayableFactory!!.setMyCanvas(this)
+            } else {
 
+                while (this.isRunning()) {
+                    this.run3()
+                }
 
-    var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
+                this.end()
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+        }
 
-currentDisplayableFactory!!.setRunnable(demoGameRunnable)
-currentDisplayableFactory!!.setMyCanvas(this)
+        this.logUtil!!.putF(this.commonStrings!!.END_RUNNABLE, this, this.commonStrings!!.RUN)
+    }
 
-                                    }
-                                
-                        else {
-                            
-        while(this.isRunning())
-        {
-this.run3()
-}
-
-this.end()
-
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
-}
-
-this.logUtil!!.putF(this.commonStrings!!.END_RUNNABLE, this, this.commonStrings!!.RUN)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun run3()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.loopTimeHelper!!.setStartTimeTNT()
-this.processGame()
-this.processLoopSleep()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.loopTimeHelper!!.setStartTimeTNT()
+        this.processGame()
+        this.processLoopSleep()
+    }
 
     override fun setRunning(running: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var running = running
-super.setRunning(running)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var running = running
+        super.setRunning(running)
 
         try {
-            
-    var features: Features = Features.getInstance()!!
 
+            var features: Features = Features.getInstance()!!
 
-    var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
+            var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
+            if (running) {} else {
 
-    
-                        if(running)
-                        
-                                    {
-                                    
-                                    }
-                                
-                        else {
-                            
-    
-                        if((features.isDefault(openGLFeatureFactory!!.OPENGL) || J2MEUtil.isHTML()) || SWTUtil.isSWT)
-                        
-                                    {
-                                    
-    var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
+                if (
+                    (features.isDefault(openGLFeatureFactory!!.OPENGL) || J2MEUtil.isHTML()) ||
+                        SWTUtil.isSWT
+                ) {
 
-currentDisplayableFactory!!.clearRunnable()
-this.end()
+                    var currentDisplayableFactory: CurrentDisplayableFactory =
+                        CurrentDisplayableFactory.getInstance()!!
 
-                                    }
-                                
-
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.SET_RUNNING, e)
-}
-
-}
-
+                    currentDisplayableFactory!!.clearRunnable()
+                    this.end()
+                }
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.SET_RUNNING, e)
+        }
+    }
 
     private val baseGameStatistics: BaseGameStatistics = GameStatisticsFactory.getInstance()!!
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun end()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
+        var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
+        var features: Features = Features.getInstance()!!
 
-    var features: Features = Features.getInstance()!!
+        this.baseGameStatistics!!.add(
+            StringMaker()
+                .append(DemoCanvas.BOT_GAME_STATS)!!
+                .append(this.baseGameStatistics!!.toString())!!
+                .append(CommonSeps.getInstance()!!.NEW_LINE)!!
+                .toString()
+        )
+        this.baseGameStatistics!!.init()
 
-this.baseGameStatistics!!.add(StringMaker().
-                            append(DemoCanvas.BOT_GAME_STATS)!!.append(this.baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
-this.baseGameStatistics!!.init()
+        if (features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND)) {
 
-    
-                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
-                        
-                                    {
-                                    progressCanvas!!.start()
+            progressCanvas!!.start()
+        }
 
-                                    }
-                                
-this.logUtil!!.putF("Demo End", this, this.commonStrings!!.RUN)
-this.close()
-DisplayChangeEventHandler.getInstance()!!.removeListener(this)
-this.stopGameDemo()
-}
-
+        this.logUtil!!.putF("Demo End", this, this.commonStrings!!.RUN)
+        this.close()
+        DisplayChangeEventHandler.getInstance()!!.removeListener(this)
+        this.stopGameDemo()
+    }
 
     override fun setGameState(gameState: GameState)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gameState = gameState
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gameState = gameState
+    }
 
     override fun getGameState()
-        //nullable = true from not(false or (false and true)) = true
-: GameState{
+    // nullable = true from not(false or (false and true)) = true
+    : GameState {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameStateFactory!!.PLAYING_GAME_STATE
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameStateFactory!!.PLAYING_GAME_STATE
+    }
 
     open fun getGameCanvasRunnableInterface()
-        //nullable = true from not(false or (false and true)) = true
-: AllBinaryGameCanvas{
+    // nullable = true from not(false or (false and true)) = true
+    : AllBinaryGameCanvas {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameCanvas
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameCanvas
+    }
 
     open fun isDemoLoading()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    var gameCanvas: AllBinaryGameCanvas = this.gameCanvas
+        var gameCanvas: AllBinaryGameCanvas = this.gameCanvas
 
+        if (gameCanvas == NullGameCanvas.getInstance()) {
 
-    
-                        if(gameCanvas == NullGameCanvas.getInstance())
-                        
-                                    {
-                                    
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else if (gameCanvas!!.isInitialized()) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                             else 
-    
-                        if(gameCanvas!!.isInitialized())
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
     open fun getState()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.state
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.state
+    }
 
     open fun setState(state: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var state = state
-this.state= state
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var state = state
+        this.state = state
+    }
 
     override fun isHighScoreSubmitted()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-this.logUtil!!.putF("Wow the AI got a high score!", this, "isHighScoreSubmitted")
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+        this.logUtil!!.putF("Wow the AI got a high score!", this, "isHighScoreSubmitted")
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     open fun getRealHighScoresPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: HighScoresPaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : HighScoresPaintable {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.realHighScoresPaintable
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.realHighScoresPaintable
+    }
 
     open fun setSpecialAnimationInterface(specialAnimationInterface: SpecialAnimation)
-        //nullable = true from not(false or (false and false)) = true
-{
-var specialAnimationInterface = specialAnimationInterface
-specialAnimationInterface!!.setFrame(0)
-this.specialAnimationInterface= specialAnimationInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var specialAnimationInterface = specialAnimationInterface
+        specialAnimationInterface!!.setFrame(0)
+        this.specialAnimationInterface = specialAnimationInterface
+    }
 
     open fun getSpecialAnimationInterface()
-        //nullable = true from not(false or (false and true)) = true
-: SpecialAnimation{
+    // nullable = true from not(false or (false and true)) = true
+    : SpecialAnimation {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.specialAnimationInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.specialAnimationInterface
+    }
 
     open fun setPaintableInterface(paintableInterface: PaintableInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var paintableInterface = paintableInterface
-this.paintableInterface= paintableInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var paintableInterface = paintableInterface
+        this.paintableInterface = paintableInterface
+    }
 
     open fun getPaintableInterface()
-        //nullable = true from not(false or (false and true)) = true
-: PaintableInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : PaintableInterface {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.paintableInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.paintableInterface
+    }
 
     open fun setDefaultPaintableInterface(defaultPaintableInterface: Paintable)
-        //nullable = true from not(false or (false and false)) = true
-{
-var defaultPaintableInterface = defaultPaintableInterface
-this.defaultPaintableInterface= defaultPaintableInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var defaultPaintableInterface = defaultPaintableInterface
+        this.defaultPaintableInterface = defaultPaintableInterface
+    }
 
     open fun getDefaultPaintableInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Paintable{
+    // nullable = true from not(false or (false and true)) = true
+    : Paintable {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.defaultPaintableInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.defaultPaintableInterface
+    }
 
     open fun getHighScoresFactoryInterface()
-        //nullable = true from not(false or (false and true)) = true
-: HighScoresFactoryInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : HighScoresFactoryInterface {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.highScoresFactoryInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.highScoresFactoryInterface
+    }
 
     open fun setMenuInputProcessor(menuInputProcessor: BasicMenuInputProcessor)
-        //nullable = true from not(false or (false and false)) = true
-{
-var menuInputProcessor = menuInputProcessor
-this.menuInputProcessor= menuInputProcessor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var menuInputProcessor = menuInputProcessor
+        this.menuInputProcessor = menuInputProcessor
+    }
 
     open fun getMenuInputProcessor()
-        //nullable = true from not(false or (false and true)) = true
-: BasicMenuInputProcessor{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicMenuInputProcessor {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.menuInputProcessor
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.menuInputProcessor
+    }
 
     open fun getMenuForm()
-        //nullable = true from not(false or (false and true)) = true
-: ScrollSelectionForm{
+    // nullable = true from not(false or (false and true)) = true
+    : ScrollSelectionForm {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.menuForm
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.menuForm
+    }
 
     open fun setMenuForm(menuForm: ScrollSelectionForm)
-        //nullable = true from not(false or (false and false)) = true
-{
-var menuForm = menuForm
-this.menuForm= menuForm
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var menuForm = menuForm
+        this.menuForm = menuForm
+    }
 
     override fun isInitialized()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initialized
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initialized
+    }
 
     open fun getOverlayPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: Paintable{
+    // nullable = true from not(false or (false and true)) = true
+    : Paintable {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.overlayPaintable
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.overlayPaintable
+    }
 
     open fun setBasicGameDemoPaintable(basicGameDemoPaintable: StatePaintable)
-        //nullable = true from not(false or (false and false)) = true
-{
-var basicGameDemoPaintable = basicGameDemoPaintable
-this.basicGameDemoPaintable= basicGameDemoPaintable
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var basicGameDemoPaintable = basicGameDemoPaintable
+        this.basicGameDemoPaintable = basicGameDemoPaintable
+    }
 
     open fun getBasicGameDemoPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: StatePaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : StatePaintable {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicGameDemoPaintable
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.basicGameDemoPaintable
+    }
 
     open fun setTempWait(tempWait: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var tempWait = tempWait
-this.tempWait= tempWait
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var tempWait = tempWait
+        this.tempWait = tempWait
+    }
 
     open fun getTempWait()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.tempWait
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.tempWait
+    }
 
     override fun isSingleThread()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLFeatureUtil.getInstance()!!.isAnyThreed() || SWTUtil.isSWT
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return OpenGLFeatureUtil.getInstance()!!.isAnyThreed() || SWTUtil.isSWT
+    }
 
     open fun isRunningInAnotherThread()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    var features: Features = Features.getInstance()!!
+        var features: Features = Features.getInstance()!!
 
+        var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
-    var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
+        if (features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD)) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-    
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.isRunning()
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.isRunning()
+        }
+    }
 
     open fun getGameInitializationInterfaceFactoryInterface()
-        //nullable = true from not(false or (false and true)) = true
-: BasicBuildGameInitializerFactory{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicBuildGameInitializerFactory {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameInitializationInterfaceFactoryInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameInitializationInterfaceFactoryInterface
+    }
 
     override fun getType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return DemoCanvas.TYPE
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return DemoCanvas.TYPE
+    }
 }
-
-
-}
-                
-            
-

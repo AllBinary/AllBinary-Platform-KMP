@@ -1,115 +1,87 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import java.io.InputStream
-import javax.microedition.lcdui.Image
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import java.io.IOException
-import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
+import java.io.InputStream
+import java.lang.Object
+import javax.microedition.lcdui.Image
 import org.allbinary.platform.graphics.PlatformBitmapBase
+import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.microemu.android.device.AndroidImageInterface
 
 open public class OpenGLBitmapFactory : PlatformBitmapBaseFactory {
-        
-companion object {
-            
-    private val instance: OpenGLBitmapFactory = OpenGLBitmapFactory()
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OpenGLBitmapFactory{
+    companion object {
 
+        private val instance: OpenGLBitmapFactory = OpenGLBitmapFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OpenGLBitmapFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmapFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OpenGLBitmapFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-open public inner class Config
-            : Object
-         {
-        
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
+    open public inner class Config : Object {
+
+        /*Static stuff is not allowed for Kotlin inner classescompanion object {
+         */
+        /*
         }
             */
 
+        val bitmapConfig: Bitmap.Config
 
-    val bitmapConfig: Bitmap.Config
- constructor (bitmapConfig: Bitmap.Config)
-            : super()
-        {
-    //var bitmapConfig = bitmapConfig
-this.bitmapConfig= bitmapConfig
-}
+        constructor(bitmapConfig: Bitmap.Config) : super() {
+            // var bitmapConfig = bitmapConfig
+            this.bitmapConfig = bitmapConfig
+        }
+    }
 
-
-}
-                
-            
     val ARGB_8888: Config = Config(Bitmap.Config.ARGB_8888)
 
-    open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Config)
-        //nullable = true from not(false or (false and false)) = true
-: OpenGLBitmap{
-var width = width
-var height = height
-var config = config
+    open fun createBitmap(
+        width: Int,
+        height: Int,
+        config: OpenGLBitmapFactory.Config,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : OpenGLBitmap {
+        var width = width
+        var height = height
+        var config = config
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return OpenGLBitmap(Bitmap.createBitmap(width, height, config.bitmapConfig))
+    }
 
+    @Throws(IOException::class)
+    open fun decodeStream(
+        inputStream: InputStream
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : OpenGLBitmap {
+        var inputStream = inputStream
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(Bitmap.createBitmap(width, height, config.bitmapConfig))
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return OpenGLBitmap(BitmapFactory.decodeStream(inputStream))
+    }
+
+    override fun createBitmap(
+        image: Image
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : PlatformBitmapBase {
+        // var image = image
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return OpenGLBitmap((image as AndroidImageInterface).getBitmap())
+    }
 }
-
-
-                @Throws(IOException::class)
-            
-    open fun decodeStream(inputStream: InputStream)
-        //nullable = true from not(false or (false and false)) = true
-: OpenGLBitmap{
-var inputStream = inputStream
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(BitmapFactory.decodeStream(inputStream))
-}
-
-
-    override fun createBitmap(image: Image)
-        //nullable = true from not(false or (false and false)) = true
-: PlatformBitmapBase{
-    //var image = image
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(
-                                    (image as AndroidImageInterface).getBitmap())
-}
-
-
-}
-                
-            
-

@@ -1,57 +1,40 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.audio
+/* Generated Code Do Not Modify */
+package org.allbinary.media.audio
 
+import java.lang.Object
 
+open public class SoundStrings : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: SoundStrings = SoundStrings()
 
-open public class SoundStrings
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: SoundStrings = SoundStrings()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : SoundStrings {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: SoundStrings{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return SoundStrings.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return SoundStrings.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val STOP_ALL: String = "stopAll"
 
     val CLOSE_ALL: String = "closeAll"
@@ -63,8 +46,4 @@ companion object {
     val STOPPING_SOUND: String = "Stopping Sound: "
 
     val CLOSING_SOUND: String = "Closing Sound: "
-
 }
-                
-            
-

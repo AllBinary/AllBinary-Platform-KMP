@@ -1,111 +1,85 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 
-open public class CommonButtons
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: CommonButtons = CommonButtons()
+open public class CommonButtons : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CommonButtons{
+    companion object {
 
+        private val instance: CommonButtons = CommonButtons()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CommonButtons {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CommonButtons.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CommonButtons.instance
         }
-            
+    }
+
     val STANDARD_BUTTON_SIZE: Int
 
     val NORMAL_BUTTON: Rectangle
 
     val LARGE_BUTTON: Rectangle
-private constructor ()
-            : super()
-        {
 
-    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+    private constructor() : super() {
 
+        var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-    var commonButtonSize: Int = 128
+        var commonButtonSize: Int = 128
 
+        while (commonButtonSize > 64) {
 
-        while(commonButtonSize > 64)
-        {
+            var totalColumns: Int = displayInfo!!.getLastWidth() / commonButtonSize
 
-    var totalColumns: Int = displayInfo!!.getLastWidth() /commonButtonSize
+            var totalRows: Int = displayInfo!!.getLastHeight() / commonButtonSize
 
+            var max: Int = totalColumns
 
-    var totalRows: Int = displayInfo!!.getLastHeight() /commonButtonSize
+            if (totalRows > max) {
 
+                max = totalRows
+            }
 
-    var max: Int = totalColumns
+            if (max > 9) {
 
+                break
+            }
 
-    
-                        if(totalRows > max)
-                        
-                                    {
-                                    max= totalRows
+            commonButtonSize = commonButtonSize shr 1
+        }
 
-                                    }
-                                
-
-    
-                        if(max > 9)
-                        
-                                    {
-                                    break;
-
-                    
-
-                                    }
-                                
-commonButtonSize= commonButtonSize shr 1
+        this.STANDARD_BUTTON_SIZE = commonButtonSize
+        this.NORMAL_BUTTON =
+            Rectangle(
+                PointFactory.getInstance()!!.ZERO_ZERO,
+                this.STANDARD_BUTTON_SIZE,
+                this.STANDARD_BUTTON_SIZE,
+            )
+        this.LARGE_BUTTON =
+            Rectangle(
+                PointFactory.getInstance()!!.ZERO_ZERO,
+                this.STANDARD_BUTTON_SIZE shl 1,
+                this.STANDARD_BUTTON_SIZE shl 1,
+            )
+    }
 }
-
-this.STANDARD_BUTTON_SIZE= commonButtonSize
-this.NORMAL_BUTTON= Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, this.STANDARD_BUTTON_SIZE, this.STANDARD_BUTTON_SIZE)
-this.LARGE_BUTTON= Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, this.STANDARD_BUTTON_SIZE shl 1, this.STANDARD_BUTTON_SIZE shl 1)
-}
-
-
-}
-                
-            
-

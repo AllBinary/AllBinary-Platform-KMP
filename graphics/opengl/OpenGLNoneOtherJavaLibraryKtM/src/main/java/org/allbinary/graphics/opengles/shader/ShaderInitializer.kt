@@ -1,76 +1,57 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles.shader
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles.shader
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.khronos.opengles.GL10
+import kotlin.Array
 import org.allbinary.string.CommonStrings
 
-open public class ShaderInitializer
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ShaderInitializer = ShaderInitializer()
+open public class ShaderInitializer : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ShaderInitializer{
+    companion object {
 
+        private val instance: ShaderInitializer = ShaderInitializer()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ShaderInitializer {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ShaderInitializer.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ShaderInitializer.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    open fun init(gl: GL10, shader: Array<Shader?>, attributeArray: Array<String?>)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var gl = gl
-    //var shader = shader
-    //var attributeArray = attributeArray
+    open fun init(
+        gl: GL10,
+        shader: Array<Shader?>,
+        attributeArray: Array<String?>,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var gl = gl
+        // var shader = shader
+        // var attributeArray = attributeArray
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return -1
+    }
 }
-
-
-}
-                
-            
-

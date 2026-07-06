@@ -1,34 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.racetrack.drop
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map.racetrack.drop
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
-import org.allbinary.util.BasicArrayListUtil
-import org.allbinary.string.CommonStrings
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -42,11 +28,14 @@ import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicM
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellTypeFactory
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapInterface
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackRoadsGeographicMapCellHistoryFactory
+import org.allbinary.string.CommonStrings
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.util.BasicArrayListUtil
 
 open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGenerator {
-        
 
     val list: BasicArrayList = BasicArrayListD()
 
@@ -54,181 +43,141 @@ open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGener
 
     private val STRAIGHTAWAY: Int = 4
 
-    var raceTrackGeographicMap: RaceTrackGeographicMapInterface = NullRaceTrackGeographicMap.NULL_RACE_TRACK_GEOGRAPHIC_MAP
+    var raceTrackGeographicMap: RaceTrackGeographicMapInterface =
+        NullRaceTrackGeographicMap.NULL_RACE_TRACK_GEOGRAPHIC_MAP
 
-    var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance()!!
-protected constructor (){
-this.timeDelayHelper= TimeDelayHelper(10000)
-}
+    var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory =
+        GeographicMapCellTypeFactory.getInstance()!!
 
+    protected constructor() {
+        this.timeDelayHelper = TimeDelayHelper(10000)
+    }
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.list.clear()
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.list.clear()
+    }
 
+    @Throws(Exception::class)
+    override fun isDropAllowedAt(
+        geographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var geographicMapCellPosition = geographicMapCellPosition
 
-                @Throws(Exception::class)
-            
-    override fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var geographicMapCellPosition = geographicMapCellPosition
+        var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType =
+            this.raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition)
+                as RaceTrackGeographicMapCellType
 
-    var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = this.raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
+        var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory =
+            this.raceTrackGeographicMapCellTypeFactory as RaceTrackGeographicMapCellTypeFactory
 
+        if (
+            raceTrackGeographicMapCellType ==
+                raceTrackGeographicMapCellTypeFactory!!.HORIZONTAL_STRAIGHT_ROAD_CELL_TYPE ||
+                raceTrackGeographicMapCellType ==
+                    raceTrackGeographicMapCellTypeFactory!!.VERTICAL_STRAIGHT_ROAD_CELL_TYPE
+        ) {
 
-    var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory = this.raceTrackGeographicMapCellTypeFactory as RaceTrackGeographicMapCellTypeFactory
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
-    
-                        if(raceTrackGeographicMapCellType == raceTrackGeographicMapCellTypeFactory!!.HORIZONTAL_STRAIGHT_ROAD_CELL_TYPE || raceTrackGeographicMapCellType == raceTrackGeographicMapCellTypeFactory!!.VERTICAL_STRAIGHT_ROAD_CELL_TYPE)
-                        
-                                    {
-                                    
+    @Throws(Exception::class)
+    override fun update(
+        allBinaryGameLayerManager: AllBinaryGameLayerManager,
+        geographicMapInterface: BasicGeographicMap,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryGameLayerManager = allBinaryGameLayerManager
+        // var geographicMapInterface = geographicMapInterface
+        this.init()
 
+        var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap =
+            geographicMapInterface as BaseRaceTrackGeographicMap
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+        this.raceTrackGeographicMap = baseRaceTrackGeographicMap
+        this.raceTrackGeographicMapCellTypeFactory =
+            baseRaceTrackGeographicMap!!.getGeographicMapCellTypeFactory()
+                as RaceTrackGeographicMapCellTypeFactory
 
-                                    }
-                                
+        var roadGeographicMapCellHistory: GeographicMapCellHistory =
+            RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!
 
+        var trackedList: BasicArrayList = roadGeographicMapCellHistory!!.getTracked()!!
 
+        var geographicMapCellPosition: GeographicMapCellPosition
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
+        var lastIndex: Int = trackedList!!.size() - 1
 
+        var total: Int = 0
 
-                @Throws(Exception::class)
-            
-    override fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
-    //var geographicMapInterface = geographicMapInterface
-this.init()
+        var ahead: Int = 0
 
-    var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = geographicMapInterface as BaseRaceTrackGeographicMap
+        for (index in lastIndex downTo 0) {
 
-this.raceTrackGeographicMap= baseRaceTrackGeographicMap
-this.raceTrackGeographicMapCellTypeFactory= baseRaceTrackGeographicMap!!.getGeographicMapCellTypeFactory() as RaceTrackGeographicMapCellTypeFactory
+            geographicMapCellPosition = trackedList!!.get(index) as GeographicMapCellPosition
+            total = 0
+            ahead = index
 
-    var roadGeographicMapCellHistory: GeographicMapCellHistory = RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!
+            while (this.isDropAllowedAt(trackedList!!.get(ahead) as GeographicMapCellPosition)) {
+                total++
 
+                if (total > this.STRAIGHTAWAY) {
 
-    var trackedList: BasicArrayList = roadGeographicMapCellHistory!!.getTracked()!!
+                    this.list.add(geographicMapCellPosition)
+                    break
+                }
 
+                ahead++
 
-    var geographicMapCellPosition: GeographicMapCellPosition
+                if (ahead > lastIndex) {
 
+                    break
+                }
+            }
+        }
 
-    var lastIndex: Int = trackedList!!.size() -1
+        var size: Int = this.list.size()!!
 
+        for (index in size - 1 downTo 0) {
 
-    var total: Int= 0
-
-
-    var ahead: Int= 0
-
-
-
-
-
-                        for (index in lastIndex downTo 0)
-
-        {
-geographicMapCellPosition= trackedList!!.get(index) as GeographicMapCellPosition
-total= 0
-ahead= index
-
-        while(this.isDropAllowedAt(trackedList!!.get(ahead) as GeographicMapCellPosition))
-        {
-total++
-
-    
-                        if(total > this.STRAIGHTAWAY)
-                        
-                                    {
-                                    this.list.add(geographicMapCellPosition)
-break;
-
-                    
-
-                                    }
-                                
-ahead++
-
-    
-                        if(ahead > lastIndex)
-                        
-                                    {
-                                    break;
-
-                    
-
-                                    }
-                                
-}
-
-}
-
-
-    var size: Int = this.list.size()!!
-
-
-
-
-
-                        for (index in size -1 downTo 0)
-
-        {
-this.drop(allBinaryGameLayerManager, index)
-}
-
-}
-
+            this.drop(allBinaryGameLayerManager, index)
+        }
+    }
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryLayerManager = allBinaryLayerManager
 
-    
-                        if(this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
-                        
-                                    {
-                                    
-    var index: Int = this.basicArrayListUtil!!.getRandomIndex(this.list)!!
+        if (
+            this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime)
+        ) {
 
-this.drop(allBinaryLayerManager, index)
+            var index: Int = this.basicArrayListUtil!!.getRandomIndex(this.list)!!
 
-                                    }
-                                
-}
+            this.drop(allBinaryLayerManager, index)
+        }
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryLayerManager = allBinaryLayerManager
-    //var index = index
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryLayerManager = allBinaryLayerManager
+        // var index = index
 
-
-
-                            throw Exception(CommonStrings.getInstance()!!.NOT_IMPLEMENTED)
+        throw Exception(CommonStrings.getInstance()!!.NOT_IMPLEMENTED)
+    }
 }
-
-
-}
-                
-            
-

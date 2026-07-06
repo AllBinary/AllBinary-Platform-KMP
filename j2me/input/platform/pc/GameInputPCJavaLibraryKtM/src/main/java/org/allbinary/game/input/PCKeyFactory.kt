@@ -1,60 +1,43 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.awt.event.KeyEvent
+import java.lang.Object
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.string.CommonSeps
 
-open public class PCKeyFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val SINGLETON: PCKeyFactory = PCKeyFactory()
+open public class PCKeyFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: PCKeyFactory{
+    companion object {
 
+        private val SINGLETON: PCKeyFactory = PCKeyFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : PCKeyFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PCKeyFactory.SINGLETON
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PCKeyFactory.SINGLETON
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val UNKNOWN: PCGameKey = PCGameKey(KeyEvent.VK_UNDEFINED, "UNKNOWN")
 
     val ENTER: PCGameKey = PCGameKey(5, "Enter")
@@ -189,7 +172,8 @@ companion object {
 
     val DPAD_LEFT: PCGameKey = PCGameKey(KeyEvent.VK_LEFT, CommonPhoneStrings.getInstance()!!.LEFT)
 
-    val DPAD_RIGHT: PCGameKey = PCGameKey(KeyEvent.VK_RIGHT, CommonPhoneStrings.getInstance()!!.RIGHT)
+    val DPAD_RIGHT: PCGameKey =
+        PCGameKey(KeyEvent.VK_RIGHT, CommonPhoneStrings.getInstance()!!.RIGHT)
 
     val DPAD_UP2: PCGameKey = this.DPAD_UP
 
@@ -215,207 +199,139 @@ companion object {
 
     val BACK_SPACE: PCGameKey = PCGameKey(KeyEvent.VK_BACK_SPACE, "Backspace")
 
-    open fun isSubmission(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
+    open fun isSubmission(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
 
-    
-                        if(input == this.ENTER)
-                        
-                                    {
-                                    
+        if (input == this.ENTER) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
-                                    }
-                                
+    open fun isDelete(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
 
+        if (input == this.DEL) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isBackSpace(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.BACK_SPACE) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isUp(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_UP || input == this.DPAD_UP2) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isDown(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_DOWN || input == this.DPAD_DOWN2) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isLeft(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_LEFT || input == this.DPAD_LEFT2) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isRight(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_RIGHT || input == this.DPAD_RIGHT2) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isEnter(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.ENTER) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 }
-
-
-    open fun isDelete(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DEL)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isBackSpace(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.BACK_SPACE)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isUp(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_UP || input == this.DPAD_UP2)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isDown(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_DOWN || input == this.DPAD_DOWN2)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isLeft(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_LEFT || input == this.DPAD_LEFT2)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isRight(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_RIGHT || input == this.DPAD_RIGHT2)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isEnter(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.ENTER)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-}
-                
-            
-

@@ -1,68 +1,46 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
 
+import java.lang.Object
 
+open public class TouchScreenTypeFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: TouchScreenTypeFactory = TouchScreenTypeFactory()
 
-open public class TouchScreenTypeFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: TouchScreenTypeFactory = TouchScreenTypeFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : TouchScreenTypeFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: TouchScreenTypeFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return TouchScreenTypeFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return TouchScreenTypeFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     open fun TouchScreenTypeFactory()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var touchScreenFactory: TouchScreenFactory = TouchScreenFactory.getInstance()!!
+        var touchScreenFactory: TouchScreenFactory = TouchScreenFactory.getInstance()!!
 
-touchScreenFactory!!.setTouch(true)
+        touchScreenFactory!!.setTouch(true)
+    }
 }
-
-
-}
-                
-            
-

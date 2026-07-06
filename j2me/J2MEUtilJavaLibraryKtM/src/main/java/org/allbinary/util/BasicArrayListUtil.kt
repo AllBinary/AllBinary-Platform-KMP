@@ -1,202 +1,154 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.util
+/* Generated Code Do Not Modify */
+package org.allbinary.util
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.System
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import java.lang.System
+import kotlin.Array
 import org.allbinary.game.rand.MyRandomFactory
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonPhoneStrings
 
-open public class BasicArrayListUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: BasicArrayListUtil = BasicArrayListUtil()
+open public class BasicArrayListUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: BasicArrayListUtil{
+    companion object {
 
+        private val instance: BasicArrayListUtil = BasicArrayListUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : BasicArrayListUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicArrayListUtil.instance
-}
-
-
-    open fun main(args: Array<String?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-var args = args
-
-    var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
-
-
-    var list: BasicArrayList = BasicArrayListD()
-
-list.add(commonPhoneStrings!!.ONE)
-list.add(commonPhoneStrings!!.TWO)
-list.add(commonPhoneStrings!!.THREE)
-list.add(commonPhoneStrings!!.FOUR)
-list.add(commonPhoneStrings!!.FIVE)
-list.add(commonPhoneStrings!!.SIX)
-list.add(commonPhoneStrings!!.SEVEN)
-list.add(commonPhoneStrings!!.EIGHT)
-list.add(commonPhoneStrings!!.NINE)
-BasicArrayListUtil.getInstance()!!.reverse(list)
-System.out.println(list.toString())
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicArrayListUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    val NULL_ARRAY_OF_ARRAY: Array<Array<BasicArrayList?>?> = Array(0) { arrayOfNulls<BasicArrayList?>(0) }
-                                                            
+
+        open fun main(args: Array<String?>)
+            // nullable = true from not(false or (false and false)) = true
+        {
+            var args = args
+
+            var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
+
+            var list: BasicArrayList = BasicArrayListD()
+
+            list.add(commonPhoneStrings!!.ONE)
+            list.add(commonPhoneStrings!!.TWO)
+            list.add(commonPhoneStrings!!.THREE)
+            list.add(commonPhoneStrings!!.FOUR)
+            list.add(commonPhoneStrings!!.FIVE)
+            list.add(commonPhoneStrings!!.SIX)
+            list.add(commonPhoneStrings!!.SEVEN)
+            list.add(commonPhoneStrings!!.EIGHT)
+            list.add(commonPhoneStrings!!.NINE)
+            BasicArrayListUtil.getInstance()!!.reverse(list)
+            System.out.println(list.toString())
+        }
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
+    val NULL_ARRAY_OF_ARRAY: Array<Array<BasicArrayList?>?> =
+        Array(0) { arrayOfNulls<BasicArrayList?>(0) }
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 
     private val immutableInstance: BasicArrayList = ImmutableBasicArrayList("Immutable", 0)
 
-    open fun getRandom(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-: Any{
-var list = list
+    open fun getRandom(
+        list: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Any {
+        var list = list
 
-    var i_random: Int = this.getRandomIndex(list)!!
+        var i_random: Int = this.getRandomIndex(list)!!
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return list.objectArray[i_random]!!
+    }
 
+    open fun getRandomIndex(
+        list: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var list = list
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return list.objectArray[i_random]!!
-}
-
-
-    open fun getRandomIndex(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var list = list
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.myRandomFactory!!.getAbsoluteNextInt(list.size())
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.myRandomFactory!!.getAbsoluteNextInt(list.size())
+    }
 
     open fun reverse(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var list = list
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var list = list
 
-    var lastMinusOneIndex: Int = list.size() -2
+        var lastMinusOneIndex: Int = list.size() - 2
 
+        var temp: Any
 
-    var temp: Any
+        var size: Int = lastMinusOneIndex / 2
 
+        var secondSwapIndex: Int = 0
 
-    var size: Int = lastMinusOneIndex /2
+        for (index in 0 until size) {
 
+            secondSwapIndex = lastMinusOneIndex - index
+            temp = list.removeAt(index)
+            list.addAt(index, list.removeAt(secondSwapIndex))
+            list.addAt(secondSwapIndex + 1, temp)
+        }
+    }
 
-    var secondSwapIndex: Int= 0
+    open fun log(
+        list: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        // var list = list
 
+        var S_LABEL: String = " s: "
 
+        var size: Int = list.size()!!
 
+        var stringBuffer: StringMaker = StringMaker()
 
+        stringBuffer!!.append(CommonLabels.getInstance()!!.TOTAL_LABEL)
+        stringBuffer!!.appendint(size)
 
-                        for (index in 0 until size)
+        for (index in size - 1 downTo 0) {
 
-        {
-secondSwapIndex= lastMinusOneIndex -index
-temp= list.removeAt(index)
-list.addAt(index, list.removeAt(secondSwapIndex))
-list.addAt(secondSwapIndex +1, temp)
-}
+            var usedList: BasicArrayList = list.objectArray[index]!! as BasicArrayList
 
-}
+            stringBuffer!!.append(S_LABEL)
+            stringBuffer!!.appendint(usedList!!.size())
+        }
 
-
-    open fun log(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-    //var list = list
-
-    var S_LABEL: String = " s: "
-
-
-    var size: Int = list.size()!!
-
-
-    var stringBuffer: StringMaker = StringMaker()
-
-stringBuffer!!.append(CommonLabels.getInstance()!!.TOTAL_LABEL)
-stringBuffer!!.appendint(size)
-
-
-
-
-                        for (index in size -1 downTo 0)
-
-        {
-
-    var usedList: BasicArrayList = list.objectArray[index]!! as BasicArrayList
-
-stringBuffer!!.append(S_LABEL)
-stringBuffer!!.appendint(usedList!!.size())
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 
     open fun getImmutableInstance()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.immutableInstance
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.immutableInstance
+    }
 }
-
-
-}
-                
-            
-

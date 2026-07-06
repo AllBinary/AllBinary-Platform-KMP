@@ -1,93 +1,70 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics
 
+import java.lang.Object
 
+open public class PointFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: PointFactory = PointFactory()
 
-open public class PointFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: PointFactory = PointFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : PointFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: PointFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PointFactory.instance
         }
-            
+    }
+
     var ZERO_ZERO: GPoint = this.createXYZ(0, 0, 0)!!
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {}
+
+    private constructor() : super() {}
+
+    open fun createXY(
+        x: Int,
+        y: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : GPoint {
+        var x = x
+        var y = y
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return GPoint(x, y, 0)
+    }
+
+    open fun createXYZ(
+        x: Int,
+        y: Int,
+        z: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : GPoint {
+        var x = x
+        var y = y
+        var z = z
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return GPoint(x, y, z)
+    }
 }
-
-private constructor ()
-            : super()
-        {
-}
-
-
-    open fun createXY(x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-: GPoint{
-var x = x
-var y = y
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GPoint(x, y, 0)
-}
-
-
-    open fun createXYZ(x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-: GPoint{
-var x = x
-var y = y
-var z = z
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GPoint(x, y, z)
-}
-
-
-}
-                
-            
-

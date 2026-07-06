@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.image.opengles
+/* Generated Code Do Not Modify */
+package org.allbinary.image.opengles
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.khronos.opengles.GL10
 import javax.microedition.khronos.opengles.GL11
@@ -36,88 +26,77 @@ import org.allbinary.graphics.opengles.OpenGLLogUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.opengles.PlatformTextureBaseFactory
-//Many devices don't support this even though it is supposed to
+
+// Many devices don't support this even though it is supposed to
 open public class OpenGLESGL11ExtImage : OpenGLESImage {
-        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var a: Int= 0
+    private var a: Int = 0
 
     private val rectangle: IntArray
-public constructor (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
-                            : super(image, bitmapFactory, textureFactory){
-    //var image = image
-    //var bitmapFactory = bitmapFactory
-    //var textureFactory = textureFactory
+    public constructor(
+        image: Image,
+        bitmapFactory: PlatformBitmapBaseFactory,
+        textureFactory: PlatformTextureBaseFactory,
+    ) : super(image, bitmapFactory, textureFactory) {
+        // var image = image
+        // var bitmapFactory = bitmapFactory
+        // var textureFactory = textureFactory
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.onDisplayChangeEvent(
-                            null)
-this.rectangle= intArrayOf(0,this.getHeight(), this.getWidth(),  -this.getHeight())
-}
-
+        this.onDisplayChangeEvent(null)
+        this.rectangle = intArrayOf(0, this.getHeight(), this.getWidth(), -this.getHeight())
+    }
 
     open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var displayChangeEvent = displayChangeEvent
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var displayChangeEvent = displayChangeEvent
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, "onResize")
-this.a= DisplayInfoSingleton.getInstance()!!.getLastHeight() -this.getHeight()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onResize", e)
-}
-
-}
-
+            this.a = DisplayInfoSingleton.getInstance()!!.getLastHeight() - this.getHeight()
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onResize", e)
+        }
+    }
 
     override fun set(gl: GL)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
-this.onDisplayChangeEvent(
-                            null)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
+        this.onDisplayChangeEvent(null)
 
-    var gl11: GL11 = gl as GL11
+        var gl11: GL11 = gl as GL11
 
+        if (super.initTexture(gl11)) {
 
-    
-                        if(super.initTexture(gl11))
-                        
-                                    {
-                                    this.textureFactory!!.load(gl11, GL10.GL_TEXTURE_2D, 0, this, 0, true)
-gl11.glTexParameteriv(GL10.GL_TEXTURE_2D, GL11Ext.GL_TEXTURE_CROP_RECT_OES, this.rectangle, 0)
-gl11.glDisable(GL10.GL_TEXTURE_2D)
-OpenGLLogUtil.getInstance()!!.logError(gl11, this)
-
-                                    }
-                                
-}
-
+            this.textureFactory!!.load(gl11, GL10.GL_TEXTURE_2D, 0, this, 0, true)
+            gl11.glTexParameteriv(
+                GL10.GL_TEXTURE_2D,
+                GL11Ext.GL_TEXTURE_CROP_RECT_OES,
+                this.rectangle,
+                0,
+            )
+            gl11.glDisable(GL10.GL_TEXTURE_2D)
+            OpenGLLogUtil.getInstance()!!.logError(gl11, this)
+        }
+    }
 
     open fun draw(gl: GL10, x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
-    //var x = x
-    //var y = y
-    //var z = z
-gl.glEnable(GL10.GL_TEXTURE_2D)
-gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties!!.textureID)
-gl = glgl as GL11Ext
-gl.
-                    glDrawTexfOES(x, this.a -y, z, this.getWidth(), this.getHeight())
-gl.glDisable(GL10.GL_TEXTURE_2D)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
+        // var x = x
+        // var y = y
+        // var z = z
+        gl.glEnable(GL10.GL_TEXTURE_2D)
+        gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties!!.textureID)
+        gl = glgl as GL11Ext
+        gl.glDrawTexfOES(x, this.a - y, z, this.getWidth(), this.getHeight())
+        gl.glDisable(GL10.GL_TEXTURE_2D)
+    }
 }
-
-
-}
-                
-            
-

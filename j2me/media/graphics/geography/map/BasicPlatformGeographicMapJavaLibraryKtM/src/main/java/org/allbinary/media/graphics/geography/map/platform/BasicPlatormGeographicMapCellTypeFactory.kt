@@ -1,40 +1,29 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.platform
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map.platform
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.Enumeration
 import java.util.Hashtable
-import org.allbinary.string.CommonStrings
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
+import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.EnumerationUtil
 
 open public class BasicPlatormGeographicMapCellTypeFactory : GeographicMapCellTypeFactory {
-        
 
     private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
@@ -45,148 +34,105 @@ open public class BasicPlatormGeographicMapCellTypeFactory : GeographicMapCellTy
     val LADDER_CELL_TYPE: BasicPlatormGeographicMapCellType
 
     private val maxTileId: Int
-public constructor (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
-    //var tileTypeToTileIdsMap = tileTypeToTileIdsMap
-    //var maxTileId = maxTileId
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+    public constructor(tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int) {
+        // var tileTypeToTileIdsMap = tileTypeToTileIdsMap
+        // var maxTileId = maxTileId
 
-this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
-this.maxTileId= maxTileId
-GeographicMapCellType(0, 0)
+        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    var BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType.createType(1)!!
+        this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
+        this.maxTileId = maxTileId
+        GeographicMapCellType(0, 0)
 
+        var BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType =
+            BasicPlatormGeographicMapCellType.createType(1)!!
 
-    var JUMP_THRU_CELL_TYPE: BasicPlatormGeographicMapCellType = BLOCK_CELL_TYPE
+        var JUMP_THRU_CELL_TYPE: BasicPlatormGeographicMapCellType = BLOCK_CELL_TYPE
 
+        var LADDER_CELL_TYPE: BasicPlatormGeographicMapCellType = BLOCK_CELL_TYPE
 
-    var LADDER_CELL_TYPE: BasicPlatormGeographicMapCellType = BLOCK_CELL_TYPE
+        var PLATFORM: String = "Platform"
 
+        var JUMP_TRHU: String = "JumpThru"
 
-    var PLATFORM: String = "Platform"
+        var LADDER: String = "Ladder"
 
+        var enumeration: Enumeration<Any?> = tileTypeToTileIdsMap!!.keys()!!
 
-    var JUMP_TRHU: String = "JumpThru"
+        var idsWithTypeList: BasicArrayList
 
+        var key: String
 
-    var LADDER: String = "Ladder"
+        var basicPlatormGeographicMapCellType: BasicPlatormGeographicMapCellType
 
+        while (this.enumerationUtil!!.hasMoreElements(enumeration)) {
+            key = this.enumerationUtil!!.nextElement(enumeration)!! as String
+            this.logUtil!!.putF(key, this, commonStrings!!.INIT)
+            idsWithTypeList = tileTypeToTileIdsMap!!.get(key) as BasicArrayList
+            basicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType(idsWithTypeList)
 
-    var enumeration: Enumeration<Any?> = tileTypeToTileIdsMap!!.keys()!!
+            if (key.equals(PLATFORM)) {
 
+                BLOCK_CELL_TYPE = basicPlatormGeographicMapCellType
+            }
 
-    var idsWithTypeList: BasicArrayList
+            if (key.equals(JUMP_TRHU)) {
 
+                JUMP_THRU_CELL_TYPE = basicPlatormGeographicMapCellType
+            }
 
-    var key: String
+            if (key.equals(LADDER)) {
 
+                LADDER_CELL_TYPE = basicPlatormGeographicMapCellType
+            }
+        }
 
-    var basicPlatormGeographicMapCellType: BasicPlatormGeographicMapCellType
-
-
-        while(this.enumerationUtil!!.hasMoreElements(enumeration))
-        {
-key= this.enumerationUtil!!.nextElement(enumeration)!! as String
-this.logUtil!!.putF(key, this, commonStrings!!.INIT)
-idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
-basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithTypeList)
-
-    
-                        if(key.equals(PLATFORM))
-                        
-                                    {
-                                    BLOCK_CELL_TYPE= basicPlatormGeographicMapCellType
-
-                                    }
-                                
-
-    
-                        if(key.equals(JUMP_TRHU))
-                        
-                                    {
-                                    JUMP_THRU_CELL_TYPE= basicPlatormGeographicMapCellType
-
-                                    }
-                                
-
-    
-                        if(key.equals(LADDER))
-                        
-                                    {
-                                    LADDER_CELL_TYPE= basicPlatormGeographicMapCellType
-
-                                    }
-                                
-}
-
-this.BLOCK_CELL_TYPE= BLOCK_CELL_TYPE
-this.JUMP_THRU_CELL_TYPE= JUMP_THRU_CELL_TYPE
-this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
-GeographicMapCellType(this.maxTileId -1, 0)
-GeographicMapCellType(this.maxTileId -2, 0)
-}
-
+        this.BLOCK_CELL_TYPE = BLOCK_CELL_TYPE
+        this.JUMP_THRU_CELL_TYPE = JUMP_THRU_CELL_TYPE
+        this.LADDER_CELL_TYPE = LADDER_CELL_TYPE
+        GeographicMapCellType(this.maxTileId - 1, 0)
+        GeographicMapCellType(this.maxTileId - 2, 0)
+    }
 
     override fun getStartType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.maxTileId -1
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.maxTileId - 1
+    }
 
     override fun getEndType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.maxTileId -2
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.maxTileId - 2
+    }
 
     override fun getEmptyType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
 
+    override fun isPath(
+        cellType: GeographicMapCellType
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var cellType = cellType
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
+        if (cellType!!.getType() == 0) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 }
-
-
-    override fun isPath(cellType: GeographicMapCellType)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var cellType = cellType
-
-    
-                        if(cellType!!.getType() == 0)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-}
-                
-            
-

@@ -1,82 +1,54 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.ai
+/* Generated Code Do Not Modify */
+package org.allbinary.ai
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.layer.AllBinaryLayerManager
 
-open public class ArtificialIntelligence
-            : Object
-        
-                , ArtificialIntelligenceInterface {
-        
-companion object {
-            
-    val AI_ID: Int = 2
+open public class ArtificialIntelligence : Object, ArtificialIntelligenceInterface {
 
-    private val instance: ArtificialIntelligence = ArtificialIntelligence()
+    companion object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ArtificialIntelligence{
+        val AI_ID: Int = 2
 
+        private val instance: ArtificialIntelligence = ArtificialIntelligence()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ArtificialIntelligence {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ArtificialIntelligence.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ArtificialIntelligence.instance
         }
-            public constructor ()
-            : super()
-        {
-}
+    }
 
+    public constructor() : super() {}
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processAI(layerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var layerManager = layerManager
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var layerManager = layerManager
+    }
 
     override fun getId()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 1
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 1
+    }
 }
-
-
-}
-                
-            
-

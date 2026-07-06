@@ -1,144 +1,106 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.business.init
+/* Generated Code Do Not Modify */
+package org.allbinary.business.init
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.debug.DebugFactory
 import org.allbinary.debug.NoDebug
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class LicenseInitInfo
-            : Object
-         {
-        
+open public class LicenseInitInfo : Object {
 
     private var id: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var serverVector: BasicArrayList = BasicArrayListD()
-public constructor ()
-            : super()
-        {
-}
 
+    public constructor() : super() {}
 
     open fun getLicenseId()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.id
+    }
 
+    open fun getServer(
+        index: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        var index = index
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.id
-}
-
-
-    open fun getServer(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-var index = index
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.serverVector!!.objectArray[index]!! as String
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.serverVector!!.objectArray[index]!! as String
+    }
 
     open fun getNumberOfServers()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.serverVector!!.size()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.serverVector!!.size()
+    }
 
     open fun setLicenseId(value: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.id= value
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.id = value
+    }
 
     open fun clearServers()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.serverVector= BasicArrayListD()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.serverVector = BasicArrayListD()
+    }
 
     open fun setServer(value: String, index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-var index = index
-this.serverVector!!.addAt(index, value)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        var index = index
+        this.serverVector!!.addAt(index, value)
+    }
 
     open fun addServer(value: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.serverVector!!.add(value)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.serverVector!!.add(value)
+    }
 
     open fun getServerList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.serverVector
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.serverVector
+    }
 
     open fun setServerList(servers: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-var servers = servers
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var servers = servers
 
-    
-                        if(DebugFactory.getInstance() == NoDebug.getInstance())
-                        
-                                    {
-                                    this.serverVector= servers
+        if (DebugFactory.getInstance() == NoDebug.getInstance()) {
 
-                                    }
-                                
+            this.serverVector = servers
+        }
+    }
 }
-
-
-}
-                
-            
-

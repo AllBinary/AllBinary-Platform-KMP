@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.hud.basic.life
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.hud.basic.life
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
 import org.allbinary.game.graphics.hud.BasicHud
@@ -33,113 +23,90 @@ import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.graphics.paint.PaintableInterface
 
-open public class LivesHudWidget : BasicHud
-                , PaintableInterface {
-        
+open public class LivesHudWidget : BasicHud, PaintableInterface {
 
     private val lifeInterface: Life
 
     private val xArray: IntArray
 
     private val animationInterface: Animation
-public constructor (animationInterface: Animation, lifeInterface: Life, location: Int, direction: Int)                        
 
-                            : super(location, direction, 2, BasicColorFactory.getInstance()!!.WHITE){
-var animationInterface = animationInterface
-var lifeInterface = lifeInterface
-var location = location
-var direction = direction
+    public constructor(
+        animationInterface: Animation,
+        lifeInterface: Life,
+        location: Int,
+        direction: Int,
+    ) : super(location, direction, 2, BasicColorFactory.getInstance()!!.WHITE) {
+        var animationInterface = animationInterface
+        var lifeInterface = lifeInterface
+        var location = location
+        var direction = direction
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.lifeInterface= lifeInterface
+        this.lifeInterface = lifeInterface
 
-    var size: Int = this.getLifeInterface()!!.getMaxlives().toInt()
+        var size: Int = this.getLifeInterface()!!.getMaxlives().toInt()
 
-this.xArray= IntArray(size)
-this.animationInterface= animationInterface
-this.updateMaxWidth= this.lifeInterface!!.getMaxlives() *16
-this.updateMaxHeight= 16
-}
-
+        this.xArray = IntArray(size)
+        this.animationInterface = animationInterface
+        this.updateMaxWidth = this.lifeInterface!!.getMaxlives() * 16
+        this.updateMaxHeight = 16
+    }
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-super.updateMeasurement(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        super.updateMeasurement(graphics)
 
-    var maxLives: Int = this.getLifeInterface()!!.getMaxlives().toInt()
+        var maxLives: Int = this.getLifeInterface()!!.getMaxlives().toInt()
 
+        for (index in 0 until maxLives) {
 
-
-
-
-                        for (index in 0 until maxLives)
-
-        {
-this.xArray[index]= this.getX() +(index *16)
-}
-
-}
-
+            this.xArray[index] = this.getX() + (index * 16)
+        }
+    }
 
     override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-var displayChangeEvent = displayChangeEvent
-super.onDisplayChangeEvent(displayChangeEvent)
-this.myFontProcessor= this.updateMyFontProcessor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var displayChangeEvent = displayChangeEvent
+        super.onDisplayChangeEvent(displayChangeEvent)
+        this.myFontProcessor = this.updateMyFontProcessor
+    }
 
     override fun setX(x: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-super.setX(x)
-this.myFontProcessor= this.updateMyFontProcessor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        super.setX(x)
+        this.myFontProcessor = this.updateMyFontProcessor
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.myFontProcessor!!.process(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        this.myFontProcessor!!.process(graphics)
 
+        for (index in this.getLifeInterface()!!.get().toInt() - 1 downTo 0) {
 
-
-
-                        for (index in this.getLifeInterface()!!.get().toInt()  - 1  downTo 0)
-
-        {
-this.animationInterface!!.paintXY(graphics, this.xArray[index]!!, this.getY())
-}
-
-}
-
+            this.animationInterface!!.paintXY(graphics, this.xArray[index]!!, this.getY())
+        }
+    }
 
     override fun paintThreed(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+    }
 
     open fun getLifeInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Life{
+    // nullable = true from not(false or (false and true)) = true
+    : Life {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.lifeInterface
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.lifeInterface
+    }
 }
-
-
-}
-                
-            
-

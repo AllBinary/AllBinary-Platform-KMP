@@ -1,90 +1,63 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.math
+/* Generated Code Do Not Modify */
+package org.allbinary.math
 
+import java.lang.Object
+import kotlin.Array
 
+open public class AngleIncrementInfoFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: AngleIncrementInfoFactory = AngleIncrementInfoFactory()
 
-open public class AngleIncrementInfoFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: AngleIncrementInfoFactory = AngleIncrementInfoFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : AngleIncrementInfoFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: AngleIncrementInfoFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AngleIncrementInfoFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AngleIncrementInfoFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    private val angleIncrementInfo: Array<AngleIncrementInfo?> = arrayOfNulls(AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt())
+    }
 
-    open fun getAt(angleIncrement: Short)
-        //nullable = true from not(false or (false and false)) = true
-: AngleIncrementInfo{
-var angleIncrement = angleIncrement
+    // Auto Generated
+    public constructor() : super() {}
 
-    var halfAngleIncrement: Int = (angleIncrement.toInt() shr 1)
+    private val angleIncrementInfo: Array<AngleIncrementInfo?> =
+        arrayOfNulls(AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt())
 
+    open fun getAt(
+        angleIncrement: Short
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : AngleIncrementInfo {
+        var angleIncrement = angleIncrement
 
-    var angleIncrementInfoCanBeNull: AngleIncrementInfo? = this.angleIncrementInfo[halfAngleIncrement]
+        var halfAngleIncrement: Int = (angleIncrement.toInt() shr 1)
 
+        var angleIncrementInfoCanBeNull: AngleIncrementInfo? =
+            this.angleIncrementInfo[halfAngleIncrement]
 
-    
-                        if(angleIncrementInfoCanBeNull == 
-                                    null
-                                )
-                        
-                                    {
-                                    angleIncrementInfoCanBeNull= AngleIncrementInfo(angleIncrement)
-this.angleIncrementInfo[halfAngleIncrement]= angleIncrementInfoCanBeNull
+        if (angleIncrementInfoCanBeNull == null) {
 
-                                    }
-                                
+            angleIncrementInfoCanBeNull = AngleIncrementInfo(angleIncrement)
+            this.angleIncrementInfo[halfAngleIncrement] = angleIncrementInfoCanBeNull
+        }
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return angleIncrementInfoCanBeNull
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return angleIncrementInfoCanBeNull
+    }
 }
-
-
-}
-                
-            
-

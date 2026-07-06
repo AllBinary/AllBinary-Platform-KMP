@@ -1,682 +1,553 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.pathfinding
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.pathfinding
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.HashSet
 import java.util.PriorityQueue
+import kotlin.Array
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.MathUtil
-import org.allbinary.string.CommonStrings
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType
+import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
 open public class PathFinder : GeographicPathFinderBase {
-        
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
-    private val openPriorityQueue: PriorityQueue<PathFindingNodeCost> = PriorityQueue<PathFindingNodeCost>()
+    private val openPriorityQueue: PriorityQueue<PathFindingNodeCost> =
+        PriorityQueue<PathFindingNodeCost>()
 
     private val closedSet: HashSet<PathFindingNodeCost> = HashSet<PathFindingNodeCost>()
 
     private var geographicMapInterface: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    private var costArray: Array<Array<PathFindingNodeCost?>?> = PathFindingNodeCost.NULL_PATH_FINDING_NODE_COST_ARRAY_ARRAY
+    private var costArray: Array<Array<PathFindingNodeCost?>?> =
+        PathFindingNodeCost.NULL_PATH_FINDING_NODE_COST_ARRAY_ARRAY
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun init(geographicMapInterface: BasicGeographicMap)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapInterface = geographicMapInterface
-this.geographicMapInterface= geographicMapInterface
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapInterface = geographicMapInterface
+        this.geographicMapInterface = geographicMapInterface
 
-    var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+        var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
-this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeCost?>(tiledLayer!!.getRows()) }
-                                                            
+        this.costArray =
+            Array(tiledLayer!!.getColumns()) {
+                arrayOfNulls<PathFindingNodeCost?>(tiledLayer!!.getRows())
+            }
 
-    var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
+        var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory =
+            geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
 
+        var node: PathFindingNodeCost
 
-    var node: PathFindingNodeCost
+        var sizeX: Int = this.costArray!!.size
 
+        var sizeY: Int = this.costArray[0]!!.size
 
-    var sizeX: Int = this.costArray!!.size
-                
+        for (column in 0 until sizeX) {
 
+            for (row in 0 until sizeY) {
 
-    var sizeY: Int = this.costArray[0]!!.size
-                
+                var geographicMapCellType: GeographicMapCellType =
+                    geographicMapInterface!!.getCellTypeAt(
+                        basicGeographicMapCellPositionFactory!!.getAt(column, row)
+                    )!!
 
+                var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType =
+                    geographicMapCellType as RaceTrackGeographicMapCellType
 
+                node =
+                    PathFindingNodeCost(
+                        NullUtil.getInstance()!!.NULL_OBJECT,
+                        basicGeographicMapCellPositionFactory!!.getAt(column, row),
+                        PathFindingNodeCostInfo(
+                            raceTrackGeographicMapCellType!!.getTravelCost().toLong(),
+                            -1.toLong(),
+                        ),
+                    )
+                this.costArray[column]!![row] = node
+            }
+        }
+    }
 
-
-
-                        for (column in 0 until sizeX)
-
-        {
-
-
-
-
-                        for (row in 0 until sizeY)
-
-        {
-
-    var geographicMapCellType: GeographicMapCellType = geographicMapInterface!!.getCellTypeAt(basicGeographicMapCellPositionFactory!!.getAt(column, row))!!
-
-
-    var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = geographicMapCellType as RaceTrackGeographicMapCellType
-
-node= PathFindingNodeCost(NullUtil.getInstance()!!.NULL_OBJECT, basicGeographicMapCellPositionFactory!!.getAt(column, row), PathFindingNodeCostInfo(raceTrackGeographicMapCellType!!.getTravelCost().toLong(),  -1.toLong()))
-this.costArray[column]!![row]= node
-}
-
-}
-
-}
-
-
-    override fun searchTotalPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-var startPathFindingNodeList = startPathFindingNodeList
-var endPathFindingNodeList = endPathFindingNodeList
-var totalPaths = totalPaths
+    override fun searchTotalPath(
+        startPathFindingNodeList: BasicArrayList,
+        endPathFindingNodeList: BasicArrayList,
+        totalPaths: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        var startPathFindingNodeList = startPathFindingNodeList
+        var endPathFindingNodeList = endPathFindingNodeList
+        var totalPaths = totalPaths
 
         try {
-            
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.search(
+                startPathFindingNodeList!!.get(0) as PathFindingNode,
+                endPathFindingNodeList!!.get(0) as PathFindingNode,
+            )
+        } catch (e: Exception) {
+
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.basicArrayListUtil!!.getImmutableInstance()
+        }
+    }
+
+    @Throws(Exception::class)
+    override fun searchTotalPathN(
+        startPathFindingNodeList: BasicArrayList,
+        endPathFindingNodeList: BasicArrayList,
+        totalPaths: Int,
+        multipassState: MultipassState,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        var startPathFindingNodeList = startPathFindingNodeList
+        var endPathFindingNodeList = endPathFindingNodeList
+        var totalPaths = totalPaths
+        // var multipassState = multipassState
+
+        if (multipassState!!.step == 0) {
+
+            multipassState!!.step++
+        } else if (multipassState!!.step == 1) {
+
+            this.searchStart(
+                startPathFindingNodeList!!.get(0) as PathFindingNode,
+                endPathFindingNodeList!!.get(0) as PathFindingNode,
+                multipassState,
+            )
+        } else if (multipassState!!.step == 2) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.searchN(
+                startPathFindingNodeList!!.get(0) as PathFindingNode,
+                endPathFindingNodeList!!.get(0) as PathFindingNode,
+                multipassState,
+            )
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.basicArrayListUtil!!.getImmutableInstance()
+    }
+
+    @Throws(Exception::class)
+    open fun search(
+        startPathFindingNode: PathFindingNode,
+        endPathFindingNode: PathFindingNode,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var startPathFindingNode = startPathFindingNode
+        // var endPathFindingNode = endPathFindingNode
+
+        var list: BasicArrayList =
+            this.findPath(
+                startPathFindingNode!!.geographicMapCellPosition,
+                endPathFindingNode!!.geographicMapCellPosition,
+            )!!
+
+        var pathList: BasicArrayList = BasicArrayListD()
+
+        pathList!!.add(list)
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return pathList
+    }
+
+    @Throws(Exception::class)
+    open fun searchStart(
+        startPathFindingNode: PathFindingNode,
+        endPathFindingNode: PathFindingNode,
+        multipassState: MultipassState,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var startPathFindingNode = startPathFindingNode
+        // var endPathFindingNode = endPathFindingNode
+        // var multipassState = multipassState
+        this.findPathStart(
+            startPathFindingNode!!.geographicMapCellPosition,
+            endPathFindingNode!!.geographicMapCellPosition,
+            multipassState,
+        )
+    }
+
+    @Throws(Exception::class)
+    open fun searchN(
+        startPathFindingNode: PathFindingNode,
+        endPathFindingNode: PathFindingNode,
+        multipassState: MultipassState,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var startPathFindingNode = startPathFindingNode
+        // var endPathFindingNode = endPathFindingNode
+        // var multipassState = multipassState
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.search(startPathFindingNodeList!!.get(0) as PathFindingNode, endPathFindingNodeList!!.get(0) as PathFindingNode)
-} catch(e: Exception)
-            {
+        var list: BasicArrayList =
+            this.findPathEnd(
+                startPathFindingNode!!.geographicMapCellPosition,
+                endPathFindingNode!!.geographicMapCellPosition,
+                multipassState,
+            )!!
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+        if (list == null) {
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.basicArrayListUtil!!.getImmutableInstance()
+        }
 
+        var pathList: BasicArrayList = BasicArrayListD()
 
+        pathList!!.add(list)
+        multipassState!!.iteration = 0
+        multipassState!!.step = 0
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicArrayListUtil!!.getImmutableInstance()
-}
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return pathList
+    }
 
-}
+    @Throws(Exception::class)
+    open fun findPath(
+        start: GeographicMapCellPosition,
+        target: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var start = start
+        // var target = target
+        this.openPriorityQueue!!.clear()
+        this.closedSet!!.clear()
 
+        var discoveryCalculation: Long = 0
 
-                @Throws(Exception::class)
-            
-    override fun searchTotalPathN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-var startPathFindingNodeList = startPathFindingNodeList
-var endPathFindingNodeList = endPathFindingNodeList
-var totalPaths = totalPaths
-    //var multipassState = multipassState
+        var node: PathFindingNodeCost
 
-    
-                        if(multipassState!!.step == 0)
-                        
-                                    {
-                                    multipassState!!.step++
+        var targetColumn: Int = target.getColumn()!!
 
-                                    }
-                                
-                             else 
-    
-                        if(multipassState!!.step == 1)
-                        
-                                    {
-                                    this.searchStart(startPathFindingNodeList!!.get(0) as PathFindingNode, endPathFindingNodeList!!.get(0) as PathFindingNode, multipassState)
+        var targetRow: Int = target.getRow()!!
 
-                                    }
-                                
-                             else 
-    
-                        if(multipassState!!.step == 2)
-                        
-                                    {
-                                    
+        var sizeX: Int = this.costArray!!.size
 
+        var sizeY: Int = this.costArray[0]!!.size
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.searchN(startPathFindingNodeList!!.get(0) as PathFindingNode, endPathFindingNodeList!!.get(0) as PathFindingNode, multipassState)
+        for (column in 0 until sizeX) {
 
-                                    }
-                                
+            for (row in 0 until sizeY) {
 
+                discoveryCalculation =
+                    this.mathUtil!!.abs(column - targetColumn).toLong() +
+                        this.mathUtil!!.abs(row - targetRow)
+                node = this.costArray[column]!![row]!!
+                node.pathFindingNodeCostInfoP!!.totalCostP = 0
+                node.pathFindingNodeCostInfoP!!.costToEndP = discoveryCalculation
+            }
+        }
 
+        var startNode: PathFindingNodeCost = this.costArray[start.getColumn()]!![start.getRow()]!!
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicArrayListUtil!!.getImmutableInstance()
-}
+        this.openPriorityQueue!!.add(startNode)
 
+        var geographicMapInterface: BasicGeographicMap =
+            this.geographicMapInterface as BasicGeographicMap
 
-                @Throws(Exception::class)
-            
-    open fun search(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var startPathFindingNode = startPathFindingNode
-    //var endPathFindingNode = endPathFindingNode
+        var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory =
+            geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
 
-    var list: BasicArrayList = this.findPath(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition)!!
+        var allBinaryTiledLayer: AllBinaryTiledLayer =
+            geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
+        var targetNode: PathFindingNodeCost =
+            this.costArray[target.getColumn()]!![target.getRow()]!!
 
-    var pathList: BasicArrayList = BasicArrayListD()
+        var current: PathFindingNodeCost
 
-pathList!!.add(list)
+        do {
+            current = this.openPriorityQueue!!.poll()
+            this.closedSet!!.add(current)
 
+            if (current.equals(targetNode)) {
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return this.extractPath(start, current)
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return pathList
-}
+            var neighbor: PathFindingNodeCost
 
+            var neighborInfo: PathFindingNodeCostInfo
 
-                @Throws(Exception::class)
-            
-    open fun searchStart(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode, multipassState: MultipassState)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var startPathFindingNode = startPathFindingNode
-    //var endPathFindingNode = endPathFindingNode
-    //var multipassState = multipassState
-this.findPathStart(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition, multipassState)
-}
+            var calculatedCost: Long = 0
 
+            for (column in
+                current.geographicMapCellPosition!!.getColumn() - 1 until
+                    current.geographicMapCellPosition!!.getColumn() + 2) {
 
-                @Throws(Exception::class)
-            
-    open fun searchN(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode, multipassState: MultipassState)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var startPathFindingNode = startPathFindingNode
-    //var endPathFindingNode = endPathFindingNode
-    //var multipassState = multipassState
+                for (row in
+                    current.geographicMapCellPosition!!.getRow() - 1 until
+                        current.geographicMapCellPosition!!.getRow() + 2) {
 
-    var list: BasicArrayList = this.findPathEnd(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition, multipassState)!!
+                    if (
+                        column > 0 &&
+                            row > 0 &&
+                            column < allBinaryTiledLayer!!.getColumns() &&
+                            row < allBinaryTiledLayer!!.getRows() &&
+                            geographicMapInterface!!.isOnMap(
+                                basicGeographicMapCellPositionFactory!!.getAt(column, row)
+                            )
+                    ) {
+                        neighbor = this.costArray[column]!![row]!!
 
+                        if (this.closedSet!!.contains(neighbor)) {
 
-    
-                        if(list == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+                            continue
+                        }
 
+                        neighborInfo = neighbor.pathFindingNodeCostInfoP
+                        calculatedCost =
+                            neighborInfo!!.costToEndP +
+                                neighborInfo!!.costFromStartP +
+                                current.pathFindingNodeCostInfoP!!.totalCostP
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicArrayListUtil!!.getImmutableInstance()
+                        if (
+                            calculatedCost < neighborInfo!!.totalCostP ||
+                                !this.openPriorityQueue!!.contains(neighbor)
+                        ) {
+                            neighborInfo!!.totalCostP = calculatedCost
+                            neighbor.parent = current
 
-                                    }
-                                
+                            if (!this.openPriorityQueue!!.contains(neighbor)) {
 
-    var pathList: BasicArrayList = BasicArrayListD()
-
-pathList!!.add(list)
-multipassState!!.iteration= 0
-multipassState!!.step= 0
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return pathList
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun findPath(start: GeographicMapCellPosition, target: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var start = start
-    //var target = target
-this.openPriorityQueue!!.clear()
-this.closedSet!!.clear()
-
-    var discoveryCalculation: Long= 0
-
-
-    var node: PathFindingNodeCost
-
-
-    var targetColumn: Int = target.getColumn()!!
-
-
-    var targetRow: Int = target.getRow()!!
-
-
-    var sizeX: Int = this.costArray!!.size
-                
-
-
-    var sizeY: Int = this.costArray[0]!!.size
-                
-
-
-
-
-
-                        for (column in 0 until sizeX)
-
-        {
-
-
-
-
-                        for (row in 0 until sizeY)
-
-        {
-discoveryCalculation= this.mathUtil!!.abs(column -targetColumn).toLong() +this.mathUtil!!.abs(row -targetRow)
-node= this.costArray[column]!![row]!!
-node.pathFindingNodeCostInfoP!!.totalCostP= 0
-node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
-}
-
-}
-
-
-    var startNode: PathFindingNodeCost = this.costArray[start.getColumn()]!![start.getRow()]!!
-
-this.openPriorityQueue!!.add(startNode)
-
-    var geographicMapInterface: BasicGeographicMap = this.geographicMapInterface as BasicGeographicMap
-
-
-    var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-
-
-    var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-
-
-    var targetNode: PathFindingNodeCost = this.costArray[target.getColumn()]!![target.getRow()]!!
-
-
-    var current: PathFindingNodeCost
-
-
-        do
-        {
-current= this.openPriorityQueue!!.poll()
-this.closedSet!!.add(current)
-
-    
-                        if(current.equals(targetNode))
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.extractPath(start, current)
-
-                                    }
-                                
-
-    var neighbor: PathFindingNodeCost
-
-
-    var neighborInfo: PathFindingNodeCostInfo
-
-
-    var calculatedCost: Long= 0
-
-
-
-
-
-                        for (column in current.geographicMapCellPosition!!.getColumn() -1 until current.geographicMapCellPosition!!.getColumn() +2)
-
-        {
-
-
-
-
-                        for (row in current.geographicMapCellPosition!!.getRow() -1 until current.geographicMapCellPosition!!.getRow() +2)
-
-        {
-
-    
-                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getAt(column, row)))
-                        
-                                    {
-                                    neighbor= this.costArray[column]!![row]!!
-
-    
-                        if(this.closedSet!!.contains(neighbor))
-                        
-                                    {
-                                    
-
-                        continue
-                    
-
-                                    }
-                                
-neighborInfo= neighbor.pathFindingNodeCostInfoP
-calculatedCost= neighborInfo!!.costToEndP +neighborInfo!!.costFromStartP +current.pathFindingNodeCostInfoP!!.totalCostP
-
-    
-                        if(calculatedCost < neighborInfo!!.totalCostP || !this.openPriorityQueue!!.contains(neighbor))
-                        
-                                    {
-                                    neighborInfo!!.totalCostP= calculatedCost
-neighbor.parent= current
-
-    
-                        if(!this.openPriorityQueue!!.contains(neighbor))
-                        
-                                    {
-                                    
-    
-                        if(geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
-                        
-                                    {
+                                if (
+                                    geographicMapInterface!!.isOfFourDirections(
+                                        current.geographicMapCellPosition,
+                                        neighbor.geographicMapCellPosition,
+                                    )
+                                ) {
                                     this.openPriorityQueue!!.add(neighbor)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } while (!this.openPriorityQueue!!.isEmpty())
 
-                                    }
-                                
+        throw RuntimeException()
+    }
 
-                                    }
-                                
+    @Throws(Exception::class)
+    open fun findPathStart(
+        start: GeographicMapCellPosition,
+        target: GeographicMapCellPosition,
+        multipassState: MultipassState,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var start = start
+        // var target = target
+        // var multipassState = multipassState
+        this.openPriorityQueue!!.clear()
+        this.closedSet!!.clear()
 
-                                    }
-                                
+        var discoveryCalculation: Long = 0
 
-                                    }
-                                
-}
+        var node: PathFindingNodeCost
 
-}
+        var targetColumn: Int = target.getColumn()!!
 
-}
+        var targetRow: Int = target.getRow()!!
 
-        while(!this.openPriorityQueue!!.isEmpty())
-    
+        var sizeX: Int = this.costArray!!.size
+
+        var sizeY: Int = this.costArray[0]!!.size
+
+        for (column in 0 until sizeX) {
+
+            for (row in 0 until sizeY) {
 
-
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun findPathStart(start: GeographicMapCellPosition, target: GeographicMapCellPosition, multipassState: MultipassState)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var start = start
-    //var target = target
-    //var multipassState = multipassState
-this.openPriorityQueue!!.clear()
-this.closedSet!!.clear()
-
-    var discoveryCalculation: Long= 0
-
-
-    var node: PathFindingNodeCost
-
-
-    var targetColumn: Int = target.getColumn()!!
-
-
-    var targetRow: Int = target.getRow()!!
-
-
-    var sizeX: Int = this.costArray!!.size
-                
-
-
-    var sizeY: Int = this.costArray[0]!!.size
-                
-
-
-
-
-
-                        for (column in 0 until sizeX)
-
-        {
-
-
-
-
-                        for (row in 0 until sizeY)
-
-        {
-discoveryCalculation= this.mathUtil!!.abs(column -targetColumn).toLong() +this.mathUtil!!.abs(row -targetRow)
-node= this.costArray[column]!![row]!!
-node.pathFindingNodeCostInfoP!!.totalCostP= 0
-node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
-}
-
-}
-
-
-    var startNode: PathFindingNodeCost = this.costArray[start.getColumn()]!![start.getRow()]!!
-
-this.openPriorityQueue!!.add(startNode)
-multipassState!!.step++
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun findPathEnd(start: GeographicMapCellPosition, target: GeographicMapCellPosition, multipassState: MultipassState)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var start = start
-    //var target = target
-    //var multipassState = multipassState
-
-    var geographicMapInterface: BasicGeographicMap = this.geographicMapInterface as BasicGeographicMap
-
-
-    var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-
-
-    var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-
-
-    var targetNode: PathFindingNodeCost = this.costArray[target.getColumn()]!![target.getRow()]!!
-
-
-    var current: PathFindingNodeCost
-
-
-    var total: Int = 0
-
-
-        do
-        {
-current= this.openPriorityQueue!!.poll()
-this.closedSet!!.add(current)
-
-    
-                        if(current.equals(targetNode))
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.extractPath(start, current)
-
-                                    }
-                                
-
-    var neighbor: PathFindingNodeCost
-
-
-    var neighborInfo: PathFindingNodeCostInfo
-
-
-    var calculatedCost: Long= 0
-
-
-
-
-
-                        for (column in current.geographicMapCellPosition!!.getColumn() -1 until current.geographicMapCellPosition!!.getColumn() +2)
-
-        {
-
-
-
-
-                        for (row in current.geographicMapCellPosition!!.getRow() -1 until current.geographicMapCellPosition!!.getRow() +2)
-
-        {
-
-    
-                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getAt(column, row)))
-                        
-                                    {
-                                    neighbor= this.costArray[column]!![row]!!
-
-    
-                        if(this.closedSet!!.contains(neighbor))
-                        
-                                    {
-                                    
-
-                        continue
-                    
-
-                                    }
-                                
-neighborInfo= neighbor.pathFindingNodeCostInfoP
-calculatedCost= neighborInfo!!.costToEndP +neighborInfo!!.costFromStartP +current.pathFindingNodeCostInfoP!!.totalCostP
-
-    
-                        if(calculatedCost < neighborInfo!!.totalCostP || !this.openPriorityQueue!!.contains(neighbor))
-                        
-                                    {
-                                    neighborInfo!!.totalCostP= calculatedCost
-neighbor.parent= current
-
-    
-                        if(!this.openPriorityQueue!!.contains(neighbor))
-                        
-                                    {
-                                    
-    
-                        if(geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
-                        
-                                    {
+                discoveryCalculation =
+                    this.mathUtil!!.abs(column - targetColumn).toLong() +
+                        this.mathUtil!!.abs(row - targetRow)
+                node = this.costArray[column]!![row]!!
+                node.pathFindingNodeCostInfoP!!.totalCostP = 0
+                node.pathFindingNodeCostInfoP!!.costToEndP = discoveryCalculation
+            }
+        }
+
+        var startNode: PathFindingNodeCost = this.costArray[start.getColumn()]!![start.getRow()]!!
+
+        this.openPriorityQueue!!.add(startNode)
+        multipassState!!.step++
+    }
+
+    @Throws(Exception::class)
+    open fun findPathEnd(
+        start: GeographicMapCellPosition,
+        target: GeographicMapCellPosition,
+        multipassState: MultipassState,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var start = start
+        // var target = target
+        // var multipassState = multipassState
+
+        var geographicMapInterface: BasicGeographicMap =
+            this.geographicMapInterface as BasicGeographicMap
+
+        var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory =
+            geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
+
+        var allBinaryTiledLayer: AllBinaryTiledLayer =
+            geographicMapInterface!!.getAllBinaryTiledLayer()!!
+
+        var targetNode: PathFindingNodeCost =
+            this.costArray[target.getColumn()]!![target.getRow()]!!
+
+        var current: PathFindingNodeCost
+
+        var total: Int = 0
+
+        do {
+            current = this.openPriorityQueue!!.poll()
+            this.closedSet!!.add(current)
+
+            if (current.equals(targetNode)) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return this.extractPath(start, current)
+            }
+
+            var neighbor: PathFindingNodeCost
+
+            var neighborInfo: PathFindingNodeCostInfo
+
+            var calculatedCost: Long = 0
+
+            for (column in
+                current.geographicMapCellPosition!!.getColumn() - 1 until
+                    current.geographicMapCellPosition!!.getColumn() + 2) {
+
+                for (row in
+                    current.geographicMapCellPosition!!.getRow() - 1 until
+                        current.geographicMapCellPosition!!.getRow() + 2) {
+
+                    if (
+                        column > 0 &&
+                            row > 0 &&
+                            column < allBinaryTiledLayer!!.getColumns() &&
+                            row < allBinaryTiledLayer!!.getRows() &&
+                            geographicMapInterface!!.isOnMap(
+                                basicGeographicMapCellPositionFactory!!.getAt(column, row)
+                            )
+                    ) {
+                        neighbor = this.costArray[column]!![row]!!
+
+                        if (this.closedSet!!.contains(neighbor)) {
+
+                            continue
+                        }
+
+                        neighborInfo = neighbor.pathFindingNodeCostInfoP
+                        calculatedCost =
+                            neighborInfo!!.costToEndP +
+                                neighborInfo!!.costFromStartP +
+                                current.pathFindingNodeCostInfoP!!.totalCostP
+
+                        if (
+                            calculatedCost < neighborInfo!!.totalCostP ||
+                                !this.openPriorityQueue!!.contains(neighbor)
+                        ) {
+                            neighborInfo!!.totalCostP = calculatedCost
+                            neighbor.parent = current
+
+                            if (!this.openPriorityQueue!!.contains(neighbor)) {
+
+                                if (
+                                    geographicMapInterface!!.isOfFourDirections(
+                                        current.geographicMapCellPosition,
+                                        neighbor.geographicMapCellPosition,
+                                    )
+                                ) {
                                     this.openPriorityQueue!!.add(neighbor)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
-                                    }
-                                
+            total++
 
-                                    }
-                                
+            if (total > 10) {
 
-                                    }
-                                
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return this.basicArrayListUtil!!.getImmutableInstance()
+            }
+        } while (!this.openPriorityQueue!!.isEmpty())
 
-                                    }
-                                
+        throw RuntimeException()
+    }
+
+    open fun extractPath(
+        start: GeographicMapCellPosition,
+        current: PathFindingNodeCost,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var start = start
+        var current = current
+
+        var path: BasicArrayList = BasicArrayListD()
+
+        while (current.parent != NullUtil.getInstance()!!.NULL_OBJECT) {
+            path.add(current.geographicMapCellPosition)
+            current = current.parent as PathFindingNodeCost
+        }
+
+        path.add(start)
+        this.basicArrayListUtil!!.reverse(path)
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return path
+    }
 }
-
-}
-
-total++
-
-    
-                        if(total > 10)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicArrayListUtil!!.getImmutableInstance()
-
-                                    }
-                                
-}
-
-        while(!this.openPriorityQueue!!.isEmpty())
-    
-
-
-
-                            throw RuntimeException()
-}
-
-
-    open fun extractPath(start: GeographicMapCellPosition, current: PathFindingNodeCost)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var start = start
-var current = current
-
-    var path: BasicArrayList = BasicArrayListD()
-
-
-        while(current.parent != NullUtil.getInstance()!!.NULL_OBJECT)
-        {
-path.add(current.geographicMapCellPosition)
-current= current.parent as PathFindingNodeCost
-}
-
-path.add(start)
-this.basicArrayListUtil!!.reverse(path)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return path
-}
-
-
-}
-                
-            
-

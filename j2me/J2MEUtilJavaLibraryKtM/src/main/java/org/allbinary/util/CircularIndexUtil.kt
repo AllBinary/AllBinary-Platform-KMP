@@ -1,199 +1,149 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.util
+/* Generated Code Do Not Modify */
+package org.allbinary.util
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 
-open public class CircularIndexUtil
-            : Object
-         {
-        
-companion object {
-            
-    val NULL_CIRCULAR_INDEX_UTIL: CircularIndexUtil = CircularIndexUtil(0, 0)
+open public class CircularIndexUtil : Object {
 
-    open fun createInstance(max: Int)
-        //nullable = true from not(false or (false and false)) = true
-: CircularIndexUtil{
-var max = max
+    companion object {
 
+        val NULL_CIRCULAR_INDEX_UTIL: CircularIndexUtil = CircularIndexUtil(0, 0)
 
+        open fun createInstance(
+            max: Int
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : CircularIndexUtil {
+            var max = max
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CircularIndexUtil(0, max)
-}
-
-
-    open fun createInstanceAt(index: Int, max: Int)
-        //nullable = true from not(false or (false and false)) = true
-: CircularIndexUtil{
-var index = index
-var max = max
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CircularIndexUtil(index, max)
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CircularIndexUtil(0, max)
         }
-            
+
+        open fun createInstanceAt(
+            index: Int,
+            max: Int,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : CircularIndexUtil {
+            var index = index
+            var max = max
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CircularIndexUtil(index, max)
+        }
+    }
+
     private var index: Int = 0
 
     private var lastIndex: Int = 0
 
     private var size: Int = 0
-private constructor (index: Int, size: Int)
-            : super()
-        {
-var index = index
-var size = size
-this.setSize(size)
-this.setIndex(index)
-}
 
+    private constructor(index: Int, size: Int) : super() {
+        var index = index
+        var size = size
+        this.setSize(size)
+        this.setIndex(index)
+    }
 
     open fun next()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-    
-                        if(this.index >= this.lastIndex)
-                        
-                                    {
-                                    this.index= 0
+        if (this.index >= this.lastIndex) {
 
-                                    }
-                                
-                        else {
-                            this.index++
+            this.index = 0
+        } else {
+            this.index++
+        }
 
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.index
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.index
+    }
 
     open fun previous()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-    
-                        if(this.index < 1)
-                        
-                                    {
-                                    this.index= this.lastIndex
+        if (this.index < 1) {
 
-                                    }
-                                
-                        else {
-                            this.index--
+            this.index = this.lastIndex
+        } else {
+            this.index--
+        }
 
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.index
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.index
+    }
 
     open fun setIndex(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var index = index
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var index = index
 
-    
-                        if(index > this.lastIndex)
-                        
-                                    {
-                                    
+        if (index > this.lastIndex) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
-
-                                    }
-                                
-this.index= index
-}
-
+        this.index = index
+    }
 
     open fun getIndex()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.index
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.index
+    }
 
     open fun setSize(size: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var size = size
-this.size= size
-this.lastIndex= size -1
-this.index= 0
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var size = size
+        this.size = size
+        this.lastIndex = size - 1
+        this.index = 0
+    }
 
     open fun getSize()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.size
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.size
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringMaker().
-                            append(CommonLabels.getInstance()!!.INDEX_LABEL)!!.appendint(this.index)!!.append("lastIndex: ")!!.appendint(this.lastIndex)!!.append("size: ")!!.appendint(this.size)!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return StringMaker()
+            .append(CommonLabels.getInstance()!!.INDEX_LABEL)!!
+            .appendint(this.index)!!
+            .append("lastIndex: ")!!
+            .appendint(this.lastIndex)!!
+            .append("size: ")!!
+            .appendint(this.size)!!
+            .toString()
+    }
 }
-
-
-}
-                
-            
-

@@ -1,98 +1,95 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.thread
+/* Generated Code Do Not Modify */
+package org.allbinary.thread
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.System
-        
-        import java.lang.Runnable
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.logic.communication.log.LogUtil
+import java.lang.Runnable
+import java.lang.System
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 
 open public class MusicThreadPool : ThreadPool {
-        
-companion object {
-            
-    private val THREAD_POOL: ThreadPool = ThreadPool("Music", 2, ThreadPool.NORMAL_PRIORITY)
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ThreadPool{
+    companion object {
 
+        private val THREAD_POOL: ThreadPool = ThreadPool("Music", 2, ThreadPool.NORMAL_PRIORITY)
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ThreadPool {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return MusicThreadPool.THREAD_POOL
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return MusicThreadPool.THREAD_POOL
         }
-            public constructor (poolName: String, numThreads: Int, priority: Int)                        
+    }
 
-                            : super(poolName, numThreads, priority){
-    //var poolName = poolName
-    //var numThreads = numThreads
-    //var priority = priority
+    public constructor(
+        poolName: String,
+        numThreads: Int,
+        priority: Int,
+    ) : super(poolName, numThreads, priority) {
+        // var poolName = poolName
+        // var numThreads = numThreads
+        // var priority = priority
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
+    }
 
     override fun runTask(task: Runnable)
-        //nullable = true from not(false or (false and false)) = true
-{
-var task = task
-this.logUtil!!.putF(StringMaker().
-                            append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.threadPoolStrings!!.ADD_TASK)
-super.runTask(task)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var task = task
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(StringUtil.getInstance()!!.toString(task))!!
+                .appendlong(System.currentTimeMillis())!!
+                .toString(),
+            this,
+            this.threadPoolStrings!!.ADD_TASK,
+        )
+        super.runTask(task)
+    }
 
     override fun startTask(task: Runnable)
-        //nullable = true from not(false or (false and false)) = true
-{
-var task = task
-this.logUtil!!.putF(StringMaker().
-                            append(this.threadPoolStrings!!.START_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var task = task
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(this.threadPoolStrings!!.START_TASK)!!
+                .append(StringUtil.getInstance()!!.toString(task))!!
+                .appendlong(System.currentTimeMillis())!!
+                .toString(),
+            this,
+            this.commonStrings!!.RUN,
+        )
+    }
 
     override fun completedTask(task: Runnable)
-        //nullable = true from not(false or (false and false)) = true
-{
-var task = task
-this.logUtil!!.putF(StringMaker().
-                            append(this.threadPoolStrings!!.COMPLETE_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var task = task
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(this.threadPoolStrings!!.COMPLETE_TASK)!!
+                .append(StringUtil.getInstance()!!.toString(task))!!
+                .appendlong(System.currentTimeMillis())!!
+                .toString(),
+            this,
+            this.commonStrings!!.RUN,
+        )
+    }
 }
-
-
-}
-                
-            
-

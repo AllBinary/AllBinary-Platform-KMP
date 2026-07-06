@@ -1,80 +1,64 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureChoiceGroups
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class OpenGLOptions
-            : Object
-         {
-        
+open public class OpenGLOptions : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
+        var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
+        if (Features.getInstance()!!.isFeature(openGLFeatureFactory!!.OPENGL_OPTIONS)) {
 
-    
-                        if(Features.getInstance()!!.isFeature(openGLFeatureFactory!!.OPENGL_OPTIONS))
-                        
-                                    {
-                                    
-    var openGLMultipleList: BasicArrayList = BasicArrayListD()
+            var openGLMultipleList: BasicArrayList = BasicArrayListD()
 
-openGLMultipleList!!.add(openGLFeatureFactory!!.OPENGL)
-GameFeatureChoiceGroups.getMultipleInstance()!!.add("OpenGL (Complete Restart)", openGLMultipleList)
+            openGLMultipleList!!.add(openGLFeatureFactory!!.OPENGL)
+            GameFeatureChoiceGroups.getMultipleInstance()!!.add(
+                "OpenGL (Complete Restart)",
+                openGLMultipleList,
+            )
 
-    var openGLVersionSelectorMultipleList: BasicArrayList = BasicArrayListD()
+            var openGLVersionSelectorMultipleList: BasicArrayList = BasicArrayListD()
 
-openGLVersionSelectorMultipleList!!.add(openGLFeatureFactory!!.OPENGL_AUTO_SELECT)
-openGLVersionSelectorMultipleList!!.add(openGLFeatureFactory!!.OPENGL_MINIMUM)
-GameFeatureChoiceGroups.getExclusiveInstance()!!.add("OpenGL Version Selector", openGLVersionSelectorMultipleList)
+            openGLVersionSelectorMultipleList!!.add(openGLFeatureFactory!!.OPENGL_AUTO_SELECT)
+            openGLVersionSelectorMultipleList!!.add(openGLFeatureFactory!!.OPENGL_MINIMUM)
+            GameFeatureChoiceGroups.getExclusiveInstance()!!.add(
+                "OpenGL Version Selector",
+                openGLVersionSelectorMultipleList,
+            )
 
-    var openGLImageColorMultipleList: BasicArrayList = BasicArrayListD()
+            var openGLImageColorMultipleList: BasicArrayList = BasicArrayListD()
 
-openGLImageColorMultipleList!!.add(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444)
-openGLImageColorMultipleList!!.add(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_8888)
-GameFeatureChoiceGroups.getExclusiveInstance()!!.add("OpenGL Image Color RGBA", openGLImageColorMultipleList)
-
-                                    }
-                                
+            openGLImageColorMultipleList!!.add(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444)
+            openGLImageColorMultipleList!!.add(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_8888)
+            GameFeatureChoiceGroups.getExclusiveInstance()!!.add(
+                "OpenGL Image Color RGBA",
+                openGLImageColorMultipleList,
+            )
+        }
+    }
 }
-
-
-}
-                
-            
-

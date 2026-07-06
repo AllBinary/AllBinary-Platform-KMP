@@ -1,116 +1,84 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.KotlinUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
-open public class SoftwareInformation
-            : Object
-         {
-        
+open public class SoftwareInformation : Object {
 
     private val name: String
 
     private val shortName: String
 
     private val version: String
-public constructor (name: String, version: String, shortName: String)
-            : super()
-        {
-    //var name = name
-    //var version = version
-    //var shortName = shortName
-this.name= name
-this.version= version
-this.shortName= StringMaker().
-                            append(shortName)!!.append(KotlinUtil.getShortName())!!.toString()
-}
 
+    public constructor(name: String, version: String, shortName: String) : super() {
+        // var name = name
+        // var version = version
+        // var shortName = shortName
+        this.name = name
+        this.version = version
+        this.shortName =
+            StringMaker().append(shortName)!!.append(KotlinUtil.getShortName())!!.toString()
+    }
 
     open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.name
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.name
+    }
 
     open fun getVersion()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.version
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.version
+    }
 
     open fun toShortString()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.shortName
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.shortName
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var NAME: String = "Name: "
+        var NAME: String = "Name: "
 
+        var VERSION: String = "Version: "
 
-    var VERSION: String = "Version: "
+        var stringBuffer: StringMaker = StringMaker()
 
+        stringBuffer!!.append(NAME)
+        stringBuffer!!.append(this.getName())
+        stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+        stringBuffer!!.append(VERSION)
+        stringBuffer!!.append(this.getVersion())
 
-    var stringBuffer: StringMaker = StringMaker()
-
-stringBuffer!!.append(NAME)
-stringBuffer!!.append(this.getName())
-stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(VERSION)
-stringBuffer!!.append(this.getVersion())
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

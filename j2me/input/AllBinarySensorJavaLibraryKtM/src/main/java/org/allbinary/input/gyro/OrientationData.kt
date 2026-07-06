@@ -1,62 +1,40 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.gyro
+/* Generated Code Do Not Modify */
+package org.allbinary.input.gyro
 
+import java.lang.Object
 
+open public class OrientationData : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val SINGLETON: OrientationData = OrientationData()
 
-open public class OrientationData
-            : Object
-         {
-        
-companion object {
-            
-    private val SINGLETON: OrientationData = OrientationData()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OrientationData {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OrientationData{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OrientationData.SINGLETON
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OrientationData.SINGLETON
         }
-            private constructor ()
-            : super()
-        {
-}
+    }
 
+    private constructor() : super() {}
 
     val ORIENTATION_SENSOR_INPUT: String = "Orientation Sensor Input"
 
     val ORIENTATION_TYPE: String = "Orientation Type"
-
 }
-                
-            
-

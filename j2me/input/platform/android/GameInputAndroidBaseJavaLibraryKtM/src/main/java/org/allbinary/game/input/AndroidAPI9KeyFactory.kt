@@ -1,66 +1,44 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import android.view.KeyEvent
 import org.allbinary.logic.NullUtil
 
 open public class AndroidAPI9KeyFactory : AndroidKeyFactory {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: AndroidAPI9KeyFactory{
+    companion object {
 
-    
-                        if(AndroidAPI9KeyFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    AndroidAPI9KeyFactory.instance= AndroidAPI9KeyFactory()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : AndroidAPI9KeyFactory {
 
+            if (AndroidAPI9KeyFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                AndroidAPI9KeyFactory.instance = AndroidAPI9KeyFactory()
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AndroidAPI9KeyFactory.instance as AndroidAPI9KeyFactory
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AndroidAPI9KeyFactory.instance as AndroidAPI9KeyFactory
         }
-            protected constructor (){
-this.KEYCODE_BUTTON_L1= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L1, "BUTTON L1")
-this.KEYCODE_BUTTON_R1= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_R1, "BUTTON R1")
-this.KEYCODE_BUTTON_THUMBR= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBR, "BUTTON THUMBR")
-this.KEYCODE_BUTTON_THUMBL= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBL, "BUTTON THUMBL")
-this.KEYCODE_BUTTON_START= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_START, "BUTTON START")
-this.KEYCODE_BUTTON_MODE= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_MODE, "BUTTON MODE")
-this.KEYCODE_BUTTON_B= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_B, "BUTTON B")
-this.KEYCODE_BUTTON_A= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_A, "BUTTON A")
-this.KEYCODE_BUTTON_X= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_X, "BUTTON X")
-this.KEYCODE_BUTTON_Y= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_Y, "BUTTON Y")
-this.KEYCODE_BUTTON_L2= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L2, "BUTTON L2")
-this.KEYCODE_BUTTON_R2= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_R2, "BUTTON R2")
-this.KEYCODE_BUTTON_SELECT= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_SELECT, "BUTTON SELECT")
-this.KEYCODE_BUTTON_C= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_C, "BUTTON C")
-this.KEYCODE_BUTTON_Z= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_Z, "BUTTON Z")
+    }
+
+    protected constructor() {
+        this.KEYCODE_BUTTON_L1 = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L1, "BUTTON L1")
+        this.KEYCODE_BUTTON_R1 = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_R1, "BUTTON R1")
+        this.KEYCODE_BUTTON_THUMBR = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBR, "BUTTON THUMBR")
+        this.KEYCODE_BUTTON_THUMBL = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBL, "BUTTON THUMBL")
+        this.KEYCODE_BUTTON_START = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_START, "BUTTON START")
+        this.KEYCODE_BUTTON_MODE = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_MODE, "BUTTON MODE")
+        this.KEYCODE_BUTTON_B = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_B, "BUTTON B")
+        this.KEYCODE_BUTTON_A = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_A, "BUTTON A")
+        this.KEYCODE_BUTTON_X = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_X, "BUTTON X")
+        this.KEYCODE_BUTTON_Y = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_Y, "BUTTON Y")
+        this.KEYCODE_BUTTON_L2 = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L2, "BUTTON L2")
+        this.KEYCODE_BUTTON_R2 = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_R2, "BUTTON R2")
+        this.KEYCODE_BUTTON_SELECT = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_SELECT, "BUTTON SELECT")
+        this.KEYCODE_BUTTON_C = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_C, "BUTTON C")
+        this.KEYCODE_BUTTON_Z = AndroidGameKey(KeyEvent.KEYCODE_BUTTON_Z, "BUTTON Z")
+    }
 }
-
-
-}
-                
-            
-

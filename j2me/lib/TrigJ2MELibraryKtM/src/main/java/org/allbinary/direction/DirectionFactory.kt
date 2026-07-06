@@ -1,55 +1,40 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.direction
+/* Generated Code Do Not Modify */
+package org.allbinary.direction
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.string.CommonSeps
 
-open public class DirectionFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: DirectionFactory = DirectionFactory()
+open public class DirectionFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: DirectionFactory{
+    companion object {
 
+        private val instance: DirectionFactory = DirectionFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : DirectionFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return DirectionFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return DirectionFactory.instance
         }
-            
+    }
+
     val NAME: String = "DIRECTION"
 
     val LEFT: Direction = Direction(CommonPhoneStrings.getInstance()!!.LEFT, "WEST", 0, 1)
@@ -77,26 +62,59 @@ companion object {
     val BOTTOM: Direction = Direction("BOTTOM", "BOTTOM", 11, 0)
 
     val ALL_DIRECTION: Direction = Direction("ALL_DIRECTION", "ALL_DIRECTION", 12, 0)
-private constructor ()
-            : super()
-        {
 
-    var stringBuffer: StringMaker = StringMaker()
+    private constructor() : super() {
 
+        var stringBuffer: StringMaker = StringMaker()
 
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-this.UP_LEFT= Direction("UP LEFT", stringBuffer!!.append(this.UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(this.LEFT.getOtherName())!!.toString(), 4, 0)
-stringBuffer!!.delete(0, stringBuffer!!.length())
-this.UP_RIGHT= Direction("UP RIGHT", stringBuffer!!.append(this.UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(this.RIGHT.getOtherName())!!.toString(), 5, 0)
-stringBuffer!!.delete(0, stringBuffer!!.length())
-this.DOWN_LEFT= Direction("DOWN LEFT", stringBuffer!!.append(this.DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(this.LEFT.getOtherName())!!.toString(), 6, 0)
-stringBuffer!!.delete(0, stringBuffer!!.length())
-this.DOWN_RIGHT= Direction("DOWN RIGHT", stringBuffer!!.append(this.DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(this.RIGHT.getOtherName())!!.toString(), 7, 0)
+        this.UP_LEFT =
+            Direction(
+                "UP LEFT",
+                stringBuffer!!
+                    .append(this.UP.getOtherName())!!
+                    .append(commonSeps!!.SPACE)!!
+                    .append(this.LEFT.getOtherName())!!
+                    .toString(),
+                4,
+                0,
+            )
+        stringBuffer!!.delete(0, stringBuffer!!.length())
+        this.UP_RIGHT =
+            Direction(
+                "UP RIGHT",
+                stringBuffer!!
+                    .append(this.UP.getOtherName())!!
+                    .append(commonSeps!!.SPACE)!!
+                    .append(this.RIGHT.getOtherName())!!
+                    .toString(),
+                5,
+                0,
+            )
+        stringBuffer!!.delete(0, stringBuffer!!.length())
+        this.DOWN_LEFT =
+            Direction(
+                "DOWN LEFT",
+                stringBuffer!!
+                    .append(this.DOWN.getOtherName())!!
+                    .append(commonSeps!!.SPACE)!!
+                    .append(this.LEFT.getOtherName())!!
+                    .toString(),
+                6,
+                0,
+            )
+        stringBuffer!!.delete(0, stringBuffer!!.length())
+        this.DOWN_RIGHT =
+            Direction(
+                "DOWN RIGHT",
+                stringBuffer!!
+                    .append(this.DOWN.getOtherName())!!
+                    .append(commonSeps!!.SPACE)!!
+                    .append(this.RIGHT.getOtherName())!!
+                    .toString(),
+                7,
+                0,
+            )
+    }
 }
-
-
-}
-                
-            
-

@@ -1,69 +1,52 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic
+/* Generated Code Do Not Modify */
+package org.allbinary.logic
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Hashtable
 import java.util.Vector
-//ActualPlatform
-/*actual*/ open public class NullUtil
-            : Object
-         {
-        
-/*actual*/ companion object {
-            
-    private val instance: NullUtil = NullUtil()
+import kotlin.Array
+import kotlin.reflect.KClass
 
-    /*actual*/ open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: NullUtil{
+// ActualPlatform
+/*actual*/ open public class NullUtil : Object {
 
+    /*actual*/ companion object {
 
+        private val instance: NullUtil = NullUtil()
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullUtil.instance
-}
+        /*actual*/ open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : NullUtil {
 
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NullUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     /*actual*/ val NULL_OBJECT: Any = Any()
 
     /*actual*/ val NULL_CLASS: KClass<*> = this.NULL_OBJECT::class!!
 
     /*actual*/ val NULL_OBJECT_ARRAY: Array<Any?> = arrayOfNulls(0)
 
-    /*actual*/ val NULL_CHAR_ARRAY: CharArray = 
-                                                        
-                                                        CharArray(0)
-                                                    
+    /*actual*/ val NULL_CHAR_ARRAY: CharArray = CharArray(0)
 
     /*actual*/ val NULL_BYTE_ARRAY: ByteArray = ByteArray(0)
 
@@ -73,15 +56,12 @@ import java.util.Vector
 
     /*actual*/ val NULL_INT_ARRAY_ARRAY: Array<IntArray?> = Array(0) { IntArray(0) }
 
-    /*actual*/ val NULL_INT_ARRAY_ARRAY_ARRAY: Array<Array<IntArray?>?> = Array(0) { Array(0) { IntArray(0) } }
+    /*actual*/ val NULL_INT_ARRAY_ARRAY_ARRAY: Array<Array<IntArray?>?> =
+        Array(0) { Array(0) { IntArray(0) } }
 
     /*actual*/ val NULL_FLOAT_ARRAY: FloatArray = FloatArray(0)
 
     /*actual*/ val EMPTY_VECTOR: Vector<Any> = Vector<Any>()
 
     /*actual*/ val NULL_TABLE: Hashtable<Any, Any> = Hashtable<Any, Any>()
-
 }
-                
-            
-

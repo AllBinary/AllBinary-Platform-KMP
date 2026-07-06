@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.control.validate
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.control.validate
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Hashtable
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.java.bool.BooleanFactory
@@ -32,78 +23,52 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
-open public class ValidatorBase
-            : Object
-        
-                , ValidatorBaseInterface {
-        
-companion object {
-            
-    private val instance: ValidatorBase = ValidatorBase()
+open public class ValidatorBase : Object, ValidatorBaseInterface {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ValidatorBase{
+    companion object {
 
+        private val instance: ValidatorBase = ValidatorBase()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ValidatorBase {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ValidatorBase.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ValidatorBase.instance
         }
-            public constructor ()
-            : super()
-        {
-}
+    }
 
+    public constructor() : super() {}
 
     override fun isValid()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BooleanFactory.getInstance()!!.TRUE
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return BooleanFactory.getInstance()!!.TRUE
+    }
 
     override fun validationInfo()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringUtil.getInstance()!!.EMPTY_STRING
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return StringUtil.getInstance()!!.EMPTY_STRING
+    }
 
     override fun toHashtable()
-        //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Hashtable<Any, Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullUtil.getInstance()!!.NULL_TABLE
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return NullUtil.getInstance()!!.NULL_TABLE
+    }
 
     override fun toList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+    }
 }
-
-
-}
-                
-            
-

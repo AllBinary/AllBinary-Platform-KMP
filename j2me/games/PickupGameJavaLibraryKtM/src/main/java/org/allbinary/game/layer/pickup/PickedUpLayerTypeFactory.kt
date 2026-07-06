@@ -1,58 +1,41 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.pickup
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.pickup
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringUtil
 
-open public class PickedUpLayerTypeFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: PickedUpLayerTypeFactory = PickedUpLayerTypeFactory()
+open public class PickedUpLayerTypeFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: PickedUpLayerTypeFactory{
+    companion object {
 
+        private val instance: PickedUpLayerTypeFactory = PickedUpLayerTypeFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : PickedUpLayerTypeFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PickedUpLayerTypeFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PickedUpLayerTypeFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     var NONE: PickedUpLayerType = PickedUpLayerType(StringUtil.getInstance()!!.NULL_STRING)
 
     var BEAM: PickedUpLayerType = PickedUpLayerType("BEAM")
@@ -72,8 +55,4 @@ companion object {
     var LIFE: PickedUpLayerType = PickedUpLayerType("Life")
 
     var POINTS: PickedUpLayerType = PickedUpLayerType("Points")
-
 }
-                
-            
-

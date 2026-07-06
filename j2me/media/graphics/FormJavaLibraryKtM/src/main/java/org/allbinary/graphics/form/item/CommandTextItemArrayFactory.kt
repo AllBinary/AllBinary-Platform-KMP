@@ -1,33 +1,25 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.form.item
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.form.item
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Vector
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.ImageItem
+import kotlin.Array
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.form.ScreenInfo
@@ -36,113 +28,84 @@ import org.allbinary.logic.util.visitor.Visitor
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class CommandTextItemArrayFactory
-            : Object
-         {
-        
+open public class CommandTextItemArrayFactory : Object {
 
     private val list: BasicArrayList = BasicArrayListD()
 
     private val visitorInterface: Visitor
-public constructor (visitorInterface: Visitor)
-            : super()
-        {
-    //var visitorInterface = visitorInterface
-this.visitorInterface= visitorInterface
+
+    public constructor(visitorInterface: Visitor) : super() {
+        // var visitorInterface = visitorInterface
+        this.visitorInterface = visitorInterface
+    }
+
+    open fun getInstance(
+        vector: Vector<Any>,
+        backgroundBasicColor: BasicColor,
+        foregroundBasicColor: BasicColor,
+    )
+        // nullable =  from not(true or (false and false)) =
+        : Array<ABCustomItem?> {
+        var vector = vector
+        // var backgroundBasicColor = backgroundBasicColor
+        // var foregroundBasicColor = foregroundBasicColor
+
+        var size: Int = vector.size!!
+
+        this.list.clear()
+
+        var textItem: CommandTextItem
+
+        var priorityLimit: Int = 7
+
+        var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+        var isLargeEnoughDisplayForBigMenu: Boolean =
+            (displayInfo!!.isPortrait() &&
+                displayInfo!!.getLastHeight() >= ScreenInfo.getInstance()!!.MEDIUM_WIDTH) ||
+                (!displayInfo!!.isPortrait() &&
+                    displayInfo!!.getLastWidth() >= ScreenInfo.getInstance()!!.MEDIUM_WIDTH)
+
+        if (!isLargeEnoughDisplayForBigMenu && size > 3) {
+
+            priorityLimit = 3
+        }
+
+        var command: Command
+
+        for (index in 0 until size) {
+
+            command = vector.elementAt(index) as Command
+
+            if (command.getPriority() < priorityLimit) {
+
+                var aBoolean: Boolean = this.visitorInterface!!.visit(command) as Boolean
+
+                if (aBoolean) {
+
+                    textItem =
+                        CommandTextItem(
+                            command,
+                            ImageItem.LAYOUT_DEFAULT,
+                            StringUtil.getInstance()!!.EMPTY_STRING,
+                            backgroundBasicColor,
+                            foregroundBasicColor,
+                        )
+                    this.list.add(textItem)
+                }
+            }
+        }
+
+        var textItemArray: Array<ABCustomItem?> = arrayOfNulls(this.list.size())
+
+        var size2: Int = textItemArray!!.size
+
+        for (index in 0 until size2) {
+
+            textItemArray[index] = this.list.objectArray[index]!! as ABCustomItem
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return textItemArray
+    }
 }
-
-
-    open fun getInstance(vector: Vector<Any>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
-        //nullable =  from not(true or (false and false)) = 
-: Array<ABCustomItem?>{
-var vector = vector
-    //var backgroundBasicColor = backgroundBasicColor
-    //var foregroundBasicColor = foregroundBasicColor
-
-    var size: Int = vector.size!!
-
-this.list.clear()
-
-    var textItem: CommandTextItem
-
-
-    var priorityLimit: Int = 7
-
-
-    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-
-    var isLargeEnoughDisplayForBigMenu: Boolean = (displayInfo!!.isPortrait() && displayInfo!!.getLastHeight() >= ScreenInfo.getInstance()!!.MEDIUM_WIDTH) || (!displayInfo!!.isPortrait() && displayInfo!!.getLastWidth() >= ScreenInfo.getInstance()!!.MEDIUM_WIDTH)
-
-
-    
-                        if(!isLargeEnoughDisplayForBigMenu && size > 3)
-                        
-                                    {
-                                    priorityLimit= 3
-
-                                    }
-                                
-
-    var command: Command
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-command= vector.elementAt(index) as Command
-
-    
-                        if(command.getPriority() < priorityLimit)
-                        
-                                    {
-                                    
-    var aBoolean: Boolean = this.visitorInterface!!.visit(command) as Boolean
-
-
-    
-                        if(aBoolean)
-                        
-                                    {
-                                    textItem= CommandTextItem(command, ImageItem.LAYOUT_DEFAULT, StringUtil.getInstance()!!.EMPTY_STRING, backgroundBasicColor, foregroundBasicColor)
-this.list.add(textItem)
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
-
-    var textItemArray: Array<ABCustomItem?> = arrayOfNulls(this.list.size())
-
-
-    var size2: Int = textItemArray!!.size
-                
-
-
-
-
-
-                        for (index in 0 until size2)
-
-        {
-textItemArray[index]= this.list.objectArray[index]!! as ABCustomItem
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return textItemArray
-}
-
-
-}
-                
-            
-

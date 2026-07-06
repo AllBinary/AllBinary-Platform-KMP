@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.image
+/* Generated Code Do Not Modify */
+package org.allbinary.media.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.game.configuration.feature.Features
@@ -33,37 +24,28 @@ import org.allbinary.graphics.Anchor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class ImageCopyUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ImageCopyUtil = ImageCopyUtil()
+open public class ImageCopyUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ImageCopyUtil{
+    companion object {
 
+        private val instance: ImageCopyUtil = ImageCopyUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ImageCopyUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageCopyUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ImageCopyUtil.instance
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val imageCreationUtil: ImageCreationUtil = ImageCreationUtil.getInstance()!!
-private constructor ()
-            : super()
-        {
-}
 
+    private constructor() : super() {}
 
     private var anchor: Int = Anchor.TOP_LEFT
 
@@ -73,160 +55,106 @@ private constructor ()
 
     private val NO_COPY: String = "J2ME does not need to copy images after initial loading"
 
-                @Throws(Exception::class)
-            
-    open fun createImageForRotation(originalImage: Image)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var originalImage = originalImage
+    @Throws(Exception::class)
+    open fun createImageForRotation(
+        originalImage: Image
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var originalImage = originalImage
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.createImage(originalImage)
+    }
 
+    @Throws(Exception::class)
+    open fun createImage(
+        originalImage: Image
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var originalImage = originalImage
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createImage(originalImage)
+        if (!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION)) {
+
+            this.logUtil!!.put(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR, Exception())
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return originalImage
+        }
+
+        var image: Image =
+            this.imageCreationUtil!!.createImageWH(
+                originalImage!!.getWidth(),
+                originalImage!!.getHeight(),
+            )!!
+
+        if (image.isMutable()) {
+
+            image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return image
+        } else {
+
+            throw Exception("Not Mutable")
+        }
+    }
+
+    @Throws(Exception::class)
+    open fun createImageScale(
+        originalImage: Image,
+        canvasScale: Float,
+        resize: Boolean,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var originalImage = originalImage
+        // var canvasScale = canvasScale
+        // var resize = resize
+
+        if (!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION)) {
+
+            this.logUtil!!.put(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR, Exception())
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return originalImage
+        }
+
+        var newWidth: Int = (originalImage!!.getWidth() * canvasScale).toInt()
+
+        var newHeight: Int = (originalImage!!.getHeight() * canvasScale).toInt()
+
+        if (resize) {
+
+            if (newWidth < newHeight) {
+
+                newWidth = newHeight
+            }
+
+            if (newHeight < newWidth) {
+
+                newHeight = newWidth
+            }
+        }
+
+        var image: Image = this.imageCreationUtil!!.createImageWH(newWidth, newHeight)!!
+
+        if (image.isMutable()) {
+
+            var halfWidthDelta: Int = (newWidth - originalImage!!.getWidth()) / 2
+
+            var halfHeightDelta: Int = (newHeight - originalImage!!.getHeight()) / 2
+
+            var graphics: Graphics = image.getGraphics()!!
+
+            graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, this.anchor)
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return image
+        } else {
+
+            throw Exception("Not Mutable")
+        }
+    }
 }
-
-
-                @Throws(Exception::class)
-            
-    open fun createImage(originalImage: Image)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var originalImage = originalImage
-
-    
-                        if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
-                        
-                                    {
-                                    this.logUtil!!.put(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR, Exception())
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return originalImage
-
-                                    }
-                                
-
-    var image: Image = this.imageCreationUtil!!.createImageWH(originalImage!!.getWidth(), originalImage!!.getHeight())!!
-
-
-    
-                        if(image.isMutable())
-                        
-                                    {
-                                    image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-
-                                    }
-                                
-                        else {
-                            
-
-
-                            throw Exception("Not Mutable")
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun createImageScale(originalImage: Image, canvasScale: Float, resize: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var originalImage = originalImage
-    //var canvasScale = canvasScale
-    //var resize = resize
-
-    
-                        if(!this.features.isFeature(this.gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
-                        
-                                    {
-                                    this.logUtil!!.put(this.NO_COPY, this, this.commonStrings!!.CONSTRUCTOR, Exception())
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return originalImage
-
-                                    }
-                                
-
-    var newWidth: Int = (originalImage!!.getWidth() *canvasScale).toInt()
-
-
-    var newHeight: Int = (originalImage!!.getHeight() *canvasScale).toInt()
-
-
-    
-                        if(resize)
-                        
-                                    {
-                                    
-    
-                        if(newWidth < newHeight)
-                        
-                                    {
-                                    newWidth= newHeight
-
-                                    }
-                                
-
-    
-                        if(newHeight < newWidth)
-                        
-                                    {
-                                    newHeight= newWidth
-
-                                    }
-                                
-
-                                    }
-                                
-
-    var image: Image = this.imageCreationUtil!!.createImageWH(newWidth, newHeight)!!
-
-
-    
-                        if(image.isMutable())
-                        
-                                    {
-                                    
-    var halfWidthDelta: Int = (newWidth -originalImage!!.getWidth()) /2
-
-
-    var halfHeightDelta: Int = (newHeight -originalImage!!.getHeight()) /2
-
-
-    var graphics: Graphics = image.getGraphics()!!
-
-graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, this.anchor)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-
-                                    }
-                                
-                        else {
-                            
-
-
-                            throw Exception("Not Mutable")
-
-                        }
-                            
-}
-
-
-}
-                
-            
-

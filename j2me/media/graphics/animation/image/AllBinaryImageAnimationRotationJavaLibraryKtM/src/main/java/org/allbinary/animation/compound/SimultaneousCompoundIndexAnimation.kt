@@ -1,235 +1,165 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.compound
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.compound
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
+import kotlin.Array
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class SimultaneousCompoundIndexAnimation : IndexedAnimation {
-        
 
     private var animationInterfaceArray: Array<IndexedAnimation?>
-public constructor (animationInterfaceArray: Array<IndexedAnimation?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
-    //var animationInterfaceArray = animationInterfaceArray
-    //var animationBehavior = animationBehavior
+    public constructor(
+        animationInterfaceArray: Array<IndexedAnimation?>,
+        animationBehavior: AnimationBehavior,
+    ) : super(animationBehavior) {
+        // var animationInterfaceArray = animationInterfaceArray
+        // var animationBehavior = animationBehavior
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationInterfaceArray= animationInterfaceArray
-}
-
+        this.animationInterfaceArray = animationInterfaceArray
+    }
 
     override fun setFrame(frameIndex: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var frameIndex = frameIndex
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var frameIndex = frameIndex
 
+        for (index in this.animationInterfaceArray!!.size - 1 downTo 0) {
 
-
-
-                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
-        {
-this.animationInterfaceArray[index]!!.setFrame(frameIndex)
-}
-
-}
-
+            this.animationInterfaceArray[index]!!.setFrame(frameIndex)
+        }
+    }
 
     override fun getFrame()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterfaceArray[0]!!.getFrame()
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[0]!!.getFrame()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getAnimationSize()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[0]!!.getAnimationSize()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterfaceArray[0]!!.getAnimationSize()
+    }
 
     override fun getSize()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[0]!!.getSize()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterfaceArray[0]!!.getSize()
+    }
 
     override fun previousFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        for (index in this.animationInterfaceArray!!.size - 1 downTo 0) {
 
+            this.animationInterfaceArray[index]!!.previousFrame()
+        }
+    }
 
-
-                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
-        {
-this.animationInterfaceArray[index]!!.previousFrame()
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun nextFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        for (index in this.animationInterfaceArray!!.size - 1 downTo 0) {
 
-
-
-                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
-        {
-this.animationInterfaceArray[index]!!.nextFrame()
-}
-
-}
-
+            this.animationInterfaceArray[index]!!.nextFrame()
+        }
+    }
 
     override fun setSequence(sequence: IntArray)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var sequence = sequence
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var sequence = sequence
+    }
 
     override fun getSequence()
-        //nullable = true from not(false or (false and true)) = true
-: IntArray{
+    // nullable = true from not(false or (false and true)) = true
+    : IntArray {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PrimitiveIntUtil.getArrayInstance()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return PrimitiveIntUtil.getArrayInstance()
+    }
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
 
+        for (index in this.animationInterfaceArray!!.size - 1 downTo 0) {
 
-
-
-                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
-        {
-this.animationInterfaceArray[index]!!.paintXY(graphics, x, y)
-}
-
-}
-
+            this.animationInterfaceArray[index]!!.paintXY(graphics, x, y)
+        }
+    }
 
     override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
-    //var z = z
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
+        // var z = z
 
+        for (index in this.animationInterfaceArray!!.size - 1 downTo 0) {
 
+            this.animationInterfaceArray[index]!!.paintThreedXYZ(graphics, x, y, z)
+        }
+    }
 
-
-                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
-        {
-this.animationInterfaceArray[index]!!.paintThreedXYZ(graphics, x, y, z)
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun set(gl: GL)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
 
+        for (index in this.animationInterfaceArray!!.size - 1 downTo 0) {
 
-
-
-                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
-        {
-this.animationInterfaceArray[index]!!.set(gl)
-}
-
-}
-
+            this.animationInterfaceArray[index]!!.set(gl)
+        }
+    }
 
     open fun getAnimationInterfaceArray()
-        //nullable = true from not(false or (false and true)) = true
-: Array<IndexedAnimation?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<IndexedAnimation?> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterfaceArray
+    }
 
     open fun setAnimationInterfaceArray(animationInterfaceArray: Array<IndexedAnimation?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var animationInterfaceArray = animationInterfaceArray
-this.animationInterfaceArray= animationInterfaceArray
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var animationInterfaceArray = animationInterfaceArray
+        this.animationInterfaceArray = animationInterfaceArray
+    }
 }
-
-
-}
-                
-            
-

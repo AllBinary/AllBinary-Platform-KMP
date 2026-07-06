@@ -1,138 +1,108 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.displayable
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.displayable
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.Image
 
-open public class ScreenRelationalUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ScreenRelationalUtil = ScreenRelationalUtil()
+open public class ScreenRelationalUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ScreenRelationalUtil{
+    companion object {
 
+        private val instance: ScreenRelationalUtil = ScreenRelationalUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ScreenRelationalUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ScreenRelationalUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ScreenRelationalUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun getScaleImage(image: Image)
-        //nullable = true from not(false or (false and false)) = true
-: Float{
-    //var image = image
+    }
 
+    // Auto Generated
+    public constructor() : super() {}
 
+    open fun getScaleImage(
+        image: Image
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Float {
+        // var image = image
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getScaleWH(image.getWidth(), image.getHeight())
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.getScaleWH(image.getWidth(), image.getHeight())
+    }
+
+    open fun getScaleWH(
+        aWidth: Int,
+        aHeight: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Float {
+        // var aWidth = aWidth
+        // var aHeight = aHeight
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.getScaleWHA(aWidth, aHeight, 20)
+    }
+
+    open fun getScaleWHA(
+        aWidth: Int,
+        aHeight: Int,
+        add: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Float {
+        // var aWidth = aWidth
+        // var aHeight = aHeight
+        // var add = add
+
+        var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+        var last: IntArray = displayInfoSingleton!!.getLast()!!
+
+        var width: Float = last[displayInfoSingleton!!.WIDTH]!!.toFloat()
+
+        var height: Float = last[displayInfoSingleton!!.HEIGHT]!!.toFloat()
+
+        var largestSize: Float = width
+
+        if (largestSize < height) {
+
+            largestSize = height
+        }
+
+        var scale: Float = (largestSize) / aWidth
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return scale
+    }
+
+    open fun getScaledHeight(
+        aWidth: Int,
+        aHeight: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var aWidth = aWidth
+        // var aHeight = aHeight
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return (this.getScaleWH(aWidth, aHeight) * aHeight).toInt()
+    }
+
+    open fun getScaledHeightAdd(
+        aWidth: Int,
+        aHeight: Int,
+        add: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var aWidth = aWidth
+        // var aHeight = aHeight
+        // var add = add
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return (this.getScaleWHA(aWidth, aHeight, add) * aHeight).toInt()
+    }
 }
-
-
-    open fun getScaleWH(aWidth: Int, aHeight: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Float{
-    //var aWidth = aWidth
-    //var aHeight = aHeight
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getScaleWHA(aWidth, aHeight, 20)
-}
-
-
-    open fun getScaleWHA(aWidth: Int, aHeight: Int, add: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Float{
-    //var aWidth = aWidth
-    //var aHeight = aHeight
-    //var add = add
-
-    var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-
-
-    var last: IntArray = displayInfoSingleton!!.getLast()!!
-
-
-    var width: Float = last[displayInfoSingleton!!.WIDTH]!!.toFloat()
-
-
-    var height: Float = last[displayInfoSingleton!!.HEIGHT]!!.toFloat()
-
-
-    var largestSize: Float = width
-
-
-    
-                        if(largestSize < height)
-                        
-                                    {
-                                    largestSize= height
-
-                                    }
-                                
-
-    var scale: Float = (largestSize) /aWidth
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return scale
-}
-
-
-    open fun getScaledHeight(aWidth: Int, aHeight: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var aWidth = aWidth
-    //var aHeight = aHeight
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return (this.getScaleWH(aWidth, aHeight) *aHeight).toInt()
-}
-
-
-    open fun getScaledHeightAdd(aWidth: Int, aHeight: Int, add: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var aWidth = aWidth
-    //var aHeight = aHeight
-    //var add = add
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return (this.getScaleWHA(aWidth, aHeight, add) *aHeight).toInt()
-}
-
-
-}
-                
-            
-

@@ -1,31 +1,23 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.init
+/* Generated Code Do Not Modify */
+package org.allbinary.game.init
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.CommandListener
+import kotlin.Array
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.game.configuration.event.ChangedGameFeatureListener
@@ -44,22 +36,19 @@ import org.allbinary.input.motion.button.BasicTouchInputFactory
 import org.allbinary.input.motion.button.CancelTouchButtonInputFactory
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 
-open public class BaseGameInitialization
-            : Object
-        
-                , GameInitializationInterface {
-        
-companion object {
-            
-    val NULL_BASE_GAME_INITIALIZATION: BaseGameInitialization = BaseGameInitialization(arrayOfNulls(0), 0)
+open public class BaseGameInitialization : Object, GameInitializationInterface {
 
-        }
-            
+    companion object {
+
+        val NULL_BASE_GAME_INITIALIZATION: BaseGameInitialization =
+            BaseGameInitialization(arrayOfNulls(0), 0)
+    }
+
     val resourceInitializationArray: Array<ResourceInitialization?>
 
     private val portion: Int
 
-    private var initialized: Boolean= false
+    private var initialized: Boolean = false
 
     val EARLY_RESOURCES: Int = 0
 
@@ -68,256 +57,222 @@ companion object {
     val EARLY_CHANGABLE_RESOURCES: Int = 2
 
     val GAME_CHANGABLE_RESOURCES: Int = 3
-public constructor (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)
-            : super()
-        {
-    //var resourceInitializationArray = resourceInitializationArray
-    //var portion = portion
-this.resourceInitializationArray= resourceInitializationArray
-this.portion= portion
-}
 
+    public constructor(
+        resourceInitializationArray: Array<ResourceInitialization?>,
+        portion: Int,
+    ) : super() {
+        // var resourceInitializationArray = resourceInitializationArray
+        // var portion = portion
+        this.resourceInitializationArray = resourceInitializationArray
+        this.portion = portion
+    }
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun initKey(portion: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var portion = portion
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var portion = portion
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun initKeyMapping(abeClientInformation: AbeClientInformationInterface, portion: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var abeClientInformation = abeClientInformation
-var portion = portion
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var abeClientInformation = abeClientInformation
+        var portion = portion
 
-    
-                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(InputFeatureFactory.getInstance()!!.INPUT_MAPPING))
-                        
-                                    {
-                                    PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.init(abeClientInformation)
-ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Game Keys")
-ChangedGameFeatureListener.getInstance()!!.remove(InputFeatureFactory.getInstance()!!.INPUT_MAPPING)
+        if (
+            ChangedGameFeatureListener.getInstance()!!.isChangedFeature(
+                InputFeatureFactory.getInstance()!!.INPUT_MAPPING
+            )
+        ) {
+            PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.init(
+                abeClientInformation
+            )
+            ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Game Keys")
+            ChangedGameFeatureListener.getInstance()!!.remove(
+                InputFeatureFactory.getInstance()!!.INPUT_MAPPING
+            )
+        }
+    }
 
-                                    }
-                                
-}
+    @Throws(Exception::class)
+    override fun init(
+        abeClientInformation: AbeClientInformationInterface,
+        commandListener: CommandListener,
+        level: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var abeClientInformation = abeClientInformation
+        // var commandListener = commandListener
+        // var level = level
 
+        var resourceLoadingLevelFactory: ResourceLoadingLevelFactory =
+            ResourceLoadingLevelFactory.getInstance()!!
 
-                @Throws(Exception::class)
-            
-    override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var abeClientInformation = abeClientInformation
-    //var commandListener = commandListener
-    //var level = level
+        if (
+            !this.isInitialized() &&
+                (level == resourceLoadingLevelFactory!!.LOAD_ALL.getLevel() ||
+                    level == resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel())
+        ) {
 
-    var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
+            var localPortion: Int = 40
 
+            if (level == resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel()) {
 
-    
-                        if(!this.isInitialized() && (level == resourceLoadingLevelFactory!!.LOAD_ALL.getLevel() || level == resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel()))
-                        
-                                    {
-                                    
-    var localPortion: Int = 40
+                localPortion = 8
+            }
 
+            this.setInitialized(true)
+            this.initKey(this.getPortion())
+            this.initKeyMapping(abeClientInformation, this.getPortion())
+            GameKeyEventFactory.getInstance()!!.init()
 
-    
-                        if(level == resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel())
-                        
-                                    {
-                                    localPortion= 8
+            var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-                                    }
-                                
-this.setInitialized(true)
-this.initKey(this.getPortion())
-this.initKeyMapping(abeClientInformation, this.getPortion())
-GameKeyEventFactory.getInstance()!!.init()
+            progressCanvas!!.addNormalPortion(localPortion, "Game Key Events")
+            BasicTouchInputFactory.getInstance()!!.init(
+                PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
+                    .getInputMapping()
+            )
+            CancelTouchButtonInputFactory.getInstance()
+            progressCanvas!!.addNormalPortion(localPortion, "Touch Input")
+            CompleteMotionGestureInputToGameMotionGestureInput.getInstance()!!.init()
+            progressCanvas!!.addNormalPortion(localPortion, "Motion Input")
+            GameFeatureImageCacheFactory.init()
+            progressCanvas!!.addNormalPortion(localPortion, "Image Cache")
+            this.resourceInitializationArray[this.EARLY_RESOURCES]!!.init()
+        }
+    }
 
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
+    private var gameInitialized: Boolean = false
 
-progressCanvas!!.addNormalPortion(localPortion, "Game Key Events")
-BasicTouchInputFactory.getInstance()!!.init(PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping())
-CancelTouchButtonInputFactory.getInstance()
-progressCanvas!!.addNormalPortion(localPortion, "Touch Input")
-CompleteMotionGestureInputToGameMotionGestureInput.getInstance()!!.init()
-progressCanvas!!.addNormalPortion(localPortion, "Motion Input")
-GameFeatureImageCacheFactory.init()
-progressCanvas!!.addNormalPortion(localPortion, "Image Cache")
-this.resourceInitializationArray[this.EARLY_RESOURCES]!!.init()
+    private var allLoaded: Boolean = false
 
-                                    }
-                                
-}
-
-
-    private var gameInitialized: Boolean= false
-
-    private var allLoaded: Boolean= false
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun resourceInitialization(level: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var level = level
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var level = level
 
-    var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
+        var resourceLoadingLevelFactory: ResourceLoadingLevelFactory =
+            ResourceLoadingLevelFactory.getInstance()!!
 
+        if (
+            this.resourceAnimationChange() &&
+                level == resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel()
+        ) {
+            this.clearResources()
+            this.resourceInitializationArray[this.EARLY_CHANGABLE_RESOURCES]!!.init()
+        }
 
-    
-                        if(this.resourceAnimationChange() && level == resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel())
-                        
-                                    {
-                                    this.clearResources()
-this.resourceInitializationArray[this.EARLY_CHANGABLE_RESOURCES]!!.init()
+        if (
+            this.resourceAnimationChange() &&
+                level == resourceLoadingLevelFactory!!.LOAD_ALL.getLevel()
+        ) {
 
-                                    }
-                                
+            if (this.allLoaded) {
 
-    
-                        if(this.resourceAnimationChange() && level == resourceLoadingLevelFactory!!.LOAD_ALL.getLevel())
-                        
-                                    {
-                                    
-    
-                        if(this.allLoaded)
-                        
-                                    {
-                                    this.clearResources()
+                this.clearResources()
+            }
 
-                                    }
-                                
+            if (
+                FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.getList()!!
+                    .size() == 0
+            ) {
+                this.resourceInitializationArray[this.EARLY_CHANGABLE_RESOURCES]!!.init()
+            }
 
-    
-                        if(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.getList()!!.size() == 0)
-                        
-                                    {
-                                    this.resourceInitializationArray[this.EARLY_CHANGABLE_RESOURCES]!!.init()
-
-                                    }
-                                
-this.resourceInitializationArray[this.GAME_CHANGABLE_RESOURCES]!!.init()
-this.allLoaded= true
-
-                                    }
-                                
-}
-
+            this.resourceInitializationArray[this.GAME_CHANGABLE_RESOURCES]!!.init()
+            this.allLoaded = true
+        }
+    }
 
     open fun resourceAnimationChange()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    var changedGameFeatureListener: ChangedGameFeatureListener = ChangedGameFeatureListener.getInstance()!!
+        var changedGameFeatureListener: ChangedGameFeatureListener =
+            ChangedGameFeatureListener.getInstance()!!
 
+        var gameConfigurationCentral: GameConfigurationCentral =
+            GameConfigurationCentral.getInstance()!!
 
-    var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
+        if (
+            changedGameFeatureListener!!.isChangedGameConfiguration(
+                gameConfigurationCentral!!.SCALE
+            )
+        ) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
-    
-                        if(changedGameFeatureListener!!.isChangedGameConfiguration(gameConfigurationCentral!!.SCALE))
-                        
-                                    {
-                                    
+        if (
+            ChangedGameFeatureListener.getInstance()!!.isChangedFeature(
+                MainFeatureFactory.getInstance()!!.STATIC
+            )
+        ) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-    
-                        if(ChangedGameFeatureListener.getInstance()!!.isChangedFeature(MainFeatureFactory.getInstance()!!.STATIC))
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     open fun clearResources()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.allLoaded= false
-GameFeatureImageCacheFactory.releaseAll()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.allLoaded = false
+        GameFeatureImageCacheFactory.releaseAll()
 
-    var featuredAnimationInterfaceFactoryInterfaceFactory: FeaturedAnimationInterfaceFactoryInterfaceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!
+        var featuredAnimationInterfaceFactoryInterfaceFactory:
+            FeaturedAnimationInterfaceFactoryInterfaceFactory =
+            FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!
 
-featuredAnimationInterfaceFactoryInterfaceFactory!!.clear()
-FeaturedResourceRelativeRelationshipFactory.getInstance()!!.clear()
-}
-
+        featuredAnimationInterfaceFactoryInterfaceFactory!!.clear()
+        FeaturedResourceRelativeRelationshipFactory.getInstance()!!.clear()
+    }
 
     open fun setGameInitialized(gameInitialized: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gameInitialized = gameInitialized
-this.gameInitialized= gameInitialized
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gameInitialized = gameInitialized
+        this.gameInitialized = gameInitialized
+    }
 
     open fun isGameInitialized()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameInitialized
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameInitialized
+    }
 
     open fun getPortion()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.portion
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.portion
+    }
 
     open fun setInitialized(initialized: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var initialized = initialized
-this.initialized= initialized
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var initialized = initialized
+        this.initialized = initialized
+    }
 
     open fun isInitialized()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initialized
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initialized
+    }
 }
-
-
-}
-                
-            
-

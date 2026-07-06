@@ -1,82 +1,55 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.tick
+/* Generated Code Do Not Modify */
+package org.allbinary.game.tick
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.layer.AllBinaryLayerManager
 
-open public class NullTickable
-            : Object
-        
-                , TickableInterface {
-        
-companion object {
-            
-    private val SINGLETON: NullTickable = NullTickable()
+open public class NullTickable : Object, TickableInterface {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: NullTickable{
+    companion object {
 
+        private val SINGLETON: NullTickable = NullTickable()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : NullTickable {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullTickable.SINGLETON
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NullTickable.SINGLETON
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-                @Throws(Exception::class)
-            
-    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
-}
+    }
 
+    // Auto Generated
+    public constructor() : super() {}
+
+    @Throws(Exception::class)
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
+    }
 
     private val NAME: String = "NulLTickable"
 
     override fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.NAME
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.NAME
+    }
 }
-
-
-}
-                
-            
-

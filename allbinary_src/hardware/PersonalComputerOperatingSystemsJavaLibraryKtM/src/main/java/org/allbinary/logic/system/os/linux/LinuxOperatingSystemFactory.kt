@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system.os.linux
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system.os.linux
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
@@ -34,108 +25,66 @@ import org.allbinary.logic.system.os.OperatingSystems
 import org.allbinary.logic.system.os.SystemProperties
 import org.allbinary.string.CommonStrings
 
-open public class LinuxOperatingSystemFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: LinuxOperatingSystemFactory = LinuxOperatingSystemFactory()
+open public class LinuxOperatingSystemFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: LinuxOperatingSystemFactory{
+    companion object {
 
+        private val instance: LinuxOperatingSystemFactory = LinuxOperatingSystemFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : LinuxOperatingSystemFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return LinuxOperatingSystemFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return LinuxOperatingSystemFactory.instance
         }
-            
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor ()
-            : super()
-        {
-}
+    }
 
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private constructor() : super() {}
 
     open fun getOperatingSystemInstance()
-        //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem{
+    // nullable = true from not(false or (false and true)) = true
+    : GenericOperatingSystem {
 
         try {
-            
-    var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
 
+            var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
 
-    var osName: String = SystemProperties.getInstance()!!.getName()!!
+            var osName: String = SystemProperties.getInstance()!!.getName()!!
 
+            var operatingSystemInterface: GenericOperatingSystem
 
-    var operatingSystemInterface: GenericOperatingSystem
+            if (osName!!.compareTo(operatingSystems!!.LINUX) == 0) {
 
+                operatingSystemInterface = LinuxOS()
+            } else {
 
-    
-                        if(osName!!.compareTo(operatingSystems!!.LINUX) == 0)
-                        
-                                    {
-                                    operatingSystemInterface= LinuxOS()
+                if (operatingSystems!!.isUnknownSpecificOSAllowed()) {
 
-                                    }
-                                
-                        else {
-                            
-    
-                        if(operatingSystems!!.isUnknownSpecificOSAllowed())
-                        
-                                    {
-                                    operatingSystemInterface= LinuxOS()
+                    operatingSystemInterface = LinuxOS()
+                } else {
 
-                                    }
-                                
-                        else {
-                            
+                    throw Exception("Specific Linux OS Not Supported: " + osName)
+                }
+            }
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return operatingSystemInterface
+        } catch (e: Exception) {
 
-                            throw Exception("Specific Linux OS Not Supported: " +osName)
+            if (
+                LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR)
+            ) {
 
-                        }
-                            
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-                        }
-                            
+                this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+            }
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return operatingSystemInterface
-} catch(e: Exception)
-            {
-
-    
-                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
-                        
-                                    {
-                                    
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NoOperatingSystem.NO_OPERATING_SYSTEM
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NoOperatingSystem.NO_OPERATING_SYSTEM
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

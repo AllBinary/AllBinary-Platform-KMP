@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input.event
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input.event
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.EventStrings
@@ -32,221 +23,180 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class RawKeyEventHandler
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: RawKeyEventHandler = RawKeyEventHandler()
+open public class RawKeyEventHandler : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: RawKeyEventHandler{
+    companion object {
 
+        private val instance: RawKeyEventHandler = RawKeyEventHandler()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : RawKeyEventHandler {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return RawKeyEventHandler.instance
-}
-
-
-    private val TOTAL_LISTENERS: String = "Total Listeners: "
-
-    private val LISTENER_LABEL: String = " Listener: "
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return RawKeyEventHandler.instance
         }
-            
+
+        private val TOTAL_LISTENERS: String = "Total Listeners: "
+
+        private val LISTENER_LABEL: String = " Listener: "
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var eventListenerInterfaceList: BasicArrayList
-public constructor ()
-            : super()
-        {
-this.eventListenerInterfaceList= BasicArrayListD()
-}
 
+    public constructor() : super() {
+        this.eventListenerInterfaceList = BasicArrayListD()
+    }
 
     open fun removeAllListeners()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.eventListenerInterfaceList= BasicArrayListD()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.eventListenerInterfaceList = BasicArrayListD()
+    }
 
     open fun addListeners(vector: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var vector = vector
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var vector = vector
 
-    var eventListenerInterface: RawKeyEventListener
+        var eventListenerInterface: RawKeyEventListener
 
+        var size: Int = vector.size()!!
 
-    var size: Int = vector.size()!!
+        for (index in 0 until size) {
 
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-eventListenerInterface= vector.get(index) as RawKeyEventListener
-this.addListener(eventListenerInterface)
-}
-
-}
-
+            eventListenerInterface = vector.get(index) as RawKeyEventListener
+            this.addListener(eventListenerInterface)
+        }
+    }
 
     open fun addListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventListenerInterface = eventListenerInterface
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventListenerInterface = eventListenerInterface
 
-    
-                        if(!this.eventListenerInterfaceList!!.contains(eventListenerInterface))
-                        
-                                    {
-                                    this.eventListenerInterfaceList!!.add(eventListenerInterface)
+        if (!this.eventListenerInterfaceList!!.contains(eventListenerInterface)) {
 
-                                    }
-                                
-}
-
+            this.eventListenerInterfaceList!!.add(eventListenerInterface)
+        }
+    }
 
     open fun addListener(eventListenerInterface: RawKeyEventListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventListenerInterface = eventListenerInterface
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventListenerInterface = eventListenerInterface
 
-    
-                        if(!this.eventListenerInterfaceList!!.contains(eventListenerInterface))
-                        
-                                    {
-                                    this.eventListenerInterfaceList!!.add(eventListenerInterface)
+        if (!this.eventListenerInterfaceList!!.contains(eventListenerInterface)) {
 
-                                    }
-                                
-}
-
+            this.eventListenerInterfaceList!!.add(eventListenerInterface)
+        }
+    }
 
     open fun removeListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventListenerInterface = eventListenerInterface
-this.eventListenerInterfaceList!!.remove(eventListenerInterface)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventListenerInterface = eventListenerInterface
+        this.eventListenerInterfaceList!!.remove(eventListenerInterface)
+    }
 
     open fun removeListener(eventListenerInterface: RawKeyEventListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventListenerInterface = eventListenerInterface
-this.eventListenerInterfaceList!!.remove(eventListenerInterface)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventListenerInterface = eventListenerInterface
+        this.eventListenerInterfaceList!!.remove(eventListenerInterface)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun fireEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
-    //var repeated = repeated
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
+        // var repeated = repeated
 
-    var eventListenerInterface: RawKeyEventListener
+        var eventListenerInterface: RawKeyEventListener
 
+        var index: Int = 0
 
-    var index: Int = 0
+        while (index < this.eventListenerInterfaceList!!.size()) {
 
+            try {
+                eventListenerInterface =
+                    this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
+                this.process(keyCode, deviceId, repeated, eventListenerInterface)
+            } catch (e: Exception) {
 
-        while(index < this.eventListenerInterfaceList!!.size())
-        {
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-        try {
-            eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
-this.process(keyCode, deviceId, repeated, eventListenerInterface)
-} catch(e: Exception)
-            {
+                this.logUtil!!.put(
+                    commonStrings!!.EXCEPTION,
+                    this,
+                    EventStrings.getInstance()!!.FIRE_EVENT,
+                    e,
+                )
+            }
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            index++
+        }
+    }
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
-}
-
-index++
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun process(keyCode: Int, deviceId: Int, repeated: Boolean, eventListenerInterface: RawKeyEventListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
-    //var repeated = repeated
-    //var eventListenerInterface = eventListenerInterface
-eventListenerInterface!!.onEventRaw(keyCode, deviceId, repeated)
-}
-
+    @Throws(Exception::class)
+    open fun process(
+        keyCode: Int,
+        deviceId: Int,
+        repeated: Boolean,
+        eventListenerInterface: RawKeyEventListener,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
+        // var repeated = repeated
+        // var eventListenerInterface = eventListenerInterface
+        eventListenerInterface!!.onEventRaw(keyCode, deviceId, repeated)
+    }
 
     open fun getEventListenerInterfaceListP()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.eventListenerInterfaceList
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.eventListenerInterfaceList
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(RawKeyEventHandler.TOTAL_LISTENERS)
-stringBuffer!!.appendint(this.eventListenerInterfaceList!!.size())
+        stringBuffer!!.append(RawKeyEventHandler.TOTAL_LISTENERS)
+        stringBuffer!!.appendint(this.eventListenerInterfaceList!!.size())
 
-    var eventListenerInterface: RawKeyEventListener
+        var eventListenerInterface: RawKeyEventListener
 
+        var index: Int = 0
 
-    var index: Int = 0
+        while (index < this.eventListenerInterfaceList!!.size()) {
 
+            try {
+                eventListenerInterface =
+                    this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
+                stringBuffer!!.append(RawKeyEventHandler.LISTENER_LABEL)
+                stringBuffer!!.append(eventListenerInterface!!.toString())
+            } catch (e: Exception) {
 
-        while(index < this.eventListenerInterfaceList!!.size())
-        {
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-        try {
-            eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
-stringBuffer!!.append(RawKeyEventHandler.LISTENER_LABEL)
-stringBuffer!!.append(eventListenerInterface!!.toString())
-} catch(e: Exception)
-            {
+                this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
+            }
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            index++
+        }
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-index++
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
-
-}
-                
-            
-

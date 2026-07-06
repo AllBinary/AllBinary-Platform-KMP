@@ -1,138 +1,75 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.color
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.color
 
+import java.lang.Object
 
+open public class ColorTemperatureUtil : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: ColorTemperatureUtil = ColorTemperatureUtil()
 
-open public class ColorTemperatureUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ColorTemperatureUtil = ColorTemperatureUtil()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ColorTemperatureUtil {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ColorTemperatureUtil{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ColorTemperatureUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ColorTemperatureUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-    open fun getBasicColor(thirdTemp: Int)
-        //nullable = true from not(false or (false and false)) = true
-: BasicColor{
-var thirdTemp = thirdTemp
+    open fun getBasicColor(
+        thirdTemp: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicColor {
+        var thirdTemp = thirdTemp
 
-    var basicColor: BasicColor = this.basicColorFactory!!.RED
+        var basicColor: BasicColor = this.basicColorFactory!!.RED
 
+        if (thirdTemp > 3700) {
 
-    
-                        if(thirdTemp > 3700)
-                        
-                                    {
-                                    basicColor= this.basicColorFactory!!.PURPLE
+            basicColor = this.basicColorFactory!!.PURPLE
+        } else if (thirdTemp > 3200) {
 
-                                    }
-                                
-                             else 
-    
-                        if(thirdTemp > 3200)
-                        
-                                    {
-                                    basicColor= this.basicColorFactory!!.BLUE
+            basicColor = this.basicColorFactory!!.BLUE
+        } else if (thirdTemp > 2700) {
 
-                                    }
-                                
-                             else 
-    
-                        if(thirdTemp > 2700)
-                        
-                                    {
-                                    basicColor= this.basicColorFactory!!.PUCE
+            basicColor = this.basicColorFactory!!.PUCE
+        } else if (thirdTemp > 2200) {
 
-                                    }
-                                
-                             else 
-    
-                        if(thirdTemp > 2200)
-                        
-                                    {
-                                    basicColor= this.basicColorFactory!!.WHITE
+            basicColor = this.basicColorFactory!!.WHITE
+        } else if (thirdTemp > 1700) {
 
-                                    }
-                                
-                             else 
-    
-                        if(thirdTemp > 1700)
-                        
-                                    {
-                                    basicColor= this.basicColorFactory!!.GREEN
+            basicColor = this.basicColorFactory!!.GREEN
+        } else if (thirdTemp > 1200) {
 
-                                    }
-                                
-                             else 
-    
-                        if(thirdTemp > 1200)
-                        
-                                    {
-                                    basicColor= this.basicColorFactory!!.YELLOW
+            basicColor = this.basicColorFactory!!.YELLOW
+        } else if (thirdTemp > 700) {
 
-                                    }
-                                
-                             else 
-    
-                        if(thirdTemp > 700)
-                        
-                                    {
-                                    basicColor= this.basicColorFactory!!.ORANGE
+            basicColor = this.basicColorFactory!!.ORANGE
+        }
 
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicColor
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return basicColor
+    }
 }
-
-
-}
-                
-            
-

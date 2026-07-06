@@ -1,117 +1,91 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.logic.NullUtil
 
-open public class GameKeyMappingFactory
-            : Object
-         {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class GameKeyMappingFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: GameKeyMappingFactory{
+    companion object {
 
-    
-                        if(GameKeyMappingFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    GameKeyMappingFactory.instance= GameKeyMappingFactory()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : GameKeyMappingFactory {
 
+            if (GameKeyMappingFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                GameKeyMappingFactory.instance = GameKeyMappingFactory()
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameKeyMappingFactory.instance as GameKeyMappingFactory
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GameKeyMappingFactory.instance as GameKeyMappingFactory
         }
-            
+    }
+
     private var intKeyToGameKey: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
-private constructor ()
-            : super()
-        {
 
-    var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
+    private constructor() : super() {
 
-this.setGameKey(gameKeyFactory!!.NONE)
-this.setGameKey(gameKeyFactory!!.UP)
-this.setGameKey(gameKeyFactory!!.DOWN)
-this.setGameKey(gameKeyFactory!!.LEFT)
-this.setGameKey(gameKeyFactory!!.RIGHT)
-this.setGameKey(gameKeyFactory!!.KEY_POUND)
-this.setGameKey(gameKeyFactory!!.KEY_STAR)
-this.setGameKey(gameKeyFactory!!.KEY_NUM0)
-this.setGameKey(gameKeyFactory!!.KEY_NUM1)
-this.setGameKey(gameKeyFactory!!.KEY_NUM2)
-this.setGameKey(gameKeyFactory!!.KEY_NUM3)
-this.setGameKey(gameKeyFactory!!.KEY_NUM4)
-this.setGameKey(gameKeyFactory!!.KEY_NUM5)
-this.setGameKey(gameKeyFactory!!.KEY_NUM6)
-this.setGameKey(gameKeyFactory!!.KEY_NUM7)
-this.setGameKey(gameKeyFactory!!.KEY_NUM8)
-this.setGameKey(gameKeyFactory!!.KEY_NUM9)
-this.setGameKey(gameKeyFactory!!.GAME_A)
-this.setGameKey(gameKeyFactory!!.GAME_B)
-this.setGameKey(gameKeyFactory!!.GAME_C)
-this.setGameKey(gameKeyFactory!!.GAME_D)
-this.setGameKey(gameKeyFactory!!.FIRE)
-this.setGameKey(gameKeyFactory!!.LEVEL_DOWN)
-this.setGameKey(gameKeyFactory!!.LEVEL_UP)
-}
+        var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
 
+        this.setGameKey(gameKeyFactory!!.NONE)
+        this.setGameKey(gameKeyFactory!!.UP)
+        this.setGameKey(gameKeyFactory!!.DOWN)
+        this.setGameKey(gameKeyFactory!!.LEFT)
+        this.setGameKey(gameKeyFactory!!.RIGHT)
+        this.setGameKey(gameKeyFactory!!.KEY_POUND)
+        this.setGameKey(gameKeyFactory!!.KEY_STAR)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM0)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM1)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM2)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM3)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM4)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM5)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM6)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM7)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM8)
+        this.setGameKey(gameKeyFactory!!.KEY_NUM9)
+        this.setGameKey(gameKeyFactory!!.GAME_A)
+        this.setGameKey(gameKeyFactory!!.GAME_B)
+        this.setGameKey(gameKeyFactory!!.GAME_C)
+        this.setGameKey(gameKeyFactory!!.GAME_D)
+        this.setGameKey(gameKeyFactory!!.FIRE)
+        this.setGameKey(gameKeyFactory!!.LEVEL_DOWN)
+        this.setGameKey(gameKeyFactory!!.LEVEL_UP)
+    }
 
-    open fun getGameKey(key: Int)
-        //nullable = true from not(false or (false and false)) = true
-: GameKey{
-var key = key
+    open fun getGameKey(
+        key: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : GameKey {
+        var key = key
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.intKeyToGameKey[key]!!
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.intKeyToGameKey[key]!!
+    }
 
     open fun setGameKey(gameKey: GameKey)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gameKey = gameKey
-this.intKeyToGameKey[gameKey!!.getId()]= gameKey
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gameKey = gameKey
+        this.intKeyToGameKey[gameKey!!.getId()] = gameKey
+    }
 }
-
-
-}
-                
-            
-

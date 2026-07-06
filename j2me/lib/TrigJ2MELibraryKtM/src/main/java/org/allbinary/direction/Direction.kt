@@ -1,54 +1,42 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.direction
+/* Generated Code Do Not Modify */
+package org.allbinary.direction
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.logic.string.StringMaker
 
-open public class Direction
-            : Object
-         {
-        
-companion object {
-            
-    private var directionArray: Array<Direction?> = arrayOfNulls(13)
+open public class Direction : Object {
 
-    open fun getInstance(direction: Int)
-        //nullable =  from not(true or (false and false)) = 
-: Direction{
-var direction = direction
+    companion object {
 
+        private var directionArray: Array<Direction?> = arrayOfNulls(13)
 
+        open fun getInstance(
+            direction: Int
+        )
+            // nullable =  from not(true or (false and false)) =
+            : Direction {
+            var direction = direction
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return Direction.directionArray[direction]!!
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return Direction.directionArray[direction]!!
         }
-            
+    }
+
     private var name: String
 
     private var otherName: String
@@ -56,86 +44,65 @@ var direction = direction
     private var value: Int
 
     private var frameFactor: Int
- constructor (name: String, otherName: String, value: Int, frameFactor: Int)
-            : super()
-        {
-var name = name
-var otherName = otherName
-var value = value
-var frameFactor = frameFactor
-this.name= name
-this.otherName= otherName
-this.value= value
-this.frameFactor= frameFactor
-Direction.directionArray[value]= this
-}
 
+    constructor(name: String, otherName: String, value: Int, frameFactor: Int) : super() {
+        var name = name
+        var otherName = otherName
+        var value = value
+        var frameFactor = frameFactor
+        this.name = name
+        this.otherName = otherName
+        this.value = value
+        this.frameFactor = frameFactor
+        Direction.directionArray[value] = this
+    }
 
     open fun getValue()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.value
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.value
+    }
 
     open fun getFrameFactor()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.frameFactor
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.frameFactor
+    }
 
     open fun getOtherName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.otherName
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.otherName
+    }
 
     open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.name
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.name
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("Direction: ")
-stringBuffer!!.append(this.getName())
-stringBuffer!!.append(" Or: ")
-stringBuffer!!.append(this.getOtherName())
-stringBuffer!!.append(" Value: ")
-stringBuffer!!.appendint(this.value)
+        stringBuffer!!.append("Direction: ")
+        stringBuffer!!.append(this.getName())
+        stringBuffer!!.append(" Or: ")
+        stringBuffer!!.append(this.getOtherName())
+        stringBuffer!!.append(" Value: ")
+        stringBuffer!!.appendint(this.value)
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

@@ -1,54 +1,39 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.image
+/* Generated Code Do Not Modify */
+package org.allbinary.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class ImageTypeUtil
-            : Object
-         {
-        
-companion object {
-            
-    private var SINGLETON: ImageTypeUtil = ImageTypeUtil()
+open public class ImageTypeUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ImageTypeUtil{
+    companion object {
 
+        private var SINGLETON: ImageTypeUtil = ImageTypeUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ImageTypeUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageTypeUtil.SINGLETON
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ImageTypeUtil.SINGLETON
         }
-            
+    }
+
     val PNG: String = "png"
 
     val JPG: String = "jpg"
@@ -56,54 +41,33 @@ companion object {
     val GIF: String = "gif"
 
     private val list: BasicArrayList = BasicArrayListD()
-private constructor ()
-            : super()
-        {
-this.list.add(JPG)
-this.list.add(GIF)
-this.list.add(PNG)
+
+    private constructor() : super() {
+        this.list.add(JPG)
+        this.list.add(GIF)
+        this.list.add(PNG)
+    }
+
+    open fun isSupported(
+        mediaFileType: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var mediaFileType = mediaFileType
+        mediaFileType = mediaFileType!!.lowercase()
+
+        for (index in this.list.size() - 1 downTo 0) {
+
+            var name: String = this.list.get(index) as String
+
+            if (mediaFileType!!.compareTo(name) == 0) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            }
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 }
-
-
-    open fun isSupported(mediaFileType: String)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var mediaFileType = mediaFileType
-mediaFileType= mediaFileType!!.lowercase()
-
-
-
-
-                        for (index in this.list.size() -1 downTo 0)
-
-        {
-
-    var name: String = this.list.get(index) as String
-
-
-    
-                        if(mediaFileType!!.compareTo(name) == 0)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-}
-                
-            
-

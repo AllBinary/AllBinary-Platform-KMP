@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Canvas
 import org.allbinary.game.input.GameInputStrings
 import org.allbinary.game.input.event.GameKeyEvent
@@ -34,262 +24,190 @@ import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.input.motion.gesture.MotionGestureInput
 import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
 import org.allbinary.input.motion.gesture.observer.MotionGestureEvent
-import org.allbinary.logic.communication.log.PreLogUtil
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.math.RectangleCollisionUtil
-import org.allbinary.string.CommonSeps
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
 
 open public class PopupMenuInputProcessor : BasicMenuInputProcessor {
-        
 
-    private val rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
+    private val rectangleCollisionUtil: RectangleCollisionUtil =
+        RectangleCollisionUtil.getInstance()!!
 
     private val CLICK_DELAY: Int = 120
 
     private val clickTimeHelper: TimeDelayHelper = TimeDelayHelper(this.CLICK_DELAY)
 
     private var rectangle: Rectangle
-public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, rectangle: Rectangle)                        
 
-                            : super(gameKeyEventList, playerInputId, gameCanvas){
-    //var gameKeyEventList = gameKeyEventList
-    //var playerInputId = playerInputId
-    //var gameCanvas = gameCanvas
-    //var rectangle = rectangle
+    public constructor(
+        gameKeyEventList: BasicArrayList,
+        playerInputId: Int,
+        gameCanvas: MyCanvas,
+        rectangle: Rectangle,
+    ) : super(gameKeyEventList, playerInputId, gameCanvas) {
+        // var gameKeyEventList = gameKeyEventList
+        // var playerInputId = playerInputId
+        // var gameCanvas = gameCanvas
+        // var rectangle = rectangle
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.rectangle= rectangle
-}
-
+        this.rectangle = rectangle
+    }
 
     open fun init(rectangle: Rectangle)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var rectangle = rectangle
-this.rectangle= rectangle
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var rectangle = rectangle
+        this.rectangle = rectangle
+    }
 
+    @Throws(Exception::class)
+    open fun processInput(
+        key: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var key = key
 
-                @Throws(Exception::class)
-            
-    open fun processInput(key: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var key = key
+        if (key == Canvas.KEY_STAR) {
 
-    
-                        if(key == Canvas.KEY_STAR)
-                        
-                                    {
-                                    
-    var gameCanvas: AllBinaryGameCanvas = this.getCanvas() as AllBinaryGameCanvas
+            var gameCanvas: AllBinaryGameCanvas = this.getCanvas() as AllBinaryGameCanvas
 
-gameCanvas!!.toggleMenu()
+            gameCanvas!!.toggleMenu()
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 1
+        }
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 1
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processInputList()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
         try {
-            
-    var motionInputsIndex: Int = this.processMotionInputs()!!
 
+            var motionInputsIndex: Int = this.processMotionInputs()!!
 
-    var list: BasicArrayList = this.getGameKeyEventList()!!
+            var list: BasicArrayList = this.getGameKeyEventList()!!
 
+            var size: Int = list.size()!!
 
-    var size: Int = list.size()!!
+            var key: Int = 0
 
+            var gameKeyEvent: GameKeyEvent
 
-    var key: Int = 0
+            for (index in 0 until size) {
 
+                gameKeyEvent = list.objectArray[index]!! as GameKeyEvent
 
-    var gameKeyEvent: GameKeyEvent
+                if (gameKeyEvent != null) {
 
+                    key = gameKeyEvent!!.getKey()
 
+                    if (this.processInput(key) == 1) {
 
+                        break
+                    }
+                }
+            }
 
+            this.clear()
 
-                        for (index in 0 until size)
+            if (size > 0 || motionInputsIndex >= 0) {
 
-        {
-gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return 1
+            } else {
 
-    
-                        if(gameKeyEvent != 
-                                    null
-                                )
-                        
-                                    {
-                                    key= gameKeyEvent!!.getKey()
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return -1
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                GameInputStrings.getInstance()!!.PROCESS_INPUT,
+                e,
+            )
 
-    
-                        if(this.processInput(key) == 1)
-                        
-                                    {
-                                    break;
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return -1
+        }
+    }
 
-                    
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
-this.clear()
-
-    
-                        if(size > 0 || motionInputsIndex >= 0)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 1
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, GameInputStrings.getInstance()!!.PROCESS_INPUT, e)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processMotionInputs()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-    var lastIndex: Int = this.motionGestureEventList!!.size() -1
+        var lastIndex: Int = this.motionGestureEventList!!.size() - 1
 
+        if (lastIndex >= 0) {
 
-    
-                        if(lastIndex >= 0)
-                        
-                                    {
-                                    
-    var motionGestureEvent: MotionGestureEvent = this.motionGestureEventList!!.objectArray[lastIndex]!! as MotionGestureEvent
+            var motionGestureEvent: MotionGestureEvent =
+                this.motionGestureEventList!!.objectArray[lastIndex]!! as MotionGestureEvent
 
-this.processMotionInput(motionGestureEvent)
+            this.processMotionInput(motionGestureEvent)
+        }
 
-                                    }
-                                
-this.motionGestureEventList!!.clear()
+        this.motionGestureEventList!!.clear()
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return lastIndex
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return lastIndex
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var motionGestureEvent = motionGestureEvent
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var motionGestureEvent = motionGestureEvent
 
-    
-                        if(motionGestureEvent == 
-                                    null
-                                )
-                        
-                                    {
-                                    this.logUtil!!.putF("Exception: Bug", this, this.gameInputStrings!!.PROCESS_MOTION_INPUT)
+        if (motionGestureEvent == null) {
 
+            this.logUtil!!.putF(
+                "Exception: Bug",
+                this,
+                this.gameInputStrings!!.PROCESS_MOTION_INPUT,
+            )
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
+        var touchMotionGestureFactory: TouchMotionGestureFactory =
+            TouchMotionGestureFactory.getInstance()!!
 
-                                    }
-                                
+        var motionGestureInput: MotionGestureInput = motionGestureEvent!!.getMotionGesture()!!
 
-    var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
+        if (motionGestureInput == touchMotionGestureFactory!!.RELEASED) {
 
+            var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
 
-    var motionGestureInput: MotionGestureInput = motionGestureEvent!!.getMotionGesture()!!
+            var rectPoint: GPoint = this.rectangle.getPoint()!!
 
+            if (
+                this.rectangleCollisionUtil!!.isInside(
+                    rectPoint!!.getX(),
+                    rectPoint!!.getY(),
+                    this.rectangle.getMaxX() + 20,
+                    this.rectangle.getMaxY(),
+                    point.getX(),
+                    point.getY(),
+                )
+            ) {
 
-    
-                        if(motionGestureInput == touchMotionGestureFactory!!.RELEASED)
-                        
-                                    {
-                                    
-    var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
+                if (this.clickTimeHelper!!.isTimeTNT()) {
 
+                    var gameCanvas: AllBinaryGameCanvas = this.getCanvas() as AllBinaryGameCanvas
 
-    var rectPoint: GPoint = this.rectangle.getPoint()!!
-
-
-    
-                        if(this.rectangleCollisionUtil!!.isInside(rectPoint!!.getX(), rectPoint!!.getY(), this.rectangle.getMaxX() +20, this.rectangle.getMaxY(), point.getX(), point.getY()))
-                        
-                                    {
-                                    
-    
-                        if(this.clickTimeHelper!!.isTimeTNT())
-                        
-                                    {
-                                    
-    var gameCanvas: AllBinaryGameCanvas = this.getCanvas() as AllBinaryGameCanvas
-
-gameCanvas!!.toggleMenu()
-
-                                    }
-                                
-
-                                    }
-                                
-
-                                    }
-                                
+                    gameCanvas!!.toggleMenu()
+                }
+            }
+        }
+    }
 }
-
-
-}
-                
-            
-

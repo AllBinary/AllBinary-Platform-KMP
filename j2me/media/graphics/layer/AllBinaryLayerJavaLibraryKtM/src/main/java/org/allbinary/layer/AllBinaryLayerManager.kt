@@ -1,247 +1,170 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2011 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import kotlin.Array
 import org.allbinary.layer.event.LayerManagerEvent
 import org.allbinary.layer.event.LayerManagerEventHandler
 
 open public class AllBinaryLayerManager : LayerManager {
-        
 
-    private val layerManagerEventHandler: LayerManagerEventHandler = LayerManagerEventHandler.getInstance()!!
+    private val layerManagerEventHandler: LayerManagerEventHandler =
+        LayerManagerEventHandler.getInstance()!!
 
-    private val createLayerManagerEvent: LayerManagerEvent = LayerManagerEvent(this, this.layerManagerEventHandler!!.CREATE)
+    private val createLayerManagerEvent: LayerManagerEvent =
+        LayerManagerEvent(this, this.layerManagerEventHandler!!.CREATE)
 
-    private val deleteLayerManagerEvent: LayerManagerEvent = LayerManagerEvent(this, this.layerManagerEventHandler!!.DELETE)
+    private val deleteLayerManagerEvent: LayerManagerEvent =
+        LayerManagerEvent(this, this.layerManagerEventHandler!!.DELETE)
 
     private var basicLayerProcessorArray: Array<LayerProcessor?> = arrayOfNulls(0)
-protected constructor ()                        
 
-                            : super(LayerManagerNoDebug.getInstance()){
+    protected constructor() : super(LayerManagerNoDebug.getInstance()) {
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
+    }
 
     open fun getLayerProcessorArray()
-        //nullable = true from not(false or (false and true)) = true
-: Array<LayerProcessor?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<LayerProcessor?> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicLayerProcessorArray
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.basicLayerProcessorArray
+    }
 
     open fun setLayerProcessorArray(layerProcessorArray: Array<LayerProcessor?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerProcessorArray = layerProcessorArray
-this.basicLayerProcessorArray= layerProcessorArray
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerProcessorArray = layerProcessorArray
+        this.basicLayerProcessorArray = layerProcessorArray
+    }
 
     open fun log()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var size: Int = this.basicLayerProcessorArray!!.size
-                
+        var size: Int = this.basicLayerProcessorArray!!.size
 
+        for (index in 0 until size) {
 
+            var layerProcessorInterface: LayerProcessor = this.basicLayerProcessorArray[index]!!
+        }
+    }
 
-
-
-                        for (index in 0 until size)
-
-        {
-
-    var layerProcessorInterface: LayerProcessor = this.basicLayerProcessorArray[index]!!
-
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun append(layerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerInterface = layerInterface
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerInterface = layerInterface
 
-    
-                        if(!this.contains(layerInterface))
-                        
-                                    {
-                                    this.appendProcessors(layerInterface)
-super.append(layerInterface)
+        if (!this.contains(layerInterface)) {
 
-                                    }
-                                
-}
+            this.appendProcessors(layerInterface)
+            super.append(layerInterface)
+        }
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun appendAt(layerInterface: AllBinaryLayer, index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerInterface = layerInterface
-    //var index = index
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerInterface = layerInterface
+        // var index = index
 
-    
-                        if(!this.contains(layerInterface))
-                        
-                                    {
-                                    this.appendProcessors(layerInterface)
-super.appendAt(layerInterface, index)
+        if (!this.contains(layerInterface)) {
 
-                                    }
-                                
-}
+            this.appendProcessors(layerInterface)
+            super.appendAt(layerInterface, index)
+        }
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun appendProcessors(layerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerInterface = layerInterface
-this.createLayerManagerEvent!!.setLayerInterface(layerInterface)
-this.layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerInterface = layerInterface
+        this.createLayerManagerEvent!!.setLayerInterface(layerInterface)
+        this.layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
 
-    var layerProcessorInterface: LayerProcessor
+        var layerProcessorInterface: LayerProcessor
 
+        for (index in this.basicLayerProcessorArray!!.size - 1 downTo 0) {
 
+            layerProcessorInterface = this.basicLayerProcessorArray[index]!!
 
+            if (layerProcessorInterface!!.isProcessorLayer(layerInterface)) {
 
+                layerProcessorInterface!!.getLayerManager()!!.append(layerInterface)
+            }
+        }
+    }
 
-                        for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
-
-        {
-layerProcessorInterface= this.basicLayerProcessorArray[index]!!
-
-    
-                        if(layerProcessorInterface!!.isProcessorLayer(layerInterface))
-                        
-                                    {
-                                    layerProcessorInterface!!.getLayerManager()!!.append(layerInterface)
-
-                                    }
-                                
-}
-
-}
-
-
-                @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Throws(Exception::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun remove(layerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerInterface = layerInterface
-this.deleteLayerManagerEvent!!.setLayerInterface(layerInterface)
-this.layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerInterface = layerInterface
+        this.deleteLayerManagerEvent!!.setLayerInterface(layerInterface)
+        this.layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
 
-    var layerProcessorInterface: LayerProcessor
+        var layerProcessorInterface: LayerProcessor
 
+        for (index in this.basicLayerProcessorArray!!.size - 1 downTo 0) {
 
+            layerProcessorInterface = this.basicLayerProcessorArray[index]!!
+            layerProcessorInterface!!.getLayerManager()!!.remove(layerInterface)
+        }
 
+        super.remove(layerInterface)
+    }
 
-
-                        for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
-
-        {
-layerProcessorInterface= this.basicLayerProcessorArray[index]!!
-layerProcessorInterface!!.getLayerManager()!!.remove(layerInterface)
-}
-
-super.remove(layerInterface)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var layerProcessorInterface: LayerProcessor
+        var layerProcessorInterface: LayerProcessor
 
+        var size: Int = this.basicLayerProcessorArray!!.size
 
-    var size: Int = this.basicLayerProcessorArray!!.size
-                
+        for (index in 0 until size) {
 
+            layerProcessorInterface = this.basicLayerProcessorArray[index]!!
+            layerProcessorInterface!!.process(this)
+        }
+    }
 
-
-
-
-                        for (index in 0 until size)
-
-        {
-layerProcessorInterface= this.basicLayerProcessorArray[index]!!
-layerProcessorInterface!!.process(this)
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun cleanup()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var layerProcessorInterface: LayerProcessor
+        var layerProcessorInterface: LayerProcessor
 
+        var size: Int = this.basicLayerProcessorArray!!.size
 
-    var size: Int = this.basicLayerProcessorArray!!.size
-                
+        for (index in 0 until size) {
 
+            layerProcessorInterface = this.basicLayerProcessorArray[index]!!
+            layerProcessorInterface!!.getLayerManager()!!.cleanup()
+        }
 
-
-
-
-                        for (index in 0 until size)
-
-        {
-layerProcessorInterface= this.basicLayerProcessorArray[index]!!
-layerProcessorInterface!!.getLayerManager()!!.cleanup()
+        super.cleanup()
+    }
 }
-
-super.cleanup()
-}
-
-
-}
-                
-            
-

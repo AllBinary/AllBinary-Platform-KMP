@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.data
+/* Generated Code Do Not Modify */
+package org.allbinary.data
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
@@ -33,102 +24,74 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class CamelCaseUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: CamelCaseUtil = CamelCaseUtil()
+open public class CamelCaseUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CamelCaseUtil{
+    companion object {
 
+        private val instance: CamelCaseUtil = CamelCaseUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CamelCaseUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CamelCaseUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CamelCaseUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-                @Throws(Exception::class)
-            
-    open fun getAsCamelCase(string: String, stringBuilder: StringMaker)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-    //var string = string
-    //var stringBuilder = stringBuilder
+    @Throws(Exception::class)
+    open fun getAsCamelCase(
+        string: String,
+        stringBuilder: StringMaker,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        // var string = string
+        // var stringBuilder = stringBuilder
 
-    
-                        if(string == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+        if (string == null) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return StringUtil.getInstance()!!.EMPTY_STRING
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringUtil.getInstance()!!.EMPTY_STRING
+        var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
-                                    }
-                                
+        stringBuilder!!.delete(0, stringBuilder!!.length())
 
-    var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
+        var list: BasicArrayList = BasicArrayListD()
 
-stringBuilder!!.delete(0, stringBuilder!!.length())
+        var tokenizer: Tokenizer = Tokenizer(this.commonSeps!!.UNDERSCORE)
 
-    var list: BasicArrayList = BasicArrayListD()
+        tokenizer.getTokensFromString(string, list)
 
+        var size: Int = list.size()!!
 
-    var tokenizer: Tokenizer = Tokenizer(this.commonSeps!!.UNDERSCORE)
+        var word: String
 
-tokenizer.getTokensFromString(string, list)
+        for (i in 0 until size) {
 
-    var size: Int = list.size()!!
+            word = list.get(i) as String
+            word =
+                if (stringValidationUtil!!.isEmpty(word)) {
 
+                    word
+                } else {
+                    StringMaker()
+                        .appendchar(Character.toUpperCase(word[0]))!!
+                        .append(word.substring(1)!!.lowercase())!!
+                        .toString()
+                }
 
-    var word: String
+            stringBuilder!!.append(word)
+        }
 
-
-
-
-
-                        for (i in 0 until size)
-
-        {
-word= list.get(i) as String
-word= if(stringValidationUtil!!.isEmpty(word)) {
-                            
-                            word
-                        
-                            } else {
-                            StringMaker().
-                            appendchar(Character.toUpperCase(word[0]))!!.append(word.substring(1)!!.lowercase())!!.toString()
-                            }
-    
-stringBuilder!!.append(word)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuilder!!.toString()
+    }
 }
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuilder!!.toString()
-}
-
-
-}
-                
-            
-

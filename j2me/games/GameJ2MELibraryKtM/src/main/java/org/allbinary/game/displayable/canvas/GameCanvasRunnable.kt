@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.graphics.displayable.GameTickDisplayInfoSingleton
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -32,50 +22,44 @@ import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 
 open public class GameCanvasRunnable : GameRunnable {
-        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val gameTickDisplayInfoSingleton: GameTickDisplayInfoSingleton = GameTickDisplayInfoSingleton.getInstance()!!
+    private val gameTickDisplayInfoSingleton: GameTickDisplayInfoSingleton =
+        GameTickDisplayInfoSingleton.getInstance()!!
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
-public constructor (allBinaryGameCanvas: AllBinaryGameCanvas){
-var allBinaryGameCanvas = allBinaryGameCanvas
-this.allBinaryGameCanvas= allBinaryGameCanvas
-}
 
+    public constructor(allBinaryGameCanvas: AllBinaryGameCanvas) {
+        var allBinaryGameCanvas = allBinaryGameCanvas
+        this.allBinaryGameCanvas = allBinaryGameCanvas
+    }
 
-    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
+    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper =
+        GameTickTimeDelayHelperFactory.getInstance()!!
 
     override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
-            this.allBinaryGameCanvas!!.getLoopTimeHelperP()!!.setStartTime(this.gameTickTimeDelayHelper!!.setStartTime())
-this.gameTickDisplayInfoSingleton!!.update()
-this.allBinaryGameCanvas!!.processGame()
-} catch(e: Exception)
-            {
+            this.allBinaryGameCanvas!!
+                .getLoopTimeHelperP()!!
+                .setStartTime(this.gameTickTimeDelayHelper!!.setStartTime())
+            this.gameTickDisplayInfoSingleton!!.update()
+            this.allBinaryGameCanvas!!.processGame()
+        } catch (e: Exception) {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-}
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+        }
+    }
 
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processLoopSleep()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.allBinaryGameCanvas!!.processLoopSleep()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.allBinaryGameCanvas!!.processLoopSleep()
+    }
 }
-
-
-}
-                
-            
-

@@ -1,109 +1,75 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system.os
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system.os
 
+import java.lang.Object
+import java.lang.System
 
+// ActualPlatform
+/*actual*/ open public class SystemProperties : Object {
 
+    /*actual*/ companion object {
 
-        import java.lang.Object        
-        
-        import java.lang.System
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-//ActualPlatform
-/*actual*/ open public class SystemProperties
-            : Object
-         {
-        
-/*actual*/ companion object {
-            
-    private val instance: SystemProperties = SystemProperties()
+        private val instance: SystemProperties = SystemProperties()
 
-    /*actual*/ open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: SystemProperties{
+        /*actual*/ open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : SystemProperties {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return SystemProperties.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return SystemProperties.instance
         }
-            
+    }
+
     private val OS_NAME: String = "os.name"
 
     private val OS_ARCH: String = "os.arch"
 
     private val OS_VERSION: String = "os.version"
-private constructor ()
-            : super()
-        {
-}
 
+    private constructor() : super() {}
 
     /*actual*/ open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(this.OS_NAME)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return System.getProperty(this.OS_NAME)
+    }
 
     /*actual*/ open fun getArch()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(this.OS_ARCH)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return System.getProperty(this.OS_ARCH)
+    }
 
     /*actual*/ open fun getVersion()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(this.OS_VERSION)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return System.getProperty(this.OS_VERSION)
+    }
 
     open fun getUserHomePath()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                            throw RuntimeException()
+        throw RuntimeException()
+    }
 }
-
-
-}
-                
-            
-

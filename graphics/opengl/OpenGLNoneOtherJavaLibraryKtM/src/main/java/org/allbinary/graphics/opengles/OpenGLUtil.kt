@@ -1,72 +1,46 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles
-
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Runnable
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import java.lang.Runnable
 import javax.microedition.lcdui.Image
 
-open public class OpenGLUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: OpenGLUtil = OpenGLUtil()
+open public class OpenGLUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OpenGLUtil{
+    companion object {
 
+        private val instance: OpenGLUtil = OpenGLUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OpenGLUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OpenGLUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun addImage(image: Image)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var image = image
+    }
 
+    // Auto Generated
+    public constructor() : super() {}
 
+    open fun addImage(
+        image: Image
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var image = image
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return image
+    }
 
     open fun clear()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun addRunnable(runnable: Runnable)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var runnable = runnable
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var runnable = runnable
+    }
 }
-
-
-}
-                
-            
-

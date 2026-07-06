@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.weapon
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.weapon
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
@@ -44,28 +34,23 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.physics.movement.Movement
-import org.allbinary.view.ViewPosition
 import org.allbinary.view.ViewPositionBase
 
-open public class WeaponLayer : MultiPlayerGameLayer
-                , TickableInterface {
-        
-companion object {
-            
-    open fun getStaticType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+open public class WeaponLayer : MultiPlayerGameLayer, TickableInterface {
 
+    companion object {
 
+        open fun getStaticType()
+        // nullable = true from not(false or (false and true)) = true
+        : Int {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 0
         }
-            
-    private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
+    }
+
+    private var animationInterface: Animation =
+        NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
     var initAnimationInterface: Animation
 
@@ -73,9 +58,9 @@ companion object {
 
     private var sourceLayerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 
-    var totalDamage: Int= 0
+    var totalDamage: Int = 0
 
-    private var initDamage: Int= 0
+    private var initDamage: Int = 0
 
     private var destroyed: Boolean = true
 
@@ -86,467 +71,375 @@ companion object {
     private var weaponProperties: WeaponProperties = WeaponProperties.NULL_WEAPON_PROPERTIES
 
     private val multiPlayerType: Int
-protected constructor (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPositionBase)                        
 
-                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
-    //var name = name
-    //var remoteInfo = remoteInfo
-    //var multiPlayerType = multiPlayerType
-    //var movement = movement
-    //var animationInterface = animationInterface
-    //var destroyedAnimationInterface = destroyedAnimationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
+    protected constructor(
+        name: String,
+        remoteInfo: RemoteInfo,
+        multiPlayerType: Int,
+        movement: Movement,
+        animationInterface: Animation,
+        destroyedAnimationInterface: Animation,
+        rectangle: Rectangle,
+        viewPosition: ViewPositionBase,
+    ) : super(
+        remoteInfo,
+        BasicGroupFactory.getInstance()!!.NONE_ARRAY,
+        name,
+        rectangle,
+        viewPosition,
+    ) {
+        // var name = name
+        // var remoteInfo = remoteInfo
+        // var multiPlayerType = multiPlayerType
+        // var movement = movement
+        // var animationInterface = animationInterface
+        // var destroyedAnimationInterface = destroyedAnimationInterface
+        // var rectangle = rectangle
+        // var viewPosition = viewPosition
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.initAnimationInterface= animationInterface
-this.setAnimationInterface(animationInterface)
-this.destroyedAnimationInterface= destroyedAnimationInterface
-this.movement= movement
-this.multiPlayerType= multiPlayerType
-}
+        this.initAnimationInterface = animationInterface
+        this.setAnimationInterface(animationInterface)
+        this.destroyedAnimationInterface = destroyedAnimationInterface
+        this.movement = movement
+        this.multiPlayerType = multiPlayerType
+    }
 
-
-    private var collidableWeaponBehavior: CollidableWeaponBehavior = CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR
+    private var collidableWeaponBehavior: CollidableWeaponBehavior =
+        CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR
 
     override fun setCollidableInferface(collidableInferface: CollidableBaseBehavior)
-        //nullable = true from not(false or (false and false)) = true
-{
-var collidableInferface = collidableInferface
-super.setCollidableInferface(collidableInferface)
-this.collidableWeaponBehavior= this.getCollidableInferface() as CollidableWeaponBehavior
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var collidableInferface = collidableInferface
+        super.setCollidableInferface(collidableInferface)
+        this.collidableWeaponBehavior = this.getCollidableInferface() as CollidableWeaponBehavior
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun initXYZ(x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
-var z = z
-this.x= x
-this.y= y
-this.z= z
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+        var z = z
+        this.x = x
+        this.y = y
+        this.z = z
+    }
 
+    @Throws(Exception::class)
+    open fun init(
+        sourceLayerInterface: AllBinaryLayer,
+        angle: Int,
+        otherAngle: Int,
+        weaponProperties: WeaponProperties,
+        scoreable: ScoreableInterface,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var sourceLayerInterface = sourceLayerInterface
+        var angle = angle
+        var otherAngle = otherAngle
+        var weaponProperties = weaponProperties
+        var scoreable = scoreable
+        this.setWeaponPropertiesP(weaponProperties)
+        this.setReadyForExplosion(false)
+        this.setAnimationInterface(this.getInitAnimationInterfaceP())
+        this.setOwnerLayerInterface(sourceLayerInterface)
+        this.collidableWeaponBehavior!!.init(sourceLayerInterface)
+        this.setGroupInterfaces()
 
-                @Throws(Exception::class)
-            
-    open fun init(sourceLayerInterface: AllBinaryLayer, angle: Int, otherAngle: Int, weaponProperties: WeaponProperties, scoreable: ScoreableInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var sourceLayerInterface = sourceLayerInterface
-var angle = angle
-var otherAngle = otherAngle
-var weaponProperties = weaponProperties
-var scoreable = scoreable
-this.setWeaponPropertiesP(weaponProperties)
-this.setReadyForExplosion(false)
-this.setAnimationInterface(this.getInitAnimationInterfaceP())
-this.setOwnerLayerInterface(sourceLayerInterface)
-this.collidableWeaponBehavior!!.init(sourceLayerInterface)
-this.setGroupInterfaces()
+        if (scoreable != null) {
 
-    
-                        if(scoreable != 
-                                    null
-                                )
-                        
-                                    {
-                                    this.scoreableInterface= scoreable
+            this.scoreableInterface = scoreable
+        }
 
-                                    }
-                                
-this.totalDamage= 0
-this.initDamage= weaponProperties!!.getDamage()
-this.setDestroyed(false)
-this.movement.init(weaponProperties!!.getSpeed(), angle, otherAngle)
-}
-
+        this.totalDamage = 0
+        this.initDamage = weaponProperties!!.getDamage()
+        this.setDestroyed(false)
+        this.movement.init(weaponProperties!!.getSpeed(), angle, otherAngle)
+    }
 
     open fun setGroupInterfaces()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var basicGroupFactory: BasicGroupFactory = BasicGroupFactory.getInstance()!!
+        var basicGroupFactory: BasicGroupFactory = BasicGroupFactory.getInstance()!!
 
+        if (this.sourceLayerInterface!!.getGroupInterface()[0] == basicGroupFactory!!.ENEMY) {
 
-    
-                        if(this.sourceLayerInterface!!.getGroupInterface()[0] == basicGroupFactory!!.ENEMY)
-                        
-                                    {
-                                    this.setGroupInterface(basicGroupFactory!!.ENEMY_ARRAY)
+            this.setGroupInterface(basicGroupFactory!!.ENEMY_ARRAY)
+        } else {
+            this.setGroupInterface(this.sourceLayerInterface!!.getGroupInterface())
+        }
+    }
 
-                                    }
-                                
-                        else {
-                            this.setGroupInterface(this.sourceLayerInterface!!.getGroupInterface())
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
 
-    
-                        if(this.isExhausted() && !this.isDestroyed())
-                        
-                                    {
-                                    
-    
-                        if(this.isReadyForExplosion())
-                        
-                                    {
-                                    
-    var indexedAnimationInterface: IndexedAnimation = this.getAnimationInterface() as IndexedAnimation
+        if (this.isExhausted() && !this.isDestroyed()) {
 
+            if (this.isReadyForExplosion()) {
 
-    var currentFrame: Int = indexedAnimationInterface!!.getFrame()!!
+                var indexedAnimationInterface: IndexedAnimation =
+                    this.getAnimationInterface() as IndexedAnimation
 
+                var currentFrame: Int = indexedAnimationInterface!!.getFrame()!!
 
-    
-                        if(currentFrame < indexedAnimationInterface!!.getAnimationSize() -1)
-                        
-                                    {
-                                    indexedAnimationInterface!!.nextFrame()
+                if (currentFrame < indexedAnimationInterface!!.getAnimationSize() - 1) {
 
-                                    }
-                                
-                        else {
-                            this.setDestroyed(true)
+                    indexedAnimationInterface!!.nextFrame()
+                } else {
+                    this.setDestroyed(true)
+                }
+            } else {
 
-                        }
-                            
+                var collidableWeaponBehavior: CollidableWeaponBehavior =
+                    this.getCollidableInferface() as CollidableWeaponBehavior
 
-                                    }
-                                
-                        else {
-                            
-    var collidableWeaponBehavior: CollidableWeaponBehavior = this.getCollidableInferface() as CollidableWeaponBehavior
+                if (collidableWeaponBehavior!!.isCollided()) {
 
+                    this.setAnimationInterface(this.destroyedAnimationInterface)
+                    this.getMovement()!!.stop()
+                    this.setReadyForExplosion(true)
+                } else {
+                    this.setDestroyed(true)
+                }
+            }
+        }
 
-    
-                        if(collidableWeaponBehavior!!.isCollided())
-                        
-                                    {
-                                    this.setAnimationInterface(this.destroyedAnimationInterface)
-this.getMovement()!!.stop()
-this.setReadyForExplosion(true)
-
-                                    }
-                                
-                        else {
-                            this.setDestroyed(true)
-
-                        }
-                            
-
-                        }
-                            
-
-                                    }
-                                
-this.movement.process(this)
-this.totalDamage += this.weaponProperties!!.getDissipation()
-}
-
+        this.movement.process(this)
+        this.totalDamage += this.weaponProperties!!.getDissipation()
+    }
 
     override fun isDestroyed()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.destroyed
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.destroyed
+    }
 
     override fun damage(damage: Int, damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var damage = damage
-var damageType = damageType
-this.totalDamage += damage *damage
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var damage = damage
+        var damageType = damageType
+        this.totalDamage += damage * damage
+    }
 
     open fun givePoints(total: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var total = total
-this.scoreableInterface!!.addPoints(GameConfigurationUtil.getInstance()!!.getCompetitionValue() *total)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var total = total
+        this.scoreableInterface!!.addPoints(
+            GameConfigurationUtil.getInstance()!!.getCompetitionValue() * total
+        )
+    }
 
     open fun isExhausted()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.totalDamage > this.getInitDamage() || this.totalDamage < 0)
-                        
-                                    {
-                                    
+        if (this.totalDamage > this.getInitDamage() || this.totalDamage < 0) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
-                                    }
-                                
-                        else {
-                            
+    override fun getDamage(
+        damageType: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var damageType = damageType
 
+        if (!this.isExhausted()) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+            var total: Int = this.getInitDamage() - this.totalDamage
 
-                        }
-                            
-}
+            this.givePoints(total)
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return total
+        }
 
-    override fun getDamage(damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var damageType = damageType
-
-    
-                        if(!this.isExhausted())
-                        
-                                    {
-                                    
-    var total: Int = this.getInitDamage() -this.totalDamage
-
-this.givePoints(total)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return total
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
 
     open fun setDestroyed(destroyed: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var destroyed = destroyed
-this.destroyed= destroyed
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var destroyed = destroyed
+        this.destroyed = destroyed
 
-    
-                        if(this.isDestroyed())
-                        
-                                    {
-                                    this.scoreableInterface= NoScoreable.getInstance()
-DestroyedLayerProcessor.getInstance()!!.add(this)
+        if (this.isDestroyed()) {
 
-                                    }
-                                
-}
-
+            this.scoreableInterface = NoScoreable.getInstance()
+            DestroyedLayerProcessor.getInstance()!!.add(this)
+        }
+    }
 
     open fun getInitDamage()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initDamage
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initDamage
+    }
 
     open fun setAnimationInterface(animationInterface: Animation)
-        //nullable = true from not(false or (false and false)) = true
-{
-var animationInterface = animationInterface
-this.animationInterface= animationInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var animationInterface = animationInterface
+        this.animationInterface = animationInterface
+    }
 
     open fun getAnimationInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Animation{
+    // nullable = true from not(false or (false and true)) = true
+    : Animation {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterface
+    }
 
     open fun getInitAnimationInterfaceP()
-        //nullable = true from not(false or (false and true)) = true
-: Animation{
+    // nullable = true from not(false or (false and true)) = true
+    : Animation {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initAnimationInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initAnimationInterface
+    }
 
     open fun setInitAnimationInterfaceP(initAnimationInterface: Animation)
-        //nullable = true from not(false or (false and false)) = true
-{
-var initAnimationInterface = initAnimationInterface
-this.initAnimationInterface= initAnimationInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var initAnimationInterface = initAnimationInterface
+        this.initAnimationInterface = initAnimationInterface
+    }
 
     open fun getDestroyedAnimationInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Animation{
+    // nullable = true from not(false or (false and true)) = true
+    : Animation {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.destroyedAnimationInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.destroyedAnimationInterface
+    }
 
     open fun getOwnerLayerInterface()
-        //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+    // nullable = true from not(false or (false and true)) = true
+    : AllBinaryLayer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.sourceLayerInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.sourceLayerInterface
+    }
 
     open fun setOwnerLayerInterface(sourceLayerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var sourceLayerInterface = sourceLayerInterface
-this.sourceLayerInterface= sourceLayerInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var sourceLayerInterface = sourceLayerInterface
+        this.sourceLayerInterface = sourceLayerInterface
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
 
-    var viewPosition: ViewPositionBase = this.getViewPosition()!!
+        var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
-this.animationInterface!!.paintXY(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight())
-}
-
+        this.animationInterface!!.paintXY(
+            graphics,
+            viewPosition!!.getX() - this.getHalfWidth(),
+            viewPosition!!.getY() - this.getHalfHeight(),
+        )
+    }
 
     override fun paintThreed(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
 
-    var viewPosition: ViewPositionBase = this.getViewPosition()!!
+        var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
-this.animationInterface!!.paintThreedXYZ(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight(), viewPosition!!.getZ() -this.getHalfDepth())
-}
-
+        this.animationInterface!!.paintThreedXYZ(
+            graphics,
+            viewPosition!!.getX() - this.getHalfWidth(),
+            viewPosition!!.getY() - this.getHalfHeight(),
+            viewPosition!!.getZ() - this.getHalfDepth(),
+        )
+    }
 
     open fun getMovement()
-        //nullable = true from not(false or (false and true)) = true
-: Movement{
+    // nullable = true from not(false or (false and true)) = true
+    : Movement {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.movement
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.movement
+    }
 
     open fun setMovement(movement: Movement)
-        //nullable = true from not(false or (false and false)) = true
-{
-var movement = movement
-this.movement= movement
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var movement = movement
+        this.movement = movement
+    }
 
     override fun getType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return WeaponLayer.getStaticType()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return WeaponLayer.getStaticType()
+    }
 
     override fun getMultiPlayerType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.multiPlayerType
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.multiPlayerType
+    }
 
     open fun setWeaponPropertiesP(weaponProperties: WeaponProperties)
-        //nullable = true from not(false or (false and false)) = true
-{
-var weaponProperties = weaponProperties
-this.weaponProperties= weaponProperties
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var weaponProperties = weaponProperties
+        this.weaponProperties = weaponProperties
+    }
 
     open fun getWeaponPropertiesP()
-        //nullable = true from not(false or (false and true)) = true
-: WeaponProperties{
+    // nullable = true from not(false or (false and true)) = true
+    : WeaponProperties {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.weaponProperties
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.weaponProperties
+    }
 
     override fun implmentsTickableInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun set(gl: GL)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gl = gl
-this.initAnimationInterface!!.set(gl)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gl = gl
+        this.initAnimationInterface!!.set(gl)
+    }
 }
-
-
-}
-                
-            
-

@@ -1,32 +1,22 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system.os
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system.os
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.System
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import java.lang.System
 import org.allbinary.logic.communication.log.Log
 import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
@@ -39,167 +29,143 @@ import org.allbinary.logic.system.os.solaris.SolarisOperatingSystemFactory
 import org.allbinary.logic.system.os.windows.WindowsOperatingSystemFactory
 import org.allbinary.string.CommonStrings
 
-open public class OperatingSystemFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: OperatingSystemFactory = OperatingSystemFactory()
+open public class OperatingSystemFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OperatingSystemFactory{
+    companion object {
 
+        private val instance: OperatingSystemFactory = OperatingSystemFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OperatingSystemFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OperatingSystemFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OperatingSystemFactory.instance
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
+    private var genericOperatingSystem: GenericOperatingSystem =
+        NoOperatingSystem.NO_OPERATING_SYSTEM
 
     private var hasDetected: Boolean = false
-private constructor ()
-            : super()
-        {
-}
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+    private constructor() : super() {}
 
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     open fun getOperatingSystemInstance()
-        //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem{
+    // nullable = true from not(false or (false and true)) = true
+    : GenericOperatingSystem {
 
         try {
-            
-    var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
 
+            var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
 
-    var systemProperties: SystemProperties = SystemProperties.getInstance()!!
+            var systemProperties: SystemProperties = SystemProperties.getInstance()!!
 
+            var osName: String = systemProperties!!.getName()!!
 
-    var osName: String = systemProperties!!.getName()!!
+            var osArch: String = systemProperties!!.getArch()!!
 
+            var osVersion: String = systemProperties!!.getVersion()!!
 
-    var osArch: String = systemProperties!!.getArch()!!
+            if (!this.hasDetected) {
 
+                this.logUtil!!.putF("osName: " + osName, this, this.commonStrings!!.GET_INSTANCE)
+                this.hasDetected = true
 
-    var osVersion: String = systemProperties!!.getVersion()!!
+                if (osName!!.indexOf(operatingSystems!!.LINUX) >= 0) {
 
+                    if (
+                        LogConfigTypes.LOGGING.contains(
+                            LogConfigTypeFactory.getInstance()!!.FACTORYERROR
+                        )
+                    ) {
+                        this.logUtil!!.putF(
+                            "Found a Linux OS",
+                            this,
+                            this.commonStrings!!.GET_INSTANCE,
+                        )
+                    }
 
-    
-                        if(!this.hasDetected)
-                        
-                                    {
-                                    this.logUtil!!.putF("osName: " +osName, this, this.commonStrings!!.GET_INSTANCE)
-this.hasDetected= true
+                    this.genericOperatingSystem =
+                        LinuxOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                } else if (osName!!.indexOf(operatingSystems!!.WINDOWS) >= 0) {
 
-    
-                        if(osName!!.indexOf(operatingSystems!!.LINUX) >= 0)
-                        
-                                    {
-                                    
-    
-                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
-                        
-                                    {
-                                    this.logUtil!!.putF("Found a Linux OS", this, this.commonStrings!!.GET_INSTANCE)
+                    if (
+                        LogConfigTypes.LOGGING.contains(
+                            LogConfigTypeFactory.getInstance()!!.FACTORYERROR
+                        )
+                    ) {
+                        this.logUtil!!.putF(
+                            "Found a Windows OS",
+                            this,
+                            this.commonStrings!!.GET_INSTANCE,
+                        )
+                    }
 
-                                    }
-                                
-this.genericOperatingSystem= LinuxOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                    this.genericOperatingSystem =
+                        WindowsOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                } else if (osName!!.indexOf(operatingSystems!!.SOLARIS) >= 0) {
 
-                                    }
-                                
-                             else 
-    
-                        if(osName!!.indexOf(operatingSystems!!.WINDOWS) >= 0)
-                        
-                                    {
-                                    
-    
-                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
-                        
-                                    {
-                                    this.logUtil!!.putF("Found a Windows OS", this, this.commonStrings!!.GET_INSTANCE)
+                    if (
+                        LogConfigTypes.LOGGING.contains(
+                            LogConfigTypeFactory.getInstance()!!.FACTORYERROR
+                        )
+                    ) {
+                        this.logUtil!!.putF(
+                            "Found a Solaris OS",
+                            this,
+                            this.commonStrings!!.GET_INSTANCE,
+                        )
+                    }
 
-                                    }
-                                
-this.genericOperatingSystem= WindowsOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                    this.genericOperatingSystem =
+                        SolarisOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                } else {
 
-                                    }
-                                
-                             else 
-    
-                        if(osName!!.indexOf(operatingSystems!!.SOLARIS) >= 0)
-                        
-                                    {
-                                    
-    
-                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
-                        
-                                    {
-                                    this.logUtil!!.putF("Found a Solaris OS", this, this.commonStrings!!.GET_INSTANCE)
+                    throw Exception(
+                        StringMaker().append("OS Not Supported: ")!!.append(osName)!!.toString()
+                    )
+                }
 
-                                    }
-                                
-this.genericOperatingSystem= SolarisOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                var log: Log =
+                    LogFactory.getInstanceF(
+                        StringMaker()
+                            .append("OperatingSystem Info: ")!!
+                            .append(
+                                StringUtil.getInstance()!!.toString(this.genericOperatingSystem)
+                            )!!
+                            .toString(),
+                        this,
+                        this.commonStrings!!.GET_INSTANCE,
+                    )!!
 
-                                    }
-                                
-                        else {
-                            
+                System.out.println(log.toString())
+                this.logUtil!!.putL(log)
+            }
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.genericOperatingSystem
+        } catch (e: Exception) {
 
-                            throw Exception(StringMaker().
-                            append("OS Not Supported: ")!!.append(osName)!!.toString())
+            if (
+                LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR)
+            ) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    this.commonStrings!!.GET_INSTANCE,
+                    e,
+                )
+            }
 
-                        }
-                            
-
-    var log: Log = LogFactory.getInstanceF(StringMaker().
-                            append("OperatingSystem Info: ")!!.append(StringUtil.getInstance()!!.toString(this.genericOperatingSystem))!!.toString(), this, this.commonStrings!!.GET_INSTANCE)!!
-
-System.out.println(log.toString())
-this.logUtil!!.putL(log)
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.genericOperatingSystem
-} catch(e: Exception)
-            {
-
-    
-                        if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
-                        
-                                    {
-                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET_INSTANCE, e)
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NoOperatingSystem.NO_OPERATING_SYSTEM
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NoOperatingSystem.NO_OPERATING_SYSTEM
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

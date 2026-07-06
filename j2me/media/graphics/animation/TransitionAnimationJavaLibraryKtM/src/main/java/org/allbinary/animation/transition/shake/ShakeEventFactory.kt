@@ -1,57 +1,40 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.transition.shake
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.transition.shake
 
+import java.lang.Object
 
+open public class ShakeEventFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: ShakeEventFactory = ShakeEventFactory()
 
-open public class ShakeEventFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ShakeEventFactory = ShakeEventFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ShakeEventFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ShakeEventFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ShakeEventFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ShakeEventFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     var MICRO: ShakeEvent = ShakeEvent()
 
     var SMALL: ShakeEvent = ShakeEvent()
@@ -61,12 +44,6 @@ companion object {
     var LARGE: ShakeEvent = ShakeEvent()
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {}
 }
-
-
-}
-                
-            
-

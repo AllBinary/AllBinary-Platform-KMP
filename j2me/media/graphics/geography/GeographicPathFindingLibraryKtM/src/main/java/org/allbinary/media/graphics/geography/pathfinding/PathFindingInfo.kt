@@ -1,132 +1,108 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.pathfinding
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.pathfinding
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
-open public class PathFindingInfo
-            : Object
-        
-                , PathFindingInfoInterface {
-        
-companion object {
-            
-    val NULL_PATH_FINDING_INFO: PathFindingInfo = PathFindingInfo(PathFindingNodeCostInfoFactoryBase.NULL_PATH_FINDING_NODE_COST_INFO_FACTORY_BASE, BasicArrayListUtil.getInstance()!!.getImmutableInstance(), BasicArrayListUtil.getInstance()!!.getImmutableInstance())
+open public class PathFindingInfo : Object, PathFindingInfoInterface {
 
-        }
-            
-    private var pathFinder: GeographicPathFinderBase = GeographicPathFinderBase.NULL_GEOGRAPHIC_PATH_FINDER_BASE
+    companion object {
+
+        val NULL_PATH_FINDING_INFO: PathFindingInfo =
+            PathFindingInfo(
+                PathFindingNodeCostInfoFactoryBase.NULL_PATH_FINDING_NODE_COST_INFO_FACTORY_BASE,
+                BasicArrayListUtil.getInstance()!!.getImmutableInstance(),
+                BasicArrayListUtil.getInstance()!!.getImmutableInstance(),
+            )
+    }
+
+    private var pathFinder: GeographicPathFinderBase =
+        GeographicPathFinderBase.NULL_GEOGRAPHIC_PATH_FINDER_BASE
 
     private val startPathFindingNodeList: BasicArrayList
 
     private val endPathFindingNodeList: BasicArrayList
 
     private val pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase
-public constructor (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
-            : super()
-        {
-    //var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
-    //var startPathFindingNodeList = startPathFindingNodeList
-    //var endPathFindingNodeList = endPathFindingNodeList
-this.pathFindingNodeCostInfoFactoryInterface= pathFindingNodeCostInfoFactoryInterface
-this.startPathFindingNodeList= startPathFindingNodeList
-this.endPathFindingNodeList= endPathFindingNodeList
-}
 
+    public constructor(
+        pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase,
+        startPathFindingNodeList: BasicArrayList,
+        endPathFindingNodeList: BasicArrayList,
+    ) : super() {
+        // var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
+        // var startPathFindingNodeList = startPathFindingNodeList
+        // var endPathFindingNodeList = endPathFindingNodeList
+        this.pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
+        this.startPathFindingNodeList = startPathFindingNodeList
+        this.endPathFindingNodeList = endPathFindingNodeList
+    }
 
     override fun getStartPathFindingNodeList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.startPathFindingNodeList
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.startPathFindingNodeList
+    }
 
     override fun getEndPathFindingNodeList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.endPathFindingNodeList
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.endPathFindingNodeList
+    }
 
     override fun getPathFinder()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicPathFinderBase{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicPathFinderBase {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.pathFinder
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.pathFinder
+    }
 
     open fun addStartPathFindingNode(startPathFindingNode: PathFindingNode)
-        //nullable = true from not(false or (false and false)) = true
-{
-var startPathFindingNode = startPathFindingNode
-this.startPathFindingNodeList!!.add(startPathFindingNode)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var startPathFindingNode = startPathFindingNode
+        this.startPathFindingNodeList!!.add(startPathFindingNode)
+    }
 
     open fun addEndPathFindingNode(endPathFindingNode: PathFindingNode)
-        //nullable = true from not(false or (false and false)) = true
-{
-var endPathFindingNode = endPathFindingNode
-this.endPathFindingNodeList!!.add(endPathFindingNode)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var endPathFindingNode = endPathFindingNode
+        this.endPathFindingNodeList!!.add(endPathFindingNode)
+    }
 
     open fun setPathFinder(pathFinder: GeographicPathFinderBase)
-        //nullable = true from not(false or (false and false)) = true
-{
-var pathFinder = pathFinder
-this.pathFinder= pathFinder
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var pathFinder = pathFinder
+        this.pathFinder = pathFinder
+    }
 
     open fun getPathFindingNodeCostInfoFactoryInterface()
-        //nullable = true from not(false or (false and true)) = true
-: PathFindingNodeCostInfoFactoryBase{
+    // nullable = true from not(false or (false and true)) = true
+    : PathFindingNodeCostInfoFactoryBase {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.pathFindingNodeCostInfoFactoryInterface
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.pathFindingNodeCostInfoFactoryInterface
+    }
 }
-
-
-}
-                
-            
-

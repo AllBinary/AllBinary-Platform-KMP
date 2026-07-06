@@ -1,37 +1,29 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.configuration.persistance
+/* Generated Code Do Not Modify */
+package org.allbinary.game.configuration.persistance
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.DataInputStream
 import java.io.DataOutputStream
+import java.lang.Object
 import java.util.Hashtable
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
+import kotlin.Array
 import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
@@ -42,237 +34,191 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.util.HashtableUtil
 
 open public class KeyValuePersistance : BasicPersitance {
-        
 
     private val tsUtil: TsUtil = TsUtil.getInstance()!!
-protected constructor (recordId: String)                        
 
-                            : super(recordId){
-    //var recordId = recordId
+    protected constructor(recordId: String) : super(recordId) {
 
+        // var recordId = recordId
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
+        // For kotlin this is before the body of the constructor.
 
+    }
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun loadAll(abeClientInformation: AbeClientInformationInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var abeClientInformation = abeClientInformation
-this.loadAllSize(abeClientInformation, 1)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var abeClientInformation = abeClientInformation
+        this.loadAllSize(abeClientInformation, 1)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun loadAllSize(abeClientInformation: AbeClientInformationInterface, size: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var abeClientInformation = abeClientInformation
-var size = size
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var abeClientInformation = abeClientInformation
+        var size = size
 
-    var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
-
-
-        try {
-            recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
-
-    var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
-
-
-    var hashtable: Hashtable<String, String>
-
-
-    var name: String
-
-
-    var value: String
-
-
-    var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-
-
-    var stringBuffer: StringMaker = StringMaker()
-
-
-    var recordAsBytes: ByteArray
-
-
-    var byteArrayInputStream: ByteArrayInputStream
-
-
-    var inputStream: DataInputStream
-
-
-        while(recordEnum!!.hasNextElement())
-        {
-
-    var id: Int = recordEnum!!.nextRecordId()!!
-
-stringBuffer!!.delete(0, stringBuffer!!.length())
-this.logUtil!!.putF(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.appendint(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
-recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
-
-    
-                        if(recordAsBytes != 
-                                    null
-                                )
-                        
-                                    {
-                                    byteArrayInputStream= ByteArrayInputStream(recordAsBytes)
-inputStream= DataInputStream(byteArrayInputStream)
-hashtable= Hashtable<String, String>()
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-name= inputStream!!.readUTF()
-inputStream!!.readUTF()
-value= inputStream!!.readUTF()
-hashtable.put(name, value)
-}
-
-this.valueList!!.add(hashtable)
-this.idList!!.add(smallIntegerSingletonFactory!!.getAt(id))
-
-                                    }
-                                
-}
-
-} catch(e: Exception)
-            {
-
-
-
-                            throw e
-}
-
-         finally {
-            
-    
-                        if(recordStore != 
-                                    null
-                                )
-                        
-                                    {
-                                    PreLogUtil.put(this.persistanceStrings!!.CLOSING_RECORDSTORE, this, this.persistanceStrings!!.LOAD_ALL)
-recordStore!!.closeRecordStore()
-
-                                    }
-                                
-
-         }
-        
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var abeClientInformation = abeClientInformation
-    //var hashtable = hashtable
-
-    var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
-
+        var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
         try {
-            this.logUtil!!.putF(StringMaker().
-                            append(this.persistanceStrings!!.SAVING)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, this.commonStrings!!.SAVE)
-recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 
-    var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
+            var recordEnum: RecordEnumeration =
+                recordStore!!.enumerateRecords(
+                    NullRecordFilter.NULL_RECORD_FILTER,
+                    NullRecordComparator.NULL_RECORD_COMPARATOR,
+                    true,
+                )!!
 
+            var hashtable: Hashtable<String, String>
 
-    var outputStream: DataOutputStream = DataOutputStream(byteArrayOutputStream)
+            var name: String
 
+            var value: String
 
-    var value: String
+            var smallIntegerSingletonFactory: SmallIntegerSingletonFactory =
+                SmallIntegerSingletonFactory.getInstance()!!
 
+            var stringBuffer: StringMaker = StringMaker()
 
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+            var recordAsBytes: ByteArray
 
+            var byteArrayInputStream: ByteArrayInputStream
 
-    var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
+            var inputStream: DataInputStream
 
+            while (recordEnum!!.hasNextElement()) {
 
-    var anyType: Any
+                var id: Int = recordEnum!!.nextRecordId()!!
 
+                stringBuffer!!.delete(0, stringBuffer!!.length())
+                this.logUtil!!.putF(
+                    stringBuffer!!
+                        .append(this.persistanceStrings!!.LOADING_ID)!!
+                        .appendint(id)!!
+                        .toString(),
+                    this,
+                    this.persistanceStrings!!.LOAD_ALL,
+                )
+                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
 
-    var size: Int = objectArray!!.size
-                
+                if (recordAsBytes != null) {
 
+                    byteArrayInputStream = ByteArrayInputStream(recordAsBytes)
+                    inputStream = DataInputStream(byteArrayInputStream)
+                    hashtable = Hashtable<String, String>()
 
+                    for (index in 0 until size) {
 
+                        name = inputStream!!.readUTF()
+                        inputStream!!.readUTF()
+                        value = inputStream!!.readUTF()
+                        hashtable.put(name, value)
+                    }
 
+                    this.valueList!!.add(hashtable)
+                    this.idList!!.add(smallIntegerSingletonFactory!!.getAt(id))
+                }
+            }
+        } catch (e: Exception) {
 
-                        for (index in 0 until size)
+            throw e
+        } finally {
 
-        {
-outputStream!!.writeUTF(objectArray[index]!! as String)
-outputStream!!.writeUTF(commonSeps!!.EQUALS)
-anyType= objectArray[index]!! as Object
-value= hashtable.get(anyType as Object) as String
-outputStream!!.writeUTF(value)
+            if (recordStore != null) {
+
+                PreLogUtil.put(
+                    this.persistanceStrings!!.CLOSING_RECORDSTORE,
+                    this,
+                    this.persistanceStrings!!.LOAD_ALL,
+                )
+                recordStore!!.closeRecordStore()
+            }
+        }
+    }
+
+    @Throws(Exception::class)
+    open fun save(
+        abeClientInformation: AbeClientInformationInterface,
+        hashtable: Hashtable<Any, Any>,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var abeClientInformation = abeClientInformation
+        // var hashtable = hashtable
+
+        var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
+
+        try {
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append(this.persistanceStrings!!.SAVING)!!
+                    .append(StringUtil.getInstance()!!.toString(hashtable))!!
+                    .toString(),
+                this,
+                this.commonStrings!!.SAVE,
+            )
+            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+
+            var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
+
+            var outputStream: DataOutputStream = DataOutputStream(byteArrayOutputStream)
+
+            var value: String
+
+            var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+            var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
+
+            var anyType: Any
+
+            var size: Int = objectArray!!.size
+
+            for (index in 0 until size) {
+
+                outputStream!!.writeUTF(objectArray[index]!! as String)
+                outputStream!!.writeUTF(commonSeps!!.EQUALS)
+                anyType = objectArray[index]!! as Object
+                value = hashtable.get(anyType as Object) as String
+                outputStream!!.writeUTF(value)
+            }
+
+            var tsUtil: TsUtil = TsUtil.getInstance()!!
+
+            var savedGameBytes: ByteArray =
+                tsUtil!!.getByteArray(byteArrayOutputStream!!.toString())!!
+
+            recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
+        } catch (e: Exception) {
+
+            throw e
+        } finally {
+
+            if (recordStore != null) {
+
+                PreLogUtil.put(
+                    this.persistanceStrings!!.CLOSING_RECORDSTORE,
+                    this,
+                    this.commonStrings!!.SAVE,
+                )
+                recordStore!!.closeRecordStore()
+            }
+        }
+    }
+
+    open fun get(
+        index: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Hashtable<Any, Any> {
+        var index = index
+
+        var hashtable: Hashtable<Any, Any> =
+            this.valueList!!.objectArray[index]!! as Hashtable<Any, Any>
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return hashtable
+    }
 }
-
-
-    var tsUtil: TsUtil = TsUtil.getInstance()!!
-
-
-    var savedGameBytes: ByteArray = tsUtil!!.getByteArray(byteArrayOutputStream!!.toString())!!
-
-recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
-} catch(e: Exception)
-            {
-
-
-
-                            throw e
-}
-
-         finally {
-            
-    
-                        if(recordStore != 
-                                    null
-                                )
-                        
-                                    {
-                                    PreLogUtil.put(this.persistanceStrings!!.CLOSING_RECORDSTORE, this, this.commonStrings!!.SAVE)
-recordStore!!.closeRecordStore()
-
-                                    }
-                                
-
-         }
-        
-}
-
-
-    open fun get(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
-var index = index
-
-    var hashtable: Hashtable<Any, Any> = this.valueList!!.objectArray[index]!! as Hashtable<Any, Any>
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable
-}
-
-
-}
-                
-            
-

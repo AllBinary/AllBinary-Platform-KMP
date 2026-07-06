@@ -1,152 +1,105 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.util
+/* Generated Code Do Not Modify */
+package org.allbinary.util
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Enumeration
 import java.util.Hashtable
+import kotlin.Array
 
-open public class HashtableUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: HashtableUtil = HashtableUtil()
+open public class HashtableUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: HashtableUtil{
+    companion object {
 
+        private val instance: HashtableUtil = HashtableUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : HashtableUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return HashtableUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return HashtableUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, Any>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var fromHashtable = fromHashtable
-    //var hashtable = hashtable
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var fromHashtable = fromHashtable
+        // var hashtable = hashtable
 
-    var enumeration: Enumeration<Any?> = fromHashtable!!.keys()!!
+        var enumeration: Enumeration<Any?> = fromHashtable!!.keys()!!
 
+        var keyCanBeNull: Any?
 
-    var keyCanBeNull: Any?
+        var valueCanBeNull: Any?
 
+        while (this.enumerationUtil!!.hasMoreElements(enumeration)) {
+            keyCanBeNull = this.enumerationUtil!!.nextElement(enumeration)!!
+            valueCanBeNull = hashtable.get(keyCanBeNull as Object)
 
-    var valueCanBeNull: Any?
+            if (valueCanBeNull == null) {} else {
 
+                hashtable.put(keyCanBeNull, valueCanBeNull)
+            }
+        }
+    }
 
-        while(this.enumerationUtil!!.hasMoreElements(enumeration))
-        {
-keyCanBeNull= this.enumerationUtil!!.nextElement(enumeration)!!
-valueCanBeNull= hashtable.get(keyCanBeNull as Object)
+    open fun getKeysAsArray(
+        hashtable: Hashtable<Any, Any>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Array<Any?> {
+        // var hashtable = hashtable
 
-    
-                        if(valueCanBeNull == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-                                    }
-                                
-                        else {
-                            hashtable.put(keyCanBeNull, valueCanBeNull)
+        var objectArray: Array<Any?> = arrayOfNulls(hashtable.size)
 
-                        }
-                            
+        var index: Int = 0
+
+        var enumeration: Enumeration<Any?> = hashtable.keys()!!
+
+        while (this.enumerationUtil!!.hasMoreElements(enumeration)) {
+            objectArray[index++] = this.enumerationUtil!!.nextElement(enumeration)!!
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return objectArray
+    }
+
+    open fun getKeysAsList(
+        hashtable: Hashtable<Any, Any>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var hashtable = hashtable
+
+        var list: BasicArrayList = BasicArrayListS(hashtable.size)
+
+        var enumeration: Enumeration<Any?> = hashtable.keys()!!
+
+        while (this.enumerationUtil!!.hasMoreElements(enumeration)) {
+            list.add(this.enumerationUtil!!.nextElement(enumeration)!!)
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return list
+    }
 }
-
-}
-
-
-    open fun getKeysAsArray(hashtable: Hashtable<Any, Any>)
-        //nullable = true from not(false or (false and false)) = true
-: Array<Any?>{
-    //var hashtable = hashtable
-
-    var objectArray: Array<Any?> = arrayOfNulls(hashtable.size)
-
-
-    var index: Int = 0
-
-
-    var enumeration: Enumeration<Any?> = hashtable.keys()!!
-
-
-        while(this.enumerationUtil!!.hasMoreElements(enumeration))
-        {
-objectArray[index++]= this.enumerationUtil!!.nextElement(enumeration)!!
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return objectArray
-}
-
-
-    open fun getKeysAsList(hashtable: Hashtable<Any, Any>)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var hashtable = hashtable
-
-    var list: BasicArrayList = BasicArrayListS(hashtable.size)
-
-
-    var enumeration: Enumeration<Any?> = hashtable.keys()!!
-
-
-        while(this.enumerationUtil!!.hasMoreElements(enumeration))
-        {
-list.add(this.enumerationUtil!!.nextElement(enumeration)!!)
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
-}
-
-
-}
-                
-            
-

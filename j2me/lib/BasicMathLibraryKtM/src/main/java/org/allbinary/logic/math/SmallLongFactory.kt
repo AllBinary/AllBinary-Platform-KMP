@@ -1,59 +1,45 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.math
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.math
 
+import java.lang.Object
+import kotlin.Array
 
+open public class SmallLongFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: SmallLongFactory = SmallLongFactory()
 
-open public class SmallLongFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: SmallLongFactory = SmallLongFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : SmallLongFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: SmallLongFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return SmallLongFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return SmallLongFactory.instance
         }
-            
+    }
+
     val NEGATIVE_MAX: Int = 500
 
     val POSITIVE_MAX: Int = 0x2D1
 
-    private val INTEGER_ARRAY: Array<Long?> = arrayOfNulls(this.NEGATIVE_MAX +this.POSITIVE_MAX)
+    private val INTEGER_ARRAY: Array<Long?> = arrayOfNulls(this.NEGATIVE_MAX + this.POSITIVE_MAX)
 
-    private val STRING_ARRAY: Array<String?> = arrayOfNulls(this.NEGATIVE_MAX +this.POSITIVE_MAX)
+    private val STRING_ARRAY: Array<String?> = arrayOfNulls(this.NEGATIVE_MAX + this.POSITIVE_MAX)
 
     var MIN: Int = 0
 
@@ -62,155 +48,91 @@ companion object {
     var lastNegativeMin: Int = 0
 
     open fun initWithRange(value: Int, negativeValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-var negativeValue = negativeValue
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        var negativeValue = negativeValue
 
+        for (index in value - 1 downTo this.lastMin) {
 
+            this.INTEGER_ARRAY[index + this.NEGATIVE_MAX] = index as Long
+        }
 
+        for (index in negativeValue - 1 downTo this.lastNegativeMin) {
 
-                        for (index in value -1 downTo this.lastMin)
+            this.INTEGER_ARRAY[index] = -index as Long
+        }
 
-        {
-this.INTEGER_ARRAY[index +this.NEGATIVE_MAX]= index as Long
-}
+        if (this.lastMin < value) {
 
+            this.lastMin = value
+            this.MIN = value
+        }
 
+        if (this.lastNegativeMin < negativeValue) {
 
-
-
-                        for (index in negativeValue -1 downTo this.lastNegativeMin)
-
-        {
-this.INTEGER_ARRAY[index]=  -index as Long
-}
-
-
-    
-                        if(this.lastMin < value)
-                        
-                                    {
-                                    this.lastMin= value
-this.MIN= value
-
-                                    }
-                                
-
-    
-                        if(this.lastNegativeMin < negativeValue)
-                        
-                                    {
-                                    this.lastNegativeMin= negativeValue
-
-                                    }
-                                
-}
-
+            this.lastNegativeMin = negativeValue
+        }
+    }
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.INTEGER_ARRAY[0] == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-    
-                        if(this.lastMin < this.POSITIVE_MAX || this.lastNegativeMin < this.NEGATIVE_MAX)
-                        
-                                    {
-                                    
+        if (this.INTEGER_ARRAY[0] == null) {
 
+            if (this.lastMin < this.POSITIVE_MAX || this.lastNegativeMin < this.NEGATIVE_MAX) {
 
+                for (index in this.POSITIVE_MAX - 1 downTo this.lastMin) {
 
-                        for (index in this.POSITIVE_MAX -1 downTo this.lastMin)
+                    this.INTEGER_ARRAY[index + this.NEGATIVE_MAX] = index as Long
+                }
 
-        {
-this.INTEGER_ARRAY[index +this.NEGATIVE_MAX]= index as Long
+                for (index in this.NEGATIVE_MAX - 1 downTo this.lastNegativeMin) {
+
+                    this.INTEGER_ARRAY[index] = -index as Long
+                }
+
+                this.lastMin = this.POSITIVE_MAX
+                this.lastNegativeMin = this.NEGATIVE_MAX
+            }
+        }
+    }
+
+    private constructor() : super() {}
+
+    open fun getInstanceNoThrow(
+        index: Long
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Long {
+        var index = index
+
+        if (index + this.NEGATIVE_MAX > this.INTEGER_ARRAY.size - 1) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.INTEGER_ARRAY[-1 + this.NEGATIVE_MAX]!!
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.INTEGER_ARRAY[(index.toInt()) + this.NEGATIVE_MAX]!!
+    }
+
+    open fun getString(
+        index: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        var index = index
+
+        var i: Int = index + this.NEGATIVE_MAX
+
+        if (this.STRING_ARRAY[i] == null) {
+
+            this.STRING_ARRAY[i] = this.INTEGER_ARRAY[i]!!.toString()
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.STRING_ARRAY[i]!!
+    }
 }
-
-
-
-
-
-                        for (index in this.NEGATIVE_MAX -1 downTo this.lastNegativeMin)
-
-        {
-this.INTEGER_ARRAY[index]=  -index as Long
-}
-
-this.lastMin= this.POSITIVE_MAX
-this.lastNegativeMin= this.NEGATIVE_MAX
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
-private constructor ()
-            : super()
-        {
-}
-
-
-    open fun getInstanceNoThrow(index: Long)
-        //nullable = true from not(false or (false and false)) = true
-: Long{
-var index = index
-
-    
-                        if(index +this.NEGATIVE_MAX > this.INTEGER_ARRAY.size -1)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.INTEGER_ARRAY[ -1 +this.NEGATIVE_MAX]!!
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.INTEGER_ARRAY[(index.toInt()) +this.NEGATIVE_MAX]!!
-}
-
-
-    open fun getString(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-var index = index
-
-    var i: Int = index +this.NEGATIVE_MAX
-
-
-    
-                        if(this.STRING_ARRAY[i] == 
-                                    null
-                                )
-                        
-                                    {
-                                    this.STRING_ARRAY[i]= this.INTEGER_ARRAY[i]!!.toString()
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.STRING_ARRAY[i]!!
-}
-
-
-}
-                
-            
-

@@ -1,37 +1,28 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.data.resource
+/* Generated Code Do Not Modify */
+package org.allbinary.data.resource
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import java.io.InputStream
-import java.util.Hashtable
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
+import java.io.InputStream
+import java.lang.Integer
+import java.lang.Object
+import java.util.Hashtable
+import kotlin.Array
 import org.allbinary.debug.DebugFactory
 import org.allbinary.debug.NoDebug
 import org.allbinary.logic.NullUtil
@@ -42,27 +33,21 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.HashtableUtil
 
-open public class ResourceUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ResourceUtil = ResourceUtil()
+open public class ResourceUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ResourceUtil{
+    companion object {
 
+        private val instance: ResourceUtil = ResourceUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ResourceUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ResourceUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ResourceUtil.instance
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var context: Any = NullUtil.getInstance()!!.NULL_OBJECT
@@ -70,202 +55,161 @@ companion object {
     private var resources: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     private var hashMap: Hashtable<Any, Any> = Hashtable<Any, Any>()
-private constructor ()
-            : super()
-        {
-}
 
+    private constructor() : super() {}
 
     open fun getContext()
-        //nullable = true from not(false or (false and true)) = true
-: Context{
+    // nullable = true from not(false or (false and true)) = true
+    : Context {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.context as Context
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.context as Context
+    }
 
     open fun setContextFromActivity(activity: Activity)
-        //nullable = true from not(false or (false and false)) = true
-{
-var activity = activity
-this.context= activity
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var activity = activity
+        this.context = activity
+    }
 
     open fun setContext(aContext: Context)
-        //nullable = true from not(false or (false and false)) = true
-{
-var aContext = aContext
-this.context= aContext
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var aContext = aContext
+        this.context = aContext
+    }
 
+    open fun getResourceId(
+        resource: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Integer {
+        var resource = resource
 
-    open fun getResourceId(resource: String)
-        //nullable = true from not(false or (false and false)) = true
-: Integer{
-var resource = resource
+        var value: Integer = this.hashMap!!.get(resource as Object) as Integer
 
-    var value: Integer = this.hashMap!!.get(resource as Object) as Integer
+        if (DebugFactory.getInstance() != NoDebug.getInstance()) {
 
+            PreLogUtil.put(
+                StringMaker()
+                    .append(resource)!!
+                    .append(CommonSeps.getInstance()!!.COLON)!!
+                    .append(value.toString())!!
+                    .toString(),
+                this,
+                "getResourceId",
+            )
+        }
 
-    
-                        if(DebugFactory.getInstance() != NoDebug.getInstance())
-                        
-                                    {
-                                    PreLogUtil.put(StringMaker().
-                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value.toString())!!.toString(), this, "getResourceId")
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return value
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return value
+    }
 
     open fun addResource(resource: String, value: Integer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var resource = resource
-var value = value
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var resource = resource
+        var value = value
 
-    
-                        if(DebugFactory.getInstance() != NoDebug.getInstance())
-                        
-                                    {
-                                    PreLogUtil.put(StringMaker().
-                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value.toString())!!.toString(), this, "addResource")
+        if (DebugFactory.getInstance() != NoDebug.getInstance()) {
 
-    
-                        if(this.containsDuplicate(resource, value))
-                        
-                                    {
-                                    ForcedLogUtil.log(StringMaker().
-                            append("Found Duplicate Resource: ")!!.append(resource)!!.toString(), this)
+            PreLogUtil.put(
+                StringMaker()
+                    .append(resource)!!
+                    .append(CommonSeps.getInstance()!!.COLON)!!
+                    .append(value.toString())!!
+                    .toString(),
+                this,
+                "addResource",
+            )
 
-                                    }
-                                
+            if (this.containsDuplicate(resource, value)) {
 
-                                    }
-                                
-this.hashMap!!.put(resource, value)
-}
+                ForcedLogUtil.log(
+                    StringMaker()
+                        .append("Found Duplicate Resource: ")!!
+                        .append(resource)!!
+                        .toString(),
+                    this,
+                )
+            }
+        }
 
+        this.hashMap!!.put(resource, value)
+    }
 
-    open fun containsDuplicate(resource: String, value: Integer)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var resource = resource
-var value = value
+    open fun containsDuplicate(
+        resource: String,
+        value: Integer,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var resource = resource
+        var value = value
 
-    var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(this.hashMap)!!
+        var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(this.hashMap)!!
 
+        for (index in objectArray!!.size - 1 downTo 0) {
 
+            var integer: Integer = this.hashMap!!.get(objectArray[index]!! as Object) as Integer
 
+            if (resource != objectArray[index]) {
 
+                if (value != integer) {
 
-                        for (index in objectArray!!.size  - 1  downTo 0)
+                    if (value.toInt() == integer.toInt()) {
 
-        {
-
-    var integer: Integer = this.hashMap!!.get(objectArray[index]!! as Object) as Integer
-
-
-    
-                        if(resource != objectArray[index])
-                        
-                                    {
-                                    
-    
-                        if(value != integer)
-                        
-                                    {
-                                    
-    
-                        if(value.toInt() == integer.toInt())
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
+                        // if statement needs to be on the same line and ternary does not work the
+                        // same way.
                         return true
+                    }
+                }
+            }
+        }
 
-                                    }
-                                
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     open fun setResources(resources: Resources)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var resources = resources
-this.logUtil!!.putF(StringMaker().
-                            append("Resource Loader: ")!!.append(resources::class.toString()!!)!!.toString(), this, "setResources")
-this.resources= resources
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var resources = resources
+        this.logUtil!!.putF(
+            StringMaker()
+                .append("Resource Loader: ")!!
+                .append(resources::class.toString()!!)!!
+                .toString(),
+            this,
+            "setResources",
+        )
+        this.resources = resources
+    }
+
+    @Throws(Exception::class)
+    open fun getResourceAsStream(
+        resource: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : InputStream {
+        // var resource = resource
+
+        var integer: Integer = this.hashMap!!.get(resource as Object) as Integer
+
+        var id: Int = integer.toInt()!!
+
+        var resources: Resources = (this.resources as Resources)
+
+        var inputStream: InputStream = resources.openRawResource(id)!!
+
+        if (inputStream != null) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return inputStream
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return inputStream
+    }
 }
-
-
-                @Throws(Exception::class)
-            
-    open fun getResourceAsStream(resource: String)
-        //nullable = true from not(false or (false and false)) = true
-: InputStream{
-    //var resource = resource
-
-    var integer: Integer = this.hashMap!!.get(resource as Object) as Integer
-
-
-    var id: Int = integer.toInt()!!
-
-
-    var resources: Resources = (this.resources as Resources)
-
-
-    var inputStream: InputStream = resources.openRawResource(id)!!
-
-
-    
-                        if(inputStream != 
-                                    null
-                                )
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputStream
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return inputStream
-}
-
-
-}
-                
-            
-

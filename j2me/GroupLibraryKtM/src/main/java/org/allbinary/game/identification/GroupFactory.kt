@@ -1,62 +1,46 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.identification
+/* Generated Code Do Not Modify */
+package org.allbinary.game.identification
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class GroupFactory
-            : Object
-         {
-        
-companion object {
-            
-    private var instance: GroupFactory = GroupFactory()
+open public class GroupFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: GroupFactory{
+    companion object {
 
+        private var instance: GroupFactory = GroupFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : GroupFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GroupFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GroupFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val NULL_GROUP_ARRAY: Array<Group?> = arrayOfNulls(0)
@@ -66,84 +50,63 @@ companion object {
     private var index: Int = 0
 
     open fun getNextGroup()
-        //nullable = true from not(false or (false and true)) = true
-: Group{
+    // nullable = true from not(false or (false and true)) = true
+    : Group {
 
-    var group: Group = this.list.objectArray[this.index]!! as Group
+        var group: Group = this.list.objectArray[this.index]!! as Group
 
-this.index++
+        this.index++
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return group
+    }
 
+    open fun getNextGroupByName(
+        name: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Group {
+        // var name = name
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return group
-}
+        var group: Group = this.getNextGroup()!!
 
+        group.setName(name)
 
-    open fun getNextGroupByName(name: String)
-        //nullable = true from not(false or (false and false)) = true
-: Group{
-    //var name = name
-
-    var group: Group = this.getNextGroup()!!
-
-group.setName(name)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return group
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return group
+    }
 
     open fun init(groups: Short, nameArray: Array<String?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-var groups = groups
-var nameArray = nameArray
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var groups = groups
+        var nameArray = nameArray
 
-    var stringMaker: StringMaker = StringMaker()
+        var stringMaker: StringMaker = StringMaker()
 
+        var stringUtil: StringUtil = StringUtil.getInstance()!!
 
-    var stringUtil: StringUtil = StringUtil.getInstance()!!
+        var TEAM: String = "Team "
 
+        this.list.clear()
+        this.index = 0
 
-    var TEAM: String = "Team "
+        var size: Int = this.list.size()!!
 
-this.list.clear()
-this.index= 0
+        while (size < groups) {
 
-    var size: Int = this.list.size()!!
+            var name: String = stringUtil!!.EMPTY_STRING
 
+            if (size < nameArray!!.size) {
 
-        while(size < groups)
-        {
+                name = nameArray[size]!!
+            } else {
+                stringMaker!!.delete(0, stringMaker!!.length())
+                name = stringMaker!!.append(TEAM)!!.appendint(size)!!.toString()
+            }
 
-    var name: String = stringUtil!!.EMPTY_STRING
-
-
-    
-                        if(size < nameArray!!.size)
-                        
-                                    {
-                                    name= nameArray[size]!!
-
-                                    }
-                                
-                        else {
-                            stringMaker!!.delete(0, stringMaker!!.length())
-name= stringMaker!!.append(TEAM)!!.appendint(size)!!.toString()
-
-                        }
-                            
-this.list.add(Group(name, (size +3).toShort()))
-size++
+            this.list.add(Group(name, (size + 3).toShort()))
+            size++
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

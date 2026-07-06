@@ -1,122 +1,97 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot 
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.image
+/* Generated Code Do Not Modify */
+package org.allbinary.media.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Matrix
 import android.graphics.Paint
+import java.lang.Object
 import javax.microedition.lcdui.Image
 import org.microemu.android.device.AndroidImageInterface
 
-open public class AndroidImageUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: AndroidImageUtil = AndroidImageUtil()
+open public class AndroidImageUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: AndroidImageUtil{
+    companion object {
 
+        private val instance: AndroidImageUtil = AndroidImageUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : AndroidImageUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AndroidImageUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AndroidImageUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     open fun paintBitmap(bitmap: Bitmap, originalBitmap: Bitmap, paint: Paint)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var bitmap = bitmap
-    //var originalBitmap = originalBitmap
-    //var paint = paint
-bitmap.eraseColor(Color.TRANSPARENT)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var bitmap = bitmap
+        // var originalBitmap = originalBitmap
+        // var paint = paint
+        bitmap.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = android.graphics.Canvas()
+        var canvas: Canvas = android.graphics.Canvas()
 
-canvas.setBitmap(bitmap)
-canvas.drawBitmap(originalBitmap, 0.0f, 0.0f, paint)
-}
-
+        canvas.setBitmap(bitmap)
+        canvas.drawBitmap(originalBitmap, 0.0f, 0.0f, paint)
+    }
 
     open fun paint(image: Image, originalImage: Image, paint: Paint)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var image = image
-    //var originalImage = originalImage
-    //var paint = paint
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var image = image
+        // var originalImage = originalImage
+        // var paint = paint
 
-    var androidImage: AndroidImageInterface = image as AndroidImageInterface
+        var androidImage: AndroidImageInterface = image as AndroidImageInterface
 
-androidImage!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
+        androidImage!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = androidImage!!.getCanvas()!!
+        var canvas: Canvas = androidImage!!.getCanvas()!!
 
+        var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
 
-    var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
-
-canvas.drawBitmap(originalAndroidImage!!.getBitmap(), 0.0f, 0.0f, paint)
-}
-
+        canvas.drawBitmap(originalAndroidImage!!.getBitmap(), 0.0f, 0.0f, paint)
+    }
 
     open fun rotate(image: Image, originalImage: Image, matrix: Matrix, paint: Paint)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var image = image
-    //var originalImage = originalImage
-    //var matrix = matrix
-    //var paint = paint
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var image = image
+        // var originalImage = originalImage
+        // var matrix = matrix
+        // var paint = paint
 
-    var androidImage: AndroidImageInterface = image as AndroidImageInterface
+        var androidImage: AndroidImageInterface = image as AndroidImageInterface
 
-androidImage!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
+        androidImage!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = androidImage!!.getCanvas()!!
+        var canvas: Canvas = androidImage!!.getCanvas()!!
 
-canvas.concat(matrix)
+        canvas.concat(matrix)
 
-    var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
+        var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
 
-canvas.drawBitmap(originalAndroidImage!!.getBitmap(), 0.0f, 0.0f, paint)
+        canvas.drawBitmap(originalAndroidImage!!.getBitmap(), 0.0f, 0.0f, paint)
+    }
 }
-
-
-}
-                
-            
-

@@ -1,108 +1,79 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 
-open public class Input
-            : Object
-         {
-        
+open public class Input : Object {
 
-    private var id: Int= 0
+    private var id: Int = 0
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor (id: Int, name: String)
-            : super()
-        {
-var id = id
-var name = name
-this.setId(id)
-this.setName(name)
-}
 
+    public constructor(id: Int, name: String) : super() {
+        var id = id
+        var name = name
+        this.setId(id)
+        this.setName(name)
+    }
 
     open fun getId()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.id
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.id
+    }
 
     open fun setId(key: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var key = key
-this.id= key
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var key = key
+        this.id = key
+    }
 
     open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.name
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.name
+    }
 
     open fun setName(keyName: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyName = keyName
-this.name= keyName
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyName = keyName
+        this.name = keyName
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("Name: ")
-stringBuffer!!.append(this.getName())
-stringBuffer!!.append(" Id: ")
-stringBuffer!!.appendint(this.getId())
+        stringBuffer!!.append("Name: ")
+        stringBuffer!!.append(this.getName())
+        stringBuffer!!.append(" Id: ")
+        stringBuffer!!.appendint(this.getId())
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

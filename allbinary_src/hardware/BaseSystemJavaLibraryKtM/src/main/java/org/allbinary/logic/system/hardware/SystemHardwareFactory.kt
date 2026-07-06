@@ -1,132 +1,97 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system.hardware
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system.hardware
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.os.GenericOperatingSystem
 import org.allbinary.string.CommonStrings
 
-open public class SystemHardwareFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: SystemHardwareFactory = SystemHardwareFactory()
+open public class SystemHardwareFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: SystemHardwareFactory{
+    companion object {
 
+        private val instance: SystemHardwareFactory = SystemHardwareFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : SystemHardwareFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return SystemHardwareFactory.instance
-}
-
-
-    open fun static_toString()
-        //nullable = true from not(false or (false and true)) = true
-: String{
-
-    var systemHardwareFactory: SystemHardwareFactory = SystemHardwareFactory.getInstance()!!
-
-
-    var osBuffer: StringMaker = StringMaker()
-
-osBuffer!!.append("Hardware Info: \n")
-
-    
-                        if(systemHardwareFactory!!.hardwareInterface != 
-                                    null
-                                )
-                        
-                                    {
-                                    osBuffer!!.append(systemHardwareFactory!!.hardwareInterface!!.toString())
-
-                                    }
-                                
-                        else {
-                            osBuffer!!.append(StringUtil.getInstance()!!.NULL_STRING)
-
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return osBuffer!!.toString()
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return SystemHardwareFactory.instance
         }
-            
+
+        open fun static_toString()
+        // nullable = true from not(false or (false and true)) = true
+        : String {
+
+            var systemHardwareFactory: SystemHardwareFactory = SystemHardwareFactory.getInstance()!!
+
+            var osBuffer: StringMaker = StringMaker()
+
+            osBuffer!!.append("Hardware Info: \n")
+
+            if (systemHardwareFactory!!.hardwareInterface != null) {
+
+                osBuffer!!.append(systemHardwareFactory!!.hardwareInterface!!.toString())
+            } else {
+                osBuffer!!.append(StringUtil.getInstance()!!.NULL_STRING)
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return osBuffer!!.toString()
+        }
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var hardwareInterface: HardwareInterface = NoHardware.getInstance()!!
-private constructor ()
-            : super()
-        {
-}
 
+    private constructor() : super() {}
 
-    open fun getInstance(operatingSystemInterface: GenericOperatingSystem)
-        //nullable =  from not(true or (false and false)) = 
-: HardwareInterface{
-var operatingSystemInterface = operatingSystemInterface
+    open fun getInstance(
+        operatingSystemInterface: GenericOperatingSystem
+    )
+        // nullable =  from not(true or (false and false)) =
+        : HardwareInterface {
+        var operatingSystemInterface = operatingSystemInterface
 
         try {
-            
-    
-                        if(this.hardwareInterface == NoHardware.getInstance())
-                        
-                                    {
-                                    this.hardwareInterface= HardwareFactory.getInstance()!!.getInstance(operatingSystemInterface)
 
-                                    }
-                                
-this.logUtil!!.putF("Found Hardware", this, this.commonStrings!!.CONSTRUCTOR)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
+            if (this.hardwareInterface == NoHardware.getInstance()) {
+
+                this.hardwareInterface =
+                    HardwareFactory.getInstance()!!.getInstance(operatingSystemInterface)
+            }
+
+            this.logUtil!!.putF("Found Hardware", this, this.commonStrings!!.CONSTRUCTOR)
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.commonStrings!!.CONSTRUCTOR,
+                e,
+            )
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.hardwareInterface
+    }
 }
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hardwareInterface
-}
-
-
-}
-                
-            
-

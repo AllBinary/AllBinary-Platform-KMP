@@ -1,187 +1,136 @@
+/* Generated Code Do Not Modify */
+package javax.microedition.lcdui
 
-        /* Generated Code Do Not Modify */
-        package javax.microedition.lcdui
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.Stack
 
 open public class NullCanvas : Canvas {
-        
-companion object {
-            
-    val NULL_CANVAS: NullCanvas = NullCanvas()
 
-        }
-            public constructor (){
-}
+    companion object {
 
+        val NULL_CANVAS: NullCanvas = NullCanvas()
+    }
+
+    public constructor() {}
 
     override fun setFullScreenMode(mode: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var mode = mode
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var mode = mode
+    }
 
     override fun sizeChanged(w: Int, h: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var w = w
-var h = h
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var w = w
+        var h = h
+    }
 
     open fun getCommandStack()
-        //nullable = true from not(false or (false and true)) = true
-: Stack<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Stack<Any> {
 
+        throw RuntimeException()
+    }
 
+    open fun isCommand(
+        command: Command
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var command = command
 
-                            throw RuntimeException()
-}
-
-
-    open fun isCommand(command: Command)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var command = command
-
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun addCommand(command: Command)
-        //nullable = true from not(false or (false and false)) = true
-{
-var command = command
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var command = command
+    }
 
     override fun removeCommand(command: Command)
-        //nullable = true from not(false or (false and false)) = true
-{
-var command = command
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var command = command
+    }
 
     open fun removeAllCommands()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     override fun setCommandListener(l: CommandListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var l = l
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var l = l
+    }
 
     open fun getCustomCommandListener()
-        //nullable = true from not(false or (false and true)) = true
-: CommandListener{
+    // nullable = true from not(false or (false and true)) = true
+    : CommandListener {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     open fun isPaused()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     open fun removePauseCommand()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun pause()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun unPause()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+    }
 
     open fun destroy()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun setPaused(isPaused: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var isPaused = isPaused
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var isPaused = isPaused
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun pointerDragged(x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+    }
 
     override fun pointerPressed(x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+    }
 
     override fun pointerReleased(x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+    }
 }
-
-
-}
-                
-            
-

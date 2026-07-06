@@ -1,32 +1,22 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2011 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.layer
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
+import java.lang.Object
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.logic.communication.log.LogUtil
@@ -34,220 +24,169 @@ import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
 
-open public class Layer
-            : Object
-         {
-        
-companion object {
-            
-    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
+open public class Layer : Object {
 
-        }
-            
+    companion object {
+
+        val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    var x: Int= 0
+    var x: Int = 0
 
-    var y: Int= 0
+    var y: Int = 0
 
     var z: Int = 3
 
-    private var width: Int= 0
+    private var width: Int = 0
 
-    private var height: Int= 0
+    private var height: Int = 0
 
     private var visible: Boolean = true
-public constructor (width: Int, height: Int)
-            : super()
-        {
-var width = width
-var height = height
-this.setLayerWidth(width)
-this.setLayerHeight(height)
-}
 
+    public constructor(width: Int, height: Int) : super() {
+        var width = width
+        var height = height
+        this.setLayerWidth(width)
+        this.setLayerHeight(height)
+    }
 
     open fun setPosition(x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
-var z = z
-this.x= x
-this.y= y
-this.z= z
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+        var z = z
+        this.x = x
+        this.y = y
+        this.z = z
+    }
 
     open fun moveDXY(dx: Int, dy: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var dx = dx
-    //var dy = dy
-this.x += dx
-this.y += dy
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var dx = dx
+        // var dy = dy
+        this.x += dx
+        this.y += dy
+    }
 
     open fun moveDXYZ(dx: Int, dy: Int, dz: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var dx = dx
-var dy = dy
-var dz = dz
-this.x += dx
-this.y += dy
-this.z += dz
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var dx = dx
+        var dy = dy
+        var dz = dz
+        this.x += dx
+        this.y += dy
+        this.z += dz
+    }
 
     open fun getXP()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.x
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.x
+    }
 
     open fun getYP()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.y
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.y
+    }
 
     open fun getZP()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.z
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.z
+    }
 
     open fun getWidth()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.width
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.width
+    }
 
     open fun getHeight()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.height
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.height
+    }
 
     open fun getDepth()
-        //nullable = true from not(false or (false and true)) = true
-: Long{
+    // nullable = true from not(false or (false and true)) = true
+    : Long {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
 
     open fun setVisible(visible: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var visible = visible
-this.visible= visible
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var visible = visible
+        this.visible = visible
+    }
 
     open fun isVisible()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.visible
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.visible
+    }
 
     open fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+        var canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
 
-    var canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-
-this.logUtil!!.putF(commonStrings!!.NOT_IMPLEMENTED, this, canvasStrings!!.PAINT)
-}
-
+        this.logUtil!!.putF(commonStrings!!.NOT_IMPLEMENTED, this, canvasStrings!!.PAINT)
+    }
 
     open fun setLayerWidth(width: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var width = width
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var width = width
 
-    
-                        if(width < 0)
-                        
-                                    {
-                                    
+        if (width < 0) {
 
+            throw IllegalArgumentException()
+        }
 
-                            throw IllegalArgumentException()
-
-                                    }
-                                
-this.width= width
-}
-
+        this.width = width
+    }
 
     open fun setLayerHeight(height: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var height = height
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var height = height
 
-    
-                        if(height < 0)
-                        
-                                    {
-                                    
+        if (height < 0) {
 
+            throw IllegalArgumentException()
+        }
 
-                            throw IllegalArgumentException()
-
-                                    }
-                                
-this.height= height
-}
-
+        this.height = height
+    }
 
     open fun toStringAppend(stringBuffer: StringMaker)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var stringBuffer = stringBuffer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var stringBuffer = stringBuffer
+    }
 }
-
-
-}
-                
-            
-

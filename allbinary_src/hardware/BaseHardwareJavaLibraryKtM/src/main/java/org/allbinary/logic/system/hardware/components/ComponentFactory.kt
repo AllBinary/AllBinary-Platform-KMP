@@ -1,58 +1,41 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2011 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system.hardware.components
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system.hardware.components
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.string.CommonStrings
 
-open public class ComponentFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ComponentFactory = ComponentFactory()
+open public class ComponentFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ComponentFactory{
+    companion object {
 
+        private val instance: ComponentFactory = ComponentFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ComponentFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ComponentFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ComponentFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val VGA: Component = Component("VGA")
 
     val IDE: Component = Component("IDE")
@@ -78,8 +61,4 @@ companion object {
     val Class: Component = Component("Class")
 
     val UNKNOWN: Component = Component(CommonStrings.getInstance()!!.UNKNOWN)
-
 }
-                
-            
-

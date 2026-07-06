@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation
+/* Generated Code Do Not Modify */
+package org.allbinary.animation
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionUtil
 import org.allbinary.logic.string.StringMaker
@@ -33,9 +23,7 @@ import org.allbinary.math.AngleInfo
 import org.allbinary.math.FrameUtil
 import org.allbinary.util.CircularIndexUtil
 
-open public class RotationAnimation : IndexedAnimation
-                , RotationAnimationInterface {
-        
+open public class RotationAnimation : IndexedAnimation, RotationAnimationInterface {
 
     val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 
@@ -44,152 +32,132 @@ open public class RotationAnimation : IndexedAnimation
     val angleInfo: AngleInfo
 
     var circularIndexUtil: CircularIndexUtil
-protected constructor (angleInfo: AngleInfo, circularIndexUtil: CircularIndexUtil, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
-    //var angleInfo = angleInfo
-    //var circularIndexUtil = circularIndexUtil
-    //var animationBehavior = animationBehavior
+    protected constructor(
+        angleInfo: AngleInfo,
+        circularIndexUtil: CircularIndexUtil,
+        animationBehavior: AnimationBehavior,
+    ) : super(animationBehavior) {
+        // var angleInfo = angleInfo
+        // var circularIndexUtil = circularIndexUtil
+        // var animationBehavior = animationBehavior
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.angleInfo= angleInfo
-this.circularIndexUtil= circularIndexUtil
-}
-
+        this.angleInfo = angleInfo
+        this.circularIndexUtil = circularIndexUtil
+    }
 
     open fun nextRotationX()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun previousRotationX()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     override fun nextRotation()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.next())
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.next())
+    }
 
     override fun previousRotation()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.previous())
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.previous())
+    }
 
     open fun nextRotationZ()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun previousRotationZ()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     override fun setFrame(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var index = index
-this.circularIndexUtil!!.setIndex(index)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var index = index
+        this.circularIndexUtil!!.setIndex(index)
 
-    var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
+        var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
 
-this.angleInfo!!.adjustAngle(newFrame)
-}
-
+        this.angleInfo!!.adjustAngle(newFrame)
+    }
 
     override fun setFrameByDirection(direction: Direction)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var direction = direction
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var direction = direction
 
-    var angle: Angle = this.directionUtil!!.getFrameAngle(direction)!!
+        var angle: Angle = this.directionUtil!!.getFrameAngle(direction)!!
 
-this.adjustFrameToAngle(angle)
-}
-
+        this.adjustFrameToAngle(angle)
+    }
 
     override fun setFrameToAngle(angle: Angle)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var angle = angle
-this.adjustFrameToAngle(angle)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var angle = angle
+        this.adjustFrameToAngle(angle)
+    }
 
     override fun adjustFrameToAngle(angle: Angle)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var angle = angle
-this.adjustFrame(angle.getValue())
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var angle = angle
+        this.adjustFrame(angle.getValue())
+    }
 
     override fun adjustFrame(angle: Short)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var angle = angle
-this.setFrame(this.frameUtil!!.getFrameForAngle(angle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var angle = angle
+        this.setFrame(
+            this.frameUtil!!.getFrameForAngle(
+                angle,
+                this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt(),
+            )
+        )
+    }
 
     override fun getFrame()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.circularIndexUtil!!.getIndex()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.circularIndexUtil!!.getIndex()
+    }
 
     override fun getSize()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.circularIndexUtil!!.getSize()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.circularIndexUtil!!.getSize()
+    }
 
     override fun getAngleInfoP()
-        //nullable = true from not(false or (false and true)) = true
-: AngleInfo{
+    // nullable = true from not(false or (false and true)) = true
+    : AngleInfo {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.angleInfo
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.angleInfo
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringMaker().
-                            append(super.toString())!!.append("circularIndexUtil: ")!!.append(this.circularIndexUtil!!.toString())!!.append("angleInfo: ")!!.append(this.angleInfo!!.toString())!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return StringMaker()
+            .append(super.toString())!!
+            .append("circularIndexUtil: ")!!
+            .append(this.circularIndexUtil!!.toString())!!
+            .append("angleInfo: ")!!
+            .append(this.angleInfo!!.toString())!!
+            .toString()
+    }
 }
-
-
-}
-                
-            
-

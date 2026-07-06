@@ -1,107 +1,77 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.identification
+/* Generated Code Do Not Modify */
+package org.allbinary.game.identification
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 
-open public class Group
-            : Object
-        
-                , GroupInterface {
-        
+open public class Group : Object, GroupInterface {
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private val teamId: Short
 
     private var string: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor (teamName: String, teamId: Short)
-            : super()
-        {
-var teamName = teamName
-var teamId = teamId
-this.teamId= teamId
-this.setName(teamName)
-}
 
+    public constructor(teamName: String, teamId: Short) : super() {
+        var teamName = teamName
+        var teamId = teamId
+        this.teamId = teamId
+        this.setName(teamName)
+    }
 
     override fun getGroupName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.name
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.name
+    }
 
     open fun setName(name: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var name = name
-this.name= name
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var name = name
+        this.name = name
 
-    var groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
+        var groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
 
+        var stringBuffer: StringMaker = StringMaker()
 
-    var stringBuffer: StringMaker = StringMaker()
-
-stringBuffer!!.append(groupCommonFactory!!.GROUP_NAME_LABEL)
-stringBuffer!!.append(this.name)
-stringBuffer!!.append(groupCommonFactory!!.ID_LABEL)
-stringBuffer!!.appendshort(this.teamId)
-this.string= stringBuffer!!.toString()
-}
-
+        stringBuffer!!.append(groupCommonFactory!!.GROUP_NAME_LABEL)
+        stringBuffer!!.append(this.name)
+        stringBuffer!!.append(groupCommonFactory!!.ID_LABEL)
+        stringBuffer!!.appendshort(this.teamId)
+        this.string = stringBuffer!!.toString()
+    }
 
     override fun getGroupId()
-        //nullable = true from not(false or (false and true)) = true
-: Short{
+    // nullable = true from not(false or (false and true)) = true
+    : Short {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.teamId
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.teamId
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.string
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.string
+    }
 }
-
-
-}
-                
-            
-

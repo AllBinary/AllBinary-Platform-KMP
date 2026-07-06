@@ -1,56 +1,38 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles
 
+import java.lang.Object
 
+open public class OpenGLFeatureFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: OpenGLFeatureFactory = OpenGLFeatureFactory()
 
-open public class OpenGLFeatureFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: OpenGLFeatureFactory = OpenGLFeatureFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OpenGLFeatureFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OpenGLFeatureFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLFeatureFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OpenGLFeatureFactory.instance
         }
-            private constructor ()
-            : super()
-        {
-}
+    }
 
+    private constructor() : super() {}
 
     val OPENGL_OPTIONS: OpenGLFeature = OpenGLFeature("OpenGL Options")
 
@@ -70,7 +52,8 @@ companion object {
 
     val OPENGL_AS_GAME_THREAD: OpenGLFeature = OpenGLFeature("As game thread")
 
-    val OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS: OpenGLFeature = OpenGLFeature("As different threads")
+    val OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS: OpenGLFeature =
+        OpenGLFeature("As different threads")
 
     val IMAGE_COLOR_DEPTH_4444: OpenGLFeature = OpenGLFeature("4444")
 
@@ -90,13 +73,10 @@ companion object {
 
     val OPENGL_SIMPLE_OBJECT3D_PROCESSOR: OpenGLFeature = OpenGLFeature("Simple Object3d Processor")
 
-    val OPENGL_COMPLEX_OBJECT3D_PROCESSOR: OpenGLFeature = OpenGLFeature("Complex Object3d Processor")
+    val OPENGL_COMPLEX_OBJECT3D_PROCESSOR: OpenGLFeature =
+        OpenGLFeature("Complex Object3d Processor")
 
     val OPENGL_SIMPLE_TEXTURE_PROCESSOR: OpenGLFeature = OpenGLFeature("Simple Texture Processor")
 
     val OPENGL_COMPLEX_TEXTURE_PROCESSOR: OpenGLFeature = OpenGLFeature("Complex Texture Processor")
-
 }
-                
-            
-

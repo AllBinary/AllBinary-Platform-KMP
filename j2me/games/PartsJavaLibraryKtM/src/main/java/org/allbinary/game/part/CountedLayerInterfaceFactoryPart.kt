@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.part
+/* Generated Code Do Not Modify */
+package org.allbinary.game.part
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Hashtable
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
@@ -38,204 +29,184 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.math.PrimitiveLongUtil
 
-open public class CountedLayerInterfaceFactoryPart
-            : Object
-        
-                , PartInterface
-                , UpdateMyFontInterface {
-        
-companion object {
-            
-    val NULL_COUNTED_LAYER_INTERFACE_FACTORY: CountedLayerInterfaceFactoryPart = CountedLayerInterfaceFactoryPart(0, CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY)
+open public class CountedLayerInterfaceFactoryPart : Object, PartInterface, UpdateMyFontInterface {
 
-        }
-            
+    companion object {
+
+        val NULL_COUNTED_LAYER_INTERFACE_FACTORY: CountedLayerInterfaceFactoryPart =
+            CountedLayerInterfaceFactoryPart(
+                0,
+                CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY,
+            )
+    }
+
     private val updateMyFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
 
     private var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
 
-    private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
+    private var animationInterface: Animation =
+        NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
-    private var total: Int= 0
+    private var total: Int = 0
 
     private var totalString: CharArray = NullUtil.getInstance()!!.NULL_CHAR_ARRAY
 
-    private var xOffset: Int= 0
+    private var xOffset: Int = 0
 
-    private var countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory = CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
+    private var countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory =
+        CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor (total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
-            : super()
-        {
-    //var total = total
-    //var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
-this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(1000)
-this.init(total, countedPickedUpLayerInterfaceFactory)
-}
 
+    public constructor(
+        total: Int,
+        countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory,
+    ) : super() {
+        // var total = total
+        // var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(1000)
+        this.init(total, countedPickedUpLayerInterfaceFactory)
+    }
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
-    var font: Font = graphics.getFont()!!
+        var font: Font = graphics.getFont()!!
 
-this.setXOffset(font.charsWidth(this.totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +(font.getSize() shr 1))
-this.myFontProcessor= MyFontProcessor.getInstance()
-}
+        this.setXOffset(
+            font.charsWidth(this.totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +
+                (font.getSize() shr 1)
+        )
+        this.myFontProcessor = MyFontProcessor.getInstance()
+    }
 
+    open fun init(
+        total: Int,
+        countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var total = total
+        // var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
+        this.setCountedPickedUpLayerInterfaceFactory(countedPickedUpLayerInterfaceFactory)
+        this.total = total
+    }
 
-    open fun init(total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var total = total
-    //var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
-this.setCountedPickedUpLayerInterfaceFactory(countedPickedUpLayerInterfaceFactory)
-this.total= total
-}
+    @Throws(Exception::class)
+    open fun getInstance(
+        hashtable: Hashtable<Any, Any>,
+        x: Int,
+        y: Int,
+        z: Int,
+    )
+        // nullable =  from not(true or (false and false)) =
+        : AllBinaryLayer {
+        var hashtable = hashtable
+        var x = x
+        var y = y
+        var z = z
 
+        if (this.total > 0) {
 
-                @Throws(Exception::class)
-            
-    open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
-        //nullable =  from not(true or (false and false)) = 
-: AllBinaryLayer{
-var hashtable = hashtable
-var x = x
-var y = y
-var z = z
+            this.setTotal(this.total - 1)
 
-    
-                        if(this.total > 0)
-                        
-                                    {
-                                    this.setTotal(this.total -1)
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.getCountedPickedUpLayerInterfaceFactory()!!.getNextInstance(
+                hashtable,
+                x,
+                y,
+                z,
+            )
+        } else {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getCountedPickedUpLayerInterfaceFactory()!!.getNextInstance(hashtable, x, y, z)
-
-                                    }
-                                
-                        else {
-                            
-
-
-                            throw Exception("No more left. Could use a listener to automatically remove")
-
-                        }
-                            
-}
-
+            throw Exception("No more left. Could use a listener to automatically remove")
+        }
+    }
 
     open fun getTotal()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.total
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.total
+    }
 
     open fun setTotal(total: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var total = total
-this.total= total
-this.totalString= this.primitiveLongUtil!!.getCharArray(total)
-this.myFontProcessor= this.updateMyFontProcessor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var total = total
+        this.total = total
+        this.totalString = this.primitiveLongUtil!!.getCharArray(total)
+        this.myFontProcessor = this.updateMyFontProcessor
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.myFontProcessor!!.process(graphics)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        this.myFontProcessor!!.process(graphics)
+    }
 
     override fun paintThreed(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+    }
 
     override fun getAnimationInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Animation{
+    // nullable = true from not(false or (false and true)) = true
+    : Animation {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterface
+    }
 
     open fun setAnimationInterface(animationInterface: Animation)
-        //nullable = true from not(false or (false and false)) = true
-{
-var animationInterface = animationInterface
-this.animationInterface= animationInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var animationInterface = animationInterface
+        this.animationInterface = animationInterface
+    }
 
     open fun getXOffset()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.xOffset
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.xOffset
+    }
 
     open fun setXOffset(totalStringWidth: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var totalStringWidth = totalStringWidth
-this.xOffset= totalStringWidth
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var totalStringWidth = totalStringWidth
+        this.xOffset = totalStringWidth
+    }
 
     open fun getTotalString()
-        //nullable = true from not(false or (false and true)) = true
-: CharArray{
+    // nullable = true from not(false or (false and true)) = true
+    : CharArray {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.totalString
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.totalString
+    }
 
     open fun getCountedPickedUpLayerInterfaceFactory()
-        //nullable = true from not(false or (false and true)) = true
-: CountedPickedUpLayerInterfaceFactory{
+    // nullable = true from not(false or (false and true)) = true
+    : CountedPickedUpLayerInterfaceFactory {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.countedPickedUpLayerInterfaceFactory
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.countedPickedUpLayerInterfaceFactory
+    open fun setCountedPickedUpLayerInterfaceFactory(
+        countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
+        this.countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
+    }
 }
-
-
-    open fun setCountedPickedUpLayerInterfaceFactory(countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
-        //nullable = true from not(false or (false and false)) = true
-{
-var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
-this.countedPickedUpLayerInterfaceFactory= countedPickedUpLayerInterfaceFactory
-}
-
-
-}
-                
-            
-

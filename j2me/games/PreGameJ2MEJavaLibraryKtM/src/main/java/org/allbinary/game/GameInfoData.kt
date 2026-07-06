@@ -1,56 +1,38 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game
+/* Generated Code Do Not Modify */
+package org.allbinary.game
 
+import java.lang.Object
 
+open public class GameInfoData : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: GameInfoData = GameInfoData()
 
-open public class GameInfoData
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: GameInfoData = GameInfoData()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : GameInfoData {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: GameInfoData{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameInfoData.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GameInfoData.instance
         }
-            private constructor ()
-            : super()
-        {
-}
+    }
 
+    private constructor() : super() {}
 
     val GAME_TYPE: String = "GAME_TYPE"
 
@@ -63,8 +45,4 @@ companion object {
     val CURRENT_LEVEL: String = "CURRENT_LEVEL"
 
     val SOFTWARE_INFORMATION: String = "SOFTWARE_INFORMATION"
-
 }
-                
-            
-

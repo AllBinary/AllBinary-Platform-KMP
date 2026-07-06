@@ -1,129 +1,99 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.math
+/* Generated Code Do Not Modify */
+package org.allbinary.math
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
 
-open public class AngleInfo
-            : Object
-         {
-        
-companion object {
-            
-    open fun getInstance(angleIncrement: Short)
-        //nullable =  from not(true or (false and false)) = 
-: AngleInfo{
-    //var angleIncrement = angleIncrement
+open public class AngleInfo : Object {
 
+    companion object {
 
+        open fun getInstance(
+            angleIncrement: Short
+        )
+            // nullable =  from not(true or (false and false)) =
+            : AngleInfo {
+            // var angleIncrement = angleIncrement
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AngleInfo(AngleIncrementInfoFactory.getInstance()!!.getAt(angleIncrement))
-}
-
-
-    private val ANGLE: String = "Angle: "
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AngleInfo(AngleIncrementInfoFactory.getInstance()!!.getAt(angleIncrement))
         }
-            
+
+        private val ANGLE: String = "Angle: "
+    }
+
     private val angleIncrementInfo: AngleIncrementInfo
 
     private var angle: Short = 0
-private constructor (angleIncrementInfo: AngleIncrementInfo)
-            : super()
-        {
-    //var angleIncrementInfo = angleIncrementInfo
-this.angleIncrementInfo= angleIncrementInfo
-}
 
+    private constructor(angleIncrementInfo: AngleIncrementInfo) : super() {
+        // var angleIncrementInfo = angleIncrementInfo
+        this.angleIncrementInfo = angleIncrementInfo
+    }
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 
     open fun adjustAngle(frame: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var frame = frame
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var frame = frame
 
-    var newAngle: Int = this.angleIncrementInfo!!.getAngleIncrement() *frame -90
+        var newAngle: Int = this.angleIncrementInfo!!.getAngleIncrement() * frame - 90
 
-this.setAngle(this.frameUtil!!.adjustAngleToFrameAngle(newAngle).toShort())
-}
-
+        this.setAngle(this.frameUtil!!.adjustAngleToFrameAngle(newAngle).toShort())
+    }
 
     open fun getAngle()
-        //nullable = true from not(false or (false and true)) = true
-: Short{
+    // nullable = true from not(false or (false and true)) = true
+    : Short {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.angle
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.angle
+    }
 
     open fun setAngle(angle: Short)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var angle = angle
-this.angle= angle
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var angle = angle
+        this.angle = angle
+    }
 
     open fun getAngleIncrementInfo()
-        //nullable = true from not(false or (false and true)) = true
-: AngleIncrementInfo{
+    // nullable = true from not(false or (false and true)) = true
+    : AngleIncrementInfo {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.angleIncrementInfo
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.angleIncrementInfo
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(AngleInfo.ANGLE)
-stringBuffer!!.appendshort(this.angle)
-stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getAngleIncrementInfo()))
+        stringBuffer!!.append(AngleInfo.ANGLE)
+        stringBuffer!!.appendshort(this.angle)
+        stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+        stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getAngleIncrementInfo()))
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

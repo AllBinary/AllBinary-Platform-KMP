@@ -1,82 +1,57 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input.form
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input.form
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.layer.NullPathFindingLayer
 import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.waypoint.WaypointLayer
 
-open public class PrimaryWaypointHelper
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: PrimaryWaypointHelper = PrimaryWaypointHelper()
+open public class PrimaryWaypointHelper : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: PrimaryWaypointHelper{
+    companion object {
 
+        private val instance: PrimaryWaypointHelper = PrimaryWaypointHelper()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : PrimaryWaypointHelper {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PrimaryWaypointHelper.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PrimaryWaypointHelper.instance
         }
-            
-    private var waypointLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
-private constructor ()
-            : super()
-        {
-}
+    }
 
+    private var waypointLayer: PathFindingLayerInterface =
+        NullPathFindingLayer.NULL_PATH_FINDING_LAYER
+
+    private constructor() : super() {}
 
     open fun getWaypointLayer()
-        //nullable = true from not(false or (false and true)) = true
-: PathFindingLayerInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : PathFindingLayerInterface {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypointLayer
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.waypointLayer
+    }
 
     open fun setWaypointLayer(waypointLayer: WaypointLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var waypointLayer = waypointLayer
-this.waypointLayer= waypointLayer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var waypointLayer = waypointLayer
+        this.waypointLayer = waypointLayer
+    }
 }
-
-
-}
-                
-            
-

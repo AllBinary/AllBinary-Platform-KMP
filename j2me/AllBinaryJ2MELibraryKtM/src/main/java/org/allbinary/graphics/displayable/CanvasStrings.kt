@@ -1,59 +1,42 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.displayable
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.displayable
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
-open public class CanvasStrings
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: CanvasStrings = CanvasStrings()
+open public class CanvasStrings : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CanvasStrings{
+    companion object {
 
+        private val instance: CanvasStrings = CanvasStrings()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CanvasStrings {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CanvasStrings.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CanvasStrings.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val CONSTRUCTOR: String = "MyCanvas::MyCanvas"
 
     val PAUSE: String = "MyCanvas::pause"
@@ -76,7 +59,8 @@ companion object {
 
     val FD_HEIGHT: String = " font/display height: "
 
-    val EMPTY_CHILD_NAME_LIST: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
+    val EMPTY_CHILD_NAME_LIST: BasicArrayList =
+        BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
     val ABOUT: String = "About"
 
@@ -89,8 +73,4 @@ companion object {
     val MD2_MODEL: String = "_md2"
 
     val _PNG: String = ".png"
-
 }
-                
-            
-

@@ -1,162 +1,112 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2003 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2003 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.game.collision.CollisionType
 import org.allbinary.game.collision.CollisionTypeFactory
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableBehavior
 
 open public class CollidableRTSBehavior : CollidableDestroyableDamageableBehavior {
-        
-public constructor (collidable: Boolean)                        
 
-                            : super(collidable){
-    //var collidable = collidable
+    public constructor(collidable: Boolean) : super(collidable) {
 
+        // var collidable = collidable
 
-                            //For kotlin this is before the body of the constructor.
-                    
+        // For kotlin this is before the body of the constructor.
+
+    }
+
+    override fun isCollision(
+        ownerLayer: CollidableCompositeLayer,
+        collidableInterfaceCompositeInterface: CollidableCompositeLayer,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var ownerLayer = ownerLayer
+        // var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+
+        var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
+
+        var collisionType: CollisionType =
+            collidableInterfaceCompositeInterface!!
+                .getCollidableInferface()!!
+                .getCollisionTypeWith(ownerLayer)!!
+
+        if (collisionType == collisionTypeFactory!!.PICKUP) {} else if (
+            collisionType == collisionTypeFactory!!.COLLISION
+        ) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return super.isCollision(ownerLayer, collidableInterfaceCompositeInterface)
+        } else {
+
+            if (
+                collidableInterfaceCompositeInterface!!.getX2() <= ownerLayer!!.getXP() ||
+                    collidableInterfaceCompositeInterface!!.getY2() <= ownerLayer!!.getYP() ||
+                    collidableInterfaceCompositeInterface!!.getYP() >= ownerLayer!!.getY2() ||
+                    collidableInterfaceCompositeInterface!!.getXP() >= ownerLayer!!.getX2()
+            ) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return false
+            } else {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            }
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    @Throws(Exception::class)
+    override fun collide(
+        ownerLayer: CollidableCompositeLayer,
+        collidableInterfaceCompositeInterface: CollidableCompositeLayer,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var ownerLayer = ownerLayer
+        // var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+
+        var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
+
+        var collisionType: CollisionType =
+            collidableInterfaceCompositeInterface!!
+                .getCollidableInferface()!!
+                .getCollisionTypeWith(ownerLayer)!!
+
+        if (collisionType == collisionTypeFactory!!.PICKUP) {} else if (
+            collisionType == collisionTypeFactory!!.COLLISION
+        ) {
+            super.collide(ownerLayer, collidableInterfaceCompositeInterface)
+        } else {
+            this.collideNone(ownerLayer, collidableInterfaceCompositeInterface)
+        }
+    }
+
+    @Throws(Exception::class)
+    open fun collideNone(
+        ownerLayer: CollidableCompositeLayer,
+        collidableInterface: CollidableCompositeLayer,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var ownerLayer = ownerLayer
+        // var collidableInterface = collidableInterface
+    }
 }
-
-
-    override fun isCollision(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableCompositeLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var ownerLayer = ownerLayer
-    //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-
-    var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
-
-
-    var collisionType: CollisionType = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.getCollisionTypeWith(ownerLayer)!!
-
-
-    
-                        if(collisionType == collisionTypeFactory!!.PICKUP)
-                        
-                                    {
-                                    
-                                    }
-                                
-                             else 
-    
-                        if(collisionType == collisionTypeFactory!!.COLLISION)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return super.isCollision(ownerLayer, collidableInterfaceCompositeInterface)
-
-                                    }
-                                
-                        else {
-                            
-    
-                        if(collidableInterfaceCompositeInterface!!.getX2() <= ownerLayer!!.getXP() || collidableInterfaceCompositeInterface!!.getY2() <= ownerLayer!!.getYP() || collidableInterfaceCompositeInterface!!.getYP() >= ownerLayer!!.getY2() || collidableInterfaceCompositeInterface!!.getXP() >= ownerLayer!!.getX2())
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                        }
-                            
-
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun collide(ownerLayer: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableCompositeLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var ownerLayer = ownerLayer
-    //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-
-    var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
-
-
-    var collisionType: CollisionType = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.getCollisionTypeWith(ownerLayer)!!
-
-
-    
-                        if(collisionType == collisionTypeFactory!!.PICKUP)
-                        
-                                    {
-                                    
-                                    }
-                                
-                             else 
-    
-                        if(collisionType == collisionTypeFactory!!.COLLISION)
-                        
-                                    {
-                                    super.collide(ownerLayer, collidableInterfaceCompositeInterface)
-
-                                    }
-                                
-                        else {
-                            this.collideNone(ownerLayer, collidableInterfaceCompositeInterface)
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun collideNone(ownerLayer: CollidableCompositeLayer, collidableInterface: CollidableCompositeLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var ownerLayer = ownerLayer
-    //var collidableInterface = collidableInterface
-}
-
-
-}
-                
-            
-

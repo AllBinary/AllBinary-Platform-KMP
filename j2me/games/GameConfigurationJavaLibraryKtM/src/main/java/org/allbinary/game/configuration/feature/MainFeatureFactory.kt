@@ -1,57 +1,40 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.configuration.feature
+/* Generated Code Do Not Modify */
+package org.allbinary.game.configuration.feature
 
+import java.lang.Object
 
+open public class MainFeatureFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: MainFeatureFactory = MainFeatureFactory()
 
-open public class MainFeatureFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: MainFeatureFactory = MainFeatureFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : MainFeatureFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: MainFeatureFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return MainFeatureFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return MainFeatureFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val FULL_SCREEN: Feature = Feature("Full Screen")
 
     val TITLE_BAR: Feature = Feature("Title Bar")
@@ -61,8 +44,4 @@ companion object {
     val LOAD_ONDEMAND: Feature = Feature("Load OnDemand")
 
     val LOAD_ALL: Feature = Feature("Load All")
-
 }
-                
-            
-

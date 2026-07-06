@@ -1,73 +1,64 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.racetrack
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map.racetrack
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.game.TiledLayer
+import kotlin.Array
 
-open public class TiledLayerFactory
-            : Object
-         {
-        
+open public class TiledLayerFactory : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun getInstance(raceTrackData: RaceTrackData)
-        //nullable =  from not(true or (false and false)) = 
-: TiledLayer{
-var raceTrackData = raceTrackData
+    // Auto Generated
+    public constructor() : super() {}
 
-    var mapArray: Array<IntArray?> = raceTrackData!!.getMapArray()!!
+    open fun getInstance(
+        raceTrackData: RaceTrackData
+    )
+        // nullable =  from not(true or (false and false)) =
+        : TiledLayer {
+        var raceTrackData = raceTrackData
 
+        var mapArray: Array<IntArray?> = raceTrackData!!.getMapArray()!!
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return TiledLayer(
+            mapArray[0]!!.size,
+            mapArray!!.size,
+            raceTrackData!!.getTileSetImage(),
+            raceTrackData!!.getCellWidth(),
+            raceTrackData!!.getCellHeight(),
+        )
+    }
 
+    open fun getMiniInstance(
+        raceTrackData: RaceTrackData
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : TiledLayer {
+        var raceTrackData = raceTrackData
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return TiledLayer(mapArray[0]!!.size, mapArray!!.size, raceTrackData!!.getTileSetImage(), raceTrackData!!.getCellWidth(), raceTrackData!!.getCellHeight())
+        var mapArray: Array<IntArray?> = raceTrackData!!.getMapArray()!!
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return TiledLayer(
+            mapArray[0]!!.size,
+            mapArray!!.size,
+            raceTrackData!!.getMiniTileSetImage(),
+            raceTrackData!!.getMiniCellWidth(),
+            raceTrackData!!.getMiniCellHeight(),
+        )
+    }
 }
-
-
-    open fun getMiniInstance(raceTrackData: RaceTrackData)
-        //nullable = true from not(false or (false and false)) = true
-: TiledLayer{
-var raceTrackData = raceTrackData
-
-    var mapArray: Array<IntArray?> = raceTrackData!!.getMapArray()!!
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return TiledLayer(mapArray[0]!!.size, mapArray!!.size, raceTrackData!!.getMiniTileSetImage(), raceTrackData!!.getMiniCellWidth(), raceTrackData!!.getMiniCellHeight())
-}
-
-
-}
-                
-            
-

@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.midlet
+/* Generated Code Do Not Modify */
+package org.allbinary.midlet
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.Hashtable
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
@@ -43,16 +33,15 @@ import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.system.Memory
-// MIDlet methods not overridden are final
-open public class AllBinaryMidlet : MIDlet
-                , CommandListener {
-        
-companion object {
-            
-    val NULL_ALLBINARY_MIDLET: AllBinaryMidlet = AllBinaryMidlet()
 
-        }
-            
+// MIDlet methods not overridden are final
+open public class AllBinaryMidlet : MIDlet, CommandListener {
+
+    companion object {
+
+        val NULL_ALLBINARY_MIDLET: AllBinaryMidlet = AllBinaryMidlet()
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -67,188 +56,170 @@ companion object {
 
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-    private var midletDestroyed: Boolean= false
-public constructor (){
-this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
-}
+    private var midletDestroyed: Boolean = false
 
+    public constructor() {
+        this.logUtil!!.putF(
+            this.commonStrings!!.CONSTRUCTOR,
+            this,
+            "AllBinaryMidlet::AllBinaryMidlet",
+        )
+    }
 
     open fun setDisplay(newDisplay: Displayable)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var newDisplay = newDisplay
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var newDisplay = newDisplay
 
-    var title: String = StringUtil.getInstance()!!.EMPTY_STRING
+        var title: String = StringUtil.getInstance()!!.EMPTY_STRING
 
+        if (newDisplay != NullCanvas.NULL_CANVAS) {
 
-    
-                        if(newDisplay != NullCanvas.NULL_CANVAS)
-                        
-                                    {
-                                    title= newDisplay!!.getTitle()
+            title = newDisplay!!.getTitle()
 
-    
-                        if(title != 
-                                    null
-                                )
-                        
-                                    {
-                                    this.logUtil!!.putF(StringMaker().
-                            append(this.SETTING_)!!.append(title)!!.append(this._DISPLAY_)!!.append(StringUtil.getInstance()!!.toString(newDisplay))!!.toString(), this, this.SET_DISPLAY)
+            if (title != null) {
 
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF(StringMaker().
-                            append(this.SETTING_NO_TITLE)!!.append(StringUtil.getInstance()!!.toString(newDisplay))!!.toString(), this, this.SET_DISPLAY)
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append(this.SETTING_)!!
+                        .append(title)!!
+                        .append(this._DISPLAY_)!!
+                        .append(StringUtil.getInstance()!!.toString(newDisplay))!!
+                        .toString(),
+                    this,
+                    this.SET_DISPLAY,
+                )
+            } else {
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append(this.SETTING_NO_TITLE)!!
+                        .append(StringUtil.getInstance()!!.toString(newDisplay))!!
+                        .toString(),
+                    this,
+                    this.SET_DISPLAY,
+                )
+            }
+        }
 
-                        }
-                            
+        var display: Display = this.getDisplay()!!
 
-                                    }
-                                
-
-    var display: Display = this.getDisplay()!!
-
-display.setCurrent(newDisplay)
-}
-
+        display.setCurrent(newDisplay)
+    }
 
     open fun getDisplay()
-        //nullable = true from not(false or (false and true)) = true
-: Display{
+    // nullable = true from not(false or (false and true)) = true
+    : Display {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return Display.getDisplay(this)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return Display.getDisplay(this)
+    }
 
     open fun getCurrentDisplayable()
-        //nullable = true from not(false or (false and true)) = true
-: Displayable{
+    // nullable = true from not(false or (false and true)) = true
+    : Displayable {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return Display.getDisplay(this)!!.getCurrent()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return Display.getDisplay(this)!!.getCurrent()
+    }
 
     open fun setDestroyed(destroyed: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var destroyed = destroyed
-this.midletDestroyed= destroyed
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var destroyed = destroyed
+        this.midletDestroyed = destroyed
+    }
 
     open fun isDestroyed()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.midletDestroyed
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.midletDestroyed
-}
-
-
-                @Throws(MIDletStateChangeException::class)
-            
+    @Throws(MIDletStateChangeException::class)
     override fun startApp()
-        //nullable = true from not(false or (false and true)) = true
-{
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
     override fun pauseApp()
-        //nullable = true from not(false or (false and true)) = true
-{
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
     open fun destroyAppInRunnable(unconditional: Boolean, isProgress: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var unconditional = unconditional
-var isProgress = isProgress
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var unconditional = unconditional
+        var isProgress = isProgress
+    }
 
     override fun destroyApp(unconditional: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var unconditional = unconditional
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var unconditional = unconditional
 
-    var METHOD_NAME: String = "AllBinaryMidlet::destroyApp"
-
+        var METHOD_NAME: String = "AllBinaryMidlet::destroyApp"
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, METHOD_NAME)
-PreLogUtil.put(Memory.getInfo(), this, METHOD_NAME)
-this.setDestroyed(true)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
-}
+            PreLogUtil.put(Memory.getInfo(), this, METHOD_NAME)
+            this.setDestroyed(true)
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+        }
+    }
 
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setStartStateHashtable(hashtable: Hashtable<Any, Any>)
-        //nullable = true from not(false or (false and false)) = true
-{
-var hashtable = hashtable
-this.logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, "setStartStateHashtable")
-this.hashtable= hashtable
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var hashtable = hashtable
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(CommonLabels.getInstance()!!.START_LABEL)!!
+                .append(StringUtil.getInstance()!!.toString(hashtable))!!
+                .toString(),
+            this,
+            "setStartStateHashtable",
+        )
+        this.hashtable = hashtable
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun getStartStateHashtable()
-        //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
-this.logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(this.hashtable))!!.toString(), this, "getStartStateHashtable")
+    // nullable = true from not(false or (false and true)) = true
+    : Hashtable<Any, Any> {
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(CommonLabels.getInstance()!!.START_LABEL)!!
+                .append(StringUtil.getInstance()!!.toString(this.hashtable))!!
+                .toString(),
+            this,
+            "getStartStateHashtable",
+        )
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.hashtable
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hashtable
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun getCurrentStateHashtable()
-        //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
-this.logUtil!!.putF(this.commonStrings!!.START, this, "getStateHashtable")
+    // nullable = true from not(false or (false and true)) = true
+    : Hashtable<Any, Any> {
+        this.logUtil!!.putF(this.commonStrings!!.START, this, "getStateHashtable")
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullUtil.getInstance()!!.NULL_TABLE
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return NullUtil.getInstance()!!.NULL_TABLE
+    }
 
     override fun commandAction(command: Command, displayable: Displayable)
-        //nullable = true from not(false or (false and false)) = true
-{
-var command = command
-var displayable = displayable
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var command = command
+        var displayable = displayable
+    }
 }
-
-
-}
-                
-            
-

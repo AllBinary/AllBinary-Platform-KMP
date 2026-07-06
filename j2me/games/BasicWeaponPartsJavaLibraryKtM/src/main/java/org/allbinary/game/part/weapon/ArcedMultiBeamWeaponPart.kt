@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.part.weapon
+/* Generated Code Do Not Modify */
+package org.allbinary.game.part.weapon
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.animation.Animation
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.layer.weapon.WeaponLayer
@@ -36,70 +26,81 @@ import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.math.AngleFactory
 
 open public class ArcedMultiBeamWeaponPart : BasicWeaponPart {
-        
 
     private val weaponLayerCircularStaticPool: WeaponLayerCircularPool
 
     private val total: Int
-public constructor (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, total: Int, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
-                            : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){
-    //var animationInterface = animationInterface
-    //var sourceLayerInterface = sourceLayerInterface
-    //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
-    //var total = total
-    //var weaponProperties = weaponProperties
-    //var scoreableInterface = scoreableInterface
-    //var relativeRelationship = relativeRelationship
+    public constructor(
+        animationInterface: Animation,
+        sourceLayerInterface: AllBinaryLayer,
+        weaponLayerCircularStaticPool: WeaponLayerCircularPool,
+        total: Int,
+        weaponProperties: WeaponProperties,
+        scoreableInterface: ScoreableInterface,
+        relativeRelationship: RelativeRelationship,
+    ) : super(
+        animationInterface,
+        sourceLayerInterface,
+        weaponProperties,
+        scoreableInterface,
+        relativeRelationship,
+    ) {
+        // var animationInterface = animationInterface
+        // var sourceLayerInterface = sourceLayerInterface
+        // var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
+        // var total = total
+        // var weaponProperties = weaponProperties
+        // var scoreableInterface = scoreableInterface
+        // var relativeRelationship = relativeRelationship
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.total= total
-this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
-}
-
+        this.total = total
+        this.weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
+    }
 
     private val TOTAL_ANGLE: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
 
-                @Throws(Exception::class)
-            
-    override fun processScore(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allbinaryLayerManager = allbinaryLayerManager
-    //var angle = angle
-    //var otherAngle = otherAngle
-    //var weaponProperties = weaponProperties
-    //var scoreableInterface = scoreableInterface
+    @Throws(Exception::class)
+    override fun processScore(
+        allbinaryLayerManager: AllBinaryLayerManager,
+        angle: Short,
+        otherAngle: Short,
+        weaponProperties: WeaponProperties,
+        scoreableInterface: ScoreableInterface,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allbinaryLayerManager = allbinaryLayerManager
+        // var angle = angle
+        // var otherAngle = otherAngle
+        // var weaponProperties = weaponProperties
+        // var scoreableInterface = scoreableInterface
 
-    var increment: Short = ((this.total -1) /this.TOTAL_ANGLE).toShort()
+        var increment: Short = ((this.total - 1) / this.TOTAL_ANGLE).toShort()
 
+        var minAngle: Short = (angle - ((increment * this.total) shr 1)).toShort()
 
-    var minAngle: Short = (angle -((increment *this.total) shr 1)).toShort()
+        var next: Int = 0
 
+        var weaponLayer: WeaponLayer
 
-    var next: Int = 0
+        for (index in 0 until this.total) {
 
-
-    var weaponLayer: WeaponLayer
-
-
-
-
-
-                        for (index in 0 until this.total)
-
-        {
-weaponLayer= this.weaponLayerCircularStaticPool!!.getInstanceWeaponLayer(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), 0, (minAngle +increment).toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
-allbinaryLayerManager!!.append(weaponLayer)
-next += increment
+            weaponLayer =
+                this.weaponLayerCircularStaticPool!!.getInstanceWeaponLayer(
+                    this.getOwnerLayerInterface(),
+                    this.relativeRelationship!!.getX(),
+                    this.relativeRelationship!!.getY(),
+                    0,
+                    (minAngle + increment).toInt(),
+                    otherAngle.toInt(),
+                    weaponProperties,
+                    scoreableInterface,
+                )
+            allbinaryLayerManager!!.append(weaponLayer)
+            next += increment
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

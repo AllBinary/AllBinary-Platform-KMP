@@ -1,91 +1,68 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.android.input.motion
+/* Generated Code Do Not Modify */
+package org.allbinary.android.input.motion
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.android.input.motion.event.AnalogControllerConfigurationEvent
 import org.allbinary.android.input.motion.event.AnalogControllerConfigurationEventHandler
 import org.allbinary.logic.math.ScaleFactorFactory
 
-open public class AnalogControllerConfigurationFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: AnalogControllerConfigurationFactory = AnalogControllerConfigurationFactory()
+open public class AnalogControllerConfigurationFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: AnalogControllerConfigurationFactory{
+    companion object {
 
+        private val instance: AnalogControllerConfigurationFactory =
+            AnalogControllerConfigurationFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : AnalogControllerConfigurationFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AnalogControllerConfigurationFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AnalogControllerConfigurationFactory.instance
         }
-            
+    }
+
     val SCALE_FACTOR: Int = ScaleFactorFactory.getInstance()!!.DEFAULT_SCALE_FACTOR
 
     val SCALE_VALUE: Int = ScaleFactorFactory.getInstance()!!.DEFAULT_SCALE_VALUE
 
-    private var available: Boolean= false
+    private var available: Boolean = false
 
-    private val analogControllerConfigurationEvent: AnalogControllerConfigurationEvent = AnalogControllerConfigurationEvent(this)
-private constructor ()
-            : super()
-        {
-}
+    private val analogControllerConfigurationEvent: AnalogControllerConfigurationEvent =
+        AnalogControllerConfigurationEvent(this)
 
+    private constructor() : super() {}
 
     open fun isAvailable()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.available
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.available
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setAvailable(available: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var available = available
-this.available= available
-AnalogControllerConfigurationEventHandler.getInstance()!!.fireEvent(this.analogControllerConfigurationEvent)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var available = available
+        this.available = available
+        AnalogControllerConfigurationEventHandler.getInstance()!!.fireEvent(
+            this.analogControllerConfigurationEvent
+        )
+    }
 }
-
-
-}
-                
-            
-

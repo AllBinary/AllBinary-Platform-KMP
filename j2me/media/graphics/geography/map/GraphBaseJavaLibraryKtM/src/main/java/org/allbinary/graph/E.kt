@@ -1,44 +1,23 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.graph
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graph
+import java.lang.Object
 
+open public class E : Object {
 
+    companion object {
 
+        private val e: E = E()
+    }
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+    // Auto Generated
+    public constructor() : super() {}
 
-open public class E
-            : Object
-         {
-        
-companion object {
-            
-    private val e: E = E()
-
-        }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
     open fun newInstance()
-        //nullable = true from not(false or (false and true)) = true
-: E{
+    // nullable = true from not(false or (false and true)) = true
+    : E {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return E.e
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return E.e
+    }
 }
-
-
-}
-                
-            
-

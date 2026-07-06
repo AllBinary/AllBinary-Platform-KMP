@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2002 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2002 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.displayable.screen
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.displayable.screen
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.Stack
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
@@ -40,136 +30,118 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
-open public class CommandForm : Form
-                , MyCommandInterface
-                , MenuListener {
-        
-companion object {
-            
-    private var NULL_COMMAND_FORM: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class CommandForm : Form, MyCommandInterface, MenuListener {
 
-    open fun getNullCommandForm()
-        //nullable = true from not(false or (false and true)) = true
-: CommandForm{
+    companion object {
 
-    
-                        if(CommandForm.NULL_COMMAND_FORM == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    CommandForm.NULL_COMMAND_FORM= CommandForm(NullCommandListener.NULL_COMMAND_LISTENER, StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
+        private var NULL_COMMAND_FORM: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getNullCommandForm()
+        // nullable = true from not(false or (false and true)) = true
+        : CommandForm {
 
+            if (CommandForm.NULL_COMMAND_FORM == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                CommandForm.NULL_COMMAND_FORM =
+                    CommandForm(
+                        NullCommandListener.NULL_COMMAND_LISTENER,
+                        StringUtil.getInstance()!!.EMPTY_STRING,
+                        BasicColorFactory.getInstance()!!.BLACK,
+                        BasicColorFactory.getInstance()!!.WHITE,
+                    )
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CommandForm.NULL_COMMAND_FORM as CommandForm
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CommandForm.NULL_COMMAND_FORM as CommandForm
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val repaintProcessor: Processor = ScreenRepaintProcessorFactory.getInstance()!!.create(this)!!
+    private val repaintProcessor: Processor =
+        ScreenRepaintProcessorFactory.getInstance()!!.create(this)!!
 
     private var commandStack: Stack<Any>
-public constructor (commandListener: CommandListener, formTitle: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(formTitle){
-var commandListener = commandListener
-var formTitle = formTitle
-var backgrounBasicColor = backgrounBasicColor
-var foregroundBasicColor = foregroundBasicColor
+    public constructor(
+        commandListener: CommandListener,
+        formTitle: String,
+        backgrounBasicColor: BasicColor,
+        foregroundBasicColor: BasicColor,
+    ) : super(formTitle) {
+        var commandListener = commandListener
+        var formTitle = formTitle
+        var backgrounBasicColor = backgrounBasicColor
+        var foregroundBasicColor = foregroundBasicColor
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.commandStack= Stack<Any>()
+        this.commandStack = Stack<Any>()
 
         try {
             this.repaintProcessor!!.process()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
-}
-
-}
-
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.commonStrings!!.CONSTRUCTOR,
+                e,
+            )
+        }
+    }
 
     open fun initCommands(cmdListener: CommandListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var cmdListener = cmdListener
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var cmdListener = cmdListener
+    }
 
     override fun open()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(this.commonStrings!!.START, this, "open")
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(this.commonStrings!!.START, this, "open")
+    }
 
     override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CLOSE)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CLOSE)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.repaintProcessor!!.process()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.repaintProcessor!!.process()
+    }
 
     override fun getSourceId()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
 
     override fun addCommand(command: Command)
-        //nullable = true from not(false or (false and false)) = true
-{
-var command = command
-this.commandStack!!.push(command)
-super.addCommand(command)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var command = command
+        this.commandStack!!.push(command)
+        super.addCommand(command)
+    }
 
     override fun removeAllCommands()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var size: Int = this.commandStack!!.size!!
+        var size: Int = this.commandStack!!.size!!
 
+        for (index in 0 until size) {
 
-
-
-
-                        for (index in 0 until size)
-
-        {
-super.removeCommand(this.commandStack!!.pop() as Command)
+            super.removeCommand(this.commandStack!!.pop() as Command)
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

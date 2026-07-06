@@ -1,42 +1,23 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.khronos.opengles.GL10
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class OpenGLProcessor
-            : Object
-         {
-        
+open public class OpenGLProcessor : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     open fun process(gl: GL10)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gl = gl
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gl = gl
+    }
 }
-
-
-}
-                
-            
-

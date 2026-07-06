@@ -1,83 +1,61 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.util
+/* Generated Code Do Not Modify */
+package org.allbinary.util
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.logic.communication.log.ForcedLogUtil
 
 open public class ImmutableBasicArrayList : BasicArrayListS {
-        
 
     private val name: String
-public constructor (name: String, size: Int)                        
 
-                            : super(size){
-    //var name = name
-    //var size = size
+    public constructor(name: String, size: Int) : super(size) {
 
+        // var name = name
+        // var size = size
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.name= name
-}
+        // For kotlin this is before the body of the constructor.
 
+        this.name = name
+    }
 
-    override fun add(e: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var e = e
-ForcedLogUtil.log(this.name, this)
+    override fun add(
+        e: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var e = e
+        ForcedLogUtil.log(this.name, this)
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
     override fun addAt(index: Int, element: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-var index = index
-var element = element
-ForcedLogUtil.log(this.name, this)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var index = index
+        var element = element
+        ForcedLogUtil.log(this.name, this)
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.name
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.name
+    }
 }
-
-
-}
-                
-            
-

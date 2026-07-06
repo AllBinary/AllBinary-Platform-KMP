@@ -1,99 +1,68 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.color
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.color
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
+import java.lang.Object
 import java.util.Hashtable
 
-open public class BasicColorCacheFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: BasicColorCacheFactory = BasicColorCacheFactory()
+open public class BasicColorCacheFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: BasicColorCacheFactory{
+    companion object {
 
+        private val instance: BasicColorCacheFactory = BasicColorCacheFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : BasicColorCacheFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicColorCacheFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicColorCacheFactory.instance
         }
-            
-    private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
-private constructor ()
-            : super()
-        {
-}
+    }
 
+    private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+
+    private constructor() : super() {}
 
     open fun add(basicDefaultColor: BasicColor)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var basicDefaultColor = basicDefaultColor
-this.hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicDefaultColor = basicDefaultColor
+        this.hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
+    }
+
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
+    open fun getAndOrCreate(
+        integer: Integer
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicColor {
+        // var integer = integer
+
+        var basicColor: BasicColor = this.hashtable.get(integer as Object) as BasicColor
+
+        if (basicColor == null) {
+
+            basicColor = BasicColorFactory.getInstance()!!.createInstance(integer.toInt())
+            this.hashtable.put(integer, basicColor)
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return basicColor
+    }
 }
-
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
-    open fun getAndOrCreate(integer: Integer)
-        //nullable = true from not(false or (false and false)) = true
-: BasicColor{
-    //var integer = integer
-
-    var basicColor: BasicColor = this.hashtable.get(integer as Object) as BasicColor
-
-
-    
-                        if(basicColor == 
-                                    null
-                                )
-                        
-                                    {
-                                    basicColor= BasicColorFactory.getInstance()!!.createInstance(integer.toInt())
-this.hashtable.put(integer, basicColor)
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicColor
-}
-
-
-}
-                
-            
-

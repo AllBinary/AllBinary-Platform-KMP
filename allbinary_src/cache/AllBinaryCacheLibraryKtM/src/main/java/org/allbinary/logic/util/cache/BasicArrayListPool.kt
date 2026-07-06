@@ -1,141 +1,92 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.util.cache
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.util.cache
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.util.BasicArrayList
 
 open public class BasicArrayListPool : AbstractArrayListPool {
-        
-public constructor (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
 
-                            : super(cacheableInterfaceFactoryInterface){
-var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
+    public constructor(
+        cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface
+    ) : super(cacheableInterfaceFactoryInterface) {
+        var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
+    }
 
     override fun clear()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.buffers.clear()
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.buffers.clear()
+    }
 
+    @Throws(Exception::class)
+    override fun remove(
+        key: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : CacheableInterface {
+        var key = key
 
-                @Throws(Exception::class)
-            
-    override fun remove(key: Any)
-        //nullable = true from not(false or (false and false)) = true
-: CacheableInterface{
-var key = key
+        var size: Int = this.buffers.size()!!
 
-    var size: Int = this.buffers.size()!!
+        if (size > 0) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.buffers.removeAt(size - 1) as CacheableInterface
+        } else {
 
-    
-                        if(size > 0)
-                        
-                                    {
-                                    
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.cacheableInterfaceFactoryInterface!!.getInstance(key)
+        }
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.buffers.removeAt(size -1) as CacheableInterface
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.cacheableInterfaceFactoryInterface!!.getInstance(key)
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun addAll(usedList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-var usedList = usedList
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var usedList = usedList
 
+        for (index in usedList!!.size()!! - 1 downTo 0) {
 
+            var anyType: CacheableInterface = usedList!!.objectArray[index]!! as CacheableInterface
 
+            this.add(anyType)
+        }
 
-                        for (index in usedList!!.size()!!  - 1  downTo 0)
+        usedList!!.clear()
+    }
 
-        {
-
-    var anyType: CacheableInterface = usedList!!.objectArray[index]!! as CacheableInterface
-
-this.add(anyType)
-}
-
-usedList!!.clear()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun releaseUsedBackToPool(usedList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-var usedList = usedList
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var usedList = usedList
 
+        for (index in usedList!!.size()!! - 1 downTo 0) {
 
+            var list: BasicArrayListCacheable =
+                usedList!!.objectArray[index]!! as BasicArrayListCacheable
 
+            if (list.size() == 0) {
 
-                        for (index in usedList!!.size()!!  - 1  downTo 0)
-
-        {
-
-    var list: BasicArrayListCacheable = usedList!!.objectArray[index]!! as BasicArrayListCacheable
-
-
-    
-                        if(list.size() == 0)
-                        
-                                    {
-                                    usedList!!.removeAt(index)
-this.add(list)
-
-                                    }
-                                
+                usedList!!.removeAt(index)
+                this.add(list)
+            }
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

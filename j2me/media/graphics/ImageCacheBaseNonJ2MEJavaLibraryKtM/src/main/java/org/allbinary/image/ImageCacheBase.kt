@@ -1,34 +1,26 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.image
+/* Generated Code Do Not Modify */
+package org.allbinary.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.io.InputStream
+import java.lang.Object
 import java.util.Hashtable
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
+import kotlin.Array
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
@@ -36,10 +28,7 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class ImageCacheBase
-            : Object
-         {
-        
+open public class ImageCacheBase : Object {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -60,290 +49,212 @@ open public class ImageCacheBase
     var volume: Int = 0
 
     var nextIndex: Int = 0
-public constructor ()
-            : super()
-        {
 
+    public constructor() : super() {
 
+        for (index in this.listOfList!!.size - 1 downTo 0) {
 
+            this.listOfList[index] = BasicArrayListD()
+        }
 
-                        for (index in this.listOfList!!.size -1 downTo 0)
+        for (index in this.availableListOfList!!.size - 1 downTo 0) {
 
-        {
-this.listOfList[index]= BasicArrayListD()
-}
+            this.availableListOfList[index] = BasicArrayListD()
+        }
+    }
 
+    open fun getImage(
+        resourceId: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var resourceId = resourceId
 
+        var imageCanBeNull: Any? = this.hashtable.get(resourceId as Object)
 
+        if (imageCanBeNull == null) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NullImage.NULL_IMAGE
+        }
 
-                        for (index in this.availableListOfList!!.size -1 downTo 0)
-
-        {
-this.availableListOfList[index]= BasicArrayListD()
-}
-
-}
-
-
-    open fun getImage(resourceId: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var resourceId = resourceId
-
-    var imageCanBeNull: Any? = this.hashtable.get(resourceId as Object)
-
-
-    
-                        if(imageCanBeNull == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullImage.NULL_IMAGE
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageCanBeNull as Image
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return imageCanBeNull as Image
+    }
 
     open fun releaseAll()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        for (index in this.listOfList!!.size - 1 downTo 0) {
 
+            this.availableListOfList[index]!!.clear()
+            this.availableListOfList[index]!!.addAllList(this.listOfList[index]!!)
+        }
 
+        this.logUtil!!.putF(
+            StringMaker().append("ImageCache: ")!!.append(this.toString())!!.toString(),
+            this,
+            "releaseAll",
+        )
+    }
 
-                        for (index in this.listOfList!!.size -1 downTo 0)
+    open fun getIndexWH(
+        width: Int,
+        height: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var width = width
+        // var height = height
 
-        {
-this.availableListOfList[index]!!.clear()
-this.availableListOfList[index]!!.addAllList(this.listOfList[index]!!)
-}
+        var foundIndex: Int = -1
 
-this.logUtil!!.putF(StringMaker().
-                            append("ImageCache: ")!!.append(this.toString())!!.toString(), this, "releaseAll")
-}
+        var size: Int = this.widths.size
 
+        for (index in 0 until size) {
 
-    open fun getIndexWH(width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var width = width
-    //var height = height
+            if (this.widths[index] == width && this.heights[index] == height) {
 
-    var foundIndex: Int =  -1
+                foundIndex = index
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return foundIndex
+            }
+        }
 
-    var size: Int = this.widths.size
-                
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return foundIndex
+    }
 
+    open fun getFromAvailable(
+        foundIndex: Int,
+        width: Int,
+        height: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var foundIndex = foundIndex
+        // var width = width
+        // var height = height
 
+        if (foundIndex != -1) {
 
+            if (this.availableListOfList[foundIndex]!!.size() > 0) {
 
+                var list: BasicArrayList = this.availableListOfList[foundIndex]!!
 
-                        for (index in 0 until size)
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return list.removeAt(list.size() - 1) as Image
+            }
+        }
 
-        {
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return NullImage.NULL_IMAGE
+    }
 
-    
-                        if(this.widths[index] == width && this.heights[index] == height)
-                        
-                                    {
-                                    foundIndex= index
+    @Throws(Exception::class)
+    open fun get(
+        caller: String,
+        width: Int,
+        height: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var caller = caller
+        // var width = width
+        // var height = height
 
+        throw RuntimeException()
+    }
 
+    @Throws(Exception::class)
+    open fun getWithKey(
+        key: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var key = key
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return foundIndex
+        throw RuntimeException()
+    }
 
-                                    }
-                                
-}
+    @Throws(Exception::class)
+    open fun createImage(
+        caller: String,
+        width: Int,
+        height: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var caller = caller
+        // var width = width
+        // var height = height
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.imageFactory!!.createImage(caller, width, height)
+    }
 
+    @Throws(Exception::class)
+    open fun createImageFromInputStream(
+        key: Any,
+        inputStream: InputStream,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var key = key
+        // var inputStream = inputStream
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return foundIndex
-}
-
-
-    open fun getFromAvailable(foundIndex: Int, width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var foundIndex = foundIndex
-    //var width = width
-    //var height = height
-
-    
-                        if(foundIndex !=  -1)
-                        
-                                    {
-                                    
-    
-                        if(this.availableListOfList[foundIndex]!!.size() > 0)
-                        
-                                    {
-                                    
-    var list: BasicArrayList = this.availableListOfList[foundIndex]!!
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return list.removeAt(list.size() -1) as Image
-
-                                    }
-                                
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullImage.NULL_IMAGE
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun get(caller: String, width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var caller = caller
-    //var width = width
-    //var height = height
-
-
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun getWithKey(key: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var key = key
-
-
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun createImage(caller: String, width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var caller = caller
-    //var width = width
-    //var height = height
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.imageFactory!!.createImage(caller, width, height)
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun createImageFromInputStream(key: Any, inputStream: InputStream)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var key = key
-    //var inputStream = inputStream
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.imageFactory!!.createImageFromInputStream(key, inputStream)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.imageFactory!!.createImageFromInputStream(key, inputStream)
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
+        for (index in this.nextIndex - 1 downTo 0) {
 
+            var width: Int = this.widths[index]!!
 
+            var height: Int = this.heights[index]!!
 
+            var total: Int = this.listOfList[index]!!.size()!!
 
-                        for (index in this.nextIndex -1 downTo 0)
+            var totalAvailable: Int = this.availableListOfList[index]!!.size()!!
 
-        {
+            stringBuffer!!.append(" w: ")
+            stringBuffer!!.appendint(width)
+            stringBuffer!!.append(" h: ")
+            stringBuffer!!.appendint(height)
+            stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+            stringBuffer!!.append(CommonLabels.getInstance()!!.TOTAL_LABEL)
+            stringBuffer!!.appendint(total)
+            stringBuffer!!.append(" available: ")
+            stringBuffer!!.appendint(totalAvailable)
+        }
 
-    var width: Int = this.widths[index]!!
-
-
-    var height: Int = this.heights[index]!!
-
-
-    var total: Int = this.listOfList[index]!!.size()!!
-
-
-    var totalAvailable: Int = this.availableListOfList[index]!!.size()!!
-
-stringBuffer!!.append(" w: ")
-stringBuffer!!.appendint(width)
-stringBuffer!!.append(" h: ")
-stringBuffer!!.appendint(height)
-stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(CommonLabels.getInstance()!!.TOTAL_LABEL)
-stringBuffer!!.appendint(total)
-stringBuffer!!.append(" available: ")
-stringBuffer!!.appendint(totalAvailable)
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 
     open fun getHashtableP()
-        //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Hashtable<Any, Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hashtable
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.hashtable
+    }
 
     open fun init(image: Image)
-        //nullable = true from not(false or (false and false)) = true
-{
-var image = image
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var image = image
+    }
 
     open fun initProgress()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {}
 }
-
-
-}
-                
-            
-

@@ -1,75 +1,49 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.canvas
 
+import java.lang.Object
 
+open public class Processor : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val SINGLETON: Processor = Processor()
 
-open public class Processor
-            : Object
-         {
-        
-companion object {
-            
-    private val SINGLETON: Processor = Processor()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : Processor {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: Processor{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return Processor.SINGLETON
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return Processor.SINGLETON
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-                @Throws(Exception::class)
-            
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
+    @Throws(Exception::class)
     open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processt(timeDelta: Long)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var timeDelta = timeDelta
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var timeDelta = timeDelta
+    }
 }
-
-
-}
-                
-            
-

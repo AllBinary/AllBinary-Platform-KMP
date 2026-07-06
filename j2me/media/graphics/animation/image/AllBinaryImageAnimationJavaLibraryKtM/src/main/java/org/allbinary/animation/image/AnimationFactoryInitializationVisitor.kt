@@ -1,91 +1,70 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.image
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 
-open public class AnimationFactoryInitializationVisitor
-            : Object
-         {
-        
+open public class AnimationFactoryInitializationVisitor : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    var width: Int= 0
+    // Auto Generated
+    public constructor() : super() {}
 
-    var height: Int= 0
+    var width: Int = 0
 
-    var dx: Int= 0
+    var height: Int = 0
 
-    var dy: Int= 0
+    var dx: Int = 0
 
-    var originalDx: Int= 0
+    var dy: Int = 0
 
-    var originalDy: Int= 0
+    var originalDx: Int = 0
+
+    var originalDy: Int = 0
 
     open fun visit()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
+        var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
-    var commonLabels: CommonLabels = CommonLabels.getInstance()!!
+        var stringBuffer: StringMaker = StringMaker()
 
+        stringBuffer!!
+            .append(PositionStrings.getInstance()!!.DX_LABEL)!!
+            .appendfloat(this.dx.toFloat())
+        stringBuffer!!
+            .append(PositionStrings.getInstance()!!.DY_LABEL)!!
+            .appendfloat(this.dy.toFloat())
+        stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
+        stringBuffer!!.appendint(this.width)
+        stringBuffer!!.append(commonSeps!!.SPACE)
+        stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
+        stringBuffer!!.appendint(this.height)
 
-    var stringBuffer: StringMaker = StringMaker()
-
-stringBuffer!!.append(PositionStrings.getInstance()!!.DX_LABEL)!!.appendfloat(this.dx.toFloat())
-stringBuffer!!.append(PositionStrings.getInstance()!!.DY_LABEL)!!.appendfloat(this.dy.toFloat())
-stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.appendint(this.width)
-stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.appendint(this.height)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

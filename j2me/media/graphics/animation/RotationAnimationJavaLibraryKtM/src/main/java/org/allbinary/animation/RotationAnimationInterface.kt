@@ -1,49 +1,34 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation
+/* Generated Code Do Not Modify */
+package org.allbinary.animation
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.direction.DirectionalInterface
 import org.allbinary.math.AngleInfo
 
 interface RotationAnimationInterface : IndexedAnimationInterface, DirectionalInterface {
-        
 
     open fun getAngleInfoP()
-        //nullable = true from not(false or (false and true)) = true
-: AngleInfo
+    // nullable = true from not(false or (false and true)) = true
+    : AngleInfo
 
     open fun nextRotation()
-        //nullable = true from not(false or (false and true)) = true
 
+    // nullable = true from not(false or (false and true)) = true
 
     open fun previousRotation()
-        //nullable = true from not(false or (false and true)) = true
-
+    // nullable = true from not(false or (false and true)) = true
 
 }
-                
-            
-

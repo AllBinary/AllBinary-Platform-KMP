@@ -1,45 +1,32 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.text
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.text
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.graphics.font.FontDebugFactory
-import org.allbinary.logic.string.StringMaker
 
-open public class CustomTextAnimation : TextAnimation
-                , GetTextInterface {
-        
-companion object {
-            
-    private val INIT_STRING: String = ""
+open public class CustomTextAnimation : TextAnimation, GetTextInterface {
 
-        }
-            
+    companion object {
+
+        private val INIT_STRING: String = ""
+    }
+
     val fontDebugFactory: FontDebugFactory = FontDebugFactory.getInstance()!!
 
     val fontSize: Int
@@ -49,123 +36,95 @@ companion object {
     private var lastText: String = CustomTextAnimation.INIT_STRING
 
     var hasChanged: Boolean = true
-public constructor (text: String, fontSize: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(text, animationBehavior){
-    //var text = text
-    //var fontSize = fontSize
-    //var animationBehavior = animationBehavior
+    public constructor(
+        text: String,
+        fontSize: Int,
+        animationBehavior: AnimationBehavior,
+    ) : super(text, animationBehavior) {
+        // var text = text
+        // var fontSize = fontSize
+        // var animationBehavior = animationBehavior
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.fontSize= fontSize
-this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
-}
-
+        this.fontSize = fontSize
+        this.font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
+    }
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
-this.myFontProcessor!!.process(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
+        this.myFontProcessor!!.process(graphics)
 
-    var existingFont: Font = graphics.getFont()!!
+        var existingFont: Font = graphics.getFont()!!
 
-this.fontDebugFactory!!.setFont(this.font, graphics)
-super.paintXYNoUpdate(graphics, x, y)
-this.fontDebugFactory!!.setFont(existingFont, graphics)
-}
-
+        this.fontDebugFactory!!.setFont(this.font, graphics)
+        super.paintXYNoUpdate(graphics, x, y)
+        this.fontDebugFactory!!.setFont(existingFont, graphics)
+    }
 
     override fun setScale(scaleX: Float, scaleY: Float)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var scaleX = scaleX
-    //var scaleY = scaleY
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var scaleX = scaleX
+        // var scaleY = scaleY
 
-    
-                        if(scaleX != scaleY)
-                        
-                                    {
-                                    
+        if (scaleX != scaleY) {
 
+            throw RuntimeException()
+        }
 
-                            throw RuntimeException()
-
-                                    }
-                                
-this.hasChanged= true
-this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (this.fontSize *scaleX).toInt())
-}
-
+        this.hasChanged = true
+        this.font =
+            Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (this.fontSize * scaleX).toInt())
+    }
 
     override fun setText(text: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var text = text
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var text = text
 
-    
-                        if(this.lastText != text)
-                        
-                                    {
-                                    this.hasChanged= true
-this.lastText= text
-super.setText(text)
+        if (this.lastText != text) {
 
-                                    }
-                                
-}
-
+            this.hasChanged = true
+            this.lastText = text
+            super.setText(text)
+        }
+    }
 
     override fun getText()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.lastText
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.lastText
-}
-
-
-    private var textWidth: Int= 0
+    private var textWidth: Int = 0
 
     override fun getWidth()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-    
-                        if(this.hasChanged)
-                        
-                                    {
-                                    this.textWidth= this.font.stringWidth(this.textArrayP[0]!!)
-this.hasChanged= false
+        if (this.hasChanged) {
 
-                                    }
-                                
+            this.textWidth = this.font.stringWidth(this.textArrayP[0]!!)
+            this.hasChanged = false
+        }
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.textWidth
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.textWidth
+    }
 
     override fun getFontHeight()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.font.getHeight()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.font.getHeight()
+    }
 }
-
-
-}
-                
-            
-

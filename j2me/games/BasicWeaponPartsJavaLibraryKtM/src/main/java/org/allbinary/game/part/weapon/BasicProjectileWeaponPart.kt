@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.part.weapon
+/* Generated Code Do Not Modify */
+package org.allbinary.game.part.weapon
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.animation.Animation
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.layer.weapon.WeaponLayer
@@ -36,60 +26,86 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 
 open public class BasicProjectileWeaponPart : BasicWeaponPart {
-        
-companion object {
-            
-    open fun createBasicProjectileWeaponPart(animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)
-        //nullable = true from not(false or (false and false)) = true
-: BasicProjectileWeaponPart{
-    //var animationInterface = animationInterface
-    //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
 
+    companion object {
 
+        open fun createBasicProjectileWeaponPart(
+            animationInterface: Animation,
+            weaponLayerCircularStaticPool: WeaponLayerCircularPool,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : BasicProjectileWeaponPart {
+            // var animationInterface = animationInterface
+            // var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicProjectileWeaponPart(animationInterface, AllBinaryLayer.NULL_ALLBINARY_LAYER, weaponLayerCircularStaticPool, WeaponProperties.NULL_WEAPON_PROPERTIES, NoScoreable.getInstance(), RelativeRelationship.NULL_RELATIVE_RELATIONSHIP)
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicProjectileWeaponPart(
+                animationInterface,
+                AllBinaryLayer.NULL_ALLBINARY_LAYER,
+                weaponLayerCircularStaticPool,
+                WeaponProperties.NULL_WEAPON_PROPERTIES,
+                NoScoreable.getInstance(),
+                RelativeRelationship.NULL_RELATIVE_RELATIONSHIP,
+            )
         }
-            
+    }
+
     private var weaponLayerCircularStaticPool: WeaponLayerCircularPool
-public constructor (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
-                            : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){
-    //var animationInterface = animationInterface
-    //var sourceLayerInterface = sourceLayerInterface
-    //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
-    //var weaponProperties = weaponProperties
-    //var scoreableInterface = scoreableInterface
-    //var relativeRelationship = relativeRelationship
+    public constructor(
+        animationInterface: Animation,
+        sourceLayerInterface: AllBinaryLayer,
+        weaponLayerCircularStaticPool: WeaponLayerCircularPool,
+        weaponProperties: WeaponProperties,
+        scoreableInterface: ScoreableInterface,
+        relativeRelationship: RelativeRelationship,
+    ) : super(
+        animationInterface,
+        sourceLayerInterface,
+        weaponProperties,
+        scoreableInterface,
+        relativeRelationship,
+    ) {
+        // var animationInterface = animationInterface
+        // var sourceLayerInterface = sourceLayerInterface
+        // var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
+        // var weaponProperties = weaponProperties
+        // var scoreableInterface = scoreableInterface
+        // var relativeRelationship = relativeRelationship
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
+        this.weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
+    }
+
+    @Throws(Exception::class)
+    override fun processScore(
+        allbinaryLayerManager: AllBinaryLayerManager,
+        angle: Short,
+        otherAngle: Short,
+        weaponProperties: WeaponProperties,
+        scoreableInterface: ScoreableInterface,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allbinaryLayerManager = allbinaryLayerManager
+        // var angle = angle
+        var otherAngle = otherAngle
+        // var weaponProperties = weaponProperties
+        // var scoreableInterface = scoreableInterface
+
+        var weaponLayer: WeaponLayer =
+            this.weaponLayerCircularStaticPool!!.getInstanceWeaponLayer(
+                this.getOwnerLayerInterface(),
+                this.relativeRelationship!!.getX(),
+                this.relativeRelationship!!.getY(),
+                this.relativeRelationship!!.getZ(),
+                angle.toInt(),
+                otherAngle.toInt(),
+                weaponProperties,
+                scoreableInterface,
+            )!!
+
+        allbinaryLayerManager!!.append(weaponLayer)
+    }
 }
-
-
-                @Throws(Exception::class)
-            
-    override fun processScore(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allbinaryLayerManager = allbinaryLayerManager
-    //var angle = angle
-var otherAngle = otherAngle
-    //var weaponProperties = weaponProperties
-    //var scoreableInterface = scoreableInterface
-
-    var weaponLayer: WeaponLayer = this.weaponLayerCircularStaticPool!!.getInstanceWeaponLayer(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), this.relativeRelationship!!.getZ(), angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)!!
-
-allbinaryLayerManager!!.append(weaponLayer)
-}
-
-
-}
-                
-            
-

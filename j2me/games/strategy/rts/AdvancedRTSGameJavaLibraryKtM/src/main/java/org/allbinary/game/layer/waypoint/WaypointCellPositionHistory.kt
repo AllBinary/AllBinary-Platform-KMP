@@ -1,226 +1,156 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.waypoint
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.waypoint
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
+import java.lang.Object
 import org.allbinary.graphics.CellPosition
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
-open public class WaypointCellPositionHistory
-            : Object
-         {
-        
-companion object {
-            
-    private val SINGLETON: WaypointCellPositionHistory = WaypointCellPositionHistory()
+open public class WaypointCellPositionHistory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: WaypointCellPositionHistory{
+    companion object {
 
+        private val SINGLETON: WaypointCellPositionHistory = WaypointCellPositionHistory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : WaypointCellPositionHistory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return WaypointCellPositionHistory.SINGLETON
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return WaypointCellPositionHistory.SINGLETON
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     private var positionList: BasicArrayList = BasicArrayListD()
 
     private var layerList: BasicArrayList = BasicArrayListD()
 
     open fun add(cellPosition: CellPosition, layerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var cellPosition = cellPosition
-var layerInterface = layerInterface
-this.positionList!!.add(cellPosition)
-this.layerList!!.add(layerInterface)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var cellPosition = cellPosition
+        var layerInterface = layerInterface
+        this.positionList!!.add(cellPosition)
+        this.layerList!!.add(layerInterface)
+    }
 
     open fun addList(list: BasicArrayList, layerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var list = list
-var layerInterface = layerInterface
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var list = list
+        var layerInterface = layerInterface
 
+        for (index in list.size() - 1 downTo 0) {
 
-
-
-                        for (index in list.size() -1 downTo 0)
-
-        {
-this.add(list.get(index) as CellPosition, layerInterface)
-}
-
-}
-
+            this.add(list.get(index) as CellPosition, layerInterface)
+        }
+    }
 
     open fun remove(cellPosition: CellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-var cellPosition = cellPosition
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var cellPosition = cellPosition
 
-    var index: Int = this.positionList!!.indexOf(cellPosition)!!
+        var index: Int = this.positionList!!.indexOf(cellPosition)!!
 
+        if (index >= 0) {
 
-    
-                        if(index >= 0)
-                        
-                                    {
-                                    this.positionList!!.removeAt(index)
-this.layerList!!.removeAt(index)
-
-                                    }
-                                
-}
-
+            this.positionList!!.removeAt(index)
+            this.layerList!!.removeAt(index)
+        }
+    }
 
     open fun removeLayer(layerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var layerInterface = layerInterface
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var layerInterface = layerInterface
 
-    var index: Int = 0
+        var index: Int = 0
 
+        while (index != -1) {
+            index = this.layerList!!.indexOf(layerInterface)
 
-        while(index !=  -1)
-        {
-index= this.layerList!!.indexOf(layerInterface)
+            if (index >= 0) {
 
-    
-                        if(index >= 0)
-                        
-                                    {
-                                    this.positionList!!.removeAt(index)
-this.layerList!!.removeAt(index)
-
-                                    }
-                                
-}
-
-}
-
+                this.positionList!!.removeAt(index)
+                this.layerList!!.removeAt(index)
+            }
+        }
+    }
 
     open fun clear()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.positionList!!.clear()
-this.layerList!!.clear()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.positionList!!.clear()
+        this.layerList!!.clear()
+    }
+
+    open fun isCellPositionWithDrop(
+        cellPosition: CellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var cellPosition = cellPosition
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.positionList!!.contains(cellPosition)
+    }
+
+    open fun anyCellPositionWithDrop(
+        list: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var list = list
+
+        for (index in list.size() - 1 downTo 0) {
+
+            if (this.isCellPositionWithDrop(list.get(index) as CellPosition)) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            }
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun getLayerInterface(
+        cellPosition: CellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : AllBinaryLayer {
+        var cellPosition = cellPosition
+
+        var index: Int = this.positionList!!.indexOf(cellPosition)!!
+
+        if (index >= 0) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.layerList!!.get(index) as AllBinaryLayer
+        } else {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AllBinaryLayer.NULL_ALLBINARY_LAYER
+        }
+    }
 }
-
-
-    open fun isCellPositionWithDrop(cellPosition: CellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var cellPosition = cellPosition
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.positionList!!.contains(cellPosition)
-}
-
-
-    open fun anyCellPositionWithDrop(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var list = list
-
-
-
-
-                        for (index in list.size() -1 downTo 0)
-
-        {
-
-    
-                        if(this.isCellPositionWithDrop(list.get(index) as CellPosition))
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun getLayerInterface(cellPosition: CellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: AllBinaryLayer{
-var cellPosition = cellPosition
-
-    var index: Int = this.positionList!!.indexOf(cellPosition)!!
-
-
-    
-                        if(index >= 0)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.layerList!!.get(index) as AllBinaryLayer
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AllBinaryLayer.NULL_ALLBINARY_LAYER
-
-                        }
-                            
-}
-
-
-}
-                
-            
-

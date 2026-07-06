@@ -1,162 +1,116 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.resource
+/* Generated Code Do Not Modify */
+package org.allbinary.game.resource
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Hashtable
 import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
-open public class ResourceRelativeRelationshipFactory
-            : Object
-        
-                , ResourceRelativeRelationshipFactoryInterface {
-        
+open public class ResourceRelativeRelationshipFactory :
+    Object, ResourceRelativeRelationshipFactoryInterface {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-    private var initialized: Boolean= false
+    private var initialized: Boolean = false
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun init(level: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var level = level
-this.setInitialized(true)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var level = level
+        this.setInitialized(true)
+    }
 
+    @Throws(Exception::class)
+    override fun getResourceRelativeRelationshipList(
+        resource: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        var resource = resource
 
-                @Throws(Exception::class)
-            
-    override fun getResourceRelativeRelationshipList(resource: String)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-var resource = resource
+        var listCanBeNull: Any? = this.hashtable.get(resource as Object)
 
-    var listCanBeNull: Any? = this.hashtable.get(resource as Object)
+        if (listCanBeNull == null) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.basicArrayListUtil!!.getImmutableInstance()
+        }
 
-    
-                        if(listCanBeNull == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return listCanBeNull as BasicArrayList
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicArrayListUtil!!.getImmutableInstance()
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return listCanBeNull as BasicArrayList
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun addResourceRelativeRelationship(resource: String, hardPoint: RelativeRelationship)
-        //nullable = true from not(false or (false and false)) = true
-{
-var resource = resource
-var hardPoint = hardPoint
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var resource = resource
+        var hardPoint = hardPoint
 
-    var list: BasicArrayList = this.getResourceRelativeRelationshipList(resource)!!
+        var list: BasicArrayList = this.getResourceRelativeRelationshipList(resource)!!
 
+        if (list == this.basicArrayListUtil!!.getImmutableInstance()) {
 
-    
-                        if(list == this.basicArrayListUtil!!.getImmutableInstance())
-                        
-                                    {
-                                    list= BasicArrayListD()
+            list = BasicArrayListD()
+        }
 
-                                    }
-                                
-list.add(hardPoint)
-this.hashtable.put(resource, list)
-}
+        list.add(hardPoint)
+        this.hashtable.put(resource, list)
+    }
 
+    override fun isLoadingLevel(
+        level: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var level = level
 
-    override fun isLoadingLevel(level: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var level = level
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     override fun isFeature()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     open fun setInitialized(initialized: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var initialized = initialized
-this.initialized= initialized
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var initialized = initialized
+        this.initialized = initialized
+    }
 
     open fun isInitialized()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initialized
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initialized
+    }
 }
-
-
-}
-                
-            
-

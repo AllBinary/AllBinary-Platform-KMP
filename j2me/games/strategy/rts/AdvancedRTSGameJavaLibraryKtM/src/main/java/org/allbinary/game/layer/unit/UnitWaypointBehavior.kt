@@ -1,32 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.unit
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.unit
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
 import org.allbinary.game.input.form.PrimaryWaypointHelper
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.RTSLayerEvent
@@ -52,15 +41,13 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
-open public class UnitWaypointBehavior : WaypointBehaviorBase
-                , WaypointEventListenerInterface {
-        
-companion object {
-            
-    private val PATHING: String = "Pathing"
+open public class UnitWaypointBehavior : WaypointBehaviorBase, WaypointEventListenerInterface {
 
-        }
-            
+    companion object {
+
+        private val PATHING: String = "Pathing"
+    }
+
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
     private var longWeaponRange: Int = 0
@@ -71,9 +58,11 @@ companion object {
 
     val currentGeographicMapCellHistoryP: GeographicMapCellHistory
 
-    private var lastPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var lastPathGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var currentPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var currentPathGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
     private val FAKE_WAYPOINT_LAYER: CollidableDestroyableDamageableLayer
 
@@ -87,607 +76,517 @@ companion object {
 
     private var movingFromStopped: Boolean = false
 
-    var waypointPathsListP: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
+    var waypointPathsListP: BasicArrayList =
+        BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
     private var currentTargetDistance: Int = Integer.MAX_VALUE
 
-    var currentTargetLayerInterfaceP: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.getNullInstance()!!
+    var currentTargetLayerInterfaceP: CollidableDestroyableDamageableLayer =
+        CollidableDestroyableDamageableLayer.getNullInstance()!!
 
-    private var trackingWaypoint: Boolean= false
-protected constructor (associatedAdvancedRTSGameLayer: UnitLayer, fakeWaypoint: CollidableDestroyableDamageableLayer){
-var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-var fakeWaypoint = fakeWaypoint
-this.associatedAdvancedRTSGameLayer= associatedAdvancedRTSGameLayer
-this.completeTimeDelayHelper= TimeDelayHelper(30000)
-this.targetList= BasicArrayListD()
-this.possibleTargetList= BasicArrayListD()
-this.setWaypointPathsList(BasicArrayListUtil.getInstance()!!.getImmutableInstance())
-this.currentGeographicMapCellHistoryP= GeographicMapCellHistory()
-this.FAKE_WAYPOINT_LAYER= fakeWaypoint
-}
+    private var trackingWaypoint: Boolean = false
 
+    protected constructor(
+        associatedAdvancedRTSGameLayer: UnitLayer,
+        fakeWaypoint: CollidableDestroyableDamageableLayer,
+    ) {
+        var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        var fakeWaypoint = fakeWaypoint
+        this.associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.completeTimeDelayHelper = TimeDelayHelper(30000)
+        this.targetList = BasicArrayListD()
+        this.possibleTargetList = BasicArrayListD()
+        this.setWaypointPathsList(BasicArrayListUtil.getInstance()!!.getImmutableInstance())
+        this.currentGeographicMapCellHistoryP = GeographicMapCellHistory()
+        this.FAKE_WAYPOINT_LAYER = fakeWaypoint
+    }
 
     open fun initRange(weaponRange: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var weaponRange = weaponRange
-this.longWeaponRange= weaponRange /2
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var weaponRange = weaponRange
+        this.longWeaponRange = weaponRange / 2
+    }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun onWaypointEvent(event: RTSLayerEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var event = event
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var event = event
 
-    var advancedRTSGameLayer: AdvancedRTSGameLayer = event.getRtsLayer() as AdvancedRTSGameLayer
+        var advancedRTSGameLayer: AdvancedRTSGameLayer = event.getRtsLayer() as AdvancedRTSGameLayer
 
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.onWaypointEvent(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer)
+        this.associatedAdvancedRTSGameLayer!!
+            .waypointLogHelperP!!
+            .onWaypointEvent(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer)
 
-    
-                        if(this.associatedAdvancedRTSGameLayer!!.isSelected())
-                        
-                                    {
-                                    this.addWaypointFromUser(advancedRTSGameLayer)
+        if (this.associatedAdvancedRTSGameLayer!!.isSelected()) {
 
-                                    }
-                                
-                             else 
-    
-                        if(advancedRTSGameLayer!!.shouldAddWaypointFromBuilding())
-                        
-                                    {
-                                    this.addWaypointFromBuilding(advancedRTSGameLayer)
+            this.addWaypointFromUser(advancedRTSGameLayer)
+        } else if (advancedRTSGameLayer!!.shouldAddWaypointFromBuilding()) {
 
-                                    }
-                                
-}
+            this.addWaypointFromBuilding(advancedRTSGameLayer)
+        }
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun addWaypointFromUser(advancedRTSGameLayer: AdvancedRTSGameLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var advancedRTSGameLayer = advancedRTSGameLayer
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var advancedRTSGameLayer = advancedRTSGameLayer
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun addWaypointFromBuilding(advancedRTSGameLayer: AdvancedRTSGameLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var advancedRTSGameLayer = advancedRTSGameLayer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var advancedRTSGameLayer = advancedRTSGameLayer
 
-    
-                        if(advancedRTSGameLayer == PrimaryWaypointHelper.getInstance()!!.getWaypointLayer() || advancedRTSGameLayer!!.getParentLayer() == this.associatedAdvancedRTSGameLayer!!.getParentLayer())
-                        
-                                    {
-                                    
-    
-                        if(!this.targetList!!.contains(advancedRTSGameLayer))
-                        
-                                    {
-                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.addWaypointFromBuilding(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer)
+        if (
+            advancedRTSGameLayer == PrimaryWaypointHelper.getInstance()!!.getWaypointLayer() ||
+                advancedRTSGameLayer!!.getParentLayer() ==
+                    this.associatedAdvancedRTSGameLayer!!.getParentLayer()
+        ) {
 
-    
-                        if(advancedRTSGameLayer!!.isDestroyed())
-                        
-                                    {
-                                    
+            if (!this.targetList!!.contains(advancedRTSGameLayer)) {
 
+                this.associatedAdvancedRTSGameLayer!!
+                    .waypointLogHelperP!!
+                    .addWaypointFromBuilding(
+                        this.associatedAdvancedRTSGameLayer,
+                        advancedRTSGameLayer,
+                    )
 
-                            throw Exception("Trying to add a dead: " +advancedRTSGameLayer)
+                if (advancedRTSGameLayer!!.isDestroyed()) {
 
-                                    }
-                                
-this.targetList!!.add(advancedRTSGameLayer)
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.addWaypointFromBuildingList(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer, this.targetList)
+                    throw Exception("Trying to add a dead: " + advancedRTSGameLayer)
+                }
 
-                                    }
-                                
-
-                                    }
-                                
-}
-
+                this.targetList!!.add(advancedRTSGameLayer)
+                this.associatedAdvancedRTSGameLayer!!
+                    .waypointLogHelperP!!
+                    .addWaypointFromBuildingList(
+                        this.associatedAdvancedRTSGameLayer,
+                        advancedRTSGameLayer,
+                        this.targetList,
+                    )
+            }
+        }
+    }
 
     override fun isWaypointListEmptyOrOnlyTargets()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
+    @Throws(Exception::class)
+    open fun insertWaypoint(
+        index: Int,
+        rtsLayer: CollidableDestroyableDamageableLayer,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var index = index
+        // var rtsLayer = rtsLayer
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
+        if (this.canInsertWaypoint(index, rtsLayer)) {
 
+            this.associatedAdvancedRTSGameLayer!!
+                .waypointLogHelperP!!
+                .insertWaypoint(
+                    this.associatedAdvancedRTSGameLayer,
+                    index,
+                    rtsLayer,
+                    this.getName(),
+                )
 
-                @Throws(Exception::class)
-            
-    open fun insertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageableLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var index = index
-    //var rtsLayer = rtsLayer
+            if (rtsLayer!!.isDestroyed()) {
 
-    
-                        if(this.canInsertWaypoint(index, rtsLayer))
-                        
-                                    {
-                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.insertWaypoint(this.associatedAdvancedRTSGameLayer, index, rtsLayer, this.getName())
+                throw Exception("Trying to add a dead: " + rtsLayer)
+            }
 
-    
-                        if(rtsLayer!!.isDestroyed())
-                        
-                                    {
-                                    
+            this.targetList!!.addAt(index, rtsLayer)
+            this.associatedAdvancedRTSGameLayer!!
+                .waypointLogHelperP!!
+                .insertWaypointList(
+                    this.associatedAdvancedRTSGameLayer,
+                    index,
+                    rtsLayer,
+                    this.getName(),
+                    this.targetList,
+                )
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
-                            throw Exception("Trying to add a dead: " +rtsLayer)
-
-                                    }
-                                
-this.targetList!!.addAt(index, rtsLayer)
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.insertWaypointList(this.associatedAdvancedRTSGameLayer, index, rtsLayer, this.getName(), this.targetList)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     open fun move()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.isMoving())
-                        
-                                    {
-                                    this.setMovingFromStopped(false)
+        if (this.isMoving()) {
 
-                                    }
-                                
-                        else {
-                            this.setMovingFromStopped(true)
+            this.setMovingFromStopped(false)
+        } else {
+            this.setMovingFromStopped(true)
+        }
 
-                        }
-                            
-this.setMoving(false)
-}
+        this.setMoving(false)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setRandomGeographicMapCellHistory(pathsList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathsList = pathsList
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathsList = pathsList
 
-    var size: Int = pathsList!!.size()!!
+        var size: Int = pathsList!!.size()!!
 
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.setRandomGeographicMapCellHistoryList(this.associatedAdvancedRTSGameLayer, pathsList)
+        this.associatedAdvancedRTSGameLayer!!
+            .waypointLogHelperP!!
+            .setRandomGeographicMapCellHistoryList(this.associatedAdvancedRTSGameLayer, pathsList)
 
-    
-                        if(size > 0)
-                        
-                                    {
-                                    
-    var geographicMapCellPositionBasicArrayList: BasicArrayList = BasicArrayListUtil.getInstance()!!.getRandom(pathsList) as BasicArrayList
+        if (size > 0) {
 
-this.setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList)
+            var geographicMapCellPositionBasicArrayList: BasicArrayList =
+                BasicArrayListUtil.getInstance()!!.getRandom(pathsList) as BasicArrayList
 
-                                    }
-                                
-}
+            this.setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList)
+        }
+    }
 
+    @Throws(Exception::class)
+    open fun setGeographicMapCellHistoryPath(
+        geographicMapCellPositionBasicArrayList: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
+        this.lastPathGeographicMapCellPosition =
+            SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-                @Throws(Exception::class)
-            
-    open fun setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
-this.lastPathGeographicMapCellPosition= SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        if (this.associatedAdvancedRTSGameLayer!!.showMoreCaptionStates) {
 
-    
-                        if(this.associatedAdvancedRTSGameLayer!!.showMoreCaptionStates)
-                        
-                                    {
-                                    this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(UnitWaypointBehavior.PATHING, BasicColorFactory.getInstance()!!.GREEN)
+            this.associatedAdvancedRTSGameLayer!!
+                .getCaptionAnimationHelper()!!
+                .update(UnitWaypointBehavior.PATHING, BasicColorFactory.getInstance()!!.GREEN)
+        }
 
-                                    }
-                                
-this.currentGeographicMapCellHistoryP!!.init()
-this.associatedAdvancedRTSGameLayer!!.init(this.currentGeographicMapCellHistoryP, geographicMapCellPositionBasicArrayList)
-this.setTrackingWaypoint(true)
-this.getCompleteTimeDelayHelper()!!.setStartTimeTNT()
-}
+        this.currentGeographicMapCellHistoryP!!.init()
+        this.associatedAdvancedRTSGameLayer!!.init(
+            this.currentGeographicMapCellHistoryP,
+            geographicMapCellPositionBasicArrayList,
+        )
+        this.setTrackingWaypoint(true)
+        this.getCompleteTimeDelayHelper()!!.setStartTimeTNT()
+    }
 
+    open fun canInsertWaypoint(
+        index: Int,
+        rtsLayer: CollidableDestroyableDamageableLayer,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var index = index
+        // var rtsLayer = rtsLayer
 
-    open fun canInsertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageableLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var index = index
-    //var rtsLayer = rtsLayer
+        if (this.targetList!!.size() > 4) {} else if (
+            this.targetList!!.contains(rtsLayer)
+        ) {} else {
 
-    
-                        if(this.targetList!!.size() > 4)
-                        
-                                    {
-                                    
-                                    }
-                                
-                             else 
-    
-                        if(this.targetList!!.contains(rtsLayer))
-                        
-                                    {
-                                    
-                                    }
-                                
-                        else {
-                            
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+    @Throws(Exception::class)
+    open fun addBuildingChase(
+        allbinaryLayer: AllBinaryLayer,
+        cellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allbinaryLayer = allbinaryLayer
+        // var cellPosition = cellPosition
+    }
 
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun addBuildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allbinaryLayer = allbinaryLayer
-    //var cellPosition = cellPosition
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun moveAwayFromBuilding(buildingLayer: BuildingLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var buildingLayer = buildingLayer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var buildingLayer = buildingLayer
 
-    var geographicMapCellPosition: GeographicMapCellPosition = this.associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
+        var geographicMapCellPosition: GeographicMapCellPosition =
+            this.associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
 
+        var list: BasicArrayList =
+            buildingLayer!!
+                .geographicMapCellPositionAreaBase!!
+                .getOccupyingGeographicMapCellPositionList()!!
 
-    var list: BasicArrayList = buildingLayer!!.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
+        if (list.contains(geographicMapCellPosition)) {
 
+            if (this.insertWaypoint(0, this.FAKE_WAYPOINT_LAYER)) {
 
-    
-                        if(list.contains(geographicMapCellPosition))
-                        
-                                    {
-                                    
-    
-                        if(this.insertWaypoint(0, this.FAKE_WAYPOINT_LAYER))
-                        
-                                    {
-                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.moveAwayFromBuilding(this.associatedAdvancedRTSGameLayer)
-this.setCurrentTargetLayerInterface(this.FAKE_WAYPOINT_LAYER as CollidableDestroyableDamageableLayer)
+                this.associatedAdvancedRTSGameLayer!!
+                    .waypointLogHelperP!!
+                    .moveAwayFromBuilding(this.associatedAdvancedRTSGameLayer)
+                this.setCurrentTargetLayerInterface(
+                    this.FAKE_WAYPOINT_LAYER as CollidableDestroyableDamageableLayer
+                )
 
-    var pathsList: BasicArrayList = buildingLayer!!.getMoveOutOfBuildAreaPath(geographicMapCellPosition)!!
+                var pathsList: BasicArrayList =
+                    buildingLayer!!.getMoveOutOfBuildAreaPath(geographicMapCellPosition)!!
 
-this.associatedAdvancedRTSGameLayer!!.setClosestGeographicMapCellHistory(pathsList)
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
+                this.associatedAdvancedRTSGameLayer!!.setClosestGeographicMapCellHistory(pathsList)
+            }
+        }
+    }
 
     private val repeatedToLong: TimeDelayHelper = TimeDelayHelper(22000)
 
     override fun needToMove()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.needToMove(this.associatedAdvancedRTSGameLayer, this)
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+        this.associatedAdvancedRTSGameLayer!!
+            .waypointLogHelperP!!
+            .needToMove(this.associatedAdvancedRTSGameLayer, this)
 
-    
-                        if(this.isTrackingWaypoint() || this.sensorAction == SensorActionFactory.getInstance()!!.EVADE || (this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.getNullInstance() && this.getCurrentTargetDistance() >= this.longWeaponRange +this.currentTargetLayerInterfaceP!!.getHalfHeight()))
-                        
-                                    {
-                                    this.repeatedToLong!!.setStartTimeTNT()
+        if (
+            this.isTrackingWaypoint() ||
+                this.sensorAction == SensorActionFactory.getInstance()!!.EVADE ||
+                (this.currentTargetLayerInterfaceP !=
+                    CollidableDestroyableDamageableLayer.getNullInstance() &&
+                    this.getCurrentTargetDistance() >=
+                        this.longWeaponRange + this.currentTargetLayerInterfaceP!!.getHalfHeight())
+        ) {
+            this.repeatedToLong!!.setStartTimeTNT()
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
+        if (this.repeatedToLong!!.isTimeTNT()) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+            var message: String = "Repeating too long: " + this.getMovementLogicAsString()
 
-                                    }
-                                
+            ForcedLogUtil.log(message, this.associatedAdvancedRTSGameLayer)
+        }
 
-    
-                        if(this.repeatedToLong!!.isTimeTNT())
-                        
-                                    {
-                                    
-    var message: String = "Repeating too long: " +this.getMovementLogicAsString()
-
-ForcedLogUtil.log(message, this.associatedAdvancedRTSGameLayer)
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     override fun getMovementLogicAsString()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("isTrackingWaypoint: ")
-stringBuffer!!.appendboolean(this.isTrackingWaypoint())
-stringBuffer!!.append(" sensorAction: ")
-stringBuffer!!.append(this.sensorAction!!.name)
-stringBuffer!!.append(" getCurrentTargetLayerInterface: ")
-stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.currentTargetLayerInterfaceP))
+        stringBuffer!!.append("isTrackingWaypoint: ")
+        stringBuffer!!.appendboolean(this.isTrackingWaypoint())
+        stringBuffer!!.append(" sensorAction: ")
+        stringBuffer!!.append(this.sensorAction!!.name)
+        stringBuffer!!.append(" getCurrentTargetLayerInterface: ")
+        stringBuffer!!.append(
+            StringUtil.getInstance()!!.toString(this.currentTargetLayerInterfaceP)
+        )
 
-    
-                        if(this.currentTargetLayerInterfaceP != CollidableDestroyableDamageableLayer.getNullInstance())
-                        
-                                    {
-                                    stringBuffer!!.append(" Target Range: ")
-stringBuffer!!.appendint(this.getCurrentTargetDistance())
-stringBuffer!!.append(" >= ")
-stringBuffer!!.appendint(this.longWeaponRange +this.currentTargetLayerInterfaceP!!.getHalfHeight())
+        if (
+            this.currentTargetLayerInterfaceP !=
+                CollidableDestroyableDamageableLayer.getNullInstance()
+        ) {
+            stringBuffer!!.append(" Target Range: ")
+            stringBuffer!!.appendint(this.getCurrentTargetDistance())
+            stringBuffer!!.append(" >= ")
+            stringBuffer!!.appendint(
+                this.longWeaponRange + this.currentTargetLayerInterfaceP!!.getHalfHeight()
+            )
+        }
 
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 
     open fun isMovingFromStopped()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.movingFromStopped
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.movingFromStopped
+    }
 
     open fun setMovingFromStopped(movingFromStopped: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var movingFromStopped = movingFromStopped
-this.movingFromStopped= movingFromStopped
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var movingFromStopped = movingFromStopped
+        this.movingFromStopped = movingFromStopped
+    }
 
     override fun setWaypointPathsList(waypointPathsList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-var waypointPathsList = waypointPathsList
-this.waypointPathsListP= waypointPathsList
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var waypointPathsList = waypointPathsList
+        this.waypointPathsListP = waypointPathsList
+    }
 
     override fun getWaypointPathsList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypointPathsListP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.waypointPathsListP
+    }
 
     open fun isMoving()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.moving
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.moving
+    }
 
     open fun setMoving(moving: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var moving = moving
-this.moving= moving
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var moving = moving
+        this.moving = moving
+    }
 
     override fun isTrackingWaypoint()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.trackingWaypoint
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.trackingWaypoint
+    }
 
     open fun getPossibleTargetList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.possibleTargetList
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.possibleTargetList
-}
-
-
-    open fun setLastPathGeographicMapCellPosition(lastPathGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-var lastPathGeographicMapCellPosition = lastPathGeographicMapCellPosition
-this.lastPathGeographicMapCellPosition= lastPathGeographicMapCellPosition
-}
-
+    open fun setLastPathGeographicMapCellPosition(
+        lastPathGeographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var lastPathGeographicMapCellPosition = lastPathGeographicMapCellPosition
+        this.lastPathGeographicMapCellPosition = lastPathGeographicMapCellPosition
+    }
 
     open fun getLastPathGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.lastPathGeographicMapCellPosition
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.lastPathGeographicMapCellPosition
-}
-
-
-    open fun setCurrentPathGeographicMapCellPosition(currentPathGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-var currentPathGeographicMapCellPosition = currentPathGeographicMapCellPosition
-this.currentPathGeographicMapCellPosition= currentPathGeographicMapCellPosition
-}
-
+    open fun setCurrentPathGeographicMapCellPosition(
+        currentPathGeographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var currentPathGeographicMapCellPosition = currentPathGeographicMapCellPosition
+        this.currentPathGeographicMapCellPosition = currentPathGeographicMapCellPosition
+    }
 
     override fun getCurrentPathGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.currentPathGeographicMapCellPosition
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.currentPathGeographicMapCellPosition
+    }
 
     open fun setSensorAction(sensorAction: SensorAction)
-        //nullable = true from not(false or (false and false)) = true
-{
-var sensorAction = sensorAction
-this.sensorAction= sensorAction
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var sensorAction = sensorAction
+        this.sensorAction = sensorAction
+    }
 
     open fun getSensorAction()
-        //nullable = true from not(false or (false and true)) = true
-: SensorAction{
+    // nullable = true from not(false or (false and true)) = true
+    : SensorAction {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.sensorAction
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.sensorAction
-}
-
-
-    open fun setCurrentTargetLayerInterface(currentTargetLayerInterface: CollidableDestroyableDamageableLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var currentTargetLayerInterface = currentTargetLayerInterface
-this.currentTargetLayerInterfaceP= currentTargetLayerInterface
-}
-
+    open fun setCurrentTargetLayerInterface(
+        currentTargetLayerInterface: CollidableDestroyableDamageableLayer
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var currentTargetLayerInterface = currentTargetLayerInterface
+        this.currentTargetLayerInterfaceP = currentTargetLayerInterface
+    }
 
     override fun getCurrentTargetLayerInterface()
-        //nullable = true from not(false or (false and true)) = true
-: CollidableDestroyableDamageableLayer{
+    // nullable = true from not(false or (false and true)) = true
+    : CollidableDestroyableDamageableLayer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.currentTargetLayerInterfaceP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.currentTargetLayerInterfaceP
+    }
 
     open fun setCurrentTargetDistance(currentTargetDistance: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var currentTargetDistance = currentTargetDistance
-this.currentTargetDistance= currentTargetDistance
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var currentTargetDistance = currentTargetDistance
+        this.currentTargetDistance = currentTargetDistance
+    }
 
     open fun getCurrentTargetDistance()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.currentTargetDistance
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.currentTargetDistance
+    }
 
     open fun getCompleteTimeDelayHelper()
-        //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : TimeDelayHelper {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.completeTimeDelayHelper
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.completeTimeDelayHelper
+    }
 
     override fun getCurrentGeographicMapCellHistory()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellHistory{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellHistory {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.currentGeographicMapCellHistoryP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.currentGeographicMapCellHistoryP
+    }
 
     open fun setTrackingWaypoint(trackingWaypoint: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var trackingWaypoint = trackingWaypoint
-this.trackingWaypoint= trackingWaypoint
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var trackingWaypoint = trackingWaypoint
+        this.trackingWaypoint = trackingWaypoint
+    }
 }
-
-
-}
-                
-            
-

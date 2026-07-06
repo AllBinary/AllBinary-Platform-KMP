@@ -1,69 +1,45 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles.shader
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles.shader
 
+import java.lang.Object
 
+open public class ShaderManagerFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: ShaderManagerFactory = ShaderManagerFactory()
 
-open public class ShaderManagerFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ShaderManagerFactory = ShaderManagerFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ShaderManagerFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ShaderManagerFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ShaderManagerFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ShaderManagerFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     open fun create()
-        //nullable = true from not(false or (false and true)) = true
-: ShaderManager{
+    // nullable = true from not(false or (false and true)) = true
+    : ShaderManager {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ShaderManager.getInstance()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return ShaderManager.getInstance()
+    }
 }
-
-
-}
-                
-            
-

@@ -1,78 +1,57 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2007 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2007 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
-import org.allbinary.logic.communication.log.LogUtil
 
 open public class EndLevelNoBuildingSelectedTouchButtonsBuilder : TouchButtonsListBuilder {
-        
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     override fun getList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
-    var list: BasicArrayList = BasicArrayListD()
+            var list: BasicArrayList = BasicArrayListD()
 
-list.addAllList(BasicTouchButtonsBuilder().
-                            getList())
-list.addAllList(BuildingScrollTouchButtonsBuilder().
-                            getList())
-this.addList(list)
+            list.addAllList(BasicTouchButtonsBuilder().getList())
+            list.addAllList(BuildingScrollTouchButtonsBuilder().getList())
+            this.addList(list)
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return list
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.commonStrings!!.CONSTRUCTOR,
+                e,
+            )
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

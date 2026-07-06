@@ -1,70 +1,63 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game
+/* Generated Code Do Not Modify */
+package org.allbinary.game
 
+import java.lang.Object
 
+open public class GameInfoCopyFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        open fun getInstanceMaxLevel(
+            gameInfo: GameInfo,
+            maxLevel: Int,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : GameInfo {
+            // var gameInfo = gameInfo
+            // var maxLevel = maxLevel
 
-open public class GameInfoCopyFactory
-            : Object
-         {
-        
-companion object {
-            
-    open fun getInstanceMaxLevel(gameInfo: GameInfo, maxLevel: Int)
-        //nullable = true from not(false or (false and false)) = true
-: GameInfo{
-    //var gameInfo = gameInfo
-    //var maxLevel = maxLevel
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameInfo(gameInfo!!.getGameType(), gameInfo!!.getGameMode(), gameInfo!!.getPlayerType(), maxLevel, gameInfo!!.getCurrentLevel())
-}
-
-
-    open fun getInstance(gameInfo: GameInfo)
-        //nullable =  from not(true or (false and false)) = 
-: GameInfo{
-    //var gameInfo = gameInfo
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameInfo(gameInfo!!.getGameType(), gameInfo!!.getGameMode(), gameInfo!!.getPlayerType(), gameInfo!!.getHighestLevel(), gameInfo!!.getCurrentLevel())
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GameInfo(
+                gameInfo!!.getGameType(),
+                gameInfo!!.getGameMode(),
+                gameInfo!!.getPlayerType(),
+                maxLevel,
+                gameInfo!!.getCurrentLevel(),
+            )
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-}
-                
-            
 
+        open fun getInstance(
+            gameInfo: GameInfo
+        )
+            // nullable =  from not(true or (false and false)) =
+            : GameInfo {
+            // var gameInfo = gameInfo
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GameInfo(
+                gameInfo!!.getGameType(),
+                gameInfo!!.getGameMode(),
+                gameInfo!!.getPlayerType(),
+                gameInfo!!.getHighestLevel(),
+                gameInfo!!.getCurrentLevel(),
+            )
+        }
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+}

@@ -1,35 +1,25 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.score.displayable
+/* Generated Code Do Not Modify */
+package org.allbinary.game.score.displayable
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.System
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.System
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
+import kotlin.Array
 import org.allbinary.J2MEUtil
 import org.allbinary.game.GameInfo
 import org.allbinary.game.commands.GameCommandsFactory
@@ -57,20 +47,23 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.thread.ARunnable
 import org.allbinary.thread.SecondaryThreadPool
 
-open public class HighScoresCanvas : GameCommandCanvas
-                , HighScoresResultsListener {
-        
-companion object {
-            
-    val NAME: String = "HighScoresCanvas"
+open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListener {
 
-        }
-            
+    companion object {
+
+        val NAME: String = "HighScoresCanvas"
+    }
+
     private var paintable: Paintable = NullPaintable.getInstance()!!
 
-    private val highScoreCommandsFactory: HighScoreCommandsFactory = HighScoreCommandsFactory.getInstance()!!
+    private val highScoreCommandsFactory: HighScoreCommandsFactory =
+        HighScoreCommandsFactory.getInstance()!!
 
-    private val waitPaintable: SimpleTextPaintable = SimpleTextPaintable(this.commonStrings!!.PLEASE_WAIT_FOR_SERVER, BasicColorFactory.getInstance()!!.WHITE)
+    private val waitPaintable: SimpleTextPaintable =
+        SimpleTextPaintable(
+            this.commonStrings!!.PLEASE_WAIT_FOR_SERVER,
+            BasicColorFactory.getInstance()!!.WHITE,
+        )
 
     private val highScoresPaintable: HighScoresPaintable
 
@@ -87,320 +80,285 @@ companion object {
     private var currentCommand: Command = this.highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[0]!!
 
     private var hasPainted: Boolean = false
-public constructor (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, gameInfo: GameInfo, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface: HighScoresCanvasInputProcessorFactoryInterface)                        
 
-                            : super(commandListener, HighScoresCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
-    //var commandListener = commandListener
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
-    //var gameInfo = gameInfo
-    //var paintable = paintable
-    //var highScoresFactoryInterface = highScoresFactoryInterface
-    //var highScoresCanvasInputProcessorFactoryInterface = highScoresCanvasInputProcessorFactoryInterface
+    public constructor(
+        commandListener: CommandListener,
+        allBinaryGameLayerManager: AllBinaryGameLayerManager,
+        gameInfo: GameInfo,
+        paintable: HighScoresPaintable,
+        highScoresFactoryInterface: HighScoresFactoryInterface,
+        highScoresCanvasInputProcessorFactoryInterface:
+            HighScoresCanvasInputProcessorFactoryInterface,
+    ) : super(
+        commandListener,
+        HighScoresCanvas.NAME,
+        allBinaryGameLayerManager!!.getBackgroundBasicColor(),
+        allBinaryGameLayerManager!!.getForegroundBasicColor(),
+    ) {
+        // var commandListener = commandListener
+        // var allBinaryGameLayerManager = allBinaryGameLayerManager
+        // var gameInfo = gameInfo
+        // var paintable = paintable
+        // var highScoresFactoryInterface = highScoresFactoryInterface
+        // var highScoresCanvasInputProcessorFactoryInterface =
+        // highScoresCanvasInputProcessorFactoryInterface
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
-this.highScoresPaintable= paintable
-this.highScoresFactoryInterface= highScoresFactoryInterface
-this.highScoresCanvasInputProcessor= highScoresCanvasInputProcessorFactoryInterface!!.getInstance(this)
-this.gameInfo= gameInfo
-this.waitPaintable!!.setBasicColorP(allBinaryGameLayerManager!!.getForegroundBasicColor())
-this.getHighScoresPaintable()!!.setBasicColorP(allBinaryGameLayerManager!!.getForegroundBasicColor())
-this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(allBinaryGameLayerManager!!.getBackgroundBasicColor(), false)
+        this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+        this.highScoresPaintable = paintable
+        this.highScoresFactoryInterface = highScoresFactoryInterface
+        this.highScoresCanvasInputProcessor =
+            highScoresCanvasInputProcessorFactoryInterface!!.getInstance(this)
+        this.gameInfo = gameInfo
+        this.waitPaintable!!.setBasicColorP(allBinaryGameLayerManager!!.getForegroundBasicColor())
+        this.getHighScoresPaintable()!!.setBasicColorP(
+            allBinaryGameLayerManager!!.getForegroundBasicColor()
+        )
+        this.colorFillPaintable =
+            ColorFillPaintableFactory.getInstance()!!.getInstance(
+                allBinaryGameLayerManager!!.getBackgroundBasicColor(),
+                false,
+            )
 
-    
-                        if(this.highScoresHelper!!.getHighScoresArray() == NoHighScoresFactory.getInstance()!!.NO_HIGH_SCORES)
-                        
-                                    {
-                                    this.setPaintable(this.waitPaintable)
+        if (
+            this.highScoresHelper!!.getHighScoresArray() ==
+                NoHighScoresFactory.getInstance()!!.NO_HIGH_SCORES
+        ) {
+            this.setPaintable(this.waitPaintable)
+        } else {
+            this.logUtil!!.putF(
+                "Show HighScores that are already loaded",
+                this,
+                this.commonStrings!!.CONSTRUCTOR,
+            )
+            this.updateCommand(this.currentCommand)
+            this.setPaintable(this.getHighScoresPaintable())
+        }
 
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF("Show HighScores that are already loaded", this, this.commonStrings!!.CONSTRUCTOR)
-this.updateCommand(this.currentCommand)
-this.setPaintable(this.getHighScoresPaintable())
+        open class HighScoreRunnable : ARunnable {
 
-                        }
-                            
+            val highScoresCanvas: HighScoresCanvas
 
-open class HighScoreRunnable : ARunnable {
-        
+            constructor(highScoresCanvas: HighScoresCanvas) {
+                // var highScoresCanvas = highScoresCanvas
+                this.highScoresCanvas = highScoresCanvas
+            }
 
-    val highScoresCanvas: HighScoresCanvas
- constructor (highScoresCanvas: HighScoresCanvas){
-    //var highScoresCanvas = highScoresCanvas
-this.highScoresCanvas= highScoresCanvas
-}
-
-
-    override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-
-    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-
-    var highScoresCanvas: HighScoresCanvas = this.highScoresCanvas
-
-
-        try {
-            
-    var isHTML: Boolean = J2MEUtil.isHTML()!!
-
-
-    
-                        if(!isHTML)
-                        
-                                    {
-                                    
-        while(!highScoresCanvas!!.hasPainted)
-        {
-}
-
-highScoresCanvas!!.hasPainted= false
-
-                                    }
-                                
-
-    var stringMaker: StringMaker = StringMaker()
-
-logUtil!!.putF(stringMaker!!.append("HighScoresCanvas - Request repaint to be sure: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
-highScoresCanvas!!.repaintBehavior!!.onChangeRepaint(highScoresCanvas)
-
-    
-                        if(!isHTML)
-                        
-                                    {
-                                    
-        while(!highScoresCanvas!!.hasPainted)
-        {
-}
-
-
-                                    }
-                                
-stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.putF(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
-highScoresCanvas!!.executeUpdate()
-} catch(e: Exception)
+            override fun run()
+                // nullable = true from not(false or (false and true)) = true
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-}
 
-}
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+                var logUtil: LogUtil = LogUtil.getInstance()!!
 
-}
-                
-            
+                var highScoresCanvas: HighScoresCanvas = this.highScoresCanvas
 
-                    //Otherwise - statement - EmptyStmt
+                try {
 
-SecondaryThreadPool.getInstance()!!.runTask(HighScoreRunnable(this))
-}
+                    var isHTML: Boolean = J2MEUtil.isHTML()!!
 
+                    if (!isHTML) {
+
+                        while (!highScoresCanvas!!.hasPainted) {}
+
+                        highScoresCanvas!!.hasPainted = false
+                    }
+
+                    var stringMaker: StringMaker = StringMaker()
+
+                    logUtil!!.putF(
+                        stringMaker!!
+                            .append("HighScoresCanvas - Request repaint to be sure: ")!!
+                            .appendlong(System.currentTimeMillis())!!
+                            .toString(),
+                        this,
+                        commonStrings!!.RUN,
+                    )
+                    highScoresCanvas!!.repaintBehavior!!.onChangeRepaint(highScoresCanvas)
+
+                    if (!isHTML) {
+
+                        while (!highScoresCanvas!!.hasPainted) {}
+                    }
+
+                    stringMaker!!.delete(0, stringMaker!!.length())
+                    logUtil!!.putF(
+                        stringMaker!!
+                            .append(
+                                "HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: "
+                            )!!
+                            .appendlong(System.currentTimeMillis())!!
+                            .toString(),
+                        this,
+                        commonStrings!!.RUN,
+                    )
+                    highScoresCanvas!!.executeUpdate()
+                } catch (e: Exception) {
+                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+                }
+            }
+        }
+
+        // Otherwise - statement - EmptyStmt
+
+        SecondaryThreadPool.getInstance()!!.runTask(HighScoreRunnable(this))
+    }
 
     override fun initCommands(cmdListener: CommandListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var cmdListener = cmdListener
-this.removeAllCommands()
-this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
-this.setCommandListener(cmdListener)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var cmdListener = cmdListener
+        this.removeAllCommands()
+        this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
+        this.setCommandListener(cmdListener)
+    }
 
     override fun open()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.open()
-this.highScoresCanvasInputProcessor!!.open()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.open()
+        this.highScoresCanvasInputProcessor!!.open()
+    }
 
     override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.close()
-this.highScoresCanvasInputProcessor!!.close()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.close()
+        this.highScoresCanvasInputProcessor!!.close()
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.colorFillPaintable!!.paint(graphics)
-this.paintable.paint(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        this.colorFillPaintable!!.paint(graphics)
+        this.paintable.paint(graphics)
 
-    
-                        if(this.waitPaintable != this.paintable)
-                        
-                                    {
-                                    this.highScoresCanvasInputProcessor!!.paint(graphics)
+        if (this.waitPaintable != this.paintable) {
 
-                                    }
-                                
-super.paint(graphics)
-this.hasPainted= true
-}
+            this.highScoresCanvasInputProcessor!!.paint(graphics)
+        }
 
+        super.paint(graphics)
+        this.hasPainted = true
+    }
 
     open fun executeUpdate()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
             this.highScoresFactoryInterface!!.fetchHighScores(this.getGameInfo(), this)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
-}
-
-}
-
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
+        }
+    }
 
     open fun getHighScoresPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: HighScoresPaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : HighScoresPaintable {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.highScoresPaintable
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.highScoresPaintable
+    }
 
     override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var highScoresArray = highScoresArray
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var highScoresArray = highScoresArray
 
         try {
-            
-    
-                        if(highScoresArray != 
-                                    null
-                                )
-                        
-                                    {
-                                    this.logUtil!!.putF(StringMaker().
-                            append(this.commonStrings!!.START)!!.appendint(highScoresArray!!.size)!!.toString(), this, "setHighScoresArray")
 
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF(this.commonStrings!!.START, this, "setHighScoresArray")
+            if (highScoresArray != null) {
 
-                        }
-                            
-this.highScoresHelper!!.setHighScoresArray(highScoresArray)
-this.updateCommand(this.currentCommand)
-this.setPaintable(this.getHighScoresPaintable())
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
-}
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append(this.commonStrings!!.START)!!
+                        .appendint(highScoresArray!!.size)!!
+                        .toString(),
+                    this,
+                    "setHighScoresArray",
+                )
+            } else {
+                this.logUtil!!.putF(this.commonStrings!!.START, this, "setHighScoresArray")
+            }
 
-}
+            this.highScoresHelper!!.setHighScoresArray(highScoresArray)
+            this.updateCommand(this.currentCommand)
+            this.setPaintable(this.getHighScoresPaintable())
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
+        }
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun updateCommand(command: Command)
-        //nullable = true from not(false or (false and false)) = true
-{
-var command = command
-this.logUtil!!.putF(StringMaker().
-                            append(this.commonStrings!!.START)!!.append(this.stringUtil!!.toString(command))!!.toString(), this, this.commonStrings!!.UPDATE)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var command = command
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(this.commonStrings!!.START)!!
+                .append(this.stringUtil!!.toString(command))!!
+                .toString(),
+            this,
+            this.commonStrings!!.UPDATE,
+        )
 
-    var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
+        var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
+        if (this.highScoreCommandsFactory!!.isHighScoreCommand(command)) {
 
-    
-                        if(this.highScoreCommandsFactory!!.isHighScoreCommand(command))
-                        
-                                    {
-                                    
-    var index: Int = this.highScoreCommandsFactory!!.getIndex(command)!!
+            var index: Int = this.highScoreCommandsFactory!!.getIndex(command)!!
 
+            var nextIndex: Int = index + 1
 
-    var nextIndex: Int = index +1
+            var highScoresArray: Array<HighScores?> = this.highScoresHelper!!.getHighScoresArray()!!
 
+            if (nextIndex >= highScoresArray!!.size) {
 
-    var highScoresArray: Array<HighScores?> = this.highScoresHelper!!.getHighScoresArray()!!
+                nextIndex = 0
+            }
 
+            if (highScoresArray!!.size > 0) {
 
-    
-                        if(nextIndex >= highScoresArray!!.size)
-                        
-                                    {
-                                    nextIndex= 0
+                this.getHighScoresPaintable()!!.setHighScores(highScoresArray[index]!!)
+            } else {
+                this.getHighScoresPaintable()!!.setHighScores(
+                    NullHighScoresSingletonFactory.getInstance()
+                )
+            }
 
-                                    }
-                                
+            if (index != nextIndex) {
 
-    
-                        if(highScoresArray!!.size > 0)
-                        
-                                    {
-                                    this.getHighScoresPaintable()!!.setHighScores(highScoresArray[index]!!)
+                this.removeAllCommands()
+                this.addCommand(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS)
+                this.addCommand(this.highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[nextIndex]!!)
+            }
+        }
 
-                                    }
-                                
-                        else {
-                            this.getHighScoresPaintable()!!.setHighScores(NullHighScoresSingletonFactory.getInstance())
-
-                        }
-                            
-
-    
-                        if(index != nextIndex)
-                        
-                                    {
-                                    this.removeAllCommands()
-this.addCommand(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS)
-this.addCommand(this.highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[nextIndex]!!)
-
-                                    }
-                                
-
-                                    }
-                                
-this.currentCommand= command
-this.close()
-super.initMenu()
-this.open()
-this.repaintBehavior!!.onChangeRepaint(this)
-}
-
+        this.currentCommand = command
+        this.close()
+        super.initMenu()
+        this.open()
+        this.repaintBehavior!!.onChangeRepaint(this)
+    }
 
     open fun getGameInfo()
-        //nullable = true from not(false or (false and true)) = true
-: GameInfo{
+    // nullable = true from not(false or (false and true)) = true
+    : GameInfo {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameInfo
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameInfo
+    }
 
     open fun setPaintable(paintable: Paintable)
-        //nullable = true from not(false or (false and false)) = true
-{
-var paintable = paintable
-this.paintable= paintable
-this.repaintBehavior!!.onChangeRepaint(this)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var paintable = paintable
+        this.paintable = paintable
+        this.repaintBehavior!!.onChangeRepaint(this)
+    }
 }
-
-
-}
-                
-            
-

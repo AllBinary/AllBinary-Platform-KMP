@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.pickup
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.pickup
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
@@ -38,172 +28,160 @@ import org.allbinary.graphics.Rectangle
 import org.allbinary.image.opengles.OpenGLSurfaceChangedInterface
 import org.allbinary.view.ViewPositionBase
 
-open public class PickupLayer : MultiPlayerGameLayer
-                , PickedUpLayerInterface
-                , PickupableInterface {
-        
+open public class PickupLayer : MultiPlayerGameLayer, PickedUpLayerInterface, PickupableInterface {
 
-    private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface = CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
+    private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface =
+        CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
 
-    private var destroyed: Boolean= false
+    private var destroyed: Boolean = false
 
-    private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-public constructor (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPositionBase)                        
+    private var animationInterface: Animation =
+        NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
-                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
-    //var name = name
-    //var remoteInfo = remoteInfo
-    //var total = total
-    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
-    //var animationInterface = animationInterface
-    //var rectangle = rectangle
-    //var viewPosition = viewPosition
+    public constructor(
+        name: String,
+        remoteInfo: RemoteInfo,
+        total: Int,
+        pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface,
+        animationInterface: Animation,
+        rectangle: Rectangle,
+        viewPosition: ViewPositionBase,
+    ) : super(
+        remoteInfo,
+        BasicGroupFactory.getInstance()!!.NONE_ARRAY,
+        name,
+        rectangle,
+        viewPosition,
+    ) {
+        // var name = name
+        // var remoteInfo = remoteInfo
+        // var total = total
+        // var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+        // var animationInterface = animationInterface
+        // var rectangle = rectangle
+        // var viewPosition = viewPosition
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableAlwaysPickupNeverCollideBehaviorFactory.getInstance()!!.createBehavior())
-this.setLayerWidth(10)
-this.setLayerHeight(10)
-this.init(pickedUpLayerInterfaceFactoryInterface, animationInterface)
-}
+        this.setCollidableInferface(
+            CollidableAlwaysPickupNeverCollideBehaviorFactory.getInstance()!!.createBehavior()
+        )
+        this.setLayerWidth(10)
+        this.setLayerHeight(10)
+        this.init(pickedUpLayerInterfaceFactoryInterface, animationInterface)
+    }
 
-
-    open fun init(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
-    //var animationInterface = animationInterface
-this.pickedUpLayerInterfaceFactoryInterface= pickedUpLayerInterfaceFactoryInterface
-this.animationInterface= animationInterface
-this.setDestroyed(false)
-}
-
+    open fun init(
+        pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface,
+        animationInterface: Animation,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+        // var animationInterface = animationInterface
+        this.pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+        this.animationInterface = animationInterface
+        this.setDestroyed(false)
+    }
 
     open fun initXYZ(x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
-var z = z
-this.setPosition(x, y, z)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+        var z = z
+        this.setPosition(x, y, z)
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
 
-    var viewPosition: ViewPositionBase = this.getViewPosition()!!
+        var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
+        var viewX: Int = viewPosition!!.getX()!!
 
-    var viewX: Int = viewPosition!!.getX()!!
+        var viewY: Int = viewPosition!!.getY()!!
 
-
-    var viewY: Int = viewPosition!!.getY()!!
-
-this.animationInterface!!.paintXY(graphics, viewX, viewY)
-}
-
+        this.animationInterface!!.paintXY(graphics, viewX, viewY)
+    }
 
     override fun paintThreed(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
 
-    var viewPosition: ViewPositionBase = this.getViewPosition()!!
+        var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
+        var viewX: Int = viewPosition!!.getX()!!
 
-    var viewX: Int = viewPosition!!.getX()!!
+        var viewY: Int = viewPosition!!.getY()!!
 
-
-    var viewY: Int = viewPosition!!.getY()!!
-
-this.animationInterface!!.paintThreedXYZ(graphics, viewX, viewY, 3)
-}
-
+        this.animationInterface!!.paintThreedXYZ(graphics, viewX, viewY, 3)
+    }
 
     override fun getPickedUpLayerInterfaceFactoryInterface()
-        //nullable = true from not(false or (false and true)) = true
-: PickedUpLayerInterfaceFactoryInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : PickedUpLayerInterfaceFactoryInterface {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.pickedUpLayerInterfaceFactoryInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.pickedUpLayerInterfaceFactoryInterface
+    }
 
     override fun setPickedUp()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setDestroyed(true)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setDestroyed(true)
+    }
 
     override fun isDestroyed()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.destroyed
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.destroyed
+    }
 
     open fun setDestroyed(destroyed: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var destroyed = destroyed
-this.destroyed= destroyed
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var destroyed = destroyed
+        this.destroyed = destroyed
 
-    
-                        if(this.isDestroyed())
-                        
-                                    {
-                                    DestroyedLayerProcessor.getInstance()!!.add(this)
+        if (this.isDestroyed()) {
 
-                                    }
-                                
-}
-
+            DestroyedLayerProcessor.getInstance()!!.add(this)
+        }
+    }
 
     override fun damage(damage: Int, damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var damage = damage
-var damageType = damageType
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var damage = damage
+        var damageType = damageType
+    }
 
+    override fun getDamage(
+        damageType: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var damageType = damageType
 
-    override fun getDamage(damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var damageType = damageType
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun set(gl: GL)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gl = gl
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gl = gl
 
-    var openGLSurfaceChangedInterface: OpenGLSurfaceChangedInterface = this.animationInterface as OpenGLSurfaceChangedInterface
+        var openGLSurfaceChangedInterface: OpenGLSurfaceChangedInterface =
+            this.animationInterface as OpenGLSurfaceChangedInterface
 
-openGLSurfaceChangedInterface!!.set(gl)
+        openGLSurfaceChangedInterface!!.set(gl)
+    }
 }
-
-
-}
-                
-            
-

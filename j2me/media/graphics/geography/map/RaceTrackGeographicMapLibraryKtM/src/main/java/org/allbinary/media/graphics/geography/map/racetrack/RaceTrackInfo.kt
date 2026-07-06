@@ -1,38 +1,25 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.racetrack
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map.racetrack
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
+import java.lang.Object
 import org.allbinary.graphics.color.BasicColor
 
-open public class RaceTrackInfo
-            : Object
-         {
-        
+open public class RaceTrackInfo : Object {
 
     private var id: Integer
 
@@ -49,181 +36,154 @@ open public class RaceTrackInfo
     private var worstContinuePosition: Int
 
     private var totalLaps: Int
-public constructor (id: Integer, name: String, raceTrackFrictionProperties: RaceTrackFrictionProperties, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, qualifyTime: Int, worstContinuePosition: Int, totalLaps: Int)
-            : super()
-        {
-    //var id = id
-    //var name = name
-    //var raceTrackFrictionProperties = raceTrackFrictionProperties
-    //var foregroundBasicColor = foregroundBasicColor
-    //var backgroundBasicColor = backgroundBasicColor
-    //var qualifyTime = qualifyTime
-    //var worstContinuePosition = worstContinuePosition
-    //var totalLaps = totalLaps
-this.id= id
-this.name= name
-this.raceTrackFrictionProperties= raceTrackFrictionProperties
-this.backgroundBasicColor= backgroundBasicColor
-this.foregroundBasicColor= foregroundBasicColor
-this.qualifyTime= qualifyTime
-this.worstContinuePosition= worstContinuePosition
-this.totalLaps= totalLaps
-}
 
+    public constructor(
+        id: Integer,
+        name: String,
+        raceTrackFrictionProperties: RaceTrackFrictionProperties,
+        foregroundBasicColor: BasicColor,
+        backgroundBasicColor: BasicColor,
+        qualifyTime: Int,
+        worstContinuePosition: Int,
+        totalLaps: Int,
+    ) : super() {
+        // var id = id
+        // var name = name
+        // var raceTrackFrictionProperties = raceTrackFrictionProperties
+        // var foregroundBasicColor = foregroundBasicColor
+        // var backgroundBasicColor = backgroundBasicColor
+        // var qualifyTime = qualifyTime
+        // var worstContinuePosition = worstContinuePosition
+        // var totalLaps = totalLaps
+        this.id = id
+        this.name = name
+        this.raceTrackFrictionProperties = raceTrackFrictionProperties
+        this.backgroundBasicColor = backgroundBasicColor
+        this.foregroundBasicColor = foregroundBasicColor
+        this.qualifyTime = qualifyTime
+        this.worstContinuePosition = worstContinuePosition
+        this.totalLaps = totalLaps
+    }
 
     open fun getId()
-        //nullable = true from not(false or (false and true)) = true
-: Integer{
+    // nullable = true from not(false or (false and true)) = true
+    : Integer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.id
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.id
+    }
 
     open fun setId(id: Integer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var id = id
-this.id= id
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var id = id
+        this.id = id
+    }
 
     open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.name
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.name
+    }
 
     open fun setName(name: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var name = name
-this.name= name
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var name = name
+        this.name = name
+    }
 
     open fun getQualifyTime()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.qualifyTime
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.qualifyTime
+    }
 
     open fun setQualifyTime(qualifyTime: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var qualifyTime = qualifyTime
-this.qualifyTime= qualifyTime
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var qualifyTime = qualifyTime
+        this.qualifyTime = qualifyTime
+    }
 
     open fun getWorstContinuePosition()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.worstContinuePosition
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.worstContinuePosition
+    }
 
     open fun setWorstContinuePosition(worstContinuePosition: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var worstContinuePosition = worstContinuePosition
-this.worstContinuePosition= worstContinuePosition
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var worstContinuePosition = worstContinuePosition
+        this.worstContinuePosition = worstContinuePosition
+    }
 
     open fun getTotalLaps()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.totalLaps
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.totalLaps
+    }
 
     open fun setTotalLaps(totalLaps: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var totalLaps = totalLaps
-this.totalLaps= totalLaps
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var totalLaps = totalLaps
+        this.totalLaps = totalLaps
+    }
 
     open fun getForegroundBasicColor()
-        //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicColor {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.foregroundBasicColor
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.foregroundBasicColor
+    }
 
     open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
-        //nullable = true from not(false or (false and false)) = true
-{
-var foregroundBasicColor = foregroundBasicColor
-this.foregroundBasicColor= foregroundBasicColor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var foregroundBasicColor = foregroundBasicColor
+        this.foregroundBasicColor = foregroundBasicColor
+    }
 
     open fun getBackgroundBasicColor()
-        //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicColor {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.backgroundBasicColor
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.backgroundBasicColor
+    }
 
     open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
-        //nullable = true from not(false or (false and false)) = true
-{
-var backgroundBasicColor = backgroundBasicColor
-this.backgroundBasicColor= backgroundBasicColor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var backgroundBasicColor = backgroundBasicColor
+        this.backgroundBasicColor = backgroundBasicColor
+    }
 
     open fun getRaceTrackFrictionProperties()
-        //nullable = true from not(false or (false and true)) = true
-: RaceTrackFrictionProperties{
+    // nullable = true from not(false or (false and true)) = true
+    : RaceTrackFrictionProperties {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.raceTrackFrictionProperties
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.raceTrackFrictionProperties
+    open fun setRaceTrackFrictionProperties(
+        raceTrackFrictionProperties: RaceTrackFrictionProperties
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var raceTrackFrictionProperties = raceTrackFrictionProperties
+        this.raceTrackFrictionProperties = raceTrackFrictionProperties
+    }
 }
-
-
-    open fun setRaceTrackFrictionProperties(raceTrackFrictionProperties: RaceTrackFrictionProperties)
-        //nullable = true from not(false or (false and false)) = true
-{
-var raceTrackFrictionProperties = raceTrackFrictionProperties
-this.raceTrackFrictionProperties= raceTrackFrictionProperties
-}
-
-
-}
-                
-            
-

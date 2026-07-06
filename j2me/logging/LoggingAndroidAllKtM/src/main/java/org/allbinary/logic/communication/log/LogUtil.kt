@@ -1,150 +1,142 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.communication.log
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.communication.log
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.logic.NullUtil
+import java.lang.Integer
+import java.lang.Object
 import org.allbinary.TsUtil
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
-//ActualPlatform
-/*actual*/ open public class LogUtil
-            : Object
-         {
-        
-/*actual*/ companion object {
-            
-    private val instance: LogUtil = LogUtil()
 
-    /*actual*/ open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: LogUtil{
+// ActualPlatform
+/*actual*/ open public class LogUtil : Object {
 
+    /*actual*/ companion object {
 
+        private val instance: LogUtil = LogUtil()
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return LogUtil.instance
-}
+        /*actual*/ open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : LogUtil {
 
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return LogUtil.instance
         }
-            
+    }
+
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
     private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
 
     private val LABEL: String = "org.allbinary"
-private constructor ()
-            : super()
-        {
-}
 
+    private constructor() : super() {}
 
     /*actual*/ open fun putL(log: Log)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var log = log
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var log = log
 
-    var specialMessage: String = log.getSpecialMessage()!!
+        var specialMessage: String = log.getSpecialMessage()!!
 
+        var anyType: Any = log.getObject()!!
 
-    var anyType: Any = log.getObject()!!
+        var functionName: String = log.getFunctionName()!!
 
+        var exception: Any = log.getThrowable()!!
 
-    var functionName: String = log.getFunctionName()!!
-
-
-    var exception: Any = log.getThrowable()!!
-
-this.put(specialMessage, anyType, functionName, exception)
-}
-
+        this.put(specialMessage, anyType, functionName, exception)
+    }
 
     /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var specialMessage = specialMessage
-    //var anyType = anyType
-var functionName = functionName
-this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var specialMessage = specialMessage
+        // var anyType = anyType
+        var functionName = functionName
+        this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+    }
 
     open fun putFS(specialMessage: String, string: String, functionName: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var specialMessage = specialMessage
-    //var string = string
-var functionName = functionName
-this.putS(specialMessage, string, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var specialMessage = specialMessage
+        // var string = string
+        var functionName = functionName
+        this.putS(specialMessage, string, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+    }
+
+    /*actual*/ open fun put(
+        specialMessage: String,
+        anyType: Any,
+        functionName: String,
+        exception: Any,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var specialMessage = specialMessage
+        // var anyType = anyType
+        var functionName = functionName
+        var exception = exception
+
+        var className: String = this.LABEL
+
+        className =
+            StringMaker()
+                .append(anyType!!::class.toString()!!)!!
+                .append(this.commonSeps!!.COLON)!!
+                .append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(anyType)))!!
+                .toString()
+                .toCharArray()
+                .concatToString()
+
+        var message: String =
+            this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+
+        android.util.Log.i(this.LABEL, message)
+    }
+
+    /*actual*/ open fun putS(
+        specialMessage: String,
+        string: String,
+        functionName: String,
+        exception: Any,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var specialMessage = specialMessage
+        // var string = string
+        var functionName = functionName
+        var exception = exception
+
+        var className: String = this.LABEL
+
+        className =
+            StringMaker()
+                .append(string)!!
+                .append(this.commonSeps!!.COLON)!!
+                .append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(string)))!!
+                .toString()
+                .toCharArray()
+                .concatToString()
+
+        var message: String =
+            this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+
+        android.util.Log.i(this.LABEL, message)
+    }
 }
-
-
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var specialMessage = specialMessage
-    //var anyType = anyType
-var functionName = functionName
-var exception = exception
-
-    var className: String = this.LABEL
-
-className= StringMaker().
-                            append(anyType!!::class.toString()!!)!!.append(this.commonSeps!!.COLON)!!.append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(anyType)))!!.toString().toCharArray().concatToString()
-                                
-
-    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
-
-android.util.Log.i(this.LABEL, message)
-}
-
-
-    /*actual*/ open fun putS(specialMessage: String, string: String, functionName: String, exception: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var specialMessage = specialMessage
-    //var string = string
-var functionName = functionName
-var exception = exception
-
-    var className: String = this.LABEL
-
-className= StringMaker().
-                            append(string)!!.append(this.commonSeps!!.COLON)!!.append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(string)))!!.toString().toCharArray().concatToString()
-                                
-
-    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
-
-android.util.Log.i(this.LABEL, message)
-}
-
-
-}
-                
-            
-

@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.graphics.hud
+/* Generated Code Do Not Modify */
+package org.allbinary.game.graphics.hud
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.Graphics
 import org.allbinary.J2MEUtil
 import org.allbinary.graphics.Anchor
@@ -41,16 +32,11 @@ import org.allbinary.graphics.font.UpdateMyFontInterface
 import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonStrings
 
-open public class BasicHud
-            : Object
-        
-                , UpdateMyFontInterface {
-        
+open public class BasicHud : Object, UpdateMyFontInterface {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -66,454 +52,450 @@ open public class BasicHud
 
     var myFontProcessor: MyFontProcessor = updateMyFontProcessor
 
-    private var location: Int= 0
+    private var location: Int = 0
 
-    private var direction: Int= 0
+    private var direction: Int = 0
 
-    private var bufferZone: Int= 0
+    private var bufferZone: Int = 0
 
-    private var bufferZoneY: Int= 0
+    private var bufferZoneY: Int = 0
 
-    private var hudGraphicsPosition: HudGraphicsPosition = HudGraphicsPosition.NULL_HUD_GRAPHICS_POSITION
+    private var hudGraphicsPosition: HudGraphicsPosition =
+        HudGraphicsPosition.NULL_HUD_GRAPHICS_POSITION
 
-    private var x: Int= 0
+    private var x: Int = 0
 
-    private var y: Int= 0
+    private var y: Int = 0
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.BLACK
 
     private var color: Int
 
-    var updateMaxWidth: Int= 0
+    var updateMaxWidth: Int = 0
 
-    var updateMaxHeight: Int= 0
+    var updateMaxHeight: Int = 0
 
-    var offsetY: Int= 0
-public constructor (location: Int, direction: Int, bufferZone: Int, basicColor: BasicColor)
-            : super()
-        {
-    //var location = location
-    //var direction = direction
-    //var bufferZone = bufferZone
-    //var basicColor = basicColor
-this.setLocation(location)
-this.setDirection(direction)
-this.setBufferZone(bufferZone)
-this.onDisplayChangeEvent(DisplayInfoSingleton.getInstance()!!.displayChangeEvent)
-this.setBasicColorP(basicColor)
-this.color= basicColor!!.toInt()
-}
+    var offsetY: Int = 0
 
+    public constructor(
+        location: Int,
+        direction: Int,
+        bufferZone: Int,
+        basicColor: BasicColor,
+    ) : super() {
+        // var location = location
+        // var direction = direction
+        // var bufferZone = bufferZone
+        // var basicColor = basicColor
+        this.setLocation(location)
+        this.setDirection(direction)
+        this.setBufferZone(bufferZone)
+        this.onDisplayChangeEvent(DisplayInfoSingleton.getInstance()!!.displayChangeEvent)
+        this.setBasicColorP(basicColor)
+        this.color = basicColor!!.toInt()
+    }
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
         try {
-            this.hudGraphicsPosition= this.getHudGraphicsPositionWH(this.displayInfo!!.getLastWidth(), this.displayInfo!!.getLastHeight(), this.updateMaxWidth, this.updateMaxHeight)
-this.x= this.hudGraphicsPosition!!.getPoint()!!.getX()
-this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
-} catch(e: Exception)
-            {
+            this.hudGraphicsPosition =
+                this.getHudGraphicsPositionWH(
+                    this.displayInfo!!.getLastWidth(),
+                    this.displayInfo!!.getLastHeight(),
+                    this.updateMaxWidth,
+                    this.updateMaxHeight,
+                )
+            this.x = this.hudGraphicsPosition!!.getPoint()!!.getX()
+            this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
+        } catch (e: Exception) {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
-}
+            this.logUtil!!.put(
+                commonStrings!!.EXCEPTION,
+                this,
+                this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT,
+                e,
+            )
+        }
 
-this.myFontProcessor= MyFontProcessor.getInstance()
-}
-
+        this.myFontProcessor = MyFontProcessor.getInstance()
+    }
 
     open fun getLocation()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.location
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.location
+    }
 
     open fun getDirection()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.direction
+    }
 
+    @Throws(Exception::class)
+    open fun getHudGraphicsPositionWH(
+        width: Int,
+        height: Int,
+        maxWidth: Int,
+        maxHeight: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : HudGraphicsPosition {
+        // var width = width
+        // var height = height
+        // var maxWidth = maxWidth
+        // var maxHeight = maxHeight
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.direction
-}
+        var x: Int = 0
 
+        var y: Int = 0
 
-                @Throws(Exception::class)
-            
-    open fun getHudGraphicsPositionWH(width: Int, height: Int, maxWidth: Int, maxHeight: Int)
-        //nullable = true from not(false or (false and false)) = true
-: HudGraphicsPosition{
-    //var width = width
-    //var height = height
-    //var maxWidth = maxWidth
-    //var maxHeight = maxHeight
+        var anchor: Int = 0
 
-    var x: Int = 0
+        var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
 
+        if (basicHudFactory!!.BOTTOMLEFT == this.getLocation()) {
 
-    var y: Int = 0
+            x = this.bufferZone + 2
+            y = height - maxHeight - this.bufferZone
+            anchor = Graphics.BOTTOM and Graphics.LEFT
+        } else if (basicHudFactory!!.BOTTOMRIGHT == this.getLocation()) {
 
+            x = width - maxWidth
+            y = height - maxHeight - this.bufferZone
+            anchor = Graphics.BOTTOM and Graphics.RIGHT
+        } else if (basicHudFactory!!.TOPLEFT == this.getLocation()) {
 
-    var anchor: Int = 0
+            x = this.bufferZone + 2
+            y = this.bufferZoneY
+            anchor = Anchor.TOP_LEFT
+        } else if (basicHudFactory!!.TOPRIGHT == this.getLocation()) {
 
+            x = width - maxWidth
+            y = this.bufferZoneY
+            anchor = Graphics.TOP and Graphics.RIGHT
+        } else if (basicHudFactory!!.TOPCENTER == this.getLocation()) {
 
-    var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
+            x = ((width - maxWidth) / 2)
+            y = this.bufferZoneY
+            anchor = Graphics.TOP and Graphics.HCENTER
+        } else if (basicHudFactory!!.BOTTOMCENTER == this.getLocation()) {
 
+            x = ((width - maxWidth) / 2)
+            y = height - maxHeight - this.bufferZone
+            anchor = Graphics.BOTTOM and Graphics.HCENTER
+        } else if (basicHudFactory!!.ABSOLUTE == this.getLocation()) {
 
-    
-                        if(basicHudFactory!!.BOTTOMLEFT == this.getLocation())
-                        
-                                    {
-                                    x= this.bufferZone +2
-y= height -maxHeight -this.bufferZone
-anchor= Graphics.BOTTOM and Graphics.LEFT
+            x = maxHeight
+            y = maxWidth
+            anchor = 0
+        }
 
-                                    }
-                                
-                             else 
-    
-                        if(basicHudFactory!!.BOTTOMRIGHT == this.getLocation())
-                        
-                                    {
-                                    x= width -maxWidth
-y= height -maxHeight -this.bufferZone
-anchor= Graphics.BOTTOM and Graphics.RIGHT
-
-                                    }
-                                
-                             else 
-    
-                        if(basicHudFactory!!.TOPLEFT == this.getLocation())
-                        
-                                    {
-                                    x= this.bufferZone +2
-y= this.bufferZoneY
-anchor= Anchor.TOP_LEFT
-
-                                    }
-                                
-                             else 
-    
-                        if(basicHudFactory!!.TOPRIGHT == this.getLocation())
-                        
-                                    {
-                                    x= width -maxWidth
-y= this.bufferZoneY
-anchor= Graphics.TOP and Graphics.RIGHT
-
-                                    }
-                                
-                             else 
-    
-                        if(basicHudFactory!!.TOPCENTER == this.getLocation())
-                        
-                                    {
-                                    x= ((width -maxWidth) /2)
-y= this.bufferZoneY
-anchor= Graphics.TOP and Graphics.HCENTER
-
-                                    }
-                                
-                             else 
-    
-                        if(basicHudFactory!!.BOTTOMCENTER == this.getLocation())
-                        
-                                    {
-                                    x= ((width -maxWidth) /2)
-y= height -maxHeight -this.bufferZone
-anchor= Graphics.BOTTOM and Graphics.HCENTER
-
-                                    }
-                                
-                             else 
-    
-                        if(basicHudFactory!!.ABSOLUTE == this.getLocation())
-                        
-                                    {
-                                    x= maxHeight
-y= maxWidth
-anchor= 0
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return HudGraphicsPosition(this.getPoint(x, y), anchor)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return HudGraphicsPosition(this.getPoint(x, y), anchor)
+    }
 
     open fun onEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
     open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var displayChangeEvent = displayChangeEvent
-this.myFontProcessor= this.updateMyFontProcessor
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var displayChangeEvent = displayChangeEvent
+        this.myFontProcessor = this.updateMyFontProcessor
+    }
 
+    open fun getPoint(
+        x: Int,
+        y: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : GPoint {
+        // var x = x
+        // var y = y
 
-    open fun getPoint(x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-: GPoint{
-    //var x = x
-    //var y = y
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.getInstance()!!.createXY(x, y)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return PointFactory.getInstance()!!.createXY(x, y)
+    }
 
     open fun getBufferZone()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.bufferZone
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.bufferZone
+    }
 
     open fun setBufferZone(bufferZone: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var bufferZone = bufferZone
-this.bufferZone= bufferZone
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var bufferZone = bufferZone
+        this.bufferZone = bufferZone
 
-    
-                        if(J2MEUtil.isHTML())
-                        
-                                    {
-                                    this.bufferZoneY= this.bufferZone
+        if (J2MEUtil.isHTML()) {
 
-                                    }
-                                
-                        else {
-                            this.bufferZoneY= this.bufferZone +5
-
-                        }
-                            
-}
-
+            this.bufferZoneY = this.bufferZone
+        } else {
+            this.bufferZoneY = this.bufferZone + 5
+        }
+    }
 
     open fun setLocation(location: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var location = location
-this.location= location
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var location = location
+        this.location = location
+    }
 
     open fun setDirection(direction: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var direction = direction
-this.direction= direction
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var direction = direction
+        this.direction = direction
+    }
 
     open fun getHudGraphicsPosition()
-        //nullable = true from not(false or (false and true)) = true
-: HudGraphicsPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : HudGraphicsPosition {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hudGraphicsPosition
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.hudGraphicsPosition
+    }
 
     open fun getColor()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.color
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.color
+    }
 
     open fun getX()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.x
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.x
+    }
 
     open fun setX(x: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var x = x
-this.x= x
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var x = x
+        this.x = x
+    }
 
     open fun setBasicColorP(basicColor: BasicColor)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var basicColor = basicColor
-this.basicColor= basicColor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicColor = basicColor
+        this.basicColor = basicColor
+    }
 
     open fun getBasicColorP()
-        //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicColor {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicColor
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.basicColor
+    }
 
     open fun setY(y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var y = y
-this.y= y
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var y = y
+        this.y = y
+    }
 
     open fun getY()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.y
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.y
+    }
 
     open fun paintSSO(graphics: Graphics, string: String, string2: String, offset: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var string = string
-    //var string2 = string2
-    //var offset = offset
-this.myFontProcessor!!.process(graphics)
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
-graphics.drawString(string, this.x, this.getY(), this.hudGraphicsPosition!!.getAnchor())
-graphics.drawString(string2, this.x +offset, this.getY(), this.hudGraphicsPosition!!.getAnchor())
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var string = string
+        // var string2 = string2
+        // var offset = offset
+        this.myFontProcessor!!.process(graphics)
+        this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+        graphics.drawString(string, this.x, this.getY(), this.hudGraphicsPosition!!.getAnchor())
+        graphics.drawString(
+            string2,
+            this.x + offset,
+            this.getY(),
+            this.hudGraphicsPosition!!.getAnchor(),
+        )
+    }
 
+    open fun paintSSOO(
+        graphics: Graphics,
+        string: String,
+        string2: String,
+        offset: Int,
+        offset2: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var string = string
+        // var string2 = string2
+        // var offset = offset
+        // var offset2 = offset2
+        this.myFontProcessor!!.process(graphics)
+        graphics.setColor(this.getColor())
+        graphics.drawString(
+            string,
+            this.x + offset,
+            this.getY(),
+            this.hudGraphicsPosition!!.getAnchor(),
+        )
+        graphics.drawString(
+            string2,
+            this.x + offset2,
+            this.getY(),
+            this.hudGraphicsPosition!!.getAnchor(),
+        )
+    }
 
-    open fun paintSSOO(graphics: Graphics, string: String, string2: String, offset: Int, offset2: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var string = string
-    //var string2 = string2
-    //var offset = offset
-    //var offset2 = offset2
-this.myFontProcessor!!.process(graphics)
-graphics.setColor(this.getColor())
-graphics.drawString(string, this.x +offset, this.getY(), this.hudGraphicsPosition!!.getAnchor())
-graphics.drawString(string2, this.x +offset2, this.getY(), this.hudGraphicsPosition!!.getAnchor())
-}
+    open fun paintDXY(
+        graphics: Graphics,
+        charArray: CharArray,
+        offset: Int,
+        len: Int,
+        charArray2: CharArray,
+        offset2: Int,
+        len2: Int,
+        xOffset: Int,
+        xOffset2: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var charArray = charArray
+        // var offset = offset
+        // var len = len
+        // var charArray2 = charArray2
+        // var offset2 = offset2
+        // var len2 = len2
+        // var xOffset = xOffset
+        // var xOffset2 = xOffset2
+        this.myFontProcessor!!.process(graphics)
+        this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
+        var y: Int = this.getY()!!
 
-    open fun paintDXY(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int, xOffset2: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var charArray = charArray
-    //var offset = offset
-    //var len = len
-    //var charArray2 = charArray2
-    //var offset2 = offset2
-    //var len2 = len2
-    //var xOffset = xOffset
-    //var xOffset2 = xOffset2
-this.myFontProcessor!!.process(graphics)
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+        graphics.drawChars(
+            charArray,
+            offset,
+            len,
+            this.x + xOffset,
+            y,
+            this.hudGraphicsPosition!!.getAnchor(),
+        )
+        graphics.drawChars(
+            charArray2,
+            offset2,
+            len2,
+            this.x + xOffset2,
+            y,
+            this.hudGraphicsPosition!!.getAnchor(),
+        )
+    }
 
-    var y: Int = this.getY()!!
+    open fun paintDX(
+        graphics: Graphics,
+        charArray: CharArray,
+        offset: Int,
+        len: Int,
+        charArray2: CharArray,
+        offset2: Int,
+        len2: Int,
+        xOffset: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var charArray = charArray
+        // var offset = offset
+        // var len = len
+        // var charArray2 = charArray2
+        // var offset2 = offset2
+        // var len2 = len2
+        // var xOffset = xOffset
+        this.myFontProcessor!!.process(graphics)
+        this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
-graphics.drawChars(charArray, offset, len, this.x +xOffset, y, this.hudGraphicsPosition!!.getAnchor())
-graphics.drawChars(charArray2, offset2, len2, this.x +xOffset2, y, this.hudGraphicsPosition!!.getAnchor())
-}
+        var y: Int = this.getY()!!
 
-
-    open fun paintDX(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var charArray = charArray
-    //var offset = offset
-    //var len = len
-    //var charArray2 = charArray2
-    //var offset2 = offset2
-    //var len2 = len2
-    //var xOffset = xOffset
-this.myFontProcessor!!.process(graphics)
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
-
-    var y: Int = this.getY()!!
-
-graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition!!.getAnchor())
-graphics.drawChars(charArray2, offset2, len2, this.x +xOffset, y, this.hudGraphicsPosition!!.getAnchor())
-}
-
+        graphics.drawChars(
+            charArray,
+            offset,
+            len,
+            this.x,
+            y,
+            this.hudGraphicsPosition!!.getAnchor(),
+        )
+        graphics.drawChars(
+            charArray2,
+            offset2,
+            len2,
+            this.x + xOffset,
+            y,
+            this.hudGraphicsPosition!!.getAnchor(),
+        )
+    }
 
     open fun paintOffsetAndLength(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var charArray = charArray
-    //var offset = offset
-    //var len = len
-this.myFontProcessor!!.process(graphics)
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var charArray = charArray
+        // var offset = offset
+        // var len = len
+        this.myFontProcessor!!.process(graphics)
+        this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
-    var y: Int = this.getY()!!
+        var y: Int = this.getY()!!
 
-graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition!!.getAnchor())
-}
-
+        graphics.drawChars(
+            charArray,
+            offset,
+            len,
+            this.x,
+            y,
+            this.hudGraphicsPosition!!.getAnchor(),
+        )
+    }
 
     open fun paint(graphics: Graphics, string: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var string = string
-this.myFontProcessor!!.process(graphics)
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var string = string
+        this.myFontProcessor!!.process(graphics)
+        this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
-    var y: Int = this.getY() +this.offsetY
+        var y: Int = this.getY() + this.offsetY
 
-graphics.drawString(string, this.x, y, this.hudGraphicsPosition!!.getAnchor())
+        graphics.drawString(string, this.x, y, this.hudGraphicsPosition!!.getAnchor())
+    }
 }
-
-
-}
-                
-            
-

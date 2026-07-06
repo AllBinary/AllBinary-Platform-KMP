@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.layer.event
+/* Generated Code Do Not Modify */
+package org.allbinary.layer.event
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.EventStrings
@@ -33,169 +23,157 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
 open public class LayerManagerEventHandler : BasicEventHandler {
-        
-companion object {
-            
-    private var instance: LayerManagerEventHandler = LayerManagerEventHandler()
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: LayerManagerEventHandler{
+    companion object {
 
+        private var instance: LayerManagerEventHandler = LayerManagerEventHandler()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : LayerManagerEventHandler {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return LayerManagerEventHandler.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return LayerManagerEventHandler.instance
         }
-            
-    private val list: BasicArrayList = BasicArrayListD()
-private constructor (){
-}
+    }
 
+    private val list: BasicArrayList = BasicArrayListD()
+
+    private constructor() {}
 
     open fun addListener(layerManagerEventListener: LayerManagerEventListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManagerEventListener = layerManagerEventListener
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManagerEventListener = layerManagerEventListener
 
-    
-                        if(!this.list.contains(layerManagerEventListener))
-                        
-                                    {
-                                    this.list.add(layerManagerEventListener)
+        if (!this.list.contains(layerManagerEventListener)) {
 
-                                    }
-                                
-}
-
+            this.list.add(layerManagerEventListener)
+        }
+    }
 
     override fun removeAllListeners()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.list.clear()
-super.removeAllListeners()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.list.clear()
+        super.removeAllListeners()
+    }
 
     override fun removeListener(eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventListenerInterface = eventListenerInterface
-this.list.remove(eventListenerInterface)
-super.removeListener(eventListenerInterface)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventListenerInterface = eventListenerInterface
+        this.list.remove(eventListenerInterface)
+        super.removeListener(eventListenerInterface)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun fireEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
 
+        for (index in this.list.size()!! - 1 downTo 0) {
 
+            try {
 
+                var layerManagerEventListener: LayerManagerEventListener =
+                    this.list.objectArray[index]!! as LayerManagerEventListener
 
-                        for (index in this.list.size()!!  - 1  downTo 0)
+                layerManagerEventListener!!.onCreateLayerManagerEvent(
+                    eventObject as LayerManagerEvent
+                )
+            } catch (e: Exception) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    EventStrings.getInstance()!!.FIRE_EVENT,
+                    e,
+                )
+            }
+        }
 
-        {
-
-        try {
-            
-    var layerManagerEventListener: LayerManagerEventListener = this.list.objectArray[index]!! as LayerManagerEventListener
-
-layerManagerEventListener!!.onCreateLayerManagerEvent(eventObject as LayerManagerEvent)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
-}
-
-}
-
-super.fireEvent(eventObject)
-}
-
+        super.fireEvent(eventObject)
+    }
 
     val CREATE: String = "Create"
 
     val DELETE: String = "Delete"
 
-                @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Throws(Exception::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     open fun fireDeleteEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
 
+        for (index in this.list.size()!! - 1 downTo 0) {
 
+            try {
 
+                var layerManagerEventListener: LayerManagerEventListener =
+                    this.list.objectArray[index]!! as LayerManagerEventListener
 
-                        for (index in this.list.size()!!  - 1  downTo 0)
+                layerManagerEventListener!!.onDeleteLayerManagerEvent(
+                    eventObject as LayerManagerEvent
+                )
+            } catch (e: Exception) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    EventStrings.getInstance()!!.FIRE_EVENT,
+                    e,
+                )
+            }
+        }
 
-        {
+        var eventListenerInterfaceList: BasicArrayList = this.eventListenerInterfaceList
 
-        try {
-            
-    var layerManagerEventListener: LayerManagerEventListener = this.list.objectArray[index]!! as LayerManagerEventListener
+        var eventListenerInterface: EventListenerInterface
 
-layerManagerEventListener!!.onDeleteLayerManagerEvent(eventObject as LayerManagerEvent)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+        var layerManagerEventListenerInterface: LayerManagerEventListenerInterface
+
+        var index: Int = 0
+
+        while (index < eventListenerInterfaceList!!.size()) {
+
+            try {
+                eventListenerInterface =
+                    eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
+                layerManagerEventListenerInterface =
+                    (eventListenerInterface as LayerManagerEventListenerInterface)
+                layerManagerEventListenerInterface!!.onDeleteLayerManagerEvent(
+                    eventObject as LayerManagerEvent
+                )
+            } catch (e: Exception) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    EventStrings.getInstance()!!.FIRE_EVENT,
+                    e,
+                )
+            }
+
+            index++
+        }
+    }
+
+    @Throws(Exception::class)
+    override fun process(
+        eventObject: AllBinaryEventObject,
+        eventListenerInterface: EventListenerInterface,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        // var eventListenerInterface = eventListenerInterface
+
+        var layerManagerEventListenerInterface: LayerManagerEventListenerInterface =
+            (eventListenerInterface as LayerManagerEventListenerInterface)
+
+        layerManagerEventListenerInterface!!.onCreateLayerManagerEvent(
+            eventObject as LayerManagerEvent
+        )
+    }
 }
-
-}
-
-
-    var eventListenerInterfaceList: BasicArrayList = this.eventListenerInterfaceList
-
-
-    var eventListenerInterface: EventListenerInterface
-
-
-    var layerManagerEventListenerInterface: LayerManagerEventListenerInterface
-
-
-    var index: Int = 0
-
-
-        while(index < eventListenerInterfaceList!!.size())
-        {
-
-        try {
-            eventListenerInterface= eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
-layerManagerEventListenerInterface= (eventListenerInterface as LayerManagerEventListenerInterface)
-layerManagerEventListenerInterface!!.onDeleteLayerManagerEvent(eventObject as LayerManagerEvent)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
-}
-
-index++
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
-    //var eventListenerInterface = eventListenerInterface
-
-    var layerManagerEventListenerInterface: LayerManagerEventListenerInterface = (eventListenerInterface as LayerManagerEventListenerInterface)
-
-layerManagerEventListenerInterface!!.onCreateLayerManagerEvent(eventObject as LayerManagerEvent)
-}
-
-
-}
-                
-            
-

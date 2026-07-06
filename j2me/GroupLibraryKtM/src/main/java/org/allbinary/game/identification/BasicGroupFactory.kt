@@ -1,67 +1,47 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.identification
+/* Generated Code Do Not Modify */
+package org.allbinary.game.identification
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.logic.NullUtil
 
-open public class BasicGroupFactory
-            : Object
-         {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class BasicGroupFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: BasicGroupFactory{
+    companion object {
 
-    
-                        if(BasicGroupFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    BasicGroupFactory.instance= BasicGroupFactory()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : BasicGroupFactory {
 
+            if (BasicGroupFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                BasicGroupFactory.instance = BasicGroupFactory()
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicGroupFactory.instance as BasicGroupFactory
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicGroupFactory.instance as BasicGroupFactory
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val NAME: String = "GROUP_NAME"
 
     val NO_SUCH_GROUP: String = "No Such Group: "
@@ -78,11 +58,7 @@ companion object {
 
     val ENEMY_ARRAY: Array<Group?> = arrayOf(this.ENEMY)
 
-    val ENEMY_ON_LEVEL_ARRAY: Array<Group?> = arrayOf(this.ENEMY,this.ENEMY_ON_LEVEL)
+    val ENEMY_ON_LEVEL_ARRAY: Array<Group?> = arrayOf(this.ENEMY, this.ENEMY_ON_LEVEL)
 
     val NONE_ARRAY: Array<Group?> = arrayOf(this.NONE)
-
 }
-                
-            
-

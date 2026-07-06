@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.displayable
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.displayable
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.Stack
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Command
@@ -40,10 +30,7 @@ import org.allbinary.media.audio.Sound
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 
-open public class MyCanvas : Canvas
-                , DisplayableInterface
-                , MyCommandInterface {
-        
+open public class MyCanvas : Canvas, DisplayableInterface, MyCommandInterface {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -63,282 +50,246 @@ open public class MyCanvas : Canvas
 
     private var commandListener: CommandListener = NullCommandListener.NULL_COMMAND_LISTENER
 
-    private var paused: Boolean= false
-public constructor (name: String, childNameList: BasicArrayList){
-    //var name = name
-    //var childNameList = childNameList
-this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, this.commonStrings!!.CONSTRUCTOR)
-this.displayInfo!!.update(this, this.canvasStrings!!.CONSTRUCTOR)
-this.name= name
-this.childNameList= childNameList
-this.commandStack= Stack()
-}
+    private var paused: Boolean = false
 
+    public constructor(name: String, childNameList: BasicArrayList) {
+        // var name = name
+        // var childNameList = childNameList
+        this.logUtil!!.putF(
+            this.commonStrings!!.CONSTRUCTOR,
+            this,
+            this.commonStrings!!.CONSTRUCTOR,
+        )
+        this.displayInfo!!.update(this, this.canvasStrings!!.CONSTRUCTOR)
+        this.name = name
+        this.childNameList = childNameList
+        this.commandStack = Stack()
+    }
 
     override fun setFullScreenMode(mode: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var mode = mode
-super.setFullScreenMode(mode)
-this.displayInfo!!.update(this, this.canvasStrings!!.SET_FULL_SCREEN_MODE)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var mode = mode
+        super.setFullScreenMode(mode)
+        this.displayInfo!!.update(this, this.canvasStrings!!.SET_FULL_SCREEN_MODE)
+    }
 
     override fun sizeChanged(w: Int, h: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var w = w
-var h = h
-this.displayInfo!!.update(this, this.canvasStrings!!.SIZE_CHANGED)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var w = w
+        var h = h
+        this.displayInfo!!.update(this, this.canvasStrings!!.SIZE_CHANGED)
+    }
 
     open fun getCommandStack()
-        //nullable = true from not(false or (false and true)) = true
-: Stack<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Stack<Any> {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.commandStack
+    }
 
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
+    open fun isCommand(
+        command: Command
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var command = command
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.commandStack
-}
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.commandStack!!.contains(command)
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
-    open fun isCommand(command: Command)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var command = command
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.commandStack!!.contains(command)
-}
-
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun addCommand(command: Command)
-        //nullable = true from not(false or (false and false)) = true
-{
-var command = command
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var command = command
 
-    
-                        if(!this.commandStack!!.contains(command))
-                        
-                                    {
-                                    this.commandStack!!.push(command)
-super.addCommand(command)
+        if (!this.commandStack!!.contains(command)) {
 
-                                    }
-                                
-}
+            this.commandStack!!.push(command)
+            super.addCommand(command)
+        }
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun removeCommand(command: Command)
-        //nullable = true from not(false or (false and false)) = true
-{
-var command = command
-this.commandStack!!.removeElement(command)
-super.removeCommand(command)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var command = command
+        this.commandStack!!.removeElement(command)
+        super.removeCommand(command)
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun removeAllCommands()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var size: Int = this.commandStack!!.size!!
+        var size: Int = this.commandStack!!.size!!
 
+        for (index in 0 until size) {
 
-
-
-
-                        for (index in 0 until size)
-
-        {
-super.removeCommand(this.commandStack!!.pop() as Command)
-}
-
-}
-
+            super.removeCommand(this.commandStack!!.pop() as Command)
+        }
+    }
 
     override fun setCommandListener(l: CommandListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var l = l
-super.setCommandListener(l)
-this.commandListener= l
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var l = l
+        super.setCommandListener(l)
+        this.commandListener = l
+    }
 
     open fun getCustomCommandListener()
-        //nullable = true from not(false or (false and true)) = true
-: CommandListener{
+    // nullable = true from not(false or (false and true)) = true
+    : CommandListener {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.commandListener
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.commandListener
-}
-
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     open fun isPaused()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.paused
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.paused
+    }
 
     open fun removePauseCommand()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     open fun pause()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.PAUSE)
-this.removePauseCommand()
-this.addCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
-this.setPaused(true)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.PAUSE)
+        this.removePauseCommand()
+        this.addCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
+        this.setPaused(true)
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     open fun unPause()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.UN_PAUSE)
-this.removeCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
-this.addCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
-this.setPaused(false)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(this.commonStrings!!.START, this, this.canvasStrings!!.UN_PAUSE)
+        this.removeCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
+        this.addCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
+        this.setPaused(false)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.displayInfo!!.process()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.displayInfo!!.process()
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+    }
 
     open fun draw(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+    }
 
+    open fun hasChild(
+        displayable: MyCanvas
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var displayable = displayable
 
-    open fun hasChild(displayable: MyCanvas)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var displayable = displayable
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.childNameList!!.contains(displayable.name)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.childNameList!!.contains(displayable.name)
+    }
 
     open fun destroy()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF("Destroyed MyCanvas", this, "destroy")
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF("Destroyed MyCanvas", this, "destroy")
+    }
 
     open fun setPaused(isPaused: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var isPaused = isPaused
-this.paused= isPaused
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var isPaused = isPaused
+        this.paused = isPaused
+    }
 
     open fun keyPressedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-var deviceId = deviceId
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        var deviceId = deviceId
+    }
 
     open fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-var deviceId = deviceId
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        var deviceId = deviceId
+    }
 
     open fun keyReleasedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var keyCode = keyCode
-var deviceId = deviceId
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var keyCode = keyCode
+        var deviceId = deviceId
+    }
 
     private val touchME: TouchJ2ME = TouchJ2ME()
 
     override fun pointerDragged(x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
-this.touchME!!.pointerDragged(x, y)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+        this.touchME!!.pointerDragged(x, y)
+    }
 
     override fun pointerPressed(x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
-this.touchME!!.pointerPressed(x, y)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+        this.touchME!!.pointerPressed(x, y)
+    }
 
     override fun pointerReleased(x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-var y = y
-this.touchME!!.pointerReleased(x, y)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        var y = y
+        this.touchME!!.pointerReleased(x, y)
+    }
 
     open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var nextSongSound = nextSongSound
-    //var leftVolume = leftVolume
-    //var rightVolume = rightVolume
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var nextSongSound = nextSongSound
+        // var leftVolume = leftVolume
+        // var rightVolume = rightVolume
+    }
 }
-
-
-}
-                
-            
-

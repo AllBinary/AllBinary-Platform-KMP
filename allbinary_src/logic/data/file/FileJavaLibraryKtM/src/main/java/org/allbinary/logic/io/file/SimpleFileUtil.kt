@@ -1,37 +1,29 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.io.file
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.io.file
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
 import java.io.Reader
 import java.io.Writer
+import java.lang.Object
 import java.nio.CharBuffer
+import kotlin.Array
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.StreamUtil
@@ -40,261 +32,224 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class SimpleFileUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: SimpleFileUtil = SimpleFileUtil()
+open public class SimpleFileUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: SimpleFileUtil{
+    companion object {
 
+        private val instance: SimpleFileUtil = SimpleFileUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : SimpleFileUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return SimpleFileUtil.instance
-}
-
-
-    open fun nullOutputStream()
-        //nullable = true from not(false or (false and true)) = true
-: OutputStream{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return object: OutputStream()
-                                {
-                                
-                @Throws(IOException::class)
-            
-    override fun write(b: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var b = b
-}
-
-                @Throws(IOException::class)
-            
-    override fun write(b: ByteArray, off: Int, len: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var b = b
-var off = off
-var len = len
-}
-
-    override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
-                                }
-                            
-}
-
-
-    open fun nullWriter()
-        //nullable = true from not(false or (false and true)) = true
-: Writer{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return object: Writer()
-                                {
-                                
-    private var closed: Boolean= false
-
-                @Throws(IOException::class)
-            
-    override fun append(c: Char)
-        //nullable = true from not(false or (false and false)) = true
-: Writer{
-var c = c
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this
-}
-
-                @Throws(IOException::class)
-            
-    override fun append(csq: CharSequence)
-        //nullable = true from not(false or (false and false)) = true
-: Writer{
-var csq = csq
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this
-}
-
-                @Throws(IOException::class)
-            
-    override fun append(csq: CharSequence, start: Int, end: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Writer{
-var csq = csq
-var start = start
-var end = end
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this
-}
-
-                @Throws(IOException::class)
-            
-    override fun write(c: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var c = c
-}
-
-                @Throws(IOException::class)
-            
-    override fun write(cbuf: CharArray, off: Int, len: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var cbuf = cbuf
-var off = off
-var len = len
-}
-
-                @Throws(IOException::class)
-            
-    override fun write(str: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var str = str
-}
-
-                @Throws(IOException::class)
-            
-    override fun write(str: String, off: Int, len: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var str = str
-var off = off
-var len = len
-}
-
-                @Throws(IOException::class)
-            
-    override fun flush()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
-    override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
-                                }
-                            
-}
-
-
-    open fun nullReader()
-        //nullable = true from not(false or (false and true)) = true
-: Reader{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return object: Reader()
-                                {
-                                
-                @Throws(IOException::class)
-            
-    override fun read()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-}
-
-                @Throws(IOException::class)
-            
-    override fun read(cbuf: CharArray, off: Int, len: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var cbuf = cbuf
-var off = off
-var len = len
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-}
-
-                @Throws(IOException::class)
-            
-    override fun read(target: CharBuffer)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var target = target
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-}
-
-                @Throws(IOException::class)
-            
-    override fun ready()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-                @Throws(IOException::class)
-            
-    override fun skip(n: Long)
-        //nullable = true from not(false or (false and false)) = true
-: Long{
-var n = n
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0L
-}
-
-    override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
-                                }
-                            
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return SimpleFileUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+
+        open fun nullOutputStream()
+        // nullable = true from not(false or (false and true)) = true
+        : OutputStream {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return object : OutputStream() {
+
+                @Throws(IOException::class)
+                override fun write(b: Int)
+                    // nullable = true from not(false or (false and false)) = true
+                {
+                    var b = b
+                }
+
+                @Throws(IOException::class)
+                override fun write(b: ByteArray, off: Int, len: Int)
+                    // nullable = true from not(false or (false and false)) = true
+                {
+                    var b = b
+                    var off = off
+                    var len = len
+                }
+
+                override fun close()
+                    // nullable = true from not(false or (false and true)) = true
+                {}
+            }
+        }
+
+        open fun nullWriter()
+        // nullable = true from not(false or (false and true)) = true
+        : Writer {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return object : Writer() {
+
+                private var closed: Boolean = false
+
+                @Throws(IOException::class)
+                override fun append(
+                    c: Char
+                )
+                    // nullable = true from not(false or (false and false)) = true
+                    : Writer {
+                    var c = c
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return this
+                }
+
+                @Throws(IOException::class)
+                override fun append(
+                    csq: CharSequence
+                )
+                    // nullable = true from not(false or (false and false)) = true
+                    : Writer {
+                    var csq = csq
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return this
+                }
+
+                @Throws(IOException::class)
+                override fun append(
+                    csq: CharSequence,
+                    start: Int,
+                    end: Int,
+                )
+                    // nullable = true from not(false or (false and false)) = true
+                    : Writer {
+                    var csq = csq
+                    var start = start
+                    var end = end
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return this
+                }
+
+                @Throws(IOException::class)
+                override fun write(c: Int)
+                    // nullable = true from not(false or (false and false)) = true
+                {
+                    var c = c
+                }
+
+                @Throws(IOException::class)
+                override fun write(cbuf: CharArray, off: Int, len: Int)
+                    // nullable = true from not(false or (false and false)) = true
+                {
+                    var cbuf = cbuf
+                    var off = off
+                    var len = len
+                }
+
+                @Throws(IOException::class)
+                override fun write(str: String)
+                    // nullable = true from not(false or (false and false)) = true
+                {
+                    var str = str
+                }
+
+                @Throws(IOException::class)
+                override fun write(str: String, off: Int, len: Int)
+                    // nullable = true from not(false or (false and false)) = true
+                {
+                    var str = str
+                    var off = off
+                    var len = len
+                }
+
+                @Throws(IOException::class)
+                override fun flush()
+                    // nullable = true from not(false or (false and true)) = true
+                {}
+
+                override fun close()
+                    // nullable = true from not(false or (false and true)) = true
+                {}
+            }
+        }
+
+        open fun nullReader()
+        // nullable = true from not(false or (false and true)) = true
+        : Reader {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return object : Reader() {
+
+                @Throws(IOException::class)
+                override fun read()
+                // nullable = true from not(false or (false and true)) = true
+                : Int {
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return -1
+                }
+
+                @Throws(IOException::class)
+                override fun read(
+                    cbuf: CharArray,
+                    off: Int,
+                    len: Int,
+                )
+                    // nullable = true from not(false or (false and false)) = true
+                    : Int {
+                    var cbuf = cbuf
+                    var off = off
+                    var len = len
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return -1
+                }
+
+                @Throws(IOException::class)
+                override fun read(
+                    target: CharBuffer
+                )
+                    // nullable = true from not(false or (false and false)) = true
+                    : Int {
+                    var target = target
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return -1
+                }
+
+                @Throws(IOException::class)
+                override fun ready()
+                // nullable = true from not(false or (false and true)) = true
+                : Boolean {
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return false
+                }
+
+                @Throws(IOException::class)
+                override fun skip(
+                    n: Long
+                )
+                    // nullable = true from not(false or (false and false)) = true
+                    : Long {
+                    var n = n
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return 0L
+                }
+
+                override fun close()
+                    // nullable = true from not(false or (false and true)) = true
+                {}
+            }
+        }
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val NULL_WRITER: Writer = SimpleFileUtil.nullWriter()!!
@@ -307,166 +262,113 @@ var n = n
 
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
 
-    open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var inputStream = inputStream
-    //var max = max
-    //var byteArray1 = byteArray1
+    open fun loadFileAsList(
+        inputStream: InputStream,
+        max: Int,
+        byteArray1: ByteArray,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var inputStream = inputStream
+        // var max = max
+        // var byteArray1 = byteArray1
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.loadFileAsListReturnLine(inputStream, max, byteArray1, 0)
+    }
 
+    open fun loadFileAsListReturnLine(
+        inputStream: InputStream,
+        max: Int,
+        byteArray1: ByteArray,
+        includeReturnLine: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var inputStream = inputStream
+        // var max = max
+        // var byteArray1 = byteArray1
+        // var includeReturnLine = includeReturnLine
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.loadFileAsListReturnLine(inputStream, max, byteArray1, 0)
-}
+        var stringList: BasicArrayList = BasicArrayListD()
 
+        if (inputStream == null) {
 
-    open fun loadFileAsListReturnLine(inputStream: InputStream, max: Int, byteArray1: ByteArray, includeReturnLine: Int)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var inputStream = inputStream
-    //var max = max
-    //var byteArray1 = byteArray1
-    //var includeReturnLine = includeReturnLine
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return stringList
+        }
 
-    var stringList: BasicArrayList = BasicArrayListD()
-
-
-    
-                        if(inputStream == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringList
-
-                                    }
-                                
-
-    var byteArray: ByteArray = this.nullUtil!!.NULL_BYTE_ARRAY
-
+        var byteArray: ByteArray = this.nullUtil!!.NULL_BYTE_ARRAY
 
         try {
-            
-    var outputStream2: ByteArrayOutputStream = ByteArrayOutputStream(max)
 
-byteArray= this.streamUtil!!.getByteArray(inputStream, outputStream2, byteArray1)
-this.streamUtil!!.close(inputStream)
-} catch(e: Exception)
-            {
-this.streamUtil!!.close(inputStream)
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
+            var outputStream2: ByteArrayOutputStream = ByteArrayOutputStream(max)
+
+            byteArray = this.streamUtil!!.getByteArray(inputStream, outputStream2, byteArray1)
+            this.streamUtil!!.close(inputStream)
+        } catch (e: Exception) {
+            this.streamUtil!!.close(inputStream)
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
+        }
+
+        if (byteArray == null) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return stringList
+        }
+
+        var size: Int = byteArray!!.size
+
+        var index: Int = 0
+
+        var startIndex: Int = 0
+
+        var returnLine: Int = 0
+
+        while (index < size) {
+            startIndex = index
+
+            while (index < size - 1 && byteArray[index] != '\n'.code.toByte()) {
+                index++
+            }
+
+            if (includeReturnLine == 0) {
+
+                if (index > 0 && byteArray[index - 1] == '\r'.code.toByte()) {
+
+                    returnLine = 1
+                } else {
+                    returnLine = 0
+                }
+            }
+
+            var s: String = byteArray.decodeToString()
+
+            stringList!!.add(s)
+            index++
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringList
+    }
+
+    open fun createStringFromArrayOfStrings(
+        stringArray: Array<String?>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        // var stringArray = stringArray
+
+        var stringMaker: StringMaker = StringMaker()
+
+        var size: Int = stringArray!!.size
+
+        for (index in 0 until size) {
+
+            stringMaker!!.append(stringArray[index]!!)
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringMaker!!.toString()
+    }
 }
-
-
-    
-                        if(byteArray == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringList
-
-                                    }
-                                
-
-    var size: Int = byteArray!!.size
-                
-
-
-    var index: Int = 0
-
-
-    var startIndex: Int= 0
-
-
-    var returnLine: Int = 0
-
-
-        while(index < size)
-        {
-startIndex= index
-
-        while(index < size -1 && byteArray[index] != '\n'.code.toByte())
-        {
-index++
-}
-
-
-    
-                        if(includeReturnLine == 0)
-                        
-                                    {
-                                    
-    
-                        if(index > 0 && byteArray[index -1] == '\r'.code.toByte())
-                        
-                                    {
-                                    returnLine= 1
-
-                                    }
-                                
-                        else {
-                            returnLine= 0
-
-                        }
-                            
-
-                                    }
-                                
-
-    var s: String = byteArray.decodeToString()
-
-stringList!!.add(s)
-index++
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringList
-}
-
-
-    open fun createStringFromArrayOfStrings(stringArray: Array<String?>)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-    //var stringArray = stringArray
-
-    var stringMaker: StringMaker = StringMaker()
-
-
-    var size: Int = stringArray!!.size
-                
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-stringMaker!!.append(stringArray[index]!!)
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringMaker!!.toString()
-}
-
-
-}
-                
-            
-

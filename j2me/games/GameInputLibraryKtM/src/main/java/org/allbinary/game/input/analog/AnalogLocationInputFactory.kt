@@ -1,100 +1,65 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input.analog
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input.analog
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class AnalogLocationInputFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: AnalogLocationInputFactory = AnalogLocationInputFactory()
+open public class AnalogLocationInputFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: AnalogLocationInputFactory{
+    companion object {
 
+        private val instance: AnalogLocationInputFactory = AnalogLocationInputFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : AnalogLocationInputFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AnalogLocationInputFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AnalogLocationInputFactory.instance
         }
-            
-    private val list: BasicArrayList = BasicArrayListD()
-private constructor ()
-            : super()
-        {
-}
+    }
 
+    private val list: BasicArrayList = BasicArrayListD()
+
+    private constructor() : super() {}
 
     open fun addPlayer(playerInputId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var playerInputId = playerInputId
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var playerInputId = playerInputId
 
-    var analogLocationInput: AnalogLocationInput = AnalogLocationInput.NULL_ANALOG_LOCATION_INPUT
+        var analogLocationInput: AnalogLocationInput =
+            AnalogLocationInput.NULL_ANALOG_LOCATION_INPUT
 
+        if (playerInputId < this.list.size()) {
 
-    
-                        if(playerInputId < this.list.size())
-                        
-                                    {
-                                    analogLocationInput= this.list.get(playerInputId) as AnalogLocationInput
+            analogLocationInput = this.list.get(playerInputId) as AnalogLocationInput
+        }
 
-                                    }
-                                
+        if (analogLocationInput == AnalogLocationInput.NULL_ANALOG_LOCATION_INPUT) {
 
-    
-                        if(analogLocationInput == AnalogLocationInput.NULL_ANALOG_LOCATION_INPUT)
-                        
-                                    {
-                                    analogLocationInput= AnalogLocationInput(playerInputId)
-this.list.add(analogLocationInput)
+            analogLocationInput = AnalogLocationInput(playerInputId)
+            this.list.add(analogLocationInput)
+        }
+    }
 
-                                    }
-                                
-}
+    open fun getInstanceForPlayer(
+        playerInputId: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : AnalogLocationInput {
+        var playerInputId = playerInputId
 
-
-    open fun getInstanceForPlayer(playerInputId: Int)
-        //nullable = true from not(false or (false and false)) = true
-: AnalogLocationInput{
-var playerInputId = playerInputId
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list.get(playerInputId) as AnalogLocationInput
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.list.get(playerInputId) as AnalogLocationInput
+    }
 
     open fun getList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.list
+    }
 }
-
-
-}
-                
-            
-

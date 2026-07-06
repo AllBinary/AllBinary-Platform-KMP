@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2003 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2003 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
 import org.allbinary.graphics.GPoint
@@ -39,7 +29,6 @@ import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositio
 import org.allbinary.util.BasicArrayList
 
 open public class PathAnimation : Animation {
-        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -47,32 +36,31 @@ open public class PathAnimation : Animation {
 
     private val pathFindingLayer: PathFindingLayerInterface
 
-    var allBinaryGameLayerManagerP: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
-public constructor (pathFindingLayer: PathFindingLayerInterface, linePathAnimation: LinePathAnimation){
-    //var pathFindingLayer = pathFindingLayer
-    //var linePathAnimation = linePathAnimation
-this.pathFindingLayer= pathFindingLayer
-this.linePathAnimation= linePathAnimation
-}
+    var allBinaryGameLayerManagerP: AllBinaryGameLayerManager =
+        AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
 
+    public constructor(
+        pathFindingLayer: PathFindingLayerInterface,
+        linePathAnimation: LinePathAnimation,
+    ) {
+        // var pathFindingLayer = pathFindingLayer
+        // var linePathAnimation = linePathAnimation
+        this.pathFindingLayer = pathFindingLayer
+        this.linePathAnimation = linePathAnimation
+    }
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
-this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryGameLayerManager = allBinaryGameLayerManager
+        this.allBinaryGameLayerManagerP = allBinaryGameLayerManager
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun nextFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     private val startColor: BasicColor = BasicColorFactory.getInstance()!!.RED
 
@@ -81,113 +69,84 @@ this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
     private val endColor: BasicColor = BasicColorFactory.getInstance()!!.GREEN
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
 
         try {
-            
-    var waypointBehaviorBase: WaypointBehaviorBase = this.pathFindingLayer!!.getWaypointBehavior()!!
 
+            var waypointBehaviorBase: WaypointBehaviorBase =
+                this.pathFindingLayer!!.getWaypointBehavior()!!
 
-    
-                        if(waypointBehaviorBase != 
-                                    null
-                                )
-                        
-                                    {
-                                    
-    var geographicMapCellHistory: GeographicMapCellHistory = waypointBehaviorBase!!.getCurrentGeographicMapCellHistory()!!
+            if (waypointBehaviorBase != null) {
 
+                var geographicMapCellHistory: GeographicMapCellHistory =
+                    waypointBehaviorBase!!.getCurrentGeographicMapCellHistory()!!
 
-    var list: BasicArrayList = geographicMapCellHistory!!.getTracked()!!
+                var list: BasicArrayList = geographicMapCellHistory!!.getTracked()!!
 
+                var size: Int = list.size()!!
 
-    var size: Int = list.size()!!
+                if (size > 0) {
 
+                    var geographicMapCompositeInterface: GeographicMapCompositeInterface =
+                        this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
 
-    
-                        if(size > 0)
-                        
-                                    {
-                                    
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
+                    var geographicMapInterface: BasicGeographicMap =
+                        geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
+                    var tiledLayer: AllBinaryTiledLayer =
+                        geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
-    var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
+                    var geographicMapCellPosition: GeographicMapCellPosition =
+                        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
+                    var nextPoint: GPoint
 
-    var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+                    var point: GPoint
 
+                    var start: Int = size - 2
 
-    var geographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+                    for (index in 0 until size - 1) {
 
+                        if (index == start) {
 
-    var nextPoint: GPoint
-
-
-    var point: GPoint
-
-
-    var start: Int = size -2
-
-
-
-
-
-                        for (index in 0 until size -1)
-
-        {
-
-    
-                        if(index == start)
-                        
-                                    {
-                                    this.setBasicColorP(this.startColor)
-this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
-
-                                    }
-                                
-                             else 
-    
-                        if(geographicMapCellHistory!!.isVisited(geographicMapCellPosition))
-                        
-                                    {
-                                    this.setBasicColorP(this.endColor)
-this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
-
-                                    }
-                                
-                        else {
+                            this.setBasicColorP(this.startColor)
+                            this.basicSetColorUtil!!.setBasicColorP3(
+                                graphics,
+                                this.getBasicColorP(),
+                                this.getColor(),
+                            )
+                        } else if (
+                            geographicMapCellHistory!!.isVisited(geographicMapCellPosition)
+                        ) {
+                            this.setBasicColorP(this.endColor)
+                            this.basicSetColorUtil!!.setBasicColorP3(
+                                graphics,
+                                this.getBasicColorP(),
+                                this.getColor(),
+                            )
+                        } else {
                             this.setBasicColorP(this.middleColor)
-this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
-
+                            this.basicSetColorUtil!!.setBasicColorP3(
+                                graphics,
+                                this.getBasicColorP(),
+                                this.getColor(),
+                            )
                         }
-                            
-geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
-point= geographicMapCellPosition!!.getMidPoint()
-geographicMapCellPosition= list.get(index +1) as GeographicMapCellPosition
-nextPoint= geographicMapCellPosition!!.getMidPoint()
-this.linePathAnimation!!.paint(graphics, point, nextPoint, tiledLayer)
+
+                        geographicMapCellPosition = list.get(index) as GeographicMapCellPosition
+                        point = geographicMapCellPosition!!.getMidPoint()
+                        geographicMapCellPosition = list.get(index + 1) as GeographicMapCellPosition
+                        nextPoint = geographicMapCellPosition!!.getMidPoint()
+                        this.linePathAnimation!!.paint(graphics, point, nextPoint, tiledLayer)
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.putF("Cleared Target", this, "paint")
+        }
+    }
 }
-
-
-                                    }
-                                
-
-                                    }
-                                
-} catch(e: Exception)
-            {
-this.logUtil!!.putF("Cleared Target", this, "paint")
-}
-
-}
-
-
-}
-                
-            
-

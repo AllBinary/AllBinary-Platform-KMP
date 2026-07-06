@@ -1,35 +1,26 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.Vector
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.NullCommandListener
+import kotlin.Array
 import org.allbinary.canvas.Processor
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.feature.Features
@@ -64,8 +55,8 @@ import org.allbinary.graphics.form.FormTypeFactory
 import org.allbinary.graphics.form.PaintableForm
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.graphics.form.ScrollSelectionFormNoneFactory
-import org.allbinary.graphics.form.item.CommandTextItemArrayFactory
 import org.allbinary.graphics.form.item.ABCustomItem
+import org.allbinary.graphics.form.item.CommandTextItemArrayFactory
 import org.allbinary.graphics.form.item.validation.AllCommandsVisitor
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
@@ -78,18 +69,16 @@ import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayListD
 
-open public class GameCommandCanvas : MyCanvas
-                , MenuListener
-                , DisplayChangeEventListener
-                , UpdateMyFontInterface {
-        
-companion object {
-            
-    private val id: Int = 0
+open public class GameCommandCanvas :
+    MyCanvas, MenuListener, DisplayChangeEventListener, UpdateMyFontInterface {
 
-        }
-            
-    private val repaintProcessor: Processor = ScreenRepaintProcessorFactory.getInstance()!!.create(this)!!
+    companion object {
+
+        private val id: Int = 0
+    }
+
+    private val repaintProcessor: Processor =
+        ScreenRepaintProcessorFactory.getInstance()!!.create(this)!!
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
@@ -97,13 +86,16 @@ companion object {
 
     val backgroundBasicColor: BasicColor
 
-    val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
+    val inputToGameKeyMapping: InputToGameKeyMapping =
+        PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
+            .getInputMapping()!!
 
     val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 
-    private val downGameKeyEventHandler: DownGameKeyEventHandler = DownGameKeyEventHandler.getInstance()!!
+    private val downGameKeyEventHandler: DownGameKeyEventHandler =
+        DownGameKeyEventHandler.getInstance()!!
 
     private val upGameKeyEventHandler: UpGameKeyEventHandler = UpGameKeyEventHandler.getInstance()!!
 
@@ -123,377 +115,371 @@ companion object {
 
     private var menuForm: PaintableForm = PaintableForm.getNullPaintableForm()!!
 
-    private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
+    private var isSingleKeyRepeatableProcessing: Boolean =
+        Features.getInstance()!!.isFeature(
+            InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS
+        )!!
 
     var fontHeight: Int = 0
-public constructor (cmdListener: CommandListener, name: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(name, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST){
-    //var cmdListener = cmdListener
-    //var name = name
-    //var backgroundBasicColor = backgroundBasicColor
-    //var foregroundBasicColor = foregroundBasicColor
+    public constructor(
+        cmdListener: CommandListener,
+        name: String,
+        backgroundBasicColor: BasicColor,
+        foregroundBasicColor: BasicColor,
+    ) : super(name, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST) {
+        // var cmdListener = cmdListener
+        // var name = name
+        // var backgroundBasicColor = backgroundBasicColor
+        // var foregroundBasicColor = foregroundBasicColor
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.repaintBehavior= RepaintBehavior.getInstance()
-this.foregroundBasicColor= foregroundBasicColor
-this.backgroundBasicColor= backgroundBasicColor
-this.foregroundColor= this.foregroundBasicColor!!.toInt()
-this.backgroundColor= this.backgroundBasicColor!!.toInt()
-this.initCommands(cmdListener)
+        this.repaintBehavior = RepaintBehavior.getInstance()
+        this.foregroundBasicColor = foregroundBasicColor
+        this.backgroundBasicColor = backgroundBasicColor
+        this.foregroundColor = this.foregroundBasicColor!!.toInt()
+        this.backgroundColor = this.backgroundBasicColor!!.toInt()
+        this.initCommands(cmdListener)
 
-    
-                        if(cmdListener != NullCommandListener.NULL_COMMAND_LISTENER)
-                        
-                                    {
-                                    
-        try {
-            this.initMenu()
-this.repaintProcessor!!.process()
-} catch(e: Exception)
-            {
+        if (cmdListener != NullCommandListener.NULL_COMMAND_LISTENER) {
 
+            try {
+                this.initMenu()
+                this.repaintProcessor!!.process()
+            } catch (e: Exception) {
 
-
-                            throw RuntimeException()
-}
-
-
-                                    }
-                                
-}
-
+                throw RuntimeException()
+            }
+        }
+    }
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
         try {
-            
-    var font: Font = graphics.getFont()!!
 
-this.logUtil!!.putF(StringMaker().
-                            append(this.commonStrings!!.START)!!.append(this.canvasStrings!!.FD_WIDTH)!!.appendint(MyFontProcessor.defaultCharWidth(font))!!.append(this.canvasStrings!!.FD_HEIGHT)!!.appendint(font.getHeight())!!.toString(), this, this.canvasStrings!!.UPDATE_MEASUREMENT)
-this.fontHeight= font.getHeight()
+            var font: Font = graphics.getFont()!!
 
-    var rectangle: Rectangle = this.createRectangle(this.menuForm!!.size())!!
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append(this.commonStrings!!.START)!!
+                    .append(this.canvasStrings!!.FD_WIDTH)!!
+                    .appendint(MyFontProcessor.defaultCharWidth(font))!!
+                    .append(this.canvasStrings!!.FD_HEIGHT)!!
+                    .appendint(font.getHeight())!!
+                    .toString(),
+                this,
+                this.canvasStrings!!.UPDATE_MEASUREMENT,
+            )
+            this.fontHeight = font.getHeight()
 
-this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM)
-this.update()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
-}
+            var rectangle: Rectangle = this.createRectangle(this.menuForm!!.size())!!
 
-this.myFontProcessor= MyFontProcessor.getInstance()
-}
+            this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM)
+            this.update()
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT,
+                e,
+            )
+        }
 
+        this.myFontProcessor = MyFontProcessor.getInstance()
+    }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
     override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var displayChangeEvent = displayChangeEvent
-this.logUtil!!.putF(StringMaker().
-                            append(this.commonStrings!!.START)!!.append(DisplayInfoSingleton.getInstance()!!.toString())!!.toString(), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
-this.myFontProcessor= this.updateMyFontProcessor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var displayChangeEvent = displayChangeEvent
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(this.commonStrings!!.START)!!
+                .append(DisplayInfoSingleton.getInstance()!!.toString())!!
+                .toString(),
+            this,
+            this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT,
+        )
+        this.myFontProcessor = this.updateMyFontProcessor
+    }
 
     open fun initCommands(cmdListener: CommandListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var cmdListener = cmdListener
-this.removeAllCommands()
-this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
-this.setCommandListener(cmdListener)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var cmdListener = cmdListener
+        this.removeAllCommands()
+        this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
+        this.setCommandListener(cmdListener)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun initMenu()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var form: ScrollSelectionForm = this.createForm()!!
+        var form: ScrollSelectionForm = this.createForm()!!
 
-this.menuForm= form
+        this.menuForm = form
 
-    
-                        if(form != ScrollSelectionFormNoneFactory.getInstance())
-                        
-                                    {
-                                    this.setMenuInputProcessor(ImmediateCommandFormInputProcessor(BasicArrayListD(),  -1, this, form))
-this.menuPaintable= FormPaintable(form)
+        if (form != ScrollSelectionFormNoneFactory.getInstance()) {
 
-                                    }
-                                
-this.repaintBehavior!!.onChangeRepaint(this)
-}
+            this.setMenuInputProcessor(
+                ImmediateCommandFormInputProcessor(BasicArrayListD(), -1, this, form)
+            )
+            this.menuPaintable = FormPaintable(form)
+        }
 
+        this.repaintBehavior!!.onChangeRepaint(this)
+    }
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun createForm()
-        //nullable = true from not(false or (false and true)) = true
-: ScrollSelectionForm{
+    // nullable = true from not(false or (false and true)) = true
+    : ScrollSelectionForm {
 
-    var items: Array<ABCustomItem?> = CommandTextItemArrayFactory(AllCommandsVisitor()).
-                            getInstance(this.getCommandStack() as Vector<Any>, this.backgroundBasicColor, this.foregroundBasicColor)!!
+        var items: Array<ABCustomItem?> =
+            CommandTextItemArrayFactory(AllCommandsVisitor())
+                .getInstance(
+                    this.getCommandStack() as Vector<Any>,
+                    this.backgroundBasicColor,
+                    this.foregroundBasicColor,
+                )!!
 
+        var rectangle: Rectangle = this.createRectangle(items.size)!!
 
-    var rectangle: Rectangle = this.createRectangle(items.size)!!
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return CommandCurrentSelectionFormFactory.getInstance(
+            StringUtil.getInstance()!!.EMPTY_STRING,
+            items,
+            rectangle,
+            FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM,
+            15,
+            false,
+            this.backgroundBasicColor,
+            this.foregroundBasicColor,
+        )
+    }
 
+    open fun createRectangle(
+        size: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Rectangle {
+        // var size = size
 
+        var height: Int = size * this.fontHeight
 
+        var startY: Int = (this.displayInfo!!.getLastHeight() * 2 / 3) - height
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM, 15, false, this.backgroundBasicColor, this.foregroundBasicColor)
-}
+        var pointFactory: PointFactory = PointFactory.getInstance()!!
 
+        var rectangle: Rectangle =
+            Rectangle(
+                pointFactory!!.createXY(30, startY),
+                this.displayInfo!!.getLastWidth() - 30,
+                startY,
+            )
 
-    open fun createRectangle(size: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Rectangle{
-    //var size = size
-
-    var height: Int = size *this.fontHeight
-
-
-    var startY: Int = (this.displayInfo!!.getLastHeight() *2 /3) -height
-
-
-    var pointFactory: PointFactory = PointFactory.getInstance()!!
-
-
-    var rectangle: Rectangle = Rectangle(pointFactory!!.createXY(30, startY), this.displayInfo!!.getLastWidth() -30, startY)
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return rectangle
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return rectangle
+    }
 
     override fun open()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(this.commonStrings!!.START, this, "open")
-BasicMotionGesturesHandler.getInstance()!!.addListenerInterface(this.getMenuInputProcessor())
-GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
-DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(this.commonStrings!!.START, this, "open")
+        BasicMotionGesturesHandler.getInstance()!!.addListenerInterface(
+            this.getMenuInputProcessor()
+        )
+        GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
+        DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
+    }
 
     override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CLOSE)
-BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
-GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
-DisplayChangeEventHandler.getInstance()!!.removeListener(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CLOSE)
+        BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
+        GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
+        DisplayChangeEventHandler.getInstance()!!.removeListener(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.repaintProcessor!!.process()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.repaintProcessor!!.process()
+    }
 
     override fun getSourceId()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameCommandCanvas.id
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return GameCommandCanvas.id
+    }
 
     override fun keyPressed(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-this.keyPressedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        this.keyPressedByDevice(keyCode, 0)
+    }
 
     override fun keyReleased(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-this.keyReleasedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        this.keyReleasedByDevice(keyCode, 0)
+    }
 
     override fun keyRepeated(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-this.keyRepeatedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        this.keyRepeatedByDevice(keyCode, 0)
+    }
 
     override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
-this.logUtil!!.putF(StringMaker().
-                            append(CommonSeps.getInstance()!!.SPACE)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.KEY_PRESSED)
-this.addGameKeyEvent(keyCode, 0, false)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(CommonSeps.getInstance()!!.SPACE)!!
+                .appendint(keyCode)!!
+                .toString(),
+            this,
+            this.gameInputStrings!!.KEY_PRESSED,
+        )
+        this.addGameKeyEvent(keyCode, 0, false)
+    }
 
     override fun keyReleasedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
-this.removeGameKeyEvent(keyCode, deviceId, false)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
+        this.removeGameKeyEvent(keyCode, deviceId, false)
+    }
 
     override fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
 
-    
-                        if(this.isSingleKeyRepeatableProcessing)
-                        
-                                    {
-                                    this.addGameKeyEvent(keyCode, deviceId, true)
+        if (this.isSingleKeyRepeatableProcessing) {
 
-                                    }
-                                
-}
-
+            this.addGameKeyEvent(keyCode, deviceId, true)
+        }
+    }
 
     open fun addGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
-    //var repeated = repeated
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
+        // var repeated = repeated
 
         try {
-            
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
+            var gameKey: GameKey =
+                this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
-    
-                        if(gameKey != this.gameKeyFactory!!.NONE)
-                        
-                                    {
-                                    
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
+            if (gameKey != this.gameKeyFactory!!.NONE) {
 
-this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.downGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
+                var gameKeyEvent: GameKeyEvent =
+                    this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
 
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
-
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
-}
-
-}
-
+                this.downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+                this.downGameKeyEventHandler!!
+                    .getInstanceForDevice(deviceId)!!
+                    .fireEvent(gameKeyEvent)
+            } else {
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append(this.gameInputStrings!!.NO_KEY)!!
+                        .appendint(keyCode)!!
+                        .toString(),
+                    this,
+                    this.gameInputStrings!!.ADD_KEY_EVENT,
+                )
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+        }
+    }
 
     open fun removeGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
-    //var repeated = repeated
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
+        // var repeated = repeated
 
         try {
-            
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
+            var gameKey: GameKey =
+                this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
-    
-                        if(gameKey != this.gameKeyFactory!!.NONE)
-                        
-                                    {
-                                    
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
+            if (gameKey != this.gameKeyFactory!!.NONE) {
 
-this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
+                var gameKeyEvent: GameKeyEvent =
+                    this.gameKeyEventFactory!!.getInstanceForInput(this, gameKey)!!
 
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
-
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
-}
-
-}
-
+                this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+                this.upGameKeyEventHandler!!
+                    .getInstanceForDevice(deviceId)!!
+                    .fireEvent(gameKeyEvent)
+            } else {
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append(this.gameInputStrings!!.NO_KEY)!!
+                        .appendint(keyCode)!!
+                        .toString(),
+                    this,
+                    this.gameInputStrings!!.REMOVE_KEY_EVENT,
+                )
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+        }
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-this.myFontProcessor!!.process(graphics)
-this.menuPaintable!!.paint(graphics)
-this.repaintBehavior!!.repaint(this)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        this.myFontProcessor!!.process(graphics)
+        this.menuPaintable!!.paint(graphics)
+        this.repaintBehavior!!.repaint(this)
+    }
 
     open fun setMenuInputProcessor(menuInputProcessor: BasicMenuInputProcessor)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var menuInputProcessor = menuInputProcessor
-this.menuInputProcessor= menuInputProcessor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var menuInputProcessor = menuInputProcessor
+        this.menuInputProcessor = menuInputProcessor
+    }
 
     open fun getMenuInputProcessor()
-        //nullable = true from not(false or (false and true)) = true
-: BasicMenuInputProcessor{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicMenuInputProcessor {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.menuInputProcessor
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.menuInputProcessor
+    }
 }
-
-
-}
-                
-            
-

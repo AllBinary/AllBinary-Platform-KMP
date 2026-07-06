@@ -1,139 +1,107 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system.os
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system.os
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.logic.system.os.android.AndroidOperatingSystemFactory
+import java.lang.Object
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.system.os.android.AndroidOperatingSystemFactory
 import org.allbinary.string.CommonStrings
 
-open public class OperatingSystemFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: OperatingSystemFactory = OperatingSystemFactory()
+open public class OperatingSystemFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OperatingSystemFactory{
+    companion object {
 
+        private val instance: OperatingSystemFactory = OperatingSystemFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OperatingSystemFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OperatingSystemFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OperatingSystemFactory.instance
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
+    private var genericOperatingSystem: GenericOperatingSystem =
+        NoOperatingSystem.NO_OPERATING_SYSTEM
 
     private var hasDetected: Boolean = false
-private constructor ()
-            : super()
-        {
-}
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+    private constructor() : super() {}
 
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     open fun getOperatingSystemInstance()
-        //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem{
+    // nullable = true from not(false or (false and true)) = true
+    : GenericOperatingSystem {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
+        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
         try {
-            
-    var systemProperties: SystemProperties = SystemProperties.getInstance()!!
 
+            var systemProperties: SystemProperties = SystemProperties.getInstance()!!
 
-    var osName: String = systemProperties!!.getName()!!
+            var osName: String = systemProperties!!.getName()!!
 
+            if (!this.hasDetected) {
 
-    
-                        if(!this.hasDetected)
-                        
-                                    {
-                                    this.hasDetected= true
+                this.hasDetected = true
 
-    
-                        if(osName!!.indexOf(OperatingSystems.getInstance()!!.ANDROID) >= 0)
-                        
-                                    {
-                                    this.logUtil!!.putF("Found a Android OS", this, commonStrings!!.GET_INSTANCE)
-this.genericOperatingSystem= AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
-this.logUtil!!.putF(StringMaker().
-                            append("Operating System Info: ")!!.append(this.genericOperatingSystem!!.toString())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                if (osName!!.indexOf(OperatingSystems.getInstance()!!.ANDROID) >= 0) {
 
-                                    }
-                                
-                             else 
-    
-                        if(osName!!.indexOf(OperatingSystems.getInstance()!!.HARMONY) >= 0)
-                        
-                                    {
-                                    this.logUtil!!.putF("Found a Harmony OS", this, commonStrings!!.GET_INSTANCE)
-this.genericOperatingSystem= AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
-this.logUtil!!.putF(StringMaker().
-                            append("Operating System Info: ")!!.append(this.genericOperatingSystem!!.toString())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                    this.logUtil!!.putF("Found a Android OS", this, commonStrings!!.GET_INSTANCE)
+                    this.genericOperatingSystem =
+                        AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                    this.logUtil!!.putF(
+                        StringMaker()
+                            .append("Operating System Info: ")!!
+                            .append(this.genericOperatingSystem!!.toString())!!
+                            .toString(),
+                        this,
+                        commonStrings!!.GET_INSTANCE,
+                    )
+                } else if (osName!!.indexOf(OperatingSystems.getInstance()!!.HARMONY) >= 0) {
 
-                                    }
-                                
-                        else {
-                            
+                    this.logUtil!!.putF("Found a Harmony OS", this, commonStrings!!.GET_INSTANCE)
+                    this.genericOperatingSystem =
+                        AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+                    this.logUtil!!.putF(
+                        StringMaker()
+                            .append("Operating System Info: ")!!
+                            .append(this.genericOperatingSystem!!.toString())!!
+                            .toString(),
+                        this,
+                        commonStrings!!.GET_INSTANCE,
+                    )
+                } else {
 
+                    throw Exception(
+                        StringMaker().append("OS Not Supported: ")!!.append(osName)!!.toString()
+                    )
+                }
+            }
+        } catch (e: Exception) {
+            this.genericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+        }
 
-                            throw Exception(StringMaker().
-                            append("OS Not Supported: ")!!.append(osName)!!.toString())
-
-                        }
-                            
-
-                                    }
-                                
-} catch(e: Exception)
-            {
-this.genericOperatingSystem= NoOperatingSystem.NO_OPERATING_SYSTEM
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.genericOperatingSystem
+    }
 }
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.genericOperatingSystem
-}
-
-
-}
-                
-            
-

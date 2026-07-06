@@ -1,95 +1,66 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.input.mapping.PersistentInputMapping
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class PlatformInputMappingFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: PlatformInputMappingFactory = PlatformInputMappingFactory()
+open public class PlatformInputMappingFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: PlatformInputMappingFactory{
+    companion object {
 
+        private val instance: PlatformInputMappingFactory = PlatformInputMappingFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : PlatformInputMappingFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PlatformInputMappingFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PlatformInputMappingFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var inputToGameKeyMapping: PersistentInputMapping = PersistentInputMapping.getNullInstance()!!
+    private var inputToGameKeyMapping: PersistentInputMapping =
+        PersistentInputMapping.getNullInstance()!!
 
     open fun getPersistentInputMappingInstance()
-        //nullable = true from not(false or (false and true)) = true
-: PersistentInputMapping{
+    // nullable = true from not(false or (false and true)) = true
+    : PersistentInputMapping {
 
         try {
-            
-    
-                        if(this.inputToGameKeyMapping == PersistentInputMapping.getNullInstance())
-                        
-                                    {
-                                    this.inputToGameKeyMapping= LaptopGameInputMapping()
 
-                                    }
-                                
-} catch(e: Exception)
-            {
+            if (this.inputToGameKeyMapping == PersistentInputMapping.getNullInstance()) {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+                this.inputToGameKeyMapping = LaptopGameInputMapping()
+            }
+        } catch (e: Exception) {
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.inputToGameKeyMapping
+    }
 }
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.inputToGameKeyMapping
-}
-
-
-}
-                
-            
-

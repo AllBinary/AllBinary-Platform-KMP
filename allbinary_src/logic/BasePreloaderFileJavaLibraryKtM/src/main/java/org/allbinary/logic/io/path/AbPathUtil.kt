@@ -1,60 +1,39 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.io.path
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.io.path
 
+import java.lang.Object
 
+open public class AbPathUtil : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: AbPathUtil = AbPathUtil()
 
-open public class AbPathUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: AbPathUtil = AbPathUtil()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : AbPathUtil {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: AbPathUtil{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPathUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AbPathUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val NO_ABPATH: AbPath = AbPath.createAbPath()!!
-
 }
-                
-            
-

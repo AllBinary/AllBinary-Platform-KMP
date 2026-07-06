@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.game.input.CompleteMotionGestureInputEvent
 import org.allbinary.game.input.CompleteMotionGestureInputEventHandler
 import org.allbinary.game.input.CompleteMotionGestureInputEventListenerInterface
@@ -44,9 +34,8 @@ import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.TimeDelayHelper
 
-open public class TouchButtonsPaintableComposite : ProcessPaintable
-                , CompleteMotionGestureInputEventListenerInterface {
-        
+open public class TouchButtonsPaintableComposite :
+    ProcessPaintable, CompleteMotionGestureInputEventListenerInterface {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -59,22 +48,21 @@ open public class TouchButtonsPaintableComposite : ProcessPaintable
     private var timeHelper: TimeDelayHelper = TimeDelayHelper(250)
 
     private var released: Boolean = true
-public constructor (inputMappingInterface: InputMappingInterface, basicColor: BasicColor){
-    //var inputMappingInterface = inputMappingInterface
-    //var basicColor = basicColor
-this.inputMappingInterface= inputMappingInterface
-CompleteMotionGestureInputEventHandler.getInstance()!!.addListenerInterface(this)
-this.touchButtonsPaintable= TouchButtonsMappingPaintable(basicColor)
-}
 
+    public constructor(inputMappingInterface: InputMappingInterface, basicColor: BasicColor) {
+        // var inputMappingInterface = inputMappingInterface
+        // var basicColor = basicColor
+        this.inputMappingInterface = inputMappingInterface
+        CompleteMotionGestureInputEventHandler.getInstance()!!.addListenerInterface(this)
+        this.touchButtonsPaintable = TouchButtonsMappingPaintable(basicColor)
+    }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
     private val METHOD_NAME: String = "onCompleteMotionGestureInputEvent"
 
@@ -84,88 +72,78 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
     private val IGNORE: String = "Ignoring: Until Released"
 
-    override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var completeMotionGestureInputEvent = completeMotionGestureInputEvent
+    override fun onCompleteMotionGestureInputEvent(
+        completeMotionGestureInputEvent: CompleteMotionGestureInputEvent
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var completeMotionGestureInputEvent = completeMotionGestureInputEvent
 
         try {
-            this.logUtil!!.putF(this.commonStrings!!.START, this, "onCompleteMotionGestureInputEvent")
+            this.logUtil!!.putF(
+                this.commonStrings!!.START,
+                this,
+                "onCompleteMotionGestureInputEvent",
+            )
 
-    var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
+            var touchMotionGestureFactory: TouchMotionGestureFactory =
+                TouchMotionGestureFactory.getInstance()!!
 
+            var gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent =
+                completeMotionGestureInputEvent as GameKeyCompleteMotionGestureInputEvent
 
-    var gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent = completeMotionGestureInputEvent as GameKeyCompleteMotionGestureInputEvent
+            var gameKey: GameKey = gameKeyCompleteMotionGestureInputEvent!!.getGameKey()!!
 
+            var motionGestureInput: MotionGestureInput =
+                completeMotionGestureInputEvent!!.getMotionGestureInput()!!
 
-    var gameKey: GameKey = gameKeyCompleteMotionGestureInputEvent!!.getGameKey()!!
+            if (motionGestureInput == touchMotionGestureFactory!!.RELEASED) {
 
+                this.logUtil!!.putF(this.RELEASE, this, this.METHOD_NAME)
+                this.released = true
 
-    var motionGestureInput: MotionGestureInput = completeMotionGestureInputEvent!!.getMotionGestureInput()!!
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return
+            }
 
+            if (
+                motionGestureInput == TouchMotionGestureFactory.getInstance()!!.NO_MOTION &&
+                    !this.timeHelper!!.isTimeTNT()
+            ) {
+                this.logUtil!!.putF(this.FAST_REPEAT, this, this.METHOD_NAME)
 
-    
-                        if(motionGestureInput == touchMotionGestureFactory!!.RELEASED)
-                        
-                                    {
-                                    this.logUtil!!.putF(this.RELEASE, this, this.METHOD_NAME)
-this.released= true
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return
+            }
 
+            if (!this.released) {
 
+                this.logUtil!!.putF(this.IGNORE, this, this.METHOD_NAME)
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return
+            }
 
-                                    }
-                                
-
-    
-                        if(motionGestureInput == TouchMotionGestureFactory.getInstance()!!.NO_MOTION && !this.timeHelper!!.isTimeTNT())
-                        
-                                    {
-                                    this.logUtil!!.putF(this.FAST_REPEAT, this, this.METHOD_NAME)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
-
-                                    }
-                                
-
-    
-                        if(!this.released)
-                        
-                                    {
-                                    this.logUtil!!.putF(this.IGNORE, this, this.METHOD_NAME)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
-
-                                    }
-                                
-this.released= false
-this.logUtil!!.putF(StringMaker().
-                            append("GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKey))!!.append(" MotionGestureInput: ")!!.append(StringUtil.getInstance()!!.toString(motionGestureInput))!!.toString(), this, this.METHOD_NAME)
-this.inputMappingInterface!!.processInputMapping(gameKey, motionGestureInput)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_NAME, e)
-}
-
-}
-
+            this.released = false
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append("GameKey: ")!!
+                    .append(StringUtil.getInstance()!!.toString(gameKey))!!
+                    .append(" MotionGestureInput: ")!!
+                    .append(StringUtil.getInstance()!!.toString(motionGestureInput))!!
+                    .toString(),
+                this,
+                this.METHOD_NAME,
+            )
+            this.inputMappingInterface!!.processInputMapping(gameKey, motionGestureInput)
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_NAME, e)
+        }
+    }
 
     override fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-CompleteMotionGestureInputEventHandler.getInstance()!!.removeListener(this)
+        // nullable = true from not(false or (false and true)) = true
+    {
+        CompleteMotionGestureInputEventHandler.getInstance()!!.removeListener(this)
+    }
 }
-
-
-}
-                
-            
-

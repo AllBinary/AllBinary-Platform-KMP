@@ -1,34 +1,25 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.score
+/* Generated Code Do Not Modify */
+package org.allbinary.game.score
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.io.ByteArrayInputStream
 import java.io.DataInputStream
 import java.io.EOFException
 import java.io.IOException
+import java.lang.Object
 import java.util.Hashtable
 import javax.microedition.rms.RecordComparator
 import javax.microedition.rms.RecordEnumeration
@@ -51,53 +42,56 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
 open public class RecordStoreHighScores : HighScores {
-        
-companion object {
-            
-    private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun getInstance(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, highScoreName: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)
-        //nullable =  from not(true or (false and false)) = 
-: HighScores{
-    //var abeClientInformation = abeClientInformation
-    //var gameInfo = gameInfo
-    //var highScoreName = highScoreName
-    //var heading = heading
-    //var columnTwoHeading = columnTwoHeading
-    //var recordComparatorInterface = recordComparatorInterface
+    companion object {
 
-    var highScoresCanBeNull: Any? = RecordStoreHighScores.hashTable!!.get(highScoreName as Object)
+        private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
+        @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+        // instead.
+        open fun getInstance(
+            abeClientInformation: AbeClientInformationInterface,
+            gameInfo: GameInfo,
+            highScoreName: String,
+            heading: String,
+            columnTwoHeading: String,
+            recordComparatorInterface: RecordComparator,
+        )
+            // nullable =  from not(true or (false and false)) =
+            : HighScores {
+            // var abeClientInformation = abeClientInformation
+            // var gameInfo = gameInfo
+            // var highScoreName = highScoreName
+            // var heading = heading
+            // var columnTwoHeading = columnTwoHeading
+            // var recordComparatorInterface = recordComparatorInterface
 
-    
-                        if(highScoresCanBeNull == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-    var highScores: HighScores = RecordStoreHighScores(abeClientInformation, gameInfo, highScoreName, heading, columnTwoHeading, recordComparatorInterface)
+            var highScoresCanBeNull: Any? =
+                RecordStoreHighScores.hashTable!!.get(highScoreName as Object)
 
-RecordStoreHighScores.hashTable!!.put(highScores!!.getName(), highScores)
+            if (highScoresCanBeNull == null) {
 
+                var highScores: HighScores =
+                    RecordStoreHighScores(
+                        abeClientInformation,
+                        gameInfo,
+                        highScoreName,
+                        heading,
+                        columnTwoHeading,
+                        recordComparatorInterface,
+                    )
 
+                RecordStoreHighScores.hashTable!!.put(highScores!!.getName(), highScores)
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return highScores
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return highScores
+            }
 
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return highScoresCanBeNull as HighScores
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return highScoresCanBeNull as HighScores
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -115,505 +109,394 @@ RecordStoreHighScores.hashTable!!.put(highScores!!.getName(), highScores)
     private val abeClientInformation: AbeClientInformationInterface
 
     private val recordComparatorInterface: RecordComparator
-private constructor (abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, name: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)                        
 
-                            : super(name, heading, columnTwoHeading){
-    //var abeClientInformation = abeClientInformation
-    //var gameInfo = gameInfo
-    //var name = name
-    //var heading = heading
-    //var columnTwoHeading = columnTwoHeading
-    //var recordComparatorInterface = recordComparatorInterface
+    private constructor(
+        abeClientInformation: AbeClientInformationInterface,
+        gameInfo: GameInfo,
+        name: String,
+        heading: String,
+        columnTwoHeading: String,
+        recordComparatorInterface: RecordComparator,
+    ) : super(name, heading, columnTwoHeading) {
+        // var abeClientInformation = abeClientInformation
+        // var gameInfo = gameInfo
+        // var name = name
+        // var heading = heading
+        // var columnTwoHeading = columnTwoHeading
+        // var recordComparatorInterface = recordComparatorInterface
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.abeClientInformation= abeClientInformation
-this.gameInfo= gameInfo
-this.recordComparatorInterface= recordComparatorInterface
-this.load()
-}
+        this.abeClientInformation = abeClientInformation
+        this.gameInfo = gameInfo
+        this.recordComparatorInterface = recordComparatorInterface
+        this.load()
+    }
 
+    open fun getRecordId(
+        abeClientInformation: AbeClientInformationInterface
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        // var abeClientInformation = abeClientInformation
 
-    open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-    //var abeClientInformation = abeClientInformation
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.platformRecordIdUtil!!.getRecordId(
+            abeClientInformation,
+            StringMaker()
+                .append(CommonSeps.getInstance()!!.UNDERSCORE)!!
+                .append(this.getName())!!
+                .append(this.RECORD_ID)!!
+                .toString(),
+        )
+    }
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.platformRecordIdUtil!!.getRecordId(abeClientInformation, StringMaker().
-                            append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(this.getName())!!.append(this.RECORD_ID)!!.toString())
-}
-
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun addHighScore(newHighScore: HighScore)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var newHighScore = newHighScore
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var newHighScore = newHighScore
 
-    var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
-
+        var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
         try {
-            this.logUtil!!.putF(StringMaker().
-                            append("Adding HighScore: ")!!.appendlong(newHighScore!!.getScore())!!.toString(), this, this.commonStrings!!.ADD)
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append("Adding HighScore: ")!!
+                    .appendlong(newHighScore!!.getScore())!!
+                    .toString(),
+                this,
+                this.commonStrings!!.ADD,
+            )
 
-    
-                        if(this.isTooManyHighScores())
-                        
-                                    {
-                                    this.logUtil!!.putF("Removing Lowest Score", this, this.commonStrings!!.ADD)
-this.removeLowestHighScore()
+            if (this.isTooManyHighScores()) {
 
-                                    }
-                                
-recordStore= RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
+                this.logUtil!!.putF("Removing Lowest Score", this, this.commonStrings!!.ADD)
+                this.removeLowestHighScore()
+            }
 
-    var highScoreBytes: ByteArray = newHighScore!!.getAsBytes()!!
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
 
+            var highScoreBytes: ByteArray = newHighScore!!.getAsBytes()!!
 
-    var recordId: Int = recordStore!!.addRecord(highScoreBytes, 0, highScoreBytes!!.size)!!
+            var recordId: Int = recordStore!!.addRecord(highScoreBytes, 0, highScoreBytes!!.size)!!
 
-this.load()
-} catch(e: RecordStoreException)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
-}
- catch(e: IOException)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
-}
- catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
-}
+            this.load()
+        } catch (e: RecordStoreException) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
+        } catch (e: IOException) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
+        } finally {
 
-         finally {
-            
-        try {
-            
-    
-                        if(recordStore != 
-                                    null
-                                )
-                        
-                                    {
-                                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.ADD)
-recordStore!!.closeRecordStore()
+            try {
 
-                                    }
-                                
-} catch(e: RecordStoreException)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
-}
+                if (recordStore != null) {
 
-
-         }
-        
-}
-
+                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.ADD)
+                    recordStore!!.closeRecordStore()
+                }
+            } catch (e: RecordStoreException) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    this.commonStrings!!.ADD,
+                    e,
+                )
+            }
+        }
+    }
 
     open fun removeLowestHighScore()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
-
+        var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
         try {
-            recordStore= RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
 
-    var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
+            var recordEnum: RecordEnumeration =
+                recordStore!!.enumerateRecords(
+                    NullRecordFilter.NULL_RECORD_FILTER,
+                    NullRecordComparator.NULL_RECORD_COMPARATOR,
+                    true,
+                )!!
 
+            var scoreComparator: ScoreComparator =
+                (this.recordComparatorInterface as ScoreComparator)
 
-    var scoreComparator: ScoreComparator = (this.recordComparatorInterface as ScoreComparator)
+            var bestHighScore: HighScore =
+                HighScore(-1, "none", GameInfo.NONE, scoreComparator!!.getBestScore())
 
+            var recordAsBytes: ByteArray
 
-    var bestHighScore: HighScore = HighScore( -1, "none", GameInfo.NONE, scoreComparator!!.getBestScore())
+            var byteArrayInputStream: ByteArrayInputStream
 
+            var inputStream: DataInputStream
 
-    var recordAsBytes: ByteArray
+            while (recordEnum!!.hasNextElement()) {
 
+                var id: Int = recordEnum!!.nextRecordId()!!
 
-    var byteArrayInputStream: ByteArrayInputStream
+                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
 
+                if (recordAsBytes != null) {
 
-    var inputStream: DataInputStream
+                    byteArrayInputStream = ByteArrayInputStream(recordAsBytes)
+                    inputStream = DataInputStream(byteArrayInputStream)
 
+                    var name: String = inputStream!!.readUTF()!!
 
-        while(recordEnum!!.hasNextElement())
-        {
+                    var nextScore: Long = inputStream!!.readLong()!!
 
-    var id: Int = recordEnum!!.nextRecordId()!!
+                    var nextCurrentHighScore: HighScore =
+                        HighScore(id, name, GameInfo.NONE, nextScore)
 
-recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
+                    if (
+                        this.recordComparatorInterface!!.compare(
+                            nextCurrentHighScore!!.getAsBytes(),
+                            bestHighScore!!.getAsBytes(),
+                        ) == RecordComparator.FOLLOWS
+                    ) {
+                        bestHighScore = nextCurrentHighScore
+                    }
+                }
+            }
 
-    
-                        if(recordAsBytes != 
-                                    null
-                                )
-                        
-                                    {
-                                    byteArrayInputStream= ByteArrayInputStream(recordAsBytes)
-inputStream= DataInputStream(byteArrayInputStream)
+            if (bestHighScore!!.getId() != -1) {
 
-    var name: String = inputStream!!.readUTF()!!
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append("Removing Lowest HighScore: ")!!
+                        .appendlong(bestHighScore!!.getScore())!!
+                        .toString(),
+                    this,
+                    this.commonStrings!!.LOAD,
+                )
+                recordStore!!.deleteRecord(bestHighScore!!.getId())
+            }
+        } catch (e: RecordStoreException) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
+        } finally {
 
+            try {
 
-    var nextScore: Long = inputStream!!.readLong()!!
+                if (recordStore != null) {
 
-
-    var nextCurrentHighScore: HighScore = HighScore(id, name, GameInfo.NONE, nextScore)
-
-
-    
-                        if(this.recordComparatorInterface!!.compare(nextCurrentHighScore!!.getAsBytes(), bestHighScore!!.getAsBytes()) == RecordComparator.FOLLOWS)
-                        
-                                    {
-                                    bestHighScore= nextCurrentHighScore
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
-
-    
-                        if(bestHighScore!!.getId() !=  -1)
-                        
-                                    {
-                                    this.logUtil!!.putF(StringMaker().
-                            append("Removing Lowest HighScore: ")!!.appendlong(bestHighScore!!.getScore())!!.toString(), this, this.commonStrings!!.LOAD)
-recordStore!!.deleteRecord(bestHighScore!!.getId())
-
-                                    }
-                                
-} catch(e: RecordStoreException)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
-}
- catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
-}
-
-         finally {
-            
-        try {
-            
-    
-                        if(recordStore != 
-                                    null
-                                )
-                        
-                                    {
-                                    PreLogUtil.put("Closing RecordStore", this, "removeLowestHighScore")
-recordStore!!.closeRecordStore()
-
-                                    }
-                                
-} catch(e: RecordStoreException)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
-}
-
-
-         }
-        
-}
-
+                    PreLogUtil.put("Closing RecordStore", this, "removeLowestHighScore")
+                    recordStore!!.closeRecordStore()
+                }
+            } catch (e: RecordStoreException) {
+                this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
+            }
+        }
+    }
 
     open fun load()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
-
-
-        try {
-            recordStore= RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
-this.setList(BasicArrayListD())
-
-    var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
-
-
-    var recordAsBytes: ByteArray
-
-
-    var byteArrayInputStream: ByteArrayInputStream
-
-
-    var inputStream: DataInputStream
-
-
-        while(recordEnum!!.hasNextElement())
-        {
-
-    var id: Int = recordEnum!!.nextRecordId()!!
-
-recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
-
-    
-                        if(recordAsBytes != 
-                                    null
-                                )
-                        
-                                    {
-                                    byteArrayInputStream= ByteArrayInputStream(recordAsBytes)
-inputStream= DataInputStream(byteArrayInputStream)
+        var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
         try {
-            
-    var name: String = inputStream!!.readUTF()!!
+            recordStore =
+                RecordStore.openRecordStore(this.getRecordId(this.abeClientInformation), true)
+            this.setList(BasicArrayListD())
 
+            var recordEnum: RecordEnumeration =
+                recordStore!!.enumerateRecords(
+                    NullRecordFilter.NULL_RECORD_FILTER,
+                    NullRecordComparator.NULL_RECORD_COMPARATOR,
+                    true,
+                )!!
 
-    var score: Long = inputStream!!.readLong()!!
+            var recordAsBytes: ByteArray
 
+            var byteArrayInputStream: ByteArrayInputStream
 
-    var newHighScore: HighScore = HighScore(id, name, GameInfo.NONE, score)
+            var inputStream: DataInputStream
 
+            while (recordEnum!!.hasNextElement()) {
 
-    var list: BasicArrayList = this.getList()!!
+                var id: Int = recordEnum!!.nextRecordId()!!
 
+                recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
 
-    var size: Int = list.size()!!
+                if (recordAsBytes != null) {
 
+                    byteArrayInputStream = ByteArrayInputStream(recordAsBytes)
+                    inputStream = DataInputStream(byteArrayInputStream)
 
-    var lastIndex: Int = size
+                    try {
 
+                        var name: String = inputStream!!.readUTF()!!
 
+                        var score: Long = inputStream!!.readLong()!!
 
+                        var newHighScore: HighScore = HighScore(id, name, GameInfo.NONE, score)
 
+                        var list: BasicArrayList = this.getList()!!
 
-                        for (index in 0 until size)
+                        var size: Int = list.size()!!
 
-        {
+                        var lastIndex: Int = size
 
-    var highScore: HighScore = list.objectArray[index]!! as HighScore
+                        for (index in 0 until size) {
 
+                            var highScore: HighScore = list.objectArray[index]!! as HighScore
 
-    
-                        if(this.recordComparatorInterface!!.compare(newHighScore!!.getAsBytes(), highScore!!.getAsBytes()) == RecordComparator.PRECEDES)
-                        
-                                    {
-                                    lastIndex= index
-break;
+                            if (
+                                this.recordComparatorInterface!!.compare(
+                                    newHighScore!!.getAsBytes(),
+                                    highScore!!.getAsBytes(),
+                                ) == RecordComparator.PRECEDES
+                            ) {
+                                lastIndex = index
+                                break
+                            }
+                        }
 
-                    
+                        list.addAt(lastIndex, newHighScore)
+                    } catch (e: EOFException) {
+                        this.logUtil!!.put("EOF", this, this.commonStrings!!.LOAD, e)
 
-                                    }
-                                
-}
+                        throw e
+                    }
+                }
+            }
+        } catch (e: RecordStoreNotFoundException) {
+            this.logUtil!!.put("No High Scores", this, this.commonStrings!!.LOAD, e)
+        } catch (e: RecordStoreException) {
+            this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
+        } catch (e: IOException) {
+            this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
+        } finally {
 
-list.addAt(lastIndex, newHighScore)
-} catch(e: EOFException)
-            {
-this.logUtil!!.put("EOF", this, this.commonStrings!!.LOAD, e)
+            try {
 
+                if (recordStore != null) {
 
-
-                            throw e
-}
-
-
-                                    }
-                                
-}
-
-} catch(e: RecordStoreNotFoundException)
-            {
-this.logUtil!!.put("No High Scores", this, this.commonStrings!!.LOAD, e)
-}
- catch(e: RecordStoreException)
-            {
-this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
-}
- catch(e: IOException)
-            {
-this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
-}
- catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.UNKNOWN, this, this.commonStrings!!.LOAD, e)
-}
-
-         finally {
-            
-        try {
-            
-    
-                        if(recordStore != 
-                                    null
-                                )
-                        
-                                    {
-                                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.LOAD)
-recordStore!!.closeRecordStore()
-
-                                    }
-                                
-} catch(e: RecordStoreException)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.LOAD, e)
-}
-
-
-         }
-        
-}
-
+                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.LOAD)
+                    recordStore!!.closeRecordStore()
+                }
+            } catch (e: RecordStoreException) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    this.commonStrings!!.LOAD,
+                    e,
+                )
+            }
+        }
+    }
 
     open fun isTooManyHighScores()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.getList() != 
-                                    null
-                                 && this.getList()!!.size() < this.MAXHIGHSCORES)
-                        
-                                    {
-                                    
+        if (this.getList() != null && this.getList()!!.size() < this.MAXHIGHSCORES) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        } else {
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append("HighScores RecordStore Max Reached: ")!!
+                    .appendint(this.MAXHIGHSCORES)!!
+                    .toString(),
+                this,
+                "isTooManyHighScores",
+            )
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+    }
 
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF(StringMaker().
-                            append("HighScores RecordStore Max Reached: ")!!.appendint(this.MAXHIGHSCORES)!!.toString(), this, "isTooManyHighScores")
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
-    override fun isBestScore(newHighScore: HighScore)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var newHighScore = newHighScore
+    @Throws(Exception::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
+    override fun isBestScore(
+        newHighScore: HighScore
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var newHighScore = newHighScore
 
         try {
-            
-    
-                        if(!this.isTooManyHighScores())
-                        
-                                    {
-                                    this.logUtil!!.putF("Slot Available for a High Score", this, "isBestScore")
 
+            if (!this.isTooManyHighScores()) {
 
+                this.logUtil!!.putF("Slot Available for a High Score", this, "isBestScore")
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            } else {
+
+                var list: BasicArrayList = this.getList()!!
+
+                var size: Int = list.size()!!
+
+                for (index in 0 until size) {
+
+                    var highScore: HighScore = list.objectArray[index]!! as HighScore
+
+                    if (
+                        this.recordComparatorInterface!!.compare(
+                            newHighScore!!.getAsBytes(),
+                            highScore!!.getAsBytes(),
+                        ) == RecordComparator.FOLLOWS
+                    ) {
+                        this.logUtil!!.putF("Obtained a High Score", this, "isBestScore")
+
+                        // if statement needs to be on the same line and ternary does not work the
+                        // same way.
                         return true
+                    }
+                }
+            }
 
-                                    }
-                                
-                        else {
-                            
-    var list: BasicArrayList = this.getList()!!
+            this.logUtil!!.putF("Not a High Score", this, "isBestScore")
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
 
-    var size: Int = list.size()!!
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-
-    var highScore: HighScore = list.objectArray[index]!! as HighScore
-
-
-    
-                        if(this.recordComparatorInterface!!.compare(newHighScore!!.getAsBytes(), highScore!!.getAsBytes()) == RecordComparator.FOLLOWS)
-                        
-                                    {
-                                    this.logUtil!!.putF("Obtained a High Score", this, "isBestScore")
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-}
-
-
-                        }
-                            
-this.logUtil!!.putF("Not a High Score", this, "isBestScore")
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.ADD, e)
-
-
-
-                            throw e
-}
-
-}
-
+            throw e
+        }
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(super.toString())
+        stringBuffer!!.append(super.toString())
 
-    var list: BasicArrayList = this.getList()!!
+        var list: BasicArrayList = this.getList()!!
 
+        var size: Int = list.size()!!
 
-    var size: Int = list.size()!!
+        for (index in 0 until size) {
 
+            var highScore: HighScore = list.objectArray[index]!! as HighScore
 
+            stringBuffer!!.append(highScore!!.getScoreString())
+            stringBuffer!!.append(CommonSeps.getInstance()!!.COMMA_SEP)
+        }
 
-
-
-                        for (index in 0 until size)
-
-        {
-
-    var highScore: HighScore = list.objectArray[index]!! as HighScore
-
-stringBuffer!!.append(highScore!!.getScoreString())
-stringBuffer!!.append(CommonSeps.getInstance()!!.COMMA_SEP)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
-
-}
-                
-            
-

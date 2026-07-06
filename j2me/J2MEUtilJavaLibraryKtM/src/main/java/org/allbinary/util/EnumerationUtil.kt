@@ -1,104 +1,79 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.util
+/* Generated Code Do Not Modify */
+package org.allbinary.util
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Enumeration
-//ArkTs does not have this.  So this is for the ArkTs build.
-open public class EnumerationUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: EnumerationUtil = EnumerationUtil()
+import kotlin.Array
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: EnumerationUtil{
+// ArkTs does not have this.  So this is for the ArkTs build.
+open public class EnumerationUtil : Object {
 
+    companion object {
 
+        private val instance: EnumerationUtil = EnumerationUtil()
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return EnumerationUtil.instance
-}
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : EnumerationUtil {
 
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return EnumerationUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun hasMoreElements(enumeration: Enumeration<Any?>)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var enumeration = enumeration
+    }
 
+    // Auto Generated
+    public constructor() : super() {}
 
+    open fun hasMoreElements(
+        enumeration: Enumeration<Any?>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var enumeration = enumeration
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return enumeration.hasMoreElements()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return enumeration.hasMoreElements()
+    }
+
+    open fun nextElement(
+        enumeration: Enumeration<Any?>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Any {
+        // var enumeration = enumeration
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return enumeration.nextElement()!!
+    }
+
+    open fun getAsArray(
+        enumeration: Enumeration<Any?>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Array<Any?> {
+        // var enumeration = enumeration
+
+        var basicArrayList: BasicArrayList = BasicArrayListD()
+
+        while (this.hasMoreElements(enumeration)) {
+            basicArrayList!!.add(this.nextElement(enumeration)!!)
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return basicArrayList!!.toArray()
+    }
 }
-
-
-    open fun nextElement(enumeration: Enumeration<Any?>)
-        //nullable = true from not(false or (false and false)) = true
-: Any{
-    //var enumeration = enumeration
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return enumeration.nextElement()!!
-}
-
-
-    open fun getAsArray(enumeration: Enumeration<Any?>)
-        //nullable = true from not(false or (false and false)) = true
-: Array<Any?>{
-    //var enumeration = enumeration
-
-    var basicArrayList: BasicArrayList = BasicArrayListD()
-
-
-        while(this.hasMoreElements(enumeration))
-        {
-basicArrayList!!.add(this.nextElement(enumeration)!!)
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return basicArrayList!!.toArray()
-}
-
-
-}
-                
-            
-

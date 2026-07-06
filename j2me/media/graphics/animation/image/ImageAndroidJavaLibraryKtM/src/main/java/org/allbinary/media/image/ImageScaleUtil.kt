@@ -1,33 +1,24 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.image
+/* Generated Code Do Not Modify */
+package org.allbinary.media.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Matrix
+import java.lang.Object
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
 import org.allbinary.graphics.Anchor
@@ -38,33 +29,24 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.microemu.android.device.AndroidImageInterface
 
-open public class ImageScaleUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ImageScaleUtil = ImageScaleUtil()
+open public class ImageScaleUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ImageScaleUtil{
+    companion object {
 
+        private val instance: ImageScaleUtil = ImageScaleUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ImageScaleUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageScaleUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ImageScaleUtil.instance
         }
-            
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor ()
-            : super()
-        {
-}
+    }
 
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private constructor() : super() {}
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -78,217 +60,195 @@ private constructor ()
 
     private val scaleYBasicArrayList: BasicArrayList = BasicArrayListD()
 
-                @Throws(Exception::class)
-            
-    open fun createImage2(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var imageCache = imageCache
-    //var originalImage = originalImage
-    //var scaleNominatorX = scaleNominatorX
-    //var scaleDenominatorX = scaleDenominatorX
-    //var scaleNominatorY = scaleNominatorY
-    //var scaleDenominatorY = scaleDenominatorY
-    //var cached = cached
+    @Throws(Exception::class)
+    open fun createImage2(
+        imageCache: ImageCache,
+        originalImage: Image,
+        scaleNominatorX: Float,
+        scaleDenominatorX: Float,
+        scaleNominatorY: Float,
+        scaleDenominatorY: Float,
+        cached: Boolean,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var imageCache = imageCache
+        // var originalImage = originalImage
+        // var scaleNominatorX = scaleNominatorX
+        // var scaleDenominatorX = scaleDenominatorX
+        // var scaleNominatorY = scaleNominatorY
+        // var scaleDenominatorY = scaleDenominatorY
+        // var cached = cached
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.createImage3(
+            imageCache,
+            originalImage,
+            scaleNominatorX,
+            scaleDenominatorX,
+            scaleNominatorY,
+            scaleDenominatorY,
+            cached,
+            true,
+        )
+    }
 
+    @Throws(Exception::class)
+    open fun createImage3(
+        imageCache: ImageCache,
+        originalImage: Image,
+        scaleNominatorX: Float,
+        scaleDenominatorX: Float,
+        scaleNominatorY: Float,
+        scaleDenominatorY: Float,
+        cached: Boolean,
+        mutable: Boolean,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var imageCache = imageCache
+        // var originalImage = originalImage
+        // var scaleNominatorX = scaleNominatorX
+        // var scaleDenominatorX = scaleDenominatorX
+        // var scaleNominatorY = scaleNominatorY
+        // var scaleDenominatorY = scaleDenominatorY
+        // var cached = cached
+        // var mutable = mutable
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, true)
-}
+        var scaleX: Float = scaleNominatorX / scaleDenominatorX
 
+        var scaleY: Float = scaleNominatorY / scaleDenominatorY
 
-                @Throws(Exception::class)
-            
-    open fun createImage3(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var imageCache = imageCache
-    //var originalImage = originalImage
-    //var scaleNominatorX = scaleNominatorX
-    //var scaleDenominatorX = scaleDenominatorX
-    //var scaleNominatorY = scaleNominatorY
-    //var scaleDenominatorY = scaleDenominatorY
-    //var cached = cached
-    //var mutable = mutable
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.createImage(imageCache, originalImage, scaleX, scaleY, cached)
+    }
 
-    var scaleX: Float = scaleNominatorX /scaleDenominatorX
+    @Throws(Exception::class)
+    open fun createImage(
+        imageCache: ImageCache,
+        originalImage: Image,
+        scaleX: Float,
+        scaleY: Float,
+        cached: Boolean,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var imageCache = imageCache
+        // var originalImage = originalImage
+        // var scaleX = scaleX
+        // var scaleY = scaleY
+        // var cached = cached
 
+        var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
 
-    var scaleY: Float = scaleNominatorY /scaleDenominatorY
+        var originalBitmap: Bitmap = originalAndroidImage!!.getBitmap()!!
 
+        var width: Int = (originalBitmap!!.getWidth() * scaleX).toInt()
 
+        var height: Int = (originalBitmap!!.getHeight() * scaleY).toInt()
 
+        var index: Int = this.imageBasicArrayList!!.indexOf(originalImage)!!
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createImage(imageCache, originalImage, scaleX, scaleY, cached)
-}
+        var alreadyAvailable: Boolean = false
 
+        if (index >= 0) {
 
-                @Throws(Exception::class)
-            
-    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float, scaleY: Float, cached: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var imageCache = imageCache
-    //var originalImage = originalImage
-    //var scaleX = scaleX
-    //var scaleY = scaleY
-    //var cached = cached
+            var scaleX2Float: Float = this.scaleXBasicArrayList!!.get(index) as Float
 
-    var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
+            var scaleX2: Float = scaleX2Float!!.toFloat()!!
 
+            var scaleY2Float: Float = this.scaleYBasicArrayList!!.get(index) as Float
 
-    var originalBitmap: Bitmap = originalAndroidImage!!.getBitmap()!!
+            var scaleY2: Float = scaleY2Float!!.toFloat()!!
 
+            if (scaleX2 == scaleX && scaleY2 == scaleY) {
 
-    var width: Int = (originalBitmap!!.getWidth() *scaleX).toInt()
+                alreadyAvailable = true
+            }
+        }
 
+        if (alreadyAvailable) {
 
-    var height: Int = (originalBitmap!!.getHeight() *scaleY).toInt()
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.scaledImageBasicArrayList!!.get(index) as Image
+        } else {
 
+            var scaledImage: Image =
+                this.getScaledImage(
+                    imageCache,
+                    originalImage,
+                    scaleX,
+                    scaleY,
+                    width,
+                    height,
+                    cached,
+                )!!
 
-    var index: Int = this.imageBasicArrayList!!.indexOf(originalImage)!!
+            this.imageBasicArrayList!!.add(originalImage)
+            this.scaledImageBasicArrayList!!.add(scaledImage)
+            this.scaleXBasicArrayList!!.add(scaleX)
+            this.scaleYBasicArrayList!!.add(scaleY)
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return scaledImage
+        }
+    }
 
-    var alreadyAvailable: Boolean = false
+    @Throws(Exception::class)
+    open fun getScaledImage(
+        imageCache: ImageCache,
+        originalImage: Image,
+        scaleX: Float,
+        scaleY: Float,
+        width: Int,
+        height: Int,
+        cached: Boolean,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var imageCache = imageCache
+        // var originalImage = originalImage
+        // var scaleX = scaleX
+        // var scaleY = scaleY
+        // var width = width
+        // var height = height
+        // var cached = cached
 
+        var image: Image = NullImage.NULL_IMAGE
 
-    
-                        if(index >= 0)
-                        
-                                    {
-                                    
-    var scaleX2Float: Float = this.scaleXBasicArrayList!!.get(index) as Float
+        if (cached) {
 
+            image = imageCache!!.get(this::class.toString()!!, width, height)
+        } else {
+            image = imageCache!!.get(this.commonStrings!!.CREATE_IMAGE, width, height)
+        }
 
-    var scaleX2: Float = scaleX2Float!!.toFloat()!!
+        if (image.isMutable()) {
 
+            var matrix: Matrix = Matrix()
 
-    var scaleY2Float: Float = this.scaleYBasicArrayList!!.get(index) as Float
+            this.scale(image, matrix, scaleX, scaleY)
+            image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return image
+        } else {
 
-    var scaleY2: Float = scaleY2Float!!.toFloat()!!
-
-
-    
-                        if(scaleX2 == scaleX && scaleY2 == scaleY)
-                        
-                                    {
-                                    alreadyAvailable= true
-
-                                    }
-                                
-
-                                    }
-                                
-
-    
-                        if(alreadyAvailable)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.scaledImageBasicArrayList!!.get(index) as Image
-
-                                    }
-                                
-                        else {
-                            
-    var scaledImage: Image = this.getScaledImage(imageCache, originalImage, scaleX, scaleY, width, height, cached)!!
-
-this.imageBasicArrayList!!.add(originalImage)
-this.scaledImageBasicArrayList!!.add(scaledImage)
-this.scaleXBasicArrayList!!.add(scaleX)
-this.scaleYBasicArrayList!!.add(scaleY)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return scaledImage
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun getScaledImage(imageCache: ImageCache, originalImage: Image, scaleX: Float, scaleY: Float, width: Int, height: Int, cached: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var imageCache = imageCache
-    //var originalImage = originalImage
-    //var scaleX = scaleX
-    //var scaleY = scaleY
-    //var width = width
-    //var height = height
-    //var cached = cached
-
-    var image: Image = NullImage.NULL_IMAGE
-
-
-    
-                        if(cached)
-                        
-                                    {
-                                    image= imageCache!!.get(this::class.toString()!!, width, height)
-
-                                    }
-                                
-                        else {
-                            image= imageCache!!.get(this.commonStrings!!.CREATE_IMAGE, width, height)
-
-                        }
-                            
-
-    
-                        if(image.isMutable())
-                        
-                                    {
-                                    
-    var matrix: Matrix = Matrix()
-
-this.scale(image, matrix, scaleX, scaleY)
-image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-
-                                    }
-                                
-                        else {
-                            
-
-
-                            throw Exception("Not Mutable")
-
-                        }
-                            
-}
-
+            throw Exception("Not Mutable")
+        }
+    }
 
     open fun scale(image: Image, matrix: Matrix, scaleX: Float, scaleY: Float)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var image = image
-    //var matrix = matrix
-    //var scaleX = scaleX
-    //var scaleY = scaleY
-matrix.setScale(scaleX, scaleY)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var image = image
+        // var matrix = matrix
+        // var scaleX = scaleX
+        // var scaleY = scaleY
+        matrix.setScale(scaleX, scaleY)
 
-    var canvas: Canvas = 
-                                    (image as AndroidImageInterface).getCanvas()!!
+        var canvas: Canvas = (image as AndroidImageInterface).getCanvas()!!
 
-canvas.concat(matrix)
+        canvas.concat(matrix)
+    }
 }
-
-
-}
-                
-            
-

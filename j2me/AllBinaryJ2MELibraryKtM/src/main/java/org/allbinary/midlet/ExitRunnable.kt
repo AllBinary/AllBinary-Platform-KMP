@@ -1,42 +1,28 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.midlet
+/* Generated Code Do Not Modify */
+package org.allbinary.midlet
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Runnable
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import java.lang.Runnable
 import javax.microedition.lcdui.NullCanvas
 import org.allbinary.canvas.Processor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class ExitRunnable
-            : Object
-        
-                , Runnable {
-        
+open public class ExitRunnable : Object, Runnable {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -47,46 +33,44 @@ open public class ExitRunnable
     private val processor: Processor
 
     private val isProgress: Boolean
-public constructor (midlet: AllBinaryMidlet, processor: Processor, isProgress: Boolean)
-            : super()
-        {
-var midlet = midlet
-var processor = processor
-var isProgress = isProgress
-this.midlet= midlet
-this.isProgress= isProgress
-this.processor= processor
-}
 
+    public constructor(
+        midlet: AllBinaryMidlet,
+        processor: Processor,
+        isProgress: Boolean,
+    ) : super() {
+        var midlet = midlet
+        var processor = processor
+        var isProgress = isProgress
+        this.midlet = midlet
+        this.isProgress = isProgress
+        this.processor = processor
+    }
 
     override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START_RUNNABLE, this, this.commonStrings!!.RUN)
-this.midlet.destroyAppInRunnable(false, this.isProgress)
-this.midlet.setDisplay(NullCanvas.NULL_CANVAS)
-this.midlet.notifyDestroyed()
-this.logUtil!!.putF(this.commonStrings!!.END_RUNNABLE, this, this.commonStrings!!.RUN)
-this.processor.process()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
-
-        try {
+            this.midlet.destroyAppInRunnable(false, this.isProgress)
+            this.midlet.setDisplay(NullCanvas.NULL_CANVAS)
+            this.midlet.notifyDestroyed()
+            this.logUtil!!.putF(this.commonStrings!!.END_RUNNABLE, this, this.commonStrings!!.RUN)
             this.processor.process()
-} catch(e2: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+
+            try {
+                this.processor.process()
+            } catch (e2: Exception) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    this.commonStrings!!.RUN,
+                    e,
+                )
+            }
+        }
+    }
 }
-
-}
-
-}
-
-
-}
-                
-            
-

@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.ai
+/* Generated Code Do Not Modify */
+package org.allbinary.game.ai
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Canvas
 import org.allbinary.ai.ArtificialIntelligenceInterface
 import org.allbinary.direction.Direction
@@ -55,16 +45,15 @@ import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class DiveAndDirectionalTrackingAI : BasicAI
-                , TrackingEventListenerInterface
-                , DestroyedEventListenerInterface {
-        
+open public class DiveAndDirectionalTrackingAI :
+    BasicAI, TrackingEventListenerInterface, DestroyedEventListenerInterface {
 
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
     private val directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
-    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
+    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper =
+        GameTickTimeDelayHelperFactory.getInstance()!!
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(500)
 
@@ -74,11 +63,12 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
 
     private val velocityInterface: BasicVelocityProperties
 
-    private val directionToKeyMap: IntArray = intArrayOf(Canvas.LEFT,Canvas.DOWN,Canvas.UP,Canvas.RIGHT)
+    private val directionToKeyMap: IntArray =
+        intArrayOf(Canvas.LEFT, Canvas.DOWN, Canvas.UP, Canvas.RIGHT)
 
-    private var initialDropped: Boolean= false
+    private var initialDropped: Boolean = false
 
-    private var diveP: Boolean= false
+    private var diveP: Boolean = false
 
     private var directionOfTarget: Direction = Direction.getInstance(0)!!
 
@@ -91,653 +81,413 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
     private val aiVistor: Visitor
 
     private var lastDirection: Direction = DirectionFactory.getInstance()!!.NO_DIRECTION
-public constructor (ownerLayerInterface: AllBinaryLayer, artificialIntelligenceInterface: ArtificialIntelligenceInterface, gameInput: GameInput, visitor: Visitor)                        
 
-                            : super(ownerLayerInterface, gameInput){
-var ownerLayerInterface = ownerLayerInterface
-var artificialIntelligenceInterface = artificialIntelligenceInterface
-var gameInput = gameInput
-var visitor = visitor
+    public constructor(
+        ownerLayerInterface: AllBinaryLayer,
+        artificialIntelligenceInterface: ArtificialIntelligenceInterface,
+        gameInput: GameInput,
+        visitor: Visitor,
+    ) : super(ownerLayerInterface, gameInput) {
+        var ownerLayerInterface = ownerLayerInterface
+        var artificialIntelligenceInterface = artificialIntelligenceInterface
+        var gameInput = gameInput
+        var visitor = visitor
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.aiVistor= visitor
-this.artificialIntelligenceInterface= artificialIntelligenceInterface
+        this.aiVistor = visitor
+        this.artificialIntelligenceInterface = artificialIntelligenceInterface
 
-    var directionalCompositeInterface: DirectionalCompositeInterface = this.getOwnerLayerInterface() as DirectionalCompositeInterface
+        var directionalCompositeInterface: DirectionalCompositeInterface =
+            this.getOwnerLayerInterface() as DirectionalCompositeInterface
 
-this.directionalInterface= directionalCompositeInterface!!.getDirectionalInterface()
+        this.directionalInterface = directionalCompositeInterface!!.getDirectionalInterface()
 
-    var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface = this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
+        var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface =
+            this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
 
-this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityProperties()
-DestroyedEventHandler.getInstance()!!.addListenerInterface(this)
-this.init()
-}
+        this.velocityInterface = velocityInterfaceCompositeInterface!!.getVelocityProperties()
+        DestroyedEventHandler.getInstance()!!.addListenerInterface(this)
+        this.init()
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
 
-    
-                        if(this.isBeyondTarget())
-                        
-                                    {
-                                    this.init()
-this.velocityInterface!!.zero()
+        if (this.isBeyondTarget()) {
 
-                                    }
-                                
+            this.init()
+            this.velocityInterface!!.zero()
+        }
 
-    
-                        if(!this.diveP)
-                        
-                                    {
-                                    this.target(allBinaryLayerManager)
+        if (!this.diveP) {
 
-                                    }
-                                
-                        else {
-                            this.dive()
-this.attack()
+            this.target(allBinaryLayerManager)
+        } else {
+            this.dive()
+            this.attack()
+        }
 
-                        }
-                            
-this.list.clear()
-}
-
+        this.list.clear()
+    }
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.diveP= false
-this.directionOfTarget= DirectionFactory.getInstance()!!.NOT_BORDERED_WITH
-TrackingEventHandler.getInstance()!!.addListenerInterface(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.diveP = false
+        this.directionOfTarget = DirectionFactory.getInstance()!!.NOT_BORDERED_WITH
+        TrackingEventHandler.getInstance()!!.addListenerInterface(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun target(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
 
-    
-                        if(this.list.size() == 0)
-                        
-                                    {
-                                    
+        if (this.list.size() == 0) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
+        var lastTrackingEvent: TrackingEvent = this.list.removeAt(0) as TrackingEvent
 
-                                    }
-                                
+        this.lastTrackingLayerInterface = lastTrackingEvent!!.getLayerInterface()
 
-    var lastTrackingEvent: TrackingEvent = this.list.removeAt(0) as TrackingEvent
+        var layerInterface: AllBinaryLayer = this.lastTrackingLayerInterface
 
-this.lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
+        var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-    var layerInterface: AllBinaryLayer = this.lastTrackingLayerInterface
+        if (layerInterface!!.getGroupInterface() == ownerLayerInterface!!.getGroupInterface()) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return
+        }
 
-    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
+        var x: Int = this.lastTrackingLayerInterface!!.getXP()!!
 
+        var y: Int = this.lastTrackingLayerInterface!!.getYP()!!
 
-    
-                        if(layerInterface!!.getGroupInterface() == ownerLayerInterface!!.getGroupInterface())
-                        
-                                    {
-                                    
+        var yDistance: Int = ownerLayerInterface!!.getYP() - y - ownerLayerInterface!!.getHeight()
 
+        var xDistance: Int = ownerLayerInterface!!.getXP() - x - ownerLayerInterface!!.getWidth()
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
+        var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
-                                    }
-                                
+        if (this.mathUtil!!.abs(yDistance) > this.mathUtil!!.abs(xDistance)) {
 
-    var x: Int = this.lastTrackingLayerInterface!!.getXP()!!
+            if (yDistance > this.MIN_DISTANCE) {
 
+                this.directionOfTarget = directionFactory!!.UP
+            } else if (yDistance < -this.MIN_DISTANCE) {
 
-    var y: Int = this.lastTrackingLayerInterface!!.getYP()!!
+                this.directionOfTarget = directionFactory!!.DOWN
+            }
+        } else {
 
+            if (xDistance > this.MIN_DISTANCE) {
 
-    var yDistance: Int = ownerLayerInterface!!.getYP() -y -ownerLayerInterface!!.getHeight()
+                this.directionOfTarget = directionFactory!!.LEFT
+            } else if (xDistance < -this.MIN_DISTANCE) {
 
+                this.directionOfTarget = directionFactory!!.RIGHT
+            }
+        }
 
-    var xDistance: Int = ownerLayerInterface!!.getXP() -x -ownerLayerInterface!!.getWidth()
+        if (
+            !this.initialDropped && this.directionOfTarget != directionFactory!!.NOT_BORDERED_WITH
+        ) {
+            this.drop()
+        }
 
+        if (this.initialDropped) {
 
-    var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
+            if (
+                this.directionOfTarget == directionFactory!!.UP ||
+                    this.directionOfTarget == directionFactory!!.DOWN
+            ) {
+                this.verticalTargeting(x)
+            } else if (
+                this.directionOfTarget == directionFactory!!.LEFT ||
+                    this.directionOfTarget == directionFactory!!.RIGHT
+            ) {
+                this.horizontalTargeting(y)
+            } else {
+                this.artificialIntelligenceInterface!!.processAI(allBinaryLayerManager)
+            }
+        }
+    }
 
-
-    
-                        if(this.mathUtil!!.abs(yDistance) > this.mathUtil!!.abs(xDistance))
-                        
-                                    {
-                                    
-    
-                        if(yDistance > this.MIN_DISTANCE)
-                        
-                                    {
-                                    this.directionOfTarget= directionFactory!!.UP
-
-                                    }
-                                
-                             else 
-    
-                        if(yDistance <  -this.MIN_DISTANCE)
-                        
-                                    {
-                                    this.directionOfTarget= directionFactory!!.DOWN
-
-                                    }
-                                
-
-                                    }
-                                
-                        else {
-                            
-    
-                        if(xDistance > this.MIN_DISTANCE)
-                        
-                                    {
-                                    this.directionOfTarget= directionFactory!!.LEFT
-
-                                    }
-                                
-                             else 
-    
-                        if(xDistance <  -this.MIN_DISTANCE)
-                        
-                                    {
-                                    this.directionOfTarget= directionFactory!!.RIGHT
-
-                                    }
-                                
-
-                        }
-                            
-
-    
-                        if(!this.initialDropped && this.directionOfTarget != directionFactory!!.NOT_BORDERED_WITH)
-                        
-                                    {
-                                    this.drop()
-
-                                    }
-                                
-
-    
-                        if(this.initialDropped)
-                        
-                                    {
-                                    
-    
-                        if(this.directionOfTarget == directionFactory!!.UP || this.directionOfTarget == directionFactory!!.DOWN)
-                        
-                                    {
-                                    this.verticalTargeting(x)
-
-                                    }
-                                
-                             else 
-    
-                        if(this.directionOfTarget == directionFactory!!.LEFT || this.directionOfTarget == directionFactory!!.RIGHT)
-                        
-                                    {
-                                    this.horizontalTargeting(y)
-
-                                    }
-                                
-                        else {
-                            this.artificialIntelligenceInterface!!.processAI(allBinaryLayerManager)
-
-                        }
-                            
-
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun verticalTargeting(x: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
 
-    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
+        var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
+        if (ownerLayerInterface!!.getXP() < x) {
 
-    
-                        if(ownerLayerInterface!!.getXP() < x)
-                        
-                                    {
-                                    this.moveRight()
+            this.moveRight()
+        }
 
-                                    }
-                                
+        if (ownerLayerInterface!!.getXP() > x) {
 
-    
-                        if(ownerLayerInterface!!.getXP() > x)
-                        
-                                    {
-                                    this.moveLeft()
+            this.moveLeft()
+        }
 
-                                    }
-                                
+        if (ownerLayerInterface!!.getXP() > x - 3 && ownerLayerInterface!!.getXP() < x + 3) {
 
-    
-                        if(ownerLayerInterface!!.getXP() > x -3 && ownerLayerInterface!!.getXP() < x +3)
-                        
-                                    {
-                                    this.setDive()
+            this.setDive()
+        }
+    }
 
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun horizontalTargeting(y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var y = y
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var y = y
 
-    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
+        var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
+        if (ownerLayerInterface!!.getYP() < y) {
 
-    
-                        if(ownerLayerInterface!!.getYP() < y)
-                        
-                                    {
-                                    this.moveDown()
+            this.moveDown()
+        }
 
-                                    }
-                                
+        if (ownerLayerInterface!!.getYP() > y) {
 
-    
-                        if(ownerLayerInterface!!.getYP() > y)
-                        
-                                    {
-                                    this.moveUp()
+            this.moveUp()
+        }
 
-                                    }
-                                
+        if (ownerLayerInterface!!.getYP() > y - 3 && ownerLayerInterface!!.getYP() < y + 3) {
 
-    
-                        if(ownerLayerInterface!!.getYP() > y -3 && ownerLayerInterface!!.getYP() < y +3)
-                        
-                                    {
-                                    this.setDive()
-
-                                    }
-                                
-}
-
+            this.setDive()
+        }
+    }
 
     open fun setDive()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.diveP= true
-this.velocityInterface!!.zero()
-TrackingEventHandler.getInstance()!!.removeListener(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.diveP = true
+        this.velocityInterface!!.zero()
+        TrackingEventHandler.getInstance()!!.removeListener(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun moveRight()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setLastDirection(this.directionFactory!!.RIGHT)
-this.directionalInterface!!.setFrameByDirection(this.lastDirection)
-this.aiVistor!!.visit(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setLastDirection(this.directionFactory!!.RIGHT)
+        this.directionalInterface!!.setFrameByDirection(this.lastDirection)
+        this.aiVistor!!.visit(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun moveLeft()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setLastDirection(this.directionFactory!!.LEFT)
-this.directionalInterface!!.setFrameByDirection(this.lastDirection)
-this.aiVistor!!.visit(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setLastDirection(this.directionFactory!!.LEFT)
+        this.directionalInterface!!.setFrameByDirection(this.lastDirection)
+        this.aiVistor!!.visit(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun moveDown()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setLastDirection(this.directionFactory!!.DOWN)
-this.directionalInterface!!.setFrameByDirection(this.lastDirection)
-this.aiVistor!!.visit(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setLastDirection(this.directionFactory!!.DOWN)
+        this.directionalInterface!!.setFrameByDirection(this.lastDirection)
+        this.aiVistor!!.visit(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun moveUp()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setLastDirection(this.directionFactory!!.UP)
-this.directionalInterface!!.setFrameByDirection(this.lastDirection)
-this.aiVistor!!.visit(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setLastDirection(this.directionFactory!!.UP)
+        this.directionalInterface!!.setFrameByDirection(this.lastDirection)
+        this.aiVistor!!.visit(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun dive()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.directionalInterface!!.setFrameByDirection(this.directionOfTarget)
-this.aiVistor!!.visit(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.directionalInterface!!.setFrameByDirection(this.directionOfTarget)
+        this.aiVistor!!.visit(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun attack()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.processKeyAI(Canvas.KEY_NUM1)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.processKeyAI(Canvas.KEY_NUM1)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun drop()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
-                        
-                                    {
-                                    this.initialDropped= true
-this.aiVistor!!.visit(this)
+        if (this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime)) {
 
-                                    }
-                                
-}
-
+            this.initialDropped = true
+            this.aiVistor!!.visit(this)
+        }
+    }
 
     open fun isBeyondTarget()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.directionOfTarget == this.directionFactory!!.DOWN)
-                        
-                                    {
-                                    
-    
-                        if(this.getOwnerLayerInterface()!!.getYP() > this.lastTrackingLayerInterface!!.getYP() +this.MIN_DISTANCE)
-                        
-                                    {
-                                    
+        if (this.directionOfTarget == this.directionFactory!!.DOWN) {
 
+            if (
+                this.getOwnerLayerInterface()!!.getYP() >
+                    this.lastTrackingLayerInterface!!.getYP() + this.MIN_DISTANCE
+            ) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            } else {
 
-                                    }
-                                
-                        else {
-                            
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return false
+            }
+        } else if (this.directionOfTarget == this.directionFactory!!.UP) {
 
+            if (
+                this.getOwnerLayerInterface()!!.getYP() <
+                    this.lastTrackingLayerInterface!!.getYP() + this.MIN_DISTANCE
+            ) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            } else {
 
-                        }
-                            
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return false
+            }
+        } else if (this.directionOfTarget == this.directionFactory!!.RIGHT) {
 
-                                    }
-                                
-                             else 
-    
-                        if(this.directionOfTarget == this.directionFactory!!.UP)
-                        
-                                    {
-                                    
-    
-                        if(this.getOwnerLayerInterface()!!.getYP() < this.lastTrackingLayerInterface!!.getYP() +this.MIN_DISTANCE)
-                        
-                                    {
-                                    
+            if (
+                this.getOwnerLayerInterface()!!.getXP() >
+                    this.lastTrackingLayerInterface!!.getXP() + this.MIN_DISTANCE
+            ) {
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return false
+            }
+        } else if (this.directionOfTarget == this.directionFactory!!.LEFT) {
 
-                                    }
-                                
-                        else {
-                            
+            if (
+                this.getOwnerLayerInterface()!!.getXP() <
+                    this.lastTrackingLayerInterface!!.getXP() + this.MIN_DISTANCE
+            ) {
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return false
+            }
+        } else {
 
-                        }
-                            
-
-                                    }
-                                
-                             else 
-    
-                        if(this.directionOfTarget == this.directionFactory!!.RIGHT)
-                        
-                                    {
-                                    
-    
-                        if(this.getOwnerLayerInterface()!!.getXP() > this.lastTrackingLayerInterface!!.getXP() +this.MIN_DISTANCE)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-
-                                    }
-                                
-                             else 
-    
-                        if(this.directionOfTarget == this.directionFactory!!.LEFT)
-                        
-                                    {
-                                    
-    
-                        if(this.getOwnerLayerInterface()!!.getXP() < this.lastTrackingLayerInterface!!.getXP() +this.MIN_DISTANCE)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-var eventObject = eventObject
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var eventObject = eventObject
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
     override fun onMovement(trackingEvent: TrackingEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-var trackingEvent = trackingEvent
-this.list.add(trackingEvent)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var trackingEvent = trackingEvent
+        this.list.add(trackingEvent)
+    }
 
     override fun onDestroyed(destroyedEvent: DestroyedEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-var destroyedEvent = destroyedEvent
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var destroyedEvent = destroyedEvent
 
-    
-                        if(this.getOwnerLayerInterface() == destroyedEvent!!.getLayerInterface())
-                        
-                                    {
-                                    TrackingEventHandler.getInstance()!!.removeListener(this)
-DestroyedEventHandler.getInstance()!!.removeListener(this)
+        if (this.getOwnerLayerInterface() == destroyedEvent!!.getLayerInterface()) {
 
-                                    }
-                                
-}
-
+            TrackingEventHandler.getInstance()!!.removeListener(this)
+            DestroyedEventHandler.getInstance()!!.removeListener(this)
+        }
+    }
 
     open fun setLastDirection(lastDirection: Direction)
-        //nullable = true from not(false or (false and false)) = true
-{
-var lastDirection = lastDirection
-this.lastDirection= lastDirection
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var lastDirection = lastDirection
+        this.lastDirection = lastDirection
 
-    var value: Int = this.getLastDirection()!!.getValue()!!
+        var value: Int = this.getLastDirection()!!.getValue()!!
 
+        if (value < 4) {
 
-    
-                        if(value < 4)
-                        
-                                    {
-                                    super.setLastKey(this.directionToKeyMap[value]!!)
-
-                                    }
-                                
-}
-
+            super.setLastKey(this.directionToKeyMap[value]!!)
+        }
+    }
 
     override fun setLastKey(lastKey: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var lastKey = lastKey
-super.setLastKey(lastKey)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var lastKey = lastKey
+        super.setLastKey(lastKey)
 
-    
-                        if(this.getLastKey() == Canvas.LEFT)
-                        
-                                    {
-                                    this.lastDirection= DirectionFactory.getInstance()!!.LEFT
+        if (this.getLastKey() == Canvas.LEFT) {
 
-                                    }
-                                
-                             else 
-    
-                        if(this.getLastKey() == Canvas.DOWN)
-                        
-                                    {
-                                    this.lastDirection= DirectionFactory.getInstance()!!.DOWN
+            this.lastDirection = DirectionFactory.getInstance()!!.LEFT
+        } else if (this.getLastKey() == Canvas.DOWN) {
 
-                                    }
-                                
-                             else 
-    
-                        if(this.getLastKey() == Canvas.UP)
-                        
-                                    {
-                                    this.lastDirection= DirectionFactory.getInstance()!!.UP
+            this.lastDirection = DirectionFactory.getInstance()!!.DOWN
+        } else if (this.getLastKey() == Canvas.UP) {
 
-                                    }
-                                
-                             else 
-    
-                        if(this.getLastKey() == Canvas.RIGHT)
-                        
-                                    {
-                                    this.lastDirection= DirectionFactory.getInstance()!!.RIGHT
+            this.lastDirection = DirectionFactory.getInstance()!!.UP
+        } else if (this.getLastKey() == Canvas.RIGHT) {
 
-                                    }
-                                
-}
-
+            this.lastDirection = DirectionFactory.getInstance()!!.RIGHT
+        }
+    }
 
     open fun getLastDirection()
-        //nullable = true from not(false or (false and true)) = true
-: Direction{
+    // nullable = true from not(false or (false and true)) = true
+    : Direction {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.lastDirection
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.lastDirection
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(super.toString())
-stringBuffer!!.append(" LastDirection: ")
-stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getLastDirection()))
+        stringBuffer!!.append(super.toString())
+        stringBuffer!!.append(" LastDirection: ")
+        stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getLastDirection()))
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

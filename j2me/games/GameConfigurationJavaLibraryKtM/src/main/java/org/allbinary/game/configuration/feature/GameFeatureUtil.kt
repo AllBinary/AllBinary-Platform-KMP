@@ -1,33 +1,25 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.configuration.feature
+/* Generated Code Do Not Modify */
+package org.allbinary.game.configuration.feature
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Enumeration
 import java.util.Hashtable
 import javax.microedition.lcdui.ChoiceGroup
+import kotlin.Array
 import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -36,32 +28,24 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.EnumerationUtil
 import org.allbinary.util.HashtableUtil
 
-open public class GameFeatureUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: GameFeatureUtil = GameFeatureUtil()
+open public class GameFeatureUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: GameFeatureUtil{
+    companion object {
 
+        private val instance: GameFeatureUtil = GameFeatureUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : GameFeatureUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameFeatureUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GameFeatureUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tsUtil: TsUtil = TsUtil.getInstance()!!
@@ -72,344 +56,232 @@ companion object {
 
     val GAME_FEATURE_CHANGED: String = "Game Feature Changed: "
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setDefault(choiceGroup: ChoiceGroup)
-        //nullable = true from not(false or (false and false)) = true
-{
-var choiceGroup = choiceGroup
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var choiceGroup = choiceGroup
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
+        var METHOD_NAME: String = "setDefault"
 
-    var METHOD_NAME: String = "setDefault"
+        var SELECTED_ARRAY_RETURN: String = "selectedArray_return["
 
+        var SELECTED_SEP: String = "] = "
 
-    var SELECTED_ARRAY_RETURN: String = "selectedArray_return["
+        var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
 
+        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
 
-    var SELECTED_SEP: String = "] = "
+        stringBuffer!!.append("Multiple Total Choices: ")
+        stringBuffer!!.appendint(total)
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
+        var features: Features = Features.getInstance()!!
 
-    var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
+        for (index in 0 until selectedArray_return!!.size) {
 
+            var isSelected: Boolean = selectedArray_return[index]!!
 
-    var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
+            stringBuffer!!.delete(0, stringBuffer!!.length())
+            stringBuffer!!.append(SELECTED_ARRAY_RETURN)
+            stringBuffer!!.appendint(index)
+            stringBuffer!!.append(SELECTED_SEP)
+            stringBuffer!!.appendboolean(isSelected)
+            this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
-stringBuffer!!.append("Multiple Total Choices: ")
-stringBuffer!!.appendint(total)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
+            var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
 
-    var features: Features = Features.getInstance()!!
+            var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
 
+            if (features.isDefault(gameFeature)) {
 
+                features.add(gameFeature)
+                choiceGroup!!.setSelectedIndex(index, true)
+            } else {
+                features.remove(gameFeature)
+                choiceGroup!!.setSelectedIndex(index, false)
+            }
+        }
+    }
 
-
-
-                        for (index in 0 until selectedArray_return!!.size)
-
-        {
-
-    var isSelected: Boolean = selectedArray_return[index]!!
-
-stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(SELECTED_ARRAY_RETURN)
-stringBuffer!!.appendint(index)
-stringBuffer!!.append(SELECTED_SEP)
-stringBuffer!!.appendboolean(isSelected)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
-
-    var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
-
-
-    var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
-
-
-    
-                        if(features.isDefault(gameFeature))
-                        
-                                    {
-                                    features.add(gameFeature)
-choiceGroup!!.setSelectedIndex(index, true)
-
-                                    }
-                                
-                        else {
-                            features.remove(gameFeature)
-choiceGroup!!.setSelectedIndex(index, false)
-
-                        }
-                            
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun updateMultiple(choiceGroup: ChoiceGroup)
-        //nullable = true from not(false or (false and false)) = true
-{
-var choiceGroup = choiceGroup
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var choiceGroup = choiceGroup
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
+        var METHOD_NAME: String = "updateMultiple"
 
-    var METHOD_NAME: String = "updateMultiple"
+        var SELECTED_ARRAY_RETURN: String = "selectedArray_return["
 
+        var SELECTED_SEP: String = "] = "
 
-    var SELECTED_ARRAY_RETURN: String = "selectedArray_return["
+        var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
 
+        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
 
-    var SELECTED_SEP: String = "] = "
+        stringBuffer!!.append("Multiple Total Choices: ")
+        stringBuffer!!.appendint(total)
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
+        var features: Features = Features.getInstance()!!
 
-    var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
+        for (index in 0 until selectedArray_return!!.size) {
 
+            var isSelected: Boolean = selectedArray_return[index]!!
 
-    var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
+            stringBuffer!!.delete(0, stringBuffer!!.length())
+            stringBuffer!!.append(SELECTED_ARRAY_RETURN)
+            stringBuffer!!.appendint(index)
+            stringBuffer!!.append(SELECTED_SEP)
+            stringBuffer!!.appendboolean(isSelected)
+            this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
-stringBuffer!!.append("Multiple Total Choices: ")
-stringBuffer!!.appendint(total)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
+            var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
 
-    var features: Features = Features.getInstance()!!
+            var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
 
+            if (!isSelected && features.isFeature(gameFeature)) {
 
+                features.remove(gameFeature)
+            } else if (isSelected && !features.isFeature(gameFeature)) {
 
+                features.add(gameFeature)
+            }
+        }
+    }
 
-
-                        for (index in 0 until selectedArray_return!!.size)
-
-        {
-
-    var isSelected: Boolean = selectedArray_return[index]!!
-
-stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(SELECTED_ARRAY_RETURN)
-stringBuffer!!.appendint(index)
-stringBuffer!!.append(SELECTED_SEP)
-stringBuffer!!.appendboolean(isSelected)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
-
-    var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
-
-
-    var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
-
-
-    
-                        if(!isSelected && features.isFeature(gameFeature))
-                        
-                                    {
-                                    features.remove(gameFeature)
-
-                                    }
-                                
-                             else 
-    
-                        if(isSelected && !features.isFeature(gameFeature))
-                        
-                                    {
-                                    features.add(gameFeature)
-
-                                    }
-                                
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun updateExclusiveForChoiceGroup(choiceGroup: ChoiceGroup)
-        //nullable = true from not(false or (false and false)) = true
-{
-var choiceGroup = choiceGroup
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var choiceGroup = choiceGroup
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
+        var METHOD_NAME: String = "updateExclusive"
 
-    var METHOD_NAME: String = "updateExclusive"
+        var SELECTED_ARRAY_RETURN: String = "selectedArray_return["
 
+        var SELECTED_SEP: String = "] = "
 
-    var SELECTED_ARRAY_RETURN: String = "selectedArray_return["
+        var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
 
+        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
 
-    var SELECTED_SEP: String = "] = "
+        stringBuffer!!.append("Exclusive Total Choices: 1==")
+        stringBuffer!!.appendint(total)
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
+        for (index in 0 until selectedArray_return!!.size) {
 
-    var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
+            var isSelected: Boolean = selectedArray_return[index]!!
 
+            stringBuffer!!.delete(0, stringBuffer!!.length())
+            stringBuffer!!.append(SELECTED_ARRAY_RETURN)
+            stringBuffer!!.appendint(index)
+            stringBuffer!!.append(SELECTED_SEP)
+            stringBuffer!!.appendboolean(isSelected)
+            this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
-    var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
+            if (isSelected) {
 
-stringBuffer!!.append("Exclusive Total Choices: 1==")
-stringBuffer!!.appendint(total)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
+                var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
 
+                this.updateExclusive(selectedChoiceLabel)
+            }
+        }
+    }
 
+    open fun isExclusive(
+        itemLabel: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var itemLabel = itemLabel
 
+        var enumeration: Enumeration<Any?> =
+            GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!.keys()!!
 
-                        for (index in 0 until selectedArray_return!!.size)
+        var name: String
 
-        {
+        while (this.enumerationUtil!!.hasMoreElements(enumeration)) {
+            name = this.enumerationUtil!!.nextElement(enumeration)!! as String
 
-    var isSelected: Boolean = selectedArray_return[index]!!
+            if (this.tsUtil!!.compareTo(itemLabel, name) == 0) {
 
-stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(SELECTED_ARRAY_RETURN)
-stringBuffer!!.appendint(index)
-stringBuffer!!.append(SELECTED_SEP)
-stringBuffer!!.appendboolean(isSelected)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            }
+        }
 
-    
-                        if(isSelected)
-                        
-                                    {
-                                    
-    var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
-this.updateExclusive(selectedChoiceLabel)
-
-                                    }
-                                
-}
-
-}
-
-
-    open fun isExclusive(itemLabel: String)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var itemLabel = itemLabel
-
-    var enumeration: Enumeration<Any?> = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!.keys()!!
-
-
-    var name: String
-
-
-        while(this.enumerationUtil!!.hasMoreElements(enumeration))
-        {
-name= this.enumerationUtil!!.nextElement(enumeration)!! as String
-
-    
-                        if(this.tsUtil!!.compareTo(itemLabel, name) == 0)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun updateExclusive(selectedChoiceLabel: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var selectedChoiceLabel = selectedChoiceLabel
-this.logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(selectedChoiceLabel)!!.toString(), this, "updateExclusive")
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var selectedChoiceLabel = selectedChoiceLabel
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(CommonLabels.getInstance()!!.ITEM_LABEL)!!
+                .append(selectedChoiceLabel)!!
+                .toString(),
+            this,
+            "updateExclusive",
+        )
 
-    var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
+        var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
 
+        var hashtable: Hashtable<Any, Any> =
+            GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!
 
-    var hashtable: Hashtable<Any, Any> = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!
+        var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
 
+        var basicArrayList: BasicArrayList
 
-    var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
+        var anyType: Any
 
+        var size: Int = objectArray!!.size
 
-    var basicArrayList: BasicArrayList
+        for (index in 0 until size) {
 
+            anyType = objectArray[index]!! as Object
+            basicArrayList = hashtable.get(anyType as Object) as BasicArrayList
+            this.updateExclusiveList(gameFeature, basicArrayList)
+        }
+    }
 
-    var anyType: Any
-
-
-    var size: Int = objectArray!!.size
-                
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-anyType= objectArray[index]!! as Object
-basicArrayList= hashtable.get(anyType as Object) as BasicArrayList
-this.updateExclusiveList(gameFeature, basicArrayList)
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun updateExclusiveList(gameFeature: Feature, list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gameFeature = gameFeature
-var list = list
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gameFeature = gameFeature
+        var list = list
 
-    
-                        if(list.contains(gameFeature))
-                        
-                                    {
-                                    
-    var features: Features = Features.getInstance()!!
+        if (list.contains(gameFeature)) {
 
+            var features: Features = Features.getInstance()!!
 
-    var addIndex: Int = list.indexOf(gameFeature)!!
+            var addIndex: Int = list.indexOf(gameFeature)!!
 
+            var size: Int = list.size()!!
 
-    var size: Int = list.size()!!
+            for (index in 0 until size) {
 
+                if (addIndex != index) {
 
-
-
-
-                        for (index in 0 until size)
-
-        {
-
-    
-                        if(addIndex != index)
-                        
-                                    {
-                                    features.remove(list.objectArray[index]!! as Feature)
-
-                                    }
-                                
-                        else {
-                            features.add(list.objectArray[index]!! as Feature)
-
-                        }
-                            
+                    features.remove(list.objectArray[index]!! as Feature)
+                } else {
+                    features.add(list.objectArray[index]!! as Feature)
+                }
+            }
+        }
+    }
 }
-
-
-                                    }
-                                
-}
-
-
-}
-                
-            
-

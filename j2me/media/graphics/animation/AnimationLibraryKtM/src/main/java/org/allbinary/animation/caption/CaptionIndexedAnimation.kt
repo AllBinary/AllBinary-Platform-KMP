@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.caption
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.caption
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
 import javax.microedition.media.Player
 import org.allbinary.animation.Animation
@@ -37,7 +27,6 @@ import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
 
 open public class CaptionIndexedAnimation : IndexedAnimation {
-        
 
     private var animationInterface: Animation
 
@@ -58,172 +47,153 @@ open public class CaptionIndexedAnimation : IndexedAnimation {
     private var timeDelayHelper: TimeDelayHelper
 
     private var player: Player
-public constructor (animationInterface: Animation, movieIndexedAnimationInterface: IndexedAnimation, player: Player, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
-    //var animationInterface = animationInterface
-    //var movieIndexedAnimationInterface = movieIndexedAnimationInterface
-    //var player = player
-    //var captionDx = captionDx
-    //var captionDy = captionDy
-    //var dx = dx
-    //var dy = dy
-    //var time = time
-    //var animationBehavior = animationBehavior
+    public constructor(
+        animationInterface: Animation,
+        movieIndexedAnimationInterface: IndexedAnimation,
+        player: Player,
+        captionDx: Int,
+        captionDy: Int,
+        dx: Int,
+        dy: Int,
+        time: Int,
+        animationBehavior: AnimationBehavior,
+    ) : super(animationBehavior) {
+        // var animationInterface = animationInterface
+        // var movieIndexedAnimationInterface = movieIndexedAnimationInterface
+        // var player = player
+        // var captionDx = captionDx
+        // var captionDy = captionDy
+        // var dx = dx
+        // var dy = dy
+        // var time = time
+        // var animationBehavior = animationBehavior
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationInterface= animationInterface
-this.movieIndexedAnimationInterface= movieIndexedAnimationInterface
-this.captionDx= captionDx
-this.captionDy= captionDy
-this.dx= dx
-this.dy= dy
-this.time= time
-this.END_EVENT= AllBinaryEventObject(this)
+        this.animationInterface = animationInterface
+        this.movieIndexedAnimationInterface = movieIndexedAnimationInterface
+        this.captionDx = captionDx
+        this.captionDy = captionDy
+        this.dx = dx
+        this.dy = dy
+        this.time = time
+        this.END_EVENT = AllBinaryEventObject(this)
 
-    var timePerFrame: Int = this.time /this.getSize()
+        var timePerFrame: Int = this.time / this.getSize()
 
-this.timeDelayHelper= TimeDelayHelper(timePerFrame)
-this.player= player
-this.player.start()
-}
+        this.timeDelayHelper = TimeDelayHelper(timePerFrame)
+        this.player = player
+        this.player.start()
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun nextFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
-                        
-                                    {
-                                    this.movieIndexedAnimationInterface!!.nextFrame()
+        if (
+            this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime)
+        ) {
+            this.movieIndexedAnimationInterface!!.nextFrame()
+        }
 
-                                    }
-                                
+        if (this.isLastFrame()) {
 
-    
-                        if(this.isLastFrame())
-                        
-                                    {
-                                    AnimationEventHandler.getInstance()!!.fireEvent(this.END_EVENT)
-
-                                    }
-                                
-}
-
+            AnimationEventHandler.getInstance()!!.fireEvent(this.END_EVENT)
+        }
+    }
 
     override fun isLastFrame()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.movieIndexedAnimationInterface!!.getFrame() == this.getSize() -1)
-                        
-                                    {
-                                    
+        if (this.movieIndexedAnimationInterface!!.getFrame() == this.getSize() - 1) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
     override fun previousFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.movieIndexedAnimationInterface!!.previousFrame()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.movieIndexedAnimationInterface!!.previousFrame()
+    }
 
     override fun setFrame(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var index = index
-this.movieIndexedAnimationInterface!!.setFrame(index)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var index = index
+        this.movieIndexedAnimationInterface!!.setFrame(index)
+    }
 
     override fun getFrame()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.movieIndexedAnimationInterface!!.getFrame()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.movieIndexedAnimationInterface!!.getFrame()
+    }
 
     override fun getSize()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.movieIndexedAnimationInterface!!.getSize()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.movieIndexedAnimationInterface!!.getSize()
+    }
 
     override fun setSequence(sequence: IntArray)
-        //nullable = true from not(false or (false and false)) = true
-{
-var sequence = sequence
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var sequence = sequence
+    }
 
     override fun getSequence()
-        //nullable = true from not(false or (false and true)) = true
-: IntArray{
+    // nullable = true from not(false or (false and true)) = true
+    : IntArray {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PrimitiveIntUtil.getArrayInstance()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return PrimitiveIntUtil.getArrayInstance()
+    }
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
-this.animationInterface!!.paintXY(graphics, x +this.captionDx, y +this.captionDy)
-this.movieIndexedAnimationInterface!!.paintXY(graphics, x +this.captionDx +this.dx, y +this.captionDy +this.dy)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
+        this.animationInterface!!.paintXY(graphics, x + this.captionDx, y + this.captionDy)
+        this.movieIndexedAnimationInterface!!.paintXY(
+            graphics,
+            x + this.captionDx + this.dx,
+            y + this.captionDy + this.dy,
+        )
+    }
 
     override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
-    //var z = z
-this.animationInterface!!.paintThreedXYZ(graphics, x +this.captionDx, y +this.captionDy, z)
-this.movieIndexedAnimationInterface!!.paintThreedXYZ(graphics, x +this.captionDx +this.dx, y +this.captionDy +this.dy, z)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
+        // var z = z
+        this.animationInterface!!.paintThreedXYZ(
+            graphics,
+            x + this.captionDx,
+            y + this.captionDy,
+            z,
+        )
+        this.movieIndexedAnimationInterface!!.paintThreedXYZ(
+            graphics,
+            x + this.captionDx + this.dx,
+            y + this.captionDy + this.dy,
+            z,
+        )
+    }
 }
-
-
-}
-                
-            
-

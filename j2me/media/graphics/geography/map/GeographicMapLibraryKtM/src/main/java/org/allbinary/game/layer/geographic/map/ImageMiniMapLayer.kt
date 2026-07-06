@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.geographic.map
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.geographic.map
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
@@ -34,48 +24,39 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.view.ViewPositionBase
 
 open public class ImageMiniMapLayer : MiniMapLayer {
-        
 
     private var image: Image = NullImage.NULL_IMAGE
-public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPositionBase)                        
 
-                            : super(geographicMapInterface, viewPosition){
-var geographicMapInterface = geographicMapInterface
-var viewPosition = viewPosition
+    public constructor(
+        geographicMapInterface: BasicGeographicMap,
+        viewPosition: ViewPositionBase,
+    ) : super(geographicMapInterface, viewPosition) {
+        var geographicMapInterface = geographicMapInterface
+        var viewPosition = viewPosition
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var aWidth: Int = this.allBinaryTiledLayer!!.getWidth()!!
+        var aWidth: Int = this.allBinaryTiledLayer!!.getWidth()!!
 
+        var aHeight: Int = this.allBinaryTiledLayer!!.getHeight()!!
 
-    var aHeight: Int = this.allBinaryTiledLayer!!.getHeight()!!
-
-this.image= PaintableToImageUtil.getImage(this.allBinaryTiledLayer, aWidth, aHeight)
-}
-
+        this.image = PaintableToImageUtil.getImage(this.allBinaryTiledLayer, aWidth, aHeight)
+    }
 
     private var anchor: Int = Anchor.TOP_LEFT
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-graphics.drawImage(this.image, this.x, this.y, this.anchor)
-this.paintDots(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        graphics.drawImage(this.image, this.x, this.y, this.anchor)
+        this.paintDots(graphics)
+    }
 }
-
-
-}
-                
-            
-

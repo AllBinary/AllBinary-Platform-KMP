@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.io.path
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.io.path
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.io.file.FilePathData
 import org.allbinary.logic.io.file.FilePathUtil
 import org.allbinary.logic.string.StringMaker
@@ -32,40 +23,29 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.string.CommonSeps
 
-open public class AbPath
-            : Object
-         {
-        
-companion object {
-            
-    open fun createAbPath()
-        //nullable = true from not(false or (false and true)) = true
-: AbPath{
+open public class AbPath : Object {
 
-        try {
-            
-    var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
+    companion object {
 
+        open fun createAbPath()
+        // nullable = true from not(false or (false and true)) = true
+        : AbPath {
 
+            try {
 
+                var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbPath(EMPTY_STRING, EMPTY_STRING)
-} catch(ex: Exception)
-            {
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return AbPath(EMPTY_STRING, EMPTY_STRING)
+            } catch (ex: Exception) {
 
-
-
-                            throw RuntimeException()
-}
-
-}
-
-
-    private val NETWORK_SEP: String = ":/"
-
+                throw RuntimeException()
+            }
         }
-            
+
+        private val NETWORK_SEP: String = ":/"
+    }
+
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
     private val abPathData: AbPathData = AbPathData.getInstance()!!
@@ -83,261 +63,183 @@ companion object {
     private var hasSchemaP: Boolean = false
 
     private var numberOfSeps: Int = 0
-public constructor (aPath: String, name: String)
-            : super()
-        {
-var aPath = aPath
-var name = name
 
-    var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
+    public constructor(aPath: String, name: String) : super() {
+        var aPath = aPath
+        var name = name
 
+        var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
-    
-                        if(!stringValidationUtil!!.isEmpty(aPath))
-                        
-                                    {
-                                    this.schema= this.getSchema(aPath)
-this.nameP= name
-this.path= this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPathFromPath(aPath)))
+        if (!stringValidationUtil!!.isEmpty(aPath)) {
 
-                                    }
-                                
-                        else {
-                            this.init()
+            this.schema = this.getSchema(aPath)
+            this.nameP = name
+            this.path =
+                this.abPathUtil!!.adjustEnd(this.abPathUtil!!.adjust(this.getPathFromPath(aPath)))
+        } else {
+            this.init()
 
-    
-                        if(!stringValidationUtil!!.isEmpty(name))
-                        
-                                    {
-                                    this.nameP= name
+            if (!stringValidationUtil!!.isEmpty(name)) {
 
-                                    }
-                                
-
-                        }
-                            
-}
-
+                this.nameP = name
+            }
+        }
+    }
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.schema= this.EMPTY_STRING
-this.setPath(this.abPathData!!.SEPARATOR)
-this.nameP= this.EMPTY_STRING
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.schema = this.EMPTY_STRING
+        this.setPath(this.abPathData!!.SEPARATOR)
+        this.nameP = this.EMPTY_STRING
+    }
 
+    open fun getSchema(
+        aPath: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        var aPath = aPath
 
-    open fun getSchema(aPath: String)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-var aPath = aPath
+        var beginIndex: Int = aPath!!.indexOf(this.commonSeps!!.COLON)!!
 
-    var beginIndex: Int = aPath!!.indexOf(this.commonSeps!!.COLON)!!
+        if (beginIndex >= 0) {
 
+            this.hasSchemaP = true
 
-    
-                        if(beginIndex >= 0)
-                        
-                                    {
-                                    this.hasSchemaP= true
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return aPath!!.substring(0, beginIndex)
+        }
 
+        this.hasSchemaP = false
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return aPath!!.substring(0, beginIndex)
-
-                                    }
-                                
-this.hasSchemaP= false
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.EMPTY_STRING
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.EMPTY_STRING
+    }
 
     open fun hasSchema()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.hasSchemaP
+    }
 
+    @Throws(Exception::class)
+    open fun getPathFromPath(
+        aPath: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        var aPath = aPath
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hasSchemaP
-}
+        var filePathData: FilePathData = FilePathData.getInstance()!!
 
+        var tempPath: String = aPath
 
-                @Throws(Exception::class)
-            
-    open fun getPathFromPath(aPath: String)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-var aPath = aPath
+        if (!this.hasSchema()) {
 
-    var filePathData: FilePathData = FilePathData.getInstance()!!
+            tempPath = this.abPathUtil!!.adjustStart(tempPath)
+        } else {
 
+            var beginIndex: Int = tempPath!!.indexOf(this.commonSeps!!.COLON)!!
 
-    var tempPath: String = aPath
+            if (beginIndex >= 0) {
 
+                beginIndex++
 
-    
-                        if(!this.hasSchema())
-                        
-                                    {
-                                    tempPath= this.abPathUtil!!.adjustStart(tempPath)
+                while (
+                    tempPath[beginIndex] == this.abPathData!!.SEPARATORCHAR ||
+                        tempPath[beginIndex] == filePathData!!.SEPARATORCHAR
+                ) {
+                    beginIndex++
+                    this.numberOfSeps++
 
-                                    }
-                                
-                        else {
-                            
-    var beginIndex: Int = tempPath!!.indexOf(this.commonSeps!!.COLON)!!
+                    if (this.numberOfSeps > 2) {
 
+                        throw Exception("Should Not Have More Than Two Seps")
+                    }
+                }
 
-    
-                        if(beginIndex >= 0)
-                        
-                                    {
-                                    beginIndex++
+                tempPath = tempPath!!.substring(beginIndex, tempPath!!.length)
+            }
+        }
 
-        while(tempPath[beginIndex] == this.abPathData!!.SEPARATORCHAR || tempPath[beginIndex] == filePathData!!.SEPARATORCHAR)
-        {
-beginIndex++
-this.numberOfSeps++
-
-    
-                        if(this.numberOfSeps > 2)
-                        
-                                    {
-                                    
-
-
-                            throw Exception("Should Not Have More Than Two Seps")
-
-                                    }
-                                
-}
-
-tempPath= tempPath!!.substring(beginIndex, tempPath!!.length)
-
-                                    }
-                                
-
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return tempPath
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return tempPath
+    }
 
     open fun setName(name: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var name = name
-this.nameP= name
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var name = name
+        this.nameP = name
+    }
 
     open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.nameP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.nameP
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
+        if (this.hasSchema()) {
 
-    
-                        if(this.hasSchema())
-                        
-                                    {
-                                    stringBuffer!!.append(this.schema)
-stringBuffer!!.append(AbPath.NETWORK_SEP)
+            stringBuffer!!.append(this.schema)
+            stringBuffer!!.append(AbPath.NETWORK_SEP)
+        }
 
-                                    }
-                                
-stringBuffer!!.append(this.getPath())
-stringBuffer!!.append(this.nameP)
+        stringBuffer!!.append(this.getPath())
+        stringBuffer!!.append(this.nameP)
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 
     open fun toFileSystemString()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-    
-                        if(this.hasSchema())
-                        
-                                    {
-                                    
-    var filePathData: FilePathData = FilePathData.getInstance()!!
+        if (this.hasSchema()) {
 
+            var filePathData: FilePathData = FilePathData.getInstance()!!
 
-    var stringBuffer: StringMaker = StringMaker()
+            var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(this.schema)
-stringBuffer!!.append(this.commonSeps!!.COLON)
-stringBuffer!!.append(filePathData!!.PATH_START)
-stringBuffer!!.append(FilePathUtil.adjust(this.getPath()))
-stringBuffer!!.append(this.nameP)
+            stringBuffer!!.append(this.schema)
+            stringBuffer!!.append(this.commonSeps!!.COLON)
+            stringBuffer!!.append(filePathData!!.PATH_START)
+            stringBuffer!!.append(FilePathUtil.adjust(this.getPath()))
+            stringBuffer!!.append(this.nameP)
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return stringBuffer!!.toString()
+        } else {
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return FilePathUtil.adjust(this.getPath()) +this.nameP
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return FilePathUtil.adjust(this.getPath()) + this.nameP
+        }
+    }
 
     open fun getPath()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.path
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.path
+    }
 
     open fun setPath(path: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var path = path
-this.path= path
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var path = path
+        this.path = path
+    }
 }
-
-
-}
-                
-            
-

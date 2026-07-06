@@ -1,267 +1,217 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.math
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.math
 
+import java.lang.Object
 
+open public class BasicDecimal : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        val ZERO_BIGDECIMAL: BasicDecimal = BasicDecimal(0)
 
-open public class BasicDecimal
-            : Object
-         {
-        
-companion object {
-            
-    val ZERO_BIGDECIMAL: BasicDecimal = BasicDecimal(0)
+        open fun createBigDecimal(
+            bigDecimal: BasicDecimal
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : BasicDecimal {
+            // var bigDecimal = bigDecimal
 
-    open fun createBigDecimal(bigDecimal: BasicDecimal)
-        //nullable = true from not(false or (false and false)) = true
-: BasicDecimal{
-    //var bigDecimal = bigDecimal
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicDecimal(bigDecimal!!.getUnscaled())
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicDecimal(bigDecimal!!.getUnscaled())
         }
-            
-    private var units: Long
-public constructor (units: Long)
-            : super()
-        {
-var units = units
-this.units= units
-this.updateScaled()
-}
+    }
 
+    private var units: Long
+
+    public constructor(units: Long) : super() {
+        var units = units
+        this.units = units
+        this.updateScaled()
+    }
 
     open fun setint(value: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= value.toLong()
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = value.toLong()
+        this.updateScaled()
+    }
 
     open fun setlong(value: Long)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = value
+        this.updateScaled()
+    }
 
     open fun set(bigDecimal: BasicDecimal)
-        //nullable = true from not(false or (false and false)) = true
-{
-var bigDecimal = bigDecimal
-this.units= bigDecimal!!.getUnscaled()
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var bigDecimal = bigDecimal
+        this.units = bigDecimal!!.getUnscaled()
+        this.updateScaled()
+    }
 
     open fun addint(value: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= this.units +value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = this.units + value
+        this.updateScaled()
+    }
 
     open fun addlong(value: Long)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= this.units +value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = this.units + value
+        this.updateScaled()
+    }
 
     open fun add(bigDecimal: BasicDecimal)
-        //nullable = true from not(false or (false and false)) = true
-{
-var bigDecimal = bigDecimal
-this.units= this.units +bigDecimal!!.getUnscaled()
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var bigDecimal = bigDecimal
+        this.units = this.units + bigDecimal!!.getUnscaled()
+        this.updateScaled()
+    }
 
     open fun subtractint(value: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= this.units -value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = this.units - value
+        this.updateScaled()
+    }
 
     open fun subtractlong(value: Long)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= this.units -value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = this.units - value
+        this.updateScaled()
+    }
 
     open fun subtract(bigDecimal: BasicDecimal)
-        //nullable = true from not(false or (false and false)) = true
-{
-var bigDecimal = bigDecimal
-this.units= this.units -bigDecimal!!.getUnscaled()
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var bigDecimal = bigDecimal
+        this.units = this.units - bigDecimal!!.getUnscaled()
+        this.updateScaled()
+    }
 
     open fun multiplyint(value: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= this.units *value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = this.units * value
+        this.updateScaled()
+    }
 
     open fun multiplylong(value: Long)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= this.units *value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = this.units * value
+        this.updateScaled()
+    }
 
     open fun multiply(bigDecimal: BasicDecimal)
-        //nullable = true from not(false or (false and false)) = true
-{
-var bigDecimal = bigDecimal
-this.units= this.units *bigDecimal!!.getUnscaled()
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var bigDecimal = bigDecimal
+        this.units = this.units * bigDecimal!!.getUnscaled()
+        this.updateScaled()
+    }
 
     open fun divideint(value: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= this.units /value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = this.units / value
+        this.updateScaled()
+    }
 
     open fun dividelong(value: Long)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.units= this.units /value
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.units = this.units / value
+        this.updateScaled()
+    }
 
     open fun divide(bigDecimal: BasicDecimal)
-        //nullable = true from not(false or (false and false)) = true
-{
-var bigDecimal = bigDecimal
-this.units= this.units /bigDecimal!!.getUnscaled()
-this.updateScaled()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var bigDecimal = bigDecimal
+        this.units = this.units / bigDecimal!!.getUnscaled()
+        this.updateScaled()
+    }
 
     open fun getUnscaled()
-        //nullable = true from not(false or (false and true)) = true
-: Long{
+    // nullable = true from not(false or (false and true)) = true
+    : Long {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.units
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.units
-}
-
-
-    private var scaled: Int= 0
+    private var scaled: Int = 0
 
     open fun updateScaled()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.scaled= (this.units /this.factorValue).toInt()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.scaled = (this.units / this.factorValue).toInt()
+    }
 
     open fun getScaled()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.scaled
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.scaled
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return (this.units).toString()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return (this.units).toString()
+    }
 
     private val factor: Int = ScaleFactorFactory.getInstance()!!.DEFAULT_SCALE_FACTOR
 
     private val factorValue: Int = ScaleFactorFactory.getInstance()!!.DEFAULT_SCALE_VALUE
 
     open fun getScaledFactor()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.factor
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.factor
+    }
 
     open fun getScaledFactorValue()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.factorValue
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.factorValue
+    }
 }
-
-
-}
-                
-            
-

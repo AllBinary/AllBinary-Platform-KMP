@@ -1,72 +1,68 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2003 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2003 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Canvas
+import kotlin.Array
+import org.allbinary.game.configuration.feature.Features
+import org.allbinary.game.configuration.feature.InputFeatureFactory
+import org.allbinary.game.input.event.GameKeyEvent
+import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.RTSGameStrings
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSLayerInfoPaintable
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.capital.Capital
-import org.allbinary.media.audio.DowngradeSound
-import org.allbinary.media.audio.UpgradeSound
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
-import org.allbinary.util.BasicArrayListUtil
-import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.java.bool.BooleanFactory
-import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.InputFeatureFactory
-import org.allbinary.game.input.event.GameKeyEvent
-import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.hud.event.GameNotificationEvent
 import org.allbinary.game.layer.hud.event.GameNotificationEventHandler
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayerManager
-import org.allbinary.logic.util.visitor.Visitor
+import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
+import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.util.visitor.Visitor
+import org.allbinary.media.audio.DowngradeSound
 import org.allbinary.media.audio.ErrorSound
+import org.allbinary.media.audio.UpgradeSound
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.util.BasicArrayListUtil
 
 open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
-        
 
-    val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
+    val inputProcessorArray: Array<GameInputProcessor?> =
+        arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
     private val list: BasicArrayList
 
-    val isSingleKeyProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS) || Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_PRESS)
+    val isSingleKeyProcessing: Boolean =
+        Features.getInstance()!!.isFeature(
+            InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS
+        ) ||
+            Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_PRESS)
 
     private var selectedRTSLayersList: BasicArrayList = BasicArrayListD()
 
     private var preSelectedRTSLayersList: BasicArrayList = BasicArrayListD()
 
-    private var paintSelectedRTSLayersList: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
+    private var paintSelectedRTSLayersList: BasicArrayList =
+        BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
     private var rtsPlayerLayerInterface: RTSPlayerLayerInterface
 
@@ -77,546 +73,427 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
     private val noMoneyGameNotificationEvent: GameNotificationEvent
 
     private val downgradeGameNotificationEvent: GameNotificationEvent
-public constructor (towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, list: BasicArrayList, playerInputId: Int, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
 
-                            : super(list, BasicArrayListD(), playerInputId){
-var towerInfoPaintable = towerInfoPaintable
-var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-var list = list
-var playerInputId = playerInputId
-var selectRTSLayerVisitorFactoryInterface = selectRTSLayerVisitorFactoryInterface
+    public constructor(
+        towerInfoPaintable: RTSLayerInfoPaintable,
+        rtsPlayerLayerInterface: RTSPlayerLayerInterface,
+        list: BasicArrayList,
+        playerInputId: Int,
+        selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface,
+    ) : super(list, BasicArrayListD(), playerInputId) {
+        var towerInfoPaintable = towerInfoPaintable
+        var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        var list = list
+        var playerInputId = playerInputId
+        var selectRTSLayerVisitorFactoryInterface = selectRTSLayerVisitorFactoryInterface
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.initInputProcessors()
-this.rtsPlayerLayerInterface= rtsPlayerLayerInterface
-this.list= list
-this.selectRTSLayerVisitorInterface= selectRTSLayerVisitorFactoryInterface!!.create(this)
+        this.initInputProcessors()
+        this.rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        this.list = list
+        this.selectRTSLayerVisitorInterface = selectRTSLayerVisitorFactoryInterface!!.create(this)
 
-    var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
+        var smallIntegerSingletonFactory: SmallIntegerSingletonFactory =
+            SmallIntegerSingletonFactory.getInstance()!!
 
+        var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-    var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
+        this.upgradeGameNotificationEvent =
+            GameNotificationEvent(
+                this,
+                RTSGameStrings.getInstance()!!.UPGRADE,
+                smallIntegerSingletonFactory!!.getAt(2),
+                basicColorFactory!!.PINK,
+                BooleanFactory.getInstance()!!.FALSE,
+            )
+        this.noMoneyGameNotificationEvent =
+            GameNotificationEvent(
+                this,
+                RTSGameStrings.getInstance()!!.NO_MONEY,
+                smallIntegerSingletonFactory!!.getAt(2),
+                basicColorFactory!!.PINK,
+                BooleanFactory.getInstance()!!.FALSE,
+            )
+        this.downgradeGameNotificationEvent =
+            GameNotificationEvent(
+                this,
+                RTSGameStrings.getInstance()!!.DOWNGRADE,
+                smallIntegerSingletonFactory!!.getAt(2),
+                basicColorFactory!!.PINK,
+                BooleanFactory.getInstance()!!.FALSE,
+            )
+    }
 
-this.upgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.UPGRADE, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-this.downgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.DOWNGRADE, smallIntegerSingletonFactory!!.getAt(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryGameLayerManager = allBinaryGameLayerManager
 
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = allBinaryGameLayerManager as GeographicMapCompositeInterface
+        var geographicMapCompositeInterface: GeographicMapCompositeInterface =
+            allBinaryGameLayerManager as GeographicMapCompositeInterface
 
+        var geographicMapInterface: BasicGeographicMap =
+            geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-    var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
+        this.upgradeGameNotificationEvent!!.setBasicColorP(
+            geographicMapInterface!!.getForegroundBasicColor()
+        )
+        this.noMoneyGameNotificationEvent!!.setBasicColorP(
+            geographicMapInterface!!.getForegroundBasicColor()
+        )
+        this.downgradeGameNotificationEvent!!.setBasicColorP(
+            geographicMapInterface!!.getForegroundBasicColor()
+        )
+    }
 
-this.upgradeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getForegroundBasicColor())
-this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getForegroundBasicColor())
-this.downgradeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getForegroundBasicColor())
-}
+    open fun isSelected(
+        rtsLayer: RTSLayer
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var rtsLayer = rtsLayer
 
+        if (this.selectedRTSLayersList!!.contains(rtsLayer)) {
 
-    open fun isSelected(rtsLayer: RTSLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var rtsLayer = rtsLayer
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-    
-                        if(this.selectedRTSLayersList!!.contains(rtsLayer))
-                        
-                                    {
-                                    
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun upgrade()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var anyChanged: Boolean = false
+        var anyChanged: Boolean = false
 
+        for (index in this.selectedRTSLayersList!!.size() - 1 downTo 0) {
 
+            var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
 
+            if (rtsLayer!!.isUpgradeable()) {
 
+                var capital: Capital = this.rtsPlayerLayerInterface!!.getCapital()!!
 
-                        for (index in this.selectedRTSLayersList!!.size() -1 downTo 0)
+                var upgradeCost: Int = rtsLayer!!.getUpgradeCost()!!
 
-        {
+                if (upgradeCost <= capital.getTotalMoney()) {
 
-    var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
+                    anyChanged = true
+                    this.rtsPlayerLayerInterface!!.add(UpgradeSound.getInstance())
+                    rtsLayer!!.upgrade()
+                    capital.removeMoney(upgradeCost)
 
+                    if (
+                        !this.rtsPlayerLayerInterface!!
+                            .implmentsArtificialIntelligenceCompositeInterface()
+                    ) {
+                        GameNotificationEventHandler.getInstance()!!.fireEvent(
+                            this.upgradeGameNotificationEvent
+                        )
+                    }
+                } else {
+                    this.rtsPlayerLayerInterface!!.add(ErrorSound.getInstance())
 
-    
-                        if(rtsLayer!!.isUpgradeable())
-                        
-                                    {
-                                    
-    var capital: Capital = this.rtsPlayerLayerInterface!!.getCapital()!!
+                    if (
+                        !this.rtsPlayerLayerInterface!!
+                            .implmentsArtificialIntelligenceCompositeInterface()
+                    ) {
+                        GameNotificationEventHandler.getInstance()!!.fireEvent(
+                            this.noMoneyGameNotificationEvent
+                        )
+                    }
+                }
+            }
+        }
 
+        if (anyChanged) {
 
-    var upgradeCost: Int = rtsLayer!!.getUpgradeCost()!!
+            var rtsPlayerGameInput: RTSPlayerGameInput =
+                (this.rtsPlayerLayerInterface!!.getPlayerGameInput() as RTSPlayerGameInput)
 
+            rtsPlayerGameInput!!.updatePaintable()
+        }
+    }
 
-    
-                        if(upgradeCost <= capital.getTotalMoney())
-                        
-                                    {
-                                    anyChanged= true
-this.rtsPlayerLayerInterface!!.add(UpgradeSound.getInstance())
-rtsLayer!!.upgrade()
-capital.removeMoney(upgradeCost)
-
-    
-                        if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
-                        
-                                    {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.upgradeGameNotificationEvent)
-
-                                    }
-                                
-
-                                    }
-                                
-                        else {
-                            this.rtsPlayerLayerInterface!!.add(ErrorSound.getInstance())
-
-    
-                        if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
-                        
-                                    {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.noMoneyGameNotificationEvent)
-
-                                    }
-                                
-
-                        }
-                            
-
-                                    }
-                                
-}
-
-
-    
-                        if(anyChanged)
-                        
-                                    {
-                                    
-    var rtsPlayerGameInput: RTSPlayerGameInput = (this.rtsPlayerLayerInterface!!.getPlayerGameInput() as RTSPlayerGameInput)
-
-rtsPlayerGameInput!!.updatePaintable()
-
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun downgrade()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var anyChanged: Boolean = false
+        var anyChanged: Boolean = false
 
+        for (index in this.selectedRTSLayersList!!.size()!! - 1 downTo 0) {
 
+            var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
 
+            if (rtsLayer!!.isDowngradeable()) {
 
+                anyChanged = true
+                this.rtsPlayerLayerInterface!!.add(DowngradeSound.getInstance())
 
-                        for (index in this.selectedRTSLayersList!!.size()!!  - 1  downTo 0)
+                var downgradeCost: Int = rtsLayer!!.getDowngradeCost()!!
 
-        {
+                rtsLayer!!.downgrade()
 
-    var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
+                var capital: Capital = this.rtsPlayerLayerInterface!!.getCapital()!!
 
+                capital.addMoney(downgradeCost)
 
-    
-                        if(rtsLayer!!.isDowngradeable())
-                        
-                                    {
-                                    anyChanged= true
-this.rtsPlayerLayerInterface!!.add(DowngradeSound.getInstance())
+                if (
+                    !this.rtsPlayerLayerInterface!!
+                        .implmentsArtificialIntelligenceCompositeInterface()
+                ) {
+                    GameNotificationEventHandler.getInstance()!!.fireEvent(
+                        this.downgradeGameNotificationEvent
+                    )
+                }
+            }
+        }
 
-    var downgradeCost: Int = rtsLayer!!.getDowngradeCost()!!
+        if (anyChanged) {
 
-rtsLayer!!.downgrade()
+            var rtsPlayerGameInput: RTSPlayerGameInput =
+                (this.rtsPlayerLayerInterface!!.getPlayerGameInput() as RTSPlayerGameInput)
 
-    var capital: Capital = this.rtsPlayerLayerInterface!!.getCapital()!!
-
-capital.addMoney(downgradeCost)
-
-    
-                        if(!this.rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
-                        
-                                    {
-                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.downgradeGameNotificationEvent)
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
-
-    
-                        if(anyChanged)
-                        
-                                    {
-                                    
-    var rtsPlayerGameInput: RTSPlayerGameInput = (this.rtsPlayerLayerInterface!!.getPlayerGameInput() as RTSPlayerGameInput)
-
-rtsPlayerGameInput!!.updatePaintable()
-
-                                    }
-                                
-}
-
+            rtsPlayerGameInput!!.updatePaintable()
+        }
+    }
 
     open fun initInputProcessors()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.inputProcessorArray[Canvas.KEY_NUM1]= SelectedRTSLayersPlayerUpgradeGameInputProcessor(this)
-this.inputProcessorArray[Canvas.KEY_NUM3]= SelectedRTSLayersPlayerDowngradeGameInputProcessor(this)
-GameInputProcessorUtil.init(this.inputProcessorArray)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.inputProcessorArray[Canvas.KEY_NUM1] =
+            SelectedRTSLayersPlayerUpgradeGameInputProcessor(this)
+        this.inputProcessorArray[Canvas.KEY_NUM3] =
+            SelectedRTSLayersPlayerDowngradeGameInputProcessor(this)
+        GameInputProcessorUtil.init(this.inputProcessorArray)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processInputKey(key: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var key = key
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var key = key
 
-    
-                        if(this.selectedRTSLayersList != 
-                                    null
-                                )
-                        
-                                    {
-                                    this.inputProcessorArray[key]!!.processEvent(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
+        if (this.selectedRTSLayersList != null) {
 
-                                    }
-                                
-}
+            this.inputProcessorArray[key]!!.processEvent(
+                AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER,
+                GameKeyEvent.NONE,
+            )
+        }
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processInput(layerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var layerManager = layerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var layerManager = layerManager
 
         try {
-            
-    var size: Int = this.list.size()!!
 
+            var size: Int = this.list.size()!!
 
-    var key: Int = 0
+            var key: Int = 0
 
+            for (index in 0 until size) {
 
+                var gameKeyEvent: GameKeyEvent = this.list.get(index) as GameKeyEvent
 
+                key = gameKeyEvent!!.getKey()
+                this.processInputKey(key)
+            }
 
+            if (this.isSingleKeyProcessing) {
 
-                        for (index in 0 until size)
-
-        {
-
-    var gameKeyEvent: GameKeyEvent = this.list.get(index) as GameKeyEvent
-
-key= gameKeyEvent!!.getKey()
-this.processInputKey(key)
-}
-
-
-    
-                        if(this.isSingleKeyProcessing)
-                        
-                                    {
-                                    this.clear()
-
-                                    }
-                                
-                        else {
-                            this.update()
-
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.PROCESS_INPUT, e)
-}
-
-}
-
+                this.clear()
+            } else {
+                this.update()
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.gameInputStrings!!.PROCESS_INPUT,
+                e,
+            )
+        }
+    }
 
     open fun getSelectedBasicArrayList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.selectedRTSLayersList
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.selectedRTSLayersList
+    }
 
     open fun addSelectedRTSLayer(selectedLayer: RTSLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var selectedLayer = selectedLayer
-this.paintSelectedRTSLayersList= BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var selectedLayer = selectedLayer
+        this.paintSelectedRTSLayersList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()
 
-    
-                        if(selectedLayer == CollidableDestroyableDamageableLayer.getNullInstance())
-                        
-                                    {
-                                    this.deselectAll()
-this.selectedRTSLayersList!!.clear()
+        if (selectedLayer == CollidableDestroyableDamageableLayer.getNullInstance()) {
 
-                                    }
-                                
-                        else {
-                            
-    
-                        if(!this.selectedRTSLayersList!!.contains(selectedLayer))
-                        
-                                    {
-                                    this.selectedRTSLayersList!!.add(selectedLayer)
+            this.deselectAll()
+            this.selectedRTSLayersList!!.clear()
+        } else {
 
-                                    }
-                                
+            if (!this.selectedRTSLayersList!!.contains(selectedLayer)) {
 
-                        }
-                            
-this.paintSelectedRTSLayersList= this.selectedRTSLayersList
-}
+                this.selectedRTSLayersList!!.add(selectedLayer)
+            }
+        }
 
+        this.paintSelectedRTSLayersList = this.selectedRTSLayersList
+    }
 
     open fun setSelectedRTSLayer(selectedLayer: CollidableDestroyableDamageableLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var selectedLayer = selectedLayer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var selectedLayer = selectedLayer
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("Selected Layer: ")
+        stringBuffer!!.append("Selected Layer: ")
 
-    
-                        if(selectedLayer != 
-                                    null
-                                )
-                        
-                                    {
-                                    stringBuffer!!.append(selectedLayer!!.getName())
+        if (selectedLayer != null) {
 
-                                    }
-                                
-this.logUtil!!.putF(stringBuffer!!.toString(), this, "setSelectedRTSLayer")
-this.paintSelectedRTSLayersList= BasicArrayListUtil.getInstance()!!.getImmutableInstance()
-this.selectRTSLayerVisitorInterface!!.visit(selectedLayer)
-this.deselectAll()
+            stringBuffer!!.append(selectedLayer!!.getName())
+        }
 
-    
-                        if(this.selectedRTSLayersList!!.size() > 0)
-                        
-                                    {
-                                    this.getPreSelectedRTSLayersList()!!.clear()
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, "setSelectedRTSLayer")
+        this.paintSelectedRTSLayersList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+        this.selectRTSLayerVisitorInterface!!.visit(selectedLayer)
+        this.deselectAll()
 
-    var tempList: BasicArrayList = this.getPreSelectedRTSLayersList()!!
+        if (this.selectedRTSLayersList!!.size() > 0) {
 
-this.preSelectedRTSLayersList= this.selectedRTSLayersList
-this.selectedRTSLayersList= tempList
-this.logUtil!!.putF(StringMaker().
-                            append("Preselected: ")!!.append(this.preSelectedRTSLayersList!!.toString())!!.toString(), this, "setSelectedRTSLayer")
+            this.getPreSelectedRTSLayersList()!!.clear()
 
-                                    }
-                                
+            var tempList: BasicArrayList = this.getPreSelectedRTSLayersList()!!
 
-    
-                        if(selectedLayer != CollidableDestroyableDamageableLayer.getNullInstance())
-                        
-                                    {
-                                    this.selectedRTSLayersList!!.add(selectedLayer)
+            this.preSelectedRTSLayersList = this.selectedRTSLayersList
+            this.selectedRTSLayersList = tempList
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append("Preselected: ")!!
+                    .append(this.preSelectedRTSLayersList!!.toString())!!
+                    .toString(),
+                this,
+                "setSelectedRTSLayer",
+            )
+        }
 
-                                    }
-                                
-this.paintSelectedRTSLayersList= this.selectedRTSLayersList
-}
+        if (selectedLayer != CollidableDestroyableDamageableLayer.getNullInstance()) {
 
+            this.selectedRTSLayersList!!.add(selectedLayer)
+        }
+
+        this.paintSelectedRTSLayersList = this.selectedRTSLayersList
+    }
 
     open fun getLastSelectedRtsLayer()
-        //nullable = true from not(false or (false and true)) = true
-: CollidableDestroyableDamageableLayer{
+    // nullable = true from not(false or (false and true)) = true
+    : CollidableDestroyableDamageableLayer {
 
-    
-                        if(this.isAnyRTSLayerSelected())
-                        
-                                    {
-                                    
+        if (this.isAnyRTSLayerSelected()) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.selectedRTSLayersList!!.get(this.selectedRTSLayersList!!.size() - 1)
+                as CollidableDestroyableDamageableLayer
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.selectedRTSLayersList!!.get(this.selectedRTSLayersList!!.size() -1) as CollidableDestroyableDamageableLayer
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CollidableDestroyableDamageableLayer.getNullInstance()
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CollidableDestroyableDamageableLayer.getNullInstance()
+        }
+    }
 
     open fun selectAllPreselected()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("Select all Preselected: ")
-stringBuffer!!.append(this.preSelectedRTSLayersList!!.toString())
-this.logUtil!!.putF(stringBuffer!!.toString(), this, "selectAllPreselected")
+        stringBuffer!!.append("Select all Preselected: ")
+        stringBuffer!!.append(this.preSelectedRTSLayersList!!.toString())
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, "selectAllPreselected")
 
+        for (index in this.preSelectedRTSLayersList!!.size() - 1 downTo 0) {
 
+            var rtsLayer: RTSLayer = this.preSelectedRTSLayersList!!.get(index) as RTSLayer
 
-
-                        for (index in this.preSelectedRTSLayersList!!.size() -1 downTo 0)
-
-        {
-
-    var rtsLayer: RTSLayer = this.preSelectedRTSLayersList!!.get(index) as RTSLayer
-
-rtsLayer!!.select()
-}
-
-}
-
+            rtsLayer!!.select()
+        }
+    }
 
     open fun deselectAllPreselected()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("Deselect all Preselected: ")
-stringBuffer!!.append(this.preSelectedRTSLayersList!!.toString())
-this.logUtil!!.putF(stringBuffer!!.toString(), this, "deselectAllPreselected")
+        stringBuffer!!.append("Deselect all Preselected: ")
+        stringBuffer!!.append(this.preSelectedRTSLayersList!!.toString())
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, "deselectAllPreselected")
 
+        for (index in this.preSelectedRTSLayersList!!.size() - 1 downTo 0) {
 
+            var rtsLayer: RTSLayer = this.preSelectedRTSLayersList!!.get(index) as RTSLayer
 
+            rtsLayer!!.deselect()
+        }
 
-                        for (index in this.preSelectedRTSLayersList!!.size() -1 downTo 0)
-
-        {
-
-    var rtsLayer: RTSLayer = this.preSelectedRTSLayersList!!.get(index) as RTSLayer
-
-rtsLayer!!.deselect()
-}
-
-this.preSelectedRTSLayersList!!.clear()
-}
-
+        this.preSelectedRTSLayersList!!.clear()
+    }
 
     open fun deselectAll()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        for (index in this.selectedRTSLayersList!!.size() - 1 downTo 0) {
 
+            var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
 
-
-                        for (index in this.selectedRTSLayersList!!.size() -1 downTo 0)
-
-        {
-
-    var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
-
-rtsLayer!!.deselect()
-}
-
-}
-
+            rtsLayer!!.deselect()
+        }
+    }
 
     open fun isAnyRTSLayerSelected()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.selectedRTSLayersList!!.size() == 0)
-                        
-                                    {
-                                    
+        if (this.selectedRTSLayersList!!.size() == 0) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
     open fun getPaintSelectedRTSLayersList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.paintSelectedRTSLayersList
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.paintSelectedRTSLayersList
+    }
 
     open fun getPreSelectedRTSLayersList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.preSelectedRTSLayersList
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.preSelectedRTSLayersList
+    }
 }
-
-
-}
-                
-            
-

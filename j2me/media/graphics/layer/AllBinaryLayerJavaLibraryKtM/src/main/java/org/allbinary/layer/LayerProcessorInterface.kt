@@ -1,51 +1,39 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.layer
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+/* Generated Code Do Not Modify */
+package org.allbinary.layer
 
 interface LayerProcessorInterface : BasicLayerProcessorInterface {
-        
 
     open fun getLayerManager()
-        //nullable = true from not(false or (false and true)) = true
-: LayerManager
+    // nullable = true from not(false or (false and true)) = true
+    : LayerManager
 
-                @Throws(Exception::class)
-            
-    open fun processAt(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
-        //nullable = true from not(false or (false and false)) = true
+    @Throws(Exception::class)
+    open fun processAt(
+        allBinaryLayerManager: AllBinaryLayerManager,
+        layerInterface: AllBinaryLayer,
+        index: Int,
+    )
 
+    // nullable = true from not(false or (false and false)) = true
 
-                @Throws(Exception::class)
-            
-    open fun isProcessorLayer(layerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean
-
+    @Throws(Exception::class)
+    open fun isProcessorLayer(
+        layerInterface: AllBinaryLayer
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean
 }
-                
-            
-

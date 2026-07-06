@@ -1,392 +1,334 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2003 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2003 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
+import java.lang.Object
 import java.util.Hashtable
-import org.allbinary.game.identification.GroupCommonFactory
-import org.allbinary.util.BasicArrayList
-import org.allbinary.logic.communication.log.LogUtil
+import kotlin.Array
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.GameInfo
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.identification.BasicGroupFactory
+import org.allbinary.game.identification.GroupCommonFactory
 import org.allbinary.game.part.PartInterface
 import org.allbinary.game.part.weapon.BasicWeaponPart
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.racetrack.BaseRaceTrackGeographicMap
+import org.allbinary.util.BasicArrayList
 
-open public class RTSLayerUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: RTSLayerUtil = RTSLayerUtil()
+open public class RTSLayerUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: RTSLayerUtil{
+    companion object {
 
+        private val instance: RTSLayerUtil = RTSLayerUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : RTSLayerUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return RTSLayerUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return RTSLayerUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
 
-    open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel: Int, lastLevel: Int)
-        //nullable = true from not(false or (false and false)) = true
-: WeaponProperties{
-    //var weaponProperties = weaponProperties
-    //var currentLevel = currentLevel
-    //var lastLevel = lastLevel
+    open fun createWeaponProperties(
+        weaponProperties: WeaponProperties,
+        currentLevel: Int,
+        lastLevel: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : WeaponProperties {
+        // var weaponProperties = weaponProperties
+        // var currentLevel = currentLevel
+        // var lastLevel = lastLevel
 
-    var reloadTime: Long = weaponProperties!!.getReloadTime()!!
+        var reloadTime: Long = weaponProperties!!.getReloadTime()!!
 
+        if (lastLevel > currentLevel) {
 
-    
-                        if(lastLevel > currentLevel)
-                        
-                                    {
-                                    reloadTime= reloadTime +50
+            reloadTime = reloadTime + 50
+        } else if (lastLevel < currentLevel) {
 
-                                    }
-                                
-                             else 
-    
-                        if(lastLevel < currentLevel)
-                        
-                                    {
-                                    reloadTime= reloadTime -50
+            reloadTime = reloadTime - 50
+        }
 
-                                    }
-                                
+        var newWeaponProperties: WeaponProperties =
+            WeaponProperties(
+                reloadTime,
+                weaponProperties!!.getTargetingTime(),
+                weaponProperties!!.getSpeed()!!.getUnscaled(),
+                weaponProperties!!.getDamage() / lastLevel * currentLevel,
+                weaponProperties!!.getDissipation(),
+            )
 
-    var newWeaponProperties: WeaponProperties = WeaponProperties(reloadTime, weaponProperties!!.getTargetingTime(), weaponProperties!!.getSpeed()!!.getUnscaled(), weaponProperties!!.getDamage() /lastLevel *currentLevel, weaponProperties!!.getDissipation())
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return newWeaponProperties
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return newWeaponProperties
+    }
 
     open fun downgrade(rtsLayer: RTSLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var rtsLayer = rtsLayer
-rtsLayer!!.setLevel(rtsLayer!!.getLevel() -1)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var rtsLayer = rtsLayer
+        rtsLayer!!.setLevel(rtsLayer!!.getLevel() - 1)
 
-    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
+        var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
 
+        var size: Int = partInterfaceArray!!.size
 
-    var size: Int = partInterfaceArray!!.size
-                
+        var partInterface: BasicWeaponPart
 
+        for (index in size - 1 downTo 0) {
 
-    var partInterface: BasicWeaponPart
+            partInterface = partInterfaceArray[index]!! as BasicWeaponPart
+            partInterface!!.setWeaponProperties(
+                this.createWeaponProperties(
+                    partInterface!!.getWeaponProperties(),
+                    rtsLayer!!.getLevel(),
+                    rtsLayer!!.getLevel() + 1,
+                )
+            )
+        }
 
-
-
-
-
-                        for (index in size  - 1  downTo 0)
-
-        {
-partInterface= partInterfaceArray[index]!! as BasicWeaponPart
-partInterface!!.setWeaponProperties(this.createWeaponProperties(partInterface!!.getWeaponProperties(), rtsLayer!!.getLevel(), rtsLayer!!.getLevel() +1))
-}
-
-rtsLayer!!.select()
-}
-
+        rtsLayer!!.select()
+    }
 
     open fun upgrade(rtsLayer: RTSLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var rtsLayer = rtsLayer
-rtsLayer!!.setLevel(rtsLayer!!.getLevel() +1)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var rtsLayer = rtsLayer
+        rtsLayer!!.setLevel(rtsLayer!!.getLevel() + 1)
 
-    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
+        var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
 
+        var size: Int = partInterfaceArray!!.size
 
-    var size: Int = partInterfaceArray!!.size
-                
+        var partInterface: BasicWeaponPart
 
+        for (index in size - 1 downTo 0) {
 
-    var partInterface: BasicWeaponPart
+            partInterface = partInterfaceArray[index]!! as BasicWeaponPart
+            partInterface!!.setWeaponProperties(
+                this.createWeaponProperties(
+                    partInterface!!.getWeaponProperties(),
+                    rtsLayer!!.getLevel(),
+                    rtsLayer!!.getLevel() - 1,
+                )
+            )
+        }
 
+        rtsLayer!!.select()
+    }
 
+    private val MAX_RELOAD_TIME: Long = Integer.MAX_VALUE.toLong() / 100000
 
+    open fun getCostExponential(
+        cost: Long
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Long {
+        // var cost = cost
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return ((cost * cost * cost) / (cost * 1000))
+    }
 
-                        for (index in size  - 1  downTo 0)
+    open fun getWeaponPropertiesCost(
+        weaponProperties: WeaponProperties
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var weaponProperties = weaponProperties
 
-        {
-partInterface= partInterfaceArray[index]!! as BasicWeaponPart
-partInterface!!.setWeaponProperties(this.createWeaponProperties(partInterface!!.getWeaponProperties(), rtsLayer!!.getLevel(), rtsLayer!!.getLevel() -1))
-}
+        var cost: Long =
+            (weaponProperties!!.getDamage() +
+                weaponProperties!!.getRange() +
+                ((this.MAX_RELOAD_TIME / weaponProperties!!.getReloadTime()) shr 1))
 
-rtsLayer!!.select()
-}
+        cost = this.getCostExponential(cost)
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return cost.toInt()
+    }
 
-    private val MAX_RELOAD_TIME: Long = Integer.MAX_VALUE.toLong() /100000
+    open fun getCost(
+        rtsLayer: RTSLayer
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var rtsLayer = rtsLayer
 
-    open fun getCostExponential(cost: Long)
-        //nullable = true from not(false or (false and false)) = true
-: Long{
-    //var cost = cost
+        var total: Int = 0
 
+        var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
 
+        var size: Int = partInterfaceArray!!.size
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ((cost *cost *cost) /(cost *1000))
-}
+        var partInterface: BasicWeaponPart
 
+        var weaponProperties: WeaponProperties
 
-    open fun getWeaponPropertiesCost(weaponProperties: WeaponProperties)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var weaponProperties = weaponProperties
+        for (index in size - 1 downTo 0) {
 
-    var cost: Long = (weaponProperties!!.getDamage() +weaponProperties!!.getRange() +((this.MAX_RELOAD_TIME /weaponProperties!!.getReloadTime()) shr 1))
+            partInterface = partInterfaceArray[index]!! as BasicWeaponPart
+            weaponProperties = partInterface!!.getWeaponProperties()
+            total += this.getWeaponPropertiesCost(weaponProperties)
+        }
 
-cost= this.getCostExponential(cost)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return total
+    }
 
+    open fun getDowngradeCost(
+        rtsLayer: RTSLayer
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var rtsLayer = rtsLayer
 
+        var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return cost.toInt()
-}
+        var size: Int = partInterfaceArray!!.size
 
+        var downgradeCost: Int = 0
 
-    open fun getCost(rtsLayer: RTSLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var rtsLayer = rtsLayer
+        var partInterface: BasicWeaponPart
 
-    var total: Int = 0
-
-
-    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
-
-
-    var size: Int = partInterfaceArray!!.size
-                
-
-
-    var partInterface: BasicWeaponPart
-
-
-    var weaponProperties: WeaponProperties
-
-
-
-
-
-                        for (index in size -1 downTo 0)
-
-        {
-partInterface= partInterfaceArray[index]!! as BasicWeaponPart
-weaponProperties= partInterface!!.getWeaponProperties()
-total += this.getWeaponPropertiesCost(weaponProperties)
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return total
-}
-
-
-    open fun getDowngradeCost(rtsLayer: RTSLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var rtsLayer = rtsLayer
-
-    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
-
-
-    var size: Int = partInterfaceArray!!.size
-                
-
-
-    var downgradeCost: Int = 0
-
-
-    var partInterface: BasicWeaponPart
-
-
-    var weaponProperties: WeaponProperties
-
-
-    var downgradeWeaponCost: Int= 0
-
-
-    var currentWeaponCost: Int= 0
-
-
-
-
-
-                        for (index in size -1 downTo 0)
-
-        {
-partInterface= partInterfaceArray[index]!! as BasicWeaponPart
-weaponProperties= partInterface!!.getWeaponProperties()
-downgradeWeaponCost= this.getWeaponPropertiesCost(this.createWeaponProperties(weaponProperties, rtsLayer!!.getLevel() -1, rtsLayer!!.getLevel()))
-currentWeaponCost= this.getWeaponPropertiesCost(weaponProperties)
-downgradeCost += (currentWeaponCost -downgradeWeaponCost)
-}
-
-downgradeCost= downgradeCost *9 /10
-this.logUtil!!.putF(StringMaker().
-                            append("Total Cost: ")!!.appendint(downgradeCost)!!.toString(), this, "getDowngradeCost")
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return downgradeCost
-}
-
-
-    open fun getUpgradeCost(rtsLayer: RTSLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var rtsLayer = rtsLayer
-
-    var upgradeCost: Int = 0
-
-
-    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
-
-
-    var size: Int = partInterfaceArray!!.size
-                
-
-
-    var partInterface: BasicWeaponPart
-
-
-    var weaponProperties: WeaponProperties
-
-
-    var upgradedWeaponCost: Int= 0
-
-
-    var currentWeaponCost: Int= 0
-
-
-
-
-
-                        for (index in size -1 downTo 0)
-
-        {
-partInterface= partInterfaceArray[index]!! as BasicWeaponPart
-weaponProperties= partInterface!!.getWeaponProperties()
-upgradedWeaponCost= this.getWeaponPropertiesCost(this.createWeaponProperties(weaponProperties, rtsLayer!!.getLevel() +1, rtsLayer!!.getLevel()))
-currentWeaponCost= this.getWeaponPropertiesCost(weaponProperties)
-upgradeCost += (upgradedWeaponCost -currentWeaponCost)
-}
-
-this.logUtil!!.putF(StringMaker().
-                            append("Total Cost: ")!!.appendint(upgradeCost)!!.toString(), this, "getUpgradeCost")
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return upgradeCost
-}
-
-
-                @Throws(Exception::class)
-            
+        var weaponProperties: WeaponProperties
+
+        var downgradeWeaponCost: Int = 0
+
+        var currentWeaponCost: Int = 0
+
+        for (index in size - 1 downTo 0) {
+
+            partInterface = partInterfaceArray[index]!! as BasicWeaponPart
+            weaponProperties = partInterface!!.getWeaponProperties()
+            downgradeWeaponCost =
+                this.getWeaponPropertiesCost(
+                    this.createWeaponProperties(
+                        weaponProperties,
+                        rtsLayer!!.getLevel() - 1,
+                        rtsLayer!!.getLevel(),
+                    )
+                )
+            currentWeaponCost = this.getWeaponPropertiesCost(weaponProperties)
+            downgradeCost += (currentWeaponCost - downgradeWeaponCost)
+        }
+
+        downgradeCost = downgradeCost * 9 / 10
+        this.logUtil!!.putF(
+            StringMaker().append("Total Cost: ")!!.appendint(downgradeCost)!!.toString(),
+            this,
+            "getDowngradeCost",
+        )
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return downgradeCost
+    }
+
+    open fun getUpgradeCost(
+        rtsLayer: RTSLayer
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var rtsLayer = rtsLayer
+
+        var upgradeCost: Int = 0
+
+        var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
+
+        var size: Int = partInterfaceArray!!.size
+
+        var partInterface: BasicWeaponPart
+
+        var weaponProperties: WeaponProperties
+
+        var upgradedWeaponCost: Int = 0
+
+        var currentWeaponCost: Int = 0
+
+        for (index in size - 1 downTo 0) {
+
+            partInterface = partInterfaceArray[index]!! as BasicWeaponPart
+            weaponProperties = partInterface!!.getWeaponProperties()
+            upgradedWeaponCost =
+                this.getWeaponPropertiesCost(
+                    this.createWeaponProperties(
+                        weaponProperties,
+                        rtsLayer!!.getLevel() + 1,
+                        rtsLayer!!.getLevel(),
+                    )
+                )
+            currentWeaponCost = this.getWeaponPropertiesCost(weaponProperties)
+            upgradeCost += (upgradedWeaponCost - currentWeaponCost)
+        }
+
+        this.logUtil!!.putF(
+            StringMaker().append("Total Cost: ")!!.appendint(upgradeCost)!!.toString(),
+            this,
+            "getUpgradeCost",
+        )
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return upgradeCost
+    }
+
+    @Throws(Exception::class)
     open fun destroyAndClear(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-var list = list
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var list = list
 
-    var rtsLayer: RTSLayer
+        var rtsLayer: RTSLayer
 
+        for (index in list.size() - 1 downTo 0) {
 
+            rtsLayer = list.get(index) as RTSLayer
+            rtsLayer!!.setDestroyed(true)
+        }
 
+        list.clear()
+    }
 
+    open fun createFakeRTSLayerHashtable(
+        baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Hashtable<Any, Any> {
+        // var baseRaceTrackGeographicMap = baseRaceTrackGeographicMap
 
-                        for (index in list.size() -1 downTo 0)
+        var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-        {
-rtsLayer= list.get(index) as RTSLayer
-rtsLayer!!.setDestroyed(true)
+        var layerManager: FakeLayerManager = FakeLayerManager(GameInfo.NONE)
+
+        layerManager!!.setGeographicMapInterface(arrayOf(baseRaceTrackGeographicMap))
+        hashtable.put(AllBinaryGameLayerManager.ID, layerManager)
+        hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.LEFT)
+        hashtable.put(this.groupCommonFactory!!.ID, BasicGroupFactory.getInstance()!!.NONE_ARRAY)
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return hashtable
+    }
 }
-
-list.clear()
-}
-
-
-    open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap)
-        //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
-    //var baseRaceTrackGeographicMap = baseRaceTrackGeographicMap
-
-    var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
-
-
-    var layerManager: FakeLayerManager = FakeLayerManager(GameInfo.NONE)
-
-layerManager!!.setGeographicMapInterface(arrayOf(baseRaceTrackGeographicMap))
-hashtable.put(AllBinaryGameLayerManager.ID, layerManager)
-hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.LEFT)
-hashtable.put(this.groupCommonFactory!!.ID, BasicGroupFactory.getInstance()!!.NONE_ARRAY)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable
-}
-
-
-}
-                
-            
-

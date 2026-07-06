@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.touch.action
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.touch.action
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.game.input.GameKey
 import org.allbinary.game.input.GameKeyFactory
 import org.allbinary.game.input.PlatformInputMappingFactory
@@ -35,63 +25,55 @@ import org.allbinary.logic.NullUtil
 import org.allbinary.string.CommonStrings
 
 open public class ReleaseTouchInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: GameKeyCompleteMotionGestureInputEvent{
+    companion object {
 
-    
-                        if(ReleaseTouchInputToGameKeyEventAction.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    ReleaseTouchInputToGameKeyEventAction.instance= ReleaseTouchInputToGameKeyEventAction()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : GameKeyCompleteMotionGestureInputEvent {
 
+            if (
+                ReleaseTouchInputToGameKeyEventAction.instance ==
+                    NullUtil.getInstance()!!.NULL_OBJECT
+            ) {
+                ReleaseTouchInputToGameKeyEventAction.instance =
+                    ReleaseTouchInputToGameKeyEventAction()
+            }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ReleaseTouchInputToGameKeyEventAction.instance as GameKeyCompleteMotionGestureInputEvent
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ReleaseTouchInputToGameKeyEventAction.instance
+                as GameKeyCompleteMotionGestureInputEvent
         }
-            
+    }
+
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
-private constructor ()                        
 
-                            : super("Release Action", TouchMotionGestureFactory.getInstance()!!.RELEASED, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
+    private constructor() :
+        super(
+            "Release Action",
+            TouchMotionGestureFactory.getInstance()!!.RELEASED,
+            PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
+                .getInputMapping(),
+        ) {
 
-
-                            //For kotlin this is before the body of the constructor.
-                    
+        // For kotlin this is before the body of the constructor.
 
         try {
             this.setGameKey(this.NONE)
-this.setGameKeyEvent(GameKeyEventFactory.getInstance()!!.getInstanceForInput(this, this.NONE))
-} catch(e: Exception)
-            {
+            this.setGameKeyEvent(
+                GameKeyEventFactory.getInstance()!!.getInstanceForInput(this, this.NONE)
+            )
+        } catch (e: Exception) {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
-}
-
-}
-
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+        }
+    }
 
     override fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {}
 }
-
-
-}
-                
-            
-

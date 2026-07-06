@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.resource
+/* Generated Code Do Not Modify */
+package org.allbinary.game.resource
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureControlledInterface
 import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
@@ -37,19 +28,13 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class FeaturedResourceFactory
-            : Object
-         {
-        
+open public class FeaturedResourceFactory : Object {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val list: BasicArrayList = BasicArrayListD()
-public constructor ()
-            : super()
-        {
-}
 
+    public constructor() : super() {}
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -71,108 +56,105 @@ public constructor ()
 
     private val GAME_FEATURE_CONTROLLED: String = "GameFeatureControlledInterface: "
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun init(level: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var level = level
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var level = level
 
-    var size: Int = this.list.size()!!
+        var size: Int = this.list.size()!!
 
+        for (index in 0 until size) {
 
+            var featureInterface: GameFeatureControlledInterface =
+                this.list.objectArray[index]!! as GameFeatureControlledInterface
 
+            var isLoadingLevel: Boolean = featureInterface!!.isLoadingLevel(level)!!
 
+            var isFeature: Boolean = featureInterface!!.isFeature()!!
 
-                        for (index in 0 until size)
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append(this.GAME_FEATURE_CONTROLLED)!!
+                    .append(featureInterface!!.toString())!!
+                    .append(this.IS_LOADING_LEVEL_LABEL)!!
+                    .append(ResourceLoadingLevelFactory.getInstance()!!.getLevelString(level))!!
+                    .append(CommonSeps.getInstance()!!.COLON_SEP)!!
+                    .appendboolean(isLoadingLevel)!!
+                    .append(this.IS_FEATURE)!!
+                    .appendboolean(isFeature)!!
+                    .toString(),
+                this,
+                this.commonStrings!!.INIT,
+            )
 
-        {
+            if (isLoadingLevel && isFeature) {
 
-    var featureInterface: GameFeatureControlledInterface = this.list.objectArray[index]!! as GameFeatureControlledInterface
+                featureInterface!!.init(level)
+            }
+        }
 
+        var features: Features = Features.getInstance()!!
 
-    var isLoadingLevel: Boolean = featureInterface!!.isLoadingLevel(level)!!
+        var graphicsFeatureFactory: GraphicsFeatureFactory = GraphicsFeatureFactory.getInstance()!!
 
+        var stringBuffer: StringMaker = StringMaker()
 
-    var isFeature: Boolean = featureInterface!!.isFeature()!!
+        stringBuffer!!.append(this.ANIMATION_FEATURES)
+        stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
+        stringBuffer!!.append(this.IMAGE_LABEL)
+        stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.INIT)
 
-this.logUtil!!.putF(StringMaker().
-                            append(this.GAME_FEATURE_CONTROLLED)!!.append(featureInterface!!.toString())!!.append(this.IS_LOADING_LEVEL_LABEL)!!.append(ResourceLoadingLevelFactory.getInstance()!!.getLevelString(level))!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.appendboolean(isLoadingLevel)!!.append(this.IS_FEATURE)!!.appendboolean(isFeature)!!.toString(), this, this.commonStrings!!.INIT)
+        if (features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS)) {
 
-    
-                        if(isLoadingLevel && isFeature)
-                        
-                                    {
-                                    featureInterface!!.init(level)
-
-                                    }
-                                
-}
-
-
-    var features: Features = Features.getInstance()!!
-
-
-    var graphicsFeatureFactory: GraphicsFeatureFactory = GraphicsFeatureFactory.getInstance()!!
-
-
-    var stringBuffer: StringMaker = StringMaker()
-
-stringBuffer!!.append(this.ANIMATION_FEATURES)
-stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
-stringBuffer!!.append(this.IMAGE_LABEL)
-stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.INIT)
-
-    
-                        if(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
-                        
-                                    {
-                                    stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(this.IMAGE_GRAPHICS_ARRAY)
-stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
-stringBuffer!!.append(this.IMAGE_GRAPHICS_ROTATION)
-stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
-stringBuffer!!.append(this.SPRITE_QUARTER)
-stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
-stringBuffer!!.append(this.SPRITE_FULL)
-stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.INIT)
-
-                                    }
-                                
-}
-
+            stringBuffer!!.delete(0, stringBuffer!!.length())
+            stringBuffer!!.append(this.IMAGE_GRAPHICS_ARRAY)
+            stringBuffer!!.appendboolean(
+                features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS)
+            )
+            stringBuffer!!.append(this.IMAGE_GRAPHICS_ROTATION)
+            stringBuffer!!.appendboolean(
+                features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS)
+            )
+            stringBuffer!!.append(this.SPRITE_QUARTER)
+            stringBuffer!!.appendboolean(
+                features.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS)
+            )
+            stringBuffer!!.append(this.SPRITE_FULL)
+            stringBuffer!!.appendboolean(
+                features.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS)
+            )
+            this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.INIT)
+        }
+    }
 
     open fun clear()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.list.clear()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.list.clear()
+    }
 
     open fun add(featureInterface: GameFeatureControlledInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var featureInterface = featureInterface
-this.logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(featureInterface))!!.toString(), this, this.commonStrings!!.ADD)
-this.list.add(featureInterface)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var featureInterface = featureInterface
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(CommonLabels.getInstance()!!.START_LABEL)!!
+                .append(StringUtil.getInstance()!!.toString(featureInterface))!!
+                .toString(),
+            this,
+            this.commonStrings!!.ADD,
+        )
+        this.list.add(featureInterface)
+    }
 
     open fun getList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.list
+    }
 }
-
-
-}
-                
-            
-

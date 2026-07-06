@@ -1,37 +1,26 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.image
+/* Generated Code Do Not Modify */
+package org.allbinary.image
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.System
-        
-        import java.lang.Thread
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.io.InputStream
+import java.lang.System
+import java.lang.Thread
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
+import kotlin.Array
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.gd.resource.GDResources
 import org.allbinary.logic.string.StringMaker
@@ -40,231 +29,180 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.system.Memory
 
 open public class ImageCache : ImageCacheBase {
-        
-companion object {
-            
-    val NULL_IMAGE_CACHE: ImageCache = ImageCache()
 
-        }
-            
+    companion object {
+
+        val NULL_IMAGE_CACHE: ImageCache = ImageCache()
+    }
+
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor (){
-}
 
+    public constructor() {}
 
     open fun addListener(renderer: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-var renderer = renderer
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var renderer = renderer
+    }
 
+    open fun getIndex(
+        key: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var key = key
 
-    open fun getIndex(key: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var key = key
+        var gdResources: GDResources = GDResources.getInstance()!!
 
-    var gdResources: GDResources = GDResources.getInstance()!!
+        var resourceStringArray: Array<String?> = gdResources!!.resourceStringArray
 
+        var size: Int = resourceStringArray!!.size
 
-    var resourceStringArray: Array<String?> = gdResources!!.resourceStringArray
+        for (index in 0 until size) {
 
+            if (resourceStringArray[index] == key) {
 
-    var size: Int = resourceStringArray!!.size
-                
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return index
+            }
+        }
 
+        this.logUtil!!.putF(
+            StringMaker()
+                .append("unable to find key: ")!!
+                .append(StringUtil.getInstance()!!.toString(key))!!
+                .toString(),
+            this,
+            this.commonStrings!!.RUN,
+        )
 
+        throw RuntimeException()
+    }
 
+    @Throws(Exception::class)
+    override fun get(
+        caller: String,
+        width: Int,
+        height: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var caller = caller
+        // var width = width
+        // var height = height
 
+        var foundIndex: Int = this.getIndexWH(width, height)!!
 
-                        for (index in 0 until size)
+        var image: Image = this.getFromAvailable(foundIndex, width, height)!!
 
-        {
+        if (image == NullImage.NULL_IMAGE) {
 
-    
-                        if(resourceStringArray[index] == key)
-                        
-                                    {
-                                    
+            this.volume += width * height
 
+            if (this.volume > 32000) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return index
+                System.gc()
+                this.volume = 0
+            }
 
-                                    }
-                                
-}
+            image = this.createImage(caller, width, height)
 
-this.logUtil!!.putF(StringMaker().
-                            append("unable to find key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString(), this, this.commonStrings!!.RUN)
+            var widths: IntArray = this.widths
 
+            if (this.nextIndex > widths.size - 1) {
 
+                if (foundIndex == -1) {
 
-                            throw RuntimeException()
-}
+                    foundIndex = this.nextIndex
+                    widths[this.nextIndex] = width
+                    this.heights[this.nextIndex] = height
+                    this.nextIndex++
+                }
 
+                this.listOfList[foundIndex]!!.add(image)
+            }
+        }
 
-                @Throws(Exception::class)
-            
-    override fun get(caller: String, width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var caller = caller
-    //var width = width
-    //var height = height
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return image
+    }
 
-    var foundIndex: Int = this.getIndexWH(width, height)!!
+    @Throws(Exception::class)
+    override fun getWithKey(
+        key: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var key = key
 
+        var image: Image = this.getImage(key)!!
 
-    var image: Image = this.getFromAvailable(foundIndex, width, height)!!
+        if (image == NullImage.NULL_IMAGE) {
 
+            var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
-    
-                        if(image == NullImage.NULL_IMAGE)
-                        
-                                    {
-                                    this.volume += width *height
+            var inputStream: InputStream = resourceUtil!!.getResourceAsStream(key as String)!!
 
-    
-                        if(this.volume > 32000)
-                        
-                                    {
-                                    System.gc()
-this.volume= 0
+            if (inputStream == null) {
 
-                                    }
-                                
-image= this.createImage(caller, width, height)
+                throw RuntimeException(
+                    StringMaker()
+                        .append("Image resource is not available for key: ")!!
+                        .append(StringUtil.getInstance()!!.toString(key))!!
+                        .toString()
+                )
+            }
 
-    var widths: IntArray = this.widths
+            try {
+                image = this.createImageFromInputStream(key, inputStream)
+            } catch (e: Exception) {
+                this.logUtil!!.put(
+                    "Exception: Trying Again After GC",
+                    this,
+                    this.commonStrings!!.GET,
+                    e,
+                )
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append("InputStream: ")!!
+                        .append(StringUtil.getInstance()!!.toString(inputStream))!!
+                        .toString(),
+                    this,
+                    this.commonStrings!!.GET,
+                )
+                System.gc()
+                System.gc()
+                this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
+                Thread.sleep(100)
+                image = this.createImageFromInputStream(key, inputStream)
+            }
 
+            inputStream!!.close()
+            this.hashtable.put(key, image)
+        }
 
-    
-                        if(this.nextIndex > widths.size -1)
-                        
-                                    {
-                                    
-    
-                        if(foundIndex ==  -1)
-                        
-                                    {
-                                    foundIndex= this.nextIndex
-widths[this.nextIndex]= width
-this.heights[this.nextIndex]= height
-this.nextIndex++
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return image
+    }
 
-                                    }
-                                
-this.listOfList[foundIndex]!!.add(image)
-
-                                    }
-                                
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun getWithKey(key: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var key = key
-
-    var image: Image = this.getImage(key)!!
-
-
-    
-                        if(image == NullImage.NULL_IMAGE)
-                        
-                                    {
-                                    
-    var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-
-
-    var inputStream: InputStream = resourceUtil!!.getResourceAsStream(key as String)!!
-
-
-    
-                        if(inputStream == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-
-
-                            throw RuntimeException(StringMaker().
-                            append("Image resource is not available for key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString())
-
-                                    }
-                                
-
-        try {
-            image= this.createImageFromInputStream(key, inputStream)
-} catch(e: Exception)
-            {
-this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
-this.logUtil!!.putF(StringMaker().
-                            append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, this.commonStrings!!.GET)
-System.gc()
-System.gc()
-this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
-Thread.sleep(100)
-image= this.createImageFromInputStream(key, inputStream)
-}
-
-inputStream!!.close()
-this.hashtable.put(key, image)
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun loadImageForAnimation()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun progressEnded()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun runTask()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun isLazy()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 }
-
-
-}
-                
-            
-

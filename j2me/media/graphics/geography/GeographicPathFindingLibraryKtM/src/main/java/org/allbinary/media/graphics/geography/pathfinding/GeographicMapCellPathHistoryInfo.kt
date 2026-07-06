@@ -1,149 +1,128 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.pathfinding
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.pathfinding
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 
-open public class GeographicMapCellPathHistoryInfo
-            : Object
-         {
-        
+open public class GeographicMapCellPathHistoryInfo : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    private var previousGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    // Auto Generated
+    public constructor() : super() {}
 
-    private var previousOnPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var previousGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var previousOnPathGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var nextOnPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var nextOnPathGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+
+    private var nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
     open fun getPreviousGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.previousGeographicMapCellPosition
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.previousGeographicMapCellPosition
-}
-
-
-    open fun setPreviousGeographicMapCellPosition(previousGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-var previousGeographicMapCellPosition = previousGeographicMapCellPosition
-this.previousGeographicMapCellPosition= previousGeographicMapCellPosition
-}
-
+    open fun setPreviousGeographicMapCellPosition(
+        previousGeographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var previousGeographicMapCellPosition = previousGeographicMapCellPosition
+        this.previousGeographicMapCellPosition = previousGeographicMapCellPosition
+    }
 
     open fun getPreviousOnPathGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.previousOnPathGeographicMapCellPosition
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.previousOnPathGeographicMapCellPosition
-}
-
-
-    open fun setPreviousOnPathGeographicMapCellPosition(previousOnPathGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-var previousOnPathGeographicMapCellPosition = previousOnPathGeographicMapCellPosition
-this.previousOnPathGeographicMapCellPosition= previousOnPathGeographicMapCellPosition
-}
-
+    open fun setPreviousOnPathGeographicMapCellPosition(
+        previousOnPathGeographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var previousOnPathGeographicMapCellPosition = previousOnPathGeographicMapCellPosition
+        this.previousOnPathGeographicMapCellPosition = previousOnPathGeographicMapCellPosition
+    }
 
     open fun getNextUnvisitedOnPathGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.nextUnvisitedOnPathGeographicMapCellPosition
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.nextUnvisitedOnPathGeographicMapCellPosition
-}
-
-
-    open fun setNextUnvisitedOnPathGeographicMapCellPosition(nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-var nextUnvisitedOnPathGeographicMapCellPosition = nextUnvisitedOnPathGeographicMapCellPosition
-this.nextUnvisitedOnPathGeographicMapCellPosition= nextUnvisitedOnPathGeographicMapCellPosition
-}
-
+    open fun setNextUnvisitedOnPathGeographicMapCellPosition(
+        nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var nextUnvisitedOnPathGeographicMapCellPosition =
+            nextUnvisitedOnPathGeographicMapCellPosition
+        this.nextUnvisitedOnPathGeographicMapCellPosition =
+            nextUnvisitedOnPathGeographicMapCellPosition
+    }
 
     open fun getNextOnPathGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.nextOnPathGeographicMapCellPosition
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.nextOnPathGeographicMapCellPosition
-}
-
-
-    open fun setNextOnPathGeographicMapCellPosition(nextOnPathGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-var nextOnPathGeographicMapCellPosition = nextOnPathGeographicMapCellPosition
-this.nextOnPathGeographicMapCellPosition= nextOnPathGeographicMapCellPosition
-}
-
+    open fun setNextOnPathGeographicMapCellPosition(
+        nextOnPathGeographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var nextOnPathGeographicMapCellPosition = nextOnPathGeographicMapCellPosition
+        this.nextOnPathGeographicMapCellPosition = nextOnPathGeographicMapCellPosition
+    }
 
     open fun getNextChosenOnPathGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.nextChosenOnPathGeographicMapCellPosition
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.nextChosenOnPathGeographicMapCellPosition
+    open fun setNextChosenOnPathGeographicMapCellPosition(
+        nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var nextChosenOnPathGeographicMapCellPosition = nextChosenOnPathGeographicMapCellPosition
+        this.nextChosenOnPathGeographicMapCellPosition = nextChosenOnPathGeographicMapCellPosition
+    }
 }
-
-
-    open fun setNextChosenOnPathGeographicMapCellPosition(nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-var nextChosenOnPathGeographicMapCellPosition = nextChosenOnPathGeographicMapCellPosition
-this.nextChosenOnPathGeographicMapCellPosition= nextChosenOnPathGeographicMapCellPosition
-}
-
-
-}
-                
-            
-

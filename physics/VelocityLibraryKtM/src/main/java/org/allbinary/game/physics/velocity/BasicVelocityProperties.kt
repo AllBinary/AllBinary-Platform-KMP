@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.physics.velocity
+/* Generated Code Do Not Modify */
+package org.allbinary.game.physics.velocity
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionUtil
 import org.allbinary.logic.communication.log.LogUtil
@@ -36,11 +27,7 @@ import org.allbinary.math.Angle
 import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonSeps
 
-open public class BasicVelocityProperties
-            : Object
-        
-                , BasicVelocityInterface {
-        
+open public class BasicVelocityProperties : Object, BasicVelocityInterface {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -51,244 +38,240 @@ open public class BasicVelocityProperties
     val velocityZBasicDecimal: BasicDecimal
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-public constructor ()
-            : super()
-        {
-this.velocityXBasicDecimal= BasicDecimal(0)
-this.velocityYBasicDecimal= BasicDecimal(0)
-this.velocityZBasicDecimal= BasicDecimal(0)
-}
 
+    public constructor() : super() {
+        this.velocityXBasicDecimal = BasicDecimal(0)
+        this.velocityYBasicDecimal = BasicDecimal(0)
+        this.velocityZBasicDecimal = BasicDecimal(0)
+    }
 
     override fun zero()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.velocityXBasicDecimal!!.setint(0)
-this.velocityYBasicDecimal!!.setint(0)
-this.velocityZBasicDecimal!!.setint(0)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.velocityXBasicDecimal!!.setint(0)
+        this.velocityYBasicDecimal!!.setint(0)
+        this.velocityZBasicDecimal!!.setint(0)
+    }
 
     override fun getVelocityXBasicDecimalP()
-        //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicDecimal {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.velocityXBasicDecimal
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.velocityXBasicDecimal
+    }
 
     override fun getVelocityYBasicDecimalP()
-        //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicDecimal {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.velocityYBasicDecimal
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.velocityYBasicDecimal
+    }
 
     open fun getVelocityZBasicDecimalP()
-        //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicDecimal {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.velocityZBasicDecimal
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.velocityZBasicDecimal
+    }
 
     val directionUtil: DirectionUtil = DirectionUtil.getInstance()!!
 
-    override fun setVelocityWithBigDecimalAndDirection(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitudeBasicDecimal = magnitudeBasicDecimal
-    //var direction = direction
-    //var otherDirection = otherDirection
+    override fun setVelocityWithBigDecimalAndDirection(
+        magnitudeBasicDecimal: BasicDecimal,
+        direction: Direction,
+        otherDirection: Direction,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitudeBasicDecimal = magnitudeBasicDecimal
+        // var direction = direction
+        // var otherDirection = otherDirection
 
-    var angle: Angle = this.directionUtil!!.getAngle(direction)!!
+        var angle: Angle = this.directionUtil!!.getAngle(direction)!!
 
+        var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
 
-    var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
+        this.setVelocityWithBigDecimal(magnitudeBasicDecimal, angle, otherAngle)
+    }
 
-this.setVelocityWithBigDecimal(magnitudeBasicDecimal, angle, otherAngle)
-}
+    override fun setVelocityWithDirection(
+        magnitude: Long,
+        direction: Direction,
+        otherDirection: Direction,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitude = magnitude
+        // var direction = direction
+        // var otherDirection = otherDirection
 
+        var angle: Angle = this.directionUtil!!.getAngle(direction)!!
 
-    override fun setVelocityWithDirection(magnitude: Long, direction: Direction, otherDirection: Direction)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitude = magnitude
-    //var direction = direction
-    //var otherDirection = otherDirection
+        var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
 
-    var angle: Angle = this.directionUtil!!.getAngle(direction)!!
+        this.setVelocity(magnitude, angle, otherAngle)
+    }
 
+    override fun addVelocityWithBigDecimalAndDirection(
+        magnitudeBasicDecimal: BasicDecimal,
+        direction: Direction,
+        otherDirection: Direction,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitudeBasicDecimal = magnitudeBasicDecimal
+        // var direction = direction
+        // var otherDirection = otherDirection
 
-    var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
+        var angle: Angle = this.directionUtil!!.getAngle(direction)!!
 
-this.setVelocity(magnitude, angle, otherAngle)
-}
+        var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
 
+        this.addVelocityWithBigDecimal(magnitudeBasicDecimal, angle, otherAngle)
+    }
 
-    override fun addVelocityWithBigDecimalAndDirection(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitudeBasicDecimal = magnitudeBasicDecimal
-    //var direction = direction
-    //var otherDirection = otherDirection
+    override fun addVelocityWithDirection(
+        magnitude: Long,
+        direction: Direction,
+        otherDirection: Direction,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitude = magnitude
+        // var direction = direction
+        // var otherDirection = otherDirection
 
-    var angle: Angle = this.directionUtil!!.getAngle(direction)!!
+        var angle: Angle = this.directionUtil!!.getAngle(direction)!!
 
+        var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
 
-    var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
+        this.addVelocity(magnitude, angle, otherAngle)
+    }
 
-this.addVelocityWithBigDecimal(magnitudeBasicDecimal, angle, otherAngle)
-}
+    override fun setVelocityWithBigDecimal(
+        magnitudeBasicDecimal: BasicDecimal,
+        angle: Angle,
+        otherAngle: Angle,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitudeBasicDecimal = magnitudeBasicDecimal
+        // var angle = angle
+        // var otherAngle = otherAngle
 
+        var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
 
-    override fun addVelocityWithDirection(magnitude: Long, direction: Direction, otherDirection: Direction)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitude = magnitude
-    //var direction = direction
-    //var otherDirection = otherDirection
+        this.setVelocity(magnitude, angle, otherAngle)
+    }
 
-    var angle: Angle = this.directionUtil!!.getAngle(direction)!!
+    override fun addVelocityWithBigDecimal(
+        magnitudeBasicDecimal: BasicDecimal,
+        angle: Angle,
+        otherAngle: Angle,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitudeBasicDecimal = magnitudeBasicDecimal
+        // var angle = angle
+        // var otherAngle = otherAngle
 
+        var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
 
-    var otherAngle: Angle = this.directionUtil!!.getAngle(otherDirection)!!
-
-this.addVelocity(magnitude, angle, otherAngle)
-}
-
-
-    override fun setVelocityWithBigDecimal(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitudeBasicDecimal = magnitudeBasicDecimal
-    //var angle = angle
-    //var otherAngle = otherAngle
-
-    var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
-
-this.setVelocity(magnitude, angle, otherAngle)
-}
-
-
-    override fun addVelocityWithBigDecimal(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitudeBasicDecimal = magnitudeBasicDecimal
-    //var angle = angle
-    //var otherAngle = otherAngle
-
-    var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
-
-this.addVelocity(magnitude, angle, otherAngle)
-}
-
+        this.addVelocity(magnitude, angle, otherAngle)
+    }
 
     override fun setVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitude = magnitude
-    //var angle = angle
-    //var otherAngle = otherAngle
-this.setVelocityi(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitude = magnitude
+        // var angle = angle
+        // var otherAngle = otherAngle
+        this.setVelocityi(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
+    }
 
     override fun addVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitude = magnitude
-    //var angle = angle
-    //var otherAngle = otherAngle
-this.addVelocityi(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitude = magnitude
+        // var angle = angle
+        // var otherAngle = otherAngle
+        this.addVelocityi(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
+    }
 
     open fun setVelocityi(magnitude: Long, angle: Int, otherAngle: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitude = magnitude
-    //var angle = angle
-    //var otherAngle = otherAngle
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitude = magnitude
+        // var angle = angle
+        // var otherAngle = otherAngle
 
-    var xVector: Long = (this.axisMathVectorUtil!!.calculateX(magnitude, angle) /this.velocityXBasicDecimal!!.getScaledFactorValue())
+        var xVector: Long =
+            (this.axisMathVectorUtil!!.calculateX(magnitude, angle) /
+                this.velocityXBasicDecimal!!.getScaledFactorValue())
 
+        var yVector: Long =
+            (this.axisMathVectorUtil!!.calculateY(magnitude, angle) /
+                this.velocityYBasicDecimal!!.getScaledFactorValue())
 
-    var yVector: Long = (this.axisMathVectorUtil!!.calculateY(magnitude, angle) /this.velocityYBasicDecimal!!.getScaledFactorValue())
+        var zVector: Long =
+            (this.axisMathVectorUtil!!.calculateZ(magnitude, otherAngle) /
+                this.velocityZBasicDecimal!!.getScaledFactorValue())
 
-
-    var zVector: Long = (this.axisMathVectorUtil!!.calculateZ(magnitude, otherAngle) /this.velocityZBasicDecimal!!.getScaledFactorValue())
-
-this.velocityXBasicDecimal!!.setlong(xVector)
-this.velocityYBasicDecimal!!.setlong(yVector)
-this.velocityZBasicDecimal!!.setlong(zVector)
-}
-
+        this.velocityXBasicDecimal!!.setlong(xVector)
+        this.velocityYBasicDecimal!!.setlong(yVector)
+        this.velocityZBasicDecimal!!.setlong(zVector)
+    }
 
     override fun addVelocityi(magnitude: Long, angle: Int, otherAngle: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var magnitude = magnitude
-    //var angle = angle
-    //var otherAngle = otherAngle
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var magnitude = magnitude
+        // var angle = angle
+        // var otherAngle = otherAngle
 
-    var xVector: Long = (this.axisMathVectorUtil!!.calculateX(magnitude, angle) /this.velocityXBasicDecimal!!.getScaledFactorValue())
+        var xVector: Long =
+            (this.axisMathVectorUtil!!.calculateX(magnitude, angle) /
+                this.velocityXBasicDecimal!!.getScaledFactorValue())
 
+        var yVector: Long =
+            (this.axisMathVectorUtil!!.calculateY(magnitude, angle) /
+                this.velocityYBasicDecimal!!.getScaledFactorValue())
 
-    var yVector: Long = (this.axisMathVectorUtil!!.calculateY(magnitude, angle) /this.velocityYBasicDecimal!!.getScaledFactorValue())
+        var zVector: Long =
+            (this.axisMathVectorUtil!!.calculateZ(magnitude, otherAngle) /
+                this.velocityZBasicDecimal!!.getScaledFactorValue())
 
-
-    var zVector: Long = (this.axisMathVectorUtil!!.calculateZ(magnitude, otherAngle) /this.velocityZBasicDecimal!!.getScaledFactorValue())
-
-this.velocityXBasicDecimal!!.addlong(xVector)
-this.velocityYBasicDecimal!!.addlong(yVector)
-this.velocityZBasicDecimal!!.addlong(zVector)
-}
-
+        this.velocityXBasicDecimal!!.addlong(xVector)
+        this.velocityYBasicDecimal!!.addlong(yVector)
+        this.velocityZBasicDecimal!!.addlong(zVector)
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
+        var positionStrings: PositionStrings = PositionStrings.getInstance()!!
 
-    var positionStrings: PositionStrings = PositionStrings.getInstance()!!
+        var stringBuffer: StringMaker = StringMaker()
 
+        var stringUtil: StringUtil = StringUtil.getInstance()!!
 
-    var stringBuffer: StringMaker = StringMaker()
+        stringBuffer!!.append("Velocity ")
+        stringBuffer!!.append(positionStrings!!.X_LABEL)
+        stringBuffer!!.append(stringUtil!!.toString(this.velocityXBasicDecimal))
+        stringBuffer!!.append(commonSeps!!.SPACE)
+        stringBuffer!!.append(positionStrings!!.Y_LABEL)
+        stringBuffer!!.append(stringUtil!!.toString(this.velocityYBasicDecimal))
+        stringBuffer!!.append(commonSeps!!.SPACE)
+        stringBuffer!!.append(positionStrings!!.Z_LABEL)
+        stringBuffer!!.append(stringUtil!!.toString(this.velocityZBasicDecimal))
 
-
-    var stringUtil: StringUtil = StringUtil.getInstance()!!
-
-stringBuffer!!.append("Velocity ")
-stringBuffer!!.append(positionStrings!!.X_LABEL)
-stringBuffer!!.append(stringUtil!!.toString(this.velocityXBasicDecimal))
-stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(positionStrings!!.Y_LABEL)
-stringBuffer!!.append(stringUtil!!.toString(this.velocityYBasicDecimal))
-stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(positionStrings!!.Z_LABEL)
-stringBuffer!!.append(stringUtil!!.toString(this.velocityZBasicDecimal))
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

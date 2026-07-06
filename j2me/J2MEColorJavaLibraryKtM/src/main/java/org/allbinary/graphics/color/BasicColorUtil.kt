@@ -1,57 +1,41 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.color
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.color
 
+import java.lang.Object
+import kotlin.Array
 
+open public class BasicColorUtil : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: BasicColorUtil = BasicColorUtil()
 
-open public class BasicColorUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: BasicColorUtil = BasicColorUtil()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : BasicColorUtil {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: BasicColorUtil{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicColorUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicColorUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val ZERO_ARRAY: Array<BasicColor?> = arrayOfNulls(0)
 
     val ALPHA: Int = 0xFF000000.toInt()
@@ -60,84 +44,76 @@ companion object {
 
     val ffOpaque: Boolean = true
 
-    open fun getRGB(red: Int, green: Int, blue: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var red = red
-var green = green
-var blue = blue
+    open fun getRGB(
+        red: Int,
+        green: Int,
+        blue: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var red = red
+        var green = green
+        var blue = blue
 
-    var value: Int = 0
+        var value: Int = 0
 
+        if (this.isAlpha) {
 
-    
-                        if(this.isAlpha)
-                        
-                                    {
-                                    
-    
-                        if(this.ffOpaque)
-                        
-                                    {
-                                    value= this.ALPHA
+            if (this.ffOpaque) {
 
-                                    }
-                                
+                value = this.ALPHA
+            }
+        }
 
-                                    }
-                                
-value= (red shl 16) or value
-value= (green shl 8) or value
-value= blue or value
+        value = (red shl 16) or value
+        value = (green shl 8) or value
+        value = blue or value
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return value
+    }
 
+    open fun getARGB(
+        alphaValue: Int,
+        r: Int,
+        g: Int,
+        b: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var alphaValue = alphaValue
+        // var r = r
+        // var g = g
+        // var b = b
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return value
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return ((alphaValue shl 24) and this.ALPHA) +
+            ((r shl 16) and 0x00FF0000) +
+            ((g shl 8) and 0x0000FF00) +
+            (b and 0x000000FF)
+    }
+
+    open fun get(
+        alphaValue: Int,
+        color: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var alphaValue = alphaValue
+        // var color = color
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return ((alphaValue shl 24) and this.ALPHA) + color
+    }
+
+    open fun invert(
+        color: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var color = color
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return (0xFFFFFF - color) or this.ALPHA
+    }
 }
-
-
-    open fun getARGB(alphaValue: Int, r: Int, g: Int, b: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var alphaValue = alphaValue
-    //var r = r
-    //var g = g
-    //var b = b
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ((alphaValue shl 24) and this.ALPHA) +((r shl 16) and 0x00FF0000) +((g shl 8) and 0x0000FF00) +(b and 0x000000FF)
-}
-
-
-    open fun get(alphaValue: Int, color: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var alphaValue = alphaValue
-    //var color = color
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ((alphaValue shl 24) and this.ALPHA) +color
-}
-
-
-    open fun invert(color: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var color = color
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return (0xFFFFFF -color) or this.ALPHA
-}
-
-
-}
-                
-            
-

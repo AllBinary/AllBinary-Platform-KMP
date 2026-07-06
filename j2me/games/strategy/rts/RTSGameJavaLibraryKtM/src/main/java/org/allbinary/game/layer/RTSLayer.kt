@@ -1,34 +1,23 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2003 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2003 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.Hashtable
 import javax.microedition.lcdui.Graphics
-import org.allbinary.game.input.form.RTSFormInput
-import org.allbinary.game.multiplayer.layer.MultiPlayerGameLayer
+import kotlin.Array
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.IndexedAnimation
@@ -47,9 +36,12 @@ import org.allbinary.game.input.GameInputProcessorUtil
 import org.allbinary.game.input.GameKeyEventSourceInterface
 import org.allbinary.game.input.InputFactory
 import org.allbinary.game.input.form.NullRTSFormInputFactory
+import org.allbinary.game.input.form.RTSFormInput
 import org.allbinary.game.layer.waypoint.Waypoint2LogHelper
 import org.allbinary.game.layer.waypoint.WaypointLogHelper
 import org.allbinary.game.layer.waypoint.WaypointRunnableLogHelper
+import org.allbinary.game.multiplayer.layer.MultiPlayerGameLayer
+import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.game.tick.TickableInterface
 import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.game.view.TileLayerPositionIntoViewPosition
@@ -58,107 +50,111 @@ import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
-import org.allbinary.media.graphics.geography.map.BasicGeographicMap
-import org.allbinary.time.TimeDelayHelper
-import org.allbinary.view.event.ViewPositionEventHandler
-import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.LayerDistanceUtil
+import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
+import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
 import org.allbinary.view.ViewPositionBase
+import org.allbinary.view.event.ViewPositionEventHandler
 
-open public class RTSLayer : MultiPlayerGameLayer
-                , TickableInterface
-                , GameInputInterface
-                , GameKeyEventSourceInterface
-                , RTSInterface
-                , PathFindingLayerInterface {
-        
-companion object {
-            
-                @Throws(Exception::class)
-            
-    open fun createSimulatedInstance(remoteInfo: RemoteInfo)
-        //nullable = true from not(false or (false and false)) = true
-: RTSLayer{
-    //var remoteInfo = remoteInfo
+open public class RTSLayer :
+    MultiPlayerGameLayer,
+    TickableInterface,
+    GameInputInterface,
+    GameKeyEventSourceInterface,
+    RTSInterface,
+    PathFindingLayerInterface {
 
-    var nullAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance()!!
+    companion object {
 
+        @Throws(Exception::class)
+        open fun createSimulatedInstance(
+            remoteInfo: RemoteInfo
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : RTSLayer {
+            // var remoteInfo = remoteInfo
 
-    var nullIndexedAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance()!!
+            var nullAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface =
+                NullAnimationFactory.getFactoryInstance()!!
 
+            var nullIndexedAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface =
+                NullIndexedAnimationFactory.getFactoryInstance()!!
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return RTSLayer(RemoteInfo.REMOTE_INFO, GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0, TileLayerPositionIntoViewPosition())
-}
-
-
-    private val id: Int = 0
-
-    val MAIN_INDEX: Int = 0
-
-    val SECONDARY_INDEX: Int = 1
-
-    open fun getMinStaticType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 1
-}
-
-
-    open fun getMaxStaticType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 4
-}
-
-
-    open fun isRTSLayer(layerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var layerInterface = layerInterface
-
-    
-                        if(layerInterface!!.getType() >= RTSLayer.getMinStaticType() && layerInterface!!.getType() <= RTSLayer.getMaxStaticType())
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return RTSLayer(
+                RemoteInfo.REMOTE_INFO,
+                GroupFactory.getInstance()!!.NULL_GROUP_ARRAY,
+                StringUtil.getInstance()!!.EMPTY_STRING,
+                StringUtil.getInstance()!!.EMPTY_STRING,
+                Health.NULL_HEALTH,
+                NullRTSFormInputFactory.getInstance(),
+                nullAnimationInterfaceFactoryInterface,
+                nullIndexedAnimationInterfaceFactoryInterface,
+                nullAnimationInterfaceFactoryInterface,
+                nullAnimationInterfaceFactoryInterface,
+                nullIndexedAnimationInterfaceFactoryInterface,
+                NullIndexedAnimationFactory.getFactoryInstance(),
+                RectangleFactory.SINGLETON,
+                0,
+                0,
+                TileLayerPositionIntoViewPosition(),
+            )
         }
-            
+
+        private val id: Int = 0
+
+        val MAIN_INDEX: Int = 0
+
+        val SECONDARY_INDEX: Int = 1
+
+        open fun getMinStaticType()
+        // nullable = true from not(false or (false and true)) = true
+        : Int {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 1
+        }
+
+        open fun getMaxStaticType()
+        // nullable = true from not(false or (false and true)) = true
+        : Int {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 4
+        }
+
+        open fun isRTSLayer(
+            layerInterface: AllBinaryLayer
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : Boolean {
+            // var layerInterface = layerInterface
+
+            if (
+                layerInterface!!.getType() >= RTSLayer.getMinStaticType() &&
+                    layerInterface!!.getType() <= RTSLayer.getMaxStaticType()
+            ) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return true
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
+
     val debug: Boolean = true
 
     val showMoreCaptionStates: Boolean = this.debug
 
-    val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
+    val inputProcessorArray: Array<GameInputProcessor?> =
+        arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
     var rtsLayer2LogHelper: RTSLayer2LogHelper = RTSLayer2LogHelper.getInstance()!!
 
@@ -166,7 +162,8 @@ companion object {
 
     var waypoint2LogHelperP: Waypoint2LogHelper = Waypoint2LogHelper.getInstance()!!
 
-    var waypointRunnableLogHelperP: WaypointRunnableLogHelper = WaypointRunnableLogHelper.getInstance()!!
+    var waypointRunnableLogHelperP: WaypointRunnableLogHelper =
+        WaypointRunnableLogHelper.getInstance()!!
 
     private val rtsFormInput: RTSFormInput
 
@@ -216,957 +213,755 @@ companion object {
 
     var slightAngle: Int = 0
 
-    var percentCompleteP: Int= 0
+    var percentCompleteP: Int = 0
 
     private var destroyed: Boolean = false
 
     private var selected: Boolean = false
-protected constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPositionBase)                        
 
-                            : super(remoteInfo, groupInterface, name, rectangle, viewPosition){
-    //var remoteInfo = remoteInfo
-    //var groupInterface = groupInterface
-    //var rootName = rootName
-    //var name = name
-    //var healthInterface = healthInterface
-    //var rtsFormInput = rtsFormInput
-    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-    //var rectangle = rectangle
-    //var x = x
-    //var y = y
-    //var viewPosition = viewPosition
+    protected constructor(
+        remoteInfo: RemoteInfo,
+        groupInterface: Array<Group?>,
+        rootName: String,
+        name: String,
+        healthInterface: Health,
+        rtsFormInput: RTSFormInput,
+        animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface,
+        rectangle: Rectangle,
+        x: Int,
+        y: Int,
+        viewPosition: ViewPositionBase,
+    ) : super(remoteInfo, groupInterface, name, rectangle, viewPosition) {
+        // var remoteInfo = remoteInfo
+        // var groupInterface = groupInterface
+        // var rootName = rootName
+        // var name = name
+        // var healthInterface = healthInterface
+        // var rtsFormInput = rtsFormInput
+        // var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+        // var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+        // var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+        // var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+        // var verticleBuildAnimationInterfaceFactoryInterface =
+        // verticleBuildAnimationInterfaceFactoryInterface
+        // var proceduralAnimationInterfaceFactoryInterface =
+        // proceduralAnimationInterfaceFactoryInterface
+        // var rectangle = rectangle
+        // var x = x
+        // var y = y
+        // var viewPosition = viewPosition
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.initInputProcessors()
-this.rootName= rootName
-this.healthInterface= healthInterface
-this.rtsFormInput= rtsFormInput
-this.setPosition(x, y, this.z)
-this.verticleBuildAnimationInterface= verticleBuildAnimationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
-this.buildAnimationInterface= buildAnimationInterfaceFactoryInterface!!.getInstance(0)
-this.baseAnimationInterface= baseAnimationInterfaceFactoryInterface!!.getInstance(0)
-this.emptyAnimationInterface= emptyAnimationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
-this.indexedButShouldBeRotationAnimationInterface= animationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
-this.initAnimationInterface= this.indexedButShouldBeRotationAnimationInterface
-this.destroyAnimationInterface= proceduralAnimationInterfaceFactoryInterface!!.getInstanceAnimation(this.indexedButShouldBeRotationAnimationInterface) as IndexedAnimation
+        this.initInputProcessors()
+        this.rootName = rootName
+        this.healthInterface = healthInterface
+        this.rtsFormInput = rtsFormInput
+        this.setPosition(x, y, this.z)
+        this.verticleBuildAnimationInterface =
+            verticleBuildAnimationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
+        this.buildAnimationInterface = buildAnimationInterfaceFactoryInterface!!.getInstance(0)
+        this.baseAnimationInterface = baseAnimationInterfaceFactoryInterface!!.getInstance(0)
+        this.emptyAnimationInterface =
+            emptyAnimationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
+        this.indexedButShouldBeRotationAnimationInterface =
+            animationInterfaceFactoryInterface!!.getInstance(0) as IndexedAnimation
+        this.initAnimationInterface = this.indexedButShouldBeRotationAnimationInterface
+        this.destroyAnimationInterface =
+            proceduralAnimationInterfaceFactoryInterface!!.getInstanceAnimation(
+                this.indexedButShouldBeRotationAnimationInterface
+            ) as IndexedAnimation
 
-    var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
+        var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
-this.rangeAnimation= animation
-this.initRangeAnimation= animation
-this.sensorRangeAnimation= animation
-this.initSensorRangeAnimation= animation
-this.animationInterface= this.initAnimationInterface
-this.geographicMapCellPositionAreaBase= GeographicMapCellPositionArea(this)
-}
+        this.rangeAnimation = animation
+        this.initRangeAnimation = animation
+        this.sensorRangeAnimation = animation
+        this.initSensorRangeAnimation = animation
+        this.animationInterface = this.initAnimationInterface
+        this.geographicMapCellPositionAreaBase = GeographicMapCellPositionArea(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
-super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryGameLayerManager = allBinaryGameLayerManager
+        super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
+        var geographicMapCompositeInterface: GeographicMapCompositeInterface =
+            this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
 
+        var geographicMapInterface: BasicGeographicMap =
+            geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-    var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
+        var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
+        var viewPosition2: TileLayerPositionIntoViewPosition =
+            this.getViewPosition() as TileLayerPositionIntoViewPosition
 
-    var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+        viewPosition2!!.setTiledLayer(tiledLayer)
+        this.updateWaypointBehavior(geographicMapInterface)
+    }
 
-
-    var viewPosition2: TileLayerPositionIntoViewPosition = this.getViewPosition() as TileLayerPositionIntoViewPosition
-
-viewPosition2!!.setTiledLayer(tiledLayer)
-this.updateWaypointBehavior(geographicMapInterface)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapInterface = geographicMapInterface
-this.geographicMapCellPositionAreaBase!!.update(geographicMapInterface)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapInterface = geographicMapInterface
+        this.geographicMapCellPositionAreaBase!!.update(geographicMapInterface)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-ViewPositionEventHandler.getInstance()!!.addListener(this as AllBinaryLayer)
-this.animationInterface= this.buildAnimationInterface
-this.hackVerticleBuild= 0
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        ViewPositionEventHandler.getInstance()!!.addListener(this as AllBinaryLayer)
+        this.animationInterface = this.buildAnimationInterface
+        this.hackVerticleBuild = 0
+    }
 
     open fun select()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.rangeAnimation= this.initRangeAnimation
-this.sensorRangeAnimation= this.initSensorRangeAnimation
-this.setSelected(true)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.rangeAnimation = this.initRangeAnimation
+        this.sensorRangeAnimation = this.initSensorRangeAnimation
+        this.setSelected(true)
+    }
 
     open fun deselect()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
+        var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
-this.rangeAnimation= animation
-this.sensorRangeAnimation= animation
-this.setSelected(false)
-}
-
+        this.rangeAnimation = animation
+        this.sensorRangeAnimation = animation
+        this.setSelected(false)
+    }
 
     open fun setSelected(selected: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var selected = selected
-this.selected= selected
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var selected = selected
+        this.selected = selected
+    }
 
     override fun isSelected()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.selected
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.selected
+    }
 
     override fun getPercentComplete()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.percentCompleteP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.percentCompleteP
+    }
 
     open fun getScrollSelectionForm()
-        //nullable = true from not(false or (false and true)) = true
-: ScrollSelectionForm{
+    // nullable = true from not(false or (false and true)) = true
+    : ScrollSelectionForm {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ScrollSelectionForm.getNullScrollSelectionForm()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return ScrollSelectionForm.getNullScrollSelectionForm()
+    }
 
     override fun initInputProcessors()
-        //nullable = true from not(false or (false and true)) = true
-{
-GameInputProcessorUtil.init(this.inputProcessorArray)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        GameInputProcessorUtil.init(this.inputProcessorArray)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryLayerManager = allBinaryLayerManager
-this.animationInterface= this.indexedButShouldBeRotationAnimationInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryLayerManager = allBinaryLayerManager
+        this.animationInterface = this.indexedButShouldBeRotationAnimationInterface
+    }
 
     override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryLayerManager = allBinaryLayerManager
 
         try {
-            
-    
-                        if(this.isCompleted())
-                        
-                                    {
-                                    this.processBuiltTick(allBinaryLayerManager)
 
-                                    }
-                                
-                        else {
-                            this.build()
+            if (this.isCompleted()) {
 
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processTick", e)
-}
+                this.processBuiltTick(allBinaryLayerManager)
+            } else {
+                this.build()
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processTick", e)
+        }
+    }
 
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processInput(layerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+    }
 
     open fun reload()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun onMovement(trackingEvent: TrackingEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var trackingEvent = trackingEvent
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var trackingEvent = trackingEvent
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun onMovementFound(trackingEvent: TrackingEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var trackingEvent = trackingEvent
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var trackingEvent = trackingEvent
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-super.paintFirst(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        super.paintFirst(graphics)
 
-    var viewPosition: ViewPositionBase = this.getViewPosition()!!
+        var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
+        var viewX: Int = viewPosition!!.getX()!!
 
-    var viewX: Int = viewPosition!!.getX()!!
+        var viewY: Int = viewPosition!!.getY()!!
 
+        this.getAnimationInterface()!!.paintXY(graphics, viewX, viewY)
+    }
 
-    var viewY: Int = viewPosition!!.getY()!!
-
-this.getAnimationInterface()!!.paintXY(graphics, viewX, viewY)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun damage(damage: Int, damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var damage = damage
-    //var damageType = damageType
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var damage = damage
+        // var damageType = damageType
+    }
 
     override fun getSourceId()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return RTSLayer.id
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return RTSLayer.id
+    }
 
     private val rtsLayerUtil: RTSLayerUtil = RTSLayerUtil.getInstance()!!
 
     override fun downgrade()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.rtsLayerUtil!!.downgrade(this)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.rtsLayerUtil!!.downgrade(this)
+    }
 
     override fun upgrade()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.rtsLayerUtil!!.upgrade(this)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.rtsLayerUtil!!.upgrade(this)
+    }
 
     override fun isCompleted()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.hackVerticleBuild < this.BUILD_VALUE)
-                        
-                                    {
-                                    
+        if (this.hackVerticleBuild < this.BUILD_VALUE) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+    }
 
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun build()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.buildFrameTimeHelper!!.isTimeTNT())
-                        
-                                    {
-                                    this.animationInterface= this.buildAnimationInterface
-this.verticleBuildAnimationInterface!!.nextFrame()
-this.hackVerticleBuild++
+        if (this.buildFrameTimeHelper!!.isTimeTNT()) {
 
-                                    }
-                                
-this.percentCompleteP= 100 *this.hackVerticleBuild /this.BUILD_VALUE
-this.getHudPaintable()!!.updateInfo()
-}
+            this.animationInterface = this.buildAnimationInterface
+            this.verticleBuildAnimationInterface!!.nextFrame()
+            this.hackVerticleBuild++
+        }
 
+        this.percentCompleteP = 100 * this.hackVerticleBuild / this.BUILD_VALUE
+        this.getHudPaintable()!!.updateInfo()
+    }
 
     override fun isSelfUpgradeable()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
     override fun getCost()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsLayerUtil!!.getCost(this)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsLayerUtil!!.getCost(this)
+    }
 
     override fun getDowngradeCost()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsLayerUtil!!.getDowngradeCost(this)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsLayerUtil!!.getDowngradeCost(this)
+    }
 
     override fun getUpgradeCost()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsLayerUtil!!.getUpgradeCost(this)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsLayerUtil!!.getUpgradeCost(this)
+    }
 
     override fun isUpgradeable()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.getLevel() < this.getMaxLevel())
-                        
-                                    {
-                                    
+        if (this.getLevel() < this.getMaxLevel()) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
     override fun isDowngradeable()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.getLevel() > 1)
-                        
-                                    {
-                                    
+        if (this.getLevel() > 1) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
     override fun getLevel()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.level
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.level
+    }
 
     open fun setLevel(level: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var level = level
-this.level= level
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var level = level
+        this.level = level
+    }
 
     open fun getVerticleBuildAnimationInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Animation{
+    // nullable = true from not(false or (false and true)) = true
+    : Animation {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.verticleBuildAnimationInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.verticleBuildAnimationInterface
+    }
 
     open fun getAnimationInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Animation{
+    // nullable = true from not(false or (false and true)) = true
+    : Animation {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterface
+    }
 
     open fun setAnimationInterface(animationInterface: Animation)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var animationInterface = animationInterface
-this.animationInterface= animationInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var animationInterface = animationInterface
+        this.animationInterface = animationInterface
+    }
 
     private val layerDistanceUtil: LayerDistanceUtil = LayerDistanceUtil.getInstance()!!
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setTarget(targetGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var targetGameLayer = targetGameLayer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var targetGameLayer = targetGameLayer
 
-    var anotherTargetDistance: Int = this.layerDistanceUtil!!.getDistance(this as AllBinaryLayer, targetGameLayer as AllBinaryLayer)!!
+        var anotherTargetDistance: Int =
+            this.layerDistanceUtil!!.getDistance(
+                this as AllBinaryLayer,
+                targetGameLayer as AllBinaryLayer,
+            )!!
 
+        var waypointBehaviorBase: WaypointBehaviorBase = this.getWaypointBehavior()!!
 
-    var waypointBehaviorBase: WaypointBehaviorBase = this.getWaypointBehavior()!!
-
-waypointBehaviorBase!!.setTargetWithDistance(targetGameLayer as PathFindingLayerInterface, anotherTargetDistance)
-}
-
+        waypointBehaviorBase!!.setTargetWithDistance(
+            targetGameLayer as PathFindingLayerInterface,
+            anotherTargetDistance,
+        )
+    }
 
     open fun createHudPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : SelectionHudPaintable {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getHudPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : SelectionHudPaintable {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getMaxLevel()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.maxLevel
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.maxLevel
+    }
 
     open fun setMaxLevel(maxLevel: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var maxLevel = maxLevel
-this.maxLevel= maxLevel
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var maxLevel = maxLevel
+        this.maxLevel = maxLevel
+    }
 
     open fun getHealthInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Health{
+    // nullable = true from not(false or (false and true)) = true
+    : Health {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.healthInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.healthInterface
+    }
 
     open fun setHealthInterface(healthInterface: Health)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var healthInterface = healthInterface
-this.healthInterface= healthInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var healthInterface = healthInterface
+        this.healthInterface = healthInterface
+    }
 
     open fun getRTSFormInput()
-        //nullable = true from not(false or (false and true)) = true
-: RTSFormInput{
+    // nullable = true from not(false or (false and true)) = true
+    : RTSFormInput {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsFormInput
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsFormInput
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun isDestroyed()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.destroyed
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.destroyed
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setDestroyed(destroyed: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var destroyed = destroyed
-this.destroyed= destroyed
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var destroyed = destroyed
+        this.destroyed = destroyed
 
-    
-                        if(this.isDestroyed())
-                        
-                                    {
-                                    DestroyedLayerProcessor.getInstance()!!.add(this)
-ViewPositionEventHandler.getInstance()!!.removeListener(this)
+        if (this.isDestroyed()) {
 
-                                    }
-                                
-}
-
+            DestroyedLayerProcessor.getInstance()!!.add(this)
+            ViewPositionEventHandler.getInstance()!!.removeListener(this)
+        }
+    }
 
     override fun getEndGeographicMapCellPositionList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()
+    }
 
     override fun getGeographicMapCellPositionArea()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPositionAreaBase{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPositionAreaBase {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.geographicMapCellPositionAreaBase
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.geographicMapCellPositionAreaBase
+    }
 
     override fun shouldHandleStartSameAsEnd()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun handleCost(ownerLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var ownerLayer = ownerLayer
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var ownerLayer = ownerLayer
+    }
 
     override fun getWaypointBehavior()
-        //nullable = true from not(false or (false and true)) = true
-: WaypointBehaviorBase{
+    // nullable = true from not(false or (false and true)) = true
+    : WaypointBehaviorBase {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getParentLayer()
-        //nullable = true from not(false or (false and true)) = true
-: PathFindingLayerInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : PathFindingLayerInterface {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getRTSLayer2LogHelper()
-        //nullable = true from not(false or (false and true)) = true
-: RTSLayer2LogHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : RTSLayer2LogHelper {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsLayer2LogHelper
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsLayer2LogHelper
+    }
 
     override fun getWaypointLogHelper()
-        //nullable = true from not(false or (false and true)) = true
-: WaypointLogHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : WaypointLogHelper {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypointLogHelperP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.waypointLogHelperP
+    }
 
     override fun getWaypoint2LogHelper()
-        //nullable = true from not(false or (false and true)) = true
-: Waypoint2LogHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : Waypoint2LogHelper {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypoint2LogHelperP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.waypoint2LogHelperP
+    }
 
     override fun getWaypointRunnableLogHelper()
-        //nullable = true from not(false or (false and true)) = true
-: WaypointRunnableLogHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : WaypointRunnableLogHelper {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypointRunnableLogHelperP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.waypointRunnableLogHelperP
+    }
 
     override fun shouldAddWaypointFromBuilding()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     override fun getCaptionAnimationHelper()
-        //nullable = true from not(false or (false and true)) = true
-: CaptionAnimationHelperBase{
+    // nullable = true from not(false or (false and true)) = true
+    : CaptionAnimationHelperBase {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun isShowMoreCaptionStates()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.showMoreCaptionStates
+    }
 
+    @Throws(Exception::class)
+    override fun init(
+        geographicMapCellHistory: GeographicMapCellHistory,
+        geographicMapCellPositionBasicArrayList: BasicArrayList,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapCellHistory = geographicMapCellHistory
+        // var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
+    }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.showMoreCaptionStates
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapCellHistory = geographicMapCellHistory
-    //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getCurrentGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getTopLeftGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        throw RuntimeException()
+    }
 
+    override fun getMoveOutOfBuildAreaPath(
+        geographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var geographicMapCellPosition = geographicMapCellPosition
 
-                            throw RuntimeException()
-}
+        throw RuntimeException()
+    }
 
-
-    override fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var geographicMapCellPosition = geographicMapCellPosition
-
-
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathsList = pathsList
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathsList = pathsList
+    }
 
     override fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapCellPosition = geographicMapCellPosition
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapCellPosition = geographicMapCellPosition
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setLoad(resource: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var resource = resource
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var resource = resource
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getSurroundingGeographicMapCellPositionList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun trackTo(reason: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var reason = reason
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var reason = reason
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun trackToDXY(dx: Int, dy: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var dx = dx
-    //var dy = dy
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var dx = dx
+        // var dy = dy
+    }
 
     override fun isWaypointListEmptyOrOnlyTargets()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     override fun getTrackingEvent()
-        //nullable = true from not(false or (false and true)) = true
-: TrackingEvent{
+    // nullable = true from not(false or (false and true)) = true
+    : TrackingEvent {
 
+        throw RuntimeException()
+    }
 
+    @Throws(Exception::class)
+    override fun buildingChase(
+        allbinaryLayer: AllBinaryLayer,
+        cellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var allbinaryLayer = allbinaryLayer
+        // var cellPosition = cellPosition
 
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var allbinaryLayer = allbinaryLayer
-    //var cellPosition = cellPosition
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     override fun allStop()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     override fun implmentsTickableInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
     override fun implmentsGameInputInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
     open fun getRootName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rootName
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rootName
+    }
 
     open fun getRotationAnimationInterface()
-        //nullable = true from not(false or (false and true)) = true
-: RotationAnimation{
+    // nullable = true from not(false or (false and true)) = true
+    : RotationAnimation {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.indexedButShouldBeRotationAnimationInterface as RotationAnimation
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.indexedButShouldBeRotationAnimationInterface as RotationAnimation
+    }
 
     open fun setFrame(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var index = index
-this.getRotationAnimationInterface()!!.setFrame(index)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var index = index
+        this.getRotationAnimationInterface()!!.setFrame(index)
+    }
 
     open fun setRotationAnimationInterface(rotationAnimationInterface: RotationAnimation)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var rotationAnimationInterface = rotationAnimationInterface
-this.indexedButShouldBeRotationAnimationInterface= rotationAnimationInterface
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var rotationAnimationInterface = rotationAnimationInterface
+        this.indexedButShouldBeRotationAnimationInterface = rotationAnimationInterface
+    }
 }
-
-
-}
-                
-            
-

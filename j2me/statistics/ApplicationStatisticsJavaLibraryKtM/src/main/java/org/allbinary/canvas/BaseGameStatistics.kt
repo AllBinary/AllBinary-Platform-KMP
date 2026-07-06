@@ -1,32 +1,23 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.logic.math.PrimitiveLongSingleton
 import org.allbinary.logic.math.ScaleFactorFactory
 import org.allbinary.logic.string.StringMaker
@@ -36,114 +27,99 @@ import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
 
-open public class BaseGameStatistics
-            : Object
-         {
-        
+open public class BaseGameStatistics : Object {
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(Integer.MAX_VALUE)
 
     private val updateDelayHelper: TimeDelayHelper = TimeDelayHelper(2000)
 
-    private var totalRefreshes: Long= 0
+    private var totalRefreshes: Long = 0
 
-    private var totalFrames: Long= 0
+    private var totalFrames: Long = 0
 
-    val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor ()
-            : super()
-        {
-}
+    val gameTickTimeDelayHelper: GameTickTimeDelayHelper =
+        GameTickTimeDelayHelperFactory.getInstance()!!
 
+    public constructor() : super() {}
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.timeDelayHelper!!.setStartTimeTNT()
-this.totalRefreshes= 0
-this.totalFrames= 0
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.timeDelayHelper!!.setStartTimeTNT()
+        this.totalRefreshes = 0
+        this.totalFrames = 0
+    }
 
     open fun add(string: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var string = string
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var string = string
+    }
 
     open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun nextFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.totalFrames++
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.totalFrames++
+    }
 
     open fun nextRefresh()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.totalRefreshes++
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.totalRefreshes++
+    }
 
     private val DEFAULT_SCALE_FACTOR: Int = ScaleFactorFactory.getInstance()!!.DEFAULT_SCALE_FACTOR
 
     open fun getRefreshRate()
-        //nullable = true from not(false or (false and true)) = true
-: Short{
+    // nullable = true from not(false or (false and true)) = true
+    : Short {
 
-    var elapsed: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+        var elapsed: Long =
+            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
+        if (elapsed > 1) {
 
-    
-                        if(elapsed > 1)
-                        
-                                    {
-                                    
-    var time: Short = (this.totalRefreshes /(elapsed shr this.DEFAULT_SCALE_FACTOR)).toShort()
+            var time: Short =
+                (this.totalRefreshes / (elapsed shr this.DEFAULT_SCALE_FACTOR)).toShort()
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return time
+        } else {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return time
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 0
+        }
+    }
 
     open fun getTimeDelayHelper()
-        //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : TimeDelayHelper {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.timeDelayHelper
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.timeDelayHelper
+    }
 
     val NOT: String = "Not enough Time to Calculate"
 
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    private val STRING_ARRAY: Array<String?> = arrayOf(" Total Time: ",this.EMPTY_STRING," Total Frames: ",this.EMPTY_STRING," Frames/10 Sec: ",this.EMPTY_STRING," Total Paints: ",this.EMPTY_STRING," Paints/10 Sec: ",this.EMPTY_STRING)
+    private val STRING_ARRAY: Array<String?> =
+        arrayOf(
+            " Total Time: ",
+            this.EMPTY_STRING,
+            " Total Frames: ",
+            this.EMPTY_STRING,
+            " Frames/10 Sec: ",
+            this.EMPTY_STRING,
+            " Total Paints: ",
+            this.EMPTY_STRING,
+            " Paints/10 Sec: ",
+            this.EMPTY_STRING,
+        )
 
     private val SPACE_CHAR: Char = ' '
 
@@ -151,210 +127,156 @@ this.totalRefreshes++
 
     private val X_CHAR: Char = 'X'
 
-    private val CHAR_ARRAY: Array<CharArray?> = arrayOf(charArrayOf('F','r','a','m','e','s','/','1','0',' ','S','e','c',':'),charArrayOf('X','X'),charArrayOf('P','a','i','n','t','s','/','1','0',' ','S','e','c',':'),charArrayOf('X','X'))
+    private val CHAR_ARRAY: Array<CharArray?> =
+        arrayOf(
+            charArrayOf('F', 'r', 'a', 'm', 'e', 's', '/', '1', '0', ' ', 'S', 'e', 'c', ':'),
+            charArrayOf('X', 'X'),
+            charArrayOf('P', 'a', 'i', 'n', 't', 's', '/', '1', '0', ' ', 'S', 'e', 'c', ':'),
+            charArrayOf('X', 'X'),
+        )
 
-    private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
+    private val primitiveLongSingleton: PrimitiveLongSingleton =
+        PrimitiveLongSingleton.getInstance()!!
 
     open fun to2DCharArray()
-        //nullable = true from not(false or (false and true)) = true
-: Array<CharArray?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<CharArray?> {
 
-    var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+        var totalTime: Long =
+            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
-totalTime= (totalTime shr this.DEFAULT_SCALE_FACTOR)
+        totalTime = (totalTime shr this.DEFAULT_SCALE_FACTOR)
 
-    
-                        if(totalTime > 0 && this.updateDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
-                        
-                                    {
-                                    
-    var framesPerSec: Int = (this.totalFrames /totalTime).toInt()
+        if (
+            totalTime > 0 &&
+                this.updateDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime)
+        ) {
 
+            var framesPerSec: Int = (this.totalFrames / totalTime).toInt()
 
-    
-                        if(framesPerSec < 10)
-                        
-                                    {
-                                    this.CHAR_ARRAY[1]!![0]= this.SPACE_CHAR
-this.CHAR_ARRAY[1]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec]!!
+            if (framesPerSec < 10) {
 
-                                    }
-                                
-                             else 
-    
-                        if(framesPerSec < 100)
-                        
-                                    {
-                                    
-    var tens: Int = framesPerSec /10
+                this.CHAR_ARRAY[1]!![0] = this.SPACE_CHAR
+                this.CHAR_ARRAY[1]!![1] =
+                    this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec]!!
+            } else if (framesPerSec < 100) {
 
+                var tens: Int = framesPerSec / 10
 
-    var removeTens: Int = tens *10
+                var removeTens: Int = tens * 10
 
-this.CHAR_ARRAY[1]!![0]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[tens]!!
-this.CHAR_ARRAY[1]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec -removeTens]!!
+                this.CHAR_ARRAY[1]!![0] = this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[tens]!!
+                this.CHAR_ARRAY[1]!![1] =
+                    this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[framesPerSec - removeTens]!!
+            } else {
+                this.CHAR_ARRAY[1]!![0] = this.PLUS_CHAR
+                this.CHAR_ARRAY[1]!![1] = this.PLUS_CHAR
+            }
 
-                                    }
-                                
-                        else {
-                            this.CHAR_ARRAY[1]!![0]= this.PLUS_CHAR
-this.CHAR_ARRAY[1]!![1]= this.PLUS_CHAR
+            var refreshesPerSec: Int = (this.totalRefreshes / totalTime).toInt()
 
-                        }
-                            
+            if (refreshesPerSec < 10) {
 
-    var refreshesPerSec: Int = (this.totalRefreshes /totalTime).toInt()
+                this.CHAR_ARRAY[3]!![0] = this.X_CHAR
+                this.CHAR_ARRAY[3]!![1] =
+                    this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec]!!
+            } else if (refreshesPerSec < 100) {
 
+                var tens: Int = refreshesPerSec / 10
 
-    
-                        if(refreshesPerSec < 10)
-                        
-                                    {
-                                    this.CHAR_ARRAY[3]!![0]= this.X_CHAR
-this.CHAR_ARRAY[3]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec]!!
+                var removeTens: Int = tens * 10
 
-                                    }
-                                
-                             else 
-    
-                        if(refreshesPerSec < 100)
-                        
-                                    {
-                                    
-    var tens: Int = refreshesPerSec /10
+                this.CHAR_ARRAY[3]!![0] =
+                    this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec / 10]!!
+                this.CHAR_ARRAY[3]!![1] =
+                    this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec - removeTens]!!
+            } else {
+                this.CHAR_ARRAY[3]!![0] = this.PLUS_CHAR
+                this.CHAR_ARRAY[3]!![1] = this.PLUS_CHAR
+            }
+        }
 
-
-    var removeTens: Int = tens *10
-
-this.CHAR_ARRAY[3]!![0]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec /10]!!
-this.CHAR_ARRAY[3]!![1]= this.primitiveLongSingleton!!.NUMBER_CHAR_ARRAY[refreshesPerSec -removeTens]!!
-
-                                    }
-                                
-                        else {
-                            this.CHAR_ARRAY[3]!![0]= this.PLUS_CHAR
-this.CHAR_ARRAY[3]!![1]= this.PLUS_CHAR
-
-                        }
-                            
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.CHAR_ARRAY
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.CHAR_ARRAY
+    }
 
     open fun toStringArray()
-        //nullable = true from not(false or (false and true)) = true
-: Array<String?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<String?> {
 
-    var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+        var totalTime: Long =
+            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
-totalTime= (totalTime /10000)
+        totalTime = (totalTime / 10000)
 
-    
-                        if(totalTime > 0)
-                        
-                                    {
-                                    this.STRING_ARRAY[1]= (totalTime).toString()
-this.STRING_ARRAY[3]= (this.totalFrames).toString()
-this.STRING_ARRAY[5]= (this.totalFrames /totalTime).toString()
-this.STRING_ARRAY[7]= (this.totalRefreshes).toString()
-this.STRING_ARRAY[9]= (this.totalRefreshes /totalTime).toString()
+        if (totalTime > 0) {
 
-                                    }
-                                
-                        else {
-                            
-    var string: String = this.EMPTY_STRING
+            this.STRING_ARRAY[1] = (totalTime).toString()
+            this.STRING_ARRAY[3] = (this.totalFrames).toString()
+            this.STRING_ARRAY[5] = (this.totalFrames / totalTime).toString()
+            this.STRING_ARRAY[7] = (this.totalRefreshes).toString()
+            this.STRING_ARRAY[9] = (this.totalRefreshes / totalTime).toString()
+        } else {
 
-this.STRING_ARRAY[1]= string
-this.STRING_ARRAY[3]= string
-this.STRING_ARRAY[5]= string
-this.STRING_ARRAY[7]= string
-this.STRING_ARRAY[9]= string
+            var string: String = this.EMPTY_STRING
 
-                        }
-                            
+            this.STRING_ARRAY[1] = string
+            this.STRING_ARRAY[3] = string
+            this.STRING_ARRAY[5] = string
+            this.STRING_ARRAY[7] = string
+            this.STRING_ARRAY[9] = string
+        }
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.STRING_ARRAY
+    }
 
+    open fun toStringAt(
+        totalTime: Long
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        var totalTime = totalTime
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.STRING_ARRAY
-}
+        var stringBuffer: StringMaker = StringMaker()
 
+        stringBuffer!!.append(this.STRING_ARRAY[0]!!)
+        stringBuffer!!.appendlong(totalTime)
+        stringBuffer!!.append(this.STRING_ARRAY[2]!!)
+        stringBuffer!!.appendlong(this.totalFrames)
+        stringBuffer!!.append(this.STRING_ARRAY[4]!!)
+        stringBuffer!!.appendlong(this.totalFrames / totalTime)
 
-    open fun toStringAt(totalTime: Long)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-var totalTime = totalTime
+        if (this.totalRefreshes > 0) {
 
-    var stringBuffer: StringMaker = StringMaker()
+            stringBuffer!!.append(this.STRING_ARRAY[6]!!)
+            stringBuffer!!.appendlong(this.totalRefreshes)
+            stringBuffer!!.append(this.STRING_ARRAY[8]!!)
+            stringBuffer!!.appendlong(this.totalRefreshes / totalTime)
+            stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+        }
 
-stringBuffer!!.append(this.STRING_ARRAY[0]!!)
-stringBuffer!!.appendlong(totalTime)
-stringBuffer!!.append(this.STRING_ARRAY[2]!!)
-stringBuffer!!.appendlong(this.totalFrames)
-stringBuffer!!.append(this.STRING_ARRAY[4]!!)
-stringBuffer!!.appendlong(this.totalFrames /totalTime)
-
-    
-                        if(this.totalRefreshes > 0)
-                        
-                                    {
-                                    stringBuffer!!.append(this.STRING_ARRAY[6]!!)
-stringBuffer!!.appendlong(this.totalRefreshes)
-stringBuffer!!.append(this.STRING_ARRAY[8]!!)
-stringBuffer!!.appendlong(this.totalRefreshes /totalTime)
-stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+        var totalTime: Long =
+            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
-totalTime= (totalTime /1000)
+        totalTime = (totalTime / 1000)
 
-    
-                        if(totalTime > 0)
-                        
-                                    {
-                                    
+        if (totalTime > 0) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.toStringAt(totalTime)
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.toStringAt(totalTime)
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.NOT
-
-                        }
-                            
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.NOT
+        }
+    }
 }
-
-
-}
-                
-            
-

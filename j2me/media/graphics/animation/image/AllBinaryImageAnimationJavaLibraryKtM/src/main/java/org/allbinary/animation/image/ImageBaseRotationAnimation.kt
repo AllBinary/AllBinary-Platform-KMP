@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.image
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.DisposalUtil
@@ -36,106 +26,91 @@ import org.allbinary.math.AngleInfo
 import org.allbinary.util.CircularIndexUtil
 
 open public class ImageBaseRotationAnimation : RotationAnimation {
-        
 
     private val image: Image
-public constructor (image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, CircularIndexUtil.createInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
-    //var image = image
-    //var angleInfo = angleInfo
-    //var totalAngle = totalAngle
-    //var animationBehavior = animationBehavior
+    public constructor(
+        image: Image,
+        angleInfo: AngleInfo,
+        totalAngle: Short,
+        animationBehavior: AnimationBehavior,
+    ) : super(
+        angleInfo,
+        CircularIndexUtil.createInstance(
+            totalAngle / angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()
+        ),
+        animationBehavior,
+    ) {
+        // var image = image
+        // var angleInfo = angleInfo
+        // var totalAngle = totalAngle
+        // var animationBehavior = animationBehavior
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.image= image
-}
+        this.image = image
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getAnimationSize()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getSize()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.getSize()
+    }
 
     override fun setSequence(sequence: IntArray)
-        //nullable = true from not(false or (false and false)) = true
-{
-var sequence = sequence
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var sequence = sequence
+    }
 
     override fun getSequence()
-        //nullable = true from not(false or (false and true)) = true
-: IntArray{
+    // nullable = true from not(false or (false and true)) = true
+    : IntArray {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PrimitiveIntUtil.getArrayInstance()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return PrimitiveIntUtil.getArrayInstance()
+    }
 
     var anchor: Int = Anchor.TOP_LEFT
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
-graphics.drawImage(this.image, x, y, this.anchor)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
+        graphics.drawImage(this.image, x, y, this.anchor)
+    }
 
     open fun getImage()
-        //nullable = true from not(false or (false and true)) = true
-: Image{
+    // nullable = true from not(false or (false and true)) = true
+    : Image {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.image
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.image
+    }
 
     override fun getWidth()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.image.getWidth()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.image.getWidth()
+    }
 
     open fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-DisposalUtil.getInstance()!!.disposeImage(this.image)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        DisposalUtil.getInstance()!!.disposeImage(this.image)
+    }
 
-
-                @Throws(Throwable::class)
-            
+    @Throws(Throwable::class)
     override fun finalize()
-        //nullable = true from not(false or (false and true)) = true
-{
-DisposalUtil.getInstance()!!.disposeImage(this.image)
+        // nullable = true from not(false or (false and true)) = true
+    {
+        DisposalUtil.getInstance()!!.disposeImage(this.image)
+    }
 }
-
-
-}
-                
-            
-

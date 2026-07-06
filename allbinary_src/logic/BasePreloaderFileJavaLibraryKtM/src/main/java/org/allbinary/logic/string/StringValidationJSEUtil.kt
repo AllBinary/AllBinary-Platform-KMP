@@ -1,85 +1,51 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.string
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.string
 
+import java.lang.Object
 
+open public class StringValidationJSEUtil : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        open fun isBlank(
+            string: String
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : Boolean {
+            var string = string
 
-open public class StringValidationJSEUtil
-            : Object
-         {
-        
-companion object {
-            
-    open fun isBlank(string: String)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var string = string
+            var len: Int = string.length!!
 
-    var len: Int = string.length!!
+            for (i in 0 until len) {
 
+                var c: Char = string[i]!!
 
+                if (Character.isWhitespace(c) == false) {
 
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return false
+                }
+            }
 
-
-                        for (i in 0 until len)
-
-        {
-
-    var c: Char = string[i]!!
-
-
-    
-                        if(Character.isWhitespace(c) == false)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                                    }
-                                
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
         }
-            private constructor ()
-            : super()
-        {
+    }
+
+    private constructor() : super() {}
 }
-
-
-}
-                
-            
-

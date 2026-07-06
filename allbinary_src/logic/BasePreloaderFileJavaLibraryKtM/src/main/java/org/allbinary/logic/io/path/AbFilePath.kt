@@ -1,52 +1,39 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.io.path
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.io.path
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.logic.string.StringUtil
 
 open public class AbFilePath : AbPath {
-        
-public constructor (aPath: String)                        
 
-                            : super(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING){
-var aPath = aPath
+    public constructor(
+        aPath: String
+    ) : super(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING) {
+        var aPath = aPath
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
+        var abPathUtil: PathUtil = PathUtil.getInstance()!!
 
-    var abPathUtil: PathUtil = PathUtil.getInstance()!!
-
-this.schema= this.getSchema(aPath)
-this.setName(abPathUtil!!.getNameFromPath(aPath))
-this.setPath(abPathUtil!!.adjust(this.getPathFromPath(abPathUtil!!.removeNameFromPath(aPath)!!.toString())))
+        this.schema = this.getSchema(aPath)
+        this.setName(abPathUtil!!.getNameFromPath(aPath))
+        this.setPath(
+            abPathUtil!!.adjust(
+                this.getPathFromPath(abPathUtil!!.removeNameFromPath(aPath)!!.toString())
+            )
+        )
+    }
 }
-
-
-}
-                
-            
-

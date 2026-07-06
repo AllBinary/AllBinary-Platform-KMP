@@ -1,32 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
@@ -49,19 +38,19 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.util.BasicArrayList
 
-open public class GameInputMappingCanvas : GameCommandCanvas
-                , InputMappingInterface {
-        
-companion object {
-            
-    val NAME: String = "GameInputMappingCanvas"
+open public class GameInputMappingCanvas : GameCommandCanvas, InputMappingInterface {
 
-    val DISPLAY: Command = Command("Controls", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 2)
+    companion object {
 
-    val DEFAULT: Command = Command("Default", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 2)
+        val NAME: String = "GameInputMappingCanvas"
 
-        }
-            
+        val DISPLAY: Command =
+            Command("Controls", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 2)
+
+        val DEFAULT: Command =
+            Command("Default", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 2)
+    }
+
     private val paintable: ProcessPaintable
 
     private val helpPaintable: InputMappingHelpPaintable
@@ -77,347 +66,300 @@ companion object {
     private var selectedGameKey: GameKey = this.NONE
 
     private var selectedInput: Input = this.NONE
-public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, helpPaintable: HelpPaintable)                        
 
-                            : super(commandListener, GameInputMappingCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
-    //var abeClientInformation = abeClientInformation
-    //var commandListener = commandListener
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
-    //var helpPaintable = helpPaintable
+    public constructor(
+        abeClientInformation: AbeClientInformationInterface,
+        commandListener: CommandListener,
+        allBinaryGameLayerManager: AllBinaryGameLayerManager,
+        helpPaintable: HelpPaintable,
+    ) : super(
+        commandListener,
+        GameInputMappingCanvas.NAME,
+        allBinaryGameLayerManager!!.getBackgroundBasicColor(),
+        allBinaryGameLayerManager!!.getForegroundBasicColor(),
+    ) {
+        // var abeClientInformation = abeClientInformation
+        // var commandListener = commandListener
+        // var allBinaryGameLayerManager = allBinaryGameLayerManager
+        // var helpPaintable = helpPaintable
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+        this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
-    
-                        if(helpPaintable == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+        if (helpPaintable == null) {
 
+            throw Exception("Help Paintable Exception")
+        }
 
-                            throw Exception("Help Paintable Exception")
-
-                                    }
-                                
-this.abeClientInformation= abeClientInformation
-this.helpPaintable= helpPaintable as InputMappingHelpPaintable
-this.inputMapping= PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()
-this.paintable= ProcessPaintable()
-this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(allBinaryGameLayerManager!!.getBackgroundBasicColor(), false)
-}
-
+        this.abeClientInformation = abeClientInformation
+        this.helpPaintable = helpPaintable as InputMappingHelpPaintable
+        this.inputMapping =
+            PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()
+        this.paintable = ProcessPaintable()
+        this.colorFillPaintable =
+            ColorFillPaintableFactory.getInstance()!!.getInstance(
+                allBinaryGameLayerManager!!.getBackgroundBasicColor(),
+                false,
+            )
+    }
 
     override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.close()
-this.paintable.process()
-this.selectedGameKey= this.NONE
-this.selectedInput= this.NONE
-this.update()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.close()
+        this.paintable.process()
+        this.selectedGameKey = this.NONE
+        this.selectedInput = this.NONE
+        this.update()
+    }
 
     override fun initCommands(cmdListener: CommandListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var cmdListener = cmdListener
-this.removeAllCommands()
-this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
-this.addCommand(GameInputMappingCanvas.DEFAULT)
-this.addCommand(GameInputMappingInstructionsCanvas.DISPLAY)
-this.setCommandListener(cmdListener)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var cmdListener = cmdListener
+        this.removeAllCommands()
+        this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
+        this.addCommand(GameInputMappingCanvas.DEFAULT)
+        this.addCommand(GameInputMappingInstructionsCanvas.DISPLAY)
+        this.setCommandListener(cmdListener)
+    }
 
     override fun keyPressed(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-this.keyPressedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        this.keyPressedByDevice(keyCode, 0)
+    }
 
     override fun keyReleased(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-this.keyReleasedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        this.keyReleasedByDevice(keyCode, 0)
+    }
 
     override fun keyRepeated(keyCode: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-this.keyRepeatedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        this.keyRepeatedByDevice(keyCode, 0)
+    }
 
     override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
-this.addGameKey(keyCode, false)
-super.keyPressedByDevice(keyCode, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
+        this.addGameKey(keyCode, false)
+        super.keyPressedByDevice(keyCode, 0)
+    }
 
     private val inputFactory: InputFactory = InputFactory.getInstance()!!
 
     open fun addGameKey(keyCode: Int, repeated: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var repeated = repeated
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var repeated = repeated
 
         try {
-            this.logUtil!!.putF(StringMaker().
-                            append("Raw Device Key Code: ")!!.append(Integer.toHexString(keyCode))!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append("Raw Device Key Code: ")!!
+                    .append(Integer.toHexString(keyCode))!!
+                    .toString(),
+                this,
+                this.gameInputStrings!!.ADD_KEY_EVENT,
+            )
 
-    var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
+            var gameKey: GameKey =
+                this.inputToGameKeyMapping!!.getInstanceForCanvas(this, keyCode)!!
 
+            var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
-    var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
+            this.processInputMapping(gameKey, input)
+        } catch (e: Exception) {
+            this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+        }
+    }
 
-this.processInputMapping(gameKey, input)
-} catch(e: Exception)
-            {
-this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processInputMapping(gameKey: GameKey, input: Input)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gameKey = gameKey
-    //var input = input
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gameKey = gameKey
+        // var input = input
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("Start Passed GameKey: ")
-stringBuffer!!.append(this.stringUtil!!.toString(gameKey))
-stringBuffer!!.append(" Input: ")
-stringBuffer!!.append(this.stringUtil!!.toString(input))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.PROCESS)
+        stringBuffer!!.append("Start Passed GameKey: ")
+        stringBuffer!!.append(this.stringUtil!!.toString(gameKey))
+        stringBuffer!!.append(" Input: ")
+        stringBuffer!!.append(this.stringUtil!!.toString(input))
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.PROCESS)
 
-    
-                        if(this.selectedGameKey != this.NONE)
-                        
-                                    {
-                                    this.gameActionCrud(gameKey, input)
+        if (this.selectedGameKey != this.NONE) {
 
-                                    }
-                                
-                        else {
-                            this.setSelectedAction(gameKey)
-
-                        }
-                            
-}
-
+            this.gameActionCrud(gameKey, input)
+        } else {
+            this.setSelectedAction(gameKey)
+        }
+    }
 
     open fun setSelectedAction(gameKey: GameKey)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gameKey = gameKey
-this.logUtil!!.putF(StringMaker().
-                            append("Selected GameKey: ")!!.append(this.stringUtil!!.toString(gameKey))!!.toString(), this, "setSelectedAction")
-this.selectedGameKey= gameKey
-this.selectedInput= this.NONE
-this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
-this.repaintBehavior!!.onChangeRepaint(this)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gameKey = gameKey
+        this.logUtil!!.putF(
+            StringMaker()
+                .append("Selected GameKey: ")!!
+                .append(this.stringUtil!!.toString(gameKey))!!
+                .toString(),
+            this,
+            "setSelectedAction",
+        )
+        this.selectedGameKey = gameKey
+        this.selectedInput = this.NONE
+        this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
+        this.repaintBehavior!!.onChangeRepaint(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun gameActionCrud(gameKey: GameKey, input: Input)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gameKey = gameKey
-    //var input = input
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gameKey = gameKey
+        // var input = input
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("Start GameKey: ")
-stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
-stringBuffer!!.append(" Input: ")
-stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, "gameActionCrud")
+        stringBuffer!!.append("Start GameKey: ")
+        stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
+        stringBuffer!!.append(" Input: ")
+        stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, "gameActionCrud")
 
-    
-                        if(this.selectedInput == this.NONE)
-                        
-                                    {
-                                    
-    var list: BasicArrayList = this.inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
+        if (this.selectedInput == this.NONE) {
 
+            var list: BasicArrayList =
+                this.inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
 
-    var isInputAlreadyMappedToSelectedAction: Boolean = list.contains(input)!!
+            var isInputAlreadyMappedToSelectedAction: Boolean = list.contains(input)!!
 
+            if (isInputAlreadyMappedToSelectedAction) {
 
-    
-                        if(isInputAlreadyMappedToSelectedAction)
-                        
-                                    {
-                                    this.logUtil!!.putF(StringMaker().
-                            append("Already Mapped Input: ")!!.append(this.stringUtil!!.toString(input))!!.toString(), this, "gameActionCrud")
-this.selectedInput= input
-this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
-this.repaintBehavior!!.onChangeRepaint(this)
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append("Already Mapped Input: ")!!
+                        .append(this.stringUtil!!.toString(input))!!
+                        .toString(),
+                    this,
+                    "gameActionCrud",
+                )
+                this.selectedInput = input
+                this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
+                this.repaintBehavior!!.onChangeRepaint(this)
+            } else {
+                this.addNewMapping(gameKey, input)
+            }
+        } else if (this.inputMapping!!.isDelete(input)) {
 
-                                    }
-                                
-                        else {
-                            this.addNewMapping(gameKey, input)
+            this.deleteCurrentMapping()
+        } else {
+            this.setSelectedAction(gameKey)
+        }
+    }
 
-                        }
-                            
-
-                                    }
-                                
-                             else 
-    
-                        if(this.inputMapping!!.isDelete(input))
-                        
-                                    {
-                                    this.deleteCurrentMapping()
-
-                                    }
-                                
-                        else {
-                            this.setSelectedAction(gameKey)
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun addNewMapping(gameKey: GameKey, input: Input)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gameKey = gameKey
-    //var input = input
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gameKey = gameKey
+        // var input = input
 
-    var METHOD_NAME: String = "addNewMapping"
+        var METHOD_NAME: String = "addNewMapping"
 
-this.logUtil!!.putF(this.commonStrings!!.START, this, METHOD_NAME)
+        this.logUtil!!.putF(this.commonStrings!!.START, this, METHOD_NAME)
 
-    var isInputAlreadyMapped: Boolean = this.inputMapping!!.getInputMapping()!!.isMapped(input)!!
+        var isInputAlreadyMapped: Boolean =
+            this.inputMapping!!.getInputMapping()!!.isMapped(input)!!
 
+        if (!isInputAlreadyMapped && !this.inputMapping!!.isSystemInput(input)) {
 
-    
-                        if(!isInputAlreadyMapped && !this.inputMapping!!.isSystemInput(input))
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
+            var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("Add Key Mapping : GameKey: ")
-stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
-stringBuffer!!.append(" Input: ")
-stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
-this.inputMapping!!.getInputMapping()!!.add(this.selectedGameKey, input)
-this.selectedInput= input
-this.update()
+            stringBuffer!!.append("Add Key Mapping : GameKey: ")
+            stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
+            stringBuffer!!.append(" Input: ")
+            stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
+            this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
+            this.inputMapping!!.getInputMapping()!!.add(this.selectedGameKey, input)
+            this.selectedInput = input
+            this.update()
+        } else {
+            this.logUtil!!.putF(
+                "Unable to add Mapping since one already exists or is MENU, HOME, or BACK key and setting selected action to what it is already mapped to",
+                this,
+                METHOD_NAME,
+            )
+            this.setSelectedAction(gameKey)
+        }
+    }
 
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF("Unable to add Mapping since one already exists or is MENU, HOME, or BACK key and setting selected action to what it is already mapped to", this, METHOD_NAME)
-this.setSelectedAction(gameKey)
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun deleteCurrentMapping()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var METHOD_NAME: String = "deleteCurrentMapping"
+        var METHOD_NAME: String = "deleteCurrentMapping"
 
+        var list: BasicArrayList =
+            this.inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
 
-    var list: BasicArrayList = this.inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
+        if (list.size() > 1) {
 
+            var stringBuffer: StringMaker = StringMaker()
 
-    
-                        if(list.size() > 1)
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
+            stringBuffer!!.append("Start GameKey: ")
+            stringBuffer!!.append("Remove Key Mapping: GameKey: ")
+            stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
+            stringBuffer!!.append(" Input: ")
+            stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
+            this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
+            this.inputMapping!!.getInputMapping()!!.remove(this.selectedGameKey, this.selectedInput)
+            this.selectedInput = this.NONE
+            this.update()
+        } else {
+            this.logUtil!!.putF("Can't Remove Last Key Mapping", this, METHOD_NAME)
+        }
+    }
 
-stringBuffer!!.append("Start GameKey: ")
-stringBuffer!!.append("Remove Key Mapping: GameKey: ")
-stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
-stringBuffer!!.append(" Input: ")
-stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
-this.inputMapping!!.getInputMapping()!!.remove(this.selectedGameKey, this.selectedInput)
-this.selectedInput= this.NONE
-this.update()
-
-                                    }
-                                
-                        else {
-                            this.logUtil!!.putF("Can't Remove Last Key Mapping", this, METHOD_NAME)
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setDefault()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.inputMapping!!.setDefault(this.abeClientInformation)
-this.helpPaintable!!.update(this.NONE, this.NONE)
-this.repaintBehavior!!.onChangeRepaint(this)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.inputMapping!!.setDefault(this.abeClientInformation)
+        this.helpPaintable!!.update(this.NONE, this.NONE)
+        this.repaintBehavior!!.onChangeRepaint(this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.inputMapping!!.update(this.abeClientInformation)
-this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
-this.repaintBehavior!!.onChangeRepaint(this)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.inputMapping!!.update(this.abeClientInformation)
+        this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
+        this.repaintBehavior!!.onChangeRepaint(this)
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-this.colorFillPaintable!!.paint(graphics)
-this.helpPaintable!!.paint(graphics)
-this.paintable.paint(graphics)
-super.paint(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        this.colorFillPaintable!!.paint(graphics)
+        this.helpPaintable!!.paint(graphics)
+        this.paintable.paint(graphics)
+        super.paint(graphics)
+    }
 }
-
-
-}
-                
-            
-

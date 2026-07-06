@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.hud.basic.health
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.hud.basic.health
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
 import org.allbinary.game.graphics.hud.BasicHud
@@ -37,10 +27,7 @@ import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.NoTimeDelayHelper
 import org.allbinary.time.TimeDelayHelper
 
-open public class HealthHudWidget : BasicHud
-                , PaintableInterface
-                , HealthListenerInterface {
-        
+open public class HealthHudWidget : BasicHud, PaintableInterface, HealthListenerInterface {
 
     private var healthScale: Int
 
@@ -48,68 +35,57 @@ open public class HealthHudWidget : BasicHud
 
     var healthInterface: Health
 
-    var max: Int= 0
+    var max: Int = 0
 
     private var xArray: IntArray
 
-    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor (animationInterface: Animation, healthInterface: Health, location: Int, direction: Int)                        
+    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper =
+        GameTickTimeDelayHelperFactory.getInstance()!!
 
-                            : super(location, direction, 2, BasicColorFactory.getInstance()!!.WHITE){
-var animationInterface = animationInterface
-var healthInterface = healthInterface
-var location = location
-var direction = direction
+    public constructor(
+        animationInterface: Animation,
+        healthInterface: Health,
+        location: Int,
+        direction: Int,
+    ) : super(location, direction, 2, BasicColorFactory.getInstance()!!.WHITE) {
+        var animationInterface = animationInterface
+        var healthInterface = healthInterface
+        var location = location
+        var direction = direction
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.animationInterface= animationInterface
-this.healthInterface= healthInterface
-this.healthInterface!!.addListener(this)
-this.healthScale= (this.healthInterface!!.getMaxHealth() /6) +1
-this.onHealthChange()
-this.updateMaxWidth= healthInterface!!.getMaxHealth() *16
-this.updateMaxHeight= 16
-this.xArray= IntArray(30)
-this.update()
-}
-
+        this.animationInterface = animationInterface
+        this.healthInterface = healthInterface
+        this.healthInterface!!.addListener(this)
+        this.healthScale = (this.healthInterface!!.getMaxHealth() / 6) + 1
+        this.onHealthChange()
+        this.updateMaxWidth = healthInterface!!.getMaxHealth() * 16
+        this.updateMaxHeight = 16
+        this.xArray = IntArray(30)
+        this.update()
+    }
 
     open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.xArray != 
-                                    null
-                                )
-                        
-                                    {
-                                    
+        if (this.xArray != null) {
 
+            for (index in 0 until this.xArray!!.size) {
 
-
-                        for (index in 0 until this.xArray!!.size)
-
-        {
-this.xArray[index]= this.getX() +(index *16)
-}
-
-
-                                    }
-                                
-}
-
+                this.xArray[index] = this.getX() + (index * 16)
+            }
+        }
+    }
 
     override fun setX(x: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var x = x
-super.setX(x)
-this.update()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var x = x
+        super.setX(x)
+        this.update()
+    }
 
     private var timeDelayHelper: TimeDelayHelper = NoTimeDelayHelper.SINGLETON
 
@@ -120,79 +96,47 @@ this.update()
     private val fastBeatTimeDelayHelper: TimeDelayHelper = TimeDelayHelper(320)
 
     override fun onHealthChange()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.max= (this.healthInterface!!.getHealth() /this.healthScale)
-this.timeDelayHelper= NoTimeDelayHelper.SINGLETON
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.max = (this.healthInterface!!.getHealth() / this.healthScale)
+        this.timeDelayHelper = NoTimeDelayHelper.SINGLETON
 
-    
-                        if(this.max <= 1 && this.healthInterface!!.isAlive())
-                        
-                                    {
-                                    this.max= 1
+        if (this.max <= 1 && this.healthInterface!!.isAlive()) {
 
-    
-                        if(this.healthScale -this.healthInterface!!.getHealth() > (this.healthScale *2) /3)
-                        
-                                    {
-                                    this.timeDelayHelper= this.slowBeatTimeDelayHelper
+            this.max = 1
 
-                                    }
-                                
-                             else 
-    
-                        if(this.healthScale -this.healthInterface!!.getHealth() > this.healthScale /3)
-                        
-                                    {
-                                    this.timeDelayHelper= this.mediumBeatTimeDelayHelper
-
-                                    }
-                                
-                        else {
-                            this.timeDelayHelper= this.fastBeatTimeDelayHelper
-
-                        }
-                            
-
-                                    }
-                                
-}
-
+            if (
+                this.healthScale - this.healthInterface!!.getHealth() > (this.healthScale * 2) / 3
+            ) {
+                this.timeDelayHelper = this.slowBeatTimeDelayHelper
+            } else if (
+                this.healthScale - this.healthInterface!!.getHealth() > this.healthScale / 3
+            ) {
+                this.timeDelayHelper = this.mediumBeatTimeDelayHelper
+            } else {
+                this.timeDelayHelper = this.fastBeatTimeDelayHelper
+            }
+        }
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.myFontProcessor!!.process(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        this.myFontProcessor!!.process(graphics)
 
+        for (index in 0 until this.max) {
 
+            if (this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime)) {
 
-
-                        for (index in 0 until this.max)
-
-        {
-
-    
-                        if(this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
-                        
-                                    {
-                                    this.animationInterface!!.paintXY(graphics, this.xArray[index]!!, this.getY())
-
-                                    }
-                                
-}
-
-}
-
+                this.animationInterface!!.paintXY(graphics, this.xArray[index]!!, this.getY())
+            }
+        }
+    }
 
     override fun paintThreed(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+    }
 }
-
-
-}
-                
-            
-

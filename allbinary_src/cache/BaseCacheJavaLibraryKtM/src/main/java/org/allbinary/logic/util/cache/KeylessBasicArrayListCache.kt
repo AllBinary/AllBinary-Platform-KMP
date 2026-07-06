@@ -1,136 +1,91 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.util.cache
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.util.cache
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
 open public class KeylessBasicArrayListCache : IndexedBasicArrayListCache {
-        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-public constructor (){
-}
 
+    public constructor() {}
 
     open fun get()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
         try {
-            
-    
-                        if(this.index >= this.list.size())
-                        
-                                    {
-                                    this.addDefault()
 
-                                    }
-                                
+            if (this.index >= this.list.size()) {
 
-    var list: BasicArrayList = this.getAt(this.index++) as BasicArrayList
+                this.addDefault()
+            }
 
+            var list: BasicArrayList = this.getAt(this.index++) as BasicArrayList
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return list
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET, e)
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.GET, e)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.basicArrayListUtil!!.getImmutableInstance()
-}
-
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.basicArrayListUtil!!.getImmutableInstance()
+        }
+    }
 
     override fun clear()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.clear()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.clear()
 
-    var basicArrayList: BasicArrayList
+        var basicArrayList: BasicArrayList
 
+        for (index in this.list.size() - 1 downTo 0) {
 
-
-
-
-                        for (index in this.list.size() -1 downTo 0)
-
-        {
-basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
-basicArrayList!!.clear()
-}
-
-}
-
+            basicArrayList = (this.list.objectArray[index]!! as BasicArrayList)
+            basicArrayList!!.clear()
+        }
+    }
 
     override fun log()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("S: ")
-stringBuffer!!.appendint(this.list.size())
+        stringBuffer!!.append("S: ")
+        stringBuffer!!.appendint(this.list.size())
 
-    var S_LABEL: String = " s: "
+        var S_LABEL: String = " s: "
 
+        var basicArrayList: BasicArrayList
 
-    var basicArrayList: BasicArrayList
+        for (index in this.list.size() - 1 downTo 0) {
 
+            stringBuffer!!.append(S_LABEL)
+            basicArrayList = (this.list.objectArray[index]!! as BasicArrayList)
+            stringBuffer!!.appendint(basicArrayList!!.size())
+        }
 
-
-
-
-                        for (index in this.list.size() -1 downTo 0)
-
-        {
-stringBuffer!!.append(S_LABEL)
-basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
-stringBuffer!!.appendint(basicArrayList!!.size())
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
-
-}
-                
-            
-

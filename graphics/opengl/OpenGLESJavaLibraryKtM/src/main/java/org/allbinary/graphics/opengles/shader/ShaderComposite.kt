@@ -1,38 +1,27 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles.shader
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles.shader
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.khronos.opengles.GL10
-import org.allbinary.graphics.opengles.OpenGLProcessor
+import kotlin.Array
 import org.allbinary.graphics.opengles.NullOpenGLProcessorFactory
+import org.allbinary.graphics.opengles.OpenGLProcessor
 
-open public class ShaderComposite
-            : Object
-         {
-        
+open public class ShaderComposite : Object {
 
     val disableProgramShaderOpenGLProcessor: OpenGLProcessor
 
@@ -50,68 +39,85 @@ open public class ShaderComposite
 
     val vertexOpenGLProcessor: OpenGLProcessor
 
-    var useProgramShaderOpenGLProcessor: OpenGLProcessor = 
-                null
-            
+    var useProgramShaderOpenGLProcessor: OpenGLProcessor = null
 
     var shaderMatrixOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
 
-    var colorEnableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
+    var colorEnableVertexAttribArrayOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
-    var normalEnableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
+    var normalEnableVertexAttribArrayOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
-    var vertexEnableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
+    var vertexEnableVertexAttribArrayOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
-    var textureEnableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
+    var textureEnableVertexAttribArrayOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
-    var colorDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
+    var colorDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
-    var normalDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
+    var normalDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
-    var vertexDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
+    var vertexDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
-    var textureDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
+    var textureDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor =
+        NullOpenGLProcessorFactory.getInstance()!!
 
-    var uniformLightPositionOpenGLProcessor: OpenGLObject3dProcessor = NullOpenGLTextureProcessor.getInstance()!!
+    var uniformLightPositionOpenGLProcessor: OpenGLObject3dProcessor =
+        NullOpenGLTextureProcessor.getInstance()!!
 
-    var uniformLightColorOpenGLProcessor: OpenGLObject3dProcessor = NullOpenGLTextureProcessor.getInstance()!!
+    var uniformLightColorOpenGLProcessor: OpenGLObject3dProcessor =
+        NullOpenGLTextureProcessor.getInstance()!!
 
-    var uniformCameraPositionOpenGLProcessor: OpenGLObject3dProcessor = NullOpenGLTextureProcessor.getInstance()!!
+    var uniformCameraPositionOpenGLProcessor: OpenGLObject3dProcessor =
+        NullOpenGLTextureProcessor.getInstance()!!
 
-    var uniformTextureUnitOpenGLProcessor: OpenGLObject3dProcessor = NullOpenGLTextureProcessor.getInstance()!!
+    var uniformTextureUnitOpenGLProcessor: OpenGLObject3dProcessor =
+        NullOpenGLTextureProcessor.getInstance()!!
 
-    var programHandle: Int= 0
-public constructor (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)
-            : super()
-        {
-    //var requiresOpenGLVersion = requiresOpenGLVersion
-    //var shaderArray = shaderArray
-    //var compositeShaderUpdater = compositeShaderUpdater
-    //var shaderInitializer = shaderInitializer
-    //var modelViewProjection = modelViewProjection
-    //var colorOpenGLProcessor = colorOpenGLProcessor
-    //var vertexOpenGLProcessor = vertexOpenGLProcessor
-    //var disableProgramShaderOpenGLProcessor = disableProgramShaderOpenGLProcessor
-this.requiresOpenGLVersion= requiresOpenGLVersion
-this.shaderArray= shaderArray
-this.shaderInitializer= shaderInitializer
-this.compositeShaderUpdater= compositeShaderUpdater
-this.modelViewProjection= modelViewProjection
-this.colorOpenGLProcessor= colorOpenGLProcessor
-this.vertexOpenGLProcessor= vertexOpenGLProcessor
-this.disableProgramShaderOpenGLProcessor= disableProgramShaderOpenGLProcessor
-}
+    var programHandle: Int = 0
 
+    public constructor(
+        requiresOpenGLVersion: String,
+        shaderArray: Array<Shader?>,
+        compositeShaderUpdater: CompositeShaderUpdater,
+        shaderInitializer: ShaderInitializer,
+        modelViewProjection: ModelViewProjection,
+        colorOpenGLProcessor: OpenGLProcessor,
+        vertexOpenGLProcessor: OpenGLProcessor,
+        disableProgramShaderOpenGLProcessor: OpenGLProcessor,
+    ) : super() {
+        // var requiresOpenGLVersion = requiresOpenGLVersion
+        // var shaderArray = shaderArray
+        // var compositeShaderUpdater = compositeShaderUpdater
+        // var shaderInitializer = shaderInitializer
+        // var modelViewProjection = modelViewProjection
+        // var colorOpenGLProcessor = colorOpenGLProcessor
+        // var vertexOpenGLProcessor = vertexOpenGLProcessor
+        // var disableProgramShaderOpenGLProcessor = disableProgramShaderOpenGLProcessor
+        this.requiresOpenGLVersion = requiresOpenGLVersion
+        this.shaderArray = shaderArray
+        this.shaderInitializer = shaderInitializer
+        this.compositeShaderUpdater = compositeShaderUpdater
+        this.modelViewProjection = modelViewProjection
+        this.colorOpenGLProcessor = colorOpenGLProcessor
+        this.vertexOpenGLProcessor = vertexOpenGLProcessor
+        this.disableProgramShaderOpenGLProcessor = disableProgramShaderOpenGLProcessor
+    }
 
     open fun init(gl: GL10)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gl = gl
-this.programHandle= this.shaderInitializer!!.init(gl, this.shaderArray, this.compositeShaderUpdater!!.attributeArray)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gl = gl
+        this.programHandle =
+            this.shaderInitializer!!.init(
+                gl,
+                this.shaderArray,
+                this.compositeShaderUpdater!!.attributeArray,
+            )
+    }
 }
-
-
-}
-                
-            
-

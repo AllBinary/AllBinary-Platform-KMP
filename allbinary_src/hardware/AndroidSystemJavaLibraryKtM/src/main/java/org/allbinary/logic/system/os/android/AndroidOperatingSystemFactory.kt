@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system.os.android
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system.os.android
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.os.GenericOperatingSystem
@@ -33,104 +24,69 @@ import org.allbinary.logic.system.os.OperatingSystems
 import org.allbinary.logic.system.os.SystemProperties
 import org.allbinary.string.CommonStrings
 
-open public class AndroidOperatingSystemFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: AndroidOperatingSystemFactory = AndroidOperatingSystemFactory()
+open public class AndroidOperatingSystemFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: AndroidOperatingSystemFactory{
+    companion object {
 
+        private val instance: AndroidOperatingSystemFactory = AndroidOperatingSystemFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : AndroidOperatingSystemFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AndroidOperatingSystemFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AndroidOperatingSystemFactory.instance
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tsUtil: TsUtil = TsUtil.getInstance()!!
-private constructor ()
-            : super()
-        {
-}
 
+    private constructor() : super() {}
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun getOperatingSystemInstance()
-        //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem{
+    // nullable = true from not(false or (false and true)) = true
+    : GenericOperatingSystem {
 
         try {
-            
-    var GenericOperatingSystem: GenericOperatingSystem
 
+            var GenericOperatingSystem: GenericOperatingSystem
 
-    var systemProperties: SystemProperties = SystemProperties.getInstance()!!
+            var systemProperties: SystemProperties = SystemProperties.getInstance()!!
 
+            var osName: String = systemProperties!!.getName()!!
 
-    var osName: String = systemProperties!!.getName()!!
+            if (this.tsUtil!!.compareTo(osName, OperatingSystems.getInstance()!!.ANDROID) == 0) {
 
+                GenericOperatingSystem = AndroidOS()
+            } else {
 
-    
-                        if(this.tsUtil!!.compareTo(osName, OperatingSystems.getInstance()!!.ANDROID) == 0)
-                        
-                                    {
-                                    GenericOperatingSystem= AndroidOS()
+                if (OperatingSystems.getInstance()!!.isUnknownSpecificOSAllowed()) {
 
-                                    }
-                                
-                        else {
-                            
-    
-                        if(OperatingSystems.getInstance()!!.isUnknownSpecificOSAllowed())
-                        
-                                    {
-                                    GenericOperatingSystem= AndroidOS()
+                    GenericOperatingSystem = AndroidOS()
+                } else {
 
-                                    }
-                                
-                        else {
-                            
+                    throw Exception("Specific Android OS Not Supported: " + osName)
+                }
+            }
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GenericOperatingSystem
+        } catch (e: Exception) {
 
-                            throw Exception("Specific Android OS Not Supported: " +osName)
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-                        }
-                            
+            this.logUtil!!.put(
+                "Failed to get OperatingSystem returning NoOperatingSystem",
+                this,
+                commonStrings!!.GET_INSTANCE,
+                e,
+            )
 
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GenericOperatingSystem
-} catch(e: Exception)
-            {
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-this.logUtil!!.put("Failed to get OperatingSystem returning NoOperatingSystem", this, commonStrings!!.GET_INSTANCE, e)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NoOperatingSystem.NO_OPERATING_SYSTEM
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NoOperatingSystem.NO_OPERATING_SYSTEM
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

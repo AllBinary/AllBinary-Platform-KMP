@@ -1,96 +1,75 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input.motion.action
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input.motion.action
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class GameKeyCompleteMotionGestureInputEventFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val SINGLETON: GameKeyCompleteMotionGestureInputEventFactory = GameKeyCompleteMotionGestureInputEventFactory()
+open public class GameKeyCompleteMotionGestureInputEventFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: GameKeyCompleteMotionGestureInputEventFactory{
+    companion object {
 
+        private val SINGLETON: GameKeyCompleteMotionGestureInputEventFactory =
+            GameKeyCompleteMotionGestureInputEventFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : GameKeyCompleteMotionGestureInputEventFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameKeyCompleteMotionGestureInputEventFactory.SINGLETON
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GameKeyCompleteMotionGestureInputEventFactory.SINGLETON
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val eventList: BasicArrayList = BasicArrayListD()
 
     open fun add(gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gameKeyCompleteMotionGestureInputEvent = gameKeyCompleteMotionGestureInputEvent
-this.eventList!!.add(gameKeyCompleteMotionGestureInputEvent)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gameKeyCompleteMotionGestureInputEvent = gameKeyCompleteMotionGestureInputEvent
+        this.eventList!!.add(gameKeyCompleteMotionGestureInputEvent)
+    }
 
     open fun updateAll()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.appendint(this.eventList!!.size())!!.toString(), this, "updateAll")
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(CommonLabels.getInstance()!!.START_LABEL)!!
+                .appendint(this.eventList!!.size())!!
+                .toString(),
+            this,
+            "updateAll",
+        )
 
+        for (index in this.eventList!!.size() - 1 downTo 0) {
 
+            var gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent =
+                this.eventList!!.objectArray[index]!! as GameKeyCompleteMotionGestureInputEvent
 
-
-                        for (index in this.eventList!!.size() -1 downTo 0)
-
-        {
-
-    var gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent = this.eventList!!.objectArray[index]!! as GameKeyCompleteMotionGestureInputEvent
-
-gameKeyCompleteMotionGestureInputEvent!!.update()
+            gameKeyCompleteMotionGestureInputEvent!!.update()
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

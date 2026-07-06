@@ -1,148 +1,99 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
 import org.allbinary.image.opengles.OpenGLStrings
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
+import org.allbinary.logic.string.StringMaker
 
-open public class OpenGLLogUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: OpenGLLogUtil = OpenGLLogUtil()
+open public class OpenGLLogUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OpenGLLogUtil{
+    companion object {
 
+        private val instance: OpenGLLogUtil = OpenGLLogUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OpenGLLogUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLLogUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OpenGLLogUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     private val MAX_TEXTURE: String = " Max Texture Size: "
 
     open fun logError(gl: GL10)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
 
-    var error: Int = gl.glGetError()!!
+        var error: Int = gl.glGetError()!!
 
+        if (error != GL10.GL_NO_ERROR) {
 
-    
-                        if(error != GL10.GL_NO_ERROR)
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
+            var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(OpenGLStrings.getInstance()!!.GL_ERROR_LABEL)
-stringBuffer!!.appendint(error)
+            stringBuffer!!.append(OpenGLStrings.getInstance()!!.GL_ERROR_LABEL)
+            stringBuffer!!.appendint(error)
 
-    
-                        if(error == 1281)
-                        
-                                    {
-                                    stringBuffer!!.append(this.MAX_TEXTURE)
+            if (error == 1281) {
 
-    var maxTextureSize: IntArray = IntArray(1)
+                stringBuffer!!.append(this.MAX_TEXTURE)
 
-gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
-stringBuffer!!.appendint(maxTextureSize[0]!!)
+                var maxTextureSize: IntArray = IntArray(1)
 
-                                    }
-                                
+                gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
+                stringBuffer!!.appendint(maxTextureSize[0]!!)
+            }
 
-    
-                        if(error == 1280)
-                        
-                                    {
-                                    PreLogUtil.put(stringBuffer!!.toString(), this, OpenGLStrings.getInstance()!!.SET)
+            if (error == 1280) {
 
-                                    }
-                                
-                        else {
-                            ForcedLogUtil.log(stringBuffer!!.toString(), this)
-
-                        }
-                            
-
-                                    }
-                                
-}
-
+                PreLogUtil.put(stringBuffer!!.toString(), this, OpenGLStrings.getInstance()!!.SET)
+            } else {
+                ForcedLogUtil.log(stringBuffer!!.toString(), this)
+            }
+        }
+    }
 
     private val LOG_ERROR: String = "logError"
 
     private val IMAGE: String = " Image: "
 
     open fun logError(gl: GL10, image: Image)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
-    //var image = image
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
+        // var image = image
 
-    var error: Int = gl.glGetError()!!
+        var error: Int = gl.glGetError()!!
 
+        if (error != GL10.GL_NO_ERROR) {
 
-    
-                        if(error != GL10.GL_NO_ERROR)
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
+            var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(OpenGLStrings.getInstance()!!.GL_ERROR_LABEL)
-stringBuffer!!.appendint(error)
+            stringBuffer!!.append(OpenGLStrings.getInstance()!!.GL_ERROR_LABEL)
+            stringBuffer!!.appendint(error)
 
-    
-                        if(error == 1281)
-                        
-                                    {
-                                    stringBuffer!!.append(this.MAX_TEXTURE)
+            if (error == 1281) {
 
-    var maxTextureSize: IntArray = IntArray(1)
+                stringBuffer!!.append(this.MAX_TEXTURE)
 
-gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
-stringBuffer!!.appendint(maxTextureSize[0]!!)
+                var maxTextureSize: IntArray = IntArray(1)
 
-                                    }
-                                
-stringBuffer!!.append(this.IMAGE)
-stringBuffer!!.append(image.toString())
-PreLogUtil.put(stringBuffer!!.toString(), this, this.LOG_ERROR)
+                gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
+                stringBuffer!!.appendint(maxTextureSize[0]!!)
+            }
 
-                                    }
-                                
+            stringBuffer!!.append(this.IMAGE)
+            stringBuffer!!.append(image.toString())
+            PreLogUtil.put(stringBuffer!!.toString(), this, this.LOG_ERROR)
+        }
+    }
 }
-
-
-}
-                
-            
-

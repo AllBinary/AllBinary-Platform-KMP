@@ -1,46 +1,33 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.audio
+/* Generated Code Do Not Modify */
+package org.allbinary.media.audio
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.media.Control
 import javax.microedition.media.Controllable
 import javax.microedition.media.Player
 import javax.microedition.media.PlayerListener
+import kotlin.Array
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
 
-open public class PlayerComposite
-            : Object
-        
-                , Controllable
-                , Player {
-        
+open public class PlayerComposite : Object, Controllable, Player {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -49,235 +36,190 @@ open public class PlayerComposite
     private val player: Player
 
     private val timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
-public constructor (player: Player, repeatTime: Int)
-            : super()
-        {
-    //var player = player
-    //var repeatTime = repeatTime
-this.player= player
-this.timeElapsedHelper!!.delay= repeatTime
-}
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+    public constructor(player: Player, repeatTime: Int) : super() {
+        // var player = player
+        // var repeatTime = repeatTime
+        this.player = player
+        this.timeElapsedHelper!!.delay = repeatTime
+    }
 
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun addPlayerListener(playerListener: PlayerListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var playerListener = playerListener
-this.player.addPlayerListener(playerListener)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var playerListener = playerListener
+        this.player.addPlayerListener(playerListener)
+    }
 
     override fun removePlayerListener(playerListener: PlayerListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var playerListener = playerListener
-this.player.removePlayerListener(playerListener)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var playerListener = playerListener
+        this.player.removePlayerListener(playerListener)
+    }
 
     override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.player.close()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.player.close()
+    }
 
     override fun deallocate()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.player.deallocate()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.player.deallocate()
+    }
 
     override fun getContentType()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player.getContentType()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.player.getContentType()
+    }
 
     override fun getDuration()
-        //nullable = true from not(false or (false and true)) = true
-: Long{
+    // nullable = true from not(false or (false and true)) = true
+    : Long {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player.getDuration()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.player.getDuration()
+    }
 
     override fun getMediaTime()
-        //nullable = true from not(false or (false and true)) = true
-: Long{
+    // nullable = true from not(false or (false and true)) = true
+    : Long {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player.getMediaTime()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.player.getMediaTime()
+    }
 
     override fun prefetch()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
             this.player.prefetch()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "prefetch", e)
-}
-
-}
-
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "prefetch", e)
+        }
+    }
 
     override fun realize()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
             this.player.realize()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "realize", e)
-}
-
-}
-
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "realize", e)
+        }
+    }
 
     override fun getState()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player.getState()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.player.getState()
+    }
 
     override fun setLoopCount(count: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var count = count
-this.player.setLoopCount(count)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var count = count
+        this.player.setLoopCount(count)
+    }
 
-
-    override fun setMediaTime(now: Long)
-        //nullable = true from not(false or (false and false)) = true
-: Long{
-var now = now
+    override fun setMediaTime(
+        now: Long
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Long {
+        var now = now
 
         try {
-            
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.player.setMediaTime(now)
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player.setMediaTime(now)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setMediaTime", e)
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return -1
+        }
+    }
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-}
-
-}
-
-
-    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
+    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper =
+        GameTickTimeDelayHelperFactory.getInstance()!!
 
     override fun start()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
-            
-    
-                        if(this.timeElapsedHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
-                        
-                                    {
-                                    this.player.start()
 
-                                    }
-                                
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.START_METHOD_NAME, e)
-}
+            if (this.timeElapsedHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime)) {
 
-}
-
+                this.player.start()
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.commonStrings!!.START_METHOD_NAME,
+                e,
+            )
+        }
+    }
 
     override fun stop()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
             this.player.stop()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "stop", e)
-}
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "stop", e)
+        }
+    }
 
-}
+    override fun getControl(
+        controlType: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Control {
+        var controlType = controlType
 
-
-    override fun getControl(controlType: String)
-        //nullable = true from not(false or (false and false)) = true
-: Control{
-var controlType = controlType
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player.getControl(controlType)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.player.getControl(controlType)
+    }
 
     override fun getControls()
-        //nullable = true from not(false or (false and true)) = true
-: Array<Control?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<Control?> {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     open fun setVolume(leftVolume: Int, rightVolume: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var leftVolume = leftVolume
-    //var rightVolume = rightVolume
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var leftVolume = leftVolume
+        // var rightVolume = rightVolume
 
-    var controllable2: Controllable2 = (this.player as Controllable2)
+        var controllable2: Controllable2 = (this.player as Controllable2)
 
-controllable2.setVolume(leftVolume, rightVolume)
-}
-
+        controllable2.setVolume(leftVolume, rightVolume)
+    }
 
     open fun getPlayerP()
-        //nullable = true from not(false or (false and true)) = true
-: Player{
+    // nullable = true from not(false or (false and true)) = true
+    : Player {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.player
+    }
 }
-
-
-}
-                
-            
-

@@ -1,31 +1,22 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.special
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.special
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
+import kotlin.Array
 import org.allbinary.game.collision.CollidableNeverCollideBehaviorFactory
 import org.allbinary.game.combat.damage.DamageableInterface
 import org.allbinary.game.combat.destroy.DestroyableInterface
@@ -50,553 +41,446 @@ import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.view.ViewPositionBase
 
-open public class CollidableDestroyableDamageableLayer : CollidableCompositeLayer
-                , DestroyableInterface
-                , DamageableInterface
-                , PickupCompositeInterface
-                , SpecialGameInputInterface {
-        
-companion object {
-            
-    var NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class CollidableDestroyableDamageableLayer :
+    CollidableCompositeLayer,
+    DestroyableInterface,
+    DamageableInterface,
+    PickupCompositeInterface,
+    SpecialGameInputInterface {
 
-    open fun getNullInstance()
-        //nullable = true from not(false or (false and true)) = true
-: CollidableDestroyableDamageableLayer{
+    companion object {
 
-    
-                        if(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER= CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, RectangleFactory.SINGLETON, ViewPositionBase.NULL_VIEW_POSITION)
+        var NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getNullInstance()
+        // nullable = true from not(false or (false and true)) = true
+        : CollidableDestroyableDamageableLayer {
 
+            if (
+                CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER ==
+                    NullUtil.getInstance()!!.NULL_OBJECT
+            ) {
+                CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER =
+                    CollidableDestroyableDamageableLayer(
+                        BasicGroupFactory.getInstance()!!.NONE_ARRAY,
+                        StringUtil.getInstance()!!.EMPTY_STRING,
+                        RectangleFactory.SINGLETON,
+                        ViewPositionBase.NULL_VIEW_POSITION,
+                    )
+            }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER as CollidableDestroyableDamageableLayer
-}
-
-
-    private val READYFOREXPLOSION: String = "ReadyForExplosion: "
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+                as CollidableDestroyableDamageableLayer
         }
-            
+
+        private val READYFOREXPLOSION: String = "ReadyForExplosion: "
+    }
+
     private var groupInterface: Array<Group?>
 
-    private var readyForExplosion: Boolean= false
+    private var readyForExplosion: Boolean = false
 
     private var initWidth: Int
 
     private var initHeight: Int
 
-    private var initX: Int= 0
+    private var initX: Int = 0
 
-    private var initY: Int= 0
+    private var initY: Int = 0
 
-    private var initZ: Int= 0
+    private var initZ: Int = 0
 
     var partInterfaceArrayP: Array<PartInterface?> = PartInterfaceUtil.getZeroArray()!!
 
     private var pickupBehavior: PickupBehavior
 
-    var allBinaryGameLayerManagerP: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
+    var allBinaryGameLayerManagerP: AllBinaryGameLayerManager =
+        AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
 
     var isDraggable: Boolean = false
 
     var isDragged: Boolean = false
-public constructor (groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPositionBase)                        
 
-                            : super(name, layerInfo, viewPosition, CollidableNeverCollideBehaviorFactory.getInstance()){
-    //var groupInterface = groupInterface
-    //var name = name
-    //var layerInfo = layerInfo
-    //var viewPosition = viewPosition
+    public constructor(
+        groupInterface: Array<Group?>,
+        name: String,
+        layerInfo: Rectangle,
+        viewPosition: ViewPositionBase,
+    ) : super(name, layerInfo, viewPosition, CollidableNeverCollideBehaviorFactory.getInstance()) {
+        // var groupInterface = groupInterface
+        // var name = name
+        // var layerInfo = layerInfo
+        // var viewPosition = viewPosition
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.initWidth= layerInfo!!.getWidth()
-this.initHeight= layerInfo!!.getHeight()
-this.groupInterface= groupInterface
-this.pickupBehavior= PickupBehavior.NULL_PICKUP_BEHAVIOR
-}
+        this.initWidth = layerInfo!!.getWidth()
+        this.initHeight = layerInfo!!.getHeight()
+        this.groupInterface = groupInterface
+        this.pickupBehavior = PickupBehavior.NULL_PICKUP_BEHAVIOR
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun initPosition()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setPosition(this.initX, this.initY, this.initZ)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setPosition(this.initX, this.initY, this.initZ)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun initPositionXYZ(x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var x = x
-    //var y = y
-    //var z = z
-this.initX= x
-this.initY= y
-this.initZ= z
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var x = x
+        // var y = y
+        // var z = z
+        this.initX = x
+        this.initY = y
+        this.initZ = z
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-super.paint(graphics)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        super.paint(graphics)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun damage(damage: Int, damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var damage = damage
-    //var damageType = damageType
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var damage = damage
+        // var damageType = damageType
 
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
+    @Throws(Exception::class)
+    override fun getDamage(
+        damageType: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var damageType = damageType
 
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
-
-                @Throws(Exception::class)
-            
-    override fun getDamage(damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var damageType = damageType
-
-
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun isDestroyed()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
     override fun getGroupInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Array<Group?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<Group?> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.groupInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.groupInterface
+    }
 
     open fun setGroupInterface(teamInterface: Array<Group?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var teamInterface = teamInterface
-this.groupInterface= teamInterface
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var teamInterface = teamInterface
+        this.groupInterface = teamInterface
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
-this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryGameLayerManager = allBinaryGameLayerManager
+        this.allBinaryGameLayerManagerP = allBinaryGameLayerManager
 
-    
-                        if(this.allBinaryGameLayerManagerP == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+        if (this.allBinaryGameLayerManagerP == null) {
 
-
-                            throw RuntimeException()
-
-                                    }
-                                
-}
-
+            throw RuntimeException()
+        }
+    }
 
     open fun isReadyForExplosion()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.readyForExplosion
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.readyForExplosion
+    }
 
     open fun setReadyForExplosion(isReadyForExplosion: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var isReadyForExplosion = isReadyForExplosion
-this.readyForExplosion= isReadyForExplosion
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var isReadyForExplosion = isReadyForExplosion
+        this.readyForExplosion = isReadyForExplosion
+    }
 
     open fun getInitWidth()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initWidth
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initWidth
+    }
 
     open fun getInitHeight()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initHeight
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initHeight
+    }
 
     open fun getInitX()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initX
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initX
+    }
 
     open fun getInitY()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.initY
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.initY
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun up()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun down()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun right()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun left()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun strafeLeft()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun strafeRight()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+        // var gameKeyEvent = gameKeyEvent
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+        // var gameKeyEvent = gameKeyEvent
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+        // var gameKeyEvent = gameKeyEvent
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+        // var gameKeyEvent = gameKeyEvent
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+        // var gameKeyEvent = gameKeyEvent
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+        // var gameKeyEvent = gameKeyEvent
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun upAnalog(yAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var yAnalogValue = yAnalogValue
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var yAnalogValue = yAnalogValue
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun downAnalog(yAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var yAnalogValue = yAnalogValue
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var yAnalogValue = yAnalogValue
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun rightAnalog(xAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var xAnalogValue = xAnalogValue
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var xAnalogValue = xAnalogValue
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun leftAnalog(xAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var xAnalogValue = xAnalogValue
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var xAnalogValue = xAnalogValue
+    }
 
+    @Throws(Exception::class)
+    open fun rightTrigger(
+        layerManager: AllBinaryLayerManager,
+        gameKeyEvent: GameKeyEvent,
+        xAnalogValue: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+        // var gameKeyEvent = gameKeyEvent
+        // var xAnalogValue = xAnalogValue
+    }
 
-                @Throws(Exception::class)
-            
-    open fun rightTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-    //var xAnalogValue = xAnalogValue
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun leftTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-    //var xAnalogValue = xAnalogValue
-}
-
+    @Throws(Exception::class)
+    open fun leftTrigger(
+        layerManager: AllBinaryLayerManager,
+        gameKeyEvent: GameKeyEvent,
+        xAnalogValue: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManager = layerManager
+        // var gameKeyEvent = gameKeyEvent
+        // var xAnalogValue = xAnalogValue
+    }
 
     open fun onDestroyed(destroyedEvent: DestroyedEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var destroyedEvent = destroyedEvent
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var destroyedEvent = destroyedEvent
+    }
 
     override fun getPickupBehavior()
-        //nullable = true from not(false or (false and true)) = true
-: PickupBehavior{
+    // nullable = true from not(false or (false and true)) = true
+    : PickupBehavior {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.pickupBehavior
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.pickupBehavior
+    }
 
     override fun setPickupBehavior(pickupBehavior: PickupBehavior)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pickupBehavior = pickupBehavior
-this.pickupBehavior= pickupBehavior
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pickupBehavior = pickupBehavior
+        this.pickupBehavior = pickupBehavior
+    }
 
-
-                @Throws(Exception::class)
-            
-    open fun addPart(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
-}
-
+    @Throws(Exception::class)
+    open fun addPart(
+        pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+    }
 
     open fun setPartInterfaceArray(partInterfaceArray: Array<PartInterface?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var partInterfaceArray = partInterfaceArray
-this.partInterfaceArrayP= partInterfaceArray
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var partInterfaceArray = partInterfaceArray
+        this.partInterfaceArrayP = partInterfaceArray
+    }
 
     open fun getPartInterfaceArray()
-        //nullable = true from not(false or (false and true)) = true
-: Array<PartInterface?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<PartInterface?> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.partInterfaceArrayP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.partInterfaceArrayP
+    }
 
     override fun toStringAppend(stringBuffer: StringMaker)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var stringBuffer = stringBuffer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var stringBuffer = stringBuffer
 
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
+        var positionStrings: PositionStrings = PositionStrings.getInstance()!!
 
-    var positionStrings: PositionStrings = PositionStrings.getInstance()!!
+        super.toStringAppend(stringBuffer)
+        stringBuffer!!.append(commonSeps!!.NEW_LINE)
 
-super.toStringAppend(stringBuffer)
-stringBuffer!!.append(commonSeps!!.NEW_LINE)
+        var groupInterfaceArray: Array<Group?> = this.getGroupInterface()!!
 
-    var groupInterfaceArray: Array<Group?> = this.getGroupInterface()!!
+        var size: Int = groupInterfaceArray!!.size
 
+        for (index in 0 until size) {
 
-    var size: Int = groupInterfaceArray!!.size
-                
+            stringBuffer!!.append(groupInterfaceArray[index]!!.toString())
+            stringBuffer!!.append(commonSeps!!.COMMA)
+        }
 
+        var pickupBehavior: PickupBehavior = this.getPickupBehavior()!!
 
+        if (pickupBehavior != null) {
 
+            stringBuffer!!.append(commonSeps!!.NEW_LINE)
+            stringBuffer!!.append(pickupBehavior!!.toString())
+        }
 
-
-                        for (index in 0 until size)
-
-        {
-stringBuffer!!.append(groupInterfaceArray[index]!!.toString())
-stringBuffer!!.append(commonSeps!!.COMMA)
-}
-
-
-    var pickupBehavior: PickupBehavior = this.getPickupBehavior()!!
-
-
-    
-                        if(pickupBehavior != 
-                                    null
-                                )
-                        
-                                    {
-                                    stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(pickupBehavior!!.toString())
-
-                                    }
-                                
-stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(CollidableDestroyableDamageableLayer.READYFOREXPLOSION)
-stringBuffer!!.appendboolean(this.readyForExplosion)
-stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(this.commonStrings!!.INIT)
-stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(positionStrings!!.X_LABEL)
-stringBuffer!!.appendint(this.initX)
-stringBuffer!!.append(positionStrings!!.Y_LABEL)
-stringBuffer!!.appendint(this.initX)
-stringBuffer!!.append(positionStrings!!.Z_LABEL)
-stringBuffer!!.appendint(this.initZ)
-}
-
+        stringBuffer!!.append(commonSeps!!.NEW_LINE)
+        stringBuffer!!.append(CollidableDestroyableDamageableLayer.READYFOREXPLOSION)
+        stringBuffer!!.appendboolean(this.readyForExplosion)
+        stringBuffer!!.append(commonSeps!!.NEW_LINE)
+        stringBuffer!!.append(this.commonStrings!!.INIT)
+        stringBuffer!!.append(commonSeps!!.SPACE)
+        stringBuffer!!.append(positionStrings!!.X_LABEL)
+        stringBuffer!!.appendint(this.initX)
+        stringBuffer!!.append(positionStrings!!.Y_LABEL)
+        stringBuffer!!.appendint(this.initX)
+        stringBuffer!!.append(positionStrings!!.Z_LABEL)
+        stringBuffer!!.appendint(this.initZ)
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-this.toStringAppend(stringBuffer)
+        this.toStringAppend(stringBuffer)
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

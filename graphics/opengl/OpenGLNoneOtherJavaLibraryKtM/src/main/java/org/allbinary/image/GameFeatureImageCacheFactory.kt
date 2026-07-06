@@ -1,70 +1,47 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.image
+/* Generated Code Do Not Modify */
+package org.allbinary.image
 
+import java.lang.Object
 
+open public class GameFeatureImageCacheFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ImageCache {
 
-open public class GameFeatureImageCacheFactory
-            : Object
-         {
-        
-companion object {
-            
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ImageCache{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageCacheFactory.getInstance()
-}
-
-
-    open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
-ImageCacheFactory.init()
-}
-
-
-    open fun releaseAll()
-        //nullable = true from not(false or (false and true)) = true
-{
-ImageCacheFactory.getInstance()!!.releaseAll()
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ImageCacheFactory.getInstance()
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-}
-                
-            
 
+        open fun init()
+            // nullable = true from not(false or (false and true)) = true
+        {
+            ImageCacheFactory.init()
+        }
+
+        open fun releaseAll()
+            // nullable = true from not(false or (false and true)) = true
+        {
+            ImageCacheFactory.getInstance()!!.releaseAll()
+        }
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+}

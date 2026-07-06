@@ -1,32 +1,24 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.score.displayable
+/* Generated Code Do Not Modify */
+package org.allbinary.game.score.displayable
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
+import kotlin.Array
 import org.allbinary.game.GameInfo
 import org.allbinary.game.score.HighScore
 import org.allbinary.game.score.HighScoreNamePersistanceSingleton
@@ -41,17 +33,14 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
 
-open public class HighScoreUtil
-            : Object
-        
-                , HighScoresResultsListener {
-        
-companion object {
-            
-    val SUBMIT_TEXTBOX_COMMAND: Command = Command("Submit", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
+open public class HighScoreUtil : Object, HighScoresResultsListener {
 
-        }
-            
+    companion object {
+
+        val SUBMIT_TEXTBOX_COMMAND: Command =
+            Command("Submit", StringUtil.getInstance()!!.EMPTY_STRING, Command.SCREEN, 1)
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -69,104 +58,108 @@ companion object {
     private val highScoresHelper: HighScoresHelperBaseInterface
 
     private var firstTime: Boolean = true
-public constructor (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBaseInterface, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore)
-            : super()
-        {
-    //var highScoresFactoryInterface = highScoresFactoryInterface
-    //var highScoresHelper = highScoresHelper
-    //var abeClientInformation = abeClientInformation
-    //var gameInfo = gameInfo
-    //var cmdListener = cmdListener
-    //var name = name
-    //var highScore = highScore
-this.highScoresFactoryInterface= highScoresFactoryInterface
-this.highScoresHelper= highScoresHelper
-this.highScoresArray= this.highScoresHelper!!.getHighScoresArray()
-this.highScore= highScore
-this.abeClientInformation= abeClientInformation
-this.gameInfo= gameInfo
-}
 
+    public constructor(
+        highScoresFactoryInterface: HighScoresFactoryInterface,
+        highScoresHelper: HighScoresHelperBaseInterface,
+        abeClientInformation: AbeClientInformationInterface,
+        gameInfo: GameInfo,
+        cmdListener: CommandListener,
+        name: String,
+        highScore: HighScore,
+    ) : super() {
+        // var highScoresFactoryInterface = highScoresFactoryInterface
+        // var highScoresHelper = highScoresHelper
+        // var abeClientInformation = abeClientInformation
+        // var gameInfo = gameInfo
+        // var cmdListener = cmdListener
+        // var name = name
+        // var highScore = highScore
+        this.highScoresFactoryInterface = highScoresFactoryInterface
+        this.highScoresHelper = highScoresHelper
+        this.highScoresArray = this.highScoresHelper!!.getHighScoresArray()
+        this.highScore = highScore
+        this.abeClientInformation = abeClientInformation
+        this.gameInfo = gameInfo
+    }
 
     override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var highScoresArray = highScoresArray
-this.highScoresArray= highScoresArray
-this.firstTime= false
-this.saveHighScore()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var highScoresArray = highScoresArray
+        this.highScoresArray = highScoresArray
+        this.firstTime = false
+        this.saveHighScore()
+    }
 
     open fun update(name: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var name = name
-HighScoreNamePersistanceSingleton.getInstance()!!.save(this.abeClientInformation, this.gameInfo, name)
-this.highScore!!.setName(name)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var name = name
+        HighScoreNamePersistanceSingleton.getInstance()!!.save(
+            this.abeClientInformation,
+            this.gameInfo,
+            name,
+        )
+        this.highScore!!.setName(name)
+    }
 
     open fun saveHighScore()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(StringMaker().
-                            append(this.commonStrings!!.START)!!.append(StringUtil.getInstance()!!.toString(this.highScore))!!.toString(), this, "saveHighScore")
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(this.commonStrings!!.START)!!
+                .append(StringUtil.getInstance()!!.toString(this.highScore))!!
+                .toString(),
+            this,
+            "saveHighScore",
+        )
 
-    var size: Int = this.highScoresArray!!.size
-                
+        var size: Int = this.highScoresArray!!.size
 
+        if (this.firstTime && size == 0) {
 
-    
-                        if(this.firstTime && size == 0)
-                        
-                                    {
-                                    this.logUtil!!.putF("Games canvas did not give us any HighScores", this, "saveHighScore")
-this.highScoresFactoryInterface!!.fetchHighScores(this.gameInfo, this)
+            this.logUtil!!.putF(
+                "Games canvas did not give us any HighScores",
+                this,
+                "saveHighScore",
+            )
+            this.highScoresFactoryInterface!!.fetchHighScores(this.gameInfo, this)
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return
+        }
 
+        var highScores: HighScores
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
+        var highScoresAsString: String
 
-                                    }
-                                
+        for (index in 0 until size) {
 
-    var highScores: HighScores
+            highScores = this.highScoresArray[index]!!
+            highScores!!.addHighScore(this.highScore)
+            highScoresAsString = highScores!!.toString()
+            this.logUtil!!.putF(
+                StringMaker()
+                    .append("Added/Adding Score: ")!!
+                    .append(highScoresAsString)!!
+                    .toString(),
+                this,
+                "saveHighScore",
+            )
+        }
 
-
-    var highScoresAsString: String
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-highScores= this.highScoresArray[index]!!
-highScores!!.addHighScore(this.highScore)
-highScoresAsString= highScores!!.toString()
-this.logUtil!!.putF(StringMaker().
-                            append("Added/Adding Score: ")!!.append(highScoresAsString)!!.toString(), this, "saveHighScore")
-}
-
-this.highScoresHelper!!.setHighScoresArray(this.highScoresArray)
-}
-
+        this.highScoresHelper!!.setHighScoresArray(this.highScoresArray)
+    }
 
     open fun submit(myCanvas: MyCanvas)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var myCanvas = myCanvas
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var myCanvas = myCanvas
 
-    var commandListener: CommandListener = myCanvas!!.getCustomCommandListener()!!
+        var commandListener: CommandListener = myCanvas!!.getCustomCommandListener()!!
 
-commandListener!!.commandAction(HighScoreUtil.SUBMIT_TEXTBOX_COMMAND, myCanvas)
+        commandListener!!.commandAction(HighScoreUtil.SUBMIT_TEXTBOX_COMMAND, myCanvas)
+    }
 }
-
-
-}
-                
-            
-

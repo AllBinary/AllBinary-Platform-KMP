@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.pickup.health
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.pickup.health
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.game.layer.pickup.CountedPickedUpLayerInterfaceFactory
 import org.allbinary.game.layer.pickup.IconLayerFactory
@@ -34,68 +24,68 @@ import org.allbinary.game.layer.pickup.PickedUpLayerTypeFactory
 import org.allbinary.game.layer.pickup.PickupProcessorInterface
 import org.allbinary.layer.AllBinaryLayer
 
-open public class HealPickedUpLayerInterfaceFactory : PickedUpLayerInterfaceFactory
-                , PickupProcessorInterface {
-        
-companion object {
-            
-    private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface = CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
+open public class HealPickedUpLayerInterfaceFactory :
+    PickedUpLayerInterfaceFactory, PickupProcessorInterface {
 
-                @Throws(Exception::class)
-            
-    open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
-HealPickedUpLayerInterfaceFactory.pickedUpLayerInterfaceFactoryInterface= HealPickedUpLayerInterfaceFactory()
-}
+    companion object {
 
+        private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface =
+            CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: PickedUpLayerInterfaceFactoryInterface{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return HealPickedUpLayerInterfaceFactory.pickedUpLayerInterfaceFactoryInterface
-}
-
-
+        @Throws(Exception::class)
+        open fun init()
+            // nullable = true from not(false or (false and true)) = true
+        {
+            HealPickedUpLayerInterfaceFactory.pickedUpLayerInterfaceFactoryInterface =
+                HealPickedUpLayerInterfaceFactory()
         }
-            
-    private var pool: HealLayerCircularStaticPool = HealLayerCircularStaticPool(HealLayerFactory(), 1)
-private constructor ()                        
 
-                            : super(PickedUpLayerTypeFactory.getInstance()!!.HEAL, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(HealthResources.getInstance()!!.RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(HealthResources.getInstance()!!.RESOURCE)!!.getInstance(0)){
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : PickedUpLayerInterfaceFactoryInterface {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return HealPickedUpLayerInterfaceFactory.pickedUpLayerInterfaceFactoryInterface
+        }
+    }
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
+    private var pool: HealLayerCircularStaticPool =
+        HealLayerCircularStaticPool(HealLayerFactory(), 1)
 
+    private constructor() :
+        super(
+            PickedUpLayerTypeFactory.getInstance()!!.HEAL,
+            IconLayerFactory.getInstance(
+                FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(
+                        HealthResources.getInstance()!!.RESOURCE
+                    )!!
+                    .getInstance(0),
+                10,
+                10,
+            ),
+            FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(
+                    HealthResources.getInstance()!!.RESOURCE
+                )!!
+                .getInstance(0),
+        ) {
+
+        // For kotlin this is before the body of the constructor.
+
+    }
 
     open fun getTotal()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 1
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 1
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun process(sourceLayerInterface: AllBinaryLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var sourceLayerInterface = sourceLayerInterface
-this.pool.visit(sourceLayerInterface)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var sourceLayerInterface = sourceLayerInterface
+        this.pool.visit(sourceLayerInterface)
+    }
 }
-
-
-}
-                
-            
-

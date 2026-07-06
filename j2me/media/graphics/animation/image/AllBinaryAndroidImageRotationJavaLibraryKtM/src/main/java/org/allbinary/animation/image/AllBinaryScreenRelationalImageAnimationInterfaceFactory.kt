@@ -1,87 +1,73 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.image
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
-import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.graphics.displayable.ScreenRelationalUtil
+import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.media.image.ImageScaleUtil
 import org.microemu.android.device.AndroidImageInterface
 
-open public class AllBinaryScreenRelationalImageAnimationInterfaceFactory : BaseImageAnimationFactory {
-        
+open public class AllBinaryScreenRelationalImageAnimationInterfaceFactory :
+    BaseImageAnimationFactory {
 
     private var lastImage: Image = NullImage.NULL_IMAGE
-public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, PrimitiveIntUtil.getArrayInstance(), 0, 0, 0, 0, animationBehaviorFactory){
-    //var image = image
-    //var animationBehaviorFactory = animationBehaviorFactory
+    public constructor(
+        image: Image,
+        animationBehaviorFactory: AnimationBehaviorFactory,
+    ) : super(image, PrimitiveIntUtil.getArrayInstance(), 0, 0, 0, 0, animationBehaviorFactory) {
+        // var image = image
+        // var animationBehaviorFactory = animationBehaviorFactory
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
+        if (this.lastImage != NullImage.NULL_IMAGE) {
 
-    
-                        if(this.lastImage != NullImage.NULL_IMAGE)
-                        
-                                    {
-                                    
-    var androidImageInterface: AndroidImageInterface = this.lastImage as AndroidImageInterface
+            var androidImageInterface: AndroidImageInterface =
+                this.lastImage as AndroidImageInterface
 
-androidImageInterface!!.getBitmap()!!.recycle()
+            androidImageInterface!!.getBitmap()!!.recycle()
+        }
 
-                                    }
-                                
+        var scale: Float = ScreenRelationalUtil.getInstance()!!.getScaleImage(image)!!
 
-    var scale: Float = ScreenRelationalUtil.getInstance()!!.getScaleImage(image)!!
+        this.lastImage =
+            ImageScaleUtil.getInstance()!!.createImage(
+                GameFeatureImageCacheFactory.getInstance(),
+                this.getImage(),
+                scale,
+                scale,
+                false,
+            )
+    }
 
-this.lastImage= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), this.getImage(), scale, scale, false)
+    @Throws(Exception::class)
+    override fun getInstance(
+        instanceId: Int
+    )
+        // nullable =  from not(true or (false and false)) =
+        : Animation {
+        // var instanceId = instanceId
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return ImageAnimation(this.lastImage, this.animationBehaviorFactory!!.getOrCreateInstance())
+    }
 }
-
-
-                @Throws(Exception::class)
-            
-    override fun getInstance(instanceId: Int)
-        //nullable =  from not(true or (false and false)) = 
-: Animation{
-    //var instanceId = instanceId
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageAnimation(this.lastImage, this.animationBehaviorFactory!!.getOrCreateInstance())
-}
-
-
-}
-                
-            
-

@@ -200,10 +200,11 @@
             </plugin>
 
 
+<!--
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-                <version>3.8.0</version><!-- spotless-maven-plugin -->
+                <version>3.8.0</version> spotless-maven-plugin 
                 <configuration>
                     <kotlin>
                         <includes>
@@ -213,7 +214,7 @@
                         
                         <ktfmt>
                             <version>0.64</version>
-                            <!-- Options include DEFAULT, GOOGLE, KOTLINLANG, DROPBOX -->
+                             Options include DEFAULT, GOOGLE, KOTLINLANG, DROPBOX 
                             <style>KOTLINLANG</style>
                         </ktfmt>
                     </kotlin>
@@ -233,6 +234,7 @@
                     </execution>
                 </executions>
             </plugin>
+-->
             
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

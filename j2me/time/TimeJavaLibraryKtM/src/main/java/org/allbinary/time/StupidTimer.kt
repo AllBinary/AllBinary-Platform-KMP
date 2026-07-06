@@ -1,16 +1,7 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.time
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.time
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -20,16 +11,11 @@ import org.allbinary.logic.util.visitor.Visitor
 import org.allbinary.string.CommonStrings
 import org.allbinary.thread.ThreadObjectUtil
 
-open public class StupidTimer
-            : Object
-         {
-        
+open public class StupidTimer : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -38,117 +24,100 @@ open public class StupidTimer
 
     private val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
 
-    open fun visitBool(visitorInterface: Visitor)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var visitorInterface = visitorInterface
+    open fun visitBool(
+        visitorInterface: Visitor
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var visitorInterface = visitorInterface
 
-    var result: Boolean = visitorInterface!!.visit(this.nullUtil!!.NULL_OBJECT) as Boolean
+        var result: Boolean = visitorInterface!!.visit(this.nullUtil!!.NULL_OBJECT) as Boolean
 
+        var result2: Boolean = result!!
 
-    var result2: Boolean = result!!
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return result2
+    }
 
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return result2
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun visit(visitorInterface: Visitor, timeDelayHelper: TimeDelayHelper)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var visitorInterface = visitorInterface
-    //var timeDelayHelper = timeDelayHelper
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var visitorInterface = visitorInterface
+        // var timeDelayHelper = timeDelayHelper
 
-    var tookTooLong: Boolean = false
+        var tookTooLong: Boolean = false
 
+        var WAITING_FOR: String = "Waiting for: "
 
-    var WAITING_FOR: String = "Waiting for: "
+        PreLogUtil.put(
+            StringMaker()
+                .append(WAITING_FOR)!!
+                .append(StringUtil.getInstance()!!.toString(visitorInterface))!!
+                .toString(),
+            this,
+            this.commonStrings!!.VISIT,
+        )
 
-PreLogUtil.put(StringMaker().
-                            append(WAITING_FOR)!!.append(StringUtil.getInstance()!!.toString(visitorInterface))!!.toString(), this, this.commonStrings!!.VISIT)
+        var index: Int = 0
 
-    var index: Int = 0
+        while (this.visitBool(visitorInterface)) {
 
+            if (index % 10 == 0) {
 
-        while(this.visitBool(visitorInterface))
-        {
+                PreLogUtil.put(
+                    StringMaker().append(WAITING_FOR)!!.appendint(index)!!.toString(),
+                    this,
+                    this.commonStrings!!.VISIT,
+                )
+            }
 
-    
-                        if(index % 10 == 0)
-                        
-                                    {
-                                    PreLogUtil.put(StringMaker().
-                            append(WAITING_FOR)!!.appendint(index)!!.toString(), this, this.commonStrings!!.VISIT)
+            index++
 
-                                    }
-                                
-index++
+            // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+            synchronized(this)
 
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this) 
+            // mutex.withLock
+            {
+                this.threadObjectUtil!!.waitObjectFor(this, 1800)
+            }
 
-        //mutex.withLock
-        {
-this.threadObjectUtil!!.waitObjectFor(this, 1800)
-}
+            if (timeDelayHelper!!.isTimeTNT()) {
 
+                tookTooLong = true
+                break
+            }
+        }
 
-    
-                        if(timeDelayHelper!!.isTimeTNT())
-                        
-                                    {
-                                    tookTooLong= true
-break;
+        if (tookTooLong) {
 
-                    
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.commonStrings!!.VISIT,
+                Exception(
+                    StringMaker()
+                        .append("Took Too Long: ")!!
+                        .append(StringUtil.getInstance()!!.toString(visitorInterface))!!
+                        .toString()
+                ),
+            )
+        } else {
+            PreLogUtil.put(timeDelayHelper!!.toString(), this, this.commonStrings!!.VISIT)
+        }
+    }
 
-                                    }
-                                
-}
-
-
-    
-                        if(tookTooLong)
-                        
-                                    {
-                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.VISIT, Exception(StringMaker().
-                            append("Took Too Long: ")!!.append(StringUtil.getInstance()!!.toString(visitorInterface))!!.toString()))
-
-                                    }
-                                
-                        else {
-                            PreLogUtil.put(timeDelayHelper!!.toString(), this, this.commonStrings!!.VISIT)
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun stopWaiting()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this) 
+        // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this)
 
-        //mutex.withLock
+        // mutex.withLock
         {
-this.threadObjectUtil!!.notifyObject(this)
+            this.threadObjectUtil!!.notifyObject(this)
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

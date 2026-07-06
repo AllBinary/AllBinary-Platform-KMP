@@ -1,95 +1,70 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.graphics.hud
+/* Generated Code Do Not Modify */
+package org.allbinary.game.graphics.hud
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.PointFactory
 
-open public class HudGraphicsPosition
-            : Object
-         {
-        
-companion object {
-            
-    val NULL_HUD_GRAPHICS_POSITION: HudGraphicsPosition = HudGraphicsPosition(PointFactory.getInstance()!!.ZERO_ZERO, 9)
+open public class HudGraphicsPosition : Object {
 
-        }
-            
-    private var anchor: Int= 0
+    companion object {
+
+        val NULL_HUD_GRAPHICS_POSITION: HudGraphicsPosition =
+            HudGraphicsPosition(PointFactory.getInstance()!!.ZERO_ZERO, 9)
+    }
+
+    private var anchor: Int = 0
 
     private var point: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
-public constructor (point: GPoint, anchor: Int)
-            : super()
-        {
-var point = point
-var anchor = anchor
-this.setAnchor(anchor)
-this.setPoint(point)
-}
 
+    public constructor(point: GPoint, anchor: Int) : super() {
+        var point = point
+        var anchor = anchor
+        this.setAnchor(anchor)
+        this.setPoint(point)
+    }
 
     open fun getAnchor()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.anchor
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.anchor
+    }
 
     open fun setAnchor(anchor: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var anchor = anchor
-this.anchor= anchor
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var anchor = anchor
+        this.anchor = anchor
+    }
 
     open fun getPoint()
-        //nullable = true from not(false or (false and true)) = true
-: GPoint{
+    // nullable = true from not(false or (false and true)) = true
+    : GPoint {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.point
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.point
+    }
 
     open fun setPoint(point: GPoint)
-        //nullable = true from not(false or (false and false)) = true
-{
-var point = point
-this.point= point
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var point = point
+        this.point = point
+    }
 }
-
-
-}
-                
-            
-

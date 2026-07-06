@@ -1,35 +1,24 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.special
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.special
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        import java.lang.System
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
+import java.lang.System
 import javax.microedition.lcdui.Graphics
+import kotlin.Array
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.animation.IndexedAnimationBehavior
@@ -40,35 +29,46 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class TitleAnimation : SpecialAnimation {
-        
-companion object {
-            
-    open fun createAnimation(animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int)
-        //nullable = true from not(false or (false and false)) = true
-: TitleAnimation{
-    //var animationInterfaceArray = animationInterfaceArray
-    //var basicColorArray = basicColorArray
-    //var dxArray = dxArray
-    //var dyArray = dyArray
-    //var y = y
-    //var width = width
 
+    companion object {
 
+        open fun createAnimation(
+            animationInterfaceArray: Array<IndexedAnimation?>,
+            basicColorArray: Array<BasicColor?>,
+            dxArray: IntArray,
+            dyArray: IntArray,
+            y: Int,
+            width: Int,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : TitleAnimation {
+            // var animationInterfaceArray = animationInterfaceArray
+            // var basicColorArray = basicColorArray
+            // var dxArray = dxArray
+            // var dyArray = dyArray
+            // var y = y
+            // var width = width
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return TitleAnimation(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width, IndexedAnimationBehavior(1, 250))
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return TitleAnimation(
+                animationInterfaceArray,
+                basicColorArray,
+                dxArray,
+                dyArray,
+                y,
+                width,
+                IndexedAnimationBehavior(1, 250),
+            )
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    var deltaX: Float= 0.0f
+    var deltaX: Float = 0.0f
 
-    var deltaY: Float= 0.0f
+    var deltaY: Float = 0.0f
 
-    var deltaZ: Float= 0.0f
+    var deltaZ: Float = 0.0f
 
     val basicColorArray: Array<BasicColor?>
 
@@ -87,251 +87,192 @@ companion object {
     private var lastFrameStartTime: Long
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-public constructor (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
-    //var animationInterfaceArray = animationInterfaceArray
-    //var basicColorArray = basicColorArray
-    //var dxArray = dxArray
-    //var dyArray = dyArray
-    //var y = y
-    //var width = width
-    //var animationBehavior = animationBehavior
+    public constructor(
+        animationInterfaceArray: Array<IndexedAnimation?>,
+        basicColorArray: Array<BasicColor?>,
+        dxArray: IntArray,
+        dyArray: IntArray,
+        y: Int,
+        width: Int,
+        animationBehavior: AnimationBehavior,
+    ) : super(animationBehavior) {
+        // var animationInterfaceArray = animationInterfaceArray
+        // var basicColorArray = basicColorArray
+        // var dxArray = dxArray
+        // var dyArray = dyArray
+        // var y = y
+        // var width = width
+        // var animationBehavior = animationBehavior
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.lastFrameStartTime= System.currentTimeMillis()
-this.animationInterfaceArray= animationInterfaceArray
-this.sizeP= this.animationInterfaceArray!!.size
-this.basicColorArray= basicColorArray
-this.dxArray= dxArray
-this.dyArray= dyArray
-this.y= y
-this.widthP= width
-this.reset()
-}
-
+        this.lastFrameStartTime = System.currentTimeMillis()
+        this.animationInterfaceArray = animationInterfaceArray
+        this.sizeP = this.animationInterfaceArray!!.size
+        this.basicColorArray = basicColorArray
+        this.dxArray = dxArray
+        this.dyArray = dyArray
+        this.y = y
+        this.widthP = width
+        this.reset()
+    }
 
     override fun nextFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var currentTime: Long = System.currentTimeMillis()!!
+        var currentTime: Long = System.currentTimeMillis()!!
 
+        var totalTimeElapsed: Long = currentTime - this.lastFrameStartTime
 
-    var totalTimeElapsed: Long = currentTime -this.lastFrameStartTime
+        var indexedAnimationBehavior: IndexedAnimationBehavior =
+            this.getAnimationBehavior() as IndexedAnimationBehavior
 
+        if (totalTimeElapsed > indexedAnimationBehavior!!.frameDelayTime) {
 
-    var indexedAnimationBehavior: IndexedAnimationBehavior = this.getAnimationBehavior() as IndexedAnimationBehavior
+            this.previousFrame()
+            this.lastFrameStartTime = currentTime
+        }
 
+        if (this.animationInterfaceArray[0]!!.getFrame() == 0) {
 
-    
-                        if(totalTimeElapsed > indexedAnimationBehavior!!.frameDelayTime)
-                        
-                                    {
-                                    this.previousFrame()
-this.lastFrameStartTime= currentTime
-
-                                    }
-                                
-
-    
-                        if(this.animationInterfaceArray[0]!!.getFrame() == 0)
-                        
-                                    {
-                                    indexedAnimationBehavior!!.loopIndex++
-
-                                    }
-                                
-}
-
+            indexedAnimationBehavior!!.loopIndex++
+        }
+    }
 
     override fun isComplete()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    var indexedAnimationBehavior: IndexedAnimationBehavior = this.getAnimationBehavior() as IndexedAnimationBehavior
+        var indexedAnimationBehavior: IndexedAnimationBehavior =
+            this.getAnimationBehavior() as IndexedAnimationBehavior
 
+        if (
+            indexedAnimationBehavior!!.loopTotal == -1 ||
+                indexedAnimationBehavior!!.loopIndex < indexedAnimationBehavior!!.loopTotal ||
+                this.getFrame() != 0
+        ) {
 
-    
-                        if(indexedAnimationBehavior!!.loopTotal ==  -1 || indexedAnimationBehavior!!.loopIndex < indexedAnimationBehavior!!.loopTotal || this.getFrame() != 0)
-                        
-                                    {
-                                    
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        } else {
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+    }
 
     override fun setSequence(sequence: IntArray)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var sequence = sequence
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var sequence = sequence
+    }
 
     override fun getSequence()
-        //nullable = true from not(false or (false and true)) = true
-: IntArray{
+    // nullable = true from not(false or (false and true)) = true
+    : IntArray {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PrimitiveIntUtil.getArrayInstance()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return PrimitiveIntUtil.getArrayInstance()
+    }
 
     override fun getSize()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[0]!!.getSize()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterfaceArray[0]!!.getSize()
+    }
 
     override fun getFrame()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[0]!!.getFrame()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.animationInterfaceArray[0]!!.getFrame()
+    }
 
     override fun setFrame(frame: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var frame = frame
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var frame = frame
 
+        for (index in 0 until this.sizeP) {
 
-
-
-                        for (index in 0 until this.sizeP)
-
-        {
-this.animationInterfaceArray[index]!!.setFrame(frame)
-}
-
-}
-
+            this.animationInterfaceArray[index]!!.setFrame(frame)
+        }
+    }
 
     override fun setLastFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setFrame(this.getSize() -1)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setFrame(this.getSize() - 1)
+    }
 
     override fun reset()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setLastFrame()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setLastFrame()
 
-    var indexedAnimationBehavior: IndexedAnimationBehavior = (this.getAnimationBehavior() as IndexedAnimationBehavior)
+        var indexedAnimationBehavior: IndexedAnimationBehavior =
+            (this.getAnimationBehavior() as IndexedAnimationBehavior)
 
-indexedAnimationBehavior!!.reset()
-}
-
+        indexedAnimationBehavior!!.reset()
+    }
 
     override fun previousFrame()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        for (index in 0 until this.sizeP) {
 
-
-
-                        for (index in 0 until this.sizeP)
-
-        {
-this.animationInterfaceArray[index]!!.previousFrame()
-}
-
-}
-
+            this.animationInterfaceArray[index]!!.previousFrame()
+        }
+    }
 
     open fun paintFrameXY(graphics: Graphics, frame: Int, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var frame = frame
-    //var x = x
-    //var y = y
-this.setFrame(frame)
-this.paintXY(graphics, x, y)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var frame = frame
+        // var x = x
+        // var y = y
+        this.setFrame(frame)
+        this.paintXY(graphics, x, y)
+    }
 
     val CLEAR_COLOR: BasicColor = BasicColorFactory.getInstance()!!.CLEAR_COLOR
 
     override fun paintXY(graphics: Graphics, ax: Int, ay: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var ax = ax
-    //var ay = ay
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var ax = ax
+        // var ay = ay
 
-    var x: Int = 0
+        var x: Int = 0
 
+        if (this.widthP != Integer.MIN_VALUE) {
 
-    
-                        if(this.widthP != Integer.MIN_VALUE)
-                        
-                                    {
-                                    x= ((this.displayInfoSingleton!!.getLastWidth() -this.widthP) /2)
+            x = ((this.displayInfoSingleton!!.getLastWidth() - this.widthP) / 2)
+        }
 
-                                    }
-                                
+        var deltaX: Int = 0
 
-    var deltaX: Int= 0
+        var deltaY: Int = 0
 
+        for (index in 0 until this.sizeP) {
 
-    var deltaY: Int= 0
+            deltaX = this.dxArray[index] + x
+            deltaY = this.dyArray[index] + this.y
 
+            if (this.basicColorArray[index] != this.CLEAR_COLOR) {
 
+                this.basicSetColorUtil!!.setBasicColorP(graphics, this.basicColorArray[index]!!)
+            }
 
-
-
-                        for (index in 0 until this.sizeP)
-
-        {
-deltaX= this.dxArray[index] +x
-deltaY= this.dyArray[index] +this.y
-
-    
-                        if(this.basicColorArray[index] != this.CLEAR_COLOR)
-                        
-                                    {
-                                    this.basicSetColorUtil!!.setBasicColorP(graphics, this.basicColorArray[index]!!)
-
-                                    }
-                                
-this.animationInterfaceArray[index]!!.paintXY(graphics, deltaX, deltaY)
+            this.animationInterfaceArray[index]!!.paintXY(graphics, deltaX, deltaY)
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

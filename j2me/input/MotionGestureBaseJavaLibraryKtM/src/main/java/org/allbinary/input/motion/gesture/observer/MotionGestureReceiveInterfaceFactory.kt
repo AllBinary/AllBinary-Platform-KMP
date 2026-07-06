@@ -1,78 +1,47 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.gesture.observer
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.gesture.observer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.input.motion.gesture.configuration.MotionGestureConfiguration
 import org.allbinary.input.motion.gesture.configuration.MotionGestureConfigurationFactory
 
-open public class MotionGestureReceiveInterfaceFactory
-            : Object
-         {
-        
-companion object {
-            
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CompleteMotionGestureListenerInterface{
+open public class MotionGestureReceiveInterfaceFactory : Object {
 
-    var configuration: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
+    companion object {
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CompleteMotionGestureListenerInterface {
 
-    
-                        if(!configuration.isExecutingActionsAllowed())
-                        
-                                    {
-                                    
+            var configuration: MotionGestureConfiguration =
+                MotionGestureConfigurationFactory.getInstance()!!
 
+            if (!configuration.isExecutingActionsAllowed()) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullCompleteMotionGestureReceiver()
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return NullCompleteMotionGestureReceiver()
+            } else {
 
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ResolveCompleteMotionGestureListener()
-
-                        }
-                            
-}
-
-
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return ResolveCompleteMotionGestureListener()
+            }
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-}
-                
-            
+    }
 
+    // Auto Generated
+    public constructor() : super() {}
+}

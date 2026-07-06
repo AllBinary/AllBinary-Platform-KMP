@@ -1,32 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.ai.scroller
+/* Generated Code Do Not Modify */
+package org.allbinary.game.ai.scroller
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
 import java.util.Hashtable
 import javax.microedition.lcdui.Canvas
 import org.allbinary.game.ai.BasicAI
@@ -43,13 +32,12 @@ import org.allbinary.media.audio.Sound
 import org.allbinary.time.TimeDelayHelper
 
 open public class HorizontalScreenPatrolAI : BasicAI {
-        
-companion object {
-            
-    val SOUND: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(433)!!
 
-        }
-            
+    companion object {
+
+        val SOUND: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(433)!!
+    }
+
     var keyDirection: Int = Canvas.LEFT
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -65,115 +53,85 @@ companion object {
     private val secondaryPlayerQueue: PlayerQueue = SecondaryPlayerQueueFactory.getInstance()!!
 
     private val sound: Sound
-public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput){
-var hashtable = hashtable
-var ownerLayerInterface = ownerLayerInterface
-var gameInput = gameInput
+    public constructor(
+        hashtable: Hashtable<Any, Any>,
+        ownerLayerInterface: AllBinaryLayer,
+        gameInput: GameInput,
+    ) : super(ownerLayerInterface, gameInput) {
+        var hashtable = hashtable
+        var ownerLayerInterface = ownerLayerInterface
+        var gameInput = gameInput
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.sound= hashtable.get(HorizontalScreenPatrolAI.SOUND) as Sound
+        this.sound = hashtable.get(HorizontalScreenPatrolAI.SOUND) as Sound
 
-    
-                        if(this.sound == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+        if (this.sound == null) {
 
+            throw Exception("No Sound Provided!!")
+        }
+    }
 
-                            throw Exception("No Sound Provided!!")
-
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
-super.processKeyAI(this.keyDirection)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
+        super.processKeyAI(this.keyDirection)
 
-    
-                        if(this.timeDelayHelper!!.isTimeTNT())
-                        
-                                    {
-                                    
-    var layerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
+        if (this.timeDelayHelper!!.isTimeTNT()) {
 
+            var layerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-    var currentOwnerLayerX: Int = layerInterface!!.getXP()!!
+            var currentOwnerLayerX: Int = layerInterface!!.getXP()!!
 
+            if (currentOwnerLayerX < -layerInterface!!.getWidth()) {
 
-    
-                        if(currentOwnerLayerX <  -layerInterface!!.getWidth())
-                        
-                                    {
-                                    
-    var y: Int = MyRandomFactory.getInstance()!!.getAbsoluteNextIntAllowZero(50)!!
+                var y: Int = MyRandomFactory.getInstance()!!.getAbsoluteNextIntAllowZero(50)!!
 
-layerInterface!!.setPosition(this.displayInfoSingleton!!.getLastWidth() +layerInterface!!.getWidth() +50, y, layerInterface!!.getZP())
-this.firedIndex= 0
-this.firingX= this.displayInfoSingleton!!.getLastHalfWidth() +MyRandomFactory.getInstance()!!.getNextInt(this.displayInfoSingleton!!.getLastHalfWidth())
-this.secondaryPlayerQueue!!.add(this.sound)
+                layerInterface!!.setPosition(
+                    this.displayInfoSingleton!!.getLastWidth() + layerInterface!!.getWidth() + 50,
+                    y,
+                    layerInterface!!.getZP(),
+                )
+                this.firedIndex = 0
+                this.firingX =
+                    this.displayInfoSingleton!!.getLastHalfWidth() +
+                        MyRandomFactory.getInstance()!!.getNextInt(
+                            this.displayInfoSingleton!!.getLastHalfWidth()
+                        )
+                this.secondaryPlayerQueue!!.add(this.sound)
+            }
 
-                                    }
-                                
+            if (
+                currentOwnerLayerX < this.firingX &&
+                    currentOwnerLayerX > -layerInterface!!.getWidth()
+            ) {
+                super.processKeyAI(Canvas.KEY_NUM1)
 
-    
-                        if(currentOwnerLayerX < this.firingX && currentOwnerLayerX >  -layerInterface!!.getWidth())
-                        
-                                    {
-                                    super.processKeyAI(Canvas.KEY_NUM1)
+                var gameLayerManager: AllBinaryGameLayerManager =
+                    allBinaryLayerManager as AllBinaryGameLayerManager
 
-    var gameLayerManager: AllBinaryGameLayerManager = allBinaryLayerManager as AllBinaryGameLayerManager
+                var FIRE: Int = (gameLayerManager!!.getGameInfo()!!.getCurrentLevel() + 12) shr 2
 
+                if (FIRE > this.MAX_FIRE) {
 
-    var FIRE: Int = (gameLayerManager!!.getGameInfo()!!.getCurrentLevel() +12) shr 2
+                    FIRE = this.MAX_FIRE
+                }
 
+                if (this.firedIndex > FIRE) {
 
-    
-                        if(FIRE > this.MAX_FIRE)
-                        
-                                    {
-                                    FIRE= this.MAX_FIRE
+                    this.firedIndex = 0
+                    this.firingX = Integer.MIN_VALUE
+                }
 
-                                    }
-                                
-
-    
-                        if(this.firedIndex > FIRE)
-                        
-                                    {
-                                    this.firedIndex= 0
-this.firingX= Integer.MIN_VALUE
-
-                                    }
-                                
-this.firedIndex++
-
-                                    }
-                                
-
-                                    }
-                                
-}
-
+                this.firedIndex++
+            }
+        }
+    }
 
     open fun nextDirection()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {}
 }
-
-
-}
-                
-            
-

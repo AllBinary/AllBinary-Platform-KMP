@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.midlet
+/* Generated Code Do Not Modify */
+package org.allbinary.game.midlet
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.util.Hashtable
 import org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface
 import org.allbinary.game.layer.AllBinaryGameLayerManager
@@ -35,164 +25,119 @@ import org.allbinary.logic.system.security.licensing.ClientInformationFactory
 import org.allbinary.thread.PrimaryThreadPool
 
 open public class DemoGameMidlet : GameMidlet {
-        
-public constructor (clientInformationFactory: ClientInformationFactory)                        
 
-                            : super(clientInformationFactory){
-    //var clientInformationFactory = clientInformationFactory
+    public constructor(
+        clientInformationFactory: ClientInformationFactory
+    ) : super(clientInformationFactory) {
+        // var clientInformationFactory = clientInformationFactory
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun isContinue()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
+        var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
 
+        if (hashtable != null && hashtable.size > 0) {
 
-    
-                        if(hashtable != 
-                                    null
-                                 && hashtable.size > 0)
-                        
-                                    {
-                                    
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
     open fun getHighestLevel()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 1
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 1
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun createDemoGameCanvasRunnableInterface()
-        //nullable = true from not(false or (false and true)) = true
-: GameCanvasRunnableInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : GameCanvasRunnableInterface {
 
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
+    @Throws(Exception::class)
+    open fun createGameCanvasRunnable(
+        allBinaryGameLayerManager: AllBinaryGameLayerManager
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : GameCanvasRunnableInterface {
+        var allBinaryGameLayerManager = allBinaryGameLayerManager
 
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
-
-                @Throws(Exception::class)
-            
-    open fun createGameCanvasRunnable(allBinaryGameLayerManager: AllBinaryGameLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-: GameCanvasRunnableInterface{
-var allBinaryGameLayerManager = allBinaryGameLayerManager
-
-
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun createGameCanvasRunnableInterface()
-        //nullable = true from not(false or (false and true)) = true
-: GameCanvasRunnableInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : GameCanvasRunnableInterface {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.createGameCanvasRunnable(this.createGameLayerManager())
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.createGameCanvasRunnable(this.createGameLayerManager())
+    }
 
     open fun demoSetup()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun postDemoSetup()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
-
-                @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Throws(Exception::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun setDemo()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.logUtil!!.putF(this.commonStrings!!.START, this, "setDemo")
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.logUtil!!.putF(this.commonStrings!!.START, this, "setDemo")
 
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
+        var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.start()
-PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
-}
+        progressCanvas!!.start()
+        PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
+    }
 
-
-                @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Throws(Exception::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun createGame()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var CREATE_GAME: String = "createGame"
+        var CREATE_GAME: String = "createGame"
 
-this.logUtil!!.putF(this.commonStrings!!.START, this, CREATE_GAME)
+        this.logUtil!!.putF(this.commonStrings!!.START, this, CREATE_GAME)
 
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
+        var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.start()
+        progressCanvas!!.start()
 
-    var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
+        var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
 
-this.setStartStateHashtable(NullUtil.getInstance()!!.NULL_TABLE)
-PrimaryThreadPool.getInstance()!!.runTask(CreateGameRunnable(this, hashtable))
-this.logUtil!!.putF(this.commonStrings!!.END, this, CREATE_GAME)
-}
-
+        this.setStartStateHashtable(NullUtil.getInstance()!!.NULL_TABLE)
+        PrimaryThreadPool.getInstance()!!.runTask(CreateGameRunnable(this, hashtable))
+        this.logUtil!!.putF(this.commonStrings!!.END, this, CREATE_GAME)
+    }
 
     open fun isReady()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 }
-
-
-}
-                
-            
-

@@ -1,34 +1,34 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.building
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.building
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Hashtable
 import javax.microedition.lcdui.Graphics
+import kotlin.Array
+import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.animation.NullIndexedAnimationFactory
+import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
+import org.allbinary.animation.RotationAnimationInterfaceCompositeInterface
+import org.allbinary.direction.Direction
+import org.allbinary.direction.DirectionFactory
+import org.allbinary.game.combat.damage.DamageFloaters
+import org.allbinary.game.health.Health
+import org.allbinary.game.identification.Group
 import org.allbinary.game.identification.GroupFactory
 import org.allbinary.game.input.form.NullRTSFormInputFactory
 import org.allbinary.game.input.form.RTSFormInput
@@ -37,82 +37,85 @@ import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.AdvancedRTSPlayerLayerInterface
 import org.allbinary.game.layer.AdvancedRTSProperties
 import org.allbinary.game.layer.CollidableRTSBehavior
+import org.allbinary.game.layer.GeographicMapCellPositionAreaBase
+import org.allbinary.game.layer.NullPathFindingLayer
 import org.allbinary.game.layer.RTSLayerUtil
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.game.layer.waypoint.Waypoint
-import org.allbinary.game.view.TileLayerPositionIntoViewPosition
-import org.allbinary.graphics.RectangleFactory
-import org.allbinary.logic.string.StringUtil
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
-import org.allbinary.animation.AnimationInterfaceFactoryInterface
-import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
-import org.allbinary.animation.RotationAnimationInterfaceCompositeInterface
-import org.allbinary.direction.Direction
-import org.allbinary.direction.DirectionFactory
-import org.allbinary.game.combat.damage.DamageFloaters
-import org.allbinary.game.health.Health
-import org.allbinary.game.identification.Group
-import org.allbinary.game.layer.GeographicMapCellPositionAreaBase
-import org.allbinary.game.layer.NullPathFindingLayer
+import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.game.tracking.TrackingEventListenerInterface
+import org.allbinary.game.view.TileLayerPositionIntoViewPosition
 import org.allbinary.graphics.Rectangle
+import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.SelectSound
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapDirectionUtil
 import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
 import org.allbinary.time.TimeDelayHelper
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListS
 import org.allbinary.weapon.media.audio.ExplosionBasicSound
-import org.allbinary.game.multiplayer.layer.RemoteInfo
 
-open public class BuildingLayer : AdvancedRTSGameLayer
-                , RotationAnimationInterfaceCompositeInterface
-                , TrackingEventListenerInterface {
-        
-companion object {
-            
-                @Throws(Exception::class)
-            
-    open fun createSimulated()
-        //nullable = true from not(false or (false and true)) = true
-: BuildingLayer{
+open public class BuildingLayer :
+    AdvancedRTSGameLayer,
+    RotationAnimationInterfaceCompositeInterface,
+    TrackingEventListenerInterface {
 
-    var nullAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance()!!
+    companion object {
 
+        @Throws(Exception::class)
+        open fun createSimulated()
+        // nullable = true from not(false or (false and true)) = true
+        : BuildingLayer {
 
-    var nullIndexedAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance()!!
+            var nullAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface =
+                NullAnimationFactory.getFactoryInstance()!!
 
+            var nullIndexedAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface =
+                NullIndexedAnimationFactory.getFactoryInstance()!!
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BuildingLayer(RemoteInfo.REMOTE_INFO, SimulatedBuildingPropertiesFactory.getInstance(), AdvancedRTSProperties.createPropertiesSimulated(), GroupFactory.getInstance()!!.NULL_GROUP_ARRAY, StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0)
-}
-
-
-    open fun getStaticType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 2
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BuildingLayer(
+                RemoteInfo.REMOTE_INFO,
+                SimulatedBuildingPropertiesFactory.getInstance(),
+                AdvancedRTSProperties.createPropertiesSimulated(),
+                GroupFactory.getInstance()!!.NULL_GROUP_ARRAY,
+                StringUtil.getInstance()!!.EMPTY_STRING,
+                StringUtil.getInstance()!!.EMPTY_STRING,
+                Health.NULL_HEALTH,
+                NullRTSFormInputFactory.getInstance(),
+                nullAnimationInterfaceFactoryInterface,
+                nullIndexedAnimationInterfaceFactoryInterface,
+                nullAnimationInterfaceFactoryInterface,
+                nullAnimationInterfaceFactoryInterface,
+                nullIndexedAnimationInterfaceFactoryInterface,
+                NullIndexedAnimationFactory.getFactoryInstance(),
+                RectangleFactory.SINGLETON,
+                0,
+                0,
+            )
         }
-            
-    private var buildingLevelCost: Int= 0
 
-    private var productivity: Int= 0
+        open fun getStaticType()
+        // nullable = true from not(false or (false and true)) = true
+        : Int {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 2
+        }
+    }
+
+    private var buildingLevelCost: Int = 0
+
+    private var productivity: Int = 0
 
     private var efficiency: Int
 
@@ -127,624 +130,522 @@ companion object {
     private val healthBar: Paintable
 
     private val pathsHashtable: Hashtable<Any, Any>
-public constructor (remoteInfo: RemoteInfo, buildingPropertiesFactory: BuildingPropertiesFactory, advancedRTSProperties: AdvancedRTSProperties, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
-                            : super(remoteInfo, NullPathFindingLayer.NULL_PATH_FINDING_LAYER, advancedRTSProperties, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
-    //var remoteInfo = remoteInfo
-    //var buildingPropertiesFactory = buildingPropertiesFactory
-    //var advancedRTSProperties = advancedRTSProperties
-    //var groupInterface = groupInterface
-    //var rootName = rootName
-    //var name = name
-    //var healthInterface = healthInterface
-    //var rtsFormInput = rtsFormInput
-    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-    //var rectangle = rectangle
-    //var x = x
-    //var y = y
+    public constructor(
+        remoteInfo: RemoteInfo,
+        buildingPropertiesFactory: BuildingPropertiesFactory,
+        advancedRTSProperties: AdvancedRTSProperties,
+        groupInterface: Array<Group?>,
+        rootName: String,
+        name: String,
+        healthInterface: Health,
+        rtsFormInput: RTSFormInput,
+        animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface,
+        rectangle: Rectangle,
+        x: Int,
+        y: Int,
+    ) : super(
+        remoteInfo,
+        NullPathFindingLayer.NULL_PATH_FINDING_LAYER,
+        advancedRTSProperties,
+        groupInterface,
+        rootName,
+        name,
+        healthInterface,
+        rtsFormInput,
+        animationInterfaceFactoryInterface,
+        emptyAnimationInterfaceFactoryInterface,
+        baseAnimationInterfaceFactoryInterface,
+        buildAnimationInterfaceFactoryInterface,
+        verticleBuildAnimationInterfaceFactoryInterface,
+        proceduralAnimationInterfaceFactoryInterface,
+        rectangle,
+        x,
+        y,
+        TileLayerPositionIntoViewPosition(),
+    ) {
+        // var remoteInfo = remoteInfo
+        // var buildingPropertiesFactory = buildingPropertiesFactory
+        // var advancedRTSProperties = advancedRTSProperties
+        // var groupInterface = groupInterface
+        // var rootName = rootName
+        // var name = name
+        // var healthInterface = healthInterface
+        // var rtsFormInput = rtsFormInput
+        // var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+        // var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+        // var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+        // var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+        // var verticleBuildAnimationInterfaceFactoryInterface =
+        // verticleBuildAnimationInterfaceFactoryInterface
+        // var proceduralAnimationInterfaceFactoryInterface =
+        // proceduralAnimationInterfaceFactoryInterface
+        // var rectangle = rectangle
+        // var x = x
+        // var y = y
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableRTSBehavior(true))
-this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, SelectSound.getInstance()))
-this.damageFloaters= buildingPropertiesFactory!!.getDamageFloaters(this)
-this.damageFloatersPaintableInterface= buildingPropertiesFactory!!.damageFloatersPaintableInterface
-this.healthBar= buildingPropertiesFactory!!.getHealthBar(this)
-this.pathsHashtable= buildingPropertiesFactory!!.getHashtable()
-this.setMaxLevel(30)
-this.setProductivity(1)
-this.setEfficiency(this.calculateEfficiency())
-this.efficiencyPerLevel= buildingPropertiesFactory!!.getEfficiencyPerLevel(this)
-this.efficiency= this.efficiencyPerLevel
-this.generateMoveOutOfBuildAreaPaths()
-this.trackingEvent= buildingPropertiesFactory!!.getTrackingEvent(this)
-}
+        this.setCollidableInferface(CollidableRTSBehavior(true))
+        this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, SelectSound.getInstance()))
+        this.damageFloaters = buildingPropertiesFactory!!.getDamageFloaters(this)
+        this.damageFloatersPaintableInterface =
+            buildingPropertiesFactory!!.damageFloatersPaintableInterface
+        this.healthBar = buildingPropertiesFactory!!.getHealthBar(this)
+        this.pathsHashtable = buildingPropertiesFactory!!.getHashtable()
+        this.setMaxLevel(30)
+        this.setProductivity(1)
+        this.setEfficiency(this.calculateEfficiency())
+        this.efficiencyPerLevel = buildingPropertiesFactory!!.getEfficiencyPerLevel(this)
+        this.efficiency = this.efficiencyPerLevel
+        this.generateMoveOutOfBuildAreaPaths()
+        this.trackingEvent = buildingPropertiesFactory!!.getTrackingEvent(this)
+    }
 
-
-    var local: Boolean= false
+    var local: Boolean = false
 
     override fun initVisibility(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 
-    var advancedRTSPlayerLayerInterface: AdvancedRTSPlayerLayerInterface = rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
+        var advancedRTSPlayerLayerInterface: AdvancedRTSPlayerLayerInterface =
+            rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
 
+        if (advancedRTSPlayerLayerInterface!!.isLocalPlayer()) {
 
-    
-                        if(advancedRTSPlayerLayerInterface!!.isLocalPlayer())
-                        
-                                    {
-                                    this.local= true
-this.addVisibility()
+            this.local = true
+            this.addVisibility()
+        } else {
+            this.local = false
+        }
 
-                                    }
-                                
-                        else {
-                            this.local= false
+        super.initVisibility(rtsPlayerLayerInterface)
+    }
 
-                        }
-                            
-super.initVisibility(rtsPlayerLayerInterface)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-super.construct(rtsPlayerLayerInterface)
-TrackingEventHandler.getInstance()!!.addListenerInterface(this)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        super.construct(rtsPlayerLayerInterface)
+        TrackingEventHandler.getInstance()!!.addListenerInterface(this)
+    }
 
     override fun onMovement(trackingEvent: TrackingEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var trackingEvent = trackingEvent
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var trackingEvent = trackingEvent
 
         try {
-            
-    var layerInterface: AdvancedRTSGameLayer = trackingEvent!!.getLayerInterface() as AdvancedRTSGameLayer
 
+            var layerInterface: AdvancedRTSGameLayer =
+                trackingEvent!!.getLayerInterface() as AdvancedRTSGameLayer
 
-    
-                        if(layerInterface!!.getGroupInterface()[0] != this.getGroupInterface()[0])
-                        
-                                    {
-                                    layerInterface!!.onMovementFound(this.trackingEvent)
+            if (layerInterface!!.getGroupInterface()[0] != this.getGroupInterface()[0]) {
 
-                                    }
-                                
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onMovement", e)
-}
-
-}
-
+                layerInterface!!.onMovementFound(this.trackingEvent)
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onMovement", e)
+        }
+    }
 
     val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(3000)
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
 
-    
-                        if(this.getHealthInterface()!!.isDamaged())
-                        
-                                    {
-                                    this.setAnimationInterface(this.destroyAnimationInterface)
+        if (this.getHealthInterface()!!.isDamaged()) {
 
-                                    }
-                                
+            this.setAnimationInterface(this.destroyAnimationInterface)
+        }
 
-    
-                        if(!this.getHealthInterface()!!.isAlive())
-                        
-                                    {
-                                    
-    
-                        if(this.isReadyForExplosion())
-                        
-                                    {
-                                    
-    var currentFrame: Int = this.destroyAnimationInterface!!.getFrame()!!
+        if (!this.getHealthInterface()!!.isAlive()) {
 
+            if (this.isReadyForExplosion()) {
 
-    var size: Int = this.destroyAnimationInterface!!.getSize() -1
+                var currentFrame: Int = this.destroyAnimationInterface!!.getFrame()!!
 
+                var size: Int = this.destroyAnimationInterface!!.getSize() - 1
 
-    
-                        if(currentFrame == size && !this.timeDelayHelper!!.isTimeTNT())
-                        
-                                    {
-                                    
-    
-                        if(!this.getHealthInterface()!!.isAlive())
-                        
-                                    {
-                                    this.setDestroyed(true)
+                if (currentFrame == size && !this.timeDelayHelper!!.isTimeTNT()) {
 
-                                    }
-                                
+                    if (!this.getHealthInterface()!!.isAlive()) {
 
-                                    }
-                                
-                        else {
-                            this.destroyAnimationInterface!!.nextFrame()
+                        this.setDestroyed(true)
+                    }
+                } else {
+                    this.destroyAnimationInterface!!.nextFrame()
+                }
+            } else {
+                this.setAnimationInterface(this.destroyAnimationInterface)
+                SecondaryPlayerQueueFactory.getInstance()!!.add(ExplosionBasicSound.getInstance())
+                this.shakeListener!!.onSmallShakeEvent()
+                this.vibration.vibrate(this.duration, 0, 0)
+                this.timeDelayHelper!!.setStartTimeTNT()
+                this.setReadyForExplosion(true)
+            }
+        } else {
+            super.processBuiltTick(allBinaryLayerManager)
+        }
 
-                        }
-                            
-
-                                    }
-                                
-                        else {
-                            this.setAnimationInterface(this.destroyAnimationInterface)
-SecondaryPlayerQueueFactory.getInstance()!!.add(ExplosionBasicSound.getInstance())
-this.shakeListener!!.onSmallShakeEvent()
-this.vibration.vibrate(this.duration, 0, 0)
-this.timeDelayHelper!!.setStartTimeTNT()
-this.setReadyForExplosion(true)
-
-                        }
-                            
-
-                                    }
-                                
-                        else {
-                            super.processBuiltTick(allBinaryLayerManager)
-
-                        }
-                            
-this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
-}
-
+        this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
+    }
 
     open fun calculateEfficiency()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.efficiencyPerLevel
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.efficiencyPerLevel
+    }
 
     override fun getCost()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-    var total: Long = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() *this.getBuildingLevelCost()).toLong())!!
+        var total: Long =
+            RTSLayerUtil.getInstance()!!.getCostExponential(
+                (this.getLevel() * this.getBuildingLevelCost()).toLong()
+            )!!
 
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return total.toInt()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return total.toInt()
+    }
 
     override fun getDowngradeCost()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-    var downgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential(((this.getLevel() -1) *this.getBuildingLevelCost()).toLong())!!
+        var downgradeCost: Long =
+            RTSLayerUtil.getInstance()!!.getCostExponential(
+                ((this.getLevel() - 1) * this.getBuildingLevelCost()).toLong()
+            )!!
 
-this.logUtil!!.putF("Cost: " +downgradeCost, this, "getDowngradeCost")
+        this.logUtil!!.putF("Cost: " + downgradeCost, this, "getDowngradeCost")
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return downgradeCost.toInt() *9 /10
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return downgradeCost.toInt() * 9 / 10
+    }
 
     override fun getUpgradeCost()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-    var upgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential(((this.getLevel() +1) *this.getBuildingLevelCost()).toLong())!!
+        var upgradeCost: Long =
+            RTSLayerUtil.getInstance()!!.getCostExponential(
+                ((this.getLevel() + 1) * this.getBuildingLevelCost()).toLong()
+            )!!
 
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return upgradeCost.toInt()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return upgradeCost.toInt()
+    }
 
     override fun downgrade()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.downgrade()
-this.setProductivity(this.getProductivity() -1)
-this.setEfficiency(this.getEfficiency() -this.calculateEfficiency())
-this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealth() -((this.getLevel() +1) *100))
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.downgrade()
+        this.setProductivity(this.getProductivity() - 1)
+        this.setEfficiency(this.getEfficiency() - this.calculateEfficiency())
+        this.getHealthInterface()!!.setMaxHealth(
+            this.getHealthInterface()!!.getMaxHealth() - ((this.getLevel() + 1) * 100)
+        )
+    }
 
     override fun upgrade()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.upgrade()
-this.setProductivity(this.getProductivity() +1)
-this.setEfficiency(this.getEfficiency() +this.calculateEfficiency())
-this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealth() +(this.getLevel() *100))
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.upgrade()
+        this.setProductivity(this.getProductivity() + 1)
+        this.setEfficiency(this.getEfficiency() + this.calculateEfficiency())
+        this.getHealthInterface()!!.setMaxHealth(
+            this.getHealthInterface()!!.getMaxHealth() + (this.getLevel() * 100)
+        )
+    }
 
     open fun getBuildingLevelCost()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.buildingLevelCost
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.buildingLevelCost
+    }
 
     open fun setBuildingLevelCost(buildingLevelCost: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var buildingLevelCost = buildingLevelCost
-this.buildingLevelCost= buildingLevelCost
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var buildingLevelCost = buildingLevelCost
+        this.buildingLevelCost = buildingLevelCost
+    }
 
     open fun getProductivity()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.productivity
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.productivity
+    }
 
     open fun setProductivity(productivity: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var productivity = productivity
-this.productivity= productivity
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var productivity = productivity
+        this.productivity = productivity
+    }
 
     open fun getEfficiency()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.efficiency
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.efficiency
+    }
 
     open fun setEfficiency(efficiency: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var efficiency = efficiency
-this.efficiency= efficiency
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var efficiency = efficiency
+        this.efficiency = efficiency
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun generateMoveOutOfBuildAreaPaths()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var occupyList: BasicArrayList = this.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
+        var occupyList: BasicArrayList =
+            this.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
 
+        var surroundList: BasicArrayList =
+            this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()!!
 
-    var surroundList: BasicArrayList = this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()!!
+        var NO_DIRECTION: Direction = DirectionFactory.getInstance()!!.NO_DIRECTION
 
+        var geographicMapDirectionUtil: GeographicMapDirectionUtil =
+            GeographicMapDirectionUtil.getInstance()!!
 
-    var NO_DIRECTION: Direction = DirectionFactory.getInstance()!!.NO_DIRECTION
+        var pathsList: BasicArrayList
 
+        var occupyGeographicMapCellPosition: GeographicMapCellPosition
 
-    var geographicMapDirectionUtil: GeographicMapDirectionUtil = GeographicMapDirectionUtil.getInstance()!!
+        var surroundGeographicMapCellPosition: GeographicMapCellPosition
 
+        var list: BasicArrayList
 
-    var pathsList: BasicArrayList
+        for (index2 in occupyList!!.size() - 1 downTo 0) {
 
+            pathsList = BasicArrayListD()
+            occupyGeographicMapCellPosition = occupyList!!.get(index2) as GeographicMapCellPosition
 
-    var occupyGeographicMapCellPosition: GeographicMapCellPosition
+            for (index in surroundList!!.size() - 1 downTo 0) {
 
+                surroundGeographicMapCellPosition =
+                    surroundList!!.get(index) as GeographicMapCellPosition
 
-    var surroundGeographicMapCellPosition: GeographicMapCellPosition
+                if (
+                    geographicMapDirectionUtil!!
+                        .getEightDirectionFromCellPositionToAdjacentCellPosition(
+                            surroundGeographicMapCellPosition,
+                            occupyGeographicMapCellPosition,
+                        ) != NO_DIRECTION
+                ) {
+                    list = BasicArrayListS(1)
+                    list.add(surroundGeographicMapCellPosition)
+                    pathsList!!.add(list)
+                }
+            }
 
+            this.pathsHashtable!!.put(occupyGeographicMapCellPosition, pathsList)
+        }
+    }
 
-    var list: BasicArrayList
+    override fun getMoveOutOfBuildAreaPath(
+        geographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var geographicMapCellPosition = geographicMapCellPosition
 
+        var pathsList: BasicArrayList =
+            this.pathsHashtable!!.get(geographicMapCellPosition as Object) as BasicArrayList
 
-
-
-
-                        for (index2 in occupyList!!.size() -1 downTo 0)
-
-        {
-pathsList= BasicArrayListD()
-occupyGeographicMapCellPosition= occupyList!!.get(index2) as GeographicMapCellPosition
-
-
-
-
-                        for (index in surroundList!!.size() -1 downTo 0)
-
-        {
-surroundGeographicMapCellPosition= surroundList!!.get(index) as GeographicMapCellPosition
-
-    
-                        if(geographicMapDirectionUtil!!.getEightDirectionFromCellPositionToAdjacentCellPosition(surroundGeographicMapCellPosition, occupyGeographicMapCellPosition) != NO_DIRECTION)
-                        
-                                    {
-                                    list= BasicArrayListS(1)
-list.add(surroundGeographicMapCellPosition)
-pathsList!!.add(list)
-
-                                    }
-                                
-}
-
-this.pathsHashtable!!.put(occupyGeographicMapCellPosition, pathsList)
-}
-
-}
-
-
-    override fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var geographicMapCellPosition = geographicMapCellPosition
-
-    var pathsList: BasicArrayList = this.pathsHashtable!!.get(geographicMapCellPosition as Object) as BasicArrayList
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return pathsList
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return pathsList
+    }
 
     override fun getEndGeographicMapCellPositionList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.geographicMapCellPositionAreaBase!!
+            .getSurroundingGeographicMapCellPositionList()
+    }
 
     override fun shouldHandleStartSameAsEnd()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
-    
-                        if(this.isVisible())
-                        
-                                    {
-                                    super.paint(graphics)
-this.damageFloatersPaintableInterface!!.paint(graphics)
-this.healthBar!!.paint(graphics)
+        if (this.isVisible()) {
 
-                                    }
-                                
-}
+            super.paint(graphics)
+            this.damageFloatersPaintableInterface!!.paint(graphics)
+            this.healthBar!!.paint(graphics)
+        }
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun damage(damage: Int, damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var damage = damage
-    //var damageType = damageType
-super.damage(damage, damageType)
-this.damageFloaters!!.add(damage)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var damage = damage
+        // var damageType = damageType
+        super.damage(damage, damageType)
+        this.damageFloaters!!.add(damage)
 
-    
-                        if(damage > 0)
-                        this.getHealthInterface()!!.damage(damage)
-}
+        if (damage > 0) this.getHealthInterface()!!.damage(damage)
+    }
 
+    @Throws(Exception::class)
+    override fun getDamage(
+        damageType: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var damageType = damageType
 
-                @Throws(Exception::class)
-            
-    override fun getDamage(damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var damageType = damageType
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
 
     open fun addVisibility()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = this.geographicMapCellPositionAreaBase
+        var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase =
+            this.geographicMapCellPositionAreaBase
 
+        var occupyList: BasicArrayList =
+            geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
 
-    var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
+        VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(occupyList)
 
-VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(occupyList)
+        var surroundList: BasicArrayList =
+            geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
 
-    var surroundList: BasicArrayList = geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
-
-VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(surroundList)
-}
-
+        VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(surroundList)
+    }
 
     open fun removeVisibility()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var occupyList: BasicArrayList = this.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
+        var occupyList: BasicArrayList =
+            this.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
 
-VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(occupyList)
+        VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(occupyList)
 
-    var surroundList: BasicArrayList = this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()!!
+        var surroundList: BasicArrayList =
+            this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()!!
 
-VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(surroundList)
-}
+        VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(surroundList)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setDestroyed(destroyed: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var destroyed = destroyed
-super.setDestroyed(destroyed)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var destroyed = destroyed
+        super.setDestroyed(destroyed)
 
-    
-                        if(this.isDestroyed())
-                        
-                                    {
-                                    DropCellPositionHistory.getInstance()!!.removeAll(this)
-TrackingEventHandler.getInstance()!!.removeListener(this)
+        if (this.isDestroyed()) {
 
-    
-                        if(this.local)
-                        
-                                    {
-                                    this.removeVisibility()
+            DropCellPositionHistory.getInstance()!!.removeAll(this)
+            TrackingEventHandler.getInstance()!!.removeListener(this)
 
-                                    }
-                                
+            if (this.local) {
 
-    
-                        if(!this.getHealthInterface()!!.isAlive())
-                        
-                                    {
-                                    
-    var damage: Int = this.getHealthInterface()!!.getMaxHealth()!!
+                this.removeVisibility()
+            }
 
+            if (!this.getHealthInterface()!!.isAlive()) {
 
-    
-                        if(damage > 10)
-                        
-                                    {
-                                    SecondaryPlayerQueueFactory.getInstance()!!.add(ExplosionBasicSound.getInstance())
+                var damage: Int = this.getHealthInterface()!!.getMaxHealth()!!
 
-    
-                        if(damage < 100)
-                        
-                                    {
-                                    this.shakeListener!!.onSmallShakeEvent()
-this.vibration.vibrate(this.duration, 0, 0)
+                if (damage > 10) {
 
-                                    }
-                                
-                             else 
-    
-                        if(damage < 1000)
-                        
-                                    {
-                                    this.shakeListener!!.onMediumShakeEvent()
-this.vibration.vibrate(this.duration *2, 0, 0)
+                    SecondaryPlayerQueueFactory.getInstance()!!.add(
+                        ExplosionBasicSound.getInstance()
+                    )
 
-                                    }
-                                
-                             else 
-    
-                        if(damage < 3000)
-                        
-                                    {
-                                    this.shakeListener!!.onLargeShakeEvent()
-this.vibration.vibrate(this.duration *4, 0, 0)
+                    if (damage < 100) {
 
-                                    }
-                                
+                        this.shakeListener!!.onSmallShakeEvent()
+                        this.vibration.vibrate(this.duration, 0, 0)
+                    } else if (damage < 1000) {
 
-                                    }
-                                
+                        this.shakeListener!!.onMediumShakeEvent()
+                        this.vibration.vibrate(this.duration * 2, 0, 0)
+                    } else if (damage < 3000) {
 
-                                    }
-                                
-
-                                    }
-                                
-}
-
+                        this.shakeListener!!.onLargeShakeEvent()
+                        this.vibration.vibrate(this.duration * 4, 0, 0)
+                    }
+                }
+            }
+        }
+    }
 
     override fun createHudPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : SelectionHudPaintable {
 
-    var buildingInfoHudPaintable: BuildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance()!!
+        var buildingInfoHudPaintable: BuildingInfoHudPaintable =
+            BuildingInfoHudPaintable.getInstance()!!
 
-buildingInfoHudPaintable!!.setBasicColorP(this.allBinaryGameLayerManagerP!!.getForegroundBasicColor())
-buildingInfoHudPaintable!!.setRtsLayer(this)
+        buildingInfoHudPaintable!!.setBasicColorP(
+            this.allBinaryGameLayerManagerP!!.getForegroundBasicColor()
+        )
+        buildingInfoHudPaintable!!.setRtsLayer(this)
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return buildingInfoHudPaintable
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return buildingInfoHudPaintable
+    }
 
     override fun getHudPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : SelectionHudPaintable {
 
-    var buildingInfoHudPaintable: BuildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance()!!
+        var buildingInfoHudPaintable: BuildingInfoHudPaintable =
+            BuildingInfoHudPaintable.getInstance()!!
 
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return buildingInfoHudPaintable
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return buildingInfoHudPaintable
+    }
 
     override fun getType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BuildingLayer.getStaticType()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return BuildingLayer.getStaticType()
+    }
 }
-
-
-}
-                
-            
-

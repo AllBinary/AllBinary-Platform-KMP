@@ -1,101 +1,61 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2011 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.system.hardware
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.system.hardware
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.logic.system.os.GenericOperatingSystem
-import org.allbinary.logic.system.os.OperatingSystems
+import java.lang.Object
 import org.allbinary.logic.system.hardware.linux.LinuxHardware
 import org.allbinary.logic.system.hardware.windows.WindowsHardware
+import org.allbinary.logic.system.os.GenericOperatingSystem
+import org.allbinary.logic.system.os.OperatingSystems
 
-open public class HardwareFactory
-            : Object
-         {
-        
-companion object {
-            
-                @Throws(Exception::class)
-            
-    open fun getInstance(os: GenericOperatingSystem)
-        //nullable =  from not(true or (false and false)) = 
-: HardwareInterface{
-var os = os
+open public class HardwareFactory : Object {
 
-        try {
-            
-    var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
+    companion object {
 
+        @Throws(Exception::class)
+        open fun getInstance(
+            os: GenericOperatingSystem
+        )
+            // nullable =  from not(true or (false and false)) =
+            : HardwareInterface {
+            var os = os
 
-    
-                        if(os.getName()!!.compareTo(operatingSystems!!.LINUX) == 0)
-                        
-                                    {
-                                    
+            try {
 
+                var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return LinuxHardware() as HardwareInterface
+                if (os.getName()!!.compareTo(operatingSystems!!.LINUX) == 0) {
 
-                                    }
-                                
-                             else 
-    
-                        if(os.getName()!!.indexOf(operatingSystems!!.WINDOWS) >= 0)
-                        
-                                    {
-                                    
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return LinuxHardware() as HardwareInterface
+                } else if (os.getName()!!.indexOf(operatingSystems!!.WINDOWS) >= 0) {
 
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return WindowsHardware() as HardwareInterface
+                }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return WindowsHardware() as HardwareInterface
+                throw Exception("No Hardware Imp for: " + os.getName())
+            } catch (e: Exception) {
 
-                                    }
-                                
-
-
-
-                            throw Exception("No Hardware Imp for: " +os.getName())
-} catch(e: Exception)
-            {
-
-
-
-                            throw e
-}
-
-}
-
-
+                throw e
+            }
         }
-            private constructor ()
-            : super()
-        {
+    }
+
+    private constructor() : super() {}
 }
-
-
-}
-                
-            
-

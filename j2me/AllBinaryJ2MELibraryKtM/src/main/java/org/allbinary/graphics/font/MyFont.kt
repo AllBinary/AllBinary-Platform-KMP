@@ -1,184 +1,148 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.font
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.font
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.Font
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
-open public class MyFont
-            : Object
-         {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class MyFont : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: MyFont{
+    companion object {
 
-    
-                        if(MyFont.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    MyFont.instance= MyFont()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : MyFont {
 
+            if (MyFont.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                MyFont.instance = MyFont()
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return MyFont.instance as MyFont
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return MyFont.instance as MyFont
         }
-            
+    }
+
     private val defaultFont: Font = Font.getDefaultFont()!!
 
     var DEFAULT_CHAR_HEIGHT: Int = this.defaultFont!!.getHeight()!!
 
     private var DEFAULT_CHAR_WIDTH: Int = this.defaultFont!!.charWidth('C')!!
-private constructor ()
-            : super()
-        {
-}
 
+    private constructor() : super() {}
 
     open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.DEFAULT_CHAR_HEIGHT= this.defaultFont!!.getHeight()
-this.DEFAULT_CHAR_WIDTH= this.defaultFont!!.charWidth('C')
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.DEFAULT_CHAR_HEIGHT = this.defaultFont!!.getHeight()
+        this.DEFAULT_CHAR_WIDTH = this.defaultFont!!.charWidth('C')
+    }
 
     open fun defaultCharWidth()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.DEFAULT_CHAR_WIDTH
+    }
 
+    open fun defaultStringWidth(
+        size: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var size = size
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.DEFAULT_CHAR_WIDTH
-}
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.DEFAULT_CHAR_WIDTH * size
+    }
 
+    open fun stringWidth(
+        string: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var string = string
 
-    open fun defaultStringWidth(size: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var size = size
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.DEFAULT_CHAR_WIDTH * string.length
+    }
 
+    open fun stringWidth2(
+        string: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var string = string
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.DEFAULT_CHAR_WIDTH *size
-}
-
-
-    open fun stringWidth(string: String)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var string = string
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.DEFAULT_CHAR_WIDTH *string.length
-}
-
-
-    open fun stringWidth2(string: String)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var string = string
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.defaultFont!!.stringWidth(string)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.defaultFont!!.stringWidth(string)
+    }
 
     open fun getSize()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.defaultFont!!.getSize()
+    }
 
+    open fun charWidth(
+        aChar: Char
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var aChar = aChar
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.defaultFont!!.getSize()
-}
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.defaultFont!!.charWidth(aChar)
+    }
 
+    open fun charsWidth(
+        charArray: CharArray,
+        offset: Int,
+        length: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var charArray = charArray
+        // var offset = offset
+        // var length = length
 
-    open fun charWidth(aChar: Char)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var aChar = aChar
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.defaultFont!!.charWidth(aChar)
-}
-
-
-    open fun charsWidth(charArray: CharArray, offset: Int, length: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var charArray = charArray
-    //var offset = offset
-    //var length = length
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.defaultFont!!.charsWidth(charArray, offset, length)
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.defaultFont!!.charsWidth(charArray, offset, length)
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringMaker().
-                            append(this::class.toString())!!.appendint(this.DEFAULT_CHAR_WIDTH)!!.append(commonSeps!!.FORWARD_SLASH)!!.appendint(this.DEFAULT_CHAR_HEIGHT)!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return StringMaker()
+            .append(this::class.toString())!!
+            .appendint(this.DEFAULT_CHAR_WIDTH)!!
+            .append(commonSeps!!.FORWARD_SLASH)!!
+            .appendint(this.DEFAULT_CHAR_HEIGHT)!!
+            .toString()
+    }
 }
-
-
-}
-                
-            
-

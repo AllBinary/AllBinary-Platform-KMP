@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input.event
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input.event
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.game.input.PlayerGameInput
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.AllBinaryEventObject
@@ -35,149 +25,129 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
 open public class UpGameKeyEventHandlerBase : BasicEventHandler {
-        
-companion object {
-            
-    private val TOTAL_LISTENERS: String = " Total PlayerGameInput Listeners: "
 
-    private val LISTENER_LABEL: String = " PlayerGameInput Listener: "
+    companion object {
 
-        }
-            
+        private val TOTAL_LISTENERS: String = " Total PlayerGameInput Listeners: "
+
+        private val LISTENER_LABEL: String = " PlayerGameInput Listener: "
+    }
+
     private val list: BasicArrayList = BasicArrayListD()
- constructor (){
-}
 
+    constructor() {}
 
     open fun addListener(playerGameInput: PlayerGameInput)
-        //nullable = true from not(false or (false and false)) = true
-{
-var playerGameInput = playerGameInput
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var playerGameInput = playerGameInput
 
-    
-                        if(!this.list.contains(playerGameInput))
-                        
-                                    {
-                                    this.list.add(playerGameInput)
+        if (!this.list.contains(playerGameInput)) {
 
-                                    }
-                                
-}
-
+            this.list.add(playerGameInput)
+        }
+    }
 
     override fun removeAllListeners()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.list.clear()
-super.removeAllListeners()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.list.clear()
+        super.removeAllListeners()
+    }
 
     override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventListenerInterface = eventListenerInterface
-this.list.remove(eventListenerInterface)
-super.removeListenerSingleThreaded(eventListenerInterface)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventListenerInterface = eventListenerInterface
+        this.list.remove(eventListenerInterface)
+        super.removeListenerSingleThreaded(eventListenerInterface)
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun removeListener(eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventListenerInterface = eventListenerInterface
-this.list.remove(eventListenerInterface)
-super.removeListener(eventListenerInterface)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventListenerInterface = eventListenerInterface
+        this.list.remove(eventListenerInterface)
+        super.removeListener(eventListenerInterface)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun fireEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
 
+        for (index in this.list.size()!! - 1 downTo 0) {
 
+            try {
 
+                var playerGameInput: PlayerGameInput =
+                    this.list.objectArray[index]!! as PlayerGameInput
 
-                        for (index in this.list.size()!!  - 1  downTo 0)
+                playerGameInput!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
+            } catch (e: Exception) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    EventStrings.getInstance()!!.FIRE_EVENT,
+                    e,
+                )
+            }
+        }
 
-        {
+        super.fireEvent(eventObject)
+    }
 
-        try {
-            
-    var playerGameInput: PlayerGameInput = this.list.objectArray[index]!! as PlayerGameInput
+    @Throws(Exception::class)
+    override fun process(
+        eventObject: AllBinaryEventObject,
+        eventListenerInterface: EventListenerInterface,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        // var eventListenerInterface = eventListenerInterface
 
-playerGameInput!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
-}
+        var upGameKeyEventListenerInterface: UpGameKeyEventListenerInterface =
+            eventListenerInterface as UpGameKeyEventListenerInterface
 
-}
-
-super.fireEvent(eventObject)
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
-    //var eventListenerInterface = eventListenerInterface
-
-    var upGameKeyEventListenerInterface: UpGameKeyEventListenerInterface = eventListenerInterface as UpGameKeyEventListenerInterface
-
-upGameKeyEventListenerInterface!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
-}
-
+        upGameKeyEventListenerInterface!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
+        var size: Int = this.list.size()!!
 
-    var size: Int = this.list.size()!!
+        stringBuffer!!.append(super.toString())
+        stringBuffer!!.append(UpGameKeyEventHandlerBase.TOTAL_LISTENERS)
+        stringBuffer!!.appendint(size)
 
-stringBuffer!!.append(super.toString())
-stringBuffer!!.append(UpGameKeyEventHandlerBase.TOTAL_LISTENERS)
-stringBuffer!!.appendint(size)
+        for (index in 0 until size) {
 
+            try {
 
+                var eventListenerInterface: EventListenerInterface =
+                    this.list.get(index) as EventListenerInterface
 
+                stringBuffer!!.append(UpGameKeyEventHandlerBase.LISTENER_LABEL)
+                stringBuffer!!.append(eventListenerInterface!!.toString())
+            } catch (e: Exception) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    this.commonStrings!!.TOSTRING,
+                    e,
+                )
+            }
+        }
 
-                        for (index in 0 until size)
-
-        {
-
-        try {
-            
-    var eventListenerInterface: EventListenerInterface = this.list.get(index) as EventListenerInterface
-
-stringBuffer!!.append(UpGameKeyEventHandlerBase.LISTENER_LABEL)
-stringBuffer!!.append(eventListenerInterface!!.toString())
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.TOSTRING, e)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
-
-}
-                
-            
-

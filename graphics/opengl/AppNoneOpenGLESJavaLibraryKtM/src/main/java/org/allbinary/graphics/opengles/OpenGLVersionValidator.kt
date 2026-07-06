@@ -1,92 +1,66 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.graphics.opengles.shader.ShaderComposite
 
-open public class OpenGLVersionValidator
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: OpenGLVersionValidator = OpenGLVersionValidator()
+open public class OpenGLVersionValidator : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OpenGLVersionValidator{
+    companion object {
 
+        private val instance: OpenGLVersionValidator = OpenGLVersionValidator()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OpenGLVersionValidator {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLVersionValidator.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OpenGLVersionValidator.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     open fun isGL31OrHigher()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
+    open fun isAvailable(
+        glVersionRequired: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var glVersionRequired = glVersionRequired
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isAvailable(glVersionRequired: String)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var glVersionRequired = glVersionRequired
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     open fun setShaderComposite(shaderComposite: ShaderComposite, anyType: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var shaderComposite = shaderComposite
-    //var anyType = anyType
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var shaderComposite = shaderComposite
+        // var anyType = anyType
+    }
+
+    var EGL_CONTEXT_CLIENT_VERSION_VALUE: Int = -1
 }
-
-
-    var EGL_CONTEXT_CLIENT_VERSION_VALUE: Int =  -1
-
-}
-                
-            
-

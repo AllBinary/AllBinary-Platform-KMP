@@ -1,53 +1,38 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.business.user.role
+/* Generated Code Do Not Modify */
+package org.allbinary.business.user.role
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import java.util.Vector
 
-open public class AdminRoleFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: AdminRoleFactory = AdminRoleFactory()
+open public class AdminRoleFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: AdminRoleFactory{
+    companion object {
 
+        private val instance: AdminRoleFactory = AdminRoleFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : AdminRoleFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdminRoleFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AdminRoleFactory.instance
         }
-            
+    }
+
     private val adminRoles: Vector<Any> = Vector<Any>()
 
     private val storeAdminRoles: Vector<Any> = Vector<Any>()
@@ -69,172 +54,133 @@ companion object {
     private val shippingManagementRoles: Vector<Any> = Vector<Any>()
 
     private val webManagementRoles: Vector<Any> = Vector<Any>()
-private constructor ()
-            : super()
-        {
 
-    var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
+    private constructor() : super() {
 
-this.adminRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.storeAdminRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.storeAdminRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.storeManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.storeManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.storeManagementRoles!!.add(basicUserRoleFactory!!.CUSTOMERMANAGER)
-this.storeManagementRoles!!.add(basicUserRoleFactory!!.ADJUSTER)
-this.storeManagementRoles!!.add(basicUserRoleFactory!!.PRODUCTMANAGER)
-this.storeManagementRoles!!.add(basicUserRoleFactory!!.REVIEWER)
-this.storeManagementRoles!!.add(basicUserRoleFactory!!.SHIPPING)
-this.productManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.productManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.productManagementRoles!!.add(basicUserRoleFactory!!.PRODUCTMANAGER)
-this.reviewManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.reviewManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.reviewManagementRoles!!.add(basicUserRoleFactory!!.REVIEWER)
-this.customerManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.customerManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.customerManagementRoles!!.add(basicUserRoleFactory!!.CUSTOMERMANAGER)
-this.workflowManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.workflowManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.workflowManagementRoles!!.add(basicUserRoleFactory!!.WORKFLOWEDITOR)
-this.orderManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.orderManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.adjusterManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.adjusterManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.adjusterManagementRoles!!.add(basicUserRoleFactory!!.ADJUSTER)
-this.shippingManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.shippingManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.shippingManagementRoles!!.add(basicUserRoleFactory!!.SHIPPING)
-this.webManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
-this.webManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
-this.webManagementRoles!!.add(basicUserRoleFactory!!.WEBMANAGER)
-this.webManagementRoles!!.add(basicUserRoleFactory!!.WORKFLOWEDITOR)
-this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
-}
+        var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
 
+        this.adminRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.storeAdminRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.storeAdminRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.storeManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.storeManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.storeManagementRoles!!.add(basicUserRoleFactory!!.CUSTOMERMANAGER)
+        this.storeManagementRoles!!.add(basicUserRoleFactory!!.ADJUSTER)
+        this.storeManagementRoles!!.add(basicUserRoleFactory!!.PRODUCTMANAGER)
+        this.storeManagementRoles!!.add(basicUserRoleFactory!!.REVIEWER)
+        this.storeManagementRoles!!.add(basicUserRoleFactory!!.SHIPPING)
+        this.productManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.productManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.productManagementRoles!!.add(basicUserRoleFactory!!.PRODUCTMANAGER)
+        this.reviewManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.reviewManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.reviewManagementRoles!!.add(basicUserRoleFactory!!.REVIEWER)
+        this.customerManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.customerManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.customerManagementRoles!!.add(basicUserRoleFactory!!.CUSTOMERMANAGER)
+        this.workflowManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.workflowManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.workflowManagementRoles!!.add(basicUserRoleFactory!!.WORKFLOWEDITOR)
+        this.orderManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.orderManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.adjusterManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.adjusterManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.adjusterManagementRoles!!.add(basicUserRoleFactory!!.ADJUSTER)
+        this.shippingManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.shippingManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.shippingManagementRoles!!.add(basicUserRoleFactory!!.SHIPPING)
+        this.webManagementRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
+        this.webManagementRoles!!.add(basicUserRoleFactory!!.STOREMANAGER)
+        this.webManagementRoles!!.add(basicUserRoleFactory!!.WEBMANAGER)
+        this.webManagementRoles!!.add(basicUserRoleFactory!!.WORKFLOWEDITOR)
+        this.webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
+    }
 
     open fun getProductManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.productManagementRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.productManagementRoles
+    }
 
     open fun getAdminRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.adminRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.adminRoles
+    }
 
     open fun getStoreAdminRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.storeAdminRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.storeAdminRoles
+    }
 
     open fun getStoreManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.storeManagementRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.storeManagementRoles
+    }
 
     open fun getReviewManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.reviewManagementRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.reviewManagementRoles
+    }
 
     open fun getCustomerManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.customerManagementRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.customerManagementRoles
+    }
 
     open fun getWorkflowManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.workflowManagementRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.workflowManagementRoles
+    }
 
     open fun getWebManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.webManagementRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.webManagementRoles
+    }
 
     open fun getShippingManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.shippingManagementRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.shippingManagementRoles
+    }
 
     open fun getAdjusterManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.adjusterManagementRoles
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.adjusterManagementRoles
+    }
 
     open fun getOrderManagementRoles()
-        //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+    // nullable = true from not(false or (false and true)) = true
+    : Vector<Any> {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.orderManagementRoles
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.orderManagementRoles
+    }
 }
-
-
-}
-                
-            
-

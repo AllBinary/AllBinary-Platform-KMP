@@ -1,152 +1,119 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2003 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2003 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
-import org.allbinary.logic.string.StringUtil
+import kotlin.Array
 import org.allbinary.AndroidUtil
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.part.weapon.BasicWeaponPart
 import org.allbinary.graphics.font.UpdateMyFontInterface
+import org.allbinary.logic.string.StringUtil
 
-open public class RTSLayerHudPaintable : SelectionHudPaintable
-                , UpdateMyFontInterface {
-        
-companion object {
-            
-    private val instance: RTSLayerHudPaintable = RTSLayerHudPaintable()
+open public class RTSLayerHudPaintable : SelectionHudPaintable, UpdateMyFontInterface {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: RTSLayerHudPaintable{
+    companion object {
 
+        private val instance: RTSLayerHudPaintable = RTSLayerHudPaintable()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : RTSLayerHudPaintable {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return RTSLayerHudPaintable.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return RTSLayerHudPaintable.instance
         }
-            
+    }
+
     private var weaponProperties: Array<String?> = StringUtil.getInstance()!!.getArrayInstance()!!
 
-    private var rtsLayer: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.getNullInstance()!!
+    private var rtsLayer: CollidableDestroyableDamageableLayer =
+        CollidableDestroyableDamageableLayer.getNullInstance()!!
 
-    var costY: Int= 0
+    var costY: Int = 0
 
-    var costY1: Int= 0
+    var costY1: Int = 0
 
-    private var fontHeight: Int= 0
-private constructor (){
-}
+    private var fontHeight: Int = 0
 
+    private constructor() {}
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-super.updateMeasurement(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        super.updateMeasurement(graphics)
 
-    var font: Font = graphics.getFont()!!
+        var font: Font = graphics.getFont()!!
 
-this.fontHeight= font.getHeight()
-this.costY1= (this.y +((this.weaponProperties!!.size +1) *this.fontHeight))
+        this.fontHeight = font.getHeight()
+        this.costY1 = (this.y + ((this.weaponProperties!!.size + 1) * this.fontHeight))
 
-    
-                        if(!AndroidUtil.isAndroid())
-                        
-                                    {
-                                    this.costY= this.costY1
+        if (!AndroidUtil.isAndroid()) {
 
-                                    }
-                                
-                        else {
-                            this.costY= (this.y +((this.weaponProperties!!.size +2) *this.fontHeight))
-
-                        }
-                            
-}
-
+            this.costY = this.costY1
+        } else {
+            this.costY = (this.y + ((this.weaponProperties!!.size + 2) * this.fontHeight))
+        }
+    }
 
     override fun updateSelectionInfo()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setName(this.getRtsLayer()!!.getName())
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setName(this.getRtsLayer()!!.getName())
 
-    var partInterface: BasicWeaponPart = this.getRtsLayer()!!.getPartInterfaceArray()[0]!! as BasicWeaponPart
+        var partInterface: BasicWeaponPart =
+            this.getRtsLayer()!!.getPartInterfaceArray()[0]!! as BasicWeaponPart
 
-this.weaponProperties= partInterface!!.getWeaponProperties()!!.toStringArray()
-this.myFontProcessor= this.updateMyFontProcessor
-}
-
+        this.weaponProperties = partInterface!!.getWeaponProperties()!!.toStringArray()
+        this.myFontProcessor = this.updateMyFontProcessor
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-super.paint(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        super.paint(graphics)
 
-    var size: Int = this.weaponProperties!!.size
-                
+        var size: Int = this.weaponProperties!!.size
 
+        for (index in 0 until size) {
 
-
-
-
-                        for (index in 0 until size)
-
-        {
-graphics.drawString(this.weaponProperties[index]!!, this.textX, this.y +((index +1) *this.fontHeight), 0)
-}
-
-}
-
+            graphics.drawString(
+                this.weaponProperties[index]!!,
+                this.textX,
+                this.y + ((index + 1) * this.fontHeight),
+                0,
+            )
+        }
+    }
 
     open fun setRtsLayer(rtsLayer: RTSLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var rtsLayer = rtsLayer
-this.rtsLayer= rtsLayer
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var rtsLayer = rtsLayer
+        this.rtsLayer = rtsLayer
+    }
 
     open fun getRtsLayer()
-        //nullable = true from not(false or (false and true)) = true
-: CollidableDestroyableDamageableLayer{
+    // nullable = true from not(false or (false and true)) = true
+    : CollidableDestroyableDamageableLayer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsLayer
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsLayer
+    }
 }
-
-
-}
-                
-            
-

@@ -1,131 +1,105 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation
+/* Generated Code Do Not Modify */
+package org.allbinary.animation
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.Graphics
+import kotlin.Array
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 import org.allbinary.media.ScaleProperties
 import org.allbinary.util.CircularIndexUtil
 
-open public class NullRotationAnimationFactory
-            : Object
-        
-                , AnimationInterfaceFactoryInterface
-                , ProceduralAnimationInterfaceFactoryInterface {
-        
-companion object {
-            
-    private var NULL_ROTATION_ANIMATION_FACTORY: NullRotationAnimationFactory = NullRotationAnimationFactory()
+open public class NullRotationAnimationFactory :
+    Object, AnimationInterfaceFactoryInterface, ProceduralAnimationInterfaceFactoryInterface {
 
-    open fun getFactoryInstance()
-        //nullable = true from not(false or (false and true)) = true
-: NullRotationAnimationFactory{
+    companion object {
 
+        private var NULL_ROTATION_ANIMATION_FACTORY: NullRotationAnimationFactory =
+            NullRotationAnimationFactory()
 
+        open fun getFactoryInstance()
+        // nullable = true from not(false or (false and true)) = true
+        : NullRotationAnimationFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullRotationAnimationFactory.NULL_ROTATION_ANIMATION_FACTORY
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NullRotationAnimationFactory.NULL_ROTATION_ANIMATION_FACTORY
         }
-            
+    }
+
     val NULL_ROTATION_ANIMATION_ARRAY: Array<RotationAnimation?> = arrayOfNulls(0)
 
-open public inner class NullRotationAnimation2 : NullRotationAnimation {
-        
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
+    open public inner class NullRotationAnimation2 : NullRotationAnimation {
+
+        /*Static stuff is not allowed for Kotlin inner classescompanion object {
+         */
+        /*
         }
             */
 
- constructor ()                        
+        constructor() :
+            super(
+                AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE),
+                CircularIndexUtil.createInstance(4),
+                AnimationBehavior.getInstance(),
+            ) {
 
-                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), AnimationBehavior.getInstance()){
+            // For kotlin this is before the body of the constructor.
 
+        }
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
-
-    override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
-}
-
-
-}
-                
-            
-    private val NULL_ANIMATION: Animation = NullRotationAnimation2()
-private constructor ()
-            : super()
+        override fun paintXY(graphics: Graphics, x: Int, y: Int)
+            // nullable = true from not(false or (false and false)) = true
         {
-}
+            // var graphics = graphics
+            // var x = x
+            // var y = y
+        }
+    }
 
+    private val NULL_ANIMATION: Animation = NullRotationAnimation2()
 
-    override fun getInstance(instanceId: Int)
-        //nullable =  from not(true or (false and false)) = 
-: Animation{
-    //var instanceId = instanceId
+    private constructor() : super() {}
 
+    override fun getInstance(
+        instanceId: Int
+    )
+        // nullable =  from not(true or (false and false)) =
+        : Animation {
+        // var instanceId = instanceId
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.NULL_ANIMATION
+    }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.NULL_ANIMATION
-}
+    @Throws(Exception::class)
+    override fun getInstanceAnimation(
+        animationInterface: Animation
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Animation {
+        var animationInterface = animationInterface
 
-
-                @Throws(Exception::class)
-            
-    override fun getInstanceAnimation(animationInterface: Animation)
-        //nullable = true from not(false or (false and false)) = true
-: Animation{
-var animationInterface = animationInterface
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.NULL_ANIMATION
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.NULL_ANIMATION
+    }
 
     override fun setInitialScale(scaleProperties: ScaleProperties)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var scaleProperties = scaleProperties
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var scaleProperties = scaleProperties
+    }
 }
-
-
-}
-                
-            
-

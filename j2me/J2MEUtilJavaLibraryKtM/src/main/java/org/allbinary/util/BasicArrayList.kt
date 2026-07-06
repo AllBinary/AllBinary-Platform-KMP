@@ -1,764 +1,513 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.util
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.util
-
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.System
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import java.lang.System
+import kotlin.Array
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
-//This is a very fast and simple resizable list.
-open public class BasicArrayList
-            : Object
-         {
-        
-companion object {
-            
-    private val SIZE: String = ", Size: "
 
-        }
-            
+// This is a very fast and simple resizable list.
+open public class BasicArrayList : Object {
+
+    companion object {
+
+        private val SIZE: String = ", Size: "
+    }
+
     private val arrayUtil: ArrayUtil = ArrayUtil.getInstance()!!
 
     var objectArray: Array<Any?>
 
     private var currentIndex: Int = 0
-public constructor (objectArray: Array<Any?>)
-            : super()
-        {
-    //var objectArray = objectArray
-this.objectArray= objectArray
-}
 
+    public constructor(objectArray: Array<Any?>) : super() {
+        // var objectArray = objectArray
+        this.objectArray = objectArray
+    }
 
     open fun addAt(index: Int, element: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var index = index
-    //var element = element
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var index = index
+        // var element = element
 
-    
-                        if(index > this.currentIndex || index < 0)
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
+        if (index > this.currentIndex || index < 0) {
 
-stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
-stringBuffer!!.appendint(index)
-stringBuffer!!.append(BasicArrayList.SIZE)
-stringBuffer!!.appendint(this.currentIndex)
+            var stringBuffer: StringMaker = StringMaker()
 
+            stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
+            stringBuffer!!.appendint(index)
+            stringBuffer!!.append(BasicArrayList.SIZE)
+            stringBuffer!!.appendint(this.currentIndex)
 
+            throw IndexOutOfBoundsException(stringBuffer!!.toString())
+        }
 
-                            throw IndexOutOfBoundsException(stringBuffer!!.toString())
+        this.ensureCapacity(this.currentIndex + 1)
+        System.arraycopy(
+            this.objectArray,
+            index,
+            this.objectArray,
+            index + 1,
+            this.currentIndex - index,
+        )
+        this.objectArray[index] = element
+        this.currentIndex++
+    }
 
-                                    }
-                                
-this.ensureCapacity(this.currentIndex +1)
-System.arraycopy(this.objectArray, index, this.objectArray, index +1, this.currentIndex -index)
-this.objectArray[index]= element
-this.currentIndex++
-}
+    open fun add(
+        anyType: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var anyType = anyType
+        this.ensureCapacity(this.currentIndex + 1)
+        this.objectArray[this.currentIndex++] = anyType
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
+
+    open fun removeAt(
+        index: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Any {
+        // var index = index
+
+        if (index >= this.currentIndex) {
+
+            var stringBuffer: StringMaker = StringMaker()
+
+            stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
+            stringBuffer!!.appendint(index)
+            stringBuffer!!.append(BasicArrayList.SIZE)
+            stringBuffer!!.appendint(this.currentIndex)
 
+            throw IndexOutOfBoundsException(stringBuffer!!.toString())
+        }
 
-    open fun add(anyType: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var anyType = anyType
-this.ensureCapacity(this.currentIndex +1)
-this.objectArray[this.currentIndex++]= anyType
+        var oldValue: Any = this.objectArray[index]!!
 
+        var numMoved: Int = this.currentIndex - index - 1
 
+        if (numMoved > 0) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
+            System.arraycopy(this.objectArray, index + 1, this.objectArray, index, numMoved)
+        }
 
+        this.objectArray[--this.currentIndex] = null
 
-    open fun removeAt(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Any{
-    //var index = index
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return oldValue
+    }
 
-    
-                        if(index >= this.currentIndex)
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
+    open fun remove(
+        anyType: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var anyType = anyType
 
-stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
-stringBuffer!!.appendint(index)
-stringBuffer!!.append(BasicArrayList.SIZE)
-stringBuffer!!.appendint(this.currentIndex)
+        if (anyType == null) {
 
+            for (index in 0 until this.currentIndex) {
 
+                if (this.objectArray[index] == null) {
 
-                            throw IndexOutOfBoundsException(stringBuffer!!.toString())
+                    var numMoved: Int = this.currentIndex - index - 1
 
-                                    }
-                                
+                    if (numMoved > 0) {
 
-    var oldValue: Any = this.objectArray[index]!!
+                        System.arraycopy(
+                            this.objectArray,
+                            index + 1,
+                            this.objectArray,
+                            index,
+                            numMoved,
+                        )
+                    }
 
+                    this.objectArray[--this.currentIndex] = null
 
-    var numMoved: Int = this.currentIndex -index -1
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return true
+                }
+            }
+        } else {
 
+            for (index in 0 until this.currentIndex) {
 
-    
-                        if(numMoved > 0)
-                        
-                                    {
-                                    System.arraycopy(this.objectArray, index +1, this.objectArray, index, numMoved)
+                if (
+                    anyType == this.objectArray[index] ||
+                        anyType!!.equals(this.objectArray[index]!!)
+                ) {
 
-                                    }
-                                
-this.objectArray[--this.currentIndex]= 
-                                        null
-                                    
+                    var numMoved: Int = this.currentIndex - index - 1
 
+                    if (numMoved > 0) {
 
+                        System.arraycopy(
+                            this.objectArray,
+                            index + 1,
+                            this.objectArray,
+                            index,
+                            numMoved,
+                        )
+                    }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldValue
-}
+                    this.objectArray[--this.currentIndex] = null
 
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return true
+                }
+            }
+        }
 
-    open fun remove(anyType: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var anyType = anyType
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
-    
-                        if(anyType == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+    open fun removeAll2(
+        list: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var list = list
 
+        var result: Boolean = true
 
+        var size: Int = list.size()!!
 
-                        for (index in 0 until this.currentIndex)
+        for (index in 0 until size) {
 
-        {
+            if (this.remove(list.get(index))) {} else {
 
-    
-                        if(this.objectArray[index] == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-    var numMoved: Int = this.currentIndex -index -1
+                result = false
+            }
+        }
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return result
+    }
 
-    
-                        if(numMoved > 0)
-                        
-                                    {
-                                    System.arraycopy(this.objectArray, index +1, this.objectArray, index, numMoved)
+    open fun addAll2(
+        list: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var list = list
+        this.ensureCapacity(this.currentIndex + list.currentIndex)
 
-                                    }
-                                
-this.objectArray[--this.currentIndex]= 
-                                        null
-                                    
+        var listSize: Int = list.currentIndex
 
+        for (index in 0 until listSize) {
 
+            this.objectArray[this.currentIndex++] = list.objectArray[index]!!
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 
-                                    }
-                                
-}
+    open fun addAllList(
+        list: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var list = list
 
+        var newObjectArray: Array<Any?> = list.toArray()!!
 
-                                    }
-                                
-                        else {
-                            
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.addAll(newObjectArray)
+    }
 
+    open fun addAll(
+        newObjectArray: Array<Any?>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var newObjectArray = newObjectArray
 
+        var numSize: Int = newObjectArray!!.size
 
-                        for (index in 0 until this.currentIndex)
+        this.ensureCapacity(this.currentIndex + numSize)
+        System.arraycopy(newObjectArray, 0, this.objectArray, this.currentIndex, numSize)
+        this.currentIndex += numSize
 
-        {
-
-    
-                        if(anyType == this.objectArray[index] || anyType!!.equals(this.objectArray[index]!!))
-                        
-                                    {
-                                    
-    var numMoved: Int = this.currentIndex -index -1
-
-
-    
-                        if(numMoved > 0)
-                        
-                                    {
-                                    System.arraycopy(this.objectArray, index +1, this.objectArray, index, numMoved)
-
-                                    }
-                                
-this.objectArray[--this.currentIndex]= 
-                                        null
-                                    
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-}
-
-
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun removeAll2(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var list = list
-
-    var result: Boolean = true
-
-
-    var size: Int = list.size()!!
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-
-    
-                        if(this.remove(list.get(index)))
-                        
-                                    {
-                                    
-                                    }
-                                
-                        else {
-                            result= false
-
-                        }
-                            
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return result
-}
-
-
-    open fun addAll2(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var list = list
-this.ensureCapacity(this.currentIndex +list.currentIndex)
-
-    var listSize: Int = list.currentIndex
-
-
-
-
-
-                        for (index in 0 until listSize)
-
-        {
-this.objectArray[this.currentIndex++]= list.objectArray[index]!!
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-}
-
-
-    open fun addAllList(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var list = list
-
-    var newObjectArray: Array<Any?> = list.toArray()!!
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.addAll(newObjectArray)
-}
-
-
-    open fun addAll(newObjectArray: Array<Any?>)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var newObjectArray = newObjectArray
-
-    var numSize: Int = newObjectArray!!.size
-                
-
-this.ensureCapacity(this.currentIndex +numSize)
-System.arraycopy(newObjectArray, 0, this.objectArray, this.currentIndex, numSize)
-this.currentIndex += numSize
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return numSize != 0
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return numSize != 0
+    }
 
     open fun ensureCapacity(minSize: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var minSize = minSize
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var minSize = minSize
 
-    var oldCapacity: Int = this.objectArray!!.size
-                
+        var oldCapacity: Int = this.objectArray!!.size
 
+        if (minSize > oldCapacity) {
 
-    
-                        if(minSize > oldCapacity)
-                        
-                                    {
-                                    
-    var newCapacity: Int = ((oldCapacity *3) shr 1) +1
+            var newCapacity: Int = ((oldCapacity * 3) shr 1) + 1
 
+            if (newCapacity < minSize) {
 
-    
-                        if(newCapacity < minSize)
-                        
-                                    {
-                                    newCapacity= minSize
+                newCapacity = minSize
+            }
 
-                                    }
-                                
-this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
-
-                                    }
-                                
-}
-
+            this.objectArray = this.arrayUtil!!.copyOf(this.objectArray, newCapacity)
+        }
+    }
 
     open fun trimToSize()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var oldCapacity: Int = this.objectArray!!.size
-                
+        var oldCapacity: Int = this.objectArray!!.size
 
+        if (this.currentIndex < oldCapacity) {
 
-    
-                        if(this.currentIndex < oldCapacity)
-                        
-                                    {
-                                    this.objectArray= this.arrayUtil!!.copyOf(this.objectArray, this.currentIndex)
+            this.objectArray = this.arrayUtil!!.copyOf(this.objectArray, this.currentIndex)
+        }
+    }
 
-                                    }
-                                
-}
+    open fun indexOf(
+        anyType: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var anyType = anyType
 
+        if (anyType == null) {
 
-    open fun indexOf(anyType: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var anyType = anyType
+            for (i in 0 until this.currentIndex) {
 
-    
-                        if(anyType == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+                if (this.objectArray[i] == null) {
 
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return i
+                }
+            }
+        } else {
 
+            for (i in 0 until this.currentIndex) {
 
-                        for (i in 0 until this.currentIndex)
+                if (anyType!!.equals(this.objectArray[i]!!)) {
 
-        {
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return i
+                }
+            }
+        }
 
-    
-                        if(this.objectArray[i] == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return -1
+    }
 
+    open fun lastIndexOf(
+        anyType: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var anyType = anyType
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return i
+        if (anyType == null) {
 
-                                    }
-                                
-}
+            for (i in this.currentIndex - 1 downTo 0) {
 
+                if (this.objectArray[i] == null) {
 
-                                    }
-                                
-                        else {
-                            
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return i
+                }
+            }
+        } else {
 
+            for (i in this.currentIndex - 1 downTo 0) {
 
+                if (anyType!!.equals(this.objectArray[i]!!)) {
 
-                        for (i in 0 until this.currentIndex)
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return i
+                }
+            }
+        }
 
-        {
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return -1
+    }
 
-    
-                        if(anyType!!.equals(this.objectArray[i]!!))
-                        
-                                    {
-                                    
+    open fun get(
+        index: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Any {
+        // var index = index
 
+        if (index >= this.currentIndex) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return i
+            var stringBuffer: StringMaker = StringMaker()
 
-                                    }
-                                
-}
+            stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
+            stringBuffer!!.appendint(index)
+            stringBuffer!!.append(BasicArrayList.SIZE)
+            stringBuffer!!.appendint(this.currentIndex)
 
+            throw IndexOutOfBoundsException(stringBuffer!!.toString())
+        }
 
-                        }
-                            
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.objectArray[index]!!
+    }
 
+    open fun set(
+        index: Int,
+        element: Any,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Any {
+        // var index = index
+        // var element = element
 
+        if (index >= this.currentIndex) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-}
+            var stringBuffer: StringMaker = StringMaker()
 
+            stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
+            stringBuffer!!.appendint(index)
+            stringBuffer!!.append(BasicArrayList.SIZE)
+            stringBuffer!!.appendint(this.currentIndex)
 
-    open fun lastIndexOf(anyType: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var anyType = anyType
+            throw IndexOutOfBoundsException(stringBuffer!!.toString())
+        }
 
-    
-                        if(anyType == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+        var oldValue: Any = this.objectArray[index]!!
 
+        this.objectArray[index] = element
 
-
-                        for (i in this.currentIndex -1 downTo 0)
-
-        {
-
-    
-                        if(this.objectArray[i] == 
-                                    null
-                                )
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return i
-
-                                    }
-                                
-}
-
-
-                                    }
-                                
-                        else {
-                            
-
-
-
-                        for (i in this.currentIndex -1 downTo 0)
-
-        {
-
-    
-                        if(anyType!!.equals(this.objectArray[i]!!))
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return i
-
-                                    }
-                                
-}
-
-
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
-}
-
-
-    open fun get(index: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Any{
-    //var index = index
-
-    
-                        if(index >= this.currentIndex)
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
-
-stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
-stringBuffer!!.appendint(index)
-stringBuffer!!.append(BasicArrayList.SIZE)
-stringBuffer!!.appendint(this.currentIndex)
-
-
-
-                            throw IndexOutOfBoundsException(stringBuffer!!.toString())
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.objectArray[index]!!
-}
-
-
-    open fun set(index: Int, element: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Any{
-    //var index = index
-    //var element = element
-
-    
-                        if(index >= this.currentIndex)
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
-
-stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
-stringBuffer!!.appendint(index)
-stringBuffer!!.append(BasicArrayList.SIZE)
-stringBuffer!!.appendint(this.currentIndex)
-
-
-
-                            throw IndexOutOfBoundsException(stringBuffer!!.toString())
-
-                                    }
-                                
-
-    var oldValue: Any = this.objectArray[index]!!
-
-this.objectArray[index]= element
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldValue
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return oldValue
+    }
 
     open fun clear()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        for (i in 0 until this.currentIndex) {
 
+            this.objectArray[i] = null
+        }
 
-
-                        for (i in 0 until this.currentIndex)
-
-        {
-this.objectArray[i]= 
-                                        null
-                                    
-}
-
-this.currentIndex= 0
-}
-
+        this.currentIndex = 0
+    }
 
     open fun size()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.currentIndex
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.currentIndex
+    }
 
     open fun isEmpty()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.currentIndex == 0
+    }
 
+    open fun contains(
+        anyType: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var anyType = anyType
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.currentIndex == 0
-}
-
-
-    open fun contains(anyType: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var anyType = anyType
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.indexOf(anyType) >= 0
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.indexOf(anyType) >= 0
+    }
 
     open fun toArray()
-        //nullable = true from not(false or (false and true)) = true
-: Array<Any?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<Any?> {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.arrayUtil!!.copyOf(this.objectArray, this.currentIndex)
+    }
 
+    open fun toArrayType(
+        objectArray: Array<Any?>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Array<Any?> {
+        // var objectArray = objectArray
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.arrayUtil!!.copyOf(this.objectArray, this.currentIndex)
-}
+        if (objectArray!!.size < this.currentIndex) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return this.arrayUtil!!.copyOfType(
+                this.objectArray,
+                this.currentIndex,
+                objectArray!!::class,
+            )
+        }
 
-    open fun toArrayType(objectArray: Array<Any?>)
-        //nullable = true from not(false or (false and false)) = true
-: Array<Any?>{
-    //var objectArray = objectArray
+        System.arraycopy(this.objectArray, 0, objectArray, 0, this.currentIndex)
 
-    
-                        if(objectArray!!.size < this.currentIndex)
-                        
-                                    {
-                                    
+        if (objectArray!!.size > this.currentIndex) {
 
+            objectArray[this.currentIndex] = null
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.arrayUtil!!.copyOfType(this.objectArray, this.currentIndex, objectArray!!::class)
-
-                                    }
-                                
-System.arraycopy(this.objectArray, 0, objectArray, 0, this.currentIndex)
-
-    
-                        if(objectArray!!.size > this.currentIndex)
-                        
-                                    {
-                                    objectArray[this.currentIndex]= 
-                                        null
-                                    
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return objectArray
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return objectArray
+    }
 
     public override fun clone()
-        //nullable = true from not(false or (false and true)) = true
-: Any{
+    // nullable = true from not(false or (false and true)) = true
+    : Any {
 
-    var size: Int = this.size()!!
+        var size: Int = this.size()!!
 
+        var list: BasicArrayList = BasicArrayListS(size)
 
-    var list: BasicArrayList = BasicArrayListS(size)
+        var anyType: Any
 
+        for (index in 0 until size) {
 
-    var anyType: Any
+            anyType = this.objectArray[index]!!
+            list.add(anyType)
+        }
 
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-anyType= this.objectArray[index]!!
-list.add(anyType)
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return list
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var COMMA_SEP: String = CommonSeps.getInstance()!!.COMMA_SEP
+        var COMMA_SEP: String = CommonSeps.getInstance()!!.COMMA_SEP
 
+        var stringBuffer: StringMaker = StringMaker()
 
-    var stringBuffer: StringMaker = StringMaker()
+        for (index in 0 until this.currentIndex) {
 
+            stringBuffer!!.append(this.objectArray[index]!!.toString())
+            stringBuffer!!.append(COMMA_SEP)
+        }
 
-
-
-
-                        for (index in 0 until this.currentIndex)
-
-        {
-stringBuffer!!.append(this.objectArray[index]!!.toString())
-stringBuffer!!.append(COMMA_SEP)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
-
-}
-                
-            
-
