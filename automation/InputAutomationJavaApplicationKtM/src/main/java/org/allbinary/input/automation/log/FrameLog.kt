@@ -39,13 +39,13 @@ open public class FrameLog
         
 companion object {
             
-    private var frameBytes: ByteArray = .toCharArray().
+    private var frameBytes: ByteArray = "".
                             encodeToByteArray()!!
 
-    private var info: ByteArray = .toCharArray().
+    private var info: ByteArray = "".
                             encodeToByteArray()!!
 
-    private var actions: ByteArray = .toCharArray().
+    private var actions: ByteArray = "".
                             encodeToByteArray()!!
 
         }

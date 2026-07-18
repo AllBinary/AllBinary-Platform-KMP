@@ -93,6 +93,12 @@ open public class Animation : Object, AnimationInterface, OpenGLSurfaceChangedIn
         this.colorP = this.basicColor!!.toInt()
     }
 
+    open fun setBackgroundBasicColorP(basicColor: BasicColor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicColor = basicColor
+    }
+
     open fun getChangeBasicColor()
     // nullable = true from not(false or (false and true)) = true
     : BasicColor {

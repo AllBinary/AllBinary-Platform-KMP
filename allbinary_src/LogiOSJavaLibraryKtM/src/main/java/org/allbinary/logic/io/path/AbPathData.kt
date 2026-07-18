@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.io.file.FilePathData
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
 
@@ -63,7 +64,7 @@ private constructor ()
     open fun getExtensionIndex(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-var filePath = filePath
+    //var filePath = filePath
 
     var indexOfFileExtensionDelmiter: Int = filePath!!.lastIndexOf(this.EXTENSION_SEP)!!
 
@@ -104,10 +105,37 @@ var filePath = filePath
 }
 
 
+    open fun getExtensionWithDot(filePath: String)
+        //nullable = true from not(false or (false and false)) = true
+: String{
+    //var filePath = filePath
+
+    var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
+
+
+    var extension: String = StringUtil.getInstance()!!.EMPTY_STRING
+
+
+    
+                        if(indexOfFileExtensionDelmiter >= 0)
+                        
+                                    {
+                                    extension= filePath!!.substring(indexOfFileExtensionDelmiter)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return extension
+}
+
+
     open fun getExtension(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
-var filePath = filePath
+    //var filePath = filePath
 
     var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
 
@@ -131,20 +159,79 @@ var filePath = filePath
 }
 
 
-    open fun removeNameFromPath(path: String, systemSep: Char)
+    open fun getNameFromPath(path: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var path = path
-    //var systemSep = systemSep
 
-    var endIndex: Int = path.lastIndexOf(this.SEPARATOR)!!
+    var endIndex: Int = path.lastIndexOf(this.SEPARATORCHAR)!!
 
 
     
                         if(endIndex < 0)
                         
                                     {
-                                    endIndex= path.lastIndexOf(systemSep)
+                                    endIndex= path.lastIndexOf(FilePathData.getInstance()!!.SEPARATORCHAR)
+
+                                    }
+                                
+
+    
+                        if(endIndex < 0)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return path
+
+                                    }
+                                
+
+    
+                        if(path.length == endIndex +1)
+                        
+                                    {
+                                    
+    var categoryName: String = path.substring(0, endIndex)!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.getNameFromPath(categoryName)
+
+                                    }
+                                
+                        else {
+                            
+    var categoryName: String = path.substring(endIndex +1)!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return categoryName
+
+                        }
+                            
+}
+
+
+    open fun removeNameFromPath(path: String)
+        //nullable = true from not(false or (false and false)) = true
+: String{
+    //var path = path
+
+    var endIndex: Int = path.lastIndexOf(this.SEPARATORCHAR)!!
+
+
+    
+                        if(endIndex < 0)
+                        
+                                    {
+                                    endIndex= path.lastIndexOf(FilePathData.getInstance()!!.SEPARATORCHAR)
 
                                     }
                                 
@@ -170,7 +257,7 @@ var filePath = filePath
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.removeNameFromPath(path.substring(0, endIndex -1), systemSep)
+                        return this.removeNameFromPath(path.substring(0, endIndex -1))
 
                                     }
                                 

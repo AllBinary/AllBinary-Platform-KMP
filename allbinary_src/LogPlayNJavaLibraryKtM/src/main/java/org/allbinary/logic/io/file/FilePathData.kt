@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.io.File
 
 open public class FilePathData
             : Object
@@ -48,21 +47,12 @@ companion object {
 
         }
             
-    val SEPARATORCHAR: Char = File.separatorChar
+    val SEPARATORCHAR: Char = '\\'
 
-    var PATH_START: String = File.separator
+    var PATH_START: String = "\\\\"
 private constructor ()
             : super()
         {
-
-    
-                        if(File.separatorChar == '\\')
-                        
-                                    {
-                                    this.PATH_START= File.separator +File.separator
-
-                                    }
-                                
 }
 
 

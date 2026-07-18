@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.io.Closeable
 import java.io.FileInputStream
 import java.io.InputStream
 import java.io.OutputStream
@@ -38,6 +39,7 @@ import org.allbinary.logic.io.AbFileLocalInputStream
 import org.allbinary.logic.io.AbIOSystem
 import org.allbinary.logic.io.DataOutputStreamFactory
 import org.allbinary.logic.io.FileStreamFactory
+import org.allbinary.logic.io.NullCloseable
 import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.io.path.AbPath
@@ -1146,76 +1148,6 @@ this.logUtil!!.put(stringBuffer!!.toString(), getInstance(), COPY, e)
                             throw e
 }
 
-}
-
-
-    open fun readAsString(fileName: String)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-    //var fileName = fileName
-
-    var bytes: ByteArray = ByteArray(1000000)
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.readAsString(fileName, bytes)
-}
-
-
-    open fun readAsString(fileName: String, bytes: ByteArray)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-    //var fileName = fileName
-    //var bytes = bytes
-
-    var idFile: FileInputStream = 
-                null
-            
-
-
-        try {
-            idFile= FileInputStream(fileName)
-
-    var size: Int = idFile!!.read(bytes)!!
-
-
-    
-                        if(size > 0)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return bytes.decodeToString()
-
-                                    }
-                                
-} catch(e: Exception)
-            {
-
-    
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(this.logConfigTypeFactory!!.IDLOGGING))
-                        
-                                    {
-                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "SmallInsert", e)
-
-                                    }
-                                
-}
-
-         finally {
-            this.streamUtil!!.close(idFile)
-
-         }
-        
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 

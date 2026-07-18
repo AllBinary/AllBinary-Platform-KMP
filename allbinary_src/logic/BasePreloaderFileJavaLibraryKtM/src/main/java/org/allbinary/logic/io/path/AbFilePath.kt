@@ -26,10 +26,12 @@ open public class AbFilePath : AbPath {
 
         // For kotlin this is before the body of the constructor.
 
+        var pathData: AbPathData = AbPathData.getInstance()!!
+
         var abPathUtil: PathUtil = PathUtil.getInstance()!!
 
         this.schema = this.getSchema(aPath)
-        this.setName(abPathUtil!!.getNameFromPath(aPath))
+        this.setName(pathData!!.getNameFromPath(aPath))
         this.setPath(
             abPathUtil!!.adjust(
                 this.getPathFromPath(abPathUtil!!.removeNameFromPath(aPath)!!.toString())

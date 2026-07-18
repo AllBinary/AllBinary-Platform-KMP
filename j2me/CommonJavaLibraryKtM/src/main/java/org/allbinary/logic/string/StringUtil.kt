@@ -33,6 +33,8 @@ open public class StringUtil : Object {
         }
     }
 
+    val INIT_STRING: String = ""
+
     val NULL_STRING: String = "null"
 
     val EMPTY_STRING: String = ""

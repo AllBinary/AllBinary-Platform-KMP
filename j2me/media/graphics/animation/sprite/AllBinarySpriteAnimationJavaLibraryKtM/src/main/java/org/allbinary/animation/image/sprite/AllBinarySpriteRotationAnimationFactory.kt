@@ -22,6 +22,7 @@ import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.animation.image.BaseImageAnimationFactory
 import org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil
+import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
 
 open public class AllBinarySpriteRotationAnimationFactory :
@@ -208,6 +209,13 @@ open public class AllBinarySpriteRotationAnimationFactory :
 
         // For kotlin this is before the body of the constructor.
 
+        if (animationBehaviorFactory == AnimationBehaviorFactory.getInstance()) {
+
+            ForcedLogUtil.log(
+                "Using default AnimationBehaviorFactory with IndexedAnimationFactory",
+                this,
+            )
+        }
     }
 
     open fun init(dx: Int, dy: Int)

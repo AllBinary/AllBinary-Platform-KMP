@@ -63,7 +63,7 @@ companion object {
     open fun create(directoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var directoryAbPath = directoryAbPath
+    //var directoryAbPath = directoryAbPath
 
 
 
@@ -77,7 +77,7 @@ var directoryAbPath = directoryAbPath
     open fun remove(existingDirectoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
-var existingDirectoryAbPath = existingDirectoryAbPath
+    //var existingDirectoryAbPath = existingDirectoryAbPath
 this.remove(existingDirectoryAbPath!!.toFileSystemString())
 }
 
@@ -85,7 +85,7 @@ this.remove(existingDirectoryAbPath!!.toFileSystemString())
     open fun create(directory: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var directory = directory
+    //var directory = directory
 
         try {
             
@@ -136,7 +136,7 @@ PreLogUtil.putOE("Error Creating Directories: " +directory, this, "create", e)
     open fun remove(existingDirectory: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var existingDirectory = existingDirectory
+    //var existingDirectory = existingDirectory
 
     var existingDirectoryFile: AbFile = FileFactory.getInstance()!!.getInstance(existingDirectory)!!
 
@@ -183,8 +183,8 @@ var existingDirectory = existingDirectory
     open fun search(fileFilter: FileFilter, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var fileFilter = fileFilter
-var file = file
+    //var fileFilter = fileFilter
+    //var file = file
 
 
 
@@ -196,9 +196,9 @@ var file = file
     open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var fileFilter = fileFilter
-var file = file
-var isRecursiveSearch = isRecursiveSearch
+    //var fileFilter = fileFilter
+    //var file = file
+    //var isRecursiveSearch = isRecursiveSearch
 
     var fileList: BasicArrayList = BasicArrayListD()
 
@@ -284,7 +284,7 @@ fileList!!.addAllList(recursiveFileList)
     open fun search(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var file = file
+    //var file = file
 
 
 
@@ -379,8 +379,8 @@ fileList!!.addAllList(recursiveFileList)
     open fun search(searchValue: String, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var searchValue = searchValue
-var file = file
+    //var searchValue = searchValue
+    //var file = file
 
 
 
@@ -484,8 +484,8 @@ fileList!!.addAllList(recursiveFileList)
     open fun search(level: Int, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var level = level
-var file = file
+    //var level = level
+    //var file = file
 
 
 
@@ -497,9 +497,9 @@ var file = file
     open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-var level = level
-var file = file
-var isRecursiveSearch = isRecursiveSearch
+    //var level = level
+    //var file = file
+    //var isRecursiveSearch = isRecursiveSearch
 
     var fileList: BasicArrayList = BasicArrayListD()
 

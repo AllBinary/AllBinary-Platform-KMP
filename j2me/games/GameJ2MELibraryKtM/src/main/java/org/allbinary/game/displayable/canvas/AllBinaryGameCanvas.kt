@@ -328,7 +328,7 @@ open public class AllBinaryGameCanvas :
 
     private var progressPaintable: PaintableInterface = ProgressCanvasFactory.getLazyInstance()!!
 
-    var fontHeight: Int = 0
+    var fontHeightP: Int = 0
 
     public constructor(
         commandListener: CommandListener,
@@ -389,7 +389,7 @@ open public class AllBinaryGameCanvas :
                 this,
                 this.canvasStrings!!.UPDATE_MEASUREMENT,
             )
-            this.fontHeight = font.getHeight()
+            this.fontHeightP = font.getHeight()
             this.myFormUtil!!.updateMeasurement(graphics)
 
             var popupMenuRectangle: Rectangle = this.myFormUtil!!.getPopupMenuRectangle()!!

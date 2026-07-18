@@ -28,7 +28,7 @@
 import java.io.DataOutputStream
 import java.io.FileOutputStream
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.logic.io.file.FileUtil
+import org.allbinary.logic.io.file.AbFileSystem
 import org.allbinary.string.CommonStrings
 
 open public class SmallDelete
@@ -48,7 +48,7 @@ public constructor (fileName: String)
         {
 var fileName = fileName
 this.fileName= fileName
-this.string= FileUtil.getInstance()!!.readAsString(fileName)
+this.string= AbFileSystem.getInstance()!!.readAsString(fileName)
 }
 
 

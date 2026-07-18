@@ -54,7 +54,7 @@ open public class NullRotationAnimationFactory :
             super(
                 AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE),
                 CircularIndexUtil.createInstance(4),
-                AnimationBehavior.getInstance(),
+                IndexedAnimationBehavior(1, 250),
             ) {
 
             // For kotlin this is before the body of the constructor.

@@ -50,7 +50,7 @@ companion object {
 
     private val logPath: String = "g:\\log\\"
 
-    private val extension: String = .toCharArray()
+    private val extension: String = ""
 
     private val fileName: String = .toCharArray()
 
@@ -214,7 +214,7 @@ var exception = exception
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray()
+                        return ""
 
                                     }
                                 
@@ -238,7 +238,7 @@ var exception = exception
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray()
+                        return ""
 
                                     }
                                 
@@ -331,7 +331,7 @@ var functionName = functionName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray()
+                        return ""
 
                                     }
                                 
@@ -355,7 +355,7 @@ var functionName = functionName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray()
+                        return ""
 
                                     }
                                 

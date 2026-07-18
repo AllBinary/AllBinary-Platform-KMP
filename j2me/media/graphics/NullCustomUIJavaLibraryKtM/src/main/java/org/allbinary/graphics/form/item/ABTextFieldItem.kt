@@ -9,6 +9,8 @@ import org.allbinary.logic.util.visitor.Visitor
 
 open public class ABTextFieldItem : ABTextItem {
 
+    private var font: Font
+
     public constructor(
         canvas: Canvas,
         visitor: Visitor,
@@ -34,6 +36,7 @@ open public class ABTextFieldItem : ABTextItem {
 
         // For kotlin this is before the body of the constructor.
 
+        this.font = font
     }
 
     override fun getLabel()
@@ -68,5 +71,25 @@ open public class ABTextFieldItem : ABTextItem {
         // nullable = true from not(false or (false and false)) = true
     {
         var state = state
+    }
+
+    open fun getFontHeight()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.font.getHeight()
+    }
+
+    open fun setBackgroundBasicColorP(basicColor: BasicColor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicColor = basicColor
+    }
+
+    open fun setForegroundBasicColorP(basicColor: BasicColor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicColor = basicColor
     }
 }

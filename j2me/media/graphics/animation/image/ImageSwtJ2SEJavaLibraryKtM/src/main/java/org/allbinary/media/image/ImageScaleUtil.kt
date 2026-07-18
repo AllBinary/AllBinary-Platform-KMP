@@ -178,7 +178,7 @@ this.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX,
     var height: Int = originalImage!!.getHeight()!!
 
 
-    var scaledImage: Image = this.imageCopyUtil!!.createImageWH(originalImage, scaleX.toInt(), scaleY.toInt(), mutable)!!
+    var scaledImage: Image = this.imageCopyUtil!!.createImageWH(originalImage, (scaleX *width).toInt(), (scaleY *height).toInt(), mutable)!!
 
 originalImageArray[0]= scaledImage
 }

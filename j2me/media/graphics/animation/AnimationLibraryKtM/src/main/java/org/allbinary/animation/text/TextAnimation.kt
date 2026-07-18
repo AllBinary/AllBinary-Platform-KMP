@@ -24,6 +24,7 @@ import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.graphics.font.UpdateMyFontInterface
 import org.allbinary.graphics.font.UpdateMyFontProcessor
+import org.allbinary.graphics.threed.SWTJOGLProcessor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
@@ -42,6 +43,8 @@ open public class TextAnimation : IndexedAnimation, UpdateMyFontInterface {
     private var anchor: Int = Anchor.TOP_LEFT
 
     private var fontHeight: Int = 0
+
+    private var offsetY: Int = 0
 
     private var textChangeListener: TextChangeListener = TextChangeListener.getInstance()!!
 
@@ -65,6 +68,17 @@ open public class TextAnimation : IndexedAnimation, UpdateMyFontInterface {
         var font: Font = graphics.getFont()!!
 
         this.fontHeight = font.getHeight()
+
+        var adjustedFontHeight: Int = -(this.fontHeight * 1.33).toInt()
+
+        this.offsetY =
+            if (SWTJOGLProcessor.getInstance()!!.isJOGL()) {
+
+                adjustedFontHeight
+            } else {
+                0
+            }
+
         this.textChangeListener!!.onMeasure()
         this.textChangeListener = TextChangeListener.getInstance()
         this.myFontProcessor = MyFontProcessor.getInstance()
@@ -100,7 +114,7 @@ open public class TextAnimation : IndexedAnimation, UpdateMyFontInterface {
             graphics.drawString(
                 this.textArrayP[index]!!,
                 x,
-                y + (index * this.fontHeight),
+                y + this.offsetY + (index * this.fontHeight),
                 this.anchor,
             )
         }

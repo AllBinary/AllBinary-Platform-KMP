@@ -26,7 +26,6 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
-import org.allbinary.string.CommonSeps
 
 open public class ResourceUtil : Object {
 
@@ -101,10 +100,6 @@ open public class ResourceUtil : Object {
         : InputStream {
         // var resource = resource
         // var startIndex = startIndex
-
-        var stringMaker: StringMaker = StringMaker()
-
-        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
         var inputStream: InputStream =
             FileInputStream(

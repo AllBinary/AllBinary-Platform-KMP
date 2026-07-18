@@ -28,6 +28,7 @@ import org.allbinary.animation.image.ImageAnimation
 import org.allbinary.graphics.color.BasicColorUtil
 import org.allbinary.image.AnimationFactoryImageScaleUtil
 import org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil
+import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.media.ScaleProperties
 import org.allbinary.media.audio.Sound
 
@@ -87,6 +88,15 @@ open public class ImageCaptionIndexedAnimationFactory : Object, AnimationInterfa
         // var dy = dy
         // var time = time
         // var animationBehaviorFactory = animationBehaviorFactory
+
+        if (animationBehaviorFactory == AnimationBehaviorFactory.getInstance()) {
+
+            ForcedLogUtil.log(
+                "Using default AnimationBehaviorFactory with IndexedAnimationFactory",
+                this,
+            )
+        }
+
         this.captionImage = captionImage
         this.spriteMovieImage = spriteMovieImage
         this.frameWidth = frameWidth

@@ -30,6 +30,7 @@ import java.util.Vector
 import org.allbinary.data.tables.TableMappingInterface
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.FileData
+import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.io.path.PathUtil
 
 open public class FileTableMapping
@@ -90,10 +91,13 @@ filePropertyVector!!.add(this.file.getPath())
     var filePropertyHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
+    var pathData: AbPathData = AbPathData.getInstance()!!
+
+
     var pathUtil: PathUtil = PathUtil.getInstance()!!
 
 
-    var rootFileName: String = pathUtil!!.getNameFromPath(pathUtil!!.getWithoutExtension(this.file.getPath()))!!
+    var rootFileName: String = pathData!!.getNameFromPath(pathUtil!!.getWithoutExtension(this.file.getPath()))!!
 
 
     var fileData: FileData = FileData.getInstance()!!

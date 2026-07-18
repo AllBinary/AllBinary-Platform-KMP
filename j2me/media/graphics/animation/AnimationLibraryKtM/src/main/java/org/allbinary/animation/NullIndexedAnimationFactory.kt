@@ -47,7 +47,7 @@ open public class NullIndexedAnimationFactory :
         }
             */
 
-        constructor() : super(AnimationBehavior.getInstance()) {
+        constructor() : super(IndexedAnimationBehavior(1, 250)) {
 
             // For kotlin this is before the body of the constructor.
 

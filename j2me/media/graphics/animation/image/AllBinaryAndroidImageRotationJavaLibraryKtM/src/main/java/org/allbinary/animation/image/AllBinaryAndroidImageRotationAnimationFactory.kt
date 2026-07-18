@@ -148,6 +148,45 @@ open public class AllBinaryAndroidImageRotationAnimationFactory : BaseImageAnima
             // if statement needs to be on the same line and ternary does not work the same way.
             return androidImageRotationAnimationFactory
         }
+
+        @Throws(Exception::class)
+        open fun createFactoryADXY(
+            image: Image,
+            width: Int,
+            height: Int,
+            dx: Int,
+            dy: Int,
+            angleIncrement: Short,
+            animationBehaviorFactory: AnimationBehaviorFactory,
+            resizeCanvasForRotation: Boolean,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : AllBinaryAndroidImageRotationAnimationFactory {
+            // var image = image
+            // var width = width
+            // var height = height
+            // var dx = dx
+            // var dy = dy
+            // var angleIncrement = angleIncrement
+            // var animationBehaviorFactory = animationBehaviorFactory
+            // var resizeCanvasForRotation = resizeCanvasForRotation
+
+            var androidImageRotationAnimationFactory:
+                AllBinaryAndroidImageRotationAnimationFactory =
+                AllBinaryAndroidImageRotationAnimationFactory(
+                    image,
+                    width,
+                    height,
+                    angleIncrement,
+                    animationBehaviorFactory,
+                    resizeCanvasForRotation,
+                )
+
+            androidImageRotationAnimationFactory!!.init(dx, dy)
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return androidImageRotationAnimationFactory
+        }
     }
 
     open fun init(dx: Int, dy: Int)

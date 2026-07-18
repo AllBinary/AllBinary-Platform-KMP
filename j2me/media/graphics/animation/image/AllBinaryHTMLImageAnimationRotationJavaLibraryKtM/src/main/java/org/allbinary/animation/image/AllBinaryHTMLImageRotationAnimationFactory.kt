@@ -36,7 +36,34 @@ import org.allbinary.math.AngleInfo
 
 open public class AllBinaryHTMLImageRotationAnimationFactory : BaseImageAnimationFactory {
         
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun createFactoryADXY(image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinaryHTMLImageRotationAnimationFactory{
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var angleIncrement = angleIncrement
+    //var animationBehaviorFactory = animationBehaviorFactory
 
+    var htmlImageRotationAnimationFactory: AllBinaryHTMLImageRotationAnimationFactory = AllBinaryHTMLImageRotationAnimationFactory(image, width, height, angleIncrement, animationBehaviorFactory)
+
+htmlImageRotationAnimationFactory!!.init(dx, dy)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return htmlImageRotationAnimationFactory
+}
+
+
+        }
+            
     val angleIncrement: Short
 public constructor (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
@@ -51,6 +78,18 @@ public constructor (image: Image, width: Int, height: Int, angleIncrement: Short
                             //For kotlin this is before the body of the constructor.
                     
 this.angleIncrement= angleIncrement
+}
+
+
+    open fun init(dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var dx = dx
+    //var dy = dy
+this.animationFactoryInitializationVisitor!!.dx= dx
+this.animationFactoryInitializationVisitor!!.dy= dy
+this.animationFactoryInitializationVisitor!!.originalDx= dx
+this.animationFactoryInitializationVisitor!!.originalDy= dy
 }
 
 

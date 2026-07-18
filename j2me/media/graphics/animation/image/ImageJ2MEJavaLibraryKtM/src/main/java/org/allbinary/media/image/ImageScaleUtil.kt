@@ -57,7 +57,7 @@ open public class ImageScaleUtil : Object {
         // var cached = cached
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return this.createImage(
+        return this.createImage3(
             imageCache,
             originalImage,
             scaleNominatorX,
@@ -70,7 +70,7 @@ open public class ImageScaleUtil : Object {
     }
 
     @Throws(Exception::class)
-    open fun createImage(
+    open fun createImage3(
         imageCache: ImageCache,
         originalImage: Image,
         scaleNominatorX: Float,

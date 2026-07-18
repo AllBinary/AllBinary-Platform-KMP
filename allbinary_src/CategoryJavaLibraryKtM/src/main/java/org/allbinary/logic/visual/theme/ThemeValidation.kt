@@ -90,10 +90,13 @@ var cssStyleValidation = cssStyleValidation
 var categoryThemePath = categoryThemePath
 this.transformInfoInterface= transformInfoInterface
 
+    var pathData: AbPathData = AbPathData.getInstance()!!
+
+
     var pathUtil: PathUtil = PathUtil.getInstance()!!
 
 this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemePath)
-this.themeName= pathUtil!!.getNameFromPath(categoryThemePath)
+this.themeName= pathData!!.getNameFromPath(categoryThemePath)
 this.styleValidationInterface= cssStyleValidation
 this.init()
 }
@@ -108,10 +111,13 @@ this.transformInfoInterface= transformInfoInterface
     var categoryThemeAbPath: AbPath = AbPath(hashMap!!.get(ThemeData.getInstance()!!.PATH) as String, StringUtil.getInstance()!!.EMPTY_STRING)
 
 
+    var pathData: AbPathData = AbPathData.getInstance()!!
+
+
     var pathUtil: PathUtil = PathUtil.getInstance()!!
 
 this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemeAbPath!!.toString())
-this.themeName= pathUtil!!.getNameFromPath(categoryThemeAbPath!!.toString())
+this.themeName= pathData!!.getNameFromPath(categoryThemeAbPath!!.toString())
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))

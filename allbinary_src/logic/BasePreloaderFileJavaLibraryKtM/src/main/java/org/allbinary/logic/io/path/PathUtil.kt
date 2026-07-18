@@ -229,40 +229,6 @@ open public class PathUtil : Object {
         return path
     }
 
-    open fun getNameFromPath(
-        categoryPath: String
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : String {
-        var categoryPath = categoryPath
-
-        var endIndex: Int = categoryPath!!.lastIndexOf(this.abPathData!!.SEPARATOR)!!
-
-        if (endIndex < 0) {
-
-            endIndex = categoryPath!!.lastIndexOf(this.filePathData!!.SEPARATORCHAR)
-        }
-
-        if (endIndex < 0)
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return categoryPath
-
-        if (categoryPath!!.length == endIndex + 1) {
-
-            var categoryName: String = categoryPath!!.substring(0, endIndex)!!
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.getNameFromPath(categoryName)
-        } else {
-
-            var categoryName: String = categoryPath!!.substring(endIndex + 1)!!
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return categoryName
-        }
-    }
-
     @Throws(Exception::class)
     open fun removeNameFromPath(
         path: String

@@ -57,6 +57,8 @@ open public class RootStoreCategoryProperties
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    private val pathData: AbPathData = AbPathData.getInstance()!!
+
     private var fileAbPath: AbPath
 
     private var abPath: AbPath
@@ -87,7 +89,7 @@ public constructor (transformInfoInterface: TransformInfoInterface, categoryAbPa
     //var categoryAbPath = categoryAbPath
 this.transformInfoInterface= transformInfoInterface
 this.abPath= categoryAbPath
-this.category= PathUtil.getInstance()!!.getNameFromPath(categoryAbPath!!.toString())
+this.category= this.pathData!!.getNameFromPath(categoryAbPath!!.toString())
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.category))
@@ -112,7 +114,7 @@ this.transformInfoInterface= transformInfoInterface
     var categoryPath: String = CategoryUtil.getNameFromNode(node)!!
 
 this.abPath= AbPath(categoryPath, StringUtil.getInstance()!!.EMPTY_STRING)
-this.category= PathUtil.getInstance()!!.getNameFromPath(categoryPath)
+this.category= this.pathData!!.getNameFromPath(categoryPath)
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.category))
@@ -137,7 +139,7 @@ this.transformInfoInterface= transformInfoInterface
     var categoryPath: String = .toCharArray()
 
 this.abPath= AbPath(categoryPath, StringUtil.getInstance()!!.EMPTY_STRING)
-this.category= PathUtil.getInstance()!!.getNameFromPath(categoryPath)
+this.category= this.pathData!!.getNameFromPath(categoryPath)
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.category))

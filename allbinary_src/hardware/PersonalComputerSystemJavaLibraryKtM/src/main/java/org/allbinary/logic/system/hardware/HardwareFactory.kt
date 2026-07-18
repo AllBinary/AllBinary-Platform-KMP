@@ -25,6 +25,16 @@ open public class HardwareFactory : Object {
 
     companion object {
 
+        private val instance: HardwareFactory = HardwareFactory()
+
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : HardwareFactory {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return HardwareFactory.instance
+        }
+
         @Throws(Exception::class)
         open fun getInstance(
             os: GenericOperatingSystem

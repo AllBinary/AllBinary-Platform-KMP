@@ -15,14 +15,17 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.logic.io.file
 
+import java.io.File
+import java.io.FileInputStream
 import java.io.InputStream
 import java.lang.Object
 import kotlin.Array
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
-// J2MEForJ2ME
+// FileJ2SE should be the same as J2SEForJ2ME
 open public class AbFileSystem : Object {
 
     companion object {
@@ -45,28 +48,6 @@ open public class AbFileSystem : Object {
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    open fun isDirectoryOrFile(
-        path: String
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        // var path = path
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return false
-    }
-
-    open fun isDirectory(
-        path: String
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        // var path = path
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return false
-    }
-
     open fun getFilesAsStringArrayForPath(
         currentDirPath: String
     )
@@ -74,8 +55,17 @@ open public class AbFileSystem : Object {
         : Array<String?> {
         // var currentDirPath = currentDirPath
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return StringUtil.getInstance()!!.getArrayInstance()
+        var file: File = File(currentDirPath)
+
+        if (file.exists()) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return file.list()
+        } else {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return StringUtil.getInstance()!!.getArrayInstance()
+        }
     }
 
     open fun readAsString(
@@ -99,6 +89,27 @@ open public class AbFileSystem : Object {
         : String {
         // var fileName = fileName
         // var bytes = bytes
+
+        var closeable: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+        try {
+
+            var idFile: InputStream = FileInputStream(fileName)
+
+            closeable = idFile
+
+            var size: Int = idFile!!.read(bytes)!!
+
+            if (size > 0) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return bytes.decodeToString()
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "readAsString", e)
+        } finally {
+            this.close(closeable)
+        }
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return StringUtil.getInstance()!!.EMPTY_STRING

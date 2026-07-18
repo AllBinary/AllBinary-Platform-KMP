@@ -62,7 +62,7 @@ open public class StartIntermissionPaintable : InitUpdatePaintable, UpdateMyFont
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-    var fontHeight: Int = 0
+    var fontHeightP: Int = 0
 
     public constructor(
         gameCanvas: AllBinaryGameCanvas,
@@ -90,7 +90,7 @@ open public class StartIntermissionPaintable : InitUpdatePaintable, UpdateMyFont
 
         var font: Font = graphics.getFont()!!
 
-        this.fontHeight = font.getHeight()
+        this.fontHeightP = font.getHeight()
         this.myFontProcessor = MyFontProcessor.getInstance()
     }
 

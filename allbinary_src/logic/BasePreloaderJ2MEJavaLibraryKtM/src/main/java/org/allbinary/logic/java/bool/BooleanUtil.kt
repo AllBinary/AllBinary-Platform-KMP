@@ -17,6 +17,7 @@ package org.allbinary.logic.java.bool
 
 import java.lang.Object
 import org.allbinary.TsUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringValidationUtil
 
 open public class BooleanUtil : Object {
@@ -97,5 +98,25 @@ open public class BooleanUtil : Object {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return false
+    }
+
+    open fun toStringFromBooleanArray(
+        booleanArray: BooleanArray
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        // var booleanArray = booleanArray
+
+        var stringMaker: StringMaker = StringMaker()
+
+        var size: Int = booleanArray!!.size
+
+        for (index in 0 until size) {
+
+            stringMaker!!.appendboolean(booleanArray[index]!!)
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringMaker!!.toString()
     }
 }
