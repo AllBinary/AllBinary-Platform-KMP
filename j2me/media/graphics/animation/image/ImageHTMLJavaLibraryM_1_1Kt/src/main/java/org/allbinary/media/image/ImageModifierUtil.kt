@@ -36,7 +36,7 @@ import org.microemu.device.playn.PlaynImage
 import org.microemu.device.ResourceCallbackStrings
 import playn.core.Canvas
 import playn.core.CanvasImage
-import playn.core.ResourceCallback
+import playn.core.util.Callback
 
 open public class ImageModifierUtil
             : Object
@@ -236,10 +236,10 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
                                 
                         else {
                             
-    var callback: ResourceCallback = object: ResourceCallback()
+    var callback: Callback = object: Callback()
                                 {
                                 
-    override fun done(resource: Any)
+    override fun onSuccess(resource: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
@@ -250,7 +250,7 @@ logUtil!!.putF(resourceCallbackStrings!!.DONE +image.getName(), this, resourceCa
 copy(imageArray, index, image, image3)
 }
 
-    override fun error(e: Throwable)
+    override fun onFailure(e: Throwable)
         //nullable = true from not(false or (false and false)) = true
 {
 var e = e

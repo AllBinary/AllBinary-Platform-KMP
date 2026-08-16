@@ -28,13 +28,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.thread.ARunnable
-import java.awt
 import java.net.URI
 import java.net.URL
+import java.awt.Desktop
+import java.util.List
+import javax.swing.ImageIcon
+import javax.swing.JDialog
 import javax.help.HelpSet
 import javax.help.event.HelpSetEvent
 import javax.help.event.HelpSetListener
-import javax.swing
 import bundle.input.automation.InputAutomationBundleActivatorListenerInterface
 import bundle.input.automation.module.configuration.InputAutomationConfigurationModuleChangeListener
 import bundle.input.automation.robot.InputAutomationRobotChangeListener
@@ -47,8 +49,8 @@ import org.allbinary.input.automation.configuration.InputAutomationConfiguration
 import org.allbinary.input.automation.configuration.InputAutomationConfigurationModuleChangeEvent
 import org.allbinary.input.automation.module.InputAutomationModuleFactoryFactory
 import org.allbinary.input.automation.module.InputAutomationModuleFactoryInterface
+import org.allbinary.input.automation.module.configuration.InputAutomationModuleConfiguration
 import org.allbinary.input.automation.module.configuration.InputAutomationModuleConfigurations
-import org.allbinary.input.automation.module.configuration.InputAutomationModuleConfigurationsSingletonFactory
 import org.allbinary.input.automation.osgi.DesktopBundle
 import org.allbinary.input.automation.robot.InputRobotFactory
 import org.allbinary.input.automation.robot.osgi.InputAutomationRobotChangeEvent
@@ -145,7 +147,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
-var args = args
+    //var args = args
 InputAutomationJFrame.create(
                             null)
 }
@@ -156,6 +158,8 @@ InputAutomationJFrame.create(
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    private var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurations()
 
     private var inputAutomationModuleFactory: InputAutomationModuleFactoryFactory
 
@@ -205,8 +209,29 @@ this.helpSet!!.remove(helpSetEvent!!.getHelpSet())
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-InputAutomationConfigurationFactory.init(InputAutomationClientInformationFactory.getInstance())
-this.inputAutomationModuleFactory= InputAutomationModuleFactoryFactory(this)
+
+    var inputAutomationConfigurationFactory: InputAutomationConfigurationFactory = InputAutomationConfigurationFactory.getInstance()!!
+
+inputAutomationConfigurationFactory!!.init(InputAutomationClientInformationFactory.getInstance())
+
+    var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration> = inputAutomationConfigurationFactory!!.inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
+
+
+    
+                        if(inputAutomationModuleConfigurationList == 
+                                    null
+                                )
+                        
+                                    {
+                                    
+                                    }
+                                
+                        else {
+                            this.inputAutomationModuleConfigurations= InputAutomationModuleConfigurations(inputAutomationModuleConfigurationList)
+
+                        }
+                            
+this.inputAutomationModuleFactory= InputAutomationModuleFactoryFactory(inputAutomationModuleConfigurations, this)
  = 
 .
                     execute()
@@ -721,7 +746,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "startJMenuItemActionPe
     open fun setAutomationModuleConfigurationJPanel(automationModuleConfigurationJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
 {
-var automationModuleConfigurationJPanel = automationModuleConfigurationJPanel
+    //var automationModuleConfigurationJPanel = automationModuleConfigurationJPanel
 this.automationModuleConfigurationJPanel= automationModuleConfigurationJPanel
 }
 
@@ -729,7 +754,7 @@ this.automationModuleConfigurationJPanel= automationModuleConfigurationJPanel
     open fun onAdd(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
+    //var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, "onAdd")
@@ -745,7 +770,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
     open fun onRemove(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
+    //var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, "onRemove")
@@ -765,10 +790,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, "onAdd")
-
-    var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurationsSingletonFactory.getInstance()!!
-
-inputAutomationModuleConfigurations!!.add(inputAutomationConfigurationChangeEvent!!.getInputAutomationModuleConfiguration())
+this.inputAutomationModuleConfigurations!!.add(inputAutomationConfigurationChangeEvent!!.getInputAutomationModuleConfiguration())
 this.init()
 } catch(e: Exception)
             {
@@ -781,13 +803,37 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
     open fun onRemove(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-var inputAutomationConfigurationChangeEvent = inputAutomationConfigurationChangeEvent
+    //var inputAutomationConfigurationChangeEvent = inputAutomationConfigurationChangeEvent
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START, this, "onRemove")
 
-    var inputAutomationConfiguration: InputAutomationConfiguration = InputAutomationConfigurationFactory.getInstance()!!
+    var inputAutomationConfiguration: InputAutomationConfiguration = InputAutomationConfigurationFactory.getInstance()!!.inputAutomationConfiguration
 
+
+    var inputAutomationModuleConfigurationList: java.util.List<InputAutomationModuleConfiguration> = inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
+
+
+    
+                        if(inputAutomationModuleConfigurationList == 
+                                    null
+                                )
+                        
+                                    {
+                                    
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+logUtil!!.putF("inputAutomationModuleConfigurationList: " +inputAutomationModuleConfigurationList, this, commonStrings!!.INIT)
+
+
+
+                            throw Exception()
+
+                                    }
+                                
 
     var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurations(inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList())
 

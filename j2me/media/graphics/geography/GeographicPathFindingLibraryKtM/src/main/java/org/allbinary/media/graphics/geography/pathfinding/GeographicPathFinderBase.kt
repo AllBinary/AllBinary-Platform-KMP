@@ -39,9 +39,9 @@ open public class GeographicPathFinderBase : Object {
     )
         // nullable = true from not(false or (false and false)) = true
         : BasicArrayList {
-        var startPathFindingNodeList = startPathFindingNodeList
-        var endPathFindingNodeList = endPathFindingNodeList
-        var totalPaths = totalPaths
+        // var startPathFindingNodeList = startPathFindingNodeList
+        // var endPathFindingNodeList = endPathFindingNodeList
+        // var totalPaths = totalPaths
 
         throw RuntimeException()
     }
@@ -55,9 +55,9 @@ open public class GeographicPathFinderBase : Object {
     )
         // nullable = true from not(false or (false and false)) = true
         : BasicArrayList {
-        var startPathFindingNodeList = startPathFindingNodeList
-        var endPathFindingNodeList = endPathFindingNodeList
-        var totalPaths = totalPaths
+        // var startPathFindingNodeList = startPathFindingNodeList
+        // var endPathFindingNodeList = endPathFindingNodeList
+        // var totalPaths = totalPaths
         // var multipassState = multipassState
 
         throw RuntimeException()

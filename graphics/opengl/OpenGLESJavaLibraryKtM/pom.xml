@@ -194,21 +194,21 @@
                             <include>src/test/java/**/*.kt</include>
                         </includes>
                         
-                        <ktfmt>
+<!--                        <ktfmt>
                             <version>0.64</version>
                              Options include DEFAULT, GOOGLE, KOTLINLANG, DROPBOX 
                             <style>KOTLINLANG</style>
-                        </ktfmt>
+                        </ktfmt>-->
                     </kotlin>
                 </configuration>
                 <executions>
-                    <execution>
+<!--                    <execution>
                         <id>auto-format</id>
                         <goals>
                             <goal>apply</goal>
                         </goals>
                         <phase>validate</phase>
-                    </execution>
+                    </execution>-->
                     <execution>
                         <goals>
                             <goal>check</goal>

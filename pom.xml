@@ -30,7 +30,12 @@
 
     <modules>
 
+        <module>../working_thirdpartykt/embedded/j2me/microemulator/2_0_4/microemu-cldcKt</module>
+        <module>../working_thirdpartykt/embedded/j2me/microemulator/2_0_4/microemu-midpKt</module>
+        <module>../working_thirdpartykt/embedded/j2me/microemulator/2_0_4/microemu-extensions/microemu-jsr-135</module>
+
         <!--
+        requries: org.microemu:microemu-midpKt:jar:2.0.4
         -->
         <module>./j2me/AllBinaryBaseLibraryPOKtM</module>
         <module>./j2me/AllBinaryJ2MELibraryP</module>
@@ -60,6 +65,20 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>11.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>11.0</version>
+            <classifier>sources</classifier>
+        </dependency>
+
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>

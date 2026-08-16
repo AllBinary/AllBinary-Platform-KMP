@@ -11,6 +11,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.string.CommonSeps
 
 open public class SqlStrings
             : Object
@@ -84,7 +85,7 @@ companion object {
 
     val EQUAL_QUOTE: String = " = \""
 
-    val CLOSE_QUOTE: String = "\""
+    val CLOSE_QUOTE: String = CommonSeps.getInstance()!!.QUOTE
 
     val EQUAL_QUOTE_NO_SPACE: String = "=\""
 

@@ -45,6 +45,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.crypt.SuperCrypt
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class UserEntity : AbSqlBean
                 , UserEntityInterface {
@@ -66,7 +67,7 @@ open public class UserEntity : AbSqlBean
 
     private val NOT_EQUAL: String = "\"!=\""
 
-    private val END_QUOTES: String = "\""
+    private val END_QUOTES: String = CommonSeps.getInstance()!!.QUOTE
 public constructor ()                        
 
                             : super(UserDbInitInfo()){

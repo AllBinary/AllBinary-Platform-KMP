@@ -15,7 +15,7 @@ import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
 import org.allbinary.canvas.BaseGameStatistics
 import org.allbinary.canvas.GameStatisticsFactory
-
+//SWTToJ2ME
 open public class NullDisplayable : Canvas {
         
 companion object {

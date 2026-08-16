@@ -129,9 +129,11 @@ open public class SWTJOGLProcessor : Object, Runnable {
         // var ratio = ratio
     }
 
-    open fun setRatioProcessor()
-        // nullable = true from not(false or (false and true)) = true
-    {}
+    open fun setRatioProcessor(ratioProcessor: RatioProcessor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var ratioProcessor = ratioProcessor
+    }
 
     open fun charWidth(
         font: Font,

@@ -31,10 +31,9 @@ import java.util.Iterator
 import javax.help.HelpSet
 import javax.help.event.HelpSetEvent
 import javax.help.event.HelpSetListener
-import javax.swing
+import javax.swing.ListModel
 import org.allbinary.input.automation.module.configuration.InputAutomationModuleConfiguration
 import org.allbinary.input.automation.module.configuration.InputAutomationModuleConfigurations
-import org.allbinary.input.automation.module.configuration.InputAutomationModuleConfigurationsSingletonFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.help.JavaHelpSetNotifier
 import org.allbinary.string.CommonStrings
@@ -51,16 +50,14 @@ open public class InputAutomationModuleFactoryFactory
     private var defaultListModelHelper: DefaultListModelHelper
 
     private var helpSetListenerInterface: HelpSetListener
-public constructor (helpSetListenerInterface: HelpSetListener)
+public constructor (inputAutomationModuleConfigurations: InputAutomationModuleConfigurations, helpSetListenerInterface: HelpSetListener)
             : super()
         {
+    //var inputAutomationModuleConfigurations = inputAutomationModuleConfigurations
     //var helpSetListenerInterface = helpSetListenerInterface
 this.helpSetListenerInterface= helpSetListenerInterface
 this.defaultListModelHelper= DefaultListModelHelper()
 this.hashMap= HashMap<Any, Any>()
-
-    var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurationsSingletonFactory.getInstance()!!
-
 
     var collection: Collection = inputAutomationModuleConfigurations!!.getHashMap()!!.values()!!
 

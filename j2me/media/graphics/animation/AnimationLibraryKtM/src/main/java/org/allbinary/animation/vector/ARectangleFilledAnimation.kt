@@ -1,37 +1,19 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
-
 /* Generated Code Do Not Modify */
 package org.allbinary.animation.vector
 
 import javax.microedition.lcdui.Graphics
-import org.allbinary.animation.Animation
 import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.graphics.color.ColorCompositeInterface
 
-open public class ARectangleFilledAnimation : Animation, ColorCompositeInterface {
+open public class ARectangleFilledAnimation : RectangleFilledAnimation {
 
     var x: Int = 0
 
     var y: Int = 0
 
-    var width: Int = 0
+    public constructor() : super(0, 0, BasicColorFactory.getInstance()!!.BLACK) {
 
-    var height: Int = 0
+        // For kotlin this is before the body of the constructor.
 
-    public constructor() {
-        this.setBasicColorP(BasicColorFactory.getInstance()!!.BLACK)
     }
 
     override fun nextFrame()
@@ -44,6 +26,6 @@ open public class ARectangleFilledAnimation : Animation, ColorCompositeInterface
         // var graphics = graphics
         // var unusedX = unusedX
         // var unusedY = unusedY
-        graphics.fillRect(this.x, this.y, this.width, this.height)
+        super.paintXY(graphics, this.x, this.y)
     }
 }

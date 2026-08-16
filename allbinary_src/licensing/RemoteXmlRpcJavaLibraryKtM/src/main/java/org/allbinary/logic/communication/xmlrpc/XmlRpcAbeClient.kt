@@ -32,6 +32,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonLabels
+import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.apache.xmlrpc.NullXmlRpcHandler
 import org.apache.xmlrpc.XmlRpcClient
@@ -73,7 +74,7 @@ companion object {
 
     val CLIENT_INFO: String = "Client Info: \n"
 
-    val RESULT: String = "Result: \n"
+    val RESULT: String = CommonLabels.getInstance()!!.RESULT_ +CommonSeps.getInstance()!!.NEW_LINE
 
     val INVALID: String = "License data is Invalid Trying Other Servers"
 

@@ -33,6 +33,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.HashtableUtil
 
+// Android
 open public class ResourceUtil : Object {
 
     companion object {

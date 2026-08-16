@@ -86,6 +86,8 @@ private constructor ()
 
     private val NO_COPY: String = "SWT should not copy images after initial loading as the alpha is not honored"
 
+    private val UNABLE: String = "Unable to scale image without dimensions"
+
                 @Throws(Exception::class)
             
     open fun createImageForRotation(originalImage: Image)
@@ -310,9 +312,23 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
     var imageData2: ImageData = originalImmutableImage!!.image.getImageData()!!
 
 
+    
+                        if(width > 0 && height > 0)
+                        
+                                    {
+                                    
     var imageData: ImageData = imageData2!!.scaledTo(width, height)!!
 
 image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createImage(imageData))
+
+                                    }
+                                
+                        else {
+                            this.logUtil!!.putF(UNABLE, this, this.commonStrings!!.CONSTRUCTOR)
+image= SwtImmutableImage(originalImmutableImage!!.getName(), PostLoadSwtImmutableImageProcessor(originalImmutableImage))
+
+                        }
+                            
 
                                     }
                                 

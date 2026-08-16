@@ -40,6 +40,38 @@ open public class LayerManager : Object {
     }
 
     @Throws(Exception::class)
+    open fun update(layerInterface: AllBinaryLayer)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerInterface = layerInterface
+
+        var had: Boolean = this.list.remove(layerInterface)!!
+
+        if (had) {
+
+            var nextLayerInterface: AllBinaryLayer
+
+            var size: Int = this.list.size()!!
+
+            for (index in 0 until size) {
+
+                nextLayerInterface = this.list.get(index) as AllBinaryLayer
+
+                if (layerInterface!!.getZP() > nextLayerInterface!!.getZP()) {
+
+                    this.list.addAt(index, layerInterface)
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return
+                }
+            }
+
+            this.list.add(layerInterface)
+        }
+    }
+
+    @Throws(Exception::class)
     open fun insert(layerInterface: AllBinaryLayer)
         // nullable = true from not(false or (false and false)) = true
     {

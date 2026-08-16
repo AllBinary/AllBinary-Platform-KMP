@@ -48,6 +48,30 @@ open public class AbFileSystem : Object {
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+    open fun isDirectoryOrFile(
+        path: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var path = path
+
+        var file: File = File(path)
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return file.isDirectory() || file.isFile()
+    }
+
+    open fun isDirectory(
+        path: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var path = path
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return File(path).isDirectory()
+    }
+
     open fun getFilesAsStringArrayForPath(
         currentDirPath: String
     )

@@ -80,11 +80,11 @@ private constructor ()
                                     {
                                     
     
-                        if(originalImage!!.getType() >= OpenGLESImage.TYPE)
+                        if(image.getType() >= OpenGLESImage.TYPE)
                         
                                     {
                                     
-    var openGLESImage: OpenGLESImage = (originalImage as OpenGLESImage)
+    var openGLESImage: OpenGLESImage = (image as OpenGLESImage)
 
 openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
 
@@ -96,7 +96,7 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
                                     }
                                 
                         else {
-                            PreLogUtil.put("OpenGL but image is: " +originalImage +" type: " +originalImage!!.getType(), this, "rotateImage")
+                            PreLogUtil.put("OpenGL but image is: " +image +" type: " +image.getType(), this, "rotateImage")
 
                         }
                             

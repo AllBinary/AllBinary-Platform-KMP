@@ -21,6 +21,7 @@ import org.allbinary.game.combat.destroy.event.DestroyedEventHandler
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.BasicLayerProcessor
+import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 
 open public class DestroyedLayerProcessor : BasicLayerProcessor {
@@ -77,7 +78,10 @@ open public class DestroyedLayerProcessor : BasicLayerProcessor {
                 destroyedEvent =
                     destroyEventCircularStaticPool!!.getInstanceForLayer(layerInterface)
                 destroyedEventHandler!!.fireEvent(destroyedEvent)
-            } else {}
+            } else {
+
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            }
         }
 
         list.clear()

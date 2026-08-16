@@ -102,6 +102,8 @@ open public class CollidableDestroyableDamageableLayer :
 
     var isDragged: Boolean = false
 
+    var isDropped: Boolean = false
+
     public constructor(
         groupInterface: Array<Group?>,
         name: String,

@@ -43,9 +43,31 @@ open public class InputAutomationConfigurationFactory
         
 companion object {
             
-    private var inputAutomationConfiguration: InputAutomationConfiguration = 
+    private val instance: InputAutomationConfigurationFactory = InputAutomationConfigurationFactory()
+
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: InputAutomationConfigurationFactory{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return InputAutomationConfigurationFactory.instance
+}
+
+
+        }
+            
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    var inputAutomationConfiguration: InputAutomationConfiguration = 
                 null
             
+private constructor ()
+            : super()
+        {
+}
+
 
                 @Throws(Exception::class)
             
@@ -80,12 +102,19 @@ companion object {
 
     var root: JAXBElement<InputAutomationConfiguration> = unmarshaller.unmarshal(StreamSource(FileInputStream(file)), InputAutomationConfiguration::class)!!
 
-InputAutomationConfigurationFactory.inputAutomationConfiguration= root.getValue() as InputAutomationConfiguration
+this.inputAutomationConfiguration= root.getValue() as InputAutomationConfiguration
 
-    var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration> = InputAutomationConfigurationFactory.inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
+    var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration> = this.inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
 
-logUtil!!.putF("isInstalled: " +InputAutomationConfigurationFactory.inputAutomationConfiguration!!.isInstalled(), INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
+logUtil!!.putF("isInstalled: " +this.inputAutomationConfiguration!!.isInstalled() +" inputAutomationModuleConfigurationList: " +inputAutomationModuleConfigurationList, INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
+    
+                        if(inputAutomationModuleConfigurationList != 
+                                    null
+                                )
+                        
+                                    {
+                                    
     var size: Int = inputAutomationModuleConfigurationList!!.size!!
 
 
@@ -102,36 +131,19 @@ inputAutomationModuleConfiguration= inputAutomationModuleConfigurationList!!.get
 inputAutomationModuleConfiguration!!.init(abeClientInformation)
 }
 
+
+                                    }
+                                
 logUtil!!.putF("LoadedConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
                                     }
                                 
                         else {
                             logUtil!!.putF("New Configuration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
-InputAutomationConfigurationFactory.inputAutomationConfiguration= InputAutomationConfiguration()
+this.inputAutomationConfiguration= InputAutomationConfiguration()
 
                         }
                             
-}
-
-
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: InputAutomationConfiguration{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return InputAutomationConfigurationFactory.inputAutomationConfiguration
-}
-
-
-        }
-            
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor ()
-            : super()
-        {
 }
 
 

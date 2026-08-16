@@ -1,0 +1,184 @@
+
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot   
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.logic.communication.log
+
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import org.allbinary.string.CommonStrings
+import playn.core.PlayN
+//ActualPlatform
+/*actual*/ open public class LogUtil
+            : Object
+         {
+        
+/*actual*/ companion object {
+            
+    private val instance: LogUtil = LogUtil()
+
+    /*actual*/ open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: LogUtil{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return LogUtil.instance
+}
+
+
+        }
+            
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
+
+    private val playN: PlayN = PlayN.getInstance()!!
+
+    private val LOG_SUCCESS: String = "org.allbinary: "
+private constructor ()
+            : super()
+        {
+}
+
+
+    /*actual*/ open fun putL(log: Log)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var log = log
+
+    
+                        if(log == 
+                                    null
+                                )
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
+
+                                    }
+                                
+
+    var specialMessage: String = log.getSpecialMessage()!!
+
+
+    var anyType: Any = log.getObject()!!
+
+
+    var functionName: String = log.getFunctionName()!!
+
+
+    var exception: Any = log.getThrowable()!!
+
+this.put(specialMessage, anyType, functionName, exception)
+}
+
+
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
+
+    var className: String = PreLogUtil.getClassName(anyType)!!
+
+
+    
+                        if(className == 
+                                    null
+                                )
+                        
+                                    {
+                                    className= CommonStrings.getInstance()!!.EMPTY
+
+                                    }
+                                
+
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
+
+this.playN!!.log()!!.debug(this.LOG_SUCCESS +message)
+}
+
+
+    /*actual*/ open fun putFS(specialMessage: String, className: String, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
+
+    var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
+
+this.playN!!.log()!!.debug(this.LOG_SUCCESS +message)
+}
+
+
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
+    //var exception = exception
+
+    var className: String = PreLogUtil.getClassName(anyType)!!
+
+
+    
+                        if(className == 
+                                    null
+                                )
+                        
+                                    {
+                                    className= CommonStrings.getInstance()!!.EMPTY
+
+                                    }
+                                
+
+    var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
+
+
+    
+                        if(exception != 
+                                    null
+                                )
+                        
+                                    {
+                                    this.playN!!.log()!!.error(this.LOG_SUCCESS +message, exception as Throwable)
+
+                                    }
+                                
+                        else {
+                            this.playN!!.log()!!.debug(this.LOG_SUCCESS +message)
+
+                        }
+                            
+}
+
+
+}
+                
+            
+

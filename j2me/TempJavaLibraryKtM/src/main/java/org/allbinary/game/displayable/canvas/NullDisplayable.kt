@@ -4,6 +4,7 @@ package org.allbinary.game.displayable.canvas
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
 
+// Temp should not be in any build
 open public class NullDisplayable : Canvas {
 
     companion object {

@@ -18,6 +18,8 @@ package org.allbinary.logic.math
 import java.lang.Integer
 import java.lang.Object
 import kotlin.Array
+import org.allbinary.J2MEUtil
+import org.allbinary.logic.communication.log.LogUtil
 
 open public class SmallIntegerSingletonFactory : Object {
 
@@ -51,20 +53,29 @@ open public class SmallIntegerSingletonFactory : Object {
     open fun getMin()
     // nullable = true from not(false or (false and true)) = true
     : Int {
-        this.checkMe()
+
+        var minAllowed: Int =
+            (if (J2MEUtil.isJ2ME()) {
+
+                0
+            } else {
+                23
+            })
+
+        if (this.MIN <= minAllowed) {
+
+            var logUtil: LogUtil = LogUtil.getInstance()!!
+
+            logUtil!!.put(
+                "This means you loaded the InputFactory before determining the platform input size requirements.",
+                this,
+                "getMin",
+                Exception(),
+            )
+        }
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.MIN
-    }
-
-    open fun checkMe()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        if (this.MIN == 0) {
-
-            throw RuntimeException()
-        }
     }
 
     open fun initWithRange(value: Int, negativeValue: Int)
@@ -112,6 +123,7 @@ open public class SmallIntegerSingletonFactory : Object {
             }
 
             this.lastMin = this.POSITIVE_MAX
+            this.MIN = this.lastMin
             this.lastNegativeMin = this.NEGATIVE_MAX
         }
     }

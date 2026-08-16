@@ -27,6 +27,7 @@ import org.allbinary.logic.io.StreamUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 
+// J2SE - PC
 open public class ResourceUtil : Object {
 
     companion object {

@@ -69,7 +69,7 @@ open public class TextAnimation : IndexedAnimation, UpdateMyFontInterface {
 
         this.fontHeight = font.getHeight()
 
-        var adjustedFontHeight: Int = -(this.fontHeight * 1.33).toInt()
+        var adjustedFontHeight: Int = -(this.fontHeight * 2.00).toInt()
 
         this.offsetY =
             if (SWTJOGLProcessor.getInstance()!!.isJOGL()) {

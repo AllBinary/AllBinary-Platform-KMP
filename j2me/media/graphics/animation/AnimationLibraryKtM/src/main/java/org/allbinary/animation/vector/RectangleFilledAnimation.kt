@@ -22,16 +22,16 @@ import org.allbinary.graphics.color.ColorCompositeInterface
 
 open public class RectangleFilledAnimation : Animation, ColorCompositeInterface {
 
-    private var width: Int
+    var widthP: Int
 
-    private var height: Int
+    var heightP: Int
 
     public constructor(width: Int, height: Int, basicColor: BasicColor) {
         // var width = width
         // var height = height
         // var basicColor = basicColor
-        this.width = width
-        this.height = height
+        this.widthP = width
+        this.heightP = height
         this.setBasicColorP(basicColor)
     }
 
@@ -46,20 +46,20 @@ open public class RectangleFilledAnimation : Animation, ColorCompositeInterface 
         // var x = x
         // var y = y
         this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
-        graphics.fillRect(x, y, this.width, this.height)
+        graphics.fillRect(x, y, this.widthP, this.heightP)
     }
 
     open fun setWidth(width: Int)
         // nullable = true from not(false or (false and false)) = true
     {
         // var width = width
-        this.width = width
+        this.widthP = width
     }
 
     open fun setHeight(height: Int)
         // nullable = true from not(false or (false and false)) = true
     {
         // var height = height
-        this.height = height
+        this.heightP = height
     }
 }

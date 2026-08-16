@@ -47,12 +47,11 @@ companion object {
 
         }
             
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
     private val NO_DESCRIPTION: String = "No Description"
+
+    val OS: LogConfigType = LogConfigType("Operating System", this.NO_DESCRIPTION)
+
+    val FACTORYERROR: LogConfigType = LogConfigType("Factory Error", this.NO_DESCRIPTION)
 
     val FILE: LogConfigType = LogConfigType("File", this.NO_DESCRIPTION)
 
@@ -65,6 +64,13 @@ companion object {
     val REPLACE_INFO: LogConfigType = LogConfigType("Replace Info", this.NO_DESCRIPTION)
 
     val REPLACEERROR: LogConfigType = LogConfigType("Replace Error", this.NO_DESCRIPTION)
+private constructor ()
+            : super()
+        {
+LogConfigTypes.LOGGING.add(OS)
+LogConfigTypes.LOGGING.add(this.FACTORYERROR)
+}
+
 
 }
                 

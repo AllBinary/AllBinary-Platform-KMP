@@ -20,6 +20,7 @@ import org.allbinary.animation.Animation
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
+import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
@@ -146,7 +147,7 @@ open public class PathAnimation : Animation {
                 }
             }
         } catch (e: Exception) {
-            this.logUtil!!.putF("Cleared Target", this, "paint")
+            this.logUtil!!.putF("Cleared Target", this, CanvasStrings.getInstance()!!.PAINT)
         }
     }
 }

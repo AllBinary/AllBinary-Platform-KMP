@@ -109,9 +109,9 @@ open public class PathFinder : GeographicPathFinderBase {
     )
         // nullable = true from not(false or (false and false)) = true
         : BasicArrayList {
-        var startPathFindingNodeList = startPathFindingNodeList
-        var endPathFindingNodeList = endPathFindingNodeList
-        var totalPaths = totalPaths
+        // var startPathFindingNodeList = startPathFindingNodeList
+        // var endPathFindingNodeList = endPathFindingNodeList
+        // var totalPaths = totalPaths
 
         try {
 
@@ -140,9 +140,9 @@ open public class PathFinder : GeographicPathFinderBase {
     )
         // nullable = true from not(false or (false and false)) = true
         : BasicArrayList {
-        var startPathFindingNodeList = startPathFindingNodeList
-        var endPathFindingNodeList = endPathFindingNodeList
-        var totalPaths = totalPaths
+        // var startPathFindingNodeList = startPathFindingNodeList
+        // var endPathFindingNodeList = endPathFindingNodeList
+        // var totalPaths = totalPaths
         // var multipassState = multipassState
 
         if (multipassState!!.step == 0) {

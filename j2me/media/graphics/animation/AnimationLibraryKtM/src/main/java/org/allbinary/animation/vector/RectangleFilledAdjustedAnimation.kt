@@ -16,15 +16,11 @@
 package org.allbinary.animation.vector
 
 import javax.microedition.lcdui.Graphics
-import org.allbinary.animation.Animation
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.ColorCompositeInterface
 
-open public class RectangleFilledAdjustedAnimation : Animation, ColorCompositeInterface {
-
-    private var width: Int
-
-    private var height: Int
+open public class RectangleFilledAdjustedAnimation :
+    RectangleFilledAnimation, ColorCompositeInterface {
 
     private var offsetX: Int
 
@@ -36,14 +32,15 @@ open public class RectangleFilledAdjustedAnimation : Animation, ColorCompositeIn
         offsetX: Int,
         offsetY: Int,
         basicColor: BasicColor,
-    ) {
-        var width = width
-        var height = height
-        var offsetX = offsetX
-        var offsetY = offsetY
-        var basicColor = basicColor
-        this.width = width
-        this.height = height
+    ) : super(width, height, basicColor) {
+        // var width = width
+        // var height = height
+        // var offsetX = offsetX
+        // var offsetY = offsetY
+        // var basicColor = basicColor
+
+        // For kotlin this is before the body of the constructor.
+
         this.offsetX = offsetX
         this.offsetY = offsetY
         this.setBasicColorP(basicColor)
@@ -56,25 +53,11 @@ open public class RectangleFilledAdjustedAnimation : Animation, ColorCompositeIn
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
         // nullable = true from not(false or (false and false)) = true
     {
-        var graphics = graphics
-        var x = x
-        var y = y
+        // var graphics = graphics
+        // var x = x
+        // var y = y
         this.basicSetColorUtil!!.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor())
-        graphics.fillRect(x + this.offsetX, y + this.offsetY, this.width, this.height)
-    }
-
-    open fun setWidth(width: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var width = width
-        this.width = width
-    }
-
-    open fun setHeight(height: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var height = height
-        this.height = height
+        super.paintXY(graphics, x + this.offsetX, y + this.offsetY)
     }
 
     open fun setOffsetX(offsetX: Int)

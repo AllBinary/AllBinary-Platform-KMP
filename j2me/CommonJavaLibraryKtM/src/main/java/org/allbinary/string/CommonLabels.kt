@@ -59,5 +59,7 @@ open public class CommonLabels : Object {
 
     val ITEM_LABEL: String = "Item: "
 
+    val RESULT_: String = "Result: "
+
     val COLON_SEP: String = ": "
 }

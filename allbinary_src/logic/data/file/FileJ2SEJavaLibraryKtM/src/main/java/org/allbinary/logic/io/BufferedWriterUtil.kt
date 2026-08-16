@@ -18,8 +18,13 @@ package org.allbinary.logic.io
 import java.io.BufferedWriter
 import java.io.FileWriter
 import java.lang.Object
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.AbFileNativeUtil
+import org.allbinary.logic.io.path.AbPathData
+import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonLabels
+import org.allbinary.string.CommonStrings
 
 open public class BufferedWriterUtil : Object {
 
@@ -39,6 +44,14 @@ open public class BufferedWriterUtil : Object {
     // Auto Generated
     public constructor() : super() {}
 
+    private val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    private val commonLabels: CommonLabels = CommonLabels.getInstance()!!
+
+    private val REMOVING_OLD: String = "Remove old for overwritting: "
+
     @Throws(Exception::class)
     open fun overwrite(path: String, data: String)
         // nullable = true from not(false or (false and false)) = true
@@ -50,7 +63,40 @@ open public class BufferedWriterUtil : Object {
 
         if (abFile!!.exists()) {
 
+            this.logUtil!!.putF(this.REMOVING_OLD + path, this, this.commonStrings!!.CREATE)
             abFile!!.delete()
+        } else {
+
+            var name: String = AbPathData.getInstance()!!.removeNameFromPath(path)!!
+
+            var abFileDirectory: AbFile = AbFile.createAbFile(name)!!
+
+            if (abFileDirectory!!.exists()) {} else {
+
+                var stringBuilder: StringMaker = StringMaker()
+
+                this.logUtil!!.putF(
+                    stringBuilder!!
+                        .append(this.commonStrings!!.CREATE)!!
+                        .append(this.commonLabels!!.COLON_SEP)!!
+                        .append(name)!!
+                        .toString(),
+                    this,
+                    this.commonStrings!!.CREATE,
+                )
+
+                var result: Boolean = abFileDirectory!!.mkdirs()!!
+
+                stringBuilder!!.delete(0, stringBuilder!!.length())
+                this.logUtil!!.putF(
+                    stringBuilder!!
+                        .append(this.commonLabels!!.RESULT_)!!
+                        .appendboolean(result)!!
+                        .toString(),
+                    this,
+                    this.commonStrings!!.CREATE,
+                )
+            }
         }
 
         this.write(abFile, data)
@@ -65,7 +111,45 @@ open public class BufferedWriterUtil : Object {
 
         if (abFile!!.exists()) {
 
+            this.logUtil!!.putF(
+                this.REMOVING_OLD + abFile!!.getPath(),
+                this,
+                this.commonStrings!!.CREATE,
+            )
             abFile!!.delete()
+        } else {
+
+            var name: String =
+                AbPathData.getInstance()!!.removeNameFromPath(abFile!!.getAbsolutePath())!!
+
+            var abFileDirectory: AbFile = AbFile.createAbFile(name)!!
+
+            if (abFileDirectory!!.exists()) {} else {
+
+                var stringBuilder: StringMaker = StringMaker()
+
+                this.logUtil!!.putF(
+                    stringBuilder!!
+                        .append(this.commonStrings!!.CREATE)!!
+                        .append(this.commonLabels!!.COLON_SEP)!!
+                        .append(name)!!
+                        .toString(),
+                    this,
+                    this.commonStrings!!.CREATE,
+                )
+
+                var result: Boolean = abFileDirectory!!.mkdirs()!!
+
+                stringBuilder!!.delete(0, stringBuilder!!.length())
+                this.logUtil!!.putF(
+                    stringBuilder!!
+                        .append(this.commonLabels!!.RESULT_)!!
+                        .appendboolean(result)!!
+                        .toString(),
+                    this,
+                    this.commonStrings!!.CREATE,
+                )
+            }
         }
 
         this.write(abFile, data)

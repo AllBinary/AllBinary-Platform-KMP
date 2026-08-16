@@ -35,6 +35,8 @@ import org.apache.xmlrpc.XmlRpcException
 import org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient
 import org.allbinary.logic.system.security.crypt.jcehelper.NoCrypt
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+import org.allbinary.string.CommonLabels
+import org.allbinary.string.CommonSeps
 
 open public class XmlRpcRemoteLogClient : XmlRpcAbeClient {
         
@@ -83,7 +85,7 @@ param.add(hashtable)
 
     var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, this.noCrypt)!!
 
-System.out.println("Result: \n" +result.toString())
+System.out.println(CommonLabels.getInstance()!!.RESULT_ +CommonSeps.getInstance()!!.NEW_LINE +result.toString())
 
 
 

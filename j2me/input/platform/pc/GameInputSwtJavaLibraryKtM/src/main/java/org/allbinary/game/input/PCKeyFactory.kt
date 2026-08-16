@@ -16,6 +16,7 @@
 package org.allbinary.game.input
 
 import java.lang.Object
+import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.string.CommonSeps
 
@@ -139,9 +140,9 @@ open public class PCKeyFactory : Object {
 
     val w: PCGameKey = PCGameKey(119, "w")
 
-    val x: PCGameKey = PCGameKey(120, "x")
+    val x: PCGameKey = PCGameKey(120, PositionStrings.getInstance()!!.X)
 
-    val y: PCGameKey = PCGameKey(121, "y")
+    val y: PCGameKey = PCGameKey(121, PositionStrings.getInstance()!!.Y)
 
     val z: PCGameKey = PCGameKey(122, "z")
 

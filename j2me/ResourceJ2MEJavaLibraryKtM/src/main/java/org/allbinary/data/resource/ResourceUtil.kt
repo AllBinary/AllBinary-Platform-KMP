@@ -22,6 +22,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
+// J2ME
 open public class ResourceUtil : Object {
 
     companion object {
