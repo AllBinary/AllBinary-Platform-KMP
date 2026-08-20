@@ -21,6 +21,7 @@ import java.lang.Object
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
+import org.allbinary.string.CommonStrings
 
 // J2ME
 open public class ResourceUtil : Object {
@@ -41,6 +42,14 @@ open public class ResourceUtil : Object {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private constructor() : super() {}
+
+    open fun setLoadingPaths(path: String, ext: String)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var path = path
+        var ext = ext
+        this.logUtil!!.putF(CommonStrings.getInstance()!!.NOT_IMPLEMENTED, this, "setLoadingPaths")
+    }
 
     @Throws(Exception::class)
     open fun getResourceAsStream(

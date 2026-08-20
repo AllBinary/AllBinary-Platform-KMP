@@ -1,0 +1,48 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
+
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.math.permutations
+
+import java.lang.Object
+import org.allbinary.TsUtil
+
+open public class ComparableObject : Object, Comparable<Any> {
+
+    // Auto Generated
+    public constructor() : super() {}
+
+    override fun compareTo(
+        anyType: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var anyType = anyType
+
+        if (TsUtil.getInstance()!!.hashCode(this) < TsUtil.getInstance()!!.hashCode(anyType)) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return -1
+        } else if (
+            TsUtil.getInstance()!!.hashCode(this) > TsUtil.getInstance()!!.hashCode(anyType)
+        ) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 1
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
+}

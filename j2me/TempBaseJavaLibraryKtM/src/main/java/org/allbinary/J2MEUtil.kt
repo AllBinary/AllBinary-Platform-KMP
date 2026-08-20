@@ -26,7 +26,7 @@ open public class J2MEUtil : Object {
         : Boolean {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return true
+            return false
         }
 
         open fun isJ2SE()

@@ -85,4 +85,6 @@ open public class CommonSeps : Object {
     val QUOTE_END: String = "\","
 
     val COMMENT: String = "//"
+
+    val INDENT: String = "    "
 }

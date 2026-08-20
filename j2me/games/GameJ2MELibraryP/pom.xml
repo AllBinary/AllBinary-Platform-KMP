@@ -64,6 +64,7 @@
         <module>../../../graphics/opengl/OpenGLJ2MENoneJavaLibraryKtM</module>
         <module>../../../graphics/opengl/OpenGLNoneJavaLibraryKtM</module>
         <module>../../../graphics/opengl/OpenGLNoneOtherJavaLibraryKtM</module>
+        <module>../../../graphics/opengl/OpenGLNoneOther2JavaLibraryKtM</module>
         <module>../../../graphics/opengl/OpenGLESBaseJ2MEJavaLibraryKtM</module>
 
         <module>../../media/graphics/animation/AnimationLibraryKtM</module>

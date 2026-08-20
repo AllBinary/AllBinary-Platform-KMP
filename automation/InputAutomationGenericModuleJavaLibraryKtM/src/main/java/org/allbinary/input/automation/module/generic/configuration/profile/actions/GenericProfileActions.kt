@@ -37,6 +37,7 @@ import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
 import org.allbinary.input.automation.module.DefaultListModelHelper
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfiles
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.io.file.CommonDataFileStrings
 import org.allbinary.logic.io.path.AbPath
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -52,24 +53,11 @@ companion object {
             
     val DEFAULT_PROFILE_ACTIONS_PATH: String = GenericProfiles.DEFAULT_PROFILES_PATH +"actions/"
 
-    open fun getFile(name: String)
-        //nullable = true from not(false or (false and false)) = true
-: File{
-var name = name
-
-    var fileName: String = DEFAULT_PROFILE_ACTIONS_PATH +name +".xml"
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return File(fileName)
-}
-
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val commonFileStrings: CommonDataFileStrings = CommonDataFileStrings.getInstance()!!
 
     private var name: String
 
@@ -129,12 +117,27 @@ this.setHashMap(HashMap<Any, Any>())
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var idFile: FileOutputStream = FileOutputStream(GenericProfileActions.DEFAULT_PROFILE_ACTIONS_PATH +getName() +".xml")
+    var idFile: FileOutputStream = FileOutputStream(GenericProfileActions.DEFAULT_PROFILE_ACTIONS_PATH +getName() +this.commonFileStrings!!._XML)
 
 
     var idOutData: DataOutputStream = DataOutputStream(idFile)
 
 idOutData!!.writeBytes(DomDocumentHelper.toString(this.toXmlDoc()))
+}
+
+
+    open fun getFile(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: File{
+var name = name
+
+    var fileName: String = DEFAULT_PROFILE_ACTIONS_PATH +name +this.commonFileStrings!!._XML
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return File(fileName)
 }
 
 
@@ -144,7 +147,7 @@ idOutData!!.writeBytes(DomDocumentHelper.toString(this.toXmlDoc()))
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var file: File = GenericProfileActions.getFile(getName())!!
+    var file: File = this.getFile(getName())!!
 
 
     

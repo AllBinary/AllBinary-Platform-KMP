@@ -15,6 +15,7 @@
 /* Generated Code Do Not Modify */
 package org.allbinary
 
+import java.lang.InterruptedException
 import java.lang.Object
 
 open public class TsUtil : Object {

@@ -1,0 +1,64 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.math.permutations
+
+import java.lang.System
+import kotlin.Array
+import org.allbinary.TsUtil
+import org.allbinary.logic.NullUtil
+import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.util.visitor.Visitor
+import org.allbinary.string.CommonSeps
+
+open public class ObjectPermutationVisitor : Visitor {
+
+    val data: Array<Any?>
+
+    public constructor(data: Array<Any?>) {
+        // var data = data
+        this.data = data
+    }
+
+    private var stringBuilder: StringMaker = StringMaker()
+
+    override fun visit(
+        anyType: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Any {
+        // var anyType = anyType
+        this.stringBuilder!!.delete(0, stringBuilder!!.length())
+        this.print(this.data, stringBuilder)
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return NullUtil.getInstance()!!.NULL_OBJECT
+    }
+
+    open fun print(data: Array<Any?>)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var data = data
+
+        var stringBuilder: StringMaker = StringMaker()
+
+        this.print(data, stringBuilder)
+    }
+
+    open fun print(data: Array<Any?>, stringBuilder: StringMaker)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var data = data
+        // var stringBuilder = stringBuilder
+
+        var tsUtil: TsUtil = TsUtil.getInstance()!!
+
+        var size: Int = data.size
+
+        for (i in 0 until size) {
+
+            stringBuilder!!.appendint(tsUtil!!.hashCode(data[i]!!))
+            stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)
+        }
+
+        System.out.println(stringBuilder!!.toString())
+    }
+}

@@ -31,6 +31,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
+import org.allbinary.string.CommonStrings
 import org.allbinary.util.HashtableUtil
 
 // Android
@@ -58,6 +59,14 @@ open public class ResourceUtil : Object {
     private var hashMap: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     private constructor() : super() {}
+
+    open fun setLoadingPaths(path: String, ext: String)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var path = path
+        var ext = ext
+        this.logUtil!!.putF(CommonStrings.getInstance()!!.NOT_IMPLEMENTED, this, "setLoadingPaths")
+    }
 
     open fun getContext()
     // nullable = true from not(false or (false and true)) = true

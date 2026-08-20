@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.data.file.DataFileData
+import org.allbinary.logic.io.file.CommonDataFileStrings
 
 open public class TransformInfoDataData
             : Object
@@ -53,9 +53,9 @@ companion object {
 }
 
 
-    val UNCRYPTED_EXTENSION: String = DataFileData.UNCRYPTED_EXTENSION
+    val UNCRYPTED_EXTENSION: String = CommonDataFileStrings.getInstance()!!.UNCRYPTED_EXTENSION
 
-    val ENCRYPTED_EXTENSION: String = DataFileData.ENCRYPTED_EXTENSION
+    val ENCRYPTED_EXTENSION: String = CommonDataFileStrings.getInstance()!!.ENCRYPTED_EXTENSION
 
 }
                 

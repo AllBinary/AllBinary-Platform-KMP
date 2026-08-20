@@ -24,6 +24,7 @@ import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
+import org.allbinary.string.CommonStrings
 
 // J2SE - J2ME
 open public class ResourceUtil : Object {
@@ -52,7 +53,7 @@ open public class ResourceUtil : Object {
     {
         var path = path
         var ext = ext
-        this.logUtil!!.putF("Not Implemented", this, "setLoadingPaths")
+        this.logUtil!!.putF(CommonStrings.getInstance()!!.NOT_IMPLEMENTED, this, "setLoadingPaths")
     }
 
     open fun setClassLoader(classLoader: ClassLoader)

@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.data.file.DataFileData
+import org.allbinary.logic.io.file.CommonDataFileStrings
 
 open public class UserConfigurationData
             : Object
@@ -35,9 +35,9 @@ companion object {
             
     val NAME: String = "USER_CONFIGURATION_NAME"
 
-    val UNCRYPTED_EXTENSION: String = DataFileData.UNCRYPTED_EXTENSION
+    val UNCRYPTED_EXTENSION: String = CommonDataFileStrings.getInstance()!!.UNCRYPTED_EXTENSION
 
-    val ENCRYPTED_EXTENSION: String = DataFileData.ENCRYPTED_EXTENSION
+    val ENCRYPTED_EXTENSION: String = CommonDataFileStrings.getInstance()!!.ENCRYPTED_EXTENSION
 
         }
             private constructor ()

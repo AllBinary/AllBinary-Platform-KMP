@@ -32,15 +32,15 @@
         <!--
         -->
         
-        
-        <module>../AllBinaryGraphicsUserInterfaceJavaLibraryKtM</module>
+<!--        <module>../AllBinaryGraphicsUserInterfaceJavaLibraryKtM</module>-->
         
         <module>../../allbinary_src/logging/LogConfigTypeThickClientJavaLibraryKtM</module>
+<!--        
         <module>../../allbinary_src/logging/GUILoggingKtM</module>
                 
         <module>../AllBinaryGraphicsJavaApplicationKtM</module>
         
-        <module>../ImageToolJavaApplicationKtM</module>
+        <module>../ImageToolJavaApplicationKtM</module>-->
     </modules>
 
 </project>
