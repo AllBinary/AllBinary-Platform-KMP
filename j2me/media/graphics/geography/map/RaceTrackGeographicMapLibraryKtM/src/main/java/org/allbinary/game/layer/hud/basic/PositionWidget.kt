@@ -96,6 +96,6 @@ open public class PositionWidget : BasicHud {
         // nullable = true from not(false or (false and false)) = true
     {
         var graphics = graphics
-        super.paint(graphics, this.positionString)
+        super.paintString(graphics, this.positionString)
     }
 }

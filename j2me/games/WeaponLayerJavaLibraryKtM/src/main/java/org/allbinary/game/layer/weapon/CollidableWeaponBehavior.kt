@@ -24,13 +24,30 @@ import org.allbinary.game.combat.damage.DamageableInterface
 import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableBehavior
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.logic.NullUtil
 
 open public class CollidableWeaponBehavior : CollidableDestroyableDamageableBehavior {
 
     companion object {
 
-        val NULL_COLLIDABLE_WEAPON_BEHAVIOR: CollidableWeaponBehavior =
-            CollidableWeaponBehavior(false)
+        private var NULL_COLLIDABLE_WEAPON_BEHAVIOR: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+        open fun getNullInstance()
+        // nullable = true from not(false or (false and true)) = true
+        : CollidableWeaponBehavior {
+
+            if (
+                CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR ==
+                    NullUtil.getInstance()!!.NULL_OBJECT
+            ) {
+                CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR =
+                    CollidableWeaponBehavior(false)
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR
+                as CollidableWeaponBehavior
+        }
     }
 
     private var collided: Boolean = false

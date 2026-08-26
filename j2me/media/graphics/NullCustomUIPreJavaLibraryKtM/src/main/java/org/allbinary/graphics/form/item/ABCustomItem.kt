@@ -6,18 +6,32 @@ import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Screen
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
 
 open public class ABCustomItem : Object {
 
     companion object {
 
-        val NULL_CUSTOM_ITEM: ABCustomItem =
-            ABCustomItem(
-                StringUtil.getInstance()!!.EMPTY_STRING,
-                BasicColorFactory.getInstance()!!.BLACK,
-                BasicColorFactory.getInstance()!!.WHITE,
-            )
+        var NULL_CUSTOM_ITEM: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+        open fun getNullInstance()
+        // nullable = true from not(false or (false and true)) = true
+        : ABCustomItem {
+
+            if (ABCustomItem.NULL_CUSTOM_ITEM == NullUtil.getInstance()!!.NULL_OBJECT) {
+
+                ABCustomItem.NULL_CUSTOM_ITEM =
+                    ABCustomItem(
+                        StringUtil.getInstance()!!.EMPTY_STRING,
+                        BasicColorFactory.getInstance()!!.BLACK,
+                        BasicColorFactory.getInstance()!!.WHITE,
+                    )
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ABCustomItem.NULL_CUSTOM_ITEM as ABCustomItem
+        }
     }
 
     protected constructor(

@@ -19,6 +19,7 @@ import java.lang.Object
 import java.util.Hashtable
 import javax.microedition.lcdui.Graphics
 import kotlin.Array
+import org.allbinary.ag.weapon.media.audio.ExplosionBasicSound
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.animation.NullIndexedAnimationFactory
@@ -62,7 +63,6 @@ import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListS
-import org.allbinary.weapon.media.audio.ExplosionBasicSound
 
 open public class BuildingLayer :
     AdvancedRTSGameLayer,

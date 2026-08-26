@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import org.allbinary.string.CommonSeps
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+import jsinterop.annotations.JsMethod
 
 open public class PlatformRecordIdUtil
             : Object

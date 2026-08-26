@@ -25,8 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import org.allbinary.string.CommonStrings
 import playn.core.PlayN
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsConstructor
 //ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
@@ -50,8 +53,6 @@ import playn.core.PlayN
         }
             
     private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
-
-    private val playN: PlayN = PlayN.getInstance()!!
 
     private val LOG_SUCCESS: String = "org.allbinary: "
 private constructor ()
@@ -118,7 +119,10 @@ this.put(specialMessage, anyType, functionName, exception)
 
     var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
-this.playN!!.log()!!.debug(this.LOG_SUCCESS +message)
+
+    var playN: PlayN = PlayN.getInstance()!!
+
+playN!!.log()!!.debug(this.LOG_SUCCESS +message)
 }
 
 
@@ -131,7 +135,10 @@ this.playN!!.log()!!.debug(this.LOG_SUCCESS +message)
 
     var message: String = this.logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
-this.playN!!.log()!!.debug(this.LOG_SUCCESS +message)
+
+    var playN: PlayN = PlayN.getInstance()!!
+
+playN!!.log()!!.debug(this.LOG_SUCCESS +message)
 }
 
 
@@ -160,18 +167,21 @@ this.playN!!.log()!!.debug(this.LOG_SUCCESS +message)
     var message: String = this.logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
 
+    var playN: PlayN = PlayN.getInstance()!!
+
+
     
                         if(exception != 
                                     null
                                 )
                         
                                     {
-                                    this.playN!!.log()!!.error(this.LOG_SUCCESS +message, exception as Throwable)
+                                    playN!!.log()!!.error(this.LOG_SUCCESS +message, exception as Throwable)
 
                                     }
                                 
                         else {
-                            this.playN!!.log()!!.debug(this.LOG_SUCCESS +message)
+                            playN!!.log()!!.debug(this.LOG_SUCCESS +message)
 
                         }
                             

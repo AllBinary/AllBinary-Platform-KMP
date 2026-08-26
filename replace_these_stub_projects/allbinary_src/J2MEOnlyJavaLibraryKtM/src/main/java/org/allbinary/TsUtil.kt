@@ -141,7 +141,7 @@ open public class TsUtil : Object {
         return anyType!!.equals(object2)
     }
 
-    open fun toNumber(
+    open fun toNumberFromChar(
         value: Char
     )
         // nullable = true from not(false or (false and false)) = true

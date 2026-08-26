@@ -125,7 +125,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
 
         var rectHeight: Int = height + this.border - adjustedBorder
 
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
 
             this.selectedAnimationArray[index] =
                 RectangleAdjustedAnimation(
@@ -148,7 +148,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
 
         adjustedBorder = 4
 
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
 
             this.unSelectedAnimationArray[index] =
                 RectangleAdjustedAnimation(rectWidth, rectHeight, offset, offset, buttonColor)
@@ -195,7 +195,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
 
         var rectHeight: Int = height + this.border - adjustedBorder
 
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
 
             var rectangleAdjustedAnimation: RectangleAdjustedAnimation =
                 this.selectedAnimationArray[index]!! as RectangleAdjustedAnimation
@@ -219,7 +219,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
 
         adjustedBorder = 4
 
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
 
             var rectangleAdjustedAnimation: RectangleAdjustedAnimation =
                 this.unSelectedAnimationArray[index]!! as RectangleAdjustedAnimation

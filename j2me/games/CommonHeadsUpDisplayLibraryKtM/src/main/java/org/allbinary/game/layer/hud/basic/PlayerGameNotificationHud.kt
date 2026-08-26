@@ -297,6 +297,6 @@ open public class PlayerGameNotificationHud : GameNotificationHud, UpdateMyFontI
     {
         var graphics = graphics
         this.myFontProcessor!!.process(graphics)
-        super.paint(graphics, this.string)
+        super.paintString(graphics, this.string)
     }
 }

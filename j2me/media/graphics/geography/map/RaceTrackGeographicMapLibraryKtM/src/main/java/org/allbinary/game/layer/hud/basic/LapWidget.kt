@@ -64,6 +64,6 @@ open public class LapWidget : BasicHud {
         // nullable = true from not(false or (false and false)) = true
     {
         var graphics = graphics
-        super.paint(graphics, this.string)
+        super.paintString(graphics, this.string)
     }
 }

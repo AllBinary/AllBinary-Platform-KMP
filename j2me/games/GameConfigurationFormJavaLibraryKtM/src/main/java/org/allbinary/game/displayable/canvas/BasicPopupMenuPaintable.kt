@@ -77,7 +77,7 @@ open public class BasicPopupMenuPaintable : Paintable, UpdateMyFontInterface {
         this.label = BasicPopupMenuPaintable.NAME
         this.rectangle = rectangle
 
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
 
             this.animationInterface = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
         } else {
@@ -155,7 +155,7 @@ open public class BasicPopupMenuPaintable : Paintable, UpdateMyFontInterface {
 
         var height: Int = this.rectangle.getHeight()!!
 
-        if (J2MEUtil.isJ2ME()) {} else {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {} else {
 
             var rectangleFilledAnimation: RectangleFilledAnimation =
                 this.animationInterface as RectangleFilledAnimation

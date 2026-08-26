@@ -33,7 +33,7 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 import org.allbinary.logic.system.security.licensing.ClientInformationFactory
 import org.allbinary.thread.PrimaryThreadPool
 import org.allbinary.thread.ThreadPool
-
+//SWTForJ2ME
 open public class ProgressMidlet : AllBinaryMidlet {
         
 

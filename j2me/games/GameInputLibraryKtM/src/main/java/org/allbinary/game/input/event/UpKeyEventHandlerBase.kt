@@ -74,7 +74,7 @@ open public class UpKeyEventHandlerBase : BasicEventHandler {
     }
 
     @Throws(Exception::class)
-    open fun fireEvent(eventObject: Integer)
+    open fun fireEventForInteger(eventObject: Integer)
         // nullable = true from not(false or (false and false)) = true
     {
         // var eventObject = eventObject
@@ -106,7 +106,7 @@ open public class UpKeyEventHandlerBase : BasicEventHandler {
             try {
                 eventListenerInterface =
                     this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
-                this.process(eventObject, eventListenerInterface)
+                this.processForInteger(eventObject, eventListenerInterface)
             } catch (e: Exception) {
                 this.logUtil!!.put(
                     this.commonStrings!!.EXCEPTION,
@@ -121,7 +121,10 @@ open public class UpKeyEventHandlerBase : BasicEventHandler {
     }
 
     @Throws(Exception::class)
-    open fun process(eventObject: Integer, eventListenerInterface: EventListenerInterface)
+    open fun processForInteger(
+        eventObject: Integer,
+        eventListenerInterface: EventListenerInterface,
+    )
         // nullable = true from not(false or (false and false)) = true
     {
         // var eventObject = eventObject

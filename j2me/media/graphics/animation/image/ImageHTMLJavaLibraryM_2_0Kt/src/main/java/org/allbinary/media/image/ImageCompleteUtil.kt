@@ -26,6 +26,9 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsProperty
+import jsinterop.annotations.JsType
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.TimeDelayHelper

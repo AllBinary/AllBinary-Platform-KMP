@@ -75,7 +75,7 @@ open public class ProgressCanvas : RunnableCanvas, PaintableInterface, UpdateMyF
 
     private var myFontProcessor: MyFontProcessor = this.updateMyFontProcessor
 
-    var allbinaryMidlet: AllBinaryMidlet = AllBinaryMidlet.NULL_ALLBINARY_MIDLET
+    var allbinaryMidlet: AllBinaryMidlet = AllBinaryMidlet.getNullInstance()!!
 
     private var value: Float = 0.0f
 

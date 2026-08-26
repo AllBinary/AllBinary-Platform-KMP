@@ -57,7 +57,7 @@ open public class RTSFormInput : Object {
 
     private var selectedStickyItemIndex: Int = 0
 
-    private var selectedStickyItem: ABCustomItem = ABCustomItem.NULL_CUSTOM_ITEM
+    private var selectedStickyItem: ABCustomItem = ABCustomItem.getNullInstance()!!
 
     public constructor(groupInterfaceArray: Array<Group?>) : super() {
         // var groupInterfaceArray = groupInterfaceArray

@@ -36,7 +36,7 @@ open public class NullGameCanvas : AllBinaryGameCanvas {
             try {
 
                 // if statement needs to be on the same line and ternary does not work the same way.
-                return NullGameCanvas(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER)
+                return NullGameCanvas(AllBinaryGameLayerManager.getNullInstance())
             } catch (e: Exception) {
                 LogUtil.getInstance()!!.put(
                     CommonStrings.getInstance()!!.EXCEPTION,

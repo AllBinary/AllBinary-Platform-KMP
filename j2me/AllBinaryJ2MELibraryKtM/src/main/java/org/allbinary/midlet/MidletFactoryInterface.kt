@@ -17,7 +17,6 @@ package org.allbinary.midlet
 
 import java.lang.Object
 import javax.microedition.midlet.MIDlet
-import javax.microedition.midlet.NullMIDlet
 
 open public class MidletFactoryInterface : Object {
 
@@ -29,6 +28,6 @@ open public class MidletFactoryInterface : Object {
     : MIDlet {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return NullMIDlet.NULL_MIDLET
+        return AllBinaryMidlet.getNullInstance()
     }
 }

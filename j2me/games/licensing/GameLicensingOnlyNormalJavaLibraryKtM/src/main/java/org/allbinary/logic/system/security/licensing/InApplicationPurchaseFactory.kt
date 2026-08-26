@@ -17,7 +17,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import org.allbinary.logic.string.StringUtil
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsConstructor
 
 open public class InApplicationPurchaseFactory
             : Object

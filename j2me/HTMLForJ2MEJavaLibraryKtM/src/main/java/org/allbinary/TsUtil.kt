@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import javax.microedition.lcdui.Displayable
 import javax.microedition.lcdui.Form
 import javax.microedition.rms.InvalidRecordIDException
@@ -34,6 +35,7 @@ import javax.microedition.rms.RecordStore
 import javax.microedition.rms.RecordStoreException
 import javax.microedition.rms.RecordStoreNotOpenException
 import org.allbinary.logic.NullUtil
+import jsinterop.annotations.JsMethod
 
 open public class TsUtil
             : Object
@@ -165,7 +167,7 @@ recordStore!!.getRecord(recordId, data, 0)
 }
 
 
-    open fun toNumber(value: Char)
+    open fun toNumberFromChar(value: Char)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var value = value

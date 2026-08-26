@@ -574,7 +574,7 @@ open public class ScrollSelectionForm : PaintableForm {
         } else {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return ABCustomItem.NULL_CUSTOM_ITEM
+            return ABCustomItem.getNullInstance()
         }
     }
 

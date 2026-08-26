@@ -28,6 +28,9 @@
 import java.util.HashMap
 import java.util.Hashtable
 import java.util.Vector
+import jsinterop.annotations.JsType
+import jsinterop.annotations.JsProperty
+import jsinterop.annotations.JsMethod
 //ActualPlatform
 /*actual*/ open public class NullUtil
             : Object

@@ -285,7 +285,7 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
         if (this.selectedRTSLayersList != null) {
 
             this.inputProcessorArray[key]!!.processEvent(
-                AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER,
+                AllBinaryGameLayerManager.getNullInstance(),
                 GameKeyEvent.NONE,
             )
         }

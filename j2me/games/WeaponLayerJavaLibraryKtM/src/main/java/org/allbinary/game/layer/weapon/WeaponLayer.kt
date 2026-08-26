@@ -107,7 +107,7 @@ open public class WeaponLayer : MultiPlayerGameLayer, TickableInterface {
     }
 
     private var collidableWeaponBehavior: CollidableWeaponBehavior =
-        CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR
+        CollidableWeaponBehavior.getNullInstance()!!
 
     override fun setCollidableInferface(collidableInferface: CollidableBaseBehavior)
         // nullable = true from not(false or (false and false)) = true

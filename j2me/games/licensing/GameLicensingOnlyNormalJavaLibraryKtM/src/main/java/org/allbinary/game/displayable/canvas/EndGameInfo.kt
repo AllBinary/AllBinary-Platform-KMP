@@ -25,9 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import org.allbinary.game.GameInfo
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.logic.string.StringUtil
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsConstructor
+import jsinterop.annotations.JsProperty
 
 open public class EndGameInfo
             : Object

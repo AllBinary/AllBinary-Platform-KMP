@@ -29,10 +29,14 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsConstructor
+import jsinterop.annotations.JsProperty
 
 open public class ThreadPool
             : Object

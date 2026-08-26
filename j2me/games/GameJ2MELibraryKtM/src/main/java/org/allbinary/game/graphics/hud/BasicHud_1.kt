@@ -476,7 +476,7 @@ open public class BasicHud_1 : Object, UpdateMyFontInterface {
 
     var offsetY: Int = 0
 
-    open fun paint(graphics: Graphics, string: String)
+    open fun paintString(graphics: Graphics, string: String)
         // nullable = true from not(false or (false and false)) = true
     {
         // var graphics = graphics

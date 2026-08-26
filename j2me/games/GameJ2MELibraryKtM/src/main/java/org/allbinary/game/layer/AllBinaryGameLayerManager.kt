@@ -25,6 +25,7 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.LayerProcessor
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.util.BasicArrayList
 
@@ -32,12 +33,28 @@ open public class AllBinaryGameLayerManager : AllBinaryLayerManager {
 
     companion object {
 
-        val NULL_ALLBINARY_LAYER_MANAGER: AllBinaryGameLayerManager =
-            AllBinaryGameLayerManager(
-                BasicColorFactory.getInstance()!!.BLACK,
-                BasicColorFactory.getInstance()!!.WHITE,
-                GameInfo.NONE,
-            )
+        private var NULL_ALLBINARY_LAYER_MANAGER: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+        open fun getNullInstance()
+        // nullable = true from not(false or (false and true)) = true
+        : AllBinaryGameLayerManager {
+
+            if (
+                AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER ==
+                    NullUtil.getInstance()!!.NULL_OBJECT
+            ) {
+                AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER =
+                    AllBinaryGameLayerManager(
+                        BasicColorFactory.getInstance()!!.BLACK,
+                        BasicColorFactory.getInstance()!!.WHITE,
+                        GameInfo.NONE,
+                    )
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
+                as AllBinaryGameLayerManager
+        }
 
         val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(22)!!
     }

@@ -33,10 +33,10 @@ open public class GameScrollMenuPaintable : BasicGameDemoPaintable, ColorChangeL
         helpPaintableInterface: Paintable,
         basicColor: BasicColor,
     ) : super(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface) {
-        var mainDemoStatePaintable = mainDemoStatePaintable
-        var ownershipPaintable = ownershipPaintable
-        var helpPaintableInterface = helpPaintableInterface
-        var basicColor = basicColor
+        // var mainDemoStatePaintable = mainDemoStatePaintable
+        // var ownershipPaintable = ownershipPaintable
+        // var helpPaintableInterface = helpPaintableInterface
+        // var basicColor = basicColor
 
         // For kotlin this is before the body of the constructor.
 
@@ -47,20 +47,20 @@ open public class GameScrollMenuPaintable : BasicGameDemoPaintable, ColorChangeL
     override fun setState(state: Int)
         // nullable = true from not(false or (false and false)) = true
     {
-        var state = state
+        // var state = state
         this.setCurrentStatePaintable(this.getMainDemoStatePaintable())
     }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
         // nullable = true from not(false or (false and false)) = true
     {
-        var eventObject = eventObject
+        // var eventObject = eventObject
     }
 
     open fun setColor(basicColor: BasicColor)
         // nullable = true from not(false or (false and false)) = true
     {
-        var basicColor = basicColor
+        // var basicColor = basicColor
 
         var mainGameDemoStatePaintable: MainGameDemoStatePaintable =
             this.getMainDemoStatePaintable() as MainGameDemoStatePaintable
@@ -74,11 +74,14 @@ open public class GameScrollMenuPaintable : BasicGameDemoPaintable, ColorChangeL
         mainGameDemoStatePaintable!!.getOwnershipPaintableInterface()!!.setBasicColorP(basicColor)
         scrollSelectionForm!!.setButtonBasicColor(basicColor)
 
+        var item: ABTextItem
+
+        var stringComponent: ABStringComponent
+
         for (index in scrollSelectionForm!!.size() - 1 downTo 0) {
 
-            var item: ABTextItem = scrollSelectionForm!!.get(index) as ABTextItem
-
-            var stringComponent: ABStringComponent = item.getLabelStringComponent()!!
+            item = scrollSelectionForm!!.get(index) as ABTextItem
+            stringComponent = item.getLabelStringComponent()
 
             if (stringComponent != null) {
 

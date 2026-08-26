@@ -22,6 +22,7 @@ import org.allbinary.logic.system.security.licensing.ClientInformationFactory
 import org.allbinary.thread.PrimaryThreadPool
 import org.allbinary.thread.ThreadPool
 
+// J2SEForJ2ME
 open public class ProgressMidlet : AllBinaryMidlet {
 
     val abeClientInformation: AbeClientInformationInterface

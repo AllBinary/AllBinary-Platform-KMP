@@ -25,8 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsProperty
 
 open public class ScaleProperties
             : Object

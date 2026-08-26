@@ -153,7 +153,7 @@ open public class TsUtil : Object {
         return anyType!!::class.java.classLoader
     }
 
-    open fun toNumber(
+    open fun toNumberFromChar(
         value: Char
     )
         // nullable = true from not(false or (false and false)) = true

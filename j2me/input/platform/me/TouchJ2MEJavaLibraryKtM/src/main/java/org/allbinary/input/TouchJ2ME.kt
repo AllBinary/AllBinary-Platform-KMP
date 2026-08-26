@@ -23,6 +23,7 @@ import org.allbinary.input.motion.gesture.observer.MotionGestureReceiveInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
+// TouchJ2ME
 open public class TouchJ2ME : Object {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

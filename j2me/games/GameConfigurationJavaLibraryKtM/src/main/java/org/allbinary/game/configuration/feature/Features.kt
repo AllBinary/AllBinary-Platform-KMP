@@ -18,6 +18,7 @@ package org.allbinary.game.configuration.feature
 import java.lang.Object
 import org.allbinary.game.configuration.event.GameFeatureEvent
 import org.allbinary.game.configuration.event.GameFeatureEventHandler
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
@@ -32,14 +33,19 @@ open public class Features : Object {
 
     companion object {
 
-        private val SINGLETON: Features = Features()
+        private var SINGLETON: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
         open fun getInstance()
         // nullable =  from not(true or (false and true)) =
         : Features {
 
+            if (Features.SINGLETON == NullUtil.getInstance()!!.NULL_OBJECT) {
+
+                Features.SINGLETON = Features()
+            }
+
             // if statement needs to be on the same line and ternary does not work the same way.
-            return Features.SINGLETON
+            return Features.SINGLETON as Features
         }
     }
 
@@ -174,7 +180,7 @@ open public class Features : Object {
     )
         // nullable = true from not(false or (false and false)) = true
         : Boolean {
-        var gameFeature = gameFeature
+        // var gameFeature = gameFeature
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.defaultList!!.contains(gameFeature)
@@ -185,7 +191,7 @@ open public class Features : Object {
     )
         // nullable = true from not(false or (false and false)) = true
         : Boolean {
-        var gameFeature = gameFeature
+        // var gameFeature = gameFeature
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.list.contains(gameFeature)
@@ -195,7 +201,7 @@ open public class Features : Object {
     open fun toggle(gameFeature: Feature)
         // nullable = true from not(false or (false and false)) = true
     {
-        var gameFeature = gameFeature
+        // var gameFeature = gameFeature
 
         if (this.isFeature(gameFeature)) {
 

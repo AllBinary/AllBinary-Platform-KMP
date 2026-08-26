@@ -122,7 +122,7 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
                         }
                             
 
-    var scaledImage: Image = Image.createImage(width, height)!!
+    var scaledImage: Image = Image.createImageWH(width, height)!!
 
 
     var htmlImage: PlaynMutableImage = scaledImage as PlaynMutableImage

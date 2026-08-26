@@ -41,5 +41,5 @@ open public class ABToGBUtil : Object {
     var abCanvas: Canvas = NullCanvas.NULL_CANVAS
 
     var allBinaryGameLayerManager: AllBinaryGameLayerManager =
-        AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
+        AllBinaryGameLayerManager.getNullInstance()!!
 }

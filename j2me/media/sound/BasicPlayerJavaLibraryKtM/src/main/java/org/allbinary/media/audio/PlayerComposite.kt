@@ -27,6 +27,7 @@ import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
 
+// BasicPlayer
 open public class PlayerComposite : Object, Controllable, Player {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

@@ -300,7 +300,7 @@ image3.addCallback(callback)
 
         try {
             
-    var image2: Image = Image.createImage(image3.width().toInt(), image3.height().toInt())!!
+    var image2: Image = Image.createImageWH(image3.width().toInt(), image3.height().toInt())!!
 
 
     var graphics: Graphics = image2.getGraphics()!!

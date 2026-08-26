@@ -179,7 +179,7 @@ recordStore!!.getRecord(recordId, data, 0)
 }
 
 
-    open fun toNumber(value: Char)
+    open fun toNumberFromChar(value: Char)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var value = value

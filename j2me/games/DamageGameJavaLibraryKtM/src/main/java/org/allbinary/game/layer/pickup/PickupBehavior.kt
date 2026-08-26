@@ -22,6 +22,7 @@ import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.part.CountedLayerInterfaceFactoryPart
 import org.allbinary.game.part.PartInterface
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
@@ -30,8 +31,21 @@ open public class PickupBehavior : Object, PickupBehaviorInterface {
 
     companion object {
 
-        val NULL_PICKUP_BEHAVIOR: PickupBehavior =
-            PickupBehavior(CollidableCompositeLayer.NULL_COLLIDABLE_COMPOSITE_LAYER, 0)
+        var NULL_PICKUP_BEHAVIOR: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+        open fun getNullInstance()
+        // nullable = true from not(false or (false and true)) = true
+        : PickupBehavior {
+
+            if (PickupBehavior.NULL_PICKUP_BEHAVIOR == NullUtil.getInstance()!!.NULL_OBJECT) {
+
+                PickupBehavior.NULL_PICKUP_BEHAVIOR =
+                    PickupBehavior(CollidableCompositeLayer.getNullInstance(), 0)
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PickupBehavior.NULL_PICKUP_BEHAVIOR as PickupBehavior
+        }
     }
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

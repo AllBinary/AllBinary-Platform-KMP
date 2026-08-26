@@ -76,6 +76,87 @@ open public class VectorAnimation : IndexedAnimation, VectorAnimationInterface {
         this.setBasicColorP(basicColor)
     }
 
+    override fun setBasicColorP(basicColor: BasicColor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicColor = basicColor
+
+        var changed: Boolean = false
+
+        if (
+            this.getBasicColorP() == null || this.getBasicColorP()!!.toInt() != basicColor!!.toInt()
+        ) {
+            changed = true
+        }
+
+        super.setBasicColorP(basicColor)
+
+        if (changed) {
+
+            this.updateModifiers()
+        }
+    }
+
+    override fun changeBasicColor(basicColor: BasicColor)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var basicColor = basicColor
+
+        var changed: Boolean = false
+
+        if (
+            this.getChangeBasicColor() == null ||
+                this.getChangeBasicColor()!!.toInt() != basicColor!!.toInt()
+        ) {
+            changed = true
+        }
+
+        super.changeBasicColor(basicColor)
+
+        if (changed) {
+
+            this.updateModifiers()
+        }
+    }
+
+    override fun setAlpha(alpha: Int)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var alpha = alpha
+
+        var changed: Boolean = false
+
+        if (this.alphaP != alpha) {
+
+            changed = true
+        }
+
+        super.setAlpha(alpha)
+
+        if (changed) {
+
+            this.updateModifiers()
+        }
+    }
+
+    override fun setScale(scaleX: Float, scaleY: Float)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var scaleX = scaleX
+        // var scaleY = scaleY
+    }
+
+    override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var maxScaleX = maxScaleX
+        // var maxScaleY = maxScaleY
+    }
+
+    open fun updateModifiers()
+        // nullable = true from not(false or (false and true)) = true
+    {}
+
     @Throws(Exception::class)
     override fun getAnimationSize()
     // nullable = true from not(false or (false and true)) = true

@@ -27,17 +27,18 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogUtil
+import jsinterop.annotations.JsType
 import org.allbinary.canvas.Processor
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.ClientInformationFactory
 import org.allbinary.thread.PrimaryThreadPool
 import org.allbinary.thread.ThreadPool
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsConstructor
+import jsinterop.annotations.JsProperty
 
 open public class ProgressMidlet : AllBinaryMidlet {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val abeClientInformation: AbeClientInformationInterface
 public constructor (clientInformationFactory: ClientInformationFactory){

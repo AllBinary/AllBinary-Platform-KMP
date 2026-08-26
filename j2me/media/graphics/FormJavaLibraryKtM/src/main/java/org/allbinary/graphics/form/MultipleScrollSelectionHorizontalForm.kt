@@ -12,6 +12,8 @@ import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.graphics.font.UpdateMyFontInterface
 import org.allbinary.graphics.font.UpdateMyFontProcessor
 import org.allbinary.graphics.form.item.ABCustomItem
+import org.allbinary.graphics.paint.NullPaintable
+import org.allbinary.graphics.paint.Paintable
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 
@@ -129,6 +131,8 @@ open public class MultipleScrollSelectionHorizontalForm :
         }
     }
 
+    private var rectPaintable: Paintable = NullPaintable.getInstance()!!
+
     private var multipleScrollSelectionHorizontalFormTypeItemIndexPaintable: ItemIndexPaintable =
         ItemIndexPaintable.getInstance()!!
 
@@ -165,6 +169,33 @@ open public class MultipleScrollSelectionHorizontalForm :
 
         // For kotlin this is before the body of the constructor.
 
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {} else {
+
+            open class MPaintable : Paintable {
+
+                // Auto Generated
+                public constructor() : super() {}
+
+                override fun paint(graphics: Graphics)
+                    // nullable = true from not(false or (false and false)) = true
+                {
+                    // var graphics = graphics
+                    this@MultipleScrollSelectionHorizontalForm.fillRect(graphics)
+                }
+            }
+
+            // Otherwise - statement - EmptyStmt
+
+            this.rectPaintable = MPaintable()
+        }
+    }
+
+    open fun fillRect(graphics: Graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        graphics.setColor(this.backgroundColor)
+        graphics.fillRect(this.x, this.y, this.rectangle.getWidth(), this.rectangle.getHeight())
     }
 
     @Throws(Exception::class)
@@ -273,17 +304,7 @@ open public class MultipleScrollSelectionHorizontalForm :
 
             var dy: Int = this.y
 
-            if (J2MEUtil.isJ2ME()) {} else {
-
-                graphics.setColor(this.backgroundColor)
-                graphics.fillRect(
-                    this.x,
-                    this.y,
-                    this.rectangle.getWidth(),
-                    this.rectangle.getHeight(),
-                )
-            }
-
+            this.rectPaintable!!.paint(graphics)
             graphics.drawString(this.getTitle(), this.x, this.y - this.fontHeight, 0)
 
             var item: ABCustomItem

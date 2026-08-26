@@ -25,8 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import javax.microedition.khronos.opengles.GL10
 import org.allbinary.string.CommonStrings
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsProperty
 
 open public class ShaderInitializer
             : Object

@@ -38,7 +38,7 @@ open public class PathAnimation : Animation {
     private val pathFindingLayer: PathFindingLayerInterface
 
     var allBinaryGameLayerManagerP: AllBinaryGameLayerManager =
-        AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
+        AllBinaryGameLayerManager.getNullInstance()!!
 
     public constructor(
         pathFindingLayer: PathFindingLayerInterface,

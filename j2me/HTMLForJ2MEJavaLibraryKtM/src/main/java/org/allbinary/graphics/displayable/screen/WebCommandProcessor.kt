@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
@@ -33,6 +34,8 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import playn.core.PlayN
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsProperty
 
 open public class WebCommandProcessor
             : Object

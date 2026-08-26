@@ -39,7 +39,20 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
 
     companion object {
 
-        val NULL_ALLBINARY_MIDLET: AllBinaryMidlet = AllBinaryMidlet()
+        private var NULL_ALLBINARY_MIDLET: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+        open fun getNullInstance()
+        // nullable = true from not(false or (false and true)) = true
+        : AllBinaryMidlet {
+
+            if (AllBinaryMidlet.NULL_ALLBINARY_MIDLET == NullUtil.getInstance()!!.NULL_OBJECT) {
+
+                AllBinaryMidlet.NULL_ALLBINARY_MIDLET = AllBinaryMidlet()
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return AllBinaryMidlet.NULL_ALLBINARY_MIDLET as AllBinaryMidlet
+        }
     }
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

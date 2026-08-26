@@ -215,8 +215,7 @@ open public class AllBinaryGameCanvas :
 
     private val endLevelIntermissionInterface: IntermissionInterface = Intermission()
 
-    var gameLayerManager: AllBinaryGameLayerManager =
-        AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
+    var gameLayerManager: AllBinaryGameLayerManager = AllBinaryGameLayerManager.getNullInstance()!!
 
     private var gameState: GameState = this.gameStateFactory!!.NO_GAME_STATE
 

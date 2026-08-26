@@ -46,7 +46,7 @@ open public class CommandTextItemArrayFactory : Object {
     )
         // nullable =  from not(true or (false and false)) =
         : Array<ABCustomItem?> {
-        var vector = vector
+        // var vector = vector
         // var backgroundBasicColor = backgroundBasicColor
         // var foregroundBasicColor = foregroundBasicColor
 

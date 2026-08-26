@@ -25,8 +25,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
+import jsinterop.annotations.JsMethod
 
 open public class FontDebugFactory
             : Object

@@ -25,10 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import javax.microedition.lcdui.Canvas
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.MainFeatureFactory
 import javax.microedition.lcdui.CommandListener
+import jsinterop.annotations.JsMethod
 
 open public class FullScreenUtil
             : Object

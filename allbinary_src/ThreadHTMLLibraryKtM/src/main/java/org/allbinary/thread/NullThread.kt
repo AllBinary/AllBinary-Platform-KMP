@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringUtil
 
 open public class NullThread
             : Object
@@ -34,7 +35,7 @@ open public class NullThread
         
 companion object {
             
-    val NULL_THREAD: Thread = Thread()
+    val NULL_THREAD: Thread = Thread(NullRunnable.getInstance(), StringUtil.getInstance()!!.EMPTY_STRING)
 
         }
             

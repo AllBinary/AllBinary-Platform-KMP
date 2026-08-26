@@ -29,6 +29,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import java.io.InputStream
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
@@ -54,6 +55,9 @@ import org.allbinary.thread.ConcurrentImageLoadingProcessor
 import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsConstructor
+import jsinterop.annotations.JsProperty
 
 open public class ImageCache : ImageCacheBase {
         

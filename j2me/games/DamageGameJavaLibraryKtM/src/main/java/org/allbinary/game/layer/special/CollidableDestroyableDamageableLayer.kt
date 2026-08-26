@@ -96,7 +96,7 @@ open public class CollidableDestroyableDamageableLayer :
     private var pickupBehavior: PickupBehavior
 
     var allBinaryGameLayerManagerP: AllBinaryGameLayerManager =
-        AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
+        AllBinaryGameLayerManager.getNullInstance()!!
 
     var isDraggable: Boolean = false
 
@@ -120,7 +120,7 @@ open public class CollidableDestroyableDamageableLayer :
         this.initWidth = layerInfo!!.getWidth()
         this.initHeight = layerInfo!!.getHeight()
         this.groupInterface = groupInterface
-        this.pickupBehavior = PickupBehavior.NULL_PICKUP_BEHAVIOR
+        this.pickupBehavior = PickupBehavior.getNullInstance()
     }
 
     @Throws(Exception::class)

@@ -25,11 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
+import jsinterop.annotations.JsMethod
+import jsinterop.annotations.JsConstructor
+import jsinterop.annotations.JsProperty
 
 open public class CompositeShaderUpdater : ShaderUpdater {
         

@@ -26,7 +26,7 @@ open public class BaseTouchInput : Object {
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
-    constructor() : super() {}
+    public constructor() : super() {}
 
     open fun getList()
     // nullable = true from not(false or (false and true)) = true

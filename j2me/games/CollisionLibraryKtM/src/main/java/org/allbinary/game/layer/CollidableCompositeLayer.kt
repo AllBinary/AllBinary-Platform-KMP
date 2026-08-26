@@ -23,6 +23,7 @@ import org.allbinary.game.collision.CollidableInterfaceCompositeInterface
 import org.allbinary.game.collision.CollidableNeverCollideBehaviorFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.RectangleFactory
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -34,13 +35,29 @@ open public class CollidableCompositeLayer :
 
     companion object {
 
-        val NULL_COLLIDABLE_COMPOSITE_LAYER: CollidableCompositeLayer =
-            CollidableCompositeLayer(
-                StringUtil.getInstance()!!.EMPTY_STRING,
-                RectangleFactory.SINGLETON,
-                ViewPositionBase.NULL_VIEW_POSITION,
-                CollidableNeverCollideBehaviorFactory.getInstance(),
-            )
+        private var NULL_COLLIDABLE_COMPOSITE_LAYER: Any = NullUtil.getInstance()!!.NULL_OBJECT
+
+        open fun getNullInstance()
+        // nullable = true from not(false or (false and true)) = true
+        : CollidableCompositeLayer {
+
+            if (
+                CollidableCompositeLayer.NULL_COLLIDABLE_COMPOSITE_LAYER ==
+                    NullUtil.getInstance()!!.NULL_OBJECT
+            ) {
+                CollidableCompositeLayer.NULL_COLLIDABLE_COMPOSITE_LAYER =
+                    CollidableCompositeLayer(
+                        StringUtil.getInstance()!!.EMPTY_STRING,
+                        RectangleFactory.SINGLETON,
+                        ViewPositionBase.NULL_VIEW_POSITION,
+                        CollidableNeverCollideBehaviorFactory.getInstance(),
+                    )
+            }
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CollidableCompositeLayer.NULL_COLLIDABLE_COMPOSITE_LAYER
+                as CollidableCompositeLayer
+        }
     }
 
     private var collidableInferface: CollidableBaseBehavior =

@@ -18,7 +18,6 @@ package org.allbinary.game.score
 import java.lang.Object
 import javax.microedition.lcdui.Command
 import kotlin.Array
-import org.allbinary.J2MEUtil
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class HighScoreCommandsBaseFactory : Object {
@@ -29,13 +28,7 @@ open public class HighScoreCommandsBaseFactory : Object {
 
     protected constructor(HIGH_SCORE_COMMANDS: Array<Command?>) : super() {
         var HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS
-
-        if (J2MEUtil.isJ2ME()) {
-
-            this.HIGH_SCORE_COMMANDS = arrayOf(HighScoreCommands.getInstance()!!.PERSONAL)
-        } else {
-            this.HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS
-        }
+        this.HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS
     }
 
     open fun isHighScoreCommand(

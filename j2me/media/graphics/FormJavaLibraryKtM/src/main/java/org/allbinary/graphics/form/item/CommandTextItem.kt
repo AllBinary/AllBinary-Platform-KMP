@@ -29,11 +29,11 @@ open public class CommandTextItem : ABTextItem {
         backgroundBasicColor: BasicColor,
         foregroundBasicColor: BasicColor,
     ) : super(command.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor) {
-        var command = command
-        var layout = layout
-        var altText = altText
-        var backgroundBasicColor = backgroundBasicColor
-        var foregroundBasicColor = foregroundBasicColor
+        // var command = command
+        // var layout = layout
+        // var altText = altText
+        // var backgroundBasicColor = backgroundBasicColor
+        // var foregroundBasicColor = foregroundBasicColor
 
         // For kotlin this is before the body of the constructor.
 

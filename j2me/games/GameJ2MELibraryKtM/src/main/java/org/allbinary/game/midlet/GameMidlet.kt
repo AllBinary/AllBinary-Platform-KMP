@@ -24,6 +24,7 @@ import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Displayable
 import javax.microedition.lcdui.NullCanvas
+import javax.microedition.midlet.MIDletStateChangeException
 import org.allbinary.J2MEUtil
 import org.allbinary.TsUtil
 import org.allbinary.business.advertisement.GameAdStateFactory
@@ -336,6 +337,7 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
         this.logUtil!!.putF(this.commonStrings!!.END, this, METHOD_NAME)
     }
 
+    @Throws(MIDletStateChangeException::class)
     override fun startApp()
         // nullable = true from not(false or (false and true)) = true
     {

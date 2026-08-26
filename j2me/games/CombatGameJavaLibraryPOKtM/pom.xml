@@ -78,6 +78,7 @@
         <module>../../games/WeaponLayerJavaLibraryKtM</module>
 
         <module>../../games/CombatGameJavaLibraryKtM</module>
+        <module>../../games/LifeJavaLibraryKtM</module>
 
         <module>../../games/CommonHeadsUpDisplayCombatGameLibraryKtM</module>
         <module>../../games/LifeOrDeathDataJavaLibraryKtM</module>

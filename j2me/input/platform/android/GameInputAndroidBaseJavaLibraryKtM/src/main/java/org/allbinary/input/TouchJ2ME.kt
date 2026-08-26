@@ -17,6 +17,7 @@ package org.allbinary.input
 
 import java.lang.Object
 
+// TouchAndroid
 open public class TouchJ2ME : Object {
 
     public constructor() : super() {}

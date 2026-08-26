@@ -42,7 +42,7 @@ open public class WaypointBase : Object, EventListenerInterface {
     private val sound: Sound
 
     var allBinaryGameLayerManagerP: AllBinaryGameLayerManager =
-        AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
+        AllBinaryGameLayerManager.getNullInstance()!!
 
     public constructor(sound: Sound) : super() {
         // var sound = sound
