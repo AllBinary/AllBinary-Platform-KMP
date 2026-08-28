@@ -158,8 +158,6 @@
         <module>../../FullScreenJavaLibraryKtM</module>
         -->
 
-        <module>../../lib/Basic2DVectorLibraryKtM</module>
-
         <module>../../../physics/VelocityLibraryKtM</module>
 
         <module>../../games/weapon/SoundsBasicWeaponsJavaLibraryKtM</module>

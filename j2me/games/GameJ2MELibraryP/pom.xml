@@ -158,7 +158,6 @@
 
         <module>../../FullScreenNoneJavaLibraryKtM</module>
 <!--        <module>../../FullScreenJavaLibraryKtM</module>-->
-        <module>../../lib/Basic2DVectorLibraryKtM</module>
 
         <module>../../../physics/VelocityLibraryKtM</module>
         
