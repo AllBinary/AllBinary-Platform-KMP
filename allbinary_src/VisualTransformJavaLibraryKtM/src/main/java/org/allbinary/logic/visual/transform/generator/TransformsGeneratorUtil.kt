@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
@@ -120,7 +121,7 @@ var group = group
                                     }
                                 
 
-    var transformInfoObjectConfigComponentVector: Vector = transformInfoObjectConfigInterface!!.getTransformsGroup(group)!!
+    var transformInfoObjectConfigComponentVector: BasicArrayList = transformInfoObjectConfigInterface!!.getTransformsGroup(group)!!
 
 
     
@@ -131,7 +132,7 @@ var group = group
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Processing ")
-stringBuffer!!.appendint(transformInfoObjectConfigComponentVector!!.size)
+stringBuffer!!.appendint(transformInfoObjectConfigComponentVector!!.size())
 stringBuffer!!.append(" Components Group: ")
 stringBuffer!!.append(group)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "generateComponentsFromObjectConfig()")
@@ -140,7 +141,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "generateComponentsFromObje
                                 
 
     
-                        if(transformInfoObjectConfigComponentVector!!.size < 1)
+                        if(transformInfoObjectConfigComponentVector!!.size() < 1)
                         
                                     {
                                     
@@ -151,7 +152,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "generateComponentsFromObje
                                     }
                                 
 
-    var size: Int = transformInfoObjectConfigComponentVector!!.size!!
+    var size: Int = transformInfoObjectConfigComponentVector!!.size()!!
 
 
 

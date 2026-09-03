@@ -26,8 +26,10 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.TableMappingInterface
+import org.allbinary.logic.StdUtil
 
 open public class JvmStatisticsMapping : JvmStatistics
                 , TableMappingInterface {
@@ -46,7 +48,7 @@ public constructor ()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(JvmStatisticsData.FREE_MEMORY_BYTES, this.getFreeMemoryBytesString())
 hashMap!!.put(JvmStatisticsData.FREE_MEMORY_KILOBYTES, this.getFreeMemoryKilobytesString())
@@ -83,9 +85,9 @@ hashMap!!.put(JvmStatisticsData.TOTAL_MEMORY_MEGABYTES, this.getTotalMemoryMegab
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(this.getFreeMemoryBytesString())
 vector.add(this.getFreeMemoryKilobytesString())

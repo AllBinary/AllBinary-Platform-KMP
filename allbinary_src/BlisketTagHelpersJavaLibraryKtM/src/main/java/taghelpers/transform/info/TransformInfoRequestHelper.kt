@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import admin.taghelpers.ModifyTable
 import org.allbinary.data.tables.transform.info.TransformInfoEntityBuilder
@@ -106,7 +107,7 @@ TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
     var success: String = "Added TransformInfo Successfully"
 
 
-    var values: Vector = this.transformInfoInterface!!.toVector()!!
+    var values: BasicArrayList = this.transformInfoInterface!!.toVector()!!
 
 TransformInfoEntityBuilder.getInstance()!!.insert(values)
 

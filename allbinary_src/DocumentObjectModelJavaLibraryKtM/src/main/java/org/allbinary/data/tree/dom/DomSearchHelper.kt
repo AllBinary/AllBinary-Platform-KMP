@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
 
@@ -134,11 +135,11 @@ var nodeList = nodeList
             
     open fun getAllNodes(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var nodeName = nodeName
 var nodeList = nodeList
 
-    var vector: Vector = DomSearchHelper.getAllNodesNoThrow(nodeName, nodeList)!!
+    var vector: BasicArrayList = DomSearchHelper.getAllNodesNoThrow(nodeName, nodeList)!!
 
 
     
@@ -168,11 +169,11 @@ var nodeList = nodeList
 
     open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var nodeName = nodeName
 var nodeList = nodeList
 
-    var nodeVector: Vector = Vector()
+    var nodeVector: BasicArrayList = BasicArrayListD()
 
 
     var numberOfNodes: Int = nodeList!!.getLength()!!

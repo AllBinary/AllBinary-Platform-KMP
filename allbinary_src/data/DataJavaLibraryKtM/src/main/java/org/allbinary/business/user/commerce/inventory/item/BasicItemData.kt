@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -32,6 +32,26 @@ open public class BasicItemData
         
 companion object {
             
+    private val instance: BasicItemData = BasicItemData()
+
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: BasicItemData{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return instance
+}
+
+
+        }
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
     val ITEM: String = "BASICITEM"
 
     val TOTAL: String = "BASICITEM_TOTAL"
@@ -90,13 +110,6 @@ companion object {
 
     val SPECIALS: String = "BASICITEM_SPECIALS"
 
-        }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
 }
                 
             

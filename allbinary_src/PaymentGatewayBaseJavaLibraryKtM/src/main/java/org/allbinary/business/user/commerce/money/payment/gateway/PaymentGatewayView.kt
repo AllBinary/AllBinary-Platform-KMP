@@ -28,6 +28,7 @@
 import java.util.HashMap
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
@@ -69,7 +70,7 @@ this.paymentGatewayInterface= paymentGatewayInterface
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
 

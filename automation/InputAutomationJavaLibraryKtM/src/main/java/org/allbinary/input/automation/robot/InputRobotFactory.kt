@@ -33,6 +33,7 @@ import java.util.Set
 import javax.help.HelpSet
 import javax.help.event.HelpSetEvent
 import javax.help.event.HelpSetListener
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.help.JavaHelpSetNotifier
 import org.allbinary.logic.java.anyType.InterfaceUtil
@@ -113,7 +114,7 @@ securedNativeLibraryInterface!!.load()
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private var helpSetListenerInterface: HelpSetListener
 private constructor ()

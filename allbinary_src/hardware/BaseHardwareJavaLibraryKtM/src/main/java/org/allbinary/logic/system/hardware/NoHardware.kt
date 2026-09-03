@@ -17,7 +17,7 @@ package org.allbinary.logic.system.hardware
 
 import java.lang.Object
 import java.util.Hashtable
-import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface
 import org.allbinary.logic.system.hardware.components.interfaces.NoHardwareComponent
 
@@ -77,6 +77,6 @@ open public class NoHardware : Object, HardwareInterface {
         var hardwareInterface = hardwareInterface
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance()!!.NULL_TABLE
+        return StdUtil.getInstance()!!.NULL_TABLE
     }
 }

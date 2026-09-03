@@ -30,7 +30,8 @@
 import java.util.HashMap
 import java.util.HashSet
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.data.tables.context.module.storefronts.StoreFrontsEntity
@@ -38,6 +39,7 @@ import org.allbinary.data.tables.staticpages.StaticPagesEntity
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntity
 import org.allbinary.globals.GLOBALS2
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.search.SearchParams
 import org.allbinary.logic.control.search.SearchRequest
@@ -72,6 +74,8 @@ open public class ProductListing
 
     private val directory: Directory = Directory.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     private val storeFronts: StoreFrontsEntity
 
     private val staticPages: StaticPagesEntity
@@ -102,7 +106,7 @@ var storeFront = storeFront
     var inventoryColumnUtil: InventoryColumnUtil = InventoryColumnUtil.getInstance()!!
 
 
-    var keywords: Vector = inventoryColumnUtil!!.getColumnWhereLike(this.inventory, storeFront!!.getCategoryPath(), BasicItemData.KEYWORDS)!!
+    var keywords: BasicArrayList = inventoryColumnUtil!!.getColumnWhereLike(this.inventory, storeFront!!.getCategoryPath(), basicItemData!!.KEYWORDS)!!
 
 
     var subStoreVector: BasicArrayList = storeFront!!.getSubStores()!!
@@ -121,9 +125,9 @@ var storeFront = storeFront
     var subStore: String = subStoreVector!!.get(index) as String
 
 
-    var substoreKeywords: Vector = inventoryColumnUtil!!.getColumnWhereLike(this.inventory, AbPathData.getInstance()!!.SEPARATOR +subStore, BasicItemData.CATEGORY)!!
+    var substoreKeywords: BasicArrayList = inventoryColumnUtil!!.getColumnWhereLike(this.inventory, AbPathData.getInstance()!!.SEPARATOR +subStore, basicItemData!!.CATEGORY)!!
 
-keywords.addAll(substoreKeywords)
+keywords.addAllList(substoreKeywords)
 }
 
 
@@ -205,7 +209,7 @@ StreamUtil.getInstance()!!.close(idOutData)
 
                 @Throws(Exception::class)
             
-    open fun create(keywordData: String, keywordFilenameHashMap: HashMap<Any, Any>, vector: Vector, staticPath: AbPath)
+    open fun create(keywordData: String, keywordFilenameHashMap: HashMap<Any, Any>, vector: BasicArrayList, staticPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var keywordData = keywordData
@@ -226,7 +230,7 @@ hashMap!!.put(CommonSeps.getInstance()!!.SPACE, StringUtil.getInstance()!!.EMPTY
 
     var searchParams: SearchParams = this.searchRequest!!.getParams()!!
 
-searchParams!!.add(BasicItemData.KEYWORDS, keywordData)
+searchParams!!.add(basicItemData!!.KEYWORDS, keywordData)
 searchParams!!.setStartPage(CommonPhoneStrings.getInstance()!!.ZERO)
 this.searchRequest!!.setParams(searchParams)
 this.searchRequest!!.setFileBaseName(pageName)
@@ -332,7 +336,7 @@ var keywordFilenameHashMap = keywordFilenameHashMap
 
         {
 
-    var insertVector: Vector = Vector()
+    var insertVector: BasicArrayList = BasicArrayListD()
 
 
     var keywordData: String = keywordArray[index]!! as String
@@ -389,7 +393,7 @@ stringBuffer!!.append(storeFront!!.getStaticPath())
                 
 
 
-    var keywordFilenameHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keywordFilenameHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     
@@ -412,7 +416,7 @@ stringBuffer!!.append(" Store Not Found")
     var inventorySearchUtil: InventorySearchUtil = InventorySearchUtil.getInstance()!!
 
 
-    var vector: Vector = inventorySearchUtil!!.getBasicItemIdColumn(this.searchRequest)!!
+    var vector: BasicArrayList = inventorySearchUtil!!.getBasicItemIdColumn(this.searchRequest)!!
 
 
 
@@ -489,10 +493,10 @@ stringBuffer!!.append("<br />")
                                 
                         else {
                             
-    var storeFrontVector: Vector = this.storeFronts!!.getStoreFrontNames()!!
+    var storeFrontVector: BasicArrayList = this.storeFronts!!.getStoreFrontNames()!!
 
 
-    var size: Int = storeFrontVector!!.size!!
+    var size: Int = storeFrontVector!!.size()!!
 
 
 

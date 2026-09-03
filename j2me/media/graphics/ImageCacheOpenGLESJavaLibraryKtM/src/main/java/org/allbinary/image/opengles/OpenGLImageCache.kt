@@ -28,6 +28,7 @@ import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
+// ImageCacheOpenGLESJavaLibrary
 open public class OpenGLImageCache : ImageCache {
 
     private val imageCache: ImageCache = ImageCacheFactory.getInstance()!!

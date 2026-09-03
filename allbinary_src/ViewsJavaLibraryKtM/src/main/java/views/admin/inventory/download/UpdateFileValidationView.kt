@@ -325,7 +325,7 @@ this.unzip(fileItem)
 
     var hashMap: HashMap<Any, Any> = this.getRequestHashMap()!!
 
-hashMap!!.put(BasicItemData.ID, this.itemInterface!!.getId())
+hashMap!!.put(basicItemData!!.ID, this.itemInterface!!.getId())
 
     var licenseObject: Any = hashMap!!.get(DownloadItemData.LICENSE_FILE)!!
 

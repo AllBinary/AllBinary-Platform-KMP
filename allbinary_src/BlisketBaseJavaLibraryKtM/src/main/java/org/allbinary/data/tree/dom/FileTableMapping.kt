@@ -26,8 +26,10 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.TableMappingInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.FileData
 import org.allbinary.logic.io.path.AbPathData
@@ -65,9 +67,9 @@ this.file= file
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var filePropertyVector: Vector = Vector()
+    var filePropertyVector: BasicArrayList = BasicArrayListD()
 
 filePropertyVector!!.add(this.file.getAbsolutePath())
 filePropertyVector!!.add(this.file.getCanonicalPath())
@@ -88,7 +90,7 @@ filePropertyVector!!.add(this.file.getPath())
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var filePropertyHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var filePropertyHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var pathData: AbPathData = AbPathData.getInstance()!!

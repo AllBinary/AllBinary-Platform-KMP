@@ -30,7 +30,8 @@
 import java.util.Calendar
 import java.util.HashMap
 import java.util.Random
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
 import org.allbinary.business.user.UserData
@@ -38,6 +39,7 @@ import org.allbinary.business.user.commerce.money.payment.Payment
 import org.allbinary.business.user.commerce.money.payment.PaymentData
 import org.allbinary.business.user.commerce.money.payment.PaymentInterface
 import org.allbinary.data.generator.PaymentIdGenerator
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.crypt.SuperCrypt
@@ -82,10 +84,10 @@ var index = index
 
         try {
             
-    var updateKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var updateKeyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var whereKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereKeyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereKeyAndValue!!.put(UserData.USERNAME, userName)
 
@@ -134,22 +136,22 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 
     open fun get(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var userName = userName
 
         try {
             
-    var paymentVector: Vector = Vector()
+    var paymentVector: BasicArrayList = BasicArrayListD()
 
 
-    var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keyAndValue!!.put(UserData.USERNAME, userName)
 
-    var paymentList: Vector = super.getRows(keyAndValue)!!
+    var paymentList: BasicArrayList = super.getRows(keyAndValue)!!
 
 
-    var size: Int = paymentList!!.size!!
+    var size: Int = paymentList!!.size()!!
 
 
 
@@ -210,10 +212,10 @@ var userName = userName
 
         try {
             
-    var paymentHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var paymentHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var updateKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var updateKeyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 updateKeyAndValue!!.put(EntryData.getInstance()!!.DEFAULT, EntryData.getInstance()!!.DEFAULT)
 updateKeyAndValue!!.put(UserData.USERNAME, userName)
@@ -283,7 +285,7 @@ var index = index
 
         try {
             
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(UserData.USERNAME, userName)
 whereHashMap!!.put(PaymentData.ID, index.toString() as String)
@@ -321,7 +323,7 @@ var paymentInterface = paymentInterface
 
         try {
             
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(PaymentIdGenerator().
                             getNext())

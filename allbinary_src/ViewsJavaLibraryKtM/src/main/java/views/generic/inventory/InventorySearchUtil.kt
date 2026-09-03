@@ -29,7 +29,8 @@
         
 import java.util.HashMap
 import java.util.ListIterator
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.InventoryData
 import org.allbinary.business.user.commerce.inventory.basket.BasketData
@@ -92,11 +93,13 @@ companion object {
 
     private val commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
                 @Throws(Exception::class)
             
     open fun getBasicItemIdColumn(searchRequest: SearchRequest)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var searchRequest = searchRequest
 
     var inventoryEntityInterface: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
@@ -108,14 +111,14 @@ var searchRequest = searchRequest
     var inventorySearchUtil: InventoryColumnUtil = InventoryColumnUtil.getInstance()!!
 
 
-    var column: Vector = inventorySearchUtil!!.getColumnWhereLike(inventoryEntityInterface, storeFrontInterface!!.getCategoryPath(), BasicItemData.ID)!!
+    var column: BasicArrayList = inventorySearchUtil!!.getColumnWhereLike(inventoryEntityInterface, storeFrontInterface!!.getCategoryPath(), basicItemData!!.ID)!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF("Number Of Items Found: " +column.size, this, "search")
+                                    this.logUtil!!.putF("Number Of Items Found: " +column.size(), this, "search")
 
                                     }
                                 
@@ -136,9 +139,9 @@ var searchRequest = searchRequest
     var subStore: String = subStoreVector!!.get(index) as String
 
 
-    var substoreIdColumn: Vector = inventorySearchUtil!!.getColumnWhereLike(inventoryEntityInterface, subStore, BasicItemData.ID)!!
+    var substoreIdColumn: BasicArrayList = inventorySearchUtil!!.getColumnWhereLike(inventoryEntityInterface, subStore, basicItemData!!.ID)!!
 
-column.addAll(substoreIdColumn)
+column.addAllList(substoreIdColumn)
 }
 
 
@@ -146,7 +149,7 @@ column.addAll(substoreIdColumn)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF("Number Of Items Found Including SubStores: " +column.size, this, "search")
+                                    this.logUtil!!.putF("Number Of Items Found Including SubStores: " +column.size(), this, "search")
 
                                     }
                                 
@@ -187,7 +190,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 }
 
 
-    open fun search(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, column: Vector)
+    open fun search(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, column: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>{
     //var abeClientInformation = abeClientInformation
@@ -218,7 +221,7 @@ var column = column
 
 
     var keyword: String = Replace("-", CommonSeps.getInstance()!!.SPACE).
-                            all(columnValueHashMap!!.get(BasicItemData.KEYWORDS) as String)!!
+                            all(columnValueHashMap!!.get(basicItemData!!.KEYWORDS) as String)!!
 
 
     
@@ -262,9 +265,6 @@ var column = column
 
     var inventoryNodes: Array<Node?> = arrayOfNulls(MAXPAGES)
 
-
-    var iter: ListIterator = column.listIterator()!!
-
 keyword= keyword.uppercase()
 
     var lastPage: Int =  -1
@@ -299,7 +299,14 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
     var currentPage: Int =  -1
 
 
-        while(iter.hasNext())
+    var size: Int = column.size()!!
+
+
+
+
+
+                        for (index in 0 until size)
+
         {
 
     var product: String = .toCharArray()
@@ -322,7 +329,7 @@ keywords= keywords.uppercase()
                         
                                     {
                                     
-    var itemNode: Node = BasicItemView(itemInterface, Vector()).
+    var itemNode: Node = BasicItemView(itemInterface, BasicArrayListD()).
                             toXmlNode(viewDocumentInterface!!.getDoc())!!
 
 itemNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), BasketData.ITEMTOTALINBASKET, this.commonPhoneStrings!!.ONE))

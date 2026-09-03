@@ -27,7 +27,8 @@
         
 import java.io.ByteArrayInputStream
 import java.io.InputStream
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.document.DocumentToNode
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -113,14 +114,14 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
     var rootComponentInterface: TransformInterface = TransformFactory.getInstance()!!.getInstance(abeClientInformation, stringBuffer!!.toString(), this.getTransformInfoInterface())!!
 
 
-    var viewVector: Vector = this.getTransformDomNodes()!!
+    var viewVector: BasicArrayList = this.getTransformDomNodes()!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Root View Called with: " +viewVector!!.size, this, "get(transformInfoInterface)")
+                                    this.logUtil!!.putF("Root View Called with: " +viewVector!!.size(), this, "get(transformInfoInterface)")
 
                                     }
                                 
@@ -134,7 +135,7 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
     var endXMLHeader: String = "]]></xsl:text>"
 
 
-    var size: Int = viewVector!!.size!!
+    var size: Int = viewVector!!.size()!!
 
 
 

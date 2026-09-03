@@ -20,7 +20,7 @@ import java.util.HashMap
 import java.util.Map
 import kotlin.Array
 
-// ArkTs does not have this.  So this is for the ArkTs build.
+// AndroidToJ2ME
 open public class J2SEUtil : Object {
 
     companion object {

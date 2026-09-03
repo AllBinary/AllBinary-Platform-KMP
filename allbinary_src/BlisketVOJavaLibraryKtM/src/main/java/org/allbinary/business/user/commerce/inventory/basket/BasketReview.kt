@@ -29,9 +29,11 @@
         
 import java.util.HashSet
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.Item
 import org.allbinary.business.user.commerce.inventory.item.ItemView
+import org.allbinary.logic.StdUtil
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -40,7 +42,7 @@ open public class BasketReview
          {
         
 
-    var items: Vector = Vector()
+    var items: BasicArrayList = BasicArrayListD()
 public constructor ()
             : super()
         {
@@ -68,7 +70,7 @@ this.items.add(item)
 
     open fun getItems()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -191,7 +193,7 @@ weightFloat += Float(item.getWeight()).
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer(this.items.size)
+                        return Integer(this.items.size())
 }
 
 
@@ -299,7 +301,7 @@ var document = document
 
     var item: Item = itemArray[index]!! as Item
 
-node.appendChild(ItemView(item, Vector()).
+node.appendChild(ItemView(item, BasicArrayListD()).
                             toXmlNode(document))
 }
 

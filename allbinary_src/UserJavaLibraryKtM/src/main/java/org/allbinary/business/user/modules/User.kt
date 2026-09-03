@@ -27,7 +27,8 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
@@ -41,6 +42,7 @@ import org.allbinary.business.user.role.UserRole
 import org.allbinary.business.user.role.UserRoleB
 import org.allbinary.business.user.role.UserRoleData
 import org.allbinary.business.user.username.UserName
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.RequestParams
 import org.allbinary.logic.communication.http.request.session.WeblisketSessionData
 import org.allbinary.logic.communication.http.request.session.WeblisketSessionInterface
@@ -776,9 +778,9 @@ this.enable= enable
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.userName)
 values.add(this.prefixName)
@@ -802,7 +804,7 @@ values.add(this.getRole()!!.toString())
 
 values.add(userConfigurationDomDocumentMapping!!.toDomDocumentString())
 values.add(this.permissions)
-values.addAll(this.password.toVector(this.secret))
+values.addAllList(this.password.toVector(this.secret))
 values.add(this.enable)
 
     var calendar: Calendar = Calendar.getInstance()!!
@@ -828,7 +830,7 @@ values.add(time)
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 values.put(UserData.USERNAME, userName)
 values.put(UserData.PREFIXNAME, prefixName)

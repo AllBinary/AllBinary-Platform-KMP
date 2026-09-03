@@ -28,6 +28,7 @@
 import java.io.FileReader
 import java.io.LineNumberReader
 import java.util.HashMap
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
@@ -118,7 +119,7 @@ var filePath = filePath
     var fileReader: FileReader = FileReader(filePath)
 
 lineNumberReader= LineNumberReader(fileReader)
-this.cpuHashMap= HashMap<Any, Any>()
+this.cpuHashMap= StdUtil.getInstance()!!.createHashMap()
 
     
                         if(lineNumberReader == 
@@ -135,7 +136,7 @@ this.cpuHashMap= HashMap<Any, Any>()
                         
                                     {
                                     this.logUtil!!.putF(StringMaker().
-                            append("Cpu File Vector Size: ")!!.appendint(fileVector!!.size())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                            append("Cpu File BasicArrayList Size: ")!!.appendint(fileVector!!.size())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 

@@ -31,6 +31,7 @@ import java.util.Set
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
@@ -161,7 +162,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode(document)", 
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var keys: Set = this.map.keySet()!!

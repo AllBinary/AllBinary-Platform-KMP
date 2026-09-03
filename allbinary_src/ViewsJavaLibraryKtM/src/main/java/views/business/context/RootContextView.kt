@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.visual.transform.TransformFactory
@@ -119,11 +120,11 @@ var transformInfoInterface = transformInfoInterface
     var objectConfig: NoTemplateTransformInfoObjectConfig = NoTemplateTransformInfoObjectConfig(this.getTransformInfoInterface(), this.getTransformInfoInterface()!!.getObjectConfigInterface()!!.toXmlDoc())
 
 
-    var componentsVector: Vector = objectConfig!!.getTransforms()!!
+    var componentsVector: BasicArrayList = objectConfig!!.getTransforms()!!
 
 
     
-                        if(componentsVector!!.size == 0)
+                        if(componentsVector!!.size() == 0)
                         
                                     {
                                     
@@ -135,13 +136,13 @@ var transformInfoInterface = transformInfoInterface
                                 
 
     
-                        if(componentsVector!!.size > 1)
+                        if(componentsVector!!.size() > 1)
                         
                                     {
                                     
 
 
-                            throw Exception("To Many Root Template Views: " +componentsVector!!.size)
+                            throw Exception("To Many Root Template Views: " +componentsVector!!.size())
 
                                     }
                                 

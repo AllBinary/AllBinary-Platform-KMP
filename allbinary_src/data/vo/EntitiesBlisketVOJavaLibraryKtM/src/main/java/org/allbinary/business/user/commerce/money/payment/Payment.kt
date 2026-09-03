@@ -32,6 +32,7 @@ import javax.servlet.ServletRequest
 import org.allbinary.business.entry.EntryData
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.control.crypt.SuperCrypt
 import org.allbinary.logic.string.StringUtil
 import org.w3c.dom.Document
@@ -559,7 +560,7 @@ this.number= value
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(PaymentData.NAME, this.name)
 hashMap!!.put(PaymentData.TYPE, this.type)

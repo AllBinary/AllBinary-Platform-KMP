@@ -44,6 +44,8 @@ open public class BasketRequestHelper : TagHelper {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     private val weblisketSession: WeblisketSession
 
     private val storeFrontInterface: StoreFrontInterface
@@ -92,7 +94,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(BasicItemData.ID)
+this.id= this.request.getParameter(basicItemData!!.ID)
 this.num= this.request.getParameter(BasketData.ITEMTOTALINBASKET)
 }
 

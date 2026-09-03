@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class BasicQueue
             : Object
          {
         
 
-    val queueVector: Vector = Vector()
+    val queueVector: BasicArrayList = BasicArrayListD()
 protected constructor ()
             : super()
         {
@@ -69,7 +70,7 @@ this.queueVector!!.remove(anyType)
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
-    var anyType: Any = this.queueVector!!.lastElement()!!
+    var anyType: Any = this.queueVector!!.get(this.queueVector!!.size() -1)!!
 
 this.queueVector!!.remove(anyType)
 

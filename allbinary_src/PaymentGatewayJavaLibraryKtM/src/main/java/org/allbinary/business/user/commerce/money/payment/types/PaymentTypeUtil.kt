@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewaysData
 import org.allbinary.data.tree.dom.DomNodeHelper
@@ -33,6 +34,7 @@ import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.globals.FREEBLISKET_PATH_GLOBALS
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.crypt.file.CryptFileReader
 import org.allbinary.logic.io.path.AbPath
@@ -81,7 +83,7 @@ companion object {
                 null
             
 
-    private var paymentTypeVector: Vector = Vector()
+    private var paymentTypeVector: BasicArrayList = BasicArrayListD()
 private constructor ()
             : super()
         {
@@ -123,7 +125,7 @@ this.paymentTypeVector!!.add(paymentType)
 : PaymentType{
 var paymentTypeString = paymentTypeString
 
-    var size: Int = this.paymentTypeVector!!.size!!
+    var size: Int = this.paymentTypeVector!!.size()!!
 
 
 
@@ -288,15 +290,15 @@ var paymentType = paymentType
 }
 
 
-    open fun difference(a_PaymentTypeVector: Vector)
+    open fun difference(a_PaymentTypeVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var a_PaymentTypeVector = a_PaymentTypeVector
 
-    var diff: Vector = Vector()
+    var diff: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = this.paymentTypeVector!!.size!!
+    var size: Int = this.paymentTypeVector!!.size()!!
 
 
 

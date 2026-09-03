@@ -16,6 +16,9 @@
 package org.allbinary.logic.system.security.licensing
 
 import java.lang.Object
+import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringUtil
+import org.allbinary.string.CommonStrings
 
 open public class ClientInformationFactory : Object {
 
@@ -26,6 +29,20 @@ open public class ClientInformationFactory : Object {
     // nullable =  from not(true or (false and true)) =
     : ClientInformation {
 
-        throw RuntimeException()
+        var logUtil: LogUtil = LogUtil.getInstance()!!
+
+        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+        logUtil!!.putF(commonStrings!!.NOT_IMPLEMENTED, this, commonStrings!!.GET_INSTANCE)
+
+        var stringUtil: StringUtil = StringUtil.getInstance()!!
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return ClientInformation(
+            stringUtil!!.NULL_STRING,
+            stringUtil!!.NULL_STRING,
+            stringUtil!!.NULL_STRING,
+            stringUtil!!.NULL_STRING,
+        )
     }
 }

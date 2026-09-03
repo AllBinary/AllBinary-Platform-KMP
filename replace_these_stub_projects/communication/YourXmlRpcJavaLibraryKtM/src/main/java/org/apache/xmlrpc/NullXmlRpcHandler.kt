@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.NullUtil
 
 open public class NullXmlRpcHandler
@@ -46,7 +47,7 @@ companion object {
         
                 @Throws(Exception::class)
             
-    override fun execute(method: String, params: Vector<Any>)
+    override fun execute(method: String, params: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var method = method

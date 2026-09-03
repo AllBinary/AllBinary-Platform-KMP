@@ -35,6 +35,7 @@ import org.allbinary.business.user.commerce.inventory.basket.BasketInterface
 import org.allbinary.business.user.commerce.money.payment.PaymentData
 import org.allbinary.business.user.commerce.shipping.ShippingMethodData
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.w3c.dom.Document
@@ -385,7 +386,7 @@ var storeFrontInterface = storeFrontInterface
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(PaymentData.METHOD, this.paymentMethod)
 hashMap!!.put(ShippingMethodData.NAME, this.shippingType)

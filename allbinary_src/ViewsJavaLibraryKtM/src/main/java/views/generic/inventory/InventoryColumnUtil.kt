@@ -26,9 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntity
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringValidationUtil
 
@@ -60,18 +62,20 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     open fun getColumnWhereLike(inventoryEntity: InventoryEntity, category: String, column: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var inventoryEntity = inventoryEntity
 var category = category
 var column = column
 this.logUtil!!.putF("Start Category: " +category, this, "getKeywords")
 
-    var keywords: Vector = Vector()
+    var keywords: BasicArrayList = BasicArrayListD()
 
 
-    var vectorOfHashMaps: Vector = inventoryEntity!!.getAllRows()!!
+    var vectorOfHashMaps: BasicArrayList = inventoryEntity!!.getAllRows()!!
 
 
     var size: Int = vectorOfHashMaps!!.size!!
@@ -87,7 +91,7 @@ this.logUtil!!.putF("Start Category: " +category, this, "getKeywords")
     var hashMap: HashMap<Any, Any> = vectorOfHashMaps!!.get(index as Object) as HashMap<Any, Any>
 
 
-    var categoryName: String = hashMap!!.get(BasicItemData.CATEGORY) as String
+    var categoryName: String = hashMap!!.get(basicItemData!!.CATEGORY) as String
 
 
     

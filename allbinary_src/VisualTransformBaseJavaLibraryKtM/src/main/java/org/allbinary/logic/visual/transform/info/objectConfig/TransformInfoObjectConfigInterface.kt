@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 
@@ -46,25 +47,25 @@ interface TransformInfoObjectConfigInterface : DomDocumentMappingInterface {
             
     open fun getTransformsGroup(group: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getParentTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getGroupTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             

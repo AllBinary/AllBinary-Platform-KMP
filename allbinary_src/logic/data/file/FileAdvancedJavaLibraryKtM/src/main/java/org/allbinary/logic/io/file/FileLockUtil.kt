@@ -27,7 +27,9 @@
         
 import java.nio.channels.FileChannel
 import java.nio.channels.FileLock
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.AbFileOutputStream
 import org.allbinary.logic.io.StreamUtil
@@ -62,16 +64,16 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
+    open fun getAll(vector: BasicArrayList, isReturnOnFailure: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var vector = vector
 var isReturnOnFailure = isReturnOnFailure
 
-    var fileLockVector: Vector = Vector()
+    var fileLockVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -103,7 +105,7 @@ fileLockVector!!.add(fileLock)
                         if(isReturnOnFailure)
                         
                                     {
-                                    this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
+                                    this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size(), this, "getAll")
 
 
 
@@ -114,7 +116,7 @@ fileLockVector!!.add(fileLock)
                                 
 }
 
-this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
+this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size(), this, "getAll")
 
 
 
@@ -125,9 +127,9 @@ this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size, this, "getA
 
                 @Throws(Exception::class)
             
-    open fun getAllPossible(vector: Vector)
+    open fun getAllPossible(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var vector = vector
 
 
@@ -139,23 +141,23 @@ var vector = vector
 
                 @Throws(Exception::class)
             
-    open fun getAllOrNone(vector: Vector)
+    open fun getAllOrNone(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var vector = vector
 
-    var fileLockVector: Vector = this.getAll(vector, true)!!
+    var fileLockVector: BasicArrayList = this.getAll(vector, true)!!
 
 
     
-                        if(vector.size != fileLockVector!!.size)
+                        if(vector.size() != fileLockVector!!.size())
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Vector()
+                        return BasicArrayListD()
 
                                     }
                                 

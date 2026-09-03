@@ -29,12 +29,14 @@
         
 import java.awt.event.KeyEvent
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.input.KeySingletonFactory
 import org.allbinary.input.KeyUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
@@ -126,7 +128,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONST
     var nodeList: NodeList = actionNode!!.getChildNodes()!!
 
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
 
@@ -200,7 +202,7 @@ this.setRelease(value.concatToString()
                             
 }
 
-this.setKeyArray(vector.toArray(arrayOfNulls(vector.size)) as Array<Integer?>)
+this.setKeyArray(vector.toArrayType(arrayOfNulls(vector.size())) as Array<Integer?>)
 
                                     }
                                 
@@ -384,7 +386,7 @@ this.setKeyArray(integerArray)
 var text = text
 this.logUtil!!.putF(CommonLabels.getInstance()!!.START +text, this, "integerArrayValue")
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
     var index: Int = 0
@@ -439,7 +441,7 @@ index++
 }
 
 
-    var integerArray: Array<Integer?> = vector.toArray(arrayOfNulls(vector.size)) as Array<Integer?>
+    var integerArray: Array<Integer?> = vector.toArrayType(arrayOfNulls(vector.size())) as Array<Integer?>
 
 
 
@@ -453,7 +455,7 @@ index++
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
 

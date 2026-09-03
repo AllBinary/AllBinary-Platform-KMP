@@ -27,8 +27,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Rectangle
 import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class MotionRectangle
             : Object
@@ -38,13 +40,13 @@ open public class MotionRectangle
 
     private var rectangle: Rectangle
 
-    private var pixelDeltaVector: Vector
+    private var pixelDeltaVector: BasicArrayList
 public constructor (rectangle: Rectangle)
             : super()
         {
 var rectangle = rectangle
 this.setRectangle(rectangle)
-this.setPixelDeltaVector(Vector())
+this.setPixelDeltaVector(BasicArrayListD())
 }
 
 
@@ -69,7 +71,7 @@ this.rectangle= rectangle
 
     open fun getPixelDeltaVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -78,7 +80,7 @@ this.rectangle= rectangle
 }
 
 
-    open fun setPixelDeltaVector(pixelDeltaVector: Vector)
+    open fun setPixelDeltaVector(pixelDeltaVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var pixelDeltaVector = pixelDeltaVector
@@ -92,7 +94,7 @@ this.pixelDeltaVector= pixelDeltaVector
 
     var motionRectangle: MotionRectangle = MotionRectangle(this.getRectangle()!!.clone() as Rectangle)
 
-motionRectangle!!.setPixelDeltaVector(this.getPixelDeltaVector()!!.clone() as Vector)
+motionRectangle!!.setPixelDeltaVector(this.getPixelDeltaVector()!!.clone() as BasicArrayList)
 
 
 

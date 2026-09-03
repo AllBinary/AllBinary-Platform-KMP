@@ -18,8 +18,10 @@ package org.allbinary.logic.math
 import java.lang.Integer
 import java.lang.Object
 import kotlin.Array
+import org.allbinary.AndroidUtil
 import org.allbinary.J2MEUtil
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 
 open public class SmallIntegerSingletonFactory : Object {
 
@@ -54,13 +56,40 @@ open public class SmallIntegerSingletonFactory : Object {
     // nullable = true from not(false or (false and true)) = true
     : Int {
 
-        var minAllowed: Int =
-            (if (J2MEUtil.isJ2ME()) {
+        var minAllowed: Int = this.getMinAllowed()!!
 
-                0
+        if (this.MIN <= minAllowed) {
+
+            if (J2MEUtil.isJ2ME()) {} else if (AndroidUtil.isAndroid()) {
+
+                var logUtil: LogUtil = LogUtil.getInstance()!!
+
+                logUtil!!.putF(
+                    StringMaker()
+                        .append("Android InputFactory was initialized before GameMidlet: ")!!
+                        .appendint(this.MIN)!!
+                        .toString(),
+                    this,
+                    "getMin",
+                )
+                this.initWithRange(0x291, 6)
             } else {
-                23
-            })
+
+                var logUtil: LogUtil = LogUtil.getInstance()!!
+
+                logUtil!!.putF(
+                    StringMaker()
+                        .append(
+                            "InputFactory was initialized before GameMidlet or KeyFactoryInitializer - Currently this is occurs on JS build by TouchMotionGestureFactory constructor: "
+                        )!!
+                        .appendint(this.MIN)!!
+                        .toString(),
+                    this,
+                    "getMin",
+                )
+                this.initWithRange(0x2D0, 6)
+            }
+        }
 
         if (this.MIN <= minAllowed) {
 
@@ -76,6 +105,28 @@ open public class SmallIntegerSingletonFactory : Object {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.MIN
+    }
+
+    open fun getMinAllowed()
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
+
+        if (J2MEUtil.isJ2ME()) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 0
+        } else {
+
+            if (AndroidUtil.isAndroid()) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return 0x101
+            } else {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return 23
+            }
+        }
     }
 
     open fun initWithRange(value: Int, negativeValue: Int)

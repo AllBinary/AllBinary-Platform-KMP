@@ -31,6 +31,7 @@ import org.osgi.framework.BundleContext
 import org.osgi.framework.ServiceReference
 import org.osgi.framework.ServiceRegistration
 import org.allbinary.bundle.logic.system.loader.CryptServiceFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -96,7 +97,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var properties: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    var properties: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
 
     var serviceRegistration: ServiceRegistration = AllBinaryPreloaderActivator.context.registerService(CRYPT_REGISTRY_NAME, CryptServiceFactory(), properties)!!

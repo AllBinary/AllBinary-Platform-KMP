@@ -21,6 +21,7 @@ import javax.microedition.lcdui.CommandListener
 import org.allbinary.game.displayable.canvas.NullWaitGameRunnable
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonLabels
@@ -34,6 +35,8 @@ import org.allbinary.util.BasicArrayList
 open public class RunnableCanvas : MyCanvas, RunnableInterface {
 
     val nullUtil: NullUtil = NullUtil.getInstance()!!
+
+    val stdUtil: StdUtil = StdUtil.getInstance()!!
 
     private var thread: Thread = NullThread.NULL_THREAD
 

@@ -30,6 +30,7 @@ import org.allbinary.game.configuration.persistance.BasicPersitance
 import org.allbinary.game.configuration.persistance.NullRecordComparator
 import org.allbinary.game.configuration.persistance.NullRecordFilter
 import org.allbinary.game.configuration.persistance.NullRecordStore
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
@@ -91,6 +92,8 @@ open public class InputPersistance : BasicPersitance {
             var smallIntegerSingletonFactory: SmallIntegerSingletonFactory =
                 SmallIntegerSingletonFactory.getInstance()!!
 
+            var stdUtil: StdUtil = StdUtil.getInstance()!!
+
             var recordAsBytes: ByteArray
 
             var byteArrayInputStream: ByteArrayInputStream
@@ -116,7 +119,7 @@ open public class InputPersistance : BasicPersitance {
 
                     byteArrayInputStream = ByteArrayInputStream(recordAsBytes)
                     inputStream = DataInputStream(byteArrayInputStream)
-                    hashtable = Hashtable<Any, Any>()
+                    hashtable = stdUtil!!.createHashtable()
 
                     var value: Int = 0
 

@@ -27,13 +27,15 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.group.BasicGroupItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.groups.BasicGroupItemsEntityFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
@@ -42,6 +44,8 @@ open public class BasicGroupItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     private var request: HttpServletRequest
 
@@ -81,7 +85,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(BasicItemData.ID)
+this.id= this.request.getParameter(basicItemData!!.ID)
 this.itemOne= this.request.getParameter(BasicGroupItemData.ITEM_ONE)
 this.itemTwo= this.request.getParameter(BasicGroupItemData.ITEM_TWO)
 this.itemThree= this.request.getParameter(BasicGroupItemData.ITEM_THREE)
@@ -101,9 +105,9 @@ this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIF
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-values.put(BasicItemData.ID, id)
+values.put(basicItemData!!.ID, id)
 values.put(BasicGroupItemData.ITEM_ONE, this.itemOne)
 values.put(BasicGroupItemData.ITEM_TWO, this.itemTwo)
 values.put(BasicGroupItemData.ITEM_THREE, this.itemThree)
@@ -145,7 +149,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
                                 
 
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.id)
 values.add(this.itemOne)

@@ -17,7 +17,6 @@ package org.allbinary.game.displayable.canvas
 
 import java.lang.Thread
 import java.util.Hashtable
-import java.util.Vector
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
@@ -421,7 +420,7 @@ open public class DemoCanvas :
 
         var items: Array<ABCustomItem?> =
             commandTextItemArrayFactory!!.getInstance(
-                this.getCommandStack() as Vector<Any>,
+                this.getCommandStack(),
                 this.basicColorFactory!!.BLACK,
                 this.basicColorFactory!!.WHITE,
             )!!
@@ -701,7 +700,7 @@ open public class DemoCanvas :
         )
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return this.nullUtil!!.NULL_TABLE
+        return this.stdUtil!!.NULL_TABLE
     }
 
     @Throws(Exception::class)
@@ -711,7 +710,7 @@ open public class DemoCanvas :
         this.logUtil!!.putF("Trying to save the AI lol", this, "getCurrentStateHashtable")
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return this.nullUtil!!.NULL_TABLE
+        return this.stdUtil!!.NULL_TABLE
     }
 
     override fun setHighScoreSubmitted(isNotUsed: Boolean)

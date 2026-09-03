@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.user.UserData
@@ -374,7 +375,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 }
 
 
-    open fun isRoleValid(userName: String, password: String, roles: Vector)
+    open fun isRoleValid(userName: String, password: String, roles: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var userName = userName

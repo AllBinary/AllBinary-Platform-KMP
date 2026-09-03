@@ -86,6 +86,7 @@ import org.allbinary.graphics.displayable.screen.WebCommandProcessor
 import org.allbinary.input.AllBinarySensorManager
 import org.allbinary.input.event.VirtualKeyboardEventHandler
 import org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
@@ -975,7 +976,10 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
         if (gameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE) {
 
             this.logUtil!!.putF(
-                "Set Running False",
+                StringMaker()
+                    .append("Set Running False: ")!!
+                    .append(gameCanvasRunnableInterface!!.toString())!!
+                    .toString(),
                 this,
                 this.gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE,
             )
@@ -1076,7 +1080,7 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
     : Hashtable<Any, Any> {
         this.logUtil!!.putF(this.commonStrings!!.START, this, "getCurrentStateHashtable")
 
-        var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         if (
             this.allbinaryGameCanvasRunnableInterface !=

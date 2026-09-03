@@ -26,10 +26,12 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.init.db.StaticPagesDbInitInfo
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.search.SearchData
@@ -41,6 +43,8 @@ open public class StaticPagesEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     private val TABLENAME: String = "staticpages"
 public constructor ()                        
@@ -54,7 +58,7 @@ this.setTableName(this.TABLENAME)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -92,10 +96,10 @@ var values = values
 var store = store
 var keywords = keywords
 
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, store)
-whereHashMap!!.put(BasicItemData.KEYWORDS, keywords)
+whereHashMap!!.put(basicItemData!!.KEYWORDS, keywords)
 
     var file: String = super.getField(whereHashMap, SearchData.PAGE)!!
 
@@ -111,7 +115,7 @@ whereHashMap!!.put(BasicItemData.KEYWORDS, keywords)
         //nullable = true from not(false or (false and false)) = true
 {
 var keywords = keywords
-super.deleteWhere(BasicItemData.KEYWORDS, keywords)
+super.deleteWhere(basicItemData!!.KEYWORDS, keywords)
 }
 
 
@@ -133,7 +137,7 @@ super.deleteWhere(BasicItemData.KEYWORDS, keywords)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
-super.updateWhere(BasicItemData.KEYWORDS, updatedValues!!.get(BasicItemData.KEYWORDS) as String, updatedValues)
+super.updateWhere(basicItemData!!.KEYWORDS, updatedValues!!.get(basicItemData!!.KEYWORDS) as String, updatedValues)
 }
 
 
@@ -143,7 +147,7 @@ super.updateWhere(BasicItemData.KEYWORDS, updatedValues!!.get(BasicItemData.KEYW
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(TABLENAME)!!.append(this.sqlStrings!!.START)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.SIXTY_CHAR_COLUMN_NOT_NULL)!!.append(BasicItemData.KEYWORDS)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(SearchData.PAGE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.append(BasicItemData.KEYWORDS)!!.append(this.sqlStrings!!.END)
+stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(TABLENAME)!!.append(this.sqlStrings!!.START)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.SIXTY_CHAR_COLUMN_NOT_NULL)!!.append(basicItemData!!.KEYWORDS)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(SearchData.PAGE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.append(basicItemData!!.KEYWORDS)!!.append(this.sqlStrings!!.END)
 
 
 

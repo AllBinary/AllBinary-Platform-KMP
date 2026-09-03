@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 interface TransactionResultInterface {
         
@@ -36,7 +37,7 @@ interface TransactionResultInterface {
 
     open fun getValues()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
     open fun getResult()
         //nullable = true from not(false or (false and true)) = true

@@ -26,8 +26,10 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
+import org.allbinary.logic.StdUtil
 
 open public class StoreFrontAdvertisementsStatistics
             : Object
@@ -45,7 +47,7 @@ var storeFrontInterface = storeFrontInterface
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
 
@@ -57,7 +59,7 @@ var storeFrontInterface = storeFrontInterface
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

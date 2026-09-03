@@ -26,10 +26,12 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewayData
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewayInterfaceFactoryInterface
 import org.allbinary.business.user.commerce.money.payment.gateway.modules.gateway.PaymentGatewayDomNodeFactoryInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.string.regex.replace.Replace
 import org.allbinary.string.CommonSeps
@@ -70,7 +72,7 @@ this.paymentGatewayDomNodeFactoryInterface= paymentGatewayDomNodeFactoryInterfac
 {
 var paymentMethod = paymentMethod
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var UNDERSCORE: String = "_"
@@ -176,9 +178,9 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(this.name)
 vector.add(this.value)
@@ -194,7 +196,7 @@ vector.add(this.value)
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(PaymentGatewayData.NAME.toString(), this.name)
 hashMap!!.put(PaymentGatewayData.VALUE.toString(), this.value)

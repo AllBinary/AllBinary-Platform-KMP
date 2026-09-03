@@ -21,6 +21,7 @@ import java.util.Hashtable
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
 import kotlin.Array
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
@@ -34,7 +35,7 @@ open public class ImageCacheBase : Object {
 
     val imageFactory: ImageFactory = ImageFactory.getInstance()!!
 
-    val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     val SIZE: Int = 128
 

@@ -29,12 +29,14 @@
         
 import java.lang.reflect.Method
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.JspTagException
 import javax.servlet.jsp.tagext.TagSupport
 import admin.taghelpers.AuthenticationHelperFactory
 import admin.taghelpers.AuthenticationRequestHelperFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.http.request.session.WeblisketSessionData
 import org.allbinary.logic.communication.log.LogUtil
@@ -56,7 +58,7 @@ open public class AuthenticationTag : CustomTagSupport {
 
     private var newPassword: String
 
-    private var roles: Vector
+    private var roles: BasicArrayList
 
     private var propertiesHashMap: HashMap<Any, Any>
 public constructor (){
@@ -100,7 +102,7 @@ this.newPassword= value
 }
 
 
-    open fun setRoles(values: Vector)
+    open fun setRoles(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -710,7 +712,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, tagStrings!!.DO_START_TAG)
                                 )
                         
                                     {
-                                    this.propertiesHashMap= HashMap<Any, Any>()
+                                    this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 
     
                         if(this.command.compareTo(org.allbinary.globals.GLOBALS2.NEWPASSWORD) == 0)

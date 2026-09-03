@@ -27,7 +27,8 @@
         
 import java.io.File
 import java.io.FileOutputStream
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.ImageOutputData
 import org.allbinary.logic.java.number.LongUtil
 import org.allbinary.logic.string.StringMaker
@@ -71,12 +72,12 @@ this.infoStringBuffer!!.append(infoString)
 }
 
 
-    open fun addActions(vectorOfStrings: Vector<String>)
+    open fun addActions(vectorOfStrings: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var vectorOfStrings = vectorOfStrings
 
-    var size: Int = vectorOfStrings!!.size!!
+    var size: Int = vectorOfStrings!!.size()!!
 
 
 

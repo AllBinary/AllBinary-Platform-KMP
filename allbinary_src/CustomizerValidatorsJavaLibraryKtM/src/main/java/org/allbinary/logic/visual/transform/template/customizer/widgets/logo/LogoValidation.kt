@@ -29,6 +29,7 @@ import java.util.HashMap
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.HttpRequestUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.validate.Validation
@@ -325,7 +326,7 @@ var document = document
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(LogoData.getInstance()!!.IMAGE, stringUtil!!.EMPTY_STRING)
 

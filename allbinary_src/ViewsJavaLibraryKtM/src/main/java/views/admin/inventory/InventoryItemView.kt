@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.context.modules.storefront.StoreFrontFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
@@ -37,6 +38,7 @@ import org.allbinary.business.user.commerce.inventory.item.BasicItemView
 import org.allbinary.business.user.commerce.inventory.item.ItemInterface
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadableItem
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadableItemView
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.file.upload.HttpFileUploadUtil
 import org.allbinary.logic.communication.http.request.HttpRequestUtil
 import org.allbinary.logic.communication.http.request.MultipartRequestParams
@@ -61,6 +63,8 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     val request: HttpServletRequest
 
     private var imageFileName: String
@@ -69,7 +73,7 @@ companion object {
 
     var itemInterface: ItemInterface
 
-    var downloadableItemVector: Vector
+    var downloadableItemVector: BasicArrayList
 
     private var requestHashMap: HashMap<Any, Any>
 public constructor (transformInfoInterface: TransformInfoInterface)                        
@@ -116,7 +120,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 this.setRequestHashMap(MultipartRequestParams(this.request).
                             toHashMap())
 
-    var imageFileItemObject: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
+    var imageFileItemObject: Any = this.getRequestHashMap()!!.get(basicItemData!!.IMAGE)!!
 
 
     
@@ -172,13 +176,13 @@ this.itemInterface= BasicItem(this.getRequestHashMap()) as ItemInterface
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
     var downloadableItem: DownloadableItem
 
 
-    var size: Int = this.downloadableItemVector!!.size!!
+    var size: Int = this.downloadableItemVector!!.size()!!
 
 
 
@@ -266,7 +270,7 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
 
 
     
-                        if(fieldName!!.compareTo(BasicItemData.IMAGE) == 0)
+                        if(fieldName!!.compareTo(basicItemData!!.IMAGE) == 0)
                         
                                     {
                                     
@@ -276,7 +280,7 @@ this.addDomNodeInterface(BasicItemView(this.itemInterface, vector))
     var inventoryUploadMediaUtil: InventoryUploadMediaUtil = InventoryUploadMediaUtil(storeFrontInterface, this.itemInterface)
 
 
-    var fileItem: FileItem = this.getRequestHashMap()!!.get(BasicItemData.IMAGE) as FileItem
+    var fileItem: FileItem = this.getRequestHashMap()!!.get(basicItemData!!.IMAGE) as FileItem
 
 this.itemInterface= inventoryUploadMediaUtil!!.saveFiles(fileItem!!.get(), this.imageFileName, this.mediaData)
 

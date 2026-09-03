@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.osgi.framework.BundleContext
 import org.osgi.framework.ServiceReference
 import org.allbinary.logic.communication.log.LogUtil
@@ -63,11 +65,11 @@ private constructor ()
             
     open fun getServicesObjectVector(bundleContext: Object, serviceReferences: Array<ServiceReference?>)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
     //var bundleContext = bundleContext
     //var serviceReferences = serviceReferences
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
     

@@ -29,7 +29,9 @@ import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.SQLException
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 
@@ -55,6 +57,8 @@ companion object {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val stdUtil: StdUtil = StdUtil.getInstance()!!
 
     private var connectionHashMap: HashMap<Any, Any> = 
                 null
@@ -99,7 +103,7 @@ var url = url
                                 )
                         
                                     {
-                                    this.connectionHashMap= HashMap<Any, Any>()
+                                    this.connectionHashMap= this.stdUtil!!.createHashMap()
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGPOOL))
@@ -119,7 +123,7 @@ var url = url
                                 
                         else {
                             
-    var connectionVector: Vector = this.connectionHashMap!!.get(url as Object) as Vector
+    var connectionVector: BasicArrayList = this.connectionHashMap!!.get(url as Object) as BasicArrayList
 
 
     
@@ -128,7 +132,7 @@ var url = url
                                 )
                         
                                     {
-                                    connectionVector= Vector()
+                                    connectionVector= BasicArrayListD()
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGPOOL))
@@ -155,7 +159,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET)
                                 
                              else 
     
-                        if(connectionVector!!.size == 0)
+                        if(connectionVector!!.size() == 0)
                         
                                     {
                                     
@@ -181,7 +185,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET)
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = connectionVector!!.size!!
+    var size: Int = connectionVector!!.size()!!
 
 
 
@@ -209,7 +213,7 @@ this.connectionHashMap!!.put(url, connectionVector)
 stringBuffer!!.append(this.NUMBER_OF_SQL_CONNECTIONS_FOR)
 stringBuffer!!.append(url)
 stringBuffer!!.append(this.IS)
-stringBuffer!!.appendint(connectionVector!!.size)
+stringBuffer!!.appendint(connectionVector!!.size())
 this.logUtil!!.putF(NUMBER_OF_SQL_CONNECTION_VECTORS +this.connectionHashMap!!.size, this, this.METHOD_GET)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET)
 
@@ -268,7 +272,7 @@ var sqlConnection = sqlConnection
                         
                                     {
                                     
-    var connectionVector: Vector
+    var connectionVector: BasicArrayList
 
 
     
@@ -277,14 +281,14 @@ var sqlConnection = sqlConnection
                                 )
                         
                                     {
-                                    this.connectionHashMap= HashMap<Any, Any>()
-connectionVector= Vector()
+                                    this.connectionHashMap= this.stdUtil!!.createHashMap()
+connectionVector= BasicArrayListD()
 connectionVector!!.add(sqlConnection)
 
                                     }
                                 
                         else {
-                            connectionVector= this.connectionHashMap!!.get(url as Object) as Vector
+                            connectionVector= this.connectionHashMap!!.get(url as Object) as BasicArrayList
 
     
                         if(connectionVector == 
@@ -292,7 +296,7 @@ connectionVector!!.add(sqlConnection)
                                 )
                         
                                     {
-                                    connectionVector= Vector()
+                                    connectionVector= BasicArrayListD()
 
                                     }
                                 
@@ -312,7 +316,7 @@ this.connectionHashMap!!.put(url, connectionVector)
 stringBuffer!!.append(this.NUMBER_OF_SQL_CONNECTIONS_FOR)
 stringBuffer!!.append(url)
 stringBuffer!!.append(this.IS)
-stringBuffer!!.appendint(connectionVector!!.size)
+stringBuffer!!.appendint(connectionVector!!.size())
 this.logUtil!!.putF(this.NUMBER_OF_SQL_CONNECTION_VECTORS +this.connectionHashMap!!.size, this, this.METHOD_ADD)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_ADD)
 

@@ -26,11 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.Arrays
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.transform.info.TransformInfoEntityBuilder
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.sort.StringComparator
 import org.allbinary.logic.visual.transform.info.CustomizerTransformInfoData
@@ -53,7 +55,7 @@ open public class CustomizersView : HttpStoreComponentView
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    val customizersVector: Vector
+    val customizersVector: BasicArrayList
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -76,10 +78,10 @@ this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this
     var node: Node = document.createElement(TransformTemplateCustomizersData.NAME)!!
 
 
-    var unsortedCustomizerViewVector: Vector = Vector()
+    var unsortedCustomizerViewVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = this.customizersVector!!.size!!
+    var size: Int = this.customizersVector!!.size()!!
 
 
 

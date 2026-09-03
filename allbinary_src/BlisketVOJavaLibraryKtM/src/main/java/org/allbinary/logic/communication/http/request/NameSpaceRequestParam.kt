@@ -28,7 +28,9 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.tokens.Tokenizer
@@ -43,7 +45,7 @@ open public class NameSpaceRequestParam
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var nameSpaceVector: Vector
+    private var nameSpaceVector: BasicArrayList
 
     private var nameSpacePropertiesHashMap: HashMap<Any, Any>
 
@@ -53,8 +55,8 @@ public constructor (nameSpace: String, value: String)
         {
 var nameSpace = nameSpace
 var value = value
-this.nameSpaceVector= Vector()
-this.nameSpacePropertiesHashMap= HashMap<Any, Any>()
+this.nameSpaceVector= BasicArrayListD()
+this.nameSpacePropertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 this.value= value
 
     var beginIndex: Int = nameSpace!!.indexOf(NameSpaceRequestParamData.NAME)!!
@@ -181,7 +183,7 @@ packageIndex++
 
     open fun getPackages()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -213,7 +215,7 @@ var packageIndex = packageIndex
                                 )
                         
                                     {
-                                    packagePropertiesHashMap= HashMap<Any, Any>()
+                                    packagePropertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 
                                     }
                                 
@@ -264,7 +266,7 @@ var properties = properties
     var propertiesTokenizer: Tokenizer = Tokenizer(NameSpaceRequestParamData.PROPERTIESSEPARATOR)
 
 
-    var packagePropertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var packagePropertiesHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var propertyVector: BasicArrayList = propertiesTokenizer!!.getTokensFromString(properties, BasicArrayListD())!!

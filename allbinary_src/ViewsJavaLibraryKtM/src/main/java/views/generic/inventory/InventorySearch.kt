@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.data.tables.staticpages.StaticPagesEntity
@@ -53,6 +54,8 @@ open public class InventorySearch
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     private val searchRequest: SearchRequest
 public constructor (searchRequest: SearchRequest)                        
@@ -86,7 +89,7 @@ this.searchRequest= searchRequest
 
     var file: String = StaticPagesEntity().
                             getFile(storeFront!!.getName(), Replace("-", CommonSeps.getInstance()!!.SPACE).
-                            all(columnValueHashMap!!.get(BasicItemData.KEYWORDS) as String))!!
+                            all(columnValueHashMap!!.get(basicItemData!!.KEYWORDS) as String))!!
 
 
     
@@ -191,7 +194,7 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
     var inventorySearchUtil: InventorySearchUtil = InventorySearchUtil.getInstance()!!
 
 
-    var vector: Vector = inventorySearchUtil!!.getBasicItemIdColumn(this.searchRequest)!!
+    var vector: BasicArrayList = inventorySearchUtil!!.getBasicItemIdColumn(this.searchRequest)!!
 
 
 

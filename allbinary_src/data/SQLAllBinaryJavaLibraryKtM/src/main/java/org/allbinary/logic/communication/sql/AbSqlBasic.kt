@@ -35,6 +35,7 @@ import java.sql.SQLException
 import java.sql.Statement
 import org.allbinary.business.init.db.DatabaseConnectionInfoInterface
 import org.allbinary.business.init.db.DbConnectionInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.connection.pool.SqlConnectionPool
 import org.allbinary.logic.string.StringUtil
@@ -61,6 +62,8 @@ open public class AbSqlBasic
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+    val stdUtil: StdUtil = StdUtil.getInstance()!!
 
     val sqlTypeStrings: SqlTypeStrings = SqlTypeStrings.getInstance()!!
 

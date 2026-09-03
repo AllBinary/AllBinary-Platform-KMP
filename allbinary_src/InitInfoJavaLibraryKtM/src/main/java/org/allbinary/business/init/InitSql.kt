@@ -33,9 +33,11 @@ import java.sql.SQLException
 import java.sql.Statement
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.init.db.DatabaseConnectionInfoInterface
 import org.allbinary.business.init.db.DbConnectionInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
@@ -59,6 +61,8 @@ open public class InitSql
     val sqlTypeStrings: SqlTypeStrings = SqlTypeStrings.getInstance()!!
 
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
+
+    val stdUtil: StdUtil = StdUtil.getInstance()!!
 
     val INSERT: String = "insert"
 
@@ -269,7 +273,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-result= HashMap<Any, Any>()
+result= stdUtil!!.createHashMap()
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
 
@@ -440,7 +444,7 @@ this.executeSQLStatement(sqlStatement)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -453,7 +457,7 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
         try {
             
-    var size: Int = values.size!!
+    var size: Int = values.size()!!
 
 
 
@@ -470,7 +474,7 @@ stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 }
 
 
-    var value: String = this.getValue(values.lastElement() as String)!!
+    var value: String = this.getValue(values.get(values.size() -1) as String)!!
 
 stringBuffer!!.append(value)
 stringBuffer!!.append(this.INSERT_END)

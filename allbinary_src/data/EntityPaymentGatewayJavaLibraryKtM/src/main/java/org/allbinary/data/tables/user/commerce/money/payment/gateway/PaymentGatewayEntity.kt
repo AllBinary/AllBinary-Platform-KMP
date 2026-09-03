@@ -27,7 +27,8 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
@@ -40,6 +41,7 @@ import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGateway
 import org.allbinary.business.user.commerce.money.payment.types.BasicPaymentType
 import org.allbinary.business.user.commerce.money.payment.types.BasicPaymentTypeUtil
 import org.allbinary.data.generator.PaymentGatewayIdGenerator
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.crypt.SuperCrypt
@@ -88,11 +90,11 @@ var paymentGatewayInterface = paymentGatewayInterface
                                     }
                                 
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(PaymentGatewayIdGenerator().
                             getNext())
-vector.addAll(PaymentGatewayEncryptedMapping(paymentGatewayInterface).
+vector.addAllList(PaymentGatewayEncryptedMapping(paymentGatewayInterface).
                             toVector())
 
     var calendar: Calendar = Calendar.getInstance()!!
@@ -146,7 +148,7 @@ var paymentGatewayInterface = paymentGatewayInterface
 
 paymentGatewayInterface!!.setLastModified(time)
 
-    var whereKeyValuePairs: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereKeyValuePairs: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereKeyValuePairs!!.put(StoreFrontData.getInstance()!!.NAME.toString(), paymentGatewayInterface!!.getStoreName())
 whereKeyValuePairs!!.put(PaymentGatewayData.NAME.toString(), paymentGatewayInterface!!.getName())
@@ -202,10 +204,10 @@ var paymentType = paymentType
 
         try {
             
-    var paymentGatewayHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var paymentGatewayHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var whereKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereKeyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereKeyAndValue!!.put(StoreFrontData.getInstance()!!.NAME.toString(), storeName)
 whereKeyAndValue!!.put(PaymentGatewayData.NAME.toString(), paymentType!!.getName())
@@ -318,12 +320,12 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
 
     open fun findPaymentTypeVectorByStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var storeName = storeName
 
         try {
             
-    var paymentGatewayNameVector: Vector = Vector()
+    var paymentGatewayNameVector: BasicArrayList = BasicArrayListD()
 
 paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(), StoreFrontData.getInstance()!!.NAME.toString(), storeName)
 
@@ -334,10 +336,10 @@ paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(
                         
                                     {
                                     
-    var paymentGatewayVector: Vector = Vector()
+    var paymentGatewayVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = paymentGatewayNameVector!!.size!!
+    var size: Int = paymentGatewayNameVector!!.size()!!
 
 
 
@@ -377,7 +379,7 @@ paymentGatewayVector!!.add(paymentType)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Vector()
+                        return BasicArrayListD()
 
                         }
                             
@@ -410,7 +412,7 @@ var paymentType = paymentType
 
         try {
             
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME.toString(), storeName)
 whereHashMap!!.put(PaymentGatewayData.NAME.toString(), paymentType!!.getName())

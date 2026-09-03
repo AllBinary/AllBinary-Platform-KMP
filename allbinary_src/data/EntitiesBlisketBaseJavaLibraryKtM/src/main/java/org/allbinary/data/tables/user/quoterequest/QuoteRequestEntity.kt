@@ -28,12 +28,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
 import org.allbinary.business.quoterequest.QuoteRequestData
 import org.allbinary.business.user.UserData
 import org.allbinary.business.user.quoterequest.QuoteRequest
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
@@ -56,7 +58,7 @@ this.setTableName(this.tableName)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -96,7 +98,7 @@ var values = values
 var userName = userName
 var id = id
 
-    var row: HashMap<Any, Any> = HashMap<Any, Any>()
+    var row: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 row.put(UserData.USERNAME, userName)
 row.put(QuoteRequestData.getInstance()!!.ID, id.toString())
@@ -132,7 +134,7 @@ row.put(QuoteRequestData.getInstance()!!.ID, id.toString())
 
     open fun getIds(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var userName = userName
 
 

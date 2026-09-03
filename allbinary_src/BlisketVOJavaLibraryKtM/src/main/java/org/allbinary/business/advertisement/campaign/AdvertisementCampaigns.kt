@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.advertisement.AdvertisementInterface
 import org.allbinary.business.advertisement.AdvertisementsInterface
 import org.allbinary.business.advertisement.search.AdvertisementSearchInterface
@@ -36,8 +37,8 @@ open public class AdvertisementCampaigns
                 , AdvertisementCampaignsInterface {
         
 
-    private var advertisementsVector: Vector
-public constructor (vector: Vector)
+    private var advertisementsVector: BasicArrayList
+public constructor (vector: BasicArrayList)
             : super()
         {
 var vector = vector
@@ -72,7 +73,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.advertisementsVector!!.size
+                        return this.advertisementsVector!!.size()
 }
 
 

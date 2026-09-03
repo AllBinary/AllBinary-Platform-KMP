@@ -28,12 +28,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomData
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
@@ -48,11 +50,11 @@ open public class CssPropertyValues
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var propertyValueVector: Vector
+    private var propertyValueVector: BasicArrayList
 public constructor ()
             : super()
         {
-this.propertyValueVector= Vector()
+this.propertyValueVector= BasicArrayListD()
 }
 
 public constructor (node: Node)
@@ -60,23 +62,23 @@ public constructor (node: Node)
         {
 var node = node
 
-    var indexPropertyValueHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var indexPropertyValueHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-this.propertyValueVector= Vector()
+this.propertyValueVector= BasicArrayListD()
 
-    var cssPropertyNodeVector: Vector = DomSearchHelper.getAllNodes(CssPropertyValueData.getInstance()!!.NAME, node.getChildNodes())!!
+    var cssPropertyNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(CssPropertyValueData.getInstance()!!.NAME, node.getChildNodes())!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
-                                    this.logUtil!!.putF("Number Of Properties: " +cssPropertyNodeVector!!.size, this, "CssProperties()")
+                                    this.logUtil!!.putF("Number Of Properties: " +cssPropertyNodeVector!!.size(), this, "CssProperties()")
 
                                     }
                                 
 
-    var size: Int = cssPropertyNodeVector!!.size!!
+    var size: Int = cssPropertyNodeVector!!.size()!!
 
 
 
@@ -144,13 +146,13 @@ this.propertyValueVector!!.add(propertyValue)
     var cssPropertyValueData: CssPropertyValueData = CssPropertyValueData.getInstance()!!
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = this.propertyValueVector!!.size!!
+    var size: Int = this.propertyValueVector!!.size()!!
 
 
 

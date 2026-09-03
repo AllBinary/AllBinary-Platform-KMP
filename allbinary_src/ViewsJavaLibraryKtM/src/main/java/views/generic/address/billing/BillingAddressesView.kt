@@ -27,7 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.user.address.BillingAddressData
 import org.allbinary.business.user.address.StreetAddress
@@ -49,7 +50,7 @@ open public class BillingAddressesView : HttpStoreComponentView
 
     private var request: HttpServletRequest
 
-    var streetAddresses: Vector
+    var streetAddresses: BasicArrayList
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -86,7 +87,7 @@ var document = document
     var billingAddressesNode: Node = document.createElement(BillingAddressData.MULTIPLE)!!
 
 
-    var size: Int = this.streetAddresses!!.size!!
+    var size: Int = this.streetAddresses!!.size()!!
 
 
 
@@ -101,7 +102,7 @@ var document = document
 billingAddressesNode!!.appendChild(streetAddress!!.toXmlNode(document))
 }
 
-billingAddressesNode!!.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.NUMBEROFADDRESSES, Integer(streetAddresses!!.size).
+billingAddressesNode!!.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.NUMBEROFADDRESSES, Integer(streetAddresses!!.size()).
                             toString()))
 
 

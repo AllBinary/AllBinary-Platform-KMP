@@ -50,6 +50,7 @@ import org.allbinary.graphics.RectangleFactory
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.LayerDistanceUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -197,7 +198,7 @@ open public class RTSLayer :
 
     private val rootName: String
 
-    val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private val BUILD_VALUE: Int = 63
 

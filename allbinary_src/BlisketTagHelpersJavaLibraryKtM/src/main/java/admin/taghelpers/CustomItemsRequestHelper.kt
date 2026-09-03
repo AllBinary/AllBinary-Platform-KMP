@@ -27,7 +27,8 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.DynamicObjectData
@@ -35,6 +36,7 @@ import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.custom.CustomItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.customs.CustomItemsEntityFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
@@ -43,6 +45,8 @@ open public class CustomItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     private var request: HttpServletRequest
 
@@ -66,7 +70,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(BasicItemData.ID)
+this.id= this.request.getParameter(basicItemData!!.ID)
 this.className= this.request.getParameter(DynamicObjectData.NAME)
 this.packageName= this.request.getParameter(CustomItemData.PACKAGE)
 this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
@@ -78,9 +82,9 @@ this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIF
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-values.put(BasicItemData.ID, this.id)
+values.put(basicItemData!!.ID, this.id)
 values.put(DynamicObjectData.NAME, this.className)
 values.put(CustomItemData.PACKAGE, this.packageName)
 
@@ -114,7 +118,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
                                 
 
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.id)
 values.add(this.className)

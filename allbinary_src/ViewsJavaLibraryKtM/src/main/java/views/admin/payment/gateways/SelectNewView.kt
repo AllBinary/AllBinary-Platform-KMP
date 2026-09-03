@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.money.payment.types.BasicPaymentTypeUtil
 import org.allbinary.data.tables.user.commerce.money.payment.gateway.PaymentGatewayEntityFactory
 import org.allbinary.data.tables.user.commerce.money.payment.gateway.PaymentGatewayEntityInterface
@@ -59,10 +60,10 @@ var transformInfoInterface = transformInfoInterface
     var paymentGatewayEntityInterface: PaymentGatewayEntityInterface = PaymentGatewayEntityFactory.getInstance()!!
 
 
-    var existingGateways: Vector = paymentGatewayEntityInterface!!.findPaymentTypeVectorByStore(this.getPaymentGatewayPrimaryKey()!!.getStoreName())!!
+    var existingGateways: BasicArrayList = paymentGatewayEntityInterface!!.findPaymentTypeVectorByStore(this.getPaymentGatewayPrimaryKey()!!.getStoreName())!!
 
 
-    var allGatewaysLessExisting: Vector = BasicPaymentTypeUtil.getInstance()!!.difference(existingGateways)!!
+    var allGatewaysLessExisting: BasicArrayList = BasicPaymentTypeUtil.getInstance()!!.difference(existingGateways)!!
 
 
 

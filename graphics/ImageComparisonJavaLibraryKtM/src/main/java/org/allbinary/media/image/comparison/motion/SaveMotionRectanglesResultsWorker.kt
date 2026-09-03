@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.string.CommonLabels
@@ -44,17 +46,17 @@ open public class SaveMotionRectanglesResultsWorker
 
     private var running: Boolean= false
 
-    private var motionRectanglesVector: Vector
+    private var motionRectanglesVector: BasicArrayList
 public constructor ()
             : super()
         {
-this.motionRectanglesVector= Vector()
+this.motionRectanglesVector= BasicArrayListD()
 }
 
 
     open fun getMotionRectanglesVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

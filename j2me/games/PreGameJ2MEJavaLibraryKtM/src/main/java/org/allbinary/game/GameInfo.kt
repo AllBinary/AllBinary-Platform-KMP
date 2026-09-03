@@ -18,6 +18,7 @@ package org.allbinary.game
 import java.lang.Integer
 import java.lang.Object
 import java.util.Hashtable
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -185,7 +186,7 @@ open public class GameInfo : Object {
     // nullable = true from not(false or (false and true)) = true
     : Hashtable<Any, Any> {
 
-        var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         hashtable.put(this.gameInfoData!!.GAME_TYPE, this.getGameType()!!.toString())
         hashtable.put(this.gameInfoData!!.GAME_MODE, this.gameMode!!.toString())

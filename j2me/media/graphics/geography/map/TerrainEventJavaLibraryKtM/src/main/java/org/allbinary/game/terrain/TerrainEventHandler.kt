@@ -17,7 +17,7 @@ package org.allbinary.game.terrain
 
 import java.lang.Object
 import java.util.Hashtable
-import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.EventStrings
@@ -29,12 +29,12 @@ open public class TerrainEventHandler : BasicEventHandler {
 
     companion object {
 
-        private var hashtable: Hashtable<Any, Any> = NullUtil.getInstance()!!.NULL_TABLE
+        private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.NULL_TABLE
 
         open fun init()
             // nullable = true from not(false or (false and true)) = true
         {
-            TerrainEventHandler.hashtable = Hashtable<Any, Any>()
+            TerrainEventHandler.hashtable = StdUtil.getInstance()!!.createHashtable()
         }
 
         open fun getInstance(

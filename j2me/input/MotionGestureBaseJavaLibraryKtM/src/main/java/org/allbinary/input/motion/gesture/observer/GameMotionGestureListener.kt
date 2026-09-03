@@ -37,8 +37,6 @@ open public class GameMotionGestureListener : Object, MotionGestureEventListener
 
     private var touchGestureCollection: BasicArrayList = BasicArrayListD()
 
-    private var scrolledGestureCollection: BasicArrayList = BasicArrayListD()
-
     private var signed: CompleteMotionGestureListenerInterface
 
     public constructor(signed: CompleteMotionGestureListenerInterface) : super() {

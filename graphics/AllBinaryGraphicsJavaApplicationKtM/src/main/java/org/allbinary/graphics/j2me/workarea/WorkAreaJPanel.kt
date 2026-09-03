@@ -47,6 +47,7 @@ import org.allbinary.graphics.j2me.workarea.canvas.event.MyCanvasEventService
 import org.allbinary.graphics.j2me.workarea.properties.PropertiesJPanel
 import org.allbinary.graphics.j2me.workarea.tools.ToolJPanel
 import org.allbinary.log.LOGGING
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
 import org.w3c.dom.Document
@@ -226,7 +227,7 @@ MyCanvasEventService.addListener(this as MyCanvasEventListener)
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var canvasJPanelHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var canvasJPanelHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var size: Int = this.canvasJPanelList!!.size()!!

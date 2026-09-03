@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import admin.tags.AbTagData
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadableItem
@@ -64,7 +65,7 @@ this.downloadableItem= downloadableInventoryItemView!!.getDownloadableItem()
 
         try {
             
-    var vector: Vector = this.downloadableItem!!.toVector()!!
+    var vector: BasicArrayList = this.downloadableItem!!.toVector()!!
 
 DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.insert(vector)
 

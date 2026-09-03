@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 
 open public class BufferedImageInfoFactory
@@ -34,7 +35,7 @@ open public class BufferedImageInfoFactory
         
 companion object {
             
-    private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    private var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
     open fun getInstance(width: Int, height: Int, type: Int)
         //nullable =  from not(true or (false and false)) = 

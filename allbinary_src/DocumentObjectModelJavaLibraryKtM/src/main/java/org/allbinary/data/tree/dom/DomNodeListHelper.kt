@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.w3c.dom.NodeList
 
 open public class DomNodeListHelper
@@ -36,10 +38,10 @@ companion object {
             
     open fun getVector(nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var nodeList = nodeList
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = nodeList!!.getLength()!!

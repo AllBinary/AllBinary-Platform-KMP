@@ -27,6 +27,7 @@
         
 import java.util.HashMap
 import javax.servlet.jsp.tagext.TagSupport
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -52,7 +53,7 @@ public constructor ()
 
                                     }
                                 
-this.propertiesHashMap= HashMap<Any, Any>()
+this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 }
 
 
@@ -79,7 +80,7 @@ this.propertiesHashMap= HashMap<Any, Any>()
 
                                     }
                                 
-this.propertiesHashMap= HashMap<Any, Any>()
+this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 
 
 

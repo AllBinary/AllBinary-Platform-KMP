@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.basket.BasketReview
 import org.allbinary.business.user.commerce.inventory.order.OrderInterface
 import org.allbinary.data.tables.BasicDataTableInterface
@@ -49,7 +50,7 @@ interface OrderItemsEntityInterface : BasicDataTableInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 

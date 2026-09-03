@@ -28,7 +28,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.context.modules.storefront.StoreFront
 import org.allbinary.business.context.modules.storefront.StoreFrontData
@@ -186,13 +187,13 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUES
     var userName: String = this.weblisketSession!!.getUserName()!!
 
 
-    var vector: Vector = quoteRequestEntity!!.getIds(userName)!!
+    var vector: BasicArrayList = quoteRequestEntity!!.getIds(userName)!!
 
 
     var id: Int = 0
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

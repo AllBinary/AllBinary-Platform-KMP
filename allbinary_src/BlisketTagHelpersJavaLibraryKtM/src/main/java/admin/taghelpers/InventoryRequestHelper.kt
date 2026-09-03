@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import admin.tags.AbTagData
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
@@ -42,6 +43,8 @@ open public class InventoryRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     private val itemInterface: ItemInterface
 public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -68,7 +71,7 @@ this.itemInterface= itemView!!.getItemInterface()
     var dataMappingInterface: TableMappingInterface = this.getItemInterface() as TableMappingInterface
 
 
-    var values: Vector = dataMappingInterface!!.toVector()!!
+    var values: BasicArrayList = dataMappingInterface!!.toVector()!!
 
 InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.insert(values)
 
@@ -123,12 +126,12 @@ InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.insert(val
 
     var id: String = dataMappingInterface!!.getKey() as String
 
-InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.deleteWhere(BasicItemData.ID, id)
+InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.deleteWhere(basicItemData!!.ID, id)
 
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Successfully Removed the item with ")
-stringBuffer!!.append(BasicItemData.ID)
+stringBuffer!!.append(basicItemData!!.ID)
 stringBuffer!!.append("=")
 stringBuffer!!.append(id)
 stringBuffer!!.append(" from to the Inventory table")

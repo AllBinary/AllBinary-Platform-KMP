@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.module.AbstractInputAutomationWorker
 import org.allbinary.input.automation.module.InputAutomationActionInterface
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfile
@@ -72,10 +73,10 @@ this.setImageComparisonWorker(ImageComparisonWorker(imageComparatorConstraintsIn
 this.setMotionRectanglesWorker(MotionRectanglesWorker(motionRectangleConstraintsInterface))
 this.setGenericProfile(genericProfile)
 
-    var vector: Vector = this.getGenericProfile()!!.getGenericProfileDataWorkerTypeVector()!!
+    var vector: BasicArrayList = this.getGenericProfile()!!.getGenericProfileDataWorkerTypeVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -169,7 +170,7 @@ this.logUtil!!.putF("Processing Action: " +actionNameString, this, this.PROCESS_
     var genericProfileActionScript: GenericProfileActionScript = genericProfileAction!!.getGenericProfileActionScript()!!
 
 
-    var vector: Vector = genericProfileActionScript!!.getProfileActionConditionInterfaceVector()!!
+    var vector: BasicArrayList = genericProfileActionScript!!.getProfileActionConditionInterfaceVector()!!
 
 CaptureWorkerUtil.processProfileActionConditions(vector, getFrame())
 }

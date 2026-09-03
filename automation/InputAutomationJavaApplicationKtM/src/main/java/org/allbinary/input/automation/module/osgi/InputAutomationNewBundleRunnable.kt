@@ -41,6 +41,7 @@ import org.osgi.framework.Bundle
 import org.osgi.framework.BundleContext
 import org.osgi.framework.Constants
 import bundle.input.automation.InputAutomationBundleActivator
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.FileWrapperUtil
 import org.allbinary.logic.io.file.directory.SubDirectory
@@ -163,7 +164,7 @@ bundle= this.install(list.get(index) as URL)
 : HashMap<Any, Any>{
 this.logUtil!!.putF(this.commonStrings!!.START, this, "getAllJarSymbolicNameHashMap")
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var jarFileBasicArrayList: BasicArrayList = this.getJarModuleFileBasicArrayList()!!

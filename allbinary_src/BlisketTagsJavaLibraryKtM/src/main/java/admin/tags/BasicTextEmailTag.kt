@@ -29,6 +29,7 @@ import java.lang.reflect.Method
 import java.util.HashMap
 import javax.servlet.jsp.JspTagException
 import admin.taghelpers.BasicTextEmailHelperFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.log.LogUtil
 import tags.CustomTagSupport
@@ -67,7 +68,7 @@ this.body= value
 
         try {
             
-    var propertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var propertiesHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 propertiesHashMap!!.put("Subject", this.subject)
 propertiesHashMap!!.put("Body", this.body)

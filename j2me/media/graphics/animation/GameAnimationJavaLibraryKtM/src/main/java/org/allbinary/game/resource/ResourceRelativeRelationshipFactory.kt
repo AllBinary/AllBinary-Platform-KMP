@@ -18,6 +18,7 @@ package org.allbinary.game.resource
 import java.lang.Object
 import java.util.Hashtable
 import org.allbinary.graphics.RelativeRelationship
+import org.allbinary.logic.StdUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
@@ -30,7 +31,7 @@ open public class ResourceRelativeRelationshipFactory :
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
-    private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private var initialized: Boolean = false
 

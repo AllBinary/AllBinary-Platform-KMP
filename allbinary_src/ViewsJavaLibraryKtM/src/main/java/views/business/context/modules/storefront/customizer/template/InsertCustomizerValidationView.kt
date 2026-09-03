@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.transform.info.TransformInfoEntityBuilder
 import org.allbinary.logic.communication.http.request.RequestParams
 import org.allbinary.logic.communication.log.LogUtil
@@ -110,10 +111,10 @@ this.viewName= requestHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as S
     var objectConfig: NoTemplateTransformInfoObjectConfig = NoTemplateTransformInfoObjectConfig(this.getTransformInfoInterface(), this.getTransformInfoInterface()!!.getObjectConfigInterface()!!.toXmlDoc())
 
 
-    var componentVector: Vector = objectConfig!!.getGroupTransforms()!!
+    var componentVector: BasicArrayList = objectConfig!!.getGroupTransforms()!!
 
 
-    var size: Int = componentVector!!.size!!
+    var size: Int = componentVector!!.size()!!
 
 
     
@@ -124,7 +125,7 @@ this.viewName= requestHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as S
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Pointing ")
-stringBuffer!!.appendint(componentVector!!.size)
+stringBuffer!!.appendint(componentVector!!.size())
 stringBuffer!!.append(" Components")
 this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VALID)
 

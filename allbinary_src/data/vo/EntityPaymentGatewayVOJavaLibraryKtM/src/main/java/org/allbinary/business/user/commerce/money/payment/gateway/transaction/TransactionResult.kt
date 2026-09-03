@@ -27,7 +27,9 @@
         
 import java.util.HashMap
 import java.util.Hashtable
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.tokens.Tokenizer
@@ -112,12 +114,12 @@ this.result= "Needs to have the hashmap converted to string for other constructo
 
     open fun getAllPossibleKeys()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
     var paymentTransactionKeysFactory: PaymentTransactionKeysFactory = PaymentTransactionKeysFactory.getInstance()!!
 
 
-    var verisignResponseKeys: Vector = Vector()
+    var verisignResponseKeys: BasicArrayList = BasicArrayListD()
 
 verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.RESULT.toString())
 verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.PNREF.toString())
@@ -151,15 +153,15 @@ verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.EXCEPTION7.toString()
 
     open fun getValues()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var keyVector: Vector = this.getAllPossibleKeys()!!
-
-
-    var valueVector: Vector = Vector()
+    var keyVector: BasicArrayList = this.getAllPossibleKeys()!!
 
 
-    var size: Int = keyVector!!.size!!
+    var valueVector: BasicArrayList = BasicArrayListD()
+
+
+    var size: Int = keyVector!!.size()!!
 
 
 

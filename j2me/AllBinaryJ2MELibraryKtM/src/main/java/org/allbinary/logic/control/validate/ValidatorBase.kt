@@ -17,7 +17,7 @@ package org.allbinary.logic.control.validate
 
 import java.lang.Object
 import java.util.Hashtable
-import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
@@ -61,7 +61,7 @@ open public class ValidatorBase : Object, ValidatorBaseInterface {
     : Hashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance()!!.NULL_TABLE
+        return StdUtil.getInstance()!!.NULL_TABLE
     }
 
     override fun toList()

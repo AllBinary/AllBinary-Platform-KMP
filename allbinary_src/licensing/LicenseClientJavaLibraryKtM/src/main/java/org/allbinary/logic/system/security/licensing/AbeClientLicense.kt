@@ -26,7 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
-import java.util.Vector
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
@@ -87,7 +87,7 @@ public constructor (hashtable: Hashtable<Any, Any>)
             : super()
         {
 var hashtable = hashtable
-this.hashtable= Hashtable<Any, Any>()
+this.hashtable= StdUtil.getInstance()!!.createHashtable()
 
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
 
@@ -115,11 +115,11 @@ this.hashtable= Hashtable<Any, Any>()
                                 
 this.id= hashtable.get(abeClientInformationData!!.LICENSEID) as String
 
-    var vector: Vector = hashtable.get(abeClientInformationData!!.LICENSESERVERS) as Vector
+    var vector: BasicArrayList = hashtable.get(abeClientInformationData!!.LICENSESERVERS) as BasicArrayList
 
 this.servers= BasicArrayListD()
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.awt.event.ActionEvent
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.swing
 import javax.swing.tree.TreePath
 import org.allbinary.input.automation.actions.script.JTreeInterfaceFactory
@@ -52,9 +53,9 @@ open public class BasicProfileActionScriptCondition : ProfileActionScriptItem
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var profileActionProcessorInterfaceVector: Vector
+    private var profileActionProcessorInterfaceVector: BasicArrayList
 
-    private var profileActionConditionInterfaceVector: Vector
+    private var profileActionConditionInterfaceVector: BasicArrayList
 public constructor (label: String, node: Node)                        
 
                             : super(label, node){
@@ -174,8 +175,8 @@ this.init()
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.setProfileActionProcessorInterfaceVector(Vector())
-this.setProfileActionConditionInterfaceVector(Vector())
+this.setProfileActionProcessorInterfaceVector(BasicArrayListD())
+this.setProfileActionConditionInterfaceVector(BasicArrayListD())
 this.getJPopupMenu()!!.add(this.getConditionJPopupMenu())
 this.getJPopupMenu()!!.add(this.getInputJPopupMenu())
 this.getJPopupMenu()!!.add(this.getOutputJPopupMenu())
@@ -309,10 +310,10 @@ var document = document
     var node: Node = document.createElement(GenericProfileActionScriptConditionData.NAME)!!
 
 
-    var profileActionConditionInterfaceVector: Vector = this.getProfileActionConditionInterfaceVector()!!
+    var profileActionConditionInterfaceVector: BasicArrayList = this.getProfileActionConditionInterfaceVector()!!
 
 
-    var size: Int = profileActionConditionInterfaceVector!!.size!!
+    var size: Int = profileActionConditionInterfaceVector!!.size()!!
 
 
 
@@ -328,10 +329,10 @@ node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
 }
 
 
-    var profileActionProcessorInterfaceVector: Vector = this.getProfileActionProcessorInterfaceVector()!!
+    var profileActionProcessorInterfaceVector: BasicArrayList = this.getProfileActionProcessorInterfaceVector()!!
 
 
-    var size2: Int = profileActionProcessorInterfaceVector!!.size!!
+    var size2: Int = profileActionProcessorInterfaceVector!!.size()!!
 
 
 
@@ -356,7 +357,7 @@ node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
 
     open fun getProfileActionConditionInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -365,7 +366,7 @@ node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
 }
 
 
-    open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: Vector)
+    open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionConditionInterfaceVector = profileActionConditionInterfaceVector
@@ -471,7 +472,7 @@ this.logUtil!!.put("Error", this, "actionPerformed", e)
 
     open fun getProfileActionProcessorInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -480,7 +481,7 @@ this.logUtil!!.put("Error", this, "actionPerformed", e)
 }
 
 
-    open fun setProfileActionProcessorInterfaceVector(profileActionProcessorInterfaceVector: Vector)
+    open fun setProfileActionProcessorInterfaceVector(profileActionProcessorInterfaceVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionProcessorInterfaceVector = profileActionProcessorInterfaceVector
@@ -506,10 +507,10 @@ JTreeInterfaceFactory.getInstance()!!.getJTreeInterface()!!.getActionScriptJTree
 : Boolean{
 var frame = frame
 
-    var profileActionConditionInterfaceVector: Vector = this.getProfileActionConditionInterfaceVector()!!
+    var profileActionConditionInterfaceVector: BasicArrayList = this.getProfileActionConditionInterfaceVector()!!
 
 
-    var size: Int = profileActionConditionInterfaceVector!!.size!!
+    var size: Int = profileActionConditionInterfaceVector!!.size()!!
 
 
 
@@ -553,10 +554,10 @@ var frame = frame
 this.logUtil!!.putF(StringMaker().
                             append("Start - Processing ")!!.appendint(this.getProfileActionProcessorInterfaceVector()!!.size())!!.append(" inputs")!!.toString(), this, this.commonStrings!!.PROCESS)
 
-    var profileActionProcessorInterfaceVector: Vector = this.getProfileActionProcessorInterfaceVector()!!
+    var profileActionProcessorInterfaceVector: BasicArrayList = this.getProfileActionProcessorInterfaceVector()!!
 
 
-    var size: Int = profileActionProcessorInterfaceVector!!.size!!
+    var size: Int = profileActionProcessorInterfaceVector!!.size()!!
 
 
 

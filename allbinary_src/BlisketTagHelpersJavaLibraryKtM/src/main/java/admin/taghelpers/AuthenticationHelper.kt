@@ -29,7 +29,8 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import javax.servlet.jsp.tagext.TagSupport
@@ -390,7 +391,7 @@ stringBuffer!!.append("Trying New login<p/>")
 }
 
 
-    open fun isAuthenticationSessionValid(roles: Vector)
+    open fun isAuthenticationSessionValid(roles: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var roles = roles

@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.osgi.framework.BundleContext
 import org.osgi.framework.ServiceReference
 import org.allbinary.logic.communication.log.LogUtil
@@ -68,11 +69,11 @@ this.setOsgiServiceVisitorInterface(osgiServiceVisitorInterface)
 {
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 
-    var vector: Vector = this.osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
+    var vector: BasicArrayList = this.osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
 
-this.logUtil!!.putF("Processing " +vector.size +" Services", this, this.commonStrings!!.PROCESS)
+this.logUtil!!.putF("Processing " +vector.size() +" Services", this, this.commonStrings!!.PROCESS)
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
     var osgiServiceInterface: OSGIServiceInterface

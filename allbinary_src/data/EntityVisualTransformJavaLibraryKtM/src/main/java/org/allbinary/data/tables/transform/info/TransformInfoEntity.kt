@@ -26,12 +26,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.crypt.Encoder
@@ -76,7 +78,7 @@ this.transformInfoFactoryInterface= transformInfoFactoryInterface
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -152,7 +154,7 @@ var pageContext = pageContext
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
 
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(transformInfoData!!.NAME, name)
 
@@ -223,16 +225,16 @@ hashMap!!.put(transformInfoData!!.DATA, Encoder.decode.toCharArray())
             
     open fun getObjectConfigs(storeName: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var storeName = storeName
 
-    var objectConfigVector: Vector = Vector()
+    var objectConfigVector: BasicArrayList = BasicArrayListD()
 
 
-    var objectConfigColumnVector: Vector = this.getColumnWhere(TransformInfoData.getInstance()!!.OBJECTCONFIG, StoreFrontData.getInstance()!!.NAME, storeName)!!
+    var objectConfigColumnVector: BasicArrayList = this.getColumnWhere(TransformInfoData.getInstance()!!.OBJECTCONFIG, StoreFrontData.getInstance()!!.NAME, storeName)!!
 
 
-    var size: Int = objectConfigColumnVector!!.size!!
+    var size: Int = objectConfigColumnVector!!.size()!!
 
 
 
@@ -260,16 +262,16 @@ objectConfigVector!!.add(this.transformInfoObjectConfigAndManipulatorFactoryInte
             
     open fun getNames(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var storeName = storeName
 
-    var viewNameVector: Vector = Vector()
+    var viewNameVector: BasicArrayList = BasicArrayListD()
 
 
-    var columnVector: Vector = this.getColumnWhere(TransformInfoData.getInstance()!!.NAME, StoreFrontData.getInstance()!!.NAME, storeName)!!
+    var columnVector: BasicArrayList = this.getColumnWhere(TransformInfoData.getInstance()!!.NAME, StoreFrontData.getInstance()!!.NAME, storeName)!!
 
 
-    var size: Int = columnVector!!.size!!
+    var size: Int = columnVector!!.size()!!
 
 
 

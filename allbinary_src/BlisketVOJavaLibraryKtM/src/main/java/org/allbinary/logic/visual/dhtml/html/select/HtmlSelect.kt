@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.io.LineReader
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.dhtml.html.HtmlTag
@@ -59,7 +61,7 @@ open public class HtmlSelect : HtmlTag {
 
     private var selected: String
 
-    private var options: Vector
+    private var options: BasicArrayList
 
     private var multiple: String = "multiple"
 
@@ -73,7 +75,7 @@ this.before= before
 this.size= size
 this.name= name
 this.after= after
-this.options= Vector()
+this.options= BasicArrayListD()
 }
 
 

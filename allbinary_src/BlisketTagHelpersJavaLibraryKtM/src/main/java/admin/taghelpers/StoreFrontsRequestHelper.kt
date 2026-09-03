@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.context.modules.storefront.StoreFront
@@ -254,7 +255,7 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
     var success: String = "Added Successfully"
 
 
-    var values: Vector = this.modifyingStoreFrontInterface!!.toVector()!!
+    var values: BasicArrayList = this.modifyingStoreFrontInterface!!.toVector()!!
 
 StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert(values)
 

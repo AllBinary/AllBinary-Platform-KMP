@@ -32,6 +32,7 @@ import javax.servlet.jsp.tagext.TagSupport
 import admin.taghelpers.OrderHelperFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewayData
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
@@ -197,7 +198,7 @@ this.storeName= value
                                 )
                         
                                     {
-                                    this.propertiesHashMap= HashMap<Any, Any>()
+                                    this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     

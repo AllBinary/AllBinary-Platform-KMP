@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.address.ShippingAddressData
 import org.allbinary.business.user.address.StreetAddress
 import org.allbinary.data.tables.user.address.shipping.ShippingAddressesEntity
@@ -56,7 +57,7 @@ var transformInfoInterface = transformInfoInterface
     var billingAddressesEntity: ShippingAddressesEntity = ShippingAddressesEntity(this.getWeblisketSession()!!.getUserName())
 
 
-    var streetAddressList: Vector = billingAddressesEntity!!.get()!!
+    var streetAddressList: BasicArrayList = billingAddressesEntity!!.get()!!
 
 
     
@@ -74,7 +75,7 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 
-    var size: Int = streetAddressList!!.size!!
+    var size: Int = streetAddressList!!.size()!!
 
 
 

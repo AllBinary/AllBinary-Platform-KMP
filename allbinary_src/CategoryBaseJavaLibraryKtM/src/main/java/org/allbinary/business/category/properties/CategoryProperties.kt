@@ -26,11 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
 import org.allbinary.business.category.CategoryData
 import org.allbinary.business.category.CategoryInterface
 import org.allbinary.business.category.CategoryUtil
 import org.allbinary.business.category.hierarchy.CategoryHierarchyInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlData
 import org.allbinary.logic.io.path.AbPath
@@ -301,7 +301,7 @@ this.category= value
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var categoryHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var categoryHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 
@@ -314,9 +314,9 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var categoryVector: Vector = Vector()
+    var categoryVector: BasicArrayList = BasicArrayListD()
 
 categoryVector!!.add(this.category)
 

@@ -26,8 +26,10 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.validate.Validation
 import org.allbinary.logic.control.validate.ValidationInterface
@@ -44,9 +46,9 @@ open public class CssStyleValidation : Validation
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    var cssStyleElementVector: Vector
+    var cssStyleElementVector: BasicArrayList
 public constructor (){
-this.cssStyleElementVector= Vector()
+this.cssStyleElementVector= BasicArrayListD()
 }
 
 public constructor (document: Document){
@@ -78,7 +80,7 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
                                     }
                                 
 
-    var size: Int = this.cssStyleElementVector!!.size!!
+    var size: Int = this.cssStyleElementVector!!.size()!!
 
 
 
@@ -207,7 +209,7 @@ var document = document
 
 node.appendChild(styleNode)
 
-    var size: Int = this.cssStyleElementVector!!.size!!
+    var size: Int = this.cssStyleElementVector!!.size()!!
 
 
 

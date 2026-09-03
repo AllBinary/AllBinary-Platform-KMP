@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 
 open public class BasicPaymentTypeUtil
             : Object
@@ -56,7 +58,7 @@ companion object {
 }
 
 
-    private var paymentTypeVector: Vector = Vector()
+    private var paymentTypeVector: BasicArrayList = BasicArrayListD()
 
     open fun add(paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
@@ -73,7 +75,7 @@ this.paymentTypeVector!!.add(paymentType)
 : BasicPaymentType{
 var paymentTypeString = paymentTypeString
 
-    var size: Int = this.paymentTypeVector!!.size!!
+    var size: Int = this.paymentTypeVector!!.size()!!
 
 
 
@@ -119,15 +121,15 @@ var paymentType = paymentType
 }
 
 
-    open fun difference(a_PaymentTypeVector: Vector)
+    open fun difference(a_PaymentTypeVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var a_PaymentTypeVector = a_PaymentTypeVector
 
-    var diff: Vector = Vector()
+    var diff: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = this.paymentTypeVector!!.size!!
+    var size: Int = this.paymentTypeVector!!.size()!!
 
 
 

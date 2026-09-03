@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.control.validate.ValidationInterface
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
@@ -41,10 +43,10 @@ companion object {
             
     open fun getInstance(nodeList: NodeList)
         //nullable =  from not(true or (false and false)) = 
-: Vector{
+: BasicArrayList{
 var nodeList = nodeList
 
-    var propertiesVector: Vector = Vector()
+    var propertiesVector: BasicArrayList = BasicArrayListD()
 
 
 
@@ -80,10 +82,10 @@ propertiesVector!!.add(cssPropertyValidationInterface)
 
     open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: Vector{
+: BasicArrayList{
 var hashMap = hashMap
 
-    var styles: Vector = Vector()
+    var styles: BasicArrayList = BasicArrayListD()
 
 
 

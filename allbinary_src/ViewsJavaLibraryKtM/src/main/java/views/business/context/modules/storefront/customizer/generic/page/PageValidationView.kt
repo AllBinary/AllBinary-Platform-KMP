@@ -26,10 +26,12 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.transform.info.TransformInfoEntity
 import org.allbinary.data.tables.transform.info.TransformInfoEntityBuilder
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.validate.ValidationComponentInterface
 import org.allbinary.logic.string.StringMaker
@@ -92,19 +94,19 @@ var transformInfoInterface = transformInfoInterface
     var pageObjectConfigInterface: TransformInfoObjectConfigInterface = this.getTransformInfoInterface()!!.getObjectConfigInterface()!!
 
 
-    var allViewsToBeModifiedVector: Vector = pageObjectConfigInterface!!.getGroupTransforms()!!
+    var allViewsToBeModifiedVector: BasicArrayList = pageObjectConfigInterface!!.getGroupTransforms()!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Views To Be Modified: " +allViewsToBeModifiedVector!!.size, this, "get(transformInfoInterface)")
+                                    this.logUtil!!.putF("Views To Be Modified: " +allViewsToBeModifiedVector!!.size(), this, "get(transformInfoInterface)")
 
                                     }
                                 
 
-    var size: Int = allViewsToBeModifiedVector!!.size!!
+    var size: Int = allViewsToBeModifiedVector!!.size()!!
 
 
 
@@ -156,7 +158,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
                                     }
                                 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var title: String = specifiedTransformInfoInterface!!.getName()!!.substring(this.getTransformInfoInterface()!!.getStoreName()!!.length())!!
@@ -266,10 +268,10 @@ CustomizerUtil.getInstance()!!.write(specifiedTransformInfoInterface, documentSt
     var httpTransformInfoInterface: TransformInfoHttpInterface = this.getTransformInfoInterface() as TransformInfoHttpInterface
 
 
-    var allViewsToBeModifiedVector: Vector = objectConfig!!.getGroupTransforms()!!
+    var allViewsToBeModifiedVector: BasicArrayList = objectConfig!!.getGroupTransforms()!!
 
 
-    var size: Int = allViewsToBeModifiedVector!!.size!!
+    var size: Int = allViewsToBeModifiedVector!!.size()!!
 
 
 
@@ -288,7 +290,7 @@ CustomizerUtil.getInstance()!!.write(specifiedTransformInfoInterface, documentSt
     var specifiedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewNameOfViewToBeModified, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var title: String = specifiedTransformInfoInterface!!.getName()!!.substring(this.getTransformInfoInterface()!!.getStoreName()!!.length())!!

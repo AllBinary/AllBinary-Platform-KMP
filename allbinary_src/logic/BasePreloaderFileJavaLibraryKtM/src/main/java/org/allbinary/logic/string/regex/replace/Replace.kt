@@ -23,6 +23,7 @@ import kotlin.Array
 import org.allbinary.J2SEUtil
 import org.allbinary.globals.AppUrlGlobals
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 import org.allbinary.logic.string.StringMaker
@@ -84,14 +85,14 @@ open public class Replace : Object {
     public constructor(key: String, value: String) : super() {
         // var key = key
         // var value = value
-        this.hashMap = HashMap<Any, Any>()
+        this.hashMap = StdUtil.getInstance()!!.createHashMap()
         this.hashMap!!.put(arrayOf(key), arrayOf(value))
     }
 
     public constructor(keys: Array<String?>, values: Array<String?>) : super() {
         // var keys = keys
         // var values = values
-        this.hashMap = HashMap<Any, Any>()
+        this.hashMap = StdUtil.getInstance()!!.createHashMap()
         this.hashMap!!.put(keys, values)
     }
 

@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.awt.image.BufferedImage
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.handler.BasicEventHandler
@@ -45,7 +47,7 @@ open public class ImageComparisonSearchWorker : BasicEventHandler
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val imageComparisonInfoVector: Vector
+    private val imageComparisonInfoVector: BasicArrayList
 
     private var index: Long= 0
 
@@ -54,7 +56,7 @@ open public class ImageComparisonSearchWorker : BasicEventHandler
     private var imageSearchConstraintsInterface: ImageComparisonSearchConstraintsInterface
 public constructor (imageSearchConstraintsInterface: ImageComparisonSearchConstraintsInterface){
 var imageSearchConstraintsInterface = imageSearchConstraintsInterface
-this.imageComparisonInfoVector= Vector()
+this.imageComparisonInfoVector= BasicArrayListD()
 this.imageSearchConstraintsInterface= imageSearchConstraintsInterface
 }
 

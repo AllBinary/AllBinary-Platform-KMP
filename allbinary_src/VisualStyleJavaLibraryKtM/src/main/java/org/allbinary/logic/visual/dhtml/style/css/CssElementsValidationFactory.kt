@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.control.validate.ValidationInterface
 import org.w3c.dom.Node
 
@@ -38,15 +40,15 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun getInstance(cssElementStyleNodeList: Vector)
+    open fun getInstance(cssElementStyleNodeList: BasicArrayList)
         //nullable =  from not(true or (false and false)) = 
-: Vector{
+: BasicArrayList{
     //var cssElementStyleNodeList = cssElementStyleNodeList
 
-    var styles: Vector = Vector()
+    var styles: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = cssElementStyleNodeList!!.size!!
+    var size: Int = cssElementStyleNodeList!!.size()!!
 
 
     var cssElementStyleNode: Node
@@ -76,10 +78,10 @@ styles.add(cssValidationInterface)
 
     open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: Vector{
+: BasicArrayList{
     //var hashMap = hashMap
 
-    var styles: Vector = Vector()
+    var styles: BasicArrayList = BasicArrayListD()
 
 
 

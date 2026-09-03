@@ -21,7 +21,6 @@ import java.lang.Runnable
 import java.lang.System
 import java.lang.Thread
 import java.util.Hashtable
-import java.util.Vector
 import javax.microedition.lcdui.ChoiceGroup
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Font
@@ -237,7 +236,7 @@ open public class AllBinaryGameCanvas :
 
     private var isCheating: Boolean = false
 
-    private var hashtable: Hashtable<Any, Any> = this.nullUtil!!.NULL_TABLE
+    private var hashtable: Hashtable<Any, Any> = this.stdUtil!!.NULL_TABLE
 
     private var isSingleKeyRepeatableProcessing: Boolean = false
 
@@ -567,7 +566,7 @@ open public class AllBinaryGameCanvas :
 
         var items: Array<ABCustomItem?> =
             commandTextItemArrayFactory!!.getInstance(
-                this.getCommandStack() as Vector<Any>,
+                this.getCommandStack(),
                 this.gameLayerManager!!.getBackgroundBasicColor(),
                 this.gameLayerManager!!.getForegroundBasicColor(),
             )!!
@@ -641,7 +640,7 @@ open public class AllBinaryGameCanvas :
 
         var items: Array<ABCustomItem?> =
             commandTextItemArrayFactory!!.getInstance(
-                this.getCommandStack() as Vector<Any>,
+                this.getCommandStack(),
                 this.gameLayerManager!!.getBackgroundBasicColor(),
                 this.gameLayerManager!!.getForegroundBasicColor(),
             )!!
@@ -1532,7 +1531,7 @@ open public class AllBinaryGameCanvas :
     // nullable = true from not(false or (false and true)) = true
     : Hashtable<Any, Any> {
 
-        var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        var hashtable: Hashtable<Any, Any> = this.stdUtil!!.createHashtable()!!
 
         var level: Int = this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel()!!
 

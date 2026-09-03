@@ -18,6 +18,7 @@ package org.allbinary.game.input.mapping
 import java.lang.Object
 import java.util.Hashtable
 import org.allbinary.game.input.Input
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -32,7 +33,7 @@ open public class InputMapping : Object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private val mappedList: BasicArrayList = BasicArrayListD()
 

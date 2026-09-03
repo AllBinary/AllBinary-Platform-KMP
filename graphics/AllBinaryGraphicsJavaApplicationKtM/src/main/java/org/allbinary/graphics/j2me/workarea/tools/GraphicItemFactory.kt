@@ -27,6 +27,7 @@
         
 import java.util.HashMap
 import org.allbinary.log.LOGGING
+import org.allbinary.logic.StdUtil
 import org.allbinary.util.BasicArrayList
 import org.w3c.dom.Node
 
@@ -57,7 +58,7 @@ companion object {
 private constructor ()
             : super()
         {
-this.graphicItems= HashMap<Any, Any>()
+this.graphicItems= StdUtil.getInstance()!!.createHashMap()
 this.graphicItems!!.put(LinesGraphicItem.getStaticName(), LinesGraphicItemFactory())
 }
 
@@ -98,7 +99,7 @@ var graphicItemNodeList = graphicItemNodeList
     var numberOfItems: Int = graphicItemNodeList!!.size()!!
 
 
-    var graphicItemHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var graphicItemHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     

@@ -129,7 +129,7 @@ var licenceServerVector = licenceServerVector
                                     
 
 
-                            throw Exception("null Vector Passed - Just Make Empty if you want")
+                            throw Exception("null BasicArrayList Passed - Just Make Empty if you want")
 
                                     }
                                 

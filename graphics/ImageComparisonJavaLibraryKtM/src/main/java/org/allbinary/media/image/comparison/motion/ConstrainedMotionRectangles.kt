@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Rectangle
 import java.awt.image.BufferedImage
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class ConstrainedMotionRectangles : MotionRectangles {
@@ -68,13 +70,13 @@ this.logUtil!!.putF("Start - Size Before: " +motionRectangles!!.getVector()!!.si
     var bufferedImage: BufferedImage = bufferedImageArray[1]!!
 
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
-    var vector2: Vector = motionRectangles!!.getVector()!!
+    var vector2: BasicArrayList = motionRectangles!!.getVector()!!
 
 
-    var size: Int = vector2.size!!
+    var size: Int = vector2.size()!!
 
 
 

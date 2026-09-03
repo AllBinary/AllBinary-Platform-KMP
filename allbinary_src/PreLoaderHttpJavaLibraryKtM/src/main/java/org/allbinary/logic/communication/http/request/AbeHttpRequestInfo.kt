@@ -29,8 +29,10 @@
         
 import java.util.Enumeration
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
@@ -110,7 +112,7 @@ this.remotePort= Integer.toString(httpServletRequest!!.getRemotePort())
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(abeHttpRequestInfoData!!.HTTP_USER_AGENT, this.httpUserAgent)
 hashMap!!.put(abeHttpRequestInfoData!!.REMOTE_ADDRESS, this.remoteAddress)
@@ -128,9 +130,9 @@ hashMap!!.put(abeHttpRequestInfoData!!.REQUEST_FILE_PATH, this.requestedFilePath
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(this.httpUserAgent)
 vector.add(this.remoteAddress)

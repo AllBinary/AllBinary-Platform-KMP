@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class PropertiesTag : CommandTag {
@@ -44,7 +45,7 @@ public constructor (){
 
                                     }
                                 
-this.propertiesHashMap= HashMap<Any, Any>()
+this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 }
 
 
@@ -71,7 +72,7 @@ this.propertiesHashMap= HashMap<Any, Any>()
 
                                     }
                                 
-this.propertiesHashMap= HashMap<Any, Any>()
+this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 
 
 

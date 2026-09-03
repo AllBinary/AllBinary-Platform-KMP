@@ -27,12 +27,14 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.UserInterface
 import org.allbinary.business.user.role.UserRole
 import org.allbinary.data.tables.user.UserEntityFactory
 import org.allbinary.data.tables.user.UserEntityInterface
+import org.allbinary.logic.StdUtil
 
 open public class StoreFrontUsersStatistics
             : Object
@@ -47,16 +49,16 @@ public constructor (storeFrontInterface: StoreFrontInterface)
             : super()
         {
 var storeFrontInterface = storeFrontInterface
-this.totalUsersByRoleHashMap= HashMap<Any, Any>()
+this.totalUsersByRoleHashMap= StdUtil.getInstance()!!.createHashMap()
 
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
 
 
-    var userVector: Vector = userEntityInterface!!.getCustomers()!!
+    var userVector: BasicArrayList = userEntityInterface!!.getCustomers()!!
 
-this.totalNumberOfUsers= userVector!!.size as Long
+this.totalNumberOfUsers= userVector!!.size() as Long
 
-    var size: Int = userVector!!.size!!
+    var size: Int = userVector!!.size()!!
 
 
 
@@ -136,7 +138,7 @@ var role = role
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(StoreFrontUsersStatisticsData.getInstance()!!.NUMBEROFUSERS, this.getNumberOfUsers()!!.toString())
 
@@ -176,7 +178,7 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

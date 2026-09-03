@@ -594,7 +594,7 @@ open public class StartCanvas :
         )
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return this.nullUtil!!.NULL_TABLE
+        return this.stdUtil!!.NULL_TABLE
     }
 
     @Throws(Exception::class)
@@ -604,7 +604,7 @@ open public class StartCanvas :
         this.logUtil!!.putF("Trying to save the AI lol", this, "getCurrentStateHashtable")
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return this.nullUtil!!.NULL_TABLE
+        return this.stdUtil!!.NULL_TABLE
     }
 
     override fun setHighScoreSubmitted(isNotUsed: Boolean)

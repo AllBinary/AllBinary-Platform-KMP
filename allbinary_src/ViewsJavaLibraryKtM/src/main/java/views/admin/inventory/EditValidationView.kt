@@ -75,7 +75,7 @@ this.getFormData()
                                 )
                         
                                     throw Exception("No Request Params Found")
-this.id= hashMap!!.get(BasicItemData.ID) as String
+this.id= hashMap!!.get(basicItemData!!.ID) as String
 }
 
 

@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.BasicDataTableInterface
 
 interface AdvertisementCampaignInternalEntityInterface : BasicDataTableInterface {
@@ -36,7 +37,7 @@ interface AdvertisementCampaignInternalEntityInterface : BasicDataTableInterface
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -30,7 +30,8 @@
 import java.util.Calendar
 import java.util.HashMap
 import java.util.Random
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.context.modules.storefront.StoreFrontFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
@@ -58,6 +59,7 @@ import org.allbinary.data.tables.TableDataFactory
 import org.allbinary.data.tables.user.address.billing.BillingAddressesEntity
 import org.allbinary.data.tables.user.address.shipping.ShippingAddressesEntity
 import org.allbinary.data.tables.user.commerce.money.payment.PaymentEntity
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.crypt.SuperCrypt
@@ -90,7 +92,7 @@ this.setTableName(this.tableName)
 var userName = userName
 var order = order
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
         try {
@@ -282,7 +284,7 @@ this.insert(vector)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -330,7 +332,7 @@ var status = status
                                 
 
 
-    var updateHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var updateHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 updateHashMap!!.put(OrderHistoryData.STATUS, status)
 
@@ -384,7 +386,7 @@ var paymentMethod = paymentMethod
                                 
 
 
-    var updateHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var updateHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 updateHashMap!!.put(PaymentData.METHOD, paymentMethod)
 updateHashMap!!.put(OrderHistoryData.TRANSDATE, time)
@@ -409,17 +411,17 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
             
     open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var storeFrontInterface = storeFrontInterface
 
-    var orderReviewVector: Vector = Vector()
+    var orderReviewVector: BasicArrayList = BasicArrayListD()
 
 
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.getName())
 
-    var orderHashMapVector: Vector = super.getRows(whereHashMap)!!
+    var orderHashMapVector: BasicArrayList = super.getRows(whereHashMap)!!
 
 
     var size: Int = orderHashMapVector!!.size!!
@@ -452,17 +454,17 @@ orderReviewVector!!.add(orderReview)
             
     open fun getOrders(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var userName = userName
 
-    var orderReviewVector: Vector = Vector()
+    var orderReviewVector: BasicArrayList = BasicArrayListD()
 
 
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(UserData.USERNAME, userName)
 
-    var orderHashMapVector: Vector = super.getRows(whereHashMap)!!
+    var orderHashMapVector: BasicArrayList = super.getRows(whereHashMap)!!
 
 
     var size: Int = orderHashMapVector!!.size!!
@@ -495,19 +497,19 @@ orderReviewVector!!.add(orderReview)
             
     open fun getOrders(status: String, fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var status = status
 var fromDate = fromDate
 var toDate = toDate
 
-    var orderReviewVector: Vector = Vector()
+    var orderReviewVector: BasicArrayList = BasicArrayListD()
 
 
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(OrderHistoryData.STATUS, status)
 
-    var orderHashMapVector: Vector = super.getRowsWhereBetween(whereHashMap, OrderHistoryData.ORDERDATE, fromDate, toDate)!!
+    var orderHashMapVector: BasicArrayList = super.getRowsWhereBetween(whereHashMap, OrderHistoryData.ORDERDATE, fromDate, toDate)!!
 
 
     var size: Int = orderHashMapVector!!.size!!
@@ -540,14 +542,14 @@ orderReviewVector!!.add(orderReview)
             
     open fun getOrders(fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var fromDate = fromDate
 var toDate = toDate
 
-    var orderReviewVector: Vector = Vector()
+    var orderReviewVector: BasicArrayList = BasicArrayListD()
 
 
-    var orderHashMapVector: Vector = super.getRowsWhereBetween(OrderHistoryData.ORDERDATE, fromDate, toDate)!!
+    var orderHashMapVector: BasicArrayList = super.getRowsWhereBetween(OrderHistoryData.ORDERDATE, fromDate, toDate)!!
 
 
     var size: Int = orderHashMapVector!!.size!!
@@ -583,7 +585,7 @@ orderReviewVector!!.add(orderReview)
 : OrderHistory{
 var id = id
 
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(OrderData.ID, id)
 

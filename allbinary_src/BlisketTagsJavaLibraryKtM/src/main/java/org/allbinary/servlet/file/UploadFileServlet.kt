@@ -36,6 +36,7 @@ import admin.taghelpers.AuthenticationHelper
 import admin.taghelpers.AuthenticationHelperFactory
 import admin.taghelpers.AuthenticationHelperUtil
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.file.upload.FileUploadData
 import org.allbinary.logic.communication.http.file.upload.HttpFileUploadUtil
 import org.allbinary.logic.communication.http.request.HttpRequestUtil
@@ -106,7 +107,7 @@ response.sendError(HttpServletResponse.SC_NOT_FOUND)
                                     }
                                 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var authenticationHelper: AuthenticationHelper = AuthenticationHelperFactory().

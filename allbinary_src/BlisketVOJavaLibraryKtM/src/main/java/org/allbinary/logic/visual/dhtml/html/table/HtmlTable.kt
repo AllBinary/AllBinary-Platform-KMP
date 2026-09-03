@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.dhtml.html.HtmlTag
 import org.allbinary.string.CommonPhoneStrings
@@ -85,7 +87,7 @@ open public class HtmlTable : HtmlTag {
 
     private var after: String
 
-    private var htmlRowsVector: Vector
+    private var htmlRowsVector: BasicArrayList
 public constructor (before: String, cellpadding: String, cellspacing: String, after: String){
 var before = before
 var cellpadding = cellpadding
@@ -95,7 +97,7 @@ this.before= before
 this.cellpadding= cellpadding
 this.cellspacing= cellspacing
 this.after= after
-this.htmlRowsVector= Vector()
+this.htmlRowsVector= BasicArrayListD()
 addAttribute(this.BORDER, CommonPhoneStrings.getInstance()!!.ZERO)
 addAttribute(this.CELLPADDING, this.cellpadding)
 addAttribute(this.CELLSPACING, this.cellspacing)
@@ -161,7 +163,7 @@ result += "\" "
 
 result += this.END
 
-    var size: Int = this.htmlRowsVector!!.size!!
+    var size: Int = this.htmlRowsVector!!.size()!!
 
 
 

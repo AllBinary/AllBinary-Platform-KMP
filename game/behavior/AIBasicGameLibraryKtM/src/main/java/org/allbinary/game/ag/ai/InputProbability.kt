@@ -19,6 +19,7 @@ import java.lang.Integer
 import java.lang.Object
 import java.util.Hashtable
 import kotlin.Array
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.time.TimeDelayHelper
 
@@ -89,7 +90,7 @@ open public class InputProbability : Object {
     // nullable = true from not(false or (false and true)) = true
     : Hashtable<Any, Any> {
 
-        var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         hashtable.put(InputProbability.INPUT_PROBABILITY, this)
 

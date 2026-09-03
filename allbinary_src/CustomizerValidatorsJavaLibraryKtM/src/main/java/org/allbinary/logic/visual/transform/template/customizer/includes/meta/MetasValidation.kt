@@ -25,10 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.data.tree.dom.DomNodeInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.validate.Validation
 import org.allbinary.logic.string.StringMaker
@@ -47,11 +49,11 @@ open public class MetasValidation : Validation
 
     private var storeFrontInterface: StoreFrontInterface
 
-    private var metaValidationVector: Vector
+    private var metaValidationVector: BasicArrayList
 public constructor (storeName: String){
 var storeName = storeName
 this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
-this.metaValidationVector= Vector()
+this.metaValidationVector= BasicArrayListD()
 
     var contentValue: String = this.storeFrontInterface!!.getName() +" E-Commerce Site"
 
@@ -179,7 +181,7 @@ var document = document
     var node: Node = document.createElement(HtmlMetasData.getInstance()!!.NAME)!!
 
 
-    var metaArray: Array<MetaValidation?> = this.metaValidationVector!!.toArray(arrayOfNulls(0)) as Array<MetaValidation?>
+    var metaArray: Array<MetaValidation?> = this.metaValidationVector!!.toArrayType(arrayOfNulls(this.metaValidationVector!!.size())) as Array<MetaValidation?>
 
 
     var size: Int = metaArray!!.size

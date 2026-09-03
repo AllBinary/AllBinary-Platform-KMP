@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.shipping.modules.ShippingInterface
 import org.allbinary.logic.communication.log.LogUtil
@@ -42,7 +43,7 @@ open public class ShippingMethods
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var shippingVector: Vector
+    private var shippingVector: BasicArrayList
 
     private var defaultShippingMethodInterface: ShippingInterface
 public constructor (abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
@@ -59,7 +60,7 @@ this.shippingVector= ShippingMethodsFactory(abeClientInformation, storeFrontInte
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -78,7 +79,7 @@ var name = name
     var shipping: ShippingInterface
 
 
-    var size: Int = this.shippingVector!!.size!!
+    var size: Int = this.shippingVector!!.size()!!
 
 
 

@@ -29,6 +29,7 @@ import java.util.HashMap
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.init.InitSql
 import org.allbinary.business.init.db.UserDbInitInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class BasicStoreFrontsEntity : InitSql {
@@ -55,7 +56,7 @@ this.setTable(this.tableName)
 : BasicStoreFrontInterface{
 var name = name
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
 

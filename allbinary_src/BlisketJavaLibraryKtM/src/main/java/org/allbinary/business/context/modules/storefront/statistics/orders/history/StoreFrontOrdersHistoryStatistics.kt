@@ -26,12 +26,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.order.OrderHistoryInterface
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntityFactory
 import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntityInterface
+import org.allbinary.logic.StdUtil
 
 open public class StoreFrontOrdersHistoryStatistics
             : Object
@@ -60,7 +62,7 @@ this.totalMoney= Money()
     var orderHistoryEntityInterface: OrderHistoryEntityInterface = OrderHistoryEntityFactory.getInstance()!!
 
 
-    var orderHistoryInterfaceVector: Vector = orderHistoryEntityInterface!!.getStoreOrders(storeFrontInterface)!!
+    var orderHistoryInterfaceVector: BasicArrayList = orderHistoryEntityInterface!!.getStoreOrders(storeFrontInterface)!!
 
 
     var numberOfOrders: Long = 0
@@ -69,7 +71,7 @@ this.totalMoney= Money()
     var orderHistoryInterface: OrderHistoryInterface
 
 
-    var size: Int = orderHistoryInterfaceVector!!.size!!
+    var size: Int = orderHistoryInterfaceVector!!.size()!!
 
 
 
@@ -149,7 +151,7 @@ this.numberOfOrdersLong= numberOfOrders as Long
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var storeFrontOrdersHistoryStatisticsData: StoreFrontOrdersHistoryStatisticsData = StoreFrontOrdersHistoryStatisticsData.getInstance()!!
@@ -169,7 +171,7 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.t
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

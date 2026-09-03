@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
+import org.allbinary.logic.StdUtil
 
 open public class HtmlTag
             : Object
@@ -36,7 +37,7 @@ open public class HtmlTag
 public constructor ()
             : super()
         {
-this.otherAttributes= HashMap<Any, Any>()
+this.otherAttributes= StdUtil.getInstance()!!.createHashMap()
 }
 
 

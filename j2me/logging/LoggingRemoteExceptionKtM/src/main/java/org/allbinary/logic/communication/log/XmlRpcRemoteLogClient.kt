@@ -29,7 +29,8 @@
         
 import java.io.IOException
 import java.util.Hashtable
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.apache.xmlrpc.XmlRpcClient
 import org.apache.xmlrpc.XmlRpcException
 import org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient
@@ -62,7 +63,7 @@ public constructor (clientInfo: AbeClientInformationInterface)
 
         try {
             
-    var param: Vector = Vector()
+    var param: BasicArrayList = BasicArrayListD()
 
 
     var serverUrl: String = getClientInfo()!!.getLicenseServer(this.getServer())!!

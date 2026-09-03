@@ -25,10 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.InputOutputTypeData
 import org.allbinary.logic.io.OutputTypeData
@@ -347,7 +349,7 @@ attrNode!!.setValue(name)
             
     open fun getNodeVector(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var nodeName = nodeName
 
     var componentsNodeList: NodeList = this.document.getElementsByTagName(nodeName)!!
@@ -360,10 +362,10 @@ var nodeName = nodeName
                         
                                     {
                                     
-    var viewNodeVector: Vector = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, componentsNodeList!!.item(0)!!.getChildNodes())!!
+    var viewNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, componentsNodeList!!.item(0)!!.getChildNodes())!!
 
 
-    var numberOfViews: Int = viewNodeVector!!.size!!
+    var numberOfViews: Int = viewNodeVector!!.size()!!
 
 
     
@@ -393,7 +395,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getNodeVector(nodename)")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Vector()
+                        return BasicArrayListD()
 }
 
 
@@ -401,16 +403,16 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getNodeVector(nodename)")
             
     open fun getTransformDomNodes(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var nodeName = nodeName
 
-    var viewVector: Vector = Vector()
+    var viewVector: BasicArrayList = BasicArrayListD()
 
 
-    var viewNodeVector: Vector = this.getNodeVector(nodeName)!!
+    var viewNodeVector: BasicArrayList = this.getNodeVector(nodeName)!!
 
 
-    var size: Int = viewNodeVector!!.size!!
+    var size: Int = viewNodeVector!!.size()!!
 
 
 
@@ -437,16 +439,16 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
             
     open fun getTransforms(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var nodeName = nodeName
 
-    var viewVector: Vector = Vector()
+    var viewVector: BasicArrayList = BasicArrayListD()
 
 
-    var viewNodeVector: Vector = this.getNodeVector(nodeName)!!
+    var viewNodeVector: BasicArrayList = this.getNodeVector(nodeName)!!
 
 
-    var size: Int = viewNodeVector!!.size!!
+    var size: Int = viewNodeVector!!.size()!!
 
 
 
@@ -474,7 +476,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode).
             
     open fun getTransformsGroup(group: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var group = group
 
     
@@ -486,7 +488,7 @@ var group = group
                                     }
                                 
 
-    var viewVector: Vector = Vector()
+    var viewVector: BasicArrayList = BasicArrayListD()
 
 
     var GROUP: String = TransformInfosData.getInstance()!!.GROUP
@@ -541,10 +543,10 @@ break;
 }
 
 
-    var viewNodeVector: Vector = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, componentsNode!!.getChildNodes())!!
+    var viewNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, componentsNode!!.getChildNodes())!!
 
 
-    var numberOfViews: Int = viewNodeVector!!.size!!
+    var numberOfViews: Int = viewNodeVector!!.size()!!
 
 
     
@@ -556,7 +558,7 @@ break;
                                     }
                                 
 
-    var size: Int = viewNodeVector!!.size!!
+    var size: Int = viewNodeVector!!.size()!!
 
 
 
@@ -614,7 +616,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
             
     open fun getTransformDomNodes()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -627,7 +629,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
             
     open fun getTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -640,7 +642,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
             
     open fun getGroupTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -653,7 +655,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
             
     open fun getParentTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

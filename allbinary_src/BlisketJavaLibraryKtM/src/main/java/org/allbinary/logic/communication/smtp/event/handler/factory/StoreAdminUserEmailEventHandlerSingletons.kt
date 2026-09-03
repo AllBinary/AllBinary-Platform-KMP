@@ -26,9 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.data.tables.user.UserEntityFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.smtp.event.UserEmailEventNameData
 import org.allbinary.logic.communication.smtp.event.handler.EmailEventHandlerUtil
@@ -61,7 +63,7 @@ companion object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val userEmailEventHandlerHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    private val userEmailEventHandlerHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 private constructor ()
             : super()
         {
@@ -114,7 +116,7 @@ var storeFrontInterface = storeFrontInterface
                                     }
                                 
 
-    var userVector: Vector = UserEntityFactory.getInstance()!!.getStoreManagers(storeFrontInterface)!!
+    var userVector: BasicArrayList = UserEntityFactory.getInstance()!!.getStoreManagers(storeFrontInterface)!!
 
 
     var newUserEmailEventHandler: UserEmailEventHandler = EmailEventHandlerUtil.getInstance()!!.getEventHandler(abeClientInformation, userEmailEventNameData, userVector)!!

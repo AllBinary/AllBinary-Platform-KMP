@@ -50,7 +50,8 @@ open public class GraphicsFeatureFactory : Object {
 
     val SPRITE_FULL_GRAPHICS: GraphicsFeature = GraphicsFeature("Sprite Full Rotation Graphics")
 
-    val VECTOR_GRAPHICS: GraphicsFeature = GraphicsFeature("Vector Graphics")
+    val VECTOR_GRAPHICS: GraphicsFeature = GraphicsFeature("BasicArrayList Graphics")
 
-    val VECTOR_TO_IMAGE_GRAPHICS: GraphicsFeature = GraphicsFeature("Vector To Image Graphics")
+    val VECTOR_TO_IMAGE_GRAPHICS: GraphicsFeature =
+        GraphicsFeature("BasicArrayList To Image Graphics")
 }

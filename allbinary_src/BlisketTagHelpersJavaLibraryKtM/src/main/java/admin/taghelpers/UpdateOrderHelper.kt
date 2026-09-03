@@ -38,6 +38,7 @@ import org.allbinary.business.user.commerce.inventory.order.OrderHistoryData
 import org.allbinary.business.user.commerce.money.payment.PaymentData
 import org.allbinary.business.user.commerce.shipping.ShippingMethodData
 import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntityFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class UpdateOrderHelper : TagHelper {
@@ -180,10 +181,10 @@ this.storeCancelComment= this.request.getParameter(OrderData.STORECANCELCOMMENT)
     var success: String = "Successful update"
 
 
-    var orderHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var orderHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 orderHashMap!!.put(EntryData.getInstance()!!.ID, this.entryId)
 orderHashMap!!.put(OrderData.ID, this.orderId)

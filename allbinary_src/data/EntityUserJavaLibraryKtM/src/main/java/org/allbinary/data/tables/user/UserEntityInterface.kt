@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.UserInterface
 import org.allbinary.business.user.role.UserRole
@@ -39,31 +40,31 @@ interface UserEntityInterface : BasicDataTableInterface {
             
     open fun getAdministrators()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getStoreManagers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getCustomers()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getUsersWithRole(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getUsers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
@@ -79,7 +80,7 @@ interface UserEntityInterface : BasicDataTableInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 

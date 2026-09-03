@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.logic.communication.log.LogUtil
@@ -46,10 +47,12 @@ open public class BasicItemView
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     private val itemInterface: ItemInterface
 
-    private val vector: Vector
-public constructor (itemInterface: ItemInterface, vector: Vector)
+    private val vector: BasicArrayList
+public constructor (itemInterface: ItemInterface, vector: BasicArrayList)
             : super()
         {
 var itemInterface = itemInterface
@@ -80,7 +83,7 @@ var document = document
 
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-hashMap!!.put(BasicItemData.IMAGE, EMPTY_STRING)
+hashMap!!.put(this.basicItemData!!.IMAGE, EMPTY_STRING)
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -88,7 +91,7 @@ hashMap!!.put(BasicItemData.IMAGE, EMPTY_STRING)
     var keySet: Set = hashMap!!.keys!!
 
 
-    var node: Node = document.createElement(BasicItemData.ITEM)!!
+    var node: Node = document.createElement(this.basicItemData!!.ITEM)!!
 
 
     var nameArray: Array<Any?> = keySet!!.toTypedArray()!!
@@ -115,11 +118,11 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 
-    var totalNode: Node = ModDomHelper.createNameValueNodes(document, BasicItemData.TOTAL, this.itemInterface!!.getTotal()!!.toString())!!
+    var totalNode: Node = ModDomHelper.createNameValueNodes(document, this.basicItemData!!.TOTAL, this.itemInterface!!.getTotal()!!.toString())!!
 
 node.appendChild(totalNode)
 
-    var size: Int = this.vector.size!!
+    var size: Int = this.vector.size()!!
 
 
 

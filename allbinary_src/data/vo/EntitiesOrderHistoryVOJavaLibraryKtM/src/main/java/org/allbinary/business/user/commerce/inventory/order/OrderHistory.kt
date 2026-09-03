@@ -41,6 +41,7 @@ import org.allbinary.business.user.commerce.money.payment.Payment
 import org.allbinary.business.user.commerce.money.payment.PaymentData
 import org.allbinary.business.user.commerce.shipping.ShippingMethodData
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -392,7 +393,7 @@ this.total= value
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(UserData.USERNAME, this.userName)
 hashMap!!.put(OrderHistoryData.ORDERDATE, this.orderDate)

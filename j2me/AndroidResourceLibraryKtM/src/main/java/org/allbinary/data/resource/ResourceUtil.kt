@@ -26,6 +26,7 @@ import kotlin.Array
 import org.allbinary.debug.DebugFactory
 import org.allbinary.debug.NoDebug
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -56,7 +57,7 @@ open public class ResourceUtil : Object {
 
     private var resources: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    private var hashMap: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private var hashMap: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private constructor() : super() {}
 

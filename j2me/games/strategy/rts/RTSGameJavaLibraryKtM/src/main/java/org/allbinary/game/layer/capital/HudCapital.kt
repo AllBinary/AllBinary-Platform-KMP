@@ -15,7 +15,7 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.game.layer.capital
 
-import org.allbinary.game.layer.hud.basic.NumberStringHud
+import org.allbinary.game.ag.layer.hud.basic.NumberStringHud
 
 open public class HudCapital : Capital {
 

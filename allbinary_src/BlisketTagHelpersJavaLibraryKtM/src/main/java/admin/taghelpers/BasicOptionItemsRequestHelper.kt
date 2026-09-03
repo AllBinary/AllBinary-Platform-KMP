@@ -27,13 +27,15 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.option.BasicOptionItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.options.BasicOptionItemsEntityFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
@@ -42,6 +44,8 @@ open public class BasicOptionItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     private var request: HttpServletRequest
 
@@ -53,9 +57,9 @@ open public class BasicOptionItemsRequestHelper : ModifyTable {
 
     private var defaultOptionValue: String
 
-    private var optionItem: Vector
+    private var optionItem: BasicArrayList
 
-    private var optionValue: Vector
+    private var optionValue: BasicArrayList
 
     private var timeEntered: String
 
@@ -71,9 +75,9 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.optionItem= Vector()
-this.optionValue= Vector()
-this.id= this.request.getParameter(BasicItemData.ID)
+this.optionItem= BasicArrayListD()
+this.optionValue= BasicArrayListD()
+this.id= this.request.getParameter(basicItemData!!.ID)
 this.optionOneTitle= this.request.getParameter(BasicOptionItemData.OPTION_ONE_TITLE)
 this.defaultOptionItem= this.request.getParameter(BasicOptionItemData.DEFAULT_OPTION_ITEM)
 this.defaultOptionValue= this.request.getParameter(BasicOptionItemData.DEFAULT_OPTION_VALUE)
@@ -104,9 +108,9 @@ this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIF
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-values.put(BasicItemData.ID, id)
+values.put(basicItemData!!.ID, id)
 values.put(BasicOptionItemData.OPTION_ONE_ONE_ITEM, this.optionItem!!.get(0))
 values.put(BasicOptionItemData.OPTION_ONE_ONE_VALUE, this.optionValue!!.get(0))
 values.put(BasicOptionItemData.OPTION_ONE_TWO_ITEM, this.optionItem!!.get(1))
@@ -156,11 +160,11 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
                                 
 
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.id)
 
-    var size: Int = this.optionValue!!.size!!
+    var size: Int = this.optionValue!!.size()!!
 
 
 

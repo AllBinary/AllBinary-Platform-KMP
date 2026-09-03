@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.awt
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class ConsolidateMotionRectangles : MotionRectangles {
@@ -47,10 +49,10 @@ var motionRectangles = motionRectangles
                             //For kotlin this is before the body of the constructor.
                     
 
-    var vector: Vector = motionRectangles!!.getVector()!!
+    var vector: BasicArrayList = motionRectangles!!.getVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -73,14 +75,14 @@ this.consolidateMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var vector: Vector = this.getVector()!!
+    var vector: BasicArrayList = this.getVector()!!
 
-this.logUtil!!.putF("Start - Size Before: " +vector.size, this, "consolidateMotionRectangleConstraints")
+this.logUtil!!.putF("Start - Size Before: " +vector.size(), this, "consolidateMotionRectangleConstraints")
 
-    var removeVector: Vector = Vector()
+    var removeVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -96,7 +98,7 @@ this.logUtil!!.putF("Start - Size Before: " +vector.size, this, "consolidateMoti
 
 
 
-                        for (i in index +1 until vector.size!!)
+                        for (i in index +1 until vector.size()!!)
 
         {
 
@@ -137,15 +139,15 @@ this.remove(removeVector)
 }
 
 
-    open fun remove(removeVector: Vector)
+    open fun remove(removeVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var removeVector = removeVector
 
-    var vector: Vector = this.getVector()!!
+    var vector: BasicArrayList = this.getVector()!!
 
 
-    var size: Int = removeVector!!.size!!
+    var size: Int = removeVector!!.size()!!
 
 
 

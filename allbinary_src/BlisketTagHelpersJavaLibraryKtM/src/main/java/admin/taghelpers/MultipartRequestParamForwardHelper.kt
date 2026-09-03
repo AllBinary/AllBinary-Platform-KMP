@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import org.allbinary.globals.GLOBALS2
 import org.allbinary.logic.communication.http.request.RequestMapInterface
@@ -52,8 +53,8 @@ open public class MultipartRequestParamForwardHelper
 
     private val command: String
 
-    private val paramVector: Vector
-public constructor (parentHelperTag: HelperTag, page: String, command: String, paramVector: Vector, pageContext: PageContext)
+    private val paramVector: BasicArrayList
+public constructor (parentHelperTag: HelperTag, page: String, command: String, paramVector: BasicArrayList, pageContext: PageContext)
             : super()
         {
 var parentHelperTag = parentHelperTag
@@ -134,7 +135,7 @@ this.pageContext!!.forward(stringBuffer!!.toString())
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = this.paramVector!!.size!!
+    var size: Int = this.paramVector!!.size()!!
 
 
 

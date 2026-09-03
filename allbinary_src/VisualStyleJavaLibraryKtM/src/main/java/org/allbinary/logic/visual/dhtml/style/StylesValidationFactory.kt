@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.logic.communication.http.request.NameSpaceRequestParamData
@@ -61,7 +62,7 @@ companion object {
             
     open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: Vector{
+: BasicArrayList{
 var hashMap = hashMap
 
     var stylesDocument: Document = hashMap!!.get(NameSpaceRequestParamData.DOCUMENT) as Document
@@ -87,7 +88,7 @@ private constructor ()
             
     open fun getInstance(document: Document)
         //nullable =  from not(true or (false and false)) = 
-: Vector{
+: BasicArrayList{
 var document = document
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -124,14 +125,14 @@ var document = document
     var stylesNode: Node = nodeList!!.item(index)!!
 
 
-    var styleNodeList: Vector = DomSearchHelper.getAllNodes(StyleData.getInstance()!!.NAME, stylesNode!!.getChildNodes())!!
+    var styleNodeList: BasicArrayList = DomSearchHelper.getAllNodes(StyleData.getInstance()!!.NAME, stylesNode!!.getChildNodes())!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Number Of Style Nodes Present: " +styleNodeList!!.size, this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Number Of Style Nodes Present: " +styleNodeList!!.size(), this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -139,21 +140,21 @@ var document = document
 
 
 
-                        for (styleNodesIndex in 0 until styleNodeList!!.size!!)
+                        for (styleNodesIndex in 0 until styleNodeList!!.size()!!)
 
         {
 
     var styleNode: Node = styleNodeList!!.get(styleNodesIndex) as Node
 
 
-    var cssElementStyleNodeList: Vector = DomSearchHelper.getAllNodes(CssElementData.getInstance()!!.NAME, styleNode!!.getChildNodes())!!
+    var cssElementStyleNodeList: BasicArrayList = DomSearchHelper.getAllNodes(CssElementData.getInstance()!!.NAME, styleNode!!.getChildNodes())!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Number Of Element Nodes Present: " +cssElementStyleNodeList!!.size, this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Number Of Element Nodes Present: " +cssElementStyleNodeList!!.size(), this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -179,7 +180,7 @@ var document = document
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Vector()
+                        return BasicArrayListD()
 }
 
 

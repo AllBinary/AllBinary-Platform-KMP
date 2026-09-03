@@ -27,12 +27,14 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.globals.FREEBLISKET_PATH_GLOBALS
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.crypt.Encoder
 import org.allbinary.logic.control.crypt.file.CryptFileReader
@@ -848,7 +850,7 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(transformInfoData!!.NAME, this.name)
 hashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
@@ -879,9 +881,9 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: java.util.Vector{
+: BasicArrayList{
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(this.name)
 vector.add(this.storeName)

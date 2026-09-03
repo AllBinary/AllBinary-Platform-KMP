@@ -28,10 +28,12 @@
 import java.util.HashMap
 import java.util.ListIterator
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.HistoryDbInitInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.business.user.UserData
 import org.allbinary.business.user.address.ShippingAddressData
 import org.allbinary.business.user.commerce.inventory.basket.BasketInterface
@@ -58,6 +60,8 @@ open public class OrderItemsEntity : AbSqlBean
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     val tableName: String = "orderitems"
 public constructor ()                        
 
@@ -76,7 +80,7 @@ this.setTableName(this.tableName)
 var userName = userName
 var order = order
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
         try {
@@ -115,7 +119,7 @@ var order = order
 
     var itemInterface: ItemInterface = inventoryEntity!!.getItem(item)!!
 
-vector= Vector()
+vector= BasicArrayListD()
 vector.add(OrderItemIdGenerator().
                             getNext())
 vector.add(order.getId())
@@ -168,7 +172,7 @@ this.insert(vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    this.logUtil!!.putF("Command Success Added: " +items.size, this, INSERT)
+                                    this.logUtil!!.putF("Command Success Added: " +items.size(), this, INSERT)
 
                                     }
                                 
@@ -197,10 +201,10 @@ var status = status
 
         try {
             
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var updateHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var updateHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(OrderData.ID, orderId)
 whereHashMap!!.put(ShippingMethodData.GROUP, groupId)
@@ -229,16 +233,20 @@ var orderId = orderId
 
         try {
             
-    var itemStatusVector: Vector = super.getColumnWhere(OrderHistoryData.STATUS, OrderData.ID, orderId)!!
+    var itemStatusVector: BasicArrayList = super.getColumnWhere(OrderHistoryData.STATUS, OrderData.ID, orderId)!!
 
 
-    var itemStatusIter: ListIterator = itemStatusVector!!.listIterator()!!
+    var size: Int = itemStatusVector!!.size()!!
 
 
-        while(itemStatusIter!!.hasNext())
+
+
+
+                        for (index in 0 until size)
+
         {
 
-    var status: String = itemStatusIter!!.next() as String
+    var status: String = itemStatusVector!!.get(index) as String
 
 
     
@@ -291,11 +299,11 @@ var orderId = orderId
     var basketReview: BasketReview = BasketReview()
 
 
-    var keyValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keyValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keyValues!!.put(OrderData.ID, orderId)
 
-    var items: Vector = super.getRows(keyValues)!!
+    var items: BasicArrayList = super.getRows(keyValues)!!
 
 
     var entryData: EntryData = EntryData.getInstance()!!
@@ -304,7 +312,7 @@ keyValues!!.put(OrderData.ID, orderId)
     
                         if(items != 
                                     null
-                                 && items.size > 0)
+                                 && items.size() > 0)
                         
                                     {
                                     
@@ -327,14 +335,14 @@ keyValues!!.put(OrderData.ID, orderId)
 
     var itemHashMap: HashMap<Any, Any> = itemsArray[i]!! as HashMap<Any, Any>
 
-itemHashMap!!.put(BasicItemData.INBASKETS, EMPTY_STRING)
+itemHashMap!!.put(basicItemData!!.INBASKETS, EMPTY_STRING)
 itemHashMap!!.put(entryData!!.ENABLE, EMPTY_STRING)
 itemHashMap!!.put(entryData!!.TIMECREATED, EMPTY_STRING)
 itemHashMap!!.put(entryData!!.LASTMODIFIED, EMPTY_STRING)
-itemHashMap!!.put(BasicItemData.GROUPS, EMPTY_STRING)
-itemHashMap!!.put(BasicItemData.OPTIONS, EMPTY_STRING)
-itemHashMap!!.put(BasicItemData.PERMISSIONS, EMPTY_STRING)
-itemHashMap!!.put(BasicItemData.SPECIALS, EMPTY_STRING)
+itemHashMap!!.put(basicItemData!!.GROUPS, EMPTY_STRING)
+itemHashMap!!.put(basicItemData!!.OPTIONS, EMPTY_STRING)
+itemHashMap!!.put(basicItemData!!.PERMISSIONS, EMPTY_STRING)
+itemHashMap!!.put(basicItemData!!.SPECIALS, EMPTY_STRING)
 
     var item: Item = Item(itemHashMap)
 
@@ -401,47 +409,47 @@ stringBuffer!!.append(UserData.USERNAME)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(StoreFrontData.getInstance()!!.NAME)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.ID)
+stringBuffer!!.append(basicItemData!!.ID)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.NUMBER)
+stringBuffer!!.append(basicItemData!!.NUMBER)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.NEWORUSED)
+stringBuffer!!.append(basicItemData!!.NEWORUSED)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.SUMMARY)
+stringBuffer!!.append(basicItemData!!.SUMMARY)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.DISTRIBUTOR)
+stringBuffer!!.append(basicItemData!!.DISTRIBUTOR)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.IDUSEDBYDISTRIBUTOR)
+stringBuffer!!.append(basicItemData!!.IDUSEDBYDISTRIBUTOR)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.PRODUCEDBY)
+stringBuffer!!.append(basicItemData!!.PRODUCEDBY)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.PRODUCTIONDATE)
+stringBuffer!!.append(basicItemData!!.PRODUCTIONDATE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.STARTPRODUCTIONDATE)
+stringBuffer!!.append(basicItemData!!.STARTPRODUCTIONDATE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.DESCRIPTION)
+stringBuffer!!.append(basicItemData!!.DESCRIPTION)
 stringBuffer!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)
-stringBuffer!!.append(BasicItemData.KEYWORDS)
+stringBuffer!!.append(basicItemData!!.KEYWORDS)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.CATEGORY)
+stringBuffer!!.append(basicItemData!!.CATEGORY)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.TYPE)
+stringBuffer!!.append(basicItemData!!.TYPE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.SMALLIMAGE)
+stringBuffer!!.append(basicItemData!!.SMALLIMAGE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.MEDIUMIMAGE)
+stringBuffer!!.append(basicItemData!!.MEDIUMIMAGE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.LARGEIMAGE)
+stringBuffer!!.append(basicItemData!!.LARGEIMAGE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.WEIGHT)
+stringBuffer!!.append(basicItemData!!.WEIGHT)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicItemData.PRICE)
+stringBuffer!!.append(basicItemData!!.PRICE)
 stringBuffer!!.append(" VARCHAR(20) NOT NULL,")
-stringBuffer!!.append(BasicItemData.COMMENT)
+stringBuffer!!.append(basicItemData!!.COMMENT)
 stringBuffer!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)
-stringBuffer!!.append(BasicItemData.CUSTOMS)
+stringBuffer!!.append(basicItemData!!.CUSTOMS)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
-stringBuffer!!.append(BasicItemData.DOWNLOADS)
+stringBuffer!!.append(basicItemData!!.DOWNLOADS)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(ShippingMethodData.COST)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)

@@ -23,7 +23,7 @@ import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Item
 import org.allbinary.game.state.GameState
 import org.allbinary.game.state.GameStateFactory
-import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 
 open public class NullGameCanvasRunnable : Object, GameCanvasRunnableInterface {
@@ -110,7 +110,7 @@ open public class NullGameCanvasRunnable : Object, GameCanvasRunnableInterface {
     : Hashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance()!!.NULL_TABLE
+        return StdUtil.getInstance()!!.NULL_TABLE
     }
 
     @Throws(Exception::class)
@@ -119,7 +119,7 @@ open public class NullGameCanvasRunnable : Object, GameCanvasRunnableInterface {
     : Hashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance()!!.NULL_TABLE
+        return StdUtil.getInstance()!!.NULL_TABLE
     }
 
     @Throws(Exception::class)

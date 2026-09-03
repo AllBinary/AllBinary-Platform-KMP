@@ -27,12 +27,14 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.quoterequest.QuoteRequestData
 import org.allbinary.business.user.UserData
 import org.allbinary.data.generator.QuoteRequestIdGenerator
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlData
 import org.allbinary.logic.string.StringMaker
@@ -316,9 +318,9 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.id)
 values.add(this.userName)
@@ -352,7 +354,7 @@ values.add(time)
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
 
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 values.put(UserData.USERNAME, userName)
 values.put(quoteRequestData!!.PROJECT_INFO, this.projectInfo)

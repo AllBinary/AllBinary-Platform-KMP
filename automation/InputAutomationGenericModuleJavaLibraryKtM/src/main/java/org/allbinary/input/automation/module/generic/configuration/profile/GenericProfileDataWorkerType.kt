@@ -29,6 +29,7 @@ import java.util.HashMap
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.input.media.image.InputImageType
+import org.allbinary.logic.StdUtil
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -39,7 +40,7 @@ open public class GenericProfileDataWorkerType
         
 companion object {
             
-    private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    private var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
     var SAVED_CAPTURE: GenericProfileDataWorkerType = SavedCaptureGenericProfileDataWorkerType.SAVED_CAPTURE
 

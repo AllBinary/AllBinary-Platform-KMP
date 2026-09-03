@@ -27,13 +27,15 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.permission.PermissionItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.permissions.PermissionItemsEntityFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
@@ -42,6 +44,8 @@ open public class PermissionItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     private var request: HttpServletRequest
 
@@ -79,8 +83,8 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(BasicItemData.ID)
-this.number= this.request.getParameter(BasicItemData.NUMBER)
+this.id= this.request.getParameter(basicItemData!!.ID)
+this.number= this.request.getParameter(basicItemData!!.NUMBER)
 this.enabled= this.request.getParameter(EntryData.getInstance()!!.ENABLE)
 this.who= this.request.getParameter(PermissionItemData.WHO)
 this.what= this.request.getParameter(PermissionItemData.WHAT)
@@ -88,7 +92,7 @@ this.type= this.request.getParameter(PermissionItemData.TYPE)
 this.remoteAddr= this.request.getParameter(PermissionItemData.REMOTE_ADDR)
 this.startTime= this.request.getParameter(PermissionItemData.START_TIME)
 this.endTime= this.request.getParameter(PermissionItemData.END_TIME)
-this.price= this.request.getParameter(BasicItemData.PRICE)
+this.price= this.request.getParameter(basicItemData!!.PRICE)
 this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
 this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 }
@@ -98,10 +102,10 @@ this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIF
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-values.put(BasicItemData.ID, this.id)
-values.put(BasicItemData.NUMBER, this.number)
+values.put(basicItemData!!.ID, this.id)
+values.put(basicItemData!!.NUMBER, this.number)
 values.put(EntryData.getInstance()!!.ENABLE, this.enabled)
 values.put(PermissionItemData.WHO, this.who)
 values.put(PermissionItemData.WHAT, this.what)
@@ -109,7 +113,7 @@ values.put(PermissionItemData.TYPE, this.type)
 values.put(PermissionItemData.REMOTE_ADDR, this.remoteAddr)
 values.put(PermissionItemData.START_TIME, this.startTime)
 values.put(PermissionItemData.END_TIME, this.endTime)
-values.put(BasicItemData.PRICE, this.price)
+values.put(basicItemData!!.PRICE, this.price)
 
     var calendar: Calendar = Calendar.getInstance()!!
 
@@ -141,7 +145,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
                                 
 
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.id)
 values.add(this.number)

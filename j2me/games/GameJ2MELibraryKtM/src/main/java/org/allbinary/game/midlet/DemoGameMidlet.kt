@@ -17,10 +17,11 @@ package org.allbinary.game.midlet
 
 import java.util.Hashtable
 import org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface
+import org.allbinary.game.displayable.canvas.NullGameCanvasRunnable
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
-import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.system.security.licensing.ClientInformationFactory
 import org.allbinary.thread.PrimaryThreadPool
 
@@ -65,8 +66,10 @@ open public class DemoGameMidlet : GameMidlet {
     open fun createDemoGameCanvasRunnableInterface()
     // nullable = true from not(false or (false and true)) = true
     : GameCanvasRunnableInterface {
+        this.logUtil!!.putF(this.commonStrings!!.NOT_IMPLEMENTED, this, this.commonStrings!!.CREATE)
 
-        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE
     }
 
     @Throws(Exception::class)
@@ -128,7 +131,7 @@ open public class DemoGameMidlet : GameMidlet {
 
         var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
 
-        this.setStartStateHashtable(NullUtil.getInstance()!!.NULL_TABLE)
+        this.setStartStateHashtable(StdUtil.getInstance()!!.NULL_TABLE)
         PrimaryThreadPool.getInstance()!!.runTask(CreateGameRunnable(this, hashtable))
         this.logUtil!!.putF(this.commonStrings!!.END, this, CREATE_GAME)
     }

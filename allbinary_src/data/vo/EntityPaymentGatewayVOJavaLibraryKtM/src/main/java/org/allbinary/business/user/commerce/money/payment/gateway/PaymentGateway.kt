@@ -26,11 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.UserData
 import org.allbinary.business.user.commerce.money.payment.PaymentData
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.control.crypt.SuperCrypt
 import org.allbinary.logic.string.StringUtil
 
@@ -984,7 +986,7 @@ this.timeEntered= value
 : HashMap<Any, Any>{
 var isEncrypted = isEncrypted
 
-    var paymentGatewayHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var paymentGatewayHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 paymentGatewayHashMap!!.put(EntryData.getInstance()!!.ENABLE, this.enable)
 paymentGatewayHashMap!!.put(StoreFrontData.getInstance()!!.NAME.toString(), this.storeName)
@@ -1069,7 +1071,7 @@ paymentGatewayHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED.toString(), t
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -1080,10 +1082,10 @@ paymentGatewayHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED.toString(), t
 
     open fun toVector(isEncrypted: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var isEncrypted = isEncrypted
 
-    var updateVector: Vector = Vector()
+    var updateVector: BasicArrayList = BasicArrayListD()
 
 updateVector!!.add(this.enable)
 updateVector!!.add(this.storeName)

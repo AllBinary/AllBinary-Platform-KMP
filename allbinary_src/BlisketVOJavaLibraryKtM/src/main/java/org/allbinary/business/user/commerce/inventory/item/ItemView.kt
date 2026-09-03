@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.address.StreetAddressData
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.logic.string.StringUtil
@@ -41,8 +42,8 @@ open public class ItemView
 
     private val itemInterface: OrderItemInterface
 
-    private val vector: Vector
-public constructor (itemInterface: OrderItemInterface, vector: Vector)
+    private val vector: BasicArrayList
+public constructor (itemInterface: OrderItemInterface, vector: BasicArrayList)
             : super()
         {
 var itemInterface = itemInterface

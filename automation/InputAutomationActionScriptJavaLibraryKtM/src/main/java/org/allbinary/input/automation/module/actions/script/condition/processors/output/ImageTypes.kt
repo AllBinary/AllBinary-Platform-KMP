@@ -25,10 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.input.media.image.InputImageType
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -70,7 +72,7 @@ imageTypes!!.getVector()!!.add(imageType)
 
         }
             
-    private var vector: Vector = Vector()
+    private var vector: BasicArrayList = BasicArrayListD()
 public constructor ()
             : super()
         {
@@ -120,7 +122,7 @@ this.getVector()!!.add(InputImageType.getInstance(nextImageTypeString))
 
     open fun getVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -139,7 +141,7 @@ var document = document
     var newNode: Node = document.createElement(ImageActionScriptOutputData.TYPES)!!
 
 
-    var size: Int = this.vector.size!!
+    var size: Int = this.vector.size()!!
 
 
 
@@ -170,7 +172,7 @@ newNode!!.appendChild(ModDomHelper.createTextNode(document, ImageActionScriptOut
 
 stringBuffer!!.append("ImageTypes: ")
 
-    var size: Int = this.vector.size!!
+    var size: Int = this.vector.size()!!
 
 
 

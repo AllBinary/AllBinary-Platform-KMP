@@ -28,7 +28,8 @@
         import kotlin.reflect.KClass
         
 import java.sql.ResultSet
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.init.db.DbConnectionInfo
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -150,10 +151,10 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_LARGETS_INT
 
     open fun getColumn(columnName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
     //var columnName = columnName
 
-    var column: Vector = Vector()
+    var column: BasicArrayList = BasicArrayListD()
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -221,7 +222,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_COLUMN)
 
     open fun getColumnWhere(columnName: String, key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var columnName = columnName
 var key = key
 var value = value
@@ -241,7 +242,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
     var sqlStatement: String = stringBuffer!!.toString()!!
 
 
-    var column: Vector = Vector()
+    var column: BasicArrayList = BasicArrayListD()
 
 
     var rset: ResultSet

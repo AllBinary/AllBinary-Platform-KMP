@@ -27,7 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Color
+import java.awt.Point
 import java.awt.image.BufferedImage
 import java.util.HashMap
 import org.allbinary.data.tree.dom.DomNodeHelper
@@ -36,6 +37,7 @@ import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.graphics.color.ColorCacheFactory
 import org.allbinary.graphics.color.ColorCacheable
 import org.allbinary.input.media.image.capture.CapturedBufferedImagesCacheSingleton
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.cache.AutomaticCacheInterface
@@ -256,7 +258,7 @@ this.colorAtActionScriptConditionJPanel!!.getColorAtActionJDialog()!!.setVisible
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(ColorAtActionScriptConditionData.LOCATION_X, Integer.toString(this.getPoint()!!.x))
 hashMap!!.put(ColorAtActionScriptConditionData.LOCATION_Y, Integer.toString(this.getPoint()!!.y))

@@ -28,12 +28,14 @@
 import java.util.Calendar
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.RequestParams
 import org.allbinary.logic.communication.http.request.session.WeblisketSession
 import org.allbinary.logic.communication.log.LogUtil
@@ -133,9 +135,9 @@ this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstanc
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.workFlowName)
 values.add(this.storeName)
@@ -164,7 +166,7 @@ values.add(time)
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(WorkFlowData.getInstance()!!.NAME, this.workFlowName)
 hashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)

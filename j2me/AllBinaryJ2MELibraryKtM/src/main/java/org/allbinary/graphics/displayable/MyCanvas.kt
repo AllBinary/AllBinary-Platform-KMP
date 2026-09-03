@@ -24,6 +24,7 @@ import javax.microedition.lcdui.NullCommandListener
 import org.allbinary.graphics.displayable.command.MyCommandInterface
 import org.allbinary.graphics.displayable.command.MyCommandsFactory
 import org.allbinary.input.TouchJ2ME
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.Sound
@@ -63,7 +64,7 @@ open public class MyCanvas : Canvas, DisplayableInterface, MyCommandInterface {
         this.displayInfo!!.update(this, this.canvasStrings!!.CONSTRUCTOR)
         this.name = name
         this.childNameList = childNameList
-        this.commandStack = Stack()
+        this.commandStack = StdUtil.getInstance()!!.createStack()
     }
 
     override fun setFullScreenMode(mode: Boolean)

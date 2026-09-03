@@ -32,6 +32,7 @@
 import org.allbinary.thread.ARunnable
 import java.util.HashMap
 import org.allbinary.gui.dialog.HashMapJDialogListenerInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -76,7 +77,7 @@ dialog.setVisible(true)
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    private var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 public constructor (parent: java.awt.Frame, modal: Boolean)                        
 
                             : super(parent, modal){

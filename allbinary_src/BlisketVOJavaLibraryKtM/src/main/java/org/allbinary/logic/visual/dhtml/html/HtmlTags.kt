@@ -25,18 +25,20 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 
 open public class HtmlTags
             : Object
          {
         
 
-    private var htmlTagVector: Vector
+    private var htmlTagVector: BasicArrayList
 public constructor ()
             : super()
         {
-this.htmlTagVector= Vector()
+this.htmlTagVector= BasicArrayListD()
 }
 
 
@@ -67,7 +69,7 @@ this.htmlTagVector!!.add(htmlTag)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.htmlTagVector!!.size
+                        return this.htmlTagVector!!.size()
 }
 
 

@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 
 open public class InputImageType
             : Object
@@ -34,9 +36,9 @@ open public class InputImageType
         
 companion object {
             
-    private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    private var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-    private val TYPE_VECTOR: Vector = Vector()
+    private val TYPE_VECTOR: BasicArrayList = BasicArrayListD()
 
     var CAPTURE: InputImageType = InputImageType("Capture", 0)
 
@@ -58,7 +60,7 @@ var imageTypeString = imageTypeString
 
     open fun getAllAsVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

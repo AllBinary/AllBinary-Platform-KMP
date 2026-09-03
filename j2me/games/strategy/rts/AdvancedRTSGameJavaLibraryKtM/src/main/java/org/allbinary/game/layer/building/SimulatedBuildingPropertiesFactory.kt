@@ -21,7 +21,7 @@ import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
-import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 
 open public class SimulatedBuildingPropertiesFactory : BuildingPropertiesFactory {
 
@@ -85,7 +85,7 @@ open public class SimulatedBuildingPropertiesFactory : BuildingPropertiesFactory
     : Hashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance()!!.NULL_TABLE
+        return StdUtil.getInstance()!!.NULL_TABLE
     }
 
     override fun getTrackingEvent(

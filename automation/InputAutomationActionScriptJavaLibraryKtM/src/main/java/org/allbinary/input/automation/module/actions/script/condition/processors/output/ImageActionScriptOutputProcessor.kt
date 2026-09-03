@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.media.image.InputImageIOInterfaceFactory
 import org.allbinary.input.media.image.InputImageType
 import org.allbinary.logic.communication.log.LogUtil
@@ -56,10 +57,10 @@ logUtil!!.putF("Start - Processing at: " +imageActionScriptOutputInterface!!.toS
     var imageTypes: ImageTypes = imageActionScriptOutputInterface!!.getImageTypes()!!
 
 
-    var vector: Vector = imageTypes!!.getVector()!!
+    var vector: BasicArrayList = imageTypes!!.getVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

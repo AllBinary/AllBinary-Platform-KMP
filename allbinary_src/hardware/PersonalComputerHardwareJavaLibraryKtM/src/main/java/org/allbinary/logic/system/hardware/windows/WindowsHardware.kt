@@ -26,8 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
-import java.util.Vector
-import org.allbinary.logic.NullUtil
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.hardware.HardwareInterface
 import org.allbinary.logic.system.hardware.components.ComponentFactory
@@ -51,29 +52,29 @@ open public class WindowsHardware
                 , HardwareInterface {
         
 
-    private var componentInterfaceVector: Vector
+    private var componentInterfaceVector: BasicArrayList
 
-    private var videoInterfaceVector: Vector
+    private var videoInterfaceVector: BasicArrayList
 
-    private var hardDriveControllerInterfaceVector: Vector
+    private var hardDriveControllerInterfaceVector: BasicArrayList
 
-    private var cpuInterfaceVector: Vector
+    private var cpuInterfaceVector: BasicArrayList
 
-    private var usbInterfaceVector: Vector
+    private var usbInterfaceVector: BasicArrayList
 
-    private var ethernetInterfaceVector: Vector
+    private var ethernetInterfaceVector: BasicArrayList
 
-    private var multimediaInterfaceVector: Vector
+    private var multimediaInterfaceVector: BasicArrayList
 
-    private var fireWireInterfaceVector: Vector
+    private var fireWireInterfaceVector: BasicArrayList
 
-    private var bridgeInterfaceVector: Vector
+    private var bridgeInterfaceVector: BasicArrayList
 
-    private var hardDriveInterfaceVector: Vector
+    private var hardDriveInterfaceVector: BasicArrayList
 
-    private var macInterfaceVector: Vector
+    private var macInterfaceVector: BasicArrayList
 
-    private var monitorInterfaceVector: Vector
+    private var monitorInterfaceVector: BasicArrayList
 
     private val NAME: String = "Windows Hardware Profile"
 
@@ -85,21 +86,21 @@ public constructor ()
         {
 
         try {
-            this.componentInterfaceVector= Vector()
-this.videoInterfaceVector= Vector()
-this.hardDriveControllerInterfaceVector= Vector()
-this.cpuInterfaceVector= Vector()
-this.usbInterfaceVector= Vector()
-this.ethernetInterfaceVector= Vector()
-this.multimediaInterfaceVector= Vector()
-this.fireWireInterfaceVector= Vector()
-this.bridgeInterfaceVector= Vector()
-this.hardDriveInterfaceVector= Vector()
-this.macInterfaceVector= Vector()
-this.monitorInterfaceVector= Vector()
+            this.componentInterfaceVector= BasicArrayListD()
+this.videoInterfaceVector= BasicArrayListD()
+this.hardDriveControllerInterfaceVector= BasicArrayListD()
+this.cpuInterfaceVector= BasicArrayListD()
+this.usbInterfaceVector= BasicArrayListD()
+this.ethernetInterfaceVector= BasicArrayListD()
+this.multimediaInterfaceVector= BasicArrayListD()
+this.fireWireInterfaceVector= BasicArrayListD()
+this.bridgeInterfaceVector= BasicArrayListD()
+this.hardDriveInterfaceVector= BasicArrayListD()
+this.macInterfaceVector= BasicArrayListD()
+this.monitorInterfaceVector= BasicArrayListD()
 
     
-                        if(this.componentInterfaceVector!!.size < this.MINHARDWARE)
+                        if(this.componentInterfaceVector!!.size() < this.MINHARDWARE)
                         
                                     throw Exception("Not Enough Data For A Valid License On Windows")
 } catch(e: Exception)
@@ -366,7 +367,7 @@ var index = index
     var hardwareBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = this.componentInterfaceVector!!.size!!
+    var size: Int = this.componentInterfaceVector!!.size()!!
 
 
 
@@ -410,7 +411,7 @@ var hardwareInterface = hardwareInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullUtil.getInstance()!!.NULL_TABLE
+                        return StdUtil.getInstance()!!.NULL_TABLE
 }
 
 

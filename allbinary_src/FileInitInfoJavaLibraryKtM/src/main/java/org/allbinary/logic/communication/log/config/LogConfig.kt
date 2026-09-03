@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
@@ -236,10 +237,10 @@ stringBuffer!!.append(this.getFileName())
     var logConfigTypesNode: Node = logConfigTypesNodeList!!.item(0)!!
 
 
-    var logConfigTypeNodeVector: Vector = DomSearchHelper.getAllNodes(LogConfigTypeData.getInstance()!!.NAME, logConfigTypesNode!!.getChildNodes())!!
+    var logConfigTypeNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(LogConfigTypeData.getInstance()!!.NAME, logConfigTypesNode!!.getChildNodes())!!
 
 
-    var size: Int = logConfigTypeNodeVector!!.size!!
+    var size: Int = logConfigTypeNodeVector!!.size()!!
 
 
 
@@ -249,7 +250,7 @@ stringBuffer!!.append(this.getFileName())
 
         {
 
-    var node: Node = logConfigTypeNodeVector!!.elementAt(i) as Node
+    var node: Node = logConfigTypeNodeVector!!.get(i) as Node
 
 
     var logType: LogConfigType = LogConfigTypes.getInstance(node)!!

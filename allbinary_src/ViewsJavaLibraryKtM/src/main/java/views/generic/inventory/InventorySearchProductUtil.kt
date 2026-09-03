@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.BasicItemView
 import org.allbinary.business.user.commerce.inventory.item.ItemInterface
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntity
@@ -99,7 +100,7 @@ var product = product
                                     
     var viewDocumentInterface: TransformDocumentInterface = TransformStoreDocumentFactory.getInstance(searchRequest)!!
 
-viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface, Vector()).
+viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface, BasicArrayListD()).
                             toXmlNode(viewDocumentInterface!!.getDoc()))
 
     var success: String = DomDocumentHelper.toString(viewDocumentInterface!!.getDoc())!!

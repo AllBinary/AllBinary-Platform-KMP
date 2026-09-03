@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewayInterface
 import org.allbinary.business.user.commerce.money.payment.types.BasicPaymentType
 import org.allbinary.data.tables.BasicDataTableInterface
@@ -39,7 +40,7 @@ interface PaymentGatewayEntityInterface : BasicDataTableInterface {
 
     open fun findPaymentTypeVectorByStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
     open fun remove(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true

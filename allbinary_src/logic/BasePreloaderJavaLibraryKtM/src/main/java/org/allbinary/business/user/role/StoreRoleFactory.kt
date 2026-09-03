@@ -16,7 +16,8 @@
 package org.allbinary.business.user.role
 
 import java.lang.Object
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class StoreRoleFactory : Object {
 
@@ -33,11 +34,11 @@ open public class StoreRoleFactory : Object {
         }
     }
 
-    private val roles: Vector<Any> = Vector<Any>()
+    private val roles: BasicArrayList = BasicArrayListD()
 
-    private val subscriberRoles: Vector<Any> = Vector<Any>()
+    private val subscriberRoles: BasicArrayList = BasicArrayListD()
 
-    private val wholesaleRoles: Vector<Any> = Vector<Any>()
+    private val wholesaleRoles: BasicArrayList = BasicArrayListD()
 
     private constructor() : super() {
 
@@ -52,7 +53,7 @@ open public class StoreRoleFactory : Object {
 
     open fun getRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.roles
@@ -60,7 +61,7 @@ open public class StoreRoleFactory : Object {
 
     open fun getSubscriberRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.subscriberRoles
@@ -68,7 +69,7 @@ open public class StoreRoleFactory : Object {
 
     open fun getWholesaleRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.wholesaleRoles

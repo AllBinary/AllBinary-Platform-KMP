@@ -25,10 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileActions
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -43,7 +45,7 @@ open public class GenericProfile
 
     private var name: String
 
-    private var vector: Vector
+    private var vector: BasicArrayList
 
     private var genericProfileActions: GenericProfileActions
 public constructor (node: Node)
@@ -51,7 +53,7 @@ public constructor (node: Node)
         {
 var node = node
 this.setName(DomNodeHelper.getTextNodeValue(node))
-this.vector= Vector()
+this.vector= BasicArrayListD()
 
     var nodeList: NodeList = node.getChildNodes()!!
 
@@ -88,13 +90,13 @@ public constructor (name: String)
         {
 var name = name
 this.setName(name)
-this.vector= Vector()
+this.vector= BasicArrayListD()
 }
 
 
     open fun getGenericProfileDataWorkerTypeVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -132,7 +134,7 @@ var document = document
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileData.NAME, this.name)!!
 
 
-    var size: Int = this.vector.size!!
+    var size: Int = this.vector.size()!!
 
 
 

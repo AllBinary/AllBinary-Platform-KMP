@@ -28,7 +28,9 @@
         import kotlin.reflect.KClass
         
 import java.util.HashSet
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.logic.string.regex.replace.Replace
 import org.allbinary.string.CommonPhoneStrings
@@ -41,7 +43,7 @@ open public class UniqueTokens
          {
         
 
-    private val specialCharacters: Vector = Vector()
+    private val specialCharacters: BasicArrayList = BasicArrayListD()
 public constructor ()
             : super()
         {
@@ -74,7 +76,7 @@ this.specialCharacters!!.add("`")
 
                 @Throws(Exception::class)
             
-    open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
+    open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : HashSet{
 var stringVector = stringVector
@@ -90,10 +92,10 @@ var stringVector = stringVector
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
 
-        while(index < stringVector!!.size)
+        while(index < stringVector!!.size())
         {
 
-    var keywords: String = stringVector!!.elementAt(index) as String
+    var keywords: String = stringVector!!.get(index) as String
 
 
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.COMMA)
@@ -206,12 +208,12 @@ var subCleaningString = subCleaningString
 
 
 
-                        for (index in 0 until this.specialCharacters!!.size!!)
+                        for (index in 0 until this.specialCharacters!!.size()!!)
 
         {
 
     
-                        if(subCleaningString!!.compareTo(this.specialCharacters!!.elementAt(index) as String) == 0)
+                        if(subCleaningString!!.compareTo(this.specialCharacters!!.get(index) as String) == 0)
                         
 
 

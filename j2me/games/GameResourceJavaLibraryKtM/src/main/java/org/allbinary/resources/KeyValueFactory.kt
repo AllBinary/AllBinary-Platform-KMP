@@ -17,6 +17,7 @@ package org.allbinary.resources
 
 import java.lang.Object
 import java.util.Hashtable
+import org.allbinary.logic.StdUtil
 
 open public class KeyValueFactory : Object {
 
@@ -36,7 +37,7 @@ open public class KeyValueFactory : Object {
     // Auto Generated
     public constructor() : super() {}
 
-    val MAP: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    val MAP: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     open fun get(
         key: String

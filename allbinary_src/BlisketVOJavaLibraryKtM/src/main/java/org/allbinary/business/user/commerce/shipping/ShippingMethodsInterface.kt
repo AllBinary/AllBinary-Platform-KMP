@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.shipping.modules.ShippingInterface
 
 interface ShippingMethodsInterface {
@@ -33,7 +34,7 @@ interface ShippingMethodsInterface {
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             

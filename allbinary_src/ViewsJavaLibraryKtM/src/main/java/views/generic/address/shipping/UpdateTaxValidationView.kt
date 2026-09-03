@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.address.ShippingAddressData
@@ -77,7 +78,7 @@ this.streetAddress= StreetAddress(this.getRequest())
     var billingAddressesEntity: ShippingAddressesEntity = ShippingAddressesEntity(this.getWeblisketSession()!!.getUserName())
 
 
-    var streetAddressList: Vector = billingAddressesEntity!!.get()!!
+    var streetAddressList: BasicArrayList = billingAddressesEntity!!.get()!!
 
 
     
@@ -98,7 +99,7 @@ this.streetAddress= StreetAddress(this.getRequest())
     var count: Int = 0
 
 
-    var size: Int = streetAddressList!!.size!!
+    var size: Int = streetAddressList!!.size()!!
 
 
 

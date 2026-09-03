@@ -27,6 +27,7 @@
         
 import java.util.HashMap
 import org.allbinary.business.user.commerce.inventory.order.OrderHistoryData
+import org.allbinary.logic.StdUtil
 
 open public class UserEmailEventNameData
             : Object
@@ -34,7 +35,7 @@ open public class UserEmailEventNameData
         
 companion object {
             
-    private var userNameEvenNameHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    private var userNameEvenNameHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
     private var nextId: Int = 0
 

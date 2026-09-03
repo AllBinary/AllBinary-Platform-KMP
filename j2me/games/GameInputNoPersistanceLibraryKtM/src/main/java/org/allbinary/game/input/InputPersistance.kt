@@ -22,6 +22,7 @@ import kotlin.Array
 import org.allbinary.game.configuration.persistance.BasicPersitance
 import org.allbinary.game.configuration.persistance.NullRecordComparator
 import org.allbinary.game.configuration.persistance.NullRecordFilter
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.logic.string.StringMaker
@@ -79,7 +80,7 @@ open public class InputPersistance : BasicPersitance {
                 this,
                 this.persistanceStrings!!.LOAD_ALL,
             )
-            hashtable = Hashtable<Any, Any>()
+            hashtable = StdUtil.getInstance()!!.createHashtable()
             this.valueList!!.add(hashtable)
             this.idList!!.add(smallIntegerSingletonFactory!!.getAt(id))
         }

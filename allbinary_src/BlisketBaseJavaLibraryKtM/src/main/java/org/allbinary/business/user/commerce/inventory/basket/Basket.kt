@@ -35,6 +35,7 @@ import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.business.user.commerce.money.MoneyException
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntity
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntityFactory
+import org.allbinary.logic.StdUtil
 
 open public class Basket
             : Object
@@ -43,7 +44,7 @@ open public class Basket
                 , Serializable {
         
 
-    private var items: HashMap<Any, Any> = HashMap<Any, Any>()
+    private var items: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 public constructor ()
             : super()
         {

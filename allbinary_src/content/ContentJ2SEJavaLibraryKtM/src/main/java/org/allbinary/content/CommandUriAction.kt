@@ -27,6 +27,7 @@
         
 import java.util.Hashtable
 import javax.microedition.lcdui.Command
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -60,7 +61,7 @@ companion object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     open fun add(command: Command, url: String)
         //nullable = true from not(false or (false and false)) = true

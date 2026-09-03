@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.advertisement.area.AdvertisementArea
 import org.allbinary.business.advertisement.area.AdvertisementAreaData
 import org.allbinary.business.advertisement.area.AdvertisementAreaInterface
@@ -34,6 +35,7 @@ import org.allbinary.business.advertisement.campaign.AdvertisementCampaignData
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
@@ -92,17 +94,17 @@ var value = value
             
     open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var storeName = storeName
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
-    var hashMapVector: Vector = super.getRows(keysAndValues)!!
+    var hashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
     var size: Int = hashMapVector!!.size!!
@@ -146,7 +148,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 var storeName = storeName
 var advertisementAreaName = advertisementAreaName
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 keysAndValues!!.put(AdvertisementAreaData.getInstance()!!.NAME, advertisementAreaName)

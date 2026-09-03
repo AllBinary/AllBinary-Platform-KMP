@@ -18,13 +18,14 @@ package org.allbinary.game.configuration
 import java.lang.Object
 import java.util.Hashtable
 import javax.microedition.lcdui.TextField
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 
 open public class GameConfigurationTextInput : Object {
 
     companion object {
 
-        private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         var SIMULATOR_IP: GameConfigurationTextInput =
             GameConfigurationTextInput("IP: ", "192.168.1.3")

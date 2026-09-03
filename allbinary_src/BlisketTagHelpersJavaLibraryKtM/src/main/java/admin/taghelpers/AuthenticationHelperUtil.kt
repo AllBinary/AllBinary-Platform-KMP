@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.role.BasicUserRole
 import org.allbinary.business.user.role.UserRole
 import org.allbinary.globals.URLGLOBALS
@@ -90,7 +91,7 @@ var filePath = filePath
     var downloadFilePermissions: HttpFilePermissions = HttpFilePermissions(fullPath)
 
 
-    var userRoles: Vector = downloadFilePermissions!!.getUserRoles()!!
+    var userRoles: BasicArrayList = downloadFilePermissions!!.getUserRoles()!!
 
 
     var userRole: UserRole = authenticationHelper!!.getRole()!!

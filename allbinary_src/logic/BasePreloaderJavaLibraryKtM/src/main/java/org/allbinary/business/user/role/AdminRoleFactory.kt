@@ -16,7 +16,8 @@
 package org.allbinary.business.user.role
 
 import java.lang.Object
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 
 open public class AdminRoleFactory : Object {
 
@@ -33,27 +34,27 @@ open public class AdminRoleFactory : Object {
         }
     }
 
-    private val adminRoles: Vector<Any> = Vector<Any>()
+    private val adminRoles: BasicArrayList = BasicArrayListD()
 
-    private val storeAdminRoles: Vector<Any> = Vector<Any>()
+    private val storeAdminRoles: BasicArrayList = BasicArrayListD()
 
-    private val storeManagementRoles: Vector<Any> = Vector<Any>()
+    private val storeManagementRoles: BasicArrayList = BasicArrayListD()
 
-    private val productManagementRoles: Vector<Any> = Vector<Any>()
+    private val productManagementRoles: BasicArrayList = BasicArrayListD()
 
-    private val reviewManagementRoles: Vector<Any> = Vector<Any>()
+    private val reviewManagementRoles: BasicArrayList = BasicArrayListD()
 
-    private val customerManagementRoles: Vector<Any> = Vector<Any>()
+    private val customerManagementRoles: BasicArrayList = BasicArrayListD()
 
-    private val workflowManagementRoles: Vector<Any> = Vector<Any>()
+    private val workflowManagementRoles: BasicArrayList = BasicArrayListD()
 
-    private val orderManagementRoles: Vector<Any> = Vector<Any>()
+    private val orderManagementRoles: BasicArrayList = BasicArrayListD()
 
-    private val adjusterManagementRoles: Vector<Any> = Vector<Any>()
+    private val adjusterManagementRoles: BasicArrayList = BasicArrayListD()
 
-    private val shippingManagementRoles: Vector<Any> = Vector<Any>()
+    private val shippingManagementRoles: BasicArrayList = BasicArrayListD()
 
-    private val webManagementRoles: Vector<Any> = Vector<Any>()
+    private val webManagementRoles: BasicArrayList = BasicArrayListD()
 
     private constructor() : super() {
 
@@ -98,7 +99,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getProductManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.productManagementRoles
@@ -106,7 +107,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getAdminRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.adminRoles
@@ -114,7 +115,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getStoreAdminRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.storeAdminRoles
@@ -122,7 +123,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getStoreManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.storeManagementRoles
@@ -130,7 +131,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getReviewManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.reviewManagementRoles
@@ -138,7 +139,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getCustomerManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.customerManagementRoles
@@ -146,7 +147,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getWorkflowManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.workflowManagementRoles
@@ -154,7 +155,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getWebManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.webManagementRoles
@@ -162,7 +163,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getShippingManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.shippingManagementRoles
@@ -170,7 +171,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getAdjusterManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.adjusterManagementRoles
@@ -178,7 +179,7 @@ open public class AdminRoleFactory : Object {
 
     open fun getOrderManagementRoles()
     // nullable = true from not(false or (false and true)) = true
-    : Vector<Any> {
+    : BasicArrayList {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.orderManagementRoles

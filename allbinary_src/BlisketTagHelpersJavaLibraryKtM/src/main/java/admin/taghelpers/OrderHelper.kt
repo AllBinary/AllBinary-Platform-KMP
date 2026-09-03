@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.context.modules.storefront.StoreFrontData
@@ -110,11 +111,11 @@ paymentGatewayBoolean= Boolean.TRUE
     var paymentGatewayEntityInterface: PaymentGatewayEntity = PaymentGatewayEntityFactory.getInstance() as PaymentGatewayEntity
 
 
-    var paymentTypeVector: Vector = paymentGatewayEntityInterface!!.findPaymentTypeVectorByStore(this.weblisketSession!!.getStoreName())!!
+    var paymentTypeVector: BasicArrayList = paymentGatewayEntityInterface!!.findPaymentTypeVectorByStore(this.weblisketSession!!.getStoreName())!!
 
 
     
-                        if(paymentTypeVector!!.size == 1)
+                        if(paymentTypeVector!!.size() == 1)
                         
                                     {
                                     

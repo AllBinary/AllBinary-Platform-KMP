@@ -31,6 +31,7 @@ import javax.servlet.jsp.JspTagException
 import admin.taghelpers.PaymentHelperFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.user.commerce.money.payment.PaymentData
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.LicensingException
@@ -127,7 +128,7 @@ this.storeName= value
                         if(this.isEnabled())
                         
                                     {
-                                    this.propertiesHashMap= HashMap<Any, Any>()
+                                    this.propertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     

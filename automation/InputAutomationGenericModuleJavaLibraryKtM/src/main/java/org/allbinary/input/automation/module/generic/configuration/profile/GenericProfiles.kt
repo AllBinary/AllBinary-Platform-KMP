@@ -36,6 +36,7 @@ import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
 import org.allbinary.input.automation.module.DefaultListModelHelper
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileActionData
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
@@ -71,7 +72,7 @@ public constructor (fileName: String)
 var fileName = fileName
 this.fileName= fileName
 this.profilesDefaultListModelHelper= DefaultListModelHelper()
-this.hashMap= HashMap<Any, Any>()
+this.hashMap= StdUtil.getInstance()!!.createHashMap()
 
     
                         if(File(fileName).

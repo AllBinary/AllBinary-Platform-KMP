@@ -18,6 +18,7 @@ package org.allbinary.media.graphics.geography.pathfinding
 import java.lang.Integer
 import java.lang.Object
 import java.util.Hashtable
+import org.allbinary.logic.StdUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
@@ -38,7 +39,7 @@ open public class PathCacheFactory : Object {
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
-    private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private constructor() : super() {}
 

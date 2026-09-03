@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.media.image.comparison.ImageComparisonResult
 
 open public class MotionRectangles
@@ -35,7 +36,7 @@ open public class MotionRectangles
 
     private val name: String
 
-    private var rectangleVector: Vector
+    private var rectangleVector: BasicArrayList
 
     private var imageComparisonResult: ImageComparisonResult
 
@@ -47,13 +48,13 @@ var name = name
 var imageComparisonResult = imageComparisonResult
 this.name= name
 this.setImageComparisonResult(imageComparisonResult)
-this.setVector(Vector())
+this.setVector(BasicArrayListD())
 }
 
 
     open fun getVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -62,7 +63,7 @@ this.setVector(Vector())
 }
 
 
-    open fun setVector(rectangleVector: Vector)
+    open fun setVector(rectangleVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var rectangleVector = rectangleVector

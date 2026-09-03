@@ -11,7 +11,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 
 open public class PathParser
             : Object
@@ -24,7 +26,7 @@ companion object {
 : Array<String?>{
 var d = d
 
-    var tokens: Vector = Vector()
+    var tokens: BasicArrayList = BasicArrayListD()
 
 
     var sb: StringBuffer = StringBuffer()
@@ -49,7 +51,7 @@ var d = d
                         if(sb.length() > 0)
                         
                                     {
-                                    tokens.addElement(sb.toString())
+                                    tokens.add(sb.toString())
 sb.setLength(0)
 
                                     }
@@ -67,12 +69,12 @@ sb.setLength(0)
                         if(sb.length() > 0)
                         
                                     {
-                                    tokens.addElement(sb.toString())
+                                    tokens.add(sb.toString())
 sb.setLength(0)
 
                                     }
                                 
-tokens.addElement(c.concatToString()
+tokens.add(c.concatToString()
 
                                     )
 
@@ -88,11 +90,11 @@ tokens.addElement(c.concatToString()
 
     
                         if(sb.length() > 0)
-                        tokens.addElement(sb.toString())
+                        tokens.add(sb.toString())
 
-    var res: Array<String?> = arrayOfNulls(tokens.size)
+    var res: Array<String?> = arrayOfNulls(tokens.size())
 
-tokens.copyInto(res)
+tokens.toArrayType(res)
 
 
 

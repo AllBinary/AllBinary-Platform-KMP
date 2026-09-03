@@ -24,6 +24,7 @@ import javax.microedition.lcdui.NullCanvas
 import javax.microedition.midlet.MIDlet
 import javax.microedition.midlet.MIDletStateChangeException
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -67,7 +68,7 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
 
     private val SETTING_NO_TITLE: String = "Setting: No Title, Display: "
 
-    private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private var midletDestroyed: Boolean = false
 
@@ -226,7 +227,7 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
         this.logUtil!!.putF(this.commonStrings!!.START, this, "getStateHashtable")
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance()!!.NULL_TABLE
+        return StdUtil.getInstance()!!.NULL_TABLE
     }
 
     override fun commandAction(command: Command, displayable: Displayable)

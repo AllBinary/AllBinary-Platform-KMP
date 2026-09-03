@@ -16,9 +16,6 @@
 package org.allbinary.logic
 
 import java.lang.Object
-import java.util.HashMap
-import java.util.Hashtable
-import java.util.Vector
 import kotlin.Array
 import kotlin.reflect.KClass
 
@@ -61,10 +58,4 @@ import kotlin.reflect.KClass
         Array(0) { Array(0) { IntArray(0) } }
 
     /*actual*/ val NULL_FLOAT_ARRAY: FloatArray = FloatArray(0)
-
-    /*actual*/ val EMPTY_VECTOR: Vector<Any> = Vector<Any>()
-
-    /*actual*/ val NULL_TABLE: Hashtable<Any, Any> = Hashtable<Any, Any>()
-
-    /*actual*/ val NULL_MAP: HashMap<Any, Any> = HashMap<Any, Any>()
 }

@@ -18,6 +18,7 @@ package org.allbinary.graphics.color
 import java.lang.Integer
 import java.lang.Object
 import java.util.Hashtable
+import org.allbinary.logic.StdUtil
 
 open public class BasicColorCacheFactory : Object {
 
@@ -34,7 +35,7 @@ open public class BasicColorCacheFactory : Object {
         }
     }
 
-    private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private constructor() : super() {}
 

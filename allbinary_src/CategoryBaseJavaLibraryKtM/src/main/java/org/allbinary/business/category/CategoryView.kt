@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.category.properties.CategoryPropertiesInterface
 import org.allbinary.business.category.properties.CategoryPropertiesView
 import org.allbinary.data.tree.dom.DomNodeInterface
@@ -73,19 +74,19 @@ var document = document
     var node: Node = document.createElement(CategoryData.getInstance()!!.NAME)!!
 
 
-    var childCategoryVector: Vector = this.categoryInterface!!.getChildNodes()!!
+    var childCategoryVector: BasicArrayList = this.categoryInterface!!.getChildNodes()!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    this.logUtil!!.putF("Number Of Children: " +childCategoryVector!!.size, this, "toXmlNode")
+                                    this.logUtil!!.putF("Number Of Children: " +childCategoryVector!!.size(), this, "toXmlNode")
 
                                     }
                                 
 
-    var size: Int = childCategoryVector!!.size!!
+    var size: Int = childCategoryVector!!.size()!!
 
 
 

@@ -26,9 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.io.IOException
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.generator.IdGeneratorEntity
 import org.allbinary.data.tables.generator.IdGeneratorEntityFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 
@@ -62,7 +64,7 @@ var value = value
 
         try {
             
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(this.name)
 vector.add(Long.valueOf(value)!!.toString())

@@ -28,7 +28,8 @@
         import kotlin.reflect.KClass
         
 import java.util.Calendar
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.JspTagException
 import javax.servlet.jsp.tagext.TagSupport
@@ -73,7 +74,7 @@ open public class FileAuthenticationTag : CustomTagSupport {
 
     private var timeout: String
 
-    private var roles: Vector
+    private var roles: BasicArrayList
 public constructor (){
 }
 
@@ -110,7 +111,7 @@ this.newPassword= value
 }
 
 
-    open fun setRoles(values: Vector)
+    open fun setRoles(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -577,7 +578,7 @@ stringBuffer!!.append("Trying New login<p>")
                         
                                     {
                                     
-    var size: Int = this.roles.size!!
+    var size: Int = this.roles.size()!!
 
 
 

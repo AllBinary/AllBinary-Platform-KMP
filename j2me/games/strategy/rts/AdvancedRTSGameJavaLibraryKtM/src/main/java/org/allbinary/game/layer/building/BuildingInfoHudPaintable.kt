@@ -17,12 +17,12 @@ package org.allbinary.game.layer.building
 
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
+import org.allbinary.game.ag.layer.hud.basic.NumberStringHud
+import org.allbinary.game.ag.layer.hud.basic.NumberStringHudFactory
 import org.allbinary.game.graphics.hud.BasicHudFactory
 import org.allbinary.game.layer.NullPathFindingLayer
 import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.SelectionHudPaintable
-import org.allbinary.game.layer.hud.basic.NumberStringHud
-import org.allbinary.game.layer.hud.basic.NumberStringHudFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.logic.communication.log.LogUtil

@@ -27,6 +27,7 @@
         
 import java.util.HashMap
 import java.util.Set
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.media.MediaData
@@ -77,8 +78,8 @@ companion object {
 private constructor ()
             : super()
         {
-this.readerFileTypesHashMap= HashMap<Any, Any>()
-this.writerFileTypesHashMap= HashMap<Any, Any>()
+this.readerFileTypesHashMap= StdUtil.getInstance()!!.createHashMap()
+this.writerFileTypesHashMap= StdUtil.getInstance()!!.createHashMap()
 
     var hashMap: HashMap<Any, Any> = MediaData.toHashMap()!!
 

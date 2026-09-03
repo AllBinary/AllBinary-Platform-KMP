@@ -26,12 +26,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomData
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -61,13 +63,13 @@ open public class CssElementView
 
     private var description: String
 
-    var cssElementVector: Vector
+    var cssElementVector: BasicArrayList
 
-    var cssPropertyVector: Vector
+    var cssPropertyVector: BasicArrayList
 public constructor ()
             : super()
         {
-this.cssPropertyVector= Vector()
+this.cssPropertyVector= BasicArrayListD()
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -138,14 +140,14 @@ this.title= stringUtil!!.EMPTY_STRING
                                     }
                                 
 
-    var cssElementStyleNodeVector: Vector = DomSearchHelper.getAllNodes(CssElementData.getInstance()!!.NAME, node.getChildNodes())!!
+    var cssElementStyleNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(CssElementData.getInstance()!!.NAME, node.getChildNodes())!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Child Css Elements: " +cssElementStyleNodeVector!!.size, this, "CssElementView()")
+                                    this.logUtil!!.putF("Child Css Elements: " +cssElementStyleNodeVector!!.size(), this, "CssElementView()")
 
                                     }
                                 
@@ -190,7 +192,7 @@ this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(DomData.VALUE, this.value)
 hashMap!!.put(this.TITLE, this.title)
@@ -225,7 +227,7 @@ var document = document
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, CssElementData.getInstance()!!.NAME, hashMap)!!
 
 
-    var size: Int = this.cssPropertyVector!!.size!!
+    var size: Int = this.cssPropertyVector!!.size()!!
 
 
 
@@ -241,7 +243,7 @@ node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 }
 
 
-    var size2: Int = this.cssElementVector!!.size!!
+    var size2: Int = this.cssElementVector!!.size()!!
 
 
 

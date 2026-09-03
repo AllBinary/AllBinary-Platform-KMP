@@ -14,7 +14,8 @@
 import java.io.IOException
 import java.net.MalformedURLException
 import java.net.URL
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.init.crypt.jcehelper.CryptInterface
 import org.allbinary.logic.NullUtil
 
@@ -54,7 +55,7 @@ var password = password
 
                 @Throws(XmlRpcException::class, IOException::class)
             
-    override fun execute(method: String, params: Vector<Any>)
+    override fun execute(method: String, params: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var method = method
@@ -69,7 +70,7 @@ var params = params
 
                 @Throws(XmlRpcException::class, IOException::class)
             
-    open fun execute(method: String, params: Vector<Any>, cryptInterface: CryptInterface)
+    open fun execute(method: String, params: BasicArrayList, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var method = method

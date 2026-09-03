@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntity
@@ -82,7 +83,7 @@ this.getFormData()
 
                                     }
                                 
-this.id= hashMap!!.get(BasicItemData.ID) as String
+this.id= hashMap!!.get(basicItemData!!.ID) as String
 this.downloadItemId= hashMap!!.get(DownloadItemData.ID) as String
 }
 
@@ -130,11 +131,11 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
     var downloadItemsEntity: DownloadItemsEntity = DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!
 
 
-    var vector: Vector = downloadItemsEntity!!.getForItem(this.id, this.downloadItemId)!!
+    var vector: BasicArrayList = downloadItemsEntity!!.getForItem(this.id, this.downloadItemId)!!
 
 
     
-                        if(vector.size != 1)
+                        if(vector.size() != 1)
                         
                                     {
                                     
@@ -219,11 +220,11 @@ var document = document
     var downloadItemsEntity: DownloadItemsEntity = DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!
 
 
-    var vector: Vector = downloadItemsEntity!!.getForItem(this.id, this.downloadItemId)!!
+    var vector: BasicArrayList = downloadItemsEntity!!.getForItem(this.id, this.downloadItemId)!!
 
 
     
-                        if(vector.size == 0)
+                        if(vector.size() == 0)
                         
                                     {
                                     stringBuffer!!.append("DownloadItem does not exist.<br />")
@@ -232,7 +233,7 @@ var document = document
                                 
 
     
-                        if(vector.size > 1)
+                        if(vector.size() > 1)
                         
                                     {
                                     stringBuffer!!.append("To Many DownloadItems exist.<br />")

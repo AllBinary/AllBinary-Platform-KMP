@@ -6,7 +6,7 @@
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
+                *  ` 
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from 
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
                 *   
@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.InventoryDbInitInfo
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
@@ -41,6 +42,8 @@ open public class XmlOptionItemsEntity : AbSqlBean
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     val tableName: String = "xmloptionitems"
 public constructor ()                        
 
@@ -53,7 +56,7 @@ this.setTableName(this.tableName)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -91,7 +94,7 @@ var values = values
 var value = value
 
         try {
-            super.deleteWhere(BasicItemData.ID, value)
+            super.deleteWhere(basicItemData!!.ID, value)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -123,8 +126,8 @@ var value = value
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(BasicItemData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
-stringBuffer!!.append(XmlOptionItemData.XML_FILE_STATUS)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(XmlOptionItemData.OPTION_XML_FILE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(BasicItemData.ID)!!.append(this.sqlStrings!!.END)
+stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(basicItemData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
+stringBuffer!!.append(XmlOptionItemData.XML_FILE_STATUS)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(XmlOptionItemData.OPTION_XML_FILE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(basicItemData!!.ID)!!.append(this.sqlStrings!!.END)
 
 
 
@@ -148,7 +151,7 @@ stringBuffer!!.append(XmlOptionItemData.XML_FILE_STATUS)!!.append(this.sqlTypeSt
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
-super.updateWhere(BasicItemData.ID, updatedValues!!.get(BasicItemData.ID) as String, updatedValues)
+super.updateWhere(basicItemData!!.ID, updatedValues!!.get(basicItemData!!.ID) as String, updatedValues)
 }
 
 

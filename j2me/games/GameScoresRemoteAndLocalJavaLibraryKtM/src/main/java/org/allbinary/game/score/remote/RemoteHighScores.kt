@@ -27,11 +27,13 @@
         
 import java.util.Enumeration
 import java.util.Hashtable
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.game.GameInfo
 import org.allbinary.game.score.HighScore
 import org.allbinary.game.score.HighScores
 import org.allbinary.game.score.RemoteErrorHighScoresSingletonFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.SoftwareInformation
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
@@ -42,7 +44,7 @@ open public class RemoteHighScores : HighScores {
         
 companion object {
             
-    private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private val hashTable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
     open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean)
@@ -170,7 +172,7 @@ RemoteHighScoresSubmissionProcessorFactory.getInstance()!!.process(this, this.ab
     //var hashtable = hashtable
 this.getList()!!.clear()
 
-    var vector: Vector = hashtable.get(RemoteHighScoresData.getInstance()!!.HIGH_SCORES as Object) as Vector
+    var vector: BasicArrayList = hashtable.get(RemoteHighScoresData.getInstance()!!.HIGH_SCORES as Object) as BasicArrayList
 
 
     
@@ -180,7 +182,7 @@ this.getList()!!.clear()
                         
                                     {
                                     
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -190,13 +192,13 @@ this.getList()!!.clear()
 
         {
 
-    var highScoreVector: Vector = vector.elementAt(index) as Vector
+    var highScoreVector: BasicArrayList = vector.get(index) as BasicArrayList
 
 
-    var displayName: String = highScoreVector!!.elementAt(0) as String
+    var displayName: String = highScoreVector!!.get(0) as String
 
 
-    var score: String = highScoreVector!!.elementAt(1) as String
+    var score: String = highScoreVector!!.get(1) as String
 
 
     var longScore: Long = Long.parseLong(score)!!

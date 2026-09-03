@@ -41,7 +41,7 @@ var filterStringBasicArrayList = filterStringBasicArrayList
 }
 
 
-    open fun visit(file: AbFile)
+    override fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var file = file
@@ -66,7 +66,7 @@ var file = file
 }
 
 
-    open fun visit(file: AbFile, fileNameString: String)
+    override fun visit(file: AbFile, fileNameString: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var file = file

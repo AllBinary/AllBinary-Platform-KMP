@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.entry.EntryData
@@ -154,7 +155,7 @@ stringBuffer!!.append(" from to the user table")
                                     }
                                 
 
-    var values: Vector = userInterface!!.toVector()!!
+    var values: BasicArrayList = userInterface!!.toVector()!!
 
 UserEntityFactory.getInstance()!!.insert(values)
 

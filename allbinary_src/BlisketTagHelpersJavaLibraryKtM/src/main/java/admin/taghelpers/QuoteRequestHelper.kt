@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.context.modules.storefront.StoreFrontData
@@ -100,7 +101,7 @@ this.quoteRequest= QuoteRequest(this.weblisketSession!!.getUserName(), request)
 
         try {
             
-    var values: Vector = this.quoteRequest!!.toVector()!!
+    var values: BasicArrayList = this.quoteRequest!!.toVector()!!
 
 QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.insert(values)
 

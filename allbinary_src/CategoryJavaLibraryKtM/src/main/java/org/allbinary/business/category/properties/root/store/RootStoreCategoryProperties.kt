@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.category.CategoryData
 import org.allbinary.business.category.CategoryUtil
@@ -36,10 +37,10 @@ import org.allbinary.business.category.properties.root.RootCategoryPropertiesInt
 import org.allbinary.business.context.modules.storefront.StoreFrontFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
-import org.allbinary.logic.io.path.PathUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
@@ -307,7 +308,7 @@ this.category= value
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var categoryHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var categoryHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.getValue())
 
@@ -320,9 +321,9 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.getValue())
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var categoryVector: Vector = Vector()
+    var categoryVector: BasicArrayList = BasicArrayListD()
 
 categoryVector!!.add(this.getValue())
 

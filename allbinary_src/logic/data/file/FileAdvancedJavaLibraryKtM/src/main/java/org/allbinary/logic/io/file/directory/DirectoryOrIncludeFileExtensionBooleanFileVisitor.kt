@@ -59,7 +59,7 @@ this.includesString= includesString
 }
 
 
-    open fun visit(file: AbFile)
+    override fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var file = file

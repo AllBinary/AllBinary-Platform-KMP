@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.BasicErrorNodeUtil
 import org.allbinary.data.tree.dom.DomNodeInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
@@ -43,11 +45,11 @@ open public class EmailsNotUsed
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    var emailInfoVector: Vector
+    var emailInfoVector: BasicArrayList
 public constructor ()
             : super()
         {
-this.emailInfoVector= Vector()
+this.emailInfoVector= BasicArrayListD()
 }
 
 
@@ -72,7 +74,7 @@ var document = document
     var node: Node = document.createElement(EmailData.NAME)!!
 
 
-    var size: Int = this.emailInfoVector!!.size!!
+    var size: Int = this.emailInfoVector!!.size()!!
 
 
 

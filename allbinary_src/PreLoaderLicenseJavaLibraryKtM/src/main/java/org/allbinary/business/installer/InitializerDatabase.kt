@@ -30,6 +30,7 @@ import java.util.Map
 import java.util.Set
 import org.allbinary.business.init.db.DatabaseConnectionInfoInterface
 import org.allbinary.business.init.db.DbConnectionInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -77,7 +78,7 @@ public constructor (abeClientInformation: AbeClientInformationInterface, map: Ma
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var keys: Set = map.keySet()!!

@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.awt.image.BufferedImage
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.image.ImageUtil
@@ -54,7 +56,7 @@ open public class ImageComparisonResult
 
     val imageWidth: Int
 
-    private val nonMatchingPixelVector: Vector
+    private val nonMatchingPixelVector: BasicArrayList
 
     private val frameOne: Long
 
@@ -77,7 +79,7 @@ public constructor (name: String, bufferedImage: BufferedImage, bufferedImage2: 
     //var frameTwo = frameTwo
     //var tolerance = tolerance
 this.name= name
-this.nonMatchingPixelVector= Vector()
+this.nonMatchingPixelVector= BasicArrayListD()
 this.bufferedImages[0]= bufferedImage
 this.bufferedImages[1]= bufferedImage2
 this.frameOne= frameOne
@@ -184,7 +186,7 @@ this.nonMatchingPixelVector!!.add(pixel)
 
     open fun getNonMatchingPixelVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

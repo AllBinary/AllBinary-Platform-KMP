@@ -28,7 +28,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadItemData
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadableItem
@@ -85,7 +86,7 @@ this.getFormData()
 
                                     }
                                 
-this.id= hashMap!!.get(BasicItemData.ID) as String
+this.id= hashMap!!.get(basicItemData!!.ID) as String
 this.downloadItemId= hashMap!!.get(DownloadItemData.ID) as String
 }
 
@@ -138,11 +139,11 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
     var downloadItemsEntity: DownloadItemsEntity = DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!
 
 
-    var vector: Vector = downloadItemsEntity!!.getForItem(this.id, this.downloadItemId)!!
+    var vector: BasicArrayList = downloadItemsEntity!!.getForItem(this.id, this.downloadItemId)!!
 
 
     
-                        if(vector.size != 1)
+                        if(vector.size() != 1)
                         
                                     {
                                     

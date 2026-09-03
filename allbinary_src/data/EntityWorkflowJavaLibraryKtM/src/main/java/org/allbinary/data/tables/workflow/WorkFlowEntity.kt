@@ -26,11 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.DynamicObjectData
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.workflow.DbWorkFlowFactory
@@ -65,7 +67,7 @@ this.setTableName(this.tableName)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var values = values
@@ -105,7 +107,7 @@ this.setTableName(this.tableName)
 
         try {
             
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(WorkFlowData.getInstance()!!.NAME, name)
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
@@ -145,7 +147,7 @@ super.deleteWhere(keysAndValues)
 
         try {
             
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(WorkFlowData.getInstance()!!.NAME, name)
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
@@ -195,19 +197,19 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
     open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var storeName = storeName
 
         try {
             
-    var workFlowsVector: Vector = Vector()
+    var workFlowsVector: BasicArrayList = BasicArrayListD()
 
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
-    var hashMapVector: Vector = super.getRows(keysAndValues)!!
+    var hashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
     var size: Int = hashMapVector!!.size!!
@@ -268,7 +270,7 @@ var updatedValues = updatedValues
 
         try {
             
-    var wherekeysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var wherekeysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 wherekeysAndValues!!.put(WorkFlowData.getInstance()!!.NAME, updatedValues!!.get(WorkFlowData.getInstance()!!.NAME) as String)
 wherekeysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, updatedValues!!.get(StoreFrontData.getInstance()!!.NAME) as String)

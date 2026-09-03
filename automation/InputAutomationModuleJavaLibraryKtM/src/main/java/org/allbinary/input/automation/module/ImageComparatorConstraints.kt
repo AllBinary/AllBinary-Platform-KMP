@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Color
+import java.awt.Rectangle
 import java.awt.image.BufferedImage
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.collision.RectangleCollisionUtil
 import org.allbinary.graphics.GPoint
 import org.allbinary.logic.communication.log.LogUtil
@@ -41,7 +43,7 @@ open public class ImageComparatorConstraints
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var avoidVector: Vector
+    private var avoidVector: BasicArrayList
 
     private var maxNonMatchingPixelDeltas: Int= 0
 
@@ -51,13 +53,13 @@ public constructor (doImageComparisonEveryNthFrame: Int)
         {
 var doImageComparisonEveryNthFrame = doImageComparisonEveryNthFrame
 this.doImageComparisonEveryNthFrame= doImageComparisonEveryNthFrame
-this.setAvoidVector(Vector())
+this.setAvoidVector(BasicArrayListD())
 }
 
 
     open fun getAvoidVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -87,10 +89,10 @@ var rectangle = rectangle
     var isCollsionWithAvoidRectangles: Boolean = false
 
 
-    var avoidVector: Vector = this.getAvoidVector()!!
+    var avoidVector: BasicArrayList = this.getAvoidVector()!!
 
 
-    var size: Int = avoidVector!!.size!!
+    var size: Int = avoidVector!!.size()!!
 
 
 
@@ -129,10 +131,10 @@ var point = point
     var isCollsionWithAvoidRectangles: Boolean = false
 
 
-    var avoidVector: Vector = this.getAvoidVector()!!
+    var avoidVector: BasicArrayList = this.getAvoidVector()!!
 
 
-    var size: Int = avoidVector!!.size!!
+    var size: Int = avoidVector!!.size()!!
 
 
 
@@ -166,7 +168,7 @@ break;
 }
 
 
-    open fun setAvoidVector(avoidVector: Vector)
+    open fun setAvoidVector(avoidVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var avoidVector = avoidVector
@@ -243,10 +245,10 @@ var bufferedImage = bufferedImage
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var avoidVector: Vector = this.getAvoidVector()!!
+    var avoidVector: BasicArrayList = this.getAvoidVector()!!
 
 
-    var size: Int = avoidVector!!.size!!
+    var size: Int = avoidVector!!.size()!!
 
 
 

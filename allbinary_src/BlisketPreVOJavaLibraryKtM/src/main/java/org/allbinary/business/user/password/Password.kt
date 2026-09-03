@@ -29,9 +29,11 @@
         
 import java.util.HashMap
 import java.util.Random
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.UserData
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.crypt.SuperCrypt
 import org.allbinary.logic.string.StringUtil
@@ -166,7 +168,7 @@ valid= Boolean.FALSE
 
     open fun toVector(secret: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var secret = secret
 this.password= StringUtil.getInstance()!!.getNonNull(this.password)
 
@@ -174,7 +176,7 @@ this.password= StringUtil.getInstance()!!.getNonNull(this.password)
                             nextInt(SuperCrypt.KEYMAX)!!
 
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(Integer(random).
                             toString())
@@ -195,7 +197,7 @@ vector.add(SuperCrypt(random).
 var secret = secret
 this.password= StringUtil.getInstance()!!.getNonNull(this.password)
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var random: Int = Random().

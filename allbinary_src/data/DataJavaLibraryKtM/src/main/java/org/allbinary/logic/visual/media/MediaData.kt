@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
+import org.allbinary.logic.StdUtil
 
 open public class MediaData
             : Object
@@ -33,7 +34,7 @@ open public class MediaData
         
 companion object {
             
-    private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    private var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
                 @Throws(Exception::class)
             

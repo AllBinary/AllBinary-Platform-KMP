@@ -15,13 +15,13 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.input.motion.button
 
-import java.util.Hashtable
 import org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.resource.ResourceLoadingLevelFactory
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.image.ImageCache
 import org.allbinary.image.ImageCacheFactory
+import org.allbinary.logic.StdUtil
 
 open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory :
     BaseResourceAnimationInterfaceFactoryInterfaceFactory {
@@ -41,7 +41,12 @@ open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory :
 
     public constructor(
         name: String
-    ) : super(name, Hashtable<Any, Any>(), Hashtable<Any, Any>(), Hashtable<Any, Any>()) {
+    ) : super(
+        name,
+        StdUtil.getInstance()!!.createHashtable(),
+        StdUtil.getInstance()!!.createHashtable(),
+        StdUtil.getInstance()!!.createHashtable(),
+    ) {
         var name = name
 
         // For kotlin this is before the body of the constructor.

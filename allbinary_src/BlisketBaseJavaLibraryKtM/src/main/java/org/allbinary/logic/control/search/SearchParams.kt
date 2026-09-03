@@ -32,6 +32,7 @@ import java.util.Set
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.data.tree.dom.ToDomHelper
+import org.allbinary.logic.StdUtil
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -55,7 +56,7 @@ public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
-this.columnsAndSearchValues= HashMap<Any, Any>()
+this.columnsAndSearchValues= StdUtil.getInstance()!!.createHashMap()
 this.setLength(request.getParameter(SearchData.LENGTH))
 this.setOrder(request.getParameter(SearchData.ORDER))
 

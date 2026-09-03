@@ -29,13 +29,15 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
 import org.allbinary.business.user.UserData
 import org.allbinary.business.user.address.StreetAddress
 import org.allbinary.business.user.address.StreetAddressData
 import org.allbinary.data.tables.TableDataFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
@@ -76,7 +78,7 @@ var index = index
 
         try {
             
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(UserData.USERNAME, this.userName)
 whereHashMap!!.put(StreetAddressData.ID, index.toString() as String)
@@ -122,7 +124,7 @@ var index = index
 
         try {
             
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(index)
 values.add(this.userName)
@@ -179,7 +181,7 @@ var address = address
     var addressHashMap: HashMap<Any, Any> = address.toHashMap()!!
 
 
-    var whereKeyValuePairs: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereKeyValuePairs: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereKeyValuePairs!!.put(StreetAddressData.ID, address.getId())
 whereKeyValuePairs!!.put(UserData.USERNAME, this.userName)
@@ -223,21 +225,21 @@ this.setDefault(address.getId())
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
         try {
             
-    var streetAddressVector: Vector = Vector()
+    var streetAddressVector: BasicArrayList = BasicArrayListD()
 
 
-    var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keyAndValue!!.put(UserData.USERNAME, this.userName)
 
-    var addressList: Vector = super.getRows(keyAndValue)!!
+    var addressList: BasicArrayList = super.getRows(keyAndValue)!!
 
 
-    var size: Int = addressList!!.size!!
+    var size: Int = addressList!!.size()!!
 
 
 
@@ -298,7 +300,7 @@ var index = index
 
         try {
             
-    var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keyAndValue!!.put(UserData.USERNAME, this.userName)
 keyAndValue!!.put(StreetAddressData.ID, index.toString())
@@ -356,10 +358,10 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
 
         try {
             
-    var addressHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var addressHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var updateKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var updateKeyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 updateKeyAndValue!!.put(StreetAddressData.DEFAULT, StreetAddressData.DEFAULT)
 updateKeyAndValue!!.put(UserData.USERNAME, this.userName)
@@ -437,10 +439,10 @@ var value = value
 
         try {
             
-    var updateKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var updateKeyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var whereKeyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereKeyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereKeyAndValue!!.put(UserData.USERNAME, this.userName)
 

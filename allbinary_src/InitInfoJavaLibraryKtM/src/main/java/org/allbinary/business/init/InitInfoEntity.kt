@@ -26,8 +26,10 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.init.db.UserDbInitInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
@@ -91,7 +93,7 @@ this.setTable(this.tableName)
 
         try {
             
-    var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
@@ -158,7 +160,7 @@ keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
         try {
             
-    var keyAndValue: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keyAndValue: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keyAndValue!!.put(this.NOTHING, this.NOTHING)
 
@@ -231,7 +233,7 @@ updateWhere(NOTHING, NOTHING, InitInfo.getInstance()!!.toHashMap())
 
         try {
             
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.NOTHING)
 values.add(InitInfo.getInstance()!!.getTesting())

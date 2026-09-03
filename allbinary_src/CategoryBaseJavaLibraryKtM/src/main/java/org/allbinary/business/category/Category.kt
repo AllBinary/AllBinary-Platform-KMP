@@ -28,12 +28,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.category.hierarchy.CategoryHierarchy
 import org.allbinary.business.category.hierarchy.CategoryHierarchyInterface
 import org.allbinary.business.category.properties.CategoryPropertiesFactoryInterface
 import org.allbinary.business.category.properties.CategoryPropertiesInterface
 import org.allbinary.business.category.properties.root.RootCategoryPropertiesInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.string.StringMaker
@@ -61,9 +63,9 @@ companion object {
 
     private var categoryPropertiesInterface: CategoryPropertiesInterface
 
-    private val childCategoryVector: Vector = Vector()
+    private val childCategoryVector: BasicArrayList = BasicArrayListD()
 
-    private val typeVector: Vector = Vector()
+    private val typeVector: BasicArrayList = BasicArrayListD()
 
     private val PROPERTIES: Integer = Integer(1)
 
@@ -240,7 +242,7 @@ this.typeVector!!.add(this.CATEGORY)
 
     open fun getChildNodes()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -255,13 +257,13 @@ this.typeVector!!.add(this.CATEGORY)
 : Boolean{
 var categoryInterface = categoryInterface
 
-    var removalVector: Vector = Vector()
+    var removalVector: BasicArrayList = BasicArrayListD()
 
 
     var bool_return: Boolean = false
 
 
-    var size: Int = this.childCategoryVector!!.size!!
+    var size: Int = this.childCategoryVector!!.size()!!
 
 
 
@@ -305,12 +307,12 @@ this.removal(removalVector)
 }
 
 
-    open fun removal(removalVector: Vector)
+    open fun removal(removalVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var removalVector = removalVector
 
-    var removalSize: Int = removalVector!!.size!!
+    var removalSize: Int = removalVector!!.size()!!
 
 
 
@@ -338,13 +340,13 @@ this.childCategoryVector!!.remove(objectIndex)
 : Boolean{
 var categoryInterface = categoryInterface
 
-    var removalVector: Vector = Vector()
+    var removalVector: BasicArrayList = BasicArrayListD()
 
 
     var bool_return: Boolean = false
 
 
-    var size: Int = this.childCategoryVector!!.size!!
+    var size: Int = this.childCategoryVector!!.size()!!
 
 
 
@@ -439,7 +441,7 @@ this.removal(removalVector)
                                 
 
     
-                        if(this.childCategoryVector!!.size == 0)
+                        if(this.childCategoryVector!!.size() == 0)
                         
                                     {
                                     
@@ -520,7 +522,7 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
                                     }
                                 
 
-    var size: Int = this.childCategoryVector!!.size!!
+    var size: Int = this.childCategoryVector!!.size()!!
 
 
 
@@ -650,9 +652,9 @@ var document = document
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var categoryVector: Vector = this.categoryPropertiesInterface!!.toVector()!!
+    var categoryVector: BasicArrayList = this.categoryPropertiesInterface!!.toVector()!!
 
 categoryVector!!.add(this.childCategoryVector)
 

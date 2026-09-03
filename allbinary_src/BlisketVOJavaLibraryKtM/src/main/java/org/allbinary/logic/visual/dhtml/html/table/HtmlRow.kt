@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.dhtml.html.HtmlTag
 
@@ -44,13 +46,13 @@ open public class HtmlRow : HtmlTag {
 
     private var after: String
 
-    private var htmlCellsVector: Vector
+    private var htmlCellsVector: BasicArrayList
 public constructor (before: String, after: String){
 var before = before
 var after = after
 this.before= before.toCharArray().concatToString()
 this.after= after.toCharArray().concatToString()
-this.htmlCellsVector= Vector()
+this.htmlCellsVector= BasicArrayListD()
 }
 
 
@@ -91,7 +93,7 @@ this.numberOfColumns++
                 
 
 
-    var cellSize: Int = this.htmlCellsVector!!.size!!
+    var cellSize: Int = this.htmlCellsVector!!.size()!!
 
 result= this.before
 result += this.START

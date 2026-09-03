@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.awt.image.BufferedImage
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.media.image.ImageUtil
 import org.allbinary.media.image.comparison.pixel.PixelDelta
@@ -55,7 +57,7 @@ open public class ImageComparisonSearch
 
     private var tolerance: Int= 0
 
-    private var nonMatchingPixelVector: Vector
+    private var nonMatchingPixelVector: BasicArrayList
 
     private var bufferedImages: Array<BufferedImage?>
 
@@ -66,7 +68,7 @@ public constructor (bufferedImage: BufferedImage, bufferedImage2: BufferedImage,
 var bufferedImage = bufferedImage
 var bufferedImage2 = bufferedImage2
 var tolerance = tolerance
-this.nonMatchingPixelVector= Vector()
+this.nonMatchingPixelVector= BasicArrayListD()
 this.setBufferedImages(arrayOfNulls(2))
 this.getBufferedImages()[0]= bufferedImage
 this.getBufferedImages()[1]= bufferedImage2
@@ -165,7 +167,7 @@ this.nonMatchingPixelVector!!.add(pixel)
 
     open fun getNonMatchingPixelVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

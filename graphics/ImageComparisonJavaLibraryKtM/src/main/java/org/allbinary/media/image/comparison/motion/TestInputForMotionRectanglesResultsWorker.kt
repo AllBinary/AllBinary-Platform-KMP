@@ -31,10 +31,12 @@ import java.awt
 import java.awt.event.InputEvent
 import java.awt.event.KeyEvent
 import java.util.Hashtable
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.robot.InputRobotFactory
 import org.allbinary.input.automation.robot.InputRobotInterface
 import org.allbinary.input.automation.robot.TempInputRobotNames
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.string.CommonLabels
@@ -55,17 +57,17 @@ open public class TestInputForMotionRectanglesResultsWorker
 
     private var running: Boolean= false
 
-    private var motionRectanglesVector: Vector
+    private var motionRectanglesVector: BasicArrayList
 public constructor ()
             : super()
         {
-this.motionRectanglesVector= Vector()
+this.motionRectanglesVector= BasicArrayListD()
 }
 
 
     open fun getMotionRectanglesVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -127,11 +129,11 @@ timeHelper!!.setStartTimeTNT()
     var motionRectangles: MotionRectangles = this.getMotionRectanglesVector()!!.get(0) as MotionRectangles
 
 
-    var motionRectangleVector: Vector = motionRectangles!!.getVector()!!
+    var motionRectangleVector: BasicArrayList = motionRectangles!!.getVector()!!
 
 
     
-                        if(motionRectangleVector!!.size > 0)
+                        if(motionRectangleVector!!.size() > 0)
                         
                                     {
                                     

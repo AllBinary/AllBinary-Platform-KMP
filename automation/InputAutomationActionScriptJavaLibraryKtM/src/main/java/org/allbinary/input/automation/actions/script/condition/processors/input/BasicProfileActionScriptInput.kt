@@ -37,6 +37,7 @@ import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.input.automation.actions.script.condition.processors.BasicProfileActionScriptProcessor
 import org.allbinary.input.automation.robot.InputRobotFactory
 import org.allbinary.input.automation.robot.InputRobotInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -142,7 +143,7 @@ this.time= time
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(GenericProfileActionScriptInputData.TYPE, this.getInputRobotInterface()!!.getName())
 hashMap!!.put(GenericProfileActionScriptInputData.DELAY, Integer.toString(this.getTime()))

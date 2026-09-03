@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.order.Order
 import org.allbinary.business.user.commerce.inventory.order.OrderHistory
@@ -51,19 +52,19 @@ interface OrderHistoryEntityInterface : BasicDataTableInterface {
             
     open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getOrders(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             
     open fun getOrders(status: String, fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
                 @Throws(Exception::class)
             

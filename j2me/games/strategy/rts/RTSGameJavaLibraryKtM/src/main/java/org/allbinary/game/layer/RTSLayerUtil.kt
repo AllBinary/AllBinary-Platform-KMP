@@ -26,6 +26,7 @@ import org.allbinary.game.identification.BasicGroupFactory
 import org.allbinary.game.identification.GroupCommonFactory
 import org.allbinary.game.part.PartInterface
 import org.allbinary.game.part.weapon.BasicWeaponPart
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.racetrack.BaseRaceTrackGeographicMap
@@ -319,7 +320,7 @@ open public class RTSLayerUtil : Object {
         : Hashtable<Any, Any> {
         // var baseRaceTrackGeographicMap = baseRaceTrackGeographicMap
 
-        var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         var layerManager: FakeLayerManager = FakeLayerManager(GameInfo.NONE)
 

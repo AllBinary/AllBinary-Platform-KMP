@@ -26,12 +26,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.InventoryDbInitInfo
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadItemData
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadableItem
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
@@ -41,6 +43,8 @@ open public class DownloadItemsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     val tableName: String = "downloaditems"
 public constructor ()                        
@@ -54,7 +58,7 @@ this.setTableName(this.tableName)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -128,20 +132,20 @@ super.updateWhere(DownloadItemData.ID, updatedValues!!.get(DownloadItemData.ID) 
 
     open fun getForItem(id: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var id = id
 
-    var returnVector: Vector = Vector()
+    var returnVector: BasicArrayList = BasicArrayListD()
 
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-keysAndValues!!.put(BasicItemData.ID, id)
+keysAndValues!!.put(basicItemData!!.ID, id)
 
-    var vector: Vector = super.getRows(keysAndValues)!!
+    var vector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -175,22 +179,22 @@ returnVector!!.add(DownloadableItem(hashMap))
 
     open fun getForItem(id: String, downloadItemId: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var id = id
 var downloadItemId = downloadItemId
 
-    var returnVector: Vector = Vector()
+    var returnVector: BasicArrayList = BasicArrayListD()
 
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-keysAndValues!!.put(BasicItemData.ID, id)
+keysAndValues!!.put(basicItemData!!.ID, id)
 keysAndValues!!.put(DownloadItemData.ID, downloadItemId)
 
-    var vector: Vector = super.getRows(keysAndValues)!!
+    var vector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -228,7 +232,7 @@ returnVector!!.add(DownloadableItem(hashMap))
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(DownloadItemData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicItemData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.ENABLE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.SPECIAL_NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.VERSION)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.CHANGES)!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)!!.append(DownloadItemData.SYSTEM)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.PLATFORM)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.LICENSE_FILE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
+stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(DownloadItemData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(basicItemData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.ENABLE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.SPECIAL_NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.VERSION)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.CHANGES)!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)!!.append(DownloadItemData.SYSTEM)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.PLATFORM)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.LICENSE_FILE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(DownloadItemData.FILE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(DownloadItemData.SIZE)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(DownloadItemData.VALID_TIME)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(DownloadItemData.RETRIES)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(DownloadItemData.ID)!!.append(this.sqlStrings!!.END)
 
 

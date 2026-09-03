@@ -28,7 +28,6 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.j2me.workarea.tools.GraphicItemInterface
 import org.allbinary.graphics.j2me.workarea.tools.LinesGraphicItem
@@ -213,9 +212,6 @@ var pointVector = pointVector
 
         try {
             
-    var newVector: Vector = Vector()
-
-
     var size: Int = pointVector!!.size()!!
 
 

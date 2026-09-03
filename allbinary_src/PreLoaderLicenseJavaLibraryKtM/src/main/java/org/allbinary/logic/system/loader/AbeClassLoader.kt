@@ -31,8 +31,8 @@
         
 import java.io.FileInputStream
 import java.io.IOException
-import java.util.HashMap
 import java.util.Map
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogBuffer
 import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
@@ -45,7 +45,7 @@ open public class AbeClassLoader : ClassLoader {
         
 companion object {
             
-    private var classes: Map = HashMap<Any, Any>()
+    private var classes: Map = StdUtil.getInstance()!!.createHashMap()!!
 
     private var PATH: String
 

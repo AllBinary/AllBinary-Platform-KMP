@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.DynamicObjectData
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.shipping.modules.BasicWeightShippingModuleView
@@ -36,6 +37,7 @@ import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.globals.FREEBLISKET_PATH_GLOBALS
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.control.crypt.file.CryptFileReader
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
@@ -78,7 +80,7 @@ SHIPPINGMETHODSFILEPATHSTRING= stringBuffer!!.toString()
 
     private var document: Document
 
-    private var shippingVector: Vector
+    private var shippingVector: BasicArrayList
 public constructor (abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
             : super()
         {
@@ -103,7 +105,7 @@ stringBuffer!!.append(ShippingMethodsFactory.SHIPPINGMETHODSFILEPATHSTRING)
                             get(abPath)!!
 
 this.document= DomDocumentHelper.create(data)
-this.shippingVector= Vector()
+this.shippingVector= BasicArrayListD()
 
     var nodeList: NodeList = this.document.getElementsByTagName(ShippingMethodsData.NAME)!!
 
@@ -149,7 +151,7 @@ this.shippingVector!!.add(shippingMethodInterface)
 
 
     
-                        if(this.shippingVector!!.size < 1)
+                        if(this.shippingVector!!.size() < 1)
                         
                                     {
                                     this.defaultShippingMethodInterface= BasicWeightShippingModuleView()
@@ -165,7 +167,7 @@ this.shippingVector!!.add(NoShippingModuleView())
             
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Vector{
+: BasicArrayList{
 
 
 

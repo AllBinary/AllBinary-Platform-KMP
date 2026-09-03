@@ -28,6 +28,7 @@ import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.logic.StdUtil
 
 open public class BuildingPropertiesFactory : Object {
 
@@ -115,7 +116,7 @@ open public class BuildingPropertiesFactory : Object {
     : Hashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return Hashtable<Any, Any>()
+        return StdUtil.getInstance()!!.createHashtable()
     }
 
     open fun getTrackingEvent(

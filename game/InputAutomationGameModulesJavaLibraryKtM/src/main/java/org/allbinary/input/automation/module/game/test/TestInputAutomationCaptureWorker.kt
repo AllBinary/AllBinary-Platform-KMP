@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.module.AbstractInputAutomationWorker
 import org.allbinary.input.automation.module.InputAutomationActionInterface
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileAction
@@ -116,7 +117,7 @@ this.setGenericProfileActions(genericProfileActions)
     var genericProfileActionScript: GenericProfileActionScript = genericProfileAction!!.getGenericProfileActionScript()!!
 
 
-    var vector: Vector = genericProfileActionScript!!.getProfileActionConditionInterfaceVector()!!
+    var vector: BasicArrayList = genericProfileActionScript!!.getProfileActionConditionInterfaceVector()!!
 
 }
 

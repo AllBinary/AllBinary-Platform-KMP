@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.actions.script.condition.ProfileActionScriptConditionInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -38,7 +39,7 @@ companion object {
             
                 @Throws(Exception::class)
             
-    open fun processProfileActionConditions(vector: Vector, frame: Long)
+    open fun processProfileActionConditions(vector: BasicArrayList, frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var vector = vector
@@ -51,7 +52,7 @@ var frame = frame
 
 logUtil!!.putF(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionConditions")
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

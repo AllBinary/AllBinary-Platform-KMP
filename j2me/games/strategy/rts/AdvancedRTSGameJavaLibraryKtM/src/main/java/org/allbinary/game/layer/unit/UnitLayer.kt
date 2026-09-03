@@ -105,6 +105,7 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.Layer
 import org.allbinary.layer.LayerInterfaceFactoryInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.math.BasicDecimal
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.math.AngleFactory
@@ -365,7 +366,7 @@ open public class UnitLayer :
     {
         // var geographicMapInterface = geographicMapInterface
 
-        var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         hashtable.put(this.groupCommonFactory!!.ID, this.getGroupInterface())
         hashtable.put(Layer.ID, this)

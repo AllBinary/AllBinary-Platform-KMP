@@ -29,7 +29,8 @@ import java.sql.ResultSet
 import java.sql.ResultSetMetaData
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.init.db.DbConnectionInfo
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -497,7 +498,7 @@ this.executeSQLStatement(sqlStatement)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var values = values
@@ -513,7 +514,7 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
 
 
-                        for (i in 0 until values.size -1)
+                        for (i in 0 until values.size() -1)
 
         {
 
@@ -526,7 +527,7 @@ stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 }
 
 
-    var value: String = this.getValue(values.lastElement() as String)!!
+    var value: String = this.getValue(values.get(values.size() -1) as String)!!
 
 value= Replace(this.sqlStrings!!.ESCAPE, this.sqlStrings!!.DOUBLE_ESCAPE).
                             all(value)
@@ -637,7 +638,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-result= HashMap<Any, Any>()
+result= this.stdUtil!!.createHashMap()
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
 
@@ -710,7 +711,7 @@ result.put(columnName, field)
 
     open fun getRows(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
     //var keysAndValues = keysAndValues
 
 
@@ -722,7 +723,7 @@ result.put(columnName, field)
 
     open fun getRows(keysAndValues: HashMap<Any, Any>, more: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
     //var keysAndValues = keysAndValues
     //var more = more
 
@@ -734,7 +735,7 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
         try {
             
-    var rows: Vector = Vector()
+    var rows: BasicArrayList = BasicArrayListD()
 
 
     var set: Set = keysAndValues!!.keySet()!!
@@ -797,7 +798,7 @@ stringBuffer!!.append(more)
         while(rset.next())
         {
 
-    var result: HashMap<Any, Any> = HashMap<Any, Any>()
+    var result: HashMap<Any, Any> = this.stdUtil!!.createHashMap()!!
 
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
@@ -861,7 +862,7 @@ rows.add(result)
 
     open fun getAllRows()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -879,7 +880,7 @@ stringBuffer!!.append(this.getTableName())
                                     }
                                 
 
-    var rows: Vector = Vector()
+    var rows: BasicArrayList = BasicArrayListD()
 
 
     var sqlStatement: String = stringBuffer!!.toString()!!
@@ -894,7 +895,7 @@ stringBuffer!!.append(this.getTableName())
         while(rset.next())
         {
 
-    var result: HashMap<Any, Any> = HashMap<Any, Any>()
+    var result: HashMap<Any, Any> = this.stdUtil!!.createHashMap()!!
 
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
@@ -955,7 +956,7 @@ rows.add(result)
 
     open fun getRowsWhereBetween(whereKeyValuePairs: HashMap<Any, Any>, betweenColumn: String, smallest: String, largest: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
     //var whereKeyValuePairs = whereKeyValuePairs
     //var betweenColumn = betweenColumn
     //var smallest = smallest
@@ -968,7 +969,7 @@ stringBuffer!!.append(this.getTableName())
 
         try {
             
-    var rows: Vector = Vector()
+    var rows: BasicArrayList = BasicArrayListD()
 
 stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
@@ -1034,7 +1035,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
     var result: HashMap<Any, Any>
 
 
-    var columnNames: Vector
+    var columnNames: BasicArrayList
 
 
     var columnCount: Int= 0
@@ -1048,8 +1049,8 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-result= HashMap<Any, Any>()
-columnNames= Vector()
+result= this.stdUtil!!.createHashMap()
+columnNames= BasicArrayListD()
 columnCount= resultSetMetaData!!.getColumnCount()
 
 
@@ -1103,7 +1104,7 @@ rows.add(result)
 
     open fun getRowsWhereBetween(betweenColumn: String, smallest: String, largest: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
     //var betweenColumn = betweenColumn
     //var smallest = smallest
     //var largest = largest
@@ -1115,7 +1116,7 @@ stringBuffer!!.append(this.getTableName())
 
         try {
             
-    var rows: Vector = Vector()
+    var rows: BasicArrayList = BasicArrayListD()
 
 stringBuffer!!.append(this.sqlStrings!!.WHERE)
 stringBuffer!!.append(betweenColumn)
@@ -1155,7 +1156,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
     var result: HashMap<Any, Any>
 
 
-    var columnNames: Vector
+    var columnNames: BasicArrayList
 
 
     var columnCount: Int= 0
@@ -1163,8 +1164,8 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
         while(rset.next())
         {
-result= HashMap<Any, Any>()
-columnNames= Vector()
+result= this.stdUtil!!.createHashMap()
+columnNames= BasicArrayListD()
 columnCount= resultSetMetaData!!.getColumnCount()
 
 

@@ -25,8 +25,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.role.BasicUserRoleFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.path.AbPath
@@ -43,7 +45,7 @@ open public class HttpFilePermissions
 
     private val file: AbFile
 
-    private val userRoles: Vector = Vector()
+    private val userRoles: BasicArrayList = BasicArrayListD()
 public constructor (fullPath: AbPath)
             : super()
         {
@@ -92,7 +94,7 @@ this.file= AbFile.createAbFileFromAbPath(AbPath(fullPath!!.toFileSystemString(),
 
     open fun getUserRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

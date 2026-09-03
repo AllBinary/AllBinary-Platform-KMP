@@ -28,7 +28,7 @@
 import java.util.HashMap
 import java.util.Map
 import java.util.Set
-//ArkTs does not have this.  So this is for the ArkTs build.
+//HTMLForJ2ME
 open public class J2SEUtil
             : Object
          {

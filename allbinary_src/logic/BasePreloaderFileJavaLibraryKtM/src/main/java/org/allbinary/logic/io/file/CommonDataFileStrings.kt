@@ -63,6 +63,14 @@ open public class CommonDataFileStrings : Object {
 
     val _JS: String = ".js"
 
+    val CPP: String = "cpp"
+
+    val _CPP: String = ".cpp"
+
+    val H: String = "h"
+
+    val _H: String = ".h"
+
     val UNCRYPTED_EXTENSION: String = this.XML
 
     val ENCRYPTED_EXTENSION: String = "abd"

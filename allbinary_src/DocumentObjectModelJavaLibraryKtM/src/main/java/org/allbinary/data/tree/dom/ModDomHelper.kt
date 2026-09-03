@@ -29,7 +29,8 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.java.anyType.clazz.ClassUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
@@ -284,7 +285,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
                 @Throws(Exception::class)
             
-    open fun createNameValueNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: Vector)
+    open fun createNameValueNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -298,7 +299,7 @@ var valueVector = valueVector
     var node: Node = document.createElement(rootNodeName)!!
 
 
-    var size: Int = valueVector!!.size!!
+    var size: Int = valueVector!!.size()!!
 
 
 
@@ -323,7 +324,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, duplicateNodeName, 
 
                 @Throws(Exception::class)
             
-    open fun createNameValueIndexNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: Vector)
+    open fun createNameValueIndexNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -337,7 +338,7 @@ var valueVector = valueVector
     var node: Node = document.createElement(rootNodeName)!!
 
 
-    var size: Int = valueVector!!.size!!
+    var size: Int = valueVector!!.size()!!
 
 
 

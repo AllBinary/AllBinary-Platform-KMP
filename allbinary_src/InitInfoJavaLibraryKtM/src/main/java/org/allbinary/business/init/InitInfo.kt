@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
@@ -432,7 +433,7 @@ var testing = testing
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(this.TESTING, this.getTesting())
 hashMap!!.put(this.MAINPATH, this.getMainPath())

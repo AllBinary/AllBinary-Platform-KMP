@@ -16,7 +16,6 @@
 package org.allbinary.graphics.form.item.validation
 
 import java.lang.Integer
-import java.util.Vector
 import org.allbinary.graphics.form.item.ABTextFieldItem
 import org.allbinary.logic.control.validate.ValidatorBase
 import org.allbinary.logic.java.bool.BooleanFactory
@@ -61,11 +60,11 @@ open public class NumberTextFieldItemValidator : ValidatorBase {
         value: Integer
     )
         // nullable = true from not(false or (false and false)) = true
-        : Vector<Any> {
+        : BasicArrayList {
         var value = value
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return Vector<Any>()
+        return BasicArrayListD()
     }
 
     override fun isValid()

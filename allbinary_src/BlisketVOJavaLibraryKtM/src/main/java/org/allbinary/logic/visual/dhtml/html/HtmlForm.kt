@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.visual.dhtml.html.input.HtmlInput
 import org.allbinary.logic.visual.dhtml.html.table.HtmlTable
@@ -55,13 +57,13 @@ open public class HtmlForm
 
     private var action: String
 
-    var inputs: Vector
+    var inputs: BasicArrayList
 public constructor (action: String)
             : super()
         {
 var action = action
 this.action= action
-this.inputs= Vector()
+this.inputs= BasicArrayListD()
 }
 
 

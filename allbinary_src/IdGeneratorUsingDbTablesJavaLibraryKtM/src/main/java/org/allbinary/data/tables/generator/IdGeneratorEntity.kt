@@ -26,8 +26,10 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.init.db.UserDbInitInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
@@ -65,7 +67,7 @@ super.setTableName(this.tableName)
 : Long{
 var name = name
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(this.NAME, name)
 
@@ -95,7 +97,7 @@ keysAndValues!!.put(this.NAME, name)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -133,7 +135,7 @@ this.logUtil!!.put(this.commonStrings!!.FAILURE, this, this.commonStrings!!.dele
 var name = name
 var value = value
 
-    var map: HashMap<Any, Any> = HashMap<Any, Any>()
+    var map: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 map.put(this.NAME, name)
 map.put(this.VALUE, value.toString())

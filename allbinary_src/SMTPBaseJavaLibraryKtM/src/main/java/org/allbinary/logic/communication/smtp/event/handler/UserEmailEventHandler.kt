@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.smtp.event.EmailEvent
 import org.allbinary.logic.communication.smtp.event.UserEmailEventListenerInterface
 import org.allbinary.logic.communication.smtp.event.UserEmailEventNameData
@@ -36,7 +38,7 @@ open public class UserEmailEventHandler
          {
         
 
-    private var emailVector: Vector
+    private var emailVector: BasicArrayList
 
     private var emailInfo: EmailInfo
 
@@ -44,7 +46,7 @@ open public class UserEmailEventHandler
 public constructor ()
             : super()
         {
-this.emailVector= Vector()
+this.emailVector= BasicArrayListD()
 }
 
 
@@ -63,12 +65,12 @@ this.fireEmailEvent()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun addListener(vector: Vector)
+    open fun addListener(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var vector = vector
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -114,7 +116,7 @@ this.emailVector!!.remove(emailEventListenerInterface)
     var emailEvent: EmailEvent = EmailEvent(this, this.userEmailEventNameData, this.emailInfo, 0)
 
 
-    var size: Int = this.emailVector!!.size!!
+    var size: Int = this.emailVector!!.size()!!
 
 
 

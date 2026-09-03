@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.awt.image.BufferedImage
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.handler.BasicEventHandler
@@ -44,7 +46,7 @@ open public class SaveCapturedImageWorker : BasicEventHandler
 
     private var running: Boolean= false
 
-    private var capturedImageWorkerResultsEventVector: Vector = Vector()
+    private var capturedImageWorkerResultsEventVector: BasicArrayList = BasicArrayListD()
 public constructor (){
 }
 

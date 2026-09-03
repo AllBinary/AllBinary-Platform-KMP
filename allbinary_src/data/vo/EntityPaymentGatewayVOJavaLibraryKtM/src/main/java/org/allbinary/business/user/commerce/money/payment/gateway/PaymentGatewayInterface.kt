@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.TableMappingInterface
 
 interface PaymentGatewayInterface : TableMappingInterface {
@@ -312,7 +313,7 @@ interface PaymentGatewayInterface : TableMappingInterface {
 
     open fun toVector(isEncrypted: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
 }
                 

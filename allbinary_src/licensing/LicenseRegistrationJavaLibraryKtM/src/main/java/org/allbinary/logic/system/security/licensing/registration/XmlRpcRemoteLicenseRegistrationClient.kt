@@ -27,12 +27,13 @@
         
 import java.io.IOException
 import java.util.Hashtable
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.init.crypt.jcehelper.CryptInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.string.CommonLabels
 import org.apache.xmlrpc.XmlRpcClient
 import org.apache.xmlrpc.XmlRpcException
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient
@@ -78,7 +79,7 @@ stringBuffer!!.append(SEP)
 stringBuffer!!.append(server)
 this.logUtil!!.putF(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toString(), this, this.commonStrings!!.GET)
 
-    var param: Vector = Vector()
+    var param: BasicArrayList = BasicArrayListD()
 
 
     var serverUrl: String = getClientInfo()!!.getLicenseServer(this.getServer())!!

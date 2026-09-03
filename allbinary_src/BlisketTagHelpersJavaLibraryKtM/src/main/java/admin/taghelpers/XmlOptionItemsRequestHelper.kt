@@ -27,13 +27,15 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.option.XmlOptionItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.options.XmlOptionItemsEntityFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
@@ -42,6 +44,8 @@ open public class XmlOptionItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     private var request: HttpServletRequest
 
@@ -65,7 +69,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(BasicItemData.ID)
+this.id= this.request.getParameter(basicItemData!!.ID)
 this.xmlFileStatus= this.request.getParameter(XmlOptionItemData.XML_FILE_STATUS)
 this.optionXmlFile= this.request.getParameter(XmlOptionItemData.OPTION_XML_FILE)
 this.timeEntered= this.request.getParameter(EntryData.getInstance()!!.TIMECREATED)
@@ -77,9 +81,9 @@ this.lastModified= this.request.getParameter(EntryData.getInstance()!!.LASTMODIF
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-values.put(BasicItemData.ID, this.id)
+values.put(basicItemData!!.ID, this.id)
 values.put(XmlOptionItemData.XML_FILE_STATUS, this.xmlFileStatus)
 values.put(XmlOptionItemData.OPTION_XML_FILE, this.optionXmlFile)
 
@@ -113,7 +117,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
                                 
 
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.id)
 values.add(this.xmlFileStatus)

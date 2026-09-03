@@ -31,6 +31,7 @@ import org.allbinary.game.GameInfo
 import org.allbinary.game.configuration.persistance.NullRecordComparator
 import org.allbinary.game.configuration.persistance.NullRecordFilter
 import org.allbinary.game.configuration.persistance.NullRecordStore
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
@@ -45,7 +46,7 @@ open public class RecordStoreHighScores : HighScores {
 
     companion object {
 
-        private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        private val hashTable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
         // instead.

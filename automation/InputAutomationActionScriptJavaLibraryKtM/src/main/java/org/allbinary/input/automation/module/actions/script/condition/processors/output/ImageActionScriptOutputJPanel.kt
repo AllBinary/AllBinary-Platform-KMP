@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.swing
 import org.allbinary.input.media.image.InputImageType
 import org.allbinary.logic.communication.log.LogUtil
@@ -56,13 +57,13 @@ this.setImageTypeJlistModel()
     var imageTypes: ImageTypes = this.capturedImageActionScriptOutputInterface!!.getImageTypes()!!
 
 
-    var vector: Vector = imageTypes!!.getVector()!!
+    var vector: BasicArrayList = imageTypes!!.getVector()!!
 
 
-    var selectedArray: IntArray = IntArray(vector.size)
+    var selectedArray: IntArray = IntArray(vector.size())
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -151,10 +152,10 @@ this.capturedImageActionScriptOutputInterface!!.log()
     var defaultListModel: DefaultListModel = DefaultListModel()
 
 
-    var vector: Vector = InputImageType.getAllAsVector()!!
+    var vector: BasicArrayList = InputImageType.getAllAsVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

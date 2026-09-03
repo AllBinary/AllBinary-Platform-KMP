@@ -26,11 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.category.Category
 import org.allbinary.business.category.CategoryData
 import org.allbinary.business.category.CategoryFactoryInterface
 import org.allbinary.business.init.db.InventoryDbInitInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
@@ -71,10 +73,10 @@ var category = category
 
         try {
             
-    var categoryVector: Vector = category.toVector()!!
+    var categoryVector: BasicArrayList = category.toVector()!!
 
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(categoryVector!!.get(0))
 values.add(categoryVector!!.get(1))

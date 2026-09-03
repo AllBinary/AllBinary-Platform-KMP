@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.Calendar
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.user.commerce.inventory.order.OrderData
 import org.allbinary.business.user.commerce.inventory.order.OrderHistory
@@ -219,10 +220,10 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "view")
                                     }
                                 
 
-    var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PREPROCESSING, fromDate, toDate)!!
+    var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PREPROCESSING, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size!!
+    var size: Int = orderHistoryVector!!.size()!!
 
 
 
@@ -257,10 +258,10 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                                     }
                                 
 
-    var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.SHIPPED, fromDate, toDate)!!
+    var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.SHIPPED, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size!!
+    var size: Int = orderHistoryVector!!.size()!!
 
 
 
@@ -295,10 +296,10 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                                     }
                                 
 
-    var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PARTIALLYSHIPPED, fromDate, toDate)!!
+    var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PARTIALLYSHIPPED, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size!!
+    var size: Int = orderHistoryVector!!.size()!!
 
 
 
@@ -333,10 +334,10 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                                     }
                                 
 
-    var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PROCESSING, fromDate, toDate)!!
+    var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PROCESSING, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size!!
+    var size: Int = orderHistoryVector!!.size()!!
 
 
 
@@ -371,10 +372,10 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                                     }
                                 
 
-    var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.CANCELLED, fromDate, toDate)!!
+    var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.CANCELLED, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size!!
+    var size: Int = orderHistoryVector!!.size()!!
 
 
 

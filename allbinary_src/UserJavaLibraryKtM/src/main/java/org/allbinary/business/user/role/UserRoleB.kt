@@ -25,15 +25,17 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.UserFactoryInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringValidationUtil
 
 open public class UserRoleB : UserRole {
         
 companion object {
             
-    var roleVector: Vector = Vector()
+    var roleVector: BasicArrayList = BasicArrayListD()
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -49,10 +51,10 @@ UserRoleFactory.getInstance()
                         
                                     {
                                     
-    var roleVector: Vector = UserRoleB.getAll()!!
+    var roleVector: BasicArrayList = UserRoleB.getAll()!!
 
 
-    var size: Int = roleVector!!.size!!
+    var size: Int = roleVector!!.size()!!
 
 
 
@@ -91,7 +93,7 @@ UserRoleFactory.getInstance()
 
     open fun getAll()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 UserRoleFactory.getInstance()
 
 

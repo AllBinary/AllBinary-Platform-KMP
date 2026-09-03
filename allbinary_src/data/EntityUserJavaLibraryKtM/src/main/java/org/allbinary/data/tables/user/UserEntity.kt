@@ -28,7 +28,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.entry.EntryData
@@ -41,6 +42,7 @@ import org.allbinary.business.user.role.UserRole
 import org.allbinary.business.user.role.UserRoleData
 import org.allbinary.business.user.role.UserRoleFactory
 import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.control.crypt.SuperCrypt
@@ -79,7 +81,7 @@ this.setTableName(this.tableName)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -115,7 +117,7 @@ var values = values
             
     open fun getAdministrators()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -128,18 +130,18 @@ var values = values
             
     open fun getStoreManagers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var storeFrontInterface = storeFrontInterface
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var usersVector: Vector = Vector()
+    var usersVector: BasicArrayList = BasicArrayListD()
 
 keysAndValues!!.put(UserRoleData.NAME.toString(), UserRoleFactory.getInstance()!!.STOREMANAGER.toString())
 keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
 
-    var usersHashMapVector: Vector = super.getRows(keysAndValues)!!
+    var usersHashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
     var size: Int = usersHashMapVector!!.size!!
@@ -174,7 +176,7 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
             
     open fun getCustomers()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -187,17 +189,17 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
             
     open fun getUsersWithRole(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var userRole = userRole
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var usersVector: Vector = Vector()
+    var usersVector: BasicArrayList = BasicArrayListD()
 
 keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
 
-    var usersHashMapVector: Vector = super.getRows(keysAndValues)!!
+    var usersHashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
     var size: Int = usersHashMapVector!!.size!!
@@ -232,17 +234,17 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
             
     open fun getUsers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var storeFrontInterface = storeFrontInterface
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var usersVector: Vector = Vector()
+    var usersVector: BasicArrayList = BasicArrayListD()
 
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.getName())
 
-    var usersHashMapVector: Vector = super.getRows(keysAndValues)!!
+    var usersHashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
     var size: Int = usersHashMapVector!!.size!!
@@ -280,7 +282,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
 : UserInterface{
 var userName = userName
 
-    var row: HashMap<Any, Any> = HashMap<Any, Any>()
+    var row: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 row.put(UserData.USERNAME, userName)
 

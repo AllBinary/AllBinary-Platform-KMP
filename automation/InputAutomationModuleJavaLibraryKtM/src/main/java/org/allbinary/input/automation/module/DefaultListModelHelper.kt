@@ -25,8 +25,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.swing
+import org.allbinary.logic.StdUtil
 
 open public class DefaultListModelHelper
             : Object
@@ -35,11 +37,11 @@ open public class DefaultListModelHelper
 
     private var defaultListModel: DefaultListModel
 
-    private var vector: Vector
+    private var vector: BasicArrayList
 public constructor ()
             : super()
         {
-this.vector= Vector()
+this.vector= BasicArrayListD()
 this.defaultListModel= DefaultListModel()
 }
 
@@ -49,7 +51,7 @@ this.defaultListModel= DefaultListModel()
 {
 this.defaultListModel= DefaultListModel()
 
-    var size: Int = this.vector.size!!
+    var size: Int = this.vector.size()!!
 
 
 

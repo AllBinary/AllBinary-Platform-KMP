@@ -17,7 +17,7 @@ package org.allbinary.logic.system.hardware.linux
 
 import java.lang.Object
 import java.util.Hashtable
-import org.allbinary.logic.NullUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.hardware.HardwareInterface
 import org.allbinary.logic.system.hardware.components.interfaces.BridgeInterface
@@ -184,7 +184,7 @@ open public class LinuxHardware : Object, HardwareInterface {
         var hardwareInterface = hardwareInterface
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance()!!.NULL_TABLE
+        return StdUtil.getInstance()!!.NULL_TABLE
     }
 
     open fun isNextHardware(

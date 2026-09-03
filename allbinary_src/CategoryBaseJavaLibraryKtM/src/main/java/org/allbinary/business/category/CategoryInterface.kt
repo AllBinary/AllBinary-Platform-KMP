@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.category.hierarchy.CategoryHierarchyInterface
 import org.allbinary.business.category.properties.CategoryPropertiesInterface
 import org.allbinary.data.tables.TableMappingInterface
@@ -37,7 +38,7 @@ interface CategoryInterface : TableMappingInterface, ValidationInterface {
 
     open fun getChildNodes()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
     open fun addChildProperty(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true

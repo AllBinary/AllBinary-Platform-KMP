@@ -50,6 +50,8 @@ open public class InventoryHelper : TagHelper {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     private var weblisketSession: WeblisketSession
 
     private var response: HttpServletResponse
@@ -99,7 +101,7 @@ this.getFormData()
     open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-this.id= this.request.getParameter(BasicItemData.ID)
+this.id= this.request.getParameter(basicItemData!!.ID)
 }
 
 
@@ -161,7 +163,7 @@ this.id= this.request.getParameter(BasicItemData.ID)
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
-    var keywords: String = this.searchRequest!!.getParams()!!.get()!!.get(BasicItemData.KEYWORDS) as String
+    var keywords: String = this.searchRequest!!.getParams()!!.get()!!.get(basicItemData!!.KEYWORDS) as String
 
 
     

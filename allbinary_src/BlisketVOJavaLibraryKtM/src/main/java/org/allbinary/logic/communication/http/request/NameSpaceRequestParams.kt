@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.data.tree.dom.DomData
@@ -35,6 +36,7 @@ import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -467,7 +469,7 @@ var node = node
 
                 @Throws(Exception::class)
             
-    open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any, Any>, elementNodeVector: Vector)
+    open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any, Any>, elementNodeVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
@@ -477,12 +479,12 @@ var elementNodeVector = elementNodeVector
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    this.logUtil!!.putF("\nComparing Properties of: " +elementNodeVector!!.size +" Nodes", this, "isElementValueTextNodeUnique")
+                                    this.logUtil!!.putF("\nComparing Properties of: " +elementNodeVector!!.size() +" Nodes", this, "isElementValueTextNodeUnique")
 
                                     }
                                 
 
-    var size: Int = elementNodeVector!!.size!!
+    var size: Int = elementNodeVector!!.size()!!
 
 
 
@@ -529,10 +531,10 @@ var nameSpaceRequestParam = nameSpaceRequestParam
     var node: Node = rootNode
 
 
-    var packageVector: Vector = nameSpaceRequestParam!!.getPackages()!!
+    var packageVector: BasicArrayList = nameSpaceRequestParam!!.getPackages()!!
 
 
-    var size: Int = packageVector!!.size!!
+    var size: Int = packageVector!!.size()!!
 
 
 
@@ -558,14 +560,14 @@ var nameSpaceRequestParam = nameSpaceRequestParam
     var nextPackagePropertiesHashMap: HashMap<Any, Any> = nameSpaceRequestParam!!.getPackageProperties(index)!!
 
 
-    var elementNodeVector: Vector = DomSearchHelper.getAllNodesNoThrow(nextPackageName, node.getChildNodes())!!
+    var elementNodeVector: BasicArrayList = DomSearchHelper.getAllNodesNoThrow(nextPackageName, node.getChildNodes())!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    this.logUtil!!.putF("\nDocument Contains " +elementNodeVector!!.size +" Node(s) With Same Name", this, "addChildren")
+                                    this.logUtil!!.putF("\nDocument Contains " +elementNodeVector!!.size() +" Node(s) With Same Name", this, "addChildren")
 
                                     }
                                 
@@ -574,7 +576,7 @@ var nameSpaceRequestParam = nameSpaceRequestParam
 
 
     
-                        if((elementNodeVector!!.size == 0 || isElementValueTextNodeUniqueIndex ==  -1) && !nextPackageName!!.endsWith(CommonSeps.getInstance()!!.BRACKET_CLOSE))
+                        if((elementNodeVector!!.size() == 0 || isElementValueTextNodeUniqueIndex ==  -1) && !nextPackageName!!.endsWith(CommonSeps.getInstance()!!.BRACKET_CLOSE))
                         
                                     {
                                     
@@ -684,10 +686,10 @@ var document = document
     var nameSpaceRequestParam: NameSpaceRequestParam = NameSpaceRequestParam(key, value)
 
 
-    var packageVector: Vector = nameSpaceRequestParam!!.getPackages()!!
+    var packageVector: BasicArrayList = nameSpaceRequestParam!!.getPackages()!!
 
 
-    var size: Int = packageVector!!.size!!
+    var size: Int = packageVector!!.size()!!
 
 
 
@@ -737,7 +739,7 @@ var document = document
     var document: Document = DomDocumentHelper.create()!!
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var keys: Set = this.getMap()!!.keySet()!!

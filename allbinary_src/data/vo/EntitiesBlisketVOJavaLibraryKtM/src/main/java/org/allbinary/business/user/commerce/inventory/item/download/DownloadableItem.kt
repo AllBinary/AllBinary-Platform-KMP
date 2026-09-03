@@ -27,10 +27,12 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.data.generator.ProductIdGenerator
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.time.TimeUtil
@@ -93,7 +95,7 @@ public constructor (hashMap: HashMap<Any, Any>)
         {
 var hashMap = hashMap
 this.id= hashMap!!.get(DownloadItemData.ID) as String
-this.basicItemId= hashMap!!.get(BasicItemData.ID) as String
+this.basicItemId= hashMap!!.get(BasicItemData.getInstance()!!.ID) as String
 this.enabled= hashMap!!.get(EntryData.getInstance()!!.ENABLE) as String
 this.system= hashMap!!.get(DownloadItemData.SYSTEM) as String
 this.platform= hashMap!!.get(DownloadItemData.PLATFORM) as String
@@ -163,7 +165,7 @@ this.retries= hashMap!!.get(DownloadItemData.RETRIES) as String
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
     var calendar: Calendar = Calendar.getInstance()!!
 
@@ -172,7 +174,7 @@ this.retries= hashMap!!.get(DownloadItemData.RETRIES) as String
                             toString()!!
 
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(getId())
 values.add(this.basicItemId)
@@ -201,10 +203,10 @@ values.add(time)
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var values: HashMap<Any, Any> = HashMap<Any, Any>()
+    var values: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 values.put(DownloadItemData.ID, this.getId())
-values.put(BasicItemData.ID, this.basicItemId)
+values.put(BasicItemData.getInstance()!!.ID, this.basicItemId)
 values.put(EntryData.getInstance()!!.ENABLE, this.enabled)
 values.put(DownloadItemData.SYSTEM, this.getSystem())
 values.put(DownloadItemData.PLATFORM, this.getPlatform())

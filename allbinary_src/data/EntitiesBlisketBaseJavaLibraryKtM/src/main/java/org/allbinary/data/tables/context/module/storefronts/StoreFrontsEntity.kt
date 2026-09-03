@@ -26,11 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFront
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
@@ -53,7 +55,7 @@ this.setTableName(this.tableName)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -124,7 +126,7 @@ var value = value
 : StoreFront{
 var name = name
 
-    var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
+    var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
 
@@ -159,9 +161,9 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
 
     open fun getStoreFrontNames()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var storeFrontNames: Vector = super.getColumn(StoreFrontData.getInstance()!!.NAME)!!
+    var storeFrontNames: BasicArrayList = super.getColumn(StoreFrontData.getInstance()!!.NAME)!!
 
 
 

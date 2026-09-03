@@ -26,9 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentFileHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.visual.transform.info.TransformInfoData
@@ -65,7 +67,7 @@ this.document= DomDocumentFileHelper.createDocument(xmlFile)
 
         try {
             
-    var transformInfoPropertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var transformInfoPropertiesHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var transformInfosNode: Node = this.document.getElementsByTagName(TransformInfosData.getInstance()!!.NAME)!!.item(0)!!
@@ -74,19 +76,19 @@ this.document= DomDocumentFileHelper.createDocument(xmlFile)
     var transformInfosChildNodeList: NodeList = transformInfosNode!!.getChildNodes()!!
 
 
-    var transformInfoNodeVector: Vector = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, transformInfosChildNodeList)!!
+    var transformInfoNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, transformInfosChildNodeList)!!
 
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Size: " +transformInfoNodeVector!!.size, this, "toTransformInfoPropertiesHashMap()")
+                                    this.logUtil!!.putF("Size: " +transformInfoNodeVector!!.size(), this, "toTransformInfoPropertiesHashMap()")
 
                                     }
                                 
 
-    var size: Int = transformInfoNodeVector!!.size!!
+    var size: Int = transformInfoNodeVector!!.size()!!
 
 
     var node: Node

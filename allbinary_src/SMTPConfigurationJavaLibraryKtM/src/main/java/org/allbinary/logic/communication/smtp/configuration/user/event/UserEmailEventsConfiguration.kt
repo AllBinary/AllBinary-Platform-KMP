@@ -27,6 +27,7 @@
         
 import java.util.HashMap
 import org.allbinary.business.user.UserInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.smtp.event.UserEmailEventListenerInterface
 import org.allbinary.logic.communication.smtp.event.UserEmailEventNameData
@@ -61,7 +62,7 @@ this.init()
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.emailEventHashMap= HashMap<Any, Any>()
+this.emailEventHashMap= StdUtil.getInstance()!!.createHashMap()
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))

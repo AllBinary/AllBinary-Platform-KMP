@@ -26,8 +26,10 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.TableMappingInterface
+import org.allbinary.logic.StdUtil
 
 open public class UserEmailConfigurationMapping
             : Object
@@ -48,7 +50,7 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
 
@@ -75,9 +77,9 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
 

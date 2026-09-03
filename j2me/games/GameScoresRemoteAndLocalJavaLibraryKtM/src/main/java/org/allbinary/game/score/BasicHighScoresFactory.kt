@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import org.allbinary.thread.ARunnable
 import org.allbinary.game.BasicHighScoresGameInfoFactory
 import org.allbinary.game.GameInfo

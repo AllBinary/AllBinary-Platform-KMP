@@ -26,6 +26,7 @@ import org.allbinary.game.layer.geographic.map.LayerCoveringCellPositionsUtil
 import org.allbinary.graphics.GPoint
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.logic.StdUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
@@ -115,7 +116,7 @@ open public class RaceTrackAdjacentDropCellPositionGenerator : RaceTrackDropCell
         return nonRoadGeographicMapCellPosition
     }
 
-    private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     @Throws(Exception::class)
     override fun update(

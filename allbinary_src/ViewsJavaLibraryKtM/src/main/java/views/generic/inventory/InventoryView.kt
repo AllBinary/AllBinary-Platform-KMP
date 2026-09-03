@@ -27,7 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontFactory
 import org.allbinary.business.user.commerce.inventory.InventoryData
 import org.allbinary.business.user.commerce.inventory.item.BasicItemView
@@ -83,12 +84,12 @@ var document = document
     var inventoryNode: Node = document.createElement(InventoryData.INVENTORY)!!
 
 
-    var itemVector: Vector = inventoryEntityInterface!!.getItems(StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName()))!!
+    var itemVector: BasicArrayList = inventoryEntityInterface!!.getItems(StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName()))!!
 
-inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.TOTAL_NUMBER_ITEMS_ON_THIS_PAGE, Integer(itemVector!!.size).
+inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.TOTAL_NUMBER_ITEMS_ON_THIS_PAGE, Integer(itemVector!!.size()).
                             toString()))
 
-    var size: Int = itemVector!!.size!!
+    var size: Int = itemVector!!.size()!!
 
 
 
@@ -108,7 +109,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchDa
                         
                                     {
                                     
-    var node: Node = BasicItemView(itemInterface, Vector()).
+    var node: Node = BasicItemView(itemInterface, BasicArrayListD()).
                             toXmlNode(document)!!
 
 inventoryNode!!.appendChild(node)

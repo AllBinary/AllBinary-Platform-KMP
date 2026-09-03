@@ -36,6 +36,7 @@ import org.allbinary.graphics.j2me.workarea.WorkAreaJPanel
 import org.allbinary.graphics.j2me.workarea.tools.GraphicItemFactory
 import org.allbinary.graphics.j2me.workarea.tools.GraphicItemInterface
 import org.allbinary.graphics.j2me.workarea.tools.LinesGraphicItem
+import org.allbinary.logic.StdUtil
 import org.allbinary.util.BasicArrayList
 import org.w3c.dom.Node
 
@@ -95,7 +96,7 @@ this.dimension= IntegerDimension(0, 0)
                         if(name.compareTo(CanvasDom.FRAME) == 0)
                         
                                     {
-                                    this.graphicItemHashMap= HashMap<Any, Any>()
+                                    this.graphicItemHashMap= StdUtil.getInstance()!!.createHashMap()
 
     var angleNode: Node = DomHelper.getInstance()!!.searchNodeList(this.ROTATE, canvasNode!!.getChildNodes())!!
 

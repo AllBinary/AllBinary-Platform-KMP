@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.context.AbContext
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
@@ -315,7 +316,7 @@ var importUriPath = importUriPath
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

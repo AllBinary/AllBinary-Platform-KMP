@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfile
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfileDataWorkerType
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfiles
@@ -421,14 +422,14 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, "updateProfileOptions")
     var genericProfile: GenericProfile = this.getSelectedGenericProfile()!!
 
 
-    var vector: Vector = genericProfile!!.getGenericProfileDataWorkerTypeVector()!!
+    var vector: BasicArrayList = genericProfile!!.getGenericProfileDataWorkerTypeVector()!!
 
 this.screenCaptureJRadioButton!!.setSelected(false)
 this.savedCaptureJRadioButton!!.setSelected(false)
 this.captureComparisonJCheckBox!!.setSelected(false)
 this.captureMotionAnalysisJCheckBox!!.setSelected(false)
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Set
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.user.commerce.inventory.basket.BasketData
 import org.allbinary.business.user.commerce.inventory.basket.BasketInterface
@@ -118,7 +119,7 @@ var document = document
                         
                                     {
                                     
-    var basicItemView: BasicItemView = BasicItemView(itemInterface, Vector())
+    var basicItemView: BasicItemView = BasicItemView(itemInterface, BasicArrayListD())
 
 
     var node: Node = basicItemView!!.toXmlNode(document)!!

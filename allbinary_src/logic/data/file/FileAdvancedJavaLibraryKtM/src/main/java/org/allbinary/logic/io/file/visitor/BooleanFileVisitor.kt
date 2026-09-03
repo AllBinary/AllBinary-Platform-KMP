@@ -49,7 +49,7 @@ PreLogUtil.put("Filter BasicArrayList: " +this.getFilterStringBasicArrayList()!!
 }
 
 
-    open fun visit(anyType: Any)
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType

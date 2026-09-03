@@ -26,11 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.category.Category
 import org.allbinary.business.category.CategoryInterface
 import org.allbinary.business.category.properties.CategoryPropertiesFactoryInterface
 import org.allbinary.data.tree.dom.DomSearchHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.visual.theme.ThemeData
 import org.allbinary.logic.visual.theme.ThemeValidation
 import org.allbinary.logic.visual.theme.ThemesData
@@ -44,7 +46,7 @@ open public class StoreThemeCategory : Category
 
     private var transformInfoInterface: TransformInfoInterface
 
-    private var themeVector: Vector
+    private var themeVector: BasicArrayList
 public constructor (transformInfoInterface: TransformInfoInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)                        
 
                             : super(categoryPropertiesFactoryInterface, level){
@@ -56,7 +58,7 @@ var level = level
                             //For kotlin this is before the body of the constructor.
                     
 this.transformInfoInterface= transformInfoInterface
-this.themeVector= Vector()
+this.themeVector= BasicArrayListD()
 }
 
 public constructor (transformInfoInterface: TransformInfoInterface, rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)                        
@@ -71,7 +73,7 @@ var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
                             //For kotlin this is before the body of the constructor.
                     
 this.transformInfoInterface= transformInfoInterface
-this.themeVector= Vector()
+this.themeVector= BasicArrayListD()
 }
 
 public constructor (transformInfoInterface: TransformInfoInterface, node: Node, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)                        
@@ -86,7 +88,7 @@ var level = level
                             //For kotlin this is before the body of the constructor.
                     
 this.transformInfoInterface= transformInfoInterface
-this.themeVector= Vector()
+this.themeVector= BasicArrayListD()
 this.addThemes(node)
 }
 
@@ -103,7 +105,7 @@ var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
                             //For kotlin this is before the body of the constructor.
                     
 this.transformInfoInterface= transformInfoInterface
-this.themeVector= Vector()
+this.themeVector= BasicArrayListD()
 this.addThemes(node)
 }
 
@@ -165,7 +167,7 @@ this.themeVector!!.add(themeValidation)
 
     open fun getThemes()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -221,9 +223,9 @@ categoryHashMap!!.put(ThemesData.getInstance()!!.NAME, this.themeVector)
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var categoryVector: Vector = super.toVector()!!
+    var categoryVector: BasicArrayList = super.toVector()!!
 
 
 

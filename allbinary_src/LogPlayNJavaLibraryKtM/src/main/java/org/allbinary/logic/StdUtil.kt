@@ -27,27 +27,24 @@
         
 import java.util.HashMap
 import java.util.Hashtable
-import java.util.Vector
-import jsinterop.annotations.JsType
-import jsinterop.annotations.JsProperty
-import jsinterop.annotations.JsMethod
+import java.util.Stack
 //ActualPlatform
-/*actual*/ open public class NullUtil
+/*actual*/ open public class StdUtil
             : Object
          {
         
 /*actual*/ companion object {
             
-    private val instance: NullUtil = NullUtil()
+    private val instance: StdUtil = StdUtil()
 
     /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullUtil{
+: StdUtil{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullUtil.instance
+                        return StdUtil.instance
 }
 
 
@@ -58,34 +55,42 @@ import jsinterop.annotations.JsMethod
             {
             }            
         
-    /*actual*/ val NULL_OBJECT: Any = Any()
+    /*actual*/ val NULL_TABLE: Hashtable<Any, Any> = this.createHashtable()!!
 
-    /*actual*/ val NULL_CLASS: KClass<*> = this.NULL_OBJECT::class!!
+    /*actual*/ val NULL_MAP: HashMap<Any, Any> = this.createHashMap()!!
 
-    /*actual*/ val NULL_OBJECT_ARRAY: Array<Any?> = arrayOfNulls(0)
+    open fun createStack()
+        //nullable = true from not(false or (false and true)) = true
+: Stack<Any>{
 
-    /*actual*/ val NULL_BYTE_ARRAY: ByteArray = ByteArray(0)
 
-    /*actual*/ val NULL_CHAR_ARRAY: CharArray = 
-                                                        
-                                                        CharArray(0)
-                                                    
 
-    /*actual*/ val NULL_SHORT_ARRAY_ARRAY: Array<ShortArray?> = Array(0) { ShortArray(0) }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Stack<Any>()
+}
 
-    /*actual*/ val NULL_INT_ARRAY: IntArray = IntArray(0)
 
-    /*actual*/ val NULL_INT_ARRAY_ARRAY: Array<IntArray?> = Array(0) { IntArray(0) }
+    open fun createHashtable()
+        //nullable = true from not(false or (false and true)) = true
+: Hashtable<Any, Any>{
 
-    /*actual*/ val NULL_INT_ARRAY_ARRAY_ARRAY: Array<Array<IntArray?>?> = Array(0) { Array(0) { IntArray(0) } }
 
-    /*actual*/ val NULL_FLOAT_ARRAY: FloatArray = FloatArray(0)
 
-    /*actual*/ val EMPTY_VECTOR: Vector<Any> = Vector<Any>()
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Hashtable<Any, Any>()
+}
 
-    /*actual*/ val NULL_TABLE: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-    /*actual*/ val NULL_MAP: HashMap<Any, Any> = HashMap<Any, Any>()
+    open fun createHashMap()
+        //nullable = true from not(false or (false and true)) = true
+: HashMap<Any, Any>{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return HashMap<Any, Any>()
+}
+
 
 }
                 

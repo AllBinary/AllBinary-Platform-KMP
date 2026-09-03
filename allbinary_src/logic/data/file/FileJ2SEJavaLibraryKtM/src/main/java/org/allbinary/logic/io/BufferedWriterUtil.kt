@@ -50,7 +50,7 @@ open public class BufferedWriterUtil : Object {
 
     private val commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
-    private val REMOVING_OLD: String = "Remove old for overwritting: "
+    private val REMOVING_OLD: String = "Remove old for overwriting: "
 
     @Throws(Exception::class)
     open fun overwrite(path: String, data: String)

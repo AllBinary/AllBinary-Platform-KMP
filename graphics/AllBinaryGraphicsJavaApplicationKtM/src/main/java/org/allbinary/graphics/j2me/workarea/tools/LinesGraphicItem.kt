@@ -30,7 +30,8 @@
         import kotlin.reflect.KClass
         
 import java.awt
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.swing.tree.DefaultMutableTreeNode
 import javax.swing.tree.MutableTreeNode
 import org.allbinary.dom.DomHelper
@@ -42,6 +43,7 @@ import org.allbinary.graphics.j2me.StatusFactory
 import org.allbinary.graphics.j2me.workarea.canvas.CanvasDom
 import org.allbinary.graphics.j2me.workarea.canvas.IntegerDimension
 import org.allbinary.graphics.pipeline.BasicGraphicsPipeline
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonStrings
@@ -91,7 +93,7 @@ companion object {
 
     private var treeNode: DefaultMutableTreeNode
 
-    private var pointTreeNodeVector: Vector
+    private var pointTreeNodeVector: BasicArrayList
 
     private var currentMousePoint: GPoint
 
@@ -186,7 +188,7 @@ this.addPoint(pointTwoNode!!.getChildNodes())
 this.treeNode= DefaultMutableTreeNode(PointsDomUtil.getInstance()!!.LINES +LinesGraphicItem.item)
 LinesGraphicItem.item++
 this.points.init()
-this.pointTreeNodeVector= Vector()
+this.pointTreeNodeVector= BasicArrayListD()
 this.fulcrumPoint= PointFactory.getInstance()!!.createXY(0, 0)
 }
 
@@ -317,7 +319,7 @@ var point = point
 this.points.getPoints()!!.add(point)
 this.logUtil!!.putF(point.toString(), this, "addPoint")
 this.pointTreeNodeVector!!.add(DefaultMutableTreeNode(point.toString()))
-this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.size -1) as DefaultMutableTreeNode)
+this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.size() -1) as DefaultMutableTreeNode)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -340,7 +342,7 @@ this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.si
 
 point= this.points.getPoints()!!.removeAt(lastPoint) as GPoint
 
-    var index: Int = this.pointTreeNodeVector!!.size -1
+    var index: Int = this.pointTreeNodeVector!!.size() -1
 
 
     
@@ -416,7 +418,7 @@ var list = list
                                     {
                                     this.points.getPoints()!!.add(PointFactory.getInstance()!!.createXY(point.getX(), point.getY()))
 this.pointTreeNodeVector!!.add(DefaultMutableTreeNode(point.toString()))
-this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.size -1) as DefaultMutableTreeNode)
+this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.size() -1) as DefaultMutableTreeNode)
 
                                     }
                                 

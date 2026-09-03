@@ -15,12 +15,12 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.game.layer
 
+import org.allbinary.game.ag.layer.hud.basic.notification.GameNotificationHudCompositeInterface
 import org.allbinary.game.combat.destroy.event.DestroyedEventListenerInterface
 import org.allbinary.game.input.BuildMenuCompositeInterface
 import org.allbinary.game.input.PlayerGameInputCompositeInterface
 import org.allbinary.game.input.form.RTSFormInput
 import org.allbinary.game.layer.capital.Capital
-import org.allbinary.game.layer.hud.basic.notification.GameNotificationHudCompositeInterface
 import org.allbinary.game.tick.TickableInterface
 import org.allbinary.media.audio.Sound
 

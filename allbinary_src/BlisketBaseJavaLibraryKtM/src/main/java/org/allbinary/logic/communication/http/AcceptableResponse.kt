@@ -46,8 +46,8 @@ this.logUtil!!.putF(tagName, this, this.commonStrings!!.CONSTRUCTOR)
 
     var acceptableResponseUtil: AcceptableResponseUtil = AcceptableResponseUtil.getInstance()!!
 
-acceptableResponseUtil!!.candidateVector!!.add(index, candidate)
-acceptableResponseUtil!!.tagNameVector!!.add(index, tagName)
+acceptableResponseUtil!!.candidateVector!!.addAt(index, candidate)
+acceptableResponseUtil!!.tagNameVector!!.addAt(index, tagName)
 }
 
 

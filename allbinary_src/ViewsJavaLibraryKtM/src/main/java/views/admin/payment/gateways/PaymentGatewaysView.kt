@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewayData
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewaysData
@@ -46,8 +47,8 @@ open public class PaymentGatewaysView : HttpStoreComponentView
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var paymentGatewayVector: Vector
-public constructor (transformInfoInterface: TransformInfoInterface, gatewayVector: Vector)                        
+    private var paymentGatewayVector: BasicArrayList
+public constructor (transformInfoInterface: TransformInfoInterface, gatewayVector: BasicArrayList)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -75,7 +76,7 @@ var document = document
     var paymentGatewaysNode: Node = document.createElement(PaymentGatewaysData.NAME)!!
 
 
-    var size: Int = this.paymentGatewayVector!!.size!!
+    var size: Int = this.paymentGatewayVector!!.size()!!
 
 
 

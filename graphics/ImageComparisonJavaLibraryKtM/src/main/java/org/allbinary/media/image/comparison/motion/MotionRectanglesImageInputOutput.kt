@@ -27,7 +27,8 @@
         
 import java.awt
 import java.awt.image.BufferedImage
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.ImageOutputData
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.number.LongUtil
@@ -189,10 +190,10 @@ bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedI
 }
 
 
-    var rectangelList: Vector = motionRectangles!!.getVector()!!
+    var rectangelList: BasicArrayList = motionRectangles!!.getVector()!!
 
 
-    var size: Int = rectangelList!!.size!!
+    var size: Int = rectangelList!!.size()!!
 
 
 

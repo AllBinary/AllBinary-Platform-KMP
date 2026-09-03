@@ -17,6 +17,7 @@ package org.allbinary.game.configuration
 
 import java.lang.Object
 import java.util.Hashtable
+import org.allbinary.logic.StdUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -41,7 +42,7 @@ open public class GameConfigurationSingleton : Object {
 
     private constructor() : super() {
         this.list = BasicArrayListD()
-        this.hashtable = Hashtable<Any, Any>()
+        this.hashtable = StdUtil.getInstance()!!.createHashtable()
     }
 
     open fun getInstanceByName(

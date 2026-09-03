@@ -28,6 +28,7 @@
 import java.util.HashMap
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.regex.replace.Replace
 import org.allbinary.logic.visual.transform.info.TransformInfoData
@@ -102,7 +103,7 @@ var objectConfigDocument = objectConfigDocument
     var viewName: String = this.getTransformInfoInterface()!!.getName()!!
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var VARKEY: String = TransformInfoObjectConfigData.getInstance()!!.VARKEY

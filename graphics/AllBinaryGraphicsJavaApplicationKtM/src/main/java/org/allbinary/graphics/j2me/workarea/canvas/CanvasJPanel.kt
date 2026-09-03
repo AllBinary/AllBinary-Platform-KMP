@@ -29,7 +29,8 @@
         
 import java.awt
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.swing.tree.DefaultMutableTreeNode
 import javax.swing.tree.MutableTreeNode
 import org.allbinary.animation.VectorExplosionGenerator
@@ -53,6 +54,7 @@ import org.allbinary.graphics.j2me.workarea.tools.event.MyGraphicItemEventListen
 import org.allbinary.graphics.j2me.workarea.tools.event.MyGraphicItemEventService
 import org.allbinary.graphics.pipeline.RandomRotationFactory
 import org.allbinary.log.LOGGING
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.GuiLog
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -60,6 +62,7 @@ import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.w3c.dom.Node
 
 open public class CanvasJPanel : javax.swing.JPanel
@@ -193,7 +196,7 @@ this.frameLabel= CanvasTreeLabel("FrameLabel" +Integer(CanvasJPanel.frame).
 this.canvasTreeNode= DefaultMutableTreeNode(this.frameLabel)
 CanvasJPanel.frame++
 this.workAreaJTreeJPanel!!.add(this.getTreeNode())
-this.graphicItemHashMap= HashMap<Any, Any>()
+this.graphicItemHashMap= StdUtil.getInstance()!!.createHashMap()
 this.grid.grid= PointFactory.getInstance()!!.createXY(0, 0)
 this.setCanvasDimension(IntegerDimension(0, 0))
 this.selectedTool= 
@@ -376,7 +379,7 @@ this.setAngle(this.angle +angle)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var newPoints: Vector = Vector()
+    var newPoints: BasicArrayList = BasicArrayListD()
 
 
     var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toTypedArray()!!
@@ -438,7 +441,7 @@ newPoints!!.add(newGraphicItem)
 }
 
 
-    var size2: Int = newPoints!!.size!!
+    var size2: Int = newPoints!!.size()!!
 
 
 

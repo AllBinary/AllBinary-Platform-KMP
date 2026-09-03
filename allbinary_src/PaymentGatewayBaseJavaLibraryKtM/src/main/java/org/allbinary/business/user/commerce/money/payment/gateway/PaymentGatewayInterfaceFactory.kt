@@ -29,6 +29,7 @@ import java.util.HashMap
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.user.commerce.money.payment.types.BasicPaymentType
 import org.allbinary.business.user.commerce.money.payment.types.BasicPaymentTypeUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.RequestParams
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -99,7 +100,7 @@ var httpServletRequest = httpServletRequest
 : PaymentGatewayInterface{
 var paymentType = paymentType
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(PaymentGatewayData.NAME.toString(), paymentType!!.getName())
 

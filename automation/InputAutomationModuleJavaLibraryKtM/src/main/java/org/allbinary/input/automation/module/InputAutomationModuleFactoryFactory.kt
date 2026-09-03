@@ -34,6 +34,7 @@ import javax.help.event.HelpSetListener
 import javax.swing.ListModel
 import org.allbinary.input.automation.module.configuration.InputAutomationModuleConfiguration
 import org.allbinary.input.automation.module.configuration.InputAutomationModuleConfigurations
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.help.JavaHelpSetNotifier
 import org.allbinary.string.CommonStrings
@@ -57,7 +58,7 @@ public constructor (inputAutomationModuleConfigurations: InputAutomationModuleCo
     //var helpSetListenerInterface = helpSetListenerInterface
 this.helpSetListenerInterface= helpSetListenerInterface
 this.defaultListModelHelper= DefaultListModelHelper()
-this.hashMap= HashMap<Any, Any>()
+this.hashMap= StdUtil.getInstance()!!.createHashMap()
 
     var collection: Collection = inputAutomationModuleConfigurations!!.getHashMap()!!.values()!!
 

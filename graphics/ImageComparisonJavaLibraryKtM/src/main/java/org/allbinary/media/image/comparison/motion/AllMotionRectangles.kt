@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.awt
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.media.image.comparison.ImageComparisonResult
 import org.allbinary.media.image.comparison.pixel.PixelDelta
 
@@ -56,10 +57,10 @@ this.createMotionRectangles(imageComparisonResult)
 {
 var imageComparisonInfo = imageComparisonInfo
 
-    var vector: Vector = imageComparisonInfo!!.getNonMatchingPixelVector()!!
+    var vector: BasicArrayList = imageComparisonInfo!!.getNonMatchingPixelVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 
@@ -84,10 +85,10 @@ this.addPixelDeltaToAMotionRectangle(pixelDelta)
 : Boolean{
 var pixelDelta = pixelDelta
 
-    var vector: Vector = this.getVector()!!
+    var vector: BasicArrayList = this.getVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

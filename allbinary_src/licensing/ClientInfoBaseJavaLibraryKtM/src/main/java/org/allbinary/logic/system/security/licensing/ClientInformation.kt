@@ -18,6 +18,7 @@ package org.allbinary.logic.system.security.licensing
 import java.lang.Object
 import java.util.Hashtable
 import org.allbinary.TsUtil
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.hardware.HardwareInterface
@@ -153,7 +154,7 @@ open public class ClientInformation : Object, AbeClientInformationInterface {
 
         var genericOperatingSystem: GenericOperatingSystem = this.getOperatingSystemInterface()!!
 
-        var clientInfoHashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        var clientInfoHashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         clientInfoHashtable!!.put(abeClientInformationData!!.NAME, this.name)
         clientInfoHashtable!!.put(abeClientInformationData!!.VERSION, this.version)

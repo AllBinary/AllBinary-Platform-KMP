@@ -26,7 +26,9 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
@@ -36,7 +38,7 @@ open public class GameSkill
         
 companion object {
             
-    private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    private var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
     open fun getInstance(gameSkillType: GameSkillType, extra: String)
         //nullable =  from not(true or (false and false)) = 
@@ -60,7 +62,7 @@ var extra = extra
 
     private var time: Int= 0
 
-    private var vector: Vector
+    private var vector: BasicArrayList
 
     private val GAME_SKILL_LABEL: String = "GameSkill: "
 
@@ -76,7 +78,7 @@ var time = time
 this.setGameSkillType(gameSkillType)
 this.setExtra(extra)
 this.setTime(time)
-this.vector= Vector()
+this.vector= BasicArrayListD()
 GameSkill.hashMap!!.put(StringMaker().
                             append(this.getGameSkillType()!!.getName())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(extra)!!.toString(), this)
 }
@@ -149,7 +151,7 @@ this.vector.add(gameSkillPropertyInterface)
 
     open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

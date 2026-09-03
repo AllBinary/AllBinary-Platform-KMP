@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.transform.info.TransformInfoEntity
 import org.allbinary.data.tables.transform.info.TransformInfoEntityBuilder
 import org.allbinary.data.tree.dom.DomNodeInterface
@@ -106,7 +107,7 @@ var transformInfoInterface = transformInfoInterface
             
     open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: Object, transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var customizerTransformInfoInterface = customizerTransformInfoInterface
 var transformInfoInterface = transformInfoInterface
 
@@ -142,7 +143,7 @@ var transformInfoInterface = transformInfoInterface
             
     open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var transformInfoInterface = transformInfoInterface
 
     
@@ -168,7 +169,7 @@ var transformInfoInterface = transformInfoInterface
             
     open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
 var transformInfoInterface = transformInfoInterface
 
     
@@ -210,7 +211,7 @@ var domNodeInterface = domNodeInterface
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
 
 
-    var allViewsToBeModified: Vector = this.getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface)!!
+    var allViewsToBeModified: BasicArrayList = this.getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface)!!
 
 
     var document: Document = DomDocumentHelper.create()!!
@@ -228,7 +229,7 @@ document.appendChild(domNodeInterface!!.toXmlNode(document))
                         
                                     {
                                     stringBuffer!!.append("Total Views For Modification: ")
-stringBuffer!!.appendint(allViewsToBeModified!!.size)
+stringBuffer!!.appendint(allViewsToBeModified!!.size())
 stringBuffer!!.append(" New Xml/Data: ")
 stringBuffer!!.append(documentString)
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
@@ -237,7 +238,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
                                 
 transformInfoInterface!!.setData(documentString)
 
-    var size: Int = allViewsToBeModified!!.size!!
+    var size: Int = allViewsToBeModified!!.size()!!
 
 
 
@@ -372,13 +373,13 @@ var transformInfoInterface = transformInfoInterface
     var transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface = transformInfoInterface!!.getObjectConfigInterface()!!
 
 
-    var allViewsToBeModified: Vector = transformInfoObjectConfigInterface!!.getGroupTransforms()!!
+    var allViewsToBeModified: BasicArrayList = transformInfoObjectConfigInterface!!.getGroupTransforms()!!
 
 
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
 
 
-    var size: Int = allViewsToBeModified!!.size!!
+    var size: Int = allViewsToBeModified!!.size()!!
 
 
 

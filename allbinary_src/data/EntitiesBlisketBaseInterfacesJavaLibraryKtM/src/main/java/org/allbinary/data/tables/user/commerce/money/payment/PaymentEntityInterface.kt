@@ -27,7 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.money.payment.PaymentInterface
 import org.allbinary.data.tables.BasicDataTableInterface
 
@@ -48,7 +49,7 @@ interface PaymentEntityInterface : BasicDataTableInterface {
 
     open fun get(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
+: BasicArrayList
 
     open fun add(userName: String, paymentInterface: PaymentInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -58,7 +59,7 @@ interface PaymentEntityInterface : BasicDataTableInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 

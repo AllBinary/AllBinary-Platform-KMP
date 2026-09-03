@@ -18,6 +18,7 @@ package org.allbinary.image.opengles
 import java.lang.Object
 import org.allbinary.image.ImageCache
 
+// ImageCacheOpenGLESJavaLibrary
 open public class OpenGLImageCacheFactory : Object {
 
     companion object {

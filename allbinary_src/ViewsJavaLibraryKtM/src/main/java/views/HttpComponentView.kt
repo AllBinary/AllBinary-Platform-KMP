@@ -25,10 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.ServiceClientInformationInterfaceFactory
@@ -49,7 +51,7 @@ open public class HttpComponentView : TransformInfoHttpComposite
 
     val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
-    private var domNodeInterfaceVector: Vector
+    private var domNodeInterfaceVector: BasicArrayList
 
     private var transformDocumentInterface: TransformDocumentInterface
 public constructor (transformInfoInterface: TransformInfoInterface)                        
@@ -69,7 +71,7 @@ var transformInfoInterface = transformInfoInterface
 
                                     }
                                 
-this.domNodeInterfaceVector= Vector()
+this.domNodeInterfaceVector= BasicArrayListD()
 this.setTransformDocumentInterface(TransformHttpRequestDocumentFactory.getInstance(this.getPageContext(), this.getWeblisketSession()))
 }
 
@@ -122,7 +124,7 @@ this.domNodeInterfaceVector!!.add(domNodeInterface)
 
         try {
             
-    var size: Int = this.domNodeInterfaceVector!!.size!!
+    var size: Int = this.domNodeInterfaceVector!!.size()!!
 
 
 

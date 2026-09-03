@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.user.commerce.inventory.order.OrderData
 import org.allbinary.business.user.commerce.inventory.order.OrderHistory
@@ -89,10 +90,10 @@ this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)
     var orderHistoryEntity: OrderHistoryEntity = OrderHistoryEntity()
 
 
-    var orderReviewVector: Vector = orderHistoryEntity!!.getOrders(this.getWeblisketSession()!!.getUserName())!!
+    var orderReviewVector: BasicArrayList = orderHistoryEntity!!.getOrders(this.getWeblisketSession()!!.getUserName())!!
 
 
-    var size: Int = orderReviewVector!!.size!!
+    var size: Int = orderReviewVector!!.size()!!
 
 
 

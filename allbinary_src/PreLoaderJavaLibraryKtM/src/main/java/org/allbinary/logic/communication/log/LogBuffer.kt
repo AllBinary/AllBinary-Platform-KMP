@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 
 open public class LogBuffer
             : Object
@@ -34,11 +36,11 @@ open public class LogBuffer
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    var logEntryVector: Vector
+    var logEntryVector: BasicArrayList
 public constructor ()
             : super()
         {
-this.logEntryVector= Vector()
+this.logEntryVector= BasicArrayListD()
 }
 
 
@@ -54,7 +56,7 @@ this.logEntryVector!!.add(log)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var size: Int = this.logEntryVector!!.size!!
+    var size: Int = this.logEntryVector!!.size()!!
 
 
 

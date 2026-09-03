@@ -36,6 +36,7 @@ import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
 import org.allbinary.input.automation.module.DefaultListModelHelper
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfiles
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.CommonDataFileStrings
 import org.allbinary.logic.io.path.AbPath
@@ -333,7 +334,7 @@ this.save()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 

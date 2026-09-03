@@ -17,6 +17,7 @@ package org.platform
 
 import java.lang.Object
 import java.util.Hashtable
+import org.allbinary.logic.StdUtil
 
 open public class ThreedObjResources : Object {
 
@@ -36,7 +37,7 @@ open public class ThreedObjResources : Object {
     // Auto Generated
     public constructor() : super() {}
 
-    val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     open fun get(
         resourceName: String

@@ -180,7 +180,7 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
                                     }
                                 
 
-    var anyType: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
+    var anyType: Any = this.getRequestHashMap()!!.get(basicItemData!!.IMAGE)!!
 
 
     
@@ -332,7 +332,7 @@ stringBuffer!!.append(BasicItemValidation(this.itemInterface).
 }
 
 
-    var anyType: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
+    var anyType: Any = this.getRequestHashMap()!!.get(basicItemData!!.IMAGE)!!
 
 
     
@@ -453,7 +453,7 @@ var size = size
                                     {
                                     
     
-                        if(fileItemFieldName!!.compareTo(BasicItemData.IMAGE) == 0)
+                        if(fileItemFieldName!!.compareTo(basicItemData!!.IMAGE) == 0)
                         
                                     {
                                     

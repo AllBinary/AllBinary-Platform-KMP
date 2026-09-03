@@ -28,8 +28,9 @@
 import java.io.FileReader
 import java.io.LineNumberReader
 import java.util.Hashtable
-import java.util.Vector
-import org.allbinary.logic.NullUtil
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
 import org.allbinary.logic.communication.log.config.type.LogConfigTypes
@@ -70,29 +71,29 @@ companion object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var componentInterfaceVector: Vector
+    private var componentInterfaceVector: BasicArrayList
 
-    private var videoInterfaceVector: Vector
+    private var videoInterfaceVector: BasicArrayList
 
-    private var hardDriveControllerInterfaceVector: Vector
+    private var hardDriveControllerInterfaceVector: BasicArrayList
 
-    private var cpuInterfaceVector: Vector
+    private var cpuInterfaceVector: BasicArrayList
 
-    private var usbInterfaceVector: Vector
+    private var usbInterfaceVector: BasicArrayList
 
-    private var ethernetInterfaceVector: Vector
+    private var ethernetInterfaceVector: BasicArrayList
 
-    private var multimediaInterfaceVector: Vector
+    private var multimediaInterfaceVector: BasicArrayList
 
-    private var fireWireInterfaceVector: Vector
+    private var fireWireInterfaceVector: BasicArrayList
 
-    private var bridgeInterfaceVector: Vector
+    private var bridgeInterfaceVector: BasicArrayList
 
-    private var hardDriveInterfaceVector: Vector
+    private var hardDriveInterfaceVector: BasicArrayList
 
-    private var macInterfaceVector: Vector
+    private var macInterfaceVector: BasicArrayList
 
-    private var monitorInterfaceVector: Vector
+    private var monitorInterfaceVector: BasicArrayList
 
     private val NAME: String = "Linux Hardware Profile"
 
@@ -110,7 +111,7 @@ public constructor ()
 this.init(PCIFILE)
 
     
-                        if(this.componentInterfaceVector!!.size < this.MINHARDWARE)
+                        if(this.componentInterfaceVector!!.size() < this.MINHARDWARE)
                         
                                     {
                                     
@@ -190,18 +191,18 @@ var lineNumberReader = lineNumberReader
 var filePath = filePath
 
         try {
-            this.componentInterfaceVector= Vector()
-this.videoInterfaceVector= Vector()
-this.hardDriveControllerInterfaceVector= Vector()
-this.cpuInterfaceVector= Vector()
-this.usbInterfaceVector= Vector()
-this.ethernetInterfaceVector= Vector()
-this.multimediaInterfaceVector= Vector()
-this.fireWireInterfaceVector= Vector()
-this.bridgeInterfaceVector= Vector()
-this.hardDriveInterfaceVector= Vector()
-this.macInterfaceVector= Vector()
-this.monitorInterfaceVector= Vector()
+            this.componentInterfaceVector= BasicArrayListD()
+this.videoInterfaceVector= BasicArrayListD()
+this.hardDriveControllerInterfaceVector= BasicArrayListD()
+this.cpuInterfaceVector= BasicArrayListD()
+this.usbInterfaceVector= BasicArrayListD()
+this.ethernetInterfaceVector= BasicArrayListD()
+this.multimediaInterfaceVector= BasicArrayListD()
+this.fireWireInterfaceVector= BasicArrayListD()
+this.bridgeInterfaceVector= BasicArrayListD()
+this.hardDriveInterfaceVector= BasicArrayListD()
+this.macInterfaceVector= BasicArrayListD()
+this.monitorInterfaceVector= BasicArrayListD()
 
     var pciFile: FileReader = FileReader(filePath)
 
@@ -296,7 +297,7 @@ nextLine= lineNumberReader!!.readLine()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    this.logUtil!!.putF("Found Hardware Device: " +this.componentInterfaceVector!!.size, this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("Found Hardware Device: " +this.componentInterfaceVector!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -527,7 +528,7 @@ var index = index
     var hardwareBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = this.componentInterfaceVector!!.size!!
+    var size: Int = this.componentInterfaceVector!!.size()!!
 
 
 
@@ -574,7 +575,7 @@ var hardwareInterface = hardwareInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullUtil.getInstance()!!.NULL_TABLE
+                        return StdUtil.getInstance()!!.NULL_TABLE
 }
 
 

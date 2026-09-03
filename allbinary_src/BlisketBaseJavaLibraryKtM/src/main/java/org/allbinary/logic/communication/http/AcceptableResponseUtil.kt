@@ -25,8 +25,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.TsUtil
+import org.allbinary.logic.StdUtil
 
 open public class AcceptableResponseUtil
             : Object
@@ -58,9 +60,9 @@ TsUtil.getInstance()!!.hashCode(AcceptableResponseFactory.getInstance()!!.HTML)
             {
             }            
         
-    val candidateVector: Vector = Vector()
+    val candidateVector: BasicArrayList = BasicArrayListD()
 
-    val tagNameVector: Vector = Vector()
+    val tagNameVector: BasicArrayList = BasicArrayListD()
 
     open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -93,7 +95,7 @@ var index = index
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.candidateVector!!.size
+                        return this.candidateVector!!.size()
 }
 
 

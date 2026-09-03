@@ -29,11 +29,13 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.business.user.commerce.money.MoneyException
 import org.allbinary.data.generator.ProductIdGenerator
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
@@ -49,6 +51,8 @@ open public class BasicItem
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     var itemId: String
 
@@ -122,35 +126,35 @@ var itemHashMap = itemHashMap
 
                                     }
                                 
-this.itemId= itemHashMap!!.get(BasicItemData.ID) as String
-this.number= itemHashMap!!.get(BasicItemData.NUMBER) as String
-this.inBaskets= itemHashMap!!.get(BasicItemData.INBASKETS) as String
-this.weight= itemHashMap!!.get(BasicItemData.WEIGHT) as String
+this.itemId= itemHashMap!!.get(basicItemData!!.ID) as String
+this.number= itemHashMap!!.get(basicItemData!!.NUMBER) as String
+this.inBaskets= itemHashMap!!.get(basicItemData!!.INBASKETS) as String
+this.weight= itemHashMap!!.get(basicItemData!!.WEIGHT) as String
 this.enabled= itemHashMap!!.get(EntryData.getInstance()!!.ENABLE) as String
-this.newOrUsed= itemHashMap!!.get(BasicItemData.NEWORUSED) as String
-this.summary= itemHashMap!!.get(BasicItemData.SUMMARY) as String
-this.distributor= itemHashMap!!.get(BasicItemData.DISTRIBUTOR) as String
-this.idUsedByDistributor= itemHashMap!!.get(BasicItemData.IDUSEDBYDISTRIBUTOR) as String
-this.producedBy= itemHashMap!!.get(BasicItemData.PRODUCEDBY) as String
-this.productionDate= itemHashMap!!.get(BasicItemData.PRODUCTIONDATE) as String
-this.startProductionDate= itemHashMap!!.get(BasicItemData.STARTPRODUCTIONDATE) as String
-this.description= itemHashMap!!.get(BasicItemData.DESCRIPTION) as String
-this.keywords= itemHashMap!!.get(BasicItemData.KEYWORDS) as String
-this.category= itemHashMap!!.get(BasicItemData.CATEGORY) as String
-this.type= itemHashMap!!.get(BasicItemData.TYPE) as String
-this.smallImage= itemHashMap!!.get(BasicItemData.SMALLIMAGE) as String
-this.mediumImage= itemHashMap!!.get(BasicItemData.MEDIUMIMAGE) as String
-this.largeImage= itemHashMap!!.get(BasicItemData.LARGEIMAGE) as String
+this.newOrUsed= itemHashMap!!.get(basicItemData!!.NEWORUSED) as String
+this.summary= itemHashMap!!.get(basicItemData!!.SUMMARY) as String
+this.distributor= itemHashMap!!.get(basicItemData!!.DISTRIBUTOR) as String
+this.idUsedByDistributor= itemHashMap!!.get(basicItemData!!.IDUSEDBYDISTRIBUTOR) as String
+this.producedBy= itemHashMap!!.get(basicItemData!!.PRODUCEDBY) as String
+this.productionDate= itemHashMap!!.get(basicItemData!!.PRODUCTIONDATE) as String
+this.startProductionDate= itemHashMap!!.get(basicItemData!!.STARTPRODUCTIONDATE) as String
+this.description= itemHashMap!!.get(basicItemData!!.DESCRIPTION) as String
+this.keywords= itemHashMap!!.get(basicItemData!!.KEYWORDS) as String
+this.category= itemHashMap!!.get(basicItemData!!.CATEGORY) as String
+this.type= itemHashMap!!.get(basicItemData!!.TYPE) as String
+this.smallImage= itemHashMap!!.get(basicItemData!!.SMALLIMAGE) as String
+this.mediumImage= itemHashMap!!.get(basicItemData!!.MEDIUMIMAGE) as String
+this.largeImage= itemHashMap!!.get(basicItemData!!.LARGEIMAGE) as String
 this.timeEntered= itemHashMap!!.get(EntryData.getInstance()!!.TIMECREATED) as String
 this.lastModified= itemHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as String
-this.price= Money(itemHashMap!!.get(BasicItemData.PRICE) as String)
-this.comment= itemHashMap!!.get(BasicItemData.COMMENT) as String
-this.customs= itemHashMap!!.get(BasicItemData.CUSTOMS) as String
-this.setDownloads(itemHashMap!!.get(BasicItemData.DOWNLOADS) as String)
-this.groups= itemHashMap!!.get(BasicItemData.GROUPS) as String
-this.options= itemHashMap!!.get(BasicItemData.OPTIONS) as String
-this.permissions= itemHashMap!!.get(BasicItemData.PERMISSIONS) as String
-this.specials= itemHashMap!!.get(BasicItemData.SPECIALS) as String
+this.price= Money(itemHashMap!!.get(basicItemData!!.PRICE) as String)
+this.comment= itemHashMap!!.get(basicItemData!!.COMMENT) as String
+this.customs= itemHashMap!!.get(basicItemData!!.CUSTOMS) as String
+this.setDownloads(itemHashMap!!.get(basicItemData!!.DOWNLOADS) as String)
+this.groups= itemHashMap!!.get(basicItemData!!.GROUPS) as String
+this.options= itemHashMap!!.get(basicItemData!!.OPTIONS) as String
+this.permissions= itemHashMap!!.get(basicItemData!!.PERMISSIONS) as String
+this.specials= itemHashMap!!.get(basicItemData!!.SPECIALS) as String
 }
 
 public constructor ()
@@ -820,27 +824,27 @@ itemTotal!!.multiply(Integer(this.number).
                                     }
                                 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
-hashMap!!.put(BasicItemData.ID, this.itemId)
-hashMap!!.put(BasicItemData.NUMBER, this.number)
-hashMap!!.put(BasicItemData.INBASKETS, this.inBaskets)
-hashMap!!.put(BasicItemData.WEIGHT, this.weight)
+hashMap!!.put(basicItemData!!.ID, this.itemId)
+hashMap!!.put(basicItemData!!.NUMBER, this.number)
+hashMap!!.put(basicItemData!!.INBASKETS, this.inBaskets)
+hashMap!!.put(basicItemData!!.WEIGHT, this.weight)
 hashMap!!.put(EntryData.getInstance()!!.ENABLE, this.enabled)
-hashMap!!.put(BasicItemData.NEWORUSED, this.newOrUsed)
-hashMap!!.put(BasicItemData.SUMMARY, this.summary)
-hashMap!!.put(BasicItemData.DISTRIBUTOR, this.distributor)
-hashMap!!.put(BasicItemData.IDUSEDBYDISTRIBUTOR, this.idUsedByDistributor)
-hashMap!!.put(BasicItemData.PRODUCEDBY, this.producedBy)
-hashMap!!.put(BasicItemData.PRODUCTIONDATE, this.productionDate)
-hashMap!!.put(BasicItemData.STARTPRODUCTIONDATE, this.startProductionDate)
-hashMap!!.put(BasicItemData.DESCRIPTION, this.description)
-hashMap!!.put(BasicItemData.KEYWORDS, this.keywords)
-hashMap!!.put(BasicItemData.CATEGORY, this.category)
-hashMap!!.put(BasicItemData.TYPE, this.type)
-hashMap!!.put(BasicItemData.SMALLIMAGE, this.smallImage)
-hashMap!!.put(BasicItemData.MEDIUMIMAGE, this.mediumImage)
-hashMap!!.put(BasicItemData.LARGEIMAGE, this.largeImage)
+hashMap!!.put(basicItemData!!.NEWORUSED, this.newOrUsed)
+hashMap!!.put(basicItemData!!.SUMMARY, this.summary)
+hashMap!!.put(basicItemData!!.DISTRIBUTOR, this.distributor)
+hashMap!!.put(basicItemData!!.IDUSEDBYDISTRIBUTOR, this.idUsedByDistributor)
+hashMap!!.put(basicItemData!!.PRODUCEDBY, this.producedBy)
+hashMap!!.put(basicItemData!!.PRODUCTIONDATE, this.productionDate)
+hashMap!!.put(basicItemData!!.STARTPRODUCTIONDATE, this.startProductionDate)
+hashMap!!.put(basicItemData!!.DESCRIPTION, this.description)
+hashMap!!.put(basicItemData!!.KEYWORDS, this.keywords)
+hashMap!!.put(basicItemData!!.CATEGORY, this.category)
+hashMap!!.put(basicItemData!!.TYPE, this.type)
+hashMap!!.put(basicItemData!!.SMALLIMAGE, this.smallImage)
+hashMap!!.put(basicItemData!!.MEDIUMIMAGE, this.mediumImage)
+hashMap!!.put(basicItemData!!.LARGEIMAGE, this.largeImage)
 
     var calendar: Calendar = Calendar.getInstance()!!
 
@@ -849,14 +853,14 @@ hashMap!!.put(BasicItemData.LARGEIMAGE, this.largeImage)
                             toString()!!
 
 hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-hashMap!!.put(BasicItemData.PRICE, this.price.toString())
-hashMap!!.put(BasicItemData.COMMENT, this.comment)
-hashMap!!.put(BasicItemData.CUSTOMS, this.customs)
-hashMap!!.put(BasicItemData.DOWNLOADS, this.getDownloads())
-hashMap!!.put(BasicItemData.GROUPS, this.groups)
-hashMap!!.put(BasicItemData.OPTIONS, this.options)
-hashMap!!.put(BasicItemData.PERMISSIONS, this.permissions)
-hashMap!!.put(BasicItemData.SPECIALS, this.specials)
+hashMap!!.put(basicItemData!!.PRICE, this.price.toString())
+hashMap!!.put(basicItemData!!.COMMENT, this.comment)
+hashMap!!.put(basicItemData!!.CUSTOMS, this.customs)
+hashMap!!.put(basicItemData!!.DOWNLOADS, this.getDownloads())
+hashMap!!.put(basicItemData!!.GROUPS, this.groups)
+hashMap!!.put(basicItemData!!.OPTIONS, this.options)
+hashMap!!.put(basicItemData!!.PERMISSIONS, this.permissions)
+hashMap!!.put(basicItemData!!.SPECIALS, this.specials)
 
 
 
@@ -867,7 +871,7 @@ hashMap!!.put(BasicItemData.SPECIALS, this.specials)
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
@@ -878,7 +882,7 @@ hashMap!!.put(BasicItemData.SPECIALS, this.specials)
                                     }
                                 
 
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(this.itemId)
 values.add(this.number)

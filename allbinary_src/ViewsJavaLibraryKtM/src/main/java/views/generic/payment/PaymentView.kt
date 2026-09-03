@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.money.payment.Payment
 import org.allbinary.business.user.commerce.money.payment.PaymentData
 import org.allbinary.data.tables.user.commerce.money.payment.PaymentEntityFactory
@@ -65,10 +66,10 @@ var document = document
 
 document.appendChild(paymentNode)
 
-    var paymentVector: Vector = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!.get(this.getWeblisketSession()!!.getUserName())!!
+    var paymentVector: BasicArrayList = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!.get(this.getWeblisketSession()!!.getUserName())!!
 
 
-    var size: Int = paymentVector!!.size!!
+    var size: Int = paymentVector!!.size()!!
 
 
 

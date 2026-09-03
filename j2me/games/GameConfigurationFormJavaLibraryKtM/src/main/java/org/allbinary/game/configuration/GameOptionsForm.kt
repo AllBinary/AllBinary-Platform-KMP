@@ -36,6 +36,7 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.command.MyCommandsFactory
 import org.allbinary.graphics.displayable.screen.CommandForm
 import org.allbinary.input.gyro.OrientationData
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.util.BasicArrayList
@@ -217,7 +218,7 @@ open public class GameOptionsForm : CommandForm {
 
         GameConfigurationUtil.getInstance()!!.updateCompetitionValue()
 
-        var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+        var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         var SCALE: GameConfiguration = GameConfigurationCentral.getInstance()!!.SCALE
 

@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.category.CategoryInterface
 import org.allbinary.data.tables.TableMappingInterface
 import org.allbinary.logic.control.validate.ValidationInterface
@@ -41,7 +42,7 @@ interface StoreThemeCategoryInterface : CategoryInterface, TableMappingInterface
 
     open fun getThemes()
         //nullable = true from not(false or (false and true)) = true
-: Vector
+: BasicArrayList
 
 }
                 

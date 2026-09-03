@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfile
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfileDataWorkerType
 import org.allbinary.input.automation.module.generic.configuration.profile.SavedCaptureGenericProfileDataWorkerType
@@ -45,10 +46,10 @@ companion object {
 : CaptureWorkerInterface{
 var genericProfile = genericProfile
 
-    var vector: Vector = genericProfile!!.getGenericProfileDataWorkerTypeVector()!!
+    var vector: BasicArrayList = genericProfile!!.getGenericProfileDataWorkerTypeVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

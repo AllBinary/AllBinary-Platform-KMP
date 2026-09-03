@@ -29,6 +29,7 @@ import java.util.HashMap
 import java.util.List
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.file.upload.AbFileUploadFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringValidationUtil
@@ -78,7 +79,7 @@ var request = request
 
         try {
             
-    var specialRequest: HashMap<Any, Any> = HashMap<Any, Any>()
+    var specialRequest: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var multipartRequestList: List = AbFileUploadFactory.getInstance()!!.getFileItemStreamList(request)!!

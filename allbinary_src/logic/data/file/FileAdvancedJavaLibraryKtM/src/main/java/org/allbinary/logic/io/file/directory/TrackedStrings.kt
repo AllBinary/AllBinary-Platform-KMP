@@ -2,7 +2,7 @@
         /*
                 *  
                 *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
+                *  Copyright (c) 2026 AllBinary 
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.logic
+        package org.allbinary.logic.io.file.directory
 
 
 
@@ -25,34 +25,53 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
-import java.util.Vector
-//NoPlatform
-expect open public class NullUtil
+
+open public class TrackedStrings
             : Object
          {
         
 companion object {
             
-    //private val instance: NullUtil
+    private val instance: TrackedStrings = TrackedStrings()
+
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullUtil
+: TrackedStrings{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return instance
+}
+
 
         }
             
-    val NULL_OBJECT: Any
-    val NULL_CLASS: KClass<*>
-    val NULL_OBJECT_ARRAY: Array<Any?>
-    val NULL_CHAR_ARRAY: CharArray
-    val NULL_BYTE_ARRAY: ByteArray
-    val NULL_SHORT_ARRAY_ARRAY: Array<ShortArray?>
-    val NULL_INT_ARRAY: IntArray
-    val NULL_INT_ARRAY_ARRAY: Array<IntArray?>
-    val NULL_INT_ARRAY_ARRAY_ARRAY: Array<Array<IntArray?>?>
-    val NULL_FLOAT_ARRAY: FloatArray
-    val EMPTY_VECTOR: Vector<Any>
-    val NULL_TABLE: Hashtable<Any, Any>
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+    val TARGET_PATH_WINDOWS: String = "\\target\\"
+
+    val TARGET_PATH_UNIX: String = "/target/"
+
+    val HTML_TEMP: String = "HTMLTemp"
+
+    val APPLICATION: String = "Application"
+
+    val APP: String = "\\app"
+
+    val GIT_COMMAND: String = "git"
+
+    val CHANGE_DIRECTORY_OPTION: String = "-C"
+
+    val LIST_FILES_COMMAND: String = "ls-files"
+
+    val ERROR_UNMATCH_OPTION: String = "--error-unmatch"
+
+    val PATHSPEC_SEPARATOR: String = "--"
+
 }
                 
             

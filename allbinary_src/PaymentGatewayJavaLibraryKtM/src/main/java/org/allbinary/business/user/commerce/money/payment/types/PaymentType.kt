@@ -26,10 +26,12 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewayData
 import org.allbinary.business.user.commerce.money.payment.gateway.processor.PaymentProcessorInterfaceFactoryInterface
 import org.allbinary.business.user.commerce.money.payment.gateway.transaction.PaymentTransactionInterfaceFactoryInterface
+import org.allbinary.logic.StdUtil
 
 open public class PaymentType
             : Object
@@ -124,11 +126,11 @@ PaymentTypeUtil.getInstance()!!.add(this)
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
-vector.addAll(this.getBasicPaymentType()!!.toVector())
+vector.addAllList(this.getBasicPaymentType()!!.toVector())
 
     
                         if(this.paymentTransactionInterfaceFactoryInterface != 
@@ -163,7 +165,7 @@ vector.addAll(this.getBasicPaymentType()!!.toVector())
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.putAll(this.getBasicPaymentType()!!.toHashMap())
 

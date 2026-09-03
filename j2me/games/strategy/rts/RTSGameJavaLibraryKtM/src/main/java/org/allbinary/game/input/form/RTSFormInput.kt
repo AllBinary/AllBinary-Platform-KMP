@@ -31,6 +31,7 @@ import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.LayerInterfaceFactoryInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -43,7 +44,7 @@ open public class RTSFormInput : Object {
 
     private val groupCommonFactory: GroupCommonFactory = GroupCommonFactory.getInstance()!!
 
-    private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     val newUnconstructedRTSLayerInterfaceArray: Array<CollidableDestroyableDamageableLayer?> =
         arrayOfNulls(7)

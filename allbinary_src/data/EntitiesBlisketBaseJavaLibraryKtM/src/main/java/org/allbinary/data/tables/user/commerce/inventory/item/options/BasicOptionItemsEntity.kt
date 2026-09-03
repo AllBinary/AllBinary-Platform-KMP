@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.InventoryDbInitInfo
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
@@ -41,6 +42,8 @@ open public class BasicOptionItemsEntity : AbSqlBean
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
+
     val tableName: String = "basicoptionitems"
 public constructor ()                        
 
@@ -53,7 +56,7 @@ this.setTableName(this.tableName)
 }
 
 
-    open fun insert(values: Vector)
+    open fun insert(values: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -91,7 +94,7 @@ var values = values
 var value = value
 
         try {
-            super.deleteWhere(BasicItemData.ID, value)
+            super.deleteWhere(basicItemData!!.ID, value)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -123,9 +126,9 @@ var value = value
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(BasicItemData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
+stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.append(this.sqlStrings!!.START)!!.append(basicItemData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(BasicOptionItemData.OPTION_ONE_TITLE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.DEFAULT_OPTION_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.DEFAULT_OPTION_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
-stringBuffer!!.append(BasicOptionItemData.OPTION_ONE_ONE_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_ONE_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_TWO_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_TWO_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_THREE_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_THREE_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_FOUR_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_FOUR_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_FIVE_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_FIVE_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_SIX_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_SIX_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_SEVEN_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_SEVEN_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_EIGHT_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_EIGHT_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_NINE_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_NINE_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(BasicItemData.ID)!!.append(this.sqlStrings!!.END)
+stringBuffer!!.append(BasicOptionItemData.OPTION_ONE_ONE_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_ONE_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_TWO_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_TWO_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_THREE_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_THREE_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_FOUR_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_FOUR_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_FIVE_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_FIVE_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_SIX_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_SIX_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_SEVEN_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_SEVEN_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_EIGHT_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_EIGHT_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_NINE_ITEM)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(BasicOptionItemData.OPTION_ONE_NINE_VALUE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(EntryData.getInstance()!!.LASTMODIFIED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(basicItemData!!.ID)!!.append(this.sqlStrings!!.END)
 
 
 
@@ -149,7 +152,7 @@ stringBuffer!!.append(BasicOptionItemData.OPTION_ONE_ONE_ITEM)!!.append(this.sql
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
-super.updateWhere(BasicItemData.ID, updatedValues!!.get(BasicItemData.ID) as String, updatedValues)
+super.updateWhere(basicItemData!!.ID, updatedValues!!.get(basicItemData!!.ID) as String, updatedValues)
 }
 
 

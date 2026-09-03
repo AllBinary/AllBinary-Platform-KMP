@@ -25,7 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
+import org.allbinary.logic.StdUtil
 
 open public class LOGGING
             : Object
@@ -33,7 +35,7 @@ open public class LOGGING
         
 companion object {
             
-    private var logging: Vector = Vector()
+    private var logging: BasicArrayList = BasicArrayListD()
 
     open fun contains(logType: LOGGING)
         //nullable = true from not(false or (false and false)) = true

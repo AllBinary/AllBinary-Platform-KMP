@@ -26,10 +26,12 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.JspTagException
 import javax.servlet.jsp.tagext.Tag
 import admin.taghelpers.MultipartRequestParamForwardHelper
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.AbResponseHandler
 import org.allbinary.logic.system.security.licensing.LicensingException
 import tags.CustomTagSupport
@@ -47,7 +49,7 @@ open public class MultipartRequestParamForwardTag : CustomTagSupport {
 
     private var command: String
 
-    private var paramVector: Vector
+    private var paramVector: BasicArrayList
 
     open fun setPage(page: String)
         //nullable = true from not(false or (false and false)) = true
@@ -65,7 +67,7 @@ this.command= command
 }
 
 
-    open fun setParamVector(paramVector: Vector)
+    open fun setParamVector(paramVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var paramVector = paramVector
@@ -85,7 +87,7 @@ this.paramVector= paramVector
 
 ParentInventoryTagHelper.getInstance()!!.isValid(this, parentTag)
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(AbTagData.PARENT, parentTag)
 

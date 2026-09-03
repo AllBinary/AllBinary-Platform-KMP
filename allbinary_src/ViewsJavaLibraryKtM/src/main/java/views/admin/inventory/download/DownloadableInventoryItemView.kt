@@ -27,7 +27,8 @@
         
 import java.io.ByteArrayInputStream
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.context.modules.storefront.StoreFrontFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
@@ -37,6 +38,7 @@ import org.allbinary.business.user.commerce.inventory.item.ItemInterface
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadableItem
 import org.allbinary.business.user.commerce.inventory.item.download.DownloadableItemView
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.MultipartRequestParams
 import org.allbinary.logic.communication.http.request.RequestMapInterface
 import org.allbinary.logic.communication.log.LogUtil
@@ -59,6 +61,8 @@ companion object {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 
     val request: HttpServletRequest
 
@@ -112,7 +116,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 {
 this.setRequestHashMap(MultipartRequestParams(this.request).
                             toHashMap())
-this.id= this.getRequestHashMap()!!.get(BasicItemData.ID) as String
+this.id= this.getRequestHashMap()!!.get(basicItemData!!.ID) as String
 }
 
 
@@ -120,7 +124,7 @@ this.id= this.getRequestHashMap()!!.get(BasicItemData.ID) as String
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 
     

@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontFactory
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.entry.EntryData
@@ -93,10 +94,10 @@ var document = document
     var streetAddress: StreetAddress = shippingAddressesEntityInterface!!.getDefault()!!
 
 
-    var shippingVector: Vector = this.shippingMethods!!.get()!!
+    var shippingVector: BasicArrayList = this.shippingMethods!!.get()!!
 
 
-    var size: Int = shippingVector!!.size!!
+    var size: Int = shippingVector!!.size()!!
 
 
 

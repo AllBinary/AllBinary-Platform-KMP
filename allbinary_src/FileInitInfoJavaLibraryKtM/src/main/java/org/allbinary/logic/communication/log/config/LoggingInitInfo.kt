@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.globals.PATH_GLOBALS
@@ -119,11 +118,11 @@ companion object {
     var logConfigsNode: Node = logConfigsNodeList!!.item(0)!!
 
 
-    var logConfigNodeVector: Vector = DomSearchHelper.getAllNodes(LogConfigData.getInstance()!!.NAME, logConfigsNode!!.getChildNodes())!!
+    var logConfigNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(LogConfigData.getInstance()!!.NAME, logConfigsNode!!.getChildNodes())!!
 
 LoggingInitInfo.logConfigInfoList= BasicArrayListD()
 
-    var size: Int = logConfigNodeVector!!.size!!
+    var size: Int = logConfigNodeVector!!.size()!!
 
 
 
@@ -133,7 +132,7 @@ LoggingInitInfo.logConfigInfoList= BasicArrayListD()
 
         {
 
-    var node: Node = logConfigNodeVector!!.elementAt(i) as Node
+    var node: Node = logConfigNodeVector!!.get(i) as Node
 
 
     var logConfigInfo: LogConfig = LogConfig(node)

@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.io.file.directory.DirectoryBooleanFileVisitor
+import org.allbinary.logic.io.file.directory.DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor
 import org.allbinary.logic.io.file.directory.DirectoryOrIncludeFileExtensionBooleanFileVisitor
 import org.allbinary.logic.io.file.directory.SubDirectory
 import org.allbinary.logic.io.file.filter.VisitorFileFilter
@@ -189,6 +190,91 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 includeExtensionBasicArrayList!!.add(includeExtension)
 
     var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryOrIncludeFileExtensionBooleanFileVisitor(includeExtensionBasicArrayList, pathIncludes))
+
+
+    var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return files
+} catch(e: Exception)
+            {
+e.printStackTrace()
+System.out.println("Error: " +e +"\nMsg: " +e.message)
+}
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+    open fun getTrackedFiles(path: String, includeExtensions: Array<String?>)
+        //nullable = true from not(false or (false and false)) = true
+: BasicArrayList{
+    //var path = path
+    //var includeExtensions = includeExtensions
+
+        try {
+            
+    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayListD()
+
+
+    var size: Int = includeExtensions!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+includeExtensionBasicArrayList!!.add(includeExtensions[index]!!)
+}
+
+
+    var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor(includeExtensionBasicArrayList))
+
+
+    var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return files
+} catch(e: Exception)
+            {
+e.printStackTrace()
+System.out.println("Error: " +e +"\nMsg: " +e.message)
+}
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+    open fun getTrackedFiles(path: String, includeExtension: String)
+        //nullable = true from not(false or (false and false)) = true
+: BasicArrayList{
+    //var path = path
+    //var includeExtension = includeExtension
+
+        try {
+            
+    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayListD()
+
+includeExtensionBasicArrayList!!.add(includeExtension)
+
+    var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor(includeExtensionBasicArrayList))
 
 
     var files: BasicArrayList = this.subDirectory!!.search(visitorFileFilter, AbFile.createAbFile(path))!!

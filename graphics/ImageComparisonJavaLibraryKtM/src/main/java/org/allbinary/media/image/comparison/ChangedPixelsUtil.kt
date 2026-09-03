@@ -28,7 +28,8 @@
         import kotlin.reflect.KClass
         
 import java.awt.image.BufferedImage
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.util.cache.PoolInterface
 import org.allbinary.media.image.cache.BufferedImageCacheable
 import org.allbinary.media.image.cache.BufferedImageInfo
@@ -86,10 +87,10 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(ChangedPixelsUtil.S
 }
 
 
-    var vector: Vector = imageComparisonInfo!!.getNonMatchingPixelVector()!!
+    var vector: BasicArrayList = imageComparisonInfo!!.getNonMatchingPixelVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

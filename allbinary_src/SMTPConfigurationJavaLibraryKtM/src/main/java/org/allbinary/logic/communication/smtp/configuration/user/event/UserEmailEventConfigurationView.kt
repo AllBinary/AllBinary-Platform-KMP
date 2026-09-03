@@ -29,6 +29,7 @@ import java.util.HashMap
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.logic.StdUtil
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
@@ -48,7 +49,7 @@ var node = node
     var childNodeList: NodeList = node.getChildNodes()!!
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
     var name: String = DomNodeHelper.getTextNodeValue(UserEmailEventConfigurationData.NAME, childNodeList)!!

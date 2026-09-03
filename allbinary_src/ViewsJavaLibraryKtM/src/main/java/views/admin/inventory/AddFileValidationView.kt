@@ -61,6 +61,8 @@ companion object {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val basicItemData: BasicItemData = BasicItemData.getInstance()!!
 public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -194,7 +196,7 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
                                     }
                                 
 
-    var imageFileItemObject: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
+    var imageFileItemObject: Any = this.getRequestHashMap()!!.get(basicItemData!!.IMAGE)!!
 
 
     
@@ -370,7 +372,7 @@ stringBuffer!!.append(" does not exist.<br />")
 }
 
 
-    var anyType: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
+    var anyType: Any = this.getRequestHashMap()!!.get(basicItemData!!.IMAGE)!!
 
 
     
@@ -560,7 +562,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
                                     {
                                     
     
-                        if(fileItemFieldName!!.compareTo(BasicItemData.IMAGE) == 0)
+                        if(fileItemFieldName!!.compareTo(basicItemData!!.IMAGE) == 0)
                         
                                     {
                                     

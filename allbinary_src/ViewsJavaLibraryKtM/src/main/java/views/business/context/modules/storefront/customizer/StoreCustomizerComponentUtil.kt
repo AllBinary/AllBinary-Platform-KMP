@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
@@ -81,10 +82,10 @@ var transformInfoInterface = transformInfoInterface
     var customizerUtil: CustomizerUtil = CustomizerUtil.getInstance()!!
 
 
-    var allCustomizedViews: Vector = customizerUtil!!.getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface)!!
+    var allCustomizedViews: BasicArrayList = customizerUtil!!.getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface)!!
 
 
-    var size: Int = allCustomizedViews!!.size!!
+    var size: Int = allCustomizedViews!!.size()!!
 
 
 
@@ -97,7 +98,7 @@ var transformInfoInterface = transformInfoInterface
     var nextTransformInfoInterface: TransformInfo = allCustomizedViews!!.get(index) as TransformInfo
 
 
-    var allViewsToBeModified: Vector = customizerUtil!!.getTransformInfoObjectConfigComponentNodesToCustomize(transformInfoInterface, nextTransformInfoInterface)!!
+    var allViewsToBeModified: BasicArrayList = customizerUtil!!.getTransformInfoObjectConfigComponentNodesToCustomize(transformInfoInterface, nextTransformInfoInterface)!!
 
 
     
@@ -121,7 +122,7 @@ this.generate(abeClientInformation, transformInfoInterface, allViewsToBeModified
 
                 @Throws(Exception::class)
             
-    open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, allViewsToBeModifiedVector: Vector)
+    open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, allViewsToBeModifiedVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -131,7 +132,7 @@ var allViewsToBeModifiedVector = allViewsToBeModifiedVector
     var customizerUtil: CustomizerUtil = CustomizerUtil.getInstance()!!
 
 
-    var size: Int = allViewsToBeModifiedVector!!.size!!
+    var size: Int = allViewsToBeModifiedVector!!.size()!!
 
 
 

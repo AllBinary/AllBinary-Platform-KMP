@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.data.tables.context.module.storefronts.StoreFrontsEntity
 import org.allbinary.data.tables.context.module.storefronts.StoreFrontsEntityFactory
@@ -150,10 +151,16 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
 
 
-    var storeFrontNamesBasicArrayList: Vector = storeFrontsEntity!!.getStoreFrontNames()!!
+    var storeFrontNamesBasicArrayList: BasicArrayList = storeFrontsEntity!!.getStoreFrontNames()!!
 
 
-    var size: Int = storeFrontNamesBasicArrayList!!.size!!
+    var size: Int = storeFrontNamesBasicArrayList!!.size()!!
+
+
+    var nextStore: String
+
+
+    var viewsPath: String
 
 
 
@@ -162,16 +169,12 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
                         for (index in 0 until size)
 
         {
-
-    var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
-
+nextStore= storeFrontNamesBasicArrayList!!.get(index) as String
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.VIEWS_PATH)
 stringBuffer!!.append(nextStore)
-
-    var viewsPath: String = stringBuffer!!.toString()!!
-
+viewsPath= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Backup Store Views: ")
 stringBuffer!!.append(nextStore)
@@ -214,10 +217,19 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
 
 
-    var storeFrontNamesBasicArrayList: Vector = storeFrontsEntity!!.getStoreFrontNames()!!
+    var storeFrontNamesBasicArrayList: BasicArrayList = storeFrontsEntity!!.getStoreFrontNames()!!
 
 
-    var size: Int = storeFrontNamesBasicArrayList!!.size!!
+    var size: Int = storeFrontNamesBasicArrayList!!.size()!!
+
+
+    var nextStore: String
+
+
+    var storeFrontInterface: StoreFrontInterface
+
+
+    var resourcesPath: String
 
 
 
@@ -226,19 +238,13 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
                         for (index in 0 until size)
 
         {
-
-    var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
-
-
-    var storeFrontInterface: StoreFrontInterface = storeFrontsEntity!!.getStoreFrontInterface(nextStore)!!
-
+nextStore= storeFrontNamesBasicArrayList!!.get(index) as String
+storeFrontInterface= storeFrontsEntity!!.getStoreFrontInterface(nextStore)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(storeFrontInterface!!.getCurrentHostNamePath())
 stringBuffer!!.append(storeFrontInterface!!.getCategoryPath())
-
-    var resourcesPath: String = stringBuffer!!.toString()!!
-
+resourcesPath= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Backup Store Resrouces: ")
 stringBuffer!!.append(nextStore)
@@ -281,10 +287,13 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
 
 
-    var storeFrontNamesBasicArrayList: Vector = storeFrontsEntity!!.getStoreFrontNames()!!
+    var storeFrontNamesBasicArrayList: BasicArrayList = storeFrontsEntity!!.getStoreFrontNames()!!
 
 
-    var size: Int = storeFrontNamesBasicArrayList!!.size!!
+    var size: Int = storeFrontNamesBasicArrayList!!.size()!!
+
+
+    var nextStore: String
 
 
 
@@ -293,9 +302,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
                         for (index in 0 until size)
 
         {
-
-    var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
-
+nextStore= storeFrontNamesBasicArrayList!!.get(index) as String
 PreLogUtil.put("Backup Store Jsps: " +nextStore, this, "backupJsps()")
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())

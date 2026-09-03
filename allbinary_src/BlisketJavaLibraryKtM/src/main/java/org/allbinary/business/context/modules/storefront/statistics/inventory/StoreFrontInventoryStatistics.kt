@@ -28,12 +28,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.item.ItemInterface
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntityFactory
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntityInterface
+import org.allbinary.logic.StdUtil
 
 open public class StoreFrontInventoryStatistics
             : Object
@@ -53,10 +55,10 @@ this.totalInventorySaleValueMoney= Money()
     var inventoryEntityInterface: InventoryEntityInterface = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
 
 
-    var itemVector: Vector = inventoryEntityInterface!!.getItems(storeFrontInterface)!!
+    var itemVector: BasicArrayList = inventoryEntityInterface!!.getItems(storeFrontInterface)!!
 
 
-    var size: Int = itemVector!!.size!!
+    var size: Int = itemVector!!.size()!!
 
 
 
@@ -108,7 +110,7 @@ this.totalInventorySaleValueMoney!!.add(itemPriceMoney!!.toString())
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.NUMBEROFITEMS, this.getNumber()!!.toString())
 hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this.getTotal()!!.toString())
@@ -122,7 +124,7 @@ hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 

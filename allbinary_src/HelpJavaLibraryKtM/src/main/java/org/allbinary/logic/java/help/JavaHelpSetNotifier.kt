@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.net.URL
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.help.HelpSet
 
 open public class JavaHelpSetNotifier
@@ -35,11 +36,11 @@ open public class JavaHelpSetNotifier
         
 companion object {
             
-    private var vector: Vector = Vector()
+    private var vector: BasicArrayList = BasicArrayListD()
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -59,7 +60,7 @@ var helpSet = helpSet
     var url: URL = helpSet!!.getHelpSetURL()!!
 
 
-    var size: Int = JavaHelpSetNotifier.vector.size!!
+    var size: Int = JavaHelpSetNotifier.vector.size()!!
 
 
     var urlArray: Array<Any?> = JavaHelpSetNotifier.vector.toArray()!!

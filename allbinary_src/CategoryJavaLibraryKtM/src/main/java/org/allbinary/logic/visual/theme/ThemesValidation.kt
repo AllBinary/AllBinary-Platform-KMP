@@ -26,8 +26,10 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.control.validate.Validation
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -36,9 +38,9 @@ open public class ThemesValidation : Validation
                 , DomNodeInterface {
         
 
-    private var themeVector: Vector
+    private var themeVector: BasicArrayList
 public constructor (){
-this.themeVector= Vector()
+this.themeVector= BasicArrayListD()
 }
 
 public constructor (node: Node){
@@ -105,7 +107,7 @@ var document = document
     var node: Node = document.createElement(ThemesData.getInstance()!!.NAME)!!
 
 
-    var size: Int = this.themeVector!!.size!!
+    var size: Int = this.themeVector!!.size()!!
 
 
 

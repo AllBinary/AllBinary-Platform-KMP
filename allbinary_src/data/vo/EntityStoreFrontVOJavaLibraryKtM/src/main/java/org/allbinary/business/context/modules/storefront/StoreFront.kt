@@ -27,7 +27,8 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.context.configuration.ContextConfiguration
 import org.allbinary.business.context.configuration.ContextConfigurationDomDocumentMapping
@@ -38,6 +39,7 @@ import org.allbinary.business.user.UserData
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.globals.FREEBLISKET_PATH_GLOBALS
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.RequestParams
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.AbFile
@@ -1929,9 +1931,9 @@ FileUtil.getInstance()!!.copyDirectoryPortion(viewStoreImagesDirectoryAbPath, st
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
-    var dataVector: Vector = Vector()
+    var dataVector: BasicArrayList = BasicArrayListD()
 
 dataVector!!.add(this.name)
 dataVector!!.add(this.homeHostName)
@@ -1988,7 +1990,7 @@ dataVector!!.add(time)
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
 
 
-    var dataHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var dataHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 dataHashMap!!.put(storeFrontData!!.NAME, this.name)
 dataHashMap!!.put(storeFrontData!!.HOMEHOSTNAME, this.homeHostName)

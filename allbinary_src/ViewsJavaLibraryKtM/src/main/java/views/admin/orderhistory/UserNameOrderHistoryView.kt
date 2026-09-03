@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
 import org.allbinary.business.user.UserData
 import org.allbinary.business.user.commerce.inventory.order.OrderData
@@ -136,10 +137,10 @@ var document = document
     var orderHistoryEntity: OrderHistoryEntity = OrderHistoryEntity()
 
 
-    var orderReviewVector: Vector = orderHistoryEntity!!.getOrders(this.userName)!!
+    var orderReviewVector: BasicArrayList = orderHistoryEntity!!.getOrders(this.userName)!!
 
 
-    var size: Int = orderReviewVector!!.size!!
+    var size: Int = orderReviewVector!!.size()!!
 
 
 

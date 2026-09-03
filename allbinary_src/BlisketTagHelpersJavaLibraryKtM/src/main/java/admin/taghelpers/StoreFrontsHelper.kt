@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.installer.Portion
@@ -259,14 +260,14 @@ this.portion= Portion(hashMap)
     var success: String = CommonSeps.getInstance()!!.SPACE
 
 
-    var storeNamesVector: Vector = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.getStoreFrontNames()!!
+    var storeNamesVector: BasicArrayList = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.getStoreFrontNames()!!
 
 
     var storeSelect: HtmlSelect = HtmlSelect(StringUtil.getInstance()!!.EMPTY_STRING, this.commonPhoneStrings!!.ONE, StoreFrontData.getInstance()!!.SELECTSTORENAME, StringUtil.getInstance()!!.EMPTY_STRING)
 
 storeSelect!!.addAttribute(StoreFrontsHelper.CLASS, StoreFrontsHelper.TEXT)
 
-    var size: Int = storeNamesVector!!.size!!
+    var size: Int = storeNamesVector!!.size()!!
 
 
 

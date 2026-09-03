@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import javax.swing.tree.DefaultMutableTreeNode
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.input.automation.actions.script.ProfileActionScriptNodeInterface
@@ -34,6 +35,7 @@ import org.allbinary.input.automation.actions.script.condition.ProfileActionScri
 import org.allbinary.input.automation.actions.script.condition.ProfileActionScriptConditionInterface
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileActionData
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileActionJPanel
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
@@ -55,7 +57,7 @@ companion object {
 
     private var genericProfileActionJPanel: GenericProfileActionJPanel
 
-    private var profileActionConditionInterfaceVector: Vector
+    private var profileActionConditionInterfaceVector: BasicArrayList
 public constructor (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)                        
 
                             : super(NAME){
@@ -66,7 +68,7 @@ var node = node
                             //For kotlin this is before the body of the constructor.
                     
 this.genericProfileActionJPanel= genericProfileActionJPanel
-this.setProfileActionConditionInterfaceVector(Vector())
+this.setProfileActionConditionInterfaceVector(BasicArrayListD())
 
     var actionScriptNode: Node = DomSearchHelper.getNode(GenericProfileActionData.SCRIPT, node.getChildNodes())!!
 
@@ -117,7 +119,7 @@ this.setProfileActionConditionInterfaceVector(Vector())
 public constructor (genericProfileActionJPanel: GenericProfileActionJPanel){
 var genericProfileActionJPanel = genericProfileActionJPanel
 this.genericProfileActionJPanel= genericProfileActionJPanel
-this.setProfileActionConditionInterfaceVector(Vector())
+this.setProfileActionConditionInterfaceVector(BasicArrayListD())
 }
 
 
@@ -145,7 +147,7 @@ this.remove(profileActionScriptNodeInterface)
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
@@ -158,7 +160,7 @@ this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
     open fun getProfileActionConditionInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: BasicArrayList{
 
 
 
@@ -167,7 +169,7 @@ this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 }
 
 
-    open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: Vector)
+    open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionConditionInterfaceVector = profileActionConditionInterfaceVector
@@ -185,10 +187,10 @@ var document = document
     var node: Node = document.createElement(GenericProfileActionData.SCRIPT)!!
 
 
-    var vector: Vector = this.getProfileActionConditionInterfaceVector()!!
+    var vector: BasicArrayList = this.getProfileActionConditionInterfaceVector()!!
 
 
-    var size: Int = vector.size!!
+    var size: Int = vector.size()!!
 
 
 

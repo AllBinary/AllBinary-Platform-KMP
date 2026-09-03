@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.UserInterface
 import org.allbinary.business.user.modules.configuration.UserConfigurationInterface
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.smtp.configuration.user.UserEmailConfigurationInterface
 import org.allbinary.logic.communication.smtp.configuration.user.event.UserEmailEventsConfigurationInterface
@@ -60,7 +62,7 @@ companion object {
             
     open fun getUserEmailEventListenerVector(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: BasicArrayList{
     //var abeClientInformation = abeClientInformation
     //var userEmailEventNameData = userEmailEventNameData
     //var userInterface = userInterface
@@ -77,7 +79,7 @@ companion object {
     var userEmailEventListenerInterface: UserEmailEventListenerInterface = userEmailEventsConfigurationInterface!!.getEventListener(abeClientInformation, userEmailEventNameData, userInterface)!!
 
 
-    var vector: Vector = Vector()
+    var vector: BasicArrayList = BasicArrayListD()
 
 vector.add(userEmailEventListenerInterface)
 
@@ -99,7 +101,7 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun getEventHandler(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userVector: Vector)
+    open fun getEventHandler(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : UserEmailEventHandler{
     //var abeClientInformation = abeClientInformation
@@ -114,7 +116,7 @@ private constructor ()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Returning UserEmailEventHandler for ")
-stringBuffer!!.appendint(userVector!!.size)
+stringBuffer!!.appendint(userVector!!.size())
 stringBuffer!!.append(" users.")
 this.logUtil!!.putF(stringBuffer!!.toString(), this, "getEventHandler")
 
@@ -125,7 +127,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getEventHandler")
 
 userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 
-    var size: Int = userVector!!.size!!
+    var size: Int = userVector!!.size()!!
 
 
 
@@ -138,7 +140,7 @@ userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
     var userInterface: UserInterface = userVector!!.get(index) as UserInterface
 
 
-    var vector: Vector = EmailEventHandlerUtil.getUserEmailEventListenerVector(abeClientInformation, userEmailEventNameData, userInterface)!!
+    var vector: BasicArrayList = EmailEventHandlerUtil.getUserEmailEventListenerVector(abeClientInformation, userEmailEventNameData, userInterface)!!
 
 userEmailEventHandler!!.addListener(vector)
 }
