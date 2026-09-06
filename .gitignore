@@ -3,6 +3,7 @@
 *.java
 *.class
 *.iml
+.github/*.md
 .idea
 .project
 .classpath
