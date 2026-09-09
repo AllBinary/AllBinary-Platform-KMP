@@ -1,36 +1,45 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2002 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *    Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.input.form
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2002 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *    Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.input.form
 
-import kotlin.Array
-import org.allbinary.game.identification.Group
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.layer.AdvancedPlayerOwnedRTSLayers
 import org.allbinary.game.layer.AdvancedRTSPlayerLayerInterface
-import org.allbinary.game.layer.AllBinaryGameLayerManager
-import org.allbinary.game.layer.NullPathFindingLayer
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSLayerEvent
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.building.event.BuildingEventHandler
 import org.allbinary.game.layer.building.event.LocalPlayerBuildingEventHandler
+import org.allbinary.game.layer.waypoint.WaypointCellPositionHistory
+import org.allbinary.logic.java.bool.BooleanFactory
+import org.allbinary.game.identification.Group
+import org.allbinary.game.layer.AllBinaryGameLayerManager
+import org.allbinary.game.layer.NullPathFindingLayer
 import org.allbinary.game.layer.hud.event.GameNotificationEvent
 import org.allbinary.game.layer.hud.event.GameNotificationEventHandler
-import org.allbinary.game.layer.waypoint.WaypointCellPositionHistory
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayerManager
-import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.media.audio.ErrorSound
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -38,131 +47,144 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterfac
 import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
 
 open public class BuildingAdvancedRTSFormInput : BuildingRTSFormInput {
+        
 
     val atLeastOneHouseGameNotificationEvent: GameNotificationEvent
+public constructor (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
 
-    public constructor(
-        groupInterface: Array<Group?>,
-        isUnitProducer: Boolean,
-    ) : super(groupInterface, isUnitProducer) {
-        // var groupInterface = groupInterface
-        // var isUnitProducer = isUnitProducer
+                            : super(groupInterface, isUnitProducer){
+    //var groupInterface = groupInterface
+    //var isUnitProducer = isUnitProducer
 
-        // For kotlin this is before the body of the constructor.
 
-        var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
+                            //For kotlin this is before the body of the constructor.
+                    
 
-        this.atLeastOneHouseGameNotificationEvent =
-            GameNotificationEvent(
-                this,
-                "Build At Least One House First",
-                SmallIntegerSingletonFactory.getInstance()!!.getAt(2),
-                basicColorFactory!!.WHITE,
-                BooleanFactory.getInstance()!!.FALSE,
-            )
-    }
+    var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-    @Throws(Exception::class)
+this.atLeastOneHouseGameNotificationEvent= GameNotificationEvent(this, "Build At Least One House First", SmallIntegerSingletonFactory.getInstance()!!.getAt(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
+}
+
+
+                @Throws(Exception::class)
+            
     override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var allBinaryGameLayerManager = allBinaryGameLayerManager
-        super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
+super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
-        var geographicMapCompositeInterface: GeographicMapCompositeInterface =
-            allBinaryGameLayerManager as GeographicMapCompositeInterface
+    var geographicMapCompositeInterface: GeographicMapCompositeInterface = allBinaryGameLayerManager as GeographicMapCompositeInterface
 
-        var geographicMapInterface: BasicGeographicMap =
-            geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-        this.atLeastOneHouseGameNotificationEvent!!.setBasicColorP(
-            geographicMapInterface!!.getForegroundBasicColor()
-        )
-    }
+    var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
+
+this.atLeastOneHouseGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getForegroundBasicColor())
+}
+
 
     override fun isPositionBlocked()
-    // nullable = true from not(false or (false and true)) = true
-    : Boolean {
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
 
-        if (
-            DropCellPositionHistory.getInstance()!!.isCellPositionWithDrop(
-                this.getSelectedGeographicCellPosition()
-            ) ||
-                WaypointCellPositionHistory.getInstance()!!.isCellPositionWithDrop(
-                    this.getSelectedGeographicCellPosition()
-                )
-        ) {
+    
+                        if(DropCellPositionHistory.getInstance()!!.isCellPositionWithDrop(this.getSelectedGeographicCellPosition()) || WaypointCellPositionHistory.getInstance()!!.isCellPositionWithDrop(this.getSelectedGeographicCellPosition()))
+                        
+                                    {
+                                    
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return true
-        } else {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return false
-        }
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
 
-    @Throws(Exception::class)
-    override fun isBuildAttemptValid(
-        rtsPlayerLayerInterface: RTSPlayerLayerInterface,
-        layerInterface: RTSLayer,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-        var layerInterface = layerInterface
+                                    }
+                                
+                        else {
+                            
 
-        var advancedRTSPlayerLayerInterface: AdvancedRTSPlayerLayerInterface =
-            rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
 
-        var advancedPlayerOwnedRTSLayers: AdvancedPlayerOwnedRTSLayers =
-            advancedRTSPlayerLayerInterface!!.getAdvancedPlayerOwnedRTSLayers()!!
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
 
-        var totalHouses: Int = advancedPlayerOwnedRTSLayers!!.getHouseList()!!.size()!!
-
-        if (totalHouses < 1 && layerInterface!!.getName()!!.indexOf(" House") < 0) {
-
-            rtsPlayerLayerInterface!!.add(ErrorSound.getInstance())
-
-            if (!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface()) {
-
-                GameNotificationEventHandler.getInstance()!!.fireEvent(
-                    this.atLeastOneHouseGameNotificationEvent
-                )
-            }
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return false
-        }
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return super.isBuildAttemptValid(rtsPlayerLayerInterface, layerInterface)
-    }
-
-    private val BUILD_BUILDING_RTS_LAYER_EVENT: RTSLayerEvent =
-        RTSLayerEvent(NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
-
-    @Throws(Exception::class)
-    override fun add(
-        rtsPlayerLayerInterface: RTSPlayerLayerInterface,
-        layerManager: AllBinaryLayerManager,
-        layerInterface: RTSLayer,
-    )
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-        var layerManager = layerManager
-        var layerInterface = layerInterface
-        this.BUILD_BUILDING_RTS_LAYER_EVENT.setRtsLayer(layerInterface)
-        BuildingEventHandler.getInstance()!!.fireEvent(this.BUILD_BUILDING_RTS_LAYER_EVENT)
-
-        if ((rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface).isLocalPlayer()) {
-
-            LocalPlayerBuildingEventHandler.getInstance()!!.fireEvent(
-                this.BUILD_BUILDING_RTS_LAYER_EVENT
-            )
-        }
-
-        super.add(rtsPlayerLayerInterface, layerManager, layerInterface)
-    }
+                        }
+                            
 }
+
+
+                @Throws(Exception::class)
+            
+    override fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+var layerInterface = layerInterface
+
+    var advancedRTSPlayerLayerInterface: AdvancedRTSPlayerLayerInterface = rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
+
+
+    var advancedPlayerOwnedRTSLayers: AdvancedPlayerOwnedRTSLayers = advancedRTSPlayerLayerInterface!!.getAdvancedPlayerOwnedRTSLayers()!!
+
+
+    var totalHouses: Int = advancedPlayerOwnedRTSLayers!!.getHouseList()!!.size()!!
+
+
+    
+                        if(totalHouses < 1 && layerInterface!!.getName()!!.indexOf(" House") < 0)
+                        
+                                    {
+                                    rtsPlayerLayerInterface!!.add(ErrorSound.getInstance())
+
+    
+                        if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
+                        
+                                    {
+                                    GameNotificationEventHandler.getInstance()!!.fireEvent(this.atLeastOneHouseGameNotificationEvent)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.isBuildAttemptValid(rtsPlayerLayerInterface, layerInterface)
+}
+
+
+    private val BUILD_BUILDING_RTS_LAYER_EVENT: RTSLayerEvent = RTSLayerEvent(NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
+
+                @Throws(Exception::class)
+            
+    override fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
+        //nullable = true from not(false or (false and false)) = true
+{
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+var layerManager = layerManager
+var layerInterface = layerInterface
+this.BUILD_BUILDING_RTS_LAYER_EVENT.setRtsLayer(layerInterface)
+BuildingEventHandler.getInstance()!!.fireEvent(this.BUILD_BUILDING_RTS_LAYER_EVENT)
+
+    
+                        if(
+                                    (rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface).isLocalPlayer())
+                        
+                                    {
+                                    LocalPlayerBuildingEventHandler.getInstance()!!.fireEvent(this.BUILD_BUILDING_RTS_LAYER_EVENT)
+
+                                    }
+                                
+super.add(rtsPlayerLayerInterface, layerManager, layerInterface)
+}
+
+
+}
+                
+            
+

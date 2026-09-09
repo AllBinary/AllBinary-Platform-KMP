@@ -16,13 +16,14 @@
 package org.allbinary.image
 
 import java.io.InputStream
-import java.lang.System
 import java.lang.Thread
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
 import kotlin.Array
+import org.allbinary.J2MEUtil
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.gd.resource.GDResources
+import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
@@ -36,6 +37,8 @@ open public class ImageCache : ImageCacheBase {
     }
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
 
     public constructor() {}
 
@@ -101,7 +104,7 @@ open public class ImageCache : ImageCacheBase {
 
             if (this.volume > 32000) {
 
-                System.gc()
+                this.systemWrapper!!.gc()
                 this.volume = 0
             }
 
@@ -141,9 +144,10 @@ open public class ImageCache : ImageCacheBase {
 
             var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
-            var inputStream: InputStream = resourceUtil!!.getResourceAsStream(key as String)!!
+            var resourceInputStream: InputStream =
+                resourceUtil!!.getResourceAsStream(key as String)!!
 
-            if (inputStream == null) {
+            if (resourceInputStream == null) {
 
                 throw RuntimeException(
                     StringMaker()
@@ -154,7 +158,7 @@ open public class ImageCache : ImageCacheBase {
             }
 
             try {
-                image = this.createImageFromInputStream(key, inputStream)
+                image = this.createImageFromInputStream(key, resourceInputStream)
             } catch (e: Exception) {
                 this.logUtil!!.put(
                     "Exception: Trying Again After GC",
@@ -165,19 +169,23 @@ open public class ImageCache : ImageCacheBase {
                 this.logUtil!!.putF(
                     StringMaker()
                         .append("InputStream: ")!!
-                        .append(StringUtil.getInstance()!!.toString(inputStream))!!
+                        .append(StringUtil.getInstance()!!.toString(resourceInputStream))!!
                         .toString(),
                     this,
                     this.commonStrings!!.GET,
                 )
-                System.gc()
-                System.gc()
+                this.systemWrapper!!.gc()
+                this.systemWrapper!!.gc()
                 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
                 Thread.sleep(100)
-                image = this.createImageFromInputStream(key, inputStream)
+                image = this.createImageFromInputStream(key, resourceInputStream)
             }
 
-            inputStream!!.close()
+            if (J2MEUtil.isHTML()) {} else {
+
+                resourceInputStream!!.close()
+            }
+
             this.hashtable.put(key, image)
         }
 

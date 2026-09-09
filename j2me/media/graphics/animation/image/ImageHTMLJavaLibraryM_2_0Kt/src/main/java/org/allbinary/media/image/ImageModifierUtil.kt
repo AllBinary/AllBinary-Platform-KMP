@@ -37,9 +37,7 @@ import org.microemu.device.ResourceCallbackStrings
 import playn.core.Callback
 import playn.core.Canvas
 import playn.core.ImageImpl
-import playn.core.PlayN
-import playn.html.HtmlGraphics
-import playn.html.HtmlImage
+import playn.html.HTMLPlaynUtil
 
 open public class ImageModifierUtil
             : Object
@@ -70,6 +68,8 @@ companion object {
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val resourceCallbackStrings: ResourceCallbackStrings = ResourceCallbackStrings.getInstance()!!
+
+    private val playnUtil: HTMLPlaynUtil = HTMLPlaynUtil.getInstance()!!
 
     private var alphaArray: BooleanArray
 
@@ -148,11 +148,7 @@ this.setAlpha2(originalImage, image, imageIndex, alpha)
                                     (originalImage as PlaynImage).getImage() as playn.core.Image
 
 
-    var playN: PlayN = PlayN.getInstance()!!
-
-
-    var canvas: Canvas = 
-                                    (graphics as HtmlGraphics).get(canvasImage as HtmlImage)!!
+    var canvas: Canvas = this.playnUtil!!.getCanvas(canvasImage)!!
 
 canvas.clear()
 canvas.setAlpha(alpha)
@@ -178,11 +174,7 @@ canvas.draw(originalPlaynImage, 0, 0)
     var canvasImage: ImageImpl = htmlImage!!.getImage() as ImageImpl
 
 
-    var playN: PlayN = PlayN.getInstance()!!
-
-
-    var canvas: Canvas = 
-                                    (graphics as HtmlGraphics).get(canvasImage as HtmlImage)!!
+    var canvas: Canvas = this.playnUtil!!.getCanvas(canvasImage)!!
 
 canvas.setAlpha(alphaFloat)
 }

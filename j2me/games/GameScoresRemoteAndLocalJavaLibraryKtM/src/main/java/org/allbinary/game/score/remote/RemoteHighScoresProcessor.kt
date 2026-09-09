@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import org.allbinary.game.GameInfo
 import org.allbinary.game.GameInfoData
 import org.allbinary.game.configuration.GameConfigurationCentral
@@ -36,6 +35,7 @@ import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.system.security.crypt.jcehelper.NoCrypt
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.HashtableUtil
 
 open public class RemoteHighScoresProcessor
@@ -69,7 +69,7 @@ this.logUtil!!.putF("Begin Remote HighScores Retrieval", this, this.commonString
     var gameInfoData: GameInfoData = GameInfoData.getInstance()!!
 
 
-    var hashtable: Hashtable<Any, Any> = abeClientInformation!!.toHashtable()!!
+    var hashtable: ABHashtable<Any, Any> = abeClientInformation!!.toHashtable()!!
 
 HashtableUtil.getInstance()!!.putAll(gameInfo!!.toHashtable(), hashtable)
 hashtable.put(gameInfoData!!.SOFTWARE_INFORMATION, remoteHighScores!!.getSoftwareInformation()!!.toString())
@@ -85,8 +85,8 @@ hashtable.put(RemoteHighScoresData.getInstance()!!.GAME_CONFIGURATION, GameConfi
                         
                                     {
                                     
-    var resultHashtable: Hashtable<Any, Any> = XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresservicessl.php", "HighScoresService.process").
-                            get(hashtable, this.noCrypt) as Hashtable<Any, Any>
+    var resultHashtable: ABHashtable<Any, Any> = XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresservicessl.php", "HighScoresService.process").
+                            get(hashtable, this.noCrypt) as ABHashtable<Any, Any>
 
 remoteHighScores!!.update(resultHashtable)
 

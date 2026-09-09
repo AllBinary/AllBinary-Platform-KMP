@@ -25,12 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import javax.microedition.lcdui.Image
 import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.time.TimeDelayHelper
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.HashtableUtil
 import org.microemu.device.playn.PlaynImage
 
@@ -131,7 +131,7 @@ this.waitForATime(image, name, this.timeDelayHelper)
 {
 this.allTimeDelayHelper!!.setStartTimeTNT()
 
-    var hashtable: Hashtable<Any, Any> = GameFeatureImageCacheFactory.getInstance()!!.getHashtableP()!!
+    var hashtable: ABHashtable<Any, Any> = GameFeatureImageCacheFactory.getInstance()!!.getHashtableP()!!
 
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!

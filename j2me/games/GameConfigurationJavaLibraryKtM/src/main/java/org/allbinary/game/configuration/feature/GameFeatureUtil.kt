@@ -17,13 +17,13 @@ package org.allbinary.game.configuration.feature
 
 import java.lang.Object
 import java.util.Enumeration
-import java.util.Hashtable
 import javax.microedition.lcdui.ChoiceGroup
 import kotlin.Array
 import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.EnumerationUtil
 import org.allbinary.util.HashtableUtil
@@ -239,7 +239,7 @@ open public class GameFeatureUtil : Object {
 
         var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
 
-        var hashtable: Hashtable<Any, Any> =
+        var hashtable: ABHashtable<Any, Any> =
             GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!
 
         var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!

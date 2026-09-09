@@ -1,40 +1,57 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2003 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.layer
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2003 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.layer
 
-import java.lang.Object
 
-open public class RTSGameStrings : Object {
 
-    companion object {
 
-        private val instance: RTSGameStrings = RTSGameStrings()
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : RTSGameStrings {
+open public class RTSGameStrings
+            : Object
+         {
+        
+companion object {
+            
+    private val instance: RTSGameStrings = RTSGameStrings()
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return RTSGameStrings.instance
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: RTSGameStrings{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return RTSGameStrings.instance
+}
+
+
         }
-    }
-
-    // Auto Generated
-    public constructor() : super() {}
-
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
     val DRAG_TO_SPOT: String = "Please Drag"
 
     val NOT_YOURS: String = "Not Yours"
@@ -66,4 +83,8 @@ open public class RTSGameStrings : Object {
     val BUILD_ON_PATH: String = "Not On Path"
 
     val DRAGGABLE: String = "Draggable"
+
 }
+                
+            
+

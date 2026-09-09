@@ -15,8 +15,8 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.logic.system.hardware
 
-import java.util.Hashtable
 import org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface
+import org.allbinary.util.ABHashtable
 
 interface HardwareInterface {
 
@@ -40,5 +40,5 @@ interface HardwareInterface {
         hardwareInterface: HardwareInterface
     )
         // nullable = true from not(false or (false and false)) = true
-        : Hashtable<Any, Any>
+        : ABHashtable<Any, Any>
 }

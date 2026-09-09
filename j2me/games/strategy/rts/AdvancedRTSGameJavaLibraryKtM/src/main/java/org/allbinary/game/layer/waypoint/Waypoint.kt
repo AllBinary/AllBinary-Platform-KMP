@@ -1,21 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2006 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.layer.waypoint
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2006 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.layer.waypoint
 
-import kotlin.Array
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.game.layer.PathFindingLayerInterface
@@ -41,7 +50,9 @@ import org.allbinary.media.graphics.geography.pathfinding.PathGenerator
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
-open public class Waypoint : WaypointBase, BuildingEventListenerInterface {
+open public class Waypoint : WaypointBase
+                , BuildingEventListenerInterface {
+        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -51,282 +62,403 @@ open public class Waypoint : WaypointBase, BuildingEventListenerInterface {
 
     private var endList: BasicArrayList = this.basicArrayListUtil!!.getImmutableInstance()!!
 
-    private var paths: Array<Array<BasicArrayList?>?> =
-        this.basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY
+    private var paths: Array<Array<BasicArrayList?>?> = this.basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY
+public constructor (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
-    public constructor(ownerLayer: PathFindingLayerInterface, sound: Sound) : super(sound) {
+                            : super(sound){
+    //var ownerLayer = ownerLayer
+    //var sound = sound
 
-        // var ownerLayer = ownerLayer
-        // var sound = sound
 
-        // For kotlin this is before the body of the constructor.
+                            //For kotlin this is before the body of the constructor.
+                    
+this.ownerLayer= ownerLayer
+}
 
-        this.ownerLayer = ownerLayer
-    }
 
-    @Throws(Exception::class)
+                @Throws(Exception::class)
+            
     override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var allBinaryGameLayerManager = allBinaryGameLayerManager
-        super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
+super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
-        var geographicMapCompositeInterface: GeographicMapCompositeInterface =
-            allBinaryGameLayerManager as GeographicMapCompositeInterface
+    var geographicMapCompositeInterface: GeographicMapCompositeInterface = allBinaryGameLayerManager as GeographicMapCompositeInterface
 
-        var geographicMapInterface: BasicGeographicMap =
-            geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-        var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-        if (this.paths != this.basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY) {
 
-            throw RuntimeException()
-        }
+    var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
-        this.endList = this.ownerLayer!!.getEndGeographicMapCellPositionList()
-        this.paths =
-            Array(tiledLayer!!.getColumns()) {
-                arrayOfNulls<BasicArrayList?>(tiledLayer!!.getRows())
-            }
 
-        this.clearPaths()
-    }
+    
+                        if(this.paths != this.basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY)
+                        
+                                    {
+                                    
+
+
+                            throw RuntimeException()
+
+                                    }
+                                
+this.endList= this.ownerLayer!!.getEndGeographicMapCellPositionList()
+this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(tiledLayer!!.getRows()) }
+                                                            
+this.clearPaths()
+}
+
 
     open fun releaseCachedPaths()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
-        for (columnIndex in this.paths.size - 1 downTo 0) {
 
-            for (rowIndex in this.paths.size - 1 downTo 0) {
 
-                var pathsList: BasicArrayList = this.paths[columnIndex]!![rowIndex]!!
 
-                if (pathsList != this.basicArrayListUtil!!.getImmutableInstance()) {
+                        for (columnIndex in this.paths.size  - 1  downTo 0)
 
-                    BasicGeographicMapExtractedPathsCacheFactory.getInstance()!!.release(pathsList)
-                }
-            }
-        }
-    }
+        {
 
-    @Throws(Exception::class)
-    override fun getPathsListFromCacheOnly(
-        geographicMapCellPosition: GeographicMapCellPosition
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : BasicArrayList {
-        // var geographicMapCellPosition = geographicMapCellPosition
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.paths[geographicMapCellPosition!!.getColumn()]!![
-            geographicMapCellPosition!!.getRow()]!!
-    }
 
-    @Throws(Exception::class)
-    override fun getPathsListRunnable(
-        geographicMapCellPosition: GeographicMapCellPosition
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : BasicArrayList {
-        // var geographicMapCellPosition = geographicMapCellPosition
 
-        var pathsList: BasicArrayList =
-            this.paths[geographicMapCellPosition!!.getColumn()]!![
-                geographicMapCellPosition!!.getRow()]!!
+                        for (rowIndex in this.paths.size  - 1  downTo 0)
 
-        if (pathsList == this.basicArrayListUtil!!.getImmutableInstance()) {
+        {
 
-            pathsList = this.createPaths(geographicMapCellPosition)
-            this.paths[geographicMapCellPosition!!.getColumn()]!![
-                geographicMapCellPosition!!.getRow()] = pathsList
-        }
+    var pathsList: BasicArrayList = this.paths[columnIndex]!![rowIndex]!!
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return pathsList
-    }
 
-    open fun getEndGeographicMapCellPosition(
-        startGeographicMapCellPosition: GeographicMapCellPosition
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : GeographicMapCellPosition {
-        // var startGeographicMapCellPosition = startGeographicMapCellPosition
+    
+                        if(pathsList != this.basicArrayListUtil!!.getImmutableInstance())
+                        
+                                    {
+                                    BasicGeographicMapExtractedPathsCacheFactory.getInstance()!!.release(pathsList)
 
-        var endGeographicMapCellPosition: GeographicMapCellPosition =
-            this.basicArrayListUtil!!.getRandom(this.endList) as GeographicMapCellPosition
+                                    }
+                                
+}
 
-        if (startGeographicMapCellPosition == endGeographicMapCellPosition) {
+}
 
-            for (index in this.endList!!.size() - 1 downTo 0) {
+}
 
-                endGeographicMapCellPosition =
-                    this.endList!!.get(index) as GeographicMapCellPosition
 
-                if (startGeographicMapCellPosition != endGeographicMapCellPosition) {
+                @Throws(Exception::class)
+            
+    override fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
+        //nullable = true from not(false or (false and false)) = true
+: BasicArrayList{
+    //var geographicMapCellPosition = geographicMapCellPosition
 
-                    break
-                }
-            }
-        }
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return endGeographicMapCellPosition
-    }
 
-    @Throws(Exception::class)
-    open fun createPaths(
-        startGeographicMapCellPosition: GeographicMapCellPosition
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : BasicArrayList {
-        // var startGeographicMapCellPosition = startGeographicMapCellPosition
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.paths[geographicMapCellPosition!!.getColumn()]!![geographicMapCellPosition!!.getRow()]!!
+}
 
-        if (this.endList!!.size() == 0) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.basicArrayListUtil!!.getImmutableInstance()
-        }
+                @Throws(Exception::class)
+            
+    override fun getPathsListRunnable(geographicMapCellPosition: GeographicMapCellPosition)
+        //nullable = true from not(false or (false and false)) = true
+: BasicArrayList{
+    //var geographicMapCellPosition = geographicMapCellPosition
 
-        var endGeographicMapCellPosition: GeographicMapCellPosition =
-            this.getEndGeographicMapCellPosition(startGeographicMapCellPosition)!!
+    var pathsList: BasicArrayList = this.paths[geographicMapCellPosition!!.getColumn()]!![geographicMapCellPosition!!.getRow()]!!
 
-        if (endGeographicMapCellPosition == null) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.basicArrayListUtil!!.getImmutableInstance()
-        }
+    
+                        if(pathsList == this.basicArrayListUtil!!.getImmutableInstance())
+                        
+                                    {
+                                    pathsList= this.createPaths(geographicMapCellPosition)
+this.paths[geographicMapCellPosition!!.getColumn()]!![geographicMapCellPosition!!.getRow()]= pathsList
 
-        if (startGeographicMapCellPosition == endGeographicMapCellPosition) {
+                                    }
+                                
 
-            if (this.ownerLayer!!.shouldHandleStartSameAsEnd()) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return this.basicArrayListUtil!!.getImmutableInstance()
-            } else {
 
-                throw Exception("Start should not be End: " + this.endList!!.size())
-            }
-        }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return pathsList
+}
 
-        var geographicMapCompositeInterface: GeographicMapCompositeInterface =
-            this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
 
-        var geographicMapInterface: BasicGeographicMap =
-            geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
+    open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
+        //nullable = true from not(false or (false and false)) = true
+: GeographicMapCellPosition{
+    //var startGeographicMapCellPosition = startGeographicMapCellPosition
 
-        var raceTrackGeographicMap: RaceTrackGeographicMap =
-            geographicMapInterface as RaceTrackGeographicMap
+    var endGeographicMapCellPosition: GeographicMapCellPosition = this.basicArrayListUtil!!.getRandom(this.endList) as GeographicMapCellPosition
 
-        var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory =
-            raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()!!
 
-        var customMapGenerator: CustomMapGenerator =
-            raceTrackGeographicMap!!.getCustomMapGenerator() as CustomMapGenerator
+    
+                        if(startGeographicMapCellPosition == endGeographicMapCellPosition)
+                        
+                                    {
+                                    
 
-        customMapGenerator!!.copyMapIntoCustomMap()
 
-        var customMapArray: Array<IntArray?> = customMapGenerator!!.getCustomMapArray()!!
 
-        customMapArray[startGeographicMapCellPosition!!.getRow()]!![
-            startGeographicMapCellPosition!!.getColumn()] =
-            raceTrackGeographicMapCellTypeFactory!!.getStartType()
-        customMapArray[endGeographicMapCellPosition!!.getRow()]!![
-            endGeographicMapCellPosition!!.getColumn()] =
-            raceTrackGeographicMapCellTypeFactory!!.getEndType()
+                        for (index in this.endList!!.size() -1 downTo 0)
 
-        var pathFindingInfo: PathFindingInfo =
-            PathFindingInfoFactory.getInstance()!!.getInstancePathFindingInfo(
-                raceTrackGeographicMap,
-                customMapArray,
-            )!!
+        {
+endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosition
 
-        var list: BasicArrayList =
-            PathGenerator.getInstance()!!.getInstanceNoCache(
-                geographicMapInterface,
-                pathFindingInfo,
-                2,
-            )!!
+    
+                        if(startGeographicMapCellPosition != endGeographicMapCellPosition)
+                        
+                                    {
+                                    break;
 
-        if (list.size() < 1) {
+                    
 
-            throw Exception("Path may have been cleared by clearing caching")
-        }
+                                    }
+                                
+}
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return list
-    }
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return endGeographicMapCellPosition
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
+        //nullable = true from not(false or (false and false)) = true
+: BasicArrayList{
+    //var startGeographicMapCellPosition = startGeographicMapCellPosition
+
+    
+                        if(this.endList!!.size() == 0)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.basicArrayListUtil!!.getImmutableInstance()
+
+                                    }
+                                
+
+    var endGeographicMapCellPosition: GeographicMapCellPosition = this.getEndGeographicMapCellPosition(startGeographicMapCellPosition)!!
+
+
+    
+                        if(endGeographicMapCellPosition == 
+                                    null
+                                )
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.basicArrayListUtil!!.getImmutableInstance()
+
+                                    }
+                                
+
+    
+                        if(startGeographicMapCellPosition == endGeographicMapCellPosition)
+                        
+                                    {
+                                    
+    
+                        if(this.ownerLayer!!.shouldHandleStartSameAsEnd())
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.basicArrayListUtil!!.getImmutableInstance()
+
+                                    }
+                                
+                        else {
+                            
+
+
+                            throw Exception("Start should not be End: " +this.endList!!.size())
+
+                        }
+                            
+
+                                    }
+                                
+
+    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
+
+
+    var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
+
+
+    var raceTrackGeographicMap: RaceTrackGeographicMap = geographicMapInterface as RaceTrackGeographicMap
+
+
+    var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()!!
+
+
+    var customMapGenerator: CustomMapGenerator = raceTrackGeographicMap!!.getCustomMapGenerator() as CustomMapGenerator
+
+customMapGenerator!!.copyMapIntoCustomMap()
+
+    var customMapArray: Array<IntArray?> = customMapGenerator!!.getCustomMapArray()!!
+
+customMapArray[startGeographicMapCellPosition!!.getRow()]!![startGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getStartType()
+customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getEndType()
+
+    var pathFindingInfo: PathFindingInfo = PathFindingInfoFactory.getInstance()!!.getInstancePathFindingInfo(raceTrackGeographicMap, customMapArray)!!
+
+
+    var list: BasicArrayList = PathGenerator.getInstance()!!.getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2)!!
+
+
+    
+                        if(list.size() < 1)
+                        
+                                    {
+                                    
+
+
+                            throw Exception("Path may have been cleared by clearing caching")
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return list
+}
+
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var eventObject = eventObject
-        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var eventObject = eventObject
+ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+}
 
-    @Throws(Exception::class)
+
+                @Throws(Exception::class)
+            
     override fun onBuildingEvent(event: RTSLayerEvent)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var event = event
-        this.clearPaths()
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var event = event
+this.clearPaths()
+}
+
 
     open fun clearPaths()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
-        for (columnIndex in this.paths.size - 1 downTo 0) {
 
-            for (rowIndex in this.paths.size - 1 downTo 0) {
 
-                this.paths[columnIndex]!![rowIndex] =
-                    this.basicArrayListUtil!!.getImmutableInstance()
-            }
-        }
-    }
+
+                        for (columnIndex in this.paths.size  - 1  downTo 0)
+
+        {
+
+
+
+
+                        for (rowIndex in this.paths.size  - 1  downTo 0)
+
+        {
+this.paths[columnIndex]!![rowIndex]= this.basicArrayListUtil!!.getImmutableInstance()
+}
+
+}
+
+}
+
 
     override fun reset()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.getConnectedWaypointList()!!.clear()
-        this.releaseCachedPaths()
-    }
-
-    @Throws(Exception::class)
-    override fun visit(unitLayer: PathFindingLayerInterface)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var unitLayer = unitLayer
-
-        if (unitLayer!!.getGroupInterface()[0] != this.ownerLayer!!.getGroupInterface()[0]) {
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return
-        }
-
-        var size: Int = this.getConnectedWaypointList()!!.size()!!
-
-        if (size > 0) {
-
-            var unitWaypointBehavior: UnitWaypointBehavior =
-                unitLayer!!.getWaypointBehavior() as UnitWaypointBehavior
-
-            while (this.getConnectedWaypointList()!!.size() > 0) {
-
-                var rtsLayer: CollidableDestroyableDamageableLayer =
-                    this.getConnectedWaypointList()!!.get(0) as CollidableDestroyableDamageableLayer
-
-                if (rtsLayer!!.isDestroyed()) {
-
-                    this.getConnectedWaypointList()!!.remove(rtsLayer)
-                } else {
-                    unitLayer!!.handleCost(this.ownerLayer)
-                    unitWaypointBehavior!!.insertWaypoint(0, rtsLayer)
-                    break
-                }
-            }
-        }
-    }
+        //nullable = true from not(false or (false and true)) = true
+{
+this.getConnectedWaypointList()!!.clear()
+this.releaseCachedPaths()
 }
+
+
+                @Throws(Exception::class)
+            
+    override fun visit(unitLayer: PathFindingLayerInterface)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var unitLayer = unitLayer
+
+    
+                        if(unitLayer!!.getGroupInterface()[0] != this.ownerLayer!!.getGroupInterface()[0])
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
+
+                                    }
+                                
+
+    var size: Int = this.getConnectedWaypointList()!!.size()!!
+
+
+    
+                        if(size > 0)
+                        
+                                    {
+                                    
+    var unitWaypointBehavior: UnitWaypointBehavior = unitLayer!!.getWaypointBehavior() as UnitWaypointBehavior
+
+
+        while(this.getConnectedWaypointList()!!.size() > 0)
+        {
+
+    var rtsLayer: CollidableDestroyableDamageableLayer = this.getConnectedWaypointList()!!.get(0) as CollidableDestroyableDamageableLayer
+
+
+    
+                        if(rtsLayer!!.isDestroyed())
+                        
+                                    {
+                                    this.getConnectedWaypointList()!!.remove(rtsLayer)
+
+                                    }
+                                
+                        else {
+                            unitLayer!!.handleCost(this.ownerLayer)
+unitWaypointBehavior!!.insertWaypoint(0, rtsLayer)
+break;
+
+                    
+
+                        }
+                            
+}
+
+
+                                    }
+                                
+}
+
+
+}
+                
+            
+

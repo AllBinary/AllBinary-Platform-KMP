@@ -25,9 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.GraphicsDevice
+import java.awt.GraphicsEnvironment
 import java.util.Collection
-import java.util.Hashtable
 import java.util.Iterator
 import java.util.Set
 import javax.help.HelpSet
@@ -39,6 +39,7 @@ import org.allbinary.logic.java.help.JavaHelpSetNotifier
 import org.allbinary.logic.java.anyType.InterfaceUtil
 import org.allbinary.logic.system.loader.SecuredNativeLibraryInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 
 open public class InputRobotFactory
             : Object
@@ -114,7 +115,7 @@ securedNativeLibraryInterface!!.load()
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private val hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private var helpSetListenerInterface: HelpSetListener
 private constructor ()
@@ -297,7 +298,7 @@ securedNativeLibraryInterface!!.unload()
             
     open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: ABHashtable<Any, Any>{
 
 
 

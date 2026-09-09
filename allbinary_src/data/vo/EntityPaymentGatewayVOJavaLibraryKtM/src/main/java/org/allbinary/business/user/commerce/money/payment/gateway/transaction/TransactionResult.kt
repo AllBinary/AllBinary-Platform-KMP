@@ -26,15 +26,12 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Hashtable
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
-import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -68,7 +65,7 @@ var result = result
     var tokenizer2: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.EQUALS)
 
 
-    var hashtable: Hashtable<Any, Any> = tokenizer2.getTokens(tokens)!!
+    var hashtable: ABHashtable<Any, Any> = tokenizer2.getTokens(tokens)!!
 
 this.keyValuePairs!!.putAll(hashtable)
 } catch(e: Exception)

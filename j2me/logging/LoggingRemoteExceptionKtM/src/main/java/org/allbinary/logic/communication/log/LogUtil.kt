@@ -28,7 +28,6 @@
         import kotlin.reflect.KClass
         
 import java.io.IOException
-import java.util.Hashtable
 import org.apache.xmlrpc.XmlRpcException
 import org.allbinary.string.CommonSeps
 import org.allbinary.logic.string.StringMaker
@@ -36,6 +35,7 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 import org.allbinary.canvas.SpecialMessageUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.TimeDelayHelper
+import org.allbinary.util.ABHashtable
 //ActualPlatform
 /*actual*/ open public class LogUtil
             : Object
@@ -210,7 +210,7 @@ this.isFirstException= false
                                     }
                                 
 
-    var hashtable: Hashtable<Any, Any> = this.abeClientInformation!!.toHashtable()!!
+    var hashtable: ABHashtable<Any, Any> = this.abeClientInformation!!.toHashtable()!!
 
 this.stringBuffer!!.delete(0, this.stringBuffer!!.length())
 this.stringBuffer!!.append(message)

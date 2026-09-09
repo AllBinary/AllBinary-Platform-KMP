@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import jsinterop.annotations.JsType
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker

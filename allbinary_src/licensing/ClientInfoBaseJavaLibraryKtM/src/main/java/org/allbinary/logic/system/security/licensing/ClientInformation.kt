@@ -16,7 +16,6 @@
 package org.allbinary.logic.system.security.licensing
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.TsUtil
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
@@ -26,6 +25,7 @@ import org.allbinary.logic.system.hardware.SystemHardwareFactory
 import org.allbinary.logic.system.os.GenericOperatingSystem
 import org.allbinary.logic.system.os.NoOperatingSystem
 import org.allbinary.string.CommonSeps
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
@@ -147,14 +147,14 @@ open public class ClientInformation : Object, AbeClientInformationInterface {
 
     override fun toHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
 
         var abeClientInformationData: AbeClientInformationData =
             AbeClientInformationData.getInstance()!!
 
         var genericOperatingSystem: GenericOperatingSystem = this.getOperatingSystemInterface()!!
 
-        var clientInfoHashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+        var clientInfoHashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         clientInfoHashtable!!.put(abeClientInformationData!!.NAME, this.name)
         clientInfoHashtable!!.put(abeClientInformationData!!.VERSION, this.version)

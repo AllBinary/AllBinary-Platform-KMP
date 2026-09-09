@@ -16,7 +16,6 @@
 package org.allbinary.animation.special
 
 import java.lang.Integer
-import java.lang.System
 import javax.microedition.lcdui.Graphics
 import kotlin.Array
 import org.allbinary.animation.AnimationBehavior
@@ -25,6 +24,7 @@ import org.allbinary.animation.IndexedAnimationBehavior
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
+import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.PrimitiveIntUtil
 
@@ -63,6 +63,8 @@ open public class TitleAnimation : SpecialAnimation {
     }
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
 
     var deltaX: Float = 0.0f
 
@@ -107,7 +109,7 @@ open public class TitleAnimation : SpecialAnimation {
 
         // For kotlin this is before the body of the constructor.
 
-        this.lastFrameStartTime = System.currentTimeMillis()
+        this.lastFrameStartTime = this.systemWrapper!!.currentTimeMillis()
         this.animationInterfaceArray = animationInterfaceArray
         this.sizeP = this.animationInterfaceArray!!.size
         this.basicColorArray = basicColorArray
@@ -122,7 +124,7 @@ open public class TitleAnimation : SpecialAnimation {
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var currentTime: Long = System.currentTimeMillis()!!
+        var currentTime: Long = this.systemWrapper!!.currentTimeMillis()!!
 
         var totalTimeElapsed: Long = currentTime - this.lastFrameStartTime
 

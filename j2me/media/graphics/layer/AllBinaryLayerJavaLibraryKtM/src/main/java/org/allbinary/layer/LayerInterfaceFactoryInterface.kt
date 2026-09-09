@@ -15,13 +15,13 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.layer
 
-import java.util.Hashtable
+import org.allbinary.util.ABHashtable
 
 interface LayerInterfaceFactoryInterface {
 
     @Throws(Exception::class)
     open fun getNextInstance(
-        hashtable: Hashtable<Any, Any>,
+        hashtable: ABHashtable<Any, Any>,
         x: Int,
         y: Int,
         z: Int,

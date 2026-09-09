@@ -28,16 +28,16 @@
         import kotlin.reflect.KClass
         
 import java.io.IOException
-import java.util.Hashtable
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import org.apache.xmlrpc.XmlRpcClient
 import org.apache.xmlrpc.XmlRpcException
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient
 import org.allbinary.logic.system.security.crypt.jcehelper.NoCrypt
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
+import org.allbinary.util.ABHashtable
 
 open public class XmlRpcRemoteLogClient : XmlRpcAbeClient {
         
@@ -80,7 +80,7 @@ xmlRpcClient!!.setBasicAuthentication(
                             null, 
                             null)
 
-    var hashtable: Hashtable<Any, Any> = anyType as Hashtable<Any, Any>
+    var hashtable: ABHashtable<Any, Any> = anyType as ABHashtable<Any, Any>
 
 param.add(hashtable)
 

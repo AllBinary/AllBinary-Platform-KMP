@@ -26,16 +26,15 @@
         import kotlin.reflect.KClass
         
 import java.io.IOException
-import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.init.crypt.jcehelper.CryptInterface
-import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient
 import org.allbinary.logic.java.exception.ExceptionUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+import org.allbinary.util.ABHashtable
 import org.apache.xmlrpc.XmlRpcClient
 import org.apache.xmlrpc.XmlRpcException
 
@@ -95,7 +94,7 @@ xmlRpcClient!!.setBasicAuthentication(
                             null, 
                             null)
 
-    var hashtable: Hashtable<Any, Any> = anyType as Hashtable<Any, Any>
+    var hashtable: ABHashtable<Any, Any> = anyType as ABHashtable<Any, Any>
 
 this.logUtil!!.putF(CLIENT_INFO +hashtable.toString(), this, this.commonStrings!!.GET)
 param.add(hashtable)

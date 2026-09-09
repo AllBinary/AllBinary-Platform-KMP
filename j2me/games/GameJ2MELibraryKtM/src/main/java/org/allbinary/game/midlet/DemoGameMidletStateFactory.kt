@@ -1,37 +1,52 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.midlet
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.midlet
 
-import java.lang.Object
 
-open public class DemoGameMidletStateFactory : Object {
 
-    companion object {
 
-        private var STATE: DemoGameMidletStateFactory = DemoGameMidletStateFactory()
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : DemoGameMidletStateFactory {
+open public class DemoGameMidletStateFactory
+            : Object
+         {
+        
+companion object {
+            
+    private var STATE: DemoGameMidletStateFactory = DemoGameMidletStateFactory()
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return DemoGameMidletStateFactory.STATE
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: DemoGameMidletStateFactory{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return DemoGameMidletStateFactory.STATE
+}
+
+
         }
-    }
-
+            
     val NONE: DemoGameMidletState = DemoGameMidletState()
 
     val START_DEMO: DemoGameMidletState = DemoGameMidletState()
@@ -39,6 +54,13 @@ open public class DemoGameMidletStateFactory : Object {
     val START_GAME: DemoGameMidletState = DemoGameMidletState()
 
     val START_INPUT_MAPPING: DemoGameMidletState = DemoGameMidletState()
-
-    private constructor() : super() {}
+private constructor ()
+            : super()
+        {
 }
+
+
+}
+                
+            
+

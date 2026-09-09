@@ -16,7 +16,6 @@
 package org.allbinary.game.input.mapping
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.game.input.Input
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
@@ -24,6 +23,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -33,7 +33,7 @@ open public class InputMapping : Object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private val hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private val mappedList: BasicArrayList = BasicArrayListD()
 
@@ -168,7 +168,7 @@ open public class InputMapping : Object {
 
     open fun getHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.hashtable

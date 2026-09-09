@@ -1,11 +1,19 @@
-/* Generated Code Do Not Modify */
-package org.allbinary.media.audio.music
 
+        /* Generated Code Do Not Modify */
+        package org.allbinary.media.audio.music
+
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import java.lang.Object
-import kotlin.reflect.KClass
 import org.allbinary.android.AndroidServicesUtil
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -21,47 +29,54 @@ import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
-open public class MusicManager : Object {
+open public class MusicManager
+            : Object
+         {
+        
+companion object {
+            
+    open fun pause(activity: Activity, musicServiceClass: KClass<*>)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var activity = activity
+var musicServiceClass = musicServiceClass
 
-    companion object {
+    var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
 
-        open fun pause(activity: Activity, musicServiceClass: KClass<*>)
-            // nullable = true from not(false or (false and false)) = true
-        {
-            // var activity = activity
-            var musicServiceClass = musicServiceClass
 
-            var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
+    var musicPauseIntent: Intent = Intent(activity as Context, musicServiceClass::class.java)
 
-            var musicPauseIntent: Intent =
-                Intent(activity as Context, musicServiceClass::class.java)
+musicPauseIntent!!.putExtra(commonStateStrings!!.ON_START_COMMAND, 1)
+activity.startService(musicPauseIntent)
+}
 
-            musicPauseIntent!!.putExtra(commonStateStrings!!.ON_START_COMMAND, 1)
-            activity.startService(musicPauseIntent)
+
+    open fun resume(activity: Activity, musicServiceClass: KClass<*>)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var activity = activity
+var musicServiceClass = musicServiceClass
+
+    
+                        if(AndroidServicesUtil.getInstance()!!.isServiceRunning(musicServiceClass!!.toString()!!))
+                        
+                                    {
+                                    
+    var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
+
+
+    var musicResumeIntent: Intent = Intent(activity, musicServiceClass::class.java)
+
+musicResumeIntent!!.putExtra(commonStateStrings!!.ON_START_COMMAND, 2)
+activity.startService(musicResumeIntent)
+
+                                    }
+                                
+}
+
+
         }
-
-        open fun resume(activity: Activity, musicServiceClass: KClass<*>)
-            // nullable = true from not(false or (false and false)) = true
-        {
-            // var activity = activity
-            var musicServiceClass = musicServiceClass
-
-            if (
-                AndroidServicesUtil.getInstance()!!.isServiceRunning(
-                    musicServiceClass!!.toString()!!
-                )
-            ) {
-
-                var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
-
-                var musicResumeIntent: Intent = Intent(activity, musicServiceClass::class.java)
-
-                musicResumeIntent!!.putExtra(commonStateStrings!!.ON_START_COMMAND, 2)
-                activity.startService(musicResumeIntent)
-            }
-        }
-    }
-
+            
     private val PLAY: String = "Play "
 
     private val FOR: String = " for: "
@@ -78,8 +93,7 @@ open public class MusicManager : Object {
 
     private val androidServicesUtil: AndroidServicesUtil = AndroidServicesUtil.getInstance()!!
 
-    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper =
-        GameTickTimeDelayHelperFactory.getInstance()!!
+    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(0)
 
@@ -98,152 +112,189 @@ open public class MusicManager : Object {
     private val musicServiceClass: KClass<*>
 
     private val currentIntent: Intent
+public constructor (musicServiceClass: KClass<*>, songList: BasicArrayList)
+            : super()
+        {
+    //var musicServiceClass = musicServiceClass
+    //var songList = songList
+PreLogUtil.put(this.commonStateStrings!!.CONTEXT +this.resourceUtil!!.getContext(), this, this.commonStrings!!.CONSTRUCTOR)
+this.musicServiceClass= musicServiceClass
+this.currentIntent= Intent(this.resourceUtil!!.getContext(), musicServiceClass::class.java)
+this.songList= songList
+}
 
-    public constructor(musicServiceClass: KClass<*>, songList: BasicArrayList) : super() {
-        // var musicServiceClass = musicServiceClass
-        // var songList = songList
-        PreLogUtil.put(
-            this.commonStateStrings!!.CONTEXT + this.resourceUtil!!.getContext(),
-            this,
-            this.commonStrings!!.CONSTRUCTOR,
-        )
-        this.musicServiceClass = musicServiceClass
-        this.currentIntent = Intent(this.resourceUtil!!.getContext(), musicServiceClass::class.java)
-        this.songList = songList
-    }
 
     open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var nextSongSound = nextSongSound
-        // var leftVolume = leftVolume
-        // var rightVolume = rightVolume
+        //nullable = true from not(false or (false and false)) = true
+{
+var nextSongSound = nextSongSound
+    //var leftVolume = leftVolume
+    //var rightVolume = rightVolume
 
-        if (nextSongSound == null) {
+    
+                        if(nextSongSound == 
+                                    null
+                                )
+                        
+                                    {
+                                    nextSongSound= NoSound.getInstance()
 
-            nextSongSound = NoSound.getInstance()
-        }
+                                    }
+                                
+this.nextSongSound= nextSongSound
+this.leftVolume= leftVolume
+this.rightVolume= rightVolume
+this.reset()
+}
 
-        this.nextSongSound = nextSongSound
-        this.leftVolume = leftVolume
-        this.rightVolume = rightVolume
-        this.reset()
-    }
 
     open fun reset()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.timeDelayHelper!!.delay = 0
-    }
+        //nullable = true from not(false or (false and true)) = true
+{
+this.timeDelayHelper!!.delay= 0
+}
+
 
     open fun process()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
-        if (this.songList!!.size() == 0) {
+    
+                        if(this.songList!!.size() == 0)
+                        
+                                    {
+                                    
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return
-        }
 
-        if (this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime)) {
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
 
-            this.startNewSong()
+                                    }
+                                
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return
-        }
+    
+                        if(this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
+                        
+                                    {
+                                    this.startNewSong()
 
-        if (this.timeDelayHelper2!!.isTime(this.gameTickTimeDelayHelper!!.startTime)) {
 
-            if (
-                this.androidServicesUtil!!.isServiceRunning(this.musicServiceClass!!.toString()!!)
-            ) {} else {
-                this.startNewSong()
-            }
-        }
-    }
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
+
+                                    }
+                                
+
+    
+                        if(this.timeDelayHelper2!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
+                        
+                                    {
+                                    
+    
+                        if(this.androidServicesUtil!!.isServiceRunning(this.musicServiceClass!!.toString()!!))
+                        
+                                    {
+                                    
+                                    }
+                                
+                        else {
+                            this.startNewSong()
+
+                        }
+                            
+
+                                    }
+                                
+}
+
 
     open fun show()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
-        for (index in this.songList!!.size()!! - 1 downTo 0) {
 
-            var sound: Sound = this.songList!!.get(index) as Sound
 
-            var duration: Long = sound.getDuration().toLong()
 
-            PreLogUtil.put(
-                StringMaker()
-                    .append(this.PLAY)!!
-                    .append(sound.getResource())!!
-                    .append(this.FOR)!!
-                    .appendlong(duration)!!
-                    .toString(),
-                this,
-                this.commonStrings!!.PROCESS,
-            )
-        }
-    }
+                        for (index in this.songList!!.size()!!  - 1  downTo 0)
+
+        {
+
+    var sound: Sound = this.songList!!.get(index) as Sound
+
+
+    var duration: Long = sound.getDuration().toLong()
+
+PreLogUtil.put(StringMaker().
+                            append(this.PLAY)!!.append(sound.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, this.commonStrings!!.PROCESS)
+}
+
+}
+
 
     open fun startNewSong()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
         try {
             this.resourceUtil!!.getContext()!!.stopService(this.currentIntent)
 
-            if (this.nextSongSound == NoSound.getInstance()) {
+    
+                        if(this.nextSongSound == NoSound.getInstance())
+                        
+                                    {
+                                    this.currentSongSound= this.basicArrayListUtil!!.getRandom(this.songList) as Sound
 
-                this.currentSongSound = this.basicArrayListUtil!!.getRandom(this.songList) as Sound
-            } else {
-                this.currentSongSound = this.nextSongSound
-                this.nextSongSound = NoSound.getInstance()
-            }
+                                    }
+                                
+                        else {
+                            this.currentSongSound= this.nextSongSound
+this.nextSongSound= NoSound.getInstance()
 
-            var duration: Long = this.currentSongSound!!.getDuration().toLong()
+                        }
+                            
 
-            PreLogUtil.put(
-                StringMaker()
-                    .append(this.PLAY)!!
-                    .append(this.currentSongSound!!.getResource())!!
-                    .append(this.FOR)!!
-                    .appendlong(duration)!!
-                    .toString(),
-                this,
-                this.commonStrings!!.PROCESS,
-            )
-            this.timeDelayHelper!!.delay = duration.toInt()
-            this.currentIntent!!.putExtra(
-                this.musicStrings!!.SONG_EXTRA,
-                this.resourceUtil!!.getResourceId(this.currentSongSound!!.getResource())!!.toInt(),
-            )
-            this.currentIntent!!.putExtra(this.musicStrings!!.LEFT_VOLUME, this.leftVolume)
-            this.currentIntent!!.putExtra(this.musicStrings!!.RIGHT_VOLUME, this.rightVolume)
-            this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
-        } catch (e: Exception) {
+    var duration: Long = this.currentSongSound!!.getDuration().toLong()
 
-            var resource: String = StringUtil.getInstance()!!.EMPTY_STRING
+PreLogUtil.put(StringMaker().
+                            append(this.PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(this.FOR)!!.appendlong(duration)!!.toString(), this, this.commonStrings!!.PROCESS)
+this.timeDelayHelper!!.delay= duration.toInt()
+this.currentIntent!!.putExtra(this.musicStrings!!.SONG_EXTRA, this.resourceUtil!!.getResourceId(this.currentSongSound!!.getResource())!!.toInt())
+this.currentIntent!!.putExtra(this.musicStrings!!.LEFT_VOLUME, this.leftVolume)
+this.currentIntent!!.putExtra(this.musicStrings!!.RIGHT_VOLUME, this.rightVolume)
+this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
+} catch(e: Exception)
+            {
 
-            if (this.currentSongSound != null) {
+    var resource: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-                resource = this.currentSongSound!!.getResource()
-            }
 
-            PreLogUtil.putOE(
-                this.commonStrings!!.EXCEPTION_LABEL + resource,
-                this,
-                this.commonStrings!!.PROCESS,
-                e,
-            )
-        }
-    }
+    
+                        if(this.currentSongSound != 
+                                    null
+                                )
+                        
+                                    {
+                                    resource= this.currentSongSound!!.getResource()
 
-    @Throws(Exception::class)
-    open fun stop()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.resourceUtil!!.getContext()!!.stopService(this.currentIntent)
-    }
+                                    }
+                                
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.PROCESS, e)
 }
+
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun stop()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.resourceUtil!!.getContext()!!.stopService(this.currentIntent)
+}
+
+
+}
+                
+            
+

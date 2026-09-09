@@ -23,8 +23,6 @@
         
         import java.lang.Integer
         
-        import java.lang.System
-        
         import java.lang.Thread
         
         
@@ -39,6 +37,7 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.gd.resource.GDResources
+import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.system.Memory
 
@@ -53,6 +52,8 @@ companion object {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
 public constructor (){
 }
 
@@ -82,7 +83,7 @@ public constructor (){
                         if(this.volume > 32000)
                         
                                     {
-                                    System.gc()
+                                    this.systemWrapper!!.gc()
 this.volume= 0
 
                                     }
@@ -146,8 +147,8 @@ image= this.createImage(key, inputStream)
 this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
 this.logUtil!!.putF(StringMaker().
                             append("InputStream: ")!!.append(inputStream!!.toString())!!.toString(), this, this.commonStrings!!.GET)
-System.gc()
-System.gc()
+this.systemWrapper!!.gc()
+this.systemWrapper!!.gc()
 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
 Thread.sleep(100)
 image= this.createImage(key, inputStream)

@@ -15,7 +15,7 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.game.layer
 
-import java.util.Hashtable
+import org.allbinary.util.ABHashtable
 
 interface LayerPlacementInterface {
 
@@ -34,5 +34,5 @@ interface LayerPlacementInterface {
     @Throws(Exception::class)
     open fun getInstance()
     // nullable =  from not(true or (false and true)) =
-    : Hashtable<Any, Any>
+    : ABHashtable<Any, Any>
 }

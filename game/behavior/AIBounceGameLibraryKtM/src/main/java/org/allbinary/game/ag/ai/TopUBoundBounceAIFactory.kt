@@ -1,22 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.ag.ai
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.ag.ai
 
-import java.lang.Object
-import java.util.Hashtable
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.ai.ArtificialIntelligenceInterface
 import org.allbinary.bounds.TopULayerBounds
 import org.allbinary.game.ai.ArtificialIntelligenceInterfaceFactoryInterface
@@ -28,56 +36,60 @@ import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.util.ABHashtable
 
-open public class TopUBoundBounceAIFactory :
-    Object, ArtificialIntelligenceInterfaceFactoryInterface {
+open public class TopUBoundBounceAIFactory
+            : Object
+        
+                , ArtificialIntelligenceInterfaceFactoryInterface {
+        
 
-    // Auto Generated
-    public constructor() : super() {}
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+                @Throws(Exception::class)
+            
+    override fun getInstance(hashtable: ABHashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
+        //nullable =  from not(true or (false and false)) = 
+: ArtificialIntelligenceInterface{
+    //var hashtable = hashtable
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
-    @Throws(Exception::class)
-    override fun getInstance(
-        hashtable: Hashtable<Any, Any>,
-        ownerLayerInterface: AllBinaryLayer,
-        gameInput: GameInput,
-    )
-        // nullable =  from not(true or (false and false)) =
-        : ArtificialIntelligenceInterface {
-        var hashtable = hashtable
-        var ownerLayerInterface = ownerLayerInterface
-        var gameInput = gameInput
+    var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface = ownerLayerInterface as VelocityInterfaceCompositeInterface
 
-        var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface =
-            ownerLayerInterface as VelocityInterfaceCompositeInterface
 
-        var velocityInterface: VelocityInterface =
-            velocityInterfaceCompositeInterface!!.getVelocityProperties() as VelocityInterface
+    var velocityInterface: VelocityInterface = velocityInterfaceCompositeInterface!!.getVelocityProperties() as VelocityInterface
 
-        var maxDistancePerTick: Int =
-            (velocityInterface!!.getMaxForwardVelocity() shr
-                velocityInterface!!.getVelocityXBasicDecimalP()!!.getScaledFactor())
 
-        var halfWidth: Int = ownerLayerInterface!!.getWidth() * 2 + maxDistancePerTick + 1
+    var maxDistancePerTick: Int = (velocityInterface!!.getMaxForwardVelocity() shr velocityInterface!!.getVelocityXBasicDecimalP()!!.getScaledFactor())
 
-        var halfHeight: Int = ownerLayerInterface!!.getHeight() * 2 + maxDistancePerTick + 1
 
-        var point: GPoint = PointFactory.getInstance()!!.createXY(halfWidth, halfHeight + 60)!!
+    var halfWidth: Int = ownerLayerInterface!!.getWidth() *2 +maxDistancePerTick +1
 
-        var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-        var rectangle: Rectangle =
-            Rectangle(
-                point,
-                (displayInfo!!.getLastWidth() - halfWidth - point.getX()),
-                (displayInfo!!.getLastHeight() - halfHeight - point.getY()),
-            )
+    var halfHeight: Int = ownerLayerInterface!!.getHeight() *2 +maxDistancePerTick +1
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return BoundBounceAI(
-            ownerLayerInterface,
-            gameInput,
-            TopULayerBounds(rectangle),
-            ReverseVelocityBoundsVisitor(ownerLayerInterface),
-        )
-    }
+
+    var point: GPoint = PointFactory.getInstance()!!.createXY(halfWidth, halfHeight +60)!!
+
+
+    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+
+
+    var rectangle: Rectangle = Rectangle(point, (displayInfo!!.getLastWidth() -halfWidth -point.getX()), (displayInfo!!.getLastHeight() -halfHeight -point.getY()))
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BoundBounceAI(ownerLayerInterface, gameInput, TopULayerBounds(rectangle), ReverseVelocityBoundsVisitor(ownerLayerInterface))
 }
+
+
+}
+                
+            
+

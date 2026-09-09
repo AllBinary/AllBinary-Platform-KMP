@@ -1,99 +1,145 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.media.graphics.geography.pathfinding
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.media.graphics.geography.pathfinding
 
-import java.lang.Integer
-import java.lang.Object
-import java.util.Hashtable
+
+
+
+        import java.lang.Object        
+        
+        import java.lang.Integer
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.logic.StdUtil
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
-open public class PathCacheFactory : Object {
+open public class PathCacheFactory
+            : Object
+         {
+        
+companion object {
+            
+    private var pathFactory: PathCacheFactory = PathCacheFactory()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: PathCacheFactory{
 
-        private var pathFactory: PathCacheFactory = PathCacheFactory()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : PathCacheFactory {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return PathCacheFactory.pathFactory
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return PathCacheFactory.pathFactory
+}
+
+
         }
-    }
-
+            
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
-    private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private val hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+private constructor ()
+            : super()
+        {
+}
 
-    private constructor() : super() {}
 
     open fun getSize()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.hashtable.size
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.hashtable.size
+}
+
 
     open fun add(pathId: Integer, list: BasicArrayList)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var pathId = pathId
-        // var list = list
-        this.hashtable.put(pathId, list)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var pathId = pathId
+    //var list = list
+this.hashtable.put(pathId, list)
+}
+
 
     open fun remove(pathId: Integer)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var pathId = pathId
-        this.hashtable.remove(pathId)
-    }
-
-    @Throws(Exception::class)
-    open fun removeAll()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.hashtable.clear()
-
-        if (this.hashtable.size > 0) {
-
-            throw Exception("Did not clear")
-        }
-    }
-
-    @Throws(Exception::class)
-    open fun getOrCreate(
-        pathIdInteger: Integer
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : BasicArrayList {
-        // var pathIdInteger = pathIdInteger
-
-        var listCanBeNull: Any? = this.hashtable.get(pathIdInteger as Object)
-
-        if (listCanBeNull == null) {
-
-            listCanBeNull = this.basicArrayListUtil!!.getImmutableInstance()
-        }
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return listCanBeNull as BasicArrayList
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var pathId = pathId
+this.hashtable.remove(pathId)
 }
+
+
+                @Throws(Exception::class)
+            
+    open fun removeAll()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.hashtable.clear()
+
+    
+                        if(this.hashtable.size > 0)
+                        
+                                    {
+                                    
+
+
+                            throw Exception("Did not clear")
+
+                                    }
+                                
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun getOrCreate(pathIdInteger: Integer)
+        //nullable = true from not(false or (false and false)) = true
+: BasicArrayList{
+    //var pathIdInteger = pathIdInteger
+
+    var listCanBeNull: Any? = this.hashtable.get(pathIdInteger as Object)
+
+
+    
+                        if(listCanBeNull == 
+                                    null
+                                )
+                        
+                                    {
+                                    listCanBeNull= this.basicArrayListUtil!!.getImmutableInstance()
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return listCanBeNull as BasicArrayList
+}
+
+
+}
+                
+            
+

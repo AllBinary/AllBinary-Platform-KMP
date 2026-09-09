@@ -25,11 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import jsinterop.annotations.JsType
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
-import jsinterop.annotations.JsMethod
 
 open public class AboutCommandProcessor
             : Object

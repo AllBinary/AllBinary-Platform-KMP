@@ -17,7 +17,6 @@ package org.allbinary.game.input.mapping
 
 import java.lang.Object
 import java.util.Enumeration
-import java.util.Hashtable
 import org.allbinary.game.configuration.persistance.GamePersistanceStrings
 import org.allbinary.game.input.Input
 import org.allbinary.game.input.InputPersistance
@@ -30,6 +29,7 @@ import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.EnumerationUtil
 
@@ -158,7 +158,7 @@ open public class PersistentInputMapping : Object {
 
         var size: Int = list.size()!!
 
-        var hashtable: Hashtable<Any, Any>
+        var hashtable: ABHashtable<Any, Any>
 
         var enumeration: Enumeration<Any?>
 
@@ -168,7 +168,7 @@ open public class PersistentInputMapping : Object {
 
         for (index in 0 until size) {
 
-            hashtable = list.objectArray[index]!! as Hashtable<Any, Any>
+            hashtable = list.objectArray[index]!! as ABHashtable<Any, Any>
             enumeration = hashtable.keys()
 
             while (this.enumerationUtil!!.hasMoreElements(enumeration)) {

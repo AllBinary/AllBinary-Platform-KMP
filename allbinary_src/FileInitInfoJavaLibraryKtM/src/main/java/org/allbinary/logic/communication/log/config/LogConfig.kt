@@ -25,8 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper

@@ -17,7 +17,6 @@ package org.allbinary.game.configuration
 
 import java.lang.Integer
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.game.configuration.persistance.GameConfigurationPersistanceSingleton
 import org.allbinary.game.configuration.persistance.KeyValuePersistance
 import org.allbinary.logic.NullUtil
@@ -27,6 +26,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 
 open public class GameConfigurationCentral : Object {
@@ -217,7 +217,7 @@ open public class GameConfigurationCentral : Object {
 
             if (list.size() > 0) {
 
-                var hashtable: Hashtable<Any, Any> = keyValuePersistance!!.get(0)!!
+                var hashtable: ABHashtable<Any, Any> = keyValuePersistance!!.get(0)!!
 
                 var anyType: Any = this.SCALE.getName() as Object
 

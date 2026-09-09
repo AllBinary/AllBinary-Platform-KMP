@@ -1,22 +1,32 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.input.motion.gesture
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.input.motion.gesture
 
-import java.lang.Math
-import java.lang.Object
+
+
+
+        import java.lang.Object        
+        
+        import java.lang.Math
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.Line
 import org.allbinary.graphics.PointFactory
@@ -32,7 +42,10 @@ import org.allbinary.logic.math.J2SEMath
 import org.allbinary.logic.util.event.handler.BasicEventHandler
 import org.allbinary.string.CommonStrings
 
-open public class MotionGestureRecognizer : Object {
+open public class MotionGestureRecognizer
+            : Object
+         {
+        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -53,259 +66,346 @@ open public class MotionGestureRecognizer : Object {
     private val scrolledMotionGesturesHandler: BasicEventHandler
 
     private val motionEventCircularPool: MotionEventCircularPool
+public constructor (id: Int)
+            : super()
+        {
+    //var id = id
+this.motionEventCircularPool= MotionEventCircularPool.createPool(id)
 
-    public constructor(id: Int) : super() {
-        // var id = id
-        this.motionEventCircularPool = MotionEventCircularPool.createPool(id)
+    var motionGesturesHandler: BasicEventHandler = BasicEventHandler()
 
-        var motionGesturesHandler: BasicEventHandler = BasicEventHandler()
 
-        var movedMotionGesturesHandler: BasicEventHandler = motionGesturesHandler
+    var movedMotionGesturesHandler: BasicEventHandler = motionGesturesHandler
 
-        var scrolledMotionGesturesHandler: BasicEventHandler = motionGesturesHandler
+
+    var scrolledMotionGesturesHandler: BasicEventHandler = motionGesturesHandler
+
 
         try {
-            motionGesturesHandler = BasicMotionGesturesHandler.getInstance()
-            movedMotionGesturesHandler = MovedMotionGesturesHandler.getInstance()
-            scrolledMotionGesturesHandler = ScrolledMotionGesturesHandler.getInstance()
-        } catch (e: Exception) {
+            motionGesturesHandler= BasicMotionGesturesHandler.getInstance()
+movedMotionGesturesHandler= MovedMotionGesturesHandler.getInstance()
+scrolledMotionGesturesHandler= ScrolledMotionGesturesHandler.getInstance()
+} catch(e: Exception)
+            {
 
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
-        }
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+}
 
-        this.motionGesturesHandler = motionGesturesHandler as BasicMotionGesturesHandler
-        this.movedMotionGesturesHandler = movedMotionGesturesHandler
-        this.scrolledMotionGesturesHandler = scrolledMotionGesturesHandler
-    }
+this.motionGesturesHandler= motionGesturesHandler as BasicMotionGesturesHandler
+this.movedMotionGesturesHandler= movedMotionGesturesHandler
+this.scrolledMotionGesturesHandler= scrolledMotionGesturesHandler
+}
 
-    @Throws(Exception::class)
-    open fun processPressedMotionEvent(
-        current: GPoint,
-        deviceId: Int,
-        button: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        // var current = current
-        // var deviceId = deviceId
-        // var button = button
-        this.intermediate = this.origin
-        this.previous = this.origin
 
-        var event: MotionGestureEvent =
-            this.motionEventCircularPool!!.getInstance(
-                TouchMotionGestureFactory.getInstance()!!.PRESSED
-            )!!
+                @Throws(Exception::class)
+            
+    open fun processPressedMotionEvent(current: GPoint, deviceId: Int, button: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var current = current
+    //var deviceId = deviceId
+    //var button = button
+this.intermediate= this.origin
+this.previous= this.origin
 
-        event.setPreviousPoint(this.previous)
-        event.setCurrentPoint(current)
-        this.motionGesturesHandler!!.fireEvent(event)
+    var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.PRESSED)!!
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return true
-    }
+event.setPreviousPoint(this.previous)
+event.setCurrentPoint(current)
+this.motionGesturesHandler!!.fireEvent(event)
 
-    @Throws(Exception::class)
-    open fun processReleasedMotionEvent(
-        current: GPoint,
-        deviceId: Int,
-        button: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        // var current = current
-        // var deviceId = deviceId
-        // var button = button
 
-        var event: MotionGestureEvent =
-            this.motionEventCircularPool!!.getInstance(
-                TouchMotionGestureFactory.getInstance()!!.RELEASED
-            )!!
 
-        event.setPreviousPoint(this.previous)
-        event.setCurrentPoint(current)
-        this.motionGesturesHandler!!.fireEvent(event)
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+}
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return true
-    }
 
-    @Throws(Exception::class)
+                @Throws(Exception::class)
+            
+    open fun processReleasedMotionEvent(current: GPoint, deviceId: Int, button: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var current = current
+    //var deviceId = deviceId
+    //var button = button
+
+    var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.RELEASED)!!
+
+event.setPreviousPoint(this.previous)
+event.setCurrentPoint(current)
+this.motionGesturesHandler!!.fireEvent(event)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+}
+
+
+                @Throws(Exception::class)
+            
     open fun processDraggedMotionEvent(current: GPoint, deviceId: Int, buttonMask: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var current = current
-        // var deviceId = deviceId
-        // var buttonMask = buttonMask
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var current = current
+    //var deviceId = deviceId
+    //var buttonMask = buttonMask
 
-        if (this.previous == this.origin || this.intermediate == this.origin) {
+    
+                        if(this.previous == this.origin || this.intermediate == this.origin)
+                        
+                                    {
+                                    this.previous= current
+this.intermediate= current
 
-            this.previous = current
-            this.intermediate = current
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return
-        }
 
-        this.line.setP1(this.previous)
-        this.line.setP2(current)
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
 
-        var minimumMotionGesture: Int =
-            MotionGestureConfigurationFactory.getInstance()!!.getMinimumMotionGesture()!!
+                                    }
+                                
+this.line.setP1(this.previous)
+this.line.setP2(current)
 
-        if (
-            this.j2seMath!!.abs(this.line.getDeltaX().toFloat()) < minimumMotionGesture &&
-                this.j2seMath!!.abs(this.line.getDeltaY().toFloat()) < minimumMotionGesture
-        ) {
-            this.intermediate = current
+    var minimumMotionGesture: Int = MotionGestureConfigurationFactory.getInstance()!!.getMinimumMotionGesture()!!
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return
-        }
 
-        var gradient: Double = this.line.getGradient()!!
+    
+                        if(this.j2seMath!!.abs(this.line.getDeltaX().toFloat()) < minimumMotionGesture && this.j2seMath!!.abs(this.line.getDeltaY().toFloat()) < minimumMotionGesture)
+                        
+                                    {
+                                    this.intermediate= current
 
-        var absGradient: Double = this.j2seMath!!.abs(gradient.toFloat()).toDouble()
 
-        var conf: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
 
-        var touchMotionGestureFactory: TouchMotionGestureFactory =
-            TouchMotionGestureFactory.getInstance()!!
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
 
-        var newMotionGesture: MotionGestureInput = touchMotionGestureFactory!!.NO_MOTION
+                                    }
+                                
 
-        var diagonalToleranceHigher: Double = 12.0
+    var gradient: Double = this.line.getGradient()!!
 
-        var diagonalToleranceLower: Double = 12.0
 
-        if (conf.isDiagonalMotionGestureAllowed()) {
+    var absGradient: Double = this.j2seMath!!.abs(gradient.toFloat()).toDouble()
 
-            diagonalToleranceHigher = (90 - conf.getDiagonalTolerance()).toDouble()
-            diagonalToleranceLower = conf.getDiagonalTolerance().toDouble()
-        }
 
-        if (absGradient > Math.tan(Math.toRadians(diagonalToleranceHigher))) {
+    var conf: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
 
-            if (this.line.getDeltaY() > 0) {
 
-                newMotionGesture = touchMotionGestureFactory!!.UP
-            } else {
-                newMotionGesture = touchMotionGestureFactory!!.DOWN
-            }
-        } else {
+    var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
 
-            if (absGradient < Math.tan(Math.toRadians(diagonalToleranceLower))) {
 
-                if (this.line.getDeltaX() > 0) {
+    var newMotionGesture: MotionGestureInput = touchMotionGestureFactory!!.NO_MOTION
 
-                    newMotionGesture = touchMotionGestureFactory!!.LEFT
-                } else {
-                    newMotionGesture = touchMotionGestureFactory!!.RIGHT
-                }
-            } else {
 
-                if (gradient > 0) {
+    var diagonalToleranceHigher: Double = 12.0
 
-                    if (this.line.getDeltaX() > 0) {
 
-                        newMotionGesture = touchMotionGestureFactory!!.DIAGONAL_UP_LEFT
-                    } else {
-                        newMotionGesture = touchMotionGestureFactory!!.DIAGONAL_DOWN_RIGHT
-                    }
-                } else {
+    var diagonalToleranceLower: Double = 12.0
 
-                    if (this.line.getDeltaX() > 0) {
 
-                        newMotionGesture = touchMotionGestureFactory!!.DIAGONAL_DOWN_LEFT
-                    } else {
-                        newMotionGesture = touchMotionGestureFactory!!.DIAGONAL_UP_RIGHT
-                    }
-                }
-            }
-        }
+    
+                        if(conf.isDiagonalMotionGestureAllowed())
+                        
+                                    {
+                                    diagonalToleranceHigher= (90 -conf.getDiagonalTolerance()).toDouble()
+diagonalToleranceLower= conf.getDiagonalTolerance().toDouble()
 
-        this.previous = current
-        this.intermediate = current
+                                    }
+                                
 
-        var event: MotionGestureEvent =
-            this.motionEventCircularPool!!.getInstance(newMotionGesture)!!
+    
+                        if(absGradient > Math.tan(Math.toRadians(diagonalToleranceHigher)))
+                        
+                                    {
+                                    
+    
+                        if(this.line.getDeltaY() > 0)
+                        
+                                    {
+                                    newMotionGesture= touchMotionGestureFactory!!.UP
 
-        event.setPreviousPoint(this.previous)
-        event.setCurrentPoint(current)
-        this.motionGesturesHandler!!.fireEvent(event)
+                                    }
+                                
+                        else {
+                            newMotionGesture= touchMotionGestureFactory!!.DOWN
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return
-    }
+                        }
+                            
 
-    @Throws(Exception::class)
-    open fun processMovedMotionEvent(
-        current: GPoint,
-        deviceId: Int,
-        button: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        // var current = current
-        // var deviceId = deviceId
-        // var button = button
+                                    }
+                                
+                        else {
+                            
+    
+                        if(absGradient < Math.tan(Math.toRadians(diagonalToleranceLower)))
+                        
+                                    {
+                                    
+    
+                        if(this.line.getDeltaX() > 0)
+                        
+                                    {
+                                    newMotionGesture= touchMotionGestureFactory!!.LEFT
 
-        var event: MotionGestureEvent =
-            this.motionEventCircularPool!!.getInstance(
-                TouchMotionGestureFactory.getInstance()!!.NO_MOTION
-            )!!
+                                    }
+                                
+                        else {
+                            newMotionGesture= touchMotionGestureFactory!!.RIGHT
 
-        event.setPreviousPoint(this.previous)
-        event.setCurrentPoint(current)
-        this.movedMotionGesturesHandler!!.fireEvent(event)
+                        }
+                            
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return true
-    }
+                                    }
+                                
+                        else {
+                            
+    
+                        if(gradient > 0)
+                        
+                                    {
+                                    
+    
+                        if(this.line.getDeltaX() > 0)
+                        
+                                    {
+                                    newMotionGesture= touchMotionGestureFactory!!.DIAGONAL_UP_LEFT
 
-    @Throws(Exception::class)
-    open fun processScrolledMotionEvent(
-        current: GPoint,
-        deviceId: Int,
-        button: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        // var current = current
-        // var deviceId = deviceId
-        // var button = button
+                                    }
+                                
+                        else {
+                            newMotionGesture= touchMotionGestureFactory!!.DIAGONAL_DOWN_RIGHT
 
-        var touchMotionGestureFactory: TouchMotionGestureFactory =
-            TouchMotionGestureFactory.getInstance()!!
+                        }
+                            
 
-        var newMotionGesture: MotionGestureInput = touchMotionGestureFactory!!.NO_MOTION
+                                    }
+                                
+                        else {
+                            
+    
+                        if(this.line.getDeltaX() > 0)
+                        
+                                    {
+                                    newMotionGesture= touchMotionGestureFactory!!.DIAGONAL_DOWN_LEFT
 
-        if (button > 0) {
+                                    }
+                                
+                        else {
+                            newMotionGesture= touchMotionGestureFactory!!.DIAGONAL_UP_RIGHT
 
-            newMotionGesture = touchMotionGestureFactory!!.SCROLL_UP
-        } else if (button < 0) {
+                        }
+                            
 
-            newMotionGesture = touchMotionGestureFactory!!.SCROLL_DOWN
-        }
+                        }
+                            
 
-        var event: MotionGestureEvent =
-            this.motionEventCircularPool!!.getInstance(newMotionGesture)!!
+                        }
+                            
 
-        event.setPreviousPoint(this.previous)
-        event.setCurrentPoint(current)
-        this.scrolledMotionGesturesHandler!!.fireEvent(event)
+                        }
+                            
+this.previous= current
+this.intermediate= current
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return true
-    }
+    var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(newMotionGesture)!!
+
+event.setPreviousPoint(this.previous)
+event.setCurrentPoint(current)
+this.motionGesturesHandler!!.fireEvent(event)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun processMovedMotionEvent(current: GPoint, deviceId: Int, button: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var current = current
+    //var deviceId = deviceId
+    //var button = button
+
+    var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.NO_MOTION)!!
+
+event.setPreviousPoint(this.previous)
+event.setCurrentPoint(current)
+this.movedMotionGesturesHandler!!.fireEvent(event)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun processScrolledMotionEvent(current: GPoint, deviceId: Int, button: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var current = current
+    //var deviceId = deviceId
+    //var button = button
+
+    var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
+
+
+    var newMotionGesture: MotionGestureInput = touchMotionGestureFactory!!.NO_MOTION
+
+
+    
+                        if(button > 0)
+                        
+                                    {
+                                    newMotionGesture= touchMotionGestureFactory!!.SCROLL_UP
+
+                                    }
+                                
+                             else 
+    
+                        if(button < 0)
+                        
+                                    {
+                                    newMotionGesture= touchMotionGestureFactory!!.SCROLL_DOWN
+
+                                    }
+                                
+
+    var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(newMotionGesture)!!
+
+event.setPreviousPoint(this.previous)
+event.setCurrentPoint(current)
+this.scrolledMotionGesturesHandler!!.fireEvent(event)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+}
+
 
     open fun getMotionGesturesHandler()
-    // nullable = true from not(false or (false and true)) = true
-    : BasicMotionGesturesHandler {
+        //nullable = true from not(false or (false and true)) = true
+: BasicMotionGesturesHandler{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.motionGesturesHandler
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.motionGesturesHandler
 }
+
+
+}
+                
+            
+

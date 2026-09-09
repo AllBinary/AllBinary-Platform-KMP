@@ -27,21 +27,20 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Rectangle
 import java.awt.event.InputEvent
 import java.awt.event.KeyEvent
-import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.robot.InputRobotFactory
 import org.allbinary.input.automation.robot.InputRobotInterface
 import org.allbinary.input.automation.robot.TempInputRobotNames
-import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.TimeDelayHelper
+import org.allbinary.util.ABHashtable
 
 open public class TestInputForMotionRectanglesResultsWorker
             : Object
@@ -140,7 +139,7 @@ timeHelper!!.setStartTimeTNT()
     var rectangle: Rectangle = motionRectangleVector!!.get(0) as Rectangle
 
 
-    var robotHashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
+    var robotHashtable: ABHashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
 
 
     var inputTypeNameArray: Array<Any?> = robotHashtable!!.keys.toTypedArray()!!

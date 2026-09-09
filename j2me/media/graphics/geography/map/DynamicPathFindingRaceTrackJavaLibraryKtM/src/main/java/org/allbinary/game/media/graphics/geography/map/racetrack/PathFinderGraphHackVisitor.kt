@@ -39,7 +39,7 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMap
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingNode
 
-open public class PathFinderGraphHackVisitor : BasePathFinderGraphVisitor<V, E> {
+open public class PathFinderGraphHackVisitor<V, E> : BasePathFinderGraphVisitor<V, E> {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

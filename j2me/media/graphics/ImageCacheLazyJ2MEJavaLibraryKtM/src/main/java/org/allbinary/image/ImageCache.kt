@@ -21,15 +21,12 @@
 
         import java.lang.Object        
         
-        import java.lang.System
-        
         import java.lang.Thread
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import jsinterop.annotations.JsType
 import java.io.InputStream
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
@@ -55,9 +52,7 @@ import org.allbinary.thread.ConcurrentImageLoadingProcessor
 import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
-import jsinterop.annotations.JsMethod
-import jsinterop.annotations.JsConstructor
-import jsinterop.annotations.JsProperty
+import org.allbinary.logic.ABSystemWrapper
 
 open public class ImageCache : ImageCacheBase {
         
@@ -68,6 +63,8 @@ companion object {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
 
     private val concurrentImageLoadingProcessor: BaseImageLoadingProcessor = ConcurrentImageLoadingProcessor(this)
 
@@ -776,7 +773,7 @@ image.setName(key)
                         if(this.volume > 32000)
                         
                                     {
-                                    System.gc()
+                                    this.systemWrapper!!.gc()
 this.volume= 0
 
                                     }
@@ -841,8 +838,8 @@ this.listOfList[foundIndex]!!.add(image)
 this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
 this.logUtil!!.putF(StringMaker().
                             append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, this.commonStrings!!.GET)
-System.gc()
-System.gc()
+this.systemWrapper!!.gc()
+this.systemWrapper!!.gc()
 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
 Thread.sleep(100)
 image= this.createImageFromInputStream(key, inputStream)

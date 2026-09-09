@@ -25,22 +25,22 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import org.allbinary.string.CommonStrings
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.util.ABHashtable
 
 open public class GeographicMapCellPositionFactory : GeographicMapCellPositionBaseFactory {
         
 companion object {
             
-    private val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private val hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: ABHashtable<Any, Any>{
 
 
 

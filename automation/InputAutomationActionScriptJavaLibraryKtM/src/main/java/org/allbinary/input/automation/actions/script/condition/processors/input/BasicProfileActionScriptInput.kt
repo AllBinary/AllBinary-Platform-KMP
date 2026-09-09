@@ -28,7 +28,6 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Hashtable
 import java.util.Iterator
 import java.util.Set
 import org.allbinary.data.tree.dom.DomNodeHelper
@@ -41,6 +40,7 @@ import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.util.ABHashtable
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -107,7 +107,7 @@ this.logUtil!!.putF(this.commonStrings!!.START +label, this, this.commonStrings!
     var inputRobotFactory: InputRobotFactory = InputRobotFactory.getInstance()!!
 
 
-    var hashtable: Hashtable<Any, Any> = inputRobotFactory!!.get() as Hashtable<Any, Any>
+    var hashtable: ABHashtable<Any, Any> = inputRobotFactory!!.get() as ABHashtable<Any, Any>
 
 
     var set: Set = hashtable.keys!!

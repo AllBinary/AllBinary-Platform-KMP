@@ -25,9 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import jsinterop.annotations.JsType
-import jsinterop.annotations.JsMethod
-import jsinterop.annotations.JsProperty
 
 open public class ThreadPoolStrings
             : Object

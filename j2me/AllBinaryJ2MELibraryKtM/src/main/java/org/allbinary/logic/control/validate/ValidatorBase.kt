@@ -16,10 +16,10 @@
 package org.allbinary.logic.control.validate
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 
@@ -58,7 +58,7 @@ open public class ValidatorBase : Object, ValidatorBaseInterface {
 
     override fun toHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return StdUtil.getInstance()!!.NULL_TABLE

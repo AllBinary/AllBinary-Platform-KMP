@@ -1,101 +1,128 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2025 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.layer.building
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2025 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.layer.building
 
-import java.util.Hashtable
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.combat.damage.DamageFloaters
 import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.logic.StdUtil
+import org.allbinary.util.ABHashtable
 
 open public class SimulatedBuildingPropertiesFactory : BuildingPropertiesFactory {
+        
+companion object {
+            
+    private val instanceC: SimulatedBuildingPropertiesFactory = SimulatedBuildingPropertiesFactory()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: SimulatedBuildingPropertiesFactory{
 
-        private val instanceC: SimulatedBuildingPropertiesFactory =
-            SimulatedBuildingPropertiesFactory()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : SimulatedBuildingPropertiesFactory {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return SimulatedBuildingPropertiesFactory.instanceC
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return SimulatedBuildingPropertiesFactory.instanceC
+}
+
+
         }
-    }
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+    override fun getEfficiencyPerLevel(buildingLayer: BuildingLayer)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var buildingLayer = buildingLayer
 
-    // Auto Generated
-    public constructor() : super() {}
 
-    override fun getEfficiencyPerLevel(
-        buildingLayer: BuildingLayer
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Int {
-        // var buildingLayer = buildingLayer
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return 0
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
 
-    override fun getDamageFloaters(
-        buildingLayer: BuildingLayer
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : DamageFloaters {
-        // var buildingLayer = buildingLayer
 
-        var damageFloaters: DamageFloaters = DamageFloaters.getInstance()!!
+    override fun getDamageFloaters(buildingLayer: BuildingLayer)
+        //nullable = true from not(false or (false and false)) = true
+: DamageFloaters{
+    //var buildingLayer = buildingLayer
 
-        this.damageFloatersPaintableInterface = damageFloaters
+    var damageFloaters: DamageFloaters = DamageFloaters.getInstance()!!
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return damageFloaters
-    }
+this.damageFloatersPaintableInterface= damageFloaters
 
-    @Throws(Exception::class)
-    override fun getHealthBar(
-        buildingLayer: BuildingLayer
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Paintable {
-        // var buildingLayer = buildingLayer
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return NullPaintable.getInstance()
-    }
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return damageFloaters
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getHealthBar(buildingLayer: BuildingLayer)
+        //nullable = true from not(false or (false and false)) = true
+: Paintable{
+    //var buildingLayer = buildingLayer
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NullPaintable.getInstance()
+}
+
 
     override fun getHashtable()
-    // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+        //nullable = true from not(false or (false and true)) = true
+: ABHashtable<Any, Any>{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return StdUtil.getInstance()!!.NULL_TABLE
-    }
 
-    override fun getTrackingEvent(
-        buildingLayer: BuildingLayer
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : TrackingEvent {
-        // var buildingLayer = buildingLayer
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return TrackingEvent(TrackingEventHandler.getInstance())
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return StdUtil.getInstance()!!.NULL_TABLE
 }
+
+
+    override fun getTrackingEvent(buildingLayer: BuildingLayer)
+        //nullable = true from not(false or (false and false)) = true
+: TrackingEvent{
+    //var buildingLayer = buildingLayer
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return TrackingEvent(TrackingEventHandler.getInstance())
+}
+
+
+}
+                
+            
+

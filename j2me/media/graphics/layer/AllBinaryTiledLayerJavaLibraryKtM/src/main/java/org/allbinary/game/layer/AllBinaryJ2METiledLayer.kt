@@ -1,228 +1,276 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2006 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.layer
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2006 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.layer
 
-import java.lang.Integer
+
+
+
+        import java.lang.Object        
+        
+        import java.lang.Integer
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.game.TiledLayer
-import kotlin.Array
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
+import org.allbinary.logic.string.StringMaker
 
 open public class AllBinaryJ2METiledLayer : AllBinaryTiledLayer {
+        
 
     val tiledLayerP: TiledLayer
 
     val debugColor: Int
+public constructor (dataId: Integer, tiledLayer: TiledLayer, mapTwoDArray: Array<IntArray?>, debugColor: Int)                        
 
-    public constructor(
-        dataId: Integer,
-        tiledLayer: TiledLayer,
-        mapTwoDArray: Array<IntArray?>,
-        debugColor: Int,
-    ) : super(
-        dataId,
-        tiledLayer!!.getWidth(),
-        tiledLayer!!.getHeight(),
-        tiledLayer!!.getCellWidth(),
-        tiledLayer!!.getCellHeight(),
-    ) {
-        // var dataId = dataId
-        // var tiledLayer = tiledLayer
-        // var mapTwoDArray = mapTwoDArray
-        // var debugColor = debugColor
+                            : super(dataId, tiledLayer!!.getWidth(), tiledLayer!!.getHeight(), tiledLayer!!.getCellWidth(), tiledLayer!!.getCellHeight()){
+    //var dataId = dataId
+    //var tiledLayer = tiledLayer
+    //var mapTwoDArray = mapTwoDArray
+    //var debugColor = debugColor
 
-        // For kotlin this is before the body of the constructor.
 
-        this.tiledLayerP = tiledLayer
-        this.debugColor = debugColor
-        this.setCells(mapTwoDArray)
-    }
+                            //For kotlin this is before the body of the constructor.
+                    
+this.tiledLayerP= tiledLayer
+this.debugColor= debugColor
+this.setCells(mapTwoDArray)
+}
+
 
     override fun paint(graphics: Graphics)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var graphics = graphics
-        this.tiledLayerP!!.paint(graphics)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+this.tiledLayerP!!.paint(graphics)
+}
+
 
     val font2: Font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, 4)!!
 
     open fun paintDebug(graphics: Graphics)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var graphics = graphics
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
 
-        var font: Font = graphics.getFont()!!
+    var font: Font = graphics.getFont()!!
 
-        graphics.setFont(this.font2)
-        graphics.setColor(this.debugColor)
+graphics.setFont(this.font2)
+graphics.setColor(this.debugColor)
 
-        var x: Int = this.tiledLayerP!!.getX()!!
+    var x: Int = this.tiledLayerP!!.getX()!!
 
-        var y: Int = this.tiledLayerP!!.getY()!!
 
-        var firstColumn: Int = 0
+    var y: Int = this.tiledLayerP!!.getY()!!
 
-        var firstRow: Int = 0
 
-        var totalColumns: Int = this.tiledLayerP!!.getColumns()!!
+    var firstColumn: Int = 0
 
-        var totalRows: Int = this.tiledLayerP!!.getRows()!!
 
-        var x0: Int = x
+    var firstRow: Int = 0
 
-        var tile: Int = 0
 
-        var tileHeight: Int = this.tiledLayerP!!.getCellHeight()!!
+    var totalColumns: Int = this.tiledLayerP!!.getColumns()!!
 
-        var tileWidth: Int = this.tiledLayerP!!.getCellWidth()!!
 
-        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+    var totalRows: Int = this.tiledLayerP!!.getRows()!!
 
-        var stringMaker: StringMaker = StringMaker()
 
-        for (rowIndex in firstRow until totalRows) {
+    var x0: Int = x
 
-            x = x0
 
-            for (columnIndex in firstColumn until totalColumns) {
+    var tile: Int = 0
 
-                tile = this.tiledLayerP!!.getCell(columnIndex, rowIndex)
 
-                if (tile < 0) {
+    var tileHeight: Int = this.tiledLayerP!!.getCellHeight()!!
 
-                    tile = this.tiledLayerP!!.getAnimatedTile(tile)
-                }
 
-                if (tile == 0) {
+    var tileWidth: Int = this.tiledLayerP!!.getCellWidth()!!
 
-                    continue
-                }
 
-                tile--
-                stringMaker!!.delete(0, stringMaker!!.length())
-                graphics.drawString(
-                    stringMaker!!
-                        .appendint(columnIndex)!!
-                        .append(commonSeps!!.COMMA)!!
-                        .appendint(rowIndex)!!
-                        .append(commonSeps!!.COLON)!!
-                        .appendint(tile)!!
-                        .toString(),
-                    x + 5,
-                    y + 10,
-                    0,
-                )
-            }
-        }
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-        graphics.setFont(font)
-    }
+
+    var stringMaker: StringMaker = StringMaker()
+
+
+
+
+
+                        for (rowIndex in firstRow until totalRows)
+
+        {
+x= x0
+
+
+
+
+                        for (columnIndex in firstColumn until totalColumns)
+
+        {
+tile= this.tiledLayerP!!.getCell(columnIndex, rowIndex)
+
+    
+                        if(tile < 0)
+                        
+                                    {
+                                    tile= this.tiledLayerP!!.getAnimatedTile(tile)
+
+                                    }
+                                
+
+    
+                        if(tile == 0)
+                        
+                                    {
+                                    
+
+                        continue
+                    
+
+                                    }
+                                
+tile--
+stringMaker!!.delete(0, stringMaker!!.length())
+graphics.drawString(stringMaker!!.appendint(columnIndex)!!.append(commonSeps!!.COMMA)!!.appendint(rowIndex)!!.append(commonSeps!!.COLON)!!.appendint(tile)!!.toString(), x +5, y +10, 0)
+}
+
+}
+
+graphics.setFont(font)
+}
+
 
     override fun moveDXY(dx: Int, dy: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var dx = dx
-        // var dy = dy
-        this.tiledLayerP!!.move(dx, dy)
-        super.moveDXY(-dx, -dy)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var dx = dx
+    //var dy = dy
+this.tiledLayerP!!.move(dx, dy)
+super.moveDXY( -dx,  -dy)
+}
+
 
     override fun setPosition(x: Int, y: Int, z: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var x = x
-        // var y = y
-        // var z = z
-        this.tiledLayerP!!.setPosition(x, y)
-        super.setPosition(-x, -y, z)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var x = x
+    //var y = y
+    //var z = z
+this.tiledLayerP!!.setPosition(x, y)
+super.setPosition( -x,  -y, z)
+}
+
 
     open fun getTiledLayer()
-    // nullable = true from not(false or (false and true)) = true
-    : TiledLayer {
+        //nullable = true from not(false or (false and true)) = true
+: TiledLayer{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.tiledLayerP
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.tiledLayerP
+}
+
 
     override fun getCellWidth()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.tiledLayerP!!.getCellWidth()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.tiledLayerP!!.getCellWidth()
+}
+
 
     override fun getCellHeight()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.tiledLayerP!!.getCellHeight()
-    }
 
-    override fun getCell(
-        col: Int,
-        row: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Int {
-        // var col = col
-        // var row = row
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.tiledLayerP!!.getCell(col, row)
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.tiledLayerP!!.getCellHeight()
+}
+
+
+    override fun getCell(col: Int, row: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var col = col
+    //var row = row
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.tiledLayerP!!.getCell(col, row)
+}
+
 
     override fun getColumns()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.tiledLayerP!!.getColumns()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.tiledLayerP!!.getColumns()
+}
+
 
     override fun getRows()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.tiledLayerP!!.getRows()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.tiledLayerP!!.getRows()
+}
+
 
     override fun setCell(col: Int, row: Int, index: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var col = col
-        // var row = row
-        // var index = index
-        this.tiledLayerP!!.setCell(col, row, index)
-    }
-
-    override fun getAnimatedTile(
-        animationTileIndex: Int
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Int {
-        // var animationTileIndex = animationTileIndex
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.tiledLayerP!!.getAnimatedTile(animationTileIndex)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var col = col
+    //var row = row
+    //var index = index
+this.tiledLayerP!!.setCell(col, row, index)
 }
+
+
+    override fun getAnimatedTile(animationTileIndex: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var animationTileIndex = animationTileIndex
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.tiledLayerP!!.getAnimatedTile(animationTileIndex)
+}
+
+
+}
+                
+            
+

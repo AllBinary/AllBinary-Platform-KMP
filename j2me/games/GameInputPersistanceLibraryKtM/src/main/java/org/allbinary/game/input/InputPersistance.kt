@@ -21,7 +21,6 @@ import java.io.DataInputStream
 import java.io.DataOutputStream
 import java.lang.Integer
 import java.lang.Object
-import java.util.Hashtable
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
 import kotlin.Array
@@ -37,6 +36,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonSeps
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.HashtableUtil
 
@@ -81,7 +81,7 @@ open public class InputPersistance : BasicPersitance {
 
             var input: Input
 
-            var hashtable: Hashtable<Any, Any>
+            var hashtable: ABHashtable<Any, Any>
 
             var gameKeyFactory: GameKeyMappingFactory = GameKeyMappingFactory.getInstance()!!
 
@@ -194,7 +194,7 @@ open public class InputPersistance : BasicPersitance {
     @Throws(Exception::class)
     open fun save(
         abeClientInformation: AbeClientInformationInterface,
-        hashtable: Hashtable<Any, Any>,
+        hashtable: ABHashtable<Any, Any>,
     )
         // nullable = true from not(false or (false and false)) = true
     {

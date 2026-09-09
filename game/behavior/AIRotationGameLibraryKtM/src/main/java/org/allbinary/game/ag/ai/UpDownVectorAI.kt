@@ -1,20 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.ag.ai
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.ag.ai
 
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.ai.BasicAI
 import org.allbinary.game.input.GameInput
 import org.allbinary.game.physics.velocity.BasicVelocityProperties
@@ -24,52 +34,75 @@ import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.math.BasicDecimal
 
 open public class UpDownVectorAI : BasicAI {
+        
 
     private val velocityInterface: BasicVelocityProperties
 
     private var index: Int = 0
+public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-    public constructor(
-        ownerLayerInterface: AllBinaryLayer,
-        gameInput: GameInput,
-    ) : super(ownerLayerInterface, gameInput) {
-        // var ownerLayerInterface = ownerLayerInterface
-        // var gameInput = gameInput
+                            : super(ownerLayerInterface, gameInput){
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
-        // For kotlin this is before the body of the constructor.
 
-        var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface =
-            this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
+                            //For kotlin this is before the body of the constructor.
+                    
 
-        this.velocityInterface = velocityInterfaceCompositeInterface!!.getVelocityProperties()
-        this.velocityInterface!!.getVelocityYBasicDecimalP()!!.setint(0)
-    }
+    var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface = this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
 
-    @Throws(Exception::class)
-    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var allBinaryLayerManager = allBinaryLayerManager
-
-        var y: Int = this.getOwnerLayerInterface()!!.getHeight() * 270
-
-        if (this.index < 5) {
-
-            var basicDecimal: BasicDecimal = this.velocityInterface!!.getVelocityYBasicDecimalP()!!
-
-            basicDecimal!!.setint(0)
-            basicDecimal!!.addint(y)
-            this.index++
-        } else if (this.index < 10) {
-
-            var basicDecimal: BasicDecimal = this.velocityInterface!!.getVelocityYBasicDecimalP()!!
-
-            basicDecimal!!.setint(0)
-            basicDecimal!!.subtractint(y)
-            this.index++
-        } else {
-            this.index = 0
-            this.processAI(allBinaryLayerManager)
-        }
-    }
+this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityProperties()
+this.velocityInterface!!.getVelocityYBasicDecimalP()!!.setint(0)
 }
+
+
+                @Throws(Exception::class)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var allBinaryLayerManager = allBinaryLayerManager
+
+    var y: Int = this.getOwnerLayerInterface()!!.getHeight() *270
+
+
+    
+                        if(this.index < 5)
+                        
+                                    {
+                                    
+    var basicDecimal: BasicDecimal = this.velocityInterface!!.getVelocityYBasicDecimalP()!!
+
+basicDecimal!!.setint(0)
+basicDecimal!!.addint(y)
+this.index++
+
+                                    }
+                                
+                             else 
+    
+                        if(this.index < 10)
+                        
+                                    {
+                                    
+    var basicDecimal: BasicDecimal = this.velocityInterface!!.getVelocityYBasicDecimalP()!!
+
+basicDecimal!!.setint(0)
+basicDecimal!!.subtractint(y)
+this.index++
+
+                                    }
+                                
+                        else {
+                            this.index= 0
+this.processAI(allBinaryLayerManager)
+
+                        }
+                            
+}
+
+
+}
+                
+            
+

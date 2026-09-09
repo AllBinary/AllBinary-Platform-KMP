@@ -1,58 +1,87 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.ag.ai.tactical
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.ag.ai.tactical
 
-import java.lang.Object
-import java.util.Hashtable
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.ai.ArtificialIntelligenceInterface
-import org.allbinary.game.ag.ai.InputProbability
 import org.allbinary.game.ai.ArtificialIntelligenceInterfaceFactoryInterface
 import org.allbinary.game.ai.BasicAI
+import org.allbinary.game.ag.ai.InputProbability
 import org.allbinary.game.input.GameInput
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.logic.util.visitor.Visitor
+import org.allbinary.util.ABHashtable
 
-open public class BasicRandomAIFactory : Object, ArtificialIntelligenceInterfaceFactoryInterface {
+open public class BasicRandomAIFactory
+            : Object
+        
+                , ArtificialIntelligenceInterfaceFactoryInterface {
+        
 
-    // Auto Generated
-    public constructor() : super() {}
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+                @Throws(Exception::class)
+            
+    override fun getInstance(hashtable: ABHashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
+        //nullable =  from not(true or (false and false)) = 
+: ArtificialIntelligenceInterface{
+    //var hashtable = hashtable
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
-    @Throws(Exception::class)
-    override fun getInstance(
-        hashtable: Hashtable<Any, Any>,
-        ownerLayerInterface: AllBinaryLayer,
-        gameInput: GameInput,
-    )
-        // nullable =  from not(true or (false and false)) =
-        : ArtificialIntelligenceInterface {
-        var hashtable = hashtable
-        var ownerLayerInterface = ownerLayerInterface
-        var gameInput = gameInput
+    var visitor: Visitor = hashtable.get(BasicAI.AI_VISITOR as Object) as Visitor
 
-        var visitor: Visitor = hashtable.get(BasicAI.AI_VISITOR as Object) as Visitor
 
-        if (visitor == null) {
+    
+                        if(visitor == 
+                                    null
+                                )
+                        
+                                    {
+                                    
 
-            throw Exception("No Visitor Provided")
-        }
 
-        var inputProbability: InputProbability =
-            hashtable.get(InputProbability.INPUT_PROBABILITY as Object) as InputProbability
+                            throw Exception("No Visitor Provided")
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return BasicRandomAI(ownerLayerInterface, gameInput, inputProbability, visitor)
-    }
+                                    }
+                                
+
+    var inputProbability: InputProbability = hashtable.get(InputProbability.INPUT_PROBABILITY as Object) as InputProbability
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicRandomAI(ownerLayerInterface, gameInput, inputProbability, visitor)
 }
+
+
+}
+                
+            
+

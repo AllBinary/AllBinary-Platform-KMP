@@ -1,89 +1,119 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.media.image
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.media.image
 
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import javax.microedition.lcdui.Image
+import org.allbinary.graphics.Anchor
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Matrix
-import java.lang.Object
-import javax.microedition.lcdui.Image
-import org.allbinary.graphics.Anchor
 import org.microemu.android.device.AndroidImageInterface
 
-open public class ImageRotationUtil : Object {
+open public class ImageRotationUtil
+            : Object
+         {
+        
+companion object {
+            
+    private val instance: ImageRotationUtil = ImageRotationUtil()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: ImageRotationUtil{
 
-        private val instance: ImageRotationUtil = ImageRotationUtil()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : ImageRotationUtil {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return ImageRotationUtil.instance
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ImageRotationUtil.instance
+}
+
+
         }
-    }
-
+            
     private val matrix: Matrix = Matrix()
+private constructor ()
+            : super()
+        {
+}
 
-    private constructor() : super() {}
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-    @Throws(Exception::class)
-    open fun createRotatedImage(
-        originalImage: Image,
-        rotationInDegrees: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Image {
-        var originalImage = originalImage
-        var rotationInDegrees = rotationInDegrees
+                @Throws(Exception::class)
+            
+    open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Image{
+var originalImage = originalImage
+var rotationInDegrees = rotationInDegrees
 
-        var image: Image =
-            ImageCreationUtil.getInstance()!!.createImageWH(
-                originalImage!!.getWidth(),
-                originalImage!!.getHeight(),
-            )!!
+    var image: Image = ImageCreationUtil.getInstance()!!.createImageWH(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
-        if (image.isMutable()) {
 
-            var bitmap: Bitmap = (image as AndroidImageInterface).getBitmap()!!
+    
+                        if(image.isMutable())
+                        
+                                    {
+                                    
+    var bitmap: Bitmap = 
+                                    (image as AndroidImageInterface).getBitmap()!!
 
-            var width: Int = bitmap.getWidth()!!
 
-            var height: Int = bitmap.getHeight()!!
+    var width: Int = bitmap.getWidth()!!
 
-            this.matrix.setRotate(
-                rotationInDegrees.toFloat(),
-                (width shr 1).toFloat(),
-                (height shr 1).toFloat(),
-            )
 
-            var canvas: Canvas = (image as AndroidImageInterface).getCanvas()!!
+    var height: Int = bitmap.getHeight()!!
 
-            canvas.concat(this.matrix)
-            image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
+this.matrix.setRotate(rotationInDegrees.toFloat(), (width shr 1).toFloat(), (height shr 1).toFloat())
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return image
-        } else {
+    var canvas: Canvas = 
+                                    (image as AndroidImageInterface).getCanvas()!!
 
-            throw Exception("Not Mutable")
-        }
-    }
+canvas.concat(this.matrix)
+image.getGraphics()!!.drawImage(originalImage, 0, 0, this.anchor)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return image
+
+                                    }
+                                
+                        else {
+                            
+
+
+                            throw Exception("Not Mutable")
+
+                        }
+                            
 }
+
+
+}
+                
+            
+

@@ -17,12 +17,12 @@ package org.allbinary.game.layer
 
 import java.lang.Object
 import java.util.Enumeration
-import java.util.Hashtable
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.PointFactory
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.LayerInterfaceFactory
 import org.allbinary.layer.LayerInterfaceVisitor
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.EnumerationUtil
 
@@ -68,13 +68,13 @@ open public class LayerPlacer : Object {
 
         var layerInterfaceFactory: LayerInterfaceFactory = LayerInterfaceFactory.getInstance()!!
 
-        var hashtable: Hashtable<Any, Any> = layerPlacementInterface!!.getInstance()!!
+        var hashtable: ABHashtable<Any, Any> = layerPlacementInterface!!.getInstance()!!
 
         var enumeration: Enumeration<Any?> = hashtable.keys()!!
 
         var point: GPoint
 
-        var layerHashtable: Hashtable<Any, Any>
+        var layerHashtable: ABHashtable<Any, Any>
 
         var x: Int = 0
 
@@ -86,7 +86,7 @@ open public class LayerPlacer : Object {
 
         while (this.enumerationUtil!!.hasMoreElements(enumeration)) {
             point = this.enumerationUtil!!.nextElement(enumeration)!! as GPoint
-            layerHashtable = hashtable.get(point as Object) as Hashtable<Any, Any>
+            layerHashtable = hashtable.get(point as Object) as ABHashtable<Any, Any>
             x = point.getX() + relativePoint!!.getX()
             y = point.getY() + relativePoint!!.getY()
             z = point.getZ() + relativePoint!!.getZ()

@@ -17,7 +17,6 @@ package org.allbinary.image
 
 import java.io.InputStream
 import java.lang.Object
-import java.util.Hashtable
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
 import kotlin.Array
@@ -26,6 +25,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -35,7 +35,7 @@ open public class ImageCacheBase : Object {
 
     val imageFactory: ImageFactory = ImageFactory.getInstance()!!
 
-    val hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    val hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     val SIZE: Int = 128
 
@@ -243,7 +243,7 @@ open public class ImageCacheBase : Object {
 
     open fun getHashtableP()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.hashtable

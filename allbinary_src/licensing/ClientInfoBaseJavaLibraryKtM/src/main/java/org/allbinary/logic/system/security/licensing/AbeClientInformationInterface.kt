@@ -15,8 +15,8 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.logic.system.security.licensing
 
-import java.util.Hashtable
 import org.allbinary.logic.system.os.GenericOperatingSystem
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 
 interface AbeClientInformationInterface {
@@ -61,7 +61,7 @@ interface AbeClientInformationInterface {
 
     open fun toHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any>
+    : ABHashtable<Any, Any>
 
     open fun isSameId(
         alicenseId: String

@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import org.osgi.framework.BundleActivator
 import org.osgi.framework.BundleContext
 import org.osgi.framework.ServiceReference
@@ -34,6 +33,7 @@ import org.allbinary.bundle.logic.system.loader.CryptServiceFactory
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 
 open public class AllBinaryPreloaderActivator
             : Object
@@ -97,7 +97,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var properties: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    var properties: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
 
     var serviceRegistration: ServiceRegistration = AllBinaryPreloaderActivator.context.registerService(CRYPT_REGISTRY_NAME, CryptServiceFactory(), properties)!!

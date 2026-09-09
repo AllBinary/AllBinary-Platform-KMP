@@ -16,8 +16,9 @@
 package org.allbinary.logic
 
 import java.lang.Object
-import java.util.Hashtable
-import java.util.Stack
+import org.allbinary.util.ABHashtable
+import org.allbinary.util.ABStack
+import org.allbinary.util.ABVector
 
 // ActualPlatform
 /*actual*/ open public class StdUtil : Object {
@@ -38,21 +39,31 @@ import java.util.Stack
     // Auto Generated
     public constructor() : super() {}
 
-    /*actual*/ val NULL_TABLE: Hashtable<Any, Any> = this.createHashtable()!!
+    /*actual*/ val EMPTY_VECTOR: ABVector<Any> = this.createVector()!!
+
+    /*actual*/ val NULL_TABLE: ABHashtable<Any, Any> = this.createHashtable()!!
 
     open fun createStack()
     // nullable = true from not(false or (false and true)) = true
-    : Stack<Any> {
+    : ABStack<Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return Stack<Any>()
+        return ABStack<Any>()
+    }
+
+    open fun createVector()
+    // nullable = true from not(false or (false and true)) = true
+    : ABVector<Any> {
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return ABVector<Any>()
     }
 
     open fun createHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return Hashtable<Any, Any>()
+        return ABHashtable<Any, Any>()
     }
 }

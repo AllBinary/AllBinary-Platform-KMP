@@ -27,7 +27,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import jsinterop.annotations.JsType
 import javax.microedition.lcdui.Displayable
 import javax.microedition.lcdui.Form
 import javax.microedition.rms.InvalidRecordIDException
@@ -35,7 +34,6 @@ import javax.microedition.rms.RecordStore
 import javax.microedition.rms.RecordStoreException
 import javax.microedition.rms.RecordStoreNotOpenException
 import org.allbinary.logic.NullUtil
-import jsinterop.annotations.JsMethod
 
 open public class TsUtil
             : Object

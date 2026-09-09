@@ -1,20 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.layer.weapon
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.layer.weapon
 
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.animation.Animation
 import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.graphics.Rectangle
@@ -22,43 +32,30 @@ import org.allbinary.physics.movement.Movement
 import org.allbinary.view.ViewPositionBase
 
 open public class DamageWeaponLayer : WeaponLayer {
+        
+public constructor (name: String, remoteInfo: RemoteInfo, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPositionBase, username: String, actorSessionId: Int, id: Int, multiPlayerType: Int)                        
 
-    public constructor(
-        name: String,
-        remoteInfo: RemoteInfo,
-        movement: Movement,
-        animationInterface: Animation,
-        destroyedAnimationInterface: Animation,
-        rectangle: Rectangle,
-        viewPosition: ViewPositionBase,
-        username: String,
-        actorSessionId: Int,
-        id: Int,
-        multiPlayerType: Int,
-    ) : super(
-        name,
-        remoteInfo,
-        multiPlayerType,
-        movement,
-        animationInterface,
-        destroyedAnimationInterface,
-        rectangle,
-        viewPosition,
-    ) {
-        // var name = name
-        // var remoteInfo = remoteInfo
-        // var movement = movement
-        // var animationInterface = animationInterface
-        // var destroyedAnimationInterface = destroyedAnimationInterface
-        // var rectangle = rectangle
-        // var viewPosition = viewPosition
-        // var username = username
-        // var actorSessionId = actorSessionId
-        // var id = id
-        // var multiPlayerType = multiPlayerType
+                            : super(name, remoteInfo, multiPlayerType, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
+    //var name = name
+    //var remoteInfo = remoteInfo
+    //var movement = movement
+    //var animationInterface = animationInterface
+    //var destroyedAnimationInterface = destroyedAnimationInterface
+    //var rectangle = rectangle
+    //var viewPosition = viewPosition
+    //var username = username
+    //var actorSessionId = actorSessionId
+    //var id = id
+    //var multiPlayerType = multiPlayerType
 
-        // For kotlin this is before the body of the constructor.
 
-        this.setCollidableInferface(CollidableDamageWeaponBehavior(true))
-    }
+                            //For kotlin this is before the body of the constructor.
+                    
+this.setCollidableInferface(CollidableDamageWeaponBehavior(true))
 }
+
+
+}
+                
+            
+

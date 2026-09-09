@@ -16,15 +16,15 @@
 package org.allbinary.game.configuration.feature
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.game.configuration.event.ChangedGameFeatureListener
 import org.allbinary.logic.StdUtil
+import org.allbinary.util.ABHashtable
 
 open public class Feature : Object {
 
     companion object {
 
-        private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+        private var hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         open fun getInstance(
             name: String

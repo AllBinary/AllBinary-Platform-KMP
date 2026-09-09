@@ -1,22 +1,32 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.init
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.init
 
-import java.lang.Object
-import java.lang.Thread
+
+
+
+        import java.lang.Object        
+        
+        import java.lang.Thread
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.configuration.event.GameInitializedEvent
 import org.allbinary.game.configuration.event.GameInitializedEventHandler
 import org.allbinary.game.configuration.event.GameInitializedListenerInterface
@@ -28,59 +38,80 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonStrings
 
-open public class DefaultGameInitializationListener : Object, GameInitializedListenerInterface {
+open public class DefaultGameInitializationListener
+            : Object
+        
+                , GameInitializedListenerInterface {
+        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val swtJOGLProcessor: SWTJOGLProcessor = SWTJOGLProcessor.getInstance()!!
+public constructor ()
+            : super()
+        {
 
-    public constructor() : super() {
+    var gameInitializedEventHandler: GameInitializedEventHandler = GameInitializedEventHandler.getInstance()!!
 
-        var gameInitializedEventHandler: GameInitializedEventHandler =
-            GameInitializedEventHandler.getInstance()!!
+gameInitializedEventHandler!!.removeAllListeners()
+gameInitializedEventHandler!!.addListenerInterface(this as GameInitializedListenerInterface)
+}
 
-        gameInitializedEventHandler!!.removeAllListeners()
-        gameInitializedEventHandler!!.addListenerInterface(this as GameInitializedListenerInterface)
-    }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var eventObject = eventObject
-        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var eventObject = eventObject
+ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+}
+
 
     var firstTime: Boolean = true
 
     override fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var gameInitializedEvent = gameInitializedEvent
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var gameInitializedEvent = gameInitializedEvent
 
-        var ON_GAME_INITIALIZED: String = "onGameInitialized"
+    var ON_GAME_INITIALIZED: String = "onGameInitialized"
 
-        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
 
         try {
             this.logUtil!!.putF(commonStrings!!.START, this, ON_GAME_INITIALIZED)
 
-            while (!this.swtJOGLProcessor!!.isHolderCreated()) {
-                this.logUtil!!.putF(commonStrings!!.UPDATE, this, ON_GAME_INITIALIZED)
-                Thread.sleep(20)
-            }
-
-            FeatureResourceInitializationUtil.getInstance()!!.init(
-                gameInitializedEvent!!.getLevel()
-            )
-
-            if (this.firstTime) {
-
-                this.firstTime = false
-            } else {
-                this.swtJOGLProcessor!!.onSurfaceChanged()
-            }
-        } catch (e: Exception) {
-            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ON_GAME_INITIALIZED, e)
-        }
-    }
+        while(!this.swtJOGLProcessor!!.isHolderCreated())
+        {
+this.logUtil!!.putF(commonStrings!!.UPDATE, this, ON_GAME_INITIALIZED)
+Thread.sleep(20)
 }
+
+FeatureResourceInitializationUtil.getInstance()!!.init(gameInitializedEvent!!.getLevel())
+
+    
+                        if(this.firstTime)
+                        
+                                    {
+                                    this.firstTime= false
+
+                                    }
+                                
+                        else {
+                            this.swtJOGLProcessor!!.onSurfaceChanged()
+
+                        }
+                            
+} catch(e: Exception)
+            {
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ON_GAME_INITIALIZED, e)
+}
+
+}
+
+
+}
+                
+            
+

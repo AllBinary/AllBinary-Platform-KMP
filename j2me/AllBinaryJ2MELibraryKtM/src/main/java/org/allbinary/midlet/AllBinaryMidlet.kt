@@ -15,7 +15,6 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.midlet
 
-import java.util.Hashtable
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Display
@@ -34,8 +33,8 @@ import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.system.Memory
+import org.allbinary.util.ABHashtable
 
-// MIDlet methods not overridden are final
 open public class AllBinaryMidlet : MIDlet, CommandListener {
 
     companion object {
@@ -68,7 +67,7 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
 
     private val SETTING_NO_TITLE: String = "Setting: No Title, Display: "
 
-    private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private var hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private var midletDestroyed: Boolean = false
 
@@ -167,14 +166,14 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
     open fun destroyAppInRunnable(unconditional: Boolean, isProgress: Boolean)
         // nullable = true from not(false or (false and false)) = true
     {
-        var unconditional = unconditional
-        var isProgress = isProgress
+        // var unconditional = unconditional
+        // var isProgress = isProgress
     }
 
     override fun destroyApp(unconditional: Boolean)
         // nullable = true from not(false or (false and false)) = true
     {
-        var unconditional = unconditional
+        // var unconditional = unconditional
 
         var METHOD_NAME: String = "AllBinaryMidlet::destroyApp"
 
@@ -188,10 +187,10 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
     }
 
     @Throws(Exception::class)
-    open fun setStartStateHashtable(hashtable: Hashtable<Any, Any>)
+    open fun setStartStateHashtable(hashtable: ABHashtable<Any, Any>)
         // nullable = true from not(false or (false and false)) = true
     {
-        var hashtable = hashtable
+        // var hashtable = hashtable
         this.logUtil!!.putF(
             StringMaker()
                 .append(CommonLabels.getInstance()!!.START_LABEL)!!
@@ -206,7 +205,7 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
     @Throws(Exception::class)
     open fun getStartStateHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
         this.logUtil!!.putF(
             StringMaker()
                 .append(CommonLabels.getInstance()!!.START_LABEL)!!
@@ -223,7 +222,7 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
     @Throws(Exception::class)
     open fun getCurrentStateHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
         this.logUtil!!.putF(this.commonStrings!!.START, this, "getStateHashtable")
 
         // if statement needs to be on the same line and ternary does not work the same way.
@@ -233,7 +232,7 @@ open public class AllBinaryMidlet : MIDlet, CommandListener {
     override fun commandAction(command: Command, displayable: Displayable)
         // nullable = true from not(false or (false and false)) = true
     {
-        var command = command
-        var displayable = displayable
+        // var command = command
+        // var displayable = displayable
     }
 }

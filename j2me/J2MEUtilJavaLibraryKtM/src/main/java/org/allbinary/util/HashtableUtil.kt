@@ -17,7 +17,6 @@ package org.allbinary.util
 
 import java.lang.Object
 import java.util.Enumeration
-import java.util.Hashtable
 import kotlin.Array
 
 open public class HashtableUtil : Object {
@@ -40,7 +39,7 @@ open public class HashtableUtil : Object {
 
     private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
-    open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, Any>)
+    open fun putAll(fromHashtable: ABHashtable<Any, Any>, hashtable: ABHashtable<Any, Any>)
         // nullable = true from not(false or (false and false)) = true
     {
         // var fromHashtable = fromHashtable
@@ -64,7 +63,7 @@ open public class HashtableUtil : Object {
     }
 
     open fun getKeysAsArray(
-        hashtable: Hashtable<Any, Any>
+        hashtable: ABHashtable<Any, Any>
     )
         // nullable = true from not(false or (false and false)) = true
         : Array<Any?> {
@@ -85,7 +84,7 @@ open public class HashtableUtil : Object {
     }
 
     open fun getKeysAsList(
-        hashtable: Hashtable<Any, Any>
+        hashtable: ABHashtable<Any, Any>
     )
         // nullable = true from not(false or (false and false)) = true
         : BasicArrayList {

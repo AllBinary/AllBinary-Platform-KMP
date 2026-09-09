@@ -1,35 +1,56 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2022 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.image.opengles
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2022 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.image.opengles
+
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 
 open public class ModifierOpenGLESImageProcessor : OpenGLESImageProcessor {
+        
+companion object {
+            
+    private val instanceC: ModifierOpenGLESImageProcessor = ModifierOpenGLESImageProcessor()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: ModifierOpenGLESImageProcessor{
 
-        private val instanceC: ModifierOpenGLESImageProcessor = ModifierOpenGLESImageProcessor()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : ModifierOpenGLESImageProcessor {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return ModifierOpenGLESImageProcessor.instanceC
-        }
-    }
-
-    // Auto Generated
-    public constructor() : super() {}
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ModifierOpenGLESImageProcessor.instanceC
 }
+
+
+        }
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+}
+                
+            
+

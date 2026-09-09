@@ -16,16 +16,16 @@
 package org.allbinary.game.configuration
 
 import java.lang.Object
-import java.util.Hashtable
 import javax.microedition.lcdui.TextField
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.util.ABHashtable
 
 open public class GameConfigurationTextInput : Object {
 
     companion object {
 
-        private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+        private var hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         var SIMULATOR_IP: GameConfigurationTextInput =
             GameConfigurationTextInput("IP: ", "192.168.1.3")
@@ -49,7 +49,7 @@ open public class GameConfigurationTextInput : Object {
 
         open fun getHashtable()
         // nullable = true from not(false or (false and true)) = true
-        : Hashtable<Any, Any> {
+        : ABHashtable<Any, Any> {
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return GameConfigurationTextInput.hashtable

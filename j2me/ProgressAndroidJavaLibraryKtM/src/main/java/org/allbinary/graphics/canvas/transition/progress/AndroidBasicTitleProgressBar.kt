@@ -1,32 +1,43 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.graphics.canvas.transition.progress
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.graphics.canvas.transition.progress
 
-import android.app.Activity
-import java.lang.Integer
+
+
+
+        import java.lang.Object        
+        
+        import java.lang.Integer
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
-import kotlin.Array
+import android.app.Activity
 import org.allbinary.AndroidUtil
+import org.allbinary.image.GameFeatureImageCacheFactory
+import org.allbinary.image.PreResourceImageUtil
+import org.allbinary.logic.communication.log.ForcedLogUtil
+import org.allbinary.logic.java.exception.ExceptionUtil
 import org.allbinary.animation.Animation
-import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.NullAnimationFactory
-import org.allbinary.animation.image.ImageAnimation
-import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.MainFeatureFactory
 import org.allbinary.graphics.color.BasicColor
@@ -34,39 +45,40 @@ import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.graphics.displayable.event.DisplayChangeEventHandler
 import org.allbinary.graphics.displayable.event.DisplayChangeEventListener
-import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.image.ImageCacheFactory
-import org.allbinary.image.PreResourceImageUtil
-import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.java.exception.ExceptionUtil
-import org.allbinary.logic.util.event.AllBinaryEventObject
-import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.media.image.ImageScaleUtil
+import org.allbinary.logic.util.event.AllBinaryEventObject
+import org.allbinary.animation.AnimationBehavior
+import org.allbinary.animation.image.ImageAnimation
+import org.allbinary.data.resource.ResourceUtil
+import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.thread.ARunnable
 import org.allbinary.thread.NullRunnable
 
-open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEventListener {
+open public class AndroidBasicTitleProgressBar : ProgressCanvas
+                , DisplayChangeEventListener {
+        
+companion object {
+            
+    val RESOURCE: String = "ProgressImage"
 
-    companion object {
+    private var background: Int= 0
 
-        val RESOURCE: String = "ProgressImage"
+    open fun setBackgroundResource(background: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+var background = background
+AndroidBasicTitleProgressBar.background= background
+}
 
-        private var background: Int = 0
 
-        open fun setBackgroundResource(background: Int)
-            // nullable = true from not(false or (false and false)) = true
-        {
-            var background = background
-            AndroidBasicTitleProgressBar.background = background
         }
-    }
-
+            
     private var showTitleProgressBarRunnable: ARunnable = NullRunnable.getInstance()!!
 
     private var dismissTitleProgressBarRunnable: ARunnable = NullRunnable.getInstance()!!
 
-    private var titleProgressDialogPortionSetProgressRunnable: ARunnable =
-        NullRunnable.getInstance()!!
+    private var titleProgressDialogPortionSetProgressRunnable: ARunnable = NullRunnable.getInstance()!!
 
     private var titleProgressDialogSetProgressRunnable: ARunnable = NullRunnable.getInstance()!!
 
@@ -79,459 +91,572 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
     private var image: Image = NullImage.NULL_IMAGE
 
     private var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
+ constructor (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-    constructor(
-        title: String,
-        backgroundBasicColor: BasicColor,
-        foregroundBasicColor: BasicColor,
-    ) : super(title, backgroundBasicColor, foregroundBasicColor) {
-        var title = title
-        var backgroundBasicColor = backgroundBasicColor
-        var foregroundBasicColor = foregroundBasicColor
+                            : super(title, backgroundBasicColor, foregroundBasicColor){
+var title = title
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
-        // For kotlin this is before the body of the constructor.
 
-        this.init()
-        DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
+                            //For kotlin this is before the body of the constructor.
+                    
+this.init()
+DisplayChangeEventHandler.getInstance()!!.addListenerInterface(this)
 
-        var size: Int = this.IMAGE.size
+    var size: Int = this.IMAGE.size
+                
 
-        for (index in 0 until size) {
 
-            this.IMAGE[index] = NullImage.NULL_IMAGE
-        }
-    }
+
+
+
+                        for (index in 0 until size)
+
+        {
+this.IMAGE[index]= NullImage.NULL_IMAGE
+}
+
+}
+
 
     open fun init()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
         try {
+            
+    
+                        if(AndroidBasicTitleProgressBar.background != 0)
+                        
+                                    {
+                                    ResourceUtil.getInstance()!!.addResource(AndroidBasicTitleProgressBar.RESOURCE, Integer(AndroidBasicTitleProgressBar.background))
+GameFeatureImageCacheFactory.init()
+this.image= ImageCacheFactory.getInstance()!!.getWithKey(AndroidBasicTitleProgressBar.RESOURCE)
 
-            if (AndroidBasicTitleProgressBar.background != 0) {
+                                    }
+                                
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
+}
 
-                ResourceUtil.getInstance()!!.addResource(
-                    AndroidBasicTitleProgressBar.RESOURCE,
-                    Integer(AndroidBasicTitleProgressBar.background),
-                )
-                GameFeatureImageCacheFactory.init()
-                this.image =
-                    ImageCacheFactory.getInstance()!!.getWithKey(
-                        AndroidBasicTitleProgressBar.RESOURCE
-                    )
-            }
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
-        }
-    }
+}
+
 
     open fun initActivity(activity: Activity)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var activity = activity
+        //nullable = true from not(false or (false and false)) = true
+{
+var activity = activity
 
         try {
+            
+    
+                        if(this.midletActivity != activity)
+                        
+                                    {
+                                    this.midletActivity= activity
+this.showTitleProgressBarRunnable= ShowTitleProgressBarRunnable(this.midletActivity, this)
+this.dismissTitleProgressBarRunnable= DismissTitleProgressBarRunnable(this.midletActivity, this)
+this.titleProgressDialogSetProgressRunnable= TitleProgressBarSetProgressRunnable(this.midletActivity, this)
+this.titleProgressDialogPortionSetProgressRunnable= TitleProgressBarPortionSetProgressRunnable(this.midletActivity, this)
+this.loadProgressImages()
 
-            if (this.midletActivity != activity) {
+                                    }
+                                
+this.updateCurrent()
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
+}
 
-                this.midletActivity = activity
-                this.showTitleProgressBarRunnable =
-                    ShowTitleProgressBarRunnable(this.midletActivity, this)
-                this.dismissTitleProgressBarRunnable =
-                    DismissTitleProgressBarRunnable(this.midletActivity, this)
-                this.titleProgressDialogSetProgressRunnable =
-                    TitleProgressBarSetProgressRunnable(this.midletActivity, this)
-                this.titleProgressDialogPortionSetProgressRunnable =
-                    TitleProgressBarPortionSetProgressRunnable(this.midletActivity, this)
-                this.loadProgressImages()
-            }
+}
 
-            this.updateCurrent()
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
-        }
-    }
 
     open fun updateCurrent()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
         try {
+            
+    
+                        if(!this.isBackground())
+                        
+                                    {
+                                    this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 
-            if (!this.isBackground()) {
+                                    }
+                                
+                             else 
+    
+                        if(AndroidBasicTitleProgressBar.background != 0)
+                        
+                                    {
+                                    
+    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-                this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
-            } else if (AndroidBasicTitleProgressBar.background != 0) {
 
-                var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
+    var currentImage: Image
 
-                var currentImage: Image
 
-                if (displayInfo!!.isPortrait()) {
+    
+                        if(displayInfo!!.isPortrait())
+                        
+                                    {
+                                    currentImage= this.getImage(0)
 
-                    currentImage = this.getImage(0)
-                } else {
-                    currentImage = this.getImage(2)
-                }
+                                    }
+                                
+                        else {
+                            currentImage= this.getImage(2)
 
-                if (currentImage == null) {
+                        }
+                            
 
-                    this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
-                } else {
-                    this.animation = ImageAnimation(currentImage, AnimationBehavior.getInstance())
-                }
-            }
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
-        }
-    }
+    
+                        if(currentImage == 
+                                    null
+                                )
+                        
+                                    {
+                                    this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+
+                                    }
+                                
+                        else {
+                            this.animation= ImageAnimation(currentImage, AnimationBehavior.getInstance())
+
+                        }
+                            
+
+                                    }
+                                
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
+}
+
+}
+
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var eventObject = eventObject
-        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+var eventObject = eventObject
+ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+}
+
 
     override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var displayChangeEvent = displayChangeEvent
+        //nullable = true from not(false or (false and false)) = true
+{
+var displayChangeEvent = displayChangeEvent
 
         try {
             this.loadProgressImages()
-            this.updateCurrent()
-        } catch (e: Exception) {
-            this.logUtil!!.putF(
-                this.commonStrings!!.EXCEPTION_LABEL +
-                    ExceptionUtil.getInstance()!!.getStackTrace(e),
-                this,
-                this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT,
-            )
-            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
-        }
-    }
+this.updateCurrent()
+} catch(e: Exception)
+            {
+this.logUtil!!.putF(this.commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+}
+
+}
+
 
     open fun loadProgressImages()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
         try {
+            
+    var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-            var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-            var lastWidth: Int = displayInfo!!.getLastWidth()!!
+    var lastWidth: Int = displayInfo!!.getLastWidth()!!
 
-            var lastHeight: Int = displayInfo!!.getLastHeight()!!
 
-            if (displayInfo!!.isPortraitWH(lastWidth, lastHeight)) {
+    var lastHeight: Int = displayInfo!!.getLastHeight()!!
 
-                this.setImages(0, lastWidth, lastHeight)
-            } else {
-                this.setImages(2, lastWidth, lastHeight)
-            }
-        } catch (e: IllegalArgumentException) {
-            this.logUtil!!.putF(
-                "IllegalArgumentException " + ExceptionUtil.getInstance()!!.getStackTrace(e),
-                this,
-                "loadProgressImages",
-            )
-            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
-        } catch (e: Exception) {
-            this.logUtil!!.putF(
-                this.commonStrings!!.EXCEPTION_LABEL +
-                    ExceptionUtil.getInstance()!!.getStackTrace(e),
-                this,
-                "loadProgressImages",
-            )
-            this.animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
-        }
-    }
+
+    
+                        if(displayInfo!!.isPortraitWH(lastWidth, lastHeight))
+                        
+                                    {
+                                    this.setImages(0, lastWidth, lastHeight)
+
+                                    }
+                                
+                        else {
+                            this.setImages(2, lastWidth, lastHeight)
+
+                        }
+                            
+} catch(e: IllegalArgumentException)
+            {
+this.logUtil!!.putF("IllegalArgumentException " +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
+this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+}
+ catch(e: Exception)
+            {
+this.logUtil!!.putF(this.commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
+this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+}
+
+}
+
 
     open fun isInitialized()
-    // nullable = true from not(false or (false and true)) = true
-    : Boolean {
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
 
-        if (this.midletActivity != AndroidUtil.NULL_ACTIVITY) {
+    
+                        if(this.midletActivity != AndroidUtil.NULL_ACTIVITY)
+                        
+                                    {
+                                    
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return true
-        } else {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return false
-        }
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+
+                                    }
+                                
+                        else {
+                            
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+
+                        }
+                            
+}
+
 
     override fun start()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
         try {
-            this.logUtil!!.putF(
-                this.commonStrings!!.START,
-                this,
-                this.commonStrings!!.START_METHOD_NAME,
-            )
-            super.start()
-            this.midletActivity!!.runOnUiThread(this.showTitleProgressBarRunnable)
-        } catch (e: Exception) {
-            this.logUtil!!.put(
-                this.commonStrings!!.EXCEPTION,
-                this,
-                this.commonStrings!!.START_METHOD_NAME,
-                e,
-            )
-        }
-    }
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.START_METHOD_NAME)
+super.start()
+this.midletActivity!!.runOnUiThread(this.showTitleProgressBarRunnable)
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.START_METHOD_NAME, e)
+}
+
+}
+
 
     override fun end()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
         try {
-            this.logUtil!!.putF(
-                this.commonStrings!!.START,
-                this,
-                this.commonStrings!!.END_METHOD_NAME,
-            )
-            this.midletActivity!!.runOnUiThread(this.dismissTitleProgressBarRunnable)
-            super.end()
-        } catch (e: Exception) {
-            this.logUtil!!.put(
-                this.commonStrings!!.EXCEPTION,
-                this,
-                this.commonStrings!!.END_METHOD_NAME,
-                e,
-            )
-        }
-    }
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.END_METHOD_NAME)
+this.midletActivity!!.runOnUiThread(this.dismissTitleProgressBarRunnable)
+super.end()
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.END_METHOD_NAME, e)
+}
+
+}
+
 
     override fun addEarlyPortion(value: Int, text: String, index: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var value = value
-        var text = text
-        var index = index
+        //nullable = true from not(false or (false and false)) = true
+{
+var value = value
+var text = text
+var index = index
 
         try {
-            this.portion = value
-            super.addEarlyPortion(value, text, index)
+            this.portion= value
+super.addEarlyPortion(value, text, index)
 
-            if (this.midletActivity != AndroidUtil.NULL_ACTIVITY) {
+    
+                        if(this.midletActivity != AndroidUtil.NULL_ACTIVITY)
+                        
+                                    {
+                                    this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
 
-                this.midletActivity!!.runOnUiThread(
-                    this.titleProgressDialogPortionSetProgressRunnable
-                )
-            }
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.ADD_PORTION, e)
-        }
-    }
+                                    }
+                                
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.ADD_PORTION, e)
+}
+
+}
+
 
     override fun addPortion(value: Int, text: String, index: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var value = value
-        var text = text
-        var index = index
+        //nullable = true from not(false or (false and false)) = true
+{
+var value = value
+var text = text
+var index = index
 
         try {
-            this.portion = value
-            super.addPortion(value, text, index)
-            this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.ADD_PORTION, e)
-        }
-    }
+            this.portion= value
+super.addPortion(value, text, index)
+this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.ADD_PORTION, e)
+}
+
+}
+
 
     override fun addNormalPortion(value: Int, text: String)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var value = value
-        var text = text
+        //nullable = true from not(false or (false and false)) = true
+{
+var value = value
+var text = text
 
         try {
-            this.portion = value
-            super.addNormalPortion(value, text)
-            this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.ADD_PORTION, e)
-        }
-    }
+            this.portion= value
+super.addNormalPortion(value, text)
+this.midletActivity!!.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable)
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.ADD_PORTION, e)
+}
+
+}
+
 
     override fun setValue(value: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var value = value
+        //nullable = true from not(false or (false and false)) = true
+{
+var value = value
 
         try {
             super.setValue(value)
-            this.midletActivity!!.runOnUiThread(this.titleProgressDialogSetProgressRunnable)
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setValue", e)
-        }
-    }
+this.midletActivity!!.runOnUiThread(this.titleProgressDialogSetProgressRunnable)
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setValue", e)
+}
+
+}
+
 
     open fun waitUntilDisplayed()
-        // nullable = true from not(false or (false and true)) = true
-    {}
+        //nullable = true from not(false or (false and true)) = true
+{
+}
 
-    @Throws(Exception::class)
+
+                @Throws(Exception::class)
+            
     open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var index = index
-        var lastWidth = lastWidth
-        var lastHeight = lastHeight
+        //nullable = true from not(false or (false and false)) = true
+{
+var index = index
+var lastWidth = lastWidth
+var lastHeight = lastHeight
 
-        var image: Image = this.image
+    var image: Image = this.image
 
-        if (image != NullImage.NULL_IMAGE) {
 
-            if (
-                Features.getInstance()!!.isFeature(MainFeatureFactory.getInstance()!!.FULL_SCREEN)
-            ) {
+    
+                        if(image != NullImage.NULL_IMAGE)
+                        
+                                    {
+                                    
+    
+                        if(Features.getInstance()!!.isFeature(MainFeatureFactory.getInstance()!!.FULL_SCREEN))
+                        
+                                    {
+                                    
+    
+                        if(this.IMAGE[index] == NullImage.NULL_IMAGE)
+                        
+                                    {
+                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage2(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -20, image.getHeight().toFloat(), false)
 
-                if (this.IMAGE[index] == NullImage.NULL_IMAGE) {
+                                    }
+                                
 
-                    this.IMAGE[index] =
-                        ImageScaleUtil.getInstance()!!.createImage2(
-                            ImageCacheFactory.getInstance(),
-                            image,
-                            lastWidth.toFloat(),
-                            image.getWidth().toFloat(),
-                            lastHeight.toFloat() - 20,
-                            image.getHeight().toFloat(),
-                            false,
-                        )
-                }
-            } else {
+                                    }
+                                
+                        else {
+                            
+    var nextIndex: Int = index +1
 
-                var nextIndex: Int = index + 1
 
-                if (this.IMAGE[nextIndex] == NullImage.NULL_IMAGE) {
+    
+                        if(this.IMAGE[nextIndex] == NullImage.NULL_IMAGE)
+                        
+                                    {
+                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage2(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -28, image.getHeight().toFloat(), false)
 
-                    this.IMAGE[nextIndex] =
-                        ImageScaleUtil.getInstance()!!.createImage2(
-                            ImageCacheFactory.getInstance(),
-                            image,
-                            lastWidth.toFloat(),
-                            image.getWidth().toFloat(),
-                            lastHeight.toFloat() - 28,
-                            image.getHeight().toFloat(),
-                            false,
-                        )
-                }
-            }
-        }
-    }
+                                    }
+                                
 
-    @Throws(Exception::class)
+                        }
+                            
+
+                                    }
+                                
+}
+
+
+                @Throws(Exception::class)
+            
     open fun initOpenGL(graphics: Graphics)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var graphics = graphics
-        this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.INIT)
-        this.image =
-            GameFeatureImageCacheFactory.getInstance()!!.getWithKey(
-                AndroidBasicTitleProgressBar.RESOURCE
-            )
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.INIT)
+this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(AndroidBasicTitleProgressBar.RESOURCE)
 
-        var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
+    var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 
-        var size: Int = this.IMAGE.size
 
-        for (index in 0 until size) {
+    var size: Int = this.IMAGE.size
+                
 
-            if (this.IMAGE[index] != NullImage.NULL_IMAGE) {
 
-                this.IMAGE[index] = preResourceImageUtil!!.encapsulate(this.IMAGE[index]!!)
-            }
-        }
 
-        this.updateCurrent()
-    }
 
-    @Throws(Exception::class)
+
+                        for (index in 0 until size)
+
+        {
+
+    
+                        if(this.IMAGE[index] != NullImage.NULL_IMAGE)
+                        
+                                    {
+                                    this.IMAGE[index]= preResourceImageUtil!!.encapsulate(this.IMAGE[index]!!)
+
+                                    }
+                                
+}
+
+this.updateCurrent()
+}
+
+
+                @Throws(Exception::class)
+            
     override fun update(graphics: Graphics)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var graphics = graphics
-        this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.UPDATE)
-        this.initOpenGL(graphics)
-        this.image =
-            GameFeatureImageCacheFactory.getInstance()!!.getWithKey(
-                AndroidBasicTitleProgressBar.RESOURCE
-            )
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.UPDATE)
+this.initOpenGL(graphics)
+this.image= GameFeatureImageCacheFactory.getInstance()!!.getWithKey(AndroidBasicTitleProgressBar.RESOURCE)
 
-        var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
+    var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 
-        var size: Int = this.IMAGE.size
 
-        for (index in 0 until size) {
+    var size: Int = this.IMAGE.size
+                
 
-            if (this.IMAGE[index] != NullImage.NULL_IMAGE) {
 
-                preResourceImageUtil!!.update(graphics, this.IMAGE[index]!!)
-            }
-        }
-    }
 
-    @Throws(Exception::class)
-    open fun getImage(
-        index: Int
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Image {
-        var index = index
 
-        var image: Image = NullImage.NULL_IMAGE
 
-        if (Features.getInstance()!!.isFeature(MainFeatureFactory.getInstance()!!.FULL_SCREEN)) {
+                        for (index in 0 until size)
 
-            image = this.IMAGE[index]!!
-        } else {
-            image = this.IMAGE[index + 1]!!
-        }
+        {
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return image
-    }
+    
+                        if(this.IMAGE[index] != NullImage.NULL_IMAGE)
+                        
+                                    {
+                                    preResourceImageUtil!!.update(graphics, this.IMAGE[index]!!)
+
+                                    }
+                                
+}
+
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun getImage(index: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Image{
+var index = index
+
+    var image: Image = NullImage.NULL_IMAGE
+
+
+    
+                        if(Features.getInstance()!!.isFeature(MainFeatureFactory.getInstance()!!.FULL_SCREEN))
+                        
+                                    {
+                                    image= this.IMAGE[index]!!
+
+                                    }
+                                
+                        else {
+                            image= this.IMAGE[index +1]!!
+
+                        }
+                            
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return image
+}
+
 
     override fun paint2(graphics: Graphics)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var graphics = graphics
+        //nullable = true from not(false or (false and false)) = true
+{
+var graphics = graphics
 
         try {
             this.animation.paintXY(graphics, 0, 20)
-            super.paint2(graphics)
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.PAINT, e)
-        }
-    }
+super.paint2(graphics)
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.PAINT, e)
+}
+
+}
+
 
     override fun setBackground(background: Boolean)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var background = background
-        super.setBackground(background)
-        this.updateCurrent()
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+var background = background
+super.setBackground(background)
+this.updateCurrent()
+}
+
 
     open fun setPortion(portion: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var portion = portion
-        this.portion = portion
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+var portion = portion
+this.portion= portion
+}
+
 
     open fun getPortion()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.portion
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.portion
 }
+
+
+}
+                
+            
+

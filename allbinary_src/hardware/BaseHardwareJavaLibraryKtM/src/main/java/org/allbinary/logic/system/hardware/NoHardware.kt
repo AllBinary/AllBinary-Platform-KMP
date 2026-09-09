@@ -16,10 +16,10 @@
 package org.allbinary.logic.system.hardware
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface
 import org.allbinary.logic.system.hardware.components.interfaces.NoHardwareComponent
+import org.allbinary.util.ABHashtable
 
 open public class NoHardware : Object, HardwareInterface {
 
@@ -73,7 +73,7 @@ open public class NoHardware : Object, HardwareInterface {
         hardwareInterface: HardwareInterface
     )
         // nullable = true from not(false or (false and false)) = true
-        : Hashtable<Any, Any> {
+        : ABHashtable<Any, Any> {
         var hardwareInterface = hardwareInterface
 
         // if statement needs to be on the same line and ternary does not work the same way.

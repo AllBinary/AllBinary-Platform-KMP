@@ -16,10 +16,10 @@
 package org.allbinary.logic.string.tokens
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.TsUtil
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -127,10 +127,10 @@ open public class Tokenizer : Object {
         stringVector: BasicArrayList
     )
         // nullable = true from not(false or (false and false)) = true
-        : Hashtable<Any, Any> {
+        : ABHashtable<Any, Any> {
         var stringVector = stringVector
 
-        var tokenHashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+        var tokenHashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         var string: String = StringUtil.getInstance()!!.EMPTY_STRING
 

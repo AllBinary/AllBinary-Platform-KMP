@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.StdUtil
@@ -45,6 +44,7 @@ import org.allbinary.logic.system.hardware.components.interfaces.MonitorInterfac
 import org.allbinary.logic.system.hardware.components.interfaces.UsbInterface
 import org.allbinary.logic.system.hardware.components.interfaces.VideoInterface
 import org.allbinary.string.CommonSeps
+import org.allbinary.util.ABHashtable
 
 open public class WindowsHardware
             : Object
@@ -405,7 +405,7 @@ var hardwareInterface = hardwareInterface
 
     open fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
+: ABHashtable<Any, Any>{
 var hardwareInterface = hardwareInterface
 
 

@@ -29,8 +29,6 @@
         
 import java.awt
 import java.util.HashMap
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import javax.swing.tree.DefaultMutableTreeNode
 import javax.swing.tree.MutableTreeNode
 import org.allbinary.animation.VectorExplosionGenerator

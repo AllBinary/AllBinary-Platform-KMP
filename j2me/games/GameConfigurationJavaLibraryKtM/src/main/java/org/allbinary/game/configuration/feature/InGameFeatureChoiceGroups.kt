@@ -16,8 +16,8 @@
 package org.allbinary.game.configuration.feature
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.logic.StdUtil
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 
 open public class InGameFeatureChoiceGroups : Object {
@@ -47,13 +47,13 @@ open public class InGameFeatureChoiceGroups : Object {
         }
     }
 
-    private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private var hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private constructor() : super() {}
 
     open fun get()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.hashtable

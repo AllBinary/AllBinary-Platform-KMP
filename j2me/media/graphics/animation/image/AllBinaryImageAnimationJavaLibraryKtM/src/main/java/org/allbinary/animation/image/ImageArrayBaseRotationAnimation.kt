@@ -1,24 +1,33 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.animation.image
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.animation.image
 
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
-import kotlin.Array
 import org.allbinary.DisposalUtil
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.RotationAnimation
@@ -29,6 +38,7 @@ import org.allbinary.media.image.ImageModifierUtil
 import org.allbinary.util.CircularIndexUtil
 
 open public class ImageArrayBaseRotationAnimation : RotationAnimation {
+        
 
     private val imageModifierUtil: ImageModifierUtil = ImageModifierUtil.getInstanceOrCreate()!!
 
@@ -38,187 +48,213 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
 
     private var currentImage: Image
 
-    private var totalFrames: Int = 0
+    private var totalFrames: Int= 0
+public constructor (originalImageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-    public constructor(
-        originalImageArray: Array<Image?>,
-        angleInfo: AngleInfo,
-        animationBehavior: AnimationBehavior,
-    ) : super(
-        angleInfo,
-        CircularIndexUtil.createInstance(
-            360 / angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()
-        ),
-        animationBehavior,
-    ) {
-        // var originalImageArray = originalImageArray
-        // var angleInfo = angleInfo
-        // var animationBehavior = animationBehavior
+                            : super(angleInfo, CircularIndexUtil.createInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()), animationBehavior){
+    //var originalImageArray = originalImageArray
+    //var angleInfo = angleInfo
+    //var animationBehavior = animationBehavior
 
-        // For kotlin this is before the body of the constructor.
 
-        this.originalImageArray = originalImageArray
-        this.setImageArray(this.imageModifierUtil!!.getImageArray(originalImageArray))
-        this.currentImage = this.imageArray[this.circularIndexUtil!!.getIndex()]!!
-    }
+                            //For kotlin this is before the body of the constructor.
+                    
+this.originalImageArray= originalImageArray
+this.setImageArray(this.imageModifierUtil!!.getImageArray(originalImageArray))
+this.currentImage= this.imageArray[this.circularIndexUtil!!.getIndex()]!!
+}
 
-    @Throws(Exception::class)
+
+                @Throws(Exception::class)
+            
     override fun getAnimationSize()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.getSize()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.getSize()
+}
+
 
     override fun setAlpha(alpha: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var alpha = alpha
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var alpha = alpha
 
-        if (this.alphaP != alpha) {
+    
+                        if(this.alphaP != alpha)
+                        
+                                    {
+                                    super.setAlpha(alpha)
+this.imageModifierUtil!!.reset()
 
-            super.setAlpha(alpha)
-            this.imageModifierUtil!!.reset()
+    var index: Int = this.circularIndexUtil!!.getIndex()!!
 
-            var index: Int = this.circularIndexUtil!!.getIndex()!!
+this.imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 
-            this.imageModifierUtil!!.setAlpha(
-                this.originalImageArray[index]!!,
-                this.imageArray[index]!!,
-                index,
-                this.alphaP,
-            )
-        }
-    }
+                                    }
+                                
+}
+
 
     override fun nextRotation()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        super.nextRotation()
+        //nullable = true from not(false or (false and true)) = true
+{
+super.nextRotation()
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+    var index: Int = this.circularIndexUtil!!.getIndex()!!
 
-        this.imageModifierUtil!!.setAlpha(
-            this.originalImageArray[index]!!,
-            this.imageArray[index]!!,
-            index,
-            this.alphaP,
-        )
-        this.currentImage = this.imageArray[index]!!
-    }
+this.imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
+this.currentImage= this.imageArray[index]!!
+}
+
 
     override fun previousRotation()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        super.previousRotation()
+        //nullable = true from not(false or (false and true)) = true
+{
+super.previousRotation()
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+    var index: Int = this.circularIndexUtil!!.getIndex()!!
 
-        this.imageModifierUtil!!.setAlpha(
-            this.originalImageArray[index]!!,
-            this.imageArray[index]!!,
-            index,
-            this.alphaP,
-        )
-        this.currentImage = this.imageArray[index]!!
-    }
+this.imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
+this.currentImage= this.imageArray[index]!!
+}
+
 
     override fun setFrame(index2: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var index2 = index2
-        super.setFrame(index2)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var index2 = index2
+super.setFrame(index2)
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+    var index: Int = this.circularIndexUtil!!.getIndex()!!
 
-        this.imageModifierUtil!!.setAlpha(
-            this.originalImageArray[index]!!,
-            this.imageArray[index]!!,
-            index,
-            this.alphaP,
-        )
-        this.currentImage = this.imageArray[index]!!
-    }
+this.imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
+this.currentImage= this.imageArray[index]!!
+}
+
 
     override fun setSequence(sequence: IntArray)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var sequence = sequence
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var sequence = sequence
+}
+
 
     override fun getSequence()
-    // nullable = true from not(false or (false and true)) = true
-    : IntArray {
+        //nullable = true from not(false or (false and true)) = true
+: IntArray{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return PrimitiveIntUtil.getArrayInstance()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return PrimitiveIntUtil.getArrayInstance()
+}
+
 
     open fun setImageArray(imageArray: Array<Image?>)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var imageArray = imageArray
-        this.imageArray = imageArray
-        this.totalFrames = imageArray!!.size
-        this.circularIndexUtil = CircularIndexUtil.createInstance(this.totalFrames)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var imageArray = imageArray
+this.imageArray= imageArray
+this.totalFrames= imageArray!!.size
+this.circularIndexUtil= CircularIndexUtil.createInstance(this.totalFrames)
+}
+
 
     private var anchor: Int = Anchor.TOP_LEFT
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var graphics = graphics
-        // var x = x
-        // var y = y
-        graphics.drawImage(this.currentImage, x, y, this.anchor)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+graphics.drawImage(this.currentImage, x, y, this.anchor)
+}
+
 
     open fun close()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
-        var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
+    var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
 
-        var size2: Int = this.imageArray!!.size
 
-        for (index in 0 until size2) {
+    var size2: Int = this.imageArray!!.size
+                
 
-            disposalUtil!!.disposeImage(this.imageArray[index]!!)
-        }
 
-        var size: Int = this.originalImageArray!!.size
 
-        for (index in 0 until size) {
 
-            disposalUtil!!.disposeImage(this.originalImageArray[index]!!)
-        }
 
-        disposalUtil!!.disposeImage(this.currentImage)
-    }
+                        for (index in 0 until size2)
 
-    @Throws(Throwable::class)
-    override fun finalize()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
-
-        var size2: Int = this.imageArray!!.size
-
-        for (index in 0 until size2) {
-
-            disposalUtil!!.disposeImage(this.imageArray[index]!!)
-        }
-
-        var size: Int = this.originalImageArray!!.size
-
-        for (index in 0 until size) {
-
-            disposalUtil!!.disposeImage(this.originalImageArray[index]!!)
-        }
-
-        disposalUtil!!.disposeImage(this.currentImage)
-    }
+        {
+disposalUtil!!.disposeImage(this.imageArray[index]!!)
 }
+
+
+    var size: Int = this.originalImageArray!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+disposalUtil!!.disposeImage(this.originalImageArray[index]!!)
+}
+
+disposalUtil!!.disposeImage(this.currentImage)
+}
+
+
+                @Throws(Throwable::class)
+            
+    override fun finalize()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
+
+
+    var size2: Int = this.imageArray!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size2)
+
+        {
+disposalUtil!!.disposeImage(this.imageArray[index]!!)
+}
+
+
+    var size: Int = this.originalImageArray!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+disposalUtil!!.disposeImage(this.originalImageArray[index]!!)
+}
+
+disposalUtil!!.disposeImage(this.currentImage)
+}
+
+
+}
+                
+            
+

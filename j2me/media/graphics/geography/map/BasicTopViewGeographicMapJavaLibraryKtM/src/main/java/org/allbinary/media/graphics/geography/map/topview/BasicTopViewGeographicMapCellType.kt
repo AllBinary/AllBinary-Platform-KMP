@@ -1,22 +1,32 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.media.graphics.geography.map.topview
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot   
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.media.graphics.geography.map.topview
 
-import java.lang.Integer
-import java.lang.Object
+
+
+
+        import java.lang.Object        
+        
+        import java.lang.Integer
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
@@ -26,30 +36,32 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListS
 
-open public class BasicTopViewGeographicMapCellType : Object {
+open public class BasicTopViewGeographicMapCellType
+            : Object
+         {
+        
+companion object {
+            
+    open fun createType(name: String, type: Int, cost: Int)
+        //nullable = true from not(false or (false and false)) = true
+: BasicTopViewGeographicMapCellType{
+    //var name = name
+    //var type = type
+    //var cost = cost
 
-    companion object {
+    var types: BasicArrayList = BasicArrayListS(1)
 
-        open fun createType(
-            name: String,
-            type: Int,
-            cost: Int,
-        )
-            // nullable = true from not(false or (false and false)) = true
-            : BasicTopViewGeographicMapCellType {
-            // var name = name
-            // var type = type
-            // var cost = cost
+types.add(type)
 
-            var types: BasicArrayList = BasicArrayListS(1)
 
-            types.add(type)
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return BasicTopViewGeographicMapCellType(name, types, cost)
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return BasicTopViewGeographicMapCellType(name, types, cost)
+}
+
+
         }
-    }
-
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val name: String
@@ -57,95 +69,147 @@ open public class BasicTopViewGeographicMapCellType : Object {
     val cost: Int
 
     private val types: IntArray
+public constructor (name: String, types: BasicArrayList, cost: Int)
+            : super()
+        {
+    //var name = name
+    //var types = types
+    //var cost = cost
 
-    public constructor(name: String, types: BasicArrayList, cost: Int) : super() {
-        // var name = name
-        // var types = types
-        // var cost = cost
+    var size: Int = types.size()!!
 
-        var size: Int = types.size()!!
 
-        var typeArray: IntArray = IntArray(size)
+    var typeArray: IntArray = IntArray(size)
 
-        var typeAsInteger: Integer
 
-        var type: Int = 0
+    var typeAsInteger: Integer
 
-        for (index in 0 until size) {
 
-            typeAsInteger = (types.get(index) as Integer)
-            type = typeAsInteger!!.toInt()
+    var type: Int= 0
 
-            if (
-                GeographicMapCellTypeFactory.getInstance()!!.getGeographicMapCellTypeArray()[
-                        type] == null
-            ) {
-                RaceTrackGeographicMapCellType(name, type, cost, 0)
-            } else {}
 
-            typeArray[index] = type
-        }
 
-        this.name = name
-        this.cost = cost
-        this.types = typeArray
-    }
 
-    open fun isType(
-        type: GeographicMapCellType
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        // var type = type
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.hasType(type.getType())
-    }
+                        for (index in 0 until size)
 
-    open fun hasType(
-        type: Int
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Boolean {
-        // var type = type
+        {
+typeAsInteger= (types.get(index) as Integer)
+type= typeAsInteger!!.toInt()
 
-        var size: Int = this.types.size
+    
+                        if(GeographicMapCellTypeFactory.getInstance()!!.getGeographicMapCellTypeArray()[type] == 
+                                    null
+                                )
+                        
+                                    {
+                                    RaceTrackGeographicMapCellType(name, type, cost, 0)
 
-        for (index in 0 until size) {
+                                    }
+                                
+                        else {
+                            
+                        }
+                            
+typeArray[index]= type
+}
 
-            if (this.types[index] == type) {
+this.name= name
+this.cost= cost
+this.types= typeArray
+}
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return true
-            }
-        }
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return false
-    }
+    open fun isType(type: GeographicMapCellType)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var type = type
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.hasType(type.getType())
+}
+
+
+    open fun hasType(type: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var type = type
+
+    var size: Int = this.types.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+
+    
+                        if(this.types[index] == type)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+
+                                    }
+                                
+}
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
 
     open fun getTypes()
-    // nullable = true from not(false or (false and true)) = true
-    : IntArray {
+        //nullable = true from not(false or (false and true)) = true
+: IntArray{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.types
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.types
+}
+
 
     override fun toString()
-    // nullable =  from not(false or (true and true)) =
-    : String {
+        //nullable =  from not(false or (true and true)) = 
+: String{
 
-        var stringMaker: StringMaker = StringMaker()
+    var stringMaker: StringMaker = StringMaker()
 
-        var size: Int = this.types.size
 
-        for (index in 0 until size) {
+    var size: Int = this.types.size
+                
 
-            stringMaker!!.appendint(this.types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
-        }
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return stringMaker!!.toString()
-    }
+
+
+
+                        for (index in 0 until size)
+
+        {
+stringMaker!!.appendint(this.types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
 }
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return stringMaker!!.toString()
+}
+
+
+}
+                
+            
+

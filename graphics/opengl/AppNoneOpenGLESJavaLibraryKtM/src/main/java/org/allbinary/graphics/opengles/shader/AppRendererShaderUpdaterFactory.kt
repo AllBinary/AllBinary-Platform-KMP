@@ -1,40 +1,55 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2025 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.graphics.opengles.shader
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2025 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.graphics.opengles.shader
 
-import kotlin.Array
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 
 open public class AppRendererShaderUpdaterFactory : ShaderUpdater {
+        
+companion object {
+            
+    private val instanceC: AppRendererShaderUpdaterFactory = AppRendererShaderUpdaterFactory()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: AppRendererShaderUpdaterFactory{
 
-        private val instanceC: AppRendererShaderUpdaterFactory = AppRendererShaderUpdaterFactory()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : AppRendererShaderUpdaterFactory {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return AppRendererShaderUpdaterFactory.instanceC
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AppRendererShaderUpdaterFactory.instanceC
+}
+
+
         }
-    }
-
-    // Auto Generated
-    public constructor() : super() {}
-
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
     private val NULL_SHADER_COMPOSITE_ARRAY: Array<ShaderComposite?> = arrayOfNulls(0)
 
     val shaderCompositeArray: Array<ShaderComposite?> = this.NULL_SHADER_COMPOSITE_ARRAY
@@ -42,16 +57,24 @@ open public class AppRendererShaderUpdaterFactory : ShaderUpdater {
     private val shaderOpenGLProcessorArray: Array<ShaderOpenGLProcessor?> = arrayOfNulls(0)
 
     open fun getTestShaders()
-    // nullable = true from not(false or (false and true)) = true
-    : Array<ShaderOpenGLProcessor?> {
+        //nullable = true from not(false or (false and true)) = true
+: Array<ShaderOpenGLProcessor?>{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.shaderOpenGLProcessorArray
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.shaderOpenGLProcessorArray
+}
+
 
     open fun setShaderComposite(object3d: Any)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var object3d = object3d
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var object3d = object3d
 }
+
+
+}
+                
+            
+

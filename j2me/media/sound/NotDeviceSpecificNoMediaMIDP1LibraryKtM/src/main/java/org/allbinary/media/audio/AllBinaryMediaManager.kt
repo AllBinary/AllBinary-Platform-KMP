@@ -17,10 +17,10 @@ package org.allbinary.media.audio
 
 import java.io.InputStream
 import java.lang.Object
-import java.lang.System
 import javax.microedition.media.Player
 import kotlin.Array
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
+import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
@@ -76,7 +76,7 @@ open public class AllBinaryMediaManager : Object {
             var soundsFactoryInterface = soundsFactoryInterface
             Sounds(soundsFactoryInterface).stopAll()
             Sounds(soundsFactoryInterface).closeAll()
-            System.gc()
+            ABSystemWrapper.getInstance()!!.gc()
         }
 
         open fun createPlayerFromInputStream(

@@ -25,12 +25,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import jsinterop.annotations.JsType
 import org.allbinary.game.input.motion.action.NoCompleteMotionGestureInputEventListener
 import org.allbinary.input.AllBinarySensor
 import org.allbinary.input.NoAllBinarySensor
 import org.allbinary.input.accelerometer.AccelerometerSensorFactory
-import jsinterop.annotations.JsMethod
 
 open public class SensorGameUpdateProcessor
             : Object

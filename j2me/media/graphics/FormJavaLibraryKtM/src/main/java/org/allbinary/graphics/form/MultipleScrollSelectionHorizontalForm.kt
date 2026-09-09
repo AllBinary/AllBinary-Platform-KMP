@@ -1,9 +1,18 @@
-/* Generated Code Do Not Modify */
-package org.allbinary.graphics.form
 
+        /* Generated Code Do Not Modify */
+        package org.allbinary.graphics.form
+
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
-import kotlin.Array
 import org.allbinary.J2MEUtil
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
@@ -17,124 +26,112 @@ import org.allbinary.graphics.paint.Paintable
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 
-open public class MultipleScrollSelectionHorizontalForm :
-    ScrollSelectionForm, UpdateMyFontInterface {
+open public class MultipleScrollSelectionHorizontalForm : ScrollSelectionForm
+                , UpdateMyFontInterface {
+        
+companion object {
+            
+                @Throws(Exception::class)
+            
+    open fun createForm(title: String, items: Array<ABCustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+: ScrollSelectionForm{
+    //var title = title
+    //var items = items
+    //var rectangle = rectangle
+    //var formType = formType
+    //var border = border
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
-    companion object {
+    var scrollSelectionForm: ScrollSelectionForm = MultipleScrollSelectionHorizontalForm(title, items, ItemPaintableFactory.getInstance(), border, backgroundBasicColor, foregroundBasicColor)
 
-        @Throws(Exception::class)
-        open fun createForm(
-            title: String,
-            items: Array<ABCustomItem?>,
-            rectangle: Rectangle,
-            formType: FormType,
-            border: Int,
-            backgroundBasicColor: BasicColor,
-            foregroundBasicColor: BasicColor,
-        )
-            // nullable = true from not(false or (false and false)) = true
-            : ScrollSelectionForm {
-            // var title = title
-            // var items = items
-            // var rectangle = rectangle
-            // var formType = formType
-            // var border = border
-            // var backgroundBasicColor = backgroundBasicColor
-            // var foregroundBasicColor = foregroundBasicColor
+scrollSelectionForm!!.init(rectangle, formType)
 
-            var scrollSelectionForm: ScrollSelectionForm =
-                MultipleScrollSelectionHorizontalForm(
-                    title,
-                    items,
-                    ItemPaintableFactory.getInstance(),
-                    border,
-                    backgroundBasicColor,
-                    foregroundBasicColor,
-                )
 
-            scrollSelectionForm!!.init(rectangle, formType)
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return scrollSelectionForm
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return scrollSelectionForm
+}
+
+
         }
-    }
-
-    open public inner class MultipleScrollSelectionFormHorizontalPaintable : ItemIndexPaintable {
-
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
+            
+open public inner class MultipleScrollSelectionFormHorizontalPaintable : ItemIndexPaintable {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
         }
             */
 
-        private val multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm
 
-        constructor(multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm) {
-            // var multipleScrollSelectionForm = multipleScrollSelectionForm
-            this.multipleScrollSelectionForm = multipleScrollSelectionForm
-        }
+    private val multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm
+ constructor (multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm){
+    //var multipleScrollSelectionForm = multipleScrollSelectionForm
+this.multipleScrollSelectionForm= multipleScrollSelectionForm
+}
 
-        @Throws(Exception::class)
-        override fun paint(
-            graphics: Graphics,
-            index: Int,
-            item: ABCustomItem,
-            dx: Int,
-            dy: Int,
-        )
-            // nullable = true from not(false or (false and false)) = true
-            : Int {
-            // var graphics = graphics
-            // var index = index
-            // var item = item
-            var dx = dx
-            // var dy = dy
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.multipleScrollSelectionForm!!.paintHorizontal(graphics, index, item, dx, dy)
-        }
-    }
+                @Throws(Exception::class)
+            
+    override fun paint(graphics: Graphics, index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
 
-    open public inner class MultipleScrollSelectionFormVerticalPaintable : ItemIndexPaintable {
 
-        /*Static stuff is not allowed for Kotlin inner classescompanion object {
-         */
-        /*
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.multipleScrollSelectionForm!!.paintHorizontal(graphics, index, item, dx, dy)
+}
+
+
+}
+                
+            
+open public inner class MultipleScrollSelectionFormVerticalPaintable : ItemIndexPaintable {
+        
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
+            *//*
         }
             */
 
-        private val multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm
 
-        constructor(multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm) {
-            // var multipleScrollSelectionForm = multipleScrollSelectionForm
-            this.multipleScrollSelectionForm = multipleScrollSelectionForm
-        }
+    private val multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm
+ constructor (multipleScrollSelectionForm: MultipleScrollSelectionHorizontalForm){
+    //var multipleScrollSelectionForm = multipleScrollSelectionForm
+this.multipleScrollSelectionForm= multipleScrollSelectionForm
+}
 
-        @Throws(Exception::class)
-        override fun paint(
-            graphics: Graphics,
-            index: Int,
-            item: ABCustomItem,
-            dx: Int,
-            dy: Int,
-        )
-            // nullable = true from not(false or (false and false)) = true
-            : Int {
-            // var graphics = graphics
-            // var index = index
-            // var item = item
-            var dx = dx
-            // var dy = dy
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.multipleScrollSelectionForm!!.paintVertical(graphics, index, item, dx, dy)
-        }
-    }
+                @Throws(Exception::class)
+            
+    override fun paint(graphics: Graphics, index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
 
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.multipleScrollSelectionForm!!.paintVertical(graphics, index, item, dx, dy)
+}
+
+
+}
+                
+            
     private var rectPaintable: Paintable = NullPaintable.getInstance()!!
 
-    private var multipleScrollSelectionHorizontalFormTypeItemIndexPaintable: ItemIndexPaintable =
-        ItemIndexPaintable.getInstance()!!
+    private var multipleScrollSelectionHorizontalFormTypeItemIndexPaintable: ItemIndexPaintable = ItemIndexPaintable.getInstance()!!
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()!!
 
@@ -143,203 +140,248 @@ open public class MultipleScrollSelectionHorizontalForm :
     private var logged: Boolean = false
 
     private var fontHeight: Int = 0
+public constructor (title: String, items: Array<ABCustomItem?>, formPaintableFactory: ItemPaintableFactory, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-    public constructor(
-        title: String,
-        items: Array<ABCustomItem?>,
-        formPaintableFactory: ItemPaintableFactory,
-        border: Int,
-        backgroundBasicColor: BasicColor,
-        foregroundBasicColor: BasicColor,
-    ) : super(
-        title,
-        items,
-        formPaintableFactory,
-        border,
-        3,
-        backgroundBasicColor,
-        foregroundBasicColor,
-    ) {
-        // var title = title
-        // var items = items
-        // var formPaintableFactory = formPaintableFactory
-        // var border = border
-        // var backgroundBasicColor = backgroundBasicColor
-        // var foregroundBasicColor = foregroundBasicColor
+                            : super(title, items, formPaintableFactory, border, 3, backgroundBasicColor, foregroundBasicColor){
+    //var title = title
+    //var items = items
+    //var formPaintableFactory = formPaintableFactory
+    //var border = border
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
-        // For kotlin this is before the body of the constructor.
 
-        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {} else {
+                            //For kotlin this is before the body of the constructor.
+                    
 
-            open class MPaintable : Paintable {
+    
+                        if(J2MEUtil.isJ2ME() || J2MEUtil.isHTML())
+                        
+                                    {
+                                    
+                                    }
+                                
+                        else {
+                            
+open class MPaintable : Paintable {
+        
 
-                // Auto Generated
-                public constructor() : super() {}
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+    override fun paint(graphics: Graphics)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+this@MultipleScrollSelectionHorizontalForm.fillRect(graphics)
+}
 
-                override fun paint(graphics: Graphics)
-                    // nullable = true from not(false or (false and false)) = true
-                {
-                    // var graphics = graphics
-                    this@MultipleScrollSelectionHorizontalForm.fillRect(graphics)
-                }
-            }
 
-            // Otherwise - statement - EmptyStmt
+}
+                
+            
 
-            this.rectPaintable = MPaintable()
-        }
-    }
+                    //Otherwise - statement - EmptyStmt
+
+this.rectPaintable= MPaintable()
+
+                        }
+                            
+}
+
 
     open fun fillRect(graphics: Graphics)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var graphics = graphics
-        graphics.setColor(this.backgroundColor)
-        graphics.fillRect(this.x, this.y, this.rectangle.getWidth(), this.rectangle.getHeight())
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+graphics.setColor(this.backgroundColor)
+graphics.fillRect(this.x, this.y, this.rectangle.getWidth(), this.rectangle.getHeight())
+}
 
-    @Throws(Exception::class)
+
+                @Throws(Exception::class)
+            
     override fun init(rectangle: Rectangle, formType: FormType)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var rectangle = rectangle
-        // var formType = formType
-        super.init(rectangle, formType)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var rectangle = rectangle
+    //var formType = formType
+super.init(rectangle, formType)
 
-        var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
+    var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
-        if (formType == formTypeFactory!!.HORIZONTAL_FORM) {
 
-            this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable =
-                MultipleScrollSelectionFormHorizontalPaintable(this)
-        } else if (formType == formTypeFactory!!.VERTICAL_CENTER_FORM) {
+    
+                        if(formType == formTypeFactory!!.HORIZONTAL_FORM)
+                        
+                                    {
+                                    this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable= MultipleScrollSelectionFormHorizontalPaintable(this)
 
-            this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable =
-                MultipleScrollSelectionFormVerticalPaintable(this)
-        } else if (formType == formTypeFactory!!.NULL_FORM_TYPE) {} else {
+                                    }
+                                
+                             else 
+    
+                        if(formType == formTypeFactory!!.VERTICAL_CENTER_FORM)
+                        
+                                    {
+                                    this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable= MultipleScrollSelectionFormVerticalPaintable(this)
 
-            throw Exception(formTypeFactory!!.UNK)
-        }
-    }
+                                    }
+                                
+                             else 
+    
+                        if(formType == formTypeFactory!!.NULL_FORM_TYPE)
+                        
+                                    {
+                                    
+                                    }
+                                
+                        else {
+                            
+
+
+                            throw Exception(formTypeFactory!!.UNK)
+
+                        }
+                            
+}
+
 
     override fun updateMeasurement(graphics: Graphics)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var graphics = graphics
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
 
-        var font: Font = graphics.getFont()!!
+    var font: Font = graphics.getFont()!!
 
-        this.fontHeight = font.getHeight()
-        this.myFontProcessor = MyFontProcessor.getInstance()
-    }
+this.fontHeight= font.getHeight()
+this.myFontProcessor= MyFontProcessor.getInstance()
+}
 
-    @Throws(Exception::class)
-    open fun paintHorizontal(
-        graphics: Graphics,
-        index: Int,
-        item: ABCustomItem,
-        dx: Int,
-        dy: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Int {
-        // var graphics = graphics
-        // var index = index
-        // var item = item
-        var dx = dx
-        // var dy = dy
 
-        var dx2: Int = this.paintItem(graphics, index, item, dx, dy) + this.border
+                @Throws(Exception::class)
+            
+    open fun paintHorizontal(graphics: Graphics, index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+var dx = dx
+    //var dy = dy
 
-        this.paintable.paint(graphics, index, dx, dy)
-        dx = dx2
+    var dx2: Int = this.paintItem(graphics, index, item, dx, dy) +this.border
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return dx
-    }
+this.paintable.paint(graphics, index, dx, dy)
+dx= dx2
 
-    @Throws(Exception::class)
-    open fun paintVertical(
-        graphics: Graphics,
-        index: Int,
-        item: ABCustomItem,
-        dx: Int,
-        dy: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Int {
-        // var graphics = graphics
-        // var index = index
-        // var item = item
-        // var dx = dx
-        // var dy = dy
-        this.paintItem(graphics, index, item, dx, dy)
-        this.paintable.paint(graphics, index, dx, dy)
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return dx
-    }
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return dx
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun paintVertical(graphics: Graphics, index: Int, item: ABCustomItem, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+    //var dx = dx
+    //var dy = dy
+this.paintItem(graphics, index, item, dx, dy)
+this.paintable.paint(graphics, index, dx, dy)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return dx
+}
+
 
     override fun getStartIndex()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.getSelectedIndex()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.getSelectedIndex()
+}
+
 
     override fun paint(graphics: Graphics)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var graphics = graphics
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
 
         try {
             this.myFontProcessor!!.process(graphics)
 
-            var start: Int = this.getStartIndex()!!
+    var start: Int = this.getStartIndex()!!
 
-            var size: Int = this.size()!!
 
-            var dx: Int = this.x
+    var size: Int = this.size()!!
 
-            var dy: Int = this.y
 
-            this.rectPaintable!!.paint(graphics)
-            graphics.drawString(this.getTitle(), this.x, this.y - this.fontHeight, 0)
+    var dx: Int = this.x
 
-            var item: ABCustomItem
 
-            for (index in start until size) {
+    var dy: Int = this.y
 
-                item = this.get(index)
+this.rectPaintable!!.paint(graphics)
+graphics.drawString(this.getTitle(), this.x, this.y -this.fontHeight, 0)
 
-                if (dx >= this.rectangle.getMaxX()) {
+    var item: ABCustomItem
 
-                    if (this.logged) {} else {
 
-                        this.logged = true
-                        PreLogUtil.put(
-                            StringMaker()
-                                .append("painting beyond maxx: ")!!
-                                .appendint(this.rectangle.getMaxX())!!
-                                .toString(),
-                            this,
-                            this.canvasStrings!!.PAINT,
-                        )
-                    }
-                }
 
-                dx =
-                    this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable!!.paint(
-                        graphics,
-                        index,
-                        item,
-                        dx,
-                        dy,
-                    )
-            }
-        } catch (e: Exception) {
-            PreLogUtil.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.PAINT)
-        }
-    }
+
+
+                        for (index in start until size)
+
+        {
+item= this.get(index)
+
+    
+                        if(dx >= this.rectangle.getMaxX())
+                        
+                                    {
+                                    
+    
+                        if(this.logged)
+                        
+                                    {
+                                    
+                                    }
+                                
+                        else {
+                            this.logged= true
+PreLogUtil.put(StringMaker().
+                            append("painting beyond maxx: ")!!.appendint(this.rectangle.getMaxX())!!.toString(), this, this.canvasStrings!!.PAINT)
+
+                        }
+                            
+
+                                    }
+                                
+dx= this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable!!.paint(graphics, index, item, dx, dy)
 }
+
+} catch(e: Exception)
+            {
+PreLogUtil.put(this.commonStrings!!.EXCEPTION, this, this.canvasStrings!!.PAINT)
+}
+
+}
+
+
+}
+                
+            
+

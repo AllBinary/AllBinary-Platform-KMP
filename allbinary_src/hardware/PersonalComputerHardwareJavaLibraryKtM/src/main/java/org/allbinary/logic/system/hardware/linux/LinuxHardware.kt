@@ -27,8 +27,6 @@
         
 import java.io.FileReader
 import java.io.LineNumberReader
-import java.util.Hashtable
-import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
@@ -54,6 +52,7 @@ import org.allbinary.logic.system.hardware.components.interfaces.VideoInterface
 import org.allbinary.logic.system.hardware.components.linux.Cpu
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 
 open public class LinuxHardware
@@ -509,7 +508,7 @@ var index = index
 }
 
 
-    open fun getComponent(index: Int)
+    override fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : HardwareComponentInterface{
 var index = index
@@ -555,7 +554,7 @@ hardwareBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
 
-    open fun compareTo(hardwareInterface: HardwareInterface)
+    override fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var hardwareInterface = hardwareInterface
@@ -567,9 +566,9 @@ var hardwareInterface = hardwareInterface
 }
 
 
-    open fun difference(hardwareInterface: HardwareInterface)
+    override fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
+: ABHashtable<Any, Any>{
 var hardwareInterface = hardwareInterface
 
 

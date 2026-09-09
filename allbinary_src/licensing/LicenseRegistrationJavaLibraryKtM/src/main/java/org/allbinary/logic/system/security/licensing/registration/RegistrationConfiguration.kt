@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import jsinterop.annotations.JsType
 import java.io.DataInputStream
 import java.io.InputStream
 import java.io.OutputStream
@@ -38,9 +37,6 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
-import jsinterop.annotations.JsMethod
-import jsinterop.annotations.JsConstructor
-import jsinterop.annotations.JsProperty
 
 open public class RegistrationConfiguration
             : Object

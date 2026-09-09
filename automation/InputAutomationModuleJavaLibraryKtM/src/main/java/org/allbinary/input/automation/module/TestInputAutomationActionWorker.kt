@@ -27,13 +27,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import java.util.Set
 import org.allbinary.input.automation.robot.InputRobotFactory
 import org.allbinary.input.automation.robot.InputRobotInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.media.image.comparison.ImageComparatorConstraintsInterface
 import org.allbinary.media.image.comparison.motion.MotionRectangleConstraintsInterface
+import org.allbinary.util.ABHashtable
 
 open public class TestInputAutomationActionWorker : AbstractInputAutomationWorker {
         
@@ -73,7 +73,7 @@ Thread.sleep(2000)
 {
 this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 
-    var hashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
+    var hashtable: ABHashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
 
 
     var set: Set = hashtable.keys!!

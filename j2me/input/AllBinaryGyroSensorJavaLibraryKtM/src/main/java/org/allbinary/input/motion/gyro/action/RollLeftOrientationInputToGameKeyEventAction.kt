@@ -1,59 +1,73 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.input.motion.gyro.action
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.input.motion.gyro.action
 
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.input.PlatformInputMappingFactory
 import org.allbinary.game.input.motion.action.GameKeyCompleteMotionGestureInputEvent
 import org.allbinary.input.gyro.OrientationMotionGestureFactory
 import org.allbinary.logic.NullUtil
 
-open public class RollLeftOrientationInputToGameKeyEventAction :
-    GameKeyCompleteMotionGestureInputEvent {
+open public class RollLeftOrientationInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
+        
+companion object {
+            
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: GameKeyCompleteMotionGestureInputEvent{
 
-        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+    
+                        if(RollLeftOrientationInputToGameKeyEventAction.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    RollLeftOrientationInputToGameKeyEventAction.instance= RollLeftOrientationInputToGameKeyEventAction()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : GameKeyCompleteMotionGestureInputEvent {
+                                    }
+                                
 
-            if (
-                RollLeftOrientationInputToGameKeyEventAction.instance ==
-                    NullUtil.getInstance()!!.NULL_OBJECT
-            ) {
-                RollLeftOrientationInputToGameKeyEventAction.instance =
-                    RollLeftOrientationInputToGameKeyEventAction()
-            }
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return RollLeftOrientationInputToGameKeyEventAction.instance
-                as GameKeyCompleteMotionGestureInputEvent
-        }
-    }
 
-    private constructor() :
-        super(
-            "Roll Left Action",
-            OrientationMotionGestureFactory.getInstance()!!.ROLL_LEFT,
-            PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
-                .getInputMapping(),
-        ) {
-
-        // For kotlin this is before the body of the constructor.
-
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return RollLeftOrientationInputToGameKeyEventAction.instance as GameKeyCompleteMotionGestureInputEvent
 }
+
+
+        }
+            private constructor ()                        
+
+                            : super("Roll Left Action", OrientationMotionGestureFactory.getInstance()!!.ROLL_LEFT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
+}
+                
+            
+

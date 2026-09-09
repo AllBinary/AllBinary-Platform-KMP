@@ -25,15 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import org.allbinary.graphics.CellPosition
+import org.allbinary.util.ABHashtable
 
 open public class CachingGeographicMapCellPositionFactory : BasicGeographicMapCellPositionFactory {
         
 protected constructor (geographicMapInterface: BasicGeographicMap)                        
 
                             : super(geographicMapInterface){
-var geographicMapInterface = geographicMapInterface
+    //var geographicMapInterface = geographicMapInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,7 +51,7 @@ var geographicMapInterface = geographicMapInterface
     //var width = width
     //var height = height
 
-    var hashtable: Hashtable<Any, Any> = GeographicMapCellPositionFactory.getHashtable()!!
+    var hashtable: ABHashtable<Any, Any> = GeographicMapCellPositionFactory.getHashtable()!!
 
 
     var cellPositionKey: String = CellPosition.toStringColRow(i_column, i_row)!!

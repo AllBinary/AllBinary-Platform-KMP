@@ -16,8 +16,8 @@
 package org.allbinary.game.configuration
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.logic.StdUtil
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -38,7 +38,7 @@ open public class GameConfigurationSingleton : Object {
 
     private var list: BasicArrayList
 
-    private var hashtable: Hashtable<Any, Any>
+    private var hashtable: ABHashtable<Any, Any>
 
     private constructor() : super() {
         this.list = BasicArrayListD()
@@ -73,7 +73,7 @@ open public class GameConfigurationSingleton : Object {
 
     open fun getHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.hashtable

@@ -1,37 +1,58 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.logic.system.security.licensing
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot   
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.logic.system.security.licensing
 
-import java.lang.Object
 
-open public class ServiceClientInformationInterfaceFactory : Object {
 
-    companion object {
 
-        private val instance: TestClientInformation = TestClientInformation()
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : AbeClientInformationInterface {
+open public class ServiceClientInformationInterfaceFactory
+            : Object
+         {
+        
+companion object {
+            
+    private val instance: TestClientInformation = TestClientInformation()
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return ServiceClientInformationInterfaceFactory.instance
-        }
-    }
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: AbeClientInformationInterface{
 
-    // Auto Generated
-    public constructor() : super() {}
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ServiceClientInformationInterfaceFactory.instance
 }
+
+
+        }
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+}
+                
+            
+

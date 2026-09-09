@@ -1,59 +1,89 @@
-/* Generated Code Do Not Modify */
-package org.allbinary.game.layer.drop
 
-import java.lang.Object
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.layer.drop
+
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.layer.AllBinaryLayerFactoryInterface
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
 
-open public class PlacedLayerFactory : Object {
+open public class PlacedLayerFactory
+            : Object
+         {
+        
+companion object {
+            
+    private val instance: PlacedLayerFactory = PlacedLayerFactory()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: PlacedLayerFactory{
 
-        private val instance: PlacedLayerFactory = PlacedLayerFactory()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : PlacedLayerFactory {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return PlacedLayerFactory.instance
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return PlacedLayerFactory.instance
+}
+
+
         }
-    }
-
+            
     private val list: BasicArrayList = BasicArrayListD()
+private constructor ()
+            : super()
+        {
+}
 
-    private constructor() : super() {}
 
     open fun clear()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.list.clear()
-    }
+        //nullable = true from not(false or (false and true)) = true
+{
+this.list.clear()
+}
+
 
     open fun getSize()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.list.size()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.list.size()
+}
+
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
     open fun getRandomInstance()
-    // nullable = true from not(false or (false and true)) = true
-    : AllBinaryLayerFactoryInterface {
+        //nullable = true from not(false or (false and true)) = true
+: AllBinaryLayerFactoryInterface{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.basicArrayListUtil!!.getRandom(this.list) as AllBinaryLayerFactoryInterface
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.basicArrayListUtil!!.getRandom(this.list) as AllBinaryLayerFactoryInterface
+}
+
 
     open fun add(layerInterfaceFactoryInterface: AllBinaryLayerFactoryInterface)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
-        this.list.add(layerInterfaceFactoryInterface)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
+this.list.add(layerInterfaceFactoryInterface)
 }
+
+
+}
+                
+            
+

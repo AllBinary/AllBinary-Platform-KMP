@@ -25,7 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
+import org.allbinary.logic.StdUtil
+import org.allbinary.util.ABHashtable
 import org.osgi.framework.BundleContext
 import org.osgi.framework.NullServiceReferenceFactory
 import org.osgi.framework.ServiceReference
@@ -45,13 +46,13 @@ companion object {
     //var bundleContext = bundleContext
     //var anyType = anyType
     //var serviceName = serviceName
-OSGIActivatorUtil.registerAsService(bundleContext, anyType, serviceName, Hashtable<Any, Any>())
+OSGIActivatorUtil.registerAsService(bundleContext, anyType, serviceName, StdUtil.getInstance()!!.createHashtable())
 }
 
 
                 @Throws(Exception::class)
             
-    open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String, properties: Hashtable<Any, Any>)
+    open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String, properties: ABHashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var bundleContext = bundleContext

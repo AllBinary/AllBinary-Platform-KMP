@@ -1,20 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.displayable.canvas
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.displayable.canvas
 
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Command
 import org.allbinary.game.commands.GameCommandsFactory
@@ -37,12 +47,11 @@ import org.allbinary.media.audio.SelectSound
 import org.allbinary.thread.PrimaryThreadPool
 import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.BasicArrayList
-
-// In general allow scrolling of the menu and selection the center item
+//In general allow scrolling of the menu and selection the center item
 open public class CommandFormInputProcessor : BasicMenuInputProcessor {
+        
 
-    private val MOTION_GESTURE_SOURCE_ID: Int =
-        GameKeyEventFactory.getInstance()!!.MOTION_GESTURE_SOURCE_ID
+    private val MOTION_GESTURE_SOURCE_ID: Int = GameKeyEventFactory.getInstance()!!.MOTION_GESTURE_SOURCE_ID
 
     private val CLICK_DELAY: Int = 150
 
@@ -52,240 +61,362 @@ open public class CommandFormInputProcessor : BasicMenuInputProcessor {
 
     private val doubleClickTimeHelper: TimeDelayHelper = TimeDelayHelper(this.DOUBLE_CLICK_DELAY)
 
-    val isSingleKeyProcessing: Boolean =
-        InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()!!
+    val isSingleKeyProcessing: Boolean = InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()!!
 
     private var form: ScrollSelectionForm
 
     private var hasPressed: Boolean = false
+public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, form: ScrollSelectionForm)                        
 
-    public constructor(
-        gameKeyEventList: BasicArrayList,
-        playerInputId: Int,
-        gameCanvas: MyCanvas,
-        form: ScrollSelectionForm,
-    ) : super(gameKeyEventList, playerInputId, gameCanvas) {
-        // var gameKeyEventList = gameKeyEventList
-        // var playerInputId = playerInputId
-        // var gameCanvas = gameCanvas
-        // var form = form
+                            : super(gameKeyEventList, playerInputId, gameCanvas){
+    //var gameKeyEventList = gameKeyEventList
+    //var playerInputId = playerInputId
+    //var gameCanvas = gameCanvas
+    //var form = form
 
-        // For kotlin this is before the body of the constructor.
 
-        this.form = form
-    }
+                            //For kotlin this is before the body of the constructor.
+                    
+this.form= form
+}
 
-    @Throws(Exception::class)
-    open fun processInput(
-        key: Int
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Int {
-        // var key = key
 
-        if (key == Canvas.LEFT || key == Canvas.RIGHT || key == Canvas.UP || key == Canvas.DOWN) {
+                @Throws(Exception::class)
+            
+    open fun processInput(key: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var key = key
 
-            PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
-            this.form.processInputKey(key)
+    
+                        if(key == Canvas.LEFT || key == Canvas.RIGHT || key == Canvas.UP || key == Canvas.DOWN)
+                        
+                                    {
+                                    PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
+this.form.processInputKey(key)
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return 1
-        } else if (key == Canvas.FIRE) {
 
-            PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return this.processCommand()
-        }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 1
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return 0
-    }
+                                    }
+                                
+                             else 
+    
+                        if(key == Canvas.FIRE)
+                        
+                                    {
+                                    PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.processCommand()
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
 
     private val PROCESS_COMMAND: String = "processCommand"
 
     open fun processCommand()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        var commandCurrentSelectionForm: CommandCurrentSelectionForm =
-            this.form as CommandCurrentSelectionForm
+    var commandCurrentSelectionForm: CommandCurrentSelectionForm = this.form as CommandCurrentSelectionForm
 
-        var command: Command = commandCurrentSelectionForm!!.getSelectedCommand()!!
 
-        this.logUtil!!.putF(command.toString(), this, this.PROCESS_COMMAND)
+    var command: Command = commandCurrentSelectionForm!!.getSelectedCommand()!!
 
-        var features: Features = Features.getInstance()!!
+this.logUtil!!.putF(command.toString(), this, this.PROCESS_COMMAND)
 
-        var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
+    var features: Features = Features.getInstance()!!
 
-        if (
-            SWTUtil.isSWT &&
-                features.isFeature(openGLFeatureFactory!!.OPENGL) &&
-                command != GameCommandsFactory.getInstance()!!.EXIT_COMMAND
-        ) {
-            CommandRunnable(this, command).run()
-        } else {
-            PrimaryThreadPool.getInstance()!!.runTask(CommandRunnable(this, command))
-        }
 
-        if (command == GameCommandsFactory.getInstance()!!.QUIT_COMMAND) {
+    var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return -1
-        } else {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return 1
-        }
-    }
+    
+                        if(SWTUtil.isSWT && features.isFeature(openGLFeatureFactory!!.OPENGL) && command != GameCommandsFactory.getInstance()!!.EXIT_COMMAND)
+                        
+                                    {
+                                    CommandRunnable(this, command).
+                            run()
 
-    @Throws(Exception::class)
+                                    }
+                                
+                        else {
+                            PrimaryThreadPool.getInstance()!!.runTask(CommandRunnable(this, command))
+
+                        }
+                            
+
+    
+                        if(command == GameCommandsFactory.getInstance()!!.QUIT_COMMAND)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return  -1
+
+                                    }
+                                
+                        else {
+                            
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 1
+
+                        }
+                            
+}
+
+
+                @Throws(Exception::class)
+            
     override fun processInputList()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
         try {
+            
+    var motionInputsIndex: Int = this.processMotionInputs()!!
 
-            var motionInputsIndex: Int = this.processMotionInputs()!!
 
-            var list: BasicArrayList = this.getGameKeyEventList()!!
+    var list: BasicArrayList = this.getGameKeyEventList()!!
 
-            var size: Int = list.size()!!
 
-            var key: Int = 0
+    var size: Int = list.size()!!
 
-            var gameKeyEvent: GameKeyEvent
 
-            for (index in 0 until size) {
+    var key: Int = 0
 
-                gameKeyEvent = list.objectArray[index]!! as GameKeyEvent
-                key = gameKeyEvent!!.getKey()
 
-                if (gameKeyEvent!!.getSourceId() != this.MOTION_GESTURE_SOURCE_ID) {
+    var gameKeyEvent: GameKeyEvent
 
-                    if (this.processInput(key) == 1) {
 
-                        break
-                    }
-                }
-            }
 
-            this.clear()
 
-            if (size > 0 || motionInputsIndex >= 0) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return 1
-            } else {
+                        for (index in 0 until size)
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return -1
-            }
-        } catch (e: Exception) {
-            this.logUtil!!.put(
-                this.commonStrings!!.EXCEPTION,
-                this,
-                this.gameInputStrings!!.PROCESS_INPUT,
-                e,
-            )
+        {
+gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
+key= gameKeyEvent!!.getKey()
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return -1
-        }
-    }
+    
+                        if(gameKeyEvent!!.getSourceId() != this.MOTION_GESTURE_SOURCE_ID)
+                        
+                                    {
+                                    
+    
+                        if(this.processInput(key) == 1)
+                        
+                                    {
+                                    break;
 
-    @Throws(Exception::class)
-    open fun processMotionInputs()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+                    
 
-        var lastIndex: Int = this.motionGestureEventList!!.size() - 1
+                                    }
+                                
 
-        if (lastIndex >= 0) {
+                                    }
+                                
+}
 
-            var motionGestureEvent: MotionGestureEvent =
-                this.motionGestureEventList!!.objectArray[lastIndex]!! as MotionGestureEvent
+this.clear()
 
-            this.processMotionInput(motionGestureEvent)
-        }
+    
+                        if(size > 0 || motionInputsIndex >= 0)
+                        
+                                    {
+                                    
 
-        this.motionGestureEventList!!.clear()
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return lastIndex
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 1
 
-    @Throws(Exception::class)
-    open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var motionGestureEvent = motionGestureEvent
+                                    }
+                                
+                        else {
+                            
 
-        var touchMotionGestureFactory: TouchMotionGestureFactory =
-            TouchMotionGestureFactory.getInstance()!!
 
-        var motionGestureInput: MotionGestureInput = motionGestureEvent!!.getMotionGesture()!!
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return  -1
 
-        if (motionGestureInput == touchMotionGestureFactory!!.RELEASED) {
-
-            var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
-
-            if (this.form.isInForm(point)) {
-
-                var index: Int = this.form.getSelectedIndexForPoint(point)!!
-
-                if (index != -1) {
-
-                    PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
-
-                    if (index == this.form.getSelectedIndex()) {
-
-                        if (this.clickTimeHelper!!.isTimeTNT()) {
-
-                            this.processCommand()
                         }
-                    } else {
-                        this.form.setSelectedIndex(index)
-                    }
-                } else {}
-            }
+                            
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.PROCESS_INPUT, e)
 
-            if (this.hasPressed) {
 
-                if (!this.doubleClickTimeHelper!!.isTimeTNT()) {
 
-                    this.logUtil!!.putF(
-                        "Double Press",
-                        this,
-                        this.gameInputStrings!!.PROCESS_MOTION_INPUT,
-                    )
-                    this.processCommand()
-                }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return  -1
+}
 
-                this.doubleClickTimeHelper!!.delay = this.DOUBLE_CLICK_DELAY
-                this.doubleClickTimeHelper!!.setStartTimeTNT()
-            }
+}
 
-            this.hasPressed = false
-        } else if (motionGestureInput == touchMotionGestureFactory!!.PRESSED) {
 
-            this.doubleClickTimeHelper!!.delay = 0
-            this.hasPressed = true
-        }
-    }
+                @Throws(Exception::class)
+            
+    open fun processMotionInputs()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+    var lastIndex: Int = this.motionGestureEventList!!.size() -1
+
+
+    
+                        if(lastIndex >= 0)
+                        
+                                    {
+                                    
+    var motionGestureEvent: MotionGestureEvent = this.motionGestureEventList!!.objectArray[lastIndex]!! as MotionGestureEvent
+
+this.processMotionInput(motionGestureEvent)
+
+                                    }
+                                
+this.motionGestureEventList!!.clear()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return lastIndex
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var motionGestureEvent = motionGestureEvent
+
+    var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
+
+
+    var motionGestureInput: MotionGestureInput = motionGestureEvent!!.getMotionGesture()!!
+
+
+    
+                        if(motionGestureInput == touchMotionGestureFactory!!.RELEASED)
+                        
+                                    {
+                                    
+    var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
+
+
+    
+                        if(this.form.isInForm(point))
+                        
+                                    {
+                                    
+    var index: Int = this.form.getSelectedIndexForPoint(point)!!
+
+
+    
+                        if(index !=  -1)
+                        
+                                    {
+                                    PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
+
+    
+                        if(index == this.form.getSelectedIndex())
+                        
+                                    {
+                                    
+    
+                        if(this.clickTimeHelper!!.isTimeTNT())
+                        
+                                    {
+                                    this.processCommand()
+
+                                    }
+                                
+
+                                    }
+                                
+                        else {
+                            this.form.setSelectedIndex(index)
+
+                        }
+                            
+
+                                    }
+                                
+                        else {
+                            
+                        }
+                            
+
+                                    }
+                                
+
+    
+                        if(this.hasPressed)
+                        
+                                    {
+                                    
+    
+                        if(!this.doubleClickTimeHelper!!.isTimeTNT())
+                        
+                                    {
+                                    this.logUtil!!.putF("Double Press", this, this.gameInputStrings!!.PROCESS_MOTION_INPUT)
+this.processCommand()
+
+                                    }
+                                
+this.doubleClickTimeHelper!!.delay= this.DOUBLE_CLICK_DELAY
+this.doubleClickTimeHelper!!.setStartTimeTNT()
+
+                                    }
+                                
+this.hasPressed= false
+
+                                    }
+                                
+                             else 
+    
+                        if(motionGestureInput == touchMotionGestureFactory!!.PRESSED)
+                        
+                                    {
+                                    this.doubleClickTimeHelper!!.delay= 0
+this.hasPressed= true
+
+                                    }
+                                
+}
+
 
     private val NAME_LABEL: String = " ScrollSelectionForm: "
 
     override fun toString()
-    // nullable =  from not(false or (true and true)) =
-    : String {
+        //nullable =  from not(false or (true and true)) = 
+: String{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return StringMaker()
-            .append(super.toString())!!
-            .append(this.NAME_LABEL)!!
-            .append(this.form.toString())!!
-            .toString()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return StringMaker().
+                            append(super.toString())!!.append(this.NAME_LABEL)!!.append(this.form.toString())!!.toString()
 }
+
+
+}
+                
+            
+

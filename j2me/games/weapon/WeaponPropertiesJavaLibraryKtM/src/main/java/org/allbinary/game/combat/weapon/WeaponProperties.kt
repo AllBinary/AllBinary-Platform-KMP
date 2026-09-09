@@ -1,21 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.combat.weapon
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.combat.weapon
 
-import kotlin.Array
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.math.BasicDecimal
 import org.allbinary.logic.string.StringMaker
@@ -23,174 +32,193 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 
 open public class WeaponProperties : SimpleWeaponProperties {
+        
+companion object {
+            
+    val NULL_WEAPON_PROPERTIES: WeaponProperties = WeaponProperties(0L, 0L, 0L, 0, 0.toShort())
 
-    companion object {
+    private var messageSent: Boolean = false
 
-        val NULL_WEAPON_PROPERTIES: WeaponProperties = WeaponProperties(0L, 0L, 0L, 0, 0.toShort())
+    private val DAMAGE: String = "Damage: "
 
-        private var messageSent: Boolean = false
+    private val RANGE: String = "Range: "
 
-        private val DAMAGE: String = "Damage: "
+    private val RELOAD: String = "Reload: "
 
-        private val RANGE: String = "Range: "
+        }
+            
+    private var reloadTime: Long= 0
 
-        private val RELOAD: String = "Reload: "
-    }
-
-    private var reloadTime: Long = 0
-
-    private var targetingTime: Long = 0
+    private var targetingTime: Long= 0
 
     private var speed: BasicDecimal = BasicDecimal.ZERO_BIGDECIMAL
 
     private val MAX: Long = 10240L
 
     private val ZERO: Short = 0
+public constructor (reloadTime: Long, targetingTime: Long, speed: Long, damage: Int, dissipation: Short){
+var reloadTime = reloadTime
+var targetingTime = targetingTime
+var speed = speed
+var damage = damage
+var dissipation = dissipation
 
-    public constructor(
-        reloadTime: Long,
-        targetingTime: Long,
-        speed: Long,
-        damage: Int,
-        dissipation: Short,
-    ) {
-        var reloadTime = reloadTime
-        var targetingTime = targetingTime
-        var speed = speed
-        var damage = damage
-        var dissipation = dissipation
+    
+                        if(speed < this.MAX && speed != 0L && !WeaponProperties.messageSent)
+                        
+                                    {
+                                    
+    var MESSAGE: String = "Danger Danger Danger: Speed probably to slow if using 1 degree calculations as velocity for a single axis could be below 1024: "
 
-        if (speed < this.MAX && speed != 0L && !WeaponProperties.messageSent) {
 
-            var MESSAGE: String =
-                "Danger Danger Danger: Speed probably to slow if using 1 degree calculations as velocity for a single axis could be below 1024: "
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+PreLogUtil.put(StringMaker().
+                            append(MESSAGE)!!.appendlong(speed)!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+WeaponProperties.messageSent= true
 
-            PreLogUtil.put(
-                StringMaker().append(MESSAGE)!!.appendlong(speed)!!.toString(),
-                this,
-                commonStrings!!.CONSTRUCTOR,
-            )
-            WeaponProperties.messageSent = true
-        }
+                                    }
+                                
+this.setReloadTime(reloadTime)
+this.setTargetingTime(targetingTime)
+this.setDamage(damage)
+this.setDissipation(dissipation)
+this.setSpeed(BasicDecimal(speed))
 
-        this.setReloadTime(reloadTime)
-        this.setTargetingTime(targetingTime)
-        this.setDamage(damage)
-        this.setDissipation(dissipation)
-        this.setSpeed(BasicDecimal(speed))
+    
+                        if(dissipation != this.ZERO)
+                        
+                                    {
+                                    
+    var unscaledDamage: Long = this.speed.getUnscaled() *damage
 
-        if (dissipation != this.ZERO) {
 
-            var unscaledDamage: Long = this.speed.getUnscaled() * damage
+    var scaledDissipation: Int = dissipation *this.speed.getScaledFactorValue()
 
-            var scaledDissipation: Int = dissipation * this.speed.getScaledFactorValue()
 
-            var value: Long = (unscaledDamage / scaledDissipation)
+    var value: Long = (unscaledDamage /scaledDissipation)
 
-            this.setRange((value * 9).toInt() / 10)
-        }
-    }
+this.setRange((value *9).toInt() /10)
+
+                                    }
+                                
+}
+
 
     open fun setReloadTime(reloadTime: Long)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var reloadTime = reloadTime
-        this.reloadTime = reloadTime
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+var reloadTime = reloadTime
+this.reloadTime= reloadTime
+}
+
 
     open fun getReloadTime()
-    // nullable = true from not(false or (false and true)) = true
-    : Long {
+        //nullable = true from not(false or (false and true)) = true
+: Long{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.reloadTime
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.reloadTime
+}
+
 
     open fun setTargetingTime(targetingTime: Long)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var targetingTime = targetingTime
-        this.targetingTime = targetingTime
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+var targetingTime = targetingTime
+this.targetingTime= targetingTime
+}
+
 
     open fun getTargetingTime()
-    // nullable = true from not(false or (false and true)) = true
-    : Long {
+        //nullable = true from not(false or (false and true)) = true
+: Long{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.targetingTime
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.targetingTime
+}
+
 
     open fun getSpeed()
-    // nullable = true from not(false or (false and true)) = true
-    : BasicDecimal {
+        //nullable = true from not(false or (false and true)) = true
+: BasicDecimal{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.speed
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.speed
+}
+
 
     open fun setSpeed(speed: BasicDecimal)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var speed = speed
-        this.speed = speed
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+var speed = speed
+this.speed= speed
+}
 
-    open fun getDamageI(
-        range: Int
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Int {
-        var range = range
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.getDamage() - ((this.getDissipation() * range) / this.speed.getScaled())
-    }
+    open fun getDamageI(range: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+var range = range
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.getDamage() -((this.getDissipation() *range) /this.speed.getScaled())
+}
+
 
     open fun toStringArray()
-    // nullable = true from not(false or (false and true)) = true
-    : Array<String?> {
+        //nullable = true from not(false or (false and true)) = true
+: Array<String?>{
 
-        var index: Int = 0
+    var index: Int = 0
 
-        var stringArray: Array<String?> = arrayOfNulls(3)
 
-        var stringBuffer: StringMaker = StringMaker()
+    var stringArray: Array<String?> = arrayOfNulls(3)
 
-        stringArray[index++] =
-            stringBuffer!!
-                .append(WeaponProperties.DAMAGE)!!
-                .appendint(this.getDamage())!!
-                .toString()
-        stringBuffer!!.delete(0, stringBuffer!!.length())
-        stringArray[index++] =
-            stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange())!!.toString()
-        stringBuffer!!.delete(0, stringBuffer!!.length())
-        stringArray[index++] =
-            stringBuffer!!
-                .append(WeaponProperties.RELOAD)!!
-                .appendlong(this.getReloadTime())!!
-                .toString()
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return stringArray
-    }
+    var stringBuffer: StringMaker = StringMaker()
+
+stringArray[index++]= stringBuffer!!.append(WeaponProperties.DAMAGE)!!.appendint(this.getDamage())!!.toString()
+stringBuffer!!.delete(0, stringBuffer!!.length())
+stringArray[index++]= stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange())!!.toString()
+stringBuffer!!.delete(0, stringBuffer!!.length())
+stringArray[index++]= stringBuffer!!.append(WeaponProperties.RELOAD)!!.appendlong(this.getReloadTime())!!.toString()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return stringArray
+}
+
 
     override fun toString()
-    // nullable =  from not(false or (true and true)) =
-    : String {
+        //nullable =  from not(false or (true and true)) = 
+: String{
 
-        var stringBuffer: StringMaker = StringMaker()
+    var stringBuffer: StringMaker = StringMaker()
 
-        stringBuffer!!.append(WeaponProperties.DAMAGE)!!.appendint(this.getDamage())
-        stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-        stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange())
-        stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-        stringBuffer!!.append(WeaponProperties.RELOAD)!!.appendlong(this.getReloadTime())
+stringBuffer!!.append(WeaponProperties.DAMAGE)!!.appendint(this.getDamage())
+stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+stringBuffer!!.append(WeaponProperties.RANGE)!!.appendint(this.getRange())
+stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+stringBuffer!!.append(WeaponProperties.RELOAD)!!.appendlong(this.getReloadTime())
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return stringBuffer!!.toString()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return stringBuffer!!.toString()
 }
+
+
+}
+                
+            
+

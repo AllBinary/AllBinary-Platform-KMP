@@ -26,9 +26,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Enumeration
-import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import org.allbinary.game.GameInfo
 import org.allbinary.game.score.HighScore
 import org.allbinary.game.score.HighScores
@@ -38,13 +36,14 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.SoftwareInformation
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.EnumerationUtil
 
 open public class RemoteHighScores : HighScores {
         
 companion object {
             
-    private val hashTable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private val hashTable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
     open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean)
@@ -166,7 +165,7 @@ RemoteHighScoresSubmissionProcessorFactory.getInstance()!!.process(this, this.ab
 }
 
 
-    open fun update(hashtable: Hashtable<Any, Any>)
+    open fun update(hashtable: ABHashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var hashtable = hashtable

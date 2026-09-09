@@ -20,7 +20,6 @@ import java.io.ByteArrayOutputStream
 import java.io.DataInputStream
 import java.io.DataOutputStream
 import java.lang.Object
-import java.util.Hashtable
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
 import kotlin.Array
@@ -31,6 +30,7 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.string.CommonSeps
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.HashtableUtil
 
 open public class KeyValuePersistance : BasicPersitance {
@@ -72,7 +72,7 @@ open public class KeyValuePersistance : BasicPersitance {
                     true,
                 )!!
 
-            var hashtable: Hashtable<String, String>
+            var hashtable: ABHashtable<String, String>
 
             var name: String
 
@@ -108,7 +108,7 @@ open public class KeyValuePersistance : BasicPersitance {
 
                     byteArrayInputStream = ByteArrayInputStream(recordAsBytes)
                     inputStream = DataInputStream(byteArrayInputStream)
-                    hashtable = Hashtable<String, String>()
+                    hashtable = ABHashtable<String, String>()
 
                     for (index in 0 until size) {
 
@@ -142,7 +142,7 @@ open public class KeyValuePersistance : BasicPersitance {
     @Throws(Exception::class)
     open fun save(
         abeClientInformation: AbeClientInformationInterface,
-        hashtable: Hashtable<Any, Any>,
+        hashtable: ABHashtable<Any, Any>,
     )
         // nullable = true from not(false or (false and false)) = true
     {
@@ -212,11 +212,11 @@ open public class KeyValuePersistance : BasicPersitance {
         index: Int
     )
         // nullable = true from not(false or (false and false)) = true
-        : Hashtable<Any, Any> {
+        : ABHashtable<Any, Any> {
         var index = index
 
-        var hashtable: Hashtable<Any, Any> =
-            this.valueList!!.objectArray[index]!! as Hashtable<Any, Any>
+        var hashtable: ABHashtable<Any, Any> =
+            this.valueList!!.objectArray[index]!! as ABHashtable<Any, Any>
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return hashtable

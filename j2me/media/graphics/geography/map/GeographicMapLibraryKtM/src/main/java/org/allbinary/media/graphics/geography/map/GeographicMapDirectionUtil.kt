@@ -1,302 +1,623 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.media.graphics.geography.map
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.media.graphics.geography.map
 
-import java.lang.Object
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.graphics.CellPosition
-import org.allbinary.logic.string.StringMaker
 
-open public class GeographicMapDirectionUtil : Object {
+open public class GeographicMapDirectionUtil
+            : Object
+         {
+        
+companion object {
+            
+    private val instance: GeographicMapDirectionUtil = GeographicMapDirectionUtil()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: GeographicMapDirectionUtil{
 
-        private val instance: GeographicMapDirectionUtil = GeographicMapDirectionUtil()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : GeographicMapDirectionUtil {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return GeographicMapDirectionUtil.instance
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return GeographicMapDirectionUtil.instance
+}
+
+
         }
-    }
+            private constructor ()
+            : super()
+        {
+}
 
-    private constructor() : super() {}
 
     private val MESSAGE: String = "Cell Position should have been cached!!!"
 
-    @Throws(Exception::class)
-    open fun getDirectionFromCellPositionToAdjacentCellPosition(
-        fromGeographicMapCellPosition: GeographicMapCellPosition,
-        toGeographicMapCellPosition: GeographicMapCellPosition,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Direction {
-        var fromGeographicMapCellPosition = fromGeographicMapCellPosition
-        var toGeographicMapCellPosition = toGeographicMapCellPosition
+                @Throws(Exception::class)
+            
+    open fun getDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+        //nullable = true from not(false or (false and false)) = true
+: Direction{
+var fromGeographicMapCellPosition = fromGeographicMapCellPosition
+var toGeographicMapCellPosition = toGeographicMapCellPosition
 
-        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
+    var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
 
-        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
 
-        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+    var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
 
-        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
 
-        var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
+    var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
 
-        if (fromColumn - 1 == goColumn) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.LEFT
-        } else if (fromColumn + 1 == goColumn) {
+    var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.RIGHT
-        } else if (fromRow - 1 == goRow) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.UP
-        } else if (fromRow + 1 == goRow) {
+    var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.DOWN
-        } else if (fromGeographicMapCellPosition == toGeographicMapCellPosition) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.NO_DIRECTION
-        } else if (fromRow == goRow && fromColumn == goColumn) {
+    
+                        if(fromColumn -1 == goColumn)
+                        
+                                    {
+                                    
 
-            throw Exception(this.MESSAGE)
-        }
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return directionFactory!!.NOT_BORDERED_WITH
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.LEFT
 
-    @Throws(Exception::class)
-    open fun getEightDirectionFromCellPositionToAdjacentCellPosition(
-        fromGeographicMapCellPosition: GeographicMapCellPosition,
-        toGeographicMapCellPosition: GeographicMapCellPosition,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Direction {
-        var fromGeographicMapCellPosition = fromGeographicMapCellPosition
-        var toGeographicMapCellPosition = toGeographicMapCellPosition
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn +1 == goColumn)
+                        
+                                    {
+                                    
 
-        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
 
-        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.RIGHT
 
-        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+                                    }
+                                
+                             else 
+    
+                        if(fromRow -1 == goRow)
+                        
+                                    {
+                                    
 
-        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
 
-        var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.UP
 
-        if (fromRow == goRow) {
+                                    }
+                                
+                             else 
+    
+                        if(fromRow +1 == goRow)
+                        
+                                    {
+                                    
 
-            if (fromColumn - 1 == goColumn) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.LEFT
-            } else if (fromColumn + 1 == goColumn) {
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.DOWN
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.RIGHT
-            }
-        } else if (fromRow - 1 == goRow) {
+                                    }
+                                
+                             else 
+    
+                        if(fromGeographicMapCellPosition == toGeographicMapCellPosition)
+                        
+                                    {
+                                    
 
-            if (fromColumn == goColumn) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.UP
-            }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.NO_DIRECTION
 
-            if (fromColumn - 1 == goColumn) {
+                                    }
+                                
+                             else 
+    
+                        if(fromRow == goRow && fromColumn == goColumn)
+                        
+                                    {
+                                    
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.UP_LEFT
-            } else if (fromColumn + 1 == goColumn) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.UP_RIGHT
-            }
-        } else if (fromRow + 1 == goRow) {
+                            throw Exception(this.MESSAGE)
 
-            if (fromColumn == goColumn) {
+                                    }
+                                
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.DOWN
-            }
 
-            if (fromColumn - 1 == goColumn) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.DOWN_LEFT
-            } else if (fromColumn + 1 == goColumn) {
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.NOT_BORDERED_WITH
+}
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.DOWN_RIGHT
-            }
-        } else if (fromGeographicMapCellPosition == toGeographicMapCellPosition) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.NO_DIRECTION
-        } else if (fromRow == goRow && fromColumn == goColumn) {
+                @Throws(Exception::class)
+            
+    open fun getEightDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+        //nullable = true from not(false or (false and false)) = true
+: Direction{
+var fromGeographicMapCellPosition = fromGeographicMapCellPosition
+var toGeographicMapCellPosition = toGeographicMapCellPosition
 
-            throw Exception(this.MESSAGE)
-        }
+    var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return directionFactory!!.NOT_BORDERED_WITH
-    }
 
-    @Throws(Exception::class)
-    open fun getDirectionFromCellPositionToCellPosition(
-        fromGeographicMapCellPosition: GeographicMapCellPosition,
-        toGeographicMapCellPosition: GeographicMapCellPosition,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Direction {
-        var fromGeographicMapCellPosition = fromGeographicMapCellPosition
-        var toGeographicMapCellPosition = toGeographicMapCellPosition
+    var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
 
-        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
 
-        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
+    var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
 
-        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
 
-        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
+    var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
 
-        var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
-        if (fromColumn > goColumn) {
+    var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.LEFT
-        } else if (fromColumn < goColumn) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.RIGHT
-        } else if (fromRow > goRow) {
+    
+                        if(fromRow == goRow)
+                        
+                                    {
+                                    
+    
+                        if(fromColumn -1 == goColumn)
+                        
+                                    {
+                                    
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.UP
-        } else if (fromRow < goRow) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.DOWN
-        }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.LEFT
 
-        var stringMaker: StringMaker = StringMaker()
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn +1 == goColumn)
+                        
+                                    {
+                                    
 
-        var string: String =
-            stringMaker!!
-                .append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition))!!
-                .append(" == ")!!
-                .append(CellPosition.toStringCellPosition(toGeographicMapCellPosition))!!
-                .toString()!!
 
-        stringMaker!!.delete(0, stringMaker!!.length())
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.RIGHT
 
-        throw Exception(stringMaker!!.append("Error: ")!!.append(string)!!.toString())
-    }
+                                    }
+                                
+
+                                    }
+                                
+                             else 
+    
+                        if(fromRow -1 == goRow)
+                        
+                                    {
+                                    
+    
+                        if(fromColumn == goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.UP
+
+                                    }
+                                
+
+    
+                        if(fromColumn -1 == goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.UP_LEFT
+
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn +1 == goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.UP_RIGHT
+
+                                    }
+                                
+
+                                    }
+                                
+                             else 
+    
+                        if(fromRow +1 == goRow)
+                        
+                                    {
+                                    
+    
+                        if(fromColumn == goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.DOWN
+
+                                    }
+                                
+
+    
+                        if(fromColumn -1 == goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.DOWN_LEFT
+
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn +1 == goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.DOWN_RIGHT
+
+                                    }
+                                
+
+                                    }
+                                
+                             else 
+    
+                        if(fromGeographicMapCellPosition == toGeographicMapCellPosition)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.NO_DIRECTION
+
+                                    }
+                                
+                             else 
+    
+                        if(fromRow == goRow && fromColumn == goColumn)
+                        
+                                    {
+                                    
+
+
+                            throw Exception(this.MESSAGE)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.NOT_BORDERED_WITH
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun getDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+        //nullable = true from not(false or (false and false)) = true
+: Direction{
+var fromGeographicMapCellPosition = fromGeographicMapCellPosition
+var toGeographicMapCellPosition = toGeographicMapCellPosition
+
+    var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
+
+
+    var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
+
+
+    var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+
+
+    var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
+
+
+    var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
+
+
+    
+                        if(fromColumn > goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.LEFT
+
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn < goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.RIGHT
+
+                                    }
+                                
+                             else 
+    
+                        if(fromRow > goRow)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.UP
+
+                                    }
+                                
+                             else 
+    
+                        if(fromRow < goRow)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.DOWN
+
+                                    }
+                                
+
+    var stringMaker: StringMaker = StringMaker()
+
+
+    var string: String = stringMaker!!.append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition))!!.append(" == ")!!.append(CellPosition.toStringCellPosition(toGeographicMapCellPosition))!!.toString()!!
+
+stringMaker!!.delete(0, stringMaker!!.length())
+
+
+
+                            throw Exception(stringMaker!!.append("Error: ")!!.append(string)!!.toString())
+}
+
 
     private val ERROR: String = "Error: "
 
     private val EQUAL: String = " == "
 
-    @Throws(Exception::class)
-    open fun getEightDirectionFromCellPositionToCellPosition(
-        fromGeographicMapCellPosition: GeographicMapCellPosition,
-        toGeographicMapCellPosition: GeographicMapCellPosition,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : Direction {
-        var fromGeographicMapCellPosition = fromGeographicMapCellPosition
-        var toGeographicMapCellPosition = toGeographicMapCellPosition
+                @Throws(Exception::class)
+            
+    open fun getEightDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+        //nullable = true from not(false or (false and false)) = true
+: Direction{
+var fromGeographicMapCellPosition = fromGeographicMapCellPosition
+var toGeographicMapCellPosition = toGeographicMapCellPosition
 
-        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
+    var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
 
-        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
 
-        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+    var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
 
-        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
 
-        var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
+    var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
 
-        if (fromGeographicMapCellPosition == toGeographicMapCellPosition) {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return directionFactory!!.NO_DIRECTION
-        } else if (fromRow == goRow) {
+    var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
 
-            if (fromColumn > goColumn) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.LEFT
-            } else if (fromColumn < goColumn) {
+    var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.RIGHT
-            }
-        } else if (fromRow > goRow) {
 
-            if (fromColumn > goColumn) {
+    
+                        if(fromGeographicMapCellPosition == toGeographicMapCellPosition)
+                        
+                                    {
+                                    
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.UP_LEFT
-            } else if (fromColumn < goColumn) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.UP_RIGHT
-            } else if (fromColumn == goColumn) {
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.NO_DIRECTION
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.UP
-            }
-        } else if (fromRow < goRow) {
+                                    }
+                                
+                             else 
+    
+                        if(fromRow == goRow)
+                        
+                                    {
+                                    
+    
+                        if(fromColumn > goColumn)
+                        
+                                    {
+                                    
 
-            if (fromColumn > goColumn) {
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.DOWN_LEFT
-            } else if (fromColumn < goColumn) {
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.LEFT
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.DOWN_RIGHT
-            } else if (fromColumn == goColumn) {
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn < goColumn)
+                        
+                                    {
+                                    
 
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return directionFactory!!.DOWN
-            }
-        }
 
-        var stringBuffer: StringMaker = StringMaker()
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.RIGHT
 
-        stringBuffer!!.append(this.ERROR)
-        stringBuffer!!.append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition))
-        stringBuffer!!.append(this.EQUAL)
-        stringBuffer!!.append(CellPosition.toStringCellPosition(toGeographicMapCellPosition))
+                                    }
+                                
 
-        throw Exception(stringBuffer!!.toString())
-    }
+                                    }
+                                
+                             else 
+    
+                        if(fromRow > goRow)
+                        
+                                    {
+                                    
+    
+                        if(fromColumn > goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.UP_LEFT
+
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn < goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.UP_RIGHT
+
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn == goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.UP
+
+                                    }
+                                
+
+                                    }
+                                
+                             else 
+    
+                        if(fromRow < goRow)
+                        
+                                    {
+                                    
+    
+                        if(fromColumn > goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.DOWN_LEFT
+
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn < goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.DOWN_RIGHT
+
+                                    }
+                                
+                             else 
+    
+                        if(fromColumn == goColumn)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return directionFactory!!.DOWN
+
+                                    }
+                                
+
+                                    }
+                                
+
+    var stringBuffer: StringMaker = StringMaker()
+
+stringBuffer!!.append(this.ERROR)
+stringBuffer!!.append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition))
+stringBuffer!!.append(this.EQUAL)
+stringBuffer!!.append(CellPosition.toStringCellPosition(toGeographicMapCellPosition))
+
+
+
+                            throw Exception(stringBuffer!!.toString())
 }
+
+
+}
+                
+            
+

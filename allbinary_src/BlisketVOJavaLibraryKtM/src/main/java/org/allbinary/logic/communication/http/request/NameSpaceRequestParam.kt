@@ -28,8 +28,6 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil

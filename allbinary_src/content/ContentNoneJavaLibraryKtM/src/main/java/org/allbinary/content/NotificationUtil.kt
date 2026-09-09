@@ -1,46 +1,68 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.content
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.content
 
-import java.lang.Object
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import javax.microedition.lcdui.Command
 
-open public class NotificationUtil : Object {
+open public class NotificationUtil
+            : Object
+         {
+        
+companion object {
+            
+    private val SINGLETON: NotificationUtil = NotificationUtil()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: NotificationUtil{
 
-        private val SINGLETON: NotificationUtil = NotificationUtil()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : NotificationUtil {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return NotificationUtil.SINGLETON
-        }
-    }
-
-    // Auto Generated
-    public constructor() : super() {}
-
-    open fun notify(command: Command, resource: String, message: String)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var command = command
-        var resource = resource
-        var message = message
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NotificationUtil.SINGLETON
 }
+
+
+        }
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+    open fun notify(command: Command, resource: String, message: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+var command = command
+var resource = resource
+var message = message
+}
+
+
+}
+                
+            
+

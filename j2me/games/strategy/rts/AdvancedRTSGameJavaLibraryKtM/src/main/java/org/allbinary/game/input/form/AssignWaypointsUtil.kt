@@ -1,21 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2006 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.input.form
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2006 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.input.form
 
-import java.lang.Object
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.NullPathFindingLayer
 import org.allbinary.game.layer.PathFindingLayerInterface
@@ -23,68 +32,92 @@ import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSLayerEvent
 import org.allbinary.game.layer.unit.UnitLayer
 import org.allbinary.game.layer.unit.UnitWaypointBehavior
-import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.LogUtil
 
-open public class AssignWaypointsUtil : Object {
+open public class AssignWaypointsUtil
+            : Object
+         {
+        
+companion object {
+            
+    private val instance: AssignWaypointsUtil = AssignWaypointsUtil()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: AssignWaypointsUtil{
 
-        private val instance: AssignWaypointsUtil = AssignWaypointsUtil()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : AssignWaypointsUtil {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return AssignWaypointsUtil.instance
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return AssignWaypointsUtil.instance
+}
+
+
         }
-    }
-
-    // Auto Generated
-    public constructor() : super() {}
-
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val WAYPOINT_EVENT: RTSLayerEvent =
-        RTSLayerEvent(NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
+    private val WAYPOINT_EVENT: RTSLayerEvent = RTSLayerEvent(NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
 
     open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLayer)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var unitLayer = unitLayer
-        var ownerAdvancedRTSGameLayer = ownerAdvancedRTSGameLayer
+        //nullable = true from not(false or (false and false)) = true
+{
+var unitLayer = unitLayer
+var ownerAdvancedRTSGameLayer = ownerAdvancedRTSGameLayer
 
         try {
+            
+    var list: BasicArrayList = ownerAdvancedRTSGameLayer!!.getWaypointBehavior()!!.getOwnedWaypointList()!!
 
-            var list: BasicArrayList =
-                ownerAdvancedRTSGameLayer!!.getWaypointBehavior()!!.getOwnedWaypointList()!!
 
-            var unitWaypointBehavior: UnitWaypointBehavior =
-                unitLayer!!.getWaypointBehavior() as UnitWaypointBehavior
+    var unitWaypointBehavior: UnitWaypointBehavior = unitLayer!!.getWaypointBehavior() as UnitWaypointBehavior
 
-            for (index in list.size() - 1 downTo 0) {
 
-                var waypointLayer: RTSLayer = list.get(index) as RTSLayer
 
-                this.WAYPOINT_EVENT.setRtsLayer(waypointLayer)
-                unitWaypointBehavior!!.onWaypointEvent(this.WAYPOINT_EVENT)
-            }
 
-            var waypointLayer: PathFindingLayerInterface =
-                PrimaryWaypointHelper.getInstance()!!.getWaypointLayer()!!
 
-            if (waypointLayer != NullPathFindingLayer.NULL_PATH_FINDING_LAYER) {
+                        for (index in list.size() -1 downTo 0)
 
-                this.WAYPOINT_EVENT.setRtsLayer(waypointLayer)
-                unitWaypointBehavior!!.onWaypointEvent(this.WAYPOINT_EVENT)
-            }
-        } catch (e: Exception) {
+        {
 
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+    var waypointLayer: RTSLayer = list.get(index) as RTSLayer
 
-            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "set", e)
-        }
-    }
+this.WAYPOINT_EVENT.setRtsLayer(waypointLayer)
+unitWaypointBehavior!!.onWaypointEvent(this.WAYPOINT_EVENT)
 }
+
+
+    var waypointLayer: PathFindingLayerInterface = PrimaryWaypointHelper.getInstance()!!.getWaypointLayer()!!
+
+
+    
+                        if(waypointLayer != NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
+                        
+                                    {
+                                    this.WAYPOINT_EVENT.setRtsLayer(waypointLayer)
+unitWaypointBehavior!!.onWaypointEvent(this.WAYPOINT_EVENT)
+
+                                    }
+                                
+} catch(e: Exception)
+            {
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "set", e)
+}
+
+}
+
+
+}
+                
+            
+

@@ -19,7 +19,6 @@ import java.io.Closeable
 import java.io.FileReader
 import java.io.LineNumberReader
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.NullCloseable
@@ -29,6 +28,7 @@ import org.allbinary.logic.system.hardware.components.android.UnknownHardware
 import org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -158,7 +158,7 @@ open public class AndroidHardware : Object, HardwareInterface {
         hardwareInterface: HardwareInterface
     )
         // nullable = true from not(false or (false and false)) = true
-        : Hashtable<Any, Any> {
+        : ABHashtable<Any, Any> {
         var hardwareInterface = hardwareInterface
 
         // if statement needs to be on the same line and ternary does not work the same way.

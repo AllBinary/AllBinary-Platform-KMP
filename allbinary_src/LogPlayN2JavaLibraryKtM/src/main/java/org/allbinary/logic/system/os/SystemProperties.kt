@@ -25,8 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-//ActualPlatform
-/*actual*/ open public class SystemProperties
+import jsinterop.annotations.JsType
+
+open public class SystemProperties
             : Object
          {
         

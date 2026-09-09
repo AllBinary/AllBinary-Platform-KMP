@@ -25,10 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import jsinterop.annotations.JsType
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
-import jsinterop.annotations.JsMethod
 
 interface BasicEventHandlerInterface {
         

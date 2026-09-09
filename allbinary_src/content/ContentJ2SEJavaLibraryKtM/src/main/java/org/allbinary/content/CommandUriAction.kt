@@ -25,11 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import javax.microedition.lcdui.Command
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 
 open public class CommandUriAction
             : Object
@@ -61,7 +61,7 @@ companion object {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private var hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     open fun add(command: Command, url: String)
         //nullable = true from not(false or (false and false)) = true

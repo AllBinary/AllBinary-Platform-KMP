@@ -25,13 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Dimension
+import java.awt.Rectangle
+import java.awt.Toolkit
 import java.awt.image.BufferedImage
-import java.util.Hashtable
 import org.allbinary.input.automation.robot.InputRobotFactory
 import org.allbinary.input.automation.robot.InputRobotInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 
 open public class ScreenScavangerRobot
             : Object
@@ -60,7 +62,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, "getScreenAsBufferedImages
     var rectScreenSize: Rectangle = Rectangle(dimScreenSize)
 
 
-    var robotHashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
+    var robotHashtable: ABHashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
 
 
     var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(1)

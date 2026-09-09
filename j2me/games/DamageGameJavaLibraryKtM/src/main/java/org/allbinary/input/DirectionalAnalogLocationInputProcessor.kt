@@ -1,21 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.input
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.input
 
-import kotlin.Array
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.android.input.motion.AnalogLocationInputProcessor
 import org.allbinary.game.input.GameInputProcessor
 import org.allbinary.game.input.GameKeyEventSourceInterface
@@ -28,8 +37,9 @@ import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class DirectionalAnalogLocationInputProcessor :
-    AnalogLocationInputProcessor, GameKeyEventSourceInterface {
+open public class DirectionalAnalogLocationInputProcessor : AnalogLocationInputProcessor
+                , GameKeyEventSourceInterface {
+        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -48,135 +58,128 @@ open public class DirectionalAnalogLocationInputProcessor :
     private var leftTriggerGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 
     private var rightTriggerGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
-
-    public constructor(inputProcessorArray: Array<GameInputProcessor?>) {
-        var inputProcessorArray = inputProcessorArray
-        this.inputProcessorArray = inputProcessorArray
-
-        try {
-            this.leftGameKeyEvent =
-                GameKeyEventFactory.getInstance()!!.getInstanceForInput(
-                    this,
-                    this.gameKeyFactory!!.LEFT,
-                )
-            this.rightGameKeyEvent =
-                GameKeyEventFactory.getInstance()!!.getInstanceForInput(
-                    this,
-                    this.gameKeyFactory!!.RIGHT,
-                )
-            this.upGameKeyEvent =
-                GameKeyEventFactory.getInstance()!!.getInstanceForInput(
-                    this,
-                    this.gameKeyFactory!!.UP,
-                )
-            this.downGameKeyEvent =
-                GameKeyEventFactory.getInstance()!!.getInstanceForInput(
-                    this,
-                    this.gameKeyFactory!!.DOWN,
-                )
-            this.leftTriggerGameKeyEvent =
-                GameKeyEventFactory.getInstance()!!.getInstanceForInput(
-                    this,
-                    this.gameKeyFactory!!.KEY_NUM0,
-                )
-            this.rightTriggerGameKeyEvent =
-                GameKeyEventFactory.getInstance()!!.getInstanceForInput(
-                    this,
-                    this.gameKeyFactory!!.KEY_NUM5,
-                )
-        } catch (e: Exception) {
-
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
-        }
-    }
-
-    override fun process(
-        allbinaryLayerManager: AllBinaryLayerManager,
-        analogLocationInput: AnalogLocationInput,
-    )
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var allbinaryLayerManager = allbinaryLayerManager
-        var analogLocationInput = analogLocationInput
+public constructor (inputProcessorArray: Array<GameInputProcessor?>){
+var inputProcessorArray = inputProcessorArray
+this.inputProcessorArray= inputProcessorArray
 
         try {
+            this.leftGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstanceForInput(this, this.gameKeyFactory!!.LEFT)
+this.rightGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstanceForInput(this, this.gameKeyFactory!!.RIGHT)
+this.upGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstanceForInput(this, this.gameKeyFactory!!.UP)
+this.downGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstanceForInput(this, this.gameKeyFactory!!.DOWN)
+this.leftTriggerGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstanceForInput(this, this.gameKeyFactory!!.KEY_NUM0)
+this.rightTriggerGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstanceForInput(this, this.gameKeyFactory!!.KEY_NUM5)
+} catch(e: Exception)
+            {
 
-            var customGPoint: CustomGPoint
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-            customGPoint = analogLocationInput!!.getCustomGPoint()
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+}
 
-            var x: Int = customGPoint!!.getX()!!
+}
 
-            var y: Int = customGPoint!!.getY()!!
 
-            var leftTrigger: Int = analogLocationInput!!.getLeftTrigger()!!
+    override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInput: AnalogLocationInput)
+        //nullable = true from not(false or (false and false)) = true
+{
+var allbinaryLayerManager = allbinaryLayerManager
+var analogLocationInput = analogLocationInput
 
-            var rightTrigger: Int = analogLocationInput!!.getRightTrigger()!!
+        try {
+            
+    var customGPoint: CustomGPoint
 
-            if (x < 0) {
+customGPoint= analogLocationInput!!.getCustomGPoint()
 
-                this.inputProcessorArray[this.leftGameKeyEvent!!.getKey()]!!.processAnalog(
-                    allbinaryLayerManager,
-                    this.leftGameKeyEvent,
-                    x,
-                )
-            } else if (x > 0) {
+    var x: Int = customGPoint!!.getX()!!
 
-                this.inputProcessorArray[this.rightGameKeyEvent!!.getKey()]!!.processAnalog(
-                    allbinaryLayerManager,
-                    this.rightGameKeyEvent,
-                    x,
-                )
-            }
 
-            if (y < 0) {
+    var y: Int = customGPoint!!.getY()!!
 
-                this.inputProcessorArray[this.downGameKeyEvent!!.getKey()]!!.processAnalog(
-                    allbinaryLayerManager,
-                    this.downGameKeyEvent,
-                    y,
-                )
-            } else if (y > 0) {
 
-                this.inputProcessorArray[this.upGameKeyEvent!!.getKey()]!!.processAnalog(
-                    allbinaryLayerManager,
-                    this.upGameKeyEvent,
-                    y,
-                )
-            }
+    var leftTrigger: Int = analogLocationInput!!.getLeftTrigger()!!
 
-            if (leftTrigger > 0) {
 
-                this.inputProcessorArray[this.leftTriggerGameKeyEvent!!.getKey()]!!.processAnalog(
-                    allbinaryLayerManager,
-                    this.leftTriggerGameKeyEvent,
-                    leftTrigger,
-                )
-            }
+    var rightTrigger: Int = analogLocationInput!!.getRightTrigger()!!
 
-            if (rightTrigger > 0) {
 
-                this.inputProcessorArray[this.rightTriggerGameKeyEvent!!.getKey()]!!.processAnalog(
-                    allbinaryLayerManager,
-                    this.rightTriggerGameKeyEvent,
-                    rightTrigger,
-                )
-            }
-        } catch (e: Exception) {
+    
+                        if(x < 0)
+                        
+                                    {
+                                    this.inputProcessorArray[this.leftGameKeyEvent!!.getKey()]!!.processAnalog(allbinaryLayerManager, this.leftGameKeyEvent, x)
 
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+                                    }
+                                
+                             else 
+    
+                        if(x > 0)
+                        
+                                    {
+                                    this.inputProcessorArray[this.rightGameKeyEvent!!.getKey()]!!.processAnalog(allbinaryLayerManager, this.rightGameKeyEvent, x)
 
-            this.logUtil!!.put("Unable to process analog input", this, commonStrings!!.PROCESS, e)
-        }
-    }
+                                    }
+                                
+
+    
+                        if(y < 0)
+                        
+                                    {
+                                    this.inputProcessorArray[this.downGameKeyEvent!!.getKey()]!!.processAnalog(allbinaryLayerManager, this.downGameKeyEvent, y)
+
+                                    }
+                                
+                             else 
+    
+                        if(y > 0)
+                        
+                                    {
+                                    this.inputProcessorArray[this.upGameKeyEvent!!.getKey()]!!.processAnalog(allbinaryLayerManager, this.upGameKeyEvent, y)
+
+                                    }
+                                
+
+    
+                        if(leftTrigger > 0)
+                        
+                                    {
+                                    this.inputProcessorArray[this.leftTriggerGameKeyEvent!!.getKey()]!!.processAnalog(allbinaryLayerManager, this.leftTriggerGameKeyEvent, leftTrigger)
+
+                                    }
+                                
+
+    
+                        if(rightTrigger > 0)
+                        
+                                    {
+                                    this.inputProcessorArray[this.rightTriggerGameKeyEvent!!.getKey()]!!.processAnalog(allbinaryLayerManager, this.rightTriggerGameKeyEvent, rightTrigger)
+
+                                    }
+                                
+} catch(e: Exception)
+            {
+
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+this.logUtil!!.put("Unable to process analog input", this, commonStrings!!.PROCESS, e)
+}
+
+}
+
 
     override fun getSourceId()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return 0
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
 }
+
+
+}
+                
+            
+

@@ -16,7 +16,6 @@
 package org.allbinary.logic.system.hardware.linux
 
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.hardware.HardwareInterface
@@ -32,6 +31,7 @@ import org.allbinary.logic.system.hardware.components.interfaces.MediaInterface
 import org.allbinary.logic.system.hardware.components.interfaces.MonitorInterface
 import org.allbinary.logic.system.hardware.components.interfaces.UsbInterface
 import org.allbinary.logic.system.hardware.components.interfaces.VideoInterface
+import org.allbinary.util.ABHashtable
 
 open public class LinuxHardware : Object, HardwareInterface {
 
@@ -180,7 +180,7 @@ open public class LinuxHardware : Object, HardwareInterface {
         hardwareInterface: HardwareInterface
     )
         // nullable = true from not(false or (false and false)) = true
-        : Hashtable<Any, Any> {
+        : ABHashtable<Any, Any> {
         var hardwareInterface = hardwareInterface
 
         // if statement needs to be on the same line and ternary does not work the same way.

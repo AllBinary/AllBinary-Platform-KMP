@@ -26,16 +26,21 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
+import jsinterop.annotations.JsConstructor
 import jsinterop.annotations.JsType
 
-open public class ABHashtable : Hashtable {
+open public class ABHashtable<K, V> : Hashtable<K, V> {
         
+public constructor ()                        
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+                            : super(){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+
 }
                 
             

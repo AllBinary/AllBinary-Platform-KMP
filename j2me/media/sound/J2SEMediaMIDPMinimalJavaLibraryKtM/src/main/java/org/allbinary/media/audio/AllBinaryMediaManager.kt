@@ -21,8 +21,6 @@
 
         import java.lang.Object        
         
-        import java.lang.System
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -39,6 +37,7 @@ import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
+import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -109,7 +108,7 @@ Sounds(soundsFactoryInterface).
                             stopAll()
 Sounds(soundsFactoryInterface).
                             closeAll()
-System.gc()
+ABSystemWrapper.getInstance()!!.gc()
 }
 
 

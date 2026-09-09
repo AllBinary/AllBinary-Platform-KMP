@@ -17,12 +17,12 @@ package org.allbinary.game
 
 import java.lang.Integer
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
+import org.allbinary.util.ABHashtable
 
 open public class GameInfo : Object {
 
@@ -61,9 +61,9 @@ open public class GameInfo : Object {
         highestLevel: Int,
         currentLevel: Int,
     ) : super() {
-        var gameType = gameType
-        var gameMode = gameMode
-        var playerType = playerType
+        // var gameType = gameType
+        // var gameMode = gameMode
+        // var playerType = playerType
         var highestLevel = highestLevel
         var currentLevel = currentLevel
         this.gameType = gameType
@@ -184,9 +184,9 @@ open public class GameInfo : Object {
 
     open fun toHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any> {
+    : ABHashtable<Any, Any> {
 
-        var hashtable: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+        var hashtable: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
         hashtable.put(this.gameInfoData!!.GAME_TYPE, this.getGameType()!!.toString())
         hashtable.put(this.gameInfoData!!.GAME_MODE, this.gameMode!!.toString())

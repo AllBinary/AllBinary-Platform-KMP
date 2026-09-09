@@ -17,11 +17,11 @@ package org.allbinary.layer
 
 import java.lang.Integer
 import java.lang.Object
-import java.util.Hashtable
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.BasicArrayListUtil
@@ -58,7 +58,7 @@ open public class LayerInterfaceFactory : Object {
 
     @Throws(Exception::class)
     open fun getNexInstance(
-        hashtable: Hashtable<Any, Any>,
+        hashtable: ABHashtable<Any, Any>,
         x: Int,
         y: Int,
         z: Int,

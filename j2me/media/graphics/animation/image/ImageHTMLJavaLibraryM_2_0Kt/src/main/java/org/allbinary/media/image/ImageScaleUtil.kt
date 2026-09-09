@@ -31,9 +31,7 @@ import org.microemu.device.playn.PlaynImmutableImage
 import org.microemu.device.playn.PlaynMutableImage
 import playn.core.Canvas
 import playn.core.ImageImpl
-import playn.core.PlayN
-import playn.html.HtmlGraphics
-import playn.html.HtmlImage
+import playn.html.HTMLPlaynUtil
 
 open public class ImageScaleUtil
             : Object
@@ -55,7 +53,9 @@ companion object {
 
 
         }
-            private constructor ()
+            
+    private val playnUtil: HTMLPlaynUtil = HTMLPlaynUtil.getInstance()!!
+private constructor ()
             : super()
         {
 }
@@ -174,11 +174,7 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
     var canvasImage: ImageImpl = htmlImage!!.getImage() as ImageImpl
 
 
-    var playN: PlayN = PlayN.getInstance()!!
-
-
-    var canvas: Canvas = 
-                                    (graphics as HtmlGraphics).get(canvasImage as HtmlImage)!!
+    var canvas: Canvas = this.playnUtil!!.getCanvas(canvasImage)!!
 
 canvas.draw(originalPlayNImage, 0, 0, image.getWidth(), image.getHeight(), 0, 0, originalImage!!.getWidth(), originalImage!!.getHeight())
 

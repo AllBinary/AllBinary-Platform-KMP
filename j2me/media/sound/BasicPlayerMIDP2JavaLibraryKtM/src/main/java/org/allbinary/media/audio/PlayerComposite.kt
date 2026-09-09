@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import jsinterop.annotations.JsType
 import javax.microedition.media.Control
 import javax.microedition.media.Controllable
 import javax.microedition.media.MediaException
@@ -37,9 +36,6 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
-import jsinterop.annotations.JsMethod
-import jsinterop.annotations.JsConstructor
-import jsinterop.annotations.JsProperty
 //BasicPlayerMIDP2
 open public class PlayerComposite
             : Object

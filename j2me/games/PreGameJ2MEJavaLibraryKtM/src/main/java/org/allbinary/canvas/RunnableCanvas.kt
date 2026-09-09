@@ -15,11 +15,11 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.canvas
 
-import java.lang.System
 import java.lang.Thread
 import javax.microedition.lcdui.CommandListener
 import org.allbinary.game.displayable.canvas.NullWaitGameRunnable
 import org.allbinary.graphics.displayable.MyCanvas
+import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
@@ -37,6 +37,8 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
     val nullUtil: NullUtil = NullUtil.getInstance()!!
 
     val stdUtil: StdUtil = StdUtil.getInstance()!!
+
+    val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
 
     private var thread: Thread = NullThread.NULL_THREAD
 
@@ -316,10 +318,13 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
             if (this.isRunning() && !this.isSingleThread()) {
 
                 stringMaker!!.delete(0, stringMaker!!.length())
+
+                var currentTimeMillis: Long = this.systemWrapper!!.currentTimeMillis()!!
+
                 this.logUtil!!.putF(
                     stringMaker!!
                         .append(this.START_PAUSE)!!
-                        .appendlong(System.currentTimeMillis())!!
+                        .appendlong(currentTimeMillis)!!
                         .append(this.PAUSE_SLEEP)!!
                         .appendlong(this.pauseWait)!!
                         .toString(),
@@ -336,7 +341,7 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
                         this.logUtil!!.putF(
                             stringMaker!!
                                 .append(this.END_PAUSE)!!
-                                .appendlong(System.currentTimeMillis())!!
+                                .appendlong(currentTimeMillis)!!
                                 .toString(),
                             this,
                             this.PROCESS_LOOP_SLEEP,

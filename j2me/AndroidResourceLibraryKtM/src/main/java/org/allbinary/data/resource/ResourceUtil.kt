@@ -21,7 +21,6 @@ import android.content.res.Resources
 import java.io.InputStream
 import java.lang.Integer
 import java.lang.Object
-import java.util.Hashtable
 import kotlin.Array
 import org.allbinary.debug.DebugFactory
 import org.allbinary.debug.NoDebug
@@ -33,6 +32,7 @@ import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.HashtableUtil
 
 // Android
@@ -57,7 +57,7 @@ open public class ResourceUtil : Object {
 
     private var resources: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    private var hashMap: Hashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
+    private var hashMap: ABHashtable<Any, Any> = StdUtil.getInstance()!!.createHashtable()!!
 
     private constructor() : super() {}
 

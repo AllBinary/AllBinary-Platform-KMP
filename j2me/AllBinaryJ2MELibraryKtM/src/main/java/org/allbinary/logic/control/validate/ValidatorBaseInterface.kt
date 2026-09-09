@@ -15,7 +15,7 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.logic.control.validate
 
-import java.util.Hashtable
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 
 interface ValidatorBaseInterface {
@@ -30,7 +30,7 @@ interface ValidatorBaseInterface {
 
     open fun toHashtable()
     // nullable = true from not(false or (false and true)) = true
-    : Hashtable<Any, Any>
+    : ABHashtable<Any, Any>
 
     open fun toList()
     // nullable = true from not(false or (false and true)) = true

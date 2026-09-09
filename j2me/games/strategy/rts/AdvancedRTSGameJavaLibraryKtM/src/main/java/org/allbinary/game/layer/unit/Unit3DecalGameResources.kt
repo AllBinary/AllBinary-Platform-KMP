@@ -1,84 +1,121 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2006 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.layer.unit
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2006 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.layer.unit
 
-import kotlin.Array
-import org.allbinary.AndroidUtil
-import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.layer.resources.BasicGameResources
 import org.allbinary.game.layer.resources.GameGraphicsResourceUtil
+import org.allbinary.AndroidUtil
+import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
 
 open public class Unit3DecalGameResources : BasicGameResources {
+        
+companion object {
+            
+    private val instance: Unit3DecalGameResources = Unit3DecalGameResources()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: BasicGameResources{
 
-        private val instance: Unit3DecalGameResources = Unit3DecalGameResources()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : BasicGameResources {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return Unit3DecalGameResources.instance
-        }
-    }
-
-    private constructor() {
-
-        var ROOT: String = "/unit_decal"
-
-        var SMALL: String = "_40_by_40.png"
-
-        var MEDIUM: String = SMALL
-
-        var SIZE_FOUR: String = SMALL
-
-        var SIZE_FIVE: String = SMALL
-
-        var SIZE_SIX: String = SMALL
-
-        var SIZE: Array<String?> = arrayOf(SMALL, MEDIUM, SIZE_FOUR, SIZE_FIVE, SIZE_SIX)
-
-        super.init(ROOT, SIZE)
-    }
-
-    @Throws(Exception::class)
-    override fun append(ROOT: String, sizeString: String)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        var ROOT = ROOT
-        var sizeString = sizeString
-        super.append(ROOT, sizeString)
-    }
-
-    @Throws(Exception::class)
-    override fun getString()
-    // nullable = true from not(false or (false and true)) = true
-    : String {
-
-        if (AndroidUtil.isAndroid()) {
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return GameGraphicsResourceUtil.getInstance()!!.getStringForFeature(
-                GraphicsFeatureFactory.getInstance()!!.SPRITE_QUARTER_ROTATION_GRAPHICS
-            )
-        } else {
-
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return super.getString()
-        }
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Unit3DecalGameResources.instance
 }
+
+
+        }
+            private constructor (){
+
+    var ROOT: String = "/unit_decal"
+
+
+    var SMALL: String = "_40_by_40.png"
+
+
+    var MEDIUM: String = SMALL
+
+
+    var SIZE_FOUR: String = SMALL
+
+
+    var SIZE_FIVE: String = SMALL
+
+
+    var SIZE_SIX: String = SMALL
+
+
+    var SIZE: Array<String?> = arrayOf(SMALL,MEDIUM,SIZE_FOUR,SIZE_FIVE,SIZE_SIX)
+
+super.init(ROOT, SIZE)
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun append(ROOT: String, sizeString: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+var ROOT = ROOT
+var sizeString = sizeString
+super.append(ROOT, sizeString)
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getString()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+    
+                        if(AndroidUtil.isAndroid())
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return GameGraphicsResourceUtil.getInstance()!!.getStringForFeature(GraphicsFeatureFactory.getInstance()!!.SPRITE_QUARTER_ROTATION_GRAPHICS)
+
+                                    }
+                                
+                        else {
+                            
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.getString()
+
+                        }
+                            
+}
+
+
+}
+                
+            
+

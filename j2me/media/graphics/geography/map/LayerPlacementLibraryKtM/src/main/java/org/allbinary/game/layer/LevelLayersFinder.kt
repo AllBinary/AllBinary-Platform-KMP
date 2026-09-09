@@ -18,9 +18,9 @@ package org.allbinary.game.layer
 import java.lang.Integer
 import java.lang.Object
 import java.util.Enumeration
-import java.util.Hashtable
 import org.allbinary.layer.Layer
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.util.EnumerationUtil
@@ -46,7 +46,7 @@ open public class LevelLayersFinder : Object {
     private val enumerationUtil: EnumerationUtil = EnumerationUtil.getInstance()!!
 
     open fun get(
-        hashtable: Hashtable<Any, Any>
+        hashtable: ABHashtable<Any, Any>
     )
         // nullable = true from not(false or (false and false)) = true
         : BasicArrayList {
@@ -59,7 +59,7 @@ open public class LevelLayersFinder : Object {
 
         var enumeration: Enumeration<Any?> = hashtable.keys()!!
 
-        var layerHashtableCanBeNull: Hashtable<Any, Any>?
+        var layerHashtableCanBeNull: ABHashtable<Any, Any>?
 
         var integerCanBeNull: Integer?
 
@@ -68,7 +68,7 @@ open public class LevelLayersFinder : Object {
         while (this.enumerationUtil!!.hasMoreElements(enumeration)) {
             layerHashtableCanBeNull =
                 hashtable.get(this.enumerationUtil!!.nextElement(enumeration)!! as Object)
-                    as Hashtable<Any, Any>
+                    as ABHashtable<Any, Any>
             integerCanBeNull = layerHashtableCanBeNull!!.get(Layer.ID as Object) as Integer
             cachedIntegerCanBeNull =
                 smallIntegerSingletonFactory!!.getAt(integerCanBeNull!!.toInt())

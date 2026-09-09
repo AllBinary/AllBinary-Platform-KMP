@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -25,6 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import com.google.gwt.i18n.client.DateTimeFormat
+import java.util.Date
 //ActualPlatform
 /*actual*/ open public class TimeStampUtil
             : Object
@@ -52,14 +54,20 @@
 }
 
 
-    /*actual*/ open fun getAsString()
+    open fun getAsString()
         //nullable = true from not(false or (false and true)) = true
 : String{
+
+    var simpleDataFormat: DateTimeFormat = DateTimeFormat.getFormat("yyyy-MM-dd HH:mm:ss.SSS")!!
+
+
+    var date: Date = Date()
+
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "JavaScript version"
+                        return simpleDataFormat!!.format(date)
 }
 
 

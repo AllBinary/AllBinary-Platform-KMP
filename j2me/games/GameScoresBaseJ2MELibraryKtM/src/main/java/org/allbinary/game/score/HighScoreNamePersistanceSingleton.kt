@@ -1,26 +1,36 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.score
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.score
 
+
+
+
+        import java.lang.Object        
+        
+        import java.lang.Integer
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.DataInputStream
 import java.io.DataOutputStream
-import java.lang.Integer
-import java.lang.Object
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
 import javax.microedition.rms.RecordStoreException
@@ -41,25 +51,32 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class HighScoreNamePersistanceSingleton : Object {
+open public class HighScoreNamePersistanceSingleton
+            : Object
+         {
+        
+companion object {
+            
+    private var SINGLETON: HighScoreNamePersistanceSingleton = HighScoreNamePersistanceSingleton()
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: HighScoreNamePersistanceSingleton{
 
-        private var SINGLETON: HighScoreNamePersistanceSingleton =
-            HighScoreNamePersistanceSingleton()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : HighScoreNamePersistanceSingleton {
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return HighScoreNamePersistanceSingleton.SINGLETON
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return HighScoreNamePersistanceSingleton.SINGLETON
+}
+
+
         }
-    }
-
-    // Auto Generated
-    public constructor() : super() {}
-
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tsUtil: TsUtil = TsUtil.getInstance()!!
@@ -75,223 +92,259 @@ open public class HighScoreNamePersistanceSingleton : Object {
     private var nameBasicArrayList: BasicArrayList = BasicArrayListD()
 
     open fun clear()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.name = StringUtil.getInstance()!!.EMPTY_STRING
-    }
+        //nullable = true from not(false or (false and true)) = true
+{
+this.name= StringUtil.getInstance()!!.EMPTY_STRING
+}
 
-    @Throws(Exception::class)
+
+                @Throws(Exception::class)
+            
     open fun deleteAll(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var abeClientInformation = abeClientInformation
-        // var gameInfo = gameInfo
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var abeClientInformation = abeClientInformation
+    //var gameInfo = gameInfo
 
-        var size: Int = this.nameBasicArrayList!!.size()!!
+    var size: Int = this.nameBasicArrayList!!.size()!!
 
-        for (index in 0 until size) {
 
-            var integer: Integer = this.nameBasicArrayList!!.objectArray[index]!! as Integer
 
-            this.delete(abeClientInformation, gameInfo, integer.toInt())
-        }
 
-        this.clear()
-    }
 
-    open fun getRecordId(
-        abeClientInformation: AbeClientInformationInterface
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : String {
-        // var abeClientInformation = abeClientInformation
+                        for (index in 0 until size)
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.platformRecordIdUtil!!.getRecordId(abeClientInformation, this.RECORD_ID)
-    }
+        {
 
-    @Throws(Exception::class)
-    open fun delete(
-        abeClientInformation: AbeClientInformationInterface,
-        gameInfo: GameInfo,
-        deleteId: Int,
-    )
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var abeClientInformation = abeClientInformation
-        // var gameInfo = gameInfo
-        // var deleteId = deleteId
+    var integer: Integer = this.nameBasicArrayList!!.objectArray[index]!! as Integer
 
-        var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
+this.delete(abeClientInformation, gameInfo, integer.toInt())
+}
+
+this.clear()
+}
+
+
+    open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
+        //nullable = true from not(false or (false and false)) = true
+: String{
+    //var abeClientInformation = abeClientInformation
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.platformRecordIdUtil!!.getRecordId(abeClientInformation, this.RECORD_ID)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun delete(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, deleteId: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var abeClientInformation = abeClientInformation
+    //var gameInfo = gameInfo
+    //var deleteId = deleteId
+
+    var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
+
 
         try {
-            this.logUtil!!.putF(
-                StringMaker().append("Deleting: ")!!.appendint(deleteId)!!.toString(),
-                this,
-                this.commonStrings!!.delete,
-            )
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
-            recordStore!!.deleteRecord(deleteId)
-        } catch (e: Exception) {
+            this.logUtil!!.putF(StringMaker().
+                            append("Deleting: ")!!.appendint(deleteId)!!.toString(), this, this.commonStrings!!.delete)
+recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+recordStore!!.deleteRecord(deleteId)
+} catch(e: Exception)
+            {
 
-            throw e
-        } finally {
 
-            if (recordStore != null) {
 
-                PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.delete)
-                recordStore!!.closeRecordStore()
-            }
-        }
-    }
+                            throw e
+}
+
+         finally {
+            
+    
+                        if(recordStore != 
+                                    null
+                                )
+                        
+                                    {
+                                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.delete)
+recordStore!!.closeRecordStore()
+
+                                    }
+                                
+
+         }
+        
+}
+
 
     open fun getIds()
-    // nullable = true from not(false or (false and true)) = true
-    : BasicArrayList {
+        //nullable = true from not(false or (false and true)) = true
+: BasicArrayList{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.nameBasicArrayList
-    }
 
-    open fun load(
-        abeClientInformation: AbeClientInformationInterface,
-        gameInfo: GameInfo,
-    )
-        // nullable = true from not(false or (false and false)) = true
-        : String {
-        // var abeClientInformation = abeClientInformation
-        // var gameInfo = gameInfo
 
-        var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
-
-        try {
-
-            if (this.name == StringUtil.getInstance()!!.EMPTY_STRING) {
-
-                var LOADING_ID: String = "Loading id: "
-
-                recordStore =
-                    RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
-
-                var recordEnum: RecordEnumeration =
-                    recordStore!!.enumerateRecords(
-                        NullRecordFilter.NULL_RECORD_FILTER,
-                        NullRecordComparator.NULL_RECORD_COMPARATOR,
-                        true,
-                    )!!
-
-                var smallIntegerSingletonFactory: SmallIntegerSingletonFactory =
-                    SmallIntegerSingletonFactory.getInstance()!!
-
-                var recordAsBytes: ByteArray
-
-                var byteArrayInputStream: ByteArrayInputStream
-
-                var inputStream: DataInputStream
-
-                while (recordEnum!!.hasNextElement()) {
-
-                    var id: Int = recordEnum!!.nextRecordId()!!
-
-                    this.logUtil!!.putF(
-                        StringMaker().append(LOADING_ID)!!.appendint(id)!!.toString(),
-                        this,
-                        this.commonStrings!!.LOAD,
-                    )
-                    recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
-                    byteArrayInputStream = ByteArrayInputStream(recordAsBytes)
-                    inputStream = DataInputStream(byteArrayInputStream)
-
-                    while (inputStream!!.available() > 0) {
-                        this.name = inputStream!!.readUTF()
-                    }
-
-                    this.nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getAt(id))
-                }
-            }
-        } catch (e: Exception) {
-            this.save(abeClientInformation, gameInfo, this.name)
-            this.logUtil!!.putF(
-                StringMaker()
-                    .append(this.commonStrings!!.EXCEPTION_LABEL)!!
-                    .append(ExceptionUtil.getInstance()!!.getStackTrace(e))!!
-                    .toString(),
-                this,
-                this.commonStrings!!.LOAD,
-            )
-        } finally {
-
-            try {
-
-                if (recordStore != null) {
-
-                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.LOAD)
-                    recordStore!!.closeRecordStore()
-                }
-            } catch (e: RecordStoreException) {
-                this.logUtil!!.put(
-                    this.commonStrings!!.EXCEPTION,
-                    this,
-                    this.commonStrings!!.LOAD,
-                    e,
-                )
-            }
-        }
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.name
-    }
-
-    open fun save(
-        abeClientInformation: AbeClientInformationInterface,
-        gameInfo: GameInfo,
-        name: String,
-    )
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var abeClientInformation = abeClientInformation
-        // var gameInfo = gameInfo
-        // var name = name
-
-        var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
-
-        try {
-            this.logUtil!!.putF(
-                StringMaker().append("Saving: ")!!.append(name)!!.toString(),
-                this,
-                this.commonStrings!!.SAVE,
-            )
-            recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
-
-            var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
-
-            var outputStream: DataOutputStream = DataOutputStream(byteArrayOutputStream)
-
-            outputStream!!.writeUTF(name)
-
-            var savedGameBytes: ByteArray = byteArrayOutputStream!!.toByteArray()!!
-
-            recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
-            this.name = name
-        } catch (e: Exception) {
-            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.SAVE, e)
-        } finally {
-
-            try {
-
-                if (recordStore != null) {
-
-                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.SAVE)
-                    recordStore!!.closeRecordStore()
-                }
-            } catch (e: RecordStoreException) {
-                this.logUtil!!.put(
-                    this.commonStrings!!.EXCEPTION,
-                    this,
-                    this.commonStrings!!.SAVE,
-                    e,
-                )
-            }
-        }
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.nameBasicArrayList
 }
+
+
+    open fun load(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
+        //nullable = true from not(false or (false and false)) = true
+: String{
+    //var abeClientInformation = abeClientInformation
+    //var gameInfo = gameInfo
+
+    var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
+
+
+        try {
+            
+    
+                        if(this.name == StringUtil.getInstance()!!.EMPTY_STRING)
+                        
+                                    {
+                                    
+    var LOADING_ID: String = "Loading id: "
+
+recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+
+    var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
+
+
+    var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
+
+
+    var recordAsBytes: ByteArray
+
+
+    var byteArrayInputStream: ByteArrayInputStream
+
+
+    var inputStream: DataInputStream
+
+
+        while(recordEnum!!.hasNextElement())
+        {
+
+    var id: Int = recordEnum!!.nextRecordId()!!
+
+this.logUtil!!.putF(StringMaker().
+                            append(LOADING_ID)!!.appendint(id)!!.toString(), this, this.commonStrings!!.LOAD)
+recordAsBytes= this.tsUtil!!.getRecord(recordStore, id)
+byteArrayInputStream= ByteArrayInputStream(recordAsBytes)
+inputStream= DataInputStream(byteArrayInputStream)
+
+        while(inputStream!!.available() > 0)
+        {
+this.name= inputStream!!.readUTF()
+}
+
+this.nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getAt(id))
+}
+
+
+                                    }
+                                
+} catch(e: Exception)
+            {
+this.save(abeClientInformation, gameInfo, this.name)
+this.logUtil!!.putF(StringMaker().
+                            append(this.commonStrings!!.EXCEPTION_LABEL)!!.append(ExceptionUtil.getInstance()!!.getStackTrace(e))!!.toString(), this, this.commonStrings!!.LOAD)
+}
+
+         finally {
+            
+        try {
+            
+    
+                        if(recordStore != 
+                                    null
+                                )
+                        
+                                    {
+                                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.LOAD)
+recordStore!!.closeRecordStore()
+
+                                    }
+                                
+} catch(e: RecordStoreException)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.LOAD, e)
+}
+
+
+         }
+        
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.name
+}
+
+
+    open fun save(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, name: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var abeClientInformation = abeClientInformation
+    //var gameInfo = gameInfo
+    //var name = name
+
+    var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
+
+
+        try {
+            this.logUtil!!.putF(StringMaker().
+                            append("Saving: ")!!.append(name)!!.toString(), this, this.commonStrings!!.SAVE)
+recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
+
+    var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
+
+
+    var outputStream: DataOutputStream = DataOutputStream(byteArrayOutputStream)
+
+outputStream!!.writeUTF(name)
+
+    var savedGameBytes: ByteArray = byteArrayOutputStream!!.toByteArray()!!
+
+recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
+this.name= name
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.SAVE, e)
+}
+
+         finally {
+            
+        try {
+            
+    
+                        if(recordStore != 
+                                    null
+                                )
+                        
+                                    {
+                                    PreLogUtil.put("Closing RecordStore", this, this.commonStrings!!.SAVE)
+recordStore!!.closeRecordStore()
+
+                                    }
+                                
+} catch(e: RecordStoreException)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.SAVE, e)
+}
+
+
+         }
+        
+}
+
+
+}
+                
+            
+

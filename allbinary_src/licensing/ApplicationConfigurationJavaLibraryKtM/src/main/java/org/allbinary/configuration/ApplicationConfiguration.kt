@@ -1,10 +1,19 @@
-/* Generated Code Do Not Modify */
-package org.allbinary.configuration
 
+        /* Generated Code Do Not Modify */
+        package org.allbinary.configuration
+
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import java.io.Closeable
 import java.io.InputStream
 import java.io.OutputStream
-import java.lang.Object
 import org.allbinary.game.configuration.feature.Feature
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.MainFeatureFactory
@@ -20,26 +29,36 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
-open public class ApplicationConfiguration : Object {
+open public class ApplicationConfiguration
+            : Object
+         {
+        
+companion object {
+            
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: ApplicationConfiguration{
 
-        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+    
+                        if(ApplicationConfiguration.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    ApplicationConfiguration.instance= ApplicationConfiguration()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : ApplicationConfiguration {
+                                    }
+                                
 
-            if (ApplicationConfiguration.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
-                ApplicationConfiguration.instance = ApplicationConfiguration()
-            }
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return ApplicationConfiguration.instance as ApplicationConfiguration
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ApplicationConfiguration.instance as ApplicationConfiguration
+}
+
+
         }
-    }
-
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var fullscreen: Boolean = true
@@ -49,221 +68,351 @@ open public class ApplicationConfiguration : Object {
     private var progressBarView: Boolean = false
 
     private val FILE: String = "ReloadConfiguration.dat"
-
-    private constructor() : super() {
+private constructor ()
+            : super()
+        {
 
         try {
+            
+    
+                        if(FileFactory.getInstance()!!.isFile(this.FILE))
+                        
+                                    {
+                                    this.read()
 
-            if (FileFactory.getInstance()!!.isFile(this.FILE)) {
+                                    }
+                                
+                        else {
+                            this.write()
 
-                this.read()
-            } else {
-                this.write()
-            }
-        } catch (e: Exception) {
+                        }
+                            
+} catch(e: Exception)
+            {
 
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
-        }
-    }
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+}
 
-    @Throws(Exception::class)
+}
+
+
+                @Throws(Exception::class)
+            
     open fun read()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
-        var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
+    var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
-        var fileInputStream: InputStream =
-            fileInputStreamFactory!!.getFileInputStreamInstance(
-                StringUtil.getInstance()!!.EMPTY_STRING,
-                this.FILE,
-            )!!
 
-        var dataInputStream: AbDataInputStream = AbDataInputStream(fileInputStream)
+    var fileInputStream: InputStream = fileInputStreamFactory!!.getFileInputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, this.FILE)!!
 
-        var fullScreen: Int = dataInputStream!!.readInt()!!
 
-        if (fullScreen == 0) {
+    var dataInputStream: AbDataInputStream = AbDataInputStream(fileInputStream)
 
-            this.setFullscreen(false)
-        } else if (fullScreen == 1) {
 
-            this.setFullscreen(true)
-        } else {
+    var fullScreen: Int = dataInputStream!!.readInt()!!
 
-            throw Exception("Invalid FullScreen ActivityConfiguration")
-        }
 
-        var progressBarView: Int = dataInputStream!!.readInt()!!
+    
+                        if(fullScreen == 0)
+                        
+                                    {
+                                    this.setFullscreen(false)
 
-        if (progressBarView == 0) {
+                                    }
+                                
+                             else 
+    
+                        if(fullScreen == 1)
+                        
+                                    {
+                                    this.setFullscreen(true)
 
-            this.setProgressBarView(false)
-        } else if (progressBarView == 1) {
+                                    }
+                                
+                        else {
+                            
 
-            this.setProgressBarView(true)
-        } else {
 
-            throw Exception("Invalid ProgressBarView ActivityConfiguration")
-        }
+                            throw Exception("Invalid FullScreen ActivityConfiguration")
 
-        var showTitleBar: Int = dataInputStream!!.readInt()!!
+                        }
+                            
 
-        if (showTitleBar == 0) {
+    var progressBarView: Int = dataInputStream!!.readInt()!!
 
-            this.setShowTitleBar(false)
-        } else if (showTitleBar == 1) {
 
-            this.setShowTitleBar(true)
-        } else {
+    
+                        if(progressBarView == 0)
+                        
+                                    {
+                                    this.setProgressBarView(false)
 
-            throw Exception("Invalid ShowTitleBar ActivityConfiguration")
-        }
+                                    }
+                                
+                             else 
+    
+                        if(progressBarView == 1)
+                        
+                                    {
+                                    this.setProgressBarView(true)
 
-        this.logUtil!!.putF("Read Configuration: " + this.toString(), this, "read")
-    }
+                                    }
+                                
+                        else {
+                            
 
-    @Throws(Exception::class)
+
+                            throw Exception("Invalid ProgressBarView ActivityConfiguration")
+
+                        }
+                            
+
+    var showTitleBar: Int = dataInputStream!!.readInt()!!
+
+
+    
+                        if(showTitleBar == 0)
+                        
+                                    {
+                                    this.setShowTitleBar(false)
+
+                                    }
+                                
+                             else 
+    
+                        if(showTitleBar == 1)
+                        
+                                    {
+                                    this.setShowTitleBar(true)
+
+                                    }
+                                
+                        else {
+                            
+
+
+                            throw Exception("Invalid ShowTitleBar ActivityConfiguration")
+
+                        }
+                            
+this.logUtil!!.putF("Read Configuration: " +this.toString(), this, "read")
+}
+
+
+                @Throws(Exception::class)
+            
     open fun write()
-        // nullable = true from not(false or (false and true)) = true
-    {
+        //nullable = true from not(false or (false and true)) = true
+{
 
-        var closeable: Closeable = NullCloseable.NULL_CLOSEABLE
+    var closeable: Closeable = NullCloseable.NULL_CLOSEABLE
+
 
         try {
-            this.logUtil!!.putF("Write Configuration: " + this.toString(), this, "write")
+            this.logUtil!!.putF("Write Configuration: " +this.toString(), this, "write")
 
-            var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
+    var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
-            var fileOutputStream: OutputStream =
-                fileInputStreamFactory!!.getFileOutputStreamInstance(
-                    StringUtil.getInstance()!!.EMPTY_STRING,
-                    this.FILE,
-                )!!
 
-            var dataOutputStream: AbDataOutputStream = AbDataOutputStream(fileOutputStream)
+    var fileOutputStream: OutputStream = fileInputStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, this.FILE)!!
 
-            closeable = dataOutputStream
 
-            if (this.isFullscreen()) {
+    var dataOutputStream: AbDataOutputStream = AbDataOutputStream(fileOutputStream)
 
-                dataOutputStream!!.writeInt(1)
-            } else {
-                dataOutputStream!!.writeInt(0)
-            }
+closeable= dataOutputStream
 
-            if (this.isProgressBarView()) {
+    
+                        if(this.isFullscreen())
+                        
+                                    {
+                                    dataOutputStream!!.writeInt(1)
 
-                dataOutputStream!!.writeInt(1)
-            } else {
-                dataOutputStream!!.writeInt(0)
-            }
+                                    }
+                                
+                        else {
+                            dataOutputStream!!.writeInt(0)
 
-            if (this.isShowTitleBar()) {
+                        }
+                            
 
-                dataOutputStream!!.writeInt(1)
-            } else {
-                dataOutputStream!!.writeInt(0)
-            }
+    
+                        if(this.isProgressBarView())
+                        
+                                    {
+                                    dataOutputStream!!.writeInt(1)
 
-            dataOutputStream!!.flush()
-        } catch (e: Exception) {
+                                    }
+                                
+                        else {
+                            dataOutputStream!!.writeInt(0)
 
-            throw e
-        } finally {
+                        }
+                            
+
+    
+                        if(this.isShowTitleBar())
+                        
+                                    {
+                                    dataOutputStream!!.writeInt(1)
+
+                                    }
+                                
+                        else {
+                            dataOutputStream!!.writeInt(0)
+
+                        }
+                            
+dataOutputStream!!.flush()
+} catch(e: Exception)
+            {
+
+
+
+                            throw e
+}
+
+         finally {
             StreamUtil.getInstance()!!.close(closeable)
-        }
-    }
 
-    @Throws(Exception::class)
+         }
+        
+}
+
+
+                @Throws(Exception::class)
+            
     open fun update(gameFeature: Feature)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var gameFeature = gameFeature
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var gameFeature = gameFeature
 
-        if (gameFeature == MainFeatureFactory.getInstance()!!.FULL_SCREEN) {
+    
+                        if(gameFeature == MainFeatureFactory.getInstance()!!.FULL_SCREEN)
+                        
+                                    {
+                                    
+    var features: Features = Features.getInstance()!!
 
-            var features: Features = Features.getInstance()!!
 
-            if (features.isFeature(gameFeature)) {
+    
+                        if(features.isFeature(gameFeature))
+                        
+                                    {
+                                    
+    
+                        if(!this.isFullscreen())
+                        
+                                    {
+                                    this.setFullscreen(true)
+this.write()
 
-                if (!this.isFullscreen()) {
+                                    }
+                                
 
-                    this.setFullscreen(true)
-                    this.write()
-                }
-            } else {
+                                    }
+                                
+                        else {
+                            
+    
+                        if(this.isFullscreen())
+                        
+                                    {
+                                    this.setFullscreen(false)
+this.write()
 
-                if (this.isFullscreen()) {
+                                    }
+                                
 
-                    this.setFullscreen(false)
-                    this.write()
-                }
-            }
-        }
-    }
+                        }
+                            
+
+                                    }
+                                
+}
+
 
     open fun setFullscreen(fullscreen: Boolean)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var fullscreen = fullscreen
-        this.fullscreen = fullscreen
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var fullscreen = fullscreen
+this.fullscreen= fullscreen
+}
+
 
     open fun isFullscreen()
-    // nullable = true from not(false or (false and true)) = true
-    : Boolean {
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.fullscreen
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.fullscreen
+}
+
 
     open fun setShowTitleBar(showTitleBar: Boolean)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var showTitleBar = showTitleBar
-        this.showTitleBar = showTitleBar
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var showTitleBar = showTitleBar
+this.showTitleBar= showTitleBar
+}
+
 
     open fun isShowTitleBar()
-    // nullable = true from not(false or (false and true)) = true
-    : Boolean {
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.showTitleBar
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.showTitleBar
+}
+
 
     open fun setProgressBarView(progressBarView: Boolean)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var progressBarView = progressBarView
-        this.progressBarView = progressBarView
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var progressBarView = progressBarView
+this.progressBarView= progressBarView
+}
+
 
     open fun isProgressBarView()
-    // nullable = true from not(false or (false and true)) = true
-    : Boolean {
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.progressBarView
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.progressBarView
+}
+
 
     override fun toString()
-    // nullable =  from not(false or (true and true)) =
-    : String {
+        //nullable =  from not(false or (true and true)) = 
+: String{
 
-        var stringBuffer: StringMaker = StringMaker()
+    var stringBuffer: StringMaker = StringMaker()
 
-        stringBuffer!!.append("isFullscreen: ")
-        stringBuffer!!.appendboolean(this.isFullscreen())
-        stringBuffer!!.append(" isProgressBarView: ")
-        stringBuffer!!.appendboolean(this.isProgressBarView())
-        stringBuffer!!.append(" isShowTitleBar: ")
-        stringBuffer!!.appendboolean(this.isShowTitleBar())
+stringBuffer!!.append("isFullscreen: ")
+stringBuffer!!.appendboolean(this.isFullscreen())
+stringBuffer!!.append(" isProgressBarView: ")
+stringBuffer!!.appendboolean(this.isProgressBarView())
+stringBuffer!!.append(" isShowTitleBar: ")
+stringBuffer!!.appendboolean(this.isShowTitleBar())
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return stringBuffer!!.toString()
-    }
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return stringBuffer!!.toString()
 }
+
+
+}
+                
+            
+

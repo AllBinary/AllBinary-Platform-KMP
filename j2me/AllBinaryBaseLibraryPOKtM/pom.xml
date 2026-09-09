@@ -61,6 +61,7 @@
         
         <module>../J2MEWindowingJavaLibraryKtM</module>
         
+        <module>../lib/BaseMathLibraryKtM</module>
         <module>../lib/BasicMathLibraryKtM</module>
         
         <module>../../allbinary_src/ThreadLibraryKtM</module>

@@ -1,45 +1,64 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2011 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.input.gyro
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.input.gyro
 
-import java.lang.Object
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.input.InputFactory
 import org.allbinary.input.motion.gesture.MotionGestureInput
 import org.allbinary.logic.NullUtil
 
-open public class OrientationMotionGestureFactory : Object {
+open public class OrientationMotionGestureFactory
+            : Object
+         {
+        
+companion object {
+            
+    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: OrientationMotionGestureFactory{
 
-        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+    
+                        if(OrientationMotionGestureFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
+                        
+                                    {
+                                    OrientationMotionGestureFactory.instance= OrientationMotionGestureFactory()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : OrientationMotionGestureFactory {
+                                    }
+                                
 
-            if (OrientationMotionGestureFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
-                OrientationMotionGestureFactory.instance = OrientationMotionGestureFactory()
-            }
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return OrientationMotionGestureFactory.instance as OrientationMotionGestureFactory
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return OrientationMotionGestureFactory.instance as OrientationMotionGestureFactory
+}
+
+
         }
-    }
-
+            
     val LEFT: MotionGestureInput
 
     val RIGHT: MotionGestureInput
@@ -51,16 +70,22 @@ open public class OrientationMotionGestureFactory : Object {
     val ROLL_LEFT: MotionGestureInput
 
     val ROLL_RIGHT: MotionGestureInput
+private constructor ()
+            : super()
+        {
 
-    private constructor() : super() {
+    var MAX: Int = InputFactory.getInstance()!!.MAX
 
-        var MAX: Int = InputFactory.getInstance()!!.MAX
-
-        this.LEFT = MotionGestureInput(MAX - 20, "Left Orient")
-        this.RIGHT = MotionGestureInput(MAX - 21, "Right Orient")
-        this.UP = MotionGestureInput(MAX - 22, "Up Orient")
-        this.DOWN = MotionGestureInput(MAX - 23, "Down Orient")
-        this.ROLL_LEFT = MotionGestureInput(MAX - 24, "Roll Left")
-        this.ROLL_RIGHT = MotionGestureInput(MAX - 25, "Roll Right")
-    }
+this.LEFT= MotionGestureInput(MAX -20, "Left Orient")
+this.RIGHT= MotionGestureInput(MAX -21, "Right Orient")
+this.UP= MotionGestureInput(MAX -22, "Up Orient")
+this.DOWN= MotionGestureInput(MAX -23, "Down Orient")
+this.ROLL_LEFT= MotionGestureInput(MAX -24, "Roll Left")
+this.ROLL_RIGHT= MotionGestureInput(MAX -25, "Roll Right")
 }
+
+
+}
+                
+            
+

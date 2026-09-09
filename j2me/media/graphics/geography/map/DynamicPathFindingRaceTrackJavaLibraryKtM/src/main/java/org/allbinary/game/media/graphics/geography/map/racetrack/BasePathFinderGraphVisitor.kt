@@ -33,7 +33,7 @@ import org.allbinary.media.graphics.geography.pathfinding.PathFinderGraphVisitor
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingNode
 import org.allbinary.util.BasicArrayList
 
-open public class BasePathFinderGraphVisitor : PathFinderGraphVisitorBase {
+open public class BasePathFinderGraphVisitor<V, E> : PathFinderGraphVisitorBase {
         
 
     var geographicMapInterface: BasicGeographicMap

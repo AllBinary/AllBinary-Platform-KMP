@@ -1,21 +1,30 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2025 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.game.ag.layer.hud.basic
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2025 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.ag.layer.hud.basic
 
-import java.lang.Object
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
 import org.allbinary.game.graphics.hud.BasicHudFactory
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.logic.NullUtil
@@ -23,55 +32,72 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
-open public class NumberStringHudFactory : Object {
+open public class NumberStringHudFactory
+            : Object
+         {
+        
+companion object {
+            
+    private var instance: Any = NullUtil.getInstance()!!
 
-    companion object {
+    open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: NumberStringHudFactory{
 
-        private var instance: Any = NullUtil.getInstance()!!
+    
+                        if(NumberStringHudFactory.instance == NullUtil.getInstance())
+                        
+                                    {
+                                    NumberStringHudFactory.instance= NumberStringHudFactory()
 
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : NumberStringHudFactory {
+                                    }
+                                
 
-            if (NumberStringHudFactory.instance == NullUtil.getInstance()) {
 
-                NumberStringHudFactory.instance = NumberStringHudFactory()
-            }
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return NumberStringHudFactory.instance as NumberStringHudFactory
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NumberStringHudFactory.instance as NumberStringHudFactory
+}
+
+
         }
-    }
-
-    // Auto Generated
-    public constructor() : super() {}
-
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
     open fun createHud()
-    // nullable = true from not(false or (false and true)) = true
-    : NumberStringHud {
+        //nullable = true from not(false or (false and true)) = true
+: NumberStringHud{
 
         try {
+            
 
-            // if statement needs to be on the same line and ternary does not work the same way.
-            return NumberStringHud(
-                StringUtil.getInstance()!!.EMPTY_STRING,
-                9,
-                BasicHudFactory.getInstance()!!.ABSOLUTE,
-                1,
-                0,
-                BasicColorFactory.getInstance()!!.NULL_COLOR,
-            )
-        } catch (e: Exception) {
 
-            var logUtil: LogUtil = LogUtil.getInstance()!!
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NumberStringHud(StringUtil.getInstance()!!.EMPTY_STRING, 9, BasicHudFactory.getInstance()!!.ABSOLUTE, 1, 0, BasicColorFactory.getInstance()!!.NULL_COLOR)
+} catch(e: Exception)
+            {
 
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+    var logUtil: LogUtil = LogUtil.getInstance()!!
 
-            logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
-            throw RuntimeException()
-        }
-    }
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+
+
+
+                            throw RuntimeException()
+}
+
+}
+
 
     val NULL_NUMBER_STRING_HUD: NumberStringHud = this.createHud()!!
+
 }
+                
+            
+

@@ -25,11 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Hashtable
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
+import org.allbinary.util.ABHashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
@@ -40,7 +40,7 @@ open public class AbeClientLicense
         
 companion object {
             
-    open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
+    open fun hasRequiredKeys(resultHashtable: ABHashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var resultHashtable = resultHashtable
@@ -74,7 +74,7 @@ var resultHashtable = resultHashtable
 
         }
             
-    private var hashtable: Hashtable<Any, Any>
+    private var hashtable: ABHashtable<Any, Any>
 
     private var id: String
 
@@ -83,7 +83,7 @@ var resultHashtable = resultHashtable
     private var special: String
 
     private var licenseType: LicenseType
-public constructor (hashtable: Hashtable<Any, Any>)
+public constructor (hashtable: ABHashtable<Any, Any>)
             : super()
         {
 var hashtable = hashtable

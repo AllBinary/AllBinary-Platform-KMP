@@ -27,6 +27,7 @@
         
 import java.util.HashMap
 import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.regex.replace.Replace
@@ -106,7 +107,7 @@ var storeName = storeName
     var ONE_EMPTY_STRING_ARRAY: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
 
 
-    var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 hashMap!!.put(arrayOf(viewName +SPACE), ONE_EMPTY_STRING_ARRAY)
 hashMap!!.put(arrayOf(storeName +SPACE), ONE_EMPTY_STRING_ARRAY)
