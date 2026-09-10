@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.hud.basic.time
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.hud.basic.time
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.graphics.hud.BasicHud
@@ -33,106 +23,108 @@ import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.logic.math.PrimitiveLongSingleton
 
 open public class TimeHudWidget : BasicHud {
-        
-companion object {
-            
-                @Throws(Exception::class)
-            
-    open fun getInstance(location: Int, direction: Int, basicColor: BasicColor, timer: Timer)
-        //nullable =  from not(true or (false and false)) = 
-: TimeHudWidget{
-var location = location
-var direction = direction
-var basicColor = basicColor
-var timer = timer
 
+    companion object {
 
+        @Throws(Exception::class)
+        open fun getInstance(
+            location: Int,
+            direction: Int,
+            basicColor: BasicColor,
+            timer: Timer,
+        )
+            // nullable =  from not(true or (false and false)) =
+            : TimeHudWidget {
+            var location = location
+            var direction = direction
+            var basicColor = basicColor
+            var timer = timer
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return TimeHudWidget(location, direction, 2, basicColor, timer)
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return TimeHudWidget(location, direction, 2, basicColor, timer)
         }
-            
+    }
+
     private val TIME_STRING: String = "Time "
 
-    private val TIME_CHAR_ARRAY: CharArray = charArrayOf('T','i','m','e',' ')
+    private val TIME_CHAR_ARRAY: CharArray = charArrayOf('T', 'i', 'm', 'e', ' ')
 
-    private var offset: Int= 0
+    private var offset: Int = 0
 
     private var string: CharArray = PrimitiveLongSingleton.getInstance()!!.ZERO
 
     private var totalDigits: Int = 1
 
     private val timer: Timer
-public constructor (location: Int, direction: Int, bufferZone: Int, basicColor: BasicColor, timer: Timer)                        
 
-                            : super(location, direction, bufferZone, basicColor){
-    //var location = location
-    //var direction = direction
-    //var bufferZone = bufferZone
-    //var basicColor = basicColor
-    //var timer = timer
+    public constructor(
+        location: Int,
+        direction: Int,
+        bufferZone: Int,
+        basicColor: BasicColor,
+        timer: Timer,
+    ) : super(location, direction, bufferZone, basicColor) {
+        // var location = location
+        // var direction = direction
+        // var bufferZone = bufferZone
+        // var basicColor = basicColor
+        // var timer = timer
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.timer= timer
-this.set()
-this.updateMaxHeight= 14
-}
-
+        this.timer = timer
+        this.set()
+        this.updateMaxHeight = 14
+    }
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
-    var font: Font = graphics.getFont()!!
+        var font: Font = graphics.getFont()!!
 
-this.updateMaxWidth= font.getSize() *5
-this.offset= font.stringWidth(this.TIME_STRING) +MyFontProcessor.defaultStringWidth(font, 3)
-super.updateMeasurement(graphics)
-}
-
+        this.updateMaxWidth = font.getSize() * 5
+        this.offset =
+            font.stringWidth(this.TIME_STRING) + MyFontProcessor.defaultStringWidth(font, 3)
+        super.updateMeasurement(graphics)
+    }
 
     open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.timer.update()
-this.set()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.timer.update()
+        this.set()
+    }
 
     open fun set()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.string= this.timer.getTimeChars()
-this.totalDigits= this.timer.getCurrentTotalDigits()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.string = this.timer.getTimeChars()
+        this.totalDigits = this.timer.getCurrentTotalDigits()
+    }
 
     open fun getTimer()
-        //nullable = true from not(false or (false and true)) = true
-: Timer{
+    // nullable = true from not(false or (false and true)) = true
+    : Timer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.timer
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.timer
+    }
 
     open fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-super.paintDX(graphics, this.TIME_CHAR_ARRAY, 0, this.TIME_CHAR_ARRAY.size, this.string, 0, this.totalDigits, this.offset)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        super.paintDX(
+            graphics,
+            this.TIME_CHAR_ARRAY,
+            0,
+            this.TIME_CHAR_ARRAY.size,
+            this.string,
+            0,
+            this.totalDigits,
+            this.offset,
+        )
+    }
 }
-
-
-}
-                
-            
-

@@ -1,121 +1,91 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.game.layer.AllBinaryGameLayer
 import org.allbinary.logic.util.event.EventListenerInterface
-import org.allbinary.logic.util.event.handler.BasicEventHandler
 import org.allbinary.logic.util.event.EventStrings
+import org.allbinary.logic.util.event.handler.BasicEventHandler
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
 open public class GeographicMapEventHandler : BasicEventHandler {
-        
-companion object {
-            
-    private var instance: GeographicMapEventHandler = GeographicMapEventHandler()
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: GeographicMapEventHandler{
+    companion object {
 
+        private var instance: GeographicMapEventHandler = GeographicMapEventHandler()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : GeographicMapEventHandler {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeographicMapEventHandler.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GeographicMapEventHandler.instance
         }
-            
-    private val list: BasicArrayList = BasicArrayListD()
-private constructor (){
-}
+    }
 
+    private val list: BasicArrayList = BasicArrayListD()
+
+    private constructor() {}
 
     open fun addListener(gameLayer: AllBinaryGameLayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gameLayer = gameLayer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gameLayer = gameLayer
 
-    
-                        if(!this.list.contains(gameLayer))
-                        
-                                    {
-                                    this.list.add(gameLayer)
+        if (!this.list.contains(gameLayer)) {
 
-                                    }
-                                
-}
-
+            this.list.add(gameLayer)
+        }
+    }
 
     override fun removeAllListeners()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.list.clear()
-super.removeAllListeners()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.list.clear()
+        super.removeAllListeners()
+    }
 
     override fun removeListener(eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var eventListenerInterface = eventListenerInterface
-this.list.remove(eventListenerInterface)
-super.removeListener(eventListenerInterface)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var eventListenerInterface = eventListenerInterface
+        this.list.remove(eventListenerInterface)
+        super.removeListener(eventListenerInterface)
+    }
 
     open fun fireEvent()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        for (index in this.list.size()!! - 1 downTo 0) {
 
+            try {
 
+                var gameLayer: AllBinaryGameLayer = this.list.get(index) as AllBinaryGameLayer
 
-                        for (index in this.list.size()!!  - 1  downTo 0)
-
-        {
-
-        try {
-            
-    var gameLayer: AllBinaryGameLayer = this.list.get(index) as AllBinaryGameLayer
-
-gameLayer!!.move()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+                gameLayer!!.move()
+            } catch (e: Exception) {
+                this.logUtil!!.put(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    EventStrings.getInstance()!!.FIRE_EVENT,
+                    e,
+                )
+            }
+        }
+    }
 }
-
-}
-
-}
-
-
-}
-                
-            
-

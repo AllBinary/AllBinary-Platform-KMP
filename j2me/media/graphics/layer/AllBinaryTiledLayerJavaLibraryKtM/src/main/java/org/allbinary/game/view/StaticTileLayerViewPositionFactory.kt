@@ -1,58 +1,35 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.view
+/* Generated Code Do Not Modify */
+package org.allbinary.game.view
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.view.ViewPositionBase
 import org.allbinary.view.ViewPositionFactoryInterface
 
-open public class StaticTileLayerViewPositionFactory
-            : Object
-        
-                , ViewPositionFactoryInterface {
-        
+open public class StaticTileLayerViewPositionFactory : Object, ViewPositionFactoryInterface {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-                @Throws(Exception::class)
-            
+    // Auto Generated
+    public constructor() : super() {}
+
+    @Throws(Exception::class)
     override fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ViewPositionBase{
+    // nullable =  from not(true or (false and true)) =
+    : ViewPositionBase {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return StaticTileLayerIntoPositionViewPosition()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return StaticTileLayerIntoPositionViewPosition()
+    }
 }
-
-
-}
-                
-            
-

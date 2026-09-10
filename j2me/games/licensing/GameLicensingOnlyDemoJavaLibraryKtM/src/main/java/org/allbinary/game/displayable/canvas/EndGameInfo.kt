@@ -1,44 +1,30 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.GameInfo
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.logic.string.StringUtil
 
-open public class EndGameInfo
-            : Object
-         {
-        
+open public class EndGameInfo : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     val NORMAL_GAME_OVER_WIN: String = "You Won"
 
     private val TEASER_DEMO_GAME_END_LAST_LEVEL: String = "End of Demo."
@@ -50,68 +36,48 @@ open public class EndGameInfo
     private var winStr: String = this.gameOverStr
 
     open fun update(gameInfo: GameInfo, myCanvas: MyCanvas)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gameInfo = gameInfo
-    //var myCanvas = myCanvas
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gameInfo = gameInfo
+        // var myCanvas = myCanvas
 
-    
-                        if(gameInfo!!.isLastLevel())
-                        
-                                    {
-                                    this.setWinStr(this.TEASER_DEMO_GAME_END_LAST_LEVEL)
-this.setGameOverStr(this.TEASER_DEMO_GAME_END_LAST_LEVEL)
+        if (gameInfo!!.isLastLevel()) {
 
-                                    }
-                                
-                        else {
-                            this.setWinStr(this.NORMAL_GAME_OVER_WIN)
-this.setGameOverStr(this.TEASER_DEMO_GAME_END)
-
-                        }
-                            
-}
-
+            this.setWinStr(this.TEASER_DEMO_GAME_END_LAST_LEVEL)
+            this.setGameOverStr(this.TEASER_DEMO_GAME_END_LAST_LEVEL)
+        } else {
+            this.setWinStr(this.NORMAL_GAME_OVER_WIN)
+            this.setGameOverStr(this.TEASER_DEMO_GAME_END)
+        }
+    }
 
     open fun getGameOverStr()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameOverStr
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameOverStr
+    }
 
     open fun setGameOverStr(gameOverStr: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gameOverStr = gameOverStr
-this.gameOverStr= gameOverStr
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gameOverStr = gameOverStr
+        this.gameOverStr = gameOverStr
+    }
 
     open fun getWinStr()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.winStr
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.winStr
+    }
 
     open fun setWinStr(winStr: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var winStr = winStr
-this.winStr= winStr
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var winStr = winStr
+        this.winStr = winStr
+    }
 }
-
-
-}
-                
-            
-

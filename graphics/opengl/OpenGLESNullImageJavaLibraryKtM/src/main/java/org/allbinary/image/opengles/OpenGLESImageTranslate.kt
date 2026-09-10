@@ -1,78 +1,55 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.image.opengles
+/* Generated Code Do Not Modify */
+package org.allbinary.image.opengles
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.khronos.opengles.GL10
 
-open public class OpenGLESImageTranslate
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: OpenGLESImageTranslate = OpenGLESImageTranslate()
+open public class OpenGLESImageTranslate : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: OpenGLESImageTranslate{
+    companion object {
 
+        private val instance: OpenGLESImageTranslate = OpenGLESImageTranslate()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : OpenGLESImageTranslate {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLESImageTranslate.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return OpenGLESImageTranslate.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
-    //var openGLESImage = openGLESImage
-    //var x = x
-    //var y = y
-openGLESImage!!.imageProcessor!!.translate(gl, x, y)
-}
+    }
 
+    // Auto Generated
+    public constructor() : super() {}
+
+    open fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
+        // var openGLESImage = openGLESImage
+        // var x = x
+        // var y = y
+        openGLESImage!!.imageProcessor!!.translate(gl, x, y)
+    }
 
     open fun translate2(gl: GL10, openGLESImage: OpenGLESImage)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
-    //var openGLESImage = openGLESImage
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
+        // var openGLESImage = openGLESImage
+    }
 }
-
-
-}
-                
-            
-

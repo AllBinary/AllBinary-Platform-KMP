@@ -1,96 +1,69 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.unit
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.unit
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.game.layer.resources.BasicGameResources
+import java.lang.Object
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.animation.NullRotationAnimationFactory
+import org.allbinary.game.layer.resources.BasicGameResources
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 
-open public class DecalAnimationInterfaceFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: DecalAnimationInterfaceFactory = DecalAnimationInterfaceFactory()
+open public class DecalAnimationInterfaceFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: DecalAnimationInterfaceFactory{
+    companion object {
 
+        private val instance: DecalAnimationInterfaceFactory = DecalAnimationInterfaceFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : DecalAnimationInterfaceFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return DecalAnimationInterfaceFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return DecalAnimationInterfaceFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-                @Throws(Exception::class)
-            
-    open fun getAnimationFactory(basicGameResources: BasicGameResources, basicColor: BasicColor)
-        //nullable = true from not(false or (false and false)) = true
-: AnimationInterfaceFactoryInterface{
-    //var basicGameResources = basicGameResources
-    //var basicColor = basicColor
+    }
 
-    var animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface
+    // Auto Generated
+    public constructor() : super() {}
 
+    @Throws(Exception::class)
+    open fun getAnimationFactory(
+        basicGameResources: BasicGameResources,
+        basicColor: BasicColor,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : AnimationInterfaceFactoryInterface {
+        // var basicGameResources = basicGameResources
+        // var basicColor = basicColor
 
-    
-                        if(basicColor == BasicColorFactory.getInstance()!!.RED)
-                        
-                                    {
-                                    animationInterfaceFactoryInterface= FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(basicGameResources!!.RESOURCE)
+        var animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface
 
-                                    }
-                                
-                        else {
-                            animationInterfaceFactoryInterface= NullRotationAnimationFactory.getFactoryInstance()
+        if (basicColor == BasicColorFactory.getInstance()!!.RED) {
 
-                        }
-                            
+            animationInterfaceFactoryInterface =
+                FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(
+                    basicGameResources!!.RESOURCE
+                )
+        } else {
+            animationInterfaceFactoryInterface = NullRotationAnimationFactory.getFactoryInstance()
+        }
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return animationInterfaceFactoryInterface
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return animationInterfaceFactoryInterface
+    }
 }
-
-
-}
-                
-            
-

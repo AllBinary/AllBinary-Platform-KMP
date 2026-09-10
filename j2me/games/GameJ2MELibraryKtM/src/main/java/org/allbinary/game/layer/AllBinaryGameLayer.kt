@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Rectangle
@@ -46,10 +36,8 @@ import org.allbinary.view.ViewPositionBase
 import org.allbinary.view.event.ViewPositionEvent
 import org.allbinary.view.event.ViewPositionEventListenerInterface
 
-open public class AllBinaryGameLayer : AllBinaryLayer
-                , ViewPositionEventListenerInterface
-                , OpenGLSurfaceChangedInterface {
-        
+open public class AllBinaryGameLayer :
+    AllBinaryLayer, ViewPositionEventListenerInterface, OpenGLSurfaceChangedInterface {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -57,185 +45,143 @@ open public class AllBinaryGameLayer : AllBinaryLayer
 
     val RED: BasicColor = BasicColorFactory.getInstance()!!.RED
 
-    private val paintable: Paintable = if(SWTUtil.isSWT) {
-                            
-                            object: Paintable()
-                                {
-                                
-    private val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
+    private val paintable: Paintable =
+        if (SWTUtil.isSWT) {
 
-    private val BLACK: BasicColor = BasicColorFactory.getInstance()!!.BLACK
+            object : Paintable() {
 
-    open override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.BLACK)
-}
+                private val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
 
-                                }
-                            
-                        
-                            } else {
-                            NullPaintable.getInstance()
-                            }
-    
+                private val BLACK: BasicColor = BasicColorFactory.getInstance()!!.BLACK
+
+                open override fun paint(graphics: Graphics)
+                    // nullable = true from not(false or (false and false)) = true
+                {
+                    var graphics = graphics
+                    this.basicSetColorUtil!!.setBasicColorP(graphics, this.BLACK)
+                }
+            }
+        } else {
+            NullPaintable.getInstance()
+        }
 
     private val gameKeyEventList: BasicArrayList = BasicArrayListD()
-public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositionBase)                        
 
-                            : super(name, layerInfo, viewPosition){
-    //var name = name
-    //var layerInfo = layerInfo
-    //var viewPosition = viewPosition
+    public constructor(
+        name: String,
+        layerInfo: Rectangle,
+        viewPosition: ViewPositionBase,
+    ) : super(name, layerInfo, viewPosition) {
+        // var name = name
+        // var layerInfo = layerInfo
+        // var viewPosition = viewPosition
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun set(gl: GL)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
 
-
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
     open fun move()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     open fun getGameKeyEventList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameKeyEventList
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameKeyEventList
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processInput(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryLayerManager = allBinaryLayerManager
 
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryLayerManager = allBinaryLayerManager
 
-
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun onViewPositionChangeEvent()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.onChangeEvent(this.viewPositionEvent)
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.onChangeEvent(this.viewPositionEvent)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManagerEvent = layerManagerEvent
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var layerManagerEvent = layerManagerEvent
 
-    
-                        if(GameLayerUtil.isOnScreen(this))
-                        
-                                    {
-                                    this.setVisible(true)
+        if (GameLayerUtil.isOnScreen(this)) {
 
-                                    }
-                                
-                        else {
-                            this.setVisible(false)
-
-                        }
-                            
-}
-
+            this.setVisible(true)
+        } else {
+            this.setVisible(false)
+        }
+    }
 
     open fun paintFirst(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-this.paintable.paint(graphics)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        this.paintable.paint(graphics)
+    }
 
     open fun paintDebug(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
-    var viewPosition: ViewPositionBase = this.getViewPosition()!!
+        var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
+        var viewX: Int = viewPosition!!.getX()!!
 
-    var viewX: Int = viewPosition!!.getX()!!
+        var viewY: Int = viewPosition!!.getY()!!
 
-
-    var viewY: Int = viewPosition!!.getY()!!
-
-this.basicSetColorUtil!!.setBasicColorP(graphics, this.RED)
-graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight())
-}
-
+        this.basicSetColorUtil!!.setBasicColorP(graphics, this.RED)
+        graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight())
+    }
 
     open fun setWidth(width: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var width = width
-super.setLayerWidth(width)
-this.setHalfWidth(width shr 1)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var width = width
+        super.setLayerWidth(width)
+        this.setHalfWidth(width shr 1)
+    }
 
     open fun setHeight(height: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var height = height
-super.setLayerHeight(height)
-this.setHalfHeight(height shr 1)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var height = height
+        super.setLayerHeight(height)
+        this.setHalfHeight(height shr 1)
+    }
 }
-
-
-}
-                
-            
-

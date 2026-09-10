@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.configuration
+/* Generated Code Do Not Modify */
+package org.allbinary.game.configuration
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.CommandListener
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
@@ -33,88 +24,74 @@ import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class InGameOptionsFormFactory
-            : Object
-         {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class InGameOptionsFormFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: InGameOptionsFormFactory{
+    companion object {
 
-    
-                        if(InGameOptionsFormFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    InGameOptionsFormFactory.instance= InGameOptionsFormFactory()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : InGameOptionsFormFactory {
 
+            if (InGameOptionsFormFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                InGameOptionsFormFactory.instance = InGameOptionsFormFactory()
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return InGameOptionsFormFactory.instance as InGameOptionsFormFactory
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return InGameOptionsFormFactory.instance as InGameOptionsFormFactory
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var SINGLETON: CommandForm = CommandForm.getNullCommandForm()!!
 
-    open fun init(commandListener: CommandListener, initInterface: Init, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
-        //nullable = true from not(false or (false and false)) = true
-{
-var commandListener = commandListener
-var initInterface = initInterface
-var title = title
-var backgrounBasicColor = backgrounBasicColor
-var foregroundBasicColor = foregroundBasicColor
+    open fun init(
+        commandListener: CommandListener,
+        initInterface: Init,
+        title: String,
+        backgrounBasicColor: BasicColor,
+        foregroundBasicColor: BasicColor,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var commandListener = commandListener
+        var initInterface = initInterface
+        var title = title
+        var backgrounBasicColor = backgrounBasicColor
+        var foregroundBasicColor = foregroundBasicColor
 
         try {
-            
-    
-                        if(this.SINGLETON == CommandForm.getNullCommandForm())
-                        
-                                    {
-                                    initInterface!!.init()
-this.SINGLETON= InGameOptionsForm(commandListener, title, backgrounBasicColor, foregroundBasicColor)
 
-                                    }
-                                
-} catch(e: Exception)
-            {
+            if (this.SINGLETON == CommandForm.getNullCommandForm()) {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+                initInterface!!.init()
+                this.SINGLETON =
+                    InGameOptionsForm(
+                        commandListener,
+                        title,
+                        backgrounBasicColor,
+                        foregroundBasicColor,
+                    )
+            }
+        } catch (e: Exception) {
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
-}
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-}
-
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+        }
+    }
 
     open fun get()
-        //nullable = true from not(false or (false and true)) = true
-: CommandForm{
+    // nullable = true from not(false or (false and true)) = true
+    : CommandForm {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.SINGLETON
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.SINGLETON
+    }
 }
-
-
-}
-                
-            
-

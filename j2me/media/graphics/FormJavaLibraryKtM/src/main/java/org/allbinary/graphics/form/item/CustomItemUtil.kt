@@ -1,60 +1,40 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.form.item
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.form.item
 
+import java.lang.Object
+import kotlin.Array
 
+open public class CustomItemUtil : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: CustomItemUtil = CustomItemUtil()
 
-open public class CustomItemUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: CustomItemUtil = CustomItemUtil()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CustomItemUtil {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CustomItemUtil{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CustomItemUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CustomItemUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val CUSTOM_ITEM_ARRAY: Array<ABCustomItem?> = arrayOfNulls(0)
-
 }
-                
-            
-

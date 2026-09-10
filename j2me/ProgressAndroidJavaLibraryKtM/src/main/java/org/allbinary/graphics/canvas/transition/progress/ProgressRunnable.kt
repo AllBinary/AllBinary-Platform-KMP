@@ -1,59 +1,42 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.canvas.transition.progress
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.canvas.transition.progress
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import android.app.Activity
 import org.allbinary.android.activity.MidletActivityBase
 import org.allbinary.android.activity.SimpleProgressActivityInterface
 import org.allbinary.thread.ARunnable
 
 open public class ProgressRunnable : ARunnable {
-        
 
     val midletActivity: SimpleProgressActivityInterface
 
     val progressCanvas: ProgressCanvas
-public constructor (midletActivity: Activity, progressCanvas: ProgressCanvas){
-    //var midletActivity = midletActivity
-    //var progressCanvas = progressCanvas
 
-    var midletActivity2: MidletActivityBase = midletActivity as MidletActivityBase
+    public constructor(midletActivity: Activity, progressCanvas: ProgressCanvas) {
+        // var midletActivity = midletActivity
+        // var progressCanvas = progressCanvas
 
-this.midletActivity= midletActivity2 as SimpleProgressActivityInterface
-this.progressCanvas= progressCanvas
-}
+        var midletActivity2: MidletActivityBase = midletActivity as MidletActivityBase
 
+        this.midletActivity = midletActivity2 as SimpleProgressActivityInterface
+        this.progressCanvas = progressCanvas
+    }
 
     override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {}
 }
-
-
-}
-                
-            
-

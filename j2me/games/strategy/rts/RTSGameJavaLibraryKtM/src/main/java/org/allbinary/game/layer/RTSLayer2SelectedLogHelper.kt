@@ -1,57 +1,41 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 
 open public class RTSLayer2SelectedLogHelper : RTSLayer2LogHelper {
-        
-companion object {
-            
-    private val instanceC: RTSLayer2SelectedLogHelper = RTSLayer2SelectedLogHelper()
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: RTSLayer2SelectedLogHelper{
+    companion object {
 
+        private val instanceC: RTSLayer2SelectedLogHelper = RTSLayer2SelectedLogHelper()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : RTSLayer2SelectedLogHelper {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return RTSLayer2SelectedLogHelper.instanceC
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return RTSLayer2SelectedLogHelper.instanceC
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val TRACK_TO_FIRE_OR_MOVE: String = "trackTo:fireOrMove"
@@ -59,100 +43,159 @@ companion object {
     private val BUILDING_CHASE: String = "buildingChase"
 
     override fun steeringUp(pathFindingLayerInterface: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Up")!!.toString(), this, this.TRACK_TO_FIRE_OR_MOVE)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" steering - Up")!!
+                .toString(),
+            this,
+            this.TRACK_TO_FIRE_OR_MOVE,
+        )
+    }
 
     override fun steeringFireOrStop(pathFindingLayerInterface: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Fire/All Stop")!!.toString(), this, this.TRACK_TO_FIRE_OR_MOVE)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" steering - Fire/All Stop")!!
+                .toString(),
+            this,
+            this.TRACK_TO_FIRE_OR_MOVE,
+        )
+    }
 
     override fun buildingAbove(pathFindingLayerInterface: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Above")!!.toString(), this, this.BUILDING_CHASE)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" Building Above")!!
+                .toString(),
+            this,
+            this.BUILDING_CHASE,
+        )
+    }
 
+    override fun buildingChaseLeft(
+        pathFindingLayerInterface: PathFindingLayerInterface,
+        angle: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        // var angle = angle
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" steering - Going Left: ")!!
+                .appendint(angle)!!
+                .toString(),
+            this,
+            this.BUILDING_CHASE,
+        )
+    }
 
-    override fun buildingChaseLeft(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-    //var angle = angle
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Left: ")!!.appendint(angle)!!.toString(), this, this.BUILDING_CHASE)
-}
-
-
-    override fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-    //var angle = angle
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Right: ")!!.appendint(angle)!!.toString(), this, this.BUILDING_CHASE)
-}
-
+    override fun buildingChaseRight(
+        pathFindingLayerInterface: PathFindingLayerInterface,
+        angle: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        // var angle = angle
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" steering - Going Right: ")!!
+                .appendint(angle)!!
+                .toString(),
+            this,
+            this.BUILDING_CHASE,
+        )
+    }
 
     override fun buildingDown(pathFindingLayerInterface: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Below")!!.toString(), this, this.BUILDING_CHASE)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" Building Below")!!
+                .toString(),
+            this,
+            this.BUILDING_CHASE,
+        )
+    }
 
-
-    override fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-    //var angle = angle
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Down: ")!!.appendint(angle)!!.toString(), this, this.BUILDING_CHASE)
-}
-
+    override fun buildingChaseDown(
+        pathFindingLayerInterface: PathFindingLayerInterface,
+        angle: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        // var angle = angle
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" steering - Going Down: ")!!
+                .appendint(angle)!!
+                .toString(),
+            this,
+            this.BUILDING_CHASE,
+        )
+    }
 
     override fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-    //var angle = angle
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Up: ")!!.appendint(angle)!!.toString(), this, this.BUILDING_CHASE)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        // var angle = angle
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" steering - Going Up: ")!!
+                .appendint(angle)!!
+                .toString(),
+            this,
+            this.BUILDING_CHASE,
+        )
+    }
 
     open fun buildingLeft(pathFindingLayerInterface: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Left")!!.toString(), this, this.BUILDING_CHASE)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" Building Left")!!
+                .toString(),
+            this,
+            this.BUILDING_CHASE,
+        )
+    }
 
     open fun buildingRight(pathFindingLayerInterface: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-this.logUtil!!.putF(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Right")!!.toString(), this, this.BUILDING_CHASE)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingLayerInterface = pathFindingLayerInterface
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(pathFindingLayerInterface!!.getName())!!
+                .append(" Building Right")!!
+                .toString(),
+            this,
+            this.BUILDING_CHASE,
+        )
+    }
 }
-
-
-}
-                
-            
-

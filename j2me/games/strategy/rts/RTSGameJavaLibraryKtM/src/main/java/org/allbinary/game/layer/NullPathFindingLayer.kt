@@ -1,30 +1,22 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2025 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.animation.caption.CaptionAnimationHelperBase
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.waypoint.Waypoint2LogHelper
@@ -36,402 +28,285 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.util.BasicArrayList
 
-open public class NullPathFindingLayer
-            : Object
-        
-                , PathFindingLayerInterface {
-        
-companion object {
-            
-    val NULL_PATH_FINDING_LAYER: NullPathFindingLayer = NullPathFindingLayer()
+open public class NullPathFindingLayer : Object, PathFindingLayerInterface {
 
-        }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    companion object {
+
+        val NULL_PATH_FINDING_LAYER: NullPathFindingLayer = NullPathFindingLayer()
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     override fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getEndGeographicMapCellPositionList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun shouldHandleStartSameAsEnd()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getGeographicMapCellPositionArea()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPositionAreaBase{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPositionAreaBase {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getHudPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : SelectionHudPaintable {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun handleCost(ownerLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var ownerLayer = ownerLayer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var ownerLayer = ownerLayer
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getParentLayer()
-        //nullable = true from not(false or (false and true)) = true
-: PathFindingLayerInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : PathFindingLayerInterface {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getRTSLayer2LogHelper()
-        //nullable = true from not(false or (false and true)) = true
-: RTSLayer2LogHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : RTSLayer2LogHelper {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setTarget(targetGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var targetGameLayer = targetGameLayer
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var targetGameLayer = targetGameLayer
 
+        throw RuntimeException()
+    }
 
+    @Throws(Exception::class)
+    override fun init(
+        geographicMapCellHistory: GeographicMapCellHistory,
+        geographicMapCellPositionBasicArrayList: BasicArrayList,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapCellHistory = geographicMapCellHistory
+        // var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
 
-                            throw RuntimeException()
-}
+        throw RuntimeException()
+    }
 
+    override fun getMoveOutOfBuildAreaPath(
+        geographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var geographicMapCellPosition = geographicMapCellPosition
 
-                @Throws(Exception::class)
-            
-    override fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapCellHistory = geographicMapCellHistory
-    //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
+        throw RuntimeException()
+    }
 
-
-
-                            throw RuntimeException()
-}
-
-
-    override fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var geographicMapCellPosition = geographicMapCellPosition
-
-
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathsList = pathsList
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathsList = pathsList
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapCellPosition = geographicMapCellPosition
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapCellPosition = geographicMapCellPosition
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setLoad(resource: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var resource = resource
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var resource = resource
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getSurroundingGeographicMapCellPositionList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun isSelected()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun shouldAddWaypointFromBuilding()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun isShowMoreCaptionStates()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun trackTo(reason: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var reason = reason
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var reason = reason
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun trackToDXY(dx: Int, dy: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var dx = dx
-    //var dy = dy
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var dx = dx
+        // var dy = dy
 
+        throw RuntimeException()
+    }
 
+    @Throws(Exception::class)
+    override fun buildingChase(
+        allbinaryLayer: AllBinaryLayer,
+        cellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var allbinaryLayer = allbinaryLayer
+        // var cellPosition = cellPosition
 
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var allbinaryLayer = allbinaryLayer
-    //var cellPosition = cellPosition
-
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getTrackingEvent()
-        //nullable = true from not(false or (false and true)) = true
-: TrackingEvent{
+    // nullable = true from not(false or (false and true)) = true
+    : TrackingEvent {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun allStop()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun isWaypointListEmptyOrOnlyTargets()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getCurrentGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getTopLeftGeographicMapCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPosition {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getCaptionAnimationHelper()
-        //nullable = true from not(false or (false and true)) = true
-: CaptionAnimationHelperBase{
+    // nullable = true from not(false or (false and true)) = true
+    : CaptionAnimationHelperBase {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getWaypointBehavior()
-        //nullable = true from not(false or (false and true)) = true
-: WaypointBehaviorBase{
+    // nullable = true from not(false or (false and true)) = true
+    : WaypointBehaviorBase {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getWaypointLogHelper()
-        //nullable = true from not(false or (false and true)) = true
-: WaypointLogHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : WaypointLogHelper {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getWaypoint2LogHelper()
-        //nullable = true from not(false or (false and true)) = true
-: Waypoint2LogHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : Waypoint2LogHelper {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getWaypointRunnableLogHelper()
-        //nullable = true from not(false or (false and true)) = true
-: WaypointRunnableLogHelper{
+    // nullable = true from not(false or (false and true)) = true
+    : WaypointRunnableLogHelper {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getGroupInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Array<Group?>{
+    // nullable = true from not(false or (false and true)) = true
+    : Array<Group?> {
 
+        throw RuntimeException()
+    }
 
-
-                            throw RuntimeException()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun isDestroyed()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                            throw RuntimeException()
-}
-
+        throw RuntimeException()
+    }
 
     override fun getSourceId()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                            throw RuntimeException()
+        throw RuntimeException()
+    }
 }
-
-
-}
-                
-            
-

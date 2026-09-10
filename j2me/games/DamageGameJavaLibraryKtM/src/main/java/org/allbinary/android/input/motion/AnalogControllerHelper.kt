@@ -1,46 +1,32 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.android.input.motion
+/* Generated Code Do Not Modify */
+package org.allbinary.android.input.motion
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.time.TimeDelayHelper
 
-open public class AnalogControllerHelper
-            : Object
-         {
-        
+open public class AnalogControllerHelper : Object {
 
     private val reduceTimeFactor: Int
-public constructor (reduceTimeFactor: Int)
-            : super()
-        {
-var reduceTimeFactor = reduceTimeFactor
-this.reduceTimeFactor= reduceTimeFactor
-}
 
+    public constructor(reduceTimeFactor: Int) : super() {
+        var reduceTimeFactor = reduceTimeFactor
+        this.reduceTimeFactor = reduceTimeFactor
+    }
 
     private val SCALE_VALUE: Int = AnalogControllerConfigurationFactory.getInstance()!!.SCALE_VALUE
 
@@ -52,87 +38,75 @@ this.reduceTimeFactor= reduceTimeFactor
 
     private val upTimeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
 
-                @Throws(Exception::class)
-            
-    open fun right(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
-var xAnalogValue = xAnalogValue
-this.rightTimeElapsedHelper!!.delay= ((this.SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
+    @Throws(Exception::class)
+    open fun right(
+        collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer,
+        xAnalogValue: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        var xAnalogValue = xAnalogValue
+        this.rightTimeElapsedHelper!!.delay =
+            ((this.SCALE_VALUE - xAnalogValue) shr this.reduceTimeFactor)
 
-    
-                        if(this.rightTimeElapsedHelper!!.isTimeTNT())
-                        
-                                    {
-                                    collidableDestroyableDamageableLayer!!.right()
+        if (this.rightTimeElapsedHelper!!.isTimeTNT()) {
 
-                                    }
-                                
+            collidableDestroyableDamageableLayer!!.right()
+        }
+    }
+
+    @Throws(Exception::class)
+    open fun left(
+        collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer,
+        xAnalogValue: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        var xAnalogValue = xAnalogValue
+        this.leftTimeElapsedHelper!!.delay =
+            ((this.SCALE_VALUE + xAnalogValue) shr this.reduceTimeFactor)
+
+        if (this.leftTimeElapsedHelper!!.isTimeTNT()) {
+
+            collidableDestroyableDamageableLayer!!.left()
+        }
+    }
+
+    @Throws(Exception::class)
+    open fun up(
+        collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer,
+        xAnalogValue: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        var xAnalogValue = xAnalogValue
+        this.upTimeElapsedHelper!!.delay =
+            ((this.SCALE_VALUE - xAnalogValue) shr this.reduceTimeFactor)
+
+        if (this.upTimeElapsedHelper!!.isTimeTNT()) {
+
+            collidableDestroyableDamageableLayer!!.up()
+        }
+    }
+
+    @Throws(Exception::class)
+    open fun down(
+        collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer,
+        xAnalogValue: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        var xAnalogValue = xAnalogValue
+        this.downTimeElapsedHelper!!.delay =
+            ((this.SCALE_VALUE + xAnalogValue) shr this.reduceTimeFactor)
+
+        if (this.downTimeElapsedHelper!!.isTimeTNT()) {
+
+            collidableDestroyableDamageableLayer!!.down()
+        }
+    }
 }
-
-
-                @Throws(Exception::class)
-            
-    open fun left(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
-var xAnalogValue = xAnalogValue
-this.leftTimeElapsedHelper!!.delay= ((this.SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
-
-    
-                        if(this.leftTimeElapsedHelper!!.isTimeTNT())
-                        
-                                    {
-                                    collidableDestroyableDamageableLayer!!.left()
-
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun up(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
-var xAnalogValue = xAnalogValue
-this.upTimeElapsedHelper!!.delay= ((this.SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
-
-    
-                        if(this.upTimeElapsedHelper!!.isTimeTNT())
-                        
-                                    {
-                                    collidableDestroyableDamageableLayer!!.up()
-
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun down(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
-var xAnalogValue = xAnalogValue
-this.downTimeElapsedHelper!!.delay= ((this.SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
-
-    
-                        if(this.downTimeElapsedHelper!!.isTimeTNT())
-                        
-                                    {
-                                    collidableDestroyableDamageableLayer!!.down()
-
-                                    }
-                                
-}
-
-
-}
-                
-            
-

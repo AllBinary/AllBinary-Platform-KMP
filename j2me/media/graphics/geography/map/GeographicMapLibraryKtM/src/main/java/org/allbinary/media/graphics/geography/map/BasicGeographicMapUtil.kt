@@ -1,308 +1,229 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.layer.Layer
 import org.allbinary.logic.communication.log.LogUtil
 
-open public class BasicGeographicMapUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: BasicGeographicMapUtil = BasicGeographicMapUtil()
+open public class BasicGeographicMapUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: BasicGeographicMapUtil{
+    companion object {
 
+        private val instance: BasicGeographicMapUtil = BasicGeographicMapUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : BasicGeographicMapUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicGeographicMapUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicGeographicMapUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-                @Throws(Exception::class)
-            
-    open fun getBorderingRow(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var direction = direction
-    //var oldGeographicMapCellPosition = oldGeographicMapCellPosition
+    @Throws(Exception::class)
+    open fun getBorderingRow(
+        direction: Int,
+        oldGeographicMapCellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var direction = direction
+        // var oldGeographicMapCellPosition = oldGeographicMapCellPosition
 
-    var LOCATION_CHANGE: Int = 1
-
-
-
-        when (direction) {
-            0 -> {
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldGeographicMapCellPosition!!.getRow()
-}
-1 -> {
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldGeographicMapCellPosition!!.getRow()
-}
-2 -> {
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldGeographicMapCellPosition!!.getRow() +LOCATION_CHANGE
-}
-3 -> {
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldGeographicMapCellPosition!!.getRow() -LOCATION_CHANGE
-}
-else -> {
-
-
-                            throw Exception("Only Four Directions")
-}
-
-        }       
-        
-    
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun getBorderingColumn(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var direction = direction
-    //var oldGeographicMapCellPosition = oldGeographicMapCellPosition
-
-    var LOCATION_CHANGE: Int = 1
-
-
+        var LOCATION_CHANGE: Int = 1
 
         when (direction) {
             0 -> {
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return oldGeographicMapCellPosition!!.getRow()
+            }
+            1 -> {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldGeographicMapCellPosition!!.getColumn() -LOCATION_CHANGE
-}
-1 -> {
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return oldGeographicMapCellPosition!!.getRow()
+            }
+            2 -> {
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return oldGeographicMapCellPosition!!.getRow() + LOCATION_CHANGE
+            }
+            3 -> {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldGeographicMapCellPosition!!.getColumn() +LOCATION_CHANGE
-}
-2 -> {
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return oldGeographicMapCellPosition!!.getRow() - LOCATION_CHANGE
+            }
+            else -> {
 
+                throw Exception("Only Four Directions")
+            }
+        }
+    }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldGeographicMapCellPosition!!.getColumn()
-}
-3 -> {
+    @Throws(Exception::class)
+    open fun getBorderingColumn(
+        direction: Int,
+        oldGeographicMapCellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var direction = direction
+        // var oldGeographicMapCellPosition = oldGeographicMapCellPosition
 
+        var LOCATION_CHANGE: Int = 1
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return oldGeographicMapCellPosition!!.getColumn()
-}
-else -> {
+        when (direction) {
+            0 -> {
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return oldGeographicMapCellPosition!!.getColumn() - LOCATION_CHANGE
+            }
+            1 -> {
 
-                            throw Exception("Only Four Directions")
-}
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return oldGeographicMapCellPosition!!.getColumn() + LOCATION_CHANGE
+            }
+            2 -> {
 
-        }       
-        
-    
-}
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return oldGeographicMapCellPosition!!.getColumn()
+            }
+            3 -> {
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return oldGeographicMapCellPosition!!.getColumn()
+            }
+            else -> {
 
-                @Throws(Exception::class)
-            
-    open fun isSameCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var fromGeographicMapCellPosition = fromGeographicMapCellPosition
-    //var toGeographicMapCellPosition = toGeographicMapCellPosition
+                throw Exception("Only Four Directions")
+            }
+        }
+    }
 
-    var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
+    @Throws(Exception::class)
+    open fun isSameCellPosition(
+        fromGeographicMapCellPosition: GeographicMapCellPosition,
+        toGeographicMapCellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var fromGeographicMapCellPosition = fromGeographicMapCellPosition
+        // var toGeographicMapCellPosition = toGeographicMapCellPosition
 
+        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
 
-    var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
+        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
 
+        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
 
-    var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
 
+        if (fromColumn == goColumn && fromRow == goRow) {
 
-    var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
-    
-                        if(fromColumn == goColumn && fromRow == goRow)
-                        
-                                    {
-                                    
+    open fun createAllBinaryTiledLayerArray(
+        geographicMapInterfaceArray: Array<BasicGeographicMap?>
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Array<Layer?> {
+        // var geographicMapInterfaceArray = geographicMapInterfaceArray
 
+        var tiledLayerArray: Array<Layer?> = arrayOfNulls(geographicMapInterfaceArray!!.size)
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.getAllBinaryTiledLayerArray(geographicMapInterfaceArray, tiledLayerArray, 0)
+    }
 
-                                    }
-                                
-                        else {
-                            
+    open fun getAllBinaryTiledLayerArray(
+        geographicMapInterfaceArray: Array<BasicGeographicMap?>,
+        tiledLayerArray: Array<Layer?>,
+        startIndex: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Array<Layer?> {
+        // var geographicMapInterfaceArray = geographicMapInterfaceArray
+        // var tiledLayerArray = tiledLayerArray
+        // var startIndex = startIndex
 
+        var geographicMapInterface: BasicGeographicMap
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+        var size: Int = geographicMapInterfaceArray!!.size
 
-                        }
-                            
-}
+        var count: Int = 0
 
+        for (index in size + startIndex - 1 downTo startIndex) {
 
-    open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>)
-        //nullable = true from not(false or (false and false)) = true
-: Array<Layer?>{
-    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+            geographicMapInterface = geographicMapInterfaceArray[index]!!
+            tiledLayerArray[count++] = geographicMapInterface!!.getAllBinaryTiledLayer()
+        }
 
-    var tiledLayerArray: Array<Layer?> = arrayOfNulls(geographicMapInterfaceArray!!.size)
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getAllBinaryTiledLayerArray(geographicMapInterfaceArray, tiledLayerArray, 0)
-}
-
-
-    open fun getAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>, tiledLayerArray: Array<Layer?>, startIndex: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Array<Layer?>{
-    //var geographicMapInterfaceArray = geographicMapInterfaceArray
-    //var tiledLayerArray = tiledLayerArray
-    //var startIndex = startIndex
-
-    var geographicMapInterface: BasicGeographicMap
-
-
-    var size: Int = geographicMapInterfaceArray!!.size
-                
-
-
-    var count: Int = 0
-
-
-
-
-
-                        for (index in size +startIndex  - 1  downTo startIndex)
-
-        {
-geographicMapInterface= geographicMapInterfaceArray[index]!!
-tiledLayerArray[count++]= geographicMapInterface!!.getAllBinaryTiledLayer()
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return tiledLayerArray
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return tiledLayerArray
+    }
 
     open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, dx: Int, dy: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapInterfaceArray = geographicMapInterfaceArray
-    //var dx = dx
-    //var dy = dy
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapInterfaceArray = geographicMapInterfaceArray
+        // var dx = dx
+        // var dy = dy
 
-    var geographicMapInterface: BasicGeographicMap
+        var geographicMapInterface: BasicGeographicMap
 
+        var size: Int = geographicMapInterfaceArray!!.size
 
-    var size: Int = geographicMapInterfaceArray!!.size
-                
+        for (index in size - 1 downTo 0) {
 
-
-
-
-
-                        for (index in size  - 1  downTo 0)
-
-        {
-geographicMapInterface= geographicMapInterfaceArray[index]!!
-geographicMapInterface!!.getAllBinaryTiledLayer()!!.moveDXY(dx, dy)
-}
-
-}
-
+            geographicMapInterface = geographicMapInterfaceArray[index]!!
+            geographicMapInterface!!.getAllBinaryTiledLayer()!!.moveDXY(dx, dy)
+        }
+    }
 
     open fun setPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapInterfaceArray = geographicMapInterfaceArray
-    //var x = x
-    //var y = y
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapInterfaceArray = geographicMapInterfaceArray
+        // var x = x
+        // var y = y
 
-    var geographicMapInterface: BasicGeographicMap
+        var geographicMapInterface: BasicGeographicMap
 
+        var size: Int = geographicMapInterfaceArray!!.size
 
-    var size: Int = geographicMapInterfaceArray!!.size
-                
+        for (index in size - 1 downTo 0) {
 
-
-
-
-
-                        for (index in size  - 1  downTo 0)
-
-        {
-geographicMapInterface= geographicMapInterfaceArray[index]!!
-geographicMapInterface!!.getAllBinaryTiledLayer()!!.setPosition(x, y, geographicMapInterface!!.getAllBinaryTiledLayer()!!.getZP())
+            geographicMapInterface = geographicMapInterfaceArray[index]!!
+            geographicMapInterface!!
+                .getAllBinaryTiledLayer()!!
+                .setPosition(x, y, geographicMapInterface!!.getAllBinaryTiledLayer()!!.getZP())
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

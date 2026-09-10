@@ -1,121 +1,84 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2002 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2002 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.geological.resources
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.geological.resources
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.game.layer.resources.BasicGameResources
-import org.allbinary.game.layer.resources.GameGraphicsResourceUtil
+import kotlin.Array
 import org.allbinary.AndroidUtil
 import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
+import org.allbinary.game.layer.resources.BasicGameResources
+import org.allbinary.game.layer.resources.GameGraphicsResourceUtil
 
 open public class GeologicalGameResources : BasicGameResources {
-        
-companion object {
-            
-    private val instance: GeologicalGameResources = GeologicalGameResources()
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: BasicGameResources{
+    companion object {
 
+        private val instance: GeologicalGameResources = GeologicalGameResources()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : BasicGameResources {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeologicalGameResources.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GeologicalGameResources.instance
         }
-            private constructor (){
+    }
 
-    var ROOT: String = "/resource"
+    private constructor() {
 
+        var ROOT: String = "/resource"
 
-    var SMALL: String = "_20_by_20.png"
+        var SMALL: String = "_20_by_20.png"
 
+        var MEDIUM: String = SMALL
 
-    var MEDIUM: String = SMALL
+        var SIZE_FOUR: String = SMALL
 
+        var SIZE_FIVE: String = SMALL
 
-    var SIZE_FOUR: String = SMALL
+        var SIZE_SIX: String = SMALL
 
+        var SIZE: Array<String?> = arrayOf(SMALL, MEDIUM, SIZE_FOUR, SIZE_FIVE, SIZE_SIX)
 
-    var SIZE_FIVE: String = SMALL
+        super.init(ROOT, SIZE)
+    }
 
-
-    var SIZE_SIX: String = SMALL
-
-
-    var SIZE: Array<String?> = arrayOf(SMALL,MEDIUM,SIZE_FOUR,SIZE_FIVE,SIZE_SIX)
-
-super.init(ROOT, SIZE)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun append(ROOT: String, sizeString: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var ROOT = ROOT
-var sizeString = sizeString
-super.append(ROOT, sizeString)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var ROOT = ROOT
+        var sizeString = sizeString
+        super.append(ROOT, sizeString)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun getString()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-    
-                        if(AndroidUtil.isAndroid())
-                        
-                                    {
-                                    
+        if (AndroidUtil.isAndroid()) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GameGraphicsResourceUtil.getInstance()!!.getStringForFeature(
+                GraphicsFeatureFactory.getInstance()!!.SPRITE_QUARTER_ROTATION_GRAPHICS
+            )
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameGraphicsResourceUtil.getInstance()!!.getStringForFeature(GraphicsFeatureFactory.getInstance()!!.SPRITE_QUARTER_ROTATION_GRAPHICS)
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return super.getString()
-
-                        }
-                            
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return super.getString()
+        }
+    }
 }
-
-
-}
-                
-            
-

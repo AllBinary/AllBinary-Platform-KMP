@@ -1,31 +1,18 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import android.view.KeyEvent
 import org.allbinary.android.ActivityFractureUtil
-import org.allbinary.string.CommonPhoneStrings
-import org.allbinary.logic.io.path.AbPathData
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.io.path.AbPathData
+import org.allbinary.string.CommonPhoneStrings
+import org.allbinary.string.CommonStrings
 
 open public class AndroidKeyFactory : ActivityFractureUtil {
-        
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val UNKNOWN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_UNKNOWN, "UNKNOWN")
@@ -104,29 +91,41 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
     val ENDCALL: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ENDCALL, "ENDCALL")
 
-    val ZERO: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_0, CommonPhoneStrings.getInstance()!!.ZERO)
+    val ZERO: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_0, CommonPhoneStrings.getInstance()!!.ZERO)
 
-    val ONE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_1, CommonPhoneStrings.getInstance()!!.ONE)
+    val ONE: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_1, CommonPhoneStrings.getInstance()!!.ONE)
 
-    val TWO: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_2, CommonPhoneStrings.getInstance()!!.TWO)
+    val TWO: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_2, CommonPhoneStrings.getInstance()!!.TWO)
 
-    val THREE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_3, CommonPhoneStrings.getInstance()!!.THREE)
+    val THREE: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_3, CommonPhoneStrings.getInstance()!!.THREE)
 
-    val FOUR: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_4, CommonPhoneStrings.getInstance()!!.FOUR)
+    val FOUR: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_4, CommonPhoneStrings.getInstance()!!.FOUR)
 
-    val FIVE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_5, CommonPhoneStrings.getInstance()!!.FIVE)
+    val FIVE: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_5, CommonPhoneStrings.getInstance()!!.FIVE)
 
-    val SIX: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_6, CommonPhoneStrings.getInstance()!!.SIX)
+    val SIX: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_6, CommonPhoneStrings.getInstance()!!.SIX)
 
-    val SEVEN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_7, CommonPhoneStrings.getInstance()!!.SEVEN)
+    val SEVEN: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_7, CommonPhoneStrings.getInstance()!!.SEVEN)
 
-    val EIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_8, CommonPhoneStrings.getInstance()!!.EIGHT)
+    val EIGHT: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_8, CommonPhoneStrings.getInstance()!!.EIGHT)
 
-    val NINE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_9, CommonPhoneStrings.getInstance()!!.NINE)
+    val NINE: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_9, CommonPhoneStrings.getInstance()!!.NINE)
 
-    val STAR: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_STAR, CommonPhoneStrings.getInstance()!!.STAR)
+    val STAR: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_STAR, CommonPhoneStrings.getInstance()!!.STAR)
 
-    val POUND: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_POUND, CommonPhoneStrings.getInstance()!!.POUND)
+    val POUND: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_POUND, CommonPhoneStrings.getInstance()!!.POUND)
 
     val DPAD_UP: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_UP, "UP")
 
@@ -202,7 +201,8 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
     val COMMA: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_COMMA, "COMMA")
 
-    val PERIOD: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_PERIOD, AbPathData.getInstance()!!.EXTENSION_SEP)
+    val PERIOD: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_PERIOD, AbPathData.getInstance()!!.EXTENSION_SEP)
 
     val ALT_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ALT_LEFT, "ALT_LEFT")
 
@@ -234,7 +234,8 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
     val LEFT_BRACKET: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_LEFT_BRACKET, "LEFT_BRACKET")
 
-    val RIGHT_BRACKET: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_RIGHT_BRACKET, "RIGHT_BRACKET")
+    val RIGHT_BRACKET: AndroidGameKey =
+        AndroidGameKey(KeyEvent.KEYCODE_RIGHT_BRACKET, "RIGHT_BRACKET")
 
     val BACKSLASH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_BACKSLASH, "BACKSLASH")
 
@@ -261,242 +262,153 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
     val SEARCH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SEARCH, "SEARCH")
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-this.logUtil!!.putF("Start/End", this, commonStrings!!.INIT)
+        this.logUtil!!.putF("Start/End", this, commonStrings!!.INIT)
+    }
+
+    open fun isSubmission(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.ENTER) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else if (input == this.DPAD_CENTER) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isDelete(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isBackSpace(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DEL) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isLeft(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_LEFT) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isRight(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_RIGHT) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isUp(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_UP) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isDown(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_DOWN) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    open fun isEnter(
+        input: Input
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var input = input
+
+        if (input == this.DPAD_CENTER) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else if (input == this.ENTER) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else if (input == this.CALL) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 }
-
-
-    open fun isSubmission(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.ENTER)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                             else 
-    
-                        if(input == this.DPAD_CENTER)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isDelete(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isBackSpace(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DEL)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isLeft(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_LEFT)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isRight(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_RIGHT)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isUp(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_UP)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isDown(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_DOWN)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun isEnter(input: Input)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var input = input
-
-    
-                        if(input == this.DPAD_CENTER)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                             else 
-    
-                        if(input == this.ENTER)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                             else 
-    
-                        if(input == this.CALL)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-}
-                
-            
-

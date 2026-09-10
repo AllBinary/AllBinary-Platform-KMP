@@ -1,282 +1,189 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.health
+/* Generated Code Do Not Modify */
+package org.allbinary.game.health
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
-open public class Health
-            : Object
-        
-                , HealthInterface {
-        
-companion object {
-            
-    val NULL_HEALTH: Health = Health(0)
+open public class Health : Object, HealthInterface {
 
-    val NAME: String = "Health Resource"
+    companion object {
 
-    private val HEALTH_LABEL: String = "Health: "
+        val NULL_HEALTH: Health = Health(0)
 
-    private val MAX_HEALTH_LABEL: String = " Max: "
+        val NAME: String = "Health Resource"
 
-        }
-            
-    private var health: Int= 0
+        private val HEALTH_LABEL: String = "Health: "
 
-    private var maxHealth: Int= 0
+        private val MAX_HEALTH_LABEL: String = " Max: "
+    }
 
-    private var healthListenerInterface: HealthListenerInterface = NullHealthListener.NULL_HEALTH_LISTENER
-public constructor (maxHealth: Int)
-            : super()
-        {
-var maxHealth = maxHealth
-this.setMaxHealth(maxHealth)
-this.setHealth(maxHealth)
-}
+    private var health: Int = 0
 
+    private var maxHealth: Int = 0
+
+    private var healthListenerInterface: HealthListenerInterface =
+        NullHealthListener.NULL_HEALTH_LISTENER
+
+    public constructor(maxHealth: Int) : super() {
+        var maxHealth = maxHealth
+        this.setMaxHealth(maxHealth)
+        this.setHealth(maxHealth)
+    }
 
     override fun heal(ahealth: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var ahealth = ahealth
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var ahealth = ahealth
 
-    var newHealth: Int = this.getHealth() +ahealth
+        var newHealth: Int = this.getHealth() + ahealth
 
+        if (newHealth > this.getMaxHealth()) {
 
-    
-                        if(newHealth > this.getMaxHealth())
-                        
-                                    {
-                                    this.setHealth(this.getMaxHealth())
-
-                                    }
-                                
-                        else {
-                            this.setHealth(newHealth)
-
-                        }
-                            
-}
-
+            this.setHealth(this.getMaxHealth())
+        } else {
+            this.setHealth(newHealth)
+        }
+    }
 
     override fun healMax()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.setHealth(this.getMaxHealth())
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.setHealth(this.getMaxHealth())
+    }
 
     open fun isDamaged()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.getHealth() != this.getMaxHealth())
-                        
-                                    {
-                                    
+        if (this.getHealth() != this.getMaxHealth()) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        }
+    }
 
     override fun damage(ahealth: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var ahealth = ahealth
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var ahealth = ahealth
 
-    
-                        if(ahealth < 0)
-                        
-                                    {
-                                    
-    var stringBuffer: StringMaker = StringMaker()
+        if (ahealth < 0) {
 
-stringBuffer!!.append("******* Trying to heal when damaging. Damage: ")
-stringBuffer!!.appendint(ahealth)
-stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(this.toString())
-ForcedLogUtil.log(stringBuffer!!.toString(), this)
+            var stringBuffer: StringMaker = StringMaker()
 
+            stringBuffer!!.append("******* Trying to heal when damaging. Damage: ")
+            stringBuffer!!.appendint(ahealth)
+            stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+            stringBuffer!!.append(this.toString())
+            ForcedLogUtil.log(stringBuffer!!.toString(), this)
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
+        var health: Int = this.getHealth() - ahealth
 
-                                    }
-                                
-
-    var health: Int = this.getHealth() -ahealth
-
-this.setHealth(health)
-}
-
+        this.setHealth(health)
+    }
 
     override fun isAlive()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.getHealth() <= 0)
-                        
-                                    {
-                                    
+        if (this.getHealth() <= 0) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+    }
 
     override fun getMaxHealth()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.maxHealth
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.maxHealth
+    }
 
     override fun setMaxHealth(maxHealth: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var maxHealth = maxHealth
-this.maxHealth= maxHealth
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var maxHealth = maxHealth
+        this.maxHealth = maxHealth
+    }
 
     open fun setHealth(health: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var health = health
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var health = health
 
-    
-                        if(health > this.getMaxHealth())
-                        
-                                    {
-                                    this.health= this.getMaxHealth()
+        if (health > this.getMaxHealth()) {
 
-                                    }
-                                
-                             else 
-    
-                        if(health < 0)
-                        
-                                    {
-                                    this.health= 0
+            this.health = this.getMaxHealth()
+        } else if (health < 0) {
 
-                                    }
-                                
-                        else {
-                            this.health= health
+            this.health = 0
+        } else {
+            this.health = health
+        }
 
-                        }
-                            
+        if (this.healthListenerInterface != null) {
 
-    
-                        if(this.healthListenerInterface != 
-                                    null
-                                )
-                        
-                                    {
-                                    this.healthListenerInterface!!.onHealthChange()
-
-                                    }
-                                
-}
-
+            this.healthListenerInterface!!.onHealthChange()
+        }
+    }
 
     override fun getHealth()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.health
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.health
+    }
 
     override fun addListener(healthGraphic: HealthListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var healthGraphic = healthGraphic
-this.healthListenerInterface= healthGraphic
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var healthGraphic = healthGraphic
+        this.healthListenerInterface = healthGraphic
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(Health.HEALTH_LABEL)
-stringBuffer!!.appendint(this.health)
-stringBuffer!!.append(Health.MAX_HEALTH_LABEL)
-stringBuffer!!.appendint(this.maxHealth)
+        stringBuffer!!.append(Health.HEALTH_LABEL)
+        stringBuffer!!.appendint(this.health)
+        stringBuffer!!.append(Health.MAX_HEALTH_LABEL)
+        stringBuffer!!.appendint(this.maxHealth)
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

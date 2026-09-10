@@ -1,31 +1,23 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation.image
+/* Generated Code Do Not Modify */
+package org.allbinary.animation.image
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.Image
+import kotlin.Array
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
@@ -34,106 +26,125 @@ import org.allbinary.logic.NullUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.media.ScaleProperties
 import org.allbinary.media.image.ImageToRotationImageArrayUtil
-//TWB - Adjustments should be done in the resource creation and not at the animation level
-open public class PooledImageArrayRotationAnimationFactory
-            : Object
-        
-                , AnimationInterfaceFactoryInterface {
-        
-companion object {
-            
-                @Throws(Exception::class)
-            
-    open fun createFactory(image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
-        //nullable = true from not(false or (false and false)) = true
-: PooledImageArrayRotationAnimationFactory{
-    //var image = image
-    //var animationBehaviorFactory = animationBehaviorFactory
 
-    var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
+// TWB - Adjustments should be done in the resource creation and not at the animation level
+open public class PooledImageArrayRotationAnimationFactory :
+    Object, AnimationInterfaceFactoryInterface {
 
+    companion object {
 
-    var angleIncrement: Int = (totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity())
+        @Throws(Exception::class)
+        open fun createFactory(
+            image: Image,
+            animationBehaviorFactory: AnimationBehaviorFactory,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : PooledImageArrayRotationAnimationFactory {
+            // var image = image
+            // var animationBehaviorFactory = animationBehaviorFactory
 
+            var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
 
+            var angleIncrement: Int =
+                (totalAngle / GameConfigurationCentral.getInstance()!!.getGameControlFidelity())
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PooledImageArrayRotationAnimationFactory(image, image.getWidth(), image.getHeight(),  -(image.getWidth() shr 2),  -(image.getHeight() shr 2), angleIncrement, animationBehaviorFactory)
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun createDXY(image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
-        //nullable = true from not(false or (false and false)) = true
-: PooledImageArrayRotationAnimationFactory{
-    //var image = image
-    //var dx = dx
-    //var dy = dy
-    //var animationBehaviorFactory = animationBehaviorFactory
-
-    var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
-
-
-    var angleIncrement: Int = (totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity())
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PooledImageArrayRotationAnimationFactory(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory)
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PooledImageArrayRotationAnimationFactory(
+                image,
+                image.getWidth(),
+                image.getHeight(),
+                -(image.getWidth() shr 2),
+                -(image.getHeight() shr 2),
+                angleIncrement,
+                animationBehaviorFactory,
+            )
         }
-            
+
+        @Throws(Exception::class)
+        open fun createDXY(
+            image: Image,
+            dx: Int,
+            dy: Int,
+            animationBehaviorFactory: AnimationBehaviorFactory,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : PooledImageArrayRotationAnimationFactory {
+            // var image = image
+            // var dx = dx
+            // var dy = dy
+            // var animationBehaviorFactory = animationBehaviorFactory
+
+            var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
+
+            var angleIncrement: Int =
+                (totalAngle / GameConfigurationCentral.getInstance()!!.getGameControlFidelity())
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PooledImageArrayRotationAnimationFactory(
+                image,
+                image.getWidth(),
+                image.getHeight(),
+                dx,
+                dy,
+                angleIncrement,
+                animationBehaviorFactory,
+            )
+        }
+    }
+
     private var allBinaryImageRotationAnimationInfo: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Int, animationBehaviorFactory: AnimationBehaviorFactory)
-            : super()
-        {
-    //var image = image
-    //var width = width
-    //var height = height
-    //var dx = dx
-    //var dy = dy
-    //var angleIncrement = angleIncrement
-    //var animationBehaviorFactory = animationBehaviorFactory
-this.animationBehaviorFactory= animationBehaviorFactory
 
-    var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
+    public constructor(
+        image: Image,
+        width: Int,
+        height: Int,
+        dx: Int,
+        dy: Int,
+        angleIncrement: Int,
+        animationBehaviorFactory: AnimationBehaviorFactory,
+    ) : super() {
+        // var image = image
+        // var width = width
+        // var height = height
+        // var dx = dx
+        // var dy = dy
+        // var angleIncrement = angleIncrement
+        // var animationBehaviorFactory = animationBehaviorFactory
+        this.animationBehaviorFactory = animationBehaviorFactory
 
+        var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
 
-    var imageArray: Array<Image?> = ImageToRotationImageArrayUtil.getInstance()!!.generate(image, angleIncrement, totalAngle)!!
+        var imageArray: Array<Image?> =
+            ImageToRotationImageArrayUtil.getInstance()!!.generate(
+                image,
+                angleIncrement,
+                totalAngle,
+            )!!
 
-this.allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray, angleIncrement, totalAngle, dx, dy)
-}
+        this.allBinaryImageRotationAnimationInfo =
+            ImageArrayRotationAnimationInfo(imageArray, angleIncrement, totalAngle, dx, dy)
+    }
 
+    @Throws(Exception::class)
+    override fun getInstance(
+        instanceId: Int
+    )
+        // nullable =  from not(true or (false and false)) =
+        : Animation {
+        // var instanceId = instanceId
 
-                @Throws(Exception::class)
-            
-    override fun getInstance(instanceId: Int)
-        //nullable =  from not(true or (false and false)) = 
-: Animation{
-    //var instanceId = instanceId
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdjustedImageArrayRotationAnimation.createAdjustedImageArrayRotationAnimationInfo(this.allBinaryImageRotationAnimationInfo, this.animationBehaviorFactory!!.getOrCreateInstance())
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return AdjustedImageArrayRotationAnimation.createAdjustedImageArrayRotationAnimationInfo(
+            this.allBinaryImageRotationAnimationInfo,
+            this.animationBehaviorFactory!!.getOrCreateInstance(),
+        )
+    }
 
     override fun setInitialScale(scaleProperties: ScaleProperties)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var scaleProperties = scaleProperties
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var scaleProperties = scaleProperties
+    }
 }
-
-
-}
-                
-            
-

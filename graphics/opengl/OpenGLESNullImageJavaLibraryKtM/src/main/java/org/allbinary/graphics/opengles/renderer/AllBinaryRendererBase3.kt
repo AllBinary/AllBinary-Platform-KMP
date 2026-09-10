@@ -1,85 +1,55 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics.opengles.renderer
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.opengles.renderer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
 import org.allbinary.image.opengles.OpenGLESImage
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class AllBinaryRendererBase3
-            : Object
-         {
-        
+open public class AllBinaryRendererBase3 : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     val list: BasicArrayList = BasicArrayListD()
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun update(gl: GL10)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var gl = gl
 
-        while(this.list.size() > 0)
-        {
+        while (this.list.size() > 0) {
 
-    var openGLESImage: OpenGLESImage = this.list.removeAt(0) as OpenGLESImage
+            var openGLESImage: OpenGLESImage = this.list.removeAt(0) as OpenGLESImage
 
+            if (openGLESImage != null) {
 
-    
-                        if(openGLESImage != 
-                                    null
-                                )
-                        
-                                    {
-                                    openGLESImage!!.set(gl)
-
-                                    }
-                                
-}
-
-}
-
+                openGLESImage!!.set(gl)
+            }
+        }
+    }
 
     open fun add(image: Image)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var image = image
-this.list.add(image)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var image = image
+        this.list.add(image)
+    }
 }
-
-
-}
-                
-            
-

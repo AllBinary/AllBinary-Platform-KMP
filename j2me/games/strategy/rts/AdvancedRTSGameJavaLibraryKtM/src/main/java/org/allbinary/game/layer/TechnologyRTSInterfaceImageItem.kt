@@ -1,45 +1,33 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
-import org.allbinary.graphics.form.item.ABCustomImageItem
-import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.font.MyFontProcessor
 import org.allbinary.graphics.font.UpdateMyFontInterface
 import org.allbinary.graphics.font.UpdateMyFontProcessor
+import org.allbinary.graphics.form.item.ABCustomImageItem
+import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.logic.math.PrimitiveLongUtil
 
-open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem
-                , UpdateMyFontInterface {
-        
+open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem, UpdateMyFontInterface {
 
     private val rtsInterface: RTSInterface
 
@@ -55,112 +43,115 @@ open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem
 
     private var costString: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
 
-    private var costLength: Int= 0
+    private var costLength: Int = 0
 
     private var levelString: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
 
-    private var levelLength: Int= 0
+    private var levelLength: Int = 0
 
-    private var adjustedCostLabelY: Int= 0
+    private var adjustedCostLabelY: Int = 0
 
-    private var adjustedCostX: Int= 0
+    private var adjustedCostX: Int = 0
 
-    private var adjustedCostY: Int= 0
+    private var adjustedCostY: Int = 0
 
-    private var adjustedLevelX: Int= 0
+    private var adjustedLevelX: Int = 0
 
-    private var adjustedLevelY: Int= 0
-public constructor (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, rtsInterface: RTSInterface)                        
+    private var adjustedLevelY: Int = 0
 
-                            : super(label, img, layout, altText, basicColor, 0){
-    //var label = label
-    //var img = img
-    //var layout = layout
-    //var altText = altText
-    //var basicColor = basicColor
-    //var rtsInterface = rtsInterface
+    public constructor(
+        label: String,
+        img: Image,
+        layout: Int,
+        altText: String,
+        basicColor: BasicColor,
+        rtsInterface: RTSInterface,
+    ) : super(label, img, layout, altText, basicColor, 0) {
+        // var label = label
+        // var img = img
+        // var layout = layout
+        // var altText = altText
+        // var basicColor = basicColor
+        // var rtsInterface = rtsInterface
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.rtsInterface= rtsInterface
-this.update()
-}
-
+        this.rtsInterface = rtsInterface
+        this.update()
+    }
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
-    var font: Font = graphics.getFont()!!
+        var font: Font = graphics.getFont()!!
 
+        var fontHeight: Int = font.getHeight()!!
 
-    var fontHeight: Int = font.getHeight()!!
+        var imageHeight: Int = 0
 
+        var image: Image = this.getImage()!!
 
-    var imageHeight: Int = 0
+        if (image != NullImage.NULL_IMAGE) {
 
+            imageHeight = image.getHeight()
+        }
 
-    var image: Image = this.getImage()!!
-
-
-    
-                        if(image != NullImage.NULL_IMAGE)
-                        
-                                    {
-                                    imageHeight= image.getHeight()
-
-                                    }
-                                
-this.adjustedCostLabelY=  -this.yOffset +imageHeight -(3 *fontHeight)
-this.adjustedCostY=  -this.yOffset +imageHeight -(2 *fontHeight)
-this.adjustedCostX= 2 +(this.DOLLAR.length *(fontHeight -1))
-this.adjustedLevelY=  -this.yOffset +imageHeight -fontHeight
-this.adjustedLevelX= 2 +(this.LEVEL.length *(fontHeight -1))
-this.myFontProcessor= MyFontProcessor.getInstance()
-}
-
+        this.adjustedCostLabelY = -this.yOffset + imageHeight - (3 * fontHeight)
+        this.adjustedCostY = -this.yOffset + imageHeight - (2 * fontHeight)
+        this.adjustedCostX = 2 + (this.DOLLAR.length * (fontHeight - 1))
+        this.adjustedLevelY = -this.yOffset + imageHeight - fontHeight
+        this.adjustedLevelX = 2 + (this.LEVEL.length * (fontHeight - 1))
+        this.myFontProcessor = MyFontProcessor.getInstance()
+    }
 
     open fun getRtsInterface()
-        //nullable = true from not(false or (false and true)) = true
-: RTSInterface{
+    // nullable = true from not(false or (false and true)) = true
+    : RTSInterface {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsInterface
+    }
 
     open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.costString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getUpgradeCost())
-this.levelString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getLevel())
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.costString =
+            this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getUpgradeCost())
+        this.levelString =
+            this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getLevel())
+    }
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
-this.myFontProcessor!!.process(graphics)
-super.paintXY(graphics, x, y)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        // var x = x
+        // var y = y
+        this.myFontProcessor!!.process(graphics)
+        super.paintXY(graphics, x, y)
 
-    var xa: Int = x +2
+        var xa: Int = x + 2
 
-graphics.drawString(this.COST, xa, y +this.adjustedCostLabelY, 0)
-graphics.drawString(this.DOLLAR, xa, y +this.adjustedCostY, 0)
-graphics.drawChars(this.costString, 0, this.costLength, x +this.adjustedCostX, y +this.adjustedCostY, 0)
-graphics.drawString(this.LEVEL, xa, y +this.adjustedLevelY, 0)
-graphics.drawChars(this.levelString, 0, this.levelLength, x +this.adjustedLevelX, y +this.adjustedLevelY, 0)
+        graphics.drawString(this.COST, xa, y + this.adjustedCostLabelY, 0)
+        graphics.drawString(this.DOLLAR, xa, y + this.adjustedCostY, 0)
+        graphics.drawChars(
+            this.costString,
+            0,
+            this.costLength,
+            x + this.adjustedCostX,
+            y + this.adjustedCostY,
+            0,
+        )
+        graphics.drawString(this.LEVEL, xa, y + this.adjustedLevelY, 0)
+        graphics.drawChars(
+            this.levelString,
+            0,
+            this.levelLength,
+            x + this.adjustedLevelX,
+            y + this.adjustedLevelY,
+            0,
+        )
+    }
 }
-
-
-}
-                
-            
-

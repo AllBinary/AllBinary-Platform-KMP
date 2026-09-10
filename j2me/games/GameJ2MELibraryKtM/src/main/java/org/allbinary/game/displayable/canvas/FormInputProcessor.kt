@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Canvas
 import org.allbinary.game.input.GameKey
 import org.allbinary.game.input.GameKeyEventSourceInterface
@@ -44,7 +34,6 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 
 open public class FormInputProcessor : InputProcessor {
-        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -61,77 +50,95 @@ open public class FormInputProcessor : InputProcessor {
     private val platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
-public constructor (allBinaryGameCanvas: AllBinaryGameCanvas){
-var allBinaryGameCanvas = allBinaryGameCanvas
-this.allBinaryGameCanvas= allBinaryGameCanvas
-}
 
+    public constructor(allBinaryGameCanvas: AllBinaryGameCanvas) {
+        var allBinaryGameCanvas = allBinaryGameCanvas
+        this.allBinaryGameCanvas = allBinaryGameCanvas
+    }
 
     override fun keyPressedByDevice(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var keyCode = keyCode
-    //var deviceId = deviceId
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var keyCode = keyCode
+        // var deviceId = deviceId
 
         try {
-            PreLogUtil.put(StringMaker().
-                            append(this.inputFactory!!.KEY_CODE_LABEL)!!.appendint(keyCode)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(this.inputFactory!!.DEVICE_ID_LABEL)!!.appendint(deviceId)!!.toString(), this, this.gameInputStrings!!.KEY_PRESSED)
+            PreLogUtil.put(
+                StringMaker()
+                    .append(this.inputFactory!!.KEY_CODE_LABEL)!!
+                    .appendint(keyCode)!!
+                    .append(CommonSeps.getInstance()!!.SPACE)!!
+                    .append(this.inputFactory!!.DEVICE_ID_LABEL)!!
+                    .appendint(deviceId)!!
+                    .toString(),
+                this,
+                this.gameInputStrings!!.KEY_PRESSED,
+            )
 
-    var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
+            var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
+            var gameKeyEvent: GameKeyEvent =
+                this.gameKeyEventFactory!!.getInstanceForInput(this.allBinaryGameCanvas, input)!!
 
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(this.allBinaryGameCanvas, input)!!
-
-this.downKeyEventHandler!!.fireEventForGameKeyEvent(gameKeyEvent)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
-}
-
-}
-
+            this.downKeyEventHandler!!.fireEventForGameKeyEvent(gameKeyEvent)
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.gameInputStrings!!.ADD_KEY_EVENT,
+                e,
+            )
+        }
+    }
 
     override fun keyReleasedByDevice(canvas: Canvas, keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var canvas = canvas
-    //var keyCode = keyCode
-    //var deviceId = deviceId
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var canvas = canvas
+        // var keyCode = keyCode
+        // var deviceId = deviceId
 
         try {
-            
-    var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
+            var input: Input = this.inputFactory!!.getInstanceById(keyCode)!!
 
-    
-                        if(this.platformKeyFactory!!.isEnter(input))
-                        
-                                    {
-                                    PreLogUtil.put(StringMaker().
-                            append(this.inputFactory!!.KEY_CODE_LABEL)!!.appendint(keyCode)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(this.inputFactory!!.DEVICE_ID_LABEL)!!.appendint(deviceId)!!.toString(), this, this.gameInputStrings!!.KEY_RELEASED)
+            if (this.platformKeyFactory!!.isEnter(input)) {
 
-    var gameKey: GameKey = GameKeyFactory.getInstance()!!.KEY_NUM0
+                PreLogUtil.put(
+                    StringMaker()
+                        .append(this.inputFactory!!.KEY_CODE_LABEL)!!
+                        .appendint(keyCode)!!
+                        .append(CommonSeps.getInstance()!!.SPACE)!!
+                        .append(this.inputFactory!!.DEVICE_ID_LABEL)!!
+                        .appendint(deviceId)!!
+                        .toString(),
+                    this,
+                    this.gameInputStrings!!.KEY_RELEASED,
+                )
 
+                var gameKey: GameKey = GameKeyFactory.getInstance()!!.KEY_NUM0
 
-    var gameKeyEventSourceInterface: GameKeyEventSourceInterface = canvas as GameKeyEventSourceInterface
+                var gameKeyEventSourceInterface: GameKeyEventSourceInterface =
+                    canvas as GameKeyEventSourceInterface
 
+                var gameKeyEvent: GameKeyEvent =
+                    this.gameKeyEventFactory!!.getInstanceForInput(
+                        gameKeyEventSourceInterface,
+                        gameKey,
+                    )!!
 
-    var gameKeyEvent: GameKeyEvent = this.gameKeyEventFactory!!.getInstanceForInput(gameKeyEventSourceInterface, gameKey)!!
-
-this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
-this.upGameKeyEventHandler!!.getInstanceForDevice(deviceId)!!.fireEvent(gameKeyEvent)
-
-                                    }
-                                
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+                this.upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
+                this.upGameKeyEventHandler!!
+                    .getInstanceForDevice(deviceId)!!
+                    .fireEvent(gameKeyEvent)
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.gameInputStrings!!.ADD_KEY_EVENT,
+                e,
+            )
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

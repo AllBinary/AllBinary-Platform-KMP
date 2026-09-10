@@ -1,31 +1,22 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.waypoint
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.waypoint
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
+import kotlin.Array
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.game.health.Health
@@ -34,156 +25,152 @@ import org.allbinary.game.input.form.NullRTSFormInputFactory
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.AdvancedRTSProperties
 import org.allbinary.game.layer.PathFindingLayerInterface
+import org.allbinary.game.layer.RTSPlayerLayerInterface
+import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.game.view.TileLayerPositionIntoViewPosition
 import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayerManager
-import org.allbinary.game.layer.RTSPlayerLayerInterface
-import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.media.audio.AttackSound
 
 open public class WaypointLayer : AdvancedRTSGameLayer {
-        
-companion object {
-            
-    open fun getStaticType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
 
+    companion object {
 
+        open fun getStaticType()
+        // nullable = true from not(false or (false and true)) = true
+        : Int {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 4
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return 4
         }
-            protected constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterface, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+    }
 
-                            : super(remoteInfo, parentLayer, AdvancedRTSProperties.createProperties(), groupInterface, rootName, name, Health(1000), NullRTSFormInputFactory.getInstance(), animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
-    //var remoteInfo = remoteInfo
-    //var parentLayer = parentLayer
-    //var groupInterface = groupInterface
-    //var rootName = rootName
-    //var name = name
-    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-    //var rectangle = rectangle
-    //var x = x
-    //var y = y
+    protected constructor(
+        remoteInfo: RemoteInfo,
+        parentLayer: PathFindingLayerInterface,
+        groupInterface: Array<Group?>,
+        rootName: String,
+        name: String,
+        animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface,
+        proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface,
+        rectangle: Rectangle,
+        x: Int,
+        y: Int,
+    ) : super(
+        remoteInfo,
+        parentLayer,
+        AdvancedRTSProperties.createProperties(),
+        groupInterface,
+        rootName,
+        name,
+        Health(1000),
+        NullRTSFormInputFactory.getInstance(),
+        animationInterfaceFactoryInterface,
+        animationInterfaceFactoryInterface,
+        animationInterfaceFactoryInterface,
+        animationInterfaceFactoryInterface,
+        animationInterfaceFactoryInterface,
+        proceduralAnimationInterfaceFactoryInterface,
+        rectangle,
+        x,
+        y,
+        TileLayerPositionIntoViewPosition(),
+    ) {
+        // var remoteInfo = remoteInfo
+        // var parentLayer = parentLayer
+        // var groupInterface = groupInterface
+        // var rootName = rootName
+        // var name = name
+        // var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+        // var proceduralAnimationInterfaceFactoryInterface =
+        // proceduralAnimationInterfaceFactoryInterface
+        // var rectangle = rectangle
+        // var x = x
+        // var y = y
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.setCollidableInferface(CollidableWaypointBehavior(true))
-this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, AttackSound.getInstance()))
-this.setAnimationInterface(this.indexedButShouldBeRotationAnimationInterface)
-}
-
+        this.setCollidableInferface(CollidableWaypointBehavior(true))
+        this.getWaypointBehavior()!!.setWaypoint(Waypoint(this, AttackSound.getInstance()))
+        this.setAnimationInterface(this.indexedButShouldBeRotationAnimationInterface)
+    }
 
     override fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-this.percentCompleteP= 100
-this.initVisibility(rtsPlayerLayerInterface)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        this.percentCompleteP = 100
+        this.initVisibility(rtsPlayerLayerInterface)
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
 
-    
-                        if(this.isVisible())
-                        
-                                    {
-                                    super.paint(graphics)
+        if (this.isVisible()) {
 
-                                    }
-                                
-}
-
+            super.paint(graphics)
+        }
+    }
 
     override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
 
         try {
             this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processTick", e)
-}
-
-}
-
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processTick", e)
+        }
+    }
 
     override fun damage(damage: Int, damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var damage = damage
-var damageType = damageType
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var damage = damage
+        var damageType = damageType
+    }
 
+    @Throws(Exception::class)
+    override fun getDamage(
+        damageType: Int
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var damageType = damageType
 
-                @Throws(Exception::class)
-            
-    override fun getDamage(damageType: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var damageType = damageType
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 0
+    }
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 0
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setDestroyed(destroyed: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var destroyed = destroyed
-super.setDestroyed(destroyed)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var destroyed = destroyed
+        super.setDestroyed(destroyed)
 
-    
-                        if(this.isDestroyed())
-                        
-                                    {
-                                    WaypointCellPositionHistory.getInstance()!!.removeLayer(this)
+        if (this.isDestroyed()) {
 
-                                    }
-                                
-}
-
+            WaypointCellPositionHistory.getInstance()!!.removeLayer(this)
+        }
+    }
 
     override fun getType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return WaypointLayer.getStaticType()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return WaypointLayer.getStaticType()
+    }
 
     override fun isSelfUpgradeable()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 }
-
-
-}
-                
-            
-

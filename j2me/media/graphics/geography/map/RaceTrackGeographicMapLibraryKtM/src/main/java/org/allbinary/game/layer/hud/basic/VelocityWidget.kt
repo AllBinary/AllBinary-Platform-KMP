@@ -1,47 +1,35 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.hud.basic
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.hud.basic
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
-import org.allbinary.graphics.opengles.OpenGLFeatureUtil
 import org.allbinary.game.graphics.hud.BasicHud
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.font.MyFontProcessor
+import org.allbinary.graphics.opengles.OpenGLFeatureUtil
 import org.allbinary.logic.math.MathUtil
 import org.allbinary.logic.math.PrimitiveLongSingleton
 import org.allbinary.logic.math.PrimitiveLongUtil
 
 open public class VelocityWidget : BasicHud {
-        
 
-    private val KILOMETERS_PER_HOUR_STR: CharArray = charArrayOf(' ','k','m','/','h')
+    private val KILOMETERS_PER_HOUR_STR: CharArray = charArrayOf(' ', 'k', 'm', '/', 'h')
 
     private val totalChars: Int = this.KILOMETERS_PER_HOUR_STR.size
-                
 
     private var velocity: Int
 
@@ -58,119 +46,112 @@ open public class VelocityWidget : BasicHud {
     private var offset: Int = 0
 
     private var offset2: Int = 0
-public constructor (powerOfTenVelocity: Int, location: Int, direction: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, 2, basicColor){
-var powerOfTenVelocity = powerOfTenVelocity
-var location = location
-var direction = direction
-var basicColor = basicColor
+    public constructor(
+        powerOfTenVelocity: Int,
+        location: Int,
+        direction: Int,
+        basicColor: BasicColor,
+    ) : super(location, direction, 2, basicColor) {
+        var powerOfTenVelocity = powerOfTenVelocity
+        var location = location
+        var direction = direction
+        var basicColor = basicColor
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.powerOfTenVelocity= powerOfTenVelocity
-this.maxVelocity= powerOfTenVelocity
-this.velocity= 0
-this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(powerOfTenVelocity)
-this.updateMaxHeight= 14
-}
-
+        this.powerOfTenVelocity = powerOfTenVelocity
+        this.maxVelocity = powerOfTenVelocity
+        this.velocity = 0
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(powerOfTenVelocity)
+        this.updateMaxHeight = 14
+    }
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
-    var font: Font = graphics.getFont()!!
+        var font: Font = graphics.getFont()!!
 
-this.updateMaxWidth= font.getSize() *(5 +MathUtil.getInstance()!!.getTotalDigits(this.powerOfTenVelocity) +1)
-super.updateMeasurement(graphics)
-this.offset= MyFontProcessor.defaultStringWidth(font, this.primitiveLongUtil!!.getMaxDigits()) +MyFontProcessor.defaultStringWidth(font, 2)
-this.offset2= this.offset -MyFontProcessor.defaultStringWidth(font, this.totalDigits) -MyFontProcessor.defaultStringWidth(font, 2)
-}
-
+        this.updateMaxWidth =
+            font.getSize() *
+                (5 + MathUtil.getInstance()!!.getTotalDigits(this.powerOfTenVelocity) + 1)
+        super.updateMeasurement(graphics)
+        this.offset =
+            MyFontProcessor.defaultStringWidth(font, this.primitiveLongUtil!!.getMaxDigits()) +
+                MyFontProcessor.defaultStringWidth(font, 2)
+        this.offset2 =
+            this.offset -
+                MyFontProcessor.defaultStringWidth(font, this.totalDigits) -
+                MyFontProcessor.defaultStringWidth(font, 2)
+    }
 
     open fun get()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.velocity
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.velocity
+    }
 
     open fun add(value: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.set(this.velocity +value)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.set(this.velocity + value)
+    }
 
     open fun set(value: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
 
-    var lastVelocity: Int = this.velocity
+        var lastVelocity: Int = this.velocity
 
-this.velocity= value
+        this.velocity = value
 
-    
-                        if(this.velocity > this.maxVelocity)
-                        
-                                    {
-                                    this.velocity= 0
+        if (this.velocity > this.maxVelocity) {
 
-                                    }
-                                
+            this.velocity = 0
+        }
 
-    
-                        if(lastVelocity != this.velocity)
-                        
-                                    {
-                                    this.string= this.primitiveLongUtil!!.getCharArray(this.velocity *18)
+        if (lastVelocity != this.velocity) {
 
-    
-                        if(OpenGLFeatureUtil.getInstance()!!.isAnyThreed())
-                        
-                                    {
-                                    this.totalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits() +1
+            this.string = this.primitiveLongUtil!!.getCharArray(this.velocity * 18)
 
-                                    }
-                                
-                        else {
-                            this.totalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
+            if (OpenGLFeatureUtil.getInstance()!!.isAnyThreed()) {
 
-                        }
-                            
-this.myFontProcessor= this.updateMyFontProcessor
+                this.totalDigits = this.primitiveLongUtil!!.getCurrentTotalDigits() + 1
+            } else {
+                this.totalDigits = this.primitiveLongUtil!!.getCurrentTotalDigits()
+            }
 
-                                    }
-                                
-}
-
+            this.myFontProcessor = this.updateMyFontProcessor
+        }
+    }
 
     open fun reduce(value: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var value = value
-this.set(this.velocity -value)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var value = value
+        this.set(this.velocity - value)
+    }
 
     open fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-super.paintDXY(graphics, this.string, 0, this.totalDigits, this.KILOMETERS_PER_HOUR_STR, 0, this.totalChars, this.offset2, this.offset)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        super.paintDXY(
+            graphics,
+            this.string,
+            0,
+            this.totalDigits,
+            this.KILOMETERS_PER_HOUR_STR,
+            0,
+            this.totalChars,
+            this.offset2,
+            this.offset,
+        )
+    }
 }
-
-
-}
-                
-            
-

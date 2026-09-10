@@ -1,32 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.ai
+/* Generated Code Do Not Modify */
+package org.allbinary.game.ai
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
 import org.allbinary.ai.ArtificialIntelligence
 import org.allbinary.game.displayable.canvas.CanvasUtil
 import org.allbinary.game.input.GameInput
@@ -40,17 +29,15 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 
-open public class BasicAI : ArtificialIntelligence
-                , GameKeyEventSourceInterface {
-        
-companion object {
-            
-    val AI_VISITOR: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(2)!!
+open public class BasicAI : ArtificialIntelligence, GameKeyEventSourceInterface {
 
-    val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(1)!!
+    companion object {
 
-        }
-            
+        val AI_VISITOR: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(2)!!
+
+        val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(1)!!
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -61,128 +48,95 @@ companion object {
 
     private val gameInput: GameInput
 
-    private var lastKey: Int =  -1
-public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput){
-var ownerLayerInterface = ownerLayerInterface
-var gameInput = gameInput
-this.ownerLayerInterface= ownerLayerInterface
-this.gameInput= gameInput
-}
+    private var lastKey: Int = -1
 
+    public constructor(ownerLayerInterface: AllBinaryLayer, gameInput: GameInput) {
+        var ownerLayerInterface = ownerLayerInterface
+        var gameInput = gameInput
+        this.ownerLayerInterface = ownerLayerInterface
+        this.gameInput = gameInput
+    }
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var allBinaryLayerManager = allBinaryLayerManager
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var allBinaryLayerManager = allBinaryLayerManager
 
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
-
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun processKeyAI(key: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var key = key
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var key = key
 
-    
-                        if(key !=  -1)
-                        
-                                    {
-                                    this.gameInput!!.add(this.gameKeyEventFactory!!.getInstanceForKey(this, key))
+        if (key != -1) {
 
-                                    }
-                                
-}
-
+            this.gameInput!!.add(this.gameKeyEventFactory!!.getInstanceForKey(this, key))
+        }
+    }
 
     open fun setLastKey(lastKey: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var lastKey = lastKey
-this.lastKey= lastKey
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var lastKey = lastKey
+        this.lastKey = lastKey
+    }
 
     open fun getLastKey()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.lastKey
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.lastKey
+    }
 
     open fun getOwnerLayerInterface()
-        //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+    // nullable = true from not(false or (false and true)) = true
+    : AllBinaryLayer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.ownerLayerInterface
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.ownerLayerInterface
+    }
 
     open fun getGameInput()
-        //nullable = true from not(false or (false and true)) = true
-: GameInput{
+    // nullable = true from not(false or (false and true)) = true
+    : GameInput {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameInput
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameInput
+    }
 
     open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this::class.toString()!!
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this::class.toString()!!
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
-stringBuffer!!.append(this.getName())
-stringBuffer!!.append(" LastKey: ")
-stringBuffer!!.append(CanvasUtil.getKeyName(this.getLastKey()))
+        stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+        stringBuffer!!.append(this.getName())
+        stringBuffer!!.append(" LastKey: ")
+        stringBuffer!!.append(CanvasUtil.getKeyName(this.getLastKey()))
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 
     override fun getSourceId()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 1
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return 1
+    }
 }
-
-
-}
-                
-            
-

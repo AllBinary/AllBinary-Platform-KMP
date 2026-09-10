@@ -1,31 +1,22 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.combat.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.combat.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.CommandListener
+import kotlin.Array
 import org.allbinary.game.combat.destroy.DestroyedLayerProcessor
 import org.allbinary.game.combat.destroy.event.DestroyEventCircularStaticPool
 import org.allbinary.game.combat.destroy.event.DestroyedEventHandler
@@ -42,130 +33,109 @@ import org.allbinary.layer.BasicLayerProcessor
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 
 open public class CombatGameCanvas : AllBinaryGameCanvas {
-        
-companion object {
-            
-    var basicLayerProcessor: Array<BasicLayerProcessor?> = arrayOfNulls(0)
 
-        }
-            public constructor (cmdListener: CommandListener, gameLayerManager: AllBinaryGameLayerManager, highScoresFactoryInterface: HighScoresFactoryInterface, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, buffered: Boolean)                        
+    companion object {
 
-                            : super(cmdListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered){
-    //var cmdListener = cmdListener
-    //var gameLayerManager = gameLayerManager
-    //var highScoresFactoryInterface = highScoresFactoryInterface
-    //var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
-    //var buffered = buffered
+        var basicLayerProcessor: Array<BasicLayerProcessor?> = arrayOfNulls(0)
+    }
 
+    public constructor(
+        cmdListener: CommandListener,
+        gameLayerManager: AllBinaryGameLayerManager,
+        highScoresFactoryInterface: HighScoresFactoryInterface,
+        gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory,
+        buffered: Boolean,
+    ) : super(
+        cmdListener,
+        gameLayerManager,
+        highScoresFactoryInterface,
+        gameInitializationInterfaceFactoryInterface,
+        buffered,
+    ) {
+        // var cmdListener = cmdListener
+        // var gameLayerManager = gameLayerManager
+        // var highScoresFactoryInterface = highScoresFactoryInterface
+        // var gameInitializationInterfaceFactoryInterface =
+        // gameInitializationInterfaceFactoryInterface
+        // var buffered = buffered
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
+        // For kotlin this is before the body of the constructor.
 
+    }
 
     open fun CombatGameCanvas_init()
-        //nullable = true from not(false or (false and true)) = true
-{
-DestroyEventCircularStaticPool.getInstance()!!.init(this)
-ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Destroy Events")
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        DestroyEventCircularStaticPool.getInstance()!!.init(this)
+        ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Destroy Events")
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun initApp(abeClientInformation: AbeClientInformationInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var abeClientInformation = abeClientInformation
-this.CombatGameCanvas_init()
-super.initApp(abeClientInformation)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var abeClientInformation = abeClientInformation
+        this.CombatGameCanvas_init()
+        super.initApp(abeClientInformation)
+    }
 
     open fun initConfigurablePortion(portion: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var portion = portion
-DestroyedLayerProcessor.init()
-ProgressCanvasFactory.getInstance()!!.addNormalPortion(portion, "Basic Processors")
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var portion = portion
+        DestroyedLayerProcessor.init()
+        ProgressCanvasFactory.getInstance()!!.addNormalPortion(portion, "Basic Processors")
 
-    var features: Features = Features.getInstance()!!
+        var features: Features = Features.getInstance()!!
 
+        var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
 
-    var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
+        if (
+            features.isFeature(gameFeatureFactory!!.DROPPED_ITEMS) &&
+                features.isFeature(gameFeatureFactory!!.DROPPED_ITEMS_FROM_DEATH)
+        ) {
+            CombatGameCanvas.basicLayerProcessor = arrayOfNulls(2)
+            CombatGameCanvas.basicLayerProcessor[0] = DestroyedLayerProcessor.getInstance()
+            CombatGameCanvas.basicLayerProcessor[1] = DropLayerProcessor.getInstance()
+        } else {
+            CombatGameCanvas.basicLayerProcessor = arrayOfNulls(1)
+            CombatGameCanvas.basicLayerProcessor[0] = DestroyedLayerProcessor.getInstance()
+        }
+    }
 
-
-    
-                        if(features.isFeature(gameFeatureFactory!!.DROPPED_ITEMS) && features.isFeature(gameFeatureFactory!!.DROPPED_ITEMS_FROM_DEATH))
-                        
-                                    {
-                                    CombatGameCanvas.basicLayerProcessor= arrayOfNulls(2)
-CombatGameCanvas.basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
-CombatGameCanvas.basicLayerProcessor[1]= DropLayerProcessor.getInstance()
-
-                                    }
-                                
-                        else {
-                            CombatGameCanvas.basicLayerProcessor= arrayOfNulls(1)
-CombatGameCanvas.basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
-
-                        }
-                            
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processPlayingGame()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.processPlayingGame()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.processPlayingGame()
 
+        for (index in CombatGameCanvas.basicLayerProcessor!!.size - 1 downTo 0) {
 
+            CombatGameCanvas.basicLayerProcessor[index]!!.process(this.gameLayerManager)
+        }
+    }
 
-
-                        for (index in CombatGameCanvas.basicLayerProcessor!!.size  - 1  downTo 0)
-
-        {
-CombatGameCanvas.basicLayerProcessor[index]!!.process(this.gameLayerManager)
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun cleanupGame()
-        //nullable = true from not(false or (false and true)) = true
-{
-super.cleanupGame()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        super.cleanupGame()
 
+        for (index in CombatGameCanvas.basicLayerProcessor!!.size - 1 downTo 0) {
 
+            CombatGameCanvas.basicLayerProcessor[index]!!.getList()!!.clear()
+        }
 
+        GroupLayerManagerListener.getInstance()!!.clear()
+        GroupLayerManagerListener.getInstance()!!.log()
+        DestroyedEventHandler.getInstance()!!.removeAllListeners()
+        this.cleanupManager()
+    }
 
-                        for (index in CombatGameCanvas.basicLayerProcessor!!.size  - 1  downTo 0)
-
-        {
-CombatGameCanvas.basicLayerProcessor[index]!!.getList()!!.clear()
-}
-
-GroupLayerManagerListener.getInstance()!!.clear()
-GroupLayerManagerListener.getInstance()!!.log()
-DestroyedEventHandler.getInstance()!!.removeAllListeners()
-this.cleanupManager()
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun cleanupManager()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.gameLayerManager!!.cleanup()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.gameLayerManager!!.cleanup()
+    }
 }
-
-
-}
-                
-            
-

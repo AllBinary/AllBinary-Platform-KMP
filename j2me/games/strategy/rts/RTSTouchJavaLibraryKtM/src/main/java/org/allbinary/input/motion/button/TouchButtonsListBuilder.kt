@@ -1,76 +1,50 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2007 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2007 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
 open public class TouchButtonsListBuilder : BaseTouchInput {
-        
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     private val baseTouchInputList: BasicArrayList = BasicArrayListD()
 
     open fun addList(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var list = list
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var list = list
 
-    var size: Int = this.baseTouchInputList!!.size()!!
+        var size: Int = this.baseTouchInputList!!.size()!!
 
+        var baseTouchInput: BaseTouchInput
 
-    var baseTouchInput: BaseTouchInput
+        for (index in 0 until size) {
 
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-baseTouchInput= this.baseTouchInputList!!.get(index) as BaseTouchInput
-list.addAllList(baseTouchInput!!.getList())
-}
-
-}
-
+            baseTouchInput = this.baseTouchInputList!!.get(index) as BaseTouchInput
+            list.addAllList(baseTouchInput!!.getList())
+        }
+    }
 
     open fun add(baseTouchInput: BaseTouchInput)
-        //nullable = true from not(false or (false and false)) = true
-{
-var baseTouchInput = baseTouchInput
-this.baseTouchInputList!!.add(baseTouchInput)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var baseTouchInput = baseTouchInput
+        this.baseTouchInputList!!.add(baseTouchInput)
+    }
 }
-
-
-}
-                
-            
-

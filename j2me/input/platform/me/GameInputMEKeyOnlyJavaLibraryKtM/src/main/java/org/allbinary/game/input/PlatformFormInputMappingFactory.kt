@@ -1,116 +1,81 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.input.mapping.InputToGameKeyMapping
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class PlatformFormInputMappingFactory
-            : Object
-         {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class PlatformFormInputMappingFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: PlatformFormInputMappingFactory{
+    companion object {
 
-    
-                        if(PlatformFormInputMappingFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    PlatformFormInputMappingFactory.instance= PlatformFormInputMappingFactory()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : PlatformFormInputMappingFactory {
 
+            if (PlatformFormInputMappingFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                PlatformFormInputMappingFactory.instance = PlatformFormInputMappingFactory()
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return PlatformFormInputMappingFactory.instance as PlatformFormInputMappingFactory
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return PlatformFormInputMappingFactory.instance as PlatformFormInputMappingFactory
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping.getNullInstance()!!
+    private var inputToGameKeyMapping: InputToGameKeyMapping =
+        InputToGameKeyMapping.getNullInstance()!!
 
     open fun getOrCreate()
-        //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping{
+    // nullable = true from not(false or (false and true)) = true
+    : InputToGameKeyMapping {
 
         try {
-            
-    
-                        if(this.inputToGameKeyMapping == InputToGameKeyMapping.getNullInstance())
-                        
-                                    {
-                                    
-    var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping()
 
+            if (this.inputToGameKeyMapping == InputToGameKeyMapping.getNullInstance()) {
 
-    var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
+                var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping()
 
-inputToGameKeyMapping!!.add(gameKeyFactory!!.UP, gameKeyFactory!!.UP)
-inputToGameKeyMapping!!.add(gameKeyFactory!!.DOWN, gameKeyFactory!!.DOWN)
-inputToGameKeyMapping!!.add(gameKeyFactory!!.LEFT, gameKeyFactory!!.LEFT)
-inputToGameKeyMapping!!.add(gameKeyFactory!!.RIGHT, gameKeyFactory!!.RIGHT)
-inputToGameKeyMapping!!.add(gameKeyFactory!!.KEY_NUM1, gameKeyFactory!!.GAME_A)
-this.inputToGameKeyMapping= inputToGameKeyMapping
+                var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
 
-                                    }
-                                
-} catch(e: Exception)
-            {
+                inputToGameKeyMapping!!.add(gameKeyFactory!!.UP, gameKeyFactory!!.UP)
+                inputToGameKeyMapping!!.add(gameKeyFactory!!.DOWN, gameKeyFactory!!.DOWN)
+                inputToGameKeyMapping!!.add(gameKeyFactory!!.LEFT, gameKeyFactory!!.LEFT)
+                inputToGameKeyMapping!!.add(gameKeyFactory!!.RIGHT, gameKeyFactory!!.RIGHT)
+                inputToGameKeyMapping!!.add(gameKeyFactory!!.KEY_NUM1, gameKeyFactory!!.GAME_A)
+                this.inputToGameKeyMapping = inputToGameKeyMapping
+            }
+        } catch (e: Exception) {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.inputToGameKeyMapping
+    }
 }
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.inputToGameKeyMapping
-}
-
-
-}
-                
-            
-

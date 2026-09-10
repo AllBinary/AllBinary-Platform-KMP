@@ -1,53 +1,36 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.racetrack
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map.racetrack
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.game.configuration.feature.GameFeature
 
 open public class RaceTrackGameFeature : GameFeature {
-        
-companion object {
-            
-    val MINI_MAP: GameFeature = RaceTrackGameFeature("Mini Map")
 
-    val AUTO_FINISH_AI: GameFeature = RaceTrackGameFeature("Auto Finish AI")
+    companion object {
 
-        }
-            protected constructor (name: String)                        
+        val MINI_MAP: GameFeature = RaceTrackGameFeature("Mini Map")
 
-                            : super(name){
-var name = name
+        val AUTO_FINISH_AI: GameFeature = RaceTrackGameFeature("Auto Finish AI")
+    }
 
+    protected constructor(name: String) : super(name) {
 
-                            //For kotlin this is before the body of the constructor.
-                    
+        var name = name
+
+        // For kotlin this is before the body of the constructor.
+
+    }
 }
-
-
-}
-                
-            
-

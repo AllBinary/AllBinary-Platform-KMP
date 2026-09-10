@@ -1,214 +1,210 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.racetrack
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map.racetrack
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.logic.communication.log.LogUtil
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.media.graphics.geography.map.GeographicMapCellPositionFactoryInitVisitorInterface
 import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingNode
-import org.allbinary.media.graphics.geography.map.GeographicMapCellPositionFactoryInitVisitorInterface
 import org.allbinary.string.CommonSeps
 
-open public class BasePathFindingInfoFactory
-            : Object
-         {
-        
+open public class BasePathFindingInfoFactory : Object {
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-                @Throws(Exception::class)
-            
-    open fun init(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapInterface = geographicMapInterface
-    //var pathFindingInfo = pathFindingInfo
-    //var mapArray = mapArray
+    @Throws(Exception::class)
+    open fun init(
+        geographicMapInterface: BasicGeographicMap,
+        pathFindingInfo: PathFindingInfo,
+        mapArray: Array<IntArray?>,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapInterface = geographicMapInterface
+        // var pathFindingInfo = pathFindingInfo
+        // var mapArray = mapArray
 
-open class RaceTrackGeographicMapCellPositionFactoryInitVisitor
-            : Object
-        
-                , GeographicMapCellPositionFactoryInitVisitorInterface {
-        
+        open class RaceTrackGeographicMapCellPositionFactoryInitVisitor :
+            Object, GeographicMapCellPositionFactoryInitVisitorInterface {
 
-    private var startLineId: Int
+            private var startLineId: Int
 
-    private var finishLineId: Int
-public constructor ()
-            : super()
-        {
+            private var finishLineId: Int
 
-    var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = geographicMapInterface!!.getGeographicMapCellTypeFactory()!!
+            public constructor() : super() {
 
-this.startLineId= raceTrackGeographicMapCellTypeFactory!!.getStartType()
-this.finishLineId= raceTrackGeographicMapCellTypeFactory!!.getEndType()
-}
+                var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory =
+                    geographicMapInterface!!.getGeographicMapCellTypeFactory()!!
 
+                this.startLineId = raceTrackGeographicMapCellTypeFactory!!.getStartType()
+                this.finishLineId = raceTrackGeographicMapCellTypeFactory!!.getEndType()
+            }
 
-                @Throws(Exception::class)
-            
-    override fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var tiledLayer = tiledLayer
-    //var cellPosition = cellPosition
-
-    var row: Int = cellPosition!!.getRow()!!
-
-
-    var column: Int = cellPosition!!.getColumn()!!
-
-
-        try {
-            
-    var cellTypeId: Int = mapArray[row]!![column]!!
-
-
-    var geographicCellType: Int = geographicMapInterface!!.getCellTypeFromMapCellTypeInt(cellTypeId)!!
-
-
-    
-                        if(geographicCellType == this.startLineId)
-                        
-                                    {
-                                    this@BasePathFindingInfoFactory.addStartPathFindingNode(pathFindingInfo, cellPosition)
-
-                                    }
-                                
-
-    
-                        if(geographicCellType == this.finishLineId)
-                        
-                                    {
-                                    
-    
-                        if(geographicCellType == this.startLineId)
-                        
-                                    {
-                                    this@BasePathFindingInfoFactory.addEndPathFindingNode(pathFindingInfo, geographicMapInterface!!.getGeographicMapCellPositionFactoryInterface()!!.getInstance(geographicMapInterface, cellPosition!!.getColumn(), cellPosition!!.getRow(), tiledLayer!!.getColumns(), tiledLayer!!.getRows(), tiledLayer!!.getCellWidth(), tiledLayer!!.getCellHeight()))
-
-                                    }
-                                
-                        else {
-                            this@BasePathFindingInfoFactory.addEndPathFindingNode(pathFindingInfo, cellPosition)
-
-                        }
-                            
-
-                                    }
-                                
-
-    var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = geographicMapInterface!!.getGeographicMapCellTypeFactory()!!
-
-
-    var geographicMapCellTypeFactory: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance()!!
-
-
-    
-                        if(raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellTypeFactory!!.get(geographicCellType)))
-                        
-                                    {
-                                    RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.track(cellPosition)
-
-                                    }
-                                
-                        else {
-                            
-                        }
-                            
-} catch(e: Exception)
+            @Throws(Exception::class)
+            override fun visit(
+                tiledLayer: AllBinaryTiledLayer,
+                cellPosition: GeographicMapCellPosition,
+            )
+                // nullable = true from not(false or (false and false)) = true
             {
+                // var tiledLayer = tiledLayer
+                // var cellPosition = cellPosition
 
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+                var row: Int = cellPosition!!.getRow()!!
 
-logUtil!!.put(StringMaker().
-                            append(commonSeps!!.BRACKET_OPEN)!!.appendint(row)!!.append(commonSeps!!.BRACKET_CLOSE)!!.append(commonSeps!!.BRACKET_OPEN)!!.appendint(column)!!.append("] in [")!!.appendint(mapArray!!.size)!!.append(commonSeps!!.BRACKET_CLOSE)!!.append(commonSeps!!.BRACKET_OPEN)!!.appendint(mapArray[0]!!.size)!!.append(commonSeps!!.BRACKET_CLOSE)!!.toString(), this, "visit", e)
+                var column: Int = cellPosition!!.getColumn()!!
 
+                try {
 
+                    var cellTypeId: Int = mapArray[row]!![column]!!
 
-                            throw e
+                    var geographicCellType: Int =
+                        geographicMapInterface!!.getCellTypeFromMapCellTypeInt(cellTypeId)!!
+
+                    if (geographicCellType == this.startLineId) {
+
+                        this@BasePathFindingInfoFactory.addStartPathFindingNode(
+                            pathFindingInfo,
+                            cellPosition,
+                        )
+                    }
+
+                    if (geographicCellType == this.finishLineId) {
+
+                        if (geographicCellType == this.startLineId) {
+
+                            this@BasePathFindingInfoFactory.addEndPathFindingNode(
+                                pathFindingInfo,
+                                geographicMapInterface!!
+                                    .getGeographicMapCellPositionFactoryInterface()!!
+                                    .getInstance(
+                                        geographicMapInterface,
+                                        cellPosition!!.getColumn(),
+                                        cellPosition!!.getRow(),
+                                        tiledLayer!!.getColumns(),
+                                        tiledLayer!!.getRows(),
+                                        tiledLayer!!.getCellWidth(),
+                                        tiledLayer!!.getCellHeight(),
+                                    ),
+                            )
+                        } else {
+                            this@BasePathFindingInfoFactory.addEndPathFindingNode(
+                                pathFindingInfo,
+                                cellPosition,
+                            )
+                        }
+                    }
+
+                    var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory =
+                        geographicMapInterface!!.getGeographicMapCellTypeFactory()!!
+
+                    var geographicMapCellTypeFactory: GeographicMapCellTypeFactory =
+                        GeographicMapCellTypeFactory.getInstance()!!
+
+                    if (
+                        raceTrackGeographicMapCellTypeFactory!!.isPath(
+                            geographicMapCellTypeFactory!!.get(geographicCellType)
+                        )
+                    ) {
+                        RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.track(
+                            cellPosition
+                        )
+                    } else {}
+                } catch (e: Exception) {
+
+                    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+                    logUtil!!.put(
+                        StringMaker()
+                            .append(commonSeps!!.BRACKET_OPEN)!!
+                            .appendint(row)!!
+                            .append(commonSeps!!.BRACKET_CLOSE)!!
+                            .append(commonSeps!!.BRACKET_OPEN)!!
+                            .appendint(column)!!
+                            .append("] in [")!!
+                            .appendint(mapArray!!.size)!!
+                            .append(commonSeps!!.BRACKET_CLOSE)!!
+                            .append(commonSeps!!.BRACKET_OPEN)!!
+                            .appendint(mapArray[0]!!.size)!!
+                            .append(commonSeps!!.BRACKET_CLOSE)!!
+                            .toString(),
+                        this,
+                        "visit",
+                        e,
+                    )
+
+                    throw e
+                }
+            }
+        }
+
+        geographicMapInterface!!
+            .getGeographicMapCellPositionFactory()!!
+            .visit(RaceTrackGeographicMapCellPositionFactoryInitVisitor())
+    }
+
+    @Throws(Exception::class)
+    open fun addStartPathFindingNode(
+        pathFindingInfo: PathFindingInfo,
+        startGeographicMapCellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingInfo = pathFindingInfo
+        // var startGeographicMapCellPosition = startGeographicMapCellPosition
+        pathFindingInfo!!.addStartPathFindingNode(
+            PathFindingNode(NullUtil.getInstance()!!.NULL_OBJECT, startGeographicMapCellPosition)
+        )
+    }
+
+    @Throws(Exception::class)
+    open fun addEndPathFindingNode(
+        pathFindingInfo: PathFindingInfo,
+        endGeographicMapCellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var pathFindingInfo = pathFindingInfo
+        // var endGeographicMapCellPosition = endGeographicMapCellPosition
+        pathFindingInfo!!.addEndPathFindingNode(
+            PathFindingNode(NullUtil.getInstance()!!.NULL_OBJECT, endGeographicMapCellPosition)
+        )
+    }
+
+    @Throws(Exception::class)
+    open fun getInstancePathFindingInfo(
+        geographicMapInterface: BasicGeographicMap,
+        graphArray: Array<IntArray?>,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : PathFindingInfo {
+        // var geographicMapInterface = geographicMapInterface
+        // var graphArray = graphArray
+
+        throw RuntimeException()
+    }
 }
-
-}
-
-
-}
-                
-            
-geographicMapInterface!!.getGeographicMapCellPositionFactory()!!.visit(RaceTrackGeographicMapCellPositionFactoryInitVisitor())
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun addStartPathFindingNode(pathFindingInfo: PathFindingInfo, startGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingInfo = pathFindingInfo
-    //var startGeographicMapCellPosition = startGeographicMapCellPosition
-pathFindingInfo!!.addStartPathFindingNode(PathFindingNode(NullUtil.getInstance()!!.NULL_OBJECT, startGeographicMapCellPosition))
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun addEndPathFindingNode(pathFindingInfo: PathFindingInfo, endGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingInfo = pathFindingInfo
-    //var endGeographicMapCellPosition = endGeographicMapCellPosition
-pathFindingInfo!!.addEndPathFindingNode(PathFindingNode(NullUtil.getInstance()!!.NULL_OBJECT, endGeographicMapCellPosition))
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun getInstancePathFindingInfo(geographicMapInterface: BasicGeographicMap, graphArray: Array<IntArray?>)
-        //nullable = true from not(false or (false and false)) = true
-: PathFindingInfo{
-    //var geographicMapInterface = geographicMapInterface
-    //var graphArray = graphArray
-
-
-
-                            throw RuntimeException()
-}
-
-
-}
-                
-            
-

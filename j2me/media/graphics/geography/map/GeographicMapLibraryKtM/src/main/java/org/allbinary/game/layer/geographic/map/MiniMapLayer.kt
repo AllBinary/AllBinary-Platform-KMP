@@ -1,35 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.geographic.map
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.geographic.map
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
-import org.allbinary.logic.string.StringUtil
-import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
-import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.animation.vector.CircleFilledAnimation
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.graphics.GPoint
@@ -39,6 +25,8 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.color.ColorCompositeInterface
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.logic.communication.log.ForcedLogUtil
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -47,11 +35,11 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEvent
 import org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEventHandler
 import org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEventListenerInterface
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.view.ViewPositionBase
 
-open public class MiniMapLayer : AllBinaryLayer
-                , GeographicMapCellPositionEventListenerInterface {
-        
+open public class MiniMapLayer : AllBinaryLayer, GeographicMapCellPositionEventListenerInterface {
 
     val allBinaryTiledLayer: AllBinaryTiledLayer
 
@@ -64,186 +52,162 @@ open public class MiniMapLayer : AllBinaryLayer
     private val positionList: BasicArrayList
 
     private var animationInterface: CircleFilledAnimation
-public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPositionBase)                        
 
-                            : super(StringUtil.getInstance()!!.EMPTY_STRING, Rectangle(PointFactory.getInstance()!!.createXY(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition){
-var geographicMapInterface = geographicMapInterface
-var viewPosition = viewPosition
+    public constructor(
+        geographicMapInterface: BasicGeographicMap,
+        viewPosition: ViewPositionBase,
+    ) : super(
+        StringUtil.getInstance()!!.EMPTY_STRING,
+        Rectangle(
+            PointFactory.getInstance()!!.createXY(0, viewPosition!!.getY()),
+            geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(),
+            geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight(),
+        ),
+        viewPosition,
+    ) {
+        var geographicMapInterface = geographicMapInterface
+        var viewPosition = viewPosition
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.allBinaryTiledLayer= geographicMapInterface!!.getAllBinaryTiledLayer()
-this.geographicMapCellPositionFactory= geographicMapInterface!!.getGeographicMapCellPositionFactory()
-this.animationInterface= CircleFilledAnimation(this.allBinaryTiledLayer!!.getCellWidth(), this.allBinaryTiledLayer!!.getCellHeight(), BasicColorFactory.getInstance()!!.WHITE)
-this.list= BasicArrayListD()
-this.basicColorList= BasicArrayListD()
-this.positionList= BasicArrayListD()
-GeographicMapCellPositionEventHandler.getInstance()!!.addListener(this)
-this.init()
-}
+        this.allBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()
+        this.geographicMapCellPositionFactory =
+            geographicMapInterface!!.getGeographicMapCellPositionFactory()
+        this.animationInterface =
+            CircleFilledAnimation(
+                this.allBinaryTiledLayer!!.getCellWidth(),
+                this.allBinaryTiledLayer!!.getCellHeight(),
+                BasicColorFactory.getInstance()!!.WHITE,
+            )
+        this.list = BasicArrayListD()
+        this.basicColorList = BasicArrayListD()
+        this.positionList = BasicArrayListD()
+        GeographicMapCellPositionEventHandler.getInstance()!!.addListener(this)
+        this.init()
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.allBinaryTiledLayer!!.setPosition(this.x, this.y, this.z)
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.allBinaryTiledLayer!!.setPosition(this.x, this.y, this.z)
+    }
 
     override fun onEvent(eventObject: AllBinaryEventObject)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventObject = eventObject
-ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var eventObject = eventObject
+        ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+    }
 
+    @Throws(Exception::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
+    override fun onRemoveGeographicMapCellPositionEvent(
+        geographicMapCellPositionEvent: GeographicMapCellPositionEvent
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapCellPositionEvent = geographicMapCellPositionEvent
 
-                @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        var colorCompositeInterface: ColorCompositeInterface =
+            geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
 
-    override fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapCellPositionEvent = geographicMapCellPositionEvent
+        var index: Int = this.list.indexOf(colorCompositeInterface)!!
 
-    var colorCompositeInterface: ColorCompositeInterface = geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
+        if (index >= 0) {
 
+            this.list.removeAt(index)
+            this.basicColorList!!.removeAt(index)
+            this.positionList!!.removeAt(index)
+        }
+    }
 
-    var index: Int = this.list.indexOf(colorCompositeInterface)!!
+    @Throws(Exception::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
+    override fun onGeographicMapCellPositionEvent(
+        geographicMapCellPositionEvent: GeographicMapCellPositionEvent
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var geographicMapCellPositionEvent = geographicMapCellPositionEvent
 
+        var colorCompositeInterface: ColorCompositeInterface =
+            geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
 
-    
-                        if(index >= 0)
-                        
-                                    {
-                                    this.list.removeAt(index)
-this.basicColorList!!.removeAt(index)
-this.positionList!!.removeAt(index)
+        var layerIndex: Int = -1
 
-                                    }
-                                
-}
+        var size: Int = this.list.size()!!
 
+        var nextColorCompositeInterface: ColorCompositeInterface
 
-                @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        for (index in 0 until size) {
 
-    override fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var geographicMapCellPositionEvent = geographicMapCellPositionEvent
+            nextColorCompositeInterface = this.list.get(index) as ColorCompositeInterface
 
-    var colorCompositeInterface: ColorCompositeInterface = geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
+            if (nextColorCompositeInterface == colorCompositeInterface) {
 
+                layerIndex = index
+                break
+            }
+        }
 
-    var layerIndex: Int =  -1
+        var geographicMapCellPosition: GeographicMapCellPosition =
+            this.geographicMapCellPositionFactory!!.getInstance(
+                geographicMapCellPositionEvent!!.getGeographicMapCellPosition()
+            )!!
 
+        var point: GPoint = geographicMapCellPosition!!.getPoint()!!
 
-    var size: Int = this.list.size()!!
+        if (layerIndex == -1) {
 
+            this.list.add(colorCompositeInterface)
 
-    var nextColorCompositeInterface: ColorCompositeInterface
+            var basicColor: BasicColor = colorCompositeInterface!!.getBasicColorP()!!
 
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-nextColorCompositeInterface= this.list.get(index) as ColorCompositeInterface
-
-    
-                        if(nextColorCompositeInterface == colorCompositeInterface)
-                        
-                                    {
-                                    layerIndex= index
-break;
-
-                    
-
-                                    }
-                                
-}
-
-
-    var geographicMapCellPosition: GeographicMapCellPosition = this.geographicMapCellPositionFactory!!.getInstance(geographicMapCellPositionEvent!!.getGeographicMapCellPosition())!!
-
-
-    var point: GPoint = geographicMapCellPosition!!.getPoint()!!
-
-
-    
-                        if(layerIndex ==  -1)
-                        
-                                    {
-                                    this.list.add(colorCompositeInterface)
-
-    var basicColor: BasicColor = colorCompositeInterface!!.getBasicColorP()!!
-
-this.basicColorList!!.add(basicColor)
-this.positionList!!.add(point)
-layerIndex= this.basicColorList!!.size() -1
-
-                                    }
-                                
-                        else {
-                            this.positionList!!.set(layerIndex, point)
-
-                        }
-                            
-}
-
+            this.basicColorList!!.add(basicColor)
+            this.positionList!!.add(point)
+            layerIndex = this.basicColorList!!.size() - 1
+        } else {
+            this.positionList!!.set(layerIndex, point)
+        }
+    }
 
     open fun paintDots(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
 
-    var localPositionList: BasicArrayList = this.positionList
+        var localPositionList: BasicArrayList = this.positionList
 
+        var localBasicColorList: BasicArrayList = this.basicColorList
 
-    var localBasicColorList: BasicArrayList = this.basicColorList
+        var length: Int = localPositionList!!.size()!!
 
+        var point: GPoint
 
-    var length: Int = localPositionList!!.size()!!
+        var basicColor: BasicColor
 
+        for (index in length - 1 downTo 0) {
 
-    var point: GPoint
-
-
-    var basicColor: BasicColor
-
-
-
-
-
-                        for (index in length  - 1  downTo 0)
-
-        {
-point= localPositionList!!.get(index) as GPoint
-basicColor= localBasicColorList!!.get(index) as BasicColor
-graphics.setColor(basicColor!!.toInt())
-this.animationInterface!!.setBasicColorP(basicColor)
-this.animationInterface!!.paintXY(graphics, point.getX() +this.x, point.getY() +this.y)
-}
-
-}
-
+            point = localPositionList!!.get(index) as GPoint
+            basicColor = localBasicColorList!!.get(index) as BasicColor
+            graphics.setColor(basicColor!!.toInt())
+            this.animationInterface!!.setBasicColorP(basicColor)
+            this.animationInterface!!.paintXY(
+                graphics,
+                point.getX() + this.x,
+                point.getY() + this.y,
+            )
+        }
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-this.allBinaryTiledLayer!!.paint(graphics)
-this.paintDots(graphics)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
+        this.allBinaryTiledLayer!!.paint(graphics)
+        this.paintDots(graphics)
+    }
 }
-
-
-}
-                
-            
-

@@ -1,52 +1,37 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.racetrack
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map.racetrack
 
+import java.lang.Object
 
+open public class RaceTrackGeographicMapCellTypes : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: RaceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes()
 
-open public class RaceTrackGeographicMapCellTypes
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: RaceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : RaceTrackGeographicMapCellTypes {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: RaceTrackGeographicMapCellTypes{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return RaceTrackGeographicMapCellTypes.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return RaceTrackGeographicMapCellTypes.instance
         }
-            
+    }
+
     val BOTTOM_LEFT_TURN_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 
     val BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
@@ -62,21 +47,21 @@ companion object {
     val START_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 
     val DEFAULT_FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
-public constructor ()
-            : super()
-        {
-this.BOTTOM_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Bottom Left Turn", 1, 1, 0)
-this.BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Bottom Right Turn", 2, 1, 0)
-this.TOP_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Top Left Turn", 3, 1, 0)
-this.TOP_RIGHT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Top Right Turne", 4, 1, 0)
-this.HORIZONTAL_STRAIGHT_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Horizontal Straight", 5, 1, 0)
-this.VERTICAL_STRAIGHT_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Vertical Straight", 6, 1, 0)
-this.START_LINE_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Start Line", 7, 1, 0)
-this.DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Finish Line", 8, 1, 0)
+
+    public constructor() : super() {
+        this.BOTTOM_LEFT_TURN_ROAD_CELL_TYPE =
+            RaceTrackGeographicMapCellType("Bottom Left Turn", 1, 1, 0)
+        this.BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE =
+            RaceTrackGeographicMapCellType("Bottom Right Turn", 2, 1, 0)
+        this.TOP_LEFT_TURN_ROAD_CELL_TYPE = RaceTrackGeographicMapCellType("Top Left Turn", 3, 1, 0)
+        this.TOP_RIGHT_TURN_ROAD_CELL_TYPE =
+            RaceTrackGeographicMapCellType("Top Right Turne", 4, 1, 0)
+        this.HORIZONTAL_STRAIGHT_ROAD_CELL_TYPE =
+            RaceTrackGeographicMapCellType("Horizontal Straight", 5, 1, 0)
+        this.VERTICAL_STRAIGHT_ROAD_CELL_TYPE =
+            RaceTrackGeographicMapCellType("Vertical Straight", 6, 1, 0)
+        this.START_LINE_ROAD_CELL_TYPE = RaceTrackGeographicMapCellType("Start Line", 7, 1, 0)
+        this.DEFAULT_FINISH_LINE_ROAD_CELL_TYPE =
+            RaceTrackGeographicMapCellType("Finish Line", 8, 1, 0)
+    }
 }
-
-
-}
-                
-            
-

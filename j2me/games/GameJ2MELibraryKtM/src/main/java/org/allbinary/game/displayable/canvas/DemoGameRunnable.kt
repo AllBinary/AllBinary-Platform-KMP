@@ -1,77 +1,60 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.GameTickTimeDelayHelper
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 
 open public class DemoGameRunnable : GameRunnable {
-        
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val demoCanvas: DemoCanvas
-public constructor (demoCanvas: DemoCanvas){
-var demoCanvas = demoCanvas
-this.demoCanvas= demoCanvas
-}
 
+    public constructor(demoCanvas: DemoCanvas) {
+        var demoCanvas = demoCanvas
+        this.demoCanvas = demoCanvas
+    }
 
-    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
+    private val gameTickTimeDelayHelper: GameTickTimeDelayHelper =
+        GameTickTimeDelayHelperFactory.getInstance()!!
 
     override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
-            this.demoCanvas!!.getLoopTimeHelperP()!!.setStartTime(this.gameTickTimeDelayHelper!!.setStartTime())
-this.demoCanvas!!.processGame()
-} catch(e: Exception)
-            {
+            this.demoCanvas!!
+                .getLoopTimeHelperP()!!
+                .setStartTime(this.gameTickTimeDelayHelper!!.setStartTime())
+            this.demoCanvas!!.processGame()
+        } catch (e: Exception) {
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-}
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+        }
+    }
 
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processLoopSleep()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.demoCanvas!!.processLoopSleep()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.demoCanvas!!.processLoopSleep()
+    }
 }
-
-
-}
-                
-            
-

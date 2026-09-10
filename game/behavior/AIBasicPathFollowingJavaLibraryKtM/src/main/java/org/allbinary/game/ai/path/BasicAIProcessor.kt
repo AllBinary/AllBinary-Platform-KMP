@@ -1,31 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.ai.path
+/* Generated Code Do Not Modify */
+package org.allbinary.game.ai.path
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.util.BasicArrayList
+import java.lang.Object
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.layer.AllBinaryLayerManager
@@ -34,11 +24,9 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapDirectionUtil
 import org.allbinary.media.graphics.geography.pathfinding.GeographicMapCellPathHistoryInfo
+import org.allbinary.util.BasicArrayList
 
-open public class BasicAIProcessor
-            : Object
-         {
-        
+open public class BasicAIProcessor : Object {
 
     private var name: String
 
@@ -49,181 +37,183 @@ open public class BasicAIProcessor
     private var geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo
 
     private var basicAI: BasicDirectionAIHelper
-public constructor (name: String, geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)
-            : super()
-        {
-    //var name = name
-    //var geographicMapCellHistory = geographicMapCellHistory
-    //var geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
-    //var chosenPathList = chosenPathList
-    //var angleInfo = angleInfo
-    //var seed = seed
-this.name= name
-this.geographicMapCellHistory= geographicMapCellHistory
-this.geographicMapCellPositionBasicArrayList= chosenPathList
-this.geographicMapCellPathHistoryInfo= geographicMapCellPathHistoryInfo
-this.setName(name)
-this.setNewPath(geographicMapCellHistory, chosenPathList)
-this.basicAI= BasicDirectionAIHelper(this.getName(), angleInfo)
-}
 
+    public constructor(
+        name: String,
+        geographicMapCellHistory: GeographicMapCellHistory,
+        geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo,
+        chosenPathList: BasicArrayList,
+        angleInfo: AngleInfo,
+        seed: Int,
+    ) : super() {
+        // var name = name
+        // var geographicMapCellHistory = geographicMapCellHistory
+        // var geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
+        // var chosenPathList = chosenPathList
+        // var angleInfo = angleInfo
+        // var seed = seed
+        this.name = name
+        this.geographicMapCellHistory = geographicMapCellHistory
+        this.geographicMapCellPositionBasicArrayList = chosenPathList
+        this.geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
+        this.setName(name)
+        this.setNewPath(geographicMapCellHistory, chosenPathList)
+        this.basicAI = BasicDirectionAIHelper(this.getName(), angleInfo)
+    }
 
-    open fun setNewPath(geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-var geographicMapCellHistory = geographicMapCellHistory
-var chosenPathList = chosenPathList
-this.setGeographicMapCellHistory(geographicMapCellHistory)
-this.geographicMapCellPositionBasicArrayList= chosenPathList
-this.init()
-}
-
+    open fun setNewPath(
+        geographicMapCellHistory: GeographicMapCellHistory,
+        chosenPathList: BasicArrayList,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var geographicMapCellHistory = geographicMapCellHistory
+        var chosenPathList = chosenPathList
+        this.setGeographicMapCellHistory(geographicMapCellHistory)
+        this.geographicMapCellPositionBasicArrayList = chosenPathList
+        this.init()
+    }
 
     open fun init()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.geographicMapCellPathHistoryInfo= GeographicMapCellPathHistoryInfo()
-this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPosition(this.geographicMapCellPositionBasicArrayList!!.get(this.geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition)
-this.geographicMapCellPathHistoryInfo!!.setNextOnPathGeographicMapCellPosition(this.geographicMapCellPositionBasicArrayList!!.get(this.geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition)
-this.update()
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.geographicMapCellPathHistoryInfo = GeographicMapCellPathHistoryInfo()
+        this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPosition(
+            this.geographicMapCellPositionBasicArrayList!!.get(
+                this.geographicMapCellPositionBasicArrayList!!.size() - 1
+            ) as GeographicMapCellPosition
+        )
+        this.geographicMapCellPathHistoryInfo!!.setNextOnPathGeographicMapCellPosition(
+            this.geographicMapCellPositionBasicArrayList!!.get(
+                this.geographicMapCellPositionBasicArrayList!!.size() - 1
+            ) as GeographicMapCellPosition
+        )
+        this.update()
+    }
 
+    private val geographicMapDirectionUtil: GeographicMapDirectionUtil =
+        GeographicMapDirectionUtil.getInstance()!!
 
-    private val geographicMapDirectionUtil: GeographicMapDirectionUtil = GeographicMapDirectionUtil.getInstance()!!
+    @Throws(Exception::class)
+    open fun goTowardNextChosenOnPathPosition(
+        currentGeographicMapCellPosition: GeographicMapCellPosition
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var currentGeographicMapCellPosition = currentGeographicMapCellPosition
 
-                @Throws(Exception::class)
-            
-    open fun goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var currentGeographicMapCellPosition = currentGeographicMapCellPosition
+        var keyDirection: Int = -1
 
-    var keyDirection: Int =  -1
+        var goToGeographicMapCellPosition: GeographicMapCellPosition =
+            this.geographicMapCellPathHistoryInfo!!.getNextChosenOnPathGeographicMapCellPosition()!!
 
+        var geographicMapDirectionData: Direction =
+            this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(
+                currentGeographicMapCellPosition,
+                goToGeographicMapCellPosition,
+            )!!
 
-    var goToGeographicMapCellPosition: GeographicMapCellPosition = this.geographicMapCellPathHistoryInfo!!.getNextChosenOnPathGeographicMapCellPosition()!!
+        if (geographicMapDirectionData == DirectionFactory.getInstance()!!.NOT_BORDERED_WITH) {
 
+            geographicMapDirectionData =
+                this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToCellPosition(
+                    currentGeographicMapCellPosition,
+                    goToGeographicMapCellPosition,
+                )
+        }
 
-    var geographicMapDirectionData: Direction = this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition)!!
+        keyDirection = this.basicAI!!.getAIKeyPressedFromDirection(geographicMapDirectionData)
 
-
-    
-                        if(geographicMapDirectionData == DirectionFactory.getInstance()!!.NOT_BORDERED_WITH)
-                        
-                                    {
-                                    geographicMapDirectionData= this.geographicMapDirectionUtil!!.getDirectionFromCellPositionToCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition)
-
-                                    }
-                                
-keyDirection= this.basicAI!!.getAIKeyPressedFromDirection(geographicMapDirectionData)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return keyDirection
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return keyDirection
+    }
 
     open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.geographicMapCellPathHistoryInfo!!.setNextUnvisitedOnPathGeographicMapCellPosition(this.getGeographicMapCellHistory()!!.getFirstUnvisited())
-this.geographicMapCellPathHistoryInfo!!.setNextChosenOnPathGeographicMapCellPosition(this.geographicMapCellPathHistoryInfo!!.getNextUnvisitedOnPathGeographicMapCellPosition())
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.geographicMapCellPathHistoryInfo!!.setNextUnvisitedOnPathGeographicMapCellPosition(
+            this.getGeographicMapCellHistory()!!.getFirstUnvisited()
+        )
+        this.geographicMapCellPathHistoryInfo!!.setNextChosenOnPathGeographicMapCellPosition(
+            this.geographicMapCellPathHistoryInfo!!
+                .getNextUnvisitedOnPathGeographicMapCellPosition()
+        )
+    }
 
+    @Throws(Exception::class)
+    open fun processAI(
+        myManager: AllBinaryLayerManager,
+        currentGeographicMapCellPosition: GeographicMapCellPosition,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        var myManager = myManager
+        var currentGeographicMapCellPosition = currentGeographicMapCellPosition
 
-                @Throws(Exception::class)
-            
-    open fun processAI(myManager: AllBinaryLayerManager, currentGeographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-var myManager = myManager
-var currentGeographicMapCellPosition = currentGeographicMapCellPosition
+        var keyDirection: Int = -1
 
-    var keyDirection: Int =  -1
+        if (
+            this.geographicMapCellPositionBasicArrayList!!.contains(
+                currentGeographicMapCellPosition
+            )
+        ) {
+            this.update()
+            keyDirection = this.goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition)
+            this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPosition(
+                currentGeographicMapCellPosition
+            )
+        } else {
+            keyDirection = this.goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition)
+        }
 
-
-    
-                        if(this.geographicMapCellPositionBasicArrayList!!.contains(currentGeographicMapCellPosition))
-                        
-                                    {
-                                    this.update()
-keyDirection= this.goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition)
-this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPosition(currentGeographicMapCellPosition)
-
-                                    }
-                                
-                        else {
-                            keyDirection= this.goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition)
-
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return keyDirection
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return keyDirection
+    }
 
     open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.name
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.name
+    }
 
     open fun setName(name: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var name = name
-this.name= name
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var name = name
+        this.name = name
+    }
 
     open fun getGeographicMapCellPathHistoryInfo()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPathHistoryInfo{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellPathHistoryInfo {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.geographicMapCellPathHistoryInfo
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.geographicMapCellPathHistoryInfo
-}
-
-
-    open fun setGeographicMapCellPathHistoryInfo(geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo)
-        //nullable = true from not(false or (false and false)) = true
-{
-var geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
-this.geographicMapCellPathHistoryInfo= geographicMapCellPathHistoryInfo
-}
-
+    open fun setGeographicMapCellPathHistoryInfo(
+        geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
+        this.geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
+    }
 
     open fun getGeographicMapCellHistory()
-        //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellHistory{
+    // nullable = true from not(false or (false and true)) = true
+    : GeographicMapCellHistory {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.geographicMapCellHistory
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.geographicMapCellHistory
+    }
 
     open fun setGeographicMapCellHistory(geographicMapCellHistory: GeographicMapCellHistory)
-        //nullable = true from not(false or (false and false)) = true
-{
-var geographicMapCellHistory = geographicMapCellHistory
-this.geographicMapCellHistory= geographicMapCellHistory
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var geographicMapCellHistory = geographicMapCellHistory
+        this.geographicMapCellHistory = geographicMapCellHistory
+    }
 }
-
-
-}
-                
-            
-

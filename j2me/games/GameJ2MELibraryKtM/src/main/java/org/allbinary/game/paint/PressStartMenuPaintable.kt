@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.paint
+/* Generated Code Do Not Modify */
+package org.allbinary.game.paint
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.AppletUtil
@@ -38,9 +28,7 @@ import org.allbinary.input.motion.button.TouchScreenFactory
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.time.TimeDelayHelper
 
-open public class PressStartMenuPaintable : Paintable
-                , UpdateMyFontInterface {
-        
+open public class PressStartMenuPaintable : Paintable, UpdateMyFontInterface {
 
     private val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -56,112 +44,78 @@ open public class PressStartMenuPaintable : Paintable
 
     private var timeDelayHelper: TimeDelayHelper = TimeDelayHelper(1100)
 
-    private var flash: Boolean= false
-public constructor (){
+    private var flash: Boolean = false
 
-    
-                        if(TouchScreenFactory.getInstance()!!.isTouch())
-                        
-                                    {
-                                    this.startString= this.PRESS_START
+    public constructor() {
 
-                                    }
-                                
-                             else 
-    
-                        if(AppletUtil.isAppletLoader(this))
-                        
-                                    {
-                                    this.startString= this.KEY_START
+        if (TouchScreenFactory.getInstance()!!.isTouch()) {
 
-                                    }
-                                
-                        else {
-                            this.startString= this.MENU_START
+            this.startString = this.PRESS_START
+        } else if (AppletUtil.isAppletLoader(this)) {
 
-                        }
-                            
-}
-
+            this.startString = this.KEY_START
+        } else {
+            this.startString = this.MENU_START
+        }
+    }
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-    private var beginWidth: Int= 0
+    private var beginWidth: Int = 0
 
-    private var line: Int= 0
+    private var line: Int = 0
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
-    var font: Font = graphics.getFont()!!
+        var font: Font = graphics.getFont()!!
 
-this.beginWidth= (graphics.getFont()!!.stringWidth(this.startString) shr 1)
-this.line= (4 *MyFontProcessor.defaultCharWidth(font)) +(font.getHeight() shr 1)
-this.myFontProcessor= MyFontProcessor.getInstance()
-}
-
+        this.beginWidth = (graphics.getFont()!!.stringWidth(this.startString) shr 1)
+        this.line = (4 * MyFontProcessor.defaultCharWidth(font)) + (font.getHeight() shr 1)
+        this.myFontProcessor = MyFontProcessor.getInstance()
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
 
-    
-                        if(this.timeDelayHelper!!.isTimeTNT())
-                        
-                                    {
-                                    
-    
-                        if(this.isFlash())
-                        
-                                    {
-                                    this.setFlash(false)
+        if (this.timeDelayHelper!!.isTimeTNT()) {
 
-                                    }
-                                
-                        else {
-                            this.setFlash(true)
+            if (this.isFlash()) {
 
-                        }
-                            
+                this.setFlash(false)
+            } else {
+                this.setFlash(true)
+            }
+        }
 
-                                    }
-                                
+        if (this.isFlash()) {
 
-    
-                        if(this.isFlash())
-                        
-                                    {
-                                    this.myFontProcessor!!.process(graphics)
-graphics.drawString(this.startString, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHeight() -line, this.anchor)
-
-                                    }
-                                
-}
-
+            this.myFontProcessor!!.process(graphics)
+            graphics.drawString(
+                this.startString,
+                displayInfo!!.getLastHalfWidth() - beginWidth,
+                displayInfo!!.getLastHeight() - line,
+                this.anchor,
+            )
+        }
+    }
 
     open fun setFlash(flash: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var flash = flash
-this.flash= flash
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var flash = flash
+        this.flash = flash
+    }
 
     open fun isFlash()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.flash
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.flash
+    }
 }
-
-
-}
-                
-            
-

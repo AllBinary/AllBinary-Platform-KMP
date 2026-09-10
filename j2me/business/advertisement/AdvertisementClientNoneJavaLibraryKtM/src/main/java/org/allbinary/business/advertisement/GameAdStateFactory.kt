@@ -1,88 +1,60 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.business.advertisement
 
-        /* Generated Code Do Not Modify */
-        package org.allbinary.business.advertisement
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.game.GameAdState
 import org.allbinary.logic.system.SoftwareInformation
 
-open public class GameAdStateFactory
-            : Object
-        
-                , GameAdStateFactoryInterface {
-        
-companion object {
-            
-    private val instance: GameAdStateFactory = GameAdStateFactory()
+open public class GameAdStateFactory : Object, GameAdStateFactoryInterface {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: GameAdStateFactory{
+    companion object {
 
+        private val instance: GameAdStateFactory = GameAdStateFactory()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : GameAdStateFactory {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameAdStateFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return GameAdStateFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    private val gameAdStateArray: Array<GameAdState?> = arrayOf(GameAdState(AppNameLicensingAdConfiguration()))
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
+    private val gameAdStateArray: Array<GameAdState?> =
+        arrayOf(GameAdState(AppNameLicensingAdConfiguration()))
 
     private var gameAdState: GameAdState = this.gameAdStateArray[0]!!
 
     open fun getCurrentInstance()
-        //nullable = true from not(false or (false and true)) = true
-: GameAdState{
+    // nullable = true from not(false or (false and true)) = true
+    : GameAdState {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameAdState
+    }
 
+    @Throws(Exception::class)
+    override fun getInstanceForApp(
+        softwareInformation: SoftwareInformation
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : GameAdStateBase {
+        // var softwareInformation = softwareInformation
+        this.gameAdState = this.gameAdStateArray[0]!!
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameAdState
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun getInstanceForApp(softwareInformation: SoftwareInformation)
-        //nullable = true from not(false or (false and false)) = true
-: GameAdStateBase{
-    //var softwareInformation = softwareInformation
-this.gameAdState= this.gameAdStateArray[0]!!
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gameAdStateArray[0]!!
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.gameAdStateArray[0]!!
+    }
 
     open fun isEnabled()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 }
-
-
-}
-                
-            
-

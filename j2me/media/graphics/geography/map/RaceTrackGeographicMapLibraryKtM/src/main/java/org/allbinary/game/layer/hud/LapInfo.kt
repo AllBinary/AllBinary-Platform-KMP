@@ -1,128 +1,90 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.hud
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.hud
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.string.StringMaker
 
-open public class LapInfo
-            : Object
-         {
-        
-companion object {
-            
-    var NULL_LAP_INFO: LapInfo = LapInfo( -1)
+open public class LapInfo : Object {
 
-        }
-            
+    companion object {
+
+        var NULL_LAP_INFO: LapInfo = LapInfo(-1)
+    }
+
     private var numberOfLaps: Int
 
     private var totalLaps: Int
-public constructor (totalLaps: Int)
-            : super()
-        {
-var totalLaps = totalLaps
-this.totalLaps= totalLaps
-this.numberOfLaps= 1
-}
 
+    public constructor(totalLaps: Int) : super() {
+        var totalLaps = totalLaps
+        this.totalLaps = totalLaps
+        this.numberOfLaps = 1
+    }
 
     open fun add()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.numberOfLaps++
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.numberOfLaps++
+    }
 
     open fun getCurrentLap()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.numberOfLaps
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.numberOfLaps
+    }
 
     open fun getTotalLaps()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.totalLaps
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.totalLaps
+    }
 
     open fun isDone()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.numberOfLaps >= this.totalLaps)
-                        
-                                    {
-                                    
+        if (this.numberOfLaps >= this.totalLaps) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append("isDone: ")
-stringBuffer!!.appendboolean(this.isDone())
-stringBuffer!!.append(" CurrentLap: ")
-stringBuffer!!.appendint(this.getCurrentLap())
-stringBuffer!!.append(" Total Laps: ")
-stringBuffer!!.appendint(this.getTotalLaps())
+        stringBuffer!!.append("isDone: ")
+        stringBuffer!!.appendboolean(this.isDone())
+        stringBuffer!!.append(" CurrentLap: ")
+        stringBuffer!!.appendint(this.getCurrentLap())
+        stringBuffer!!.append(" Total Laps: ")
+        stringBuffer!!.appendint(this.getTotalLaps())
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

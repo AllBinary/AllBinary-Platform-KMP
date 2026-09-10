@@ -1,43 +1,29 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.displayable.canvas
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Runnable
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import java.lang.Runnable
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class CommandRunnable
-            : Object
-        
-                , Runnable {
-        
+open public class CommandRunnable : Object, Runnable {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -46,39 +32,32 @@ open public class CommandRunnable
     private val commandFormInputProcessor: CommandFormInputProcessor
 
     private val command: Command
-public constructor (commandFormInputProcessor: CommandFormInputProcessor, command: Command)
-            : super()
-        {
-var commandFormInputProcessor = commandFormInputProcessor
-var command = command
-this.commandFormInputProcessor= commandFormInputProcessor
-this.command= command
-}
 
+    public constructor(
+        commandFormInputProcessor: CommandFormInputProcessor,
+        command: Command,
+    ) : super() {
+        var commandFormInputProcessor = commandFormInputProcessor
+        var command = command
+        this.commandFormInputProcessor = commandFormInputProcessor
+        this.command = command
+    }
 
     override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
             this.logUtil!!.putF(this.commonStrings!!.START_RUNNABLE, this, this.commonStrings!!.RUN)
 
-    var canvas: MyCanvas = this.commandFormInputProcessor!!.getCanvas()!!
+            var canvas: MyCanvas = this.commandFormInputProcessor!!.getCanvas()!!
 
+            var commandListener: CommandListener = canvas.getCustomCommandListener()!!
 
-    var commandListener: CommandListener = canvas.getCustomCommandListener()!!
-
-commandListener!!.commandAction(this.command, canvas)
-this.logUtil!!.putF(this.commonStrings!!.END_RUNNABLE, this, this.commonStrings!!.RUN)
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+            commandListener!!.commandAction(this.command, canvas)
+            this.logUtil!!.putF(this.commonStrings!!.END_RUNNABLE, this, this.commonStrings!!.RUN)
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+        }
+    }
 }
-
-}
-
-
-}
-                
-            
-

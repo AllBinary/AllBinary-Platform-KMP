@@ -1,58 +1,37 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.graphics
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics
 
+import java.lang.Object
 
+open public class ScreenCaptureFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: ScreenCapture = ScreenCaptureNoneFactory.getInstance()!!
 
-open public class ScreenCaptureFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: ScreenCapture = ScreenCaptureNoneFactory.getInstance()!!
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : ScreenCapture {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: ScreenCapture{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return ScreenCaptureFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return ScreenCaptureFactory.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-}
-                
-            
+    }
 
+    // Auto Generated
+    public constructor() : super() {}
+}

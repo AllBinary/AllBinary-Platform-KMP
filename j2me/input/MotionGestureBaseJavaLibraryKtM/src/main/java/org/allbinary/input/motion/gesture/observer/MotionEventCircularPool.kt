@@ -1,82 +1,64 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.gesture.observer
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.gesture.observer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.input.InputFactory
 import org.allbinary.input.motion.gesture.MotionGestureInput
 import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
 import org.allbinary.logic.util.event.AllBinaryEventCircularPool
 
-open public class MotionEventCircularPool
-            : Object
-         {
-        
-companion object {
-            
-    open fun createPool(id: Int)
-        //nullable = true from not(false or (false and false)) = true
-: MotionEventCircularPool{
-var id = id
+open public class MotionEventCircularPool : Object {
 
+    companion object {
 
+        open fun createPool(
+            id: Int
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : MotionEventCircularPool {
+            var id = id
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return MotionEventCircularPool(id)
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return MotionEventCircularPool(id)
         }
-            
+    }
+
     private val MIN: Int = TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()!!
 
-    private var eventPool: AllBinaryEventCircularPool = AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX -1) -this.MIN)
-private constructor (id: Int)
-            : super()
-        {
-var id = id
-this.eventPool!!.initAllBinaryEventCircularPool(MotionEventFactory(this.eventPool, id))
+    private var eventPool: AllBinaryEventCircularPool =
+        AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX - 1) - this.MIN)
+
+    private constructor(id: Int) : super() {
+        var id = id
+        this.eventPool!!.initAllBinaryEventCircularPool(MotionEventFactory(this.eventPool, id))
+    }
+
+    @Throws(Exception::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
+    open fun getInstance(
+        motionGestureInput: MotionGestureInput
+    )
+        // nullable =  from not(true or (false and false)) =
+        : MotionGestureEvent {
+        var motionGestureInput = motionGestureInput
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.eventPool!!.getInstance(motionGestureInput!!.getId() - this.MIN)
+            as MotionGestureEvent
+    }
 }
-
-
-                @Throws(Exception::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
-    open fun getInstance(motionGestureInput: MotionGestureInput)
-        //nullable =  from not(true or (false and false)) = 
-: MotionGestureEvent{
-var motionGestureInput = motionGestureInput
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.eventPool!!.getInstance(motionGestureInput!!.getId() -this.MIN) as MotionGestureEvent
-}
-
-
-}
-                
-            
-

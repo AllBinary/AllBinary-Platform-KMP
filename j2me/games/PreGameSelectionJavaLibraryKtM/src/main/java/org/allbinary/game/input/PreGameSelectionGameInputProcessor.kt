@@ -1,34 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Canvas
-import org.allbinary.util.BasicArrayList
-import org.allbinary.logic.system.security.licensing.LockedFeatureNotificationUtil
-import org.allbinary.logic.system.security.licensing.LockedUtil
 import org.allbinary.canvas.Processor
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
 import org.allbinary.game.displayable.canvas.PreGameSelectorPaintable
@@ -37,17 +24,18 @@ import org.allbinary.game.input.event.GameKeyEventUtil
 import org.allbinary.game.state.GameState
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
+import org.allbinary.logic.system.security.licensing.LockedFeatureNotificationUtil
+import org.allbinary.logic.system.security.licensing.LockedUtil
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.SelectSound
+import org.allbinary.string.CommonStrings
 import org.allbinary.thread.ABRunnable
 import org.allbinary.thread.ThreadObjectUtil
 import org.allbinary.time.TimeDelayHelper
+import org.allbinary.util.BasicArrayList
 
-open public class PreGameSelectionGameInputProcessor : Processor
-                , GameInputProcessorInterface
-                , PlayerGameInputCompositeInterface {
-        
+open public class PreGameSelectionGameInputProcessor :
+    Processor, GameInputProcessorInterface, PlayerGameInputCompositeInterface {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -63,192 +51,136 @@ open public class PreGameSelectionGameInputProcessor : Processor
 
     private val lockedIndex: Int
 
-    private val abRunnable: ABRunnable = object: ABRunnable()
-                                {
-                                
-    override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
+    private val abRunnable: ABRunnable =
+        object : ABRunnable() {
 
-        try {
-            this.setRunning(true)
-SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
-gameCanvas!!.setGameState(nextGameState)
-GameKeyEventHandler.getInstance()!!.removeListener(getPlayerGameInput())
-this.setRunning(false)
-} catch(e: Exception)
+            override fun run()
+                // nullable = true from not(false or (false and true)) = true
             {
-this.setRunning(false)
 
-    var logUtil: LogUtil = LogUtil.getInstance()!!
+                try {
+                    this.setRunning(true)
+                    SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
+                    gameCanvas!!.setGameState(nextGameState)
+                    GameKeyEventHandler.getInstance()!!.removeListener(getPlayerGameInput())
+                    this.setRunning(false)
+                } catch (e: Exception) {
+                    this.setRunning(false)
 
+                    var logUtil: LogUtil = LogUtil.getInstance()!!
 
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+                    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
-}
+                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+                }
+            }
+        }
 
-}
+    public constructor(
+        gameCanvas: AllBinaryGameCanvas,
+        preGameSelectorPaintable: PreGameSelectorPaintable,
+        nextGameState: GameState,
+        lockedIndex: Int,
+    ) {
+        var gameCanvas = gameCanvas
+        var preGameSelectorPaintable = preGameSelectorPaintable
+        var nextGameState = nextGameState
+        var lockedIndex = lockedIndex
+        this.gameCanvas = gameCanvas
+        this.preGameSelectorPaintable = preGameSelectorPaintable
+        this.nextGameState = nextGameState
+        this.playerGameInput = GameInputProcessorComposite("Pre Game Selection", this)
+        this.lockedIndex = lockedIndex
+    }
 
-                                }
-                            
-public constructor (gameCanvas: AllBinaryGameCanvas, preGameSelectorPaintable: PreGameSelectorPaintable, nextGameState: GameState, lockedIndex: Int){
-var gameCanvas = gameCanvas
-var preGameSelectorPaintable = preGameSelectorPaintable
-var nextGameState = nextGameState
-var lockedIndex = lockedIndex
-this.gameCanvas= gameCanvas
-this.preGameSelectorPaintable= preGameSelectorPaintable
-this.nextGameState= nextGameState
-this.playerGameInput= GameInputProcessorComposite("Pre Game Selection", this)
-this.lockedIndex= lockedIndex
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.getPlayerGameInput()!!.update()
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.getPlayerGameInput()!!.update()
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun onInput(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-var list = list
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var list = list
 
-    var size: Int = list.size()!!
+        var size: Int = list.size()!!
 
+        for (index in 0 until size) {
 
+            var anyType: Any = list.get(index)!!
 
+            var key: Int = GameKeyEventUtil.getKey(anyType)!!
 
+            if (
+                key == Canvas.LEFT || key == Canvas.RIGHT || key == Canvas.UP || key == Canvas.DOWN
+            ) {
 
-                        for (index in 0 until size)
+                if (this.inputTimeHelper!!.isTimeTNT()) {
 
-        {
+                    SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
+                    this.getPreGameSelectorPaintable()!!
+                        .getPreGameSelectionForm()!!
+                        .processInputKey(key)
+                    break
+                }
+            } else if (key == Canvas.KEY_NUM0) {
 
-    var anyType: Any = list.get(index)!!
+                var selectedIndex: Int =
+                    this.preGameSelectorPaintable!!.getPreGameSelectionForm()!!.getSelectedIndex()!!
 
+                if (selectedIndex < this.lockedIndex || !LockedUtil.getInstance()!!.isLocked()) {
 
-    var key: Int = GameKeyEventUtil.getKey(anyType)!!
+                    if (!abRunnable!!.isRunning()) {
 
+                        abRunnable!!.setRunning(true)
+                        ThreadObjectUtil.getInstance()!!.processThread(abRunnable)
+                    }
 
-    
-                        if(key == Canvas.LEFT || key == Canvas.RIGHT || key == Canvas.UP || key == Canvas.DOWN)
-                        
-                                    {
-                                    
-    
-                        if(this.inputTimeHelper!!.isTimeTNT())
-                        
-                                    {
-                                    SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
-this.getPreGameSelectorPaintable()!!.getPreGameSelectionForm()!!.processInputKey(key)
-break;
+                    break
+                } else {
+                    LockedFeatureNotificationUtil.getInstance()!!.fire()
+                }
+            }
+        }
 
-                    
-
-                                    }
-                                
-
-                                    }
-                                
-                             else 
-    
-                        if(key == Canvas.KEY_NUM0)
-                        
-                                    {
-                                    
-    var selectedIndex: Int = this.preGameSelectorPaintable!!.getPreGameSelectionForm()!!.getSelectedIndex()!!
-
-
-    
-                        if(selectedIndex < this.lockedIndex || !LockedUtil.getInstance()!!.isLocked())
-                        
-                                    {
-                                    
-    
-                        if(!abRunnable!!.isRunning())
-                        
-                                    {
-                                    abRunnable!!.setRunning(true)
-ThreadObjectUtil.getInstance()!!.processThread(abRunnable)
-
-                                    }
-                                
-break;
-
-                    
-
-                                    }
-                                
-                        else {
-                            LockedFeatureNotificationUtil.getInstance()!!.fire()
-
-                        }
-                            
-
-                                    }
-                                
-}
-
-list.clear()
-}
-
+        list.clear()
+    }
 
     open fun getPreGameSelectorPaintable()
-        //nullable = true from not(false or (false and true)) = true
-: PreGameSelectorPaintable{
+    // nullable = true from not(false or (false and true)) = true
+    : PreGameSelectorPaintable {
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.preGameSelectorPaintable
+    }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.preGameSelectorPaintable
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun processInput(layerManager: AllBinaryLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-var layerManager = layerManager
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var layerManager = layerManager
+    }
 
     override fun initInputProcessors()
-        //nullable = true from not(false or (false and true)) = true
-{
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {}
 
     override fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.toString()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.toString()
+    }
 
     override fun getPlayerGameInput()
-        //nullable = true from not(false or (false and true)) = true
-: PlayerGameInput{
+    // nullable = true from not(false or (false and true)) = true
+    : PlayerGameInput {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.playerGameInput
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.playerGameInput
+    }
 }
-
-
-}
-                
-            
-

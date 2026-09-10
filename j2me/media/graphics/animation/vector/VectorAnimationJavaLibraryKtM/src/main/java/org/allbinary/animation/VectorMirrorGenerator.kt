@@ -1,30 +1,22 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.animation
+/* Generated Code Do Not Modify */
+package org.allbinary.animation
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.pipeline.BasicGraphicsPipeline
 import org.allbinary.logic.NullUtil
@@ -33,140 +25,110 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListS
 
-open public class VectorMirrorGenerator
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: VectorMirrorGenerator = VectorMirrorGenerator()
+open public class VectorMirrorGenerator : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: VectorMirrorGenerator{
+    companion object {
 
+        private val instance: VectorMirrorGenerator = VectorMirrorGenerator()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : VectorMirrorGenerator {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return VectorMirrorGenerator.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return VectorMirrorGenerator.instance
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
-private constructor ()
-            : super()
-        {
-}
 
+    private constructor() : super() {}
 
-    open fun getInstance(points: Array<Array<IntArray?>?>, width: Int)
-        //nullable =  from not(true or (false and false)) = 
-: Array<Array<IntArray?>?>{
-var points = points
-var width = width
+    open fun getInstance(
+        points: Array<Array<IntArray?>?>,
+        width: Int,
+    )
+        // nullable =  from not(true or (false and false)) =
+        : Array<Array<IntArray?>?> {
+        var points = points
+        var width = width
 
         try {
-            
-    var pointFactory: PointFactory = PointFactory.getInstance()!!
 
+            var pointFactory: PointFactory = PointFactory.getInstance()!!
 
-    var pointBasicArrayList: BasicArrayList
+            var pointBasicArrayList: BasicArrayList
 
+            var nextPoints: Array<IntArray?>
 
-    var nextPoints: Array<IntArray?>
+            var size2: Int = 0
 
+            var size: Int = points.size
 
-    var size2: Int= 0
+            var pointsBasicArrayList: BasicArrayList = BasicArrayListS(size)
 
+            for (frame in 0 until size) {
 
-    var size: Int = points.size
-                
+                nextPoints = points[frame]!!
+                size2 = nextPoints!!.size
+                pointBasicArrayList = BasicArrayListS(size2)
 
+                for (index in 0 until size2) {
 
-    var pointsBasicArrayList: BasicArrayList = BasicArrayListS(size)
+                    pointBasicArrayList!!.add(
+                        pointFactory!!.createXY(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!)
+                    )
+                }
 
+                pointsBasicArrayList!!.add(pointBasicArrayList)
+            }
 
+            for (index in 0 until points.size) {
 
+                pointsBasicArrayList!!.add(
+                    this.getInstance(
+                        pointsBasicArrayList!!.objectArray[index]!! as BasicArrayList,
+                        width,
+                    )
+                )
+            }
 
+            var newPoints: Array<Array<IntArray?>?> =
+                this.vectorAnimationUtil!!.toAnimationArrayFromListOfPointList(
+                    pointsBasicArrayList
+                )!!
 
-                        for (frame in 0 until size)
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return newPoints
+        } catch (e: Exception) {
 
-        {
-nextPoints= points[frame]!!
-size2= nextPoints!!.size
-pointBasicArrayList= BasicArrayListS(size2)
+            var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
+        }
+    }
 
+    @Throws(Exception::class)
+    open fun getInstance(
+        pointBasicArrayList: BasicArrayList,
+        width: Int,
+    )
+        // nullable =  from not(true or (false and false)) =
+        : BasicArrayList {
+        var pointBasicArrayList = pointBasicArrayList
+        var width = width
 
-                        for (index in 0 until size2)
+        var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(pointBasicArrayList)
 
-        {
-pointBasicArrayList!!.add(pointFactory!!.createXY(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!))
+        graphicsPipe!!.createMatrix()
+        graphicsPipe!!.mirror(width)
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return graphicsPipe!!.getMatrix()
+    }
 }
-
-pointsBasicArrayList!!.add(pointBasicArrayList)
-}
-
-
-
-
-
-                        for (index in 0 until points.size)
-
-        {
-pointsBasicArrayList!!.add(this.getInstance(pointsBasicArrayList!!.objectArray[index]!! as BasicArrayList, width))
-}
-
-
-    var newPoints: Array<Array<IntArray?>?> = this.vectorAnimationUtil!!.toAnimationArrayFromListOfPointList(pointsBasicArrayList)!!
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return newPoints
-} catch(e: Exception)
-            {
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun getInstance(pointBasicArrayList: BasicArrayList, width: Int)
-        //nullable =  from not(true or (false and false)) = 
-: BasicArrayList{
-var pointBasicArrayList = pointBasicArrayList
-var width = width
-
-    var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(pointBasicArrayList)
-
-graphicsPipe!!.createMatrix()
-graphicsPipe!!.mirror(width)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return graphicsPipe!!.getMatrix()
-}
-
-
-}
-                
-            
-

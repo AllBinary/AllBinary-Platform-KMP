@@ -1,72 +1,48 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.racetrack
+/* Generated Code Do Not Modify */
+package org.allbinary.media.graphics.geography.map.racetrack
 
+import java.lang.Object
 
+open public class CustomMapGeneratorBaseFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+        private val instance: CustomMapGeneratorBaseFactory = CustomMapGeneratorBaseFactory()
 
-open public class CustomMapGeneratorBaseFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: CustomMapGeneratorBaseFactory = CustomMapGeneratorBaseFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CustomMapGeneratorBaseFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CustomMapGeneratorBaseFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CustomMapGeneratorBaseFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CustomMapGeneratorBaseFactory.instance
         }
-            public constructor ()
-            : super()
-        {
+    }
+
+    public constructor() : super() {}
+
+    @Throws(Exception::class)
+    open fun create(
+        raceTrackGeographicMap: RaceTrackGeographicMap
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : CustomMapGeneratorBase {
+        // var raceTrackGeographicMap = raceTrackGeographicMap
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return CustomMapGeneratorBase()
+    }
 }
-
-
-                @Throws(Exception::class)
-            
-    open fun create(raceTrackGeographicMap: RaceTrackGeographicMap)
-        //nullable = true from not(false or (false and false)) = true
-: CustomMapGeneratorBase{
-    //var raceTrackGeographicMap = raceTrackGeographicMap
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CustomMapGeneratorBase()
-}
-
-
-}
-                
-            
-

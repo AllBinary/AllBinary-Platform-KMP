@@ -1,119 +1,102 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Integer
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Integer
+import java.lang.Object
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 
-open public class Driver
-            : Object
-         {
-        
-companion object {
-            
-    val NULL_DRIVER: Driver = Driver(SmallIntegerSingletonFactory.getInstance()!!.getAt(0), SmallIntegerSingletonFactory.getInstance()!!.getAt(0), Aggression(SmallIntegerSingletonFactory.getInstance()!!.getAt(0), SmallIntegerSingletonFactory.getInstance()!!.getAt(0), SmallIntegerSingletonFactory.getInstance()!!.getAt(0)))
+open public class Driver : Object {
 
-        }
-            
+    companion object {
+
+        val NULL_DRIVER: Driver =
+            Driver(
+                SmallIntegerSingletonFactory.getInstance()!!.getAt(0),
+                SmallIntegerSingletonFactory.getInstance()!!.getAt(0),
+                Aggression(
+                    SmallIntegerSingletonFactory.getInstance()!!.getAt(0),
+                    SmallIntegerSingletonFactory.getInstance()!!.getAt(0),
+                    SmallIntegerSingletonFactory.getInstance()!!.getAt(0),
+                ),
+            )
+    }
+
     private var turnSpeed: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
-    private var trackPathSelectionSkill: Integer = SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
+    private var trackPathSelectionSkill: Integer =
+        SmallIntegerSingletonFactory.getInstance()!!.getAt(0)!!
 
     private var aggression: Aggression
-public constructor (turnSpeed: Integer, trackPathSelectionSkill: Integer, aggression: Aggression)
-            : super()
-        {
-var turnSpeed = turnSpeed
-var trackPathSelectionSkill = trackPathSelectionSkill
-var aggression = aggression
-this.setTurnSpeed(turnSpeed)
-this.setTrackPathSelectionSkill(trackPathSelectionSkill)
-this.aggression= aggression
-}
 
+    public constructor(
+        turnSpeed: Integer,
+        trackPathSelectionSkill: Integer,
+        aggression: Aggression,
+    ) : super() {
+        var turnSpeed = turnSpeed
+        var trackPathSelectionSkill = trackPathSelectionSkill
+        var aggression = aggression
+        this.setTurnSpeed(turnSpeed)
+        this.setTrackPathSelectionSkill(trackPathSelectionSkill)
+        this.aggression = aggression
+    }
 
     open fun getTurnSpeed()
-        //nullable = true from not(false or (false and true)) = true
-: Integer{
+    // nullable = true from not(false or (false and true)) = true
+    : Integer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.turnSpeed
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.turnSpeed
+    }
 
     open fun setTurnSpeed(turnSpeed: Integer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var turnSpeed = turnSpeed
-this.turnSpeed= turnSpeed
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var turnSpeed = turnSpeed
+        this.turnSpeed = turnSpeed
+    }
 
     open fun getTrackPathSelectionSkill()
-        //nullable = true from not(false or (false and true)) = true
-: Integer{
+    // nullable = true from not(false or (false and true)) = true
+    : Integer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.trackPathSelectionSkill
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.trackPathSelectionSkill
+    }
 
     open fun setTrackPathSelectionSkill(trackPathSelectionSkill: Integer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var trackPathSelectionSkill = trackPathSelectionSkill
-this.trackPathSelectionSkill= trackPathSelectionSkill
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var trackPathSelectionSkill = trackPathSelectionSkill
+        this.trackPathSelectionSkill = trackPathSelectionSkill
+    }
 
     open fun getAggression()
-        //nullable = true from not(false or (false and true)) = true
-: Aggression{
+    // nullable = true from not(false or (false and true)) = true
+    : Aggression {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.aggression
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.aggression
+    }
 
     open fun setAggression(aggression: Aggression)
-        //nullable = true from not(false or (false and false)) = true
-{
-var aggression = aggression
-this.aggression= aggression
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var aggression = aggression
+        this.aggression = aggression
+    }
 }
-
-
-}
-                
-            
-

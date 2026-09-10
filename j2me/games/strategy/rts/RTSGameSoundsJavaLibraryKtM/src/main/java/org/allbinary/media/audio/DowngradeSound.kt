@@ -1,61 +1,37 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2002 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *    Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2002 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *    Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.audio
-
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.media.audio.CompositeSound
-import org.allbinary.media.audio.Sound
+/* Generated Code Do Not Modify */
+package org.allbinary.media.audio
 
 open public class DowngradeSound : CompositeSound {
-        
-companion object {
-            
-    private var soundInterface: Sound = DowngradeSound()
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: Sound{
+    companion object {
 
+        private var soundInterface: Sound = DowngradeSound()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : Sound {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return DowngradeSound.soundInterface
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return DowngradeSound.soundInterface
         }
-            private constructor ()                        
+    }
 
-                            : super("resource:/wav/downgrade.wav"){
+    private constructor() : super("resource:/wav/downgrade.wav") {
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
+    }
 }
-
-
-}
-                
-            
-

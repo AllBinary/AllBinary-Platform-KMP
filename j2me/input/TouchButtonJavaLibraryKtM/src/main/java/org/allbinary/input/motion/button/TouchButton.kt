@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
@@ -40,30 +30,46 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
 open public class TouchButton : Paintable {
-        
-companion object {
-            
-                @Throws(Exception::class)
-            
-    open fun createButton(touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
-        //nullable = true from not(false or (false and false)) = true
-: TouchButton{
-    //var touchButtonInput = touchButtonInput
-    //var touchButtonResource = touchButtonResource
-    //var rawRectangle = rawRectangle
-    //var cellPosition = cellPosition
-    //var xBorder = xBorder
-    //var yBorder = yBorder
 
+    companion object {
 
+        @Throws(Exception::class)
+        open fun createButton(
+            touchButtonInput: TouchButtonInput,
+            touchButtonResource: TouchButtonResource,
+            rawRectangle: Rectangle,
+            cellPosition: CellPosition,
+            xBorder: Int,
+            yBorder: Int,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : TouchButton {
+            // var touchButtonInput = touchButtonInput
+            // var touchButtonResource = touchButtonResource
+            // var rawRectangle = rawRectangle
+            // var cellPosition = cellPosition
+            // var xBorder = xBorder
+            // var yBorder = yBorder
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return TouchButton(touchButtonInput, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.RESOURCE)!!.getInstance(0), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.HINT)!!.getInstance(0), rawRectangle, cellPosition, xBorder, yBorder)
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return TouchButton(
+                touchButtonInput,
+                FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(
+                        touchButtonResource!!.RESOURCE
+                    )!!
+                    .getInstance(0),
+                FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(
+                        touchButtonResource!!.HINT
+                    )!!
+                    .getInstance(0),
+                rawRectangle,
+                cellPosition,
+                xBorder,
+                yBorder,
+            )
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -84,136 +90,128 @@ companion object {
 
     val cellPositionP: CellPosition
 
-    var animationX: Int= 0
+    var animationX: Int = 0
 
-    var animationY: Int= 0
+    var animationY: Int = 0
 
-    var hintAnimationY: Int= 0
-public constructor (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int){
-    //var touchButtonInput = touchButtonInput
-    //var animationInterface = animationInterface
-    //var hintAnimationInterface = hintAnimationInterface
-    //var rawRectangle = rawRectangle
-    //var cellPosition = cellPosition
-    //var xBorder = xBorder
-    //var yBorder = yBorder
-this.touchButtonInput= touchButtonInput
-this.animationInterface= animationInterface
-this.hintAnimationInterface= hintAnimationInterface
-this.rawRectangle= rawRectangle
-this.cellPositionP= cellPosition
-this.xBorder= xBorder
-this.yBorder= yBorder
-this.updateRectangle()
-this.logUtil!!.putF(StringMaker().
-                            append("Created: ")!!.append(this.toString())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
-}
+    var hintAnimationY: Int = 0
 
+    public constructor(
+        touchButtonInput: TouchButtonInput,
+        animationInterface: Animation,
+        hintAnimationInterface: Animation,
+        rawRectangle: Rectangle,
+        cellPosition: CellPosition,
+        xBorder: Int,
+        yBorder: Int,
+    ) {
+        // var touchButtonInput = touchButtonInput
+        // var animationInterface = animationInterface
+        // var hintAnimationInterface = hintAnimationInterface
+        // var rawRectangle = rawRectangle
+        // var cellPosition = cellPosition
+        // var xBorder = xBorder
+        // var yBorder = yBorder
+        this.touchButtonInput = touchButtonInput
+        this.animationInterface = animationInterface
+        this.hintAnimationInterface = hintAnimationInterface
+        this.rawRectangle = rawRectangle
+        this.cellPositionP = cellPosition
+        this.xBorder = xBorder
+        this.yBorder = yBorder
+        this.updateRectangle()
+        this.logUtil!!.putF(
+            StringMaker().append("Created: ")!!.append(this.toString())!!.toString(),
+            this,
+            this.commonStrings!!.CONSTRUCTOR,
+        )
+    }
 
     open fun paintHint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.hintAnimationInterface!!.paintXY(graphics, this.animationX, this.hintAnimationY)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        this.hintAnimationInterface!!.paintXY(graphics, this.animationX, this.hintAnimationY)
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.animationInterface!!.paintXY(graphics, this.animationX, this.animationY)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        this.animationInterface!!.paintXY(graphics, this.animationX, this.animationY)
+    }
 
     open fun updateRectangle()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
-            
-    var pointFactory: PointFactory = PointFactory.getInstance()!!
 
+            var pointFactory: PointFactory = PointFactory.getInstance()!!
 
-    var x: Int = this.rawRectangle!!.getWidth() *this.cellPositionP!!.getColumn()
+            var x: Int = this.rawRectangle!!.getWidth() * this.cellPositionP!!.getColumn()
 
+            var y: Int = this.rawRectangle!!.getHeight() * this.cellPositionP!!.getRow()
 
-    var y: Int = this.rawRectangle!!.getHeight() *this.cellPositionP!!.getRow()
+            this.rectangleP =
+                Rectangle(
+                    pointFactory!!.createXY(x + this.xBorder, y + this.yBorder),
+                    this.rawRectangle!!.getWidth(),
+                    this.rawRectangle!!.getHeight(),
+                )
 
-this.rectangleP= Rectangle(pointFactory!!.createXY(x +this.xBorder, y +this.yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
+            var point: GPoint = this.rectangleP!!.getPoint()!!
 
-    var point: GPoint = this.rectangleP!!.getPoint()!!
-
-this.animationX= point.getX()
-this.animationY= point.getY()
-this.hintAnimationY= this.animationY -32
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
-}
-
-}
-
+            this.animationX = point.getX()
+            this.animationY = point.getY()
+            this.hintAnimationY = this.animationY - 32
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
+        }
+    }
 
     open fun getCellPosition()
-        //nullable = true from not(false or (false and true)) = true
-: CellPosition{
+    // nullable = true from not(false or (false and true)) = true
+    : CellPosition {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.cellPositionP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.cellPositionP
+    }
 
     open fun getRectangle()
-        //nullable = true from not(false or (false and true)) = true
-: Rectangle{
+    // nullable = true from not(false or (false and true)) = true
+    : Rectangle {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rectangleP
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rectangleP
+    }
 
     open fun getTouchButtonInput()
-        //nullable = true from not(false or (false and true)) = true
-: TouchButtonInput{
+    // nullable = true from not(false or (false and true)) = true
+    : TouchButtonInput {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.touchButtonInput
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.touchButtonInput
+    }
 
     override fun toString()
-        //nullable =  from not(false or (true and true)) = 
-: String{
+    // nullable =  from not(false or (true and true)) =
+    : String {
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
+        var stringUtil: StringUtil = StringUtil.getInstance()!!
 
-    var stringUtil: StringUtil = StringUtil.getInstance()!!
+        stringBuffer!!.append("TouchButton: ")
+        stringBuffer!!.append(stringUtil!!.toString(this.getRectangle()))
+        stringBuffer!!.append(" CellPosition: ")
+        stringBuffer!!.append(stringUtil!!.toString(this.cellPositionP))
+        stringBuffer!!.append(" xBorder: ")
+        stringBuffer!!.appendint(this.xBorder)
+        stringBuffer!!.append(" yBorder: ")
+        stringBuffer!!.appendint(this.yBorder)
 
-stringBuffer!!.append("TouchButton: ")
-stringBuffer!!.append(stringUtil!!.toString(this.getRectangle()))
-stringBuffer!!.append(" CellPosition: ")
-stringBuffer!!.append(stringUtil!!.toString(this.cellPositionP))
-stringBuffer!!.append(" xBorder: ")
-stringBuffer!!.appendint(this.xBorder)
-stringBuffer!!.append(" yBorder: ")
-stringBuffer!!.appendint(this.yBorder)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-
-}
-                
-            
-

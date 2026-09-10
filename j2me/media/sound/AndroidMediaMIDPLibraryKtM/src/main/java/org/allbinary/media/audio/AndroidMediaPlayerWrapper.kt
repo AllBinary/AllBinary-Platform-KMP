@@ -1,34 +1,24 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.media.audio
+/* Generated Code Do Not Modify */
+package org.allbinary.media.audio
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import android.media.MediaPlayer
 import javax.microedition.media.MediaException
 import javax.microedition.media.Player
 import javax.microedition.media.PlayerListener
-import android.media.MediaPlayer
 import org.allbinary.android.NullAndroidCanvas
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.NullUtil
@@ -37,290 +27,222 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 
 open public class AndroidMediaPlayerWrapper : BasicPlayer {
-        
-companion object {
-            
-    open fun createPlayerWrapper()
-        //nullable = true from not(false or (false and true)) = true
-: AndroidMediaPlayerWrapper{
 
-        try {
-            
+    companion object {
 
+        open fun createPlayerWrapper()
+        // nullable = true from not(false or (false and true)) = true
+        : AndroidMediaPlayerWrapper {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AndroidMediaPlayerWrapper(StringUtil.getInstance()!!.EMPTY_STRING)
-} catch(e: Exception)
-            {
+            try {
 
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return AndroidMediaPlayerWrapper(StringUtil.getInstance()!!.EMPTY_STRING)
+            } catch (e: Exception) {
 
-
-                            throw RuntimeException()
-}
-
-}
-
-
-    val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper.createPlayerWrapper()!!
-
+                throw RuntimeException()
+            }
         }
-            
+
+        val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper =
+            AndroidMediaPlayerWrapper.createPlayerWrapper()!!
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var mediaPlayer: MediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER
-public constructor (resource: String){
-var resource = resource
+
+    public constructor(resource: String) {
+        var resource = resource
 
         try {
-            
-    
-                        if(resource == StringUtil.getInstance()!!.EMPTY_STRING)
-                        
-                                    {
-                                    
-                                    }
-                                
-                        else {
-                            
-    var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
+            if (resource == StringUtil.getInstance()!!.EMPTY_STRING) {} else {
 
-    var mediaPlayer: MediaPlayer = MediaPlayer.create(resourceUtil!!.getContext(), resourceUtil!!.getResourceId(resource)!!.toInt())!!
+                var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
+                var mediaPlayer: MediaPlayer =
+                    MediaPlayer.create(
+                        resourceUtil!!.getContext(),
+                        resourceUtil!!.getResourceId(resource)!!.toInt(),
+                    )!!
 
-    
-                        if(mediaPlayer == 
-                                    null
-                                )
-                        
-                                    {
-                                    
+                if (mediaPlayer == null) {
 
+                    throw Exception(
+                        StringMaker()
+                            .append("Failed to create media player for: ")!!
+                            .append(resource)!!
+                            .append(" with id: ")!!
+                            .append(resourceUtil!!.getResourceId(resource)!!.toString())!!
+                            .toString()
+                    )
+                }
 
-                            throw Exception(StringMaker().
-                            append("Failed to create media player for: ")!!.append(resource)!!.append(" with id: ")!!.append(resourceUtil!!.getResourceId(resource)!!.toString())!!.toString())
+                this.setMediaPlayer(mediaPlayer)
+                this.mediaPlayer!!.setLooping(false)
+            }
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION_LABEL + resource,
+                this,
+                this.commonStrings!!.CONSTRUCTOR,
+                e,
+            )
 
-                                    }
-                                
-this.setMediaPlayer(mediaPlayer)
-this.mediaPlayer!!.setLooping(false)
-
-                        }
-                            
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION_LABEL +resource, this, this.commonStrings!!.CONSTRUCTOR, e)
-
-
-
-                            throw e
-}
-
-}
-
+            throw e
+        }
+    }
 
     override fun setLoopCount(count: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var count = count
-super.setLoopCount(count)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var count = count
+        super.setLoopCount(count)
 
-    
-                        if(this.mediaPlayer != NullAndroidCanvas.NULL_MEDIA_PLAYER && this.mediaPlayer != 
-                                    null
-                                )
-                        
-                                    {
-                                    
-    
-                        if(count == 0)
-                        
-                                    {
-                                    this.mediaPlayer!!.setLooping(false)
+        if (this.mediaPlayer != NullAndroidCanvas.NULL_MEDIA_PLAYER && this.mediaPlayer != null) {
 
-                                    }
-                                
-                        else {
-                            
-                        }
-                            
+            if (count == 0) {
 
-                                    }
-                                
-}
+                this.mediaPlayer!!.setLooping(false)
+            } else {}
+        }
+    }
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun addPlayerListener(playerListener: PlayerListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var playerListener = playerListener
-super.addPlayerListener(playerListener)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var playerListener = playerListener
+        super.addPlayerListener(playerListener)
+    }
 
     override fun removePlayerListener(playerListener: PlayerListener)
-        //nullable = true from not(false or (false and false)) = true
-{
-var playerListener = playerListener
-super.removePlayerListener(playerListener)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var playerListener = playerListener
+        super.removePlayerListener(playerListener)
+    }
 
     override fun getState()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-    
-                        if(this.mediaPlayer!!.isPlaying())
-                        
-                                    {
-                                    
+        if (this.mediaPlayer!!.isPlaying()) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return Player.STARTED
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return Player.STARTED
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return Player.PREFETCHED
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return Player.PREFETCHED
+        }
+    }
 
     override fun close()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
             this.mediaPlayer!!.release()
-this.mediaPlayer= NullAndroidCanvas.NULL_MEDIA_PLAYER
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CLOSE, e)
-}
+            this.mediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CLOSE, e)
+        }
+    }
 
-}
-
-
-                @Throws(MediaException::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Throws(MediaException::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun start()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
-            
-    
-                        if(this.mediaPlayer!!.isPlaying())
-                        
-                                    {
-                                    this.mediaPlayer!!.pause()
-this.mediaPlayer!!.seekTo(0)
 
-                                    }
-                                
-this.mediaPlayer!!.start()
-super.start()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.START_METHOD_NAME, e)
-}
+            if (this.mediaPlayer!!.isPlaying()) {
 
-}
+                this.mediaPlayer!!.pause()
+                this.mediaPlayer!!.seekTo(0)
+            }
 
+            this.mediaPlayer!!.start()
+            super.start()
+        } catch (e: Exception) {
+            this.logUtil!!.put(
+                this.commonStrings!!.EXCEPTION,
+                this,
+                this.commonStrings!!.START_METHOD_NAME,
+                e,
+            )
+        }
+    }
 
-                @Throws(MediaException::class)
-            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
+    @Throws(MediaException::class)
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     override fun stop()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
         try {
             this.mediaPlayer!!.stop()
-this.mediaPlayer!!.prepare()
-super.stop()
-} catch(e: Exception)
-            {
-this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "stop", e)
-}
-
-}
-
+            this.mediaPlayer!!.prepare()
+            super.stop()
+        } catch (e: Exception) {
+            this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "stop", e)
+        }
+    }
 
     open fun update(event: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var event = event
-this.logUtil!!.putF("LineEvent: " +event, this, this.commonStrings!!.UPDATE)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var event = event
+        this.logUtil!!.putF("LineEvent: " + event, this, this.commonStrings!!.UPDATE)
 
-    var size: Int = this.listenersList!!.size()!!
+        var size: Int = this.listenersList!!.size()!!
 
+        for (index in 0 until size) {
 
+            var listener: PlayerListener =
+                this.listenersList!!.objectArray[index]!! as PlayerListener
 
-
-
-                        for (index in 0 until size)
-
-        {
-
-    var listener: PlayerListener = this.listenersList!!.objectArray[index]!! as PlayerListener
-
-listener.playerUpdate(this, event, NullUtil.getInstance()!!.NULL_OBJECT)
-}
-
-}
-
+            listener.playerUpdate(this, event, NullUtil.getInstance()!!.NULL_OBJECT)
+        }
+    }
 
     override fun setVolume(leftVolume: Int, rightVolume: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var leftVolume = leftVolume
-    //var rightVolume = rightVolume
-this.mediaPlayer!!.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var leftVolume = leftVolume
+        // var rightVolume = rightVolume
+        this.mediaPlayer!!.setVolume(
+            (leftVolume.toFloat()) / 100.0f,
+            (rightVolume.toFloat()) / 100.0f,
+        )
+    }
 
     override fun getDuration()
-        //nullable = true from not(false or (false and true)) = true
-: Long{
+    // nullable = true from not(false or (false and true)) = true
+    : Long {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.mediaPlayer!!.getDuration().toLong()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.mediaPlayer!!.getDuration().toLong()
+    }
 
     open fun setMediaPlayer(mediaPlayer: MediaPlayer)
-        //nullable = true from not(false or (false and false)) = true
-{
-var mediaPlayer = mediaPlayer
-this.mediaPlayer= mediaPlayer
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var mediaPlayer = mediaPlayer
+        this.mediaPlayer = mediaPlayer
+    }
 
     open fun getMediaPlayer()
-        //nullable = true from not(false or (false and true)) = true
-: MediaPlayer{
+    // nullable = true from not(false or (false and true)) = true
+    : MediaPlayer {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.mediaPlayer
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.mediaPlayer
+    }
 }
-
-
-}
-                
-            
-

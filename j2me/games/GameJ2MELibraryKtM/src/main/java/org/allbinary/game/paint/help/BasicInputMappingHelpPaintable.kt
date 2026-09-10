@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.paint.help
+/* Generated Code Do Not Modify */
+package org.allbinary.game.paint.help
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import kotlin.Array
 import org.allbinary.game.input.GameKey
 import org.allbinary.game.input.GameKeyFactory
 import org.allbinary.game.input.Input
@@ -38,148 +29,105 @@ import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 
 open public class BasicInputMappingHelpPaintable : HelpPaintable {
-        
 
     private var gameInputMappingArray: Array<GameInputMapping?>
 
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
-protected constructor (gameInputMappingArray: Array<GameInputMapping?>, basicColor: BasicColor)                        
 
-                            : super("Help Screen", BasicColorFactory.getInstance()!!.BLACK, basicColor){
-    //var gameInputMappingArray = gameInputMappingArray
-    //var basicColor = basicColor
+    protected constructor(
+        gameInputMappingArray: Array<GameInputMapping?>,
+        basicColor: BasicColor,
+    ) : super("Help Screen", BasicColorFactory.getInstance()!!.BLACK, basicColor) {
+        // var gameInputMappingArray = gameInputMappingArray
+        // var basicColor = basicColor
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.gameInputMappingArray= gameInputMappingArray
-this.update(this.NONE, this.NONE)
-}
-
+        this.gameInputMappingArray = gameInputMappingArray
+        this.update(this.NONE, this.NONE)
+    }
 
     open fun update(selectedGameKey: GameKey, selectedInput: Input)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var selectedGameKey = selectedGameKey
-    //var selectedInput = selectedInput
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var selectedGameKey = selectedGameKey
+        // var selectedInput = selectedInput
 
-    var gameKeyMapping: PersistentInputMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
+        var gameKeyMapping: PersistentInputMapping =
+            PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
 
+        var EQUAL: String = " = "
 
-    var EQUAL: String = " = "
+        var stringMaker: StringMaker = StringMaker()
 
+        var size: Int = this.gameInputMappingArray!!.size
 
-    var stringMaker: StringMaker = StringMaker()
+        var keyInfo: Array<String?> = arrayOfNulls(size)
 
+        var gameInputMapping: GameInputMapping
 
-    var size: Int = this.gameInputMappingArray!!.size
-                
+        var gameKey: GameKey
 
+        var list: BasicArrayList
 
-    var keyInfo: Array<String?> = arrayOfNulls(size)
+        for (index in 0 until size) {
 
+            gameInputMapping = this.gameInputMappingArray[index]!!
+            gameKey = gameInputMapping!!.getGameKey()
+            list = gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
+            stringMaker!!.delete(0, stringMaker!!.length())
+            keyInfo[index] =
+                stringMaker!!
+                    .append(gameInputMapping!!.getName())!!
+                    .append(EQUAL)!!
+                    .append(this.get(list))!!
+                    .toString()
+        }
 
-    var gameInputMapping: GameInputMapping
+        super.setInputInfoP(keyInfo)
+    }
 
+    open fun get(
+        keyList: BasicArrayList
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : String {
+        // var keyList = keyList
 
-    var gameKey: GameKey
+        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
+        var stringBuffer: StringMaker = StringMaker()
 
-    var list: BasicArrayList
+        var AND: String = "and "
 
+        var key: Input
 
+        var size: Int = keyList!!.size()!!
 
+        for (index in 0 until size) {
 
+            key = keyList!!.objectArray[index]!! as Input
+            stringBuffer!!.append(key.getName())
 
-                        for (index in 0 until size)
+            if (index + 1 < keyList!!.size()) {
 
-        {
-gameInputMapping= this.gameInputMappingArray[index]!!
-gameKey= gameInputMapping!!.getGameKey()
-list= gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
-stringMaker!!.delete(0, stringMaker!!.length())
-keyInfo[index]= stringMaker!!.append(gameInputMapping!!.getName())!!.append(EQUAL)!!.append(this.get(list))!!.toString()
+                if (keyList!!.size() == 2) {
+
+                    stringBuffer!!.append(commonSeps!!.SPACE)!!.append(AND)
+                } else {
+
+                    if (index + 2 == keyList!!.size()) {
+
+                        stringBuffer!!.append(commonSeps!!.COMMA_SEP)
+                        stringBuffer!!.append(AND)
+                    } else {
+                        stringBuffer!!.append(commonSeps!!.COMMA_SEP)
+                    }
+                }
+            }
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer!!.toString()
+    }
 }
-
-super.setInputInfoP(keyInfo)
-}
-
-
-    open fun get(keyList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-: String{
-    //var keyList = keyList
-
-    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-
-
-    var stringBuffer: StringMaker = StringMaker()
-
-
-    var AND: String = "and "
-
-
-    var key: Input
-
-
-    var size: Int = keyList!!.size()!!
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-key= keyList!!.objectArray[index]!! as Input
-stringBuffer!!.append(key.getName())
-
-    
-                        if(index +1 < keyList!!.size())
-                        
-                                    {
-                                    
-    
-                        if(keyList!!.size() == 2)
-                        
-                                    {
-                                    stringBuffer!!.append(commonSeps!!.SPACE)!!.append(AND)
-
-                                    }
-                                
-                        else {
-                            
-    
-                        if(index +2 == keyList!!.size())
-                        
-                                    {
-                                    stringBuffer!!.append(commonSeps!!.COMMA_SEP)
-stringBuffer!!.append(AND)
-
-                                    }
-                                
-                        else {
-                            stringBuffer!!.append(commonSeps!!.COMMA_SEP)
-
-                        }
-                            
-
-                        }
-                            
-
-                                    }
-                                
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringBuffer!!.toString()
-}
-
-
-}
-                
-            
-

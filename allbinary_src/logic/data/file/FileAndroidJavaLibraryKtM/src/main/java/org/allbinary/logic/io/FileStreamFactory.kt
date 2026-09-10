@@ -1,130 +1,99 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.io
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.io
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import android.content.Context
+import java.lang.Object
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.NullUtil
 
-open public class FileStreamFactory
-            : Object
-         {
-        
-companion object {
-            
-    private var SINGLETON: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class FileStreamFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: FileStreamFactory{
+    companion object {
 
-    
-                        if(FileStreamFactory.SINGLETON == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    FileStreamFactory.SINGLETON= FileStreamFactory(ResourceUtil.getInstance()!!.getContext())
+        private var SINGLETON: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : FileStreamFactory {
 
+            if (FileStreamFactory.SINGLETON == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                FileStreamFactory.SINGLETON =
+                    FileStreamFactory(ResourceUtil.getInstance()!!.getContext())
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return FileStreamFactory.SINGLETON as FileStreamFactory
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return FileStreamFactory.SINGLETON as FileStreamFactory
         }
-            
+    }
+
     private var context: Any
-private constructor (context: Context)
-            : super()
-        {
-    //var context = context
-this.context= context
-}
 
+    private constructor(context: Context) : super() {
+        // var context = context
+        this.context = context
+    }
 
-                @Throws(Exception::class)
-            
-    open fun getFileInputStreamInstance(path: String, fileName: String)
-        //nullable = true from not(false or (false and false)) = true
-: AbFileInputStream{
-    //var path = path
-    //var fileName = fileName
+    @Throws(Exception::class)
+    open fun getFileInputStreamInstance(
+        path: String,
+        fileName: String,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : AbFileInputStream {
+        // var path = path
+        // var fileName = fileName
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return AbFileInputStream(this.getContext()!!.openFileInput(fileName))
+    }
 
+    @Throws(Exception::class)
+    open fun getFileOutputStreamInstance(
+        path: String,
+        fileName: String,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : AbFileOutputStream {
+        // var path = path
+        // var fileName = fileName
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFileInputStream(this.getContext()!!.openFileInput(fileName))
-}
+        var context: Context = this.getContext()!!
 
+        context.deleteFile(fileName)
 
-                @Throws(Exception::class)
-            
-    open fun getFileOutputStreamInstance(path: String, fileName: String)
-        //nullable = true from not(false or (false and false)) = true
-: AbFileOutputStream{
-    //var path = path
-    //var fileName = fileName
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return AbFileOutputStream(context.openFileOutput(fileName, 0))
+    }
 
-    var context: Context = this.getContext()!!
-
-context.deleteFile(fileName)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFileOutputStream(context.openFileOutput(fileName, 0))
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun delete(path: String, fileName: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var path = path
-    //var fileName = fileName
-this.getContext()!!.deleteFile(fileName)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var path = path
+        // var fileName = fileName
+        this.getContext()!!.deleteFile(fileName)
+    }
 
     open fun getContext()
-        //nullable = true from not(false or (false and true)) = true
-: Context{
+    // nullable = true from not(false or (false and true)) = true
+    : Context {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.context as Context
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.context as Context
+    }
 }
-
-
-}
-                
-            
-

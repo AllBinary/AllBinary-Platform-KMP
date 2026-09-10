@@ -1,83 +1,56 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary
+/* Generated Code Do Not Modify */
+package org.allbinary
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import javax.microedition.lcdui.Image
 import org.eclipse.swt.graphics.Resource
 
-open public class DisposalUtil
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: DisposalUtil = DisposalUtil()
+open public class DisposalUtil : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: DisposalUtil{
+    companion object {
 
+        private val instance: DisposalUtil = DisposalUtil()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : DisposalUtil {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return DisposalUtil.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return DisposalUtil.instance
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun disposeImage(image: Image)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var image = image
-}
+    }
 
+    // Auto Generated
+    public constructor() : super() {}
+
+    open fun disposeImage(image: Image)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var image = image
+    }
 
     open fun disposeResource(resource: Resource)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var resource = resource
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var resource = resource
 
-    
-                        if(!resource.isDisposed())
-                        
-                                    {
-                                    resource.dispose()
+        if (!resource.isDisposed()) {
 
-                                    }
-                                
+            resource.dispose()
+        }
+    }
 }
-
-
-}
-                
-            
-

@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.image.opengles
+/* Generated Code Do Not Modify */
+package org.allbinary.image.opengles
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
@@ -35,20 +25,24 @@ import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
-//OpenGLESNullImageJavaLibrary
-open public class OpenGLESImage : Image
-                , OpenGLSurfaceChangedInterface {
-        
-companion object {
-            
-    val NULL_OPENGL_IMAGE: OpenGLESImage = OpenGLESImage(NullImage.NULL_IMAGE, PlatformBitmapBaseFactory.NULL_PLATFORM_BITMAP_BASE_FACTORY, PlatformTextureBaseFactory.NULL_PLATFORM_TEXTURE_BASE_FACTORY)
 
-    val texture2dList: BasicArrayList = BasicArrayListD()
+// OpenGLESNullImageJavaLibrary
+open public class OpenGLESImage : Image, OpenGLSurfaceChangedInterface {
 
-    val TYPE: Int = 4
+    companion object {
 
-        }
-            
+        val NULL_OPENGL_IMAGE: OpenGLESImage =
+            OpenGLESImage(
+                NullImage.NULL_IMAGE,
+                PlatformBitmapBaseFactory.NULL_PLATFORM_BITMAP_BASE_FACTORY,
+                PlatformTextureBaseFactory.NULL_PLATFORM_TEXTURE_BASE_FACTORY,
+            )
+
+        val texture2dList: BasicArrayList = BasicArrayListD()
+
+        val TYPE: Int = 4
+    }
+
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     val textureFactory: PlatformTextureBaseFactory
@@ -60,77 +54,77 @@ companion object {
     var imageProcessor: OpenGLESImageProcessor = OpenGLESImageProcessor.getInstance()!!
 
     var openGLESImageTranslate: OpenGLESImageTranslate = OpenGLESImageTranslate.getInstance()!!
-public constructor (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory){
-    //var image = image
-    //var bitmapFactory = bitmapFactory
-    //var textureFactory = textureFactory
-this.openGLBitmap= bitmapFactory!!.createBitmap(image)
-this.textureFactory= textureFactory
-}
 
+    public constructor(
+        image: Image,
+        bitmapFactory: PlatformBitmapBaseFactory,
+        textureFactory: PlatformTextureBaseFactory,
+    ) {
+        // var image = image
+        // var bitmapFactory = bitmapFactory
+        // var textureFactory = textureFactory
+        this.openGLBitmap = bitmapFactory!!.createBitmap(image)
+        this.textureFactory = textureFactory
+    }
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun set(gl: GL)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gl = gl
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gl = gl
 
+        throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
+    }
 
+    open fun initTexture(
+        gl: GL10
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        var gl = gl
 
-                            throw Exception(this.commonStrings!!.NOT_IMPLEMENTED)
-}
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
-
-    open fun initTexture(gl: GL10)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-var gl = gl
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-    open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gl = gl
-var viewHeight = viewHeight
-var x_src = x_src
-var y_src = y_src
-var width = width
-var height = height
-var x = x
-var y = y
-var z = z
-}
-
+    open fun drawRegion(
+        gl: GL10,
+        viewHeight: Int,
+        x_src: Float,
+        y_src: Float,
+        width: Float,
+        height: Float,
+        x: Int,
+        y: Int,
+        z: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gl = gl
+        var viewHeight = viewHeight
+        var x_src = x_src
+        var y_src = y_src
+        var width = width
+        var height = height
+        var x = x
+        var y = y
+        var z = z
+    }
 
     open fun draw(gl: GL10, x: Int, y: Int, z: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var gl = gl
-var x = x
-var y = y
-var z = z
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var gl = gl
+        var x = x
+        var y = y
+        var z = z
+    }
 
     open fun getType()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLESImage.TYPE
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return OpenGLESImage.TYPE
+    }
 }
-
-
-}
-                
-            
-

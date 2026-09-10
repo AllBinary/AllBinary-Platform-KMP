@@ -1,86 +1,60 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.thirdparty.store
+/* Generated Code Do Not Modify */
+package org.allbinary.thirdparty.store
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 
-open public class ThirdPartyStore
-            : Object
-         {
-        
+open public class ThirdPartyStore : Object {
 
-    private var authorized: Boolean= false
+    private var authorized: Boolean = false
 
     private val name: String
-public constructor (name: String)
-            : super()
-        {
-var name = name
-this.name= name
-}
 
+    public constructor(name: String) : super() {
+        var name = name
+        this.name = name
+    }
 
     open fun authorize(clientInformationInterface: AbeClientInformationInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-var clientInformationInterface = clientInformationInterface
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var clientInformationInterface = clientInformationInterface
+    }
 
     open fun isAuthorized()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.authorized
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.authorized
+    }
 
     open fun setAuthorized(authorized: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var authorized = authorized
-this.authorized= authorized
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var authorized = authorized
+        this.authorized = authorized
+    }
 
     open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String{
+    // nullable = true from not(false or (false and true)) = true
+    : String {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.name
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.name
+    }
 }
-
-
-}
-                
-            
-

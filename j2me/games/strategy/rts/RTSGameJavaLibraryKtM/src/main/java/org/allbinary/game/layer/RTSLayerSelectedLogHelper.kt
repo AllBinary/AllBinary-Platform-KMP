@@ -1,33 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonLabels
-import org.allbinary.string.CommonSeps
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.AngleInfo
@@ -35,32 +23,28 @@ import org.allbinary.math.NamedAngle
 import org.allbinary.math.PositionStrings
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.string.CommonLabels
+import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 
 open public class RTSLayerSelectedLogHelper : RTSLayerLogHelper {
-        
-companion object {
-            
-    private val instanceC: RTSLayerSelectedLogHelper = RTSLayerSelectedLogHelper()
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: RTSLayerSelectedLogHelper{
+    companion object {
 
+        private val instanceC: RTSLayerSelectedLogHelper = RTSLayerSelectedLogHelper()
 
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : RTSLayerSelectedLogHelper {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return RTSLayerSelectedLogHelper.instanceC
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return RTSLayerSelectedLogHelper.instanceC
         }
-            
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
+    }
+
+    // Auto Generated
+    public constructor() : super() {}
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
@@ -69,222 +53,317 @@ companion object {
 
     private val TRACKTO_TURNTO: String = "trackTo:turnTo"
 
-    override fun setClosestGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-    //var pathsList = pathsList
+    override fun setClosestGeographicMapCellHistory(
+        associatedAdvancedRTSGameLayer: PathFindingLayerInterface,
+        pathsList: BasicArrayList,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        // var pathsList = pathsList
 
-    var stringBuffer: StringMaker = StringMaker()
+        var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(this.commonSeps!!.SPACE)
-stringBuffer!!.append(CommonLabels.getInstance()!!.START)
-stringBuffer!!.appendint(pathsList!!.size())
-stringBuffer!!.append(" -> ")
-stringBuffer!!.append(StringUtil.getInstance()!!.toString(pathsList))
-this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: setClosestGeographicMapCellHistory")
-}
+        stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
+        stringBuffer!!.append(this.commonSeps!!.SPACE)
+        stringBuffer!!.append(CommonLabels.getInstance()!!.START)
+        stringBuffer!!.appendint(pathsList!!.size())
+        stringBuffer!!.append(" -> ")
+        stringBuffer!!.append(StringUtil.getInstance()!!.toString(pathsList))
+        this.logUtil!!.putF(
+            stringBuffer!!.toString(),
+            this,
+            "selected: setClosestGeographicMapCellHistory",
+        )
+    }
 
+    override fun trackTo(
+        associatedAdvancedRTSGameLayer: PathFindingLayerInterface,
+        nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition,
+        dx: Int,
+        dy: Int,
+        reason: String,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        // var nextUnvisitedPathGeographicMapCellPosition =
+        // nextUnvisitedPathGeographicMapCellPosition
+        // var dx = dx
+        // var dy = dy
+        // var reason = reason
 
-    override fun trackTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition, dx: Int, dy: Int, reason: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-    //var nextUnvisitedPathGeographicMapCellPosition = nextUnvisitedPathGeographicMapCellPosition
-    //var dx = dx
-    //var dy = dy
-    //var reason = reason
+        var stringBuffer: StringMaker = StringMaker()
 
-    var stringBuffer: StringMaker = StringMaker()
+        stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
+        stringBuffer!!.append(this.commonSeps!!.SPACE)
+        stringBuffer!!.append(
+            StringUtil.getInstance()!!.toString(nextUnvisitedPathGeographicMapCellPosition)
+        )
+        stringBuffer!!.append(this.positionStrings!!.DX_LABEL)
+        stringBuffer!!.appendint(dx)
+        stringBuffer!!.append(this.commonSeps!!.SPACE)
+        stringBuffer!!.append(this.positionStrings!!.DY_LABEL)
+        stringBuffer!!.appendint(dy)
+        stringBuffer!!.append(this.commonSeps!!.SPACE)
+        stringBuffer!!.append(reason)
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: trackTo")
+    }
 
-stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(this.commonSeps!!.SPACE)
-stringBuffer!!.append(StringUtil.getInstance()!!.toString(nextUnvisitedPathGeographicMapCellPosition))
-stringBuffer!!.append(this.positionStrings!!.DX_LABEL)
-stringBuffer!!.appendint(dx)
-stringBuffer!!.append(this.commonSeps!!.SPACE)
-stringBuffer!!.append(this.positionStrings!!.DY_LABEL)
-stringBuffer!!.appendint(dy)
-stringBuffer!!.append(this.commonSeps!!.SPACE)
-stringBuffer!!.append(reason)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: trackTo")
-}
+    override fun turnTo(
+        associatedAdvancedRTSGameLayer: PathFindingLayerInterface,
+        dx: Int,
+        dy: Int,
+        angleInfo: AngleInfo,
+        angle: Int,
+        movementAngle: NamedAngle,
+        evading: Boolean,
+        targetAngle: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        // var dx = dx
+        // var dy = dy
+        // var angleInfo = angleInfo
+        // var angle = angle
+        // var movementAngle = movementAngle
+        // var evading = evading
+        var targetAngle = targetAngle
 
+        var stringBuffer: StringMaker = StringMaker()
 
-    override fun turnTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int, angleInfo: AngleInfo, angle: Int, movementAngle: NamedAngle, evading: Boolean, targetAngle: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-    //var dx = dx
-    //var dy = dy
-    //var angleInfo = angleInfo
-    //var angle = angle
-    //var movementAngle = movementAngle
-    //var evading = evading
-var targetAngle = targetAngle
+        stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
+        stringBuffer!!.append(" steering - ")
+        stringBuffer!!.append(this.positionStrings!!.DX_LABEL)
+        stringBuffer!!.appendint(dx)
+        stringBuffer!!.append(this.commonSeps!!.SPACE)
+        stringBuffer!!.append(this.positionStrings!!.DY_LABEL)
+        stringBuffer!!.appendint(dy)
+        stringBuffer!!.append(" angle: ")
+        stringBuffer!!.appendint(angle)
+        stringBuffer!!.append(" movementAngle: ")
+        stringBuffer!!.append(movementAngle!!.name)
+        stringBuffer!!.append(this.commonSeps!!.FORWARD_SLASH)
+        stringBuffer!!.appendshort(movementAngle!!.getValue())
 
-    var stringBuffer: StringMaker = StringMaker()
+        if (angleInfo != null) {
 
-stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(" steering - ")
-stringBuffer!!.append(this.positionStrings!!.DX_LABEL)
-stringBuffer!!.appendint(dx)
-stringBuffer!!.append(this.commonSeps!!.SPACE)
-stringBuffer!!.append(this.positionStrings!!.DY_LABEL)
-stringBuffer!!.appendint(dy)
-stringBuffer!!.append(" angle: ")
-stringBuffer!!.appendint(angle)
-stringBuffer!!.append(" movementAngle: ")
-stringBuffer!!.append(movementAngle!!.name)
-stringBuffer!!.append(this.commonSeps!!.FORWARD_SLASH)
-stringBuffer!!.appendshort(movementAngle!!.getValue())
+            var angleIncrement: Short = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()!!
 
-    
-                        if(angleInfo != 
-                                    null
-                                )
-                        
-                                    {
-                                    
-    var angleIncrement: Short = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()!!
+            stringBuffer!!.append(" angleIncrement: ")
+            stringBuffer!!.appendshort(angleIncrement)
+        }
 
-stringBuffer!!.append(" angleIncrement: ")
-stringBuffer!!.appendshort(angleIncrement)
-
-                                    }
-                                
-stringBuffer!!.append(" Evading: ")
-stringBuffer!!.appendboolean(evading)
-this.logUtil!!.putF(stringBuffer!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        stringBuffer!!.append(" Evading: ")
+        stringBuffer!!.appendboolean(evading)
+        this.logUtil!!.putF(stringBuffer!!.toString(), this, this.TRACKTO_TURNTO)
+    }
 
     override fun doneMoving(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - done moving 0,0")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - done moving 0,0")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun closeEnough(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - close enough")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - close enough")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun movingLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingLeft")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - allow movingLeft")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun movingRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingRight")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - allow movingRight")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun movingUp(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingUp")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - allow movingUp")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun movingDown(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingDown")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - allow movingDown")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun currentMoveEnded(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - correct angle, but movement not needed for current deltas so reseting movement angle")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(
+                    " steering - correct angle, but movement not needed for current deltas so reseting movement angle"
+                )!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun evade(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - evade")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - evade")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun rotateLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - rotating left")!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - rotating left")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun rotateRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - rotating right")!!.toString(), this, this.TRACKTO_TURNTO)
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - rotating right")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
-
-    override fun handle(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, movementAngle: NamedAngle)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-    //var movementAngle = movementAngle
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - movementAngle: ")!!.append(movementAngle!!.name)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendshort(movementAngle!!.getValue())!!.toString(), this, this.TRACKTO_TURNTO)
-}
-
+    override fun handle(
+        associatedAdvancedRTSGameLayer: PathFindingLayerInterface,
+        movementAngle: NamedAngle,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        // var movementAngle = movementAngle
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - movementAngle: ")!!
+                .append(movementAngle!!.name)!!
+                .append(this.commonSeps!!.FORWARD_SLASH)!!
+                .appendshort(movementAngle!!.getValue())!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
 
     override fun noRotation(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - Do not rotate")!!.toString(), this, this.TRACKTO_TURNTO)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(" steering - Do not rotate")!!
+                .toString(),
+            this,
+            this.TRACKTO_TURNTO,
+        )
+    }
+
+    override fun notOnPath(
+        associatedAdvancedRTSGameLayer: PathFindingLayerInterface,
+        geographicMapCellHistory: GeographicMapCellHistory,
+        currentGeographicMapCellPosition: GeographicMapCellPosition,
+        pathList: BasicArrayList,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+        // var geographicMapCellHistory = geographicMapCellHistory
+        // var currentGeographicMapCellPosition = currentGeographicMapCellPosition
+        // var pathList = pathList
+
+        var stringUtil: StringUtil = StringUtil.getInstance()!!
+
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(associatedAdvancedRTSGameLayer!!.getName())!!
+                .append(CommonSeps.getInstance()!!.SPACE)!!
+                .appendint(geographicMapCellHistory!!.getTotalVisited())!!
+                .append(CommonSeps.getInstance()!!.SPACE)!!
+                .append(stringUtil!!.toString(currentGeographicMapCellPosition))!!
+                .append(" - trying to move but not on path: ")!!
+                .append(stringUtil!!.toString(pathList))!!
+                .toString(),
+            this,
+            "turnTo",
+        )
+    }
 }
-
-
-    override fun notOnPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellHistory: GeographicMapCellHistory, currentGeographicMapCellPosition: GeographicMapCellPosition, pathList: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-    //var geographicMapCellHistory = geographicMapCellHistory
-    //var currentGeographicMapCellPosition = currentGeographicMapCellPosition
-    //var pathList = pathList
-
-    var stringUtil: StringUtil = StringUtil.getInstance()!!
-
-this.logUtil!!.putF(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(CommonSeps.getInstance()!!.SPACE)!!.appendint(geographicMapCellHistory!!.getTotalVisited())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(stringUtil!!.toString(currentGeographicMapCellPosition))!!.append(" - trying to move but not on path: ")!!.append(stringUtil!!.toString(pathList))!!.toString(), this, "turnTo")
-}
-
-
-}
-                
-            
-

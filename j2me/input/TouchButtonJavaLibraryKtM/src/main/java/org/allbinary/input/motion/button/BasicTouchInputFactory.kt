@@ -1,30 +1,21 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
 import org.allbinary.game.input.InputFactory
 import org.allbinary.game.input.mapping.InputToGameKeyMapping
 import org.allbinary.logic.NullUtil
@@ -34,36 +25,26 @@ import org.allbinary.string.CommonLabels
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 
-open public class BasicTouchInputFactory
-            : Object
-         {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class BasicTouchInputFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: BasicTouchInputFactory{
+    companion object {
 
-    
-                        if(BasicTouchInputFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    BasicTouchInputFactory.instance= BasicTouchInputFactory()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : BasicTouchInputFactory {
 
+            if (BasicTouchInputFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                BasicTouchInputFactory.instance = BasicTouchInputFactory()
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicTouchInputFactory.instance as BasicTouchInputFactory
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return BasicTouchInputFactory.instance as BasicTouchInputFactory
         }
-            
+    }
+
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val SPECIAL_BUTTON_SEVEN_TESTING_ONLY: TouchButtonInput
@@ -95,103 +76,90 @@ companion object {
     private var initialized: Boolean = false
 
     private val list: BasicArrayList = BasicArrayListD()
-private constructor ()
-            : super()
-        {
 
-    var MAX: Int = InputFactory.getInstance()!!.MAX
+    private constructor() : super() {
 
-this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY= TouchButtonInput(MAX -41, "Button 7 - Testing Only May Cross Over Key Values")
-this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY= TouchButtonInput(MAX -42, "Button 8 - Testing Only May Cross Over Key Values")
-this.SPECIAL_BUTTON_SIX= TouchButtonInput(MAX -30, "Button 6")
-this.SPECIAL_BUTTON_FIVE= TouchButtonInput(MAX -31, "Button 5")
-this.SPECIAL_BUTTON_FOUR= TouchButtonInput(MAX -32, "Button 4")
-this.SPECIAL_BUTTON_THREE= TouchButtonInput(MAX -33, "Button 3")
-this.SPECIAL_BUTTON_TWO= TouchButtonInput(MAX -34, "Button 2")
-this.SPECIAL_BUTTON_ONE= TouchButtonInput(MAX -35, "Button 1")
-this.UP= TouchButtonInput(MAX -36, "Up Button")
-this.LEFT= TouchButtonInput(MAX -37, "Left Button")
-this.RIGHT= TouchButtonInput(MAX -38, "Right Button")
-this.DOWN= TouchButtonInput(MAX -39, "Down Button")
-this.NONE= TouchButtonInput(MAX -40, "No Button")
-}
+        var MAX: Int = InputFactory.getInstance()!!.MAX
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY =
+            TouchButtonInput(MAX - 41, "Button 7 - Testing Only May Cross Over Key Values")
+        this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY =
+            TouchButtonInput(MAX - 42, "Button 8 - Testing Only May Cross Over Key Values")
+        this.SPECIAL_BUTTON_SIX = TouchButtonInput(MAX - 30, "Button 6")
+        this.SPECIAL_BUTTON_FIVE = TouchButtonInput(MAX - 31, "Button 5")
+        this.SPECIAL_BUTTON_FOUR = TouchButtonInput(MAX - 32, "Button 4")
+        this.SPECIAL_BUTTON_THREE = TouchButtonInput(MAX - 33, "Button 3")
+        this.SPECIAL_BUTTON_TWO = TouchButtonInput(MAX - 34, "Button 2")
+        this.SPECIAL_BUTTON_ONE = TouchButtonInput(MAX - 35, "Button 1")
+        this.UP = TouchButtonInput(MAX - 36, "Up Button")
+        this.LEFT = TouchButtonInput(MAX - 37, "Left Button")
+        this.RIGHT = TouchButtonInput(MAX - 38, "Right Button")
+        this.DOWN = TouchButtonInput(MAX - 39, "Down Button")
+        this.NONE = TouchButtonInput(MAX - 40, "No Button")
+    }
 
+    @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
+    // instead.
     open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var inputToGameKeyMapping = inputToGameKeyMapping
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var inputToGameKeyMapping = inputToGameKeyMapping
 
-    
-                        if(!this.initialized)
-                        
-                                    {
-                                    this.initialized= true
-this.list.add(this.UP)
-this.list.add(this.LEFT)
-this.list.add(this.RIGHT)
-this.list.add(this.DOWN)
-this.list.add(this.SPECIAL_BUTTON_TWO)
-this.list.add(this.SPECIAL_BUTTON_FOUR)
-this.list.add(this.SPECIAL_BUTTON_THREE)
-this.list.add(this.SPECIAL_BUTTON_ONE)
-this.list.add(this.SPECIAL_BUTTON_FIVE)
-this.list.add(this.SPECIAL_BUTTON_SIX)
-this.list.add(this.SPECIAL_BUTTON_SIX)
-this.list.add(this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY)
-this.list.add(this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY)
-this.updateAllFromList(this.list, inputToGameKeyMapping)
+        if (!this.initialized) {
 
-                                    }
-                                
-}
-
+            this.initialized = true
+            this.list.add(this.UP)
+            this.list.add(this.LEFT)
+            this.list.add(this.RIGHT)
+            this.list.add(this.DOWN)
+            this.list.add(this.SPECIAL_BUTTON_TWO)
+            this.list.add(this.SPECIAL_BUTTON_FOUR)
+            this.list.add(this.SPECIAL_BUTTON_THREE)
+            this.list.add(this.SPECIAL_BUTTON_ONE)
+            this.list.add(this.SPECIAL_BUTTON_FIVE)
+            this.list.add(this.SPECIAL_BUTTON_SIX)
+            this.list.add(this.SPECIAL_BUTTON_SIX)
+            this.list.add(this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY)
+            this.list.add(this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY)
+            this.updateAllFromList(this.list, inputToGameKeyMapping)
+        }
+    }
 
     open fun updateAll(inputToGameKeyMapping: InputToGameKeyMapping)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var inputToGameKeyMapping = inputToGameKeyMapping
-this.updateAllFromList(this.list, inputToGameKeyMapping)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var inputToGameKeyMapping = inputToGameKeyMapping
+        this.updateAllFromList(this.list, inputToGameKeyMapping)
+    }
 
     open fun updateAllFromList(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var list = list
-    //var inputToGameKeyMapping = inputToGameKeyMapping
-this.logUtil!!.putF(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.appendint(list.size())!!.toString(), this, "updateAll")
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var list = list
+        // var inputToGameKeyMapping = inputToGameKeyMapping
+        this.logUtil!!.putF(
+            StringMaker()
+                .append(CommonLabels.getInstance()!!.START_LABEL)!!
+                .appendint(list.size())!!
+                .toString(),
+            this,
+            "updateAll",
+        )
 
-    var touchButtonInput: TouchButtonInput
+        var touchButtonInput: TouchButtonInput
 
+        for (index in list.size() - 1 downTo 0) {
 
-
-
-
-                        for (index in list.size() -1 downTo 0)
-
-        {
-touchButtonInput= list.objectArray[index]!! as TouchButtonInput
-touchButtonInput!!.update(inputToGameKeyMapping)
-}
-
-}
-
+            touchButtonInput = list.objectArray[index]!! as TouchButtonInput
+            touchButtonInput!!.update(inputToGameKeyMapping)
+        }
+    }
 
     open fun getList()
-        //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+    // nullable = true from not(false or (false and true)) = true
+    : BasicArrayList {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.list
+    }
 }
-
-
-}
-                
-            
-

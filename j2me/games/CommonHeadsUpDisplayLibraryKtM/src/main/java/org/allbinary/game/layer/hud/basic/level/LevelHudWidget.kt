@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.layer.hud.basic.level
+/* Generated Code Do Not Modify */
+package org.allbinary.game.layer.hud.basic.level
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Font
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.graphics.hud.BasicHud
@@ -33,29 +23,27 @@ import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.math.PrimitiveLongUtil
 
-open public class LevelHudWidget : BasicHud
-                , PaintableInterface {
-        
-companion object {
-            
-                @Throws(Exception::class)
-            
-    open fun createHud(maxlevel: Int, location: Int, direction: Int)
-        //nullable = true from not(false or (false and false)) = true
-: LevelHudWidget{
-var maxlevel = maxlevel
-var location = location
-var direction = direction
+open public class LevelHudWidget : BasicHud, PaintableInterface {
 
+    companion object {
 
+        @Throws(Exception::class)
+        open fun createHud(
+            maxlevel: Int,
+            location: Int,
+            direction: Int,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : LevelHudWidget {
+            var maxlevel = maxlevel
+            var location = location
+            var direction = direction
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return LevelHudWidget(maxlevel, location, direction)
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return LevelHudWidget(maxlevel, location, direction)
         }
-            
+    }
+
     private var level: Int
 
     private var maxlevel: Int
@@ -64,132 +52,115 @@ var direction = direction
 
     private var levelNumberCharArray: CharArray = NullUtil.getInstance()!!.NULL_CHAR_ARRAY
 
-    private var levelNumberTotalDigits: Int= 0
+    private var levelNumberTotalDigits: Int = 0
 
-    private var offset: Int= 0
+    private var offset: Int = 0
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor (maxlevel: Int, location: Int, direction: Int)                        
 
-                            : super(location, direction, 2, BasicColorFactory.getInstance()!!.GREY){
-var maxlevel = maxlevel
-var location = location
-var direction = direction
+    public constructor(
+        maxlevel: Int,
+        location: Int,
+        direction: Int,
+    ) : super(location, direction, 2, BasicColorFactory.getInstance()!!.GREY) {
+        var maxlevel = maxlevel
+        var location = location
+        var direction = direction
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.primitiveLongUtil= PrimitiveLongUtil.createPowerOfTen(1000)
+        this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(1000)
 
-    var LEVEL: String = "Lv "
+        var LEVEL: String = "Lv "
 
-this.levelString= LEVEL.toCharArray()
-this.maxlevel= maxlevel
-this.level= maxlevel
-this.update()
-this.updateMaxHeight= 14
-}
-
+        this.levelString = LEVEL.toCharArray()
+        this.maxlevel = maxlevel
+        this.level = maxlevel
+        this.update()
+        this.updateMaxHeight = 14
+    }
 
     override fun updateMeasurement(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var graphics = graphics
 
-    var font: Font = graphics.getFont()!!
+        var font: Font = graphics.getFont()!!
 
-this.updateMaxWidth= font.getSize() *4
-this.offset= font.charsWidth(this.levelString, 0, this.levelString!!.size) +font.getSize()
-super.updateMeasurement(graphics)
-}
-
+        this.updateMaxWidth = font.getSize() * 4
+        this.offset = font.charsWidth(this.levelString, 0, this.levelString!!.size) + font.getSize()
+        super.updateMeasurement(graphics)
+    }
 
     open fun update()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.levelNumberCharArray= this.primitiveLongUtil!!.getCharArray(this.level)
-this.levelNumberTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.levelNumberCharArray = this.primitiveLongUtil!!.getCharArray(this.level)
+        this.levelNumberTotalDigits = this.primitiveLongUtil!!.getCurrentTotalDigits()
+    }
 
     open fun setLevel(level: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var level = level
-this.level= level
-this.update()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var level = level
+        this.level = level
+        this.update()
+    }
 
     open fun nextLevel()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.level++
-this.update()
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.level++
+        this.update()
+    }
 
     open fun previousLevel()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.level--
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.level--
 
-    
-                        if(this.level < 0)
-                        
-                                    {
-                                    this.level= 0
+        if (this.level < 0) {
 
-                                    }
-                                
-this.update()
-}
+            this.level = 0
+        }
 
+        this.update()
+    }
 
     open fun isComplete()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-    
-                        if(this.level <= this.maxlevel)
-                        
-                                    {
-                                    
+        if (this.level <= this.maxlevel) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return false
+        } else {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-
-                                    }
-                                
-                        else {
-                            
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                        }
-                            
-}
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-super.paintDX(graphics, this.levelString, 0, this.levelString!!.size, this.levelNumberCharArray, 0, this.levelNumberTotalDigits, this.offset)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        super.paintDX(
+            graphics,
+            this.levelString,
+            0,
+            this.levelString!!.size,
+            this.levelNumberCharArray,
+            0,
+            this.levelNumberTotalDigits,
+            this.offset,
+        )
+    }
 
     override fun paintThreed(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+    }
 }
-
-
-}
-                
-            
-

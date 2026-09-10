@@ -1,267 +1,259 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2006 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2006 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.input.form
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input.form
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.game.layer.RTSPlayerLayerInterface
-import org.allbinary.graphics.form.item.ABCustomItem
-import org.allbinary.string.CommonStrings
+import kotlin.Array
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
+import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.form.ScrollSelectionForm
+import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
 import org.allbinary.string.CommonLabels
+import org.allbinary.string.CommonStrings
 
 open public class CompositeRTSFormInput : RTSFormInput {
-        
 
     private val rtsFormInputArray: Array<RTSFormInput?>
 
     private val itemIndex: IntArray
 
     private val isPrimaryWaypointCreator: Boolean
-public constructor (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean, itemIndex: IntArray)                        
 
-                            : super(groupInterface){
-    //var groupInterface = groupInterface
-    //var isPrimaryWaypointCreator = isPrimaryWaypointCreator
-    //var itemIndex = itemIndex
+    public constructor(
+        groupInterface: Array<Group?>,
+        isPrimaryWaypointCreator: Boolean,
+        itemIndex: IntArray,
+    ) : super(groupInterface) {
+        // var groupInterface = groupInterface
+        // var isPrimaryWaypointCreator = isPrimaryWaypointCreator
+        // var itemIndex = itemIndex
 
+        // For kotlin this is before the body of the constructor.
 
-                            //For kotlin this is before the body of the constructor.
-                    
-this.itemIndex= itemIndex
-this.isPrimaryWaypointCreator= isPrimaryWaypointCreator
-this.rtsFormInputArray= arrayOfNulls(2)
-this.rtsFormInputArray[0]= WaypointRTSFormInput(this.groupInterfaceArray, isPrimaryWaypointCreator)
-this.rtsFormInputArray[1]= UnitRTSFormInput(this.groupInterfaceArray)
-}
+        this.itemIndex = itemIndex
+        this.isPrimaryWaypointCreator = isPrimaryWaypointCreator
+        this.rtsFormInputArray = arrayOfNulls(2)
+        this.rtsFormInputArray[0] =
+            WaypointRTSFormInput(this.groupInterfaceArray, isPrimaryWaypointCreator)
+        this.rtsFormInputArray[1] = UnitRTSFormInput(this.groupInterfaceArray)
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var allBinaryGameLayerManager = allBinaryGameLayerManager
-super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var allBinaryGameLayerManager = allBinaryGameLayerManager
+        super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = allBinaryGameLayerManager as GeographicMapCompositeInterface
+        var geographicMapCompositeInterface: GeographicMapCompositeInterface =
+            allBinaryGameLayerManager as GeographicMapCompositeInterface
 
+        var geographicMapInterface: BasicGeographicMap =
+            geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-    var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
+        var size: Int = this.rtsFormInputArray!!.size
 
+        for (index in 0 until size) {
 
-    var size: Int = this.rtsFormInputArray!!.size
-                
+            this.rtsFormInputArray[index]!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
+        }
+    }
 
+    @Throws(Exception::class)
+    override fun processAtPoint(
+        associatedRtsLayer: CollidableDestroyableDamageableLayer,
+        rtsPlayerLayerInterface: RTSPlayerLayerInterface,
+        layerManager: AllBinaryLayerManager,
+        point: GPoint,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedRtsLayer = associatedRtsLayer
+        var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        var layerManager = layerManager
+        var point = point
 
+        var scrollSelectionForm: ScrollSelectionForm =
+            rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
 
+        var index: Int = scrollSelectionForm!!.getSelectedIndexForPoint(point)!!
 
+        if (
+            this.isStickyItemSelected() &&
+                associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance()
+        ) {
 
-                        for (index in 0 until size)
+            if (this.getSelectedStickyItemIndex() <= this.itemIndex[0]) {
 
-        {
-this.rtsFormInputArray[index]!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
-}
+                this.rtsFormInputArray[0]!!.processAtPoint(
+                    associatedRtsLayer,
+                    rtsPlayerLayerInterface,
+                    layerManager,
+                    point,
+                )
+            }
+        } else if (index > this.itemIndex[0]) {
 
-}
+            this.rtsFormInputArray[1]!!.processAtPoint(
+                associatedRtsLayer,
+                rtsPlayerLayerInterface,
+                layerManager,
+                point,
+            )
+        }
+    }
 
+    @Throws(Exception::class)
+    override fun processGameSpecific(
+        associatedRtsLayer: CollidableDestroyableDamageableLayer,
+        rtsPlayerLayerInterface: RTSPlayerLayerInterface,
+        layerManager: AllBinaryLayerManager,
+        item: ABCustomItem,
+        index: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedRtsLayer = associatedRtsLayer
+        var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        var layerManager = layerManager
+        var item = item
+        var index = index
 
-                @Throws(Exception::class)
-            
-    override fun processAtPoint(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedRtsLayer = associatedRtsLayer
-var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-var layerManager = layerManager
-var point = point
+        var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
+        this.logUtil!!.putF(
+            CommonLabels.getInstance()!!.INDEX_LABEL + index + " > " + this.itemIndex[0],
+            this,
+            commonStrings!!.PROCESS,
+        )
 
+        if (
+            this.isStickyItemSelected() &&
+                associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance()
+        ) {
 
-    var index: Int = scrollSelectionForm!!.getSelectedIndexForPoint(point)!!
+            if (this.getSelectedStickyItemIndex() <= this.itemIndex[0]) {
 
+                this.rtsFormInputArray[0]!!.processGameSpecific(
+                    associatedRtsLayer,
+                    rtsPlayerLayerInterface,
+                    layerManager,
+                    item,
+                    index,
+                )
+            }
+        } else if (index > this.itemIndex[0]) {
 
-    
-                        if(this.isStickyItemSelected() && associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance())
-                        
-                                    {
-                                    
-    
-                        if(this.getSelectedStickyItemIndex() <= this.itemIndex[0])
-                        
-                                    {
-                                    this.rtsFormInputArray[0]!!.processAtPoint(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point)
+            this.rtsFormInputArray[1]!!.processGameSpecific(
+                associatedRtsLayer,
+                rtsPlayerLayerInterface,
+                layerManager,
+                item,
+                index,
+            )
+        }
+    }
 
-                                    }
-                                
+    @Throws(Exception::class)
+    override fun processSticky(
+        associatedRtsLayer: CollidableDestroyableDamageableLayer,
+        rtsPlayerLayerInterface: RTSPlayerLayerInterface,
+        layerManager: AllBinaryLayerManager,
+        point: GPoint,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var associatedRtsLayer = associatedRtsLayer
+        var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        var layerManager = layerManager
+        var point = point
 
-                                    }
-                                
-                             else 
-    
-                        if(index > this.itemIndex[0])
-                        
-                                    {
-                                    this.rtsFormInputArray[1]!!.processAtPoint(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsFormInputArray[0]!!.processSticky(
+            associatedRtsLayer,
+            rtsPlayerLayerInterface,
+            layerManager,
+            point,
+        )
+    }
 
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun processGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedRtsLayer = associatedRtsLayer
-var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-var layerManager = layerManager
-var item = item
-var index = index
-
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-this.logUtil!!.putF(CommonLabels.getInstance()!!.INDEX_LABEL +index +" > " +this.itemIndex[0], this, commonStrings!!.PROCESS)
-
-    
-                        if(this.isStickyItemSelected() && associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance())
-                        
-                                    {
-                                    
-    
-                        if(this.getSelectedStickyItemIndex() <= this.itemIndex[0])
-                        
-                                    {
-                                    this.rtsFormInputArray[0]!!.processGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
-
-                                    }
-                                
-
-                                    }
-                                
-                             else 
-    
-                        if(index > this.itemIndex[0])
-                        
-                                    {
-                                    this.rtsFormInputArray[1]!!.processGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
-
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun processSticky(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var associatedRtsLayer = associatedRtsLayer
-var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-var layerManager = layerManager
-var point = point
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsFormInputArray[0]!!.processSticky(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point)
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun processStickyGameSpecific(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: ABCustomItem, index: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedRtsLayer = associatedRtsLayer
-var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-var layerManager = layerManager
-var item = item
-var index = index
-this.rtsFormInputArray[0]!!.processStickyGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index)
-}
-
+    @Throws(Exception::class)
+    override fun processStickyGameSpecific(
+        associatedRtsLayer: CollidableDestroyableDamageableLayer,
+        rtsPlayerLayerInterface: RTSPlayerLayerInterface,
+        layerManager: AllBinaryLayerManager,
+        item: ABCustomItem,
+        index: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var associatedRtsLayer = associatedRtsLayer
+        var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+        var layerManager = layerManager
+        var item = item
+        var index = index
+        this.rtsFormInputArray[0]!!.processStickyGameSpecific(
+            associatedRtsLayer,
+            rtsPlayerLayerInterface,
+            layerManager,
+            item,
+            index,
+        )
+    }
 
     override fun getSelectedStickyItemIndex()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
+    // nullable = true from not(false or (false and true)) = true
+    : Int {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsFormInputArray[0]!!.getSelectedStickyItemIndex()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsFormInputArray[0]!!.getSelectedStickyItemIndex()
+    }
 
     override fun isStickyItemSelected()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsFormInputArray[0]!!.isStickyItemSelected()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsFormInputArray[0]!!.isStickyItemSelected()
+    }
 
     override fun setStickyItemSelected(stickyItemSelected: Boolean)
-        //nullable = true from not(false or (false and false)) = true
-{
-var stickyItemSelected = stickyItemSelected
-this.rtsFormInputArray[0]!!.setStickyItemSelected(stickyItemSelected)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var stickyItemSelected = stickyItemSelected
+        this.rtsFormInputArray[0]!!.setStickyItemSelected(stickyItemSelected)
+    }
 
     override fun getSelectedStickyItem()
-        //nullable = true from not(false or (false and true)) = true
-: ABCustomItem{
+    // nullable = true from not(false or (false and true)) = true
+    : ABCustomItem {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rtsFormInputArray[0]!!.getSelectedStickyItem()
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.rtsFormInputArray[0]!!.getSelectedStickyItem()
+    }
 
     override fun setSelectedStickyItem(selectedStickyItem: ABCustomItem)
-        //nullable = true from not(false or (false and false)) = true
-{
-var selectedStickyItem = selectedStickyItem
-this.rtsFormInputArray[0]!!.setSelectedStickyItem(selectedStickyItem)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var selectedStickyItem = selectedStickyItem
+        this.rtsFormInputArray[0]!!.setSelectedStickyItem(selectedStickyItem)
+    }
 }
-
-
-}
-                
-            
-

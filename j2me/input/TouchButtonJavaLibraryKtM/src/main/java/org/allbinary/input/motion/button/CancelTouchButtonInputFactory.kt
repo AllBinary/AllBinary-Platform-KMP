@@ -1,100 +1,75 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
+import java.lang.Object
+import kotlin.Array
 import org.allbinary.game.input.InputFactory
 import org.allbinary.logic.NullUtil
 
-open public class CancelTouchButtonInputFactory
-            : Object
-         {
-        
-companion object {
-            
-    private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
+open public class CancelTouchButtonInputFactory : Object {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: CancelTouchButtonInputFactory{
+    companion object {
 
-    
-                        if(CancelTouchButtonInputFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT)
-                        
-                                    {
-                                    CancelTouchButtonInputFactory.instance= CancelTouchButtonInputFactory()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-                                    }
-                                
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : CancelTouchButtonInputFactory {
 
+            if (CancelTouchButtonInputFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
 
+                CancelTouchButtonInputFactory.instance = CancelTouchButtonInputFactory()
+            }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return CancelTouchButtonInputFactory.instance as CancelTouchButtonInputFactory
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return CancelTouchButtonInputFactory.instance as CancelTouchButtonInputFactory
         }
-            
-    private val cancelInputArray: Array<TouchButtonInput?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
-private constructor ()
-            : super()
-        {
+    }
 
-    var basicTouchInputFactory: BasicTouchInputFactory = BasicTouchInputFactory.getInstance()!!
+    private val cancelInputArray: Array<TouchButtonInput?> =
+        arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
+    private constructor() : super() {
 
+        var basicTouchInputFactory: BasicTouchInputFactory = BasicTouchInputFactory.getInstance()!!
 
+        for (index in this.cancelInputArray!!.size - 1 downTo 0) {
 
+            this.cancelInputArray[index] = basicTouchInputFactory!!.NONE
+        }
 
-                        for (index in this.cancelInputArray!!.size -1 downTo 0)
+        this.cancelInputArray[basicTouchInputFactory!!.UP.getSourceId()] =
+            basicTouchInputFactory!!.DOWN
+        this.cancelInputArray[basicTouchInputFactory!!.DOWN.getSourceId()] =
+            basicTouchInputFactory!!.UP
+        this.cancelInputArray[basicTouchInputFactory!!.LEFT.getSourceId()] =
+            basicTouchInputFactory!!.RIGHT
+        this.cancelInputArray[basicTouchInputFactory!!.RIGHT.getSourceId()] =
+            basicTouchInputFactory!!.LEFT
+    }
 
-        {
-this.cancelInputArray[index]= basicTouchInputFactory!!.NONE
+    open fun getCancel(
+        touchButtonInput: TouchButtonInput
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : TouchButtonInput {
+        var touchButtonInput = touchButtonInput
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this.cancelInputArray[touchButtonInput!!.getSourceId()]!!
+    }
 }
-
-this.cancelInputArray[basicTouchInputFactory!!.UP.getSourceId()]= basicTouchInputFactory!!.DOWN
-this.cancelInputArray[basicTouchInputFactory!!.DOWN.getSourceId()]= basicTouchInputFactory!!.UP
-this.cancelInputArray[basicTouchInputFactory!!.LEFT.getSourceId()]= basicTouchInputFactory!!.RIGHT
-this.cancelInputArray[basicTouchInputFactory!!.RIGHT.getSourceId()]= basicTouchInputFactory!!.LEFT
-}
-
-
-    open fun getCancel(touchButtonInput: TouchButtonInput)
-        //nullable = true from not(false or (false and false)) = true
-: TouchButtonInput{
-var touchButtonInput = touchButtonInput
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.cancelInputArray[touchButtonInput!!.getSourceId()]!!
-}
-
-
-}
-                
-            
-

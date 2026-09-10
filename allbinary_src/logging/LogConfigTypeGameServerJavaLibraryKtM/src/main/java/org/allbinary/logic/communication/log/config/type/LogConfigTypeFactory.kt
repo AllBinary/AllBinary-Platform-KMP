@@ -1,54 +1,37 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.logic.communication.log.config.type
+/* Generated Code Do Not Modify */
+package org.allbinary.logic.communication.log.config.type
 
+import java.lang.Object
 
+open public class LogConfigTypeFactory : Object {
 
+    companion object {
 
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
-import org.allbinary.logic.communication.log.config.type.LogConfigTypes
-import org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory
+        private val instance: LogConfigTypeFactory = LogConfigTypeFactory()
 
-open public class LogConfigTypeFactory
-            : Object
-         {
-        
-companion object {
-            
-    private val instance: LogConfigTypeFactory = LogConfigTypeFactory()
+        open fun getInstance()
+        // nullable =  from not(true or (false and true)) =
+        : LogConfigTypeFactory {
 
-    open fun getInstance()
-        //nullable =  from not(true or (false and true)) = 
-: LogConfigTypeFactory{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return LogConfigTypeFactory.instance
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return LogConfigTypeFactory.instance
         }
-            
+    }
+
     private val NO_DESCRIPTION: String = "No Description"
 
     val INIT_SERVER: LogConfigType = LogConfigType("Init Server", this.NO_DESCRIPTION)
@@ -60,14 +43,8 @@ companion object {
     val GAME_SIMULATOR: LogConfigType = LogConfigType("Game Simulator", this.NO_DESCRIPTION)
 
     val CUSTOM_TYPES: LogConfigType = LogConfigType("Custom Types", this.NO_DESCRIPTION)
-private constructor ()
-            : super()
-        {
-LogConfigTypes.LOGGING.add(this.INIT_SERVER)
+
+    private constructor() : super() {
+        LogConfigTypes.LOGGING.add(this.INIT_SERVER)
+    }
 }
-
-
-}
-                
-            
-

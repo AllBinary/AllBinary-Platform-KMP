@@ -1,30 +1,20 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot  
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.ag.life
+/* Generated Code Do Not Modify */
+package org.allbinary.game.ag.life
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import javax.microedition.lcdui.Graphics
 import org.allbinary.game.health.Health
 import org.allbinary.game.health.HealthBarAnimation
@@ -34,31 +24,37 @@ import org.allbinary.game.health.HealthListenerInterface
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.layer.AllBinaryLayer
 
-open public class HealthIncludingLifeBar : Paintable
-                , HealthListenerInterface {
-        
-companion object {
-            
-                @Throws(Exception::class)
-            
-    open fun createHealthIncludingLifeBar(layerInterface: AllBinaryLayer, life: Life, healthInterface: Health, location: Int, direction: Int)
-        //nullable = true from not(false or (false and false)) = true
-: HealthIncludingLifeBar{
-    //var layerInterface = layerInterface
-    //var life = life
-    //var healthInterface = healthInterface
-    //var location = location
-    //var direction = direction
+open public class HealthIncludingLifeBar : Paintable, HealthListenerInterface {
 
+    companion object {
 
+        @Throws(Exception::class)
+        open fun createHealthIncludingLifeBar(
+            layerInterface: AllBinaryLayer,
+            life: Life,
+            healthInterface: Health,
+            location: Int,
+            direction: Int,
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : HealthIncludingLifeBar {
+            // var layerInterface = layerInterface
+            // var life = life
+            // var healthInterface = healthInterface
+            // var location = location
+            // var direction = direction
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return HealthIncludingLifeBar(layerInterface, life, healthInterface, HealthBarTwodAnimation(layerInterface, location), direction)
-}
-
-
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return HealthIncludingLifeBar(
+                layerInterface,
+                life,
+                healthInterface,
+                HealthBarTwodAnimation(layerInterface, location),
+                direction,
+            )
         }
-            
+    }
+
     private val animationInterface: HealthBarAnimation
 
     private val life: Life
@@ -66,45 +62,50 @@ companion object {
     private val healthInterface: HealthInterface
 
     val allbinaryLayer: AllBinaryLayer
-public constructor (layerInterface: AllBinaryLayer, life: Life, healthInterface: Health, animationInterface: HealthBarAnimation, direction: Int){
-    //var layerInterface = layerInterface
-    //var life = life
-    //var healthInterface = healthInterface
-    //var animationInterface = animationInterface
-    //var direction = direction
-this.allbinaryLayer= layerInterface
-this.animationInterface= animationInterface
-this.life= life
-this.healthInterface= healthInterface
-this.healthInterface!!.addListener(this)
-this.onHealthChange()
-}
 
+    public constructor(
+        layerInterface: AllBinaryLayer,
+        life: Life,
+        healthInterface: Health,
+        animationInterface: HealthBarAnimation,
+        direction: Int,
+    ) {
+        // var layerInterface = layerInterface
+        // var life = life
+        // var healthInterface = healthInterface
+        // var animationInterface = animationInterface
+        // var direction = direction
+        this.allbinaryLayer = layerInterface
+        this.animationInterface = animationInterface
+        this.life = life
+        this.healthInterface = healthInterface
+        this.healthInterface!!.addListener(this)
+        this.onHealthChange()
+    }
 
     override fun onHealthChange()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.animationInterface!!.onHealthChange(((this.healthInterface!!.getHealth() +(this.healthInterface!!.getMaxHealth() *this.life.get())) *this.allbinaryLayer!!.getWidth()) /(this.healthInterface!!.getMaxHealth() +(this.healthInterface!!.getMaxHealth() *this.life.getStartLives())))
-}
-
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.animationInterface!!.onHealthChange(
+            ((this.healthInterface!!.getHealth() +
+                (this.healthInterface!!.getMaxHealth() * this.life.get())) *
+                this.allbinaryLayer!!.getWidth()) /
+                (this.healthInterface!!.getMaxHealth() +
+                    (this.healthInterface!!.getMaxHealth() * this.life.getStartLives()))
+        )
+    }
 
     override fun paint(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.animationInterface!!.paintXY(graphics, 0, 0)
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        this.animationInterface!!.paintXY(graphics, 0, 0)
+    }
 
     override fun paintThreed(graphics: Graphics)
-        //nullable = true from not(false or (false and false)) = true
-{
-var graphics = graphics
-this.animationInterface!!.paintThreedXYZ(graphics, 0, 0, 0)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var graphics = graphics
+        this.animationInterface!!.paintThreedXYZ(graphics, 0, 0, 0)
+    }
 }
-
-
-}
-                
-            
-
