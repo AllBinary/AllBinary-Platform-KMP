@@ -1,4 +1,5 @@
 *.xml
+!assembly.xml
 !pom.xml
 *.java
 *.class
