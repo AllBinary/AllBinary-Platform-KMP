@@ -29,8 +29,6 @@ open public class MotionGestureEvent : AllBinaryEventObject {
 
     companion object {
 
-        private val CURRENT: String = CommonLabels.getInstance()!!.CURRENT
-
         private val PREVIOUS: String = " Previous: "
 
         private val HASHCODE: String = " hashcode: "
@@ -102,6 +100,8 @@ open public class MotionGestureEvent : AllBinaryEventObject {
         this.currentPoint = currentPoint
     }
 
+    private val commonLabels: CommonLabels = CommonLabels.getInstance()!!
+
     override fun toString()
     // nullable =  from not(false or (true and true)) =
     : String {
@@ -111,7 +111,7 @@ open public class MotionGestureEvent : AllBinaryEventObject {
         var stringUtil: StringUtil = StringUtil.getInstance()!!
 
         stringBuffer!!.append(stringUtil!!.toString(this.motionGesture))
-        stringBuffer!!.append(MotionGestureEvent.CURRENT)
+        stringBuffer!!.append(this.commonLabels!!.CURRENT)
         stringBuffer!!.append(stringUtil!!.toString(this.currentPoint))
         stringBuffer!!.append(MotionGestureEvent.PREVIOUS)
         stringBuffer!!.append(stringUtil!!.toString(this.previousPoint))

@@ -43,7 +43,7 @@ open public class PostGameCommandFactory : Object {
     open fun addCommands(canvas: MyCanvas)
         // nullable = true from not(false or (false and false)) = true
     {
-        var canvas = canvas
+        // var canvas = canvas
 
         var operatingSystemInterface: GenericOperatingSystem =
             OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!

@@ -23,6 +23,7 @@ import kotlin.Array
 import org.allbinary.game.configuration.GameConfigurationGauge
 import org.allbinary.game.configuration.GameConfigurationUtil
 import org.allbinary.graphics.displayable.screen.CommandForm
+import org.allbinary.logic.MEUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -49,6 +50,8 @@ open public class GameFeatureFormUtil : Object {
     public constructor() : super() {}
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    private val meUtil: MEUtil = MEUtil.getInstance()!!
 
     open fun getChoiceGroup(
         hashtable: ABHashtable<Any, Any>,
@@ -110,9 +113,9 @@ open public class GameFeatureFormUtil : Object {
     open fun addChoiceGroup(form: CommandForm, hashtable: ABHashtable<Any, Any>, option: Int)
         // nullable = true from not(false or (false and false)) = true
     {
-        var form = form
-        var hashtable = hashtable
-        var option = option
+        // var form = form
+        // var hashtable = hashtable
+        // var option = option
 
         var stringMaker: StringMaker = StringMaker()
 
@@ -124,17 +127,18 @@ open public class GameFeatureFormUtil : Object {
 
         var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
 
+        var name: String
+
         for (index in 0 until size) {
 
-            var name: String = objectArray[index]!! as String
-
+            name = objectArray[index]!! as String
             stringMaker!!.delete(0, stringMaker!!.length())
             this.logUtil!!.putF(
                 stringMaker!!.append(ADDING_CHOICE_GROUP)!!.append(name)!!.toString(),
                 this,
                 ADD_CHOICE_GROUP,
             )
-            form.append(this.getChoiceGroup(hashtable, name, option))
+            this.meUtil!!.appendItem(form, this.getChoiceGroup(hashtable, name, option))
         }
     }
 

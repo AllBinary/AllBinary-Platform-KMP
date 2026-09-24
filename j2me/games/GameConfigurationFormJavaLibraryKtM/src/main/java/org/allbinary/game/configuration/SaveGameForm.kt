@@ -21,6 +21,7 @@ import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
 import org.allbinary.logic.ABSystemWrapper
+import org.allbinary.logic.MEUtil
 
 open public class SaveGameForm : CommandForm {
 
@@ -57,6 +58,8 @@ open public class SaveGameForm : CommandForm {
         }
     }
 
+    private val meUtil: MEUtil = MEUtil.getInstance()!!
+
     private constructor(
         commandListener: CommandListener,
         title: String,
@@ -74,7 +77,7 @@ open public class SaveGameForm : CommandForm {
 
         var timeString: String = (ABSystemWrapper.getInstance()!!.currentTimeMillis()).toString()!!
 
-        this.append(TextField("Name: ", timeString, 30, TextField.ANY))
+        this.meUtil!!.appendItem(this, TextField("Name: ", timeString, 30, TextField.ANY))
         this.initCommands(commandListener)
     }
 

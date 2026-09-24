@@ -17,6 +17,7 @@ package org.allbinary.canvas
 
 import java.lang.Thread
 import javax.microedition.lcdui.CommandListener
+import org.allbinary.TsUtil
 import org.allbinary.game.displayable.canvas.NullWaitGameRunnable
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.logic.ABSystemWrapper
@@ -39,6 +40,8 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
     val stdUtil: StdUtil = StdUtil.getInstance()!!
 
     val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
+
+    val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private var thread: Thread = NullThread.NULL_THREAD
 
@@ -82,7 +85,10 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
         // For kotlin this is before the body of the constructor.
 
         this.logUtil!!.putF(
-            StringMaker().append("delay: ")!!.appendint(this.loopTimeHelper!!.delay)!!.toString(),
+            StringMaker()
+                .append("RunnableCanvas delay: ")!!
+                .appendint(this.loopTimeHelper!!.delay)!!
+                .toString(),
             this,
             this.commonStrings!!.CONSTRUCTOR,
         )

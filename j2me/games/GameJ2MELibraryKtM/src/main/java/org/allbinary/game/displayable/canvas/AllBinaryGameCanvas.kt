@@ -670,7 +670,7 @@ open public class AllBinaryGameCanvas :
             this.isPaused(),
             BasicArrayListUtil.getInstance()!!.getImmutableInstance(),
         )
-        this.systemWrapper!!.gc()
+        this.tsUtil!!.gc()
     }
 
     @Synchronized // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic
@@ -680,7 +680,7 @@ open public class AllBinaryGameCanvas :
     {
         this.logUtil!!.putF(this.commonStrings!!.START, this, this.gameStrings!!.UNPAUSE)
         this.closeMenu()
-        this.systemWrapper!!.gc()
+        this.tsUtil!!.gc()
         super.unPause()
         this.touchButtonFactory!!.toggle(
             this.isPaused(),

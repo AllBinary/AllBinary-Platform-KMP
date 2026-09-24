@@ -103,7 +103,7 @@ open public class OwnershipPaintable : Paintable, UpdateMyFontInterface {
         graphics.drawString(
             this.COPYRIGHT,
             halfWidth - this.beginWidth,
-            height - COPYRIGHT_Y,
+            height - this.COPYRIGHT_Y,
             this.anchor,
         )
     }

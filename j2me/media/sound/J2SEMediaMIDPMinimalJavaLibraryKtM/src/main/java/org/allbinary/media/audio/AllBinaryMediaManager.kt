@@ -32,12 +32,12 @@ import java.io.InputStream
 import javax.microedition.media.Manager
 import javax.microedition.media.MediaException
 import javax.microedition.media.Player
+import org.allbinary.TsUtil
 import org.allbinary.audio.AudioContentTypeDataFactory
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
-import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -108,7 +108,7 @@ Sounds(soundsFactoryInterface).
                             stopAll()
 Sounds(soundsFactoryInterface).
                             closeAll()
-ABSystemWrapper.getInstance()!!.gc()
+TsUtil.getInstance()!!.gc()
 }
 
 

@@ -34,7 +34,7 @@ import javax.microedition.rms.RecordStore
 import javax.microedition.rms.RecordStoreException
 import javax.microedition.rms.RecordStoreNotOpenException
 import org.allbinary.logic.NullUtil
-
+//HTML
 open public class TsUtil
             : Object
          {
@@ -227,6 +227,12 @@ var owner = owner
 
                         }
                             
+}
+
+
+    open fun gc()
+        //nullable = true from not(false or (false and true)) = true
+{
 }
 
 

@@ -18,6 +18,7 @@ package org.allbinary
 import java.lang.ClassLoader
 import java.lang.InterruptedException
 import java.lang.Object
+import java.lang.System
 import javax.microedition.lcdui.Displayable
 import javax.microedition.lcdui.Form
 import javax.microedition.rms.InvalidRecordIDException
@@ -26,6 +27,7 @@ import javax.microedition.rms.RecordStoreException
 import javax.microedition.rms.RecordStoreNotOpenException
 import org.allbinary.logic.NullUtil
 
+// J2SE
 open public class TsUtil : Object {
 
     companion object {
@@ -202,5 +204,11 @@ open public class TsUtil : Object {
             // if statement needs to be on the same line and ternary does not work the same way.
             return false
         }
+    }
+
+    open fun gc()
+        // nullable = true from not(false or (false and true)) = true
+    {
+        System.gc()
     }
 }

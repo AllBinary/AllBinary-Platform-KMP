@@ -15,6 +15,7 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.input.motion.button
 
+import java.lang.Math
 import java.lang.Object
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.logic.string.StringMaker
@@ -39,8 +40,8 @@ open public class TouchButtonLocationHelper : Object {
 
         var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-        this.totalColumns = displayInfo!!.getLastWidth() / buttonSize
-        this.totalRows = displayInfo!!.getLastHeight() / buttonSize
+        this.totalColumns = Math.round(displayInfo!!.getLastWidth().toFloat() / buttonSize)
+        this.totalRows = Math.round(displayInfo!!.getLastHeight().toFloat() / buttonSize)
         this.columnsRemainder = displayInfo!!.getLastWidth() % buttonSize
         this.columnsRemainderHalf = (this.columnsRemainder shr 1)
         this.rowsRemainder = displayInfo!!.getLastHeight() % buttonSize

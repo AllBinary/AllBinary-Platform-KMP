@@ -111,6 +111,17 @@ import org.allbinary.string.CommonStrings
             System.out.print(PreLogUtil.LOG_SUCCESS)
             System.out.println(message)
         }
+
+        open fun getClassName(
+            anyType: Any
+        )
+            // nullable = true from not(false or (false and false)) = true
+            : String {
+            var anyType = anyType
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return anyType!!::class.toString()!!
+        }
     }
 
     public constructor() : super() {}

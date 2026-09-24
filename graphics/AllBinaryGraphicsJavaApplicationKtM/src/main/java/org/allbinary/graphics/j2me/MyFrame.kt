@@ -55,6 +55,7 @@ import org.allbinary.logic.communication.log.GuiLog
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.math.AngleFactory
+import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
 
@@ -455,7 +456,7 @@ frameJMenuActionPerformed(evt)
                             )
 this.previousFrameJMenuItem!!.setText("Previous")
 this.frameJMenu!!.add(this.previousFrameJMenuItem)
-this.nextFrameJMenuItem!!.setText("Next")
+this.nextFrameJMenuItem!!.setText(CommonLabels.getInstance()!!.NEXT)
 this.frameJMenu!!.add(this.nextFrameJMenuItem)
 this.removeJMenuItem!!.setText("Remove")
 this.frameJMenu!!.add(this.removeJMenuItem)

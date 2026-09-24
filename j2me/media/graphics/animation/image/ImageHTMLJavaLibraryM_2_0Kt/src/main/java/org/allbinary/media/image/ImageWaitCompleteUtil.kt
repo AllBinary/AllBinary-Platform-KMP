@@ -33,13 +33,12 @@ import org.allbinary.time.TimeDelayHelper
 import org.allbinary.util.ABHashtable
 import org.allbinary.util.HashtableUtil
 import org.microemu.device.playn.PlaynImage
+import playn.core.CoreImage
 
 open public class ImageWaitCompleteUtil : ImageCompleteUtil {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-
-    private val METHOD_NAME: String = "waitForLoad"
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(18000)
 
@@ -93,7 +92,7 @@ this.waitForATime(image, name, this.timeDelayHelper)
     var playnImage: PlaynImage = image as PlaynImage
 
 
-    var playnCoreImage: playn.core.Image = playnImage!!.getImage() as playn.core.Image
+    var playnCoreImage: CoreImage = playnImage!!.getImage() as CoreImage
 
 
         while(!playnCoreImage!!.isReady() || playnCoreImage!!.width() +playnCoreImage!!.height() <= 0)

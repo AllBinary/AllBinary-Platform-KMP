@@ -31,6 +31,7 @@ import java.io.InputStream
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
 import org.allbinary.J2MEUtil
+import org.allbinary.TsUtil
 import org.allbinary.animation.image.LazyImageRotationAnimation
 import org.allbinary.canvas.GameGlobalsFactory
 import org.allbinary.canvas.Processor
@@ -65,6 +66,8 @@ companion object {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val concurrentImageLoadingProcessor: BaseImageLoadingProcessor = ConcurrentImageLoadingProcessor(this)
 
@@ -773,7 +776,7 @@ image.setName(key)
                         if(this.volume > 32000)
                         
                                     {
-                                    this.systemWrapper!!.gc()
+                                    this.tsUtil!!.gc()
 this.volume= 0
 
                                     }
@@ -838,8 +841,8 @@ this.listOfList[foundIndex]!!.add(image)
 this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
 this.logUtil!!.putF(StringMaker().
                             append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, this.commonStrings!!.GET)
-this.systemWrapper!!.gc()
-this.systemWrapper!!.gc()
+this.tsUtil!!.gc()
+this.tsUtil!!.gc()
 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
 Thread.sleep(100)
 image= this.createImageFromInputStream(key, inputStream)

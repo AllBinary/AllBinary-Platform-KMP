@@ -29,7 +29,7 @@ open public class VectorUtil : Object {
         : VectorUtil {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return instance
+            return VectorUtil.instance
         }
     }
 

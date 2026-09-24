@@ -29,6 +29,7 @@ import javax.microedition.lcdui.Image
 import org.allbinary.logic.communication.log.LogUtil
 import org.microemu.device.playn.PlaynImmutableImage
 import org.microemu.device.playn.PlaynMutableImage
+import playn.core.CoreImage
 import playn.core.ImageImpl
 
 open public class ImageJ2MEScaleUtil
@@ -97,7 +98,7 @@ scaledImages[index]= this.scale(images[index]!!, width, height)
     //var width = width
     //var height = height
 
-    var originalPlayNImage: playn.core.Image = 
+    var originalPlayNImage: CoreImage = 
                 null
             
 
@@ -109,7 +110,7 @@ scaledImages[index]= this.scale(images[index]!!, width, height)
                                     
     var originalHTMLImage: PlaynMutableImage = image as PlaynMutableImage
 
-originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
+originalPlayNImage= originalHTMLImage!!.getImage() as CoreImage
 
                                     }
                                 
@@ -117,7 +118,7 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
                             
     var originalHTMLImage: PlaynImmutableImage = image as PlaynImmutableImage
 
-originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
+originalPlayNImage= originalHTMLImage!!.getImage() as CoreImage
 
                         }
                             

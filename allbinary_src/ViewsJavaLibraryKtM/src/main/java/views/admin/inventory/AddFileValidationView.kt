@@ -40,11 +40,11 @@ import org.allbinary.logic.control.validate.ValidationComponentInterface
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.FileData
 import org.allbinary.logic.io.path.AbPathData
-import org.allbinary.logic.io.path.PathUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
+import org.allbinary.string.CommonLabels
 import org.apache.commons.fileupload.FileItem
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -56,7 +56,7 @@ companion object {
             
     private val ADDPRODUCT: String = "Add Product"
 
-    private val NEXTSTEP: String = "Next Step"
+    private val NEXTSTEP: String = CommonLabels.getInstance()!!.NEXT +" Step"
 
         }
             

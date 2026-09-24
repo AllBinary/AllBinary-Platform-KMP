@@ -21,6 +21,7 @@ import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.util.ABHashtable
 
@@ -136,8 +137,6 @@ open public class GameInfo : Object {
         )
     }
 
-    private val NEXT: String = "Next "
-
     private val NEXT_GAME_LEVEL: String = "nextGameLevel"
 
     open fun nextGameLevel()
@@ -151,7 +150,8 @@ open public class GameInfo : Object {
 
         this.logUtil!!.putF(
             StringMaker()
-                .append(this.NEXT)!!
+                .append(CommonLabels.getInstance()!!.NEXT)!!
+                .append(CommonSeps.getInstance()!!.SPACE)!!
                 .append(this.NEW_LEVEL)!!
                 .appendint(this.getCurrentLevel())!!
                 .toString(),

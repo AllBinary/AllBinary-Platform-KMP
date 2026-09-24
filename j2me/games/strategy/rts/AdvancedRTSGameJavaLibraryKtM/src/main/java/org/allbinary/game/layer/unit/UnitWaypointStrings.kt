@@ -16,6 +16,7 @@
 package org.allbinary.game.layer.unit
 
 import java.lang.Object
+import org.allbinary.string.CommonLabels
 
 open public class UnitWaypointStrings : Object {
 
@@ -59,5 +60,5 @@ open public class UnitWaypointStrings : Object {
 
     val ALREADY_THERE: String = "Already There"
 
-    val NEXT_PATH_NODE: String = "Next Path Node"
+    val NEXT_PATH_NODE: String = CommonLabels.getInstance()!!.NEXT + " Path Node"
 }

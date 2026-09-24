@@ -30,6 +30,7 @@ import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.TimeDelayHelper
 import org.microemu.device.playn.PlaynImage
+import playn.core.CoreImage
 
 open public class ImageCompleteUtil
             : Object
@@ -83,7 +84,7 @@ var name = name
     var playnImage: PlaynImage = image as PlaynImage
 
 
-    var playnCoreImage: playn.core.Image = playnImage!!.getImage() as playn.core.Image
+    var playnCoreImage: CoreImage = playnImage!!.getImage() as CoreImage
 
 
     

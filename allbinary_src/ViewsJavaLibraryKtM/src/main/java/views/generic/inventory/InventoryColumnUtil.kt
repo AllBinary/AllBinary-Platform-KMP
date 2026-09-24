@@ -30,7 +30,6 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntity
-import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringValidationUtil
 

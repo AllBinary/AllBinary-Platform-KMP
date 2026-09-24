@@ -15,7 +15,6 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.graphics.displayable
 
-import java.util.Stack
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
@@ -29,6 +28,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.Sound
 import org.allbinary.string.CommonStrings
+import org.allbinary.util.ABStack
 import org.allbinary.util.BasicArrayList
 
 open public class MyCanvas : Canvas, DisplayableInterface, MyCommandInterface {
@@ -47,7 +47,7 @@ open public class MyCanvas : Canvas, DisplayableInterface, MyCommandInterface {
 
     private val childNameList: BasicArrayList
 
-    private val commandStack: Stack<Any>
+    private val commandStack: ABStack<Any>
 
     private var commandListener: CommandListener = NullCommandListener.NULL_COMMAND_LISTENER
 
@@ -85,7 +85,7 @@ open public class MyCanvas : Canvas, DisplayableInterface, MyCommandInterface {
 
     open fun getCommandStack()
     // nullable = true from not(false or (false and true)) = true
-    : Stack<Any> {
+    : ABStack<Any> {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.commandStack

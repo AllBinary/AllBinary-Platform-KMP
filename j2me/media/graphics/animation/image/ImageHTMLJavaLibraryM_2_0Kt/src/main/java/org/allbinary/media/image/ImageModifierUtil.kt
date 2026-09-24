@@ -36,6 +36,7 @@ import org.microemu.device.playn.PlaynImage
 import org.microemu.device.ResourceCallbackStrings
 import playn.core.Callback
 import playn.core.Canvas
+import playn.core.CoreImage
 import playn.core.ImageImpl
 import playn.html.HTMLPlaynUtil
 
@@ -144,8 +145,8 @@ this.setAlpha2(originalImage, image, imageIndex, alpha)
     var canvasImage: ImageImpl = htmlImage!!.getImage() as ImageImpl
 
 
-    var originalPlaynImage: playn.core.Image = 
-                                    (originalImage as PlaynImage).getImage() as playn.core.Image
+    var originalPlaynImage: CoreImage = 
+                                    (originalImage as PlaynImage).getImage() as CoreImage
 
 
     var canvas: Canvas = this.playnUtil!!.getCanvas(canvasImage)!!
@@ -218,8 +219,8 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
     //var index = index
     //var image = image
 
-    var image3: playn.core.Image = 
-                                    (image as PlaynImage).getImage() as playn.core.Image
+    var image3: CoreImage = 
+                                    (image as PlaynImage).getImage() as CoreImage
 
 
     
@@ -282,7 +283,7 @@ image3.addCallback(callback)
 }
 
 
-    open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: playn.core.Image)
+    open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: CoreImage)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray

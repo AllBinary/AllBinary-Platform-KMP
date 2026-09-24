@@ -54,10 +54,6 @@ open public class CellPositionFactory : Object {
     {
         var columns = columns
         var rows = rows
-        this.cellPositionArray = Array(columns) { arrayOfNulls<CellPosition?>(rows) }
-
-        this.columns = columns
-        this.rows = rows
 
         var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -68,6 +64,10 @@ open public class CellPositionFactory : Object {
         stringBuffer!!.append(" rows: ")
         stringBuffer!!.appendint(rows)
         this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+        this.cellPositionArray = Array(columns) { arrayOfNulls<CellPosition?>(rows) }
+
+        this.columns = columns
+        this.rows = rows
 
         for (column in 0 until columns) {
 

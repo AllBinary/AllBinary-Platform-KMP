@@ -25,9 +25,11 @@ import org.allbinary.logic.io.AbDataOutputStream
 import org.allbinary.logic.io.AbFileInputStream
 import org.allbinary.logic.io.DataOutputStreamFactory
 import org.allbinary.logic.io.FileStreamFactory
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.crypt.DatabaseEncoder
 import org.allbinary.logic.system.security.crypt.WeakCrypt
+import org.allbinary.string.CommonLabels
 
 open public class LicenseInitInfoUtil : Object {
 
@@ -166,7 +168,11 @@ open public class LicenseInitInfoUtil : Object {
 
                 var numberOfLicenseServers: Int = iData!!.readInt()!!
 
-                var NEXT_FILE: String = "Next License Server From File: "
+                var NEXT_FILE: String =
+                    StringMaker()
+                        .append(CommonLabels.getInstance()!!.NEXT)!!
+                        .append(" License Server From File: ")!!
+                        .toString()!!
 
                 var licenseServerDecoded: String
 

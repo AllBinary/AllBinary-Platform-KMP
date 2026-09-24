@@ -7,6 +7,7 @@ import org.allbinary.game.state.GameStateFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.string.CommonLabels
 
 open public class GameMidletStateFactory : Object {
 
@@ -43,7 +44,8 @@ open public class GameMidletStateFactory : Object {
         var currentGameState = currentGameState
         this.logUtil!!.putF(
             StringMaker()
-                .append("Current GameState: ")!!
+                .append(CommonLabels.getInstance()!!.CURRENT)!!
+                .append(" GameState: ")!!
                 .append(StringUtil.getInstance()!!.toString(currentGameState))!!
                 .toString(),
             this,

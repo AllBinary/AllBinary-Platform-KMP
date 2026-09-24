@@ -32,6 +32,7 @@
 import java.io.InputStream
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
+import org.allbinary.TsUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
@@ -54,6 +55,8 @@ companion object {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 public constructor (){
 }
 
@@ -83,7 +86,7 @@ public constructor (){
                         if(this.volume > 32000)
                         
                                     {
-                                    this.systemWrapper!!.gc()
+                                    this.tsUtil!!.gc()
 this.volume= 0
 
                                     }
@@ -147,8 +150,8 @@ image= this.createImage(key, inputStream)
 this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
 this.logUtil!!.putF(StringMaker().
                             append("InputStream: ")!!.append(inputStream!!.toString())!!.toString(), this, this.commonStrings!!.GET)
-this.systemWrapper!!.gc()
-this.systemWrapper!!.gc()
+this.tsUtil!!.gc()
+this.tsUtil!!.gc()
 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
 Thread.sleep(100)
 image= this.createImage(key, inputStream)

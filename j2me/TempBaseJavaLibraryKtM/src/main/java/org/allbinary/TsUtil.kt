@@ -18,6 +18,7 @@ package org.allbinary
 import java.lang.InterruptedException
 import java.lang.Object
 
+// TempBase
 open public class TsUtil : Object {
 
     companion object {

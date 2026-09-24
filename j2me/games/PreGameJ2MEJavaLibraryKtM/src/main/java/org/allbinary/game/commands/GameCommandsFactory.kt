@@ -18,6 +18,7 @@ package org.allbinary.game.commands
 import java.lang.Object
 import javax.microedition.lcdui.Command
 import org.allbinary.graphics.displayable.CanvasStrings
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
@@ -25,14 +26,19 @@ open public class GameCommandsFactory : Object {
 
     companion object {
 
-        private val instance: GameCommandsFactory = GameCommandsFactory()
+        private var instance: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
         open fun getInstance()
         // nullable =  from not(true or (false and true)) =
         : GameCommandsFactory {
 
+            if (GameCommandsFactory.instance == NullUtil.getInstance()!!.NULL_OBJECT) {
+
+                GameCommandsFactory.instance = GameCommandsFactory()
+            }
+
             // if statement needs to be on the same line and ternary does not work the same way.
-            return GameCommandsFactory.instance
+            return GameCommandsFactory.instance as GameCommandsFactory
         }
     }
 

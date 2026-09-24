@@ -28,10 +28,10 @@
 import javax.microedition.media.Manager
 import javax.microedition.media.MediaException
 import javax.microedition.media.Player
+import org.allbinary.TsUtil
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
-import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 //MediaMIDP2ForHTMLJavaLibrary
@@ -101,7 +101,7 @@ Sounds(soundsFactoryInterface).
                             stopAll()
 Sounds(soundsFactoryInterface).
                             closeAll()
-ABSystemWrapper.getInstance()!!.gc()
+TsUtil.getInstance()!!.gc()
 }
 
 
@@ -118,7 +118,7 @@ var resource = resource
                                     {
                                     
     
-                        if(resource.compareTo(Manager.TONE_DEVICE_LOCATOR) == 0)
+                        if(TsUtil.getInstance()!!.compareTo(resource, Manager.TONE_DEVICE_LOCATOR) == 0)
                         
                                     {
                                     

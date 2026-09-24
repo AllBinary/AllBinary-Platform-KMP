@@ -31,6 +31,7 @@ import javax.microedition.lcdui.Image
 import org.microemu.device.playn.PlaynImmutableImage
 import org.microemu.device.playn.PlaynMutableImage
 import playn.core.Canvas
+import playn.core.CoreImage
 import playn.core.ImageImpl
 import playn.html.HTMLPlaynUtil
 
@@ -185,7 +186,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
     //var image = image
     //var canvasSurface = canvasSurface
 
-    var originalPlayNImage: playn.core.Image = 
+    var originalPlayNImage: CoreImage = 
                 null
             
 
@@ -197,7 +198,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
                                     
     var originalHTMLImage: PlaynMutableImage = originalImage as PlaynMutableImage
 
-originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
+originalPlayNImage= originalHTMLImage!!.getImage() as CoreImage
 
                                     }
                                 
@@ -205,7 +206,7 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
                             
     var originalHTMLImage: PlaynImmutableImage = originalImage as PlaynImmutableImage
 
-originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
+originalPlayNImage= originalHTMLImage!!.getImage() as CoreImage
 
                         }
                             

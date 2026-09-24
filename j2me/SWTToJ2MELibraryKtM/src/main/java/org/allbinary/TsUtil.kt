@@ -21,6 +21,8 @@
 
         import java.lang.Object        
         
+        import java.lang.System
+        
         import java.lang.InterruptedException
         
         import java.lang.ClassLoader
@@ -36,7 +38,7 @@ import javax.microedition.rms.RecordStore
 import javax.microedition.rms.RecordStoreException
 import javax.microedition.rms.RecordStoreNotOpenException
 import org.allbinary.logic.NullUtil
-
+//SWT
 open public class TsUtil
             : Object
          {
@@ -241,6 +243,13 @@ var owner = owner
 
                         }
                             
+}
+
+
+    open fun gc()
+        //nullable = true from not(false or (false and true)) = true
+{
+System.gc()
 }
 
 

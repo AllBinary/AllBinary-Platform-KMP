@@ -24,7 +24,7 @@ open public class RemoteErrorHighScoresSingletonFactory : Object {
 
         private val SINGLETON: HighScores =
             HighScores(
-                "Loading",
+                CommonStrings.getInstance()!!.LOADING,
                 "Remote High Scores Did Not Load",
                 CommonStrings.getInstance()!!.PERIODS,
             )

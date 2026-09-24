@@ -3,6 +3,7 @@ package org.allbinary.layer
 
 import java.lang.Object
 import javax.microedition.lcdui.Graphics
+import org.allbinary.TsUtil
 import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -17,6 +18,8 @@ open public class LayerManager : Object {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val layerManagerLogging: LayerManagerLoggingBase
 
@@ -168,8 +171,8 @@ open public class LayerManager : Object {
         {
             this.list.clear()
             this.layerManagerLogging!!.clear()
-            this.systemWrapper!!.gc()
-            this.systemWrapper!!.gc()
+            this.tsUtil!!.gc()
+            this.tsUtil!!.gc()
         }
     }
 

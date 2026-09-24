@@ -373,7 +373,7 @@ open public class DemoCanvas :
     override fun initCommands(cmdListener: CommandListener)
         // nullable = true from not(false or (false and false)) = true
     {
-        var cmdListener = cmdListener
+        // var cmdListener = cmdListener
         this.removeAllCommands()
 
         var commandArray: Array<Any?> = this.getCustomCommands()!!

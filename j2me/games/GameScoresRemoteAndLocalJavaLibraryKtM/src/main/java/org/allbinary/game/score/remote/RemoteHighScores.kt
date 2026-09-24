@@ -33,8 +33,10 @@ import org.allbinary.game.score.HighScores
 import org.allbinary.game.score.RemoteErrorHighScoresSingletonFactory
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.SoftwareInformation
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.ABHashtable
 import org.allbinary.util.EnumerationUtil
@@ -214,7 +216,8 @@ this.getList()!!.add(highScore)
                                 
                         else {
                             
-    var NEXT_ELEMENT: String = "NextElement: "
+    var NEXT_ELEMENT: String = StringMaker().
+                            append(CommonLabels.getInstance()!!.NEXT)!!.append("Element: ")!!.toString()!!
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

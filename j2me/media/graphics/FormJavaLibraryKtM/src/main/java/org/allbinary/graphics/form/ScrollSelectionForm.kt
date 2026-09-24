@@ -24,11 +24,13 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.form.item.ABCustomItem
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.math.RectangleCollisionUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
+import org.allbinary.string.CommonStrings
 
 open public class ScrollSelectionForm : PaintableForm {
 
@@ -43,7 +45,7 @@ open public class ScrollSelectionForm : PaintableForm {
             foregroundBasicColor: BasicColor,
         )
             // nullable = true from not(false or (false and false)) = true
-            : ScrollSelectionForm {
+            : PaintableForm {
             // var title = title
             // var items = items
             // var formPaintableFactory = formPaintableFactory
@@ -68,11 +70,26 @@ open public class ScrollSelectionForm : PaintableForm {
                     )
                 } else {
 
-                    throw RuntimeException()
+                    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+                    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+                    logUtil!!.putF(commonStrings!!.EXCEPTION, logUtil, commonStrings!!.EXCEPTION)
+
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return PaintableForm.getNullPaintableForm()
                 }
             } catch (e: Exception) {
 
-                throw RuntimeException()
+                var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+                var logUtil: LogUtil = LogUtil.getInstance()!!
+
+                logUtil!!.put(commonStrings!!.EXCEPTION, logUtil, commonStrings!!.EXCEPTION, e)
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return PaintableForm.getNullPaintableForm()
             }
         }
 

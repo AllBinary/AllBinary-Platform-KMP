@@ -23,6 +23,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.NoSound
 import org.allbinary.media.audio.PlayerStateUtil
 import org.allbinary.media.audio.Sound
+import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.GameTickTimeDelayHelper
@@ -76,7 +77,7 @@ PreLogUtil.put(event, this, commonStrings!!.PROCESS)
 
     private val SONG: String = " for: "
 
-    private val NEXT_SONG: String = "Next Song: "
+    private val NEXT_SONG: String = CommonLabels.getInstance()!!.NEXT +" Song: "
 
     private val STOPPING: String = "Stopping Current Song: "
 

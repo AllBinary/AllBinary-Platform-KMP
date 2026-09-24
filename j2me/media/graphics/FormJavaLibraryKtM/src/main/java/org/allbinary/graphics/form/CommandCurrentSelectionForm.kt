@@ -69,7 +69,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
         // nullable = true from not(false or (false and false)) = true
     {
         // var graphics = graphics
-        this.updateAll(graphics, getAllitems())
+        this.updateAll(graphics, this.getAllitems())
         super.updateMeasurement(graphics)
     }
 

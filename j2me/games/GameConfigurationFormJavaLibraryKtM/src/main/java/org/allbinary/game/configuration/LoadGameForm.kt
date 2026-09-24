@@ -26,11 +26,14 @@ import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.persistance.GamePersistanceSingleton
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
+import org.allbinary.logic.MEUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 
 open public class LoadGameForm : CommandForm {
+
+    private val meUtil: MEUtil = MEUtil.getInstance()!!
 
     private var areChoices: Boolean = false
 
@@ -80,8 +83,9 @@ open public class LoadGameForm : CommandForm {
             this.add(list, "Select A Saved Game", Choice.EXCLUSIVE)
             this.areChoices = true
         } else {
-            this.append(
-                StringItem("No Saved Games", StringUtil.getInstance()!!.EMPTY_STRING, Item.PLAIN)
+            this.meUtil!!.appendItem(
+                this,
+                StringItem("No Saved Games", StringUtil.getInstance()!!.EMPTY_STRING, Item.PLAIN),
             )
             this.areChoices = false
         }
@@ -103,7 +107,7 @@ open public class LoadGameForm : CommandForm {
             choiceGroup!!.setSelectedIndex(0, true)
         }
 
-        this.append(choiceGroup)
+        this.meUtil!!.appendItem(this, choiceGroup)
     }
 
     open fun getChoiceGroup(

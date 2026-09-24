@@ -55,8 +55,6 @@ companion object {
 
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     private val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
     private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
@@ -121,7 +119,7 @@ graphics.setColor(this.color)
 
     var height: Int = this.displayInfo!!.getLastHeight()!!
 
-graphics.drawString(this.COPYRIGHT, halfWidth -this.beginWidth, height -COPYRIGHT_Y, this.anchor)
+graphics.drawString(this.COPYRIGHT, halfWidth -this.beginWidth, height -this.COPYRIGHT_Y, this.anchor)
 }
 
 

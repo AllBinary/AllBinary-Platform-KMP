@@ -30,13 +30,14 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Set
+import org.allbinary.J2SEUtil
 import org.allbinary.globals.AppUrlGlobals
 import org.allbinary.globals.URLGLOBALS
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
-import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 
 open public class Replace
             : Object
@@ -83,7 +84,7 @@ System.out.println("New String: " +testString)
             
     private val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+    private val j2seUtil: J2SEUtil = J2SEUtil.getInstance()!!
 
     private val REPLACERS_: String = "Replacers: "
 
@@ -97,7 +98,7 @@ public constructor (key: String, value: String)
         {
     //var key = key
     //var value = value
-this.hashMap= HashMap<Any, Any>()
+this.hashMap= StdUtil.getInstance()!!.createHashMap()
 this.hashMap!!.put(arrayOf(key), arrayOf(value))
 }
 
@@ -106,7 +107,7 @@ public constructor (keys: Array<String?>, values: Array<String?>)
         {
     //var keys = keys
     //var values = values
-this.hashMap= HashMap<Any, Any>()
+this.hashMap= StdUtil.getInstance()!!.createHashMap()
 this.hashMap!!.put(keys, values)
 }
 
@@ -142,16 +143,13 @@ var total = total
     var totalNumberOfReplaces: Int = 0
 
 
-    var keySet: Set = this.hashMap!!.keys!!
-
-
     var keys: Array<String?>
 
 
     var values: Array<String?>
 
 
-    var keyArray: Array<Any?> = keySet!!.toTypedArray()!!
+    var keyArray: Array<Any?> = this.j2seUtil!!.getHashMapAsArray(this.hashMap)!!
 
 
     var size: Int = keyArray!!.size
@@ -173,6 +171,18 @@ values= this.hashMap!!.get(keys as Object) as Array<String?>
     var index: Int = 0
 
 
+    var nextKey: String
+
+
+    var end: Int= 0
+
+
+    var nextSecondKey: String
+
+
+    var begin2: Int= 0
+
+
         while(index < replace.length)
         {
 
@@ -186,16 +196,15 @@ values= this.hashMap!!.get(keys as Object) as Array<String?>
                                     foundTotal++
 
     
-                        if(foundTotal % 100 == 0)
+                        if(foundTotal % 100 == 0L)
                         
                                     {
                                     System.out.println(this.FOUND_KEY +foundTotal)
 
                                     }
                                 
-
-    var end: Int = begin +keys[0]!!.length()
-
+nextKey= keys[0]!!
+end= begin +nextKey!!.length
 newStringBuffer!!.delete(0, newStringBuffer!!.length())
 newStringBuffer!!.append(replace.substring(0, begin))
 newStringBuffer!!.append(values[0]!!)
@@ -207,16 +216,15 @@ replace= newStringBuffer!!.toString()
                         if(keys.size > 1)
                         
                                     {
-                                    
-    var begin2: Int = replace.indexOf(keys[1]!!, index)!!
-
+                                    nextSecondKey= keys[1]!!
+begin2= replace.indexOf(nextSecondKey, index)
 
     
                         if(begin2 !=  -1)
                         
                                     {
                                     
-    var end2: Int = begin2 +keys[1]!!.length()
+    var end2: Int = begin2 +nextSecondKey!!.length
 
 newStringBuffer!!.delete(0, newStringBuffer!!.length())
 newStringBuffer!!.append(replace.substring(0, begin2))
@@ -263,7 +271,7 @@ totalNumberOfReplaces++
                                     {
                                     
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     this.logUtil!!.putF("Total Number Of Replaces: " +totalNumberOfReplaces, this, this.ALL)
@@ -292,16 +300,13 @@ var replace = replace
     var totalNumberOfReplaces: Int = 0
 
 
-    var keySet: Set = this.hashMap!!.keys!!
-
-
     var key: String
 
 
     var value: String
 
 
-    var keyArray: Array<Any?> = keySet!!.toTypedArray()!!
+    var keyArray: Array<Any?> = this.j2seUtil!!.getHashMapAsArray(this.hashMap)!!
 
 
     var size: Int = keyArray!!.size
@@ -364,7 +369,7 @@ totalNumberOfReplaces++
 
 
     
-                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     this.logUtil!!.putF("Total Number Of Replaces: " +totalNumberOfReplaces, this, this.ALL)

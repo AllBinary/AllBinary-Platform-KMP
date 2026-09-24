@@ -57,6 +57,8 @@ open public class CommonLabels : Object {
 
     val CURRENT: String = " Current: "
 
+    val NEXT: String = "Next"
+
     val ITEM_LABEL: String = "Item: "
 
     val RESULT_: String = "Result: "

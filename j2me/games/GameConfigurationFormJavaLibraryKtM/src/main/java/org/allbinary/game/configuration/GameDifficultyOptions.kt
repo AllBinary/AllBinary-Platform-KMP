@@ -24,11 +24,14 @@ import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.persistance.GameDifficultyFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.screen.CommandForm
+import org.allbinary.logic.MEUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 
 open public class GameDifficultyOptions : CommandForm {
+
+    private val meUtil: MEUtil = MEUtil.getInstance()!!
 
     private val list: BasicArrayList
 
@@ -115,7 +118,7 @@ open public class GameDifficultyOptions : CommandForm {
             choiceGroup!!.setSelectedIndex(0, true)
         }
 
-        this.append(choiceGroup)
+        this.meUtil!!.appendItem(this, choiceGroup)
     }
 
     open fun getChoiceGroup(
@@ -143,10 +146,11 @@ open public class GameDifficultyOptions : CommandForm {
 
         var size: Int = list.size()!!
 
+        var anyType: Any
+
         for (index in 0 until size) {
 
-            var anyType: Any = list.objectArray[index]!!
-
+            anyType = list.objectArray[index]!!
             this.logUtil!!.putF(
                 StringMaker().append(NAME)!!.append(anyType!!.toString())!!.toString(),
                 this,

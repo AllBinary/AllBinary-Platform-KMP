@@ -35,6 +35,7 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.command.MyCommandsFactory
 import org.allbinary.graphics.displayable.screen.CommandForm
 import org.allbinary.input.gyro.OrientationData
+import org.allbinary.logic.MEUtil
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
@@ -43,6 +44,8 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.HashtableUtil
 
 open public class GameOptionsForm : CommandForm {
+
+    private val meUtil: MEUtil = MEUtil.getInstance()!!
 
     public constructor(
         commandListener: CommandListener,
@@ -139,7 +142,7 @@ open public class GameOptionsForm : CommandForm {
                     30,
                     TextField.ANY,
                 )
-            this.append(textField)
+            this.meUtil!!.appendItem(this, textField)
         }
     }
 
@@ -176,7 +179,7 @@ open public class GameOptionsForm : CommandForm {
             gauge = GameConfigurationGauge(gameConfiguration)
             gauge.setDefaultCommand(GAUGE_CHANGE)
             gauge.setItemCommandListener(GameFeatureItemCommandListener(this))
-            this.append(gauge)
+            this.meUtil!!.appendItem(this, gauge)
         }
     }
 

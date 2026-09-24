@@ -21,6 +21,7 @@ import java.lang.Thread
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
 import kotlin.Array
+import org.allbinary.TsUtil
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.gd.resource.GDResources
 import org.allbinary.logic.ABSystemWrapper
@@ -39,6 +40,8 @@ open public class ImageCache : ImageCacheBase {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
+
+    private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     public constructor() {}
 
@@ -104,7 +107,7 @@ open public class ImageCache : ImageCacheBase {
 
             if (this.volume > 32000) {
 
-                this.systemWrapper!!.gc()
+                this.tsUtil!!.gc()
                 this.volume = 0
             }
 
@@ -161,8 +164,8 @@ open public class ImageCache : ImageCacheBase {
                     this,
                     this.commonStrings!!.GET,
                 )
-                this.systemWrapper!!.gc()
-                this.systemWrapper!!.gc()
+                this.tsUtil!!.gc()
+                this.tsUtil!!.gc()
                 this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
                 Thread.sleep(100)
                 image = this.createImageFromInputStream(key, inputStream)

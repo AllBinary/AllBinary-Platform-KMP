@@ -29,7 +29,7 @@ open public class ABSystemWrapper : Object {
         : ABSystemWrapper {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return instance
+            return ABSystemWrapper.instance
         }
     }
 
@@ -53,11 +53,5 @@ open public class ABSystemWrapper : Object {
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return System.currentTimeMillis()
-    }
-
-    open fun gc()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        System.gc()
     }
 }

@@ -21,10 +21,10 @@ import java.lang.Object
 import javax.microedition.media.MediaException
 import javax.microedition.media.Player
 import kotlin.Array
+import org.allbinary.TsUtil
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
-import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
@@ -73,7 +73,7 @@ open public class AllBinaryMediaManager : Object {
             logUtil!!.putF(commonString!!.START, AllBinaryMediaManager.THIS, commonString!!.INIT)
             AllBinaryMediaManager.shutdown(soundsFactoryInterface)
             ProgressCanvasFactory.getInstance()!!.addNormalPortion(50, "Media Manager")
-            ABSystemWrapper.getInstance()!!.gc()
+            TsUtil.getInstance()!!.gc()
             Sounds(soundsFactoryInterface).init()
             logUtil!!.putF(commonString!!.END, AllBinaryMediaManager.THIS, commonString!!.INIT)
         }
@@ -130,7 +130,7 @@ open public class AllBinaryMediaManager : Object {
                 }
 
                 Sounds(soundsFactoryInterface).closeAll()
-                ABSystemWrapper.getInstance()!!.gc()
+                TsUtil.getInstance()!!.gc()
                 soundsFactoryInterface!!.setInitialized(false)
                 AllBinaryMediaManager.mostUsedTotal = 0
             }

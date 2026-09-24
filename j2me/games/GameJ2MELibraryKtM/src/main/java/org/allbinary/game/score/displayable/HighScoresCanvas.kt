@@ -301,7 +301,7 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
     open fun updateCommand(command: Command)
         // nullable = true from not(false or (false and false)) = true
     {
-        var command = command
+        // var command = command
         this.logUtil!!.putF(
             StringMaker()
                 .append(this.commonStrings!!.START)!!
