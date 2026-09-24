@@ -93,6 +93,7 @@
         <module>../../input/platform/me/GameInputMEJavaLibraryKtM</module>
         <module>../../input/platform/me/GameInputMEKeyOnlyJavaLibraryKtM</module>
         <module>../../input/platform/me/GameInputMEMotionJavaLibraryKtM</module>
+        <module>../../input/platform/pc/GameInputPCBaseJavaLibraryKtM</module>
         <module>../../input/platform/pc/GameInputPCJavaLibraryKtM</module>
         <module>../../input/platform/pc/GameInputPCKeyOnlyJavaLibraryKtM</module>
         <module>../../input/platform/pc/GameInputPCMotionJavaLibraryKtM</module>
