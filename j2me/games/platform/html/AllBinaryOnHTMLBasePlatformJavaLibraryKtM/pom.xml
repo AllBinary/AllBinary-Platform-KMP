@@ -26,7 +26,7 @@
 
 
     <dependencies>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ApplicationStatisticsHTMLLibraryKt</artifactId>
@@ -63,7 +63,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-                
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>GameConfigurationJ2MEJavaLibraryKt</artifactId>
@@ -74,7 +74,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-                
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>GameInputNoPersistanceLibraryKt</artifactId>
@@ -98,13 +98,6 @@
             <!-- AllBinary Platform Version End -->
         </dependency>
 
-        <dependency>
-            <groupId>org.allbinary.media.image</groupId>
-            <artifactId>ImageHTMLJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.1-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -160,9 +153,9 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <!-- ResourceUtil is in AllBinaryPlaynGWT -->
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ScreenCaptureNoneJavaLibraryKt</artifactId>
@@ -170,7 +163,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ThreadHTMLLibraryKt</artifactId>
@@ -178,7 +171,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-                
+
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
@@ -186,7 +179,7 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
 

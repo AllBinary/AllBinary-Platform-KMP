@@ -61,7 +61,7 @@
 
             <optional>true</optional>
         </dependency>
-  
+
         <dependency>
             <groupId>org.allbinary.game</groupId>
             <artifactId>AndroidResourcesTempJavaLibraryKt</artifactId>
@@ -71,7 +71,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ClientInfoLicensingJavaLibraryKt</artifactId>
@@ -92,15 +92,14 @@
 
             <optional>true</optional>
         </dependency>
-    
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>AndroidResourceLibraryKt</artifactId>
-<!--
-            <artifactId>ResourceJ2MEJavaLibraryKt</artifactId>
             <artifactId>PCResourceLibraryKt</artifactId>
-            <artifactId>AndroidResourceLibraryKt</artifactId>
-            <artifactId>ResourceLibraryKt</artifactId>
+<!--
+            <artifactId>ResourceJ2MEJavaLibrary</artifactId>
+            <artifactId>PCResourceLibrary</artifactId>
+            <artifactId>AndroidResourceLibrary</artifactId>
+            <artifactId>ResourceLibrary</artifactId>
             for HTML it is in ABDKPlaynJavaLibrary
 -->
             <!-- AllBinary Platform Version Start -->
@@ -109,6 +108,7 @@
 
             <optional>true</optional>
         </dependency>
+
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -127,7 +127,7 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
         <plugins>

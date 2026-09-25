@@ -40,6 +40,15 @@
 
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2SEJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -70,7 +79,7 @@
             <!-- AllBinary Platform Version End -->
 
         </dependency>
-        
+
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>BaseHardwareJavaLibraryKt</artifactId>
@@ -79,7 +88,7 @@
             <!-- AllBinary Platform Version End -->
 
         </dependency>
-        
+
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>BaseOperatingSystemJavaLibraryKt</artifactId>
@@ -87,7 +96,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>AllBinaryOSGIJavaLibraryKt</artifactId>
@@ -95,7 +104,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-            
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>PreLoaderJavaLibraryKt</artifactId>
@@ -103,7 +112,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-            
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>PreLoaderFileJavaLibraryKt</artifactId>
@@ -111,7 +120,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-                        
+
         <dependency>
             <groupId>org.allbinary.media.image</groupId>
             <artifactId>ImageComparisonJavaLibraryKt</artifactId>
@@ -119,7 +128,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-            
+
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>YourOSGIComponentLibraryKt</artifactId>
@@ -167,7 +176,7 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
         <plugins>

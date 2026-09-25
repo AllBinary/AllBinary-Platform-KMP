@@ -45,7 +45,16 @@
 
             <optional>true</optional>
         </dependency>
-        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2MEJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>AndroidResourceLibraryKt</artifactId>
@@ -62,7 +71,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>J2MEColorJavaLibraryKt</artifactId>
@@ -72,16 +81,25 @@
 
             <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>OpenGLNoneOtherJavaLibraryKt</artifactId>
+            <artifactId>OpenGLESBaseJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
 
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLESDeviceJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>OpenGLESNullImageJavaLibraryKt</artifactId>
@@ -126,7 +144,7 @@
             <scope>provided</scope>
             <classifier>sources</classifier>
         </dependency>
-                                
+
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
@@ -134,7 +152,7 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
         

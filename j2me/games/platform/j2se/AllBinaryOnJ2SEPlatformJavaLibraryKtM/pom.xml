@@ -34,6 +34,13 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>CombatGameJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary.animation.transition</groupId>
@@ -42,18 +49,25 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>NotDeviceSpecificNoMediaMIDP1LibraryKt</artifactId>
             <!--
-            <artifactId>J2SEMediaMIDPMinimalJavaLibraryKt</artifactId>
-            <artifactId>NotDeviceSpecificNoMediaMIDP1LibraryKt</artifactId>
+            <artifactId>J2SEMediaMIDPMinimalJavaLibrary</artifactId>
+            <artifactId>NotDeviceSpecificNoMediaMIDP1Library</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ResourceLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -62,19 +76,19 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NullCustomUIJavaLibraryKt</artifactId>
-            <!--
             <artifactId>MicroEmulatorCustomUIJavaLibraryKt</artifactId>
-            <artifactId>NullCustomUIJavaLibraryKt</artifactId>
+            <!--
+            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
+            <artifactId>NullCustomUIJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
 
         </dependency>
+
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -134,7 +148,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>TouchScreenJ2MEJavaLibraryKt</artifactId>
@@ -167,7 +181,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-           
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>TouchButtonMappingJavaLibraryKt</artifactId>
@@ -208,7 +222,7 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
 

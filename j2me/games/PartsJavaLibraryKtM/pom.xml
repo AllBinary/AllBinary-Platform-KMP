@@ -60,70 +60,6 @@
             <!-- AllBinary Platform Version End -->
 
         </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>AllBinaryLayerJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>J2MEUtilJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>AllBinaryJ2MELibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>AnimationLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>PreGameJ2MEJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>J2MEColorJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>GroupLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>BasicMathLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
 
         <dependency>
             <groupId>org.microemu</groupId>
@@ -155,7 +91,7 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
         <plugins>

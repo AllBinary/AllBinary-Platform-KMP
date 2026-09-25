@@ -32,7 +32,7 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>LoggingJ2MEAllKt</artifactId>
@@ -61,7 +61,7 @@
 
             <optional>true</optional>
         </dependency>
-               
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>GameConfigurationJavaLibrary</artifactId>
@@ -71,17 +71,17 @@
 
             <optional>true</optional>
         </dependency>
-         
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>TempJavaLibraryKt</artifactId>
+            <artifactId>TempBaseJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
 
             <optional>true</optional>
         </dependency>
-                    
+
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ApplicationStatisticsJ2MELibraryKt</artifactId>
@@ -119,7 +119,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ClientInfoBaseJavaLibraryKt</artifactId>
@@ -244,7 +244,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-midpKt</artifactId>
@@ -275,7 +275,7 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
 

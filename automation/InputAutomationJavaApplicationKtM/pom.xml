@@ -45,6 +45,24 @@
 
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2SEJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2SEForJ2MEJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -80,19 +98,19 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
         <dependency>
             <groupId>org.allbinary.cache</groupId>
-            <artifactId>AllBinaryJSECacheJavaLibraryKt</artifactId>
-            
-            <!--
             <artifactId>AllBinaryCacheLibraryKt</artifactId>
-            <artifactId>AllBinaryJSECacheJavaLibraryKt</artifactId>
+
+            <!--
+            <artifactId>AllBinaryCacheLibrary</artifactId>
+            <artifactId>AllBinaryJSECacheJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
+
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -101,7 +119,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>BaseHardwareJavaLibraryKt</artifactId>
@@ -141,7 +159,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-    
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>InputAutomationJavaLibraryKt</artifactId>        
@@ -157,13 +175,13 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>YourOSGIComponentLibraryKt</artifactId>
             <version>2.0.1</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
@@ -171,7 +189,7 @@
             <scope>provided</scope>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
         <plugins>
