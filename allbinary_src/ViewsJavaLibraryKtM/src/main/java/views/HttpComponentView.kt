@@ -29,8 +29,7 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomNodeInterface
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
-import org.allbinary.logic.StdUtil
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.ServiceClientInformationInterfaceFactory
@@ -216,7 +215,7 @@ this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!
         try {
             this.toXmlDoc()
 
-    var success: String = DomDocumentHelper.toString(this.getDoc())!!
+    var success: String = XmlDocumentHelper.toString(this.getDoc())!!
 
 
     var result: String = BasicTransformer(this.abeClientInformation, this.getTransformInfoInterface()).

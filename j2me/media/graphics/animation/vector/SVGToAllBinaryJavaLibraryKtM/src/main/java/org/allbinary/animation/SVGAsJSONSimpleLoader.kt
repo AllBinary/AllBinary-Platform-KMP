@@ -30,6 +30,7 @@
         import kotlin.reflect.KClass
         
 import java.util.Enumeration
+import org.allbinary.graphics.GraphicsStrings
 import org.allbinary.logic.math.PrimitiveIntUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.math.PositionStrings
@@ -113,6 +114,8 @@ System.out.println(stringBuilder!!.toString())
             {
             }            
         
+    private val graphicsStrings: GraphicsStrings = GraphicsStrings.getInstance()!!
+
     private val shapeTypeFactory: ShapeTypeFactory = ShapeTypeFactory.getInstance()!!
 
     private val KEY_SVG: String = "svg"
@@ -134,10 +137,6 @@ System.out.println(stringBuilder!!.toString())
     private val KEY_X: String = PositionStrings.getInstance()!!.X
 
     private val KEY_Y: String = PositionStrings.getInstance()!!.Y
-
-    private val KEY_WIDTH: String = "width"
-
-    private val KEY_HEIGHT: String = "height"
 
     private val ERROR_PARSE_SVG_JSON: String = "Unable to parse SVG JSON"
 
@@ -397,10 +396,10 @@ this.addSeparator(pointVector)
     var y: Int = this.readInt(rectangle, KEY_Y, 0)!!
 
 
-    var width: Int = this.readInt(rectangle, KEY_WIDTH)!!
+    var width: Int = this.readInt(rectangle, graphicsStrings!!.WIDTH)!!
 
 
-    var height: Int = this.readInt(rectangle, KEY_HEIGHT)!!
+    var height: Int = this.readInt(rectangle, graphicsStrings!!.HEIGHT)!!
 
 this.addPoint(pointVector, x, y)
 this.addPoint(pointVector, x +width, y)

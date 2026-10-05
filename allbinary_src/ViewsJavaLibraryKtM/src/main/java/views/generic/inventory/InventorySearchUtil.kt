@@ -28,8 +28,6 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.ListIterator
-import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.InventoryData
@@ -40,7 +38,7 @@ import org.allbinary.business.user.commerce.inventory.item.ItemInterface
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntity
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntityFactory
 import org.allbinary.data.tree.dom.ModDomHelper
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.search.SearchData
 import org.allbinary.logic.control.search.SearchParams
@@ -171,7 +169,7 @@ var inventoryNode = inventoryNode
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_PAGES, this.commonPhoneStrings!!.ZERO))
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_ITEMS, this.commonPhoneStrings!!.ZERO))
 
-    var success: String = DomDocumentHelper.toString(viewDocumentInterface!!.getDoc())!!
+    var success: String = XmlDocumentHelper.toString(viewDocumentInterface!!.getDoc())!!
 
 
     
@@ -480,7 +478,7 @@ inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocume
 }
 
 
-    var success: String = DomDocumentHelper.toString(tempDocument)!!
+    var success: String = XmlDocumentHelper.toString(tempDocument)!!
 
 productListingPages[index]= StoreTransformer(abeClientInformation, TransformInfoHttpSearch(searchRequest) as TransformInfoInterface).
                             translate(success)

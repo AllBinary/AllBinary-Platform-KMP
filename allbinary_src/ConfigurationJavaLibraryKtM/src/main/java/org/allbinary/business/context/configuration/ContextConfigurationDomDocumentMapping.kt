@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -75,7 +76,7 @@ document.appendChild(node)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DomDocumentHelper.toString(this.toXmlDoc())
+                        return XmlDocumentHelper.toString(this.toXmlDoc())
 }
 
 

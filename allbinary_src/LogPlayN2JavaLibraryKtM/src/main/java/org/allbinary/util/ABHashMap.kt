@@ -97,11 +97,7 @@ var value = value
 }
 
 
-    override fun putAll(map: Map<
-                //Otherwise - typeArguments - type - WildcardType
-
-                //Otherwise - typeArguments - type - WildcardType
->)
+    override fun putAll(map: Map<any, any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var map = map

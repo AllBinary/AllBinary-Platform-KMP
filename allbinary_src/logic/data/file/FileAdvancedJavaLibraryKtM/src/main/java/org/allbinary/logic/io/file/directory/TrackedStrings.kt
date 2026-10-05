@@ -72,6 +72,8 @@ companion object {
 
     val PATHSPEC_SEPARATOR: String = "--"
 
+    val SEP_BY_NULL_CHAR_INSTEAD_OF_NEW_LINE: String = "-z"
+
 }
                 
             

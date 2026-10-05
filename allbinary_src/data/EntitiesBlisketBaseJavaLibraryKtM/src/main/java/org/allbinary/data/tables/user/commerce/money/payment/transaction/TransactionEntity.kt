@@ -27,13 +27,15 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Vector
+import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
 import org.allbinary.business.user.UserData
 import org.allbinary.business.user.commerce.inventory.order.OrderData
 import org.allbinary.business.user.commerce.money.payment.gateway.transaction.PaymentTransactionInterface
 import org.allbinary.business.user.commerce.money.payment.gateway.transaction.PaymentTransactionKeysFactory
+import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 import org.allbinary.logic.string.StringMaker
@@ -64,7 +66,7 @@ var orderNumber = orderNumber
 
         try {
             
-    var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
+    var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 whereHashMap!!.put(OrderData.ID, orderNumber as String)
 whereHashMap!!.put(UserData.USERNAME, userName)
@@ -103,11 +105,11 @@ var paymentTransactionInterface = paymentTransactionInterface
 
         try {
             
-    var values: Vector = Vector()
+    var values: BasicArrayList = BasicArrayListD()
 
 values.add(orderNumber)
 values.add(userName)
-values.addAll(paymentTransactionInterface!!.toVector())
+values.addAllList(paymentTransactionInterface!!.toVector())
 
     var calendar: Calendar = Calendar.getInstance()!!
 

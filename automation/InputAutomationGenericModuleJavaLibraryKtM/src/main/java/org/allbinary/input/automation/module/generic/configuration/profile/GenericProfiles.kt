@@ -33,6 +33,7 @@ import java.util.HashMap
 import java.util.Set
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
 import org.allbinary.input.automation.module.DefaultListModelHelper
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileActionData
@@ -310,7 +311,7 @@ document.appendChild(node)
     var idOutData: DataOutputStream = DataOutputStream(idFile)
 
 
-    var documentString: String = DomDocumentHelper.toString(this.toXmlDoc())!!
+    var documentString: String = XmlDocumentHelper.toString(this.toXmlDoc())!!
 
 idOutData!!.writeBytes(documentString)
 }

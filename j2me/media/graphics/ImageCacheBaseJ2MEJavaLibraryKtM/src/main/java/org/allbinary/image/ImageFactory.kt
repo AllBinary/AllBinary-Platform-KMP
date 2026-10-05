@@ -81,4 +81,16 @@ open public class ImageFactory : Object {
         // if statement needs to be on the same line and ternary does not work the same way.
         return image
     }
+
+    @Throws(Exception::class)
+    open fun createImageFromInputStream(
+        inputStream: InputStream
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var inputStream = inputStream
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return Image.createImage(inputStream)
+    }
 }

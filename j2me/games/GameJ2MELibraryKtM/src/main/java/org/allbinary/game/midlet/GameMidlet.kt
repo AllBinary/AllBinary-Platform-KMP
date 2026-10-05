@@ -843,7 +843,10 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
             }
         } catch (e: Exception) {
             this.logUtil!!.put(
-                this.commonStrings!!.EXCEPTION_LABEL + command.getLabel(),
+                StringMaker()
+                    .append(this.commonStrings!!.EXCEPTION_LABEL)!!
+                    .append(command.getLabel())!!
+                    .toString(),
                 this,
                 this.midletStrings!!.COMMAND_ACTION,
                 e,

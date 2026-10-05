@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.transform.TransformFactory
@@ -126,7 +126,7 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Retrieved OverrideObjectConfig: " +DomDocumentHelper.toString(overrideObjectConfigDocument), this, "view()")
+                                    this.logUtil!!.putF("Retrieved OverrideObjectConfig: " +XmlDocumentHelper.toString(overrideObjectConfigDocument), this, "view()")
 
                                     }
                                 

@@ -1,7 +1,7 @@
 /*
  *
  *  AllBinary Open License Version 1
- *  Copyright (c) 2025 AllBinary
+ *  Copyright (c) 2026 AllBinary
  *
  *  By agreeing to this license you and any business entity you represent are
  *  legally bound to the AllBinary Open License Version 1 legal agreement.
@@ -13,41 +13,26 @@
  */
 
 /* Generated Code Do Not Modify */
-package org.allbinary.graphics
+package org.allbinary.util
 
 import java.lang.Object
 
-open public class GraphicsStrings : Object {
+open public class ABCharacter : Object {
 
     companion object {
 
-        private val instance: GraphicsStrings = GraphicsStrings()
-
-        open fun getInstance()
-        // nullable =  from not(true or (false and true)) =
-        : GraphicsStrings {
+        open fun toString(
+            ch: Char
+        )
+            // nullable = true from not(false or (true and false)) = true
+            : String {
+            // var ch = ch
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return GraphicsStrings.instance
+            return Character.toString(ch)
         }
     }
 
     // Auto Generated
     public constructor() : super() {}
-
-    val ANIMATION: String = "animation"
-
-    val ANGLE: String = "angle"
-
-    val MOVEMENT_ANGLE: String = "movement_angle"
-
-    val ROTATION: String = "rotation"
-
-    val OPACITY: String = "opacity"
-
-    val HTML: String = "HTML"
-
-    val WIDTH: String = "width"
-
-    val HEIGHT: String = "height"
 }

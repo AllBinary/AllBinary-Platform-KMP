@@ -26,11 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.transform.info.TransformInfoEntity
 import org.allbinary.data.tables.transform.info.TransformInfoEntityBuilder
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.visual.transform.info.TransformInfo
@@ -218,7 +218,7 @@ var domNodeInterface = domNodeInterface
 
 document.appendChild(domNodeInterface!!.toXmlNode(document))
 
-    var documentString: String = DomDocumentHelper.toString(document)!!
+    var documentString: String = XmlDocumentHelper.toString(document)!!
 
 
     var stringBuffer: StringMaker = StringMaker()

@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import views.business.context.modules.storefront.HttpStoreComponentView
@@ -53,7 +53,7 @@ var transformInfoInterface = transformInfoInterface
 
         try {
             
-    var success: String = DomDocumentHelper.toString(this.getDoc())!!
+    var success: String = XmlDocumentHelper.toString(this.getDoc())!!
 
 
     var result: String = CompoundTransform(this.getTransformInfoInterface()).

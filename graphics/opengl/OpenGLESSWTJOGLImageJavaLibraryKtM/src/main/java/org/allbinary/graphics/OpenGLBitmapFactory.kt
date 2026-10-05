@@ -14,6 +14,7 @@
 import java.io.IOException
 import java.io.InputStream
 import javax.microedition.lcdui.Image
+import org.allbinary.image.ImageFactory
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.graphics.PlatformBitmapBase
 
@@ -80,7 +81,7 @@ var config = config
 }
 
 
-                @Throws(IOException::class)
+                @Throws(Exception::class)
             
     open fun decodeStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
@@ -90,7 +91,7 @@ var inputStream = inputStream
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(Image.createImage(inputStream))
+                        return OpenGLBitmap(ImageFactory.getInstance()!!.createImageFromInputStream(inputStream))
 }
 
 

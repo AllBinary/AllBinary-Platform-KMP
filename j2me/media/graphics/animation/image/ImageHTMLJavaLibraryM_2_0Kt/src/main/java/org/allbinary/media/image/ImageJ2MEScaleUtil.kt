@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -29,8 +29,12 @@ import javax.microedition.lcdui.Image
 import org.allbinary.logic.communication.log.LogUtil
 import org.microemu.device.playn.PlaynImmutableImage
 import org.microemu.device.playn.PlaynMutableImage
+import playn.core.Canvas
 import playn.core.CoreImage
 import playn.core.ImageImpl
+import playn.core.PlayN
+import playn.html.HtmlGraphics
+import playn.html.HtmlImage
 
 open public class ImageJ2MEScaleUtil
             : Object
@@ -129,9 +133,15 @@ originalPlayNImage= originalHTMLImage!!.getImage() as CoreImage
     var htmlImage: PlaynMutableImage = scaledImage as PlaynMutableImage
 
 
-    var canvasImage: ImageImpl = htmlImage!!.getImage() as ImageImpl
+    var scaledPlayNImage: ImageImpl = htmlImage!!.getImage() as ImageImpl
 
-canvasImage!!.draw(originalPlayNImage, 0, 0, scaledImage!!.getWidth(), scaledImage!!.getHeight(), 0, 0, image.getWidth(), image.getHeight())
+
+    var canvas: Canvas = 
+                                    (graphics as HtmlGraphics).get(scaledPlayNImage as HtmlImage)!!
+
+originalPlayNImage = originalPlayNImageoriginalPlayNImage as ImageImpl
+originalPlayNImage.
+                    draw(canvas.gc(), 0, 0, scaledImage!!.getWidth(), scaledImage!!.getHeight(), 0, 0, image.getWidth(), image.getHeight())
 
 
 

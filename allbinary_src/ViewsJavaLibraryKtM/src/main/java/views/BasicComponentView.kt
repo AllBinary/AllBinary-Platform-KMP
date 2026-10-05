@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.system.security.licensing.ServiceClientInformationInterfaceFactory
@@ -171,7 +171,7 @@ this.transformInfoInterface= transformInfoInterface
 
         try {
             
-    var success: String = DomDocumentHelper.toString(this.getDoc())!!
+    var success: String = XmlDocumentHelper.toString(this.getDoc())!!
 
 
     var result: String = BasicTransformer(this.abeClientInformation, this.getTransformInfoInterface()).

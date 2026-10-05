@@ -137,4 +137,6 @@ open public class CommonStrings : Object {
     val ADD_LISTENER: String = "addListener"
 
     val REMOVE_LISTENER: String = "removeListener"
+
+    val SIZE: String = "size"
 }

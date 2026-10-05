@@ -28,6 +28,7 @@
 import java.io.StringBufferInputStream
 import javax.xml.transform.stream.StreamSource
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.io.AbFileLocalInputStream
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.path.AbPath
@@ -63,7 +64,7 @@ this.dataFilePath= dataFilePath
     var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(AbFile.createAbFileFromAbPath(this.dataFilePath)))!!
 
 
-    var result: String = XslHelper.getInstance()!!.translate(StreamSource(inputStream), StreamSource(StringBufferInputStream(DomDocumentHelper.toString(document))))!!
+    var result: String = XslHelper.getInstance()!!.translate(StreamSource(inputStream), StreamSource(StringBufferInputStream(XmlDocumentHelper.toString(document))))!!
 
 
 

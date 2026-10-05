@@ -24,7 +24,6 @@ import org.allbinary.J2MEUtil
 import org.allbinary.TsUtil
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.gd.resource.GDResources
-import org.allbinary.logic.ABSystemWrapper
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
@@ -38,8 +37,6 @@ open public class ImageCache : ImageCacheBase {
     }
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-    private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
 
     private val tsUtil: TsUtil = TsUtil.getInstance()!!
 

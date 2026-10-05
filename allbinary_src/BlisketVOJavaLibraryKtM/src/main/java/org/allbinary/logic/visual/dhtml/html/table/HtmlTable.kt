@@ -65,8 +65,6 @@ open public class HtmlTable : HtmlTag {
 
     private val RULES: String = "rules"
 
-    private val WIDTH: String = "width"
-
     private val STYLE: String = "style"
 
     val BORDERCOLLAPSE: String = "border-collapse: collapse"

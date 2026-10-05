@@ -63,10 +63,6 @@ companion object {
 
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
-    private val systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
-
     private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
     private val concurrentImageLoadingProcessor: BaseImageLoadingProcessor = ConcurrentImageLoadingProcessor(this)
@@ -667,12 +663,20 @@ this.loadImage(image)
                         if(image.setReady())
                         
                                     {
+                                    
+    
+                        if(image.isReady())
+                        
+                                    {
                                     this.totalLoaded++
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
+
+                                    }
+                                
 
                                     }
                                 
@@ -740,7 +744,7 @@ image.init(image2.getImage())
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(key)!!
 
 
-    var image: Image = Image.createImage(inputStream)!!
+    var image: Image = ImageFactory.getInstance()!!.createImageFromInputStream(inputStream)!!
 
 image.setName(key)
 

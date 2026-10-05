@@ -17,6 +17,7 @@ package org.allbinary.logic
 
 import java.lang.Object
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
 
 open public class PropertyInitUtil : Object {
@@ -36,7 +37,11 @@ open public class PropertyInitUtil : Object {
 
             var logUtil: LogUtil = LogUtil.getInstance()!!
 
-            logUtil!!.putF("PropertyInitUtil: " + value, logUtil, commonStrings!!.CONSTRUCTOR)
+            logUtil!!.putF(
+                StringMaker().append("PropertyInitUtil: ")!!.appendint(value)!!.toString(),
+                logUtil,
+                commonStrings!!.CONSTRUCTOR,
+            )
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return PropertyInitUtil.instance

@@ -27,10 +27,10 @@
         
 import java.util.HashMap
 import org.allbinary.util.BasicArrayList
-import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tables.transform.info.TransformInfoEntity
 import org.allbinary.data.tables.transform.info.TransformInfoEntityBuilder
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.validate.ValidationComponentInterface
@@ -199,7 +199,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
 
 document.appendChild(pageValidation!!.toXmlNode(document))
 
-    var documentString: String = DomDocumentHelper.toString(document)!!
+    var documentString: String = XmlDocumentHelper.toString(document)!!
 
 
     

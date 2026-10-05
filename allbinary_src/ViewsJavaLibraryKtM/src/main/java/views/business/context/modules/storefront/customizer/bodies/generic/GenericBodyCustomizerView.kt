@@ -28,7 +28,7 @@
 import org.allbinary.business.page.PageData
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.logic.visual.transform.StoreTransformer
@@ -108,7 +108,7 @@ var document = document
         try {
             this.addDomNodeInterfaces()
 
-    var success: String = DomDocumentHelper.toString(this.getDoc())!!
+    var success: String = XmlDocumentHelper.toString(this.getDoc())!!
 
 
     var result: String = StoreTransformer(this.abeClientInformation, this.getTransformInfoInterface()).

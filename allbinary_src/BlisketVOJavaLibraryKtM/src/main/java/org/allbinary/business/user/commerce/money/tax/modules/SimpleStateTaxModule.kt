@@ -32,6 +32,7 @@ import org.allbinary.business.user.commerce.money.tax.components.TaxData
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.globals.FREEBLISKET_PATH_GLOBALS
 import org.allbinary.globals.URLGLOBALS
 import org.allbinary.logic.communication.log.LogUtil
@@ -95,7 +96,7 @@ this.document= DomDocumentHelper.create(data)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
-                                    this.logUtil!!.putF("Tax Doc: " +DomDocumentHelper.toString(this.document), this, "getTaxRate")
+                                    this.logUtil!!.putF("Tax Doc: " +XmlDocumentHelper.toString(this.document), this, "getTaxRate")
 
                                     }
                                 
@@ -198,7 +199,7 @@ this.document= DomDocumentHelper.create(data)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
-                                    this.logUtil!!.putF("Tax Doc: " +DomDocumentHelper.toString(this.document), this, this.commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Tax Doc: " +XmlDocumentHelper.toString(this.document), this, this.commonStrings!!.IS_VALID)
 
                                     }
                                 

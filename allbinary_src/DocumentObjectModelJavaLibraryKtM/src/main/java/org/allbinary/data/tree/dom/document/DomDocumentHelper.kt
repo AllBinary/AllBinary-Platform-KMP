@@ -21,19 +21,16 @@
 
         import java.lang.Object        
         
+        import java.lang.System
+        
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.io.ByteArrayOutputStream
 import java.io.InputStream
 import java.io.StringBufferInputStream
 import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
-import javax.xml.transform.Transformer
-import javax.xml.transform.TransformerFactory
-import javax.xml.transform.dom.DOMSource
-import javax.xml.transform.stream.StreamResult
 import org.w3c.dom.Document
 
 open public class DomDocumentHelper
@@ -42,6 +39,20 @@ open public class DomDocumentHelper
         
 companion object {
             
+    open fun init()
+        //nullable = true from not(false or (false and true)) = true
+{
+System.setProperty("jdk.xml.maxElementDepth", "0")
+System.setProperty("jdk.xml.xpathExprOpLimit", "0")
+System.setProperty("jdk.xml.xpathTotalOpLimit", "0")
+
+    var LIMIT: String = "500000"
+
+System.setProperty("jdk.xml.maxGeneralEntitySizeLimit", LIMIT)
+System.setProperty("jdk.xml.totalEntitySizeLimit", LIMIT)
+}
+
+
     open fun create()
         //nullable = true from not(false or (false and true)) = true
 : Document{
@@ -128,46 +139,6 @@ var xmlString = xmlString
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
-} catch(e: Exception)
-            {
-
-
-
-                            throw e
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun toString(document: Document)
-        //nullable = true from not(false or (true and false)) = true
-: String{
-var document = document
-
-        try {
-            
-    var domSource: DOMSource = DOMSource(document)
-
-
-    var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
-
-
-    var streamResult: StreamResult = StreamResult(byteArrayOutputStream)
-
-
-    var copyTransformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
-
-
-    var copyTransformer: Transformer = copyTransformerFactory!!.newTransformer()!!
-
-copyTransformer!!.transform(domSource, streamResult)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return byteArrayOutputStream!!.toString()
 } catch(e: Exception)
             {
 

@@ -80,7 +80,7 @@ open public class OpenGLImageUtilBase
 }
 
 
-                @Throws(IOException::class)
+                @Throws(Exception::class)
             
     open fun createImageFromInputStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true

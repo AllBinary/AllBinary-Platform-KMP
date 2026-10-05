@@ -25,13 +25,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.BasicItemView
 import org.allbinary.business.user.commerce.inventory.item.ItemInterface
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntity
 import org.allbinary.data.tables.user.commerce.inventory.item.InventoryEntityFactory
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.search.SearchRequest
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
@@ -103,7 +102,7 @@ var product = product
 viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface, BasicArrayListD()).
                             toXmlNode(viewDocumentInterface!!.getDoc()))
 
-    var success: String = DomDocumentHelper.toString(viewDocumentInterface!!.getDoc())!!
+    var success: String = XmlDocumentHelper.toString(viewDocumentInterface!!.getDoc())!!
 
 
     var outputStr: String = StoreTransformer(abeClientInformation, TransformInfoHttpSearch(searchRequest) as TransformInfoInterface).

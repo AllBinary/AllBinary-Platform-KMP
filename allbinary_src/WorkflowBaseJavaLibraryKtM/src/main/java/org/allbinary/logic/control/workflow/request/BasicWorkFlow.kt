@@ -35,6 +35,7 @@ import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.http.request.RequestParams
 import org.allbinary.logic.communication.http.request.session.WeblisketSession
@@ -141,7 +142,7 @@ this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstanc
 
 values.add(this.workFlowName)
 values.add(this.storeName)
-values.add(DomDocumentHelper.toString(this.workFlowDoc))
+values.add(XmlDocumentHelper.toString(this.workFlowDoc))
 
     var calendar: Calendar = Calendar.getInstance()!!
 
@@ -170,7 +171,7 @@ values.add(time)
 
 hashMap!!.put(WorkFlowData.getInstance()!!.NAME, this.workFlowName)
 hashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
-hashMap!!.put(WorkFlowData.getInstance()!!.DATA, DomDocumentHelper.toString(this.workFlowDoc))
+hashMap!!.put(WorkFlowData.getInstance()!!.DATA, XmlDocumentHelper.toString(this.workFlowDoc))
 
     var calendar: Calendar = Calendar.getInstance()!!
 

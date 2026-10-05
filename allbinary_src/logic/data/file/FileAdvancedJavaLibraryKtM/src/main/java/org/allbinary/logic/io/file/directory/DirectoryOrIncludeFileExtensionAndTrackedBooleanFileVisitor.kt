@@ -27,9 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.io.File
+import org.allbinary.java.runtime.process.git.GitProcessHelper
 import org.allbinary.logic.io.file.AbFile
-import org.allbinary.logic.io.file.AbFileNativeUtil
 import org.allbinary.logic.io.file.CommonDataFileStrings
 import org.allbinary.logic.io.file.visitor.IncludeFileExtensionsBooleanFileVisitor
 import org.allbinary.util.BasicArrayList
@@ -64,6 +63,8 @@ System.out.println(filePath +" is Tracked: " +result)
         }
             
     private val trackedStrings: TrackedStrings = TrackedStrings.getInstance()!!
+
+    private val gitProcessHelper: GitProcessHelper = GitProcessHelper.getInstance()!!
 
     private val includesString: String
 public constructor (filterStringBasicArrayList: BasicArrayList)                        
@@ -161,7 +162,7 @@ var fileNameString = fileNameString
                                     {
                                     
     
-                        if(this.isGitTracked(file))
+                        if(this.gitProcessHelper!!.isTracked(file))
                         
                                     {
                                     
@@ -198,40 +199,6 @@ var fileNameString = fileNameString
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.FALSE
-}
-
-
-    open fun isGitTracked(file: AbFile)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var file = file
-
-        try {
-            
-    var nativeFile: File = AbFileNativeUtil.get(file)!!
-
-
-    var parentFile: File = nativeFile!!.getParentFile()!!
-
-
-    var process: Process = ProcessBuilder(this.trackedStrings!!.GIT_COMMAND, this.trackedStrings!!.CHANGE_DIRECTORY_OPTION, parentFile!!.getPath(), this.trackedStrings!!.LIST_FILES_COMMAND, this.trackedStrings!!.ERROR_UNMATCH_OPTION, this.trackedStrings!!.PATHSPEC_SEPARATOR, nativeFile!!.getName()).
-                            redirectErrorStream(true)!!.start()!!
-
-process.getInputStream()!!.readAllBytes()
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return process.waitFor() == 0
-} catch(e: Exception)
-            {
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
 }
 
 

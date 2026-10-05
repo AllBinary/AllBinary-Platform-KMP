@@ -42,6 +42,7 @@ import org.allbinary.data.tree.category.CategoryLoaderInterface
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -163,7 +164,7 @@ xmlRequest= keyArray[index]!! as String
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    this.logUtil!!.putF(DomDocumentHelper.toString(document), this, "getXmlData()")
+                                    this.logUtil!!.putF(XmlDocumentHelper.toString(document), this, "getXmlData()")
 
                                     }
                                 
@@ -455,7 +456,7 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                             toXmlDoc()!!
 
 
-    var xmlString: String = DomDocumentHelper.toString(document)!!
+    var xmlString: String = XmlDocumentHelper.toString(document)!!
 
 
     

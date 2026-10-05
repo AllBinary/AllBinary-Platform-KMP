@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.io.ByteArrayOutputStream
 import java.io.StringReader
 import java.io.StringWriter
 import java.io.Writer
@@ -57,6 +58,46 @@ companion object {
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return XmlDocumentHelper.instance
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun toString(document: Document)
+        //nullable = true from not(false or (true and false)) = true
+: String{
+var document = document
+
+        try {
+            
+    var domSource: DOMSource = DOMSource(document)
+
+
+    var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
+
+
+    var streamResult: StreamResult = StreamResult(byteArrayOutputStream)
+
+
+    var copyTransformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
+
+
+    var copyTransformer: Transformer = copyTransformerFactory!!.newTransformer()!!
+
+copyTransformer!!.transform(domSource, streamResult)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return byteArrayOutputStream!!.toString()
+} catch(e: Exception)
+            {
+
+
+
+                            throw e
+}
+
 }
 
 

@@ -71,6 +71,26 @@ open public class CommonDataFileStrings : Object {
 
     val _H: String = ".h"
 
+    val PY: String = "py"
+
+    val _PY: String = ".py"
+
+    val GO: String = "go"
+
+    val _GO: String = ".go"
+
+    val CS: String = "cs"
+
+    val _CS: String = ".cs"
+
+    val ADA: String = "ada"
+
+    val _ADA: String = ".ada"
+
+    val RUST: String = "rust"
+
+    val _RUST: String = ".rust"
+
     val UNCRYPTED_EXTENSION: String = this.XML
 
     val ENCRYPTED_EXTENSION: String = "abd"

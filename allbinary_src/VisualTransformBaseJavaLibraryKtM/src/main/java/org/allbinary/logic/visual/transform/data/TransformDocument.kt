@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
@@ -133,7 +134,7 @@ stringBuffer!!.append(this.baseNode!!.getNodeName())
                         }
                             
 stringBuffer!!.append("\nDocument: ")
-stringBuffer!!.append(DomDocumentHelper.toString(this.document))
+stringBuffer!!.append(XmlDocumentHelper.toString(this.document))
 
 
 

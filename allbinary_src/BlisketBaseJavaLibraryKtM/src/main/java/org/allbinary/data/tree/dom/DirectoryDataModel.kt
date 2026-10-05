@@ -25,7 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.visual.transform.TransformInterface
@@ -165,7 +165,7 @@ this.getTransformDocumentInterface()!!.getBaseNode()!!.appendChild(node)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DomDocumentHelper.toString(this.getTransformDocumentInterface()!!.getDoc())
+                        return XmlDocumentHelper.toString(this.getTransformDocumentInterface()!!.getDoc())
 }
 
 

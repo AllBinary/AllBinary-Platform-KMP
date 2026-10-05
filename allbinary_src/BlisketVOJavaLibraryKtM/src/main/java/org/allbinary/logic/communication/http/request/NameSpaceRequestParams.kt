@@ -36,6 +36,7 @@ import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -246,7 +247,7 @@ document.appendChild(node)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    this.logUtil!!.putF("\nAppended Document Created: " +DomDocumentHelper.toString(document), this, "getRootNode")
+                                    this.logUtil!!.putF("\nAppended Document Created: " +XmlDocumentHelper.toString(document), this, "getRootNode")
 
                                     }
                                 
@@ -590,7 +591,7 @@ node= nextNode
                         
                                     {
                                     this.logUtil!!.putF("\nAppended Package: " +node.getNodeName(), this, "addChildren")
-this.logUtil!!.putF("\nAppended Document Created: " +DomDocumentHelper.toString(document), this, "addChildren")
+this.logUtil!!.putF("\nAppended Document Created: " +XmlDocumentHelper.toString(document), this, "addChildren")
 
                                     }
                                 
@@ -621,7 +622,7 @@ node= nextNode
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    this.logUtil!!.putF("\nAppended Multinode Element: " +DomDocumentHelper.toString(document), this, "addChildren")
+                                    this.logUtil!!.putF("\nAppended Multinode Element: " +XmlDocumentHelper.toString(document), this, "addChildren")
 
                                     }
                                 
@@ -860,7 +861,7 @@ hashMap!!.put(key.toCharArray().concatToString(), .toCharArray())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    this.logUtil!!.putF("NameSpaceRequestParams: " +this.getMap()!!.toString() +"\ntoHashMap(): " +hashMap!!.toString() +"\nDocument Created: " +DomDocumentHelper.toString(document), this, "toHashMap()")
+                                    this.logUtil!!.putF("NameSpaceRequestParams: " +this.getMap()!!.toString() +"\ntoHashMap(): " +hashMap!!.toString() +"\nDocument Created: " +XmlDocumentHelper.toString(document), this, "toHashMap()")
 
                                     }
                                 

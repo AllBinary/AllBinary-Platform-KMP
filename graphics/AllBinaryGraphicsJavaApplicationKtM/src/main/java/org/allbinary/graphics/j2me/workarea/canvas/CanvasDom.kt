@@ -31,6 +31,7 @@ import java.util.HashMap
 import org.allbinary.animation.vector.VectorCenterGenerator
 import org.allbinary.dom.DomHelper
 import org.allbinary.graphics.GPoint
+import org.allbinary.graphics.GraphicsStrings
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.j2me.workarea.WorkAreaJPanel
 import org.allbinary.graphics.j2me.workarea.tools.GraphicItemFactory
@@ -68,12 +69,10 @@ companion object {
 
     val REAL_SIZE: String = "realSize"
 
-    val WIDTH: String = "width"
-
-    val HEIGHT: String = "height"
-
         }
             
+    private val graphicsStrings: GraphicsStrings = GraphicsStrings.getInstance()!!
+
     private var graphicItemHashMap: HashMap<Any, Any>
 
     private var angle: Double
@@ -372,7 +371,7 @@ gridNode!!.appendChild(possibleNode)
 
 vectorCenterGenerator!!.calculate(this.getGraphicItemHashMap())
 
-    var widthNode: Node = document.createElement(WIDTH) as Node
+    var widthNode: Node = document.createElement(this.graphicsStrings!!.WIDTH) as Node
 
 
     var widthTextNode: Node = document.createTextNode(Integer.toString(vectorCenterGenerator!!.getWidth())) as Node
@@ -380,7 +379,7 @@ vectorCenterGenerator!!.calculate(this.getGraphicItemHashMap())
 widthNode!!.appendChild(widthTextNode)
 realSizeNode!!.appendChild(widthNode)
 
-    var heightNode: Node = document.createElement(HEIGHT) as Node
+    var heightNode: Node = document.createElement(this.graphicsStrings!!.HEIGHT) as Node
 
 
     var heightTextNode: Node = document.createTextNode(Integer.toString(vectorCenterGenerator!!.getHeight())) as Node

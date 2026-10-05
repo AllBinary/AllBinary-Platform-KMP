@@ -779,6 +779,12 @@ open public class AllBinaryGameCanvas :
         // nullable = true from not(false or (false and true)) = true
     {
         this.setMainStateProcessor(Processor.getInstance())
+        this.setProcessGameProcessorInit()
+    }
+
+    open fun setProcessGameProcessorInit()
+        // nullable = true from not(false or (false and true)) = true
+    {
         this.setProcessGameProcessor(GameProcessor(this))
     }
 

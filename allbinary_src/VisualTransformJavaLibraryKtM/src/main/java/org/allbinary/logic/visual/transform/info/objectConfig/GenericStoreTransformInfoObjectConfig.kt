@@ -28,6 +28,7 @@
 import java.util.HashMap
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.StdUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -131,7 +132,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "generate()")
     var transformInfoHttpStoreInterface: TransformInfoHttp = this.getTransformInfoInterface() as TransformInfoHttp
 
 
-    var objectConfigDocumentString: String = DomDocumentHelper.toString(objectConfigDocument)!!
+    var objectConfigDocumentString: String = XmlDocumentHelper.toString(objectConfigDocument)!!
 
 
     var replaceHashMap: HashMap<Any, Any> = this.createReplaceHashMap(transformInfoHttpStoreInterface, objectConfigDocumentString)!!
@@ -252,7 +253,7 @@ var hashMap = hashMap
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    this.logUtil!!.putF("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, "generate()")
+                                    this.logUtil!!.putF("Final ObjectConfig: " +XmlDocumentHelper.toString(newObjectConfigDocument), this, "generate()")
 
                                     }
                                 

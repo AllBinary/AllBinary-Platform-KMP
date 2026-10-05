@@ -27,6 +27,7 @@
         
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.globals.PATH_GLOBALS
 import org.allbinary.globals.URLGLOBALS
 import org.allbinary.logic.io.AbFileLocalInputStream
@@ -358,7 +359,7 @@ LoggingInitInfo.updateIfNeeded()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DomDocumentHelper.toString(document)
+                        return XmlDocumentHelper.toString(document)
 } catch(e: Exception)
             {
 

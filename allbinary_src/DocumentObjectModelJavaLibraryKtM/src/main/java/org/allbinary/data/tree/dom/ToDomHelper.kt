@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringUtil
 
 open public class ToDomHelper
             : Object
@@ -41,7 +42,12 @@ var value = value
                         if(value == 
                                     null
                                 )
-                        value= "null"
+                        
+                                    {
+                                    value= StringUtil.getInstance()!!.NULL_STRING
+
+                                    }
+                                
 
 
 

@@ -70,12 +70,12 @@ open public class AnimationFactoryImageScaleUtil : Object {
 
                 scaledImage = image
             } else {
-                scaledImage =
-                    this.imageScaleUtil!!.scale(
-                        image,
-                        (scaleX * width).toInt(),
-                        (scaleY * height).toInt(),
-                    )
+
+                var scaledWidth: Int = (scaleX * width).toInt()
+
+                var scaledHeight: Int = (scaleY * height).toInt()
+
+                scaledImage = this.imageScaleUtil!!.scale(image, scaledWidth, scaledHeight)
             }
         } else {
             scaledImage = image

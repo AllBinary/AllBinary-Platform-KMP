@@ -34,6 +34,7 @@ import org.allbinary.data.tree.category.CategoryLoaderFactory
 import org.allbinary.data.tree.category.CategoryLoaderInterface
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.control.validate.ValidationComponentInterface
 import org.allbinary.logic.string.StringMaker
@@ -87,7 +88,7 @@ isValid= this.validationInterface!!.isValid()
 
 document.appendChild(domNodeInterface!!.toXmlNode(document))
 
-    var documentString: String = DomDocumentHelper.toString(document)!!
+    var documentString: String = XmlDocumentHelper.toString(document)!!
 
 
     

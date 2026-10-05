@@ -30,7 +30,7 @@ import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeHelper
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
-import org.allbinary.logic.StdUtil
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.InputOutputTypeData
 import org.allbinary.logic.io.OutputTypeData
@@ -760,7 +760,7 @@ this.outputTypeName= outputTypeName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DomDocumentHelper.toString(this.document)
+                        return XmlDocumentHelper.toString(this.document)
 
                                     }
                                 

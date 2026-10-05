@@ -102,6 +102,8 @@ open public class ProgressCanvas : RunnableCanvas, PaintableInterface, UpdateMyF
 
     var inGameProcessor: Processor = Processor.getInstance()!!
 
+    var progressEndListener: ProgressEndListener = ProgressEndListener.instance
+
     constructor(
         title: String,
         backgroundBasicColor: BasicColor,
@@ -217,6 +219,7 @@ open public class ProgressCanvas : RunnableCanvas, PaintableInterface, UpdateMyF
     open fun inGame()
         // nullable = true from not(false or (false and true)) = true
     {
+        this.progressEndListener!!.onEndEvent()
         this.inGameProcessor = this.IN_GAME_PROCESSOR
     }
 
@@ -232,8 +235,23 @@ open public class ProgressCanvas : RunnableCanvas, PaintableInterface, UpdateMyF
     open fun endFromInitialLazyLoadingComplete()
         // nullable = true from not(false or (false and true)) = true
     {
+        this.progressEndListener!!.onEndEvent()
         this.gauge.setValue(this.getMaxValue())
         this.inGameProcessor = this.IN_GAME_PROCESSOR
+    }
+
+    open fun isInGame()
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
+
+        if (this.inGameProcessor == this.IN_GAME_PROCESSOR) {
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
     }
 
     open fun endIfPaintedSinceStart()

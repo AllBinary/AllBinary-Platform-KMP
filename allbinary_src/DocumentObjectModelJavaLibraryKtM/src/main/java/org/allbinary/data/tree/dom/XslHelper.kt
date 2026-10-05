@@ -34,7 +34,7 @@ import javax.xml.transform.TransformerFactory
 import javax.xml.transform.URIResolver
 import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
-import org.allbinary.data.tree.dom.document.DomDocumentHelper
+import org.allbinary.data.tree.dom.document.XmlDocumentHelper
 import org.w3c.dom.Document
 //import org.allbinary.data.tree.dom.document.DomDocumentHelper;
 open public class XslHelper
@@ -147,7 +147,7 @@ transformer.transform(xmlStreamSource, streamResult)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.translate(xsltStreamSource, StreamSource(StringBufferInputStream(DomDocumentHelper.toString(xmlDocument))), StreamResult(outputStream))!!.toString()
+                        return this.translate(xsltStreamSource, StreamSource(StringBufferInputStream(XmlDocumentHelper.toString(xmlDocument))), StreamResult(outputStream))!!.toString()
 } catch(e: Exception)
             {
 
@@ -227,7 +227,7 @@ transformer.transform(xmlStreamSource, streamResult)
 
         try {
             outputFile!!.createNewFile()
-this.translate(StreamSource(xsltFilePath), StreamSource(StringBufferInputStream(DomDocumentHelper.toString(xmlDocument))), StreamResult(outputFile))
+this.translate(StreamSource(xsltFilePath), StreamSource(StringBufferInputStream(XmlDocumentHelper.toString(xmlDocument))), StreamResult(outputFile))
 } catch(e: Exception)
             {
 
