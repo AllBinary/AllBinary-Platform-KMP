@@ -63,7 +63,7 @@ this.setImageTypeJlistModel()
     var selectedArray: IntArray = IntArray(vector.size())
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -155,7 +155,7 @@ this.capturedImageActionScriptOutputInterface!!.log()
     var vector: BasicArrayList = InputImageType.getAllAsVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

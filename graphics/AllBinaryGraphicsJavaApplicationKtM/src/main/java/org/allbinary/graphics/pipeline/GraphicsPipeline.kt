@@ -55,7 +55,7 @@ var aTheta = aTheta
     var newVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = this.pointBasicArrayList!!.size()!!
+    var size: Int = this.pointBasicArrayList!!.size()
 
 
 

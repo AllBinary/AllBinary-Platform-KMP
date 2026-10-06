@@ -64,7 +64,7 @@ var node = node
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
     
@@ -104,7 +104,7 @@ var node = node
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -151,7 +151,7 @@ stringBuffer!!.append("Css Font Family Property Validation Error")
             
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -164,7 +164,7 @@ stringBuffer!!.append("Css Font Family Property Validation Error")
             
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

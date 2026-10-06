@@ -60,7 +60,7 @@ var imageComparisonInfo = imageComparisonInfo
     var vector: BasicArrayList = imageComparisonInfo!!.getNonMatchingPixelVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -88,7 +88,7 @@ var pixelDelta = pixelDelta
     var vector: BasicArrayList = this.getVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

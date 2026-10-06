@@ -252,7 +252,7 @@ this.session.removeAttribute(UserData.USERNAME)
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
-    var lastAccessedTime: Long = this.session.getLastAccessedTime()!!
+    var lastAccessedTime: Long = this.session.getLastAccessedTime()
 
 
 

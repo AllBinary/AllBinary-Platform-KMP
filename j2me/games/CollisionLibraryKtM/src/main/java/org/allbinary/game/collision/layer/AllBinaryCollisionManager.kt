@@ -51,7 +51,7 @@ open public class AllBinaryCollisionManager : Object {
         var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
         var startIndex = startIndex
 
-        var size: Int = layerManager!!.getSize()!!
+        var size: Int = layerManager!!.getSize()
 
         for (index in startIndex + 1 until size) {
 

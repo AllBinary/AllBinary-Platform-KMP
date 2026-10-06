@@ -27,7 +27,8 @@
         
 import java.util.Date
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.user.UserData
@@ -401,16 +402,16 @@ hashMap!!.put(OrderHistoryData.SHIPPEDDATE, this.shipDate)
 hashMap!!.put(OrderHistoryData.TRANSDATE, this.transDate)
 hashMap!!.put(OrderHistoryData.CANCELDATE, this.cancelDate)
 hashMap!!.put(OrderHistoryData.ORDERDATEFORMATTED, Date(this.orderDate as Long.
-                            longValue()).
+                            toLong()).
                             toString())
 hashMap!!.put(OrderHistoryData.SHIPPEDDATEFORMATTED, Date(this.shipDate as Long.
-                            longValue()).
+                            toLong()).
                             toString())
 hashMap!!.put(OrderHistoryData.TRANSDATEFORMATTED, Date(this.transDate as Long.
-                            longValue()).
+                            toLong()).
                             toString())
 hashMap!!.put(OrderHistoryData.CANCELDATEFORMATTED, Date(this.cancelDate as Long.
-                            longValue()).
+                            toLong()).
                             toString())
 hashMap!!.put(OrderHistoryData.STATUS, this.status)
 hashMap!!.put(OrderHistoryData.SUBTOTAL, this.subTotal!!.toString())

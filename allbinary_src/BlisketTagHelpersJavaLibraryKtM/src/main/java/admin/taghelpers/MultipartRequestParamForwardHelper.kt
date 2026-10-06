@@ -135,7 +135,7 @@ this.pageContext!!.forward(stringBuffer!!.toString())
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = this.paramVector!!.size()!!
+    var size: Int = this.paramVector!!.size()
 
 
 

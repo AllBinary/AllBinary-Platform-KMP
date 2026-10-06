@@ -140,9 +140,9 @@ open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         var allBinaryTiledLayer: AllBinaryTiledLayer =
             geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
-        var totalColumns: Int = allBinaryTiledLayer!!.getColumns()!!
+        var totalColumns: Int = allBinaryTiledLayer!!.getColumns()
 
-        var totalRows: Int = allBinaryTiledLayer!!.getRows()!!
+        var totalRows: Int = allBinaryTiledLayer!!.getRows()
 
         for (column in 0 until totalColumns) {
 

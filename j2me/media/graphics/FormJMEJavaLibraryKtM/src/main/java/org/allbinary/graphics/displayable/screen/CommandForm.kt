@@ -138,7 +138,7 @@ open public class CommandForm : Form, MyCommandInterface, MenuListener {
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var size: Int = this.commandStack!!.size!!
+        var size: Int = this.commandStack!!.size
 
         for (index in 0 until size) {
 

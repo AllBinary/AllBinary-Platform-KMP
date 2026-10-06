@@ -59,13 +59,13 @@ open public class BasicGeographicMapCellPositionFactory : Object {
 
         var tiledLayer: AllBinaryTiledLayer = this.tiledLayer
 
-        var columns: Int = this.getColumns()!!
+        var columns: Int = this.getColumns()
 
-        var rows: Int = this.getRows()!!
+        var rows: Int = this.getRows()
 
-        var width: Int = tiledLayer!!.getCellWidth()!!
+        var width: Int = tiledLayer!!.getCellWidth()
 
-        var height: Int = tiledLayer!!.getCellHeight()!!
+        var height: Int = tiledLayer!!.getCellHeight()
 
         for (column in 0 until columns) {
 
@@ -88,9 +88,9 @@ open public class BasicGeographicMapCellPositionFactory : Object {
 
         var tiledLayer: AllBinaryTiledLayer = this.tiledLayer
 
-        var columns: Int = this.getColumns()!!
+        var columns: Int = this.getColumns()
 
-        var rows: Int = this.getRows()!!
+        var rows: Int = this.getRows()
 
         try {
 

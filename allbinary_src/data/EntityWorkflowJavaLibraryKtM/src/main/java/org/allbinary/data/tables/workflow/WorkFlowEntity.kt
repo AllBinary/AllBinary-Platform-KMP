@@ -197,7 +197,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
     open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
 var storeName = storeName
 
         try {
@@ -212,7 +212,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
     var hashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = hashMapVector!!.size!!
+    var size: Int = hashMapVector!!.size
 
 
 

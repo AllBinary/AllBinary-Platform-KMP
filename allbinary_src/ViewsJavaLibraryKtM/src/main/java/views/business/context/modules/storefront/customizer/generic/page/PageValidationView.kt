@@ -76,7 +76,7 @@ var transformInfoInterface = transformInfoInterface
 
         try {
             
-    var isValid: Boolean = Boolean.TRUE
+    var isValid: Boolean = Boolean.true
 
 
     
@@ -106,7 +106,7 @@ var transformInfoInterface = transformInfoInterface
                                     }
                                 
 
-    var size: Int = allViewsToBeModifiedVector!!.size()!!
+    var size: Int = allViewsToBeModifiedVector!!.size()
 
 
 
@@ -182,16 +182,16 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
 
 
     
-                        if(pageValidation!!.isValid() == Boolean.FALSE)
+                        if(pageValidation!!.isValid() == false)
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
 
     
-                        if(isValid == Boolean.TRUE)
+                        if(isValid == true)
                         
                                     {
                                     
@@ -244,7 +244,7 @@ CustomizerUtil.getInstance()!!.write(specifiedTransformInfoInterface, documentSt
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -271,7 +271,7 @@ CustomizerUtil.getInstance()!!.write(specifiedTransformInfoInterface, documentSt
     var allViewsToBeModifiedVector: BasicArrayList = objectConfig!!.getGroupTransforms()!!
 
 
-    var size: Int = allViewsToBeModifiedVector!!.size()!!
+    var size: Int = allViewsToBeModifiedVector!!.size()
 
 
 
@@ -314,7 +314,7 @@ CustomizerUtil.getInstance()!!.write(specifiedTransformInfoInterface, documentSt
 
 
     
-                        if(pageValidation!!.isValid() == Boolean.FALSE)
+                        if(pageValidation!!.isValid() == false)
                         
                                     {
                                     stringBuffer!!.append("TransformInfo Name for PageValidation:" +specifiedTransformInfoInterface!!.getName())
@@ -353,7 +353,7 @@ stringBuffer!!.append("PageValidation Info:" +pageValidation!!.validationInfo())
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -364,7 +364,7 @@ stringBuffer!!.append("PageValidation Info:" +pageValidation!!.validationInfo())
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

@@ -43,9 +43,9 @@ open public class ImageMiniMapLayer : MiniMapLayer {
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var aWidth: Int = this.allBinaryTiledLayer!!.getWidth()!!
+        var aWidth: Int = this.allBinaryTiledLayer!!.getWidth()
 
-        var aHeight: Int = this.allBinaryTiledLayer!!.getHeight()!!
+        var aHeight: Int = this.allBinaryTiledLayer!!.getHeight()
 
         this.image = PaintableToImageUtil.getImage(this.allBinaryTiledLayer, aWidth, aHeight)
     }

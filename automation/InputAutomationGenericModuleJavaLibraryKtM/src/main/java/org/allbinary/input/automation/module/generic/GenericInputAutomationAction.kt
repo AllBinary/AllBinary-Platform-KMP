@@ -49,7 +49,7 @@ public constructor ()
 
     open fun getInputRobotInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputRobotInterface?>{
+: Array<InputRobotInterface?>?{
 
 
 

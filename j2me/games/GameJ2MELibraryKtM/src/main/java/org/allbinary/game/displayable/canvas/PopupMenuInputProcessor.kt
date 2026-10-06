@@ -91,11 +91,11 @@ open public class PopupMenuInputProcessor : BasicMenuInputProcessor {
 
         try {
 
-            var motionInputsIndex: Int = this.processMotionInputs()!!
+            var motionInputsIndex: Int = this.processMotionInputs()
 
             var list: BasicArrayList = this.getGameKeyEventList()!!
 
-            var size: Int = list.size()!!
+            var size: Int = list.size()
 
             var key: Int = 0
 

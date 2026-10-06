@@ -24,7 +24,7 @@ companion object {
             
     open fun getAbFile(contextName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFile{
+: AbFile?{
 var contextName = contextName
 
 
@@ -38,7 +38,7 @@ var contextName = contextName
             
     open fun getAbPath(contextName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbPath{
+: AbPath?{
 var contextName = contextName
 
 
@@ -52,7 +52,7 @@ var contextName = contextName
             
     open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -63,7 +63,7 @@ var contextName = contextName
 
     open fun getFileName(contextName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
 var contextName = contextName
 
 

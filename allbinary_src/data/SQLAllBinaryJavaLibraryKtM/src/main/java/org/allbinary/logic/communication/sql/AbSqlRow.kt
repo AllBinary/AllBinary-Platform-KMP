@@ -28,7 +28,8 @@
 import java.sql.ResultSet
 import java.sql.ResultSetMetaData
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.init.db.DbConnectionInfo
@@ -564,7 +565,7 @@ this.executeSQLStatement(sqlStatement)
 
     open fun getRow(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>?{
     //var keysAndValues = keysAndValues
 
     var stringBuffer: StringMaker = StringMaker()
@@ -640,7 +641,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
         {
 result= this.stdUtil!!.createHashMap()
 
-    var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
+    var columnCount: Int = resultSetMetaData!!.getColumnCount()
 
 
 
@@ -723,7 +724,7 @@ result.put(columnName, field)
 
     open fun getRows(keysAndValues: HashMap<Any, Any>, more: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var keysAndValues = keysAndValues
     //var more = more
 
@@ -801,7 +802,7 @@ stringBuffer!!.append(more)
     var result: HashMap<Any, Any> = this.stdUtil!!.createHashMap()!!
 
 
-    var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
+    var columnCount: Int = resultSetMetaData!!.getColumnCount()
 
 
 
@@ -862,7 +863,7 @@ rows.add(result)
 
     open fun getAllRows()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList?{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -898,7 +899,7 @@ stringBuffer!!.append(this.getTableName())
     var result: HashMap<Any, Any> = this.stdUtil!!.createHashMap()!!
 
 
-    var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
+    var columnCount: Int = resultSetMetaData!!.getColumnCount()
 
 
 
@@ -956,7 +957,7 @@ rows.add(result)
 
     open fun getRowsWhereBetween(whereKeyValuePairs: HashMap<Any, Any>, betweenColumn: String, smallest: String, largest: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var whereKeyValuePairs = whereKeyValuePairs
     //var betweenColumn = betweenColumn
     //var smallest = smallest
@@ -1104,7 +1105,7 @@ rows.add(result)
 
     open fun getRowsWhereBetween(betweenColumn: String, smallest: String, largest: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var betweenColumn = betweenColumn
     //var smallest = smallest
     //var largest = largest

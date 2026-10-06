@@ -181,7 +181,7 @@ open public class BasicArrayList : Object {
 
         var result: Boolean = true
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 
@@ -477,7 +477,7 @@ open public class BasicArrayList : Object {
     // nullable = true from not(false or (false and true)) = true
     : Any {
 
-        var size: Int = this.size()!!
+        var size: Int = this.size()
 
         var list: BasicArrayList = BasicArrayListS(size)
 

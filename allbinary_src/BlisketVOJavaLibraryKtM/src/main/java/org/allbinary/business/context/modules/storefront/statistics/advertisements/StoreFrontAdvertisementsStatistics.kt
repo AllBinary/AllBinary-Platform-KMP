@@ -59,7 +59,7 @@ var storeFrontInterface = storeFrontInterface
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList?{
 
 
 
@@ -70,7 +70,7 @@ var storeFrontInterface = storeFrontInterface
 
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any?{
 
 
 

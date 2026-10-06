@@ -110,7 +110,7 @@ System.out.println("License ID: " +licenseInitInfo!!.getLicenseId())
     var list: BasicArrayList = licenseInitInfo!!.getServerList()!!
 
 
-    var size: Int = list.size()!!
+    var size: Int = list.size()
 
 
 

@@ -52,7 +52,7 @@ var frame = frame
 
 logUtil!!.putF(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionConditions")
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getTransactionEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: TransactionEntity{
+: TransactionEntity?{
 
         try {
             

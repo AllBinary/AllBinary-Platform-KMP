@@ -90,7 +90,7 @@ var index = index
 
     open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementsInterface{
+: AdvertisementsInterface?{
 var advertisementSearchInterface = advertisementSearchInterface
 
 

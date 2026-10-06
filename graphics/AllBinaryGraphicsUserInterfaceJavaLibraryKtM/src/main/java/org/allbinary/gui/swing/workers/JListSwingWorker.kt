@@ -43,7 +43,7 @@ this.setListModel(listModel)
 
     open fun doInBackground()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any?{
 
 
 

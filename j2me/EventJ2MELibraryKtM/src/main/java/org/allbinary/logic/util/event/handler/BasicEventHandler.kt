@@ -52,7 +52,7 @@ open public class BasicEventHandler : Object, BasicEventHandlerInterface {
 
         var eventListenerInterface: EventListenerInterface
 
-        var size: Int = vector.size()!!
+        var size: Int = vector.size()
 
         for (index in 0 until size) {
 
@@ -68,7 +68,7 @@ open public class BasicEventHandler : Object, BasicEventHandlerInterface {
 
         var eventListenerInterface: EventListenerInterface
 
-        var size: Int = vector.size()!!
+        var size: Int = vector.size()
 
         for (index in 0 until size) {
 

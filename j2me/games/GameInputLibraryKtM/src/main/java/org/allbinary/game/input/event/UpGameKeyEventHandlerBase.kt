@@ -122,7 +122,7 @@ open public class UpGameKeyEventHandlerBase : BasicEventHandler {
 
         var stringBuffer: StringMaker = StringMaker()
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         stringBuffer!!.append(super.toString())
         stringBuffer!!.append(UpGameKeyEventHandlerBase.TOTAL_LISTENERS)

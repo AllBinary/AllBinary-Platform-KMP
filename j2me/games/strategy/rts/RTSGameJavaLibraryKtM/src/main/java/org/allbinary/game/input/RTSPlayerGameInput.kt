@@ -209,7 +209,7 @@ open public class RTSPlayerGameInput : PlayerGameInput {
         try {
             this.processMotionInput(layerManager)
 
-            var size: Int = this.inputList!!.size()!!
+            var size: Int = this.inputList!!.size()
 
             var key: Int = 0
 

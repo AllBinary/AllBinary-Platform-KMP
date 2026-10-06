@@ -73,7 +73,7 @@ var isReturnOnFailure = isReturnOnFailure
     var fileLockVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -177,7 +177,7 @@ var vector = vector
             
     open fun getLock(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: FileLock{
+: FileLock?{
 var file = file
 
         try {
@@ -207,7 +207,7 @@ this.logUtil!!.put("Exception returns null", this, "getLock", e)
             
     open fun getLock(fileOutputStream: AbFileOutputStream)
         //nullable = true from not(false or (false and false)) = true
-: FileLock{
+: FileLock?{
 var fileOutputStream = fileOutputStream
 
         try {
@@ -242,7 +242,7 @@ StreamUtil.getInstance()!!.close(fileOutputStream)
             
     open fun getLock(fileChannel: FileChannel)
         //nullable = true from not(false or (false and false)) = true
-: FileLock{
+: FileLock?{
 var fileChannel = fileChannel
 
         try {

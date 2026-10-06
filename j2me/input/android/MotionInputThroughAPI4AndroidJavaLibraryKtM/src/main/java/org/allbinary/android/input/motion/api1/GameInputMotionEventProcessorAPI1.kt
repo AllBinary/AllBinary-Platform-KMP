@@ -60,7 +60,7 @@ open public class GameInputMotionEventProcessorAPI1 : BaseGameInputMotionEventPr
 
             var y: Int = motionEvent!!.getY().toInt()
 
-            var action: Int = motionEvent!!.getAction()!!
+            var action: Int = motionEvent!!.getAction()
 
             if (action == MotionEvent.ACTION_DOWN) {
 

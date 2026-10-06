@@ -28,7 +28,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashSet
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.Item
@@ -56,7 +57,7 @@ public constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 

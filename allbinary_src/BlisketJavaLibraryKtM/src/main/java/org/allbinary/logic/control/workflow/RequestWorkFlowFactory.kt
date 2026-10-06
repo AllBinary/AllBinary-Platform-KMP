@@ -59,7 +59,7 @@ var servletContext = servletContext
     var requestCommand: String = httpRequest!!.getPathInfo()!!
 
 
-    var index: Int = requestCommand!!.indexOf(AbPathData.getInstance()!!.SEPARATOR)!!
+    var index: Int = requestCommand!!.indexOf(AbPathData.getInstance()!!.SEPARATOR)
 
 
     var storeName: String = requestCommand!!.substring(0, index)!!

@@ -58,7 +58,7 @@ companion object {
 : Int{
 var requestPath = requestPath
 
-    var beginIndex: Int = requestPath!!.lastIndexOf(AbPathData.getInstance()!!.SEPARATOR)!!
+    var beginIndex: Int = requestPath!!.lastIndexOf(AbPathData.getInstance()!!.SEPARATOR)
 
 
     
@@ -84,7 +84,7 @@ var requestPath = requestPath
 : String{
 var requestPath = requestPath
 
-    var beginIndex: Int = this.getLastSeparatorIndex(requestPath)!!
+    var beginIndex: Int = this.getLastSeparatorIndex(requestPath)
 
 
     

@@ -448,9 +448,9 @@ open public class UnitLayer :
             var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory =
                 geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
 
-            var column: Int = currentGeographicMapCellPosition!!.getColumn()!!
+            var column: Int = currentGeographicMapCellPosition!!.getColumn()
 
-            var row: Int = currentGeographicMapCellPosition!!.getRow()!!
+            var row: Int = currentGeographicMapCellPosition!!.getRow()
 
             var lastColumn: Int = column + totalCells
 
@@ -681,7 +681,7 @@ open public class UnitLayer :
 
             if (this.isReadyForExplosion()) {
 
-                var currentFrame: Int = this.destroyAnimationInterface!!.getFrame()!!
+                var currentFrame: Int = this.destroyAnimationInterface!!.getFrame()
 
                 var size: Int = this.destroyAnimationInterface!!.getSize() - 1
 
@@ -831,13 +831,13 @@ open public class UnitLayer :
 
         var list: BasicArrayList = this.getGameKeyEventList()!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 
             var anyType: Any = list.get(index)!!
 
-            var key: Int = GameKeyEventUtil.getKey(anyType)!!
+            var key: Int = GameKeyEventUtil.getKey(anyType)
 
             this.inputProcessorArray[key]!!.processEvent(layerManager, GameKeyEvent.NONE)
         }
@@ -986,7 +986,7 @@ open public class UnitLayer :
         var angleInfo: AngleInfo = this.rotationAnimationInterfaceP!!.getAngleInfoP()!!
 
         var angle: Int =
-            FrameUtil.getInstance()!!.adjustAngleToFrameAngle(angleInfo!!.getAngle() - 270)!!
+            FrameUtil.getInstance()!!.adjustAngleToFrameAngle(angleInfo!!.getAngle() - 270)
 
         this.rtsLogHelper!!.turnTo(
             this,
@@ -1324,9 +1324,9 @@ open public class UnitLayer :
 
             var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
-            var viewX: Int = viewPosition!!.getX()!!
+            var viewX: Int = viewPosition!!.getX()
 
-            var viewY: Int = viewPosition!!.getY()!!
+            var viewY: Int = viewPosition!!.getY()
 
             this.decalAnimation!!.paintXY(graphics, viewX, viewY)
             this.rangeAnimation!!.paintXY(graphics, viewX, viewY)
@@ -1403,7 +1403,7 @@ open public class UnitLayer :
 
             if (!this.getHealthInterface()!!.isAlive()) {
 
-                var damage: Int = this.getHealthInterface()!!.getMaxHealth()!!
+                var damage: Int = this.getHealthInterface()!!.getMaxHealth()
 
                 if (damage > 10) {
 

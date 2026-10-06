@@ -245,7 +245,7 @@ open public class GameInputMappingCanvas : GameCommandCanvas, InputMappingInterf
             var list: BasicArrayList =
                 this.inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
 
-            var isInputAlreadyMappedToSelectedAction: Boolean = list.contains(input)!!
+            var isInputAlreadyMappedToSelectedAction: Boolean = list.contains(input)
 
             if (isInputAlreadyMappedToSelectedAction) {
 
@@ -282,8 +282,7 @@ open public class GameInputMappingCanvas : GameCommandCanvas, InputMappingInterf
 
         this.logUtil!!.putF(this.commonStrings!!.START, this, METHOD_NAME)
 
-        var isInputAlreadyMapped: Boolean =
-            this.inputMapping!!.getInputMapping()!!.isMapped(input)!!
+        var isInputAlreadyMapped: Boolean = this.inputMapping!!.getInputMapping()!!.isMapped(input)
 
         if (!isInputAlreadyMapped && !this.inputMapping!!.isSystemInput(input)) {
 

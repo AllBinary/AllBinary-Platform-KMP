@@ -48,7 +48,7 @@ companion object {
     //var width = width
     //var height = height
 
-    var pointCount: Int = PathParser.parsePath(svgPath, pathX, pathY, pathX!!.size)!!
+    var pointCount: Int = PathParser.parsePath(svgPath, pathX, pathY, pathX!!.size)
 
 
 

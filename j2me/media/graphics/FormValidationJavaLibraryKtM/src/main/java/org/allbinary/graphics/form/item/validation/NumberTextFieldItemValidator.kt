@@ -75,7 +75,7 @@ open public class NumberTextFieldItemValidator : ValidatorBase {
 
         var string: String = this.textFieldItem!!.getString()!!
 
-        var textLength: Int = string.length!!
+        var textLength: Int = string.length
 
         if (textLength > 0 && textLength < this.maxChars) {
 
@@ -107,7 +107,7 @@ open public class NumberTextFieldItemValidator : ValidatorBase {
 
         var string: String = this.textFieldItem!!.getString()!!
 
-        var textLength: Int = string.length!!
+        var textLength: Int = string.length
 
         var label: String = this.textFieldItem!!.getLabel()!!
 
@@ -124,7 +124,7 @@ open public class NumberTextFieldItemValidator : ValidatorBase {
 
                 var number: Integer =
                     smallIntegerSingletonFactory!!.createInstance(
-                        Integer.parseInt(this.textFieldItem!!.getString())
+                        this.textFieldItem!!.getString().toInt()
                     )!!
 
                 if (number.toInt() > this.min) {

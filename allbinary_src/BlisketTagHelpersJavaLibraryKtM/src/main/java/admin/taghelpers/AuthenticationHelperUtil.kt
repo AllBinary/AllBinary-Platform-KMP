@@ -82,7 +82,7 @@ var filePath = filePath
                                     }
                                 
 
-    var endIndex: Int = HttpRequestUtil.getInstance()!!.getLastSeparatorIndex(filePath)!!
+    var endIndex: Int = HttpRequestUtil.getInstance()!!.getLastSeparatorIndex(filePath)
 
 
     var fullPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +filePath!!.substring(0, endIndex), StringUtil.getInstance()!!.EMPTY_STRING)

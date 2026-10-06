@@ -52,7 +52,7 @@ open public class CommandTextItemArrayFactory : Object {
 
         var vectorUtil: VectorUtil = VectorUtil.getInstance()!!
 
-        var size: Int = vectorUtil!!.getSize(vector)!!
+        var size: Int = vectorUtil!!.getSize(vector)
 
         this.list.clear()
 

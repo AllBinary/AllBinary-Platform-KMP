@@ -186,7 +186,7 @@ this.setFileNames(fileName)
                         
                                     {
                                     
-    var isMediaResizable: Boolean = uploadMedia!!.isWriterMedia(mediaData!!.getName(), MediaTypeData.getInstance()!!.RESIZABLE_MEDIA)!!
+    var isMediaResizable: Boolean = uploadMedia!!.isWriterMedia(mediaData!!.getName(), MediaTypeData.getInstance()!!.RESIZABLE_MEDIA)
 
 
     
@@ -226,7 +226,7 @@ this.mediaUtil!!.saveImageFile(originalImageFile, this.itemInterface!!.getLargeI
                                 
                         else {
                             
-    var isConvertable: Boolean = mediaData!!.isConvertableTo(defaultMediaData)!!
+    var isConvertable: Boolean = mediaData!!.isConvertableTo(defaultMediaData)
 
 
     

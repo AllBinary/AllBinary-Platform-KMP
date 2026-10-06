@@ -96,7 +96,7 @@ var itemName = itemName
 : HashMap<Any, Any>{
 var graphicItemNodeList = graphicItemNodeList
 
-    var numberOfItems: Int = graphicItemNodeList!!.size()!!
+    var numberOfItems: Int = graphicItemNodeList!!.size()
 
 
     var graphicItemHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!

@@ -91,7 +91,7 @@ open public class GroupFactory : Object {
         this.list.clear()
         this.index = 0
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         while (size < groups) {
 

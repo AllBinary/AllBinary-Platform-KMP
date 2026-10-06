@@ -68,14 +68,14 @@ open public class Tokenizer : Object {
 
         var index: Int = 0
 
-        var size: Int = string.length!!
+        var size: Int = string.length
 
         while (index < size) {
             index = string.indexOf(this.sep, index)
 
             if (index != -1) {
 
-                var end: Int = string.indexOf(this.endSep, index + this.sep.length)!!
+                var end: Int = string.indexOf(this.endSep, index + this.sep.length)
 
                 if (end != -1) {
 
@@ -136,7 +136,7 @@ open public class Tokenizer : Object {
 
         var end: Int = 0
 
-        var size: Int = stringVector!!.size()!!
+        var size: Int = stringVector!!.size()
 
         for (index in 0 until size) {
 

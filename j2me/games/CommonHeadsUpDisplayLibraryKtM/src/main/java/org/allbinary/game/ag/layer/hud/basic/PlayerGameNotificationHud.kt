@@ -258,7 +258,7 @@ open public class PlayerGameNotificationHud : GameNotificationHud, UpdateMyFontI
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+        var index: Int = this.circularIndexUtil!!.getIndex()
 
         this.string = this.permanentGameNotification!!.stringList!!.objectArray[index]!! as String
         this.processor = this.nextUnremoveableProcessor
@@ -269,7 +269,7 @@ open public class PlayerGameNotificationHud : GameNotificationHud, UpdateMyFontI
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+        var index: Int = this.circularIndexUtil!!.getIndex()
 
         this.setX((this.displayInfo!!.getLastWidth() - this.width) shr 1)
         this.point.setX(this.getX())

@@ -58,9 +58,9 @@ open public class TouchButtonsMappingPaintable : Paintable {
     // nullable = true from not(false or (false and true)) = true
     : Array<Array<Paintable?>?> {
 
-        var totalColumns: Int = this.touchButtonLocationHelper!!.getTotalColumns()!!
+        var totalColumns: Int = this.touchButtonLocationHelper!!.getTotalColumns()
 
-        var totalRows: Int = this.touchButtonLocationHelper!!.getTotalRows()!!
+        var totalRows: Int = this.touchButtonLocationHelper!!.getTotalRows()
 
         var paintableTable: Array<Array<Paintable?>?> =
             Array(totalColumns) { arrayOfNulls<Paintable?>(totalRows) }
@@ -94,9 +94,9 @@ open public class TouchButtonsMappingPaintable : Paintable {
     {
         var graphics = graphics
 
-        var totalColumns: Int = this.touchButtonLocationHelper!!.getTotalColumns()!!
+        var totalColumns: Int = this.touchButtonLocationHelper!!.getTotalColumns()
 
-        var totalRows: Int = this.touchButtonLocationHelper!!.getTotalRows()!!
+        var totalRows: Int = this.touchButtonLocationHelper!!.getTotalRows()
 
         for (index in totalColumns - 1 downTo 0) {
 

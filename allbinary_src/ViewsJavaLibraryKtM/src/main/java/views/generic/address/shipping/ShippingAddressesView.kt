@@ -89,7 +89,7 @@ var document = document
     var billingAddressesNode: Node = document.createElement(ShippingAddressData.MULTIPLE)!!
 
 
-    var size: Int = this.streetAddressList!!.size()!!
+    var size: Int = this.streetAddressList!!.size()
 
 
 

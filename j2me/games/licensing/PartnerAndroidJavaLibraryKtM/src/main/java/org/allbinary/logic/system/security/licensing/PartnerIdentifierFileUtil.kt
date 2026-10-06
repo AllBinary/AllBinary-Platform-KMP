@@ -59,7 +59,7 @@ open public class PartnerIdentifierFileUtil : Object {
 
             var chars: CharArray = CharArray(30)
 
-            var size: Int = inputStreamReader!!.read(chars)!!
+            var size: Int = inputStreamReader!!.read(chars)
 
             var partnerString: String = StringUtil.getInstance()!!.EMPTY_STRING
 

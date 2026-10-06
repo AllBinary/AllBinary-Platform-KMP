@@ -73,7 +73,7 @@ open public class ResourceUtil : Object {
 
                     var stringMaker: StringMaker = StringMaker()
 
-                    var index: Int = resource.lastIndexOf('/')!!
+                    var index: Int = resource.lastIndexOf('/')
 
                     var resourcePath: String = resource.substring(index + 1)!!
 
@@ -198,7 +198,7 @@ open public class ResourceUtil : Object {
 
         var stringMaker: StringMaker = StringMaker()
 
-        var index: Int = resource.indexOf(CommonSeps.getInstance()!!.COLON)!!
+        var index: Int = resource.indexOf(CommonSeps.getInstance()!!.COLON)
 
         var resourcePath: String = resource.substring(index + startIndex)!!
 

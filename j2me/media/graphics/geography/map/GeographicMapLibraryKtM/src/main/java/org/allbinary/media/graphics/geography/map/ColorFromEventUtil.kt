@@ -40,7 +40,7 @@ open public class ColorFromEventUtil : Object {
 
     private val YELLOW: BasicColor = BasicColorFactory.getInstance()!!.YELLOW
 
-    val COLOR_INT: Int = this.YELLOW.toInt()!!
+    val COLOR_INT: Int = this.YELLOW.toInt()
 
     open fun getForegroundColor(
         gameCanvasInterface: AllBinaryGameCanvas

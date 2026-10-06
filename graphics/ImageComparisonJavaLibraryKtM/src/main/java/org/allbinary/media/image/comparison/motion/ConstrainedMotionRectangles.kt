@@ -76,7 +76,7 @@ this.logUtil!!.putF("Start - Size Before: " +motionRectangles!!.getVector()!!.si
     var vector2: BasicArrayList = motionRectangles!!.getVector()!!
 
 
-    var size: Int = vector2.size()!!
+    var size: Int = vector2.size()
 
 
 
@@ -92,7 +92,7 @@ this.logUtil!!.putF("Start - Size Before: " +motionRectangles!!.getVector()!!.si
     var rectangle: Rectangle = motionRectangle!!.getRectangle()!!
 
 
-    var isTooSmall: Boolean = this.getMotionRectangleConstraintsInterface()!!.isTooSmall(rectangle)!!
+    var isTooSmall: Boolean = this.getMotionRectangleConstraintsInterface()!!.isTooSmall(rectangle)
 
 
     
@@ -107,7 +107,7 @@ this.logUtil!!.putF("Start - Size Before: " +motionRectangles!!.getVector()!!.si
                                     }
                                 
 
-    var isAreaTooSmall: Boolean = this.getMotionRectangleConstraintsInterface()!!.isAreaTooSmall(rectangle)!!
+    var isAreaTooSmall: Boolean = this.getMotionRectangleConstraintsInterface()!!.isAreaTooSmall(rectangle)
 
 
     
@@ -122,7 +122,7 @@ this.logUtil!!.putF("Start - Size Before: " +motionRectangles!!.getVector()!!.si
                                     }
                                 
 
-    var isTooBig: Boolean = this.getMotionRectangleConstraintsInterface()!!.isTooBig(rectangle)!!
+    var isTooBig: Boolean = this.getMotionRectangleConstraintsInterface()!!.isTooBig(rectangle)
 
 
     
@@ -137,7 +137,7 @@ this.logUtil!!.putF("Start - Size Before: " +motionRectangles!!.getVector()!!.si
                                     }
                                 
 
-    var isValid: Boolean = this.getMotionRectangleConstraintsInterface()!!.isValid(this.getImageComparisonResult()!!.getFrameTwo(), bufferedImage, motionRectangle!!.getRectangle())!!
+    var isValid: Boolean = this.getMotionRectangleConstraintsInterface()!!.isValid(this.getImageComparisonResult()!!.getFrameTwo(), bufferedImage, motionRectangle!!.getRectangle())
 
 
     

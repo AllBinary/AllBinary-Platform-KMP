@@ -101,7 +101,7 @@ open public class BasicPopupMenuPaintable : Paintable, UpdateMyFontInterface {
 
         var features: Features = Features.getInstance()!!
 
-        var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
+        var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)
 
         this.drawStringUtil!!.updateMeasurement(graphics, this.label)
 
@@ -151,9 +151,9 @@ open public class BasicPopupMenuPaintable : Paintable, UpdateMyFontInterface {
         // var rectangle = rectangle
         this.rectangle = rectangle
 
-        var width: Int = this.rectangle.getWidth()!!
+        var width: Int = this.rectangle.getWidth()
 
-        var height: Int = this.rectangle.getHeight()!!
+        var height: Int = this.rectangle.getHeight()
 
         if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {} else {
 
@@ -173,13 +173,13 @@ open public class BasicPopupMenuPaintable : Paintable, UpdateMyFontInterface {
 
         var point: GPoint = this.rectangle.getPoint()!!
 
-        var x: Int = point.getX()!!
+        var x: Int = point.getX()
 
-        var y: Int = point.getY()!!
+        var y: Int = point.getY()
 
-        var width: Int = this.rectangle.getWidth()!!
+        var width: Int = this.rectangle.getWidth()
 
-        var height: Int = this.rectangle.getHeight()!!
+        var height: Int = this.rectangle.getHeight()
 
         this.animationInterface!!.paintXY(graphics, x, y)
         this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor)

@@ -123,7 +123,7 @@ open public class GameOptionsForm : CommandForm {
 
         var hashtable: ABHashtable<Any, Any> = GameConfigurationTextInput.getHashtable()!!
 
-        var size: Int = hashtable.size!!
+        var size: Int = hashtable.size
 
         var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
 
@@ -161,7 +161,7 @@ open public class GameOptionsForm : CommandForm {
 
         var stringMaker: StringMaker = StringMaker()
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var gameConfiguration: GameConfiguration
 
@@ -202,7 +202,7 @@ open public class GameOptionsForm : CommandForm {
     {
         // var abeClientInformation = abeClientInformation
 
-        var size: Int = this.size()!!
+        var size: Int = this.size()
 
         var item: Item
 
@@ -237,7 +237,7 @@ open public class GameOptionsForm : CommandForm {
 
         keyValuePersistance!!.save(abeClientInformation, hashtable)
 
-        var size2: Int = list.size()!!
+        var size2: Int = list.size()
 
         var integer: Integer
 

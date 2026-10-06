@@ -62,7 +62,7 @@ open public class BasicPersitance : Object {
     {
         // var abeClientInformation = abeClientInformation
 
-        var size: Int = this.idList!!.size()!!
+        var size: Int = this.idList!!.size()
 
         for (index in 0 until size) {
 

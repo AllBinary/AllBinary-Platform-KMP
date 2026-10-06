@@ -104,7 +104,7 @@ open public class GameInputMappingInstructionsCanvas : GameCommandCanvas {
         this.myFontProcessor!!.process(graphics)
         this.colorFillPaintable!!.paint(graphics)
 
-        var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()!!
+        var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()
 
         var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.TITLE) shr 1)
 

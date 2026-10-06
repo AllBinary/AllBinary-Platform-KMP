@@ -124,7 +124,7 @@ var searchRequest = searchRequest
     var subStoreVector: BasicArrayList = storeFrontInterface!!.getSubStores()!!
 
 
-    var size: Int = subStoreVector!!.size()!!
+    var size: Int = subStoreVector!!.size()
 
 
 
@@ -190,7 +190,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 
     open fun search(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, column: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Array<String?>{
+: Array<String?>?{
     //var abeClientInformation = abeClientInformation
 var searchRequest = searchRequest
 var column = column
@@ -203,13 +203,13 @@ var column = column
     var searchParams: SearchParams = searchRequest!!.getParams()!!
 
 
-    var startPage: Int = searchParams!!.getStartPageInt()!!.toInt()!!
+    var startPage: Int = searchParams!!.getStartPageInt()!!.toInt()
 
 
-    var endPage: Int = searchParams!!.getEndPageInt()!!.toInt()!!
+    var endPage: Int = searchParams!!.getEndPageInt()!!.toInt()
 
 
-    var pageLength: Int = searchParams!!.getLengthInt()!!.toInt()!!
+    var pageLength: Int = searchParams!!.getLengthInt()!!.toInt()
 
 
     var savedPagesInRange: Int = 0
@@ -297,7 +297,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
     var currentPage: Int =  -1
 
 
-    var size: Int = column.size()!!
+    var size: Int = column.size()
 
 
 

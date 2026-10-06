@@ -69,7 +69,7 @@ this.rectangle.setTexturesEnabled(false)
     var colorBufferList: ColorBufferList = this.rectangle.getVertices()!!.getColor4BufferList()!!
 
 
-    var size: Int = colorBufferList!!.size()!!
+    var size: Int = colorBufferList!!.size()
 
 
 

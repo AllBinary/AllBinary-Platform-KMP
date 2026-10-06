@@ -67,13 +67,13 @@ var maxPoints = maxPoints
 
         {
 
-    var t: Int = fixedPoint!!.div(fixedPoint!!.toFixed(i.toDouble()), fixedPoint!!.toFixed(steps))!!
+    var t: Int = fixedPoint!!.div(fixedPoint!!.toFixed(i.toDouble()), fixedPoint!!.toFixed(steps))
 
 
     var mt: Int = fixedPoint!!.ONE -t
 
 
-    var mt3: Int = fixedPoint!!.mul(fixedPoint!!.mul(mt, mt), mt)!!
+    var mt3: Int = fixedPoint!!.mul(fixedPoint!!.mul(mt, mt), mt)
 
 
     var mt2t3: Int = 3 *fixedPoint!!.mul(fixedPoint!!.mul(mt, mt), t)
@@ -82,7 +82,7 @@ var maxPoints = maxPoints
     var mtt23: Int = 3 *fixedPoint!!.mul(fixedPoint!!.mul(mt, t), t)
 
 
-    var t3: Int = fixedPoint!!.mul(fixedPoint!!.mul(t, t), t)!!
+    var t3: Int = fixedPoint!!.mul(fixedPoint!!.mul(t, t), t)
 
 
     var x: Int = fixedPoint!!.mul(mt3, x0) +fixedPoint!!.mul(mt2t3, x1) +fixedPoint!!.mul(mtt23, x2) +fixedPoint!!.mul(t3, x3)

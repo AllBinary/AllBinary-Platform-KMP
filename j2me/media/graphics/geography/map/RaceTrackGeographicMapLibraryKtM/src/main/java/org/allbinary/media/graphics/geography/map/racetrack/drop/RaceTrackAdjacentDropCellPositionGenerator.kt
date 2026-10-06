@@ -182,11 +182,11 @@ open public class RaceTrackAdjacentDropCellPositionGenerator : RaceTrackDropCell
 
             var point: GPoint = randomGeographicMapCellPosition!!.getPoint()!!
 
-            var x: Int = point.getX()!!
+            var x: Int = point.getX()
 
-            var y: Int = point.getY()!!
+            var y: Int = point.getY()
 
-            var z: Int = point.getZ()!!
+            var z: Int = point.getZ()
 
             var layerInterface: AllBinaryLayer =
                 RaceTrackAdjacentDropLayerFactory.getInstance()!!.getRandomInstance()!!

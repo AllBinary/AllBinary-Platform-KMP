@@ -68,7 +68,7 @@ var categoryFactoryInterface = categoryFactoryInterface
 
     open fun getDoc(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document?{
 var categoryInterface = categoryInterface
 
         try {
@@ -169,7 +169,7 @@ this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDoc", e)
 
     open fun get(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface?{
 var categoryInterface = categoryInterface
 
         try {
@@ -208,7 +208,7 @@ var categoryInterface = categoryInterface
 
     open fun get(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface?{
 var document = document
 
         try {
@@ -247,7 +247,7 @@ var document = document
 
     open fun getAll(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface?{
 var categoryInterface = categoryInterface
 
         try {
@@ -283,7 +283,7 @@ var categoryInterface = categoryInterface
 
     open fun getAll(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface?{
 var document = document
 
         try {
@@ -322,7 +322,7 @@ var document = document
 
     open fun getAll(parentCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface?{
 var parentCategoryInterface = parentCategoryInterface
 var categoryNodeList = categoryNodeList
 
@@ -392,7 +392,7 @@ parentCategoryInterface!!.addChild(categoryInterface)
 
     open fun addProperties(loadedCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface?{
 var loadedCategoryInterface = loadedCategoryInterface
 var categoryNodeList = categoryNodeList
 

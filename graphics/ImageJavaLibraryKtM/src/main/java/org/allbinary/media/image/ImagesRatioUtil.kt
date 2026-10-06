@@ -152,10 +152,10 @@ var ratio = ratio
     var point: Point = Point()
 
 
-    var newHeight: Int = bufferedImage!!.getHeight()!!
+    var newHeight: Int = bufferedImage!!.getHeight()
 
 
-    var newWidth: Int = bufferedImage!!.getWidth()!!
+    var newWidth: Int = bufferedImage!!.getWidth()
 
 
     

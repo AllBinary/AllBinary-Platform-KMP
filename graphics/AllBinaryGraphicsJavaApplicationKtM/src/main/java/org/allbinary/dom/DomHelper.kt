@@ -70,7 +70,7 @@ private constructor ()
 
     open fun createDocument()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
         try {
             
@@ -214,7 +214,7 @@ copyTransformer!!.transform(domSource, streamResult)
 var nodeName = nodeName
 var nodeList = nodeList
 
-    var numberOfNodes: Int = nodeList!!.getLength()!!
+    var numberOfNodes: Int = nodeList!!.getLength()
 
 
 
@@ -262,7 +262,7 @@ var nodeList = nodeList
     var childNodeList: NodeList = this.getChildNodeList(nodeName, nodeList)!!
 
 
-    var numberOfChildren: Int = childNodeList!!.getLength()!!
+    var numberOfChildren: Int = childNodeList!!.getLength()
 
 
 
@@ -303,7 +303,7 @@ var nodeList = nodeList
     var list: BasicArrayList = BasicArrayListD()
 
 
-    var numberOfChildren: Int = nodeList!!.getLength()!!
+    var numberOfChildren: Int = nodeList!!.getLength()
 
 
 
@@ -342,7 +342,7 @@ var nodeList = nodeList
 var nodeName = nodeName
 var nodeList = nodeList
 
-    var numberOfNodes: Int = nodeList!!.getLength()!!
+    var numberOfNodes: Int = nodeList!!.getLength()
 
 
 
@@ -385,7 +385,7 @@ this.logUtil!!.putF("NodeName: " +node.getNodeName(), this, "searchNodeList")
 var nodeName = nodeName
 var nodeList = nodeList
 
-    var numberOfNodes: Int = nodeList!!.size()!!
+    var numberOfNodes: Int = nodeList!!.size()
 
 
 

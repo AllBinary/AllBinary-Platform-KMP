@@ -51,7 +51,7 @@ open public class InputFactory : Object {
 
     val DEVICE_ID_LABEL: String = "DeviceId: "
 
-    val MAX: Int = SmallIntegerSingletonFactory.getInstance()!!.getMin()!!
+    val MAX: Int = SmallIntegerSingletonFactory.getInstance()!!.getMin()
 
     val inputIntegerArray: Array<Input?> = arrayOfNulls(this.MAX)
 

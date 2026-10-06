@@ -70,7 +70,7 @@ open public class AnimationDamageFloaters : DamageFloaters {
     {
         var damage = damage
 
-        var i: Int = this.circularIndexUtil!!.getIndex()!!
+        var i: Int = this.circularIndexUtil!!.getIndex()
 
         this.animationInterfaceArray[i]!!.setFrame(0)
         this.circularIndexUtil!!.next()
@@ -85,9 +85,9 @@ open public class AnimationDamageFloaters : DamageFloaters {
 
             var viewPosition: ViewPositionBase = this.layerInterface!!.getViewPosition()!!
 
-            var x: Int = viewPosition!!.getX()!!
+            var x: Int = viewPosition!!.getX()
 
-            var y: Int = viewPosition!!.getY()!!
+            var y: Int = viewPosition!!.getY()
 
             for (index in 0 until this.animationInterfaceArray!!.size) {
 

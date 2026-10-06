@@ -85,7 +85,7 @@ open public class BufferedWriterUtil : Object {
                     this.commonStrings!!.CREATE,
                 )
 
-                var result: Boolean = abFileDirectory!!.mkdirs()!!
+                var result: Boolean = abFileDirectory!!.mkdirs()
 
                 stringBuilder!!.delete(0, stringBuilder!!.length())
                 this.logUtil!!.putF(
@@ -138,7 +138,7 @@ open public class BufferedWriterUtil : Object {
                     this.commonStrings!!.CREATE,
                 )
 
-                var result: Boolean = abFileDirectory!!.mkdirs()!!
+                var result: Boolean = abFileDirectory!!.mkdirs()
 
                 stringBuilder!!.delete(0, stringBuilder!!.length())
                 this.logUtil!!.putF(

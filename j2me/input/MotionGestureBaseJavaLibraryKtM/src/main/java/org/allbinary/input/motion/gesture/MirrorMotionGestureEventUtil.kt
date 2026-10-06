@@ -57,10 +57,10 @@ open public class MirrorMotionGestureEventUtil : Object {
             this.motionEventCircularPool!!.getInstance(motionGestureEvent!!.getMotionGesture())!!
 
         var previousNewX: Int =
-            this.getNewX(motionGestureEvent!!.getPreviousPoint()!!.getX(), halfWidth)!!
+            this.getNewX(motionGestureEvent!!.getPreviousPoint()!!.getX(), halfWidth)
 
         var currentNewX: Int =
-            this.getNewX(motionGestureEvent!!.getCurrentPoint()!!.getX(), halfWidth)!!
+            this.getNewX(motionGestureEvent!!.getCurrentPoint()!!.getX(), halfWidth)
 
         var pointFactory: PointFactory = PointFactory.getInstance()!!
 

@@ -30,7 +30,7 @@ var encryptedExtension = encryptedExtension
             
     open fun get(fileAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
 var fileAbPath = fileAbPath
 
 
@@ -44,7 +44,7 @@ var fileAbPath = fileAbPath
             
     open fun getInputStream(fileAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream?{
 var fileAbPath = fileAbPath
 
 

@@ -107,13 +107,13 @@ open public class DirectionalAnalogLocationInputProcessor :
 
             customGPoint = analogLocationInput!!.getCustomGPoint()
 
-            var x: Int = customGPoint!!.getX()!!
+            var x: Int = customGPoint!!.getX()
 
-            var y: Int = customGPoint!!.getY()!!
+            var y: Int = customGPoint!!.getY()
 
-            var leftTrigger: Int = analogLocationInput!!.getLeftTrigger()!!
+            var leftTrigger: Int = analogLocationInput!!.getLeftTrigger()
 
-            var rightTrigger: Int = analogLocationInput!!.getRightTrigger()!!
+            var rightTrigger: Int = analogLocationInput!!.getRightTrigger()
 
             if (x < 0) {
 

@@ -16,7 +16,6 @@
 package org.allbinary.android
 
 import android.os.Build
-import java.lang.Integer
 import java.lang.Object
 
 open public class AndroidInfoFactory : Object {
@@ -37,7 +36,7 @@ open public class AndroidInfoFactory : Object {
     // Auto Generated
     public constructor() : super() {}
 
-    private val version: Int = Integer.parseInt(Build.VERSION.SDK)!!
+    private val version: Int = Build.VERSION.SDK.toInt()
 
     open fun getVersion()
     // nullable = true from not(false or (false and true)) = true

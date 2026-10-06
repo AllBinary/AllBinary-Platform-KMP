@@ -134,7 +134,7 @@ var document = document
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileData.NAME, this.name)!!
 
 
-    var size: Int = this.vector.size()!!
+    var size: Int = this.vector.size()
 
 
 

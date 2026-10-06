@@ -99,7 +99,7 @@ open public class CountedLayersHudPaintable : Object, PaintableInterface, Update
         var graphics = graphics
         this.myFontProcessor!!.process(graphics)
 
-        var lastWidth: Int = this.displayInfoSingleton!!.getLastWidth()!!
+        var lastWidth: Int = this.displayInfoSingleton!!.getLastWidth()
 
         var widthEdge: Int = lastWidth - this.dropSize
 

@@ -29,7 +29,8 @@
         
 import java.io.Serializable
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.business.user.commerce.inventory.item.ItemInterface
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.business.user.commerce.money.MoneyException

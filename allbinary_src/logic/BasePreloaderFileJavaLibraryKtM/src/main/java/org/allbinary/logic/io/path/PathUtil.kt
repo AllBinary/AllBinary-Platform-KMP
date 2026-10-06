@@ -96,7 +96,7 @@ open public class PathUtil : Object {
         : String {
         var filePath = filePath
 
-        var indexOfFileExtensionDelmiter: Int = this.abPathData!!.getExtensionIndex(filePath)!!
+        var indexOfFileExtensionDelmiter: Int = this.abPathData!!.getExtensionIndex(filePath)
 
         var pathWithoutExtension: String = filePath
 
@@ -237,7 +237,7 @@ open public class PathUtil : Object {
         : AbPath {
         var path = path
 
-        var endIndex: Int = path.lastIndexOf(this.abPathData!!.SEPARATOR)!!
+        var endIndex: Int = path.lastIndexOf(this.abPathData!!.SEPARATOR)
 
         if (endIndex < 0) {
 

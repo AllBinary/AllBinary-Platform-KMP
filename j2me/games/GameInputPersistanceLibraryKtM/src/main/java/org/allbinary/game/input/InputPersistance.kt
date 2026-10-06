@@ -19,7 +19,6 @@ import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.DataInputStream
 import java.io.DataOutputStream
-import java.lang.Integer
 import java.lang.Object
 import javax.microedition.rms.RecordEnumeration
 import javax.microedition.rms.RecordStore
@@ -102,7 +101,7 @@ open public class InputPersistance : BasicPersitance {
 
             while (recordEnum!!.hasNextElement()) {
 
-                var id: Int = recordEnum!!.nextRecordId()!!
+                var id: Int = recordEnum!!.nextRecordId()
 
                 stringBuffer!!.delete(0, stringBuffer!!.length())
                 this.logUtil!!.putF(
@@ -127,10 +126,12 @@ open public class InputPersistance : BasicPersitance {
 
                         var gameActionInputIdAsString: String = inputStream!!.readUTF()!!
 
-                        value = Integer.parseInt(gameActionInputIdAsString)
+                        value = gameActionInputIdAsString.toInt()
+
                         gameActionInputId = value.toLong()
                         inputStream!!.readUTF()
-                        value = Integer.parseInt(inputStream!!.readUTF())
+                        value = inputStream!!.readUTF().toInt()
+
                         inputId = value.toLong()
                         gameActionInput = gameKeyFactory!!.getGameKey(gameActionInputId.toInt())
                         input = inputFactory!!.getInstanceById(inputId.toInt())

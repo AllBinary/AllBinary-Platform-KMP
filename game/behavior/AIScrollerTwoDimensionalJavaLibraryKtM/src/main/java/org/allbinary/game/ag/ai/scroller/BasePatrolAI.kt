@@ -90,7 +90,7 @@ open public class BasePatrolAI : BasicAI {
 
         var mathUtil: MathUtil = MathUtil.getInstance()!!
 
-        var totalDistance: Int = mathUtil!!.abs(this.xTotalDistance)!!
+        var totalDistance: Int = mathUtil!!.abs(this.xTotalDistance)
 
         if (totalDistance > this.currentDistance) {
 

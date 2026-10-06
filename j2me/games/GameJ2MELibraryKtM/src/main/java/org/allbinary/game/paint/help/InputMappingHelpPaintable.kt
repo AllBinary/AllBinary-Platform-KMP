@@ -270,7 +270,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
             gameKey = gameInputMapping!!.getGameKey()
             list = gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
 
-            var size2: Int = list.size()!!
+            var size2: Int = list.size()
 
             inputBasicColorArray[index] = arrayOfNulls(size2)
 
@@ -292,7 +292,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
                 )
                 actionBasicColor[index] = this.selectedBasicColor
 
-                var indexOfSelectedInput: Int = list.indexOf(selectedInput)!!
+                var indexOfSelectedInput: Int = list.indexOf(selectedInput)
 
                 if (indexOfSelectedInput >= 0) {
 
@@ -333,7 +333,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
 
         var key: Input
 
-        var size: Int = keyList!!.size()!!
+        var size: Int = keyList!!.size()
 
         for (index in 0 until size) {
 
@@ -367,7 +367,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
         // var graphics = graphics
         this.myFontProcessor!!.process(graphics)
 
-        var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()!!
+        var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()
 
         graphics.setColor(this.basicColor!!.toInt())
         graphics.drawString(

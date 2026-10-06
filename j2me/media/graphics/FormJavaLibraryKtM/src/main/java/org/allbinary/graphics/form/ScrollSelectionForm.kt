@@ -466,7 +466,7 @@ open public class ScrollSelectionForm : PaintableForm {
         // var x = x
         // var y = y
 
-        var width: Int = item.getMinimumWidth()!!
+        var width: Int = item.getMinimumWidth()
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return x + width + this.border
@@ -487,7 +487,7 @@ open public class ScrollSelectionForm : PaintableForm {
         // var x = x
         // var y = y
 
-        var height: Int = item.getMinimumHeight()!!
+        var height: Int = item.getMinimumHeight()
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return y + height + this.border
@@ -582,7 +582,7 @@ open public class ScrollSelectionForm : PaintableForm {
         : ABCustomItem {
         // var point = point
 
-        var index: Int = this.getSelectedIndexForPoint(point)!!
+        var index: Int = this.getSelectedIndexForPoint(point)
 
         if (index != -1) {
 
@@ -605,7 +605,7 @@ open public class ScrollSelectionForm : PaintableForm {
 
         var nextItem: ABCustomItem
 
-        var size: Int = this.size()!!
+        var size: Int = this.size()
 
         for (index in 0 until size) {
 
@@ -638,13 +638,13 @@ open public class ScrollSelectionForm : PaintableForm {
         : Int {
         // var point = point
 
-        var start: Int = this.getStartIndex()!!
+        var start: Int = this.getStartIndex()
 
-        var size: Int = this.size()!!
+        var size: Int = this.size()
 
-        var dx: Int = this.getDx()!!
+        var dx: Int = this.getDx()
 
-        var dy: Int = this.getDy()!!
+        var dy: Int = this.getDy()
 
         var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
@@ -742,7 +742,7 @@ open public class ScrollSelectionForm : PaintableForm {
             return -1
         }
 
-        var index: Int = this.getSelectedIndex()!!
+        var index: Int = this.getSelectedIndex()
 
         if (
             this.formType == formTypeFactory!!.HORIZONTAL_FORM ||
@@ -837,9 +837,9 @@ open public class ScrollSelectionForm : PaintableForm {
         // var y = y
         item.paintXY(graphics, x, y)
 
-        var width: Int = item.getMinimumWidth()!!
+        var width: Int = item.getMinimumWidth()
 
-        var height: Int = item.getMinimumHeight()!!
+        var height: Int = item.getMinimumHeight()
 
         graphics.setColor(this.getButtonBasicColor()!!.toInt())
 

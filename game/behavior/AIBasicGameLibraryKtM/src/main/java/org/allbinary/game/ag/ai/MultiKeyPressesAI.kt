@@ -68,7 +68,7 @@ open public class MultiKeyPressesAI : KeyPressesAI {
 
             for (index in 0 until size) {
 
-                var key: Int = keys[index]!!.toInt()!!
+                var key: Int = keys[index]!!.toInt()
 
                 if (key != -1) {
 
@@ -79,7 +79,7 @@ open public class MultiKeyPressesAI : KeyPressesAI {
 
             for (index in 0 until size) {
 
-                var key: Int = keys[index]!!.toInt()!!
+                var key: Int = keys[index]!!.toInt()
 
                 if (key != -1) {
 

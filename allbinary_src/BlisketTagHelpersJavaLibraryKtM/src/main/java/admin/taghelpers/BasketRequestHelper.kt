@@ -127,7 +127,7 @@ this.num= this.request.getParameter(BasketData.ITEMTOTALINBASKET)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -148,7 +148,7 @@ basket.addItem(this.id, num)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -164,7 +164,7 @@ basket.addItem(this.id, num)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -202,7 +202,7 @@ basket.removeItem(this.id)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -218,7 +218,7 @@ basket.removeItem(this.id)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -253,7 +253,7 @@ basket.removeItem(this.id)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -269,7 +269,7 @@ basket.removeItem(this.id)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }

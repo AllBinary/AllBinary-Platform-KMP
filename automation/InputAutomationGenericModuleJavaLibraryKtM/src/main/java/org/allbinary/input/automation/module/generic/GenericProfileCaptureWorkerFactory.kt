@@ -49,7 +49,7 @@ var genericProfile = genericProfile
     var vector: BasicArrayList = genericProfile!!.getGenericProfileDataWorkerTypeVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

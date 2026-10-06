@@ -44,7 +44,7 @@ public constructor (){
 
     open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean?{
 
 
 
@@ -55,7 +55,7 @@ public constructor (){
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document{
+: org.w3c.dom.Document?{
 
 
 
@@ -66,7 +66,7 @@ public constructor (){
 
     open fun toValidationInfoNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node{
+: org.w3c.dom.Node?{
 var document = document
 
 
@@ -78,7 +78,7 @@ var document = document
 
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -89,7 +89,7 @@ var document = document
 
     open fun toXmlNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node{
+: org.w3c.dom.Node?{
 var document = document
 
         try {
@@ -126,7 +126,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
 
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document{
+: org.w3c.dom.Document?{
 
         try {
             
@@ -160,7 +160,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
 
     open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             

@@ -109,7 +109,7 @@ open public class ResourceUtil : Object {
 
         var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-        var index: Int = resource.indexOf(commonSeps!!.COLON)!!
+        var index: Int = resource.indexOf(commonSeps!!.COLON)
 
         var resourcePath: String = resource.substring(index + startIndex)!!
 

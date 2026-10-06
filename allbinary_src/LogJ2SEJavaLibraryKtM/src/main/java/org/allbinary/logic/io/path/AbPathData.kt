@@ -50,9 +50,9 @@ open public class AbPathData : Object {
         : Int {
         // var filePath = filePath
 
-        var indexOfFileExtensionDelmiter: Int = filePath!!.lastIndexOf(this.EXTENSION_SEP)!!
+        var indexOfFileExtensionDelmiter: Int = filePath!!.lastIndexOf(this.EXTENSION_SEP)
 
-        var indexOfLatDelimiter: Int = filePath!!.lastIndexOf(this.SEPARATORCHAR)!!
+        var indexOfLatDelimiter: Int = filePath!!.lastIndexOf(this.SEPARATORCHAR)
 
         if (indexOfFileExtensionDelmiter < 0) {
 
@@ -77,7 +77,7 @@ open public class AbPathData : Object {
         : String {
         // var filePath = filePath
 
-        var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
+        var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)
 
         var extension: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -97,7 +97,7 @@ open public class AbPathData : Object {
         : String {
         // var filePath = filePath
 
-        var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
+        var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)
 
         var extension: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -117,7 +117,7 @@ open public class AbPathData : Object {
         : String {
         // var path = path
 
-        var endIndex: Int = path.lastIndexOf(this.SEPARATORCHAR)!!
+        var endIndex: Int = path.lastIndexOf(this.SEPARATORCHAR)
 
         if (endIndex < 0) {
 
@@ -152,7 +152,7 @@ open public class AbPathData : Object {
         : String {
         // var path = path
 
-        var endIndex: Int = path.lastIndexOf(this.SEPARATORCHAR)!!
+        var endIndex: Int = path.lastIndexOf(this.SEPARATORCHAR)
 
         if (endIndex < 0) {
 

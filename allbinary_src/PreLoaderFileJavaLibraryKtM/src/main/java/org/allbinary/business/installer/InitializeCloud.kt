@@ -92,7 +92,7 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
     var fileBasicArrayList: BasicArrayList = Directory.getInstance()!!.search(file, true)!!
 
 
-    var size: Int = fileBasicArrayList!!.size()!!
+    var size: Int = fileBasicArrayList!!.size()
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Searched: ")

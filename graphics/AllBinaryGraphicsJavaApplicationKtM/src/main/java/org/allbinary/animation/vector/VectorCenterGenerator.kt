@@ -131,7 +131,7 @@ this.logUtil!!.putF("minX: " +this.minX +" minY: " +this.minY +" maxX: " +this.m
 this.setWidth(this.maxX -this.minX)
 this.setHeight(this.maxY -this.minY)
 
-    var max: Int = this.getWidth()!!
+    var max: Int = this.getWidth()
 
 
     
@@ -212,7 +212,7 @@ var pointVector = pointVector
 
         try {
             
-    var size: Int = pointVector!!.size()!!
+    var size: Int = pointVector!!.size()
 
 
 

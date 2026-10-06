@@ -54,7 +54,7 @@ open public class UpGameKeyEventHandler : UpGameKeyEventHandlerBase {
         : UpGameKeyEventHandlerBase {
         var deviceId = deviceId
 
-        var playerInputId: Int = this.playerInputIdFactory!!.getPlayerForDevice(deviceId)!!
+        var playerInputId: Int = this.playerInputIdFactory!!.getPlayerForDevice(deviceId)
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return UpGameKeyEventHandler.instanceArray[playerInputId]!!

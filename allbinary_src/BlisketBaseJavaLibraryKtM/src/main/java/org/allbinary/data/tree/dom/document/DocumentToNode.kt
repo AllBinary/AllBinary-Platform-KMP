@@ -95,7 +95,7 @@ var end = end
                         
                                     {
                                     
-    var endIndex: Int = documentString!!.indexOf(end, startIndex)!!
+    var endIndex: Int = documentString!!.indexOf(end, startIndex)
 
 
     

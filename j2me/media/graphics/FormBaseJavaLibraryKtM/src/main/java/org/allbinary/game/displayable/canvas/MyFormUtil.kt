@@ -64,7 +64,7 @@ open public class MyFormUtil : Object {
 
         var features: Features = Features.getInstance()!!
 
-        var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
+        var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)
 
         var TOTAL_CHAR_WIDTH: Int =
             if (SWTJOGLProcessor.getInstance()!!.isJOGL() && isOpenGL) {
@@ -74,7 +74,7 @@ open public class MyFormUtil : Object {
                 3
             }
 
-        var width: Int = MyFontProcessor.defaultStringWidth(font, TOTAL_CHAR_WIDTH)!!
+        var width: Int = MyFontProcessor.defaultStringWidth(font, TOTAL_CHAR_WIDTH)
 
         var pointFactory: PointFactory = PointFactory.getInstance()!!
 

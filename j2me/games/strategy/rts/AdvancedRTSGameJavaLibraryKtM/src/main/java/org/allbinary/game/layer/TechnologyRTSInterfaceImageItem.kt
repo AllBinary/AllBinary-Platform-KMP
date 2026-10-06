@@ -87,7 +87,7 @@ open public class TechnologyRTSInterfaceImageItem : ABCustomImageItem, UpdateMyF
 
         var font: Font = graphics.getFont()!!
 
-        var fontHeight: Int = font.getHeight()!!
+        var fontHeight: Int = font.getHeight()
 
         var imageHeight: Int = 0
 

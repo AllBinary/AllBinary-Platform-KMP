@@ -90,7 +90,7 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(ChangedPixelsUtil.S
     var vector: BasicArrayList = imageComparisonInfo!!.getNonMatchingPixelVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

@@ -34,7 +34,8 @@ import java.io.FileFilter
 import java.io.FileInputStream
 import java.net.URL
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import java.util.jar.JarInputStream
 import java.util.jar.Manifest
 import org.osgi.framework.Bundle
@@ -128,7 +129,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, "updateModules")
     var list: BasicArrayList = this.findNewModules()!!
 
 
-    var size: Int = list.size()!!
+    var size: Int = list.size()
 
 
     var bundle: Bundle
@@ -171,7 +172,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, "getAllJarSymbolicNameHash
 
 this.logUtil!!.putF("Jar Module Files: " +jarFileBasicArrayList, this, "getAllJarSymbolicNameHashMap")
 
-    var size: Int = jarFileBasicArrayList!!.size()!!
+    var size: Int = jarFileBasicArrayList!!.size()
 
 
     var file: File
@@ -327,7 +328,7 @@ this.logUtil!!.putF(CommonLabels.getInstance()!!.START +symbolicName, this, "isI
     var list: BasicArrayList = this.getInstalledJarSymbolicNameBasicArrayList()!!
 
 
-    var size: Int = list.size()!!
+    var size: Int = list.size()
 
 
     var nextSymbolicName: String

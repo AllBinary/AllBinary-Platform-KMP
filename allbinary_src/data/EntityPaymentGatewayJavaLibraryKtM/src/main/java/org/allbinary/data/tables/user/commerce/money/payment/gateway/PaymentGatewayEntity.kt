@@ -198,7 +198,7 @@ super.updateWhere(whereKeyValuePairs, updateHashMap)
 
     open fun getPaymentGatewayInterface(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
-: PaymentGatewayInterface{
+: PaymentGatewayInterface?{
 var storeName = storeName
 var paymentType = paymentType
 
@@ -320,7 +320,7 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
 
     open fun findPaymentTypeVectorByStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
 var storeName = storeName
 
         try {
@@ -339,7 +339,7 @@ paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(
     var paymentGatewayVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = paymentGatewayNameVector!!.size()!!
+    var size: Int = paymentGatewayNameVector!!.size()
 
 
 

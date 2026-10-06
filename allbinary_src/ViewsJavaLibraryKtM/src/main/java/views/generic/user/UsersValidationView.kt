@@ -63,7 +63,7 @@ this.userVector= UserEntityFactory.getInstance()!!.getCustomers()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -72,7 +72,7 @@ this.userVector= UserEntityFactory.getInstance()!!.getCustomers()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -91,7 +91,7 @@ this.userVector= UserEntityFactory.getInstance()!!.getCustomers()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -130,7 +130,7 @@ this.userVector= UserEntityFactory.getInstance()!!.getCustomers()
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -141,7 +141,7 @@ this.userVector= UserEntityFactory.getInstance()!!.getCustomers()
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

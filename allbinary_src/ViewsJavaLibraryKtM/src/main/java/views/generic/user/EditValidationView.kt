@@ -57,7 +57,7 @@ var transformInfoInterface = transformInfoInterface
         try {
             
     
-                        if(UserName.getInstance()!!.isValid(this.getWeblisketSession()!!.getUserName()) == Boolean.FALSE)
+                        if(UserName.getInstance()!!.isValid(this.getWeblisketSession()!!.getUserName()) == false)
                         
                                     {
                                     
@@ -73,7 +73,7 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -98,13 +98,13 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.getWeblisketSession()!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
 
     
-                        if(this.user.isValid() == Boolean.FALSE)
+                        if(this.user.isValid() == false)
                         
                                     {
                                     
@@ -120,7 +120,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.getWeblisketSession()!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -128,7 +128,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.getWeblisketSession()!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -144,7 +144,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.getWeblisketSession()!
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -160,7 +160,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.getWeblisketSession()!
 
 
     
-                        if(UserName.getInstance()!!.isValid(this.getWeblisketSession()!!.getUserName()) == Boolean.FALSE)
+                        if(UserName.getInstance()!!.isValid(this.getWeblisketSession()!!.getUserName()) == false)
                         
                                     {
                                     
@@ -198,7 +198,7 @@ stringBuffer!!.append("User profile does not exist - Your session data has been 
                                 
 
     
-                        if(this.user.isValid() == Boolean.FALSE)
+                        if(this.user.isValid() == false)
                         
                                     {
                                     
@@ -242,7 +242,7 @@ stringBuffer!!.append(this.user.validationInfo())
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -253,7 +253,7 @@ stringBuffer!!.append(this.user.validationInfo())
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

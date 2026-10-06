@@ -389,7 +389,7 @@ open public class BasicHud_1 : Object, UpdateMyFontInterface {
         this.myFontProcessor!!.process(graphics)
         this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
-        var y: Int = this.getY()!!
+        var y: Int = this.getY()
 
         graphics.drawChars(
             charArray,
@@ -432,7 +432,7 @@ open public class BasicHud_1 : Object, UpdateMyFontInterface {
         this.myFontProcessor!!.process(graphics)
         this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
-        var y: Int = this.getY()!!
+        var y: Int = this.getY()
 
         graphics.drawChars(
             charArray,
@@ -462,7 +462,7 @@ open public class BasicHud_1 : Object, UpdateMyFontInterface {
         this.myFontProcessor!!.process(graphics)
         this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP())
 
-        var y: Int = this.getY()!!
+        var y: Int = this.getY()
 
         graphics.drawChars(
             charArray,

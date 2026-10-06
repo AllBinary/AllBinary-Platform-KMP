@@ -151,7 +151,7 @@ open public class InputToGameKeyMapping : InputMapping {
         var input = input
         var mappedToInput = mappedToInput
 
-        var id: Int = mappedToInput!!.getId()!!
+        var id: Int = mappedToInput!!.getId()
 
         if (id >= 0 && id < this.platformToGameKeyMapping!!.size) {
 
@@ -202,7 +202,7 @@ open public class InputToGameKeyMapping : InputMapping {
         var canvas = canvas
         var gameKey = gameKey
 
-        var key: Int = canvas.getKeyCode(gameKey!!.getId())!!
+        var key: Int = canvas.getKeyCode(gameKey!!.getId())
 
         if (key < 0 && -key < this.negativePlatformToGameKeyMapping!!.size) {
 
@@ -262,7 +262,7 @@ open public class InputToGameKeyMapping : InputMapping {
 
             var negativePlatformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(0)
 
-            var smallestKey: Int = this.getSmallestCanvasGameKeyCode(canvas)!!
+            var smallestKey: Int = this.getSmallestCanvasGameKeyCode(canvas)
 
             if (smallestKey < 0) {
 

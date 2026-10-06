@@ -82,7 +82,7 @@ OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAut
             
     open fun getInputAutomationRobotChangeListener(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-: InputAutomationRobotChangeListener{
+: InputAutomationRobotChangeListener?{
 var context = context
 
     var serviceReference: ServiceReference = context.getServiceReference(InputAutomationRobotChangeListener::class.toString()!!)!!

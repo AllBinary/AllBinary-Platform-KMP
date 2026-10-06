@@ -307,7 +307,7 @@ this.updateIfNeeded()
 
     open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 this.updateIfNeeded()
 
     
@@ -338,7 +338,7 @@ this.updateIfNeeded()
 
     open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 this.updateIfNeeded()
 
     

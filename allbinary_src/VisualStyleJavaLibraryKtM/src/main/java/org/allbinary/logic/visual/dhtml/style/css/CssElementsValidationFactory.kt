@@ -48,7 +48,7 @@ companion object {
     var styles: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = cssElementStyleNodeList!!.size()!!
+    var size: Int = cssElementStyleNodeList!!.size()
 
 
     var cssElementStyleNode: Node

@@ -238,7 +238,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "insert()")
                                 
 transformInfoInterface!!.setData(documentString)
 
-    var size: Int = allViewsToBeModified!!.size()!!
+    var size: Int = allViewsToBeModified!!.size()
 
 
 
@@ -379,7 +379,7 @@ var transformInfoInterface = transformInfoInterface
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
 
 
-    var size: Int = allViewsToBeModified!!.size()!!
+    var size: Int = allViewsToBeModified!!.size()
 
 
 

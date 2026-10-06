@@ -57,7 +57,7 @@ this.nameSpaceVector= BasicArrayListD()
 this.nameSpacePropertiesHashMap= StdUtil.getInstance()!!.createHashMap()
 this.value= value
 
-    var beginIndex: Int = nameSpace!!.indexOf(NameSpaceRequestParamData.NAME)!!
+    var beginIndex: Int = nameSpace!!.indexOf(NameSpaceRequestParamData.NAME)
 
 
     
@@ -102,7 +102,7 @@ this.value= value
     var index: Int = 0
 
 
-    var size: Int = nameSpaceWithPropertiesVector!!.size()!!
+    var size: Int = nameSpaceWithPropertiesVector!!.size()
 
 
         while(index < size)
@@ -279,7 +279,7 @@ var properties = properties
     var index: Int = 0
 
 
-    var size: Int = propertyVector!!.size()!!
+    var size: Int = propertyVector!!.size()
 
 
         while(index < size)

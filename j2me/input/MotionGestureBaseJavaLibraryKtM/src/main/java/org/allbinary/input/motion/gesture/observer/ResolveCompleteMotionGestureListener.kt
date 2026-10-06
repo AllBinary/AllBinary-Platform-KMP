@@ -56,7 +56,7 @@ open public class ResolveCompleteMotionGestureListener :
 
         var commandActionsList: BasicArrayList = configuration.getAssociateCommandActionsList()!!
 
-        var size: Int = commandActionsList!!.size()!!
+        var size: Int = commandActionsList!!.size()
 
         for (index in size - 1 downTo 0) {
 

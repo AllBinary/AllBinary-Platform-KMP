@@ -70,7 +70,7 @@ this.robot= Robot(graphicsDevice)
 
     open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet{
+: HelpSet?{
 
 
 

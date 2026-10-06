@@ -32,7 +32,7 @@ open public class RaceTracksPathPrinter : Object {
     {
         var list = list
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 
@@ -55,7 +55,7 @@ open public class RaceTracksPathPrinter : Object {
     {
         var list = list
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 

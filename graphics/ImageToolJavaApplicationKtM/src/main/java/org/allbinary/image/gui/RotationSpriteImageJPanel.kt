@@ -121,7 +121,7 @@ this@RotationSpriteImageJPanel.getParent()!!.repaint()
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)
 
 filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append("sprite")!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
@@ -131,7 +131,7 @@ file= File(filePath)
                                     }
                                 
 
-    var isWritten: Boolean = ImageIO.write(this@RotationSpriteImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
+    var isWritten: Boolean = ImageIO.write(this@RotationSpriteImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)
 
 logUtil!!.putF("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
 }

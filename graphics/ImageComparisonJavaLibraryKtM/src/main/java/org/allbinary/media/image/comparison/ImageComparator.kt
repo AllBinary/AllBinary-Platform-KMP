@@ -61,7 +61,7 @@ this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
     //var imageComparisonInfo = imageComparisonInfo
     //var point = point
 
-    var isCollsionWithAvoidRectangles: Boolean = this.imageComparatorConstraintsInterface!!.isCollisionWithAvoidRectangles(point)!!
+    var isCollsionWithAvoidRectangles: Boolean = this.imageComparatorConstraintsInterface!!.isCollisionWithAvoidRectangles(point)
 
 
     
@@ -69,10 +69,10 @@ this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
                         
                                     {
                                     
-    var rgb1: Int = imageComparisonInfo!!.getBufferedImages()[0]!!.getRGB(point.getX(), point.getY())!!
+    var rgb1: Int = imageComparisonInfo!!.getBufferedImages()[0]!!.getRGB(point.getX(), point.getY())
 
 
-    var rgb2: Int = imageComparisonInfo!!.getBufferedImages()[1]!!.getRGB(point.getX(), point.getY())!!
+    var rgb2: Int = imageComparisonInfo!!.getBufferedImages()[1]!!.getRGB(point.getX(), point.getY())
 
 
     var automaticCacheInterface: AutomaticCacheInterface = ColorCacheFactory.getInstance()!!

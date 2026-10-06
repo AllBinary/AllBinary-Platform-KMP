@@ -51,7 +51,7 @@ open public class VectorExplosionAnimationFactory :
         var vectorRotationAnimationInterface: VectorAnimationInterface =
             animationInterface as VectorAnimationInterface
 
-        var frame: Int = vectorRotationAnimationInterface!!.getFrame()!!
+        var frame: Int = vectorRotationAnimationInterface!!.getFrame()
 
         var framePoints: Array<IntArray?> = vectorRotationAnimationInterface!!.getPoints(frame)!!
 

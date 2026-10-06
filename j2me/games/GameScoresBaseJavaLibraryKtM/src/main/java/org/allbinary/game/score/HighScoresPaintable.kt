@@ -73,9 +73,9 @@ open public class HighScoresPaintable : Paintable, ColorChangeListener, UpdateMy
         var graphics = graphics
         this.myFontProcessor!!.process(graphics)
 
-        var width: Int = this.displayInfoSingleton!!.getLastWidth()!!
+        var width: Int = this.displayInfoSingleton!!.getLastWidth()
 
-        var height: Int = this.displayInfoSingleton!!.getLastHeight()!!
+        var height: Int = this.displayInfoSingleton!!.getLastHeight()
 
         graphics.setColor(this.getBasicColorP()!!.toInt())
 
@@ -95,7 +95,7 @@ open public class HighScoresPaintable : Paintable, ColorChangeListener, UpdateMy
 
         var columnTwoHeading: String = this.highScores!!.getColumnTwoHeading()!!
 
-        var columnTwoHeadingWidth: Int = graphics.getFont()!!.stringWidth(columnTwoHeading)!!
+        var columnTwoHeadingWidth: Int = graphics.getFont()!!.stringWidth(columnTwoHeading)
 
         graphics.drawString(
             columnTwoHeading,
@@ -110,7 +110,7 @@ open public class HighScoresPaintable : Paintable, ColorChangeListener, UpdateMy
 
         var list: BasicArrayList = this.highScores!!.getList()!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var vectorIndex: Int = 0
 
@@ -119,8 +119,7 @@ open public class HighScoresPaintable : Paintable, ColorChangeListener, UpdateMy
         while (vectorIndex < size && charHeight * index < height - (charHeight * 2)) {
             highScore = list.objectArray[vectorIndex]!! as HighScore
 
-            var nextScoreWidth: Int =
-                graphics.getFont()!!.stringWidth(highScore!!.getScoreString())!!
+            var nextScoreWidth: Int = graphics.getFont()!!.stringWidth(highScore!!.getScoreString())
 
             if (nextScoreWidth > largestSecondColumnWidth) {
 

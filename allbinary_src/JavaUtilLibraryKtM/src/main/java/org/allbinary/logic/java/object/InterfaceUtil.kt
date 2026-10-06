@@ -70,7 +70,7 @@ stringBuffer!!.append(lineBreak)
 
     open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>{
+: KClass<*>?{
     //var interfaceName = interfaceName
     //var interfaces = interfaces
 

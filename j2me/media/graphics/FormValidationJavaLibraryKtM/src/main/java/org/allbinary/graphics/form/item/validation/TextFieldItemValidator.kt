@@ -53,7 +53,7 @@ open public class TextFieldItemValidator : ValidatorBase {
 
         var string: String = this.textFieldItem!!.getString()!!
 
-        var textLength: Int = string.length!!
+        var textLength: Int = string.length
 
         if (
             (textLength == 0 && this.allowOnEmpty) || textLength > this.min && textLength < this.max
@@ -80,7 +80,7 @@ open public class TextFieldItemValidator : ValidatorBase {
 
         var string: String = this.textFieldItem!!.getString()!!
 
-        var textLength: Int = string.length!!
+        var textLength: Int = string.length
 
         if (textLength > this.min && textLength < this.max) {} else {
 

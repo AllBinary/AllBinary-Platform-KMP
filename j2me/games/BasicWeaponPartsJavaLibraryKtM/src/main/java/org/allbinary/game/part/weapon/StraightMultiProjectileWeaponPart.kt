@@ -109,9 +109,9 @@ open public class StraightMultiProjectileWeaponPart : BasicWeaponPart {
 
         var halfWidth: Int = (reducedWidth shr 1)
 
-        var x: Int = this.relativeRelationship!!.getX()!!
+        var x: Int = this.relativeRelationship!!.getX()
 
-        var y: Int = this.relativeRelationship!!.getY()!!
+        var y: Int = this.relativeRelationship!!.getY()
 
         var sine: Long = 0
 

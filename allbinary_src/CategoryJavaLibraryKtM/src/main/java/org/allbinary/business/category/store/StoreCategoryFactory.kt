@@ -62,7 +62,7 @@ this.transformInfoInterface= transformInfoInterface
 
     open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface{
+: CategoryInterface?{
 
         try {
             
@@ -96,12 +96,12 @@ this.transformInfoInterface= transformInfoInterface
 
     open fun getRootInstance(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface?{
 var categoryPath = categoryPath
 
         try {
             
-    var level: Int = CategoryUtil.getPathLevel(categoryPath)!!
+    var level: Int = CategoryUtil.getPathLevel(categoryPath)
 
 
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreCategoryPropertiesFactory(this.transformInfoInterface, categoryPath) as CategoryPropertiesFactoryInterface
@@ -134,7 +134,7 @@ var categoryPath = categoryPath
 
     open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface?{
 var node = node
 
         try {
@@ -145,7 +145,7 @@ var node = node
     var categoryPath: AbPath = AbPath(CategoryUtil.getNameFromNode(node), StringUtil.getInstance()!!.EMPTY_STRING)
 
 
-    var level: Int = CategoryUtil.getPathLevel(categoryPath)!!
+    var level: Int = CategoryUtil.getPathLevel(categoryPath)
 
 
 

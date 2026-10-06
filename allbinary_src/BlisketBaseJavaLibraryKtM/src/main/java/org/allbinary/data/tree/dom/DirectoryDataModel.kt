@@ -72,7 +72,7 @@ this.transformDocumentInterface= TransformDocumentFactory.getInstance() as Trans
             
     open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface{
+: TransformInfoInterface?{
 
 
 
@@ -110,7 +110,7 @@ this.transformDocumentInterface= transformDocumentInterface
     var dirNode: Node = document.createElement("dir")!!
 
 
-    var size: Int = this.fileBasicArrayList!!.size()!!
+    var size: Int = this.fileBasicArrayList!!.size()
 
 
     var nextFile: AbFile

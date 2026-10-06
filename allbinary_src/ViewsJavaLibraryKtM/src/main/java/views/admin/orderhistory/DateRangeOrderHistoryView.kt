@@ -179,7 +179,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
         try {
@@ -223,7 +223,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "view")
     var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PREPROCESSING, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size()!!
+    var size: Int = orderHistoryVector!!.size()
 
 
 
@@ -261,7 +261,7 @@ node.appendChild(orderHistory!!.toXmlNode(document))
     var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.SHIPPED, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size()!!
+    var size: Int = orderHistoryVector!!.size()
 
 
 
@@ -299,7 +299,7 @@ node.appendChild(orderHistory!!.toXmlNode(document))
     var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PARTIALLYSHIPPED, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size()!!
+    var size: Int = orderHistoryVector!!.size()
 
 
 
@@ -337,7 +337,7 @@ node.appendChild(orderHistory!!.toXmlNode(document))
     var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PROCESSING, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size()!!
+    var size: Int = orderHistoryVector!!.size()
 
 
 
@@ -375,7 +375,7 @@ node.appendChild(orderHistory!!.toXmlNode(document))
     var orderHistoryVector: BasicArrayList = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.CANCELLED, fromDate, toDate)!!
 
 
-    var size: Int = orderHistoryVector!!.size()!!
+    var size: Int = orderHistoryVector!!.size()
 
 
 
@@ -431,7 +431,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
 
         try {
             
-    var isValid: Boolean = Boolean.TRUE
+    var isValid: Boolean = Boolean.true
 
 
     
@@ -440,7 +440,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
                                  || (this.dateType!!.compareTo(OrderHistoryData.TYPELONG) != 0 && this.dateType!!.compareTo(OrderHistoryData.TYPECAESAR) != 0))
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
@@ -460,7 +460,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
     var calendar: Calendar = Calendar.getInstance()!!
 
 
-    var currentTime: Long = calendar.getTimeInMillis()!!
+    var currentTime: Long = calendar.getTimeInMillis()
 
 
     var rangeDate: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -529,7 +529,7 @@ rangeDate= thirtyDays as Long.
                                 
 
     var rangeDateLong: Long = rangeDate as Long.
-                            longValue()!!
+                            toLong()
 
 this.fromDate= currentTime -rangeDateLong as Long.
                             toString()
@@ -564,7 +564,7 @@ this.toDate= calendar.getTimeInMillis() as Long.
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.toDate) || this.toDate!!.length > this.MAXLEN)
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
@@ -573,7 +573,7 @@ this.toDate= calendar.getTimeInMillis() as Long.
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.fromDate) || this.fromDate!!.length > this.MAXLEN)
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
@@ -617,7 +617,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -625,7 +625,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -636,7 +636,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

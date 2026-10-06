@@ -36,7 +36,7 @@ open public class IndexedAnimationToImageArrayUtil : Object {
             var height = height
             var sequentialAnimationInterface = sequentialAnimationInterface
 
-            var size: Int = sequentialAnimationInterface!!.getAnimationSize()!!
+            var size: Int = sequentialAnimationInterface!!.getAnimationSize()
 
             var imageArray: Array<Image?> = arrayOfNulls(size)
 

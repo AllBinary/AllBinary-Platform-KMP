@@ -88,7 +88,7 @@ this.weblisketSession= WeblisketSession(this.propertiesHashMap, this.pageContext
 
         try {
             
-    var paymentGatewayBoolean: Boolean = Boolean.FALSE
+    var paymentGatewayBoolean: Boolean = Boolean.false
 
 
     var orderInterface: OrderInterface = this.weblisketSession!!.getOrder()!!
@@ -103,7 +103,7 @@ this.weblisketSession= WeblisketSession(this.propertiesHashMap, this.pageContext
                                     {
                                     this.weblisketSession!!.setPaymentMethod(requestPaymentGateway)
 orderInterface!!.setPaymentMethod(requestPaymentGateway)
-paymentGatewayBoolean= Boolean.TRUE
+paymentGatewayBoolean= true
 
                                     }
                                 
@@ -129,7 +129,7 @@ paymentGatewayBoolean= Boolean.TRUE
 
 this.weblisketSession!!.setPaymentMethod(paymentGateway)
 orderInterface!!.setPaymentMethod(paymentGateway)
-paymentGatewayBoolean= Boolean.TRUE
+paymentGatewayBoolean= true
 
                                     }
                                 
@@ -196,7 +196,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }

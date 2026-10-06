@@ -106,7 +106,7 @@ zipFile!!.createNewFile()
     var fileInputStream: AbFileInputStream
 
 
-    var size: Int = fileBasicArrayList!!.size()!!
+    var size: Int = fileBasicArrayList!!.size()
 
 
     var current: Int = 0

@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getLogTableEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: LogTableEntity{
+: LogTableEntity?{
 
         try {
             

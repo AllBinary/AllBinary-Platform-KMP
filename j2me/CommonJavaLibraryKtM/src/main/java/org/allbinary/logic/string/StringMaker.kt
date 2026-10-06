@@ -21,7 +21,7 @@ open public class StringMaker : Object {
         : StringMaker {
         // var string = string
 
-        var stringLength: Int = string.length!!
+        var stringLength: Int = string.length
 
         this.ensureCapacity(this.currentLength + stringLength)
         string.toCharArray(
@@ -151,7 +151,7 @@ open public class StringMaker : Object {
 
             var copy: CharArray = CharArray(newCapacity)
 
-            var min: Int = this.min(this.charArray!!.size, newCapacity)!!
+            var min: Int = this.min(this.charArray!!.size, newCapacity)
 
             System.arraycopy(this.charArray, 0, copy, 0, min)
             this.charArray = copy

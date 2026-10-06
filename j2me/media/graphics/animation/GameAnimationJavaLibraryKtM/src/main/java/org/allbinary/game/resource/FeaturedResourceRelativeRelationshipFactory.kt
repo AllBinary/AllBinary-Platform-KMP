@@ -56,7 +56,7 @@ open public class FeaturedResourceRelativeRelationshipFactory : FeaturedResource
 
         var featureReleaseList: BasicArrayList = this.getList()!!
 
-        var size: Int = this.getList()!!.size()!!
+        var size: Int = this.getList()!!.size()
 
         for (index in 0 until size) {
 
@@ -100,7 +100,7 @@ open public class FeaturedResourceRelativeRelationshipFactory : FeaturedResource
 
         var newList: BasicArrayList = BasicArrayListD()
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 

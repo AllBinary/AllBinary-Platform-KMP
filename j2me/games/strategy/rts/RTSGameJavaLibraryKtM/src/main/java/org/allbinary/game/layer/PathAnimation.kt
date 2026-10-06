@@ -88,7 +88,7 @@ open public class PathAnimation : Animation {
 
                 var list: BasicArrayList = geographicMapCellHistory!!.getTracked()!!
 
-                var size: Int = list.size()!!
+                var size: Int = list.size()
 
                 if (size > 0) {
 

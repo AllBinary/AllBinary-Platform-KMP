@@ -31,7 +31,8 @@ import java.io.File
 import java.io.IOException
 import java.nio.charset.StandardCharsets
 import java.util.ArrayList
-import java.util.List
+
+//import java.util.List
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.file.AbFile
 import org.allbinary.logic.io.file.AbFileNativeUtil
@@ -108,7 +109,7 @@ logUtil!!.putF(THIS_IS_SLOW, this, commonStrings!!.CONSTRUCTOR)
     var output: ByteArray = process.getInputStream()!!.readAllBytes()!!
 
 
-    var exitCode: Int = process.waitFor()!!
+    var exitCode: Int = process.waitFor()
 
 
     

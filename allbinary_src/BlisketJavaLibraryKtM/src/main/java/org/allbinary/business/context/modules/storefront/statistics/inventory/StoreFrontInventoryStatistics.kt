@@ -58,7 +58,7 @@ this.totalInventorySaleValueMoney= Money()
     var itemVector: BasicArrayList = inventoryEntityInterface!!.getItems(storeFrontInterface)!!
 
 
-    var size: Int = itemVector!!.size()!!
+    var size: Int = itemVector!!.size()
 
 
 
@@ -71,7 +71,7 @@ this.totalInventorySaleValueMoney= Money()
     var itemInterface: ItemInterface = itemVector!!.get(index) as ItemInterface
 
 
-    var numberInStock: Int = Integer.valueOf(itemInterface!!.getNumber())!!.toInt()!!
+    var numberInStock: Int = Integer.valueOf(itemInterface!!.getNumber())!!.toInt()
 
 this.totalNumberOfItems= this.totalNumberOfItems +numberInStock
 
@@ -124,7 +124,7 @@ hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList?{
 
 
 
@@ -135,7 +135,7 @@ hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this
 
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any?{
 
 
 

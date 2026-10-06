@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Map
-import java.util.Set
+
+//import java.util.Set
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.data.tree.dom.ModDomHelper
@@ -96,7 +97,7 @@ this.map= map
 
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
         try {
@@ -107,7 +108,7 @@ var document = document
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var keys: Set = this.map.keySet()!!
+    var keys: Set = this.map.keys!!
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
@@ -165,7 +166,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode(document)", 
     var hashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var keys: Set = this.map.keySet()!!
+    var keys: Set = this.map.keys!!
 
 
     var keyArray: Array<Any?> = keys.toArray()!!

@@ -178,7 +178,7 @@ vector.add(paymentInterface!!.getType())
 vector.add(paymentInterface!!.getExpiration())
 
     var random: Int = Random().
-                            nextInt(SuperCrypt.KEYMAX)!!
+                            nextInt(SuperCrypt.KEYMAX)
 
 vector.add(SuperCrypt(random).
                             encrypt(paymentInterface!!.getNumber()))
@@ -424,7 +424,7 @@ whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.ge
     var orderHashMapVector: BasicArrayList = super.getRows(whereHashMap)!!
 
 
-    var size: Int = orderHashMapVector!!.size!!
+    var size: Int = orderHashMapVector!!.size
 
 
 
@@ -467,7 +467,7 @@ whereHashMap!!.put(UserData.USERNAME, userName)
     var orderHashMapVector: BasicArrayList = super.getRows(whereHashMap)!!
 
 
-    var size: Int = orderHashMapVector!!.size!!
+    var size: Int = orderHashMapVector!!.size
 
 
 
@@ -512,7 +512,7 @@ whereHashMap!!.put(OrderHistoryData.STATUS, status)
     var orderHashMapVector: BasicArrayList = super.getRowsWhereBetween(whereHashMap, OrderHistoryData.ORDERDATE, fromDate, toDate)!!
 
 
-    var size: Int = orderHashMapVector!!.size!!
+    var size: Int = orderHashMapVector!!.size
 
 
 
@@ -552,7 +552,7 @@ var toDate = toDate
     var orderHashMapVector: BasicArrayList = super.getRowsWhereBetween(OrderHistoryData.ORDERDATE, fromDate, toDate)!!
 
 
-    var size: Int = orderHashMapVector!!.size!!
+    var size: Int = orderHashMapVector!!.size
 
 
 
@@ -582,7 +582,7 @@ orderReviewVector!!.add(orderReview)
             
     open fun getOrder(id: String)
         //nullable = true from not(false or (false and false)) = true
-: OrderHistory{
+: OrderHistory?{
 var id = id
 
     var whereHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!

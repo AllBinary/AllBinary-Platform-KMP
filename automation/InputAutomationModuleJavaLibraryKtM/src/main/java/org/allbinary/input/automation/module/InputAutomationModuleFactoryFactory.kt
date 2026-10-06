@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Collection
+
+//import java.util.Collection
 import java.util.HashMap
-import java.util.Iterator
+
+//import java.util.Iterator
 import javax.help.HelpSet
 import javax.help.event.HelpSetEvent
 import javax.help.event.HelpSetListener

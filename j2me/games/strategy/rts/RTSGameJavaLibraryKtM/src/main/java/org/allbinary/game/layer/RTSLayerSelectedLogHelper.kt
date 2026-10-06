@@ -149,7 +149,7 @@ open public class RTSLayerSelectedLogHelper : RTSLayerLogHelper {
 
         if (angleInfo != null) {
 
-            var angleIncrement: Short = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()!!
+            var angleIncrement: Short = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()
 
             stringBuffer!!.append(" angleIncrement: ")
             stringBuffer!!.appendshort(angleIncrement)

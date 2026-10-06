@@ -197,7 +197,7 @@ open public class UnitRTSFormInput : RTSFormInput {
         // var layerInterface = layerInterface
         // var itemIndex = itemIndex
 
-        var cost: Int = layerInterface!!.getCost()!!
+        var cost: Int = layerInterface!!.getCost()
 
         var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
 

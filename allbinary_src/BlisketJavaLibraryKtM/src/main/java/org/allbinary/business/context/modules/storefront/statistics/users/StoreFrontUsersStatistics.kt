@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
@@ -58,7 +59,7 @@ this.totalUsersByRoleHashMap= StdUtil.getInstance()!!.createHashMap()
 
 this.totalNumberOfUsers= userVector!!.size() as Long
 
-    var size: Int = userVector!!.size()!!
+    var size: Int = userVector!!.size()
 
 
 
@@ -104,7 +105,7 @@ var userRole = userRole
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return numberOfUsersForRoleLong!!.longValue() +1 as Long
+                        return numberOfUsersForRoleLong!!.toLong() +1 as Long
 }
 
 
@@ -178,7 +179,7 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList?{
 
 
 
@@ -189,7 +190,7 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
 
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any?{
 
 
 

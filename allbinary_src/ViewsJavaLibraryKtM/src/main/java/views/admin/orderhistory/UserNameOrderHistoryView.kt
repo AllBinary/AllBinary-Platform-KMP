@@ -126,7 +126,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
         try {
@@ -140,7 +140,7 @@ var document = document
     var orderReviewVector: BasicArrayList = orderHistoryEntity!!.getOrders(this.userName)!!
 
 
-    var size: Int = orderReviewVector!!.size()!!
+    var size: Int = orderReviewVector!!.size()
 
 
 
@@ -216,14 +216,14 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
                                 
 
     
-                        if(UserName.getInstance()!!.isValid(this.userName) == Boolean.TRUE)
+                        if(UserName.getInstance()!!.isValid(this.userName) == true)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -231,13 +231,13 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -248,7 +248,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -273,7 +273,7 @@ var document = document
                         return "No User Name Specified<br />"
 
     
-                        if(UserName.getInstance()!!.isValid(this.userName) == Boolean.FALSE)
+                        if(UserName.getInstance()!!.isValid(this.userName) == false)
                         
                                     {
                                     

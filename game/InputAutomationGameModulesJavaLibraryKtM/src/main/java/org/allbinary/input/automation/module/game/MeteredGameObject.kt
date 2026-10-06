@@ -76,14 +76,14 @@ this.setSize(maxX -minX)
 
         {
 
-    var nominator: Double = GraphicsAnalysisUtil.getNominator(bufferedImage[index]!!, this.getMinX(), this.getMaxX(), this.getY())!!
+    var nominator: Double = GraphicsAnalysisUtil.getNominator(bufferedImage[index]!!, this.getMinX(), this.getMaxX(), this.getY())
 
 this.getRatios()[index]= Double(nominator /this.getSize())
 }
 
 
     
-                        if(this.getRatios()[bufferedImage!!.size -1]!!.doubleValue() > 0.93F)
+                        if(this.getRatios()[bufferedImage!!.size -1]!!.toDouble() > 0.93F)
                         
                                     {
                                     this.setGood(true)
@@ -97,7 +97,7 @@ this.getRatios()[index]= Double(nominator /this.getSize())
                             
 
     
-                        if(this.getRatios()[bufferedImage!!.size -1]!!.doubleValue() < this.getRatios()[0]!!.doubleValue())
+                        if(this.getRatios()[bufferedImage!!.size -1]!!.toDouble() < this.getRatios()[0]!!.toDouble())
                         
                                     {
                                     this.setDropping(true)

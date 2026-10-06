@@ -167,13 +167,13 @@ this.position(buffer, 0)
     //var pivotU = pivotU
     //var pivotV = pivotV
 
-    var angleRad: Double = Math.toRadians(angleDegrees)!!
+    var angleRad: Double = Math.toRadians(angleDegrees)
 
 
-    var cosA: Double = Math.cos(angleRad)!!
+    var cosA: Double = Math.cos(angleRad)
 
 
-    var sinA: Double = Math.sin(angleRad)!!
+    var sinA: Double = Math.sin(angleRad)
 
 
 

@@ -255,7 +255,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
             
     open fun getRole()
         //nullable = true from not(false or (false and true)) = true
-: UserRole{
+: UserRole?{
 
     var userRole: UserRole = this.session.getAttribute(UserRoleData.NAME.toString()) as UserRole
 

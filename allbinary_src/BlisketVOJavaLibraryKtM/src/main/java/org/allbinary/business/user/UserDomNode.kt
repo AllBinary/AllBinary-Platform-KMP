@@ -76,7 +76,7 @@ hashMap!!.put(UserData.PASSWORD, EMPTY_STRING)
             
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -89,7 +89,7 @@ hashMap!!.put(UserData.PASSWORD, EMPTY_STRING)
             
     open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 

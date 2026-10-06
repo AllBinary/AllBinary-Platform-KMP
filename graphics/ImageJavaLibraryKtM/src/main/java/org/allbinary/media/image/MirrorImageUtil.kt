@@ -132,10 +132,10 @@ var bufferedImage = bufferedImage
 var verticle = verticle
 var horizontal = horizontal
 
-    var width: Int = bufferedImage!!.getWidth()!!
+    var width: Int = bufferedImage!!.getWidth()
 
 
-    var height: Int = bufferedImage!!.getHeight()!!
+    var height: Int = bufferedImage!!.getHeight()
 
 
     var cellHeight: Int = height

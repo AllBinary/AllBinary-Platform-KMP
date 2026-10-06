@@ -93,7 +93,7 @@ open public class HelpPaintable : Paintable, UpdateMyFontInterface {
         // var graphics = graphics
         this.myFontProcessor!!.process(graphics)
 
-        var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()!!
+        var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()
 
         graphics.setColor(this.basicColor!!.toInt())
         graphics.drawString(

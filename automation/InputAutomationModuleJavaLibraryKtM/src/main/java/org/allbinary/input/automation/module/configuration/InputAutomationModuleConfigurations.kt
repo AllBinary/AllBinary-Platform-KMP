@@ -28,7 +28,8 @@
 import java.io.File
 import java.io.FileInputStream
 import java.util.HashMap
-import java.util.List
+
+//import java.util.List
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.input.automation.module.InputAutomationModuleData
 import org.allbinary.input.automation.module.NewInputAutomationModulesData
@@ -59,13 +60,13 @@ this.setHashMap(HashMap<Any, Any>())
     var idFile: FileInputStream = FileInputStream(file)
 
 
-    var length: Int = idFile!!.read(bytes)!!
+    var length: Int = idFile!!.read(bytes)
 
 
     var data: String = bytes.decodeToString()
 
 
-    var endIndex: Int = data.lastIndexOf('>')!!
+    var endIndex: Int = data.lastIndexOf('>')
 
 
     var document: Document = DomDocumentHelper.create(data.substring(0, endIndex +1))!!
@@ -131,7 +132,7 @@ public constructor (inputAutomationModuleConfigurationList: List<InputAutomation
     //var inputAutomationModuleConfigurationList = inputAutomationModuleConfigurationList
 this.setHashMap(HashMap<Any, Any>())
 
-    var size: Int = inputAutomationModuleConfigurationList!!.size!!
+    var size: Int = inputAutomationModuleConfigurationList!!.size
 
 
     var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration

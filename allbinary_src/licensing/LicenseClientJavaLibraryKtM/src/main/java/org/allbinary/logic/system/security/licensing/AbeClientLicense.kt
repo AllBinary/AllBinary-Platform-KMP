@@ -119,7 +119,7 @@ this.id= hashtable.get(abeClientInformationData!!.LICENSEID) as String
 
 this.servers= BasicArrayListD()
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -236,7 +236,7 @@ stringBuffer!!.append(BREAK)
     var serverVector: BasicArrayList = this.getServers()!!
 
 
-    var size: Int = serverVector!!.size()!!
+    var size: Int = serverVector!!.size()
 
 
 

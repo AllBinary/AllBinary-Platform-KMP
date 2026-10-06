@@ -94,7 +94,7 @@ open public class CompositeRTSFormInput : RTSFormInput {
         var scrollSelectionForm: ScrollSelectionForm =
             rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
 
-        var index: Int = scrollSelectionForm!!.getSelectedIndexForPoint(point)!!
+        var index: Int = scrollSelectionForm!!.getSelectedIndexForPoint(point)
 
         if (
             this.isStickyItemSelected() &&

@@ -70,7 +70,7 @@ this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this
 
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
     //var document = document
 
         try {
@@ -81,7 +81,7 @@ this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this
     var unsortedCustomizerViewVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = this.customizersVector!!.size()!!
+    var size: Int = this.customizersVector!!.size()
 
 
 

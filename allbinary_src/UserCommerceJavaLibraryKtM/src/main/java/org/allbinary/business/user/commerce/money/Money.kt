@@ -84,7 +84,7 @@ this.units= units as Long
     
                         if(this.units != 
                                     null
-                                 && this.units.longValue() > 0 && this.units.longValue() < Long.MAX_VALUE)
+                                 && this.units.toLong() > 0 && this.units.toLong() < Long.MAX_VALUE)
                         
                                     {
                                     
@@ -119,7 +119,7 @@ this.add(moreMoney!!.toString())
         //nullable = true from not(false or (false and false)) = true
 {
 var usDollarStr = usDollarStr
-this.units= this.units.longValue() +convertUsdToUnits(usDollarStr) as Long
+this.units= this.units.toLong() +convertUsdToUnits(usDollarStr) as Long
 }
 
 
@@ -127,7 +127,7 @@ this.units= this.units.longValue() +convertUsdToUnits(usDollarStr) as Long
         //nullable = true from not(false or (false and false)) = true
 {
 var usDollarStr = usDollarStr
-this.units= this.units.longValue() -convertUsdToUnits(usDollarStr) as Long
+this.units= this.units.toLong() -convertUsdToUnits(usDollarStr) as Long
 }
 
 
@@ -135,8 +135,8 @@ this.units= this.units.longValue() -convertUsdToUnits(usDollarStr) as Long
         //nullable = true from not(false or (false and false)) = true
 {
 var multiplier = multiplier
-this.units= Float(this.units.longValue() *multiplier.toFloat()).
-                            longValue() as Long
+this.units= Float(this.units.toLong() *multiplier.toFloat()).
+                            toLong() as Long
 }
 
 
@@ -144,7 +144,7 @@ this.units= Float(this.units.longValue() *multiplier.toFloat()).
         //nullable = true from not(false or (false and false)) = true
 {
 var multiplier = multiplier
-this.units= this.units.longValue() *multiplier as Long
+this.units= this.units.toLong() *multiplier as Long
 }
 
 
@@ -161,10 +161,10 @@ var currency = currency
                         
                                     {
                                     
-    var dollar: Long = this.units.longValue() /100
+    var dollar: Long = this.units.toLong() /100
 
 
-    var cents: Long = this.units.longValue() -(dollar *100)
+    var cents: Long = this.units.toLong() -(dollar *100)
 
 stringBuffer!!.append(dollar as Long.
                             toString())
@@ -199,7 +199,7 @@ var usDollarStr = usDollarStr
     var localUnit: Long = 0
 
 
-    var index: Int = usDollarStr!!.indexOf(AbPathData.getInstance()!!.EXTENSION_SEP)!!
+    var index: Int = usDollarStr!!.indexOf(AbPathData.getInstance()!!.EXTENSION_SEP)
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
@@ -227,10 +227,10 @@ centsStr= usDollarStr!!.substring.toCharArray()
                         }
                             
 localUnit= dollarStr as Long.
-                            longValue() *100 as Long.
-                            longValue()
+                            toLong() *100 as Long.
+                            toLong()
 localUnit += centsStr as Long.
-                            longValue()
+                            toLong()
 
 
 
@@ -246,7 +246,7 @@ localUnit += centsStr as Long.
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.units.longValue()
+                        return this.units.toLong()
 }
 
 

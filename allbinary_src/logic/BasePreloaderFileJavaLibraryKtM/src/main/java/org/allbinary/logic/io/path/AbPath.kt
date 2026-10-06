@@ -101,7 +101,7 @@ open public class AbPath : Object {
         : String {
         var aPath = aPath
 
-        var beginIndex: Int = aPath!!.indexOf(this.commonSeps!!.COLON)!!
+        var beginIndex: Int = aPath!!.indexOf(this.commonSeps!!.COLON)
 
         if (beginIndex >= 0) {
 
@@ -142,7 +142,7 @@ open public class AbPath : Object {
             tempPath = this.abPathUtil!!.adjustStart(tempPath)
         } else {
 
-            var beginIndex: Int = tempPath!!.indexOf(this.commonSeps!!.COLON)!!
+            var beginIndex: Int = tempPath!!.indexOf(this.commonSeps!!.COLON)
 
             if (beginIndex >= 0) {
 

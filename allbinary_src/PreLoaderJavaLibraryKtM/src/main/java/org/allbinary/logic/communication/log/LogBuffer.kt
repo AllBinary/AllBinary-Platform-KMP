@@ -56,7 +56,7 @@ this.logEntryVector!!.add(log)
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var size: Int = this.logEntryVector!!.size()!!
+    var size: Int = this.logEntryVector!!.size()
 
 
 

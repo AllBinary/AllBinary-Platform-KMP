@@ -201,7 +201,7 @@ open public class AndroidMediaPlayerWrapper : BasicPlayer {
         var event = event
         this.logUtil!!.putF("LineEvent: " + event, this, this.commonStrings!!.UPDATE)
 
-        var size: Int = this.listenersList!!.size()!!
+        var size: Int = this.listenersList!!.size()
 
         for (index in 0 until size) {
 

@@ -254,7 +254,7 @@ open public class WaypointRTSFormInput : RTSFormInput {
         // var layerManager = layerManager
         // var geographicMapCellPosition = geographicMapCellPosition
 
-        var itemIndex: Int = this.getSelectedStickyItemIndex()!!
+        var itemIndex: Int = this.getSelectedStickyItemIndex()
 
         if (
             this.newUnconstructedRTSLayerInterfaceArray[itemIndex] ==
@@ -395,7 +395,7 @@ open public class WaypointRTSFormInput : RTSFormInput {
             }
         }
 
-        var cost: Int = layerInterface!!.getCost()!!
+        var cost: Int = layerInterface!!.getCost()
 
         var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
 

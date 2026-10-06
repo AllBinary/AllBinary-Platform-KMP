@@ -234,7 +234,7 @@ public constructor (){
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 
-    var isHTML: Boolean = J2MEUtil.isHTML()!!
+    var isHTML: Boolean = J2MEUtil.isHTML()
 
 
     
@@ -436,7 +436,7 @@ this.loadNowList!!.remove(lazyImageRotationAnimation)
         //mutex.withLock
         {
 
-    var size: Int = list.size()!!
+    var size: Int = list.size()
 
 
     
@@ -456,7 +456,7 @@ this.loadNowList!!.remove(lazyImageRotationAnimation)
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
 
-    var isHTML: Boolean = J2MEUtil.isHTML()!!
+    var isHTML: Boolean = J2MEUtil.isHTML()
 
 
     
@@ -764,7 +764,7 @@ image.setName(key)
     //var width = width
     //var height = height
 
-    var foundIndex: Int = this.getIndexWH(width, height)!!
+    var foundIndex: Int = this.getIndexWH(width, height)
 
 
     var image: Image = this.getFromAvailable(foundIndex, width, height)!!
@@ -950,7 +950,7 @@ this.logUtil!!.putF(StringMaker().
 
 this.runTask()
 
-    var index: Int = this.getIndex(key)!!
+    var index: Int = this.getIndex(key)
 
 
     var width: Int = gdLazyResources!!.imageResourceWidthArray[index]!!
@@ -1015,7 +1015,7 @@ this.loadList!!.add(image)
             
 
 
-    var size: Int = this.loadAfterList!!.size()!!
+    var size: Int = this.loadAfterList!!.size()
 
 
 
@@ -1037,7 +1037,7 @@ lazyImageRotationAnimation2= this.loadAfterList!!.get(index) as LazyImageRotatio
 }
 
 
-    var size2: Int = list.size()!!
+    var size2: Int = list.size()
 
 
 

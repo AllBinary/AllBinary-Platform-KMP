@@ -82,7 +82,7 @@ this.offsetY= offsetY
                                     {
                                     this.geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition)
 
-    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
+    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)
 
 
     
@@ -136,7 +136,7 @@ this.gravity()
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var layer = layer
 
-    var xCellPosition: Int = layer.getXP()!!
+    var xCellPosition: Int = layer.getXP()
 
 
     var yCellPosition: Int = layer.getYP() +layer.getHeight()
@@ -174,7 +174,7 @@ this.gravity()
             
     override fun getGeographicMapCellPositionIfNotSolidBlockOrOffMapLocation(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition?{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties
@@ -204,7 +204,7 @@ var y = y
                                     {
                                     this.geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition)
 
-    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
+    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)
 
 
     
@@ -348,7 +348,7 @@ this.moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geogra
 
 this.geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition)
 
-    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
+    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)
 
 
     
@@ -411,7 +411,7 @@ layer.
 
 this.geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition)
 
-    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
+    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)
 
 
     

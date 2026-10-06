@@ -75,7 +75,7 @@ this.heading= HeadingValidation(multipartRequestHashMap)
             
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -103,7 +103,7 @@ this.heading= HeadingValidation(multipartRequestHashMap)
 
 
     
-                        if(isValid == Boolean.TRUE)
+                        if(isValid == true)
                         
                                     {
                                     CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this as DomNodeInterface)
@@ -130,7 +130,7 @@ this.heading= HeadingValidation(multipartRequestHashMap)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -173,7 +173,7 @@ stringBuffer!!.append(this.heading.validationInfo())
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -184,7 +184,7 @@ stringBuffer!!.append(this.heading.validationInfo())
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

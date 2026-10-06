@@ -173,7 +173,7 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                 )
         {
 
-    var index: Int = nextLine!!.indexOf(':')!!
+    var index: Int = nextLine!!.indexOf(':')
 
 
     

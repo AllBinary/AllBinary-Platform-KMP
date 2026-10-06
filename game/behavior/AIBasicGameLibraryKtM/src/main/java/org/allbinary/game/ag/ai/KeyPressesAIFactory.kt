@@ -41,7 +41,7 @@ open public class KeyPressesAIFactory : Object, ArtificialIntelligenceInterfaceF
         var gameInput = gameInput
 
         var isSingleKeyProcessing: Boolean =
-            InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()!!
+            InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()
 
         if (isSingleKeyProcessing) {
 

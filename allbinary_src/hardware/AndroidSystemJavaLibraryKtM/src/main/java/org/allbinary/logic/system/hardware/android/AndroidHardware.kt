@@ -49,7 +49,7 @@ open public class AndroidHardware : Object, HardwareInterface {
     public constructor() : super() {
         this.init(this.DEVICES)
 
-        var size: Int = this.componentInterfaceVector!!.size()!!
+        var size: Int = this.componentInterfaceVector!!.size()
 
         if (size < this.MINHARDWARE) {
 
@@ -128,7 +128,7 @@ open public class AndroidHardware : Object, HardwareInterface {
 
         var stringBuilder: StringMaker = StringMaker()
 
-        var size: Int = this.componentInterfaceVector!!.size()!!
+        var size: Int = this.componentInterfaceVector!!.size()
 
         for (index in 0 until size) {
 

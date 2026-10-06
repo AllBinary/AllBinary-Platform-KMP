@@ -91,13 +91,13 @@ this.logo= LogoValidation(hashMap)
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
-    var titleValid: Boolean = Boolean.TRUE
+    var titleValid: Boolean = Boolean.true
 
 
-    var logoValid: Boolean = Boolean.TRUE
+    var logoValid: Boolean = Boolean.true
 
 
     
@@ -113,7 +113,7 @@ this.logo= LogoValidation(hashMap)
                         if(!this.title.isValid())
                         
                                     {
-                                    titleValid= Boolean.FALSE
+                                    titleValid= false
 
                                     }
                                 
@@ -122,7 +122,7 @@ this.logo= LogoValidation(hashMap)
                         if(!this.logo.isValid())
                         
                                     {
-                                    logoValid= Boolean.FALSE
+                                    logoValid= false
 
                                     }
                                 
@@ -136,7 +136,7 @@ this.logo= LogoValidation(hashMap)
                         if(!titleValid && !logoValid)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -169,7 +169,7 @@ this.logo= LogoValidation(hashMap)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -181,13 +181,13 @@ this.logo= LogoValidation(hashMap)
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
-    var titleValid: Boolean = Boolean.TRUE
+    var titleValid: Boolean = Boolean.true
 
 
-    var logoValid: Boolean = Boolean.TRUE
+    var logoValid: Boolean = Boolean.true
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -197,7 +197,7 @@ this.logo= LogoValidation(hashMap)
                         if(!this.title.isValid())
                         
                                     {
-                                    titleValid= Boolean.FALSE
+                                    titleValid= false
 
                                     }
                                 
@@ -206,7 +206,7 @@ this.logo= LogoValidation(hashMap)
                         if(!this.logo.isValid())
                         
                                     {
-                                    logoValid= Boolean.FALSE
+                                    logoValid= false
 
                                     }
                                 
@@ -215,7 +215,7 @@ this.logo= LogoValidation(hashMap)
                         if(!titleValid && !logoValid)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -256,7 +256,7 @@ this.logo= LogoValidation(hashMap)
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -267,7 +267,7 @@ this.logo= LogoValidation(hashMap)
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

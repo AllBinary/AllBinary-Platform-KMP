@@ -104,7 +104,7 @@ this.dimension= IntegerDimension(0, 0)
 
 
     var angle: Double = Double(angleTextNode!!.getNodeValue()).
-                            doubleValue()!!
+                            toDouble()
 
 this.setAngle(angle)
 
@@ -118,7 +118,7 @@ this.setAngle(angle)
 
 
     var x: Int = Integer(xTextNode!!.getNodeValue()).
-                            toInt()!!
+                            toInt()
 
 
     var yNode: Node = DomHelper.getInstance()!!.searchNodeList(this.Y, sizeNode!!.getChildNodes())!!
@@ -128,7 +128,7 @@ this.setAngle(angle)
 
 
     var y: Int = Integer(yTextNode!!.getNodeValue()).
-                            toInt()!!
+                            toInt()
 
 this.setWorkArea(x, y)
 
@@ -153,7 +153,7 @@ this.grid.setZoom(Integer(zoomTextNode!!.getNodeValue()).
 
 
     var gridX: Int = Integer(gridXTextNode!!.getNodeValue()).
-                            toInt()!!
+                            toInt()
 
 
     var gridYNode: Node = DomHelper.getInstance()!!.searchNodeList(this.Y, gridSizeNode!!.getChildNodes())!!
@@ -163,7 +163,7 @@ this.grid.setZoom(Integer(zoomTextNode!!.getNodeValue()).
 
 
     var gridY: Int = Integer(gridYTextNode!!.getNodeValue()).
-                            toInt()!!
+                            toInt()
 
 this.setGrid(gridX, gridY)
 

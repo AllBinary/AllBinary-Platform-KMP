@@ -218,10 +218,10 @@ pathFindingNodeCostInfoFactoryInterface!!.create(geographicMapInterface, goingTo
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
-    var totalColumns: Int = allBinaryTiledLayer!!.getColumns()!!
+    var totalColumns: Int = allBinaryTiledLayer!!.getColumns()
 
 
-    var totalRows: Int = allBinaryTiledLayer!!.getRows()!!
+    var totalRows: Int = allBinaryTiledLayer!!.getRows()
 
 
 

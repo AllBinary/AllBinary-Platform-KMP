@@ -77,7 +77,7 @@ open public class AndroidGameStatistics : BaseGameStatistics {
         }
 
         var totalTime: Long =
-            this.getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+            this.getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)
 
         totalTime = (totalTime / 10000)
         this.ANDROID_STRING_ARRAY[10] = this.TOTAL_ONDRAWS
@@ -94,7 +94,7 @@ open public class AndroidGameStatistics : BaseGameStatistics {
     : String {
 
         var totalTime: Long =
-            this.getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+            this.getTimeDelayHelper()!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)
 
         totalTime = (totalTime / 1000)
 

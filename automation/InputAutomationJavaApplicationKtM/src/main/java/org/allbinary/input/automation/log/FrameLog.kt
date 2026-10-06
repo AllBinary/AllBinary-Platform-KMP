@@ -77,7 +77,7 @@ this.infoStringBuffer!!.append(infoString)
 {
 var vectorOfStrings = vectorOfStrings
 
-    var size: Int = vectorOfStrings!!.size()!!
+    var size: Int = vectorOfStrings!!.size()
 
 
 

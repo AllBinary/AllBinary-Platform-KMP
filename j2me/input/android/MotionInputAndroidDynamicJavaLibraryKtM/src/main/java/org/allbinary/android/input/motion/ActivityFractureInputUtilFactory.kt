@@ -31,7 +31,7 @@ open public class ActivityFractureInputUtilFactory : Object {
         // nullable =  from not(true or (false and true)) =
         : ActivityFractureUtil {
 
-            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
+            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()
 
             if (SDK_VERSION <= 4) {
 

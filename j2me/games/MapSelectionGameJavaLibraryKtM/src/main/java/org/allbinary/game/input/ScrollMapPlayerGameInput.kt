@@ -233,7 +233,7 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
 
         try {
 
-            var size: Int = this.inputList!!.size()!!
+            var size: Int = this.inputList!!.size()
 
             var key: Int = 0
 
@@ -310,7 +310,7 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
         : Boolean {
         var newY = newY
 
-        var y: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
+        var y: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()
 
         if (y > this.maxBottom + this.border) {
 
@@ -330,7 +330,7 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
         : Boolean {
         var newY = newY
 
-        var y: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
+        var y: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()
 
         if (y < -this.border) {
 
@@ -350,7 +350,7 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
         : Boolean {
         var newX = newX
 
-        var x: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
+        var x: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()
 
         if (x < -this.maxRight - this.border) {
 
@@ -370,7 +370,7 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
         : Boolean {
         var newX = newX
 
-        var x: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
+        var x: Int = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()
 
         if (x > this.border) {
 

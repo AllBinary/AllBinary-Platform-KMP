@@ -71,7 +71,7 @@ open public class LayerProcessor : Object, LayerProcessorInterface {
 
         var layerManager: LayerManager = this.getLayerManager()!!
 
-        var size: Int = layerManager!!.getSize()!!
+        var size: Int = layerManager!!.getSize()
 
         for (index in 0 until size) {
 

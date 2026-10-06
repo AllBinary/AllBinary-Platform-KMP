@@ -86,10 +86,10 @@ this.myFontProcessor= MyFontProcessor.getInstance()
 var graphics = graphics
 this.myFontProcessor!!.process(graphics)
 
-    var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()!!
+    var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()
 
 
-    var height: Int = this.displayInfo!!.getLastHeight()!!
+    var height: Int = this.displayInfo!!.getLastHeight()
 
 graphics.drawString(this.FULLSCREEN_TEXT, halfWidth -this.beginWidth, height -this.Y, this.anchor)
 }

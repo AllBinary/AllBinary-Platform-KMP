@@ -52,14 +52,12 @@ open public class NumberOnOwnGroupSequenceAI : SequenceAI {
 
         var layerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-        var index: Int = this.getIndex()!!
+        var index: Int = this.getIndex()
 
         if (this.numberOnSameTeam!!.size > index) {
 
             var size: Int =
-                GroupLayerManagerListener.getInstance()!!.getGroupSizeFromInterface(
-                    layerInterface
-                )!!
+                GroupLayerManagerListener.getInstance()!!.getGroupSizeFromInterface(layerInterface)
 
             if (this.numberOnSameTeam[index]!!.toInt() > size) {
 

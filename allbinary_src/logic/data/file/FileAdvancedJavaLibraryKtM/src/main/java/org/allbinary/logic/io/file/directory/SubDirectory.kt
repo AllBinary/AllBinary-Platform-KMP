@@ -61,7 +61,7 @@ var files = files
     var NEW_LINE: String = CommonSeps.getInstance()!!.NEW_LINE
 
 
-    var size: Int = files.size()!!
+    var size: Int = files.size()
 
 
 

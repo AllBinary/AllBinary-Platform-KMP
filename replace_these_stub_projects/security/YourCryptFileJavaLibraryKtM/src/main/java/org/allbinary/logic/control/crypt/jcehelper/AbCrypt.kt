@@ -40,7 +40,7 @@ var key = key
 
     open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray?{
 var array = array
 
 
@@ -52,7 +52,7 @@ var array = array
 
     open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray?{
 var array = array
 
 
@@ -64,7 +64,7 @@ var array = array
 
     open fun mutilate(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray?{
 var array = array
 
 

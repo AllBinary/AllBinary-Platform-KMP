@@ -118,10 +118,10 @@ private constructor ()
                                     }
                                 
 
-    var width: Int = originalImage!!.getWidth()!!
+    var width: Int = originalImage!!.getWidth()
 
 
-    var height: Int = originalImage!!.getHeight()!!
+    var height: Int = originalImage!!.getHeight()
 
 
     var scaleX: Float = scaleNominatorX /scaleDenominatorX
@@ -172,10 +172,10 @@ this.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX,
     //var maxScaleY = maxScaleY
     //var mutable = mutable
 
-    var width: Int = originalImage!!.getWidth()!!
+    var width: Int = originalImage!!.getWidth()
 
 
-    var height: Int = originalImage!!.getHeight()!!
+    var height: Int = originalImage!!.getHeight()
 
 
     var scaledImage: Image = this.imageCopyUtil!!.createImageWH(originalImage, (scaleX *width).toInt(), (scaleY *height).toInt(), mutable)!!

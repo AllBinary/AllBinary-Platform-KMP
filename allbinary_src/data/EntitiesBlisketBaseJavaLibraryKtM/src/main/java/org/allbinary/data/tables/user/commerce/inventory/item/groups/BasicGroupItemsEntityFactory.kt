@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getBasicGroupItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: BasicGroupItemsEntity{
+: BasicGroupItemsEntity?{
 
         try {
             

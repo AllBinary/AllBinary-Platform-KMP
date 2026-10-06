@@ -82,7 +82,7 @@ open public class StringUtil : Object {
 
         var count: Int = 0
 
-        var size: Int = string.length!!
+        var size: Int = string.length
 
         for (index in 0 until size) {
 

@@ -135,7 +135,7 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
     var endXMLHeader: String = "]]></xsl:text>"
 
 
-    var size: Int = viewVector!!.size()!!
+    var size: Int = viewVector!!.size()
 
 
 

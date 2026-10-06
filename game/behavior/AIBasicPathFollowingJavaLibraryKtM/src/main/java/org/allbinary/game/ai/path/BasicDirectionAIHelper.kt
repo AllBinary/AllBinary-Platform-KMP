@@ -46,11 +46,11 @@ open public class BasicDirectionAIHelper : Object {
 
         var keyDirection: Int = -1
 
-        var directionAngle: Int = this.angleInfo!!.getAngleIncrementInfo()!!.getFrameAngle(frame)!!
+        var directionAngle: Int = this.angleInfo!!.getAngleIncrementInfo()!!.getFrameAngle(frame)
 
-        var angle: Short = this.angleInfo!!.getAngle()!!
+        var angle: Short = this.angleInfo!!.getAngle()
 
-        var degrees: Int = Math.abs(directionAngle - angle)!!
+        var degrees: Int = Math.abs(directionAngle - angle)
 
         if (degrees < 180) {
 

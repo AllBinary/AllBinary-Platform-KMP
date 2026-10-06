@@ -81,7 +81,7 @@ this.byteArray= byteArray
 
     open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 

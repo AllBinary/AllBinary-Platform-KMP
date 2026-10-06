@@ -74,7 +74,7 @@ this.searchRequest= searchRequest
             
     open fun searchSingleStaticPage()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             

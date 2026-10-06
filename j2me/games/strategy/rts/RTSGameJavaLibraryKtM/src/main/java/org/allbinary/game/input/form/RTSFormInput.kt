@@ -104,7 +104,7 @@ open public class RTSFormInput : Object {
         // var layerManager = layerManager
         // var point = point
 
-        var index: Int = this.getIndexAt(rtsPlayerLayerInterface, point)!!
+        var index: Int = this.getIndexAt(rtsPlayerLayerInterface, point)
 
         if (index < 0) {
 
@@ -171,7 +171,7 @@ open public class RTSFormInput : Object {
         // var layerManager = layerManager
         // var point = point
 
-        var index: Int = this.getIndexAt(rtsPlayerLayerInterface, point)!!
+        var index: Int = this.getIndexAt(rtsPlayerLayerInterface, point)
 
         if (index < 0) {
 

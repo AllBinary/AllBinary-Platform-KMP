@@ -77,7 +77,7 @@ open public class BasicArrayListUtil : Object {
         : Any {
         var list = list
 
-        var i_random: Int = this.getRandomIndex(list)!!
+        var i_random: Int = this.getRandomIndex(list)
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return list.objectArray[i_random]!!
@@ -125,7 +125,7 @@ open public class BasicArrayListUtil : Object {
 
         var S_LABEL: String = " s: "
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var stringBuffer: StringMaker = StringMaker()
 

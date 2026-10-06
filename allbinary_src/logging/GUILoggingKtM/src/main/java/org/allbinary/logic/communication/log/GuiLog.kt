@@ -113,7 +113,7 @@ error.show()
 
     open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
@@ -162,7 +162,7 @@ PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this, "put", e)
 
     open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
 var specialMessage = specialMessage
 var className = className
 var functionName = functionName

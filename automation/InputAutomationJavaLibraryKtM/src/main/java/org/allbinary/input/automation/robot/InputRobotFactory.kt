@@ -27,9 +27,12 @@
         
 import java.awt.GraphicsDevice
 import java.awt.GraphicsEnvironment
-import java.util.Collection
-import java.util.Iterator
-import java.util.Set
+
+//import java.util.Collection
+
+//import java.util.Iterator
+
+//import java.util.Set
 import javax.help.HelpSet
 import javax.help.event.HelpSetEvent
 import javax.help.event.HelpSetListener

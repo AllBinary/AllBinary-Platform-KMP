@@ -70,7 +70,7 @@ open public class MapSelectionGameInputProcessor :
                     var wave: Int =
                         raceTrackGeographicMapInterfaceFactoryInterface!!.getFirstWaveWithTrack(
                             track
-                        )!!
+                        )
 
                     gameCanvas!!.getLayerManager()!!.getGameInfo()!!.setCurrentLevel(wave)
                     gameCanvas!!.buildGameInit(false)
@@ -121,13 +121,13 @@ open public class MapSelectionGameInputProcessor :
     {
         var list = list
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 
             var anyType: Any = list.get(index)!!
 
-            var key: Int = GameKeyEventUtil.getKey(anyType)!!
+            var key: Int = GameKeyEventUtil.getKey(anyType)
 
             if (
                 key == Canvas.LEFT || key == Canvas.RIGHT || key == Canvas.UP || key == Canvas.DOWN
@@ -142,7 +142,7 @@ open public class MapSelectionGameInputProcessor :
             } else if (key == Canvas.KEY_NUM0) {
 
                 var selectedIndex: Int =
-                    this.preGameSelectorPaintable!!.getPreGameSelectionForm()!!.getSelectedIndex()!!
+                    this.preGameSelectorPaintable!!.getPreGameSelectionForm()!!.getSelectedIndex()
 
                 if (selectedIndex < this.lockedIndex || !LockedUtil.getInstance()!!.isLocked()) {
 

@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.ListIterator
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontData
@@ -236,7 +237,7 @@ var orderId = orderId
     var itemStatusVector: BasicArrayList = super.getColumnWhere(OrderHistoryData.STATUS, OrderData.ID, orderId)!!
 
 
-    var size: Int = itemStatusVector!!.size()!!
+    var size: Int = itemStatusVector!!.size()
 
 
 
@@ -291,7 +292,7 @@ var orderId = orderId
 
     open fun getBasketReview(orderId: String)
         //nullable = true from not(false or (false and false)) = true
-: BasketReview{
+: BasketReview?{
 var orderId = orderId
 
         try {

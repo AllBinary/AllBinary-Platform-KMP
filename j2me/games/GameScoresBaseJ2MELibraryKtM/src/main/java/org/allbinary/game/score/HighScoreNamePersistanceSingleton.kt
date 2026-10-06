@@ -87,7 +87,7 @@ open public class HighScoreNamePersistanceSingleton : Object {
         // var abeClientInformation = abeClientInformation
         // var gameInfo = gameInfo
 
-        var size: Int = this.nameBasicArrayList!!.size()!!
+        var size: Int = this.nameBasicArrayList!!.size()
 
         for (index in 0 until size) {
 
@@ -191,7 +191,7 @@ open public class HighScoreNamePersistanceSingleton : Object {
 
                 while (recordEnum!!.hasNextElement()) {
 
-                    var id: Int = recordEnum!!.nextRecordId()!!
+                    var id: Int = recordEnum!!.nextRecordId()
 
                     this.logUtil!!.putF(
                         StringMaker().append(LOADING_ID)!!.appendint(id)!!.toString(),

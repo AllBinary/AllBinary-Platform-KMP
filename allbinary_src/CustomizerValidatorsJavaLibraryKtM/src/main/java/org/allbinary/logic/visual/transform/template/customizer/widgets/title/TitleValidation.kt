@@ -83,14 +83,14 @@ var hashMap = hashMap
                                     }
                                 
 
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
     
                         if(!StringValidationUtil.getInstance()!!.isValidRequired(this.getTitle(), 1, TitleData.getInstance()!!.MAXLEN))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -123,7 +123,7 @@ var hashMap = hashMap
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -166,7 +166,7 @@ stringBuffer!!.append("Title is not valid.")
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -177,7 +177,7 @@ stringBuffer!!.append("Title is not valid.")
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

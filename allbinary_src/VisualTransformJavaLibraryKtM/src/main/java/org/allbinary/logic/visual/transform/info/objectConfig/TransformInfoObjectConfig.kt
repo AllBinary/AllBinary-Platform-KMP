@@ -259,7 +259,7 @@ var transformInfoInterface = transformInfoInterface
     var viewNodeList: NodeList = objectConfigNode!!.getChildNodes()!!
 
 
-    var numberOfViews: Int = viewNodeList!!.getLength()!!
+    var numberOfViews: Int = viewNodeList!!.getLength()
 
 
 
@@ -365,7 +365,7 @@ var nodeName = nodeName
     var viewNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, componentsNodeList!!.item(0)!!.getChildNodes())!!
 
 
-    var numberOfViews: Int = viewNodeVector!!.size()!!
+    var numberOfViews: Int = viewNodeVector!!.size()
 
 
     
@@ -412,7 +412,7 @@ var nodeName = nodeName
     var viewNodeVector: BasicArrayList = this.getNodeVector(nodeName)!!
 
 
-    var size: Int = viewNodeVector!!.size()!!
+    var size: Int = viewNodeVector!!.size()
 
 
 
@@ -448,7 +448,7 @@ var nodeName = nodeName
     var viewNodeVector: BasicArrayList = this.getNodeVector(nodeName)!!
 
 
-    var size: Int = viewNodeVector!!.size()!!
+    var size: Int = viewNodeVector!!.size()
 
 
 
@@ -507,7 +507,7 @@ var group = group
     var componentsNode: Node = componentsNodeList!!.item(0)!!
 
 
-    var length: Int = componentsNodeList!!.getLength()!!
+    var length: Int = componentsNodeList!!.getLength()
 
 
 
@@ -546,7 +546,7 @@ break;
     var viewNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, componentsNode!!.getChildNodes())!!
 
 
-    var numberOfViews: Int = viewNodeVector!!.size()!!
+    var numberOfViews: Int = viewNodeVector!!.size()
 
 
     
@@ -558,7 +558,7 @@ break;
                                     }
                                 
 
-    var size: Int = viewNodeVector!!.size()!!
+    var size: Int = viewNodeVector!!.size()
 
 
 

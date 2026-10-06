@@ -98,10 +98,10 @@ this.icon= arrayOfNulls(bufferedImageArray!!.size)
 
         {
 
-    var width: Double = bufferedImageArray[index]!!.getWidth()!!
+    var width: Double = bufferedImageArray[index]!!.getWidth()
 
 
-    var height: Double = bufferedImageArray[index]!!.getHeight()!!
+    var height: Double = bufferedImageArray[index]!!.getHeight()
 
 
     var newWidth: Int = 52
@@ -160,7 +160,7 @@ tempBufferedImageArray[index]= bufferedImage
     var totalImages: Int = this.imageUnifierProperties!!.getRows() *this.imageUnifierProperties!!.getColumns()
 
 
-    var averageRatio: Double = this.imagesRatioUtil!!.getAverage(tempBufferedImageArray, totalImages)!!
+    var averageRatio: Double = this.imagesRatioUtil!!.getAverage(tempBufferedImageArray, totalImages)
 
 
     var averageRatioString: String = Double(averageRatio).
@@ -234,7 +234,7 @@ tempBufferedImageArray[index]= bufferedImage
     var totalImages: Int = this.imageUnifierProperties!!.getRows() *this.imageUnifierProperties!!.getColumns()
 
 
-    var averageRatio: Double = this.imagesRatioUtil!!.getAverage(tempBufferedImageArray, totalImages)!!
+    var averageRatio: Double = this.imagesRatioUtil!!.getAverage(tempBufferedImageArray, totalImages)
 
 
     var fudgedBufferedImageArray: Array<BufferedImage?> = imagesRatioUtil!!.fudge(tempBufferedImageArray, totalImages, averageRatio)!!
@@ -604,7 +604,7 @@ var evt = evt
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)
 
 filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.appendint(this.imageUnifierProperties!!.getColumns())!!.append("_By_")!!.appendint(this.imageUnifierProperties!!.getRows())!!.append("_Unified")!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
@@ -626,7 +626,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "jButton1ActionPerforme
 {
 var evt = evt
 
-    var index: Int = this.imageJList!!.getSelectedIndex()!!
+    var index: Int = this.imageJList!!.getSelectedIndex()
 
 
     var defaultListModel: DefaultListModel = this.imageJList!!.getModel() as DefaultListModel
@@ -653,7 +653,7 @@ this.updateImage()
 {
 var evt = evt
 
-    var index: Int = this.imageJList!!.getSelectedIndex()!!
+    var index: Int = this.imageJList!!.getSelectedIndex()
 
 
     
@@ -683,7 +683,7 @@ var evt = evt
     var defaultListModel: DefaultListModel = this.imageJList!!.getModel() as DefaultListModel
 
 
-    var size: Int = defaultListModel!!.size()!!
+    var size: Int = defaultListModel!!.size()
 
 
     var last: Int = size -1

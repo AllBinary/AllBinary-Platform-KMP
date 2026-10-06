@@ -53,14 +53,14 @@ var transformInfoInterface = transformInfoInterface
 this.streetAddress= StreetAddress(this.getRequest())
 
     
-                        if(this.streetAddress!!.isValid() == Boolean.FALSE)
+                        if(this.streetAddress!!.isValid() == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -68,7 +68,7 @@ this.streetAddress= StreetAddress(this.getRequest())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
@@ -85,7 +85,7 @@ this.streetAddress= StreetAddress(this.getRequest())
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -96,7 +96,7 @@ this.streetAddress= StreetAddress(this.getRequest())
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

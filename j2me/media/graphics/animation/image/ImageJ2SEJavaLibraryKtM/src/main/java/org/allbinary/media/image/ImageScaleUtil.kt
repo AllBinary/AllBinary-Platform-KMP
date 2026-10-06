@@ -97,10 +97,10 @@ private constructor ()
     //var cached = cached
     //var mutable = mutable
 
-    var width: Int = originalImage!!.getWidth()!!
+    var width: Int = originalImage!!.getWidth()
 
 
-    var height: Int = originalImage!!.getHeight()!!
+    var height: Int = originalImage!!.getHeight()
 
 
     var scaleX: Float = scaleNominatorX /scaleDenominatorX

@@ -161,9 +161,9 @@ open public class AllBinaryGameLayer :
 
         var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
-        var viewX: Int = viewPosition!!.getX()!!
+        var viewX: Int = viewPosition!!.getX()
 
-        var viewY: Int = viewPosition!!.getY()!!
+        var viewY: Int = viewPosition!!.getY()
 
         this.basicSetColorUtil!!.setBasicColorP(graphics, this.RED)
         graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight())

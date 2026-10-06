@@ -52,7 +52,7 @@ open public class NotificationUtil : Object {
 
     private constructor() : super() {
 
-        var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
+        var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()
 
         if (SDK_VERSION > 22) {
 
@@ -77,7 +77,7 @@ open public class NotificationUtil : Object {
 
         var FLAG_IMMUTABLE: Int = 1 shl 26
 
-        var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
+        var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()
 
         var pendingIntent: PendingIntent =
             PendingIntent.getActivity(

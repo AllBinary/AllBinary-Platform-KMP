@@ -42,13 +42,13 @@ open public class ScrollOverAtHalfAI : BasicAI {
 
         var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-        var x: Int = ownerLayerInterface!!.getXP()!!
+        var x: Int = ownerLayerInterface!!.getXP()
 
-        var y: Int = ownerLayerInterface!!.getYP()!!
+        var y: Int = ownerLayerInterface!!.getYP()
 
-        var halfWidth: Int = ownerLayerInterface!!.getHalfWidth()!!
+        var halfWidth: Int = ownerLayerInterface!!.getHalfWidth()
 
-        var halfHeight: Int = ownerLayerInterface!!.getHalfHeight()!!
+        var halfHeight: Int = ownerLayerInterface!!.getHalfHeight()
 
         var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 

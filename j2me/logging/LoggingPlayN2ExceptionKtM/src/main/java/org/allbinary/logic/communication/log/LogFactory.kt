@@ -49,7 +49,7 @@
 
     /*actual*/ open fun getInstanceF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: Log{
+: Log?{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName

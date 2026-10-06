@@ -61,7 +61,7 @@ open public class GroupLayerManagerListener : LayerManagerEventListener {
 
         var groupList: BasicArrayList
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         for (index in size - 1 downTo 0) {
 
@@ -132,7 +132,7 @@ open public class GroupLayerManagerListener : LayerManagerEventListener {
 
         var groupList: BasicArrayList = this.list.objectArray[groupId]!! as BasicArrayList
 
-        var size: Int = groupList!!.size()!!
+        var size: Int = groupList!!.size()
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return size
@@ -147,13 +147,13 @@ open public class GroupLayerManagerListener : LayerManagerEventListener {
 
         var id: Int = groupInterface!!.getGroupId().toInt()
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         for (index in size - 1 downTo 0) {
 
             if (id != index) {
 
-                var groupSize: Int = this.getGroupSizeById(index)!!
+                var groupSize: Int = this.getGroupSizeById(index)
 
                 if (groupSize != 0) {
 
@@ -183,7 +183,7 @@ open public class GroupLayerManagerListener : LayerManagerEventListener {
         // var id = id
         // var excludeGroupList = excludeGroupList
 
-        var size: Int = excludeGroupList!!.size()!!
+        var size: Int = excludeGroupList!!.size()
 
         var groupInterfaceArray: Array<Group?>
 
@@ -224,13 +224,13 @@ open public class GroupLayerManagerListener : LayerManagerEventListener {
         // var excludeGroupList = excludeGroupList
         // var maxSize = maxSize
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         for (index in size - 1 downTo 0) {
 
             if (!this.isIdInList(index, excludeGroupList)) {
 
-                var groupSize: Int = this.getGroupSizeById(index)!!
+                var groupSize: Int = this.getGroupSizeById(index)
 
                 if (groupSize >= maxSize) {
 
@@ -335,7 +335,7 @@ open public class GroupLayerManagerListener : LayerManagerEventListener {
 
         var TOTAL_LABEL: String = CommonLabels.getInstance()!!.TOTAL_LABEL
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         for (index in size - 1 downTo 0) {
 

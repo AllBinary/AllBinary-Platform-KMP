@@ -89,7 +89,7 @@ var connectionInfo = connectionInfo
 
     open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             
@@ -205,7 +205,7 @@ super.executeSQLStatement(sqlStatement)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
@@ -213,7 +213,7 @@ this.logUtil!!.put(this.UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }

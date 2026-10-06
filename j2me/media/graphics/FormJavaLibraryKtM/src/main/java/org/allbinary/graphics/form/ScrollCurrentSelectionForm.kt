@@ -261,7 +261,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm, UpdateMyFont
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var size: Int = this.size()!!
+        var size: Int = this.size()
 
         var totalWidth: Int = 0
 
@@ -293,7 +293,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm, UpdateMyFont
 
         var totalHeight: Int = 0
 
-        var size: Int = this.size()!!
+        var size: Int = this.size()
 
         var item2: ABCustomItem
 
@@ -417,11 +417,11 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm, UpdateMyFont
 
             var delta: Int = 0
 
-            var deltaX: Int = this.getDx()!!
+            var deltaX: Int = this.getDx()
 
-            var deltaY: Int = this.getDy()!!
+            var deltaY: Int = this.getDy()
 
-            var size: Int = this.size()!!
+            var size: Int = this.size()
 
             var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
@@ -431,7 +431,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm, UpdateMyFont
 
                 item = this.get(index)
 
-                var diffX: Int = this.preItemIndexDx!!.getDx(index, item, this.dx, this.dy)!!
+                var diffX: Int = this.preItemIndexDx!!.getDx(index, item, this.dx, this.dy)
 
                 if (index == this.getSelectedIndex()) {
 

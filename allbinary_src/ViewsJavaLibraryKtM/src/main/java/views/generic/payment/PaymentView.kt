@@ -69,7 +69,7 @@ document.appendChild(paymentNode)
     var paymentVector: BasicArrayList = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!.get(this.getWeblisketSession()!!.getUserName())!!
 
 
-    var size: Int = paymentVector!!.size()!!
+    var size: Int = paymentVector!!.size()
 
 
 

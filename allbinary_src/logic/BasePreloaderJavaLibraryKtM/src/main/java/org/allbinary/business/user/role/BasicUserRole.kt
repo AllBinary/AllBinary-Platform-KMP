@@ -38,7 +38,7 @@ open public class BasicUserRole : Object, Serializable {
 
             var roleVector: BasicArrayList = BasicUserRole.getAll()!!
 
-            var size: Int = roleVector!!.size()!!
+            var size: Int = roleVector!!.size()
 
             for (index in 0 until size) {
 

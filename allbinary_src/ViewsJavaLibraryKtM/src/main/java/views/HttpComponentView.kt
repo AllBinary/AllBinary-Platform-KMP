@@ -123,7 +123,7 @@ this.domNodeInterfaceVector!!.add(domNodeInterface)
 
         try {
             
-    var size: Int = this.domNodeInterfaceVector!!.size()!!
+    var size: Int = this.domNodeInterfaceVector!!.size()
 
 
 

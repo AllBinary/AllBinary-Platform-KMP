@@ -88,7 +88,7 @@ open public class RaceTrackRandomDropCellPositionGenerator : RaceTrackDropCellPo
 
         var point: GPoint = geographicMapCellPosition!!.getPoint()!!
 
-        var randomCell: Int = this.myRandomFactory!!.getAbsoluteNextInt(this.totalCells)!!
+        var randomCell: Int = this.myRandomFactory!!.getAbsoluteNextInt(this.totalCells)
 
         var row: Int = this.rowArray[randomCell]!!
 

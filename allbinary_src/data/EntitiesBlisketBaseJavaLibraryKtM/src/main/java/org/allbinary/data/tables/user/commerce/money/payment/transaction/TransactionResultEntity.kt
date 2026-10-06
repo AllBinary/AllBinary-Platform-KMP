@@ -148,7 +148,7 @@ super.insert(values)
 
     open fun getTransactionResultInterface(orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
-: TransactionResultInterface{
+: TransactionResultInterface?{
 var orderNumber = orderNumber
 
         try {

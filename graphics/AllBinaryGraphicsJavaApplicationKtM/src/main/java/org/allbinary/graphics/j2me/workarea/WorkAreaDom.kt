@@ -63,7 +63,7 @@ var document = document
                         
                                     {
                                     
-    var numberOfworkAreas: Int = workAreaNodeList!!.getLength()!!
+    var numberOfworkAreas: Int = workAreaNodeList!!.getLength()
 
 
     
@@ -71,7 +71,7 @@ var document = document
                         
                                     {
                                     
-    var numberOfNodes: Int = workAreaNodeList!!.getLength()!!
+    var numberOfNodes: Int = workAreaNodeList!!.getLength()
 
 
     var nameNode: Node = DomHelper.getInstance()!!.searchNodeList(this.NAME, workAreaNodeList!!.item(0)!!.getChildNodes())!!

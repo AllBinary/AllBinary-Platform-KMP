@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Map
-import java.util.Set
+
+//import java.util.Set
 import jsinterop.annotations.JsType
 
 open public class ABHashMap<K, V> : HashMap<K, V> {
@@ -97,7 +98,7 @@ var value = value
 }
 
 
-    override fun putAll(map: Map<any, any>)
+    override fun putAll(map: Map<*, *>)
         //nullable = true from not(false or (false and false)) = true
 {
 var map = map
@@ -149,7 +150,7 @@ var value = value
 
     override fun entrySet()
         //nullable = true from not(false or (false and true)) = true
-: Set<Entry>{
+: Set<Map.Entry<K, V>>{
 
 
 

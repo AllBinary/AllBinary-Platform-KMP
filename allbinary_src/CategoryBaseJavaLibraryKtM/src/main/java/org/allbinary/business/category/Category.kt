@@ -263,7 +263,7 @@ var categoryInterface = categoryInterface
     var bool_return: Boolean = false
 
 
-    var size: Int = this.childCategoryVector!!.size()!!
+    var size: Int = this.childCategoryVector!!.size()
 
 
 
@@ -312,7 +312,7 @@ this.removal(removalVector)
 {
 var removalVector = removalVector
 
-    var removalSize: Int = removalVector!!.size()!!
+    var removalSize: Int = removalVector!!.size()
 
 
 
@@ -325,7 +325,7 @@ var removalVector = removalVector
     var anyType: Any = removalVector!!.get(index)!!
 
 
-    var objectIndex: Int = this.childCategoryVector!!.indexOf(anyType)!!
+    var objectIndex: Int = this.childCategoryVector!!.indexOf(anyType)
 
 this.typeVector!!.remove(objectIndex)
 this.childCategoryVector!!.remove(objectIndex)
@@ -346,7 +346,7 @@ var categoryInterface = categoryInterface
     var bool_return: Boolean = false
 
 
-    var size: Int = this.childCategoryVector!!.size()!!
+    var size: Int = this.childCategoryVector!!.size()
 
 
 
@@ -517,12 +517,12 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
 
-    var size: Int = this.childCategoryVector!!.size()!!
+    var size: Int = this.childCategoryVector!!.size()
 
 
 
@@ -551,7 +551,7 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -575,7 +575,7 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -588,7 +588,7 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
@@ -596,7 +596,7 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
             
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -609,7 +609,7 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
             
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -623,7 +623,7 @@ var document = document
             
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 

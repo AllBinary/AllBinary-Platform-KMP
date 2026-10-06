@@ -348,7 +348,7 @@ open public class DemoCanvas :
 
                 var isOverScan: Boolean =
                     OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-                        .isOverScan()!!
+                        .isOverScan()
 
                 if (SWTUtil.isSWT) {
 
@@ -532,7 +532,7 @@ open public class DemoCanvas :
     private var isSingleKeyRepeatableProcessing: Boolean =
         Features.getInstance()!!.isFeature(
             InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS
-        )!!
+        )
 
     override fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
         // nullable = true from not(false or (false and false)) = true
@@ -850,7 +850,7 @@ open public class DemoCanvas :
         PreLogUtil.put(this.commonStrings!!.START, this, "create")
         this.highScoresPaintable = NullPaintable.getInstance()
 
-        var randomLevel: Int = this.getNextRandom()!!
+        var randomLevel: Int = this.getNextRandom()
 
         this.gameCanvas = this.createRunnable(randomLevel) as AllBinaryGameCanvas
         this.basicColor = this.gameCanvas!!.getLayerManager()!!.getForegroundBasicColor()
@@ -933,7 +933,7 @@ open public class DemoCanvas :
 
                 this.stopGameDemo()
 
-                var randomLevel: Int = this.getNextRandom()!!
+                var randomLevel: Int = this.getNextRandom()
 
                 var gameInfo: GameInfo = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!
 
@@ -988,7 +988,7 @@ open public class DemoCanvas :
 
         PreLogUtil.put(this.commonStrings!!.START, this, METHOD_NAME)
 
-        var isDefault: Boolean = J2MEUtil.isHTML()!!
+        var isDefault: Boolean = J2MEUtil.isHTML()
 
         if (
             this.gameCanvas != NullGameCanvas.getInstance() &&

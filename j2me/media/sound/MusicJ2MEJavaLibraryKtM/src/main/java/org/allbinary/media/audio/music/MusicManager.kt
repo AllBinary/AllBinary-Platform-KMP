@@ -212,7 +212,7 @@ this.nextSongSound= NoSound.getInstance()
     var startingCurrentSongSound: Sound = this.currentSongSound
 
 
-    var duration: Long = this.currentSongSound!!.getDuration()!!
+    var duration: Long = this.currentSongSound!!.getDuration()
 
 this.timeDelayHelper!!.delay= duration.toInt()
 

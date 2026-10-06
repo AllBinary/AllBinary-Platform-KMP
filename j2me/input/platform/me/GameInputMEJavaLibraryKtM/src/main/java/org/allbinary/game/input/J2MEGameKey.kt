@@ -50,7 +50,7 @@ open public class J2MEGameKey : Input {
 
         // For kotlin this is before the body of the constructor.
 
-        var id: Int = this.getId()!!
+        var id: Int = this.getId()
 
         if (id >= 0) {
 

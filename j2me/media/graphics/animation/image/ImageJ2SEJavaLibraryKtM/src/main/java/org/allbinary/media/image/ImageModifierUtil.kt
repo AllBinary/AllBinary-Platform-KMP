@@ -91,10 +91,10 @@ companion object {
     var b: Short = basicColor!!.blue
 
 
-    var width: Int = image.getWidth()!!
+    var width: Int = image.getWidth()
 
 
-    var height: Int = image.getHeight()!!
+    var height: Int = image.getHeight()
 
 
     var colorModel: ColorModel
@@ -174,10 +174,10 @@ bx= colorModel!!.getBlue(dataElements)
     var b: Float = (basicColor!!.blue.toFloat()) /MAX
 
 
-    var width: Int = image.getWidth()!!
+    var width: Int = image.getWidth()
 
 
-    var height: Int = image.getHeight()!!
+    var height: Int = image.getHeight()
 
 
     var colorModel: ColorModel
@@ -243,10 +243,10 @@ newBufferedImage!!.setRGB(index, index2, (ax shl 24) or (rx shl 16) or (gx shl 8
     var newBufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(image)!!
 
 
-    var width: Int = image.getWidth()!!
+    var width: Int = image.getWidth()
 
 
-    var height: Int = image.getHeight()!!
+    var height: Int = image.getHeight()
 
 
     var raster: WritableRaster = newBufferedImage!!.getAlphaRaster()!!

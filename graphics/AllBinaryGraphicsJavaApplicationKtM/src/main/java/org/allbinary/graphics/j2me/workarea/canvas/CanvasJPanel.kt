@@ -439,7 +439,7 @@ newPoints!!.add(newGraphicItem)
 }
 
 
-    var size2: Int = newPoints!!.size()!!
+    var size2: Int = newPoints!!.size()
 
 
 
@@ -494,7 +494,7 @@ var explosionType = explosionType
 newPoints!!.addPoints(basicArrayList)
 item.setPointsInterface(newPoints)
 
-    var angleDelta: Int = RandomRotationFactory.getInstance()!!.getNextRandomAngle(howMuch)!!
+    var angleDelta: Int = RandomRotationFactory.getInstance()!!.getNextRandomAngle(howMuch)
 
 item.setAngle(angleDelta)
 }
@@ -509,7 +509,7 @@ this.repaint()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var width: Int = this.getCanvasDimension()!!.getWidth()!!
+    var width: Int = this.getCanvasDimension()!!.getWidth()
 
 
     var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toTypedArray()!!
@@ -1075,7 +1075,7 @@ StatusFactory.getInstance()!!.setStatus("Key Pressed")
     var graphicItemInterface: GraphicItemInterface = this.graphicItemHashMap!!.get(graphicItemArray[index]!!) as GraphicItemInterface
 
 
-    var keyCode: Int = keyEvent!!.getKeyCode()!!
+    var keyCode: Int = keyEvent!!.getKeyCode()
 
 
     

@@ -273,7 +273,7 @@ open public class BuildingLayer :
 
             if (this.isReadyForExplosion()) {
 
-                var currentFrame: Int = this.destroyAnimationInterface!!.getFrame()!!
+                var currentFrame: Int = this.destroyAnimationInterface!!.getFrame()
 
                 var size: Int = this.destroyAnimationInterface!!.getSize() - 1
 
@@ -316,7 +316,7 @@ open public class BuildingLayer :
         var total: Long =
             RTSLayerUtil.getInstance()!!.getCostExponential(
                 (this.getLevel() * this.getBuildingLevelCost()).toLong()
-            )!!
+            )
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return total.toInt()
@@ -329,7 +329,7 @@ open public class BuildingLayer :
         var downgradeCost: Long =
             RTSLayerUtil.getInstance()!!.getCostExponential(
                 ((this.getLevel() - 1) * this.getBuildingLevelCost()).toLong()
-            )!!
+            )
 
         this.logUtil!!.putF("Cost: " + downgradeCost, this, "getDowngradeCost")
 
@@ -344,7 +344,7 @@ open public class BuildingLayer :
         var upgradeCost: Long =
             RTSLayerUtil.getInstance()!!.getCostExponential(
                 ((this.getLevel() + 1) * this.getBuildingLevelCost()).toLong()
-            )!!
+            )
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return upgradeCost.toInt()
@@ -588,7 +588,7 @@ open public class BuildingLayer :
 
             if (!this.getHealthInterface()!!.isAlive()) {
 
-                var damage: Int = this.getHealthInterface()!!.getMaxHealth()!!
+                var damage: Int = this.getHealthInterface()!!.getMaxHealth()
 
                 if (damage > 10) {
 

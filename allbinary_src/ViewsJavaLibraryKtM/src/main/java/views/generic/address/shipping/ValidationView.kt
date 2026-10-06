@@ -64,12 +64,12 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
 
-    var size: Int = this.streetAddressList!!.size()!!
+    var size: Int = this.streetAddressList!!.size()
 
 
 
@@ -83,7 +83,7 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
 
     
-                        if(streetAddress!!.isValid() == Boolean.FALSE)
+                        if(streetAddress!!.isValid() == false)
                         
                                     {
                                     streetAddressList!!.remove(streetAddress)
@@ -101,7 +101,7 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -109,7 +109,7 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
@@ -126,7 +126,7 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -137,7 +137,7 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

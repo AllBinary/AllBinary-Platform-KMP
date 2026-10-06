@@ -86,7 +86,7 @@ var document = document
                                     }
                                 
 
-    var size: Int = childCategoryVector!!.size()!!
+    var size: Int = childCategoryVector!!.size()
 
 
 

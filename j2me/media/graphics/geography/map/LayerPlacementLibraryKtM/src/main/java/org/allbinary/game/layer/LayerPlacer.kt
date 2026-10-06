@@ -47,7 +47,7 @@ open public class LayerPlacer : Object {
     {
         // var list = list
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var layerPlacementInterface: LayerPlacementInterface
 
@@ -109,9 +109,9 @@ open public class LayerPlacer : Object {
 
         if (layerPlacementType == LayerPlacementTypeFactory.getInstance()!!.MAP) {
 
-            var width: Int = layerPlacementInterface!!.getWidth()!!
+            var width: Int = layerPlacementInterface!!.getWidth()
 
-            var height: Int = layerPlacementInterface!!.getHeight()!!
+            var height: Int = layerPlacementInterface!!.getHeight()
 
             var x: Int = ((this.dimension.getX() - width) / 2)
 
@@ -121,9 +121,9 @@ open public class LayerPlacer : Object {
             return pointFactory!!.createXY(x, y)
         } else if (layerPlacementType == LayerPlacementTypeFactory.getInstance()!!.UP) {
 
-            var width: Int = layerPlacementInterface!!.getWidth()!!
+            var width: Int = layerPlacementInterface!!.getWidth()
 
-            var height: Int = layerPlacementInterface!!.getHeight()!!
+            var height: Int = layerPlacementInterface!!.getHeight()
 
             var x: Int = ((this.dimension.getX() - width) / 2)
 

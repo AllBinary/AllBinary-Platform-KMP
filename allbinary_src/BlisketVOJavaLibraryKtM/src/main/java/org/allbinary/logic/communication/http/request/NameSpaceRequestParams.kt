@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
@@ -164,7 +165,7 @@ var nameSpaceRequestParam = nameSpaceRequestParam
 var packageName = packageName
 var packagePropertiesHashMap = packagePropertiesHashMap
 
-    var beginIndex: Int = packageName!!.indexOf('[')!!
+    var beginIndex: Int = packageName!!.indexOf('[')
 
 
     var indexValue: String = packageName!!.substring(beginIndex +1, packageName!!.length -1)!!
@@ -485,7 +486,7 @@ var elementNodeVector = elementNodeVector
                                     }
                                 
 
-    var size: Int = elementNodeVector!!.size()!!
+    var size: Int = elementNodeVector!!.size()
 
 
 
@@ -535,7 +536,7 @@ var nameSpaceRequestParam = nameSpaceRequestParam
     var packageVector: BasicArrayList = nameSpaceRequestParam!!.getPackages()!!
 
 
-    var size: Int = packageVector!!.size()!!
+    var size: Int = packageVector!!.size()
 
 
 
@@ -573,7 +574,7 @@ var nameSpaceRequestParam = nameSpaceRequestParam
                                     }
                                 
 
-    var isElementValueTextNodeUniqueIndex: Int = this.isElementValueTextNodeUnique(nextPackagePropertiesHashMap, elementNodeVector)!!
+    var isElementValueTextNodeUniqueIndex: Int = this.isElementValueTextNodeUnique(nextPackagePropertiesHashMap, elementNodeVector)
 
 
     
@@ -690,7 +691,7 @@ var document = document
     var packageVector: BasicArrayList = nameSpaceRequestParam!!.getPackages()!!
 
 
-    var size: Int = packageVector!!.size()!!
+    var size: Int = packageVector!!.size()
 
 
 

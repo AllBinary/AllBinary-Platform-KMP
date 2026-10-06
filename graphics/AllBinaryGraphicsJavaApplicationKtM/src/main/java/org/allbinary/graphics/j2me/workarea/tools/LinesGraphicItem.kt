@@ -132,7 +132,7 @@ this.active= false
     var lineNodes: BasicArrayList = DomHelper.getInstance()!!.getWithoutTextNodes(linesNode!!.getChildNodes())!!
 
 
-    var numberOfLines: Int = lineNodes!!.size()!!
+    var numberOfLines: Int = lineNodes!!.size()
 
 
 
@@ -397,7 +397,7 @@ this.active= true
 {
 var list = list
 
-    var size: Int = list.size()!!
+    var size: Int = list.size()
 
 
 
@@ -505,7 +505,7 @@ graphics.setStroke(BasicStroke(x))
                                     }
                                 
 
-    var size: Int = tempPointVector!!.size()!!
+    var size: Int = tempPointVector!!.size()
 
 
     var firstPoint: GPoint = 
@@ -720,7 +720,7 @@ var keyEvent = keyEvent
 
         try {
             
-    var keyCode: Int = keyEvent!!.getKeyCode()!!
+    var keyCode: Int = keyEvent!!.getKeyCode()
 
 
     

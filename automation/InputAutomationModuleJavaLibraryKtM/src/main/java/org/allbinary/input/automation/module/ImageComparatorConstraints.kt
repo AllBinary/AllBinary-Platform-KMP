@@ -92,7 +92,7 @@ var rectangle = rectangle
     var avoidVector: BasicArrayList = this.getAvoidVector()!!
 
 
-    var size: Int = avoidVector!!.size()!!
+    var size: Int = avoidVector!!.size()
 
 
 
@@ -134,7 +134,7 @@ var point = point
     var avoidVector: BasicArrayList = this.getAvoidVector()!!
 
 
-    var size: Int = avoidVector!!.size()!!
+    var size: Int = avoidVector!!.size()
 
 
 
@@ -248,7 +248,7 @@ var bufferedImage = bufferedImage
     var avoidVector: BasicArrayList = this.getAvoidVector()!!
 
 
-    var size: Int = avoidVector!!.size()!!
+    var size: Int = avoidVector!!.size()
 
 
 

@@ -75,7 +75,7 @@ open public class BasicCryptUtil : Object {
 
         var decryptedString: String = decrypted.decodeToString()
 
-        var index: Int = decryptedString!!.indexOf(this.XML_START)!!
+        var index: Int = decryptedString!!.indexOf(this.XML_START)
 
         if (index > 0) {
 

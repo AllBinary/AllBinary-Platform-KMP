@@ -72,7 +72,7 @@ open public class DropCellPositionHistory : Object {
     {
         // var cellPosition = cellPosition
 
-        var index: Int = this.positionList!!.indexOf(cellPosition)!!
+        var index: Int = this.positionList!!.indexOf(cellPosition)
 
         if (index >= 0) {
 
@@ -168,7 +168,7 @@ open public class DropCellPositionHistory : Object {
         : AllBinaryLayer {
         // var cellPosition = cellPosition
 
-        var index: Int = this.positionList!!.indexOf(cellPosition)!!
+        var index: Int = this.positionList!!.indexOf(cellPosition)
 
         if (index >= 0) {
 

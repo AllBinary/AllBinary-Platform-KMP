@@ -117,7 +117,7 @@ open public class GameCommandCanvas :
     private var isSingleKeyRepeatableProcessing: Boolean =
         Features.getInstance()!!.isFeature(
             InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS
-        )!!
+        )
 
     var fontHeight: Int = 0
 

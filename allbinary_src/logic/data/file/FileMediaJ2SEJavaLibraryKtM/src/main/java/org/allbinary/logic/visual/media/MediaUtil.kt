@@ -157,7 +157,7 @@ imageFile!!.createNewFile()
     var newBufferedImage: BufferedImage = imageUtil!!.createBufferedImageForSave(bufferedImage, newWidth, newHeight)!!
 
 
-    var isWritten: Boolean = ImageIOUtil.write(newBufferedImage as RenderedImage, mediaData!!.getName(), imageFile)!!
+    var isWritten: Boolean = ImageIOUtil.write(newBufferedImage as RenderedImage, mediaData!!.getName(), imageFile)
 
 
     

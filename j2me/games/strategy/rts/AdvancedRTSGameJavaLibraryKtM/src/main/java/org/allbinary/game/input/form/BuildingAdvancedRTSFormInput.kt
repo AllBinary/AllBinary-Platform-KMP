@@ -118,7 +118,7 @@ open public class BuildingAdvancedRTSFormInput : BuildingRTSFormInput {
         var advancedPlayerOwnedRTSLayers: AdvancedPlayerOwnedRTSLayers =
             advancedRTSPlayerLayerInterface!!.getAdvancedPlayerOwnedRTSLayers()!!
 
-        var totalHouses: Int = advancedPlayerOwnedRTSLayers!!.getHouseList()!!.size()!!
+        var totalHouses: Int = advancedPlayerOwnedRTSLayers!!.getHouseList()!!.size()
 
         if (totalHouses < 1 && layerInterface!!.getName()!!.indexOf(" House") < 0) {
 

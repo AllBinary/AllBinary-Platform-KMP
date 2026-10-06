@@ -30,9 +30,9 @@ import org.allbinary.logic.string.StringMaker
 
             var stringBuffer: StringMaker = StringMaker()
 
-            var maxUtilizedMemoryAvailable: Long = Runtime.getRuntime()!!.maxMemory()!!
+            var maxUtilizedMemoryAvailable: Long = Runtime.getRuntime()!!.maxMemory()
 
-            var memoryUsed: Long = Runtime.getRuntime()!!.totalMemory()!!
+            var memoryUsed: Long = Runtime.getRuntime()!!.totalMemory()
 
             stringBuffer!!.append("APK Memory: Available: ")
             stringBuffer!!.appendlong(maxUtilizedMemoryAvailable)

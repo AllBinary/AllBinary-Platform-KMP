@@ -114,7 +114,7 @@ open public class OpenGLConfiguration : Object {
 
         var dataInputStream: DataInputStream = DataInputStream(fileInputStream)
 
-        var openGLValue: Int = dataInputStream!!.readInt()!!
+        var openGLValue: Int = dataInputStream!!.readInt()
 
         if (openGLValue == 0) {
 

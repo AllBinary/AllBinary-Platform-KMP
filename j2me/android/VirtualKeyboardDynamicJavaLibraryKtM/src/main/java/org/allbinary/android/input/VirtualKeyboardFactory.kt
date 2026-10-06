@@ -32,7 +32,7 @@ open public class VirtualKeyboardFactory : Object {
         {
             var activity = activity
 
-            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
+            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()
 
             if (SDK_VERSION <= 2) {
 

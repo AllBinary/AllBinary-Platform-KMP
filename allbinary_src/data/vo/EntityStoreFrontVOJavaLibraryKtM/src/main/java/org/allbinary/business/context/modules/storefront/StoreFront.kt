@@ -371,7 +371,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -427,7 +427,7 @@ this.name= Replace(hashMap).
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
@@ -435,7 +435,7 @@ this.name= Replace(hashMap).
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 valid= this.isNameValid()
 
@@ -446,7 +446,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.basketName, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -455,7 +455,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.homeHostName, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -464,7 +464,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.homeHostNamePath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -473,7 +473,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.hostName, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -482,7 +482,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.hostNamePath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -491,7 +491,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostName, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -500,7 +500,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.testHomeHostNamePath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -509,7 +509,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.testHostName, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -518,7 +518,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.testHostNamePath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -527,7 +527,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.imagePath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -536,7 +536,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.staticPath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -545,7 +545,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.categoryPath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -554,7 +554,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.inventoryControl, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -563,7 +563,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.subStores, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -572,7 +572,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.tagLocation, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -581,7 +581,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidRequired(this.packageLocation, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -590,7 +590,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.ftp, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -599,7 +599,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.ftpPath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -608,7 +608,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.ftpUserName, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -617,7 +617,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.ftpPassword, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -626,7 +626,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.testFtp, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -635,7 +635,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPath!!.toString(), this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -644,7 +644,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.testFtpUserName, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -653,7 +653,7 @@ valid= this.isNameValid()
                         if(!stringValidationUtil!!.isValidNotRequired(this.testFtpPassword, this.MINCHAR, this.MAXCHAR))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -666,7 +666,7 @@ valid= this.isNameValid()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -675,7 +675,7 @@ valid= this.isNameValid()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             

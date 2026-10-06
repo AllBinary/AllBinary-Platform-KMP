@@ -70,7 +70,7 @@ open public class CamelCaseUtil : Object {
 
         tokenizer.getTokensFromString(string, list)
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var word: String
 

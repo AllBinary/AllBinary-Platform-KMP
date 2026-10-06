@@ -164,7 +164,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 values.add(this.id)
 
-    var size: Int = this.optionValue!!.size()!!
+    var size: Int = this.optionValue!!.size()
 
 
 

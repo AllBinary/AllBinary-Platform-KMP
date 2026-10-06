@@ -60,7 +60,7 @@ open public class ConstantVelocityNotifyViewChangeMovement : Movement {
         var angle = angle
         var otherAngle = otherAngle
 
-        var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()!!
+        var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()
 
         var xVector: Int =
             (this.axisMathVectorUtil!!.calculateX(radius, angle) / scaleFactorValue).toInt()
@@ -80,11 +80,11 @@ open public class ConstantVelocityNotifyViewChangeMovement : Movement {
     {
         var layer = layer
 
-        var x: Int = this.basicVelocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()!!
+        var x: Int = this.basicVelocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()
 
-        var y: Int = this.basicVelocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled()!!
+        var y: Int = this.basicVelocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled()
 
-        var z: Int = this.basicVelocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled()!!
+        var z: Int = this.basicVelocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled()
 
         layer.moveDXYZ(x, y, z)
 

@@ -141,7 +141,7 @@ var document = document
     var newNode: Node = document.createElement(ImageActionScriptOutputData.TYPES)!!
 
 
-    var size: Int = this.vector.size()!!
+    var size: Int = this.vector.size()
 
 
 
@@ -172,7 +172,7 @@ newNode!!.appendChild(ModDomHelper.createTextNode(document, ImageActionScriptOut
 
 stringBuffer!!.append("ImageTypes: ")
 
-    var size: Int = this.vector.size()!!
+    var size: Int = this.vector.size()
 
 
 

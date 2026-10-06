@@ -28,7 +28,7 @@ open public class GameInputMotionInfoFactory : Object {
         // nullable =  from not(true or (false and true)) =
         : GameInputMotionInfo {
 
-            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
+            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()
 
             if (SDK_VERSION <= 4) {
 

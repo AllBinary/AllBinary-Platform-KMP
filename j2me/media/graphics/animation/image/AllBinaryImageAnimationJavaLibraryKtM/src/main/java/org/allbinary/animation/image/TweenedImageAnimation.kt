@@ -125,7 +125,7 @@ open public class TweenedImageAnimation : IndexedAnimation {
         var x = x
         var y = y
 
-        var frame: Int = this.getFrame()!!
+        var frame: Int = this.getFrame()
 
         var currentX: Int = this.dx * frame
 

@@ -157,7 +157,7 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
 
                 try {
 
-                    var isHTML: Boolean = J2MEUtil.isHTML()!!
+                    var isHTML: Boolean = J2MEUtil.isHTML()
 
                     if (!isHTML) {
 
@@ -170,7 +170,7 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
 
                     var systemWrapper: ABSystemWrapper = ABSystemWrapper.getInstance()!!
 
-                    var currentTimeMillis: Long = systemWrapper!!.currentTimeMillis()!!
+                    var currentTimeMillis: Long = systemWrapper!!.currentTimeMillis()
 
                     logUtil!!.putF(
                         stringMaker!!
@@ -315,7 +315,7 @@ open public class HighScoresCanvas : GameCommandCanvas, HighScoresResultsListene
 
         if (this.highScoreCommandsFactory!!.isHighScoreCommand(command)) {
 
-            var index: Int = this.highScoreCommandsFactory!!.getIndex(command)!!
+            var index: Int = this.highScoreCommandsFactory!!.getIndex(command)
 
             var nextIndex: Int = index + 1
 

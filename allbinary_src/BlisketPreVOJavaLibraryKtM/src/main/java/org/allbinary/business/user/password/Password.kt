@@ -84,7 +84,7 @@ this.password= value
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
     
@@ -109,7 +109,7 @@ this.password= value
 
                                     }
                                 
-valid= Boolean.FALSE
+valid= false
 
                                     }
                                 
@@ -133,7 +133,7 @@ valid= Boolean.FALSE
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -173,7 +173,7 @@ var secret = secret
 this.password= StringUtil.getInstance()!!.getNonNull(this.password)
 
     var random: Int = Random().
-                            nextInt(SuperCrypt.KEYMAX)!!
+                            nextInt(SuperCrypt.KEYMAX)
 
 
     var vector: BasicArrayList = BasicArrayListD()
@@ -201,7 +201,7 @@ this.password= StringUtil.getInstance()!!.getNonNull(this.password)
 
 
     var random: Int = Random().
-                            nextInt(SuperCrypt.KEYMAX)!!
+                            nextInt(SuperCrypt.KEYMAX)
 
 values.put(EntryData.getInstance()!!.ENCRYPTION, Integer(random).
                             toString())

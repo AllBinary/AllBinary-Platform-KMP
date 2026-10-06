@@ -146,7 +146,7 @@ var value = value
             
     open fun get(name: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable = true from not(false or (false and false)) = true
-: TransformInfoInterface{
+: TransformInfoInterface?{
 var name = name
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
@@ -234,7 +234,7 @@ var storeName = storeName
     var objectConfigColumnVector: BasicArrayList = this.getColumnWhere(TransformInfoData.getInstance()!!.OBJECTCONFIG, StoreFrontData.getInstance()!!.NAME, storeName)!!
 
 
-    var size: Int = objectConfigColumnVector!!.size()!!
+    var size: Int = objectConfigColumnVector!!.size()
 
 
 
@@ -271,7 +271,7 @@ var storeName = storeName
     var columnVector: BasicArrayList = this.getColumnWhere(TransformInfoData.getInstance()!!.NAME, StoreFrontData.getInstance()!!.NAME, storeName)!!
 
 
-    var size: Int = columnVector!!.size()!!
+    var size: Int = columnVector!!.size()
 
 
 

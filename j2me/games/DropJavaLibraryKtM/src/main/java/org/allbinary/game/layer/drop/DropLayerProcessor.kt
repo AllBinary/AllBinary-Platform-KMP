@@ -45,7 +45,7 @@ open public class DropLayerProcessor : BasicLayerProcessor {
 
         var list: BasicArrayList = this.getList()!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var layerInterface: AllBinaryLayer
 

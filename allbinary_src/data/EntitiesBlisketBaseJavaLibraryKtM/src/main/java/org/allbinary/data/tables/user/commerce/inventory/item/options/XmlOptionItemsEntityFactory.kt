@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getXmlOptionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: XmlOptionItemsEntity{
+: XmlOptionItemsEntity?{
 
         try {
             

@@ -139,7 +139,7 @@ open public class StartIntermissionPaintable : InitUpdatePaintable, UpdateMyFont
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var level: Int = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()!!
+        var level: Int = this.gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()
 
         this.stringArray[0] = StringMaker().append(this.BEGIN_LEVEL)!!.appendint(level)!!.toString()
 

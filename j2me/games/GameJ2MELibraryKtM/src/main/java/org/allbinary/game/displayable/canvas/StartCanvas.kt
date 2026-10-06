@@ -307,7 +307,7 @@ open public class StartCanvas :
 
                 var isOverScan: Boolean =
                     OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-                        .isOverScan()!!
+                        .isOverScan()
 
                 if (SWTUtil.isSWT) {
 
@@ -437,7 +437,7 @@ open public class StartCanvas :
     }
 
     private var isSingleKeyRepeatableProcessing: Boolean =
-        this.features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
+        this.features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)
 
     override fun keyRepeatedByDevice(keyCode: Int, deviceId: Int)
         // nullable = true from not(false or (false and false)) = true
@@ -738,7 +738,7 @@ open public class StartCanvas :
     {
         this.highScoresPaintable = NullPaintable.getInstance()
 
-        var randomLevel: Int = this.getNextRandom()!!
+        var randomLevel: Int = this.getNextRandom()
     }
 
     @Throws(Exception::class)

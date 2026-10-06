@@ -76,7 +76,7 @@ var document = document
     var paymentGatewaysNode: Node = document.createElement(PaymentGatewaysData.NAME)!!
 
 
-    var size: Int = this.paymentGatewayVector!!.size()!!
+    var size: Int = this.paymentGatewayVector!!.size()
 
 
 

@@ -70,7 +70,7 @@ public constructor (){
     //var width = width
     //var height = height
 
-    var foundIndex: Int = this.getIndexWH(width, height)!!
+    var foundIndex: Int = this.getIndexWH(width, height)
 
 
     var image: Image = this.getFromAvailable(foundIndex, width, height)!!

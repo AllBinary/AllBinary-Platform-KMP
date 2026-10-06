@@ -99,7 +99,7 @@ PreLogUtil.putOE("init Failed", this, commonStrings!!.INIT, e)
 
     open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray?{
 var array = array
 
         try {
@@ -154,7 +154,7 @@ PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e)
 
     open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray?{
 var array = array
 
         try {

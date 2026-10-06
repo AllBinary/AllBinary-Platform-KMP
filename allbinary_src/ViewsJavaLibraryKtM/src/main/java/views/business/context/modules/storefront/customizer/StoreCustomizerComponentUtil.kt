@@ -85,7 +85,7 @@ var transformInfoInterface = transformInfoInterface
     var allCustomizedViews: BasicArrayList = customizerUtil!!.getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface)!!
 
 
-    var size: Int = allCustomizedViews!!.size()!!
+    var size: Int = allCustomizedViews!!.size()
 
 
 
@@ -132,7 +132,7 @@ var allViewsToBeModifiedVector = allViewsToBeModifiedVector
     var customizerUtil: CustomizerUtil = CustomizerUtil.getInstance()!!
 
 
-    var size: Int = allViewsToBeModifiedVector!!.size()!!
+    var size: Int = allViewsToBeModifiedVector!!.size()
 
 
 

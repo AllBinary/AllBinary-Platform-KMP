@@ -99,11 +99,11 @@ open public class SimpleGeographicMap : Object {
         : GeographicMapCellType {
         // var cellPosition = cellPosition
 
-        var i_column: Int = cellPosition!!.getColumn()!!
+        var i_column: Int = cellPosition!!.getColumn()
 
-        var i_row: Int = cellPosition!!.getRow()!!
+        var i_row: Int = cellPosition!!.getRow()
 
-        var cellTypeId: Int = this.tiledLayer!!.getCell(i_column, i_row)!!
+        var cellTypeId: Int = this.tiledLayer!!.getCell(i_column, i_row)
 
         if (cellTypeId < 0) {
 

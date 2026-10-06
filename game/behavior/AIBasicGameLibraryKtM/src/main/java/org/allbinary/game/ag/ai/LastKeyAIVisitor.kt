@@ -40,7 +40,7 @@ open public class LastKeyAIVisitor : Visitor {
 
             var basicAI: BasicAI = anyType as BasicAI
 
-            var key: Int = basicAI!!.getLastKey()!!
+            var key: Int = basicAI!!.getLastKey()
 
             if (key != -1) {
 

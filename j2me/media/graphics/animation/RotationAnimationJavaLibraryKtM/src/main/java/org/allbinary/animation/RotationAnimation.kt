@@ -82,7 +82,7 @@ open public class RotationAnimation : IndexedAnimation, RotationAnimationInterfa
         // var index = index
         this.circularIndexUtil!!.setIndex(index)
 
-        var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
+        var newFrame: Int = this.circularIndexUtil!!.getIndex()
 
         this.angleInfo!!.adjustAngle(newFrame)
     }

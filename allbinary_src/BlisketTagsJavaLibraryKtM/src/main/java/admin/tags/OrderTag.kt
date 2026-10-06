@@ -178,7 +178,7 @@ this.storeName= value
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -216,7 +216,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                     {
                                     
     
-                        if(this.setPaymentGateway() == Boolean.TRUE)
+                        if(this.setPaymentGateway() == true)
                         
                                     {
                                     

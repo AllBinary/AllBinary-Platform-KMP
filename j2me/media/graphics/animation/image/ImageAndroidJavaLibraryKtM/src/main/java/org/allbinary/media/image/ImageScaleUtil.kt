@@ -147,7 +147,7 @@ open public class ImageScaleUtil : Object {
 
         var height: Int = (originalBitmap!!.getHeight() * scaleY).toInt()
 
-        var index: Int = this.imageBasicArrayList!!.indexOf(originalImage)!!
+        var index: Int = this.imageBasicArrayList!!.indexOf(originalImage)
 
         var alreadyAvailable: Boolean = false
 
@@ -155,11 +155,11 @@ open public class ImageScaleUtil : Object {
 
             var scaleX2Float: Float = this.scaleXBasicArrayList!!.get(index) as Float
 
-            var scaleX2: Float = scaleX2Float!!.toFloat()!!
+            var scaleX2: Float = scaleX2Float!!.toFloat()
 
             var scaleY2Float: Float = this.scaleYBasicArrayList!!.get(index) as Float
 
-            var scaleY2: Float = scaleY2Float!!.toFloat()!!
+            var scaleY2: Float = scaleY2Float!!.toFloat()
 
             if (scaleX2 == scaleX && scaleY2 == scaleY) {
 

@@ -37,7 +37,7 @@ open public class MotionEventCircularPool : Object {
         }
     }
 
-    private val MIN: Int = TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()!!
+    private val MIN: Int = TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()
 
     private var eventPool: AllBinaryEventCircularPool =
         AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX - 1) - this.MIN)

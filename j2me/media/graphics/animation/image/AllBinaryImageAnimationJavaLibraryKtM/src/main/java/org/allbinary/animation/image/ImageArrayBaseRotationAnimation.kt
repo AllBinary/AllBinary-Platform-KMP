@@ -81,7 +81,7 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
             super.setAlpha(alpha)
             this.imageModifierUtil!!.reset()
 
-            var index: Int = this.circularIndexUtil!!.getIndex()!!
+            var index: Int = this.circularIndexUtil!!.getIndex()
 
             this.imageModifierUtil!!.setAlpha(
                 this.originalImageArray[index]!!,
@@ -97,7 +97,7 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
     {
         super.nextRotation()
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+        var index: Int = this.circularIndexUtil!!.getIndex()
 
         this.imageModifierUtil!!.setAlpha(
             this.originalImageArray[index]!!,
@@ -113,7 +113,7 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
     {
         super.previousRotation()
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+        var index: Int = this.circularIndexUtil!!.getIndex()
 
         this.imageModifierUtil!!.setAlpha(
             this.originalImageArray[index]!!,
@@ -130,7 +130,7 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
         // var index2 = index2
         super.setFrame(index2)
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+        var index: Int = this.circularIndexUtil!!.getIndex()
 
         this.imageModifierUtil!!.setAlpha(
             this.originalImageArray[index]!!,

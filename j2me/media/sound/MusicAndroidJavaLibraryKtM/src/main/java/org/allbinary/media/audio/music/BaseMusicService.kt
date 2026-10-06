@@ -42,7 +42,7 @@ open public class BaseMusicService : Service {
         intent: Intent
     )
         // nullable = true from not(false or (false and false)) = true
-        : IBinder? {
+        : IBinder?? {
         // var intent = intent
         this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStateStrings!!.BIND)
 
@@ -143,7 +143,7 @@ open public class BaseMusicService : Service {
 
         if (intent != null) {
 
-            var command: Int = intent.getIntExtra(this.commonStateStrings!!.ON_START_COMMAND, -1)!!
+            var command: Int = intent.getIntExtra(this.commonStateStrings!!.ON_START_COMMAND, -1)
 
             this.logUtil!!.putF(
                 CommonLabels.getInstance()!!.COMMAND_LABEL + command,

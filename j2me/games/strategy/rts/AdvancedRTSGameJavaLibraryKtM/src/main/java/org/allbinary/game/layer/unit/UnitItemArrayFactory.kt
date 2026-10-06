@@ -64,7 +64,7 @@ open public class UnitItemArrayFactory : Object, ItemArraySingletonFactoryInterf
 
         var name: String = flagResources!!.NAME
 
-        var index: Int = name.indexOf(this.commonSeps!!.SPACE)!!
+        var index: Int = name.indexOf(this.commonSeps!!.SPACE)
 
         if (index >= 0) {
 

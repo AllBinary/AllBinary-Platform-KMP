@@ -262,9 +262,9 @@ open public class PathFinder : GeographicPathFinderBase {
 
         var node: PathFindingNodeCost
 
-        var targetColumn: Int = target.getColumn()!!
+        var targetColumn: Int = target.getColumn()
 
-        var targetRow: Int = target.getRow()!!
+        var targetRow: Int = target.getRow()
 
         var sizeX: Int = this.costArray!!.size
 
@@ -392,9 +392,9 @@ open public class PathFinder : GeographicPathFinderBase {
 
         var node: PathFindingNodeCost
 
-        var targetColumn: Int = target.getColumn()!!
+        var targetColumn: Int = target.getColumn()
 
-        var targetRow: Int = target.getRow()!!
+        var targetRow: Int = target.getRow()
 
         var sizeX: Int = this.costArray!!.size
 

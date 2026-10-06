@@ -194,7 +194,7 @@ this.glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
                         
                                     {
                                     
-    var startIndex: Int = this.glShaderVersionString!!.lastIndexOf(' ')!!
+    var startIndex: Int = this.glShaderVersionString!!.lastIndexOf(' ')
 
 
     
@@ -205,7 +205,8 @@ this.glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
 
                                     }
                                 
-this.shaderVersion= Integer.parseInt(this.glShaderVersionString!!.replace(CommonSeps.getInstance()!!.PERIOD, StringUtil.getInstance()!!.EMPTY_STRING))
+this.shaderVersion= this.glShaderVersionString!!.replace(CommonSeps.getInstance()!!.PERIOD, StringUtil.getInstance()!!.EMPTY_STRING).toInt()
+    
 
                                     }
                                 
@@ -445,7 +446,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 : Boolean{
 var gameFeature = gameFeature
 
-    var index: Int = this.glExtensions!!.indexOf(gameFeature!!.getName())!!
+    var index: Int = this.glExtensions!!.indexOf(gameFeature!!.getName())
 
 
     
@@ -642,7 +643,7 @@ stringBuffer!!.append(" GL_EXTENSIONS: ")
     var list: BasicArrayList = tokenizer.getTokensFromString(this.glExtensions, BasicArrayListD())!!
 
 
-    var size: Int = list.size()!!
+    var size: Int = list.size()
 
 
 

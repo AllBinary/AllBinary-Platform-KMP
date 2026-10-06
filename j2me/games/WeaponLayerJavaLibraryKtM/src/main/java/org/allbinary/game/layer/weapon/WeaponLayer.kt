@@ -189,7 +189,7 @@ open public class WeaponLayer : MultiPlayerGameLayer, TickableInterface {
                 var indexedAnimationInterface: IndexedAnimation =
                     this.getAnimationInterface() as IndexedAnimation
 
-                var currentFrame: Int = indexedAnimationInterface!!.getFrame()!!
+                var currentFrame: Int = indexedAnimationInterface!!.getFrame()
 
                 if (currentFrame < indexedAnimationInterface!!.getAnimationSize() - 1) {
 

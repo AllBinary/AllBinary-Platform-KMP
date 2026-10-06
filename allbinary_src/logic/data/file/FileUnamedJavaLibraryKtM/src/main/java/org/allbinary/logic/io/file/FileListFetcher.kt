@@ -65,7 +65,7 @@ companion object {
 
     open fun getFiles(path: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
 var path = path
 
         try {
@@ -93,7 +93,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
     open fun getFiles(path: String, includeExtensions: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var path = path
     //var includeExtensions = includeExtensions
 
@@ -142,7 +142,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
     open fun getFiles(path: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var path = path
     //var includeExtension = includeExtension
 
@@ -178,7 +178,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
     open fun getFiles(path: String, pathIncludes: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var path = path
     //var pathIncludes = pathIncludes
     //var includeExtension = includeExtension
@@ -215,7 +215,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
     open fun getTrackedFiles(path: String, includeExtensions: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var path = path
     //var includeExtensions = includeExtensions
 
@@ -264,7 +264,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
     open fun getTrackedFiles(path: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var path = path
     //var includeExtension = includeExtension
 
@@ -300,7 +300,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
     open fun getDirectories(path: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
     //var path = path
 
         try {

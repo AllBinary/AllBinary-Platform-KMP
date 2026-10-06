@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getCategoryEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: CategoryEntity{
+: CategoryEntity?{
 
         try {
             

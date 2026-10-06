@@ -367,7 +367,7 @@ var index = index
     var hardwareBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = this.componentInterfaceVector!!.size()!!
+    var size: Int = this.componentInterfaceVector!!.size()
 
 
 

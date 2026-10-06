@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeInterface
@@ -122,7 +123,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
 node.appendChild(totalNode)
 
-    var size: Int = this.vector.size()!!
+    var size: Int = this.vector.size()
 
 
 
@@ -150,7 +151,7 @@ node.appendChild(customNode)
 
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -161,7 +162,7 @@ node.appendChild(customNode)
 
     open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 

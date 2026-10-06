@@ -161,7 +161,7 @@ result += "\" "
 
 result += this.END
 
-    var size: Int = this.htmlRowsVector!!.size()!!
+    var size: Int = this.htmlRowsVector!!.size()
 
 
 

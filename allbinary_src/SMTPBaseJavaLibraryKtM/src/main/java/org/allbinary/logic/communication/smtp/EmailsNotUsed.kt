@@ -74,7 +74,7 @@ var document = document
     var node: Node = document.createElement(EmailData.NAME)!!
 
 
-    var size: Int = this.emailInfoVector!!.size()!!
+    var size: Int = this.emailInfoVector!!.size()
 
 
 

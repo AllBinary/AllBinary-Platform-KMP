@@ -145,7 +145,7 @@ open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGener
             }
         }
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         for (index in size - 1 downTo 0) {
 
@@ -165,7 +165,7 @@ open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGener
             this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime)
         ) {
 
-            var index: Int = this.basicArrayListUtil!!.getRandomIndex(this.list)!!
+            var index: Int = this.basicArrayListUtil!!.getRandomIndex(this.list)
 
             this.drop(allBinaryLayerManager, index)
         }

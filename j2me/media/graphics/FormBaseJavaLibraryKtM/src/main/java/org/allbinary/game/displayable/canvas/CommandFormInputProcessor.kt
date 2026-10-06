@@ -52,8 +52,7 @@ open public class CommandFormInputProcessor : BasicMenuInputProcessor {
 
     private val doubleClickTimeHelper: TimeDelayHelper = TimeDelayHelper(this.DOUBLE_CLICK_DELAY)
 
-    val isSingleKeyProcessing: Boolean =
-        InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()!!
+    val isSingleKeyProcessing: Boolean = InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()
 
     private var form: ScrollSelectionForm
 
@@ -147,11 +146,11 @@ open public class CommandFormInputProcessor : BasicMenuInputProcessor {
 
         try {
 
-            var motionInputsIndex: Int = this.processMotionInputs()!!
+            var motionInputsIndex: Int = this.processMotionInputs()
 
             var list: BasicArrayList = this.getGameKeyEventList()!!
 
-            var size: Int = list.size()!!
+            var size: Int = list.size()
 
             var key: Int = 0
 
@@ -233,7 +232,7 @@ open public class CommandFormInputProcessor : BasicMenuInputProcessor {
 
             if (this.form.isInForm(point)) {
 
-                var index: Int = this.form.getSelectedIndexForPoint(point)!!
+                var index: Int = this.form.getSelectedIndexForPoint(point)
 
                 if (index != -1) {
 

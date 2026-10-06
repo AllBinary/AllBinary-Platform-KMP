@@ -131,7 +131,7 @@ open public class GameInput : Object {
 
         var list: BasicArrayList = this.gameKeyEventList
 
-        var size: Int = removeList!!.size()!!
+        var size: Int = removeList!!.size()
 
         for (index in 0 until size) {
 

@@ -169,7 +169,7 @@ open public class TextAnimation : IndexedAnimation, UpdateMyFontInterface {
 
             var textArray: Array<String?> = arrayOfNulls(list.size())
 
-            var size: Int = list.size()!!
+            var size: Int = list.size()
 
             for (index in 0 until size) {
 

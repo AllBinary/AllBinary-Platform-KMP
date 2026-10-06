@@ -145,7 +145,7 @@ open public class CompoundIndexedAnimation : IndexedAnimation, CompoundAnimation
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var frame: Int = this.getFrame()!!
+        var frame: Int = this.getFrame()
 
         this.circularIndexUtil!!.next()
         this.setFrame(frame)
@@ -155,7 +155,7 @@ open public class CompoundIndexedAnimation : IndexedAnimation, CompoundAnimation
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var frame: Int = this.getFrame()!!
+        var frame: Int = this.getFrame()
 
         this.circularIndexUtil!!.previous()
         this.setFrame(frame)
@@ -166,7 +166,7 @@ open public class CompoundIndexedAnimation : IndexedAnimation, CompoundAnimation
     {
         // var index = index
 
-        var frame: Int = this.getFrame()!!
+        var frame: Int = this.getFrame()
 
         this.circularIndexUtil!!.setIndex(index)
         this.setFrame(frame)

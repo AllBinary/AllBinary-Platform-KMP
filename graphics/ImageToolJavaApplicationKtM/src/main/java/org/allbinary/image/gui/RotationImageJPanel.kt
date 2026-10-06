@@ -265,7 +265,7 @@ this.getParent()!!.repaint()
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)
 
 filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
@@ -274,7 +274,7 @@ file= File(filePath)
                                     }
                                 
 
-    var isWritten: Boolean = ImageIO.write(this@RotationImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
+    var isWritten: Boolean = ImageIO.write(this@RotationImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)
 
 this.logUtil!!.putF("File: " +file +" Wrote: " +isWritten, this, this.commonStrings!!.RUN)
 }

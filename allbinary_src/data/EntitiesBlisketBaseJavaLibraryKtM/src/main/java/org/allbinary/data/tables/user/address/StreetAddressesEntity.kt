@@ -225,7 +225,7 @@ this.setDefault(address.getId())
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList?{
 
         try {
             
@@ -239,7 +239,7 @@ keyAndValue!!.put(UserData.USERNAME, this.userName)
     var addressList: BasicArrayList = super.getRows(keyAndValue)!!
 
 
-    var size: Int = addressList!!.size()!!
+    var size: Int = addressList!!.size()
 
 
 
@@ -295,7 +295,7 @@ keyAndValue!!.put(UserData.USERNAME, this.userName)
 
     open fun get(index: Integer)
         //nullable = true from not(false or (false and false)) = true
-: StreetAddress{
+: StreetAddress?{
 var index = index
 
         try {
@@ -354,7 +354,7 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
 
     open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: StreetAddress{
+: StreetAddress?{
 
         try {
             

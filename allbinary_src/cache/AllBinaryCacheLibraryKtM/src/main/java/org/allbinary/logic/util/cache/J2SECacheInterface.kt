@@ -15,7 +15,7 @@
 /* Generated Code Do Not Modify */
 package org.allbinary.logic.util.cache
 
-import java.util.Set
+// import java.util.Set
 
 interface J2SECacheInterface : AutomaticCacheInterface {
 

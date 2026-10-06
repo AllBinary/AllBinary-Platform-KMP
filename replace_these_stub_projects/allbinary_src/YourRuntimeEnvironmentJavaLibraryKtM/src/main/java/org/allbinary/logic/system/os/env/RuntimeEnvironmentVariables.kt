@@ -66,7 +66,7 @@ var var = var
 
     open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Properties{
+: Properties?{
 
         try {
             
@@ -143,7 +143,7 @@ var var = var
                                 )
         {
 
-    var index: Int = keyValuePair!!.indexOf('=')!!
+    var index: Int = keyValuePair!!.indexOf('=')
 
 
     var key: String = keyValuePair!!.substring(0, index)!!
@@ -182,7 +182,7 @@ environmentVariables!!.put(key, value)
 
     open fun getTempDir()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             
@@ -213,7 +213,7 @@ environmentVariables!!.put(key, value)
 
     open fun getLibraryPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             
@@ -244,7 +244,7 @@ environmentVariables!!.put(key, value)
 
     open fun getClassPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             
@@ -301,7 +301,7 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
 
     open fun getUserHome()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             
@@ -332,7 +332,7 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
 
     open fun getUserDir()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             

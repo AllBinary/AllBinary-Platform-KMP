@@ -56,18 +56,18 @@ var transformInfoInterface = transformInfoInterface
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
     
-                        if(this.order.isIdValid() == Boolean.FALSE)
+                        if(this.order.isIdValid() == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -77,14 +77,14 @@ var transformInfoInterface = transformInfoInterface
     
                         if(this.orderHistory == 
                                     null
-                                 || this.orderHistory!!.isValid() == Boolean.FALSE)
+                                 || this.orderHistory!!.isValid() == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -96,14 +96,14 @@ this.basketReview= orderItems!!.getBasketReview(this.order.getId())
     
                         if(this.basketReview == 
                                     null
-                                 || this.basketReview!!.isValid() == Boolean.FALSE)
+                                 || this.basketReview!!.isValid() == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -130,7 +130,7 @@ this.basketReview= orderItems!!.getBasketReview(this.order.getId())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -146,7 +146,7 @@ this.basketReview= orderItems!!.getBasketReview(this.order.getId())
 
 
     
-                        if(this.order.isIdValid() == Boolean.FALSE)
+                        if(this.order.isIdValid() == false)
                         
                                     {
                                     stringBuffer!!.append(this.order.getIdValidationInfo())
@@ -159,7 +159,7 @@ this.basketReview= orderItems!!.getBasketReview(this.order.getId())
     
                         if(this.orderHistory == 
                                     null
-                                 || this.orderHistory!!.isValid() == Boolean.FALSE)
+                                 || this.orderHistory!!.isValid() == false)
                         
                                     {
                                     stringBuffer!!.append("Order History data error for: ")
@@ -187,7 +187,7 @@ stringBuffer!!.append("<br />")
                                 
                              else 
     
-                        if(this.basketReview!!.isValid() == Boolean.FALSE)
+                        if(this.basketReview!!.isValid() == false)
                         
                                     {
                                     stringBuffer!!.append("Order Items data error - not valid for: ")
@@ -227,7 +227,7 @@ stringBuffer!!.append("<br />")
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -238,7 +238,7 @@ stringBuffer!!.append("<br />")
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

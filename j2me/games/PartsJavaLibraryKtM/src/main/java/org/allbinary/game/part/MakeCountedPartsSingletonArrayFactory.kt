@@ -68,7 +68,7 @@ open public class MakeCountedPartsSingletonArrayFactory : Object {
 
         var layerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactory
 
-        var size: Int = countedBasicArrayList!!.size()!!
+        var size: Int = countedBasicArrayList!!.size()
 
         for (index in 0 until size) {
 

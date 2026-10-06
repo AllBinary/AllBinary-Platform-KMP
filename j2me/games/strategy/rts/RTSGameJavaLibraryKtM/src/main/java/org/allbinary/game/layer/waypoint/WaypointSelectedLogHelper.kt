@@ -177,7 +177,7 @@ open public class WaypointSelectedLogHelper : WaypointLogHelper {
         // var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
         // var pathsList = pathsList
 
-        var size: Int = pathsList!!.size()!!
+        var size: Int = pathsList!!.size()
 
         var stringBuffer: StringMaker = StringMaker()
 

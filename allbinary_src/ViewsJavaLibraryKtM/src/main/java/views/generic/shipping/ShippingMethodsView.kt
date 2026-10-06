@@ -97,7 +97,7 @@ var document = document
     var shippingVector: BasicArrayList = this.shippingMethods!!.get()!!
 
 
-    var size: Int = shippingVector!!.size()!!
+    var size: Int = shippingVector!!.size()
 
 
 

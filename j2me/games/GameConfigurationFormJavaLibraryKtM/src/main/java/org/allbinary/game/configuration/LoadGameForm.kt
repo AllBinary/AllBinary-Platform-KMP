@@ -133,7 +133,7 @@ open public class LoadGameForm : CommandForm {
                 NullImage.NULL_IMAGE_ARRAY,
             )
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 
@@ -177,8 +177,7 @@ open public class LoadGameForm : CommandForm {
             var choiceGroup: ChoiceGroup = this.get(0) as ChoiceGroup
 
             var value: Int =
-                Integer.valueOf(choiceGroup!!.getString(choiceGroup!!.getSelectedIndex()))!!
-                    .toInt()!!
+                Integer.valueOf(choiceGroup!!.getString(choiceGroup!!.getSelectedIndex()))!!.toInt()
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return value

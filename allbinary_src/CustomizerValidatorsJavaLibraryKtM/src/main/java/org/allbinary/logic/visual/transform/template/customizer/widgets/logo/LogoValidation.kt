@@ -123,7 +123,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
     var fileData: FileData = FileData.getInstance()!!
@@ -155,7 +155,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -177,7 +177,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -197,7 +197,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -219,7 +219,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -255,7 +255,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -298,7 +298,7 @@ stringBuffer!!.append("Logo is not valid.")
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -309,7 +309,7 @@ stringBuffer!!.append("Logo is not valid.")
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

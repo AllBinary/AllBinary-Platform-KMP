@@ -153,7 +153,7 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
     var totalSeconds: String = hashMap!!.get(DownloadItemData.VALID_TIME_SECONDS) as String
 
 
-    var totalTime: Long = TimeUtil.getInstance()!!.getTotalTime(totalYears, totalMonths, totalDays, totalHours, totalMinutes, totalSeconds)!!
+    var totalTime: Long = TimeUtil.getInstance()!!.getTotalTime(totalYears, totalMonths, totalDays, totalHours, totalMinutes, totalSeconds)
 
 this.validTime= totalTime as Long
 

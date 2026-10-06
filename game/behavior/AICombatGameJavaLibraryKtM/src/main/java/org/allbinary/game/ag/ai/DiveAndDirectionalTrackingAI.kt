@@ -169,9 +169,9 @@ open public class DiveAndDirectionalTrackingAI :
             return
         }
 
-        var x: Int = this.lastTrackingLayerInterface!!.getXP()!!
+        var x: Int = this.lastTrackingLayerInterface!!.getXP()
 
-        var y: Int = this.lastTrackingLayerInterface!!.getYP()!!
+        var y: Int = this.lastTrackingLayerInterface!!.getYP()
 
         var yDistance: Int = ownerLayerInterface!!.getYP() - y - ownerLayerInterface!!.getHeight()
 
@@ -441,7 +441,7 @@ open public class DiveAndDirectionalTrackingAI :
         var lastDirection = lastDirection
         this.lastDirection = lastDirection
 
-        var value: Int = this.getLastDirection()!!.getValue()!!
+        var value: Int = this.getLastDirection()!!.getValue()
 
         if (value < 4) {
 

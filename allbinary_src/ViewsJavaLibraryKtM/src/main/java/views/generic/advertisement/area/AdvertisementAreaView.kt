@@ -59,7 +59,7 @@ this.advertisementAreaName= this.getPropertiesHashMap()!!.get(AdvertisementAreaD
             
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
         try {

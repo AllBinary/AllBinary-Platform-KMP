@@ -39,7 +39,7 @@ open public class TimeDelayHelper : Object {
     // nullable = true from not(false or (false and true)) = true
     : Boolean {
 
-        var currentTime: Long = System.currentTimeMillis()!!
+        var currentTime: Long = System.currentTimeMillis()
 
         if (currentTime - this.startTime > this.delay) {
 
@@ -60,7 +60,7 @@ open public class TimeDelayHelper : Object {
         : Boolean {
         var delay = delay
 
-        var currentTime: Long = System.currentTimeMillis()!!
+        var currentTime: Long = System.currentTimeMillis()
 
         if (currentTime - this.startTime > delay) {
 
@@ -241,7 +241,7 @@ open public class TimeDelayHelper : Object {
         : String {
         var currentTime = currentTime
 
-        var elapsed: Long = this.getElapsed(currentTime)!!
+        var elapsed: Long = this.getElapsed(currentTime)
 
         if (elapsed > 0) {
 
@@ -269,9 +269,9 @@ open public class TimeDelayHelper : Object {
     // nullable =  from not(false or (true and true)) =
     : String {
 
-        var currentTime: Long = System.currentTimeMillis()!!
+        var currentTime: Long = System.currentTimeMillis()
 
-        var elapsed: Long = this.getElapsed(currentTime)!!
+        var elapsed: Long = this.getElapsed(currentTime)
 
         if (elapsed > 0) {
 

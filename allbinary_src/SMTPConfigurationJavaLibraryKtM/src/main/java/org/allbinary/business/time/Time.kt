@@ -65,7 +65,7 @@ this.timeLong= time as Long
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.timeLong!!.longValue()
+                        return this.timeLong!!.toLong()
 }
 
 

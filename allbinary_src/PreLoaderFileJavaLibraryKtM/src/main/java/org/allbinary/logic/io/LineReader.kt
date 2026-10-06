@@ -81,7 +81,7 @@ this.logUtil!!.put("File: " +fileName, this, "LineReader", e)
 
         try {
             
-    var nextIndex: Int = this.string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)!!
+    var nextIndex: Int = this.string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)
 
 
     
@@ -128,7 +128,7 @@ this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
 
         try {
             
-    var nextIndex: Int = this.string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)!!
+    var nextIndex: Int = this.string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)
 
 
     

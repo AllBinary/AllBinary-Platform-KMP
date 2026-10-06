@@ -60,7 +60,7 @@ open public class SelectionHudPaintable : InitUpdatePaintable, UpdateMyFontInter
     private var animationInterface: Animation =
         NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
-    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
+    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()
 
     protected constructor() {
         this.update()

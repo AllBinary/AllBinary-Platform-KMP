@@ -82,7 +82,7 @@ open public class GameFeatureFormUtil : Object {
 
         var GET_CHOICE_GROUP: String = "getChoiceGroup"
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 
@@ -123,7 +123,7 @@ open public class GameFeatureFormUtil : Object {
 
         var ADD_CHOICE_GROUP: String = "addChoiceGroup"
 
-        var size: Int = hashtable.size!!
+        var size: Int = hashtable.size
 
         var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
 
@@ -148,7 +148,7 @@ open public class GameFeatureFormUtil : Object {
     {
         var form = form
 
-        var size: Int = form.size()!!
+        var size: Int = form.size()
 
         for (index in 0 until size) {
 

@@ -113,7 +113,7 @@ open public class MiniMapLayer : AllBinaryLayer, GeographicMapCellPositionEventL
         var colorCompositeInterface: ColorCompositeInterface =
             geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
 
-        var index: Int = this.list.indexOf(colorCompositeInterface)!!
+        var index: Int = this.list.indexOf(colorCompositeInterface)
 
         if (index >= 0) {
 
@@ -138,7 +138,7 @@ open public class MiniMapLayer : AllBinaryLayer, GeographicMapCellPositionEventL
 
         var layerIndex: Int = -1
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         var nextColorCompositeInterface: ColorCompositeInterface
 
@@ -183,7 +183,7 @@ open public class MiniMapLayer : AllBinaryLayer, GeographicMapCellPositionEventL
 
         var localBasicColorList: BasicArrayList = this.basicColorList
 
-        var length: Int = localPositionList!!.size()!!
+        var length: Int = localPositionList!!.size()
 
         var point: GPoint
 

@@ -72,7 +72,7 @@ open public class MotionGestureToMotionGestureActionAssociation : Object {
         : Boolean {
         var aList = aList
 
-        var size: Int = aList!!.size()!!
+        var size: Int = aList!!.size()
 
         if (this.list.size() != size) {
 

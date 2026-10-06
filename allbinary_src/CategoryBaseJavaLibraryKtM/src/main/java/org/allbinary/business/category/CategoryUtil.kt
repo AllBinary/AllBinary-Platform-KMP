@@ -47,7 +47,7 @@ companion object {
 : Int{
 var categoryPath = categoryPath
 
-    var count: Int = StringUtils.countMatches(categoryPath!!.toString(), AbPathData.getInstance()!!.SEPARATOR)!!
+    var count: Int = StringUtils.countMatches(categoryPath!!.toString(), AbPathData.getInstance()!!.SEPARATOR)
 
 
 

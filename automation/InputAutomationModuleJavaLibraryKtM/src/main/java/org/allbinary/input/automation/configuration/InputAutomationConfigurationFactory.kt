@@ -27,7 +27,8 @@
         
 import java.io.File
 import java.io.FileInputStream
-import java.util.List
+
+//import java.util.List
 import javax.xml.bind.JAXBContext
 import javax.xml.bind.JAXBElement
 import javax.xml.bind.Unmarshaller
@@ -115,7 +116,7 @@ logUtil!!.putF("isInstalled: " +this.inputAutomationConfiguration!!.isInstalled(
                         
                                     {
                                     
-    var size: Int = inputAutomationModuleConfigurationList!!.size!!
+    var size: Int = inputAutomationModuleConfigurationList!!.size
 
 
     var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration

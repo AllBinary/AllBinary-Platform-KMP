@@ -117,10 +117,10 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
     var b: Short = basicColor!!.blue
 
 
-    var width: Int = image.getWidth()!!
+    var width: Int = image.getWidth()
 
 
-    var height: Int = image.getHeight()!!
+    var height: Int = image.getHeight()
 
 
     var imageData: ImageData = newBufferedImage!!.getImageData()!!

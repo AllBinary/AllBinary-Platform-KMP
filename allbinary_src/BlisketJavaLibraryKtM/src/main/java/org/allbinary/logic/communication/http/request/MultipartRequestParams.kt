@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.List
+
+//import java.util.List
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.jsp.PageContext
 import org.allbinary.logic.StdUtil
@@ -101,7 +102,7 @@ var request = request
                                     }
                                 
 
-    var fileItemArray: Array<Any?> = multipartRequestList!!.toArray()!!
+    var fileItemArray: Array<Any?> = multipartRequestList!!.toTypedArray()!!
 
 
     var size: Int = fileItemArray!!.size

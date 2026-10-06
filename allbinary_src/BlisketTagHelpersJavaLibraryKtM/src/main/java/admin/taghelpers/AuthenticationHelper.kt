@@ -109,7 +109,7 @@ this.timeout= this.weblisketSession!!.getTimeout()
             
     open fun invalidateSession()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer?{
 
         try {
             this.weblisketSession!!.clear()
@@ -150,10 +150,10 @@ this.timeout= this.weblisketSession!!.getTimeout()
                         
                                     {
                                     
-    var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
+    var timeCreated: Long = this.weblisketSession!!.getCreationTime()
 
 
-    var sessionTimout: Long = this.role.getSessionTimeout()!!
+    var sessionTimout: Long = this.role.getSessionTimeout()
 
 
     var calendar: Calendar = Calendar.getInstance()!!
@@ -188,7 +188,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -227,13 +227,13 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
                         
                                     {
                                     
-    var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
+    var timeCreated: Long = this.weblisketSession!!.getCreationTime()
 
 
-    var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
+    var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()
 
 
-    var inactivityAllowed: Long = this.role.getSessionInactivityTimeout()!!
+    var inactivityAllowed: Long = this.role.getSessionInactivityTimeout()
 
 
     var calendar: Calendar = Calendar.getInstance()!!
@@ -279,7 +279,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 
@@ -461,7 +461,7 @@ var roles = roles
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -472,7 +472,7 @@ var roles = roles
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -485,7 +485,7 @@ var roles = roles
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -509,7 +509,7 @@ var roles = roles
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 } catch(e: Exception)
             {
 
@@ -525,7 +525,7 @@ var roles = roles
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -603,7 +603,7 @@ login= userEntityInterface!!.login(userName, password)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -615,7 +615,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -624,7 +624,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 } catch(e: Exception)
             {
 
@@ -640,7 +640,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -661,7 +661,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -673,7 +673,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                             }
                     
@@ -692,7 +692,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -707,13 +707,13 @@ this.nextAttempt()
     var calendar: Calendar = Calendar.getInstance()!!
 
 
-    var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
+    var timeCreated: Long = this.weblisketSession!!.getCreationTime()
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
+    var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()
 
 stringBuffer!!.append("Time Since Last Access: " +(calendar.getTimeInMillis() -lastAccess) +"<br/>\n")
 

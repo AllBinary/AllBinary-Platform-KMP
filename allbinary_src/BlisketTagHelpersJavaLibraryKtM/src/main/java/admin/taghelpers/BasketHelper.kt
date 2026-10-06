@@ -88,7 +88,7 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -97,7 +97,7 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -116,7 +116,7 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 }

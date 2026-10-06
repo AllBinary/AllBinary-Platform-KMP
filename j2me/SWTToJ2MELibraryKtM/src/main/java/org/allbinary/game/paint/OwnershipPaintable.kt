@@ -65,7 +65,7 @@ companion object {
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
-    private var color: Int = this.basicColor!!.toInt()!!
+    private var color: Int = this.basicColor!!.toInt()
 
     private var anchor: Int = Anchor.TOP_LEFT
 
@@ -116,10 +116,10 @@ this.color= basicColor!!.toInt()
 this.myFontProcessor!!.process(graphics)
 graphics.setColor(this.color)
 
-    var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()!!
+    var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()
 
 
-    var height: Int = this.displayInfo!!.getLastHeight()!!
+    var height: Int = this.displayInfo!!.getLastHeight()
 
 graphics.drawString(this.COPYRIGHT, halfWidth -this.beginWidth, height -this.COPYRIGHT_Y, this.anchor)
 }

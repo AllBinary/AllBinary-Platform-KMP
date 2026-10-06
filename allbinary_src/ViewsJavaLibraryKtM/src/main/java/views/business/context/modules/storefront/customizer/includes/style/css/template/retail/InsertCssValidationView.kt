@@ -64,7 +64,7 @@ this.styleValidationInterface= CssStyleValidation(requestHashMap)
             
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -79,7 +79,7 @@ this.styleValidationInterface= CssStyleValidation(requestHashMap)
 
         try {
             
-    var isValid: Boolean = Boolean.TRUE
+    var isValid: Boolean = Boolean.true
 
 
     
@@ -92,7 +92,7 @@ this.styleValidationInterface= CssStyleValidation(requestHashMap)
                                 
 
     
-                        if(isValid == Boolean.TRUE)
+                        if(isValid == true)
                         
                                     {
                                     CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this.styleValidationInterface as DomNodeInterface)
@@ -119,7 +119,7 @@ this.styleValidationInterface= CssStyleValidation(requestHashMap)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -161,7 +161,7 @@ this.styleValidationInterface= CssStyleValidation(requestHashMap)
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -172,7 +172,7 @@ this.styleValidationInterface= CssStyleValidation(requestHashMap)
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

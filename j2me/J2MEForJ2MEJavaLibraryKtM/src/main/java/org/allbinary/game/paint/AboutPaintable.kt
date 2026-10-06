@@ -117,7 +117,7 @@ open public class AboutPaintable : Paintable, UpdateMyFontInterface {
         var graphics = graphics
         this.myFontProcessor!!.process(graphics)
 
-        var halfWidth: Int = this.displayInfoSingleton!!.getLastHalfWidth()!!
+        var halfWidth: Int = this.displayInfoSingleton!!.getLastHalfWidth()
 
         graphics.drawString(
             this.ABOUT,

@@ -123,7 +123,7 @@ companion object {
 
 LoggingInitInfo.logConfigInfoList= BasicArrayListD()
 
-    var size: Int = logConfigNodeVector!!.size()!!
+    var size: Int = logConfigNodeVector!!.size()
 
 
 
@@ -227,7 +227,7 @@ LoggingInitInfo.updateIfNeeded()
     var allLogTypeVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!
+    var size: Int = LoggingInitInfo.logConfigInfoList!!.size()
 
 
 
@@ -271,7 +271,7 @@ LoggingInitInfo.updateIfNeeded()
     var allLogTypeVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!
+    var size: Int = LoggingInitInfo.logConfigInfoList!!.size()
 
 
 

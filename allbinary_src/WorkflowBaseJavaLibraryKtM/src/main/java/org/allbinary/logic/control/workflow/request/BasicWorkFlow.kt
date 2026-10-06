@@ -27,7 +27,8 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import javax.servlet.jsp.PageContext
@@ -191,7 +192,7 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
         try {
@@ -255,7 +256,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
         try {
             
@@ -290,7 +291,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
         try {
             
-    var returnBoolean: Boolean = Boolean.TRUE
+    var returnBoolean: Boolean = Boolean.true
 
 
     
@@ -299,7 +300,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                                 )
                         
                                     {
-                                    returnBoolean= Boolean.FALSE
+                                    returnBoolean= false
 
                                     }
                                 
@@ -323,7 +324,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -371,7 +372,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -382,7 +383,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

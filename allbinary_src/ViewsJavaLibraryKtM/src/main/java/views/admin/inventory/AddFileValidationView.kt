@@ -109,7 +109,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -118,7 +118,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
     
-                        if(basicItemValidation!!.isValid() == Boolean.FALSE)
+                        if(basicItemValidation!!.isValid() == false)
                         
                                     {
                                     
@@ -134,7 +134,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -167,7 +167,7 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -191,7 +191,7 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -210,19 +210,19 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
     var fileName: String = fileItem!!.getName()!!
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 HttpFileUploadUtil.log(fileItem)
 
     
-                        if(this.isValid(fileName, size) == Boolean.FALSE)
+                        if(this.isValid(fileName, size) == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -233,7 +233,7 @@ HttpFileUploadUtil.log(fileItem)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -249,7 +249,7 @@ HttpFileUploadUtil.log(fileItem)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -257,7 +257,7 @@ HttpFileUploadUtil.log(fileItem)
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -268,7 +268,7 @@ HttpFileUploadUtil.log(fileItem)
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -307,7 +307,7 @@ var document = document
 
 
     
-                        if(basicItemValidation!!.isValid() == Boolean.FALSE)
+                        if(basicItemValidation!!.isValid() == false)
                         
                                     {
                                     stringBuffer!!.append(basicItemValidation!!.validationInfo())
@@ -389,7 +389,7 @@ stringBuffer!!.append(" does not exist.<br />")
     var fileItemFieldName: String = fileItem!!.getFieldName()!!
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 this.validationInfo(stringBuffer, fileName, fileItemFieldName, size)
 
@@ -450,7 +450,7 @@ var size = size
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -473,7 +473,7 @@ var size = size
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -504,7 +504,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -533,7 +533,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -541,7 +541,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 

@@ -153,7 +153,7 @@ open public class MotionGestureRecognizer : Object {
         this.line.setP2(current)
 
         var minimumMotionGesture: Int =
-            MotionGestureConfigurationFactory.getInstance()!!.getMinimumMotionGesture()!!
+            MotionGestureConfigurationFactory.getInstance()!!.getMinimumMotionGesture()
 
         if (
             this.j2seMath!!.abs(this.line.getDeltaX().toFloat()) < minimumMotionGesture &&
@@ -165,7 +165,7 @@ open public class MotionGestureRecognizer : Object {
             return
         }
 
-        var gradient: Double = this.line.getGradient()!!
+        var gradient: Double = this.line.getGradient()
 
         var absGradient: Double = this.j2seMath!!.abs(gradient.toFloat()).toDouble()
 

@@ -60,7 +60,7 @@ var helpSet = helpSet
     var url: URL = helpSet!!.getHelpSetURL()!!
 
 
-    var size: Int = JavaHelpSetNotifier.vector.size()!!
+    var size: Int = JavaHelpSetNotifier.vector.size()
 
 
     var urlArray: Array<Any?> = JavaHelpSetNotifier.vector.toArray()!!

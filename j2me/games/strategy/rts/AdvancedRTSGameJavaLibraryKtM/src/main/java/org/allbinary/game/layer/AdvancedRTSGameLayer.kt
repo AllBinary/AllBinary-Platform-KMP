@@ -352,7 +352,7 @@ open public class AdvancedRTSGameLayer : RTSLayer, DestroyedEventListenerInterfa
         var angleInfo: AngleInfo = this.getRotationAnimationInterface()!!.getAngleInfoP()!!
 
         var angle: Int =
-            FrameUtil.getInstance()!!.adjustAngleToFrameAngle(angleInfo!!.getAngle() + 90)!!
+            FrameUtil.getInstance()!!.adjustAngleToFrameAngle(angleInfo!!.getAngle() + 90)
 
         var gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 

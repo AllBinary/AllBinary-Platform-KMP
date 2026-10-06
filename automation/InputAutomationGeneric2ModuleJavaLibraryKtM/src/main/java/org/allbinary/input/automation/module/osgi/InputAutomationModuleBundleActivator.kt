@@ -74,7 +74,7 @@ this.init()
             
     open fun getInputAutomationConfigurationModuleChangeListener(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-: InputAutomationConfigurationModuleChangeListener{
+: InputAutomationConfigurationModuleChangeListener?{
 var context = context
 
     var serviceReference: ServiceReference = context.getServiceReference(InputAutomationConfigurationModuleChangeListener::class.toString()!!)!!

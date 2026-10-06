@@ -209,7 +209,8 @@ this.logUtil!!.putF("Button 2 Deselected: " +this.mouseActionScriptInputInterfac
                         if(!StringValidationUtil.getInstance()!!.isEmpty(mouseXString) && StringValidationUtil.getInstance()!!.isNumber(mouseXString))
                         
                                     {
-                                    this.mouseActionScriptInputInterface!!.getPoint()!!.x= Integer.parseInt(mouseXString)
+                                    this.mouseActionScriptInputInterface!!.getPoint()!!.x= mouseXString.toInt()
+    
 
                                     }
                                 
@@ -221,7 +222,8 @@ this.logUtil!!.putF("Button 2 Deselected: " +this.mouseActionScriptInputInterfac
                         if(!StringValidationUtil.getInstance()!!.isEmpty(mouseYString) && StringValidationUtil.getInstance()!!.isNumber(mouseYString))
                         
                                     {
-                                    this.mouseActionScriptInputInterface!!.getPoint()!!.y= Integer.parseInt(mouseYString)
+                                    this.mouseActionScriptInputInterface!!.getPoint()!!.y= mouseYString.toInt()
+    
 
                                     }
                                 

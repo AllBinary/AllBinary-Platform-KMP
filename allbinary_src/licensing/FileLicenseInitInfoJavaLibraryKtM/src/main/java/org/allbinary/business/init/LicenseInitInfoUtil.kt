@@ -98,7 +98,7 @@ open public class LicenseInitInfoUtil : Object {
 
             dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseIdCrypted))
 
-            var numberOfLicenseServers: Int = initData!!.getNumberOfServers()!!
+            var numberOfLicenseServers: Int = initData!!.getNumberOfServers()
 
             dataOutputStream!!.writeInt(numberOfLicenseServers)
 
@@ -166,7 +166,7 @@ open public class LicenseInitInfoUtil : Object {
 
                 initInfo!!.setLicenseId(WeakCrypt(1).decrypt(licenseIdDecoded))
 
-                var numberOfLicenseServers: Int = iData!!.readInt()!!
+                var numberOfLicenseServers: Int = iData!!.readInt()
 
                 var NEXT_FILE: String =
                     StringMaker()

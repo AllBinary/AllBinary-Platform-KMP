@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.input.automation.module.AbstractInputAutomationWorker
@@ -76,7 +77,7 @@ this.setGenericProfile(genericProfile)
     var vector: BasicArrayList = this.getGenericProfile()!!.getGenericProfileDataWorkerTypeVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

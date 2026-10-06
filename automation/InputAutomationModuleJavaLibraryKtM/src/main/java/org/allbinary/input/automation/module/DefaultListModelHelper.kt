@@ -51,7 +51,7 @@ this.defaultListModel= DefaultListModel()
 {
 this.defaultListModel= DefaultListModel()
 
-    var size: Int = this.vector.size()!!
+    var size: Int = this.vector.size()
 
 
 

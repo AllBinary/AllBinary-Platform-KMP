@@ -75,7 +75,7 @@ this.setServer(0)
     var serverUrl: String = getClientInfo()!!.getLicenseServer(this.getServer())!!
 
 
-    var index: Int = serverUrl!!.lastIndexOf('/')!!
+    var index: Int = serverUrl!!.lastIndexOf('/')
 
 serverUrl= serverUrl!!.substring(0, index +1) +this.page
 

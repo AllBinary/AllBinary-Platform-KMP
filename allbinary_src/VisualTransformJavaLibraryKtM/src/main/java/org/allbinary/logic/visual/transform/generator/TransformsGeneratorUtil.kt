@@ -152,7 +152,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "generateComponentsFromObje
                                     }
                                 
 
-    var size: Int = transformInfoObjectConfigComponentVector!!.size()!!
+    var size: Int = transformInfoObjectConfigComponentVector!!.size()
 
 
 

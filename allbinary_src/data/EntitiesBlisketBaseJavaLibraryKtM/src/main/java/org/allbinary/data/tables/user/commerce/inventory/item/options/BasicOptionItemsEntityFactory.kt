@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getBasicOptionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: BasicOptionItemsEntity{
+: BasicOptionItemsEntity?{
 
         try {
             

@@ -54,7 +54,7 @@ UserRoleFactory.getInstance()
     var roleVector: BasicArrayList = UserRoleB.getAll()!!
 
 
-    var size: Int = roleVector!!.size()!!
+    var size: Int = roleVector!!.size()
 
 
 

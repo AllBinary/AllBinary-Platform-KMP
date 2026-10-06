@@ -98,7 +98,7 @@ open public class GameInputMotionEventProcessorAPI5 : BaseGameInputMotionEventPr
 
         try {
 
-            var action: Int = motionEvent!!.getAction()!!
+            var action: Int = motionEvent!!.getAction()
 
             var total: Int = this.motionRecognizerArray!!.size
 
@@ -119,7 +119,7 @@ open public class GameInputMotionEventProcessorAPI5 : BaseGameInputMotionEventPr
 
                 for (pointerIndex in totalMinusOne downTo 0) {
 
-                    var pointerId: Int = motionEvent!!.getPointerId(pointerIndex)!!
+                    var pointerId: Int = motionEvent!!.getPointerId(pointerIndex)
 
                     if (this.isValid(pointerId)) {
 
@@ -148,7 +148,7 @@ open public class GameInputMotionEventProcessorAPI5 : BaseGameInputMotionEventPr
 
                 for (pointerIndex in totalMinusOne downTo 0) {
 
-                    var pointerId: Int = motionEvent!!.getPointerId(pointerIndex)!!
+                    var pointerId: Int = motionEvent!!.getPointerId(pointerIndex)
 
                     if (this.isValid(pointerId)) {
 
@@ -177,7 +177,7 @@ open public class GameInputMotionEventProcessorAPI5 : BaseGameInputMotionEventPr
 
                 for (pointerIndex in totalMinusOne downTo 0) {
 
-                    var pointerId: Int = motionEvent!!.getPointerId(pointerIndex)!!
+                    var pointerId: Int = motionEvent!!.getPointerId(pointerIndex)
 
                     if (this.isValid(pointerId)) {
 

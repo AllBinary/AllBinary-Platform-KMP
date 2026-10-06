@@ -47,7 +47,7 @@ open public class AbFileSystem : Object {
         {
             // var args = args
 
-            var isDirectory: Boolean = AbFileSystem.getInstance()!!.isDirectory("c:")!!
+            var isDirectory: Boolean = AbFileSystem.getInstance()!!.isDirectory("c:")
 
             System.out.println("isDirectory: " + isDirectory)
         }
@@ -134,7 +134,7 @@ open public class AbFileSystem : Object {
 
             closeable = idFile
 
-            var size: Int = idFile!!.read(bytes)!!
+            var size: Int = idFile!!.read(bytes)
 
             if (size > 0) {
 

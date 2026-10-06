@@ -77,9 +77,9 @@ open public class VisibleCellPositionsSingleton :
         this.paintSimpleTiledLayer = this.ALL_VISIBLE_TILEDLAYER
         this.currentIndex = 0
 
-        var rows: Int = simpleTiledLayer!!.getRows()!!
+        var rows: Int = simpleTiledLayer!!.getRows()
 
-        var columns: Int = simpleTiledLayer!!.getColumns()!!
+        var columns: Int = simpleTiledLayer!!.getColumns()
 
         this.stationaryVisibleCellPositions = Array(rows) { ShortArray(columns) }
         this.visibleCellPositions = Array(rows) { ShortArray(columns) }

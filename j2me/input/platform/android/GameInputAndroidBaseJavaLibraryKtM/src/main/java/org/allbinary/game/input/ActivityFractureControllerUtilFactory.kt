@@ -12,7 +12,7 @@ open public class ActivityFractureControllerUtilFactory : Object {
         // nullable =  from not(true or (false and true)) =
         : AndroidKeyFactory {
 
-            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
+            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()
 
             if (SDK_VERSION <= 8) {
 

@@ -32,7 +32,7 @@ open public class AndroidOS : GenericOperatingSystem {
 
     public constructor() {
 
-        var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
+        var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()
 
         if (SDK_VERSION > 10) {
 

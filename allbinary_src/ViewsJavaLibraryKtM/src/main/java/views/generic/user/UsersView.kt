@@ -57,7 +57,7 @@ var transformInfoInterface = transformInfoInterface
 
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
         try {
@@ -65,7 +65,7 @@ var document = document
     var usersNode: Node = document.createElement(UsersData.NAME)!!
 
 
-    var size: Int = this.userVector!!.size()!!
+    var size: Int = this.userVector!!.size()
 
 
 

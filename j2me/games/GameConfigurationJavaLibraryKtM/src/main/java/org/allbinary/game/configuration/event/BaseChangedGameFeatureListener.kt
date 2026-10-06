@@ -97,7 +97,7 @@ open public class BaseChangedGameFeatureListener : Object, GameFeatureListenerIn
         : Boolean {
         // var gameFeature = gameFeature
 
-        var isChanged: Boolean = this.list.contains(gameFeature)!!
+        var isChanged: Boolean = this.list.contains(gameFeature)
 
         var stringBuffer: StringMaker = StringMaker()
 

@@ -89,7 +89,7 @@ var document = document
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.TOTAL_NUMBER_ITEMS_ON_THIS_PAGE, Integer(itemVector!!.size()).
                             toString()))
 
-    var size: Int = itemVector!!.size()!!
+    var size: Int = itemVector!!.size()
 
 
 

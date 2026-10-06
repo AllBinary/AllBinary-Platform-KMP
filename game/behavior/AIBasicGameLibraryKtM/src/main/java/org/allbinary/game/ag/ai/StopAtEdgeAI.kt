@@ -50,17 +50,17 @@ open public class StopAtEdgeAI : BasicAI {
         var velocityProperties: BasicVelocityProperties =
             velocityInterfaceCompositeInterface!!.getVelocityProperties()!!
 
-        var x: Int = ownerLayerInterface!!.getXP()!!
+        var x: Int = ownerLayerInterface!!.getXP()
 
-        var y: Int = ownerLayerInterface!!.getYP()!!
+        var y: Int = ownerLayerInterface!!.getYP()
 
-        var x2: Int = ownerLayerInterface!!.getX2()!!
+        var x2: Int = ownerLayerInterface!!.getX2()
 
-        var y2: Int = ownerLayerInterface!!.getY2()!!
+        var y2: Int = ownerLayerInterface!!.getY2()
 
-        var width: Int = ownerLayerInterface!!.getWidth()!!
+        var width: Int = ownerLayerInterface!!.getWidth()
 
-        var height: Int = ownerLayerInterface!!.getHeight()!!
+        var height: Int = ownerLayerInterface!!.getHeight()
 
         var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 

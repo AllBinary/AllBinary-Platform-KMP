@@ -113,9 +113,9 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
 
         var selectedButtonColor: BasicColor = basicColorFactory!!.TRANSPARENT_RED
 
-        var width: Int = item.getMinimumWidth()!!
+        var width: Int = item.getMinimumWidth()
 
-        var height: Int = item.getMinimumHeight()!!
+        var height: Int = item.getMinimumHeight()
 
         var adjustedBorder: Int = 3
 
@@ -183,9 +183,9 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
 
         var selectedButtonColor: BasicColor = basicColorFactory!!.TRANSPARENT_RED
 
-        var width: Int = item.getMinimumWidth()!!
+        var width: Int = item.getMinimumWidth()
 
-        var height: Int = item.getMinimumHeight()!!
+        var height: Int = item.getMinimumHeight()
 
         var adjustedBorder: Int = 3
 
@@ -246,7 +246,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
     // nullable = true from not(false or (false and true)) = true
     : Command {
 
-        var index: Int = super.getSelectedIndex()!!
+        var index: Int = super.getSelectedIndex()
 
         var commandTextItem: CommandTextItem = this.get(index) as CommandTextItem
 
@@ -261,7 +261,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm, Upda
         : Int {
         // var item = item
 
-        var result: Int = super.append(item)!!
+        var result: Int = super.append(item)
 
         this.addAt(result, item)
 

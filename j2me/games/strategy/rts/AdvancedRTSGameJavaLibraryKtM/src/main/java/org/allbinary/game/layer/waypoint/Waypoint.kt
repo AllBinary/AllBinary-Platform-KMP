@@ -306,7 +306,7 @@ open public class Waypoint : WaypointBase, BuildingEventListenerInterface {
             return
         }
 
-        var size: Int = this.getConnectedWaypointList()!!.size()!!
+        var size: Int = this.getConnectedWaypointList()!!.size()
 
         if (size > 0) {
 

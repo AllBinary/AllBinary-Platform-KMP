@@ -98,7 +98,7 @@ var response = response
                                     }
                                 
 
-    var beginIndex: Int = requestPath!!.indexOf(this.DOWNLOAD)!!
+    var beginIndex: Int = requestPath!!.indexOf(this.DOWNLOAD)
 
 
     var filePath: String = StringUtil.getInstance()!!.EMPTY_STRING

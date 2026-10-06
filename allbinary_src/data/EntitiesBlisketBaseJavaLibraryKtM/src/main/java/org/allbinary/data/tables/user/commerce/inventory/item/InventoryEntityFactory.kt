@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getInventoryEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: InventoryEntity{
+: InventoryEntity?{
 
         try {
             

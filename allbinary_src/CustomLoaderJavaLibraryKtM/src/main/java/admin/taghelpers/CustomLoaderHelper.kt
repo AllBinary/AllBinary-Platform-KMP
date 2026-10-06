@@ -57,7 +57,7 @@ public constructor ()
             
     open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             

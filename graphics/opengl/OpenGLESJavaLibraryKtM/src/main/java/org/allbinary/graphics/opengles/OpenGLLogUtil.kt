@@ -51,7 +51,7 @@ companion object {
 {
     //var gl = gl
 
-    var error: Int = gl.glGetError()!!
+    var error: Int = gl.glGetError()
 
 
     
@@ -107,7 +107,7 @@ stringBuffer!!.appendint(maxTextureSize[0]!!)
     //var gl = gl
     //var image = image
 
-    var error: Int = gl.glGetError()!!
+    var error: Int = gl.glGetError()
 
 
     

@@ -80,13 +80,13 @@ open public class HighScoresCanvasLevelChangeInputProcessor :
 
         var list: BasicArrayList = this.getGameKeyEventList()!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 
             var anyType: Any = list.objectArray[index]!!
 
-            var key: Int = GameKeyEventUtil.getKey(anyType)!!
+            var key: Int = GameKeyEventUtil.getKey(anyType)
 
             if (key == Canvas.RIGHT) {
 
@@ -108,7 +108,7 @@ open public class HighScoresCanvasLevelChangeInputProcessor :
         var graphics = graphics
         this.myFontProcessor!!.process(graphics)
 
-        var width: Int = this.displayInfoSingleton!!.getLastWidth()!!
+        var width: Int = this.displayInfoSingleton!!.getLastWidth()
 
         var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(this.INSTRUCTIONS) shr 1)
 

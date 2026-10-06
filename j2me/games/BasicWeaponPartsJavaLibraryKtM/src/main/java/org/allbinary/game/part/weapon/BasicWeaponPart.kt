@@ -177,9 +177,9 @@ open public class BasicWeaponPart : Object, PartInterface, SalvoInterface {
 
         var viewPosition: ViewPositionBase = this.getOwnerLayerInterface()!!.getViewPosition()!!
 
-        var viewX: Int = viewPosition!!.getX()!!
+        var viewX: Int = viewPosition!!.getX()
 
-        var viewY: Int = viewPosition!!.getY()!!
+        var viewY: Int = viewPosition!!.getY()
 
         this.animationInterface!!.paintXY(graphics, viewX, viewY)
     }

@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getPaymentEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: PaymentEntity{
+: PaymentEntity?{
 
         try {
             

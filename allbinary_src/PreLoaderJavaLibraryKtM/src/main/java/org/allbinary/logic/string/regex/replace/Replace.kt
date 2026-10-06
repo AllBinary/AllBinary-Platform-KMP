@@ -186,7 +186,7 @@ values= this.hashMap!!.get(keys as Object) as Array<String?>
         while(index < replace.length)
         {
 
-    var begin: Int = replace.indexOf(keys[0]!!, index)!!
+    var begin: Int = replace.indexOf(keys[0]!!, index)
 
 
     
@@ -329,7 +329,7 @@ value= this.hashMap!!.get(key as Object) as String
         {
 newStringBuffer!!.delete(0, newStringBuffer!!.length())
 
-    var begin: Int = replace.indexOf(key, index)!!
+    var begin: Int = replace.indexOf(key, index)
 
 
     

@@ -91,7 +91,7 @@ open public class KeyValuePersistance : BasicPersitance {
 
             while (recordEnum!!.hasNextElement()) {
 
-                var id: Int = recordEnum!!.nextRecordId()!!
+                var id: Int = recordEnum!!.nextRecordId()
 
                 stringBuffer!!.delete(0, stringBuffer!!.length())
                 this.logUtil!!.putF(

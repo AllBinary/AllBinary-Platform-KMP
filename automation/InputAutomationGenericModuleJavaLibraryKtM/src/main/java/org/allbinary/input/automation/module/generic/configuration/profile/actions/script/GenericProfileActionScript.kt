@@ -190,7 +190,7 @@ var document = document
     var vector: BasicArrayList = this.getProfileActionConditionInterfaceVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

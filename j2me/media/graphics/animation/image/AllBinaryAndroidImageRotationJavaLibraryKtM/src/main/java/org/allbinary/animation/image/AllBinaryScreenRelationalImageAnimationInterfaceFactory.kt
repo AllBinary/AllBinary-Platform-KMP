@@ -47,7 +47,7 @@ open public class AllBinaryScreenRelationalImageAnimationInterfaceFactory :
             androidImageInterface!!.getBitmap()!!.recycle()
         }
 
-        var scale: Float = ScreenRelationalUtil.getInstance()!!.getScaleImage(image)!!
+        var scale: Float = ScreenRelationalUtil.getInstance()!!.getScaleImage(image)
 
         this.lastImage =
             ImageScaleUtil.getInstance()!!.createImage(

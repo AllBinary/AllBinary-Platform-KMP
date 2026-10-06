@@ -96,16 +96,16 @@ object: Thread()
     var canvasExpandUtil: CanvasExpandUtil = CanvasExpandUtil.getInstance()!!
 
 
-    var leftReduction: Int = Integer(Integer.valueOf(widthReductionTextField1!!.getText()))!!
+    var leftReduction: Int = Integer(Integer.valueOf(widthReductionTextField1!!.getText()))
 
 
-    var topReduction: Int = Integer(Integer.valueOf(heightReductionTextField1!!.getText()))!!
+    var topReduction: Int = Integer(Integer.valueOf(heightReductionTextField1!!.getText()))
 
 
-    var widthReduction: Int = Integer(Integer.valueOf(widthReductionTextField!!.getText()))!!
+    var widthReduction: Int = Integer(Integer.valueOf(widthReductionTextField!!.getText()))
 
 
-    var heightReduction: Int = Integer(Integer.valueOf(heightReductionTextField!!.getText()))!!
+    var heightReduction: Int = Integer(Integer.valueOf(heightReductionTextField!!.getText()))
 
 
     
@@ -352,7 +352,7 @@ this.getParent()!!.repaint()
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)
 
 filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(this.commonSeps!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
@@ -361,7 +361,7 @@ file= File(filePath)
                                     }
                                 
 
-    var isWritten: Boolean = ImageIO.write(this@CanvasImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
+    var isWritten: Boolean = ImageIO.write(this@CanvasImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)
 
 this.logUtil!!.putF(StringMaker().
                             append("File: ")!!.append(StringUtil.getInstance()!!.toString(file))!!.append(" Wrote: ")!!.appendboolean(isWritten)!!.toString(), this, this.commonStrings!!.RUN)

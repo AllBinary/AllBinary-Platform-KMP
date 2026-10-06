@@ -69,7 +69,7 @@ var file = file
     var list: BasicArrayList = this.getFilterStringBasicArrayList()!!
 
 
-    var size: Int = list.size()!!
+    var size: Int = list.size()
 
 
     var nextFileFilterString: String
@@ -91,7 +91,7 @@ nextFileFilterString= list.get(index) as String
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -101,7 +101,7 @@ nextFileFilterString= list.get(index) as String
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 
@@ -133,7 +133,7 @@ var fileNameString = fileNameString
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 

@@ -74,16 +74,16 @@ open public class BasePathFindingInfoFactory : Object {
                 // var tiledLayer = tiledLayer
                 // var cellPosition = cellPosition
 
-                var row: Int = cellPosition!!.getRow()!!
+                var row: Int = cellPosition!!.getRow()
 
-                var column: Int = cellPosition!!.getColumn()!!
+                var column: Int = cellPosition!!.getColumn()
 
                 try {
 
                     var cellTypeId: Int = mapArray[row]!![column]!!
 
                     var geographicCellType: Int =
-                        geographicMapInterface!!.getCellTypeFromMapCellTypeInt(cellTypeId)!!
+                        geographicMapInterface!!.getCellTypeFromMapCellTypeInt(cellTypeId)
 
                     if (geographicCellType == this.startLineId) {
 

@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getStoreFrontsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: StoreFrontsEntity{
+: StoreFrontsEntity?{
 
         try {
             

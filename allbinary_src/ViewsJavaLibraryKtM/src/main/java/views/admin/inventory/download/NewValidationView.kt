@@ -59,14 +59,14 @@ this.downloadableItem= DownloadableItem(this.itemInterface!!.getId())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -74,7 +74,7 @@ this.downloadableItem= DownloadableItem(this.itemInterface!!.getId())
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -85,7 +85,7 @@ this.downloadableItem= DownloadableItem(this.itemInterface!!.getId())
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

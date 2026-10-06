@@ -67,7 +67,7 @@ open public class StringValidationUtil : Object {
 
         for (index in 0 until value.length!!) {
 
-            var digit: Char = value[index]!!
+            var digit: Char = value[index]
 
             if (!this.isNumberFromChar(digit) && digit != '.') {
 

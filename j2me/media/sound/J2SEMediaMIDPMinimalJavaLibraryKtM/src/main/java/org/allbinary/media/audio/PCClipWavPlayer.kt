@@ -322,7 +322,7 @@ var event = event
                         
                                     {
                                     
-    var size: Int = this.listenersList!!.size()!!
+    var size: Int = this.listenersList!!.size()
 
 
 

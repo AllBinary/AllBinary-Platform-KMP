@@ -395,7 +395,7 @@ this.logUtil!!.putF(CommonLabels.getInstance()!!.START +text, this, "integerArra
         while(index < text.length)
         {
 
-    var aChar: Char = text[index]!!
+    var aChar: Char = text[index]
 
 
     
@@ -408,7 +408,7 @@ this.logUtil!!.putF(CommonLabels.getInstance()!!.START +text, this, "integerArra
                         
                                     {
                                     
-    var endIndex: Int = text.indexOf(';', index +1)!!
+    var endIndex: Int = text.indexOf(';', index +1)
 
 
     

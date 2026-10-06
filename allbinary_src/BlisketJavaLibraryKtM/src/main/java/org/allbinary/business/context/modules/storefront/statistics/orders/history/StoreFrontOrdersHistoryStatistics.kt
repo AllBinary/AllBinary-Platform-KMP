@@ -71,7 +71,7 @@ this.totalMoney= Money()
     var orderHistoryInterface: OrderHistoryInterface
 
 
-    var size: Int = orderHistoryInterfaceVector!!.size()!!
+    var size: Int = orderHistoryInterfaceVector!!.size()
 
 
 
@@ -171,7 +171,7 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.t
 
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList?{
 
 
 
@@ -182,7 +182,7 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.t
 
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any?{
 
 
 

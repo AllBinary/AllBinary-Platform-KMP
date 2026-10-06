@@ -95,7 +95,7 @@ FileLog.fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
                         }
                             
 
-    var canWrite: Boolean = FileLog.logFile!!.canWrite()!!
+    var canWrite: Boolean = FileLog.logFile!!.canWrite()
 
 
 
@@ -176,7 +176,7 @@ System.out.println("Error Creating Backup: " +e)
 
     open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
@@ -222,7 +222,7 @@ var exception = exception
                                     }
                                 
 
-    var length: Long = FileLog.logFile!!.length()!!
+    var length: Long = FileLog.logFile!!.length()
 
 
     
@@ -293,7 +293,7 @@ FileLog.fileOut!!.flush()
 
     open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
@@ -339,7 +339,7 @@ var functionName = functionName
                                     }
                                 
 
-    var length: Long = FileLog.logFile!!.length()!!
+    var length: Long = FileLog.logFile!!.length()
 
 
     

@@ -70,7 +70,7 @@ this.fireEmailEvent()
 {
 var vector = vector
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -116,7 +116,7 @@ this.emailVector!!.remove(emailEventListenerInterface)
     var emailEvent: EmailEvent = EmailEvent(this, this.userEmailEventNameData, this.emailInfo, 0)
 
 
-    var size: Int = this.emailVector!!.size()!!
+    var size: Int = this.emailVector!!.size()
 
 
 

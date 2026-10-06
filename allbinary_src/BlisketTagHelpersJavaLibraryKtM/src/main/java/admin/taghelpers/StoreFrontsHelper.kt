@@ -267,7 +267,7 @@ this.portion= Portion(hashMap)
 
 storeSelect!!.addAttribute(StoreFrontsHelper.CLASS, StoreFrontsHelper.TEXT)
 
-    var size: Int = storeNamesVector!!.size()!!
+    var size: Int = storeNamesVector!!.size()
 
 
 

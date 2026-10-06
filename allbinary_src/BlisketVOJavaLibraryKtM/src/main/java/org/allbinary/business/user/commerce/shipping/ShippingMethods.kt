@@ -79,7 +79,7 @@ var name = name
     var shipping: ShippingInterface
 
 
-    var size: Int = this.shippingVector!!.size()!!
+    var size: Int = this.shippingVector!!.size()
 
 
 

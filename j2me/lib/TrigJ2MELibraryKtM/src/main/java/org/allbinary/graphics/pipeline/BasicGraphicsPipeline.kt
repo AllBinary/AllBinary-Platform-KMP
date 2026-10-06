@@ -52,7 +52,7 @@ open public class BasicGraphicsPipeline : Object {
 
         var newBasicArrayList: BasicArrayList = BasicArrayListD()
 
-        var size: Int = this.pointBasicArrayList!!.size()!!
+        var size: Int = this.pointBasicArrayList!!.size()
 
         var pointFactory: PointFactory = PointFactory.getInstance()!!
 
@@ -105,7 +105,7 @@ open public class BasicGraphicsPipeline : Object {
 
         var pointFactory: PointFactory = PointFactory.getInstance()!!
 
-        var size: Int = this.pointBasicArrayList!!.size()!!
+        var size: Int = this.pointBasicArrayList!!.size()
 
         var sin: Long = 0
 
@@ -150,7 +150,7 @@ open public class BasicGraphicsPipeline : Object {
 
         var point: GPoint
 
-        var size: Int = this.pointBasicArrayList!!.size()!!
+        var size: Int = this.pointBasicArrayList!!.size()
 
         for (index in 0 until size) {
 

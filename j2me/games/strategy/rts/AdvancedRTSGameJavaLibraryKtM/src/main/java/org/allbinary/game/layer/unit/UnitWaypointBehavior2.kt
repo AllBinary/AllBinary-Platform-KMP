@@ -219,7 +219,7 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
             this.layerDistanceUtil!!.getDistance(
                 this.associatedAdvancedRTSGameLayer,
                 layerInterface,
-            )!!
+            )
 
         if (layerInterface == this.currentTargetLayerInterfaceP) {
 
@@ -428,7 +428,7 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var size: Int = this.targetList!!.size()!!
+        var size: Int = this.targetList!!.size()
 
         if (size > 0) {
 
@@ -976,7 +976,7 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
                         this.getPositionList()!!.get(0) as GeographicMapCellPosition
 
                     var clear: Boolean =
-                        this@UnitWaypointBehavior2.buildingChase(allbinaryLayer, cellPosition)!!
+                        this@UnitWaypointBehavior2.buildingChase(allbinaryLayer, cellPosition)
 
                     if (clear) {
 

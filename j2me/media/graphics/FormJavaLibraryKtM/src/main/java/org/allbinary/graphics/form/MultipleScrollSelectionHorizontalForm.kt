@@ -136,7 +136,7 @@ open public class MultipleScrollSelectionHorizontalForm :
     private var multipleScrollSelectionHorizontalFormTypeItemIndexPaintable: ItemIndexPaintable =
         ItemIndexPaintable.getInstance()!!
 
-    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()!!
+    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()
 
     private var myFontProcessor: MyFontProcessor = UpdateMyFontProcessor(this)
 
@@ -296,9 +296,9 @@ open public class MultipleScrollSelectionHorizontalForm :
         try {
             this.myFontProcessor!!.process(graphics)
 
-            var start: Int = this.getStartIndex()!!
+            var start: Int = this.getStartIndex()
 
-            var size: Int = this.size()!!
+            var size: Int = this.size()
 
             var dx: Int = this.x
 

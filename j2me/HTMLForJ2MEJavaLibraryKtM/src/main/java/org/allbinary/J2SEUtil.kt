@@ -27,7 +27,8 @@
         
 import java.util.HashMap
 import java.util.Map
-import java.util.Set
+
+//import java.util.Set
 //HTMLForJ2ME
 open public class J2SEUtil
             : Object

@@ -122,7 +122,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
     
@@ -131,7 +131,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
                                  || this.userName!!.length < 4 || this.userName!!.length > 250)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -142,7 +142,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
                                  || this.projectInfo!!.length < 0 || this.projectInfo!!.length > AbSqlData.MAXBLOB)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -153,7 +153,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
                                  || this.userComments!!.length < 0 || this.userComments!!.length > AbSqlData.MAXBLOB)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -164,7 +164,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
                                  || this.budget.length < 0 || this.budget.length > AbSqlData.MAXBLOB)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -175,7 +175,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
                                  || this.timeFrame!!.length < 0 || this.timeFrame!!.length > AbSqlData.MAXBLOB)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -186,7 +186,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
                                  || this.comments.length < 0 || this.comments.length > AbSqlData.MAXBLOB)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -210,7 +210,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }

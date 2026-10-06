@@ -54,7 +54,7 @@ companion object {
         
     open fun get()
         //nullable = true from not(false or (false and true)) = true
-: FloatArray{
+: FloatArray?{
 
 
 

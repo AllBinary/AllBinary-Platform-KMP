@@ -58,7 +58,7 @@ open public class ArtificialIntelligenceInterfaceFactoryInterfaceFactory : Objec
 
         var typeInteger: Integer = hashtable.get(BasicAI.ID as Object) as Integer
 
-        var type: Int = typeInteger!!.toInt()!!
+        var type: Int = typeInteger!!.toInt()
 
         var artificialIntelligenceInterfaceFactoryInterface:
             ArtificialIntelligenceInterfaceFactoryInterface =

@@ -183,7 +183,7 @@ this.getList()!!.clear()
                         
                                     {
                                     
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -202,7 +202,8 @@ this.getList()!!.clear()
     var score: String = highScoreVector!!.get(1) as String
 
 
-    var longScore: Long = Long.parseLong(score)!!
+    var longScore: Long = score.toLong()
+    
 
 
     var highScore: HighScore = HighScore( -1, displayName, 

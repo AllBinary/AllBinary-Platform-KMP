@@ -919,7 +919,7 @@ this.getSelectedWorkArea()!!.autoRotate(angleIncrementInteger!!.toInt(), totalRo
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var numberOfTabs: Int = this.jTabbedPane!!.getTabCount()!!
+    var numberOfTabs: Int = this.jTabbedPane!!.getTabCount()
 
 
 

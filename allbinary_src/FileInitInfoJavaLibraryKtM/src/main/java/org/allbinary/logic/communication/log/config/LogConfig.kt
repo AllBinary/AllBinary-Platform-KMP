@@ -238,7 +238,7 @@ stringBuffer!!.append(this.getFileName())
     var logConfigTypeNodeVector: BasicArrayList = DomSearchHelper.getAllNodes(LogConfigTypeData.getInstance()!!.NAME, logConfigTypesNode!!.getChildNodes())!!
 
 
-    var size: Int = logConfigTypeNodeVector!!.size()!!
+    var size: Int = logConfigTypeNodeVector!!.size()
 
 
 

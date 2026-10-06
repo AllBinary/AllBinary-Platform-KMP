@@ -17,7 +17,6 @@ package org.allbinary
 
 import android.app.Activity
 import android.os.Build
-import java.lang.Integer
 import java.lang.Object
 
 open public class AndroidUtil : Object {
@@ -26,7 +25,7 @@ open public class AndroidUtil : Object {
 
         val NULL_ACTIVITY: Activity = Activity()
 
-        private val version: Int = Integer.parseInt(Build.VERSION.SDK)!!
+        private val version: Int = Build.VERSION.SDK.toInt()
 
         open fun isMemoryRestrictive()
         // nullable = true from not(false or (false and true)) = true

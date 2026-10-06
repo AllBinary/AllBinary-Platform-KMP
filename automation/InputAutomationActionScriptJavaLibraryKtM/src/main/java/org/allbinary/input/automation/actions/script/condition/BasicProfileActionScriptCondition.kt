@@ -313,7 +313,7 @@ var document = document
     var profileActionConditionInterfaceVector: BasicArrayList = this.getProfileActionConditionInterfaceVector()!!
 
 
-    var size: Int = profileActionConditionInterfaceVector!!.size()!!
+    var size: Int = profileActionConditionInterfaceVector!!.size()
 
 
 
@@ -332,7 +332,7 @@ node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
     var profileActionProcessorInterfaceVector: BasicArrayList = this.getProfileActionProcessorInterfaceVector()!!
 
 
-    var size2: Int = profileActionProcessorInterfaceVector!!.size()!!
+    var size2: Int = profileActionProcessorInterfaceVector!!.size()
 
 
 
@@ -510,7 +510,7 @@ var frame = frame
     var profileActionConditionInterfaceVector: BasicArrayList = this.getProfileActionConditionInterfaceVector()!!
 
 
-    var size: Int = profileActionConditionInterfaceVector!!.size()!!
+    var size: Int = profileActionConditionInterfaceVector!!.size()
 
 
 
@@ -557,7 +557,7 @@ this.logUtil!!.putF(StringMaker().
     var profileActionProcessorInterfaceVector: BasicArrayList = this.getProfileActionProcessorInterfaceVector()!!
 
 
-    var size: Int = profileActionProcessorInterfaceVector!!.size()!!
+    var size: Int = profileActionProcessorInterfaceVector!!.size()
 
 
 

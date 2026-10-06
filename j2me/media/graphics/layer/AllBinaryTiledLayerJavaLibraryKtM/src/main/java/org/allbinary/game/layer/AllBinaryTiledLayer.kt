@@ -83,9 +83,9 @@ open public class AllBinaryTiledLayer : Layer, NamedInterface, PaintableInterfac
         stringBuffer!!.appendint(this.getColumns())
         this.logUtil!!.putF(stringBuffer!!.toString(), this, "setCells")
 
-        var rows: Int = this.getRows()!!
+        var rows: Int = this.getRows()
 
-        var columns: Int = this.getColumns()!!
+        var columns: Int = this.getColumns()
 
         for (col in 0 until columns) {
 
@@ -103,9 +103,9 @@ open public class AllBinaryTiledLayer : Layer, NamedInterface, PaintableInterfac
         // var fromTileId = fromTileId
         // var toTileId = toTileId
 
-        var rows: Int = this.getRows()!!
+        var rows: Int = this.getRows()
 
-        var columns: Int = this.getColumns()!!
+        var columns: Int = this.getColumns()
 
         for (col in 0 until columns) {
 

@@ -60,7 +60,7 @@ logUtil!!.putF("Start - Processing at: " +imageActionScriptOutputInterface!!.toS
     var vector: BasicArrayList = imageTypes!!.getVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

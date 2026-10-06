@@ -31,7 +31,7 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable, Upda
     // Auto Generated
     public constructor() : super() {}
 
-    private val halfHeight: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfHeight()!!
+    private val halfHeight: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfHeight()
 
     private val yArray: IntArray =
         intArrayOf(
@@ -72,7 +72,7 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable, Upda
         this.baseRefreshHelperCharArray = GameStatisticsFactory.getInstance()!!.to2DCharArray()
     }
 
-    private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()!!
+    private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()
 
     override fun paint(graphics: Graphics)
         // nullable = true from not(false or (false and false)) = true

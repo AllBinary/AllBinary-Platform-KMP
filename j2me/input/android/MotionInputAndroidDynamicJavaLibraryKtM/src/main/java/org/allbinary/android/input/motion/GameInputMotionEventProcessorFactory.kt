@@ -28,7 +28,7 @@ open public class GameInputMotionEventProcessorFactory : Object {
         // nullable =  from not(true or (false and true)) =
         : BaseGameInputMotionEventProcessor {
 
-            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
+            var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()
 
             if (SDK_VERSION <= 4) {
 

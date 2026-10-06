@@ -106,7 +106,7 @@ blueTotal += color.getBlue()
 }
 
 
-    var totalPixels: Long = imageAnalysisResults!!.getImageColorRangeResults()!!.getTotalPixelsChecked()!!
+    var totalPixels: Long = imageAnalysisResults!!.getImageColorRangeResults()!!.getTotalPixelsChecked()
 
 
     var colorAverage: ColorAverage = imageAnalysisResults!!.getImageColorResults()!!.getColorAverage()!!

@@ -149,7 +149,7 @@ PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
     var typeface: Typeface = Typeface.DEFAULT
 
 
-    var textureSize: Int = this.getAsTextureSize(this.CELLS_PER_ROW *cellSize)!!
+    var textureSize: Int = this.getAsTextureSize(this.CELLS_PER_ROW *cellSize)
 
 
     var bitmap: Bitmap = Bitmap.createBitmap(textureSize, textureSize, Bitmap.Config.ARGB_8888)!!

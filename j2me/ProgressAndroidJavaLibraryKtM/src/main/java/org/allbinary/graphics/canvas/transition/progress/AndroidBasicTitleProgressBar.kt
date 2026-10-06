@@ -220,9 +220,9 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas, DisplayChangeEv
 
             var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-            var lastWidth: Int = displayInfo!!.getLastWidth()!!
+            var lastWidth: Int = displayInfo!!.getLastWidth()
 
-            var lastHeight: Int = displayInfo!!.getLastHeight()!!
+            var lastHeight: Int = displayInfo!!.getLastHeight()
 
             if (displayInfo!!.isPortraitWH(lastWidth, lastHeight)) {
 

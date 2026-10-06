@@ -134,7 +134,7 @@ open public class MyCanvas : Canvas, DisplayableInterface, MyCommandInterface {
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var size: Int = this.commandStack!!.size!!
+        var size: Int = this.commandStack!!.size
 
         for (index in 0 until size) {
 

@@ -91,9 +91,9 @@ open public class AnimationFactorySpriteScaleUtil : Object {
 
                 if (this.openGLESImageExclusionUtil!!.isCustomScaling(image)) {
 
-                    var width2: Int = this.j2seMath!!.round((scaleWidth) - 0.5f)!!
+                    var width2: Int = this.j2seMath!!.round((scaleWidth) - 0.5f)
 
-                    var height2: Int = this.j2seMath!!.round((scaleHeight) - 0.5f)!!
+                    var height2: Int = this.j2seMath!!.round((scaleHeight) - 0.5f)
 
                     var multiplesOf16Width: Int = width2 / 16
 

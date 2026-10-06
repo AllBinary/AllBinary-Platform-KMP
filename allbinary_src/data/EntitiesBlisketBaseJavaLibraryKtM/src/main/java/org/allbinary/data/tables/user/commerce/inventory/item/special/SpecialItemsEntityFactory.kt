@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getSpecialItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: SpecialItemsEntity{
+: SpecialItemsEntity?{
 
         try {
             

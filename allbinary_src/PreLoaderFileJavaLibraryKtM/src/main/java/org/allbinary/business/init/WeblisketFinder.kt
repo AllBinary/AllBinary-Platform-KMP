@@ -89,7 +89,7 @@ private constructor ()
 
     open fun findAll(path: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
 var path = path
 
         try {
@@ -123,7 +123,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "findAll", e)
 
     open fun getInstallationPath(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
 var file = file
 
         try {
@@ -131,7 +131,7 @@ var file = file
     var filePath: String = file.getPath()!!
 
 
-    var end: Int = filePath!!.indexOf(KEY)!!
+    var end: Int = filePath!!.indexOf(KEY)
 
 
     

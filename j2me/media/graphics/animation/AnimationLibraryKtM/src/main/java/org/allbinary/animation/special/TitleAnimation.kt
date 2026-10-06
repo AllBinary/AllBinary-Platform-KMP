@@ -124,7 +124,7 @@ open public class TitleAnimation : SpecialAnimation {
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var currentTime: Long = this.systemWrapper!!.currentTimeMillis()!!
+        var currentTime: Long = this.systemWrapper!!.currentTimeMillis()
 
         var totalTimeElapsed: Long = currentTime - this.lastFrameStartTime
 

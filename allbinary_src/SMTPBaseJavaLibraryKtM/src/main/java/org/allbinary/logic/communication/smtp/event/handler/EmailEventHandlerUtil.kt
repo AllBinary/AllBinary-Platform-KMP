@@ -127,7 +127,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "getEventHandler")
 
 userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 
-    var size: Int = userVector!!.size()!!
+    var size: Int = userVector!!.size()
 
 
 

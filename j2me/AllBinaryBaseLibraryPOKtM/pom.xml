@@ -48,6 +48,7 @@
 
 <!--        <module>../../allbinary_src/LogNoPlatformJavaLibraryKtM</module>-->
         <module>../../allbinary_src/LogJ2MEJavaLibraryKtM</module>
+        <module>../../allbinary_src/LogJ2SEJavaLibraryKtM</module>
         <module>../../allbinary_src/LogAndroidJavaLibraryKtM</module>
         <module>../logging/LoggingNoneKtM</module>
         <module>../logging/LoggingJ2MEAllKtM</module>

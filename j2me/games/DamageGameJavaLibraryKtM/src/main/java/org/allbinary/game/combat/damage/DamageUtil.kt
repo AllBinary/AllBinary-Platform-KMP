@@ -67,7 +67,7 @@ open public class DamageUtil : Object {
         var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer =
             collidableInterfaceCompositeInterface as CollidableDestroyableDamageableLayer
 
-        var damage: Int = collidableDestroyableDamageableLayer!!.getDamage(0)!!
+        var damage: Int = collidableDestroyableDamageableLayer!!.getDamage(0)
 
         if (damage > 20000) {
 

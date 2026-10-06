@@ -93,7 +93,7 @@ this.numberOfColumns++
                 
 
 
-    var cellSize: Int = this.htmlCellsVector!!.size()!!
+    var cellSize: Int = this.htmlCellsVector!!.size()
 
 result= this.before
 result += this.START

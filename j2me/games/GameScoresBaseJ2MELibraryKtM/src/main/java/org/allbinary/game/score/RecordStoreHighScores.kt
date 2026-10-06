@@ -182,7 +182,7 @@ open public class RecordStoreHighScores : HighScores {
 
             var highScoreBytes: ByteArray = newHighScore!!.getAsBytes()!!
 
-            var recordId: Int = recordStore!!.addRecord(highScoreBytes, 0, highScoreBytes!!.size)!!
+            var recordId: Int = recordStore!!.addRecord(highScoreBytes, 0, highScoreBytes!!.size)
 
             this.load()
         } catch (e: RecordStoreException) {
@@ -242,7 +242,7 @@ open public class RecordStoreHighScores : HighScores {
 
             while (recordEnum!!.hasNextElement()) {
 
-                var id: Int = recordEnum!!.nextRecordId()!!
+                var id: Int = recordEnum!!.nextRecordId()
 
                 recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
 
@@ -253,7 +253,7 @@ open public class RecordStoreHighScores : HighScores {
 
                     var name: String = inputStream!!.readUTF()!!
 
-                    var nextScore: Long = inputStream!!.readLong()!!
+                    var nextScore: Long = inputStream!!.readLong()
 
                     var nextCurrentHighScore: HighScore =
                         HighScore(id, name, GameInfo.NONE, nextScore)
@@ -326,7 +326,7 @@ open public class RecordStoreHighScores : HighScores {
 
             while (recordEnum!!.hasNextElement()) {
 
-                var id: Int = recordEnum!!.nextRecordId()!!
+                var id: Int = recordEnum!!.nextRecordId()
 
                 recordAsBytes = this.tsUtil!!.getRecord(recordStore, id)
 
@@ -339,13 +339,13 @@ open public class RecordStoreHighScores : HighScores {
 
                         var name: String = inputStream!!.readUTF()!!
 
-                        var score: Long = inputStream!!.readLong()!!
+                        var score: Long = inputStream!!.readLong()
 
                         var newHighScore: HighScore = HighScore(id, name, GameInfo.NONE, score)
 
                         var list: BasicArrayList = this.getList()!!
 
-                        var size: Int = list.size()!!
+                        var size: Int = list.size()
 
                         var lastIndex: Int = size
 
@@ -445,7 +445,7 @@ open public class RecordStoreHighScores : HighScores {
 
                 var list: BasicArrayList = this.getList()!!
 
-                var size: Int = list.size()!!
+                var size: Int = list.size()
 
                 for (index in 0 until size) {
 
@@ -487,7 +487,7 @@ open public class RecordStoreHighScores : HighScores {
 
         var list: BasicArrayList = this.getList()!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 

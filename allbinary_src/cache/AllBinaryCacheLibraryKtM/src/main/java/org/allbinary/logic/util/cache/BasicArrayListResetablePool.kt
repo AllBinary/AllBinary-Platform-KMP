@@ -38,7 +38,7 @@ open public class BasicArrayListResetablePool : AbstractArrayListPool {
         : CacheableInterface {
         var key = key
 
-        var size: Int = this.buffers.size()!!
+        var size: Int = this.buffers.size()
 
         if (size > 0) {
 

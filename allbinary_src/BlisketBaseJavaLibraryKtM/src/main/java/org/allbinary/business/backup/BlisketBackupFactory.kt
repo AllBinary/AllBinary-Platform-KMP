@@ -152,7 +152,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var storeFrontNamesBasicArrayList: BasicArrayList = storeFrontsEntity!!.getStoreFrontNames()!!
 
 
-    var size: Int = storeFrontNamesBasicArrayList!!.size()!!
+    var size: Int = storeFrontNamesBasicArrayList!!.size()
 
 
     var nextStore: String
@@ -218,7 +218,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var storeFrontNamesBasicArrayList: BasicArrayList = storeFrontsEntity!!.getStoreFrontNames()!!
 
 
-    var size: Int = storeFrontNamesBasicArrayList!!.size()!!
+    var size: Int = storeFrontNamesBasicArrayList!!.size()
 
 
     var nextStore: String
@@ -288,7 +288,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
     var storeFrontNamesBasicArrayList: BasicArrayList = storeFrontsEntity!!.getStoreFrontNames()!!
 
 
-    var size: Int = storeFrontNamesBasicArrayList!!.size()!!
+    var size: Int = storeFrontNamesBasicArrayList!!.size()
 
 
     var nextStore: String

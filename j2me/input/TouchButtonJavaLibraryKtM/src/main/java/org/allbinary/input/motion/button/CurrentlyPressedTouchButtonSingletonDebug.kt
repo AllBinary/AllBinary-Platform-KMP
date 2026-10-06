@@ -157,7 +157,7 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
         : Boolean {
         var touchButtonInput = touchButtonInput
 
-        var isRemoved: Boolean = super.remove(touchButtonInput)!!
+        var isRemoved: Boolean = super.remove(touchButtonInput)
 
         this.listString = this.list.toString()
         this.string = StringMaker().append(this.listString)!!.append(this.append)!!.toString()

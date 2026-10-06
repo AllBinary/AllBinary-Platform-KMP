@@ -61,7 +61,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -76,7 +76,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -91,7 +91,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -106,7 +106,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -121,7 +121,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -136,7 +136,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -151,7 +151,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -166,7 +166,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -183,7 +183,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -201,7 +201,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -218,7 +218,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -236,7 +236,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -253,7 +253,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -264,7 +264,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -280,7 +280,7 @@ this.downloadableItem= downloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -498,7 +498,7 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -509,7 +509,7 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

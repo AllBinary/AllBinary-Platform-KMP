@@ -180,7 +180,7 @@ this.taskQueue= BasicArrayListD()
                         
                                     {
                                     
-    var size: Int = this.taskQueue!!.size()!!
+    var size: Int = this.taskQueue!!.size()
 
 
     var runnable: PriorityRunnable
@@ -221,7 +221,7 @@ break;
                                 
                         else {
                             
-    var index: Int = this.taskQueue!!.indexOf(lowerPriorityRunnable)!!
+    var index: Int = this.taskQueue!!.indexOf(lowerPriorityRunnable)
 
 this.taskQueue!!.addAt(index, task)
 

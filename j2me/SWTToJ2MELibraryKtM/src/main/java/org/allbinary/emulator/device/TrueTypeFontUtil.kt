@@ -353,7 +353,7 @@ this.characterArray[0]= pattern[index]
                                 
                         else {
                             
-    var shortPatternIndex: Int = this.shortPattern!!.indexOf(this.characterArray[0]!!)!!
+    var shortPatternIndex: Int = this.shortPattern!!.indexOf(this.characterArray[0]!!)
 
 
     var w: Int = (this.widthFloatArray[shortPatternIndex] /75).toInt() +19

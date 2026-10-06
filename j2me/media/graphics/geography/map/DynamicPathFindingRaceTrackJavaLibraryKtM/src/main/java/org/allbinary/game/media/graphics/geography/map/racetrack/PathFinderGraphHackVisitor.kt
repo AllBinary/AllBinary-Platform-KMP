@@ -98,10 +98,10 @@ var startPathFindingNodeList = startPathFindingNodeList
     var geographicMapCellPosition: GeographicMapCellPosition = startPathFindingNode!!.geographicMapCellPosition
 
 
-    var column: Int = geographicMapCellPosition!!.getColumn()!!
+    var column: Int = geographicMapCellPosition!!.getColumn()
 
 
-    var row: Int = geographicMapCellPosition!!.getRow()!!
+    var row: Int = geographicMapCellPosition!!.getRow()
 
 
     var nextRow: Int = row +1
@@ -151,10 +151,10 @@ var endPathFindingNodeList = endPathFindingNodeList
 
 graph.addVertex(geographicMapCellPosition)
 
-    var column: Int = geographicMapCellPosition!!.getColumn()!!
+    var column: Int = geographicMapCellPosition!!.getColumn()
 
 
-    var row: Int = geographicMapCellPosition!!.getRow()!!
+    var row: Int = geographicMapCellPosition!!.getRow()
 
 
     var nextRow: Int = row +1
@@ -295,7 +295,7 @@ var pathList = pathList
     var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getAt(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
 
 
-    var indexOf: Int = pathList!!.indexOf(overPassGeographicMapCellPosition)!!
+    var indexOf: Int = pathList!!.indexOf(overPassGeographicMapCellPosition)
 
 
     

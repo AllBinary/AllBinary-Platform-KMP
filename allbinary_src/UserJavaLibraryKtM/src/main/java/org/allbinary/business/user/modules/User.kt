@@ -208,14 +208,14 @@ this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
     
                         if(!UserName.getInstance()!!.isValid(this.userName))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -224,7 +224,7 @@ this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!
                         if(!this.password.isValid())
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -236,7 +236,7 @@ this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!
                         if(!stringValidationUtil!!.isValidRequired(this.firstName, 1, UserData.MAXLEN))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -245,7 +245,7 @@ this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!
                         if(!stringValidationUtil!!.isValidRequired(this.lastName, 1, UserData.MAXLEN))
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -254,7 +254,7 @@ this.enable= stringUtil!!.getNonNull(userHashMap!!.get(EntryData.getInstance()!!
                         if(!stringValidationUtil!!.isValidRequired(this.mainEmail, 1, UserData.MAXLEN) || this.mainEmail!!.indexOf("@") ==  -1)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -281,7 +281,7 @@ this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -918,7 +918,7 @@ var weblisketSession = weblisketSession
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
@@ -937,7 +937,7 @@ var weblisketSession = weblisketSession
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -948,7 +948,7 @@ var weblisketSession = weblisketSession
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

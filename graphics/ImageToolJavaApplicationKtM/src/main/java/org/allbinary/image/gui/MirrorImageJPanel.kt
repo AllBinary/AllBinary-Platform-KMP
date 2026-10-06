@@ -114,7 +114,7 @@ this@MirrorImageJPanel.result= MirrorImageUtil.getInstance()!!.getImage(buffered
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)
 
 filePath= filePath!!.substring(0, extensionIndex) +"_mirror" +imageStrings!!.PNG_EXTENSION
 logUtil!!.putF("Renamed File: " +filePath, this, commonStrings!!.RUN)
@@ -123,7 +123,7 @@ file= File(filePath)
                                     }
                                 
 
-    var isWritten: Boolean = ImageIO.write(this@MirrorImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
+    var isWritten: Boolean = ImageIO.write(this@MirrorImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)
 
 logUtil!!.putF("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
 this@MirrorImageJPanel.getParent()!!.repaint()

@@ -63,14 +63,14 @@ this.streetAddress= StreetAddress(this.getRequest())
 
 
     
-                        if(TaxFactory.getInstance()!!.getInstance(this.abeClientInformation, storeFrontInterface)!!.isValid(this.streetAddress, storeFrontInterface) == Boolean.FALSE)
+                        if(TaxFactory.getInstance()!!.getInstance(this.abeClientInformation, storeFrontInterface)!!.isValid(this.streetAddress, storeFrontInterface) == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -91,7 +91,7 @@ this.streetAddress= StreetAddress(this.getRequest())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -99,7 +99,7 @@ this.streetAddress= StreetAddress(this.getRequest())
     var count: Int = 0
 
 
-    var size: Int = streetAddressList!!.size()!!
+    var size: Int = streetAddressList!!.size()
 
 
 
@@ -129,12 +129,12 @@ this.streetAddress= StreetAddress(this.getRequest())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
@@ -151,7 +151,7 @@ this.streetAddress= StreetAddress(this.getRequest())
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -162,7 +162,7 @@ this.streetAddress= StreetAddress(this.getRequest())
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

@@ -142,7 +142,7 @@ iconHeightList!!.add(864)
     var IOS: String = "ios-icon-"
 
 
-    var size: Int = iconWidthList!!.size()!!
+    var size: Int = iconWidthList!!.size()
 
 
     var width: Int = 0
@@ -180,7 +180,7 @@ get.
     var filePath: String = files[index]!!.getAbsolutePath()!!
 
 
-    var endIndex: Int = filePath!!.lastIndexOf('\\')!!
+    var endIndex: Int = filePath!!.lastIndexOf('\\')
 
 
     var path: String = filePath!!.substring(0, endIndex +1)!!

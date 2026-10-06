@@ -119,7 +119,7 @@ object: Thread()
     var percent: Integer = Integer(Integer.valueOf(this@ResizeImageJPanel.jComboBox1!!.getSelectedItem() as String))!!
 
 
-    var percentAsFloat: Float = Float.parseFloat(this@ResizeImageJPanel.floatPercentJTextField!!.getText())!!
+    var percentAsFloat: Float = (this@ResizeImageJPanel.floatPercentJTextField!!.getText()).toFloat()!!
 
 
     var imageProcessorInput: ImageProcessorInput = this@ResizeImageJPanel.getImageProcessorInput()!!

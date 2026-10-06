@@ -65,7 +65,7 @@ private constructor ()
 
     open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image?{
     //var originalImage = originalImage
     //var image = image
     //var totalAngle = totalAngle
@@ -113,7 +113,7 @@ canvas.restore()
 
     open fun rotateImageCanvasSurfaceClear(originalImage: Image, image: Image, canvasSurface: Canvas, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image?{
     //var originalImage = originalImage
     //var image = image
     //var canvasSurface = canvasSurface
@@ -148,7 +148,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 
     open fun rotateImageCanvasSurface(originalImage: Image, image: Image, canvasSurface: Canvas, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image?{
     //var originalImage = originalImage
     //var image = image
     //var canvasSurface = canvasSurface

@@ -106,7 +106,7 @@ var name = name
 
     open fun loadClass(name: String, resolve: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>{
+: KClass<*>?{
 var name = name
 var resolve = resolve
 
@@ -232,7 +232,7 @@ this.logUtil!!.put("Failure loading: " +name +"\nwith: " +loadedWith, this, this
 
     open fun loadClassBytesFromFile(name: String)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray?{
 var name = name
 
     var in: FileInputStream = 
@@ -311,7 +311,7 @@ StreamUtil.getInstance()!!.close(in)
 
     open fun oldLoadClass(name: String, resolve: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>{
+: KClass<*>?{
 var name = name
 var resolve = resolve
 

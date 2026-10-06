@@ -107,7 +107,7 @@ this.downloadItemId= hashMap!!.get(DownloadItemData.ID) as String
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -123,12 +123,13 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
 
-    var downloadable: Int = Integer.parseInt(this.itemInterface!!.getDownloads())!!
+    var downloadable: Int = this.itemInterface!!.getDownloads().toInt()
+    
 
 
     
@@ -150,7 +151,7 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -163,7 +164,7 @@ this.downloadableItem= vector.get(0) as DownloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -171,13 +172,13 @@ this.downloadableItem= vector.get(0) as DownloadableItem
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -188,7 +189,7 @@ this.downloadableItem= vector.get(0) as DownloadableItem
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -229,7 +230,8 @@ var document = document
                                     }
                                 
 
-    var downloadable: Int = Integer.parseInt(this.itemInterface!!.getDownloads())!!
+    var downloadable: Int = this.itemInterface!!.getDownloads().toInt()
+    
 
 
     

@@ -61,7 +61,7 @@ this.logUtil!!.putF("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.comm
 
     open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInterface, name: String, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream?{
     //var abeClientInformation = abeClientInformation
     //var name = name
     //var inputStream = inputStream

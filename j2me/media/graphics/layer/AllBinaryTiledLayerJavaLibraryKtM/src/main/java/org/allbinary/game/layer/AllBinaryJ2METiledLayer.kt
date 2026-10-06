@@ -72,25 +72,25 @@ open public class AllBinaryJ2METiledLayer : AllBinaryTiledLayer {
         graphics.setFont(this.font2)
         graphics.setColor(this.debugColor)
 
-        var x: Int = this.tiledLayerP!!.getX()!!
+        var x: Int = this.tiledLayerP!!.getX()
 
-        var y: Int = this.tiledLayerP!!.getY()!!
+        var y: Int = this.tiledLayerP!!.getY()
 
         var firstColumn: Int = 0
 
         var firstRow: Int = 0
 
-        var totalColumns: Int = this.tiledLayerP!!.getColumns()!!
+        var totalColumns: Int = this.tiledLayerP!!.getColumns()
 
-        var totalRows: Int = this.tiledLayerP!!.getRows()!!
+        var totalRows: Int = this.tiledLayerP!!.getRows()
 
         var x0: Int = x
 
         var tile: Int = 0
 
-        var tileHeight: Int = this.tiledLayerP!!.getCellHeight()!!
+        var tileHeight: Int = this.tiledLayerP!!.getCellHeight()
 
-        var tileWidth: Int = this.tiledLayerP!!.getCellWidth()!!
+        var tileWidth: Int = this.tiledLayerP!!.getCellWidth()
 
         var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 

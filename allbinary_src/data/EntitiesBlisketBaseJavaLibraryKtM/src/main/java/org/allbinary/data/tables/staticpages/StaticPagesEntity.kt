@@ -101,7 +101,7 @@ var keywords = keywords
 whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, store)
 whereHashMap!!.put(basicItemData!!.KEYWORDS, keywords)
 
-    var file: String = super.getField(whereHashMap, SearchData.PAGE)!!
+    var file: String = super.java.getField(whereHashMap, SearchData.PAGE)!!
 
 
 

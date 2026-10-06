@@ -37,13 +37,13 @@ open public class GameTickDisplayInfoSingleton : Object {
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-    private var lastWidth: Int = this.displayInfoSingleton!!.getLastWidth()!!
+    private var lastWidth: Int = this.displayInfoSingleton!!.getLastWidth()
 
-    private var lastHeight: Int = this.displayInfoSingleton!!.getLastHeight()!!
+    private var lastHeight: Int = this.displayInfoSingleton!!.getLastHeight()
 
-    private var lastHalfWidth: Int = this.displayInfoSingleton!!.getLastHalfWidth()!!
+    private var lastHalfWidth: Int = this.displayInfoSingleton!!.getLastHalfWidth()
 
-    private var lastHalfHeight: Int = this.displayInfoSingleton!!.getLastHalfHeight()!!
+    private var lastHalfHeight: Int = this.displayInfoSingleton!!.getLastHalfHeight()
 
     open fun update()
         // nullable = true from not(false or (false and true)) = true

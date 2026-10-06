@@ -32,7 +32,8 @@ import java.sql.ResultSetMetaData
 import java.sql.SQLException
 import java.sql.Statement
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.init.db.DatabaseConnectionInfoInterface
@@ -199,7 +200,7 @@ this.executeSQLStatement(tableData)
 
     open fun getRow(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>?{
 var keysAndValues = keysAndValues
 
     var stringBuffer: StringMaker = StringMaker()
@@ -275,7 +276,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
         {
 result= stdUtil!!.createHashMap()
 
-    var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
+    var columnCount: Int = resultSetMetaData!!.getColumnCount()
 
 
 
@@ -457,7 +458,7 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
         try {
             
-    var size: Int = values.size()!!
+    var size: Int = values.size()
 
 
 

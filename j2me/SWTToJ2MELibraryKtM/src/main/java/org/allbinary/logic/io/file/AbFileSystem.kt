@@ -153,7 +153,7 @@ companion object {
 
 closeable= idFile
 
-    var size: Int = idFile!!.read(bytes)!!
+    var size: Int = idFile!!.read(bytes)
 
 
     

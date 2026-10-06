@@ -28,7 +28,8 @@
 import java.util.Enumeration
 import java.util.Hashtable
 import java.util.Map
-import java.util.Set
+
+//import java.util.Set
 import jsinterop.annotations.JsType
 
 open public class ABHashtable<K, V> : Hashtable<K, V> {

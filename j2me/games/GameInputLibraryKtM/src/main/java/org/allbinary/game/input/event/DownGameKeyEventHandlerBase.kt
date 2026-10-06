@@ -128,7 +128,7 @@ open public class DownGameKeyEventHandlerBase : BasicEventHandler {
 
         var eventListenerInterface: EventListenerInterface
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         var index: Int = 0
 

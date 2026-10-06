@@ -79,8 +79,7 @@ open public class WaypointPathRunnableBase : Object, RunnableInterface, Priority
 
         if (targetLayer != null) {
 
-            var distance: Int =
-                this.layerDistanceUtil!!.getDistance(targetLayer, pathFindingLayer)!!
+            var distance: Int = this.layerDistanceUtil!!.getDistance(targetLayer, pathFindingLayer)
 
             var distanceCategory: Int = distance / 70
 

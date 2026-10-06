@@ -93,7 +93,7 @@ private constructor ()
 
     open fun getHelpSet(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: HelpSet{
+: HelpSet?{
 var filePath = filePath
 
         try {
@@ -124,7 +124,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
     open fun getHelpSet(url: URL)
         //nullable = true from not(false or (false and false)) = true
-: HelpSet{
+: HelpSet?{
 var url = url
 
         try {

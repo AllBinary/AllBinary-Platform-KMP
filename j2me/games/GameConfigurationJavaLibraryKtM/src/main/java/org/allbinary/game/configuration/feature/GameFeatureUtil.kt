@@ -72,7 +72,7 @@ open public class GameFeatureUtil : Object {
 
         var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
 
-        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
+        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)
 
         stringBuffer!!.append("Multiple Total Choices: ")
         stringBuffer!!.appendint(total)
@@ -122,7 +122,7 @@ open public class GameFeatureUtil : Object {
 
         var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
 
-        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
+        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)
 
         stringBuffer!!.append("Multiple Total Choices: ")
         stringBuffer!!.appendint(total)
@@ -171,7 +171,7 @@ open public class GameFeatureUtil : Object {
 
         var selectedArray_return: BooleanArray = BooleanArray(choiceGroup!!.size())
 
-        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
+        var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)
 
         stringBuffer!!.append("Exclusive Total Choices: 1==")
         stringBuffer!!.appendint(total)
@@ -269,9 +269,9 @@ open public class GameFeatureUtil : Object {
 
             var features: Features = Features.getInstance()!!
 
-            var addIndex: Int = list.indexOf(gameFeature)!!
+            var addIndex: Int = list.indexOf(gameFeature)
 
-            var size: Int = list.size()!!
+            var size: Int = list.size()
 
             for (index in 0 until size) {
 

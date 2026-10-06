@@ -292,7 +292,7 @@ this.styleValidationInterface= CssStyleValidation(document)
 
         try {
             
-    var isValid: Boolean = Boolean.TRUE
+    var isValid: Boolean = Boolean.true
 
 
     
@@ -308,7 +308,7 @@ this.styleValidationInterface= CssStyleValidation(document)
                         if(!StringValidationUtil.getInstance()!!.isValidRequired(this.categoryAbPath!!.toString(), AbSqlData.MINSTRING, AbSqlData.MAXSTRING))
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
@@ -317,7 +317,7 @@ this.styleValidationInterface= CssStyleValidation(document)
                         if(!StringValidationUtil.getInstance()!!.isValidRequired(this.themeName, AbSqlData.MINSTRING, AbSqlData.MAXSTRING))
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
@@ -326,7 +326,7 @@ this.styleValidationInterface= CssStyleValidation(document)
                         if(!this.getCssStyleValidation()!!.isValid())
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
@@ -359,7 +359,7 @@ this.styleValidationInterface= CssStyleValidation(document)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -402,7 +402,7 @@ stringBuffer!!.append("Theme Validation Error")
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -413,7 +413,7 @@ stringBuffer!!.append("Theme Validation Error")
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

@@ -102,7 +102,7 @@ open public class BasicInputMappingHelpPaintable : HelpPaintable {
 
         var key: Input
 
-        var size: Int = keyList!!.size()!!
+        var size: Int = keyList!!.size()
 
         for (index in 0 until size) {
 

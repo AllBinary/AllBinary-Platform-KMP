@@ -82,7 +82,7 @@ open public class DatabaseEncoder : Object {
 
                 var byteVector: BasicArrayList = BasicArrayListD()
 
-                var size: Int = vector.size()!!
+                var size: Int = vector.size()
 
                 var byteOfData: String
 

@@ -94,7 +94,7 @@ var values = values
             
     open fun get(userName: String, id: Int)
         //nullable = true from not(false or (false and false)) = true
-: QuoteRequest{
+: QuoteRequest?{
 var userName = userName
 var id = id
 

@@ -42,7 +42,7 @@ open public class HorizontalScreenPatrolAI : BasicAI {
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
-    private var firingX: Int = this.displayInfoSingleton!!.getLastHalfWidth()!!
+    private var firingX: Int = this.displayInfoSingleton!!.getLastHalfWidth()
 
     private var firedIndex: Int = 0
 
@@ -84,11 +84,11 @@ open public class HorizontalScreenPatrolAI : BasicAI {
 
             var layerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-            var currentOwnerLayerX: Int = layerInterface!!.getXP()!!
+            var currentOwnerLayerX: Int = layerInterface!!.getXP()
 
             if (currentOwnerLayerX < -layerInterface!!.getWidth()) {
 
-                var y: Int = MyRandomFactory.getInstance()!!.getAbsoluteNextIntAllowZero(50)!!
+                var y: Int = MyRandomFactory.getInstance()!!.getAbsoluteNextIntAllowZero(50)
 
                 layerInterface!!.setPosition(
                     this.displayInfoSingleton!!.getLastWidth() + layerInterface!!.getWidth() + 50,

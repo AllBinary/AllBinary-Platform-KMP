@@ -73,14 +73,14 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
 
         try {
             
-    var valid: Boolean = Boolean.TRUE
+    var valid: Boolean = Boolean.true
 
 
     
-                        if(this.newStoreFrontInterface!!.isValid() == Boolean.FALSE)
+                        if(this.newStoreFrontInterface!!.isValid() == false)
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -91,7 +91,7 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
                                 )
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -100,7 +100,7 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
                         if(AbFile.createAbFileFromAbPath(AbPath(this.getStoreViewsPath(), StringUtil.getInstance()!!.EMPTY_STRING))!!.isFile())
                         
                                     {
-                                    valid= Boolean.FALSE
+                                    valid= false
 
                                     }
                                 
@@ -124,7 +124,7 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -159,7 +159,7 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
 
 
     
-                        if(this.newStoreFrontInterface!!.isValid() == Boolean.FALSE)
+                        if(this.newStoreFrontInterface!!.isValid() == false)
                         
                                     {
                                     stringBuffer!!.append(this.newStoreFrontInterface!!.validationInfo())
@@ -214,7 +214,7 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -225,7 +225,7 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

@@ -29,7 +29,8 @@
         
 import java.util.HashMap
 import java.util.HashSet
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
@@ -112,7 +113,7 @@ var storeFront = storeFront
     var subStoreVector: BasicArrayList = storeFront!!.getSubStores()!!
 
 
-    var size: Int = subStoreVector!!.size()!!
+    var size: Int = subStoreVector!!.size()
 
 
 
@@ -496,7 +497,7 @@ stringBuffer!!.append("<br />")
     var storeFrontVector: BasicArrayList = this.storeFronts!!.getStoreFrontNames()!!
 
 
-    var size: Int = storeFrontVector!!.size()!!
+    var size: Int = storeFrontVector!!.size()
 
 
 

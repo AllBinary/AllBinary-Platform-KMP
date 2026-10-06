@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getStaticPagesEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: StaticPagesEntity{
+: StaticPagesEntity?{
 
         try {
             

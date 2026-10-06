@@ -51,7 +51,7 @@ open public class OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer : 
 
             var layerManager: LayerManager = this.getLayerManager()!!
 
-            var size: Int = layerManager!!.getSize()!!
+            var size: Int = layerManager!!.getSize()
 
             var collidableInterfaceCompositeInterface2: CollidableCompositeLayer
 

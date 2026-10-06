@@ -48,16 +48,23 @@ open public class AngleIncrementInfoFactory : Object {
 
         var halfAngleIncrement: Int = (angleIncrement.toInt() shr 1)
 
+        var angleIncrementInfo: AngleIncrementInfo
+
         var angleIncrementInfoCanBeNull: AngleIncrementInfo? =
             this.angleIncrementInfo[halfAngleIncrement]
 
         if (angleIncrementInfoCanBeNull == null) {
 
-            angleIncrementInfoCanBeNull = AngleIncrementInfo(angleIncrement)
-            this.angleIncrementInfo[halfAngleIncrement] = angleIncrementInfoCanBeNull
+            angleIncrementInfo = AngleIncrementInfo(angleIncrement)
+            this.angleIncrementInfo[halfAngleIncrement] = angleIncrementInfo
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return angleIncrementInfo
+        } else {
+            angleIncrementInfo = angleIncrementInfoCanBeNull
         }
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return angleIncrementInfoCanBeNull
+        return angleIncrementInfo
     }
 }

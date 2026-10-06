@@ -131,7 +131,7 @@ open public class GeographicMapCellPositionEventHandler : BasicEventHandler {
         var geographicMapCellPositionEventListenerInterface:
             GeographicMapCellPositionEventListenerInterface
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 

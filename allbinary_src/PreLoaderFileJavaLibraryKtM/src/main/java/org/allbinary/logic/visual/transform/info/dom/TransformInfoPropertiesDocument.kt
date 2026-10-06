@@ -63,7 +63,7 @@ this.document= DomDocumentFileHelper.createDocument(xmlFile)
 
     open fun toTransformInfoPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>?{
 
         try {
             
@@ -88,7 +88,7 @@ this.document= DomDocumentFileHelper.createDocument(xmlFile)
                                     }
                                 
 
-    var size: Int = transformInfoNodeVector!!.size()!!
+    var size: Int = transformInfoNodeVector!!.size()
 
 
     var node: Node

@@ -100,9 +100,9 @@ open public class PickupLayer : MultiPlayerGameLayer, PickedUpLayerInterface, Pi
 
         var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
-        var viewX: Int = viewPosition!!.getX()!!
+        var viewX: Int = viewPosition!!.getX()
 
-        var viewY: Int = viewPosition!!.getY()!!
+        var viewY: Int = viewPosition!!.getY()
 
         this.animationInterface!!.paintXY(graphics, viewX, viewY)
     }
@@ -114,9 +114,9 @@ open public class PickupLayer : MultiPlayerGameLayer, PickedUpLayerInterface, Pi
 
         var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
-        var viewX: Int = viewPosition!!.getX()!!
+        var viewX: Int = viewPosition!!.getX()
 
-        var viewY: Int = viewPosition!!.getY()!!
+        var viewY: Int = viewPosition!!.getY()
 
         this.animationInterface!!.paintThreedXYZ(graphics, viewX, viewY, 3)
     }

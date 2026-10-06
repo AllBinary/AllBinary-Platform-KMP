@@ -58,7 +58,7 @@ private constructor ()
 
     open fun create2()
         //nullable = true from not(false or (false and true)) = true
-: WorkFlowEntity{
+: WorkFlowEntity?{
 
         try {
             

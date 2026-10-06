@@ -56,7 +56,7 @@ open public class DestroyedLayerProcessor : BasicLayerProcessor {
 
         var list: BasicArrayList = this.getList()!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var destroyedEventHandler: DestroyedEventHandler = DestroyedEventHandler.getInstance()!!
 

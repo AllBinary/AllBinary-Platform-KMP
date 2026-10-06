@@ -57,7 +57,7 @@ var f = f
     var s: String = f.getName()!!
 
 
-    var i: Int = s.lastIndexOf('.')!!
+    var i: Int = s.lastIndexOf('.')
 
 
     

@@ -80,7 +80,7 @@ this.anyType= anyType
 
     open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
         try {
             

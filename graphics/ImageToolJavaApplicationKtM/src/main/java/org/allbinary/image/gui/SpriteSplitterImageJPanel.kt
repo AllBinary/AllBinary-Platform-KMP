@@ -101,16 +101,16 @@ object: Thread()
     var totalAnimations: Integer = Integer(Integer.valueOf(totalAnimationsJComboBox!!.getSelectedItem() as String))!!
 
 
-    var widthReduction: Int = Integer(Integer.valueOf(widthReductionTextField!!.getText()))!!
+    var widthReduction: Int = Integer(Integer.valueOf(widthReductionTextField!!.getText()))
 
 
-    var heightReduction: Int = Integer(Integer.valueOf(heightReductionTextField!!.getText()))!!
+    var heightReduction: Int = Integer(Integer.valueOf(heightReductionTextField!!.getText()))
 
 
-    var increaseWidth: Int = Integer(Integer.valueOf(increaseWidthTextField!!.getText()))!!
+    var increaseWidth: Int = Integer(Integer.valueOf(increaseWidthTextField!!.getText()))
 
 
-    var increaseHeight: Int = Integer(Integer.valueOf(increaseHeightTextField!!.getText()))!!
+    var increaseHeight: Int = Integer(Integer.valueOf(increaseHeightTextField!!.getText()))
 
 spriteSplitterUtil!!.process(this@SpriteSplitterImageJPanel.getImageProcessorInput(), totalFrames, totalAnimations, widthReduction, heightReduction, increaseWidth, increaseHeight, spriteType, this@SpriteSplitterImageJPanel)
 } catch(e: Exception)
@@ -460,7 +460,7 @@ this.getParent()!!.repaint()
     var filePath: String = file.getAbsolutePath()!!
 
 
-    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)!!
+    var extensionIndex: Int = filePath!!.indexOf(this.imageStrings!!.PNG_EXTENSION)
 
 filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(this.commonSeps!!.UNDERSCORE)!!.append(name)!!.append(this.imageStrings!!.PNG_EXTENSION)!!.toString()
@@ -469,7 +469,7 @@ file= File(filePath)
                                     }
                                 
 
-    var isWritten: Boolean = ImageIO.write(this@SpriteSplitterImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
+    var isWritten: Boolean = ImageIO.write(this@SpriteSplitterImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)
 
 this.logUtil!!.putF(StringMaker().
                             append("File: ")!!.append(StringUtil.getInstance()!!.toString(file))!!.append(" Wrote: ")!!.appendboolean(isWritten)!!.toString(), this, this.commonStrings!!.RUN)

@@ -154,7 +154,7 @@ this.vector.add(options[index]!!)
     var RESULT: String = "Test Result: "
 
 
-    var size: Int = this.vector.size()!!
+    var size: Int = this.vector.size()
 
 
 

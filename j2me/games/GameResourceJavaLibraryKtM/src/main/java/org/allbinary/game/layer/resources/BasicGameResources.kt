@@ -46,7 +46,7 @@ open public class BasicGameResources : Object {
 
         try {
 
-            var scale: Int = GameConfigurationCentral.getInstance()!!.SCALE.getValue()!!.toInt()!!
+            var scale: Int = GameConfigurationCentral.getInstance()!!.SCALE.getValue()!!.toInt()
 
             if (scale > 1 && scale - 1 < SIZE.size) {
 

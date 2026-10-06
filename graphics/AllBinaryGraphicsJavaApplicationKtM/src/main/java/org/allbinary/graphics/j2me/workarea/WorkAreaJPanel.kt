@@ -131,7 +131,7 @@ this.initMyComponents(dimension)
     var canvasNodeList: BasicArrayList = workAreaDom!!.getCanvasNodes()!!
 
 
-    var numberOfFrames: Int = canvasNodeList!!.size()!!
+    var numberOfFrames: Int = canvasNodeList!!.size()
 
 
 
@@ -230,7 +230,7 @@ MyCanvasEventService.addListener(this as MyCanvasEventListener)
     var canvasJPanelHashMap: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
 
 
-    var size: Int = this.canvasJPanelList!!.size()!!
+    var size: Int = this.canvasJPanelList!!.size()
 
 
 
@@ -355,7 +355,7 @@ super.setVisible(true)
 {
 var factor = factor
 
-    var size: Int = this.canvasJPanelList!!.size()!!
+    var size: Int = this.canvasJPanelList!!.size()
 
 
 
@@ -592,7 +592,7 @@ nameNode!!.appendChild(nameTextNode)
     var framesNode: Node = WorkAreaJPanel.document.createElement(WorkAreaDom.FRAMES)!!
 
 
-    var size: Int = this.canvasJPanelList!!.size()!!
+    var size: Int = this.canvasJPanelList!!.size()
 
 
 
@@ -828,7 +828,7 @@ this.center()
                         
                                     {
                                     
-    var size: Int = this.canvasJPanelList!!.size()!!
+    var size: Int = this.canvasJPanelList!!.size()
 
 
 

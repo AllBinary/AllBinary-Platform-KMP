@@ -72,7 +72,7 @@ open public class AndroidServicesUtil : Object {
 
         var serviceName: String
 
-        var size: Int = runningServicesList!!.size!!
+        var size: Int = runningServicesList!!.size
 
         for (index in 0 until size) {
 

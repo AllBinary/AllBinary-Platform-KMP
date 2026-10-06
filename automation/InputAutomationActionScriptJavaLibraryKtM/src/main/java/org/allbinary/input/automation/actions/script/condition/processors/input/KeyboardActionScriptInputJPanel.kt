@@ -134,7 +134,7 @@ this.keyActionScriptInputInterface!!.log()
 
     open fun getSelectedKey()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer?{
 
     var comboBoxModel: ComboBoxModel = this.keyNameJComboBox!!.getModel()!!
 

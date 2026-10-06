@@ -114,7 +114,7 @@ open public class ThreadPool : Object {
 
             if (task != null) {
 
-                var size: Int = this.taskQueue!!.size()!!
+                var size: Int = this.taskQueue!!.size()
 
                 var runnable: PriorityRunnable
 
@@ -137,7 +137,7 @@ open public class ThreadPool : Object {
                     this.taskQueue!!.add(task)
                 } else {
 
-                    var index: Int = this.taskQueue!!.indexOf(lowerPriorityRunnable)!!
+                    var index: Int = this.taskQueue!!.indexOf(lowerPriorityRunnable)
 
                     this.taskQueue!!.addAt(index, task)
                 }

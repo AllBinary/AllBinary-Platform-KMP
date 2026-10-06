@@ -77,7 +77,7 @@ this.logUtil!!.putF("Start Category: " +category, this, "getKeywords")
     var vectorOfHashMaps: BasicArrayList = inventoryEntity!!.getAllRows()!!
 
 
-    var size: Int = vectorOfHashMaps!!.size!!
+    var size: Int = vectorOfHashMaps!!.size
 
 
 

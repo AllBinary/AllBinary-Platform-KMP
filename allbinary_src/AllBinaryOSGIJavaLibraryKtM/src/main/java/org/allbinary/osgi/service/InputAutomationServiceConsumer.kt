@@ -73,7 +73,7 @@ this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCE
 
 this.logUtil!!.putF("Processing " +vector.size() +" Services", this, this.commonStrings!!.PROCESS)
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
     var osgiServiceInterface: OSGIServiceInterface
@@ -107,7 +107,7 @@ osgiServiceInterface= vector.get(index) as OSGIServiceInterface
             
     open fun getServiceReferences()
         //nullable = true from not(false or (false and true)) = true
-: Array<ServiceReference?>{
+: Array<ServiceReference?>?{
 
 
 

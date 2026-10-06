@@ -60,7 +60,7 @@ var categoryInterface = categoryInterface
 
     open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface{
+: TransformDocumentInterface?{
 
 
 
@@ -73,7 +73,7 @@ var categoryInterface = categoryInterface
             
     open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface{
+: TransformInfoInterface?{
 
 
 
@@ -111,7 +111,7 @@ document.appendChild(CategoryView(this.getCategoryInterface()).
             
     open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 

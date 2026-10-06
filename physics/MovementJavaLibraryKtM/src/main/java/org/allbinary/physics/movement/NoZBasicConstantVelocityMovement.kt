@@ -63,7 +63,7 @@ open public class NoZBasicConstantVelocityMovement : Movement, VelocityInterface
         var angle = angle
         var otherAngle = otherAngle
 
-        var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()!!
+        var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()
 
         var xVector: Int =
             (this.axisMathVectorUtil!!.calculateX(radius, angle) / scaleFactorValue).toInt()

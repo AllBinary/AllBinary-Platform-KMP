@@ -54,13 +54,13 @@ open public class TimeUtil : Object {
         var dayString = dayString
         var hourString = hourString
 
-        var year: Int = Integer(yearString).toInt()!!
+        var year: Int = Integer(yearString).toInt()
 
-        var month: Int = Integer(monthString).toInt()!!
+        var month: Int = Integer(monthString).toInt()
 
-        var day: Int = Integer(dayString).toInt()!!
+        var day: Int = Integer(dayString).toInt()
 
-        var hour: Int = Integer(hourString).toInt()!!
+        var hour: Int = Integer(hourString).toInt()
 
         calendar.set(year, month, day, hour, 0)
     }
@@ -84,17 +84,17 @@ open public class TimeUtil : Object {
         var minuteString = minuteString
         var secondString = secondString
 
-        var year: Int = Integer(yearString).toInt()!!
+        var year: Int = Integer(yearString).toInt()
 
-        var month: Int = Integer(monthString).toInt()!!
+        var month: Int = Integer(monthString).toInt()
 
-        var day: Int = Integer(dayString).toInt()!!
+        var day: Int = Integer(dayString).toInt()
 
-        var hour: Int = Integer(hourString).toInt()!!
+        var hour: Int = Integer(hourString).toInt()
 
-        var minute: Int = Integer(minuteString).toInt()!!
+        var minute: Int = Integer(minuteString).toInt()
 
-        var second: Int = Integer(secondString).toInt()!!
+        var second: Int = Integer(secondString).toInt()
 
         calendar.set(year, month, day, hour, minute, second)
     }
@@ -150,7 +150,7 @@ open public class TimeUtil : Object {
         var minuteString = minuteString
         var secondString = secondString
 
-        var time: Long = TimeUtil.calendar.getTimeInMillis()!!
+        var time: Long = TimeUtil.calendar.getTimeInMillis()
 
         this.setExpirationCalendar(
             TimeUtil.calendar,
@@ -162,7 +162,7 @@ open public class TimeUtil : Object {
             secondString,
         )
 
-        var timeDelta: Long = TimeUtil.calendar.getTimeInMillis()!!
+        var timeDelta: Long = TimeUtil.calendar.getTimeInMillis()
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return timeDelta - time

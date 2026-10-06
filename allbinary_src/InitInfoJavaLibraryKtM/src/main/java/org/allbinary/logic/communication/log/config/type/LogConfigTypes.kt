@@ -105,7 +105,7 @@ PreLogUtil.putSE("Unable to initialize LogConfigTypes", "LogConfigTypes", "init(
     var availableLogConfigTypes: BasicArrayList = LogConfigType.availableLogConfigTypes
 
 
-    var size: Int = availableLogConfigTypes!!.size()!!
+    var size: Int = availableLogConfigTypes!!.size()
 
 
     var logConfigType: LogConfigType

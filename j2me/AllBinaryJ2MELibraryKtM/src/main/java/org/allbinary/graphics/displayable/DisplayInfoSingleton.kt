@@ -394,9 +394,9 @@ open public class DisplayInfoSingleton : Object {
         // var displayable = displayable
         // var reason = reason
 
-        var aLastWidth: Int = displayable.getWidth()!!
+        var aLastWidth: Int = displayable.getWidth()
 
-        var aLastHeight: Int = displayable.getHeight()!!
+        var aLastHeight: Int = displayable.getHeight()
 
         var aFullWidth: Int = aLastWidth
 

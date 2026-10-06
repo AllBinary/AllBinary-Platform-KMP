@@ -80,7 +80,7 @@ PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.
     var list: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = pathList!!.size()!!
+    var size: Int = pathList!!.size()
 
 
     var basicGeographicMapCellPosition: CellPosition
@@ -150,7 +150,7 @@ list.add(geographicMapCellPosition)
     var basicList: BasicArrayList = pathCacheFactory!!.getOrCreate(smallIntegerSingletonFactory!!.getAt(id))!!
 
 
-    var size: Int = basicList!!.size()!!
+    var size: Int = basicList!!.size()
 
 
     var pathList: BasicArrayList

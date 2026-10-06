@@ -44,8 +44,7 @@ open public class GameCanvasPauseRunnable : GameRunnable {
 
             var features: Features = Features.getInstance()!!
 
-            var isOpenGL: Boolean =
-                features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
+            var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)
 
             if (isOpenGL) {
 

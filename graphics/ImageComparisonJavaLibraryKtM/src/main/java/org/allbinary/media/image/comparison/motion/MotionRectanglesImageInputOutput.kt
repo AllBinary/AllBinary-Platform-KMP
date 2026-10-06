@@ -193,7 +193,7 @@ bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedI
     var rectangelList: BasicArrayList = motionRectangles!!.getVector()!!
 
 
-    var size: Int = rectangelList!!.size()!!
+    var size: Int = rectangelList!!.size()
 
 
 

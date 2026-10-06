@@ -63,7 +63,7 @@ open public class RawKeyEventHandler : Object {
 
         var eventListenerInterface: RawKeyEventListener
 
-        var size: Int = vector.size()!!
+        var size: Int = vector.size()
 
         for (index in 0 until size) {
 

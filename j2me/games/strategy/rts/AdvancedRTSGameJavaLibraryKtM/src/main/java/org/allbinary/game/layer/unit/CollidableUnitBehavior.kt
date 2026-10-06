@@ -91,7 +91,7 @@ open public class CollidableUnitBehavior : CollidableRTSBehavior {
                         this.getList()!!.get(0) as CollidableCompositeLayer
 
                     var clear: Boolean =
-                        this@CollidableUnitBehavior.steer(ownerLayer, allbinaryLayer)!!
+                        this@CollidableUnitBehavior.steer(ownerLayer, allbinaryLayer)
 
                     if (clear) {
 
@@ -245,7 +245,7 @@ open public class CollidableUnitBehavior : CollidableRTSBehavior {
 
                 var x: Int = unitLayer!!.getXP() - diff
 
-                var y: Int = ownerLayer!!.getYP()!!
+                var y: Int = ownerLayer!!.getYP()
 
                 x = tiledLayerUtil!!.keepOnMapX(tiledLayer, x, ownerLayer!!.getWidth())
                 y = tiledLayerUtil!!.keepOnMapY(tiledLayer, y, ownerLayer!!.getHeight())
@@ -264,7 +264,7 @@ open public class CollidableUnitBehavior : CollidableRTSBehavior {
 
                 var x: Int = unitLayer!!.getXP() + diff
 
-                var y: Int = unitLayer!!.getYP()!!
+                var y: Int = unitLayer!!.getYP()
 
                 x = tiledLayerUtil!!.keepOnMapX(tiledLayer, x, unitLayer!!.getWidth())
                 y = tiledLayerUtil!!.keepOnMapY(tiledLayer, y, unitLayer!!.getHeight())
@@ -288,7 +288,7 @@ open public class CollidableUnitBehavior : CollidableRTSBehavior {
 
             if (!dropCellPositionHistory!!.anyCellPositionWithDrop(partialPositionList)) {
 
-                var x: Int = ownerLayer!!.getXP()!!
+                var x: Int = ownerLayer!!.getXP()
 
                 var y: Int = unitLayer!!.getYP() - diff
 
@@ -307,7 +307,7 @@ open public class CollidableUnitBehavior : CollidableRTSBehavior {
 
             if (!dropCellPositionHistory!!.anyCellPositionWithDrop(partialPositionList)) {
 
-                var x: Int = unitLayer!!.getXP()!!
+                var x: Int = unitLayer!!.getXP()
 
                 var y: Int = unitLayer!!.getYP() + diff
 

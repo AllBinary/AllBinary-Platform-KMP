@@ -61,13 +61,13 @@ open public class CheatGameInputProcessor : PlayerGameInput {
 
             var list: BasicArrayList = this.getGameKeyEventList()!!
 
-            var size: Int = list.size()!!
+            var size: Int = list.size()
 
             for (index in 0 until size) {
 
                 var anyType: Any = list.objectArray[index]!!
 
-                var key: Int = GameKeyEventUtil.getKey(anyType)!!
+                var key: Int = GameKeyEventUtil.getKey(anyType)
 
                 if (key == this.gameKeyFactory!!.LEVEL_DOWN.getId()) {
 

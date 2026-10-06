@@ -162,7 +162,7 @@ open public class BasicVelocityProperties : Object, BasicVelocityInterface {
         // var angle = angle
         // var otherAngle = otherAngle
 
-        var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
+        var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()
 
         this.setVelocity(magnitude, angle, otherAngle)
     }
@@ -178,7 +178,7 @@ open public class BasicVelocityProperties : Object, BasicVelocityInterface {
         // var angle = angle
         // var otherAngle = otherAngle
 
-        var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
+        var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()
 
         this.addVelocity(magnitude, angle, otherAngle)
     }

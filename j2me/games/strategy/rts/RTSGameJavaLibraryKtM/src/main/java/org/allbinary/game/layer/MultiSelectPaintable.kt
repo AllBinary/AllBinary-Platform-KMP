@@ -35,7 +35,7 @@ open public class MultiSelectPaintable : SelectionHudPaintable {
 
     private val TOTAL: String = "Total Selected: "
 
-    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
+    private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()
 
     private var totalWidth: Int = 0
 
@@ -61,7 +61,7 @@ open public class MultiSelectPaintable : SelectionHudPaintable {
         var list = list
         this.clear()
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         this.totalCharArray = this.getPrimitiveLongUtil()!!.getCharArray(size)
 

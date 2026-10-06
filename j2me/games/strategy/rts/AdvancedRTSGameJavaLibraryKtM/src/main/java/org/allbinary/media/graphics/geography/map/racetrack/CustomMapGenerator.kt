@@ -89,7 +89,7 @@ open public class CustomMapGenerator : CustomMapGeneratorBase {
         // var row = row
         // var currentType = currentType
 
-        var emptyType: Int = this.geographicMapCellTypeFactory!!.getEmptyType()!!
+        var emptyType: Int = this.geographicMapCellTypeFactory!!.getEmptyType()
 
         var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory =
             this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!

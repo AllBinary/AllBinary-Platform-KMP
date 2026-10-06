@@ -243,13 +243,13 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput, BaseMotionGestur
         var rtsLayerList: BasicArrayList =
             this.getRtsPlayerLayerInterface()!!.getPlayerOwnedRTSLayers()!!.rtsLayerList
 
-        var rectX1: Int = this.startPoint!!.getX()!!
+        var rectX1: Int = this.startPoint!!.getX()
 
-        var rectY1: Int = this.startPoint!!.getY()!!
+        var rectY1: Int = this.startPoint!!.getY()
 
-        var rectX2: Int = this.endPoint!!.getX()!!
+        var rectX2: Int = this.endPoint!!.getX()
 
-        var rectY2: Int = this.endPoint!!.getY()!!
+        var rectY2: Int = this.endPoint!!.getY()
 
         if (rectX1 > rectX2) {
 
@@ -374,7 +374,7 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput, BaseMotionGestur
 
         if (this.getMotionGestureInputList()!!.size() > 0) {
 
-            var endDrag: Boolean = this.processDraggingMotionInput(layerManager)!!
+            var endDrag: Boolean = this.processDraggingMotionInput(layerManager)
 
             if (!this.isDragging) {
 
@@ -594,13 +594,13 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput, BaseMotionGestur
         ) {
             graphics.setColor(BasicColorFactory.getInstance()!!.RED.toInt())
 
-            var rectX1: Int = this.startPoint!!.getX()!!
+            var rectX1: Int = this.startPoint!!.getX()
 
-            var rectY1: Int = this.startPoint!!.getY()!!
+            var rectY1: Int = this.startPoint!!.getY()
 
-            var rectX2: Int = this.endPoint!!.getX()!!
+            var rectX2: Int = this.endPoint!!.getX()
 
-            var rectY2: Int = this.endPoint!!.getY()!!
+            var rectY2: Int = this.endPoint!!.getY()
 
             if (rectX1 > rectX2) {
 

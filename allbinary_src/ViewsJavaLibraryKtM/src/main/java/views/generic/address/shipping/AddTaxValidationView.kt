@@ -82,20 +82,20 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
 
     
-                        if(taxInterface!!.isValid(this.streetAddress, storeFrontInterface) == Boolean.FALSE)
+                        if(taxInterface!!.isValid(this.streetAddress, storeFrontInterface) == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -116,12 +116,12 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
 
-    var size: Int = streetAddressList!!.size()!!
+    var size: Int = streetAddressList!!.size()
 
 
 
@@ -142,7 +142,7 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -152,7 +152,7 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -168,7 +168,7 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -204,7 +204,7 @@ var transformInfoInterface = transformInfoInterface
                         else {
                             
     
-                        if(taxInterface!!.isValid(this.streetAddress, storeFrontInterface) == Boolean.FALSE)
+                        if(taxInterface!!.isValid(this.streetAddress, storeFrontInterface) == false)
                         
                                     {
                                     stringBuffer!!.append("Unable to validate address with Tax Component<br/>")
@@ -221,7 +221,7 @@ var transformInfoInterface = transformInfoInterface
     var streetAddressList: BasicArrayList = billingAddressesEntity!!.get()!!
 
 
-    var size: Int = streetAddressList!!.size()!!
+    var size: Int = streetAddressList!!.size()
 
 
 
@@ -272,7 +272,7 @@ var transformInfoInterface = transformInfoInterface
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -283,7 +283,7 @@ var transformInfoInterface = transformInfoInterface
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

@@ -27,7 +27,8 @@
         
 import java.sql.ResultSet
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.business.init.db.DbConnectionInfo
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -53,7 +54,7 @@ public constructor (databaseConnectionInfoInterface: DbConnectionInfo)
 
     open fun getField(key: String, value: String, requestedField: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
     //var key = key
     //var value = value
     //var requestedField = requestedField
@@ -133,7 +134,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET_FIELD)
 
     open fun getField(keysAndValues: HashMap<Any, Any>, requestedField: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
     //var keysAndValues = keysAndValues
     //var requestedField = requestedField
 

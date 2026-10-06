@@ -56,7 +56,7 @@ open public class SmallIntegerSingletonFactory : Object {
     // nullable = true from not(false or (false and true)) = true
     : Int {
 
-        var minAllowed: Int = this.getMinAllowed()!!
+        var minAllowed: Int = this.getMinAllowed()
 
         if (this.MIN <= minAllowed) {
 

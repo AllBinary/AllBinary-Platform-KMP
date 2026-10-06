@@ -70,7 +70,7 @@ public constructor ()
 
     open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet{
+: HelpSet?{
 
 
 
@@ -133,7 +133,7 @@ this.logUtil!!.putF("Buttons: " +buttons, this, "mouseRelease")
 
     open fun createScreenCapture(screenRect: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage?{
 var screenRect = screenRect
 
 
@@ -163,7 +163,7 @@ var ms = ms
 
     open fun getPixelColor(x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Color{
+: Color?{
 var x = x
 var y = y
 

@@ -95,14 +95,14 @@ this.viewName= requestHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as S
                                     }
                                 
 
-    var isValid: Boolean = Boolean.TRUE
+    var isValid: Boolean = Boolean.true
 
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.viewName))
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
@@ -114,7 +114,7 @@ this.viewName= requestHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as S
     var componentVector: BasicArrayList = objectConfig!!.getGroupTransforms()!!
 
 
-    var size: Int = componentVector!!.size()!!
+    var size: Int = componentVector!!.size()
 
 
     
@@ -279,7 +279,7 @@ TransformInfoEntityBuilder.getInstance()!!.update(updatedTransformInfoHashMap)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -322,7 +322,7 @@ stringBuffer!!.append("Error: Template Name Is Empty.")
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -333,7 +333,7 @@ stringBuffer!!.append("Error: Template Name Is Empty.")
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

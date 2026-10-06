@@ -87,7 +87,7 @@ var color = color
 
     open fun getTreeNode()
         //nullable = true from not(false or (false and true)) = true
-: MutableTreeNode{
+: MutableTreeNode?{
 
 
 
@@ -98,7 +98,7 @@ var color = color
 
     open fun getPointsInterface()
         //nullable = true from not(false or (false and true)) = true
-: Points{
+: Points?{
 
 
 
@@ -210,13 +210,13 @@ var angle = angle
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var xRect: Int = this.getXRect()!!
+    var xRect: Int = this.getXRect()
 
 
     var xRect2: Int = Math.abs(this.endPoint!!.getX() -this.startPoint!!.getX()) +xRect
 
 
-    var yRect: Int = this.getYRect()!!
+    var yRect: Int = this.getYRect()
 
 
     var yRect2: Int = Math.abs(this.endPoint!!.getY() -this.startPoint!!.getY()) +yRect
@@ -283,7 +283,7 @@ item.deactivate()
     var xDiff: Int = this.endPoint!!.getX() -this.startPoint!!.getX()
 
 
-    var xRect: Int = this.startPoint!!.getX()!!
+    var xRect: Int = this.startPoint!!.getX()
 
 
     
@@ -309,7 +309,7 @@ item.deactivate()
     var yDiff: Int = this.endPoint!!.getY() -this.startPoint!!.getY()
 
 
-    var yRect: Int = this.startPoint!!.getY()!!
+    var yRect: Int = this.startPoint!!.getY()
 
 
     
@@ -338,16 +338,16 @@ var x = x
 var y = y
 g.setColor(this.rectColor)
 
-    var xRect: Int = this.getXRect()!!
+    var xRect: Int = this.getXRect()
 
 
-    var width: Int = Math.abs(this.endPoint!!.getX() -this.startPoint!!.getX())!!
+    var width: Int = Math.abs(this.endPoint!!.getX() -this.startPoint!!.getX())
 
 
-    var yRect: Int = this.getYRect()!!
+    var yRect: Int = this.getYRect()
 
 
-    var height: Int = Math.abs(this.endPoint!!.getY() -this.startPoint!!.getY())!!
+    var height: Int = Math.abs(this.endPoint!!.getY() -this.startPoint!!.getY())
 
 g.drawRect(xRect, yRect, width, height)
 }
@@ -357,7 +357,7 @@ g.drawRect(xRect, yRect, width, height)
             
     open fun toDom(canvasDom: CanvasDom)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var canvasDom = canvasDom
 
 
@@ -369,7 +369,7 @@ var canvasDom = canvasDom
 
     open fun removePoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint{
+: GPoint?{
 
 
 
@@ -510,7 +510,7 @@ var keyEvent = keyEvent
             
     open fun duplicate()
         //nullable = true from not(false or (false and true)) = true
-: GraphicItemInterface{
+: GraphicItemInterface?{
 
 
 

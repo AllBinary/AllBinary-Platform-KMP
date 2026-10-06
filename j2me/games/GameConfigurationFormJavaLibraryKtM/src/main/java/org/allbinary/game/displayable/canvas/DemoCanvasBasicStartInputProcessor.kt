@@ -44,7 +44,7 @@ open public class DemoCanvasBasicStartInputProcessor : BasicMenuInputProcessor {
 
         var list: BasicArrayList = this.getGameKeyEventList()!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var gameKeyEvent: GameKeyEvent
 

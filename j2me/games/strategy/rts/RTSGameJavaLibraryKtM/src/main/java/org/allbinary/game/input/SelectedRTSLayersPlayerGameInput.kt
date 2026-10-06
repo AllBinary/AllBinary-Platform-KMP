@@ -181,7 +181,7 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
 
                 var capital: Capital = this.rtsPlayerLayerInterface!!.getCapital()!!
 
-                var upgradeCost: Int = rtsLayer!!.getUpgradeCost()!!
+                var upgradeCost: Int = rtsLayer!!.getUpgradeCost()
 
                 if (upgradeCost <= capital.getTotalMoney()) {
 
@@ -238,7 +238,7 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
                 anyChanged = true
                 this.rtsPlayerLayerInterface!!.add(DowngradeSound.getInstance())
 
-                var downgradeCost: Int = rtsLayer!!.getDowngradeCost()!!
+                var downgradeCost: Int = rtsLayer!!.getDowngradeCost()
 
                 rtsLayer!!.downgrade()
 
@@ -299,7 +299,7 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
 
         try {
 
-            var size: Int = this.list.size()!!
+            var size: Int = this.list.size()
 
             var key: Int = 0
 

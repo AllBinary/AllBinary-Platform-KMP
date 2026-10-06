@@ -119,7 +119,7 @@ open public class TechRTSFormInput : RTSFormInput {
 
         if (rtsInterface!!.isUpgradeable()) {
 
-            var cost: Int = rtsInterface!!.getUpgradeCost()!!
+            var cost: Int = rtsInterface!!.getUpgradeCost()
 
             var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
 

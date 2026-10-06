@@ -121,7 +121,7 @@ open public class CellPositionFactory : Object {
         i_row: Int,
     )
         // nullable = true from not(false or (false and false)) = true
-        : CellPosition {
+        : CellPosition? {
         var i_column = i_column
         var i_row = i_row
 

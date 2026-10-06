@@ -97,14 +97,14 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
 
     
                         if(BasicItemValidation(this.itemInterface).
-                            isValid() == Boolean.FALSE)
+                            isValid() == false)
                         
                                     {
                                     
@@ -120,7 +120,7 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -157,7 +157,7 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -175,7 +175,7 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -191,7 +191,7 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
     var fileItem: FileItem = anyType as FileItem
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 
     var fileName: String = fileItem!!.getName()!!
@@ -199,14 +199,14 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
 HttpFileUploadUtil.log(fileItem)
 
     
-                        if(this.isValid(fileName, size) == Boolean.FALSE)
+                        if(this.isValid(fileName, size) == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -217,7 +217,7 @@ HttpFileUploadUtil.log(fileItem)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -233,7 +233,7 @@ HttpFileUploadUtil.log(fileItem)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -241,7 +241,7 @@ HttpFileUploadUtil.log(fileItem)
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -252,7 +252,7 @@ HttpFileUploadUtil.log(fileItem)
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -343,7 +343,7 @@ stringBuffer!!.append(BasicItemValidation(this.itemInterface).
     var fileItem: FileItem = anyType as FileItem
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 
     var fileName: String = fileItem!!.getName()!!
@@ -392,7 +392,7 @@ var size = size
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -420,7 +420,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -432,7 +432,7 @@ this.processImageFiles()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 

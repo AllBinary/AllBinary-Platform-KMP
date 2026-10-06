@@ -60,7 +60,7 @@ companion object {
     var keyStroke: KeyStroke = KeyStroke.getKeyStroke(nextKey!!.toInt(), 0)!!
 
 
-    var keyChar: Char = KeyStrokeMap.getChar(keyStroke)!!
+    var keyChar: Char = KeyStrokeMap.getChar(keyStroke)
 
 defaultComboBoxModel!!.addElement(Character.toString(keyChar))
 }

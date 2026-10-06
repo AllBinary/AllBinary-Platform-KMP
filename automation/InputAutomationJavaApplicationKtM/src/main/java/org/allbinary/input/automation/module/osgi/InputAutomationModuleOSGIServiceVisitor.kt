@@ -87,7 +87,7 @@ InputAutomationJFrame.getInstance()!!.onAdd(InputAutomationConfigurationUtil.get
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "visit", e)
@@ -95,7 +95,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "visit", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }

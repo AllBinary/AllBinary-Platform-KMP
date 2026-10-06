@@ -38,7 +38,7 @@ open public class HealthBarTwodAnimation : HealthBarAnimation {
         // var x = x
         // var y = y
 
-        var ax: Int = this.allbinaryLayer!!.getViewPosition()!!.getX()!!
+        var ax: Int = this.allbinaryLayer!!.getViewPosition()!!.getX()
 
         this.basicSetColorUtil!!.setBasicColorP3(graphics, this.basicColor, this.colorP)
         graphics.fillRect(ax, this.getY() - 1, this.x2, this.thickness)

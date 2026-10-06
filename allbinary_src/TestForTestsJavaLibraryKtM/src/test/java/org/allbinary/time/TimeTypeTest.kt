@@ -152,10 +152,10 @@ Assertions.assertEquals(dayUtil!!.DAY, dayUtil!!.getNightOrDay())
     var util: TimeTypeUtil = TimeTypeUtil()
 
 
-    var nightMillis: Long = TimeTypeTest.millisForHourLocal(0)!!
+    var nightMillis: Long = TimeTypeTest.millisForHourLocal(0)
 
 
-    var dayMillis: Long = TimeTypeTest.millisForHourLocal(12)!!
+    var dayMillis: Long = TimeTypeTest.millisForHourLocal(12)
 
 Assertions.assertEquals(util.NIGHT, util.getNightOrDay(nightMillis))
 Assertions.assertEquals(util.DAY, util.getNightOrDay(dayMillis))

@@ -425,9 +425,9 @@ open public class TrueTypeFontUtilBase : Object {
 
     val characterArray: CharArray = CharArray(1)
 
-    val size: Int = this.pattern.length!!
+    val size: Int = this.pattern.length
 
-    val lastCapIndex: Int = this.pattern.indexOf('Z')!!
+    val lastCapIndex: Int = this.pattern.indexOf('Z')
 
     var currentFont: Font = Font.getDefaultFont()!!
 

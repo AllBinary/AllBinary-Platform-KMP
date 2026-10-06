@@ -54,7 +54,7 @@ open public class WorkWaypoint : Waypoint {
             return
         }
 
-        var size: Int = this.getConnectedWaypointList()!!.size()!!
+        var size: Int = this.getConnectedWaypointList()!!.size()
 
         if (size > 0) {
 

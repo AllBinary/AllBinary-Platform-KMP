@@ -111,16 +111,16 @@ open public class PacePatrolAI : BasePatrolAI, TrackingEventListenerInterface {
 
         var directionCompositeInterface: DirectionCompositeInterface
 
-        var size: Int = this.trackingList!!.size()!!
+        var size: Int = this.trackingList!!.size()
 
         for (index in 0 until size) {
 
             lastTrackingEvent = this.trackingList!!.get(0) as TrackingEvent
             lastTrackingLayerInterface = lastTrackingEvent!!.getLayerInterface()
 
-            var x: Int = lastTrackingLayerInterface!!.getXP()!!
+            var x: Int = lastTrackingLayerInterface!!.getXP()
 
-            var y: Int = lastTrackingLayerInterface!!.getYP()!!
+            var y: Int = lastTrackingLayerInterface!!.getYP()
 
             var yDistance: Int =
                 ownerLayerInterface!!.getYP() - y - ownerLayerInterface!!.getHeight()
@@ -128,9 +128,9 @@ open public class PacePatrolAI : BasePatrolAI, TrackingEventListenerInterface {
             var xDistance: Int =
                 ownerLayerInterface!!.getXP() - x - ownerLayerInterface!!.getWidth()
 
-            var absXDistance: Int = Math.abs(xDistance)!!
+            var absXDistance: Int = Math.abs(xDistance)
 
-            var absYDistance: Int = Math.abs(yDistance)!!
+            var absYDistance: Int = Math.abs(yDistance)
 
             if (absYDistance <= 100) {
 

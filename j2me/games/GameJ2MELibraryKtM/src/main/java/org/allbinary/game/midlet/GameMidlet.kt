@@ -736,7 +736,7 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
 
                 var loadGameForm: LoadGameForm = this.getLoadGameForm() as LoadGameForm
 
-                var index: Int = loadGameForm!!.getSelectedId()!!
+                var index: Int = loadGameForm!!.getSelectedId()
 
                 if (index != -1) {
 
@@ -764,7 +764,7 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
 
                 var loadGameForm: LoadGameForm = this.getLoadGameForm() as LoadGameForm
 
-                var index: Int = loadGameForm!!.getSelectedText()!!
+                var index: Int = loadGameForm!!.getSelectedText()
 
                 if (index != -1) {
 
@@ -830,7 +830,7 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
                 var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
                 var isFullScreen: Boolean =
-                    this.features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
+                    this.features.isFeature(mainFeatureFactory!!.FULL_SCREEN)
 
                 if (isFullScreen) {
 
@@ -865,7 +865,7 @@ open public class GameMidlet : ProgressMidlet, CommandListener {
 
         var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
-        var isFullScreen: Boolean = this.features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
+        var isFullScreen: Boolean = this.features.isFeature(mainFeatureFactory!!.FULL_SCREEN)
 
         var displayable: Displayable = this.getDisplay()!!.getCurrent()!!
 

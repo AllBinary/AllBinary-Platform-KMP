@@ -271,10 +271,10 @@ var newHeight = newHeight
     //var scale = scale
     //var allowTranslate = allowTranslate
 
-    var width: Double = bufferedImage!!.getWidth()!!
+    var width: Double = bufferedImage!!.getWidth()
 
 
-    var height: Double = bufferedImage!!.getHeight()!!
+    var height: Double = bufferedImage!!.getHeight()
 
 
     var d_newWidth: Double = newWidth
@@ -346,10 +346,10 @@ graphics.drawRenderedImage(bufferedImage, affineTransform)
     //var newWidth = newWidth
 var newHeight = newHeight
 
-    var width: Double = bufferedImage!!.getWidth()!!
+    var width: Double = bufferedImage!!.getWidth()
 
 
-    var height: Double = bufferedImage!!.getHeight()!!
+    var height: Double = bufferedImage!!.getHeight()
 
 
     var d_newWidth: Double = newWidth
@@ -399,7 +399,7 @@ graphics.drawImage(bufferedImage, dx4, dy4,
 
     open fun convertToBufferedImage(toolkitImage: java.awt.Image)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage?{
 var toolkitImage = toolkitImage
 
     

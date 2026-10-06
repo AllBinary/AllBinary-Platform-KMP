@@ -111,7 +111,7 @@ companion object {
 
     private val PORTION_RESTORED: String = " Portion Restored"
 
-    private val specialCharArray: CharArray = charArrayOf('\n','\f','\r')
+    private val specialCharArray: CharArray = charArrayOf('\n','\u000C','\r')
 
     private val NEW_LINE: String = "\\n"
 
@@ -126,7 +126,7 @@ companion object {
 
     open fun getOutputStream(backupPath: String, tableName: String)
         //nullable = true from not(false or (false and false)) = true
-: OutputStream{
+: OutputStream?{
 var backupPath = backupPath
 var tableName = tableName
 
@@ -365,7 +365,7 @@ var abSqlTable = abSqlTable
     var rsmd: ResultSetMetaData = rset.getMetaData()!!
 
 
-    var colNum: Int = rsmd.getColumnCount()!!
+    var colNum: Int = rsmd.getColumnCount()
 
 
     var QUERY_START: String = StringBuilder().
@@ -455,7 +455,7 @@ var portion = portion
     var path: String = org.allbinary.globals.URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
 
 
-    var current: Int = portion.getCurrent()!!.toInt()!!
+    var current: Int = portion.getCurrent()!!.toInt()
 
 
     
@@ -489,7 +489,7 @@ var portion = portion
     var bufferedLineReader: BufferedLineReader = BufferedLineReader(backupFile)
 
 
-    var size: Long = bufferedLineReader!!.getSize()!!
+    var size: Long = bufferedLineReader!!.getSize()
 
 
     var section: Long = size /portion.getTotal()!!.toInt() +1

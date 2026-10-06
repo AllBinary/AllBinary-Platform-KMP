@@ -188,7 +188,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
         // var layerManager = layerManager
         this.stringBuilder!!.delete(0, this.stringBuilder!!.length())
 
-        var size: Int = layerManager!!.getSize()!!
+        var size: Int = layerManager!!.getSize()
 
         var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 

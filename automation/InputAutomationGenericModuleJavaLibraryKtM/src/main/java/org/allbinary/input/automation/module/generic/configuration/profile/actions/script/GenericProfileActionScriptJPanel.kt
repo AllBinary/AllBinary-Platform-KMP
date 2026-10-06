@@ -138,7 +138,7 @@ add(this.jScrollPane1)
 {
 var evt = evt
 
-    var button: Int = evt.getButton()!!
+    var button: Int = evt.getButton()
 
 
     

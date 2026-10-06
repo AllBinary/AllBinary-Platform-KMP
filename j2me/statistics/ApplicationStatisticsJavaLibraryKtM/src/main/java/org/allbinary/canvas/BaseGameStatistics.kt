@@ -79,7 +79,7 @@ open public class BaseGameStatistics : Object {
     : Short {
 
         var elapsed: Long =
-            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)
 
         if (elapsed > 1) {
 
@@ -143,7 +143,7 @@ open public class BaseGameStatistics : Object {
     : Array<CharArray?> {
 
         var totalTime: Long =
-            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)
 
         totalTime = (totalTime shr this.DEFAULT_SCALE_FACTOR)
 
@@ -205,7 +205,7 @@ open public class BaseGameStatistics : Object {
     : Array<String?> {
 
         var totalTime: Long =
-            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)
 
         totalTime = (totalTime / 10000)
 
@@ -265,7 +265,7 @@ open public class BaseGameStatistics : Object {
     : String {
 
         var totalTime: Long =
-            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
+            this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)
 
         totalTime = (totalTime / 1000)
 

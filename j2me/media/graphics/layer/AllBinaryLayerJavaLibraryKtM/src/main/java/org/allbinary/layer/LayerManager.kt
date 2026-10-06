@@ -50,13 +50,13 @@ open public class LayerManager : Object {
     {
         // var layerInterface = layerInterface
 
-        var had: Boolean = this.list.remove(layerInterface)!!
+        var had: Boolean = this.list.remove(layerInterface)
 
         if (had) {
 
             var nextLayerInterface: AllBinaryLayer
 
-            var size: Int = this.list.size()!!
+            var size: Int = this.list.size()
 
             for (index in 0 until size) {
 
@@ -84,7 +84,7 @@ open public class LayerManager : Object {
 
         var nextLayerInterface: AllBinaryLayer
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         for (index in 0 until size) {
 
@@ -134,7 +134,7 @@ open public class LayerManager : Object {
         {
             this.layerManagerLogging!!.remove(layerInterface)
 
-            var result: Boolean = this.list.remove(layerInterface)!!
+            var result: Boolean = this.list.remove(layerInterface)
 
             this.layerManagerLogging!!.removeResult(this, layerInterface, result)
         }

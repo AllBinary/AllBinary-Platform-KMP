@@ -156,7 +156,7 @@ open public class GameConfigurationUtil : Object {
                 gameConfiguration!!.getValue()
             )
 
-            var size: Int = gameOptionsForm!!.size()!!
+            var size: Int = gameOptionsForm!!.size()
 
             for (index in 0 until size) {
 

@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.data.tree.dom.DomNodeInterface
@@ -60,7 +61,7 @@ this.userEmailEventsConfigurationInterface= UserEmailEventsConfiguration() as Us
     var emailEventConfigurationNodeVector: BasicArrayList = DomSearchHelper.getAllNodesNoThrow(UserEmailEventConfigurationData.NAME, childNodeList)!!
 
 
-    var size: Int = emailEventConfigurationNodeVector!!.size()!!
+    var size: Int = emailEventConfigurationNodeVector!!.size()
 
 
 

@@ -71,9 +71,9 @@ open public class ImageJ2MEScaleUtil : Object {
         // var width = width
         // var height = height
 
-        var sourceWidth: Int = image.getWidth()!!
+        var sourceWidth: Int = image.getWidth()
 
-        var sourceHeight: Int = image.getHeight()!!
+        var sourceHeight: Int = image.getHeight()
 
         var originalData: IntArray = IntArray(image.getWidth() * image.getHeight())
 

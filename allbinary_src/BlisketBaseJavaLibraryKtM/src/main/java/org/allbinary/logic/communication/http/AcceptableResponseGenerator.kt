@@ -94,7 +94,7 @@ var httpServletRequest = httpServletRequest
                         
                                     {
                                     
-    var size: Int = acceptableResponseUtil!!.size()!!
+    var size: Int = acceptableResponseUtil!!.size()
 
 
 

@@ -45,11 +45,11 @@ open public class Advertisements : Object {
         // nullable = true from not(false or (false and true)) = true
     {
 
-        var size: Int = this.pageList!!.size()!!
+        var size: Int = this.pageList!!.size()
 
         if (size > 0) {
 
-            var random: Int = this.myRandomFactory!!.getAbsoluteNextInt(size)!!
+            var random: Int = this.myRandomFactory!!.getAbsoluteNextInt(size)
 
             var advertisementProcessorInterface: AdvertisementProcessorInterface =
                 this.pageList!!.objectArray[random]!! as AdvertisementProcessorInterface
@@ -66,11 +66,11 @@ open public class Advertisements : Object {
 
         if (LockedUtil.getInstance()!!.isLocked()) {
 
-            var size: Int = this.pageList!!.size()!!
+            var size: Int = this.pageList!!.size()
 
             if (size > 0) {
 
-                var random: Int = this.myRandomFactory!!.getAbsoluteNextInt(size)!!
+                var random: Int = this.myRandomFactory!!.getAbsoluteNextInt(size)
 
                 var advertisementProcessorInterface: AdvertisementProcessorInterface =
                     this.pageList!!.objectArray[random]!! as AdvertisementProcessorInterface

@@ -122,7 +122,7 @@ open public class AbFileSystem : Object {
 
             closeable = idFile
 
-            var size: Int = idFile!!.read(bytes)!!
+            var size: Int = idFile!!.read(bytes)
 
             if (size > 0) {
 

@@ -30,7 +30,8 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.document.DomDocumentHelper
 import org.allbinary.data.tree.dom.document.XmlDocumentHelper
@@ -181,13 +182,13 @@ var fileInputStream = fileInputStream
     var bytes: ByteArray = ByteArray(100000)
 
 
-    var length: Int = fileInputStream!!.read(bytes)!!
+    var length: Int = fileInputStream!!.read(bytes)
 
 
     var data: String = bytes.decodeToString()
 
 
-    var endIndex: Int = data.lastIndexOf('>')!!
+    var endIndex: Int = data.lastIndexOf('>')
 
 
     var document: Document = DomDocumentHelper.create(data.substring(0, endIndex +1))!!

@@ -50,7 +50,7 @@ open public class BaseCircularPool : Object {
         var allBinaryObjectFactoryInterface = allBinaryObjectFactoryInterface
         this.circularIndexUtil!!.setIndex(0)
 
-        var size: Int = this.circularIndexUtil!!.getSize()!!
+        var size: Int = this.circularIndexUtil!!.getSize()
 
         for (index in 0 until size) {
 

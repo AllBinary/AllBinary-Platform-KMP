@@ -442,9 +442,9 @@ open public class RTSLayer :
 
         var viewPosition: ViewPositionBase = this.getViewPosition()!!
 
-        var viewX: Int = viewPosition!!.getX()!!
+        var viewX: Int = viewPosition!!.getX()
 
-        var viewY: Int = viewPosition!!.getY()!!
+        var viewY: Int = viewPosition!!.getY()
 
         this.getAnimationInterface()!!.paintXY(graphics, viewX, viewY)
     }
@@ -622,7 +622,7 @@ open public class RTSLayer :
             this.layerDistanceUtil!!.getDistance(
                 this as AllBinaryLayer,
                 targetGameLayer as AllBinaryLayer,
-            )!!
+            )
 
         var waypointBehaviorBase: WaypointBehaviorBase = this.getWaypointBehavior()!!
 

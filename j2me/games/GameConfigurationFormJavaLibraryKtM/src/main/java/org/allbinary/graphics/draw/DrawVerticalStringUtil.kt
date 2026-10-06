@@ -82,7 +82,7 @@ open public class DrawVerticalStringUtil : Object {
             }
         }
 
-        var size: Int = string.length!!
+        var size: Int = string.length
 
         var aChar: Char
 
@@ -110,7 +110,7 @@ open public class DrawVerticalStringUtil : Object {
         // var y = y
         // var anchor = anchor
 
-        var size: Int = string.length!!
+        var size: Int = string.length
 
         var aChar: Char
 
@@ -186,7 +186,7 @@ open public class DrawVerticalStringUtil : Object {
 
             if (string != this.EMPTY_STRING) {
 
-                var width: Int = graphics.getFont()!!.stringWidth(string)!!
+                var width: Int = graphics.getFont()!!.stringWidth(string)
 
                 var minTotalLines: Int = 1
 
@@ -201,7 +201,7 @@ open public class DrawVerticalStringUtil : Object {
 
                 var currentLength: Int = linePortion
 
-                var size: Int = string.length!!
+                var size: Int = string.length
 
                 while (offset < size) {
 

@@ -86,7 +86,7 @@ var hashMap = hashMap
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -97,7 +97,7 @@ var hashMap = hashMap
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -123,7 +123,7 @@ node.appendChild(styleNode)
 styleNode!!.appendChild(ColorsView().
                             toXmlNode(document))
 
-    var size: Int = this.cssStyleElementVector!!.size()!!
+    var size: Int = this.cssStyleElementVector!!.size()
 
 
 

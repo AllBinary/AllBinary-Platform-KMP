@@ -48,7 +48,7 @@ open public class HorizontalManeuverAI : BasicAI {
 
         var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-        var x: Int = ownerLayerInterface!!.getXP()!!
+        var x: Int = ownerLayerInterface!!.getXP()
 
         if (ownerLayerInterface!!.getXP() - this.currentSpeed <= 0) {
 
@@ -117,7 +117,7 @@ open public class HorizontalManeuverAI : BasicAI {
 
         var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-        var y: Int = ownerLayerInterface!!.getYP()!!
+        var y: Int = ownerLayerInterface!!.getYP()
 
         if (
             ownerLayerInterface!!.getY2() + ownerLayerInterface!!.getHeight() >

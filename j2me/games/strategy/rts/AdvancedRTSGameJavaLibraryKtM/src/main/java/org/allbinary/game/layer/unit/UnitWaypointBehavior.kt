@@ -254,7 +254,7 @@ open public class UnitWaypointBehavior : WaypointBehaviorBase, WaypointEventList
     {
         // var pathsList = pathsList
 
-        var size: Int = pathsList!!.size()!!
+        var size: Int = pathsList!!.size()
 
         this.associatedAdvancedRTSGameLayer!!
             .waypointLogHelperP!!

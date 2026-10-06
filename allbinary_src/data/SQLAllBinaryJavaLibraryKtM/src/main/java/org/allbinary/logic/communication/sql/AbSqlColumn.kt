@@ -92,7 +92,7 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
         while(rset.next())
         {
 
-    var intValue: Int = rset.getInt(columnName)!!
+    var intValue: Int = rset.getInt(columnName)
 
 
     

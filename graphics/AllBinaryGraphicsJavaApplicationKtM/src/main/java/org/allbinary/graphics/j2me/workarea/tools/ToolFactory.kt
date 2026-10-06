@@ -87,7 +87,7 @@ this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "setSelectionTool", e)
 
     open fun getSelectedToolFactory()
         //nullable = true from not(false or (false and true)) = true
-: GraphicsItemInterfaceFactoryInterface{
+: GraphicsItemInterfaceFactoryInterface?{
 StatusFactory.getInstance()!!.setStatus("Tool In Use: " +this.tool)
 
     

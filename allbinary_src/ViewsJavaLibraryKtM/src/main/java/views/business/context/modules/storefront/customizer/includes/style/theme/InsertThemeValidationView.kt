@@ -80,7 +80,7 @@ this.requestHashMap= NameSpaceRequestParams(this.getPageContext()).
             
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -95,7 +95,7 @@ this.requestHashMap= NameSpaceRequestParams(this.getPageContext()).
 
         try {
             
-    var isValid: Boolean = Boolean.TRUE
+    var isValid: Boolean = Boolean.true
 
 
     
@@ -111,10 +111,10 @@ this.requestHashMap= NameSpaceRequestParams(this.getPageContext()).
 
 
     
-                        if(themeValidation!!.isValid() == Boolean.FALSE)
+                        if(themeValidation!!.isValid() == false)
                         
                                     {
-                                    isValid= Boolean.FALSE
+                                    isValid= false
 
                                     }
                                 
@@ -122,7 +122,7 @@ this.validationInterface= themeValidation!!.getCssStyleValidation()
 isValid= this.validationInterface!!.isValid()
 
     
-                        if(isValid == Boolean.TRUE)
+                        if(isValid == true)
                         
                                     {
                                     CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this.validationInterface as DomNodeInterface)
@@ -149,7 +149,7 @@ isValid= this.validationInterface!!.isValid()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -191,7 +191,7 @@ isValid= this.validationInterface!!.isValid()
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -202,7 +202,7 @@ isValid= this.validationInterface!!.isValid()
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

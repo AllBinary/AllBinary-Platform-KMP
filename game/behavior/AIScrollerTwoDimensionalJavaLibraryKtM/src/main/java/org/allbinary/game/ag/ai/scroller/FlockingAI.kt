@@ -64,7 +64,7 @@ open public class FlockingAI : BasicAI {
         var list: BasicArrayList =
             groupLayerManagerListener!!.getList(BasicGroupFactory.getInstance()!!.ENEMY)!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var allBinaryLayer: AllBinaryLayer
 
@@ -76,7 +76,7 @@ open public class FlockingAI : BasicAI {
 
             if (allBinaryLayer!!.getType() != WeaponLayer.getStaticType()) {
 
-                var distance: Int = this.getXYDistance(allBinaryLayer)!!
+                var distance: Int = this.getXYDistance(allBinaryLayer)
 
                 if (distance > maxDistance) {
 

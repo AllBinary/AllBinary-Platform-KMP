@@ -28,7 +28,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.logic.java.anyType.clazz.ClassUtil
@@ -299,7 +300,7 @@ var valueVector = valueVector
     var node: Node = document.createElement(rootNodeName)!!
 
 
-    var size: Int = valueVector!!.size()!!
+    var size: Int = valueVector!!.size()
 
 
 
@@ -338,7 +339,7 @@ var valueVector = valueVector
     var node: Node = document.createElement(rootNodeName)!!
 
 
-    var size: Int = valueVector!!.size()!!
+    var size: Int = valueVector!!.size()
 
 
 

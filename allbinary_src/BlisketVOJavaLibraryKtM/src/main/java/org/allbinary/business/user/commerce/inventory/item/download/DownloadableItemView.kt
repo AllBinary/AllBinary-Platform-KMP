@@ -29,7 +29,8 @@
         
 import java.util.Calendar
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper
 import org.allbinary.logic.communication.log.LogUtil
@@ -76,47 +77,47 @@ var document = document
     var hashMap: HashMap<Any, Any> = this.downloadableItem!!.toHashMap()!!
 
 
-    var totalTime: Long = this.downloadableItem!!.getValidTime()!!.longValue()!!
+    var totalTime: Long = this.downloadableItem!!.getValidTime()!!.toLong()
 
 
     var calendar: Calendar = Calendar.getInstance()!!
 
 
-    var year: Int = calendar.get(Calendar.YEAR)!!
+    var year: Int = calendar.get(Calendar.YEAR)
 
 
-    var month: Int = calendar.get(Calendar.MONTH)!!
+    var month: Int = calendar.get(Calendar.MONTH)
 
 
-    var day: Int = calendar.get(Calendar.DAY_OF_MONTH)!!
+    var day: Int = calendar.get(Calendar.DAY_OF_MONTH)
 
 
-    var hour: Int = calendar.get(Calendar.HOUR)!!
+    var hour: Int = calendar.get(Calendar.HOUR)
 
 
-    var minute: Int = calendar.get(Calendar.MINUTE)!!
+    var minute: Int = calendar.get(Calendar.MINUTE)
 
 
-    var second: Int = calendar.get(Calendar.SECOND)!!
+    var second: Int = calendar.get(Calendar.SECOND)
 
 calendar.setTimeInMillis(calendar.getTimeInMillis() +totalTime)
 
-    var yearDelta: Int = calendar.get(Calendar.YEAR)!!
+    var yearDelta: Int = calendar.get(Calendar.YEAR)
 
 
-    var monthDelta: Int = calendar.get(Calendar.MONTH)!!
+    var monthDelta: Int = calendar.get(Calendar.MONTH)
 
 
-    var dayDelta: Int = calendar.get(Calendar.DAY_OF_MONTH)!!
+    var dayDelta: Int = calendar.get(Calendar.DAY_OF_MONTH)
 
 
-    var hourDelta: Int = calendar.get(Calendar.HOUR)!!
+    var hourDelta: Int = calendar.get(Calendar.HOUR)
 
 
-    var minuteDelta: Int = calendar.get(Calendar.MINUTE)!!
+    var minuteDelta: Int = calendar.get(Calendar.MINUTE)
 
 
-    var secondDelta: Int = calendar.get(Calendar.SECOND)!!
+    var secondDelta: Int = calendar.get(Calendar.SECOND)
 
 hashMap!!.put(DownloadItemData.VALID_TIME_YEARS, Integer(Integer.valueOf(yearDelta -year)))
 hashMap!!.put(DownloadItemData.VALID_TIME_MONTHS, Integer(Integer.valueOf(monthDelta -month)))
@@ -167,7 +168,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -178,7 +179,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
     open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 

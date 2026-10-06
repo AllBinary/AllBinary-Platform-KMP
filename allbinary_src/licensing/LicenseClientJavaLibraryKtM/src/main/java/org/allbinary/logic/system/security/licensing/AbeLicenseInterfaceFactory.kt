@@ -159,7 +159,7 @@ this.logUtil!!.put("Licensing Failure", this, this.commonStrings!!.GET, e)
     var calendar: Calendar = Calendar.getInstance()!!
 
 
-    var currentTime: Long = calendar.getTimeInMillis()!!
+    var currentTime: Long = calendar.getTimeInMillis()
 
 
     

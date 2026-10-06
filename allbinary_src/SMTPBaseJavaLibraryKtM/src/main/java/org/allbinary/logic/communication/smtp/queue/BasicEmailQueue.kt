@@ -98,7 +98,7 @@ this.remove(emailInterface as Object)
 
     open fun remove()
         //nullable = true from not(false or (false and true)) = true
-: EmailInterface{
+: EmailInterface?{
 
 
 
@@ -134,7 +134,7 @@ this.processAllUnsent()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var size: Int = queueVector!!.size()!!
+    var size: Int = queueVector!!.size()
 
 
 

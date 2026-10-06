@@ -38,11 +38,11 @@ companion object {
             
     open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var nodeName = nodeName
 var nodeList = nodeList
 
-    var numberOfNodes: Int = nodeList!!.getLength()!!
+    var numberOfNodes: Int = nodeList!!.getLength()
 
 
 
@@ -176,7 +176,7 @@ var nodeList = nodeList
     var nodeVector: BasicArrayList = BasicArrayListD()
 
 
-    var numberOfNodes: Int = nodeList!!.getLength()!!
+    var numberOfNodes: Int = nodeList!!.getLength()
 
 
 

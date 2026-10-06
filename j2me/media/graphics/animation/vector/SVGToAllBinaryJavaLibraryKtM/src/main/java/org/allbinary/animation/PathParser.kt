@@ -39,7 +39,7 @@ var d = d
 
         {
 
-    var c: Char = d[i]!!
+    var c: Char = d[i]
 
 
     
@@ -137,7 +137,7 @@ var startY: Int = 0
     var tok: String = tokens[idx++]!!
 
 
-    var cmd: Char = tok[0]!!
+    var cmd: Char = tok[0]
 
 
     
@@ -145,10 +145,10 @@ var startY: Int = 0
                         
                                     {
                                     
-    var x: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var x: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
-    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
     
@@ -176,10 +176,10 @@ count[0]++
                         
                                     {
                                     
-    var x: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var x: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
-    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
     
@@ -205,7 +205,7 @@ count[0]++
                         
                                     {
                                     
-    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
     
@@ -229,22 +229,22 @@ count[0]++
                         
                                     {
                                     
-    var x1: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var x1: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
-    var y1: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var y1: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
-    var x2: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var x2: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
-    var y2: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var y2: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
-    var x3: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var x3: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
-    var y3: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var y3: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
     
@@ -288,10 +288,10 @@ count[0]++
                         
                                     {
                                     
-    var x: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var x: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
-    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
     
@@ -317,7 +317,7 @@ count[0]++
                         
                                     {
                                     
-    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())!!
+    var y: Int = fixedPoint!!.toFixed((tokens[idx++]!!).toDouble())
 
 
     
@@ -352,7 +352,7 @@ count[0]++
 : Boolean{
 var tok = tok
 
-    var c: Char = tok[0]!!
+    var c: Char = tok[0]
 
 
 

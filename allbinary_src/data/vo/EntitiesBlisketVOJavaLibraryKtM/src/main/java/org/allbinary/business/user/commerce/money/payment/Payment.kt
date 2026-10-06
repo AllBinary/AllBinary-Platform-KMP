@@ -154,7 +154,7 @@ public constructor ()
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
-    var aFalse: Boolean = Boolean.FALSE
+    var aFalse: Boolean = Boolean.false
 
 
     
@@ -233,7 +233,7 @@ public constructor ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
@@ -619,7 +619,7 @@ var document = document
 
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -630,7 +630,7 @@ var document = document
 
     open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -641,7 +641,7 @@ var document = document
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -652,7 +652,7 @@ var document = document
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -664,7 +664,7 @@ var document = document
 
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 

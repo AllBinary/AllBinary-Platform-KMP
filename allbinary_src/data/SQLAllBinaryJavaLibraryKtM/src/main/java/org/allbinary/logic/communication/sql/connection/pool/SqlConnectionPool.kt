@@ -185,7 +185,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_GET)
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = connectionVector!!.size()!!
+    var size: Int = connectionVector!!.size()
 
 
 

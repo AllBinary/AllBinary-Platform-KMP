@@ -76,7 +76,7 @@ var location = location
             
     override fun getInstanceAnimation(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-: Animation{
+: Animation?{
 var animationInterface = animationInterface
 
 

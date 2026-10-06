@@ -55,7 +55,7 @@ System.setProperty("jdk.xml.totalEntitySizeLimit", LIMIT)
 
     open fun create()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
         try {
             

@@ -99,7 +99,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
         try {
@@ -107,7 +107,7 @@ var document = document
     var node: Node = document.createElement(WorkFlowData.getInstance()!!.WORKFLOWS)!!
 
 
-    var size: Int = this.workFlowsVector!!.size()!!
+    var size: Int = this.workFlowsVector!!.size()
 
 
 

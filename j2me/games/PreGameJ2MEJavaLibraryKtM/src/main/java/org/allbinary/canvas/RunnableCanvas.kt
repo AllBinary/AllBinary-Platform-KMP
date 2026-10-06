@@ -325,7 +325,7 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
 
                 stringMaker!!.delete(0, stringMaker!!.length())
 
-                var currentTimeMillis: Long = this.systemWrapper!!.currentTimeMillis()!!
+                var currentTimeMillis: Long = this.systemWrapper!!.currentTimeMillis()
 
                 this.logUtil!!.putF(
                     stringMaker!!
@@ -361,7 +361,7 @@ open public class RunnableCanvas : MyCanvas, RunnableInterface {
             }
         }
 
-        var elapsedTime: Long = this.loopTimeHelper!!.getElapsedTNT()!!
+        var elapsedTime: Long = this.loopTimeHelper!!.getElapsedTNT()
 
         var wait: Long = this.loopTimeHelper!!.delay.toLong()
 

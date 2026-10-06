@@ -144,7 +144,7 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
     var usersHashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = usersHashMapVector!!.size!!
+    var size: Int = usersHashMapVector!!.size
 
 
 
@@ -202,7 +202,7 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
     var usersHashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = usersHashMapVector!!.size!!
+    var size: Int = usersHashMapVector!!.size
 
 
 
@@ -247,7 +247,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
     var usersHashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = usersHashMapVector!!.size!!
+    var size: Int = usersHashMapVector!!.size
 
 
 
@@ -279,7 +279,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
             
     open fun getUser(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: UserInterface{
+: UserInterface?{
 var userName = userName
 
     var row: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
@@ -359,10 +359,10 @@ var password = password
     var isUserNameAndPasswordCorrect: Int = 0
 
 
-    var result: String = super.getField(UserData.USERNAME, userName, UserData.PASSWORD)!!
+    var result: String = super.java.getField(UserData.USERNAME, userName, UserData.PASSWORD)!!
 
 
-    var encryption: String = super.getField(UserData.USERNAME, userName, EntryData.getInstance()!!.ENCRYPTION)!!
+    var encryption: String = super.java.getField(UserData.USERNAME, userName, EntryData.getInstance()!!.ENCRYPTION)!!
 
 
     

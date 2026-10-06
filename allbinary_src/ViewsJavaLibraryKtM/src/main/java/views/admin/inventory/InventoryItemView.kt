@@ -26,7 +26,8 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
 import javax.servlet.http.HttpServletRequest
@@ -182,7 +183,7 @@ this.itemInterface= BasicItem(this.getRequestHashMap()) as ItemInterface
     var downloadableItem: DownloadableItem
 
 
-    var size: Int = this.downloadableItemVector!!.size()!!
+    var size: Int = this.downloadableItemVector!!.size()
 
 
 

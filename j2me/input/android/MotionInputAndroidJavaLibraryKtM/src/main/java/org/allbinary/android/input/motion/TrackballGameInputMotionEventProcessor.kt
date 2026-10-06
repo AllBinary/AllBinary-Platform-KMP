@@ -56,9 +56,9 @@ open public class TrackballGameInputMotionEventProcessor : MotionEventProcessor 
 
         try {
 
-            var x: Float = motionEvent!!.getX()!!
+            var x: Float = motionEvent!!.getX()
 
-            var y: Float = motionEvent!!.getY()!!
+            var y: Float = motionEvent!!.getY()
 
             if (x < 0) {
 

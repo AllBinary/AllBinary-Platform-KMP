@@ -109,7 +109,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
     {
         // var list = list
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         this.list.ensureCapacity(size)
         this.visitedList!!.ensureCapacity(size)
@@ -160,7 +160,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
 
         var localList: BasicArrayList = this.list
 
-        var index: Int = localList!!.indexOf(geographicMapCellPosition)!!
+        var index: Int = localList!!.indexOf(geographicMapCellPosition)
 
         if (localList!!.size() > index + 1) {
 
@@ -180,7 +180,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
 
         var localVisitedList: BasicArrayList = this.visitedList
 
-        var size: Int = localVisitedList!!.size()!!
+        var size: Int = localVisitedList!!.size()
 
         var value: Boolean
 
@@ -205,7 +205,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
 
         var localVisitedList: BasicArrayList = this.visitedList
 
-        var size: Int = localVisitedList!!.size()!!
+        var size: Int = localVisitedList!!.size()
 
         var value: Boolean
 
@@ -235,7 +235,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
 
         var localList: BasicArrayList = this.list
 
-        var size: Int = pathList!!.size()!!
+        var size: Int = pathList!!.size()
 
         var geographicMapCellPosition: GeographicMapCellPosition
 
@@ -260,7 +260,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
         : Boolean {
         // var geographicMapCellPosition = geographicMapCellPosition
 
-        var index: Int = this.list.indexOf(geographicMapCellPosition)!!
+        var index: Int = this.list.indexOf(geographicMapCellPosition)
 
         if (index != -1) {
 
@@ -284,7 +284,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
         : Boolean {
         // var geographicMapCellPosition = geographicMapCellPosition
 
-        var index: Int = this.list.indexOf(geographicMapCellPosition)!!
+        var index: Int = this.list.indexOf(geographicMapCellPosition)
 
         var value: Boolean
 
@@ -348,7 +348,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
         : Boolean {
         // var basicDecimal = basicDecimal
 
-        var size: Int = this.getSize()!!
+        var size: Int = this.getSize()
 
         var numberRequired: Int =
             (size shl basicDecimal!!.getScaledFactor()) / basicDecimal!!.getUnscaled().toInt()
@@ -375,7 +375,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
 
         var localFalseBoolean: Boolean = this.booleanFactory!!.FALSE
 
-        var size: Int = localVisitedList!!.size()!!
+        var size: Int = localVisitedList!!.size()
 
         for (index in size - 1 downTo 0) {
 
@@ -410,7 +410,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
         this.animation.paintXY(graphics, x + this.halfWidth, y + (height))
     }
 
-    private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()!!
+    private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()
 
     open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeographicMap)
         // nullable = true from not(false or (false and false)) = true
@@ -424,7 +424,7 @@ open public class GeographicMapCellHistory : Object, UpdateMyFontInterface {
 
             var localVisitedList: BasicArrayList = this.visitedList
 
-            var size: Int = localVisitedList!!.size()!!
+            var size: Int = localVisitedList!!.size()
 
             var geographicMapCellPosition: GeographicMapCellPosition
 

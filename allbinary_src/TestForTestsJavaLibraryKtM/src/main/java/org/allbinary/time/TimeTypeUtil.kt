@@ -48,7 +48,7 @@ companion object {
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-    var hoursOfDay: Int = this.getHourOfDay()!!
+    var hoursOfDay: Int = this.getHourOfDay()
 
 
 
@@ -111,7 +111,7 @@ calendar.setTimeInMillis(timeInMillis)
 : Boolean{
 var timeInMillis = timeInMillis
 
-    var hoursOfDay: Int = this.getHourOfDay(timeInMillis)!!
+    var hoursOfDay: Int = this.getHourOfDay(timeInMillis)
 
 
 

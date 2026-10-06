@@ -41,7 +41,7 @@ open public class InputAutomationModuleFactoryInterface
         
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -52,7 +52,7 @@ open public class InputAutomationModuleFactoryInterface
 
     open fun getConfigurationJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: JPanel?{
 
 
 
@@ -63,7 +63,7 @@ open public class InputAutomationModuleFactoryInterface
 
     open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet{
+: HelpSet?{
 
 
 

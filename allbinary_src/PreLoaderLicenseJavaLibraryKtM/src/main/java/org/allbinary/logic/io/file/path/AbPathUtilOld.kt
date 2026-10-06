@@ -391,7 +391,7 @@ var path = path
 : String{
 var categoryPath = categoryPath
 
-    var endIndex: Int = categoryPath!!.lastIndexOf(this.abPathData!!.SEPARATOR)!!
+    var endIndex: Int = categoryPath!!.lastIndexOf(this.abPathData!!.SEPARATOR)
 
 
     
@@ -449,7 +449,7 @@ var categoryPath = categoryPath
 : AbPath{
 var categoryPath = categoryPath
 
-    var endIndex: Int = categoryPath!!.lastIndexOf(this.abPathData!!.SEPARATOR)!!
+    var endIndex: Int = categoryPath!!.lastIndexOf(this.abPathData!!.SEPARATOR)
 
 
     

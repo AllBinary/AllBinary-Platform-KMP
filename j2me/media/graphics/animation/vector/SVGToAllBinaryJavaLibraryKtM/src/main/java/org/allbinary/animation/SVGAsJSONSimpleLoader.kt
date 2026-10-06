@@ -270,7 +270,7 @@ System.out.println(stringBuilder!!.toString())
     var array: JSONArray = value as JSONArray
 
 
-    var size: Int = array.length()!!
+    var size: Int = array.length()
 
 
 
@@ -351,13 +351,13 @@ this.addSeparator(pointVector)
     //var pointVector = pointVector
     //var circle = circle
 
-    var cx: Int = this.readInt(circle, KEY_CX)!!
+    var cx: Int = this.readInt(circle, KEY_CX)
 
 
-    var cy: Int = this.readInt(circle, KEY_CY)!!
+    var cy: Int = this.readInt(circle, KEY_CY)
 
 
-    var radius: Int = this.readInt(circle, KEY_R)!!
+    var radius: Int = this.readInt(circle, KEY_R)
 
 
 
@@ -390,16 +390,16 @@ this.addSeparator(pointVector)
     //var pointVector = pointVector
     //var rectangle = rectangle
 
-    var x: Int = this.readInt(rectangle, KEY_X, 0)!!
+    var x: Int = this.readInt(rectangle, KEY_X, 0)
 
 
-    var y: Int = this.readInt(rectangle, KEY_Y, 0)!!
+    var y: Int = this.readInt(rectangle, KEY_Y, 0)
 
 
-    var width: Int = this.readInt(rectangle, graphicsStrings!!.WIDTH)!!
+    var width: Int = this.readInt(rectangle, graphicsStrings!!.WIDTH)
 
 
-    var height: Int = this.readInt(rectangle, graphicsStrings!!.HEIGHT)!!
+    var height: Int = this.readInt(rectangle, graphicsStrings!!.HEIGHT)
 
 this.addPoint(pointVector, x, y)
 this.addPoint(pointVector, x +width, y)
@@ -511,8 +511,9 @@ e.printStackTrace()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Math.round(
-                                    (value as Number).doubleValue()).toInt()
+                        return Math.round(value = valuevalue as Number
+value.
+                    toDouble()).toInt()
 
                                     }
                                 

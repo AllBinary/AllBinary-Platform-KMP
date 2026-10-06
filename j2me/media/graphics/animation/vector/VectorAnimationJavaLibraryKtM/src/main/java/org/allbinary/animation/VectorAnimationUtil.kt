@@ -46,7 +46,7 @@ open public class VectorAnimationUtil : Object {
         // var vector = vector
         // var pointsPerFrame = pointsPerFrame
 
-        var size: Int = vector.size()!!
+        var size: Int = vector.size()
 
         var points: Array<Array<IntArray?>?> = Array(size) { Array(pointsPerFrame) { IntArray(2) } }
 
@@ -77,7 +77,7 @@ open public class VectorAnimationUtil : Object {
         : Array<Array<IntArray?>?> {
         // var vector = vector
 
-        var size: Int = vector.size()!!
+        var size: Int = vector.size()
 
         var points: Array<Array<IntArray?>?> = Array(size) { Array(0) { IntArray(0) } }
 
@@ -111,7 +111,7 @@ open public class VectorAnimationUtil : Object {
 
         var points: Array<IntArray?> = Array(list.size()) { IntArray(2) }
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 

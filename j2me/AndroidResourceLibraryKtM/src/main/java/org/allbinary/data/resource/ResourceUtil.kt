@@ -208,7 +208,7 @@ open public class ResourceUtil : Object {
 
         var integer: Integer = this.hashMap!!.get(resource as Object) as Integer
 
-        var id: Int = integer.toInt()!!
+        var id: Int = integer.toInt()
 
         var resources: Resources = (this.resources as Resources)
 

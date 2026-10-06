@@ -227,7 +227,7 @@ var document = document
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, CssElementData.getInstance()!!.NAME, hashMap)!!
 
 
-    var size: Int = this.cssPropertyVector!!.size()!!
+    var size: Int = this.cssPropertyVector!!.size()
 
 
 
@@ -243,7 +243,7 @@ node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 }
 
 
-    var size2: Int = this.cssElementVector!!.size()!!
+    var size2: Int = this.cssElementVector!!.size()
 
 
 

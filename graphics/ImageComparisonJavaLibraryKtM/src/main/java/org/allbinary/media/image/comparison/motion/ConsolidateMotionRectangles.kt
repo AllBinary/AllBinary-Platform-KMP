@@ -52,7 +52,7 @@ var motionRectangles = motionRectangles
     var vector: BasicArrayList = motionRectangles!!.getVector()!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -82,7 +82,7 @@ this.logUtil!!.putF("Start - Size Before: " +vector.size(), this, "consolidateMo
     var removeVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -147,7 +147,7 @@ var removeVector = removeVector
     var vector: BasicArrayList = this.getVector()!!
 
 
-    var size: Int = removeVector!!.size()!!
+    var size: Int = removeVector!!.size()
 
 
 

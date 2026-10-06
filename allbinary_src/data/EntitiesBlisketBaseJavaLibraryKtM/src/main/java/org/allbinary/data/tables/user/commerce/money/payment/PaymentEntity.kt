@@ -136,7 +136,7 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 
     open fun get(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList?{
 var userName = userName
 
         try {
@@ -151,7 +151,7 @@ keyAndValue!!.put(UserData.USERNAME, userName)
     var paymentList: BasicArrayList = super.getRows(keyAndValue)!!
 
 
-    var size: Int = paymentList!!.size()!!
+    var size: Int = paymentList!!.size()
 
 
 
@@ -207,7 +207,7 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 
     open fun getDefault(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: PaymentInterface{
+: PaymentInterface?{
 var userName = userName
 
         try {
@@ -334,7 +334,7 @@ vector.add(paymentInterface!!.getType())
 vector.add(paymentInterface!!.getExpiration())
 
     var random: Int = Random().
-                            nextInt(SuperCrypt.KEYMAX)!!
+                            nextInt(SuperCrypt.KEYMAX)
 
 vector.add(SuperCrypt(random).
                             encrypt(paymentInterface!!.getNumber()))

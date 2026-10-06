@@ -86,10 +86,10 @@ this.frameOne= frameOne
 this.frameTwo= frameTwo
 this.setTolerance(0)
 
-    var imageHeight: Int = bufferedImage!!.getHeight()!!
+    var imageHeight: Int = bufferedImage!!.getHeight()
 
 
-    var imageWidth: Int = bufferedImage!!.getWidth()!!
+    var imageWidth: Int = bufferedImage!!.getWidth()
 
 
     

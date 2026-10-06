@@ -187,7 +187,7 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
 
     open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface{
+: TransformDocumentInterface?{
 
 
 

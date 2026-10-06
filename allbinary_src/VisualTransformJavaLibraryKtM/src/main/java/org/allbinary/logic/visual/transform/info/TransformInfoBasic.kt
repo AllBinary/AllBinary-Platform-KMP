@@ -85,7 +85,7 @@ var hashMap = hashMap
 
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -96,7 +96,7 @@ var hashMap = hashMap
 
     open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -107,7 +107,7 @@ var hashMap = hashMap
 
     open fun getObject()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any?{
 
 
 
@@ -118,7 +118,7 @@ var hashMap = hashMap
 
     open fun getObjectConfigInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoObjectConfigInterface{
+: TransformInfoObjectConfigInterface?{
 
 
 
@@ -136,7 +136,7 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
 
     open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath?{
 
 
 
@@ -147,7 +147,7 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
 
     open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -158,7 +158,7 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
 
     open fun getTemplate()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -169,7 +169,7 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
 
     open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath?{
 
 
 
@@ -180,7 +180,7 @@ var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
 
     open fun getDataFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -283,7 +283,7 @@ var value = value
 
     open fun getImportUriPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 
@@ -303,7 +303,7 @@ var importUriPath = importUriPath
             
     open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any?{
 
 
 
@@ -316,7 +316,7 @@ var importUriPath = importUriPath
             
     open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList?{
 
 
 
@@ -329,7 +329,7 @@ var importUriPath = importUriPath
             
     open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>?{
 
 
 

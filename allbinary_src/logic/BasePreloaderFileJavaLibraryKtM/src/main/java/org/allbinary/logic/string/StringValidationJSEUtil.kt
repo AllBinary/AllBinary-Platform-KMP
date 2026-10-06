@@ -28,11 +28,11 @@ open public class StringValidationJSEUtil : Object {
             : Boolean {
             var string = string
 
-            var len: Int = string.length!!
+            var len: Int = string.length
 
             for (i in 0 until len) {
 
-                var c: Char = string[i]!!
+                var c: Char = string[i]
 
                 if (Character.isWhitespace(c) == false) {
 

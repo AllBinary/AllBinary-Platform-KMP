@@ -114,7 +114,7 @@ open public class HorizontaRotationManeuverAI : BasicAI, ArtificialIntelligenceT
         var angleIncrementInfo: AngleIncrementInfo =
             rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
 
-        var frame: Int = this.rotationAnimationInterface!!.getFrame()!!
+        var frame: Int = this.rotationAnimationInterface!!.getFrame()
 
         var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
@@ -137,7 +137,7 @@ open public class HorizontaRotationManeuverAI : BasicAI, ArtificialIntelligenceT
             this.drop()
         }
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+        var index: Int = this.circularIndexUtil!!.getIndex()
 
         if (index % this.currentSpeedDivisor == 0 && index % 2 == 0) {
 
@@ -168,7 +168,7 @@ open public class HorizontaRotationManeuverAI : BasicAI, ArtificialIntelligenceT
         var angleIncrementInfo: AngleIncrementInfo =
             rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
 
-        var frame: Int = this.rotationAnimationInterface!!.getFrame()!!
+        var frame: Int = this.rotationAnimationInterface!!.getFrame()
 
         if (frame == angleIncrementInfo!!.LEFT_FRAME.toInt()) {
 
@@ -211,7 +211,7 @@ open public class HorizontaRotationManeuverAI : BasicAI, ArtificialIntelligenceT
 
         var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
-        var y: Int = ownerLayerInterface!!.getYP()!!
+        var y: Int = ownerLayerInterface!!.getYP()
 
         if (
             ownerLayerInterface!!.getY2() + ownerLayerInterface!!.getHeight() >

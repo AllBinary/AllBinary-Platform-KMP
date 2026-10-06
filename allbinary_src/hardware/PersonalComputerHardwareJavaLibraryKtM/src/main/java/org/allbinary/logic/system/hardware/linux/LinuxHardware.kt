@@ -527,7 +527,7 @@ var index = index
     var hardwareBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = this.componentInterfaceVector!!.size()!!
+    var size: Int = this.componentInterfaceVector!!.size()
 
 
 
@@ -590,7 +590,7 @@ var nextLine = nextLine
                         
                                     {
                                     
-    var index: Int = nextLine!!.indexOf("Bus")!!
+    var index: Int = nextLine!!.indexOf("Bus")
 
 
     

@@ -255,9 +255,9 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
 
         var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
-        var i_column: Int = this.mathUtil!!.abs(x / allBinaryTiledLayer!!.getCellHeight())!!
+        var i_column: Int = this.mathUtil!!.abs(x / allBinaryTiledLayer!!.getCellHeight())
 
-        var i_row: Int = this.mathUtil!!.abs(y / allBinaryTiledLayer!!.getCellWidth())!!
+        var i_row: Int = this.mathUtil!!.abs(y / allBinaryTiledLayer!!.getCellWidth())
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return this.geographicMapCellPositionFactory!!.getAt(i_column, i_row)
@@ -274,9 +274,9 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
 
         var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
-        var i_column: Int = this.mathUtil!!.abs(x / allBinaryTiledLayer!!.getCellHeight())!!
+        var i_column: Int = this.mathUtil!!.abs(x / allBinaryTiledLayer!!.getCellHeight())
 
-        var i_row: Int = this.mathUtil!!.abs(y / allBinaryTiledLayer!!.getCellWidth())!!
+        var i_row: Int = this.mathUtil!!.abs(y / allBinaryTiledLayer!!.getCellWidth())
 
         if (
             allBinaryTiledLayer!!.getColumns() > i_column && allBinaryTiledLayer!!.getRows() > i_row
@@ -308,9 +308,9 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
 
         var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
-        var i_column: Int = geographicMapCellPosition!!.getColumn()!!
+        var i_column: Int = geographicMapCellPosition!!.getColumn()
 
-        var i_row: Int = geographicMapCellPosition!!.getRow()!!
+        var i_row: Int = geographicMapCellPosition!!.getRow()
 
         if (
             allBinaryTiledLayer!!.getColumns() > i_column && allBinaryTiledLayer!!.getRows() > i_row
@@ -344,9 +344,9 @@ open public class BasicGeographicMap : SimpleGeographicMap, GeographicMapInterfa
 
         var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
-        var i_columnMin: Int = this.mathUtil!!.abs(x / allBinaryTiledLayer!!.getCellHeight())!!
+        var i_columnMin: Int = this.mathUtil!!.abs(x / allBinaryTiledLayer!!.getCellHeight())
 
-        var i_rowMin: Int = this.mathUtil!!.abs(y / allBinaryTiledLayer!!.getCellWidth())!!
+        var i_rowMin: Int = this.mathUtil!!.abs(y / allBinaryTiledLayer!!.getCellWidth())
 
         var i_columnMax: Int = this.mathUtil!!.abs(x2 / allBinaryTiledLayer!!.getCellHeight()) + 1
 

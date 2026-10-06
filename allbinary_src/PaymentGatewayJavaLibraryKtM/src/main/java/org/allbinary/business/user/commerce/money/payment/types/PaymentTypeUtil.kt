@@ -125,7 +125,7 @@ this.paymentTypeVector!!.add(paymentType)
 : PaymentType{
 var paymentTypeString = paymentTypeString
 
-    var size: Int = this.paymentTypeVector!!.size()!!
+    var size: Int = this.paymentTypeVector!!.size()
 
 
 
@@ -298,7 +298,7 @@ var a_PaymentTypeVector = a_PaymentTypeVector
     var diff: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = this.paymentTypeVector!!.size()!!
+    var size: Int = this.paymentTypeVector!!.size()
 
 
 

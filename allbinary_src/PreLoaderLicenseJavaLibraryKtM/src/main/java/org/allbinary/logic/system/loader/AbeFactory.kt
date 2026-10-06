@@ -229,7 +229,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,param
 
     open fun ::class(abeClientInformation: AbeClientInformationInterface, className: String)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>{
+: KClass<*>?{
     //var abeClientInformation = abeClientInformation
     //var className = className
 

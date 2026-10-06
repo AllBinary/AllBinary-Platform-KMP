@@ -156,7 +156,7 @@ open public class PersistentInputMapping : Object {
 
         var totalMappedTo: Int = 0
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var hashtable: ABHashtable<Any, Any>
 

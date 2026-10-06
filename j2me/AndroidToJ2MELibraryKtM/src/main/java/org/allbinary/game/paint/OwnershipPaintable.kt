@@ -51,7 +51,7 @@ open public class OwnershipPaintable : Paintable, UpdateMyFontInterface {
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
-    private var color: Int = this.basicColor!!.toInt()!!
+    private var color: Int = this.basicColor!!.toInt()
 
     private var anchor: Int = Anchor.TOP_LEFT
 
@@ -96,9 +96,9 @@ open public class OwnershipPaintable : Paintable, UpdateMyFontInterface {
         this.myFontProcessor!!.process(graphics)
         graphics.setColor(this.color)
 
-        var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()!!
+        var halfWidth: Int = this.displayInfo!!.getLastHalfWidth()
 
-        var height: Int = this.displayInfo!!.getLastHeight()!!
+        var height: Int = this.displayInfo!!.getLastHeight()
 
         graphics.drawString(
             this.COPYRIGHT,

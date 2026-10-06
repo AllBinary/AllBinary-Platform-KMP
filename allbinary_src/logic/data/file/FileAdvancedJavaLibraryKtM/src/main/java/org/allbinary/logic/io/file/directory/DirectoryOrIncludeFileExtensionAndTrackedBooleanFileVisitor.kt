@@ -54,7 +54,7 @@ list.add(commonFileStrings!!.JAVA)
 
 
     var result: Boolean = DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor(list).
-                            visit(AbFile.createAbFileFromRawPath(filePath))!!
+                            visit(AbFile.createAbFileFromRawPath(filePath))
 
 System.out.println(filePath +" is Tracked: " +result)
 }
@@ -106,7 +106,7 @@ var file = file
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -130,7 +130,7 @@ var file = file
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -169,7 +169,7 @@ var fileNameString = fileNameString
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 
                                     }
                                 
@@ -198,7 +198,7 @@ var fileNameString = fileNameString
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 

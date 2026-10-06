@@ -145,7 +145,7 @@ keysAndValues!!.put(basicItemData!!.ID, id)
     var vector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -194,7 +194,7 @@ keysAndValues!!.put(DownloadItemData.ID, downloadItemId)
     var vector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

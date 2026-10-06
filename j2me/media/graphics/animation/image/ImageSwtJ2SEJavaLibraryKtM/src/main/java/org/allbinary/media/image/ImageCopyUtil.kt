@@ -404,10 +404,10 @@ image= this.openGLUtil!!.addImage(image)
     var openGLESImageProperties: OpenGLESImageProperties = openGLESImage!!.openGLESImageProperties
 
 
-    var openGLWidth: Int = openGLESImage!!.openGLBitmap!!.getWidth()!!
+    var openGLWidth: Int = openGLESImage!!.openGLBitmap!!.getWidth()
 
 
-    var openGLHeight: Int = openGLESImage!!.openGLBitmap!!.getHeight()!!
+    var openGLHeight: Int = openGLESImage!!.openGLBitmap!!.getHeight()
 
 openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2= ((width.toFloat()) /openGLWidth)
 openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLHeight)
@@ -650,10 +650,10 @@ image= this.openGLUtil!!.addImage(image)
     var newPixelArray: IntArray = IntArray(image.getWidth() *image.getHeight())
 
 
-    var width: Int = originalImage!!.getWidth()!!
+    var width: Int = originalImage!!.getWidth()
 
 
-    var height: Int = originalImage!!.getHeight()!!
+    var height: Int = originalImage!!.getHeight()
 
 
 
@@ -716,10 +716,10 @@ getImage.
     var newPixelArray: IntArray = IntArray(image.getWidth() *image.getHeight())
 
 
-    var width: Int = originalImage!!.getWidth()!!
+    var width: Int = originalImage!!.getWidth()
 
 
-    var height: Int = originalImage!!.getHeight()!!
+    var height: Int = originalImage!!.getHeight()
 
 
 

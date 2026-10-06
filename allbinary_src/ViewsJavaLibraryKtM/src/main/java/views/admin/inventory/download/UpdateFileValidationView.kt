@@ -96,7 +96,7 @@ var transformInfoInterface = transformInfoInterface
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -139,14 +139,14 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
 
     
                         if(BasicItemValidation(this.itemInterface).
-                            isValid() == Boolean.FALSE)
+                            isValid() == false)
                         
                                     {
                                     
@@ -162,7 +162,7 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -194,7 +194,7 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -213,19 +213,19 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
     var fileName: String = fileItem!!.getName()!!
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 HttpFileUploadUtil.log(fileItem)
 
     
-                        if(this.isValid(fileName, size) == Boolean.FALSE)
+                        if(this.isValid(fileName, size) == false)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -258,12 +258,12 @@ this.getRequestHashMap()!!.put(DownloadItemData.SIZE, (size).toString())
     var fileName: String = fileItem!!.getName()!!
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 HttpFileUploadUtil.log(fileItem)
 
     
-                        if(this.isValid(fileName, size) == Boolean.FALSE)
+                        if(this.isValid(fileName, size) == false)
                         
                                     {
                                     
@@ -297,12 +297,12 @@ HttpFileUploadUtil.log(fileItem)
     var fileName: String = fileItem!!.getName()!!
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 HttpFileUploadUtil.log(fileItem)
 
     
-                        if(this.isValid(fileName, size) == Boolean.FALSE)
+                        if(this.isValid(fileName, size) == false)
                         
                                     {
                                     
@@ -372,7 +372,7 @@ this.downloadableItem= DownloadableItem(hashMap)
 
 
     
-                        if(downloadableItemValidation!!.isValid() == Boolean.FALSE)
+                        if(downloadableItemValidation!!.isValid() == false)
                         
                                     {
                                     
@@ -388,7 +388,7 @@ this.downloadableItem= DownloadableItem(hashMap)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -396,7 +396,7 @@ this.downloadableItem= DownloadableItem(hashMap)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 } catch(e: Exception)
             {
 
@@ -412,7 +412,7 @@ this.downloadableItem= DownloadableItem(hashMap)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -420,7 +420,7 @@ this.downloadableItem= DownloadableItem(hashMap)
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -431,7 +431,7 @@ this.downloadableItem= DownloadableItem(hashMap)
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -497,7 +497,7 @@ var document = document
 
 
     
-                        if(basicItemValidation!!.isValid() == Boolean.FALSE)
+                        if(basicItemValidation!!.isValid() == false)
                         
                                     {
                                     stringBuffer!!.append(basicItemValidation!!.validationInfo())
@@ -551,7 +551,7 @@ stringBuffer!!.append("<br />")
     var fileName: String = fileItem!!.getName()!!
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 this.validationInfo(stringBuffer, fileName, size)
 
@@ -578,7 +578,7 @@ stringBuffer!!.append("<br/>")
     var fileName: String = fileItem!!.getName()!!
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 this.validationInfo(stringBuffer, fileName, size)
 
@@ -603,7 +603,7 @@ this.validationInfo(stringBuffer, fileName, size)
     var fileName: String = fileItem!!.getName()!!
 
 
-    var size: Long = fileItem!!.getSize()!!
+    var size: Long = fileItem!!.getSize()
 
 this.validationInfo(stringBuffer, fileName, size)
 
@@ -625,7 +625,7 @@ this.validationInfo(stringBuffer, fileName, size)
 
 
     
-                        if(downloadableItemValidation!!.isValid() == Boolean.FALSE)
+                        if(downloadableItemValidation!!.isValid() == false)
                         
                                     {
                                     
@@ -717,7 +717,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -749,7 +749,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -777,7 +777,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                         }
                             
@@ -785,7 +785,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.IS_VAL
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 

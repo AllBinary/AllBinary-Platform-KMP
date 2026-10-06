@@ -90,10 +90,10 @@ var pointVector = pointVector
     var linesNode: Node = document.createElement(this.LINES) as Node
 
 
-    var size2: Int = tempPointVector!!.size()!!
+    var size2: Int = tempPointVector!!.size()
 
 
-    var size: Int = pointVector!!.size()!!
+    var size: Int = pointVector!!.size()
 
 
     var firstPoint: GPoint = 

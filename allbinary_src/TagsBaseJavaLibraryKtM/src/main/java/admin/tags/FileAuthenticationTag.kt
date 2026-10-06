@@ -298,10 +298,10 @@ this.weblisketSession!!.setPassword(newPassword)
                         
                                     {
                                     
-    var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
+    var timeCreated: Long = this.weblisketSession!!.getCreationTime()
 
 
-    var sessionTimout: Long = this.role.getSessionTimeout()!!
+    var sessionTimout: Long = this.role.getSessionTimeout()
 
 
     var calendar: Calendar = Calendar.getInstance()!!
@@ -336,7 +336,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE.
+                        return Boolean.true.
 
                                     }
                                 
@@ -393,13 +393,13 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
                         
                                     {
                                     
-    var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
+    var timeCreated: Long = this.weblisketSession!!.getCreationTime()
 
 
-    var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
+    var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()
 
 
-    var timePassed: Long = this.role.getSessionInactivityTimeout()!!
+    var timePassed: Long = this.role.getSessionInactivityTimeout()
 
 
     var calendar: Calendar = Calendar.getInstance()!!
@@ -445,7 +445,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 
@@ -461,7 +461,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE.
+                        return Boolean.true.
 } catch(e: Exception)
             {
 
@@ -578,7 +578,7 @@ stringBuffer!!.append("Trying New login<p>")
                         
                                     {
                                     
-    var size: Int = this.roles.size()!!
+    var size: Int = this.roles.size()
 
 
 
@@ -601,7 +601,7 @@ stringBuffer!!.append("Trying New login<p>")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE.
+                        return Boolean.true.
 
                                     }
                                 
@@ -611,7 +611,7 @@ stringBuffer!!.append("Trying New login<p>")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE.
+                        return Boolean.false.
 
                                     }
                                 
@@ -619,7 +619,7 @@ stringBuffer!!.append("Trying New login<p>")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE.
+                        return Boolean.false.
 } catch(e: Exception)
             {
 
@@ -696,7 +696,7 @@ stringBuffer!!.append("Trying New login<p>")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE.
+                        return Boolean.true.
 
                                     }
                                 
@@ -705,7 +705,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE.
+                        return Boolean.false.
 
                                     }
                                 
@@ -714,7 +714,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE.
+                        return Boolean.false.
 } catch(e: Exception)
             {
 
@@ -753,7 +753,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE.
+                        return Boolean.true.
 
                                     }
                                 
@@ -765,7 +765,7 @@ this.nextAttempt()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE.
+                        return Boolean.false.
 
                             }
                     

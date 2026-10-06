@@ -249,7 +249,7 @@ this.displayInfoSingleton!!.add(this.canvasStrings!!.SCALED_IMAGES)
     var runnable: Runnable
 
 
-    var size: Int = this.runnableList!!.size()!!
+    var size: Int = this.runnableList!!.size()
 
 
 
@@ -275,7 +275,7 @@ this.runnableList!!.clear()
 {
 var gl = gl
 
-    var size: Int = this.list.size()!!
+    var size: Int = this.list.size()
 
 
     var image: Any

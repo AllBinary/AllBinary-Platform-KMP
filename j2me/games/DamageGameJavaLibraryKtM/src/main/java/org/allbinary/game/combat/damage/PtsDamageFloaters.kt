@@ -74,7 +74,7 @@ open public class PtsDamageFloaters : DamageFloaters {
     {
         var damage = damage
 
-        var index: Int = this.circularIndexUtil!!.getIndex()!!
+        var index: Int = this.circularIndexUtil!!.getIndex()
 
         this.lastDamage[index] = damage
         this.lastDamageString[index] =
@@ -92,9 +92,9 @@ open public class PtsDamageFloaters : DamageFloaters {
 
         var viewPosition: ViewPositionBase = this.layerInterface!!.getViewPosition()!!
 
-        var x: Int = viewPosition!!.getX()!!
+        var x: Int = viewPosition!!.getX()
 
-        var y: Int = viewPosition!!.getY()!!
+        var y: Int = viewPosition!!.getY()
 
         for (index in this.lastDamage!!.size - 1 downTo 0) {
 

@@ -222,9 +222,9 @@ open public class ImageCacheBase : Object {
 
             var height: Int = this.heights[index]!!
 
-            var total: Int = this.listOfList[index]!!.size()!!
+            var total: Int = this.listOfList[index]!!.size()
 
-            var totalAvailable: Int = this.availableListOfList[index]!!.size()!!
+            var totalAvailable: Int = this.availableListOfList[index]!!.size()
 
             stringBuffer!!.append(" w: ")
             stringBuffer!!.appendint(width)

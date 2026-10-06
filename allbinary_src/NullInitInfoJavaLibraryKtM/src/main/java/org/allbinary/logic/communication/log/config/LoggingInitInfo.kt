@@ -154,7 +154,7 @@ LoggingInitInfo.updateIfNeeded()
     var allLogTypeVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!
+    var size: Int = LoggingInitInfo.logConfigInfoList!!.size()
 
 
 

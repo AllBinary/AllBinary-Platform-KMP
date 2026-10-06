@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.Collection
+
+//import java.util.Collection
 import java.util.Map
-import java.util.Set
+
+//import java.util.Set
 import org.osgi.framework.ServiceReference
 import org.allbinary.logic.string.StringMaker
 
@@ -124,7 +126,7 @@ var key = key
 
     open fun put(key: Any, value: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any?{
 var key = key
 var value = value
 
@@ -137,7 +139,7 @@ var value = value
 
     open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any?{
 var key = key
 
 
@@ -162,7 +164,7 @@ var m = m
 
     open fun keySet()
         //nullable = true from not(false or (false and true)) = true
-: Set{
+: Set?{
 
     var keyStringArray: Array<String?> = this.serviceReference!!.getPropertyKeys()!!
 
@@ -176,7 +178,7 @@ var m = m
 
     open fun values()
         //nullable = true from not(false or (false and true)) = true
-: Collection<Any>{
+: Collection<Any>?{
 
 
 
@@ -187,7 +189,7 @@ var m = m
 
     open fun entrySet()
         //nullable = true from not(false or (false and true)) = true
-: Set{
+: Set?{
 
 
 

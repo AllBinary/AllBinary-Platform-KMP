@@ -58,7 +58,7 @@ private constructor ()
 
     open fun getQuoteRequestEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: QuoteRequestEntity{
+: QuoteRequestEntity?{
 
         try {
             

@@ -213,7 +213,7 @@ depthIndex++
 pathStringBuffer!!.delete(0, pathStringBuffer!!.length())
 pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(this.getValue())
 
-    var size: Int = list.size()!!
+    var size: Int = list.size()
 
 
 
@@ -278,14 +278,14 @@ this.category= value
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
-    var returnBoolean: Boolean = Boolean.FALSE
+    var returnBoolean: Boolean = Boolean.false
 
 
     
                         if(StringValidationUtil.getInstance()!!.isValidRequired(this.category, 1, AbSqlData.MAXSTRING))
                         
                                     {
-                                    returnBoolean= Boolean.TRUE
+                                    returnBoolean= true
 
                                     }
                                 
@@ -331,7 +331,7 @@ categoryVector!!.add(this.category)
             
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -344,7 +344,7 @@ categoryVector!!.add(this.category)
             
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 
@@ -358,7 +358,7 @@ var document = document
             
     open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String?{
 
 
 

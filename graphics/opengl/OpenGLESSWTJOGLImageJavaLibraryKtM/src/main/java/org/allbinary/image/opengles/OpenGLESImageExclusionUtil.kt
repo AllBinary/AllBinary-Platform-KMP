@@ -84,7 +84,7 @@ private constructor ()
                                 
                         else {
                             
-    var size: Int = this.list.size()!!
+    var size: Int = this.list.size()
 
 
     var name: String

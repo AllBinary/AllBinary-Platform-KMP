@@ -120,7 +120,7 @@ this.userName= hashMap!!.get(UserData.USERNAME) as String
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -199,7 +199,7 @@ valid= booleanFactory!!.FALSE
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }

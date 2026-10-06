@@ -27,7 +27,8 @@
         
 import java.io.Serializable
 import java.util.HashMap
-import java.util.Set
+
+//import java.util.Set
 import org.allbinary.business.context.modules.storefront.StoreFrontData
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.entry.EntryData
@@ -110,7 +111,7 @@ this.paymentMethod= paymentMethod
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 
                                     }
                                 
@@ -118,7 +119,7 @@ this.paymentMethod= paymentMethod
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 
@@ -129,7 +130,7 @@ this.paymentMethod= paymentMethod
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return true
 }
 
 

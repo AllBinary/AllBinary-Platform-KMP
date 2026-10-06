@@ -44,7 +44,7 @@ var nodeList = nodeList
     var vector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = nodeList!!.getLength()!!
+    var size: Int = nodeList!!.getLength()
 
 
 

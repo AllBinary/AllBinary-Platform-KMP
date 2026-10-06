@@ -37,7 +37,7 @@ open public class RandomTranslation : Object {
 
             var x: Int = -myRandomFactory!!.getNextInt(howMuch)
 
-            var y: Int = myRandomFactory!!.getNextInt(howMuch)!!
+            var y: Int = myRandomFactory!!.getNextInt(howMuch)
 
             var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(vector)
 

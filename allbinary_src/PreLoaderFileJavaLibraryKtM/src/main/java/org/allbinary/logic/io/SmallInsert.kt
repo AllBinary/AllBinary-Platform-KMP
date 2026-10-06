@@ -101,7 +101,7 @@ var after = after
 
         try {
             
-    var index: Int = this.string.indexOf(after)!!
+    var index: Int = this.string.indexOf(after)
 
 
     

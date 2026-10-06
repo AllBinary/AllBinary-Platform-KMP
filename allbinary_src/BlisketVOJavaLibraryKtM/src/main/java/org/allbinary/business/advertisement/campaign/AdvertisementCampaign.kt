@@ -47,7 +47,7 @@ this.hashMap= hashMap
 
     open fun getComponent()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any?{
 
 
 
@@ -85,7 +85,7 @@ this.hashMap!!.put(AdvertisementCampaignData.getInstance()!!.NAME, name)
 
     open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementsInterface{
+: AdvertisementsInterface?{
 var advertisementSearchInterface = advertisementSearchInterface
 
 

@@ -83,7 +83,7 @@ open public class ApplicationConfiguration : Object {
 
         var dataInputStream: AbDataInputStream = AbDataInputStream(fileInputStream)
 
-        var fullScreen: Int = dataInputStream!!.readInt()!!
+        var fullScreen: Int = dataInputStream!!.readInt()
 
         if (fullScreen == 0) {
 
@@ -96,7 +96,7 @@ open public class ApplicationConfiguration : Object {
             throw Exception("Invalid FullScreen ActivityConfiguration")
         }
 
-        var progressBarView: Int = dataInputStream!!.readInt()!!
+        var progressBarView: Int = dataInputStream!!.readInt()
 
         if (progressBarView == 0) {
 
@@ -109,7 +109,7 @@ open public class ApplicationConfiguration : Object {
             throw Exception("Invalid ProgressBarView ActivityConfiguration")
         }
 
-        var showTitleBar: Int = dataInputStream!!.readInt()!!
+        var showTitleBar: Int = dataInputStream!!.readInt()
 
         if (showTitleBar == 0) {
 

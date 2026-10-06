@@ -50,13 +50,13 @@ open public class GeographicMapDirectionUtil : Object {
         var fromGeographicMapCellPosition = fromGeographicMapCellPosition
         var toGeographicMapCellPosition = toGeographicMapCellPosition
 
-        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
+        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()
 
-        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
+        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()
 
-        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()
 
-        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
+        var goRow: Int = toGeographicMapCellPosition!!.getRow()
 
         var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
@@ -99,13 +99,13 @@ open public class GeographicMapDirectionUtil : Object {
         var fromGeographicMapCellPosition = fromGeographicMapCellPosition
         var toGeographicMapCellPosition = toGeographicMapCellPosition
 
-        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
+        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()
 
-        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
+        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()
 
-        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()
 
-        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
+        var goRow: Int = toGeographicMapCellPosition!!.getRow()
 
         var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
@@ -177,13 +177,13 @@ open public class GeographicMapDirectionUtil : Object {
         var fromGeographicMapCellPosition = fromGeographicMapCellPosition
         var toGeographicMapCellPosition = toGeographicMapCellPosition
 
-        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
+        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()
 
-        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
+        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()
 
-        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()
 
-        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
+        var goRow: Int = toGeographicMapCellPosition!!.getRow()
 
         var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
@@ -233,13 +233,13 @@ open public class GeographicMapDirectionUtil : Object {
         var fromGeographicMapCellPosition = fromGeographicMapCellPosition
         var toGeographicMapCellPosition = toGeographicMapCellPosition
 
-        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
+        var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()
 
-        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
+        var fromRow: Int = fromGeographicMapCellPosition!!.getRow()
 
-        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
+        var goColumn: Int = toGeographicMapCellPosition!!.getColumn()
 
-        var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
+        var goRow: Int = toGeographicMapCellPosition!!.getRow()
 
         var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 

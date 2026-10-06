@@ -64,7 +64,7 @@ open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var geographicMapCellPosition = geographicMapCellPosition
 
-    var maxColumns: Int = geographicMapInterfaceArray[0]!!.getAllBinaryTiledLayer()!!.getColumns()!!
+    var maxColumns: Int = geographicMapInterfaceArray[0]!!.getAllBinaryTiledLayer()!!.getColumns()
 
 
     
@@ -99,7 +99,7 @@ open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
                                 
 this.geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, nextTerrainGeographicMapCellPosition)
 
-    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
+    var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)
 
 
     

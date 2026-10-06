@@ -141,7 +141,7 @@ open public class OrderedObjectArrayPermutationUtil : Object {
         var data = data
         var visitor = visitor
 
-        var iterations: Long = this.factorial(data.size)!!
+        var iterations: Long = this.factorial(data.size)
 
         System.out.print(this.TOTAL_ITERATIONS_TABLE)
         System.out.println(iterations)

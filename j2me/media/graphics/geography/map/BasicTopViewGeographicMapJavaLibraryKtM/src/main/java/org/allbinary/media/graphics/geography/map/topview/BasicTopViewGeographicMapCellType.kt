@@ -63,7 +63,7 @@ open public class BasicTopViewGeographicMapCellType : Object {
         // var types = types
         // var cost = cost
 
-        var size: Int = types.size()!!
+        var size: Int = types.size()
 
         var typeArray: IntArray = IntArray(size)
 

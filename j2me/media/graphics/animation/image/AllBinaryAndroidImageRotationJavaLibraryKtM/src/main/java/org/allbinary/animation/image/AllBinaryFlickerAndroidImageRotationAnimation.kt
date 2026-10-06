@@ -152,11 +152,11 @@ open public class AllBinaryFlickerAndroidImageRotationAnimation : ImageBaseRotat
     {
         // var index = index
 
-        var currentFrame: Int = this.circularIndexUtil!!.getIndex()!!
+        var currentFrame: Int = this.circularIndexUtil!!.getIndex()
 
         this.circularIndexUtil!!.setIndex(index)
 
-        var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
+        var newFrame: Int = this.circularIndexUtil!!.getIndex()
 
         this.angleInfo!!.adjustAngle(newFrame)
         this.matrix.setRotate(

@@ -101,7 +101,7 @@ stringBuffer!!.append(this.categoryPropertiesInterface!!.validationInfo())
             
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -114,7 +114,7 @@ stringBuffer!!.append(this.categoryPropertiesInterface!!.validationInfo())
             
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

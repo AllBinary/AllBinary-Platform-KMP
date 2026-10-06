@@ -429,7 +429,7 @@ this.savedCaptureJRadioButton!!.setSelected(false)
 this.captureComparisonJCheckBox!!.setSelected(false)
 this.captureMotionAnalysisJCheckBox!!.setSelected(false)
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 

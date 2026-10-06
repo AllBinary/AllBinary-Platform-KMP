@@ -413,10 +413,10 @@ Arrays.sort(files, object: Comparator<File>()
     //var file1 = file1
     //var file2 = file2
 
-    var fileNameIndexValue1: Int = extractIndexNumberIfAnyFromFileName(file1.getName())!!
+    var fileNameIndexValue1: Int = extractIndexNumberIfAnyFromFileName(file1.getName())
 
 
-    var fileNameIndexValue2: Int = extractIndexNumberIfAnyFromFileName(file2.getName())!!
+    var fileNameIndexValue2: Int = extractIndexNumberIfAnyFromFileName(file2.getName())
 
 
 
@@ -438,12 +438,13 @@ Arrays.sort(files, object: Comparator<File>()
     var start: Int = name.lastIndexOf('_') +1
 
 
-    var end: Int = name.lastIndexOf('.')!!
+    var end: Int = name.lastIndexOf('.')
 
 
     var number: String = name.substring(start, end)!!
 
-i= Integer.parseInt(number)
+i= number.toInt()
+    
 } catch(e: Exception)
             {
 i= 0

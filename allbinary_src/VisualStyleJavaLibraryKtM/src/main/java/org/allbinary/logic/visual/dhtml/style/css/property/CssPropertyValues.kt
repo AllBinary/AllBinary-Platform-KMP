@@ -78,7 +78,7 @@ this.propertyValueVector= BasicArrayListD()
                                     }
                                 
 
-    var size: Int = cssPropertyNodeVector!!.size()!!
+    var size: Int = cssPropertyNodeVector!!.size()
 
 
 
@@ -115,7 +115,7 @@ indexPropertyValueHashMap!!.put(indexValue, propertyValue)
 }
 
 
-    var size2: Int = indexPropertyValueHashMap!!.keys.size()!!
+    var size2: Int = indexPropertyValueHashMap!!.keys.size()
 
 
 
@@ -152,7 +152,7 @@ this.propertyValueVector!!.add(propertyValue)
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var size: Int = this.propertyValueVector!!.size()!!
+    var size: Int = this.propertyValueVector!!.size()
 
 
 

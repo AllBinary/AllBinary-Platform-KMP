@@ -129,7 +129,7 @@ basicArrayList!!.add(this.getNode(treePathArray[index]!!))
 
     open fun getNode(treePath: TreePath)
         //nullable = true from not(false or (false and false)) = true
-: DefaultMutableTreeNode{
+: DefaultMutableTreeNode?{
 var treePath = treePath
 
     
@@ -176,7 +176,7 @@ var treePath = treePath
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var size: Int = this.highlightedBasicArrayList!!.size()!!
+    var size: Int = this.highlightedBasicArrayList!!.size()
 
 this.logUtil!!.putF("size: " +size, this, "deselectAll")
 

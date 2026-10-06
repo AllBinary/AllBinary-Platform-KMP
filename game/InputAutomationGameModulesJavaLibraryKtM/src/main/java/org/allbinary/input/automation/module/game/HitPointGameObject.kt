@@ -57,7 +57,7 @@ var y = y
                     
 
     
-                        if(this.getRatios()[bufferedImage!!.size -1]!!.doubleValue() < 1.0F)
+                        if(this.getRatios()[bufferedImage!!.size -1]!!.toDouble() < 1.0F)
                         
                                     {
                                     this.setDamaged(true)
@@ -71,7 +71,7 @@ var y = y
                             
 
     
-                        if(this.getRatios()[bufferedImage!!.size -1]!!.doubleValue() > 0.25F)
+                        if(this.getRatios()[bufferedImage!!.size -1]!!.toDouble() > 0.25F)
                         
                                     {
                                     this.closeDeath= false
@@ -92,7 +92,7 @@ var y = y
 var aFloat = aFloat
 
     
-                        if(this.getRatios()[this.getRatios()!!.length -1]!!.doubleValue() > aFloat)
+                        if(this.getRatios()[this.getRatios()!!.length -1]!!.toDouble() > aFloat)
                         
                                     {
                                     

@@ -126,7 +126,7 @@ open public class DownKeyEventHandlerBase : BasicEventHandler {
     {
         // var eventObject = eventObject
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         for (index in size - 1 downTo 0) {
 

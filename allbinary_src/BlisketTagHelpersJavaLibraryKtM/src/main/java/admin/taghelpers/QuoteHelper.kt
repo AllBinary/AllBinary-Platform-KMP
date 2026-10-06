@@ -193,7 +193,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUES
     var id: Int = 0
 
 
-    var size: Int = vector.size()!!
+    var size: Int = vector.size()
 
 
 
@@ -205,7 +205,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUES
 
     var nextId: Int = get = vector.get(index)get as Integer
 get.
-                    toInt()!!
+                    toInt()
 
 
     

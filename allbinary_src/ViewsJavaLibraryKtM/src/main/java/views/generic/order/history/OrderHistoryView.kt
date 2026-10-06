@@ -93,7 +93,7 @@ this.cancelled= this.request.getParameter(OrderHistoryData.CANCELLEDNAME)
     var orderReviewVector: BasicArrayList = orderHistoryEntity!!.getOrders(this.getWeblisketSession()!!.getUserName())!!
 
 
-    var size: Int = orderReviewVector!!.size()!!
+    var size: Int = orderReviewVector!!.size()
 
 
 

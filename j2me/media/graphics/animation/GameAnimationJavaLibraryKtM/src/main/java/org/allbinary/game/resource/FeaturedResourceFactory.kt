@@ -62,16 +62,16 @@ open public class FeaturedResourceFactory : Object {
     {
         var level = level
 
-        var size: Int = this.list.size()!!
+        var size: Int = this.list.size()
 
         for (index in 0 until size) {
 
             var featureInterface: GameFeatureControlledInterface =
                 this.list.objectArray[index]!! as GameFeatureControlledInterface
 
-            var isLoadingLevel: Boolean = featureInterface!!.isLoadingLevel(level)!!
+            var isLoadingLevel: Boolean = featureInterface!!.isLoadingLevel(level)
 
-            var isFeature: Boolean = featureInterface!!.isFeature()!!
+            var isFeature: Boolean = featureInterface!!.isFeature()
 
             this.logUtil!!.putF(
                 StringMaker()

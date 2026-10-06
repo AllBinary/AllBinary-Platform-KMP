@@ -454,7 +454,7 @@ open public class BuildingRTSFormInput : RTSFormInput {
             }
         }
 
-        var cost: Int = layerInterface!!.getCost()!!
+        var cost: Int = layerInterface!!.getCost()
 
         var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
 
@@ -618,9 +618,9 @@ open public class BuildingRTSFormInput : RTSFormInput {
         var surroundList: BasicArrayList =
             geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
 
-        var occupySize: Int = occupyList!!.size()!!
+        var occupySize: Int = occupyList!!.size()
 
-        var surroundSize: Int = surroundList!!.size()!!
+        var surroundSize: Int = surroundList!!.size()
 
         var stringBuffer: StringMaker = StringMaker()
 

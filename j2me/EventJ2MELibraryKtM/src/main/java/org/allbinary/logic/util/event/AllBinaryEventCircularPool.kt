@@ -34,7 +34,7 @@ open public class AllBinaryEventCircularPool : BaseCircularPool {
         var allBinaryEventObjectFactoryInterface = allBinaryEventObjectFactoryInterface
         this.circularIndexUtil!!.setIndex(0)
 
-        var size: Int = this.circularIndexUtil!!.getSize()!!
+        var size: Int = this.circularIndexUtil!!.getSize()
 
         for (index in 0 until size) {
 

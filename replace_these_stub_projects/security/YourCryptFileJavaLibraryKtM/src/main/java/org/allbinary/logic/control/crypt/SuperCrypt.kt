@@ -30,7 +30,7 @@ var key = key
 
     open fun encrypt(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
 var value = value
 
 
@@ -42,7 +42,7 @@ var value = value
 
     open fun decrypt(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String?{
 var value = value
 
 

@@ -106,7 +106,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
     var vector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = hashMapVector!!.size!!
+    var size: Int = hashMapVector!!.size
 
 
 
@@ -130,7 +130,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
     open fun get(storeName: String, advertismentName: String)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementInterface{
+: AdvertisementInterface?{
 var storeName = storeName
 var advertismentName = advertismentName
 

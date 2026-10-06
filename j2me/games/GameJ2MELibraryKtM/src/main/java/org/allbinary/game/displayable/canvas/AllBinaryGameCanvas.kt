@@ -1044,7 +1044,7 @@ open public class AllBinaryGameCanvas :
         this.addCommand(gameCommandsFactory!!.QUIT_COMMAND)
 
         var isOverScan: Boolean =
-            OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!.isOverScan()!!
+            OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!.isOverScan()
 
         if (J2MEUtil.isHTML()) {} else if (SWTUtil.isSWT) {} else if (!isOverScan) {
 
@@ -1492,7 +1492,7 @@ open public class AllBinaryGameCanvas :
 
             var levelAsString: String = hashtable.get(GameInfo.LEVEL_NAME as Object) as String
 
-            var level: Int = Integer.valueOf(levelAsString)!!.toInt()!!
+            var level: Int = Integer.valueOf(levelAsString)!!.toInt()
 
             var gameInfo: GameInfo = this.gameLayerManager!!.getGameInfo()!!
 
@@ -1538,7 +1538,7 @@ open public class AllBinaryGameCanvas :
 
         var hashtable: ABHashtable<Any, Any> = this.stdUtil!!.createHashtable()!!
 
-        var level: Int = this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel()!!
+        var level: Int = this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel()
 
         hashtable.put(GameInfo.LEVEL_NAME.toString(), level.toString())
         this.logUtil!!.putF(

@@ -79,7 +79,7 @@ this.request= httpTransformInfoInterface!!.getPageContext()!!.getRequest() as Ht
 
     open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
         try {
@@ -87,7 +87,7 @@ var document = document
     var billingAddressesNode: Node = document.createElement(BillingAddressData.MULTIPLE)!!
 
 
-    var size: Int = this.streetAddresses!!.size()!!
+    var size: Int = this.streetAddresses!!.size()
 
 
 

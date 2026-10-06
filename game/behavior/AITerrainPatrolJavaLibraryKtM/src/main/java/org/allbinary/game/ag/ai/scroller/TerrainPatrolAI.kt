@@ -67,7 +67,7 @@ open public class TerrainPatrolAI : PacePatrolAI {
 
         var list: BasicArrayList = this.terrainEventListener!!.getList()!!
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         for (index in 0 until size) {
 

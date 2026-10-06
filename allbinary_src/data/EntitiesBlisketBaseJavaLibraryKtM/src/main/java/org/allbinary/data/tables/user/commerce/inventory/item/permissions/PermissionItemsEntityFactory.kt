@@ -49,7 +49,7 @@ companion object {
 
     open fun getPermissionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: PermissionItemsEntity{
+: PermissionItemsEntity?{
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 

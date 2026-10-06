@@ -67,7 +67,7 @@ var file = file
     var inputStream: InputStream = AbFileInputStream(file)
 
 
-    var available: Int = inputStream!!.available()!!
+    var available: Int = inputStream!!.available()
 
 
     
@@ -104,7 +104,7 @@ var file = file
     var inputStream: InputStream = AbFileLocalInputStream(file)
 
 
-    var available: Int = inputStream!!.available()!!
+    var available: Int = inputStream!!.available()
 
 
     
@@ -164,7 +164,7 @@ var file = file
     var inputStream: InputStream = AbFileLocalInputStream(file)
 
 
-    var available: Int = inputStream!!.available()!!
+    var available: Int = inputStream!!.available()
 
 
     

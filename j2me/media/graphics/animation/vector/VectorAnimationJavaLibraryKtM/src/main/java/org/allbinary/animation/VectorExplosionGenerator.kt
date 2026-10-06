@@ -62,7 +62,7 @@ open public class VectorExplosionGenerator : Object {
 
         var point: GPoint
 
-        var size: Int = list.size()!!
+        var size: Int = list.size()
 
         var points: Array<IntArray?> = Array(size) { IntArray(2) }
 
@@ -196,7 +196,7 @@ open public class VectorExplosionGenerator : Object {
                     this.randomRotationFactory!!.getInstanceList(sectionBasicArrayList, howMuch)
             }
 
-            var size: Int = sectionBasicArrayList!!.size()!!
+            var size: Int = sectionBasicArrayList!!.size()
 
             for (index2 in 0 until size) {
 

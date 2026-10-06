@@ -64,9 +64,9 @@ open public class ImageRotationUtil : Object {
 
             var bitmap: Bitmap = (image as AndroidImageInterface).getBitmap()!!
 
-            var width: Int = bitmap.getWidth()!!
+            var width: Int = bitmap.getWidth()
 
-            var height: Int = bitmap.getHeight()!!
+            var height: Int = bitmap.getHeight()
 
             this.matrix.setRotate(
                 rotationInDegrees.toFloat(),

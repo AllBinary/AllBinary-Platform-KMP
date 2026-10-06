@@ -150,7 +150,7 @@ var storeFrontInterface = storeFrontInterface
     var itemHashMapVector: BasicArrayList = super.getRows(keysAndValues)!!
 
 
-    var size: Int = itemHashMapVector!!.size!!
+    var size: Int = itemHashMapVector!!.size
 
 
 
@@ -198,7 +198,7 @@ var storeFrontInterface = storeFrontInterface
             
     open fun getItem(id: String)
         //nullable = true from not(false or (false and false)) = true
-: ItemInterface{
+: ItemInterface?{
 var id = id
 
     var keysAndValues: HashMap<Any, Any> = StdUtil.getInstance()!!.createHashMap()!!
@@ -242,7 +242,7 @@ var id = id
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return super.getField(basicItemData!!.ID, id, basicItemData!!.WEIGHT)
+                        return super.java.getField(basicItemData!!.ID, id, basicItemData!!.WEIGHT)
 }
 
 

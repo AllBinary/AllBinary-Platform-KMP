@@ -158,7 +158,7 @@ verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.EXCEPTION7.toString()
     var valueVector: BasicArrayList = BasicArrayListD()
 
 
-    var size: Int = keyVector!!.size()!!
+    var size: Int = keyVector!!.size()
 
 
 

@@ -33,7 +33,7 @@ open public class StupidTimer : Object {
 
         var result: Boolean = visitorInterface!!.visit(this.nullUtil!!.NULL_OBJECT) as Boolean
 
-        var result2: Boolean = result!!
+        var result2: Boolean = result
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return result2

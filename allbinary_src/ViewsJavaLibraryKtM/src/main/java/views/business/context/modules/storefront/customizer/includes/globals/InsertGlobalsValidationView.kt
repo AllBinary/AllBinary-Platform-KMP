@@ -54,7 +54,7 @@ var transformInfoInterface = transformInfoInterface
             
     open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -69,7 +69,7 @@ var transformInfoInterface = transformInfoInterface
 
         try {
             
-    var isValid: Boolean = Boolean.TRUE
+    var isValid: Boolean = Boolean.true
 
 CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this as DomNodeInterface)
 
@@ -92,7 +92,7 @@ CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this as 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return false
 }
 
 }
@@ -134,7 +134,7 @@ CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this as 
 
     open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document?{
 
 
 
@@ -145,7 +145,7 @@ CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this as 
 
     open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node?{
 var document = document
 
 

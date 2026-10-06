@@ -65,7 +65,7 @@ open public class RTSLayerUtil : Object {
         // var currentLevel = currentLevel
         // var lastLevel = lastLevel
 
-        var reloadTime: Long = weaponProperties!!.getReloadTime()!!
+        var reloadTime: Long = weaponProperties!!.getReloadTime()
 
         if (lastLevel > currentLevel) {
 

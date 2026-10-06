@@ -73,9 +73,9 @@ open public class FeaturedAnimationInterfaceFactoryInterfaceFactory : FeaturedRe
 
         var list: BasicArrayList = this.getList()!!
 
-        var scale: Int = GameConfigurationCentral.getInstance()!!.SCALE.getValue()!!.toInt()!!
+        var scale: Int = GameConfigurationCentral.getInstance()!!.SCALE.getValue()!!.toInt()
 
-        var size: Int = this.getList()!!.size()!!
+        var size: Int = this.getList()!!.size()
 
         for (index in 0 until size) {
 
@@ -145,7 +145,7 @@ open public class FeaturedAnimationInterfaceFactoryInterfaceFactory : FeaturedRe
 
         var resourceTypeAvailableList: BasicArrayList = BasicArrayListD()
 
-        var size: Int = this.getList()!!.size()!!
+        var size: Int = this.getList()!!.size()
 
         var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface
 
@@ -194,7 +194,7 @@ open public class FeaturedAnimationInterfaceFactoryInterfaceFactory : FeaturedRe
             stringBuffer!!.appendint(size)
             stringBuffer!!.append(FOR_FACTORIES)
 
-            var size2: Int = resourceTypeAvailableList!!.size()!!
+            var size2: Int = resourceTypeAvailableList!!.size()
 
             for (index in 0 until size2) {
 
