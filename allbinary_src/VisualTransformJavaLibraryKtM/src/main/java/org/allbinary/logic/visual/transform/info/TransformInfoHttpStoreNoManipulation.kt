@@ -45,7 +45,7 @@ var pageContext = pageContext
 
                 @Throws(Exception::class)
             
-    open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -56,7 +56,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigNoManipulationFactory.get
 
                 @Throws(Exception::class)
             
-    open fun setObjectConfig(value: Object)
+    open fun setObjectConfig(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

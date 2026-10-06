@@ -127,7 +127,7 @@ var hashMap = hashMap
 }
 
 
-    open fun setObjectConfigInterface(transformInfoObjectConfigInterface: Object)
+    open fun setObjectConfigInterface(transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
@@ -215,7 +215,7 @@ var value = value
 }
 
 
-    open fun setObjectFile(value: Object)
+    open fun setObjectFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -229,7 +229,7 @@ var anyType = anyType
 }
 
 
-    open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

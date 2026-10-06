@@ -99,7 +99,7 @@ this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.stor
 }
 
 
-    open fun setObjectFile(value: Object)
+    open fun setObjectFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -108,7 +108,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTFILENA
 }
 
 
-    open fun setObject(value: Object)
+    open fun setObject(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -153,7 +153,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.DATA, this.d
 }
 
 
-    open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -162,7 +162,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTCONFIG
 }
 
 
-    open fun setObjectConfig(value: Object)
+    open fun setObjectConfig(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

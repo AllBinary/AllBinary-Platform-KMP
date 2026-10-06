@@ -38,7 +38,7 @@ open public class InsertTemplateCustomizerTransformInfoObjectConfig : NoTemplate
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor (transformInfoInterface: Object)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -48,7 +48,7 @@ var transformInfoInterface = transformInfoInterface
                     
 }
 
-public constructor (transformInfoInterface: Object, document: Object)                        
+public constructor (transformInfoInterface: TransformInfoInterface, document: Document)                        
 
                             : super(transformInfoInterface, document){
 var transformInfoInterface = transformInfoInterface
@@ -60,7 +60,7 @@ var document = document
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor (transformInfoInterface: Object, name: Object, type: Object)                        
+public constructor (transformInfoInterface: TransformInfoInterface, name: String, type: String)                        
 
                             : super(transformInfoInterface, name, type){
 var transformInfoInterface = transformInfoInterface

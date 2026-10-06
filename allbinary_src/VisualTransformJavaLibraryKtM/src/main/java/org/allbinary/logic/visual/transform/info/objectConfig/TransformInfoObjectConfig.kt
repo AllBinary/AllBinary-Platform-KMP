@@ -62,7 +62,7 @@ open public class TransformInfoObjectConfig
     private var document: Document
 
     private var outputTypeName: String
-public constructor (transformInfoInterface: Object)
+public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -101,7 +101,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "Constructor(TransformInfoI
                                 
 }
 
-public constructor (transformInfoInterface: Object, document: Object)
+public constructor (transformInfoInterface: TransformInfoInterface, document: Document)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -155,7 +155,7 @@ this.logUtil!!.putF(stringBuffer!!.toString(), this, "Constructor(TransformInfoI
                                 
 }
 
-public constructor (transformInfoInterface: Object, name: Object, type: Object)
+public constructor (transformInfoInterface: TransformInfoInterface, name: String, type: String)
             : super()
         {
 var transformInfoInterface = transformInfoInterface

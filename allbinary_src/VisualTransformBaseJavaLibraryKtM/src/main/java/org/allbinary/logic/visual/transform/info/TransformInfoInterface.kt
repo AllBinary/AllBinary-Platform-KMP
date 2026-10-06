@@ -98,7 +98,7 @@ interface TransformInfoInterface : TableMappingInterface {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun setObjectFile(value: Object)
+    open fun setObjectFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -108,7 +108,7 @@ interface TransformInfoInterface : TableMappingInterface {
 
                 @Throws(Exception::class)
             
-    open fun setObjectConfigInterface(transformInfoObjectConfigInterface: Object)
+    open fun setObjectConfigInterface(transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

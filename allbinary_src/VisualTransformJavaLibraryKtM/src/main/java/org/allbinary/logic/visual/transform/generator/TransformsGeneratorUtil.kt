@@ -64,7 +64,7 @@ private constructor ()
 
                 @Throws(Exception::class)
             
-    open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoInterface: Object, group: Object)
+    open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, group: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation
@@ -104,7 +104,7 @@ var group = group
 
                 @Throws(Exception::class)
             
-    open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoObjectConfigInterface: Object, transformInfoInterface: Object, group: Object)
+    open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInformationInterface, transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface, transformInfoInterface: TransformInfoInterface, group: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation

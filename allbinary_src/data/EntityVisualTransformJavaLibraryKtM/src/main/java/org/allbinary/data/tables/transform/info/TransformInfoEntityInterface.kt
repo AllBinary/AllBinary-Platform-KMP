@@ -43,7 +43,7 @@ interface TransformInfoEntityInterface : BasicDataTableInterface {
 
                 @Throws(Exception::class)
             
-    open fun getObjectConfigs(storeName: Object)
+    open fun getObjectConfigs(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList
 

@@ -45,7 +45,7 @@ open public class OverrideObjectConfigRootContextView : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor (transformInfoInterface: Object)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface

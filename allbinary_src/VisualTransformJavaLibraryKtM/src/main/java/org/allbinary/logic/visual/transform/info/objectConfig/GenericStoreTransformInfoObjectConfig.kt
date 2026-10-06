@@ -51,7 +51,7 @@ open public class GenericStoreTransformInfoObjectConfig : TransformInfoObjectCon
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val abeClientInformation: AbeClientInformationInterface
-public constructor (abeClientInformation: Object, transformInfoInterface: Object)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
     //var abeClientInformation = abeClientInformation
@@ -63,7 +63,7 @@ public constructor (abeClientInformation: Object, transformInfoInterface: Object
 this.abeClientInformation= abeClientInformation
 }
 
-public constructor (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)                        
 
                             : super(transformInfoInterface, document){
     //var abeClientInformation = abeClientInformation
@@ -77,7 +77,7 @@ this.abeClientInformation= abeClientInformation
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, name: String, type: String)                        
 
                             : super(transformInfoInterface, name, type){
     //var abeClientInformation = abeClientInformation

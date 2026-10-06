@@ -537,7 +537,7 @@ value.
 }
 
 
-    open fun asObject(value: Object, name: Object)
+    open fun asObject(value: Object, name: String)
         //nullable = true from not(false or (false and false)) = true
 : JSONObject{
     //var value = value

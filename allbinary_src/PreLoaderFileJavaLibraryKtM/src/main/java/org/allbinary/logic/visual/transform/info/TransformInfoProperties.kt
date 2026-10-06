@@ -92,7 +92,7 @@ this.templateFileName= value
 }
 
 
-    open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

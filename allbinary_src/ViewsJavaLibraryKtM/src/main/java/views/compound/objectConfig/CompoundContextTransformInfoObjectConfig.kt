@@ -50,7 +50,7 @@ open public class CompoundContextTransformInfoObjectConfig : GenericStoreTransfo
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor (abeClientInformation: Object, transformInfoInterface: Object)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
 
                             : super(abeClientInformation, transformInfoInterface){
     //var abeClientInformation = abeClientInformation
@@ -61,7 +61,7 @@ var transformInfoInterface = transformInfoInterface
                     
 }
 
-public constructor (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)                        
 
                             : super(abeClientInformation, transformInfoInterface, document){
     //var abeClientInformation = abeClientInformation
@@ -74,7 +74,7 @@ var document = document
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, name: String, type: String)                        
 
                             : super(abeClientInformation, transformInfoInterface, name, type){
     //var abeClientInformation = abeClientInformation

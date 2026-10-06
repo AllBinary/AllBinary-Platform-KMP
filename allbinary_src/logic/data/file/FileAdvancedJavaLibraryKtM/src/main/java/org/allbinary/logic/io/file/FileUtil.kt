@@ -86,7 +86,7 @@ companion object {
                                     }
                                 
 
-    var lastIndex: Int = newDirectory!!.lastIndexOf(separatorChar)!!
+    var lastIndex: Int = newDirectory!!.lastIndexOf(separatorChar)
 
 
     
@@ -212,7 +212,7 @@ var cloud = cloud
     var beginIndex: Int = file.getPath()!!.indexOf(cloud) +cloud.length
 
 
-    var endIndex: Int = file.getPath()!!.indexOf(file.getName())!!
+    var endIndex: Int = file.getPath()!!.indexOf(file.getName())
 
 
     var fixedPathString: String = realPath!!.toFileSystemString() +file.getPath()!!.substring(beginIndex, endIndex)
@@ -666,7 +666,7 @@ this.logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile", e)
     var fileList: BasicArrayList = this.directory.search(file, true)!!
 
 
-    var size: Int = fileList!!.size()!!
+    var size: Int = fileList!!.size()
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -731,7 +731,7 @@ nextFile= fileList!!.get(index) as AbFile
                             getPath()!!
 
 
-    var beginIndex: Int = fromDirectoryAbPath!!.getPath()!!.length()!!
+    var beginIndex: Int = fromDirectoryAbPath!!.getPath()!!.length()
 
 
     

@@ -223,7 +223,7 @@ hashMap!!.put(transformInfoData!!.DATA, Encoder.decode.toCharArray())
 
                 @Throws(Exception::class)
             
-    open fun getObjectConfigs(storeName: Object)
+    open fun getObjectConfigs(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var storeName = storeName

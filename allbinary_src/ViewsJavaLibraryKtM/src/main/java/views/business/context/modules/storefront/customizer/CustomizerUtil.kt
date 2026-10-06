@@ -105,7 +105,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-    open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: Object, transformInfoInterface: Object)
+    open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: TransformInfoInterface, transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var customizerTransformInfoInterface = customizerTransformInfoInterface
@@ -141,7 +141,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-    open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Object)
+    open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var transformInfoInterface = transformInfoInterface
@@ -167,7 +167,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-    open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: Object)
+    open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var transformInfoInterface = transformInfoInterface
@@ -356,7 +356,7 @@ transformInfoEntityInterface!!.update(specifiedTransformInfoInterface!!.toHashMa
 
                 @Throws(Exception::class)
             
-    open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
+    open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var transformInfoInterface = transformInfoInterface

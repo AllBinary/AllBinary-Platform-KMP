@@ -482,7 +482,7 @@ this.anyType= anyType
 }
 
 
-    open fun setObjectFile(value: Object)
+    open fun setObjectFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -508,7 +508,7 @@ this.templateFileName= value
 
                 @Throws(Exception::class)
             
-    open fun setObjectConfigFileName(value: Object)
+    open fun setObjectConfigFileName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -518,7 +518,7 @@ this.objectConfigFileName= value
 
                 @Throws(Exception::class)
             
-    open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -529,7 +529,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.get
 
                 @Throws(Exception::class)
             
-    open fun setObjectConfig(value: Object)
+    open fun setObjectConfig(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -954,7 +954,7 @@ this.isChild= true
 }
 
 
-    open fun setObjectConfigInterface(objectConfigInterface: Object)
+    open fun setObjectConfigInterface(objectConfigInterface: TransformInfoObjectConfigInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var objectConfigInterface = objectConfigInterface
