@@ -118,11 +118,15 @@ import org.allbinary.string.CommonStrings
 
         if (anyType!!::class.toString()!! != null) {
 
+            var hashCodeValue: Int = TsUtil.getInstance()!!.hashCode(anyType)
+
+            var hexString: String = Integer.toHexString(hashCodeValue)!!
+
             className =
                 StringMaker()
                     .append(anyType!!::class.toString()!!)!!
                     .append(CommonSeps.getInstance()!!.COLON)!!
-                    .append(Integer.toHexString(TsUtil.getInstance()!!.hashCode(anyType)))!!
+                    .append(hexString)!!
                     .toString()
                     .toCharArray()
                     .concatToString()
