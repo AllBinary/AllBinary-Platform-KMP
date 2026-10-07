@@ -141,8 +141,8 @@ xmlRequest= keyArray[index]!! as String
     
                         if(xmlRequest!!.startsWith(CategoryRequestHelper.categoryRequest))
                         
-                                    //Otherwise - thenStmt - BreakStmt
-
+                                    break
+                                
 }
 
 

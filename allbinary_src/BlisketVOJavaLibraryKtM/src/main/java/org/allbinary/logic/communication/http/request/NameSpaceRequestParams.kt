@@ -823,7 +823,7 @@ hashMap!!.put(key.toCharArray().concatToString(), value.toCharArray().concatToSt
                                 
                              else 
     
-                        if(this.getMap()!!.get(key) is )
+                        if(this.getMap()!!.get(key) is //Otherwise - ArrayType - ?)
                         
                                     {
                                     

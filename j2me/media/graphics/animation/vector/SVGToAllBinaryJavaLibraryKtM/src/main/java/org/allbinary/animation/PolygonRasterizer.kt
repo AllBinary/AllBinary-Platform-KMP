@@ -222,8 +222,8 @@ scanlineX[j]= temp
     
                         if(i +1 >= intersectCount)
                         
-                                    //Otherwise - thenStmt - BreakStmt
-
+                                    break
+                                
 
     var startX: Int = scanlineX[i]!!
 

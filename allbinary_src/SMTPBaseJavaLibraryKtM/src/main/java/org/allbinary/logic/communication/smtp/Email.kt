@@ -304,9 +304,8 @@ this.msg.setContent(mimeMultipart)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "More Logging Before This To Standard Out: " +
-                                    //Otherwise - right - ObjectCreationExpr
-
+                        return "More Logging Before This To Standard Out: " +this.bs.toString().toCharArray().concatToString()
+                                
 
                                     }
                                 

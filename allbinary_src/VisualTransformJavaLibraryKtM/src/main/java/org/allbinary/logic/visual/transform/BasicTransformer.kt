@@ -98,9 +98,7 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    this.logUtil!!.putF("Decrypted Template: \n" +
-                                    //Otherwise - right - ObjectCreationExpr
-, this, "setEncryptedTemplateFileAsInputStream(file)")
+                                    this.logUtil!!.putF("Decrypted Template: \n" +decrypted.decodeToString(), this, "setEncryptedTemplateFileAsInputStream(file)")
 
                                     }
                                 
