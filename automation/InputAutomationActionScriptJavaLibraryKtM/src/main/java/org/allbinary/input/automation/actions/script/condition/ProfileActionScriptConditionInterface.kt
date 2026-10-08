@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.input.automation.actions.script.ProfileActionScriptItemInterface
 import org.allbinary.input.automation.actions.script.ProfileActionScriptNodeInterface

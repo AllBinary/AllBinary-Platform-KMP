@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.business.context.modules.storefront.statistics.advertisements.StoreFrontAdvertisementsStatisticsInterface
 import org.allbinary.business.context.modules.storefront.statistics.advertisements.StoreFrontAdvertisementsStatisticsView

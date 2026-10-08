@@ -26,6 +26,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.ModDomHelper

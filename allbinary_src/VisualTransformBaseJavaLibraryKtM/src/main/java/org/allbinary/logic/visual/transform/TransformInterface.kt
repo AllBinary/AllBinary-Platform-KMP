@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
 import org.allbinary.logic.visual.transform.data.TransformDocumentInterface

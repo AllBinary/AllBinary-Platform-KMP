@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.media.graphics.geography.map.MultiGeographicMapBehavior
 import org.allbinary.direction.Direction

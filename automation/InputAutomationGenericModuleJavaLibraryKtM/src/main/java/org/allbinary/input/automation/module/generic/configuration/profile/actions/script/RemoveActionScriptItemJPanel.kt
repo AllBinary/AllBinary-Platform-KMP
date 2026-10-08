@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.input.automation.actions.script.condition.ProfileActionScriptConditionInterface
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileAction

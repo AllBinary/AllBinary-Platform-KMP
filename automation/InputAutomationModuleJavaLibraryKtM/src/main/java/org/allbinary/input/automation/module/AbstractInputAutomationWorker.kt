@@ -26,6 +26,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.input.media.image.capture.CaptureWorkerInterface
 import org.allbinary.logic.communication.log.LogUtil

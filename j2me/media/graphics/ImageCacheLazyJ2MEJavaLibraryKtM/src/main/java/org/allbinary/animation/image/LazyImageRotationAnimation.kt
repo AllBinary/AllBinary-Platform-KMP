@@ -1,20 +1,31 @@
-/*
- *
- *  AllBinary Open License Version 1
- *  Copyright (c) 2022 AllBinary
- *
- *  By agreeing to this license you and any business entity you represent are
- *  legally bound to the AllBinary Open License Version 1 legal agreement.
- *
- *  You may obtain the AllBinary Open License Version 1 legal agreement from
- *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
- *
- *  Created By: Travis Berthelot
- */
 
-/* Generated Code Do Not Modify */
-package org.allbinary.animation.image
+        /*
+                *  
+                *  AllBinary Open License Version 1 
+                *  Copyright (c) 2022 AllBinary 
+                *   
+                *  By agreeing to this license you and any business entity you represent are 
+                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
+                *   
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
+                *   
+                *  Created By: Travis Berthelot    
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.animation.image
 
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+                    
+        
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
@@ -26,20 +37,21 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.image.ImageCache
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
-import org.allbinary.media.ScaleProperties
 import org.allbinary.string.CommonSeps
+import org.allbinary.logic.string.StringMaker
+import org.allbinary.media.ScaleProperties
 import org.allbinary.util.CircularIndexUtil
 
 open public class LazyImageRotationAnimation : RotationAnimation {
+        
+companion object {
+            
+    private val SET_REAL_ANIMATION: String = "setRealAnimation"
 
-    companion object {
-
-        private val SET_REAL_ANIMATION: String = "setRealAnimation"
-    }
-
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val layoutIndex: Int
@@ -53,458 +65,506 @@ open public class LazyImageRotationAnimation : RotationAnimation {
     private var animation: IndexedAnimation
 
     var scaleProperties: ScaleProperties = ScaleProperties.instance
+public constructor (layoutIndex: Int, instanceId: Int, scaleProperties: ScaleProperties, animationInterfaceFactoryInterface: BaseImageAnimationFactory, animationBehavior: AnimationBehavior)                        
 
-    public constructor(
-        layoutIndex: Int,
-        instanceId: Int,
-        scaleProperties: ScaleProperties,
-        animationInterfaceFactoryInterface: BaseImageAnimationFactory,
-        animationBehavior: AnimationBehavior,
-    ) : super(
-        AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE),
-        CircularIndexUtil.createInstance(4),
-        animationBehavior,
-    ) {
-        // var layoutIndex = layoutIndex
-        // var instanceId = instanceId
-        // var scaleProperties = scaleProperties
-        // var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-        // var animationBehavior = animationBehavior
+                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior){
+    //var layoutIndex = layoutIndex
+    //var instanceId = instanceId
+    //var scaleProperties = scaleProperties
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var animationBehavior = animationBehavior
 
-        // For kotlin this is before the body of the constructor.
 
-        this.layoutIndex = layoutIndex
-        this.instanceId = instanceId
-        this.animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+                            //For kotlin this is before the body of the constructor.
+                    
+this.layoutIndex= layoutIndex
+this.instanceId= instanceId
+this.animationInterfaceFactoryInterface= animationInterfaceFactoryInterface
 
-        var imageCache: ImageCache = ImageCacheFactory.getInstance()!!
+    var imageCache: ImageCache = ImageCacheFactory.getInstance()!!
 
-        imageCache!!.add(this)
-        this.scaleProperties = scaleProperties
-        this.NULL_INDEX_ANIMATION =
-            NullRotationAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
+imageCache!!.add(this)
+this.scaleProperties= scaleProperties
+this.NULL_INDEX_ANIMATION= NullRotationAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
 
-        open class ActualRotationAnimation : RotationAnimation {
+open class ActualRotationAnimation : RotationAnimation {
+        
 
-            private val lazyImageRotationAnimation: LazyImageRotationAnimation
+    private val lazyImageRotationAnimation: LazyImageRotationAnimation
 
-            private var index: Int = 0
+    private var index: Int= 0
+public constructor (lazyImageRotationAnimation: LazyImageRotationAnimation)                        
 
-            public constructor(
-                lazyImageRotationAnimation: LazyImageRotationAnimation
-            ) : super(
-                AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE),
-                CircularIndexUtil.createInstance(4),
-                animationBehavior,
-            ) {
-                var lazyImageRotationAnimation = lazyImageRotationAnimation
+                            : super(AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior){
+var lazyImageRotationAnimation = lazyImageRotationAnimation
 
-                // For kotlin this is before the body of the constructor.
 
-                this.lazyImageRotationAnimation = lazyImageRotationAnimation
-            }
+                            //For kotlin this is before the body of the constructor.
+                    
+this.lazyImageRotationAnimation= lazyImageRotationAnimation
+}
 
-            override fun setFrame(index: Int)
-                // nullable = true from not(false or (false and false)) = true
-            {
-                // var index = index
-                this.index = index
-            }
-
-            override fun getFrame()
-            // nullable = true from not(false or (false and true)) = true
-            : Int {
-
-                // if statement needs to be on the same line and ternary does not work the same way.
-                return this.index
-            }
-
-            override fun paintXY(graphics: Graphics, x: Int, y: Int)
-                // nullable = true from not(false or (false and false)) = true
-            {
-                // var graphics = graphics
-                // var x = x
-                // var y = y
-
-                try {
-                    ImageCacheFactory.getInstance()!!.insertFirst(this@LazyImageRotationAnimation)
-                    this.lazyImageRotationAnimation!!.animation =
-                        this.lazyImageRotationAnimation!!.NULL_INDEX_ANIMATION
-                } catch (e: Exception) {
-
-                    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-                    logUtil!!.put(
-                        this.commonStrings!!.EXCEPTION,
-                        this,
-                        this.commonStrings!!.PROCESS,
-                        e,
-                    )
-                }
-            }
-
-            override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
-                // nullable = true from not(false or (false and false)) = true
-            {
-                // var graphics = graphics
-                // var x = x
-                // var y = y
-                // var z = z
-
-                try {
-                    ImageCacheFactory.getInstance()!!.insertFirst(this@LazyImageRotationAnimation)
-                    this.lazyImageRotationAnimation!!.animation =
-                        this.lazyImageRotationAnimation!!.NULL_INDEX_ANIMATION
-                } catch (e: Exception) {
-
-                    var logUtil: LogUtil = LogUtil.getInstance()!!
-
-                    logUtil!!.put(
-                        this.commonStrings!!.EXCEPTION,
-                        this,
-                        this.commonStrings!!.PROCESS,
-                        e,
-                    )
-                }
-            }
-        }
-
-        // Otherwise - statement - EmptyStmt
-
-        this.animation = ActualRotationAnimation(this)
-    }
-
-    open fun setRealAnimation()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        try {
-
-            var animation: IndexedAnimation = this.animation
-
-            this.animationInterfaceFactoryInterface!!.setInitialScale(this.scaleProperties)
-            this.animation =
-                this.animationInterfaceFactoryInterface!!.getInstance(this.instanceId)
-                    as IndexedAnimation
-            this.animation.setState(animation)
-        } catch (e: Exception) {
-            this.logUtil!!.put(
-                this.commonStrings!!.EXCEPTION,
-                this,
-                LazyImageRotationAnimation.SET_REAL_ANIMATION,
-                e,
-            )
-        }
-    }
-
-    override fun setScale(scaleX: Float, scaleY: Float)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var scaleX = scaleX
-        // var scaleY = scaleY
-        this.animation.setScale(scaleX, scaleY)
-    }
-
-    override fun getAnimationBehavior()
-    // nullable = true from not(false or (false and true)) = true
-    : AnimationBehavior {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getAnimationBehavior()
-    }
-
-    @Throws(Exception::class)
-    override fun set(gl: GL)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var gl = gl
-        this.animation.set(gl)
-    }
-
-    override fun setAlpha(alpha: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var alpha = alpha
-        this.animation.setAlpha(alpha)
-    }
-
-    override fun setDx(dx: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var dx = dx
-        this.animation.setDx(dx)
-    }
-
-    override fun setDy(dy: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var dy = dy
-        this.animation.setDy(dy)
-    }
-
-    override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var maxScaleX = maxScaleX
-        // var maxScaleY = maxScaleY
-        this.animation.setMaxScale(maxScaleX, maxScaleY)
-    }
-
-    override fun nextRotation()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
-
-        rotationAnimation!!.nextRotation()
-    }
-
-    override fun previousRotation()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
-
-        rotationAnimation!!.previousRotation()
-    }
-
-    override fun nextRotationX()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
-
-        rotationAnimation!!.nextRotationX()
-    }
-
-    override fun previousRotationX()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
-
-        rotationAnimation!!.previousRotationX()
-    }
-
-    override fun nextRotationZ()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
-
-        rotationAnimation!!.nextRotationZ()
-    }
-
-    override fun previousRotationZ()
-        // nullable = true from not(false or (false and true)) = true
-    {
-
-        var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
-
-        rotationAnimation!!.previousRotationZ()
-    }
-
-    override fun changeBasicColor(basicColor: BasicColor)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var basicColor = basicColor
-        this.animation.changeBasicColor(basicColor)
-    }
-
-    override fun getBasicColorP()
-    // nullable = true from not(false or (false and true)) = true
-    : BasicColor {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getBasicColorP()
-    }
-
-    override fun getChangeBasicColor()
-    // nullable = true from not(false or (false and true)) = true
-    : BasicColor {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getChangeBasicColor()
-    }
-
-    override fun getChangeColor()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getChangeColor()
-    }
-
-    override fun getColor()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getColor()
-    }
-
-    override fun getDx()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getDx()
-    }
-
-    override fun getDy()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getDy()
-    }
-
-    override fun isThreed()
-    // nullable = true from not(false or (false and true)) = true
-    : Boolean {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.isThreed()
-    }
-
-    @Throws(Exception::class)
-    override fun nextFrame()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.animation.nextFrame()
-    }
-
-    override fun reset()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.animation.reset()
-    }
 
     override fun setFrame(index: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var index = index
-        this.animation.setFrame(index)
-    }
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var index = index
+this.index= index
+}
+
 
     override fun getFrame()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
+        //nullable = true from not(false or (false and true)) = true
+: Int{
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getFrame()
-    }
 
-    @Throws(Exception::class)
-    override fun getAnimationSize()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getAnimationSize()
-    }
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.index
+}
 
-    override fun getSize()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getSize()
-    }
-
-    override fun previousFrame()
-        // nullable = true from not(false or (false and true)) = true
-    {
-        this.animation.previousFrame()
-    }
-
-    override fun isLastFrame()
-    // nullable = true from not(false or (false and true)) = true
-    : Boolean {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.isLastFrame()
-    }
-
-    override fun setSequence(sequence: IntArray)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var sequence = sequence
-        this.animation.setSequence(sequence)
-    }
-
-    override fun getSequence()
-    // nullable = true from not(false or (false and true)) = true
-    : IntArray {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getSequence()
-    }
-
-    override fun getWidth()
-    // nullable = true from not(false or (false and true)) = true
-    : Int {
-
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return this.animation.getWidth()
-    }
 
     override fun paintXY(graphics: Graphics, x: Int, y: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var graphics = graphics
-        // var x = x
-        // var y = y
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+
+        try {
+            ImageCacheFactory.getInstance()!!.insertFirst(this@LazyImageRotationAnimation)
+this.lazyImageRotationAnimation!!.animation= this.lazyImageRotationAnimation!!.NULL_INDEX_ANIMATION
+} catch(e: Exception)
+            {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
+}
+
+}
+
+
+    override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
+
+        try {
+            ImageCacheFactory.getInstance()!!.insertFirst(this@LazyImageRotationAnimation)
+this.lazyImageRotationAnimation!!.animation= this.lazyImageRotationAnimation!!.NULL_INDEX_ANIMATION
+} catch(e: Exception)
+            {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
+}
+
+}
+
+
+}
+                
+            
+
+                    //Otherwise - statement - EmptyStmt
+
+this.animation= ActualRotationAnimation(this)
+}
+
+
+    open fun setRealAnimation()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+        try {
+            
+    var animation: IndexedAnimation = this.animation
+
+this.animationInterfaceFactoryInterface!!.setInitialScale(this.scaleProperties)
+this.animation= this.animationInterfaceFactoryInterface!!.getInstance(this.instanceId) as IndexedAnimation
+this.animation.setState(animation)
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, LazyImageRotationAnimation.SET_REAL_ANIMATION, e)
+}
+
+}
+
+
+    override fun setScale(scaleX: Float, scaleY: Float)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var scaleX = scaleX
+    //var scaleY = scaleY
+this.animation.setScale(scaleX, scaleY)
+}
+
+
+    override fun getAnimationBehavior()
+        //nullable = true from not(false or (false and true)) = true
+: AnimationBehavior{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getAnimationBehavior()
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun set(gl: GL)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var gl = gl
+this.animation.set(gl)
+}
+
+
+    override fun setAlpha(alpha: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var alpha = alpha
+this.animation.setAlpha(alpha)
+}
+
+
+    override fun setDx(dx: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var dx = dx
+this.animation.setDx(dx)
+}
+
+
+    override fun setDy(dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var dy = dy
+this.animation.setDy(dy)
+}
+
+
+    override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var maxScaleX = maxScaleX
+    //var maxScaleY = maxScaleY
+this.animation.setMaxScale(maxScaleX, maxScaleY)
+}
+
+
+    override fun nextRotation()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
+
+rotationAnimation!!.nextRotation()
+}
+
+
+    override fun previousRotation()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
+
+rotationAnimation!!.previousRotation()
+}
+
+
+    override fun nextRotationX()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
+
+rotationAnimation!!.nextRotationX()
+}
+
+
+    override fun previousRotationX()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
+
+rotationAnimation!!.previousRotationX()
+}
+
+
+    override fun nextRotationZ()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
+
+rotationAnimation!!.nextRotationZ()
+}
+
+
+    override fun previousRotationZ()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    var rotationAnimation: RotationAnimation = (this.animation as RotationAnimation)
+
+rotationAnimation!!.previousRotationZ()
+}
+
+
+    override fun changeBasicColor(basicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var basicColor = basicColor
+this.animation.changeBasicColor(basicColor)
+}
+
+
+    override fun getBasicColorP()
+        //nullable = true from not(false or (false and true)) = true
+: BasicColor{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getBasicColorP()
+}
+
+
+    override fun getChangeBasicColor()
+        //nullable = true from not(false or (false and true)) = true
+: BasicColor{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getChangeBasicColor()
+}
+
+
+    override fun getChangeColor()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getChangeColor()
+}
+
+
+    override fun getColor()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getColor()
+}
+
+
+    override fun getDx()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getDx()
+}
+
+
+    override fun getDy()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getDy()
+}
+
+
+    override fun isThreed()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.isThreed()
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun nextFrame()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.animation.nextFrame()
+}
+
+
+    override fun reset()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.animation.reset()
+}
+
+
+    override fun setFrame(index: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var index = index
+this.animation.setFrame(index)
+}
+
+
+    override fun getFrame()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getFrame()
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun getAnimationSize()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getAnimationSize()
+}
+
+
+    override fun getSize()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getSize()
+}
+
+
+    override fun previousFrame()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.animation.previousFrame()
+}
+
+
+    override fun isLastFrame()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.isLastFrame()
+}
+
+
+    override fun setSequence(sequence: IntArray)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var sequence = sequence
+this.animation.setSequence(sequence)
+}
+
+
+    override fun getSequence()
+        //nullable = true from not(false or (false and true)) = true
+: IntArray{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getSequence()
+}
+
+
+    override fun getWidth()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.animation.getWidth()
+}
+
+
+    override fun paintXY(graphics: Graphics, x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
         try {
             this.animation.paintXY(graphics, x, y)
-        } catch (e: Exception) {
-            this.logUtil!!.put(
-                this.commonStrings!!.EXCEPTION,
-                this,
-                this.commonStrings!!.PROCESS,
-                e,
-            )
-        }
-    }
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
+}
+
+}
+
 
     override fun paintThreedXYZ(graphics: Graphics, x: Int, y: Int, z: Int)
-        // nullable = true from not(false or (false and false)) = true
-    {
-        // var graphics = graphics
-        // var x = x
-        // var y = y
-        // var z = z
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
 
         try {
             this.animation.paintThreedXYZ(graphics, x, y, z)
-        } catch (e: Exception) {
-            this.logUtil!!.put(
-                this.commonStrings!!.EXCEPTION,
-                this,
-                this.commonStrings!!.PROCESS,
-                e,
-            )
-        }
-    }
+} catch(e: Exception)
+            {
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
+}
+
+}
+
 
     override fun toString()
-    // nullable =  from not(false or (true and true)) =
-    : String {
+        //nullable =  from not(false or (true and true)) = 
+: String{
 
-        var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-        var image: Image = this.animationInterfaceFactoryInterface!!.getImage()!!
 
-        // if statement needs to be on the same line and ternary does not work the same way.
-        return StringMaker()
-            .append(super.toString())!!
-            .append(commonSeps!!.SPACE)!!
-            .append(image.getName())!!
-            .append(commonSeps!!.SPACE)!!
-            .appendint(image.getWidth())!!
-            .append(commonSeps!!.SPACE)!!
-            .appendint(image.getHeight())!!
-            .toString()
-    }
+    var image: Image = this.animationInterfaceFactoryInterface!!.getImage()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return StringMaker().
+                            append(super.toString())!!.append(commonSeps!!.SPACE)!!.append(image.getName())!!.append(commonSeps!!.SPACE)!!.appendint(image.getWidth())!!.append(commonSeps!!.SPACE)!!.appendint(image.getHeight())!!.toString()
 }
+
+
+}
+                
+            
+

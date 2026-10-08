@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.logic.system.hardware.components.interfaces.EthernetInterface
 import org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface

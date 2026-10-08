@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.data.tree.dom.DomSearchHelper
 import org.w3c.dom.Node

@@ -10,6 +10,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 
 interface GL11 : javax.microedition.khronos.opengles.GL10 {

@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.data.generator.OrderIdGenerator
 import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity

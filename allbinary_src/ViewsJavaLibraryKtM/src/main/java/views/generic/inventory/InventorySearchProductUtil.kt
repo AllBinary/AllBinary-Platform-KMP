@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.util.BasicArrayListD
 import org.allbinary.business.user.commerce.inventory.item.BasicItemView

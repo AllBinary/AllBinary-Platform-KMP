@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.data.tables.TableMappingInterface
 //import org.allbinary.business.user.commerce.money.Money;

@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import java.awt
 import org.allbinary.media.image.analysis.ColorRangeInterface

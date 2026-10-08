@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.input.automation.actions.script.condition.processors.ProfileActionScriptProcessorInterface
 import org.allbinary.input.automation.robot.InputRobotInterface

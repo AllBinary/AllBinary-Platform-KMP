@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.SensorFeatureFactory

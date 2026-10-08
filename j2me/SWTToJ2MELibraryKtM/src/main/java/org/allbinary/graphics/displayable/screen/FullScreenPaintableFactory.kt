@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.game.paint.FullScreenPaintable
 import org.allbinary.graphics.paint.Paintable

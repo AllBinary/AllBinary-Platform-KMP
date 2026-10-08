@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 //ActualPlatform
 /*actual*/ open public class LogFactory

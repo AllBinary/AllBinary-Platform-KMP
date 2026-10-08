@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.business.advertisement.AdvertisementsInterface
 import org.allbinary.business.advertisement.search.AdvertisementSearchInterface

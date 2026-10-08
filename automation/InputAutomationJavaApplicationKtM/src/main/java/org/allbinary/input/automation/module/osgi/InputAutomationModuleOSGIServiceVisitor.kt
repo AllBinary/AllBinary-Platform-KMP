@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import bundle.input.automation.module.InputAutomationModuleService
 import org.allbinary.input.automation.InputAutomationJFrame

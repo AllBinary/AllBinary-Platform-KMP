@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.data.tables.context.module.storefronts.StoreFrontsEntity
 import org.allbinary.data.tables.context.module.storefronts.StoreFrontsEntityFactory

@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.input.automation.module.InputAutomationModuleFactoryInterface
 import org.allbinary.osgi.OSGIServiceInterface

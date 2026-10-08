@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.business.user.username.UserName
 import org.allbinary.data.tables.user.UserEntityFactory

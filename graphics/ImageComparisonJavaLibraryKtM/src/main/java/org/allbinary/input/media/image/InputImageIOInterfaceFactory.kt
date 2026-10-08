@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.input.media.image.capture.CapturedImageInputOutput
 import org.allbinary.media.image.comparison.ComparisonImageInputOutput

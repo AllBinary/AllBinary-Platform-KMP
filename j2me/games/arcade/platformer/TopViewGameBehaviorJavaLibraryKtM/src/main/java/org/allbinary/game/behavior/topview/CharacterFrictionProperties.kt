@@ -24,6 +24,7 @@
         
         import kotlin.Array
         import kotlin.reflect.KClass
+                    
         
 import org.allbinary.game.physics.FrictionProperties
 import org.allbinary.game.physics.friction.FrictionData
