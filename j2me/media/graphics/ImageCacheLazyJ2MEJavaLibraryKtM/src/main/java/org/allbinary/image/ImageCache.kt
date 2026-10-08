@@ -1,43 +1,30 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2011 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                * 
-                *  AllBinary Open License Version 1
-                *  Copyright (c) 2011 AllBinary
-                *  
-                *  By agreeing to this license you and any business entity you represent are
-                *  legally bound to the AllBinary Open License Version 1 legal agreement.
-                *  
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
-                *  
-                *  Created By: Travis Berthelot   
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.image
+/* Generated Code Do Not Modify */
+package org.allbinary.image
 
-
-
-
-        import java.lang.Object        
-        
-        import java.lang.Thread
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-        
 import java.io.InputStream
+import java.lang.Thread
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullImage
+import kotlin.Array
 import org.allbinary.J2MEUtil
 import org.allbinary.TsUtil
 import org.allbinary.animation.image.LazyImageRotationAnimation
 import org.allbinary.canvas.GameGlobalsFactory
 import org.allbinary.canvas.Processor
-import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.canvas.ABToGBUtil
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
@@ -45,27 +32,29 @@ import org.allbinary.game.gd.resource.GDLazyResources
 import org.allbinary.game.gd.resource.GDResources
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
-import org.allbinary.string.CommonSeps
+import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.string.CommonSeps
+import org.allbinary.string.CommonStrings
 import org.allbinary.system.Memory
 import org.allbinary.thread.BaseImageLoadingProcessor
 import org.allbinary.thread.ConcurrentImageLoadingProcessor
 import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListD
-import org.allbinary.logic.ABSystemWrapper
 
 open public class ImageCache : ImageCacheBase {
-        
-companion object {
-            
-    val NULL_IMAGE_CACHE: ImageCache = ImageCache()
 
-        }
-            
+    companion object {
+
+        val NULL_IMAGE_CACHE: ImageCache = ImageCache()
+    }
+
     private val tsUtil: TsUtil = TsUtil.getInstance()!!
 
-    private val concurrentImageLoadingProcessor: BaseImageLoadingProcessor = ConcurrentImageLoadingProcessor(this)
+    private val concurrentImageLoadingProcessor: BaseImageLoadingProcessor =
+        ConcurrentImageLoadingProcessor(this)
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -95,1063 +84,733 @@ companion object {
 
     var hasAnyLazyAnimationFactories: Boolean = false
 
-open public inner class NotHTMLProcessor : Processor {
-        
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
+    open public inner class NotHTMLProcessor : Processor {
+
+        /*Static stuff is not allowed for Kotlin inner classescompanion object {
+         */
+        /*
         }
             */
 
+        // Auto Generated
+        public constructor() : super() {}
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-concurrentImageLoadingProcessor!!.runTask()
-}
+        override fun process()
+            // nullable = true from not(false or (false and true)) = true
+        {
+            concurrentImageLoadingProcessor!!.runTask()
+        }
+    }
 
+    open public inner class NotHTMLEndProcessor : Processor {
 
-}
-                
-            
-open public inner class NotHTMLEndProcessor : Processor {
-        
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
+        /*Static stuff is not allowed for Kotlin inner classescompanion object {
+         */
+        /*
         }
             */
 
+        // Auto Generated
+        public constructor() : super() {}
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
+        override fun process()
+            // nullable = true from not(false or (false and true)) = true
+        {
 
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
+            var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-progressCanvas!!.endIfPaintedSinceStart()
-}
+            progressCanvas!!.endIfPaintedSinceStart()
+        }
+    }
 
+    open public inner class HTMLEndProcessor : Processor {
 
-}
-                
-            
-open public inner class HTMLEndProcessor : Processor {
-        
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
+        /*Static stuff is not allowed for Kotlin inner classescompanion object {
+         */
+        /*
         }
             */
 
+        // Auto Generated
+        public constructor() : super() {}
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
+        override fun process()
+            // nullable = true from not(false or (false and true)) = true
+        {
 
-    var size: Int = gdResources!!.currentLayoutRequiredTotal
+            var size: Int = gdResources!!.currentLayoutRequiredTotal
 
+            // Otherwise - statement - EmptyStmt
 
-                    //Otherwise - statement - EmptyStmt
+            if (size == 0) {
 
+                var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-    
-                        if(size == 0)
-                        
-                                    {
-                                    
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
+                progressCanvas!!.endIfPaintedSinceStart()
+            } else if (totalLoaded > size / 12) {
 
-progressCanvas!!.endIfPaintedSinceStart()
+                var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-                                    }
-                                
-                             else 
-    
-                        if(totalLoaded > size /12)
-                        
-                                    {
-                                    
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
+                progressCanvas!!.endIfPaintedSinceStart()
+                endProcessor = NotHTMLEndProcessor()
+            }
+        }
+    }
 
-progressCanvas!!.endIfPaintedSinceStart()
-endProcessor= NotHTMLEndProcessor()
+    open public inner class FirstProcessor : Processor {
 
-                                    }
-                                
-}
-
-
-}
-                
-            
-open public inner class FirstProcessor : Processor {
-        
-/*Static stuff is not allowed for Kotlin inner classescompanion object {
-            *//*
+        /*Static stuff is not allowed for Kotlin inner classescompanion object {
+         */
+        /*
         }
             */
 
+        // Auto Generated
+        public constructor() : super() {}
 
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
-    open fun process()
-        //nullable = true from not(false or (false and true)) = true
-{
-this@ImageCache.firstProcess()
-}
+        override fun process()
+            // nullable = true from not(false or (false and true)) = true
+        {
+            this@ImageCache.firstProcess()
+        }
+    }
 
-
-}
-                
-            
     private var processor: Processor = FirstProcessor()
 
     private var endProcessor: Processor = Processor.getInstance()!!
-public constructor (){
-}
 
+    public constructor() {}
 
     open fun firstProcess()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var logUtil: LogUtil = LogUtil.getInstance()!!
+        var logUtil: LogUtil = LogUtil.getInstance()!!
 
+        var isHTML: Boolean = J2MEUtil.isHTML()
 
-    var isHTML: Boolean = J2MEUtil.isHTML()
+        if (isHTML) {
 
+            this.processor = Processor.getInstance()
+            this.endProcessor = HTMLEndProcessor()
+        } else {
+            this.processor = NotHTMLProcessor()
+            this.endProcessor = NotHTMLEndProcessor()
 
-    
-                        if(isHTML)
-                        
-                                    {
-                                    this.processor= Processor.getInstance()
-this.endProcessor= HTMLEndProcessor()
-
-                                    }
-                                
-                        else {
-                            this.processor= NotHTMLProcessor()
-this.endProcessor= NotHTMLEndProcessor()
-
-        try {
-            runTask()
-} catch(e: Exception)
-            {
-logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.END_METHOD_NAME)
-}
-
-
-                        }
-                            
-}
-
+            try {
+                this.runTask()
+            } catch (e: Exception) {
+                logUtil!!.putF(
+                    this.commonStrings!!.EXCEPTION,
+                    this,
+                    this.commonStrings!!.END_METHOD_NAME,
+                )
+            }
+        }
+    }
 
     open fun addListener(renderer: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-var renderer = renderer
-}
+        // nullable = true from not(false or (false and false)) = true
+    {
+        var renderer = renderer
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun waitForLoadNow()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.firstTime)
-                        
-                                    {
-                                    
-    var abToGBUtil: ABToGBUtil = ABToGBUtil.getInstance()!!
+        if (this.firstTime) {
 
+            var abToGBUtil: ABToGBUtil = ABToGBUtil.getInstance()!!
 
-    var abCanvas: AllBinaryGameCanvas = abToGBUtil!!.abCanvas as AllBinaryGameCanvas
+            var abCanvas: AllBinaryGameCanvas = abToGBUtil!!.abCanvas as AllBinaryGameCanvas
 
+            while (
+                this.loadNowList!!.isEmpty() &&
+                    (!abCanvas!!.isInitialized() ||
+                        (abCanvas!!.isInitialized() && this.hasAnyLazyAnimationFactories)) &&
+                    !this.progressEnded
+            ) {
+                Thread.sleep(120)
+            }
 
-        while(this.loadNowList!!.isEmpty() && (!abCanvas!!.isInitialized() || (abCanvas!!.isInitialized() && this.hasAnyLazyAnimationFactories)) && !this.progressEnded)
-        {
-Thread.sleep(120)
-}
-
-this.firstTime= false
-
-                                    }
-                                
-}
-
+            this.firstTime = false
+        }
+    }
 
     private val LOAD_IMAGE_FOR_ANIMATION: String = "Load Image Animation"
 
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun loadImageForAnimation()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    var lazyImageRotationAnimation: LazyImageRotationAnimation = 
-                null
-            
+        var lazyImageRotationAnimation: LazyImageRotationAnimation = null
 
+        // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this.lock)
 
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
-
-        //mutex.withLock
+        // mutex.withLock
         {
+            if (this.loadNowList!!.isEmpty()) {
 
-    
-                        if(this.loadNowList!!.isEmpty())
-                        
-                                    {
-                                    this.endProcessor!!.process()
+                this.endProcessor!!.process()
 
-    
-                        if(this.loadSoonList!!.isEmpty())
-                        
-                                    {
-                                    
-    
-                        if(this.loadAfterList!!.isEmpty())
-                        
-                                    {
-                                    
-    
-                        if(this.firstTime)
-                        
-                                    {
-                                    
-                                    }
-                                
-                             else 
-    
-                        if(this.gameGlobalsFactory!!.newCanvas)
-                        
-                                    {
-                                    
-                                    }
-                                
-                        else {
+                if (this.loadSoonList!!.isEmpty()) {
+
+                    if (this.loadAfterList!!.isEmpty()) {
+
+                        if (this.firstTime) {} else if (
+                            this.gameGlobalsFactory!!.newCanvas
+                        ) {} else {
                             this.loadNextImage()
-
                         }
-                            
 
+                        // if statement needs to be on the same line and ternary does not work the
+                        // same way.
+                        return
+                    } else {
+                        lazyImageRotationAnimation =
+                            this.loadAfterList!!.get(0) as LazyImageRotationAnimation
 
+                        if (this.loadImageForLazyAnimation(lazyImageRotationAnimation)) {
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
-
-                                    }
-                                
-                        else {
-                            lazyImageRotationAnimation= this.loadAfterList!!.get(0) as LazyImageRotationAnimation
-
-    
-                        if(this.loadImageForLazyAnimation(lazyImageRotationAnimation))
-                        
-                                    {
-                                    this.loadAfterList!!.remove(lazyImageRotationAnimation)
-
-                                    }
-                                
-
+                            this.loadAfterList!!.remove(lazyImageRotationAnimation)
                         }
-                            
+                    }
+                } else {
+                    lazyImageRotationAnimation =
+                        this.loadSoonList!!.get(0) as LazyImageRotationAnimation
 
-                                    }
-                                
-                        else {
-                            lazyImageRotationAnimation= this.loadSoonList!!.get(0) as LazyImageRotationAnimation
+                    if (this.loadImageForLazyAnimation(lazyImageRotationAnimation)) {
 
-    
-                        if(this.loadImageForLazyAnimation(lazyImageRotationAnimation))
-                        
-                                    {
-                                    this.loadSoonList!!.remove(lazyImageRotationAnimation)
+                        this.loadSoonList!!.remove(lazyImageRotationAnimation)
+                    }
+                }
 
-                                    }
-                                
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return
+            }
 
-                        }
-                            
+            lazyImageRotationAnimation = this.loadNowList!!.get(0) as LazyImageRotationAnimation
+        }
 
+        if (this.loadImageForLazyAnimation(lazyImageRotationAnimation)) {
 
+            // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+            synchronized(this.lock)
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
-
-                                    }
-                                
-lazyImageRotationAnimation= this.loadNowList!!.get(0) as LazyImageRotationAnimation
-}
-
-
-    
-                        if(this.loadImageForLazyAnimation(lazyImageRotationAnimation))
-                        
-                                    {
-                                    
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
-
-        //mutex.withLock
-        {
-this.loadNowList!!.remove(lazyImageRotationAnimation)
-}
-
-
-    
-                        if(lazyImageRotationAnimation!!.layoutIndex != 0)
-                        
-                                    {
-                                    
-    var list: BasicArrayList = this.getAssociated(lazyImageRotationAnimation)!!
-
-
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
-
-        //mutex.withLock
-        {
-
-    var size: Int = list.size()
-
-
-    
-                        if(size > 0)
-                        
-                                    {
-                                    this.loadSoonList!!.addAllList(list)
-
-                                    }
-                                
-}
-
-
-                                    }
-                                
-
-    var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-
-
-    var isHTML: Boolean = J2MEUtil.isHTML()
-
-
-    
-                        if(this.loadNowList!!.isEmpty() && (!isHTML || this.firstTime))
-                        
-                                    {
-                                    progressCanvas!!.endFromInitialLazyLoadingComplete()
-
-                                    }
-                                
-                        else {
-                            
-    
-                        if(this.totalLoaded % 10 == 0)
-                        
-                                    {
-                                    progressCanvas!!.addNormalPortion(1, this.LOAD_IMAGE_FOR_ANIMATION)
-
-                                    }
-                                
-
-                        }
-                            
-
-                                    }
-                                
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun loadImages()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-        while(!this.loadList!!.isEmpty() || !this.loadNowList!!.isEmpty())
-        {
-this.loadImageForAnimations()
-this.loadNextImage()
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun loadImageForAnimations()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-        while(!this.loadNowList!!.isEmpty())
-        {
-this.loadImageForAnimation()
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun loadRemainingAnimations()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-        while(!this.loadAfterList!!.isEmpty() || !this.loadNowList!!.isEmpty())
-        {
-
-        while(!this.loadNowList!!.isEmpty())
-        {
-this.loadImageForAnimation()
-}
-
-
-    var lazyImageRotationAnimation: LazyImageRotationAnimation = 
-                null
-            
-
-
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
-
-        //mutex.withLock
-        {
-
-    
-                        if(!this.loadAfterList!!.isEmpty())
-                        lazyImageRotationAnimation= this.loadAfterList!!.removeAt(0) as LazyImageRotationAnimation
-}
-
-
-    
-                        if(lazyImageRotationAnimation != 
-                                    null
-                                )
-                        
-                                    {
-                                    this.loadImageForLazyAnimation(lazyImageRotationAnimation)
-
-                                    }
-                                
-}
-
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun loadImageForLazyAnimation(lazyImageRotationAnimation: LazyImageRotationAnimation)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var lazyImageRotationAnimation = lazyImageRotationAnimation
-
-    var image: Image = lazyImageRotationAnimation!!.animationInterfaceFactoryInterface!!.getImage()!!
-
-
-    
-                        if(this.loadImage(image))
-                        
-                                    {
-                                    lazyImageRotationAnimation!!.setRealAnimation()
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun loadNextImage()
-        //nullable = true from not(false or (false and true)) = true
-{
-
-    var image: Image = 
-                null
-            
-
-
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
-
-        //mutex.withLock
-        {
-
-    
-                        if(this.loadList!!.size() == 0)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return 
-
-                                    }
-                                
-image= this.loadList!!.removeAt(0) as Image
-}
-
-this.loadImage(image)
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun loadImage(image: Image)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var image = image
-
-    
-                        if(image.isReady())
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            
-    
-                        if(image.getImage() != 
-                                    null
-                                )
-                        
-                                    {
-                                    
-    
-                        if(image.setReady())
-                        
-                                    {
-                                    
-    
-                        if(image.isReady())
-                        
-                                    {
-                                    this.totalLoaded++
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-                                    }
-                                
-
-                                    }
-                                
-                        else {
-                            
-    var key: String = image.getName()!!
-
-
-    var image2: Image = this.creatImage(key)!!
-
-
-    
-                        if(image2.isReady())
-                        
-                                    {
-                                    this.init(image, image2)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-                        else {
-                            image.setImage(image2.getImage())
-
-                        }
-                            
-
-                        }
-                            
-
-                        }
-                            
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun init(image: Image, image2: Image)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var image = image
-    //var image2 = image2
-image.init(image2.getImage())
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun creatImage(key: String)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var key = key
-
-    var inputStream: InputStream = resourceUtil!!.getResourceAsStream(key)!!
-
-
-    var image: Image = ImageFactory.getInstance()!!.createImageFromInputStream(inputStream)!!
-
-image.setName(key)
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun get(caller: String, width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var caller = caller
-    //var width = width
-    //var height = height
-
-    var foundIndex: Int = this.getIndexWH(width, height)
-
-
-    var image: Image = this.getFromAvailable(foundIndex, width, height)!!
-
-
-    
-                        if(image == NullImage.NULL_IMAGE)
-                        
-                                    {
-                                    this.volume += width *height
-
-    
-                        if(this.volume > 32000)
-                        
-                                    {
-                                    this.tsUtil!!.gc()
-this.volume= 0
-
-                                    }
-                                
-image= this.createImage(caller, width, height)
-
-    
-                        if(this.nextIndex > this.widths.length -1)
-                        
-                                    {
-                                    
-    
-                        if(foundIndex ==  -1)
-                        
-                                    {
-                                    foundIndex= this.nextIndex
-this.widths[this.nextIndex]= width
-this.heights[this.nextIndex]= height
-this.nextIndex++
-
-                                    }
-                                
-this.listOfList[foundIndex]!!.add(image)
-
-                                    }
-                                
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-}
-
-
-                @Throws(Exception::class)
-            
-    open fun getWithKey(key: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var key = key
-
-    var image: Image = this.getImage(key)!!
-
-
-    
-                        if(image == NullImage.NULL_IMAGE)
-                        
-                                    {
-                                    
-    var inputStream: InputStream = 
-                null
-            
-
-
-        try {
-            image= this.createImageFromInputStream(key, inputStream)
-} catch(e: Exception)
+            // mutex.withLock
             {
-this.logUtil!!.put("Exception: Trying Again After GC", this, this.commonStrings!!.GET, e)
-this.logUtil!!.putF(StringMaker().
-                            append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, this.commonStrings!!.GET)
-this.tsUtil!!.gc()
-this.tsUtil!!.gc()
-this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
-Thread.sleep(100)
-image= this.createImageFromInputStream(key, inputStream)
-}
+                this.loadNowList!!.remove(lazyImageRotationAnimation)
+            }
 
-this.hashtable.put(key, image)
+            if (lazyImageRotationAnimation!!.layoutIndex != 0) {
 
-                                    }
-                                
+                var list: BasicArrayList = this.getAssociated(lazyImageRotationAnimation)!!
 
+                // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+                synchronized(this.lock)
 
+                // mutex.withLock
+                {
+                    var size: Int = list.size()
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-}
+                    if (size > 0) {
 
+                        this.loadSoonList!!.addAllList(list)
+                    }
+                }
+            }
 
-    open fun getIndex(key: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var key = key
+            var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
-    var gdResources: GDResources = GDResources.getInstance()!!
+            var isHTML: Boolean = J2MEUtil.isHTML()
 
+            if (this.loadNowList!!.isEmpty() && (!isHTML || this.firstTime)) {
 
-    var resourceStringArray: Array<String?> = gdResources!!.resourceStringArray
+                progressCanvas!!.endFromInitialLazyLoadingComplete()
+            } else {
 
+                if (this.totalLoaded % 10 == 0) {
 
-    var size: Int = resourceStringArray!!.size
-                
+                    progressCanvas!!.addNormalPortion(1, this.LOAD_IMAGE_FOR_ANIMATION)
+                }
+            }
+        }
+    }
 
+    @Throws(Exception::class)
+    open fun loadImages()
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        while (!this.loadList!!.isEmpty() || !this.loadNowList!!.isEmpty()) {
+            this.loadImageForAnimations()
+            this.loadNextImage()
+        }
+    }
 
+    @Throws(Exception::class)
+    open fun loadImageForAnimations()
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        while (!this.loadNowList!!.isEmpty()) {
+            this.loadImageForAnimation()
+        }
+    }
 
-                        for (index in 0 until size)
+    @Throws(Exception::class)
+    open fun loadRemainingAnimations()
+        // nullable = true from not(false or (false and true)) = true
+    {
 
+        while (!this.loadAfterList!!.isEmpty() || !this.loadNowList!!.isEmpty()) {
+
+            while (!this.loadNowList!!.isEmpty()) {
+                this.loadImageForAnimation()
+            }
+
+            var lazyImageRotationAnimation: LazyImageRotationAnimation = null
+
+            // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+            synchronized(this.lock)
+
+            // mutex.withLock
+            {
+                if (!this.loadAfterList!!.isEmpty())
+                    lazyImageRotationAnimation =
+                        this.loadAfterList!!.removeAt(0) as LazyImageRotationAnimation
+            }
+
+            if (lazyImageRotationAnimation != null) {
+
+                this.loadImageForLazyAnimation(lazyImageRotationAnimation)
+            }
+        }
+    }
+
+    @Throws(Exception::class)
+    open fun loadImageForLazyAnimation(
+        lazyImageRotationAnimation: LazyImageRotationAnimation
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var lazyImageRotationAnimation = lazyImageRotationAnimation
+
+        var image: Image =
+            lazyImageRotationAnimation!!.animationInterfaceFactoryInterface!!.getImage()!!
+
+        if (this.loadImage(image)) {
+
+            lazyImageRotationAnimation!!.setRealAnimation()
+
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
+
+    @Throws(Exception::class)
+    open fun loadNextImage()
+        // nullable = true from not(false or (false and true)) = true
+    {
+
+        var image: Image = null
+
+        // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this.lock)
+
+        // mutex.withLock
         {
+            if (this.loadList!!.size() == 0) {
 
-    
-                        if(resourceStringArray[index] == key)
-                        
-                                    {
-                                    
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return
+            }
 
+            image = this.loadList!!.removeAt(0) as Image
+        }
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return index
+        this.loadImage(image)
+    }
 
-                                    }
-                                
-}
+    @Throws(Exception::class)
+    open fun loadImage(
+        image: Image
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Boolean {
+        // var image = image
 
-this.logUtil!!.putF(StringMaker().
-                            append("unable to find key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString(), this, this.commonStrings!!.RUN)
+        if (image.isReady()) {
 
+            // if statement needs to be on the same line and ternary does not work the same way.
+            return true
+        } else {
 
+            if (image.getImage() != null) {
 
-                            throw RuntimeException()
-}
+                if (image.setReady()) {
 
+                    if (image.isReady()) {
 
-                @Throws(Exception::class)
-            
-    open fun createImageFromInputStream(key: Any, inputStream: InputStream)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var key = key
-    //var inputStream = inputStream
+                        this.totalLoaded++
 
-    var gdLazyResources: GDLazyResources = GDLazyResources.getInstance()!!
+                        // if statement needs to be on the same line and ternary does not work the
+                        // same way.
+                        return true
+                    }
+                }
+            } else {
 
+                var key: String = image.getName()!!
 
-    var resourceStringArray: Array<String?> = gdLazyResources!!.requiredResourcesBeforeLoadingArray
+                var image2: Image = this.creatImage(key)!!
 
+                if (image2.isReady()) {
 
-    var size: Int = resourceStringArray!!.size
-                
+                    this.init(image, image2)
 
+                    // if statement needs to be on the same line and ternary does not work the same
+                    // way.
+                    return true
+                } else {
+                    image.setImage(image2.getImage())
+                }
+            }
+        }
 
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return false
+    }
 
+    @Throws(Exception::class)
+    open fun init(image: Image, image2: Image)
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var image = image
+        // var image2 = image2
+        image.init(image2.getImage())
+    }
 
+    @Throws(Exception::class)
+    open fun creatImage(
+        key: String
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var key = key
 
-                        for (index in 0 until size)
+        var inputStream: InputStream = this.resourceUtil!!.getResourceAsStream(key)!!
 
+        var image: Image = ImageFactory.getInstance()!!.createImageFromInputStream(inputStream)!!
+
+        image.setName(key)
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return image
+    }
+
+    @Throws(Exception::class)
+    override fun get(
+        caller: String,
+        width: Int,
+        height: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var caller = caller
+        // var width = width
+        // var height = height
+
+        var foundIndex: Int = this.getIndexWH(width, height)
+
+        var image: Image = this.getFromAvailable(foundIndex, width, height)!!
+
+        if (image == NullImage.NULL_IMAGE) {
+
+            this.volume += width * height
+
+            if (this.volume > 32000) {
+
+                this.tsUtil!!.gc()
+                this.volume = 0
+            }
+
+            image = this.createImage(caller, width, height)
+
+            if (this.nextIndex > this.widths.length - 1) {
+
+                if (foundIndex == -1) {
+
+                    foundIndex = this.nextIndex
+                    this.widths[this.nextIndex] = width
+                    this.heights[this.nextIndex] = height
+                    this.nextIndex++
+                }
+
+                this.listOfList[foundIndex]!!.add(image)
+            }
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return image
+    }
+
+    @Throws(Exception::class)
+    override fun getWithKey(
+        key: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var key = key
+
+        var image: Image = this.getImage(key)!!
+
+        if (image == NullImage.NULL_IMAGE) {
+
+            var inputStream: InputStream = null
+
+            try {
+                image = this.createImageFromInputStream(key, inputStream)
+            } catch (e: Exception) {
+                this.logUtil!!.put(
+                    "Exception: Trying Again After GC",
+                    this,
+                    this.commonStrings!!.GET,
+                    e,
+                )
+                this.logUtil!!.putF(
+                    StringMaker()
+                        .append("InputStream: ")!!
+                        .append(StringUtil.getInstance()!!.toString(inputStream))!!
+                        .toString(),
+                    this,
+                    this.commonStrings!!.GET,
+                )
+                this.tsUtil!!.gc()
+                this.tsUtil!!.gc()
+                this.logUtil!!.putF(Memory.getInfo(), this, this.commonStrings!!.GET)
+                Thread.sleep(100)
+                image = this.createImageFromInputStream(key, inputStream)
+            }
+
+            this.hashtable.put(key, image)
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return image
+    }
+
+    open fun getIndex(
+        key: Any
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Int {
+        // var key = key
+
+        var gdResources: GDResources = GDResources.getInstance()!!
+
+        var resourceStringArray: Array<String?> = gdResources!!.resourceStringArray
+
+        var size: Int = resourceStringArray!!.size
+
+        for (index in 0 until size) {
+
+            if (resourceStringArray[index] == key) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return index
+            }
+        }
+
+        this.logUtil!!.putF(
+            StringMaker()
+                .append("unable to find key: ")!!
+                .append(StringUtil.getInstance()!!.toString(key))!!
+                .toString(),
+            this,
+            this.commonStrings!!.RUN,
+        )
+
+        throw RuntimeException()
+    }
+
+    @Throws(Exception::class)
+    override fun createImageFromInputStream(
+        key: Any,
+        inputStream: InputStream,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var key = key
+        // var inputStream = inputStream
+
+        var gdLazyResources: GDLazyResources = GDLazyResources.getInstance()!!
+
+        var resourceStringArray: Array<String?> =
+            gdLazyResources!!.requiredResourcesBeforeLoadingArray
+
+        var size: Int = resourceStringArray!!.size
+
+        for (index in 0 until size) {
+
+            if (key == resourceStringArray[index]) {
+
+                // if statement needs to be on the same line and ternary does not work the same way.
+                return this.creatImage(key as String)
+            }
+        }
+
+        this.runTask()
+
+        var index: Int = this.getIndex(key)
+
+        var width: Int = gdLazyResources!!.imageResourceWidthArray[index]!!
+
+        var height: Int = gdLazyResources!!.imageResourceHeightArray[index]!!
+
+        var image: Image = this.createImageLater(key as String, width, height)!!
+
+        // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this.lock)
+
+        // mutex.withLock
         {
+            this.loadList!!.add(image)
+        }
 
-    
-                        if(key == resourceStringArray[index])
-                        
-                                    {
-                                    
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return image
+    }
 
+    @Throws(Exception::class)
+    open fun createImageLater(
+        key: String,
+        width: Int,
+        height: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : Image {
+        // var key = key
+        // var width = width
+        // var height = height
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.creatImage(key as String)
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return Image.createImageLater(key, width, height)
+    }
 
-                                    }
-                                
-}
+    open fun getAssociated(
+        lazyImageRotationAnimation: LazyImageRotationAnimation
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : BasicArrayList {
+        // var lazyImageRotationAnimation = lazyImageRotationAnimation
 
-this.runTask()
+        var list: BasicArrayList = BasicArrayListD()
 
-    var index: Int = this.getIndex(key)
+        // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this.lock)
 
-
-    var width: Int = gdLazyResources!!.imageResourceWidthArray[index]!!
-
-
-    var height: Int = gdLazyResources!!.imageResourceHeightArray[index]!!
-
-
-    var image: Image = this.createImageLater(key as String, width, height)!!
-
-
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
-
-        //mutex.withLock
+        // mutex.withLock
         {
-this.loadList!!.add(image)
-}
+            var lazyImageRotationAnimation2: LazyImageRotationAnimation = null
 
+            var size: Int = this.loadAfterList!!.size()
 
+            for (index in 0 until size) {
 
+                lazyImageRotationAnimation2 =
+                    this.loadAfterList!!.get(index) as LazyImageRotationAnimation
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return image
-}
+                if (
+                    lazyImageRotationAnimation2!!.instanceId ==
+                        lazyImageRotationAnimation!!.instanceId
+                ) {
+                    list.add(lazyImageRotationAnimation2)
+                }
+            }
 
+            var size2: Int = list.size()
 
-                @Throws(Exception::class)
-            
-    open fun createImageLater(key: String, width: Int, height: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Image{
-    //var key = key
-    //var width = width
-    //var height = height
+            for (index in 0 until size2) {
 
+                this.loadAfterList!!.remove(list.get(index))
+            }
+        }
 
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return Image.createImageLater(key, width, height)
-}
-
-
-    open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
-        //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
-    //var lazyImageRotationAnimation = lazyImageRotationAnimation
-
-    var list: BasicArrayList = BasicArrayListD()
-
-
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
-
-        //mutex.withLock
-        {
-
-    var lazyImageRotationAnimation2: LazyImageRotationAnimation = 
-                null
-            
-
-
-    var size: Int = this.loadAfterList!!.size()
-
-
-
-
-
-                        for (index in 0 until size)
-
-        {
-lazyImageRotationAnimation2= this.loadAfterList!!.get(index) as LazyImageRotationAnimation
-
-    
-                        if(lazyImageRotationAnimation2!!.instanceId == lazyImageRotationAnimation!!.instanceId)
-                        
-                                    {
-                                    list.add(lazyImageRotationAnimation2)
-
-                                    }
-                                
-}
-
-
-    var size2: Int = list.size()
-
-
-
-
-
-                        for (index in 0 until size2)
-
-        {
-this.loadAfterList!!.remove(list.get(index))
-}
-
-}
-
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
-}
-
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return list
+    }
 
     open fun add(lazyImageRotationAnimation: LazyImageRotationAnimation)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var lazyImageRotationAnimation = lazyImageRotationAnimation
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var lazyImageRotationAnimation = lazyImageRotationAnimation
 
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
+        // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this.lock)
 
-        //mutex.withLock
+        // mutex.withLock
         {
-this.loadAfterList!!.add(lazyImageRotationAnimation)
-}
+            this.loadAfterList!!.add(lazyImageRotationAnimation)
+        }
+    }
 
-}
-
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun insertFirst(lazyImageRotationAnimation: LazyImageRotationAnimation)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var lazyImageRotationAnimation = lazyImageRotationAnimation
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var lazyImageRotationAnimation = lazyImageRotationAnimation
 
-    
-                        if(this.loadNowList!!.contains(lazyImageRotationAnimation))
-                        
-                                    {
-                                    
-                                    }
-                                
-                        else {
-                            
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this.lock) 
+        if (this.loadNowList!!.contains(lazyImageRotationAnimation)) {} else {
 
-        //mutex.withLock
-        {
-this.loadNowList!!.add(lazyImageRotationAnimation)
-this.loadAfterList!!.remove(lazyImageRotationAnimation)
-}
+            // TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+            synchronized(this.lock)
 
+            // mutex.withLock
+            {
+                this.loadNowList!!.add(lazyImageRotationAnimation)
+                this.loadAfterList!!.remove(lazyImageRotationAnimation)
+            }
+        }
 
-                        }
-                            
-this.runTask()
-}
-
+        this.runTask()
+    }
 
     open fun progressEnded()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.progressEnded= true
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.progressEnded = true
+    }
 
-
-                @Throws(Exception::class)
-            
+    @Throws(Exception::class)
     open fun runTask()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.processor.process()
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.processor.process()
+    }
 
+    override fun initProgress()
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    open fun initProgress()
-        //nullable = true from not(false or (false and true)) = true
-{
+        if (this.firstTime) {
 
-    
-                        if(this.firstTime)
-                        
-                                    {
-                                    this.firstTime= false
-
-                                    }
-                                
-}
-
+            this.firstTime = false
+        }
+    }
 
     open fun isLazy()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
+    // nullable = true from not(false or (false and true)) = true
+    : Boolean {
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return true
+    }
 }
-
-
-}
-                
-            
-
