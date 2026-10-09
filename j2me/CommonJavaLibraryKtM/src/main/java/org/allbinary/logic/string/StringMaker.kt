@@ -49,6 +49,27 @@ open public class StringMaker : Object {
         return this
     }
 
+    open fun appendCharArray(
+        charArray: CharArray,
+        start: Int,
+        end: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+        : StringMaker {
+        // var charArray = charArray
+        // var start = start
+        // var end = end
+        this.ensureCapacity(this.currentLength + (end - start))
+
+        for (index in start until end) {
+
+            this.charArray[this.currentLength++] = charArray[index]!!
+        }
+
+        // if statement needs to be on the same line and ternary does not work the same way.
+        return this
+    }
+
     open fun appendbyte(
         b: Byte
     )
