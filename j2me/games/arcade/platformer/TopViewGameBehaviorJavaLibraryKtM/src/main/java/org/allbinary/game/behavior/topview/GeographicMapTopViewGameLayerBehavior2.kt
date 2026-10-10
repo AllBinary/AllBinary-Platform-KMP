@@ -36,7 +36,8 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
 
     private val offsetY: Int
 
-    private var previousGeographicMapCellPosition: GeographicMapCellPosition
+    private var previousGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
     public constructor(
         maxGravityActionIndex: Int,
@@ -67,8 +68,10 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
         // var geographicMapCellTypeArray = geographicMapCellTypeArray
         // var geographicMapCellPosition = geographicMapCellPosition
 
-        if (geographicMapCellPosition != null) {
-
+        if (
+            geographicMapCellPosition !=
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
             this.geographicMapBehavior!!.getCellTypeAt(
                 geographicMapInterfaceArray,
                 geographicMapCellTypeArray,
@@ -242,7 +245,7 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
         y: Int,
     )
         // nullable = true from not(false or (false and false)) = true
-        : GeographicMapCellPosition? {
+        : GeographicMapCellPosition {
         // var geographicMapInterfaceArray = geographicMapInterfaceArray
         // var geographicMapCellTypeArray = geographicMapCellTypeArray
         // var velocityProperties = velocityProperties
@@ -250,7 +253,8 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
         // var x = x
         var y = y
 
-        var geographicMapCellPosition: GeographicMapCellPosition = null
+        var geographicMapCellPosition: GeographicMapCellPosition =
+            SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
         var topLeftGeographicMapCellPosition: GeographicMapCellPosition =
             this.getPositionTopLeft(geographicMapInterfaceArray, layer, x, y)!!
@@ -264,10 +268,13 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
                 layer,
             )
 
-        if (geographicMapCellPosition == null) {
+        if (
+            geographicMapCellPosition ==
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return null
+            return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
         }
 
         var topRightGeographicMapCellPosition: GeographicMapCellPosition =
@@ -282,10 +289,13 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
                 layer,
             )
 
-        if (geographicMapCellPosition == null) {
+        if (
+            geographicMapCellPosition ==
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return null
+            return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
         }
 
         var bottomLeftGeographicMapCellPosition: GeographicMapCellPosition =
@@ -300,10 +310,13 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
                 layer,
             )
 
-        if (geographicMapCellPosition == null) {
+        if (
+            geographicMapCellPosition ==
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
 
             // if statement needs to be on the same line and ternary does not work the same way.
-            return null
+            return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
         }
 
         var bottomRightGeographicMapCellPosition: GeographicMapCellPosition =
@@ -318,7 +331,10 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
                 layer,
             )
 
-        if (geographicMapCellPosition == null) {} else {}
+        if (
+            geographicMapCellPosition ==
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {} else {}
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return geographicMapCellPosition
@@ -333,14 +349,17 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
         layer: AllBinaryLayer,
     )
         // nullable = true from not(false or (false and false)) = true
-        : GeographicMapCellPosition? {
+        : GeographicMapCellPosition {
         // var geographicMapInterfaceArray = geographicMapInterfaceArray
         // var geographicMapCellTypeArray = geographicMapCellTypeArray
         // var geographicMapCellPosition = geographicMapCellPosition
         // var velocityProperties = velocityProperties
         // var layer = layer
 
-        if (geographicMapCellPosition != null) {
+        if (
+            geographicMapCellPosition !=
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
 
             var possibleStepGeographicMapCellPosition: GeographicMapCellPosition =
                 geographicMapCellPosition
@@ -374,7 +393,7 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
 
                     // if statement needs to be on the same line and ternary does not work the same
                     // way.
-                    return null
+                    return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
                 } else {
                     this.previousGeographicMapCellPosition = possibleStepGeographicMapCellPosition
 
@@ -389,7 +408,7 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
             SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return null
+        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
     }
 
     @Throws(Exception::class)
@@ -412,10 +431,20 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
         // var x = x
         // var y = y
 
-        if (geographicMapCellPosition != null) {
+        if (
+            geographicMapCellPosition !=
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
 
-            layer = layerlayer as TopViewCharacterInterface
-            layer.terrainMove(geographicMapInterfaceArray, geographicMapCellTypeArray, x, y)
+            var topViewCharacterInterface: TopViewCharacterInterface =
+                (layer as TopViewCharacterInterface)
+
+            topViewCharacterInterface!!.terrainMove(
+                geographicMapInterfaceArray,
+                geographicMapCellTypeArray,
+                x,
+                y,
+            )
         } else {}
     }
 
@@ -457,7 +486,10 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
             y,
         )
 
-        if (geographicMapCellPosition == null) {
+        if (
+            geographicMapCellPosition ==
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
 
             // if statement needs to be on the same line and ternary does not work the same way.
             return false
@@ -485,7 +517,10 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
         var geographicMapCellPosition: GeographicMapCellPosition =
             this.getLeftPosition(geographicMapInterfaceArray, layer)!!
 
-        if (geographicMapCellPosition != null) {
+        if (
+            geographicMapCellPosition !=
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
 
             var possibleStepGeographicMapCellPosition: GeographicMapCellPosition =
                 geographicMapInterfaceArray[0]!!
@@ -508,14 +543,19 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
 
                 if (this.autoStepBlocks) {
 
-                    layer = layerlayer as TopViewCharacterInterface
-                    layer.leftp()
+                    var topViewCharacterInterface: TopViewCharacterInterface =
+                        (layer as TopViewCharacterInterface)
+
+                    topViewCharacterInterface!!.leftp()
                 } else {
                     velocityProperties!!.getVelocityXBasicDecimalP()!!.setint(0)
                 }
             } else {
-                layer = layerlayer as TopViewCharacterInterface
-                layer.leftp()
+
+                var topViewCharacterInterface: TopViewCharacterInterface =
+                    (layer as TopViewCharacterInterface)
+
+                topViewCharacterInterface!!.leftp()
             }
         }
     }
@@ -537,7 +577,10 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
         var geographicMapCellPosition: GeographicMapCellPosition =
             this.getRightPosition(geographicMapInterfaceArray, layer)!!
 
-        if (geographicMapCellPosition != null) {
+        if (
+            geographicMapCellPosition !=
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+        ) {
 
             var possibleStepGeographicMapCellPosition: GeographicMapCellPosition =
                 geographicMapInterfaceArray[0]!!
@@ -560,14 +603,19 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
 
                 if (this.autoStepBlocks) {
 
-                    layer = layerlayer as TopViewCharacterInterface
-                    layer.rightp()
+                    var topViewCharacterInterface: TopViewCharacterInterface =
+                        (layer as TopViewCharacterInterface)
+
+                    topViewCharacterInterface!!.rightp()
                 } else {
                     velocityProperties!!.getVelocityXBasicDecimalP()!!.setint(0)
                 }
             } else {
-                layer = layerlayer as TopViewCharacterInterface
-                layer.rightp()
+
+                var topViewCharacterInterface: TopViewCharacterInterface =
+                    (layer as TopViewCharacterInterface)
+
+                topViewCharacterInterface!!.rightp()
             }
         }
     }

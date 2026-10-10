@@ -21,6 +21,7 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.topview.BasicTopViewGeographicMapCellTypeFactory
 import org.allbinary.util.BasicArrayList
 
@@ -44,7 +45,7 @@ open public class GeographicMapTopViewLayerBehavior : TopViewGameLayerBehavior {
         y: Int,
     )
         // nullable = true from not(false or (false and false)) = true
-        : GeographicMapCellPosition? {
+        : GeographicMapCellPosition {
         // var geographicMapInterfaceArray = geographicMapInterfaceArray
         // var geographicMapCellTypeArray = geographicMapCellTypeArray
         // var velocityProperties = velocityProperties
@@ -53,7 +54,7 @@ open public class GeographicMapTopViewLayerBehavior : TopViewGameLayerBehavior {
         var y = y
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return null
+        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
     }
 
     @Throws(Exception::class)
@@ -65,7 +66,7 @@ open public class GeographicMapTopViewLayerBehavior : TopViewGameLayerBehavior {
         layer: AllBinaryLayer,
     )
         // nullable = true from not(false or (false and false)) = true
-        : GeographicMapCellPosition? {
+        : GeographicMapCellPosition {
         // var geographicMapInterfaceArray = geographicMapInterfaceArray
         // var geographicMapCellTypeArray = geographicMapCellTypeArray
         // var geographicMapCellPosition = geographicMapCellPosition
@@ -73,7 +74,7 @@ open public class GeographicMapTopViewLayerBehavior : TopViewGameLayerBehavior {
         // var layer = layer
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return null
+        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
     }
 
     @Throws(Exception::class)
@@ -85,7 +86,7 @@ open public class GeographicMapTopViewLayerBehavior : TopViewGameLayerBehavior {
         layer: AllBinaryLayer,
     )
         // nullable = true from not(false or (false and false)) = true
-        : GeographicMapCellPosition? {
+        : GeographicMapCellPosition {
         // var geographicMapInterfaceArray = geographicMapInterfaceArray
         // var geographicMapCellTypeArray = geographicMapCellTypeArray
         // var geographicMapCellPositionList = geographicMapCellPositionList
@@ -93,7 +94,7 @@ open public class GeographicMapTopViewLayerBehavior : TopViewGameLayerBehavior {
         // var layer = layer
 
         // if statement needs to be on the same line and ternary does not work the same way.
-        return null
+        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
     }
 
     @Throws(Exception::class)
