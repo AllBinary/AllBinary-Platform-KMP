@@ -1,37 +1,25 @@
+/*
+ *
+ *  AllBinary Open License Version 1
+ *  Copyright (c) 2022 AllBinary
+ *
+ *  By agreeing to this license you and any business entity you represent are
+ *  legally bound to the AllBinary Open License Version 1 legal agreement.
+ *
+ *  You may obtain the AllBinary Open License Version 1 legal agreement from
+ *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+ *
+ *  Created By: Travis Berthelot
+ */
 
-        /*
-                *  
-                *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
-                *   
-                *  By agreeing to this license you and any business entity you represent are 
-                *  legally bound to the AllBinary Open License Version 1 legal agreement. 
-                *   
-                *  You may obtain the AllBinary Open License Version 1 legal agreement from 
-                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository. 
-                *   
-                *  Created By: Travis Berthelot    
-        */
-        
-        /* Generated Code Do Not Modify */
-        package org.allbinary.game.behavior.topview
+/* Generated Code Do Not Modify */
+package org.allbinary.game.behavior.topview
 
-
-
-
-        import java.lang.Object        
-        
-        
-        import kotlin.Array
-        import kotlin.reflect.KClass
-                    
-        
 import org.allbinary.game.layer.behavior.GameLayerBehavior
 import org.allbinary.game.physics.acceleration.BasicAccelerationProperties
 import org.allbinary.game.physics.velocity.VelocityProperties
 
 open public class TopViewGameLayerBehavior : GameLayerBehavior {
-        
 
     val maxGravityActionIndex: Int
 
@@ -42,114 +30,82 @@ open public class TopViewGameLayerBehavior : GameLayerBehavior {
     var isFallingWithoutJumpAttempt: Boolean = false
 
     var gravityActionIndex: Int = 0
-public constructor (maxGravityActionIndex: Int){
-    //var maxGravityActionIndex = maxGravityActionIndex
-this.maxGravityActionIndex= maxGravityActionIndex
-}
 
+    public constructor(maxGravityActionIndex: Int) {
+        // var maxGravityActionIndex = maxGravityActionIndex
+        this.maxGravityActionIndex = maxGravityActionIndex
+    }
 
     open fun gravity()
-        //nullable = true from not(false or (false and true)) = true
-{
+        // nullable = true from not(false or (false and true)) = true
+    {
 
-    
-                        if(this.gravityActionIndex == 0)
-                        
-                                    {
-                                    this.gravityActionIndex++
-this.isFallingWithoutJumpAttempt= true
+        if (this.gravityActionIndex == 0) {
 
-                                    }
-                                
-}
-
+            this.gravityActionIndex++
+            this.isFallingWithoutJumpAttempt = true
+        }
+    }
 
     open fun land(velocityProperties: VelocityProperties)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var velocityProperties = velocityProperties
-velocityProperties!!.getVelocityYBasicDecimalP()!!.setint(0)
-this.landReset()
-}
-
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var velocityProperties = velocityProperties
+        velocityProperties!!.getVelocityYBasicDecimalP()!!.setint(0)
+        this.landReset()
+    }
 
     open fun landReset()
-        //nullable = true from not(false or (false and true)) = true
-{
-this.gravityActionIndex= 0
-this.isFallingWithoutJumpAttempt= false
-this.isJumpAction= true
-this.isJumpOver= false
-}
+        // nullable = true from not(false or (false and true)) = true
+    {
+        this.gravityActionIndex = 0
+        this.isFallingWithoutJumpAttempt = false
+        this.isJumpAction = true
+        this.isJumpOver = false
+    }
 
+    open fun up(
+        velocityProperties: VelocityProperties,
+        acceleration: BasicAccelerationProperties,
+        jumpBehavior: InitialJumpBehavior,
+        accelerationMultiplier: Int,
+    )
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var velocityProperties = velocityProperties
+        // var acceleration = acceleration
+        // var jumpBehavior = jumpBehavior
+        // var accelerationMultiplier = accelerationMultiplier
 
-    open fun up(velocityProperties: VelocityProperties, acceleration: BasicAccelerationProperties, jumpBehavior: InitialJumpBehavior, accelerationMultiplier: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var velocityProperties = velocityProperties
-    //var acceleration = acceleration
-    //var jumpBehavior = jumpBehavior
-    //var accelerationMultiplier = accelerationMultiplier
+        if (!this.isJumpOver) {
 
-    
-                        if(!this.isJumpOver)
-                        
-                                    {
-                                    
-    
-                        if(this.gravityActionIndex < this.maxGravityActionIndex)
-                        
-                                    {
-                                    
-    var acceleration2: Int =  -acceleration.getForward() *accelerationMultiplier
+            if (this.gravityActionIndex < this.maxGravityActionIndex) {
 
-velocityProperties!!.getVelocityYBasicDecimalP()!!.addint(acceleration2)
-velocityProperties!!.limitXYToForwardAndReverseMaxVelocity()
-this.gravityActionIndex++
+                var acceleration2: Int = -acceleration.getForward() * accelerationMultiplier
 
-                                    }
-                                
-                        else {
-                            
-                        }
-                            
+                velocityProperties!!.getVelocityYBasicDecimalP()!!.addint(acceleration2)
+                velocityProperties!!.limitXYToForwardAndReverseMaxVelocity()
+                this.gravityActionIndex++
+            } else {}
+        } else {}
 
-                                    }
-                                
-                        else {
-                            
-                        }
-                            
+        if (this.isJumpAction) {
 
-    
-                        if(this.isJumpAction)
-                        
-                                    {
-                                    jumpBehavior!!.process()
-this.isJumpAction= false
-
-                                    }
-                                
-}
-
+            jumpBehavior!!.process()
+            this.isJumpAction = false
+        }
+    }
 
     open fun inputFrames(velocityProperties: VelocityProperties)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var velocityProperties = velocityProperties
+        // nullable = true from not(false or (false and false)) = true
+    {
+        // var velocityProperties = velocityProperties
 
-    
-                        if(this.gravityActionIndex > 0 && velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled() > 0)
-                        
-                                    {
-                                    this.isJumpOver= true
-
-                                    }
-                                
+        if (
+            this.gravityActionIndex > 0 &&
+                velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled() > 0
+        ) {
+            this.isJumpOver = true
+        }
+    }
 }
-
-
-}
-                
-            
-
