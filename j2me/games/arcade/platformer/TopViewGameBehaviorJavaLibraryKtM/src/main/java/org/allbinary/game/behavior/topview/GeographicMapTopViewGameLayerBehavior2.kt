@@ -24,6 +24,7 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.MultiGeographicMapBehavior
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 
 open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewLayerBehavior {
 
@@ -368,7 +369,8 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
 
                 if (hasSolidBlock || hasOffMap) {
 
-                    this.previousGeographicMapCellPosition = null
+                    this.previousGeographicMapCellPosition =
+                        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                     // if statement needs to be on the same line and ternary does not work the same
                     // way.
@@ -383,7 +385,8 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
             }
         } else {}
 
-        this.previousGeographicMapCellPosition = null
+        this.previousGeographicMapCellPosition =
+            SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return null

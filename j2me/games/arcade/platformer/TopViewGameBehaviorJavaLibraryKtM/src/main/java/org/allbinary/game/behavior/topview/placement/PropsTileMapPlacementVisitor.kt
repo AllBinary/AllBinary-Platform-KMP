@@ -74,7 +74,7 @@ open public class PropsTileMapPlacementVisitor : TileMapPlacementVisitor {
                         }
                     } else if (mapArray[index]!![index2] == 17) {
 
-                        var randomInt: Int = randomFactory!!.getAbsoluteNextIntAllowZero(3)
+                        var randomInt: Int = this.randomFactory!!.getAbsoluteNextIntAllowZero(3)
 
                         if (randomInt == 0) {
 

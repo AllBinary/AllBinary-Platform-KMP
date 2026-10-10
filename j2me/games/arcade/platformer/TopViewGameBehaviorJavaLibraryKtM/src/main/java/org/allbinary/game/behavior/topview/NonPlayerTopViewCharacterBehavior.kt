@@ -29,6 +29,7 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.MultiGeographicMapBehavior
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 
 open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
 
@@ -67,7 +68,8 @@ open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
                 geographicMapCellPosition!!.getColumn() < maxColumns
         ) {
 
-            var nextTerrainGeographicMapCellPosition: GeographicMapCellPosition = null
+            var nextTerrainGeographicMapCellPosition: GeographicMapCellPosition =
+                SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
             var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory =
                 geographicMapInterfaceArray[0]!!.getGeographicMapCellPositionFactory()!!

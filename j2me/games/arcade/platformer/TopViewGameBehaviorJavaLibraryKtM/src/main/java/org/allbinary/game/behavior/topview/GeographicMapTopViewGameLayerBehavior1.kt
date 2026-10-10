@@ -25,6 +25,7 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.MultiGeographicMapBehavior
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 
 open public class GeographicMapTopViewGameLayerBehavior1 : GeographicMapTopViewLayerBehavior {
 
@@ -38,7 +39,8 @@ open public class GeographicMapTopViewGameLayerBehavior1 : GeographicMapTopViewL
 
     private val offsetY: Int
 
-    private var previousGeographicMapCellPosition: GeographicMapCellPosition
+    private var previousGeographicMapCellPosition: GeographicMapCellPosition =
+        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
     public constructor(
         maxGravityActionIndex: Int,
@@ -210,7 +212,8 @@ open public class GeographicMapTopViewGameLayerBehavior1 : GeographicMapTopViewL
                 if (hasSolidBlock) {
 
                     velocityProperties!!.getVelocityXBasicDecimalP()!!.setint(0)
-                    this.previousGeographicMapCellPosition = null
+                    this.previousGeographicMapCellPosition =
+                        SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                     // if statement needs to be on the same line and ternary does not work the same
                     // way.
@@ -225,7 +228,8 @@ open public class GeographicMapTopViewGameLayerBehavior1 : GeographicMapTopViewL
             }
         }
 
-        this.previousGeographicMapCellPosition = null
+        this.previousGeographicMapCellPosition =
+            SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
         // if statement needs to be on the same line and ternary does not work the same way.
         return null

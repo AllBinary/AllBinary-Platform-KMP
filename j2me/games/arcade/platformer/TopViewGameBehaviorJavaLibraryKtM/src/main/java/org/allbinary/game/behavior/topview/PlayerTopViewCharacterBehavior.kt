@@ -56,7 +56,7 @@ open public class PlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
         )
     }
 
-    open fun terrainMove(
+    override fun terrainMove(
         layer: AllBinaryLayer,
         geographicMapInterfaceArray: Array<BasicGeographicMap?>,
         x: Int,
